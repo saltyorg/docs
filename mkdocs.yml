@@ -1,0 +1,5 @@
+site_name: Saltbox Documentation
+site_url: https://docs.saltbox.dev/
+
+theme:
+  name: material

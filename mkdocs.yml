@@ -4,4 +4,7 @@ site_url: https://docs.saltbox.dev/
 theme:
   name: material
 
-copyright: Saltbox
+copyright: Copyright &copy; 2021 Saltbox
+
+extra:
+  generator: false

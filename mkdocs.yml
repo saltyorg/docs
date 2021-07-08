@@ -16,19 +16,27 @@ theme:
     - navigation.tracking
     - navigation.top
     - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
   language: en
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: red
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: red
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
     
+plugins:
+  - search:
+      lang: en
 
 extra:
   generator: false
@@ -42,13 +50,17 @@ extra:
   - icon: fontawesome/brands/github
     link: 'https://github.com/saltyorg'
     name: GitHub
+  analytics:
+    provider: google
+    property: G-REM7RWJTVV
 
 markdown_extensions:
   - toc:
       permalink: true
 
 nav:
-  - Home: 'index.md'
+  - Home: 
+    - index.md
   - Installation:
     - installation/index.md
     - installation/basics.md

@@ -12,6 +12,7 @@ nav:
   - Home: 'index.md'
   - Installation:
     - installation/index.md
+    - installation/basics.md
 
 copyright: Copyright &copy; 2021 Saltbox
 

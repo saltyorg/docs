@@ -76,3 +76,42 @@ shell: bash # (6)
 5. Rclone remote that Saltbox will mount by default and use in any automated configuration.
 
 6. Shell used by the system. Valid options are bash or zsh.
+
+## Preinstall
+
+!!! warning
+    Make sure that you have setup the configuration correctly before proceeding.
+
+This step will create the specified user account if needed and add it to sudoers, update the kernel, edit GRUB configuration if needed and install Rclone.
+
+``` shell
+sb install preinstall
+```
+
+At this point you'll want to make sure you run commands as the user specified in the accounts.yml
+
+You can either run 'su username' to switch user or reconnect to SSH as the newly created user.
+
+## Rclone
+This step will take you through the configuration of Rclone.
+
+Insert really clever rclone guide xD
+
+
+## Install Saltbox
+
+=== "Saltbox"
+    Some text about Saltbox
+
+=== "Mediabox"
+    Some text about Mediabox
+
+=== "Feederbox"
+    Some text about Feederbox
+
+=== "Core"
+    Some text about Core
+
+## Reboot
+
+You're now ready to install and tweak the setup as you see fit. After rebooting!

@@ -63,7 +63,7 @@ nav:
     - index.md
   - Install:
     - install/index.md
-    - install/basics.md
+    - install/install.md
     - install/prerequisites.md
 
 copyright: Copyright &copy; 2021 Saltbox

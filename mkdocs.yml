@@ -3,6 +3,15 @@ site_url: https://docs.saltbox.dev/
 
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+
+nav:
+  - Home: 'index.md'
+  - Installation:
+    - installation/index.md
 
 copyright: Copyright &copy; 2021 Saltbox
 

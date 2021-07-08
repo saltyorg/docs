@@ -61,8 +61,9 @@ markdown_extensions:
 nav:
   - Home: 
     - index.md
-  - Installation:
-    - installation/index.md
-    - installation/basics.md
+  - Install:
+    - install/index.md
+    - install/basics.md
+    - install/prerequisites.md
 
 copyright: Copyright &copy; 2021 Saltbox

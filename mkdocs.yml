@@ -4,7 +4,7 @@ site_author: salty
 site_description: Saltbox is an Ansible-based solution for rapidly deploying a Docker containerized cloud media server.
 
 repo_name: Saltbox
-repo_url: https://github.com/saltyorg/Saltbox
+repo_url: https://github.com/saltyorg/docs
 
 theme:
   name: material
@@ -48,7 +48,7 @@ extra:
     link: 'https://discord.saltbox.dev'
     name: Discord
   - icon: fontawesome/brands/github
-    link: 'https://github.com/saltyorg'
+    link: 'https://github.com/saltyorg/Saltbox'
     name: GitHub
   analytics:
     provider: google
@@ -63,12 +63,20 @@ nav:
     - index.md
   - Saltbox:
       - Install:
-        - saltbox/install/index.md
+        - saltbox/install/basics.md
         - saltbox/install/prerequisites.md
         - saltbox/install/install.md
       - Backup/Restore:
-        - saltbox/backup/index.md
+        - saltbox/backup/backup.md
+        - saltbox/backup/restore.md
   - Community:
-      - community/index.md
+      - community/basics.md
+  - Apps:
+      - apps/radarr.md
+      - apps/sonarr.md
+  - FAQ:
+      - faq/faq.md
+  - Advanced:
+      - advanced/example.md
 
 copyright: Copyright &copy; 2021 Saltbox

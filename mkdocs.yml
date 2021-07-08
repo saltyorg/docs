@@ -14,7 +14,6 @@ theme:
     - navigation.instant
     - navigation.sections
     - navigation.tracking
-    - navigation.top
     - toc.integrate
     - search.suggest
     - search.highlight
@@ -55,28 +54,30 @@ extra:
     property: G-REM7RWJTVV
 
 markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
   - toc:
       permalink: true
 
 nav:
   - Home: 
-    - index.md
+    - 'index.md'
   - Saltbox:
       - Install:
-        - saltbox/install/basics.md
-        - saltbox/install/prerequisites.md
-        - saltbox/install/install.md
+        - 'saltbox/install/basics.md'
+        - 'saltbox/install/prerequisites.md'
+        - 'saltbox/install/install.md'
       - Backup/Restore:
-        - saltbox/backup/backup.md
-        - saltbox/backup/restore.md
+        - 'saltbox/backup/backup.md'
+        - 'saltbox/backup/restore.md'
   - Community:
-      - community/basics.md
+      - 'community/basics.md'
   - Apps:
-      - apps/radarr.md
-      - apps/sonarr.md
+      - 'apps/radarr.md'
+      - 'apps/sonarr.md'
   - FAQ:
-      - faq/faq.md
+      - 'faq/faq.md'
   - Advanced:
-      - advanced/example.md
+      - 'advanced/example.md'
 
 copyright: Copyright &copy; 2021 Saltbox

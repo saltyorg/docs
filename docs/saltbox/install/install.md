@@ -114,4 +114,4 @@ Insert really clever rclone guide xD
 
 ## Reboot
 
-You're now ready to install and tweak the setup as you see fit. After rebooting!
+You're now ready to install other apps and tweak the setup as you see fit. After rebooting!

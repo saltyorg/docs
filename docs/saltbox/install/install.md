@@ -96,7 +96,8 @@ This step will create the specified user account if needed and add it to sudoers
 sb install preinstall
 ```
 
-At this point you'll want to make sure you run commands as the user specified in the accounts.yml
+!!! info
+    From this point you'll want to make sure you run commands as the user specified in the accounts.yml
 
 You can either run 'su username' to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
 

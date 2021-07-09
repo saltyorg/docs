@@ -8,6 +8,7 @@ repo_url: https://github.com/saltyorg/docs
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.tabs.sticky

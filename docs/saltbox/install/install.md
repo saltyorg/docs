@@ -121,7 +121,7 @@ s) Set configuration password
 q) Quit config
 n/s/q>
 ```
-Type in **n** (for new remote) and then name it **google**:
+Type in **n** (for new remote) and then name it `google`
 
 ``` shell
 ➜  ~ rclone config
@@ -132,96 +132,16 @@ q) Quit config
 n/s/q> n
 name> google
 ```
-Afterwhich you will be presented with a list of all the remotes that Rclone supports but since this guide assumes you are using Google Drive so just enter **drive**:
+After which you will be presented with a list of all the remotes that Rclone supports but since this guide assumes you are using Google Drive so just enter `drive`
 
 ``` shell
 Type of storage to configure.
 Enter a string value. Press Enter for the default ("").
 Choose a number from below, or type in your own value
- 1 / 1Fichier
-   \ "fichier"
- 2 / Alias for an existing remote
-   \ "alias"
- 3 / Amazon Drive
-   \ "amazon cloud drive"
- 4 / Amazon S3 Compliant Storage Providers including AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, and Tencent COS
-   \ "s3"
- 5 / Backblaze B2
-   \ "b2"
- 6 / Box
-   \ "box"
- 7 / Cache a remote
-   \ "cache"
- 8 / Citrix Sharefile
-   \ "sharefile"
- 9 / Compress a remote
-   \ "compress"
-10 / Dropbox
-   \ "dropbox"
-11 / Encrypt/Decrypt a remote
-   \ "crypt"
-12 / Enterprise File Fabric
-   \ "filefabric"
-13 / FTP Connection
-   \ "ftp"
-14 / Google Cloud Storage (this is not Google Drive)
-   \ "google cloud storage"
+...
 15 / Google Drive
    \ "drive"
-16 / Google Photos
-   \ "google photos"
-17 / Hadoop distributed file system
-   \ "hdfs"
-18 / Hubic
-   \ "hubic"
-19 / In memory object storage system.
-   \ "memory"
-20 / Jottacloud
-   \ "jottacloud"
-21 / Koofr
-   \ "koofr"
-22 / Local Disk
-   \ "local"
-23 / Mail.ru Cloud
-   \ "mailru"
-24 / Mega
-   \ "mega"
-25 / Microsoft Azure Blob Storage
-   \ "azureblob"
-26 / Microsoft OneDrive
-   \ "onedrive"
-27 / OpenDrive
-   \ "opendrive"
-28 / OpenStack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
-   \ "swift"
-29 / Pcloud
-   \ "pcloud"
-30 / Put.io
-   \ "putio"
-31 / QingCloud Object Storage
-   \ "qingstor"
-32 / SSH/SFTP Connection
-   \ "sftp"
-33 / Sugarsync
-   \ "sugarsync"
-34 / Tardigrade Decentralized Cloud Storage
-   \ "tardigrade"
-35 / Transparently chunk/split large files
-   \ "chunker"
-36 / Union merges the contents of several upstream fs
-   \ "union"
-37 / Webdav
-   \ "webdav"
-38 / Yandex Disk
-   \ "yandex"
-39 / Zoho
-   \ "zoho"
-40 / http Connection
-   \ "http"
-41 / premiumize.me
-   \ "premiumizeme"
-42 / seafile
-   \ "seafile"
+...
 Storage> drive
 ```
 Then you are presented with a request for a client ID which you can find out how to create by following the [link](https://rclone.org/drive/#making-your-own-client-id) in the below example.
@@ -244,7 +164,7 @@ Leave blank normally.
 Enter a string value. Press Enter for the default ("").
 client_secret>
 ```
-You will then be asked which scope to use and in this instance we want full access which is **drive**:
+You will then be asked which scope to use and in this instance we want full access which is `drive`
 
 ``` shell
 Scope that rclone should use when requesting access from drive.
@@ -290,7 +210,7 @@ Leading `~` will be expanded in the file name as will environment variables such
 Enter a string value. Press Enter for the default ("").
 service_account_file>
 ```
-When asked to edit advanced config just use the default (No):
+When asked to edit advanced config just use the default `n`
 
 ``` shell
 Edit advanced config? (y/n)
@@ -298,7 +218,7 @@ y) Yes
 n) No (default)
 y/n>
 ```
-Enter **n** (No) here if on a headless machine:
+Enter `n` (No) here if on a headless machine:
 
 ``` shell
 Remote config
@@ -342,7 +262,7 @@ e) Edit this remote
 d) Delete this remote
 y/e/d>
 ```
-After which you can hit enter and either type **q** to exit the configuration tool or setup additional drives which is outside the scope of this guide.
+After which you can hit enter and either type `q` to exit the configuration tool or setup additional drives which is outside the scope of this guide.
 
 ``` shell
 Current remotes:
@@ -362,7 +282,7 @@ e/n/d/r/c/s/q> q
 ```
 ### Existing Rclone Setup
 
-You do not have to rename the remote you want to use to **google** but if you don't do that you will have to change the remote specified in the settings.yml
+You do not have to rename the remote you want to use to `google` but if you don't do that you will have to change the remote specified in the settings.yml
 
 
 ## Install Saltbox

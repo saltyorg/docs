@@ -1,7 +1,15 @@
 ## Dependencies
-``` shell
-curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
-```
+=== "curl"
+    ``` shell
+    curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
+    ```
+
+=== "wget"
+    ``` shell
+    wget -qO- https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
+    ```
+
+
 ## Configuration
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in /srv/git/saltbox
@@ -126,14 +134,6 @@ name> google
 Afterwhich you will be presented with a list of all the remotes that Rclone supports but since this guide assumes you are using Google Drive so just enter **drive**:
 
 ``` shell
-
-➜  ~ rclone config
-No remotes found - make a new one
-n) New remote
-s) Set configuration password
-q) Quit config
-n/s/q> n
-name> google
 Type of storage to configure.
 Enter a string value. Press Enter for the default ("").
 Choose a number from below, or type in your own value

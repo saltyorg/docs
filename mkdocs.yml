@@ -71,6 +71,7 @@ nav:
         - 'saltbox/install/prerequisites.md'
         - 'saltbox/install/install.md'
       - Backup/Restore:
+        - 'saltbox/backup/settings.md'
         - 'saltbox/backup/backup.md'
         - 'saltbox/backup/restore.md'
   - Community:

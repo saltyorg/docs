@@ -9,10 +9,20 @@
     wget -qO- https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
     ```
 
+=== "curl (verbose)"
+    ``` shell
+    curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
+    ```
+
+=== "wget (verbose)"
+    ``` shell
+    wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
+    ```
+
 
 ## Configuration
 
-Make sure you fill out the following configuration files before proceeding. Each file will be located in /srv/git/saltbox
+Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
 
 accounts.yml
 
@@ -99,7 +109,7 @@ sb install preinstall
 !!! info
     From this point you'll want to make sure you run commands as the user specified in the accounts.yml
 
-You can either run 'su username' to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
+You can either run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
 
 ## Rclone
 This step will take you through the configuration of Rclone.

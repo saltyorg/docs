@@ -89,9 +89,13 @@ shell: bash # (6)
 
 3. Folder used for temporary transcode files.
 
-4. Rclone version that Saltbox will install. Valid options are latest, beta or a specific version (1.55).
+4. Rclone version that Saltbox will install. 
+
+    Valid options are **latest**, **beta** or a specific version (**1.55**).
 
 5. Rclone remote that Saltbox will mount by default and use in any automated configuration.
+
+    Optional - Leave empty to avoid remote mount setup.
 
 6. Shell used by the system. Valid options are bash or zsh.
 

@@ -42,7 +42,7 @@ extra:
   generator: false
   social:
   - icon: fontawesome/solid/heart
-    link: 'https://github.com/saltyorg/Saltbox/blob/master/DONATIONS.md'
+    link: 'https://github.com/sponsors/saltydk'
     name: Donate
   - icon: fontawesome/brands/discord
     link: 'https://discord.saltbox.dev'
@@ -77,22 +77,22 @@ nav:
   - Community:
       - 'community/basics.md'
   - Apps:
-      - 'apps/cloudplow.md'
-      - 'apps/emby.md'
-      - 'apps/jackett.md'
-      - 'apps/lidarr.md'
-      - 'apps/nzbget.md'
-      - 'apps/nzbhydra2.md'
-      - 'apps/organizr.md'
-      - 'apps/overseerr.md'
-      - 'apps/plex.md'
-      - 'apps/portainer.md'
-      - 'apps/radarr.md'
-      - 'apps/rutorrent.md'
-      - 'apps/sabnzbd.md'
-      - 'apps/sonarr.md'
-      - 'apps/sstv.md'
-      - 'apps/tautulli.md'
+      - cloudplow: 'apps/cloudplow.md'
+      - emby: 'apps/emby.md'
+      - jackett: 'apps/jackett.md'
+      - lidarr: 'apps/lidarr.md'
+      - nzbget: 'apps/nzbget.md'
+      - nzbhydra2: 'apps/nzbhydra2.md'
+      - organizr: 'apps/organizr.md'
+      - overseerr: 'apps/overseerr.md'
+      - plex: 'apps/plex.md'
+      - portainer: 'apps/portainer.md'
+      - radarr: 'apps/radarr.md'
+      - rutorrent: 'apps/rutorrent.md'
+      - sabnzbd: 'apps/sabnzbd.md'
+      - sonarr: 'apps/sonarr.md'
+      - sstv: 'apps/sstv.md'
+      - tautulli: 'apps/tautulli.md'
   - FAQ:
       - 'faq/faq.md'
   - Advanced:

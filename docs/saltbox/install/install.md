@@ -104,7 +104,7 @@ shell: bash # (6)
 !!! warning
     Make sure that you have setup the configuration correctly before proceeding.
 
-This step will create the specified user account if needed and add it to sudoers, update the kernel, edit GRUB configuration if needed and install Rclone.
+This step will create the specified user account if needed and add it to sudoers, update the kernel, edit GRUB configuration if needed and install Rclone. Your server will reboot if needed.
 
 ``` shell
 sb install preinstall
@@ -113,7 +113,7 @@ sb install preinstall
 !!! info
     From this point you'll want to make sure you run commands as the user specified in the accounts.yml
 
-You can either run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
+If your server did not need to reboot you can run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
 
 ## Rclone
 This step will take you through the configuration of Rclone.

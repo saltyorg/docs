@@ -302,16 +302,24 @@ You do not have to rename the remote you want to use to `google` but if you don'
 ## Install Saltbox
 
 === "Saltbox"
-    Some text about Saltbox
+    ``` shell
+    sb install saltbox
+    ```
 
 === "Mediabox"
-    Some text about Mediabox
-
+    ``` shell
+    sb install mediabox
+    ```
+    
 === "Feederbox"
-    Some text about Feederbox
+        ``` shell
+    sb install feederbox
+    ```
 
 === "Core"
-    Some text about Core
+        ``` shell
+    sb install core
+    ```
 
 ## Reboot
 

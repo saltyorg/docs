@@ -312,12 +312,12 @@ You do not have to rename the remote you want to use to `google` but if you don'
     ```
     
 === "Feederbox"
-        ``` shell
+    ``` shell
     sb install feederbox
     ```
 
 === "Core"
-        ``` shell
+    ``` shell
     sb install core
     ```
 

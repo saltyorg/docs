@@ -74,6 +74,8 @@ nav:
         - 'saltbox/backup/settings.md'
         - 'saltbox/backup/backup.md'
         - 'saltbox/backup/restore.md'
+      - Inventory:
+        - 'saltbox/inventory/index.md'
   - Community:
       - 'community/basics.md'
   - Apps:

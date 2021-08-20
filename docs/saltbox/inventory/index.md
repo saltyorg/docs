@@ -1,10 +1,10 @@
 # Inventory
 
-Advanced use cases that would usually require editing roles in the local repository can now be handled through the inventory system instead. 
+Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/role_name/defaults/main.yml` are designed to be changeable by the user if needed. This way avoids merge conflicts when pulling the newest changes to the repository.
+Any variables defined in `/srv/git/saltbox/role_name/defaults/main.yml` are changeable by the user. This implementation avoids git merge conflicts when updating Saltbox.
 
-Example from Plex role:
+Plex Default Variables:
 ``` yaml
 ##########################################################################
 # Title:         Saltbox: Plex | Default Variables                       #
@@ -214,11 +214,11 @@ plex_docker_restart_policy: unless-stopped
 plex_docker_state: started
 ```
 
-Anything here can be edited. Knowledge of Ansible may be required for some use cases but it should allow most changes users desire. Should anything you want not be covered then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accomodating what you need.
+Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accomodating it.
 
-Overrides have to be done in this file `"/srv/git/saltbox/inventories/host_vars/localhost.yml"` which does not exist by default.
+Overrides are done in this file `"/srv/git/saltbox/inventories/host_vars/localhost.yml"` which does not exist by default.
 
-Example:
+Changing Sonarr/Radarr image tags:
 ``` yaml
 radarr_docker_image_tag: nightly
 sonarr_docker_image_tag: nightly

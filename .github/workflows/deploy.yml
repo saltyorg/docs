@@ -5,6 +5,9 @@ on:
     branches:
       - master
       - main
+    paths-ignore:
+      - '.github/**'
+      - '/README.md'
 
 jobs:
   deploy:
@@ -17,6 +20,10 @@ jobs:
           python-version: 3.x
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs gh-deploy --force
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}

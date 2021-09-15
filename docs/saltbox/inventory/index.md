@@ -214,7 +214,7 @@ plex_docker_restart_policy: unless-stopped
 plex_docker_state: started
 ```
 
-Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accomodating it.
+Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
 Overrides are done in this file `"/srv/git/saltbox/inventories/host_vars/localhost.yml"` which does not exist by default.
 

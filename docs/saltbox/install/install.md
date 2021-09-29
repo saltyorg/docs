@@ -44,6 +44,8 @@ apprise: # (9)
 
 1. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
 
+    Do not use root.
+
     Required.
 
 2. Password used for username account during the installation and apps that have automatic user configuration.
@@ -104,7 +106,7 @@ shell: bash # (6)
 !!! warning
     Make sure that you have setup the configuration correctly before proceeding.
 
-This step will create the specified user account if needed and add it to sudoers, update the kernel, edit GRUB configuration if needed and install Rclone. Your server will reboot if needed.
+This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration and install Rclone and reboot the server if needed.
 
 ``` shell
 sb install preinstall

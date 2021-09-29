@@ -12,7 +12,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.instant
     - navigation.sections
     - navigation.tracking
     - toc.integrate
@@ -50,54 +49,49 @@ extra:
   - icon: fontawesome/brands/github
     link: 'https://github.com/saltyorg/Saltbox'
     name: GitHub
-  analytics:
-    provider: google
-    property: G-REM7RWJTVV
 
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
-  - admonition
   - pymdownx.tabbed
+  - admonition
+  - attr_list
   - toc:
       permalink: true
 
 nav:
-  - Home: 
-    - 'index.md'
+  - Home: index.md
   - Saltbox:
-      - Install:
-        - 'saltbox/install/basics.md'
-        - 'saltbox/install/prerequisites.md'
-        - 'saltbox/install/install.md'
+      - Basics: saltbox/basics/basics.md
+      - Prerequisites: saltbox/prerequisites/prerequisites.md
+      - Inventory: saltbox/inventory/index.md
+      - Install: saltbox/install/install.md
       - Backup/Restore:
-        - 'saltbox/backup/settings.md'
-        - 'saltbox/backup/backup.md'
-        - 'saltbox/backup/restore.md'
-      - Inventory:
-        - 'saltbox/inventory/index.md'
+        - Settings: saltbox/backup/settings.md
+        - Backup: saltbox/backup/backup.md
+        - Restore: saltbox/backup/restore.md
   - Community:
-      - 'community/basics.md'
+      - Basics: community/basics.md
   - Apps:
-      - cloudplow: 'apps/cloudplow.md'
-      - emby: 'apps/emby.md'
-      - jackett: 'apps/jackett.md'
-      - lidarr: 'apps/lidarr.md'
-      - nzbget: 'apps/nzbget.md'
-      - nzbhydra2: 'apps/nzbhydra2.md'
-      - organizr: 'apps/organizr.md'
-      - overseerr: 'apps/overseerr.md'
-      - plex: 'apps/plex.md'
-      - portainer: 'apps/portainer.md'
-      - radarr: 'apps/radarr.md'
-      - rutorrent: 'apps/rutorrent.md'
-      - sabnzbd: 'apps/sabnzbd.md'
-      - sonarr: 'apps/sonarr.md'
-      - sstv: 'apps/sstv.md'
-      - tautulli: 'apps/tautulli.md'
-  - FAQ:
-      - 'faq/faq.md'
-  - Advanced:
-      - 'advanced/example.md'
+      - cloudplow: apps/cloudplow.md
+      - emby: apps/emby.md
+      - jackett: apps/jackett.md
+      - lidarr: apps/lidarr.md
+      - nzbget: apps/nzbget.md
+      - nzbhydra2: apps/nzbhydra2.md
+      - organizr: apps/organizr.md
+      - overseerr: apps/overseerr.md
+      - plex: apps/plex.md
+      - portainer: apps/portainer.md
+      - radarr: apps/radarr.md
+      - rutorrent: apps/rutorrent.md
+      - sabnzbd: apps/sabnzbd.md
+      - sonarr: apps/sonarr.md
+      - sstv: apps/sstv.md
+      - tautulli: apps/tautulli.md
+  - FAQ: faq/faq.md
+  - Advanced: advanced/example.md
+  - Reference:
+      - Ports: reference/ports.md
 
 copyright: Copyright &copy; 2021 Saltbox

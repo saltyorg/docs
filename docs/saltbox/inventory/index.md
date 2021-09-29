@@ -51,7 +51,7 @@ plex_paths_db_location: "{{ plex_paths_plugin_support_location }}/Databases/com.
 plex_web_subdomain: "{{ plex_name }}"
 plex_web_domain: "{{ user.domain }}"
 plex_web_port: "32400"
-plex_web_url: "{{ 'https://' + plex_web_subdomain + dns_record_suffix + '.' + plex_web_domain
+plex_web_url: "{{ 'https://' + plex_web_subdomain + '.' + plex_web_domain
                if (reverse_proxy_is_enabled)
                else 'http://localhost:' + plex_web_port }}"
 
@@ -105,12 +105,12 @@ plex_docker_ports_webtools:
   - "33400-33410:33400/tcp"
   - "33443-33453:33443/tcp"
 plex_docker_ports: "{{ plex_docker_ports_defaults
-                        + plex_docker_ports_webtools
-                        + plex_docker_ports_custom
+                       + plex_docker_ports_webtools
+                       + plex_docker_ports_custom
                     if (not reverse_proxy_is_enabled
-                        or plex_open_main_ports)
+                       or plex_open_main_ports)
                     else plex_docker_ports_webtools
-                        + plex_docker_ports_custom }}"
+                       + plex_docker_ports_custom }}"
 # Envs
 plex_docker_envs_advertise_ip: "{{ plex_web_url + ':443'
                                 if (reverse_proxy_is_enabled)
@@ -126,7 +126,7 @@ plex_docker_envs_default:
   ADVERTISE_IP: "{{ plex_docker_envs_advertise_ip }}"
 plex_docker_envs_custom: {}
 plex_docker_envs: "{{ plex_docker_envs_default
-                          | combine(plex_docker_envs_custom) }}"
+                      | combine(plex_docker_envs_custom) }}"
 
 # Commands
 plex_docker_commands_default: []
@@ -147,19 +147,19 @@ plex_docker_volumes_custom: []
 plex_docker_volumes_theme:
   - "{{ plex_paths_location }}/98-themepark.sh:/etc/cont-init.d/98-themepark"
 plex_docker_volumes: "{{ plex_docker_volumes_default
-                          + plex_docker_volumes_custom
-                          + docker_volumes_downloads_common
+                         + plex_docker_volumes_custom
+                         + docker_volumes_downloads_common
                       if not (plex_themepark_enabled)
                       else plex_docker_volumes_default
-                          + plex_docker_volumes_custom
-                          + docker_volumes_downloads_common
-                          + plex_docker_volumes_theme}}"
+                         + plex_docker_volumes_custom
+                         + docker_volumes_downloads_common
+                         + plex_docker_volumes_theme}}"
 
 # Devices
 plex_docker_devices_default: []
 plex_docker_devices_custom: []
 plex_docker_devices: "{{ plex_docker_devices_default
-                          + plex_docker_devices_custom }}"
+                         + plex_docker_devices_custom }}"
 
 # Hosts
 lazyman_ip: "{{ ( lookup('dig', 'nhl.freegamez.ga', '@8.8.8.8', 'qtype=A') | ipv4 ) | default(false,true) }}"
@@ -174,8 +174,8 @@ plex_docker_hosts_default:
 
 plex_docker_hosts_custom: []
 plex_docker_hosts: "{{ docker_hosts_common
-                        | combine(plex_docker_hosts_default)
-                        | combine(plex_docker_hosts_custom) }}"
+                       | combine(plex_docker_hosts_default)
+                       | combine(plex_docker_hosts_custom) }}"
 
 # Labels
 plex_docker_labels_default: {}
@@ -205,7 +205,7 @@ plex_docker_capabilities: "{{ plex_docker_capabilities_default
 plex_docker_security_opts_default: []
 plex_docker_security_opts_custom: []
 plex_docker_security_opts: "{{ plex_docker_security_opts_default
-                                + plex_docker_security_opts_custom }}"
+                               + plex_docker_security_opts_custom }}"
 
 # Restart Policy
 plex_docker_restart_policy: unless-stopped

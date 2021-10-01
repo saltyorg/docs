@@ -135,7 +135,8 @@ Some points below:
          LV vg0   root    /     ext4      all
          IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
          ```
-w
+
+
 ## Domain Name
 
 **You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [[Basics: Accessing Saltbox Apps]]). The steps below will help you set up a domain and DNS settings for use with Saltbox.

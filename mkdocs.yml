@@ -92,6 +92,12 @@ nav:
   - FAQ: faq/faq.md
   - Advanced: advanced/example.md
   - Reference:
+      - Server: reference/server.md
+      - Domain Name: reference/domain.md
+      - Cloud Storage: reference/cloud.md
+      - Plex Account: reference/plex.md
+      - Media Sources: reference/usenet-torrent.md
       - Ports: reference/ports.md
+
 
 copyright: Copyright &copy; 2021 Saltbox

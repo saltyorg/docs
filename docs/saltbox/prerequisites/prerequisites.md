@@ -336,56 +336,34 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 ## Post-Setup
 
-After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.
+After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  NOte, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 
-But do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK. 
+Do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK. 
 
 This also applies to any app/subdomains you add in the future - wait till after you get certs before enabling CDN.
 
-_Note 1: Performance of your server may vary when CDN is enabled._
+_Note 1: Leave the subdomains `saltbox`, `mediabox`, and `feederbox` as `DNS Only`, as they were created to reach your servers directly and not behind a CDN proxy (i.e. they need to resolve to the server's IP and not Cloudflare's)._
 
-_Note 2: Leave the subdomains `saltbox`, `mediabox`, and `feederbox` as `DNS Only`, as they were created to reach your servers directly and not behind a CDN proxy (i.e. they need to resolve to the server's IP and not Cloudflare's)._
+_Note 2: If you enable proxying on plex/emby subdomains despite it being against TOS, you may find that performance suffers badly._
 
 You can do this by:
 
 1. Going to [Cloudflare.com](https://www.cloudflare.com/).
 
-1. Clicking the **DNS** tab.
+2. Clicking the **DNS** tab.
 
-1. Find the subdomain of interest.
+3. Find the subdomain of interest.
 
-1. Under "Status", click the switch next to the gray cloud icon (i.e. `DNS Only`) to switch to an orange one (i.e. `DNS and HTTP proxy (CDN)`).
+4. Under "Status", click the switch next to the gray cloud icon (i.e. `DNS Only`) to switch to an orange one (i.e. `DNS and HTTP proxy (CDN)`).
 
    ![](../../images/cloudflare-proxy-off.png){ width=60% }
-
-If you do this to Plex/Emby subdomains, it is recommended that you disable caching or else you may be banned by Cloudflare for violating their TOS.
-
-1. Going to [Cloudflare.com](https://www.cloudflare.com/).
-
-1. Click the **Page Rules** tab.
-
-1. Click the **Create a Page Rule** button. 
-
-1. Create a rule for the relevant subdomain. 
-
-   - If the URL matches: `subdomain.yourdomain.com/*`
-
-   - Then the settings are:
-
-     - Cache Level: `Bypass`
-
-     - Disable Performance
-
-   ![](../../images/cloudflare-page-rule.png)
-
-1. Click the **Save and Deploy** button.
 
 ## Cloud Storage
 ## Provider
 
-Saltbox can be setup to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.
+Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
 
-It is advised that you do NOT use a educational GSuite account or any GSuite account you may buy on the secondary market [eBay and the like].
+It is advised that you do NOT use a educational GSuite account or any GSuite account you may buy on the secondary market [eBay and the like], unless you are aware of and planning for the likelihood that it disappears one day.
 
 ## Basics
 
@@ -404,7 +382,7 @@ Media
 
 - Example from Google Drive:
 
-  ![](https://i.imgur.com/kwnNjni.png)
+  ![](../../images/google-drive-filesystem.png)
 
 If you have media in other folders, you can simply move them into these folders via the Cloud Storage Provider's web site.
 

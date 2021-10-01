@@ -7,6 +7,18 @@ The guides in this wiki are only meant to setup Saltbox specific settings into t
 
 If you wish to learn more about them in detail, you can easily find a ton of guides for them online (e.g. [HTPC Guides](https://www.htpcguides.com){target=_blank}, [YouTube](https://www.youtube.com){target=_blank}, etc).
 
+There are, broadly, 5 prerequisites to installing Saltbox:
+
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [A Server](#server)
+- [A Domain Name](#domain-name)
+- [Cloud Storage](#cloud-storage)
+- [A Plex Account](#plex-or-emby-account)
+- [Usenet or Bittorrent sources](#usenet-vs-bittorrent)
+
+<!-- /TOC -->
+
 ## Server
 ### Getting a Server
 
@@ -24,21 +36,22 @@ Some points below:
 
 - Get a server with at least 100GB+ of hard disk space. Even though media is uploaded to the cloud, there is still a need local storage for things like app data and backups. 
 
-  Practically, you should have more like 500GB of space available _at a minimum_.
+    Practically, you should have more like 500GB of space available _at a minimum_.
 
-  Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. To lower that, you'll need to go [here](../../apps/cloudplow.md){target=_blank}
+    Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. To lower that, you'll need to go [here](../../apps/cloudplow.md){target=_blank}
 
-  If you are planning to use Usenet, SSD should be considered required, and NVME highly recommended.  Usenet is extremely disk I/O intensive.
+    If you are planning to use Usenet, SSD should be considered required, and NVME highly recommended.  Usenet is extremely disk I/O intensive.
 
-  If you are planning to use torrents, you should have much more disk space than that available for seeding.  Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding. 
+    If you are planning to use torrents, you should have much more disk space than that available for seeding.  Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding. 
 
-  If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox.  Depending on the size of your library, that metadata can be quite large.
+    If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox.  Depending on the size of your library, that metadata can be quite large.
 
 -  If you are setting this up on a home server, verify, **before installing Saltbox**:
-   1. Make sure your ISP doesn't block ports 80 and 443 [if your ISP blocks these ports, it won't work.]
-   1. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network]
-   1. Open the relevant [ports](../../reference/ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
-   1. Point your domain at your home IP and configure some dynamic DNS software to keep it updated.  Saltbox has a dynamic dns client available [it's not installed by default], but there are many ways to set this up.  Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
+ 
+     1. Make sure your ISP doesn't block ports 80 and 443 [if your ISP blocks these ports, it won't work.]
+     2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network]
+     3. Open the relevant [ports](../../reference/ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
+     4. Point your domain at your home IP and configure some dynamic DNS software to keep it updated.  Saltbox has a dynamic dns client available [it's not installed by default], but there are many ways to set this up.  Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
 
 ### Tips
 
@@ -46,7 +59,7 @@ Some points below:
 
 - If you get an option like below, select choose `ubuntu-2004-focal-64-minimal`.
 
-  ![fix me - new image](https://i.imgur.com/DcZAAWM.png)
+  ![](../../images/ubuntu-selection.png)
 
 - Install OpenSSH server if asked. 
 
@@ -61,69 +74,68 @@ Some points below:
 
 - Examples
 
-   - Online.net
+     - Online.net
 
-     ![](../../images/online-net-partitioning.png)
+         ![](../../images/online-net-partitioning.png)
 
-   - OVH
+     - OVH
 
-     ![](../../images/ovh-partitioning.png)
+       ![](../../images/ovh-partitioning.png)
 
-     ![](../../images/ovh-partitioning2.png)
+       ![](../../images/ovh-partitioning2.png)
 
-   - Hetzner installimage
-     ``` bash
-     # Hetzner Online GmbH - installimage
-     #
-     # This file contains the configuration used to install this
-     # system via installimage script. Comments have been removed.
-     #
-     # More information about the installimage script and
-     # automatic installations can be found in our wiki:
-     #
-     # http://wiki.hetzner.de/index.php/Installimage
-     #
-     
-     DRIVE1 /dev/nvme0n1
-     DRIVE2 /dev/nvme1n1
-     SWRAID 1
-     SWRAIDLEVEL 0
-     HOSTNAME sb.domain.com
-     PART /boot  ext4     512M
-     PART lvm    vg0       all
-     LV vg0   swap   swap      swap         8G
-     LV vg0   root    /     ext4      all
-     IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
-     ```
+     - Hetzner installimage
+         ``` bash
+         # Hetzner Online GmbH - installimage
+         #
+         # This file contains the configuration used to install this
+         # system via installimage script. Comments have been removed.
+         #
+         # More information about the installimage script and
+         # automatic installations can be found in our wiki:
+         #
+         # http://wiki.hetzner.de/index.php/Installimage
+         #
+         
+         DRIVE1 /dev/nvme0n1
+         DRIVE2 /dev/nvme1n1
+         SWRAID 1
+         SWRAIDLEVEL 0
+         HOSTNAME sb.domain.com
+         PART /boot  ext4     512M
+         PART lvm    vg0       all
+         LV vg0   swap   swap      swap         8G
+         LV vg0   root    /     ext4      all
+         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
+         ```
 
-   - Hetzner installimage (with a separate 250G partition for `/opt` utilizing BTRFS for snapshot backups)
+     - Hetzner installimage (with a separate 250G partition for `/opt` utilizing BTRFS for snapshot backups)
 
-     ``` bash
-     # Hetzner Online GmbH - installimage
-     #
-     # This file contains the configuration used to install this
-     # system via installimage script. Comments have been removed.
-     #
-     # More information about the installimage script and
-     # automatic installations can be found in our wiki:
-     #
-     # http://wiki.hetzner.de/index.php/Installimage
-     #
-     
-     DRIVE1 /dev/nvme0n1
-     DRIVE2 /dev/nvme1n1
-     SWRAID 1
-     SWRAIDLEVEL 0
-     HOSTNAME sb.domain.com
-     PART /boot  ext4     512M
-     PART lvm    vg0       all
-     LV vg0   swap   swap      swap         8G
-     LV vg0   opt   /opt     btrfs         250G
-     LV vg0   root    /     ext4      all
-     IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
-     ```
-
-
+         ``` bash
+         # Hetzner Online GmbH - installimage
+         #
+         # This file contains the configuration used to install this
+         # system via installimage script. Comments have been removed.
+         #
+         # More information about the installimage script and
+         # automatic installations can be found in our wiki:
+         #
+         # http://wiki.hetzner.de/index.php/Installimage
+         #
+         
+         DRIVE1 /dev/nvme0n1
+         DRIVE2 /dev/nvme1n1
+         SWRAID 1
+         SWRAIDLEVEL 0
+         HOSTNAME sb.domain.com
+         PART /boot  ext4     512M
+         PART lvm    vg0       all
+         LV vg0   swap   swap      swap         8G
+         LV vg0   opt   /opt     btrfs         250G
+         LV vg0   root    /     ext4      all
+         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
+         ```
+w
 ## Domain Name
 
 **You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [[Basics: Accessing Saltbox Apps]]). The steps below will help you set up a domain and DNS settings for use with Saltbox.
@@ -234,17 +246,7 @@ You will need to create A Records for both IP addresses (Media and Feeder boxes)
 
 ## Cloudflare
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Intro](#intro)
-- [Sign Up](#sign-up)
-- [Setup](#setup)
-- [Cloudflare API Key](#cloudflare-api-key)
-- [Post-Setup](#post-setup)
-
-<!-- /TOC -->
-
-## Intro
+### Intro
 
 [Cloudflare](https://www.cloudflare.com) a service that, among other things, protects and accelerates a wide network of websites. By being the "man in the middle", it can act like a free DNS provider.
 
@@ -272,7 +274,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 
 
-## Sign Up
+### Sign Up
 
 1. Sign up for a free [Cloudflare](https://www.cloudflare.com/) account.
 
@@ -288,7 +290,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
        ![](../../images/namesilo-dns.png)
 
-## Setup
+### Setup
 
 1. Go to [Cloudflare.com](https://www.cloudflare.com/).
 
@@ -312,7 +314,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 -->
 
-## Cloudflare API Key
+### Cloudflare API Key
 
 1. Go to [Cloudflare.com](https://www.cloudflare.com/).
 
@@ -334,7 +336,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
    ![](../../images/cloudflare-api-show.png){ width=50% }
 
-## Post-Setup
+### Post-Setup
 
 After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  NOte, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 
@@ -358,7 +360,7 @@ You can do this by:
 
    ![](../../images/cloudflare-proxy-off.png){ width=60% }
 
-## Cloud Storage
+# Cloud Storage
 ## Provider
 
 Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
@@ -393,30 +395,30 @@ Note 2: All the paths/folders mentioned here, and elsewhere, are **CASE SENSITIV
 ---
  <sub> <a id="note1" href="#note1ref"><sup>1</sup></a> If you would like to customize your Plex libraries beyond what is listed above, see [[Customizing Plex Libraries]].</sub>
 
-## Plex or Emby Account
+# Plex or Emby Account
 
 You'll need a [Plex](https://www.plex.tv) account.
 
 Sign up for a free Plex account at https://www.plex.tv/sign-up/, if you don't already have one. 
 
-It's easiest if you have a Plex account *even if you're not planning to use Plex*.  The default `saltbox` install assumes that you are using Plex, and without a Plex account in the settings, it will fail in various ways as it tries to install Plex and then things that depends on Plex.  This can be worked around<sup name="a1">[\[1\]](#f1) </sup>, but for now the simplest route is to sign up for that free account, and then disable Plex after install if you don't want to use it.
+It's easiest if you have a Plex account *even if you're not planning to use Plex*.  The default `saltbox` install assumes that you are using Plex, and without a Plex account in the settings, it will fail in various ways as it tries to install Plex and then things that depend on Plex.  This can be worked around<sup name="a1">[\[1\]](#f1) </sup>, and may change in the future, but for now the simplest route is to sign up for that free account, and then disable Plex after install if you don't want to use it.
 
-<sup><b name="f1">[1](#a1)</b> Basically, run the `core` tag instead of the `saltbox` tag, then run the app tags you want individually. </sup>
+<sup><b name="f1">[1](#a1)</b> Basically, run the `core` tag instead of the `saltbox` tag, then run the tags for the apps you want individually. </sup>
 
-Optionally, you can use [Emby](https://emby.media/) in lieu of Plex.
+You can use [Emby](https://emby.media/) in lieu of Plex [admonitions above about needing a Plex accoutn for install still apply].
 
 Sign up for a free Emby Connect account at https://emby.media/connect.html, if you don't already have one.
 
-## Usenet vs Bittorrent
+You'll need to install Emby manually after the initial install is complete.
 
-To use Saltbox, you will need to choose which method you will use to download your media with. It can either be [Usenet, Torrents, or both](https://www.htpcguides.com/comparing-usenet-vs-torrents/).
+# Usenet vs Bittorrent
 
-### i. Usenet
+To use Saltbox, there are requirements dependings on which method[s] you choose to download your media. It can either be [Usenet, Torrents, or both](https://www.htpcguides.com/comparing-usenet-vs-torrents/).
+
+## i. Usenet
 
 If you plan on using [Usenet](https://www.reddit.com/r/usenet/wiki/faq#wiki_usenet_faq) (i.e. Newsgroups) with Saltbox, you'll need 2 things: a [Usenet provider](https://www.reddit.com/r/usenet/wiki/providers) and a [Usenet indexer](https://www.reddit.com/r/usenet/wiki/indexers). We recommend you have multiple indexers (and even multiple providers) to better your chances of finding/downloading media.
 
+## ii. BitTorrent
 
-### ii. BitTorrent
-
-If you plan on using torrents with Saltbox, we recommend you have access to a [private torrent tracker](https://www.reddit.com/r/trackers/wiki/getting_into_private_trackers) as most servers don't allow public ones. However, if you still want to use public torrent trackers with Saltbox, you are free to do so.  YOu will need to make some changes to the configuration to allow access to public trackers, as this is blocked by default.
-
+If you plan on using torrents with Saltbox, we recommend you have access to a [private torrent tracker](https://www.reddit.com/r/trackers/wiki/getting_into_private_trackers) as most servers don't allow public ones. However, if you still want to use public torrent trackers with Saltbox, you are free to do so.  You will need to make some changes to the configuration to allow access to public trackers, as they are blocked by default.

@@ -42,7 +42,7 @@ Created an A Record for your subdomains with `*` for host and set the value to y
 
 Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*` for Host > Server IP for Value.
 
-![](http://i.imgur.com/I7h5jSs.png)
+![](../images/cloudflare-a-record.png)
 
 </details>
 
@@ -166,7 +166,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 1. Set **HTTP Strict Transport Security (HSTS)** to `disabled`.
 
-   ![](https://i.imgur.com/MaqAv5i.png)
+   ![](../images/cloudflare-always-redirect.png)
 
 -->
 

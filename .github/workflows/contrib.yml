@@ -18,3 +18,4 @@ jobs:
         PATH: '/README.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'square'
+        IGNORED_CONTRIBUTORS: 'apps/github-actions'

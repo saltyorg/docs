@@ -18,6 +18,5 @@
             <sub style="font-size:14px"><b>Max Kowalski</b></sub>
         </a>
     </td>
-</tr>
-    
+</tr>  
 </table>

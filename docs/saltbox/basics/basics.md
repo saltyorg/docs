@@ -17,7 +17,7 @@
 
 ### Fast Deployment
 
-- Have a system running in minutes with minimal input (a full server setup from scratch within minutes - see example [here](https://ci.appveyor.com/project/desimaniac/cloudbox?fullLog=true)). TODO FIX THIS LINK
+- Have a system running in minutes with minimal input (a full server setup from scratch within minutes - see example [here](https://ci.appveyor.com/project/desimaniac/saltbox?fullLog=true)). TODO FIX THIS LINK
 
 ### Docker-Based Applications
 

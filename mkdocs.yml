@@ -14,6 +14,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.tracking
+    - navigation.instant
     - toc.integrate
     - search.suggest
     - search.highlight
@@ -90,7 +91,9 @@ nav:
       - sstv: apps/sstv.md
       - tautulli: apps/tautulli.md
   - FAQ: faq/faq.md
-  - Advanced: advanced/example.md
+  - Advanced:
+      - advanced/index.md
+      - ZeroSSL: advanced/zerossl.md
   - Reference:
       - Server: reference/server.md
       - Domain Name: reference/domain.md

@@ -20,7 +20,7 @@ Media
 └── TV
 ```
 
-  ![](../images/google-drive-filesystem.png)
+  ![](../../images/google-drive-filesystem.png)
 
 
 | Path  <pre>                 </pre>                 | Description  <pre>                                                                                              </pre>                                                                                                                                                          |

@@ -19,6 +19,9 @@
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
     ```
 
+!!! info
+    See [here](../../reference/dependencies.md) for more information about the dependencies.
+
 
 ## Configuration
 
@@ -62,7 +65,7 @@ apprise: # (9)
 
 5. Email used for the Cloudflare account.
 
-6. Cloudflare API Token. (insert link to cloudflare guide when created)
+6. Cloudflare API Token.
 
 7. Plex.tv username or email address on the account.
 
@@ -101,7 +104,8 @@ shell: bash # (6)
 
 6. Shell used by the system. Valid options are bash or zsh.
 
-See [here](../../reference/accounts.md) for more information about these settings.
+!!! info
+    See [here](../../reference/accounts.md) for more information about these settings.
 
 ## Preinstall
 
@@ -119,12 +123,14 @@ sb install preinstall
 
 If your server did not need to reboot you can run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
 
-See [here](../../reference/preinstall.md) for more information about the preinstall.
+!!! info
+    See [here](../../reference/preinstall.md) for more information about the preinstall.
 
 ## Rclone
 Saltbox assumes an rclone remote pointed at your google storage named `google` [as shown in the settings.yml above].
 
-See [here](../../reference/rclone.md) for more information about creating this remote.  The walkthrough for creating the remote is found there to keep this page short.
+!!! info
+    See [here](../../reference/rclone.md) for more information about creating this remote.  The walkthrough for creating the remote is found there to keep this page short.
 
 ## Install Saltbox
 
@@ -148,7 +154,8 @@ See [here](../../reference/rclone.md) for more information about creating this r
     sb install core
     ```
 
-See [here](../../reference/install.md) for more information about the install.
+!!! info
+    See [here](../../reference/install.md) for more information about the install.
 
 ## Reboot
 

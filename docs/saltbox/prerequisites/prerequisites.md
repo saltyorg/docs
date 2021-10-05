@@ -33,7 +33,7 @@ See [here](../../reference/server.md) for more information about server requirem
 
 ##Domain
 
-**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [[Basics: Accessing Saltbox Apps]]).
+**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [Accessing Apps](../basics/accessing_apps.md)).
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect externally** to the apps using `IP:PORT`.
 

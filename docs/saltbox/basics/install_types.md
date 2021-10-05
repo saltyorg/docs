@@ -3,14 +3,14 @@
 |                                                                                                                                                                                                    |       `core`       |     `saltbox`     |     `mediabox`     |    `feederbox`     |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
 | System Tweaks                                                                                                                                                                                      |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
-| [Saltbox MOTD](https://github.com/Saltbox/saltbox_motd)                                                                                                                                         |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
+| [Saltbox MOTD](https://github.com/Saltbox/saltbox_motd)                                                                                                                                            |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
 | Common Tools and Tasks                                                                                                                                                                             |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
 | [Docker](https://www.docker.com/community-edition)                                                                                                                                                 |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
 | [Rclone](https://rclone.org)                                                                                                                                                                       |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
-| Mounts: [MergerFS](https://github.com/trapexit/mergerfs)* / [UnionFS](http://manpages.ubuntu.com/manpages/trusty/man8/unionfs-fuse.8.html)                                                         |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
-| Mounts: [Rclone VFS](https://rclone.org)* / [Rclone Cache](https://rclone.org) / [Plexdrive 4](https://github.com/dweidenfeld/plexdrive) / [Plexdrive 5](https://github.com/dweidenfeld/plexdrive) |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
+| Mounts: [MergerFS](https://github.com/trapexit/mergerfs)                                                                                                                                           |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
+| Mounts: [Rclone VFS](https://rclone.org)                                                                                                                                                           |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
 | Scripts                                                                                                                                                                                            |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
-| [Nginx-Proxy](https://github.com/jwilder/nginx-proxy) ([Docker](https://hub.docker.com/r/jwilder/nginx-proxy/))                                                                                    |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
+| [Traefik](https://traefik.io/traefik/) ([Docker](https://hub.docker.com/_/traefik/))                                                                                                               |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
 | [Plex](https://www.plex.tv) ([Docker](https://github.com/plexinc/pms-docker))                                                                                                                      |                    |    ![Yes][yes]     |    ![Yes][yes]     |                    |
 | [Tautulli (PlexPy)](http://tautulli.com/) ([Docker](https://github.com/Tautulli/Tautulli-Docker))                                                                                                  |                    |    ![Yes][yes]     |    ![Yes][yes]     |                    |
 | [Ombi](https://ombi.io)  ([Docker](https://github.com/hotio/docker-ombi))                                                                                                                    |                    |    ![Yes][yes]     |    ![Yes][yes]     |                    |
@@ -26,11 +26,9 @@
 | [Radarr](https://radarr.video) ([Docker](https://github.com/hotio/docker-radarr))                                                                                                                  |                    |    ![Yes][yes]     |                    |    ![Yes][yes]     |
 | [Lidarr](https://lidarr.audio) ([Docker](https://github.com/hotio/docker-lidarr))                                                                                                                  |                    |    ![Yes][yes]     |                    |    ![Yes][yes]     |
 
-  [yes]:https://github.com/Saltbox/Assets/blob/master/images/wiki/check-mark.png
-  [no]:https://github.com/Saltbox/Assets/blob/master/images/wiki/cross-mark.png
+  [yes]:../../images/check-mark.png
+  [no]:../../images/cross-mark.png
 
-
-\* Default
 
 <!--
 :heavy_check_mark:

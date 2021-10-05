@@ -17,7 +17,7 @@
 
 ### Fast Deployment
 
-- Have a system running in minutes with minimal input (a full server setup from scratch within minutes - see example [here](https://ci.appveyor.com/project/desimaniac/saltbox?fullLog=true)). TODO FIX THIS LINK
+- Have a system running in minutes with minimal input (a full server setup from scratch within minutes.
 
 ### Docker-Based Applications
 
@@ -61,7 +61,10 @@
 
 Once the downloads are complete, Sonarr & Radarr will move [or copy in the case of torrents] these downloads to your server's `/mnt/local/Media/` folder<sup name="a3">[\[3\]](#f3) </sup> and send a notification to _Plex Autoscan_.
 
-[Plex AutoScan](https://github.com/l3uddz/plex_autoscan/) will, in turn, tell Plex to scan for the newly downloaded TV Show or Movie, by only scanning the specific season or movie folder. This will (1), make the media appear in Plex sooner than what a full library scan would have been able to do, and (2), reduce the chances of Cloud Storage API bans.
+[Plex AutoScan](https://github.com/l3uddz/plex_autoscan/) will, in turn, tell Plex to scan for the newly downloaded TV Show or Movie, by only scanning the specific season or movie folder. This will
+
+  - make the media appear in Plex sooner than what a full library scan would have been able to do, and
+  - reduce the chances of Cloud Storage API bans.
 
 [Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually<sup name="a4">[\[4\]](#f4) </sup> move everything<sup name="a5">[\[5\]](#f5) </sup> from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage, thereby reducing the storage used on the (local) server.
 

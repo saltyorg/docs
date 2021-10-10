@@ -72,7 +72,7 @@ apprise: # (10)
 
 8. Plex.tv password for the account.
 
-9. Enable if using Two Factor Authentication with your Plex account.
+9. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
 
 10. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 

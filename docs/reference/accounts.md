@@ -64,9 +64,13 @@
 
     - `pass` - Plex password.
 
+    - `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
+
     - This parameter is required. 
 
-    - The new Two-Factor Authentication [TFA] system added by Plex will prevent these automated operations from succeeding.  The Plex article [[introducing TFA|https://support.plex.tv/articles/two-factor-authentication/]] has a possible workaround.  If successful, you will need to perform that workaround every time you run the `plex` tag.  You can also disable TFA while you run the saltbox setup [or the plex tag] and then re-enable it when complete.
+    - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work evern with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
+
+    - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.
 
 - `apprise`: apprise url. 
 

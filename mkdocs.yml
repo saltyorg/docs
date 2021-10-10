@@ -96,7 +96,6 @@ nav:
   - FAQ: faq/faq.md
   - Advanced:
       - advanced/index.md
-      - ZeroSSL: advanced/zerossl.md
   - Reference:
       - Prerequisites:
           - Server: reference/server.md

@@ -42,7 +42,8 @@ cloudflare:
 plex:
   user: # (7)
   pass: # (8)
-apprise: # (9)
+  tfa: no # (9)
+apprise: # (10)
 ```
 
 1. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
@@ -71,7 +72,9 @@ apprise: # (9)
 
 8. Plex.tv password for the account.
 
-9. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
+9. Enable if using Two Factor Authentication with your Plex account.
+
+10. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
 
 settings.yml

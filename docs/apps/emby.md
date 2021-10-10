@@ -1,22 +1,3 @@
-
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
-
-- [1. Introduction](#1-introduction)
-- [2. URL](#2-url)
-- [3. Initial Setup](#3-initial-setup)
-  - [i. Domain](#i-domain)
-  - [ii. Install](#ii-install)
-- [4. Setup Wizard](#4-setup-wizard)
-- [5. Settings](#5-settings)
-  - [i. Users](#i-users)
-  - [ii. Transcoding](#ii-transcoding)
-  - [iii. Libraries](#iii-libraries)
-    - [Add Movie Library](#add-movie-library)
-    - [Add TV Shows Library](#add-tv-shows-library)
-- [6. API Key](#6-api-key)
-
-<!-- /TOC -->
-
 # 1. Introduction
 
 [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
@@ -31,20 +12,16 @@
 
 ## i. Domain
 
-- See [[Adding a Subdomain|Adding a Subdomain]] on how to add the subdomain `emby` to your DNS provider.
+- See [Adding a Subdomain](../reference/subdomain.md) on how to add the subdomain `emby` to your DNS provider.
 
-- _Note: You can skip this step if you are using [[Cloudflare|Prerequisites: Cloudflare]] with Cloudbox._
+- _Note: You can skip this step if you are using [Cloudflare](../reference/domain.md#cloudflare) with Saltbox._
 
 ## ii. Install
 
-  - Run the following commands:
+  - Run the following command:
 
     ```bash
-    cd ~/cloudbox/
-    ```
-
-    ```bash
-    sudo ansible-playbook cloudbox.yml --tags emby  
+    sb install emby  
     ```
 
 # 4. Setup Wizard
@@ -54,93 +31,74 @@
 
 1. Select your **preferred display language**. Click **Next**.
 
-   ![](https://i.imgur.com/mbRLNED.png)
+   ![](../images/emby-welcome-english.png))
 
 1. **Type** the following and click **Next**:
 
-   - **Your first name:** _your name_ 
+    - **Username:** _The username you wwant to use to log into Emby_ 
+   
+    - **New Password:** _A strong password you'll use to log into Emby_ 
 
-   - **Emby connect username or email address**: _your [Emby Connect username](https://emby.media/connect)_ (important)
+    - **New Password Confirm:** _That same password again_ 
 
-   ![](https://i.imgur.com/IdAHjqP.png)
+    - **Emby connect username or email address**: _your [Emby Connect username](https://emby.media/connect)_ (important)
+
+   ![](../images/emby-firstuser.png)
 
 1. Confirm the message by clicking **Got It**.
 
-   ![](https://i.imgur.com/RvXgVck.png)
-
+   ![](../images/emby-added.png)
+   
 1. **Confirm** the link in your email. 
 
-   ![](https://i.imgur.com/Ah8LCBQ.png)
+   ![](../images/emby-confirm-link.png)
 
-   ![](https://i.imgur.com/8kB6UVI.png)
+   ![](../images/emby-link-accepted.png)
 
-1. Skip the adding of the libraries. Click **Next**.
+2. Skip the adding of the libraries. Click **Next**.
 
-   ![](https://i.imgur.com/76WN7KQ.png)
+   ![](../images/emby-setup-media-libs.png)
 
-1. Select your **Preferred Metadata Language** and **Country** (_`English` and `United States` are recommended_) and click **Next**.
+3. Select your **Preferred Metadata Language** and **Country** (_`English` and `United States` are recommended_) and click **Next**.
 
-   ![](https://i.imgur.com/YPFIbfH.png)
+   ![](../images/emby-preferred-metadata.png)
 
 
-1. Check **Allow remote connections to this Emby Server**. Uncheck **Enable automatic port mapping**. Click **Next**.
+4. Uncheck **Enable automatic port mapping**. Click **Next**.
 
-   ![](https://i.imgur.com/fD1AknT.png)
+   ![](../images/emby/../emby-config-remote-access.png)
 
-1. **Check** to accept the terms. Click **Next**.
+5. **Check** to accept the terms. Click **Next**.
 
-   ![](https://i.imgur.com/KEhZYFa.png)
+   ![](../.images/../images/emby-terms.png)
 
-1. Click **Finish**.
+6. Click **Finish**.
 
-   ![](https://i.imgur.com/ZJ1m6dZ.png)
+   ![](../images/emby-done.png)
 
-1. You will now be taken to the **Dashboard** view.
+7. You will now be taken to the **Dashboard** view.
 
 
 
 # 5. Settings
 
-## i. Users
-
-1. Go to **Settings**.
-
-1. Go to **Users**.
-
-   ![](https://i.imgur.com/a1zdnRz.png)
-
-1. Click the **Password** tab at the top.
-
-1. Type in your password in **New password** and **New password confirm**. Click **Save**. 
-
-   ![](https://i.imgur.com/PUTS7AX.png)
-
-1. Click **Save** again.
-
-   ![](https://i.imgur.com/XG8A70a.png)
-
-
-## ii. Transcoding
+## i. Transcoding
 
 1. Go to **Settings**.
 
 1. Go to **Transcoding**.
 
-   ![](https://i.imgur.com/MFZxd88.png)
+   ![](../images/emby-transcoding.png)
 
 1. Under **Enable hardware acceleration when available**, select **Advanced**.
 
-   ![](https://i.imgur.com/iReeH6e.png)
+   ![](../images/emby-transcoding-advanced.png)
 
-1. Under **Preferred Hardware Encoders**, go down to **H.264 (AVC)**, and select **VAAPI H.264** (_for Intel CPUs with Intel Quick Sync Video enabled_). 
+2. Under **Transcoding temporary path**, type in or choose `/transcode`.
 
-   ![](https://i.imgur.com/FM7kODJ.png)
+   ![](../images/emby-transcoding-hardware-path.png)
 
-1. Under **Transcoding temporary path**, type in or choose `/transcode`.
-
-   ![](https://i.imgur.com/b9jRVSm.png)
-
-1. Click **Save**.
+3. Click **Save**.
 
 
 ## iii. Libraries
@@ -153,27 +111,25 @@ In this section, we will add two libraries: one for Movies and one for TV Shows.
 
 1. Go to **Library**.
 
-   ![](https://i.imgur.com/Reixrpp.png)
+   ![](../images/emby-setup-media-libs.png)
 
-1. Click **Add Media Library**.
+1. Click **+ New Library**.
 
 1. Under **Content type**, select **Movies**. 
 
-   ![](https://i.imgur.com/Afwb8oH.png)
+   ![](../images/emby-new-library.png)
 
-   ![](https://i.imgur.com/MUqjrm5.png)
+   ![](../images/emby-new-library-movie-name.png)
 
 1. Click **+** next to **Folders**.
 
-1. Type in or choose `/data/Movies`. Click **OK**.
+1. Type in or choose `/mnt/unionfs/Media/Movies`. Click **OK**.
 
-   _Note: These [[paths|Basics: Cloudbox Paths]] are for the standard library setup. If you have [[customized|Customizing-Plex-Libraries]] it, use those paths instead._
+   _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
 
-   ![](https://i.imgur.com/UiXspBL.png)
+   ![](../images/emby-new-library-movie-path.png)
 
-1. Click **OK** once more.
-
-   ![](https://i.imgur.com/gjOtiSy.png)
+2. Click **OK** once more.
 
 ### Add TV Shows Library
 
@@ -181,27 +137,25 @@ In this section, we will add two libraries: one for Movies and one for TV Shows.
 
 1. Go to **Library**.
 
-   ![](https://i.imgur.com/Reixrpp.png)
+   ![](../images/emby-setup-media-libs.png)
 
-1. Click **Add Media Library**.
+1. Click **+ New Library**.
 
 1. Under **Content type**, select **TV shows**. 
 
-   ![](https://i.imgur.com/Afwb8oH.png)
+   ![](../images/emby-new-library.png)
 
-   ![](https://i.imgur.com/ThVUSyI.png)
+   ![](../images/emby-new-library-tv-name.png)
 
 1. Click **+** next to **Folders**.
 
-1. Type in or choose `/data/TV`. Click **OK**.
+1. Type in or choose `/mnt/unionfs/Media/TV`. Click **OK**.
 
-   _Note: These [[paths|Basics: Cloudbox Paths]] are for the standard library setup. If you have [[customized|Customizing-Plex-Libraries]] it, use those paths instead._
+   _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
 
-   ![](https://i.imgur.com/shR8IZB.png)
+   ![](../images/emby-new-library-tv-path.png)
 
-1. Click **OK** once more.
-
-   ![](https://i.imgur.com/gI0jAIq.png)
+2. Click **OK** once more.
 
 
 # 6. API Key
@@ -210,24 +164,17 @@ Instructions below will guide you through creating an API Key for a specific app
 
 1. Click the **Settings** icon.
 
-   ![](https://i.imgur.com/ooc9sCL.png)
+2. Under **Advanced**, click **API Keys**.
 
-1. Under **Expert**, click **Advanced**.
+   ![](../images/emby-new-api-key.png)
 
-   ![](https://i.imgur.com/dslwDdM.png)
+3. Click **+ New API Key**. 
 
-1. Click the **Security** tab at the top. 
+   ![](../images/emby-new-api-key-name.png)
 
-   ![](https://i.imgur.com/Zd1XW28.png)
+4. Fill in an **App name** (e.g. Ombi) and click **OK**.
 
-1. Under **Api Keys** click **+**. 
+5. You have now have created an **Api Key** for your app.
 
-   ![](https://i.imgur.com/hcmabil.png)
+   ![](../images/emby-new-api-show.png)
 
-1. Fill in an **App name** (e.g. Ombi) and click **OK**.
-
-   ![](https://i.imgur.com/CSonhIf.png)
-
-1. And now have created an **Api Key** for your app.
-
-   ![](https://i.imgur.com/Ixi686z.png)

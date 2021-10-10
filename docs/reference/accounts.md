@@ -111,7 +111,7 @@
 
             - Note 2: Hardware Transcoding requires an  active [Plex Pass](https://www.plex.tv/features/plex-pass/). This can be enabled on either the `public` or `beta` tagged versions. 
 
-            - Note 3: If you decide to change the tags later, you will need to update Plex by running the Saltbox install command with the "plex" tag (i.e. `sudo ansible-playbook saltbox.yml --tags plex`).
+            - Note 3: If you decide to change the tags later, you will need to update Plex by running the Saltbox install command with the "plex" tag (i.e. `sb install plex`).
 
     - `transcodes`: Path of temporary transcoding files. 
 

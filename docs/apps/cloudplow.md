@@ -1,35 +1,8 @@
-<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Intro](#intro)
-  - [Remote Uploader Function](#remote-uploader-function)
-  - [UnionFS Cleaner Function](#unionfs-cleaner-function)
-- [Config](#config)
-  - [Default config.json file](#default-configjson-file)
-  - [Location](#location)
-  - [Editing](#editing)
-  - [Modify Upload Threshold and Interval](#modify-upload-threshold-and-interval)
-  - [Plex Integration](#plex-integration)
-  - [Pushover Notifications](#pushover-notifications)
-  - [Restart](#restart)
-- [CLI](#cli)
-  - [Manual Clean](#manual-clean)
-  - [Manual Upload](#manual-upload)
-
-
-<!-- /TOC -->
-
-
-# Intro
-
-[Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has two main components (as related to Cloudbox): 
-
-  1. Uploader to Rclone remote: Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
-
-  2. UnionFS Cleaner functionality: Deletion of UnionFS-Fuse whiteout files (`*_HIDDEN~`) and their corresponding "whited-out" files on Rclone remotes. With support for multiple remotes (useful if you have multiple Rclone remotes mounted).
+[Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
 
 ## Remote Uploader Function
 
-As setup for Cloudbox, Cloudplow uploads all the content in `/mnt/local/Media/` (see [[Paths|Basics: Cloudbox Paths#clouplow]]) to your cloud storage provider (e.g. Google Drive), after the folder reaches a `200` GB size threshold, when checked every `30` minutes.
+As setup for Saltbox, Cloudplow uploads all the content in `/mnt/local/Media/` (see [Paths](../saltbox/basics/paths.md#cloudplow)) to your cloud storage provider (e.g. Google Drive), after the folder reaches a `200` GB size threshold, when checked every `30` minutes.
 
 _Note: The size threshold and the check interval can be changed via steps mentioned on this page._
 
@@ -41,38 +14,17 @@ Recently, Google Drive has a max upload limit of about 750GB per day. When this 
 
 _Note: The keywords or phrases that are used to monitor the ban, and the duration of the sleep time, can be changed at any time by editing the `config.json` file._
 
+Cloudplow can also use service accounts to upload and work around this limitation.
+
 </details>
 
+## Config
 
+### Default config.json file
 
-## UnionFS Cleaner Function
+See [Example Cloudplow configs](../reference/cloudplow.md).
 
-On top of uploading your media files to the cloud storage, Cloudplow also functions as a UnionFS whiteout cleaner (i.e. `*_HIDDEN~` files).
-
-<details>
-<summary>What are <code>*_HIDDEN~</code> files? (click to expand)</summary><br />
-
-When Sonarr & Radarr upgrade your media files, they attempt delete the previous ones. When that data is still on the local server, it is deleted immediately, but when it has been moved to the cloud storage provider, for example Google Drive, it is unable to do so because the Google Drive mount is set as read-only (via Plexdrive or Rclone VFS). 
-
-Instead, UnionFS will create a whiteout file (a blank file in the format of `filename.ext_HIDDEN~`), at `/mnt/local/.unionfs-fuse/` and that will make the file invisible to whatever tries to access it via the UnionFS mount (.e.g. `/mnt/unionfs/`) and, therefore, Sonarr & Radarr will consider the file deleted, however, the media file will still exist on the cloud. 
-
-To resolve this, on the next upload task (i.e. when size threshold is reached on the next interval check), Cloudplow will scan for the whiteout file(s), remove the corresponding media file from the cloud storage, then remove the whiteout file (since it isn't needed anymore), and as a result, keep your content free of duplicates. 
-</details>
-
-
-
-
-
-
-
-# Config
-
-## Default config.json file
-
-See [[Config: Cloudplow]].
-
-
-## Location
+### Location
 
 ```
 /opt/cloudplow/config.json
@@ -80,7 +32,7 @@ See [[Config: Cloudplow]].
 
 Note: Config changes require a restart: `sudo systemctl restart cloudplow`.
 
-## Editing
+### Editing
 
 Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano. 
 
@@ -90,7 +42,7 @@ nano /opt/cloudplow/config.json
 
 Note: The cloudplow config file is a JSON file.  JSON files have a particular format and syntax.  If you are unfamiliar with JSON formatting and syntax, don't edit this file until you have gained that familiarity.  Here's a [random YouTube video](https://www.youtube.com/watch?v=GpOO5iKzOmY) that will give you a ten-minute overview.
 
-## Modify Upload Threshold and Interval
+### Modify Upload Threshold and Interval
 
 ```json
     "uploader": {
@@ -119,10 +71,7 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
     - `2GB` is at least 1GB of data.
 
 
-
-
-
-## Plex Integration 
+### Plex Integration 
 
 Cloudplow can throttle Rclone uploads during active, playing Plex streams (paused streams are ignored).
 
@@ -130,7 +79,7 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
   "plex": {
       "enabled": false,
       "url": "https://plex.domain.com",
-      "token": "",
+      "token": "YOUR_TOKEN_HERE",
       "poll_interval": 60,
       "max_streams_before_throttle": 1,
       "rclone": {
@@ -151,7 +100,7 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
 
 `url` - Your Plex URL.
 
-`token` - Your [[Plex Access Token]].
+`token` - Your [Plex Access Token](../reference/plex_auth_token.md).
 
 `poll_interval` - How often (in seconds) Plex is checked for active streams.
 
@@ -169,12 +118,12 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
        "STREAM COUNT": "THROTTLED UPLOAD SPEED",
        ```
 
-## Pushover Notifications
+### Pushover Notifications
 
-See [[here|Pushover#cloudplow]].
+See [here](../reference/pushover.md#cloudplow).
 
 
-## Restart
+### Restart
 
 Restart Cloudplow to apply the changes to the config. 
 
@@ -183,20 +132,13 @@ sudo systemctl restart cloudplow
 ```
 
 
-# CLI
+## CLI
 
 
 You can run a manual Cloudplow task from anywhere by just using the `cloudplow` command. 
 
-## Manual Clean
 
-To clean the hidden files and remove deleted files from the cloud:
-
-```
-cloudplow clean
-```
-
-## Manual Upload
+### Manual Upload
 
 To start uploading right away, regardless of what the folder size is: 
 

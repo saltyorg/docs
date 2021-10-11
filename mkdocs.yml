@@ -67,6 +67,7 @@ nav:
       - Prerequisites: saltbox/prerequisites/prerequisites.md
       - Install Types: saltbox/basics/install_types.md
       - Install: saltbox/install/install.md
+      - Update: saltbox/basics/update.md
       - Accessing Apps: saltbox/basics/accessing_apps.md
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md

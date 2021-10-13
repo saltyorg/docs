@@ -3,7 +3,6 @@
 - [1. URL](#1-url)
 - [2. Setup Wizard](#2-setup-wizard)
 - [3. Settings](#3-settings)
-  - [Remote Access](#remote-access)
   - [Library](#library)
   - [Network](#network)
   - [Transcoder](#transcoder)
@@ -47,19 +46,6 @@
 
 
 ## 3. Settings
-
-### Remote Access
-
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow;  "Remote Access" (left).
-
-1. Enable "Manually specify public port", type in `443`, and click the "Retry" button. 
-
-1. You will get a "Not available outside your network" message. This is OK. Simply ignore it and click "ENABLE REMOTE ACCESS". 
-
-1. Click "SAVE CHANGES".
-
-    ![](https://i.imgur.com/Ghjpoon.png)
-
 
 ### Library
 
@@ -260,6 +246,4 @@ To do so:
 
 ## 6. Webtools
 
-Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to http://plex._yourdomain.com_:33400 (http, not https) and login with your Plex account.
-
-_Note: Use http://_yourserveripaddress_:33400 if the above URL doesnt work._
+Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to https://plex-webtools._yourdomain.com_ and log in with your Plex account.

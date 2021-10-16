@@ -43,7 +43,11 @@ plex:
   user: # (7)
   pass: # (8)
   tfa: no # (9)
-apprise: # (10)
+dockerhub:
+  user: # (10)
+  token: # (11)
+
+apprise: # (12)
 ```
 
 1. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
@@ -74,7 +78,11 @@ apprise: # (10)
 
 9. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
 
-10. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
+10. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
+
+11. Docker Hub account token
+
+12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
 
 settings.yml

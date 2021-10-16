@@ -1,7 +1,6 @@
 ##  Options in accounts.yml
 
 ---
-
 - `user`: User information.
 
     - `name`: User name for the server. 
@@ -71,6 +70,14 @@
     - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work evern with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
 
     - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.
+
+- `dockerhub`: DockerHub account credentials. 
+
+    - Entering Dockerhub credentials increases the number of images one can pull 
+
+    - `user` - Docker Hub username.
+
+    - `token` - Docker Hub access token.
 
 - `apprise`: apprise url. 
 

@@ -2,7 +2,7 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/role_name/defaults/main.yml` are intended to be changeable by the user. This implementation avoids git merge conflicts when updating Saltbox.
+Any variables defined in `/srv/git/saltbox/roles/role_name/defaults/main.yml` are intended to be changeable by the user. This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 

@@ -2,11 +2,9 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are intended to be changeable by the user. This implementation avoids git merge conflicts when updating Saltbox.   **NOTE: This does not mean that file is intended to be edited.**  See below for details on how to override the standard values with your own.  Use these default files as a catalog of things you **can** change.
+Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in  `/srv/git/saltbox/inventories/host_vars/localhost.yml` [which does not exist by default].  This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
-
-Overrides are done in the file `"/srv/git/saltbox/inventories/host_vars/localhost.yml"` [which does not exist by default].
 
 For example, an excerpt from `/srv/git/saltbox/roles/sonarr/defaults/main.yml`:
 

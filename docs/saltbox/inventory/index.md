@@ -69,7 +69,7 @@ By default, for Sonarr, Saltbox will use the docker image `hotio/sonarr:release`
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
 ``` yaml
-sonarr_docker_image_tag: nightly
+sonarr_docker_image_tag: "nightly"
 ```
 
 Which would override the default and result in Saltbox using `hotio/sonarr:nightly`.

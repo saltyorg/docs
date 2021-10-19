@@ -97,6 +97,7 @@ nav:
   - FAQ: faq/faq.md
   - Advanced:
       - advanced/index.md
+      - advanced/your-own-containers.md
   - Reference:
       - Prerequisites:
           - Server: reference/server.md

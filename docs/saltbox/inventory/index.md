@@ -2,7 +2,7 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in  `/srv/git/saltbox/inventories/host_vars/localhost.yml` [which does not exist by default].  This implementation avoids git merge conflicts when updating Saltbox.
+Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in  `/srv/git/saltbox/inventories/host_vars/localhost.yml`.  This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
@@ -29,7 +29,7 @@ sonarr_paths_config_location: "{{ sonarr_paths_location }}/config.xml"
 
 We can see there that Sonarr gets the name "sonarr", and that name then flows through to those next four settings.
 
-If you wanted to change the name of the Sonarr app to BingBangBoing, you'd create a file at `/srv/git/saltbox/inventories/host_vars/localhost.yml` and put this into it:
+If you wanted to change the name of the Sonarr app to BingBangBoing, you'd add this to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
 ``` yaml
 sonarr_name: BingBangBoing

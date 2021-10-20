@@ -24,7 +24,7 @@ docker run -d  \
     --label traefik.enable=true \
     --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
     --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
-    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host(\`<strong>APPNAME.yourdomain.com</strong>\`) \
+    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
     --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
@@ -51,7 +51,7 @@ docker run -d \
     --label traefik.enable=true \
     --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
     --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
-    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host(\`<strong>APPNAME.yourdomain.com</strong>\`) \
+    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
     --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
@@ -166,13 +166,18 @@ Note: These are important, but leave them out if your docker run command require
       
 ## Traefik Proxy
 
-  - `--label traefik.enable=true`
-  - `--label traefik.http.routers.<name>.entrypoints=websecure`
-  - `--label traefik.http.routers.<name>.middlewares=secureHeaders@file`
-  - `--label traefik.http.routers.<name>.rule=Host(``<name>.<yourdomain>``)`
-  - `--label traefik.http.routers.<name>.service=<name>`
-  - `--label traefik.http.routers.<name>.tls.certresolver=cfdns`
-  - `--label traefik.http.routers.<name>.tls.options=securetls@file`
-  - `--label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port>` (the port for the web admin page for the container)
+``` { .sh .annotate }
+  --label traefik.enable=true
+  --label traefik.http.routers.<name>.entrypoints=websecure
+  --label traefik.http.routers.<name>.middlewares=secureHeaders@file
+  --label traefik.http.routers.<name>.rule=Host\(\`<name>.<yourdomain>\`\)
+  --label traefik.http.routers.<name>.service=<name>
+  --label traefik.http.routers.<name>.tls.certresolver=cfdns
+  --label traefik.http.routers.<name>.tls.options=securetls@file
+  --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (1)
+```
+
+1. The port for the web admin page for the container.
+
 
 You'll need to add the subdomain manually at your DNS provider if you're not using wild-card DNS.

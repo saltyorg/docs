@@ -24,7 +24,15 @@ sb install cm-settings
 
 ### How to Install Community Apps
 
-For most apps it is as simple as running the `sb install` command in a shell followed by the name of the role. For example, to install a jellyfin server you would run the jellyfin role:-
+For most apps it is as simple as running the `sb install` command in a shell followed by the name of the role.
+
+``` shell
+
+sb install cm-rolename
+
+```
+
+For example, to install a jellyfin server you would run the jellyfin role:-
 
 ``` shell
 

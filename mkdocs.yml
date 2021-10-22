@@ -89,9 +89,11 @@ nav:
         - alternatrrx: community/apps/alternatrrx.md
         - apprise: community/apps/apprise.md
         - archivebox: community/apps/archivebox.md
+        - arrx: community/apps/arrx.md
         - asshama: community/apps/asshama.md
         - autoscan: community/apps/autoscan.md
         - bazarr: community/apps/bazarr.md
+        - bazarrx: community/apps/bazarrx.md
         - beets: community/apps/beets.md
         - booksonic: community/apps/booksonic.md
         - bookstack: community/apps/bookstack.md

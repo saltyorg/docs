@@ -13,6 +13,7 @@
 
 
 ### 1. Installation
+
 ``` shell
 
 sb install cm-airdcpp
@@ -21,7 +22,7 @@ sb install cm-airdcpp
 
 ### 2. URL
 
-- To access AirDC++, visit https://airdcpp._yourdomain.com_
+- To access AirDC++, visit `https://airdcpp._yourdomain.com_`
 
 ### 3. Setup
 

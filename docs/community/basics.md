@@ -24,7 +24,7 @@ sb install cm-settings
 
 ### How to Install Community Apps
 
-For most apps it is as simple as running the `sb install` command in a shell followed by the name of the role.
+For most apps it is as simple as running the `sb install` command in a shell with a `cm-` prefix followed by the name of the role.
 
 ``` shell
 

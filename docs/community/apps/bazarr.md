@@ -1,28 +1,28 @@
-# APPNAME
+# Bazarr
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Bazarr](https://www.bazarr.media/){: target=_blank rel="noopener noreferrer" } is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Bazarr ](https://www.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://wiki.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-bazarr
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Bazarr, visit `https://bazarr._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://wiki.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" }

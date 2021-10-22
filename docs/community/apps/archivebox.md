@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[ArchiveBox](https://github.com/ArchiveBox/ArchiveBox){: target=_blank rel="noopener noreferrer" } is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline..
+[ArchiveBox](https://github.com/ArchiveBox/ArchiveBox){: target=_blank rel="noopener noreferrer" } is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
 
 ## Project Information
 

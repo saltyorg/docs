@@ -1,28 +1,31 @@
-# APPNAME
+# FlareSolverr
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[FlareSolverr](https://github.com/FlareSolverr/FlareSolverr){: target=_blank rel="noopener noreferrer" } is a proxy server to bypass Cloudflare protection.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: FlareSolverr ](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-flaresolverr
 
 ```
 
-### 2. URL
+### 2. Setup
+#### Jackett
+- Locate the _FlareSolverr API URL_ field in the main page.
+- Input `http://flaresolverr:8191` and apply the settings.
+#### Prowlarr
+- In the settings, add an Indexer Proxy and select FlareSolverr.
+- _Host_ should be `http://flaresolverr:8191`.
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }

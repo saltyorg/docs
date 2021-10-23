@@ -1,28 +1,50 @@
-# APPNAME
+# Goplaxt
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Goplaxt](https://github.com/XanderStrike/goplaxt){: target=_blank rel="noopener noreferrer" } scrobbles Plex plays to Trakt with ease!
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Goplaxt ](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/xanderstrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-goplaxt
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Goplaxt, visit `https://goplaxt._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+1. Create an API application through Trakt [here](https://trakt.tv/oauth/applications). The Redirect URI should be your goplaxt.domain + `/authorize`, so it reads as: `https://goplaxt.domain.com/authorize`.
+
+2. Edit the Goplaxt section in [community `settings.yml`:](../../community/settings.md) substituting your own `ID` and `secret`.
+
+    ``` { .yaml }
+    goplaxt:
+      trakt_id: IDHERE
+      trakt_secret: SECRETHERE
+    ```
+
+3. Run the role install command
+
+    ``` { .shell }
+
+    sb install cm-goplaxt
+
+    ```
+
+4. Visit the goplaxt site at `https://goplaxt.domain.com`. <br />
+    Enter your `Plex Username` then `Authorize`, and add the Webhook in `Plex Settings`. <br />
+    Make sure under your server `Settings > Network` that Webhooks is `enabled`.
+
+- [:octicons-link-16: Documentation](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }

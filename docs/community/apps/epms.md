@@ -1,28 +1,27 @@
-# APPNAME
+# Extended Personal Media Shows Agent and Scanner
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[EPMS](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: target=_blank rel="noopener noreferrer" } is very useful for sports or things that do not have a DB to scrape against, creates episode numbers for date-based media and sorts correctly in Plex interface.
+
+The Extended Personal Media Shows Agent is a Metadata Agent for personal media files. It works in conjunction with the Extended Personal Media Scanner to scan personal media shows. The meta data agent sets the summary details on the episode. The agent expects the files to follow the naming conventions for personal media that are outlined in the Plex documentation.
+
+This scanner is not meant to be full replacement of the Plex Media Scanner. Requests for functionality will be considered but may be limited by what Plex currently allows in the TV Show sections.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: EPMS ](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-epms
 
 ```
 
-### 2. URL
+### 2. Setup
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
-
-### 3. Setup
-
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }

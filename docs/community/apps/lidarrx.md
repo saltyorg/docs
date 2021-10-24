@@ -1,42 +1,44 @@
-# alternatrrx
+# LidarrX
 
 ## What is it?
 
-[alternatrrx](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../community/apps/alternatrr.md).
+[LidarrX](https://lidarr.audio/){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [Lidarr](../../apps/lidarr.md).
+
+Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new albums from your favorite artists and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 ## Project Information
 
-- [:material-home: alternatrr ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Lidarr ](https://lidarr.audio/#home){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://wiki.servarr.com/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Lidarr/Lidarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-alternatrrx
+sb install cm-lidarrx
 
 ```
 
 ### 2. URL
 
-- To access alternatrrx, visit `https://alternatrrX._yourdomain.com_`
+- To access LidarrX, visit `https://lidarrX._yourdomain.com_`
 
 ### 3. Setup
 
 1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the alternatrrx section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your X instance names to the LidarrX section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
-    alternatrrx:
+    lidarrx:
       roles:
-        - 1080webdl
-        - 1080remux
+        - flac
+        - mp3
    ```
 
 - For app specific instructions refer to the parent role,
-     - [alternatrr](../../community/apps/alternatrr.md)<Br/>
+     - [Lidarr](../../apps/lidarr.md)<Br/>
      - and the upstream documentation <BR/>
-       [:octicons-link-16: Documentation ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+       [:octicons-link-16: Documentation ](https://wiki.servarr.com/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }

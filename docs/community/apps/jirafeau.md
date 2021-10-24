@@ -1,28 +1,30 @@
-# APPNAME
+# Jirafeau
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Jirafeau](https://gitlab.com/mojo42/Jirafeau){: target=_blank rel="noopener noreferrer" }  is a web site permitting to upload a file in a simple way and give an unique link to it. Jirafeau is a "one-click-filesharing": Select your file, upload, share a link. That's it.
+
+See [jirafeau.net](https://jirafeau.net/){: target=_blank rel="noopener noreferrer" } for a demo.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Jirafeau ](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/jgeusebroek/jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-jirafeau
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Jirafeau, visit `https://jirafeau._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }

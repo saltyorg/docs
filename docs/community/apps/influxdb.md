@@ -1,28 +1,24 @@
-# APPNAME
+# InfluxDB
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[InfluxDB](https://www.influxdata.com/products/influxdb/){: target=_blank rel="noopener noreferrer" } is an open source time series database for recording metrics, events, and analytics.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: InfluxDB ](https://www.influxdata.com/products/influxdb/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://docs.influxdata.com/influxdb/latest/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/influxdata/influxdata-docker){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/_/influxdb){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-influxdb
 
 ```
 
-### 2. URL
+### 2. Setup
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
-
-### 3. Setup
-
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.influxdata.com/influxdb/latest/){: .header-icons target=_blank rel="noopener noreferrer" }

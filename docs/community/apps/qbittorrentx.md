@@ -1,8 +1,8 @@
-# qBittorrentX
+# qBittorrent**X**
 
 ## What is it?
 
-[qBittorrentX](https://www.qbittorrent.org/){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [qBittorrent](../../community/apps/qbittorrent.md).
+[qBittorrent**X**](https://www.qbittorrent.org/){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [qBittorrent](../../community/apps/qbittorrent.md).
 
 ## Project Information
 
@@ -21,19 +21,19 @@ sb install cm-qBittorrentX
 
 ### 2. URL
 
-- To access qBittorrentX, visit `https://qbittorrentX._yourdomain.com_`
+- To access qBittorrent**X**, visit `https://qbittorrentX._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the qBittorrentX section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the qBittorrent**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
-    qBittorrentX:
+    qbittorrentx:
       roles:
-        - 1080webdl
-        - 1080remux
+        - longtermseed
+        - educational
    ```
 
 - For app specific instructions refer to the parent role,

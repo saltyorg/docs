@@ -1,8 +1,8 @@
-# OmbiX
+# Ombi**X**
 
 ## What is it?
 
-[OmbiX](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [Ombi](../../apps/ombi.md).
+[Ombi**X**](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Ombi](../../apps/ombi.md).
 
 [Ombi](https://ombi.io/){: target=_blank rel="noopener noreferrer" } is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
 
@@ -23,13 +23,13 @@ sb install cm-ombix
 
 ### 2. URL
 
-- To access OmbiX, visit `https://OmbiX._yourdomain.com_`
+- To access Ombi**X**, visit `https://OmbiX._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the OmbiX section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the Ombi**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
     ombix:

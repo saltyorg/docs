@@ -1,8 +1,8 @@
-# alternatrrx
+# alternatrr**X**
 
 ## What is it?
 
-[alternatrrx](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../community/apps/alternatrr.md).
+[alternatrr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../community/apps/alternatrr.md).
 
 ## Project Information
 
@@ -21,13 +21,13 @@ sb install cm-alternatrrx
 
 ### 2. URL
 
-- To access alternatrrx, visit `https://alternatrrX._yourdomain.com_`
+- To access alternatrr**X**, visit `https://alternatrrX._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the alternatrrx section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the alternatrr**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
     alternatrrx:

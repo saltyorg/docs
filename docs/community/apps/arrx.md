@@ -1,4 +1,4 @@
-# arrX
+# arr**X**
 
 ## Create multiple (Sonarr / Radarr / Bazarr / etc.) containers
 

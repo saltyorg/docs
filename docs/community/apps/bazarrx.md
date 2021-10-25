@@ -1,8 +1,8 @@
-# BazarrX
+# Bazarr**X**
 
 ## What is it?
 
-[bazarrx](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [bazarr](../../community/apps/bazarr.md).
+[bazarr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [bazarr](../../community/apps/bazarr.md).
 
 ## Project Information
 
@@ -21,13 +21,13 @@ sb install cm-bazarrx
 
 ### 2. URL
 
-- To access bazarrx, visit `https://bazarrx._yourdomain.com_`
+- To access bazarr**X**, visit `https://bazarrx._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the bazarrx section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the bazarr**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
     bazarrx:

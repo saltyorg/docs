@@ -1,8 +1,8 @@
-# DelugeX
+# Deluge**X**
 
 ## What is it?
 
-[DelugeX](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [Deluge](../../community/apps/deluge.md).
+[Deluge**X**](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Deluge](../../community/apps/deluge.md).
 
 ## Project Information
 
@@ -21,13 +21,13 @@ sb install cm-delugex
 
 ### 2. URL
 
-- To access DelugeX, visit `https://delugex._yourdomain.com_`
+- To access Deluge**X**, visit `https://delugex._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the DelugeX section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the Deluge**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
    ``` { .yaml }
     delugex:

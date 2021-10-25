@@ -1,42 +1,50 @@
-# alternatrrx
+# rFlood**X**
 
 ## What is it?
 
-[alternatrrx](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../community/apps/alternatrr.md).
+[rFloodX](https://github.com/jesec/flood){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [rFlood](../../community/apps/rflood.md).
 
 ## Project Information
-
-- [:material-home: alternatrr ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: rFlood ](https://github.com/jesec/flood){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/jesec/flood/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github rTorrent:](https://github.com/jesec/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github Flood:](https://github.com/jesec/flood){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/rflood){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-alternatrrx
+sb install cm-rfloodx
 
 ```
 
 ### 2. URL
 
-- To access alternatrrx, visit `https://alternatrrX._yourdomain.com_`
+- To access rFlood**X**, visit `https://rfloodx._yourdomain.com_`
 
 ### 3. Setup
 
-1. Read through the general [arrX role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
 
-2. Add your X instance names to the alternatrrx section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the rFlood**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
 
-   ``` { .yaml }
-    alternatrrx:
-      roles:
-        - 1080webdl
-        - 1080remux
-   ```
+    ``` { .yaml }
+        rfloodx:
+          roles:
+            - linuxisos
+            - anime
+    ```
+
+3. Run the Saltbox installer to generate your **X** instances of rflood.
+
+      ``` { .shell }
+
+          sb install cm-rfloodx
+
+      ```
 
 - For app specific instructions refer to the parent role,
-     - [alternatrr](../../community/apps/alternatrr.md)<Br/>
-     - and the upstream documentation <BR/>
-       [:octicons-link-16: Documentation ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+     - [rflood](../../community/apps/rflood.md)<Br/>
+     - and the rflood upstream documentation <BR/>
+       [:octicons-link-16: Documentation ](https://github.com/jesec/flood/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

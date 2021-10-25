@@ -1,30 +1,30 @@
-# APPNAME
+# Ubooquity
 
 # **NOT YET INTEGRATED - SOON**
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Ubooquity](https://vaemendis.net/ubooquity/){: target=_blank rel="noopener noreferrer" } is a small content server that runs in the background and makes all the comics and books you chose to share available through a web page. The idea behind Ubooquity is to be able to browse your personal digital library from your tablet (e.g an iPad), your e-reader or your smartphone, either at home or from anywhere else.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Ubooquity ](https://vaemendis.net/ubooquity/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://vaemendis.github.io/ubooquity-doc/pages/manual.html){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/vaemendis){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/linuxserver/ubooquity){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-ubooquity
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Ubooquity, visit `https://ubooquity._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://vaemendis.github.io/ubooquity-doc/pages/manual.html){: .header-icons target=_blank rel="noopener noreferrer" }

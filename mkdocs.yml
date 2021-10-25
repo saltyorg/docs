@@ -130,6 +130,7 @@ nav:
         - hetzner_nfs: community/apps/hetzner_nfs.md
         - influxdb: community/apps/influxdb.md
         - invoiceninja: community/apps/invoiceninja.md
+        - jdownloader2: community/apps/jdownloader2.md
         - jellyfin: community/apps/jellyfin.md
         - jirafeau: community/apps/jirafeau.md
         - kavita: community/apps/kavita.md
@@ -150,7 +151,6 @@ nav:
         - ombi: community/apps/ombi.md
         - ombix: community/apps/ombix.md
         - ouroboros: community/apps/ouroboros.md
-        - jdownloader2: community/apps/jdownloader2.md
         - petio: community/apps/petio.md
         - prowlarr: community/apps/prowlarr.md
         - qbittorrent: community/apps/qbittorrent.md

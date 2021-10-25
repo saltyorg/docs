@@ -185,6 +185,7 @@ nav:
         - watchtower: community/apps/watchtower.md
         - wordpress: community/apps/wordpress.md
         - xteve: community/apps/xteve.md
+        - yacht: community/apps/yacht.md
       - Guides:
         - General:
           - chazlarson Guides: community/guides/chazguides.md

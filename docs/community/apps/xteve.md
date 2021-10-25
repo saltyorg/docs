@@ -1,5 +1,7 @@
 # APPNAME
 
+# **NOT YET INTEGRATED - SOON**
+
 ## What is it?
 
 [APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.

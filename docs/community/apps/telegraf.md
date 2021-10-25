@@ -1,28 +1,24 @@
-# APPNAME
+# Telegraf
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/){: target=_blank rel="noopener noreferrer" } is a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Telegraf ](https://www.influxdata.com/time-series-platform/telegraf/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://docs.influxdata.com/telegraf/v1.20/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/influxdata/telegraf){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/_/telegraf){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-telegraf
 
 ```
 
-### 2. URL
+### 2. Setup
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
-
-### 3. Setup
-
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.influxdata.com/telegraf/v1.20/){: .header-icons target=_blank rel="noopener noreferrer" }

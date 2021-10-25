@@ -1,5 +1,7 @@
 # SickChill
 
+# **NOT YET INTEGRATED - SOON**
+
 ## What is it?
 
 [SickChill](https://sickchill.github.io/){: target=_blank rel="noopener noreferrer" } is an Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.

@@ -1,5 +1,7 @@
 # qBittorrentVPN
 
+# **NOT YET INTEGRATED - SOON**
+
 ## What is it?
 
 [qBittorrent](https://www.qbittorrent.org/){: target=_blank rel="noopener noreferrer" } is a bittorrent client programmed in C++ / Qt that uses libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.

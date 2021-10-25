@@ -1,28 +1,30 @@
-# APPNAME
+# Sshwifty
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Sshwifty](https://github.com/nirui/sshwifty){: target=_blank rel="noopener noreferrer" } is an SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Sshwifty ](https://github.com/nirui/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/nirui/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/nirui/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/niruix/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-sshwifty
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Sshwifty, visit `https://sshwifty._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- The pre-configured password is taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
+
+- [:octicons-link-16: Documentation](https://github.com/nirui/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }

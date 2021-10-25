@@ -1,28 +1,28 @@
-# APPNAME
+# Stash
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Stash](https://stashapp.cc/){: target=_blank rel="noopener noreferrer" } is a locally hosted web-based app written in Go which organizes and serves your porn.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Stash ](https://stashapp.cc/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/stashapp/stash/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/stashapp/stash){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/stashapp/stash){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-stash
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Stash, visit `https://stash._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/stashapp/stash/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -1,28 +1,30 @@
-# APPNAME
+# Ombi
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Ombi](https://ombi.io/){: target=_blank rel="noopener noreferrer" } is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
+
+Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Ombi ](https://ombi.io/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://docs.ombi.app/guides/installation/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Ombi-app/Ombi){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/ombi){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-ombi
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Ombi, visit `https://ombi._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.ombi.app/guides/installation/){: .header-icons target=_blank rel="noopener noreferrer" }

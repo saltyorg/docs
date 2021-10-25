@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Nextcloud](https://nextcloud.com/){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Nextcloud](https://nextcloud.com/){: target=_blank rel="noopener noreferrer" } is safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
 
 ## Project Information
 

@@ -1,28 +1,30 @@
-# APPNAME
+# Yacht
 
 ## What is it?
 
-[APPNAME](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an summary of app.
+[Yacht](https://yacht.sh/){: target=_blank rel="noopener noreferrer" } is a web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
 
 ## Project Information
 
-- [:material-home: APPNAME ](APPHOMEPAGE){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Yacht ](https://yacht.sh/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
 - [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](DOCKERLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
 ``` shell
 
-sb install cm-ROLENAME
+sb install cm-yacht
 
 ```
 
 ### 2. URL
 
-- To access APPNAME, visit `https://ROLENAME._yourdomain.com_`
+- To access Yacht, visit `https://yacht._yourdomain.com_`
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }
+- Check out [the getting started guide](https://yacht.sh/docs/Installation/Getting_Started){: target=_blank rel="noopener noreferrer" } if this is the first time you've used Yacht.
+
+- [:octicons-link-16: Documentation](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" }

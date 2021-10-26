@@ -195,9 +195,9 @@ nav:
           - Tautulii Custom Scripts: community/guides/tautuliscripts.md
         - Downloading:
           - Hardlinking: community/guides/hardlinking.md
-      - Further Reading and Links:
-        - Trashguides: community/guides/trashguides.md
-        - Servarr: community/guides/servarr.md
+        - Further Reading and Links:
+          - Suggested Reading: community/guides/suggested_reading.md
+          - Links: community/guides/links.md
   - Apps:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md

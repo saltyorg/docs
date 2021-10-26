@@ -165,7 +165,7 @@
 
 1. Your settings will now look like this:
 
-    ![Lidarr NZBGet Downloader](https://i.imgur.com/dtwg0dY.png)
+    ![Lidarr NZBGet Downloader](https://i.ibb.co/LgDYFWT/image.png)
 
 1. Click "Save" to add NZBGet.
 

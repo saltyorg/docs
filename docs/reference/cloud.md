@@ -51,4 +51,4 @@ As a note, if you are unable to create Shared Drives in the Google Drive Web UI,
   ![](../images/google-drive-acct.png)
 
 ---
- <sub> <a id="note1" href="#note1ref"><sup>1</sup></a> If you would like to customize your Plex libraries beyond what is listed above, see [[Customizing Plex Libraries]].</sub>
+ <sub> <a id="note1" href="#note1ref"><sup>1</sup></a> If you would like to customize your Plex libraries beyond what is listed above, see [Customizing Plex Libraries](../reference/customizing-plex-libs.md).</sub>

@@ -67,6 +67,7 @@ nav:
       - Prerequisites: saltbox/prerequisites/prerequisites.md
       - Install Types: saltbox/basics/install_types.md
       - Install: saltbox/install/install.md
+      - After-Install: saltbox/install/after.md
       - Update: saltbox/basics/update.md
       - Accessing Apps: saltbox/basics/accessing_apps.md
       - Paths: saltbox/basics/paths.md
@@ -98,6 +99,7 @@ nav:
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
+      - Notes on Migrating from Cloudbox: advanced/cloudbox-migration.md
   - Reference:
       - Prerequisites:
           - Server: reference/server.md
@@ -109,12 +111,15 @@ nav:
           - Dependencies: reference/dependencies.md
           - Accounts and Settings: reference/accounts.md
           - Preinstall: reference/preinstall.md
+          - Google Drive: reference/safire.md
           - Rclone: reference/rclone.md
           - Install: reference/install.md
       - Other:
           - Cloudplow Examples: reference/cloudplow.md
+          - Customizing Plex Libraries: reference/customizing-plex-libs.md
           - Plex Auth Token: reference/plex_auth_token.md
           - Ports: reference/ports.md
           - Pushover: reference/pushover.md
+          - Subdomains: reference/subdomain.md
 
 copyright: Copyright &copy; 2021 Saltbox

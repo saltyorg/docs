@@ -1,0 +1,105 @@
+# Calibre-Web
+
+## What is it?
+
+[Calibre-Web](https://github.com/janeczku/calibre-web){: target=_blank rel="noopener noreferrer" } is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/){: target=_blank rel="noopener noreferrer" } database.
+
+Calibre-Web allows you to add users, and each user can set up a Kindle email address to have ebooks automatically sent to their Kindle reader or Kindle app. Users can also simply download epub, pdf, or whatever files you have. Requires an existing Calibre library database.
+
+!!! info
+    Calibre and Calibre-web do NOT need to be on the same server. But you do need to have a local copy of the Calibre `metadata.db` and a path to the books for calibre-web to operate.
+
+## Project Information
+
+- [:material-home: Calibre-Web ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
+
+### 1. Installation
+
+``` shell
+
+sb install cm-calibre-web
+
+```
+
+### 2. URL
+
+- To access Calibre-Web, visit `https://calibre-web._yourdomain.com_`
+
+### 3. Setup
+
+- Default admin login:
+  ``` { .yaml}
+  Username: admin
+  Password: admin123
+  ```
+  Change the default log in details immediately.
+
+- **Unrar** is included by default and needs to be set in the Calibre-Web admin page (Basic Configuration:External Binaries) with a path of `/usr/bin/unrar`.
+
+- Automatic ebook conversion via Calibre converter is included.  Enable it in the Calibre-Web admin page (Basic Configuration:External Binaries) by setting the Path to Calibre E-Book Converter to `/usr/bin/ebook-convert`.
+
+- The **kepubify ebook conversion tool** (MIT License) to convert epub to kepub is included. In the Calibre-Web admin page (Basic Configuration:External Binaries) set the Path to Kepubify E-Book Converter to `/usr/bin/kepubify`.
+
+You can access advanced features of the Guacamole remote desktop using ctrl+alt+shift enabling you to use remote copy/paste and different languages.
+
+- Shell access whilst the container is running: <br />
+  `docker exec -it calibre-web /bin/bash`
+
+- To monitor the logs of the container in realtime: <br />
+  `docker logs -f calibre-web`
+
+- Container version number: <br />
+  `docker inspect -f '{{ index .Config.Labels "build_version" }}' calibre-web`
+
+- Image version number: <br />
+  `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web`
+
+
+### 4. SK's Calibre-Web Usage Tips
+
+##### SMTP Email Server Setup
+
+A useful function of Calibre-Web is sending ebooks by email.  Therefore, you need to set up SMTP e-mail server settings.
+
+I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles.
+
+```
+Hostname: smtp-relay.gmail.com, Port:  25,  SSL: No
+```
+
+##### Kindle Setup
+
+There is a nice benefit to using a Kindle.  When you send a “personal document” (book) to your Kindle account, it will automatically download to the specific device tied to the email address you use. Even though it’s called a document, it goes into your regular library and looks just like any book you may have purchased, including the cover.  In addition, that book is available on any other device or app tied to your account, so you can read the same book on your phone, a Kindle Paperwhite, and an iPad.  Amazon’s WhisperSync feature will bookmark your most recent page in the background, so if you switch devices it will ask if you want to update to the most recent page read.
+
+If you (or your users) want to have books sent directly to a Kindle from Calibre-Web email, then there are additional one-time setup steps for each user.
+
+  * **Tell Amazon to accept books sent from your website**
+      * Go to www.amazon.com
+      * On the top navigation bar, go to `Account & Lists`.  In the dropdown, click on `Your Content and Devices`.
+      * Towards the top of the white section, in the middle, click on `Preferences`
+      * Scroll down to Personal Document Settings. Click the title to open up that section of the page.
+      * Under `Approved Personal Document E-mail List`, click the link for `"Add a new approved e-mail address"`
+      * In the popup, add `@yourdomain.com` and save.  Done!
+
+
+    Before closing the website, you might want to grab your device email address for the next step.  Under the Send-to-Kindle E-Mail Settings, copy the email address where you want the books sent by default. <br />
+
+  * **Add your Kindle email address to your profile on books.yourdomain.com**
+      * Once logged in, on the top ride side, click your name to open your profile
+      * Add your kindle email address and save
+      * Your Kindle email address will be something like name_79@kindle.com.  Every Kindle device and mobile app has its own unique address, however, you can send to any of your devices and it will still be available on all of them.  You can find this email address either in the Settings of the device/app, or copy it from the Devices page
+
+!!! info
+    Kindle has started sending verification emails on every document sent if your Kindle's email is the one they generated for you.  While you are on your settings page, go ahead and make up a new Kindle email address.
+
+Enjoy!
+
+### 5. Advanced Method of Library Storage
+
+Since only the `metadata.db` file has to be local, you can keep the metadata.db file in `/mnt/local/Media/Books` as **RW** and the actual book files in `teamdrive:Books` as **RO** and mergerfs them together. Use the latest rclone `--vfs-cache-mode=full` and related cloud-seeding settings for your teamdrive mount so that it does not get laggy. Have a script that copies the metadata.db file regularly to the local disk, and leave the books in the cloud.
+
+If this paragraph does not make sense to you, then please do not try it.
+

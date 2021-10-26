@@ -30,7 +30,7 @@ There are two pieces that can't be scripted.
     cd safire
     python3 -m venv safire-venv
     source safire-venv/bin/activate
-    pip install -r requirements.yml
+    pip install -r requirements.txt
     mkdir -p /opt/sa/all
     mkdir -p ~/safire/creds
     prefix=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c6 ;)

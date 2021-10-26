@@ -24,11 +24,12 @@ There are two pieces that can't be scripted.
 
     ```
     export g_group=INSERT_YOUR_GOOGLE_GROUP_ADDRESS
+    apt install python3.8-venv
     cd /opt
     git clone https://github.com/88lex/safire
     cd safire
     python3 -m venv safire-venv
-    safire-venv/bin/activate
+    source safire-venv/bin/activate
     pip install -r requirements.yml
     mkdir -p /opt/sa/all
     mkdir -p ~/safire/creds

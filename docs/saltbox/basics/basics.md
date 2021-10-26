@@ -2,7 +2,7 @@
 
 # What is Saltbox?
 
-- [Saltbox](https://saltbox.works/) is an [Ansible](https://www.ansible.com/how-ansible-works) and [docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server on any x64 Ubuntu Server.  
+- [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } is an [Ansible](https://www.ansible.com/how-ansible-works) and [docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server on any x64 Ubuntu Server.
 
 - Primary functions are: the automatic acquisition of media, storing that media on the cloud, and being able to  play it back from anywhere and from any device.
 
@@ -68,7 +68,7 @@ Once the downloads are complete, Sonarr & Radarr will move [or copy in the case 
 
 [Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually<sup name="a4">[\[4\]](#f4) </sup> move everything<sup name="a5">[\[5\]](#f5) </sup> from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage, thereby reducing the storage used on the (local) server.
 
-During this migration, the media files will continue to be accessible to Media Servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).  
+During this migration, the media files will continue to be accessible to Media Servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
 
 ![](../../images/basics-flowchart.png)
 

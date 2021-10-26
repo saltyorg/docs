@@ -1,4 +1,4 @@
-Notes on migreating from cloudbox
+Notes on migrating from cloudbox
 
 plex version now in inventory
 

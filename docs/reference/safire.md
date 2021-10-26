@@ -2,6 +2,12 @@ Saltbox defaults to using service accounts for uploading to multiple teamdrives 
 
 To make the setup more straightforward, this guide will leverage safire to generate as much infrastructure as possible.
 
+This will set up three Shared Drives ["td_movies", "td_tv", "td_music"] and setup all the infrastructure you need for Saltbox to use them.
+
+Don't change those names; they're referenced a few places below, so things will break if you change them.
+
+## Google Project and Group Setup
+
 There are two pieces that can't be scripted.
 
 1. You will need to create a new project and generate a credential file:
@@ -12,7 +18,7 @@ There are two pieces that can't be scripted.
 
     [Instructions here](../reference/google-group-setup.md)
 
-## Set up safire:
+## `safire` Setup:
 
 1. SSH into your server, then copy-paste these commands one by one, changing the ALL_CAPS BITS as appropriate:
 

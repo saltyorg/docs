@@ -1,8 +1,8 @@
 Saltbox defaults to using service accounts for uploading to multiple teamdrives to allow for future growth.
 
-To make the setup more straightforward, this guide will leverage safire to generate as much infrastructure as possible.
+To make the setup more straightforward, this guide will leverage `safire` to generate as much infrastructure as possible.
 
-This will set up three Shared Drives ["td_movies", "td_tv", "td_music"] and setup all the infrastructure you need for Saltbox to use them.
+This will set up three Shared Drives ["sb_movies", "sb_tv", "sb_music"] and setup all the infrastructure you need for Saltbox to use them.
 
 Don't change those names; they're referenced a few places below, so things will break if you change them.
 
@@ -67,7 +67,7 @@ There are two pieces that can't be scripted.
 3. Create three Shared Drives and store their IDs:
 
     ```
-     eval $(./safire.py add drives td_movies td_tv td_music | awk -F' ' '{print "export " $4"="$6}')
+     eval $(./safire.py add drives sb_movies sb_tv sb_music | awk -F' ' '{print "export " $4"="$6}')
     ```
 
     You'll see three errors during this; they can be ignored.
@@ -83,7 +83,7 @@ There are two pieces that can't be scripted.
 
     ```
     ./safire.py add members $prefix $g_group
-    ./safire.py add user $g_group td_
+    ./safire.py add user $g_group sb_
     ```
 
 6. Download JSON files for all the generated SAs and copy them to a directory in `/opt`:
@@ -96,16 +96,17 @@ There are two pieces that can't be scripted.
 7. Create all the required rclone remotes.  The last remote is a union remote that will combine all three of these Shared Drives.
 
     ```
-    rclone config create td_movies drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$td_movies
-    rclone config create td_music drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$td_music
-    rclone config create td_tv drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$td_tv
-    rclone config create google union upstreams="td_movies: td_music: td_tv:"
+    rclone config create sb_movies drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_movies
+    rclone config create sb_music drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_music
+    rclone config create sb_tv drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_tv
+    rclone config create google union upstreams="sb_movies: sb_music: sb_tv:"
     ```
 
 8. Finally create some mount files for use later with autoscan and the like.
 
     ```
-    rclone touch td_movies:/movies.bin
-    rclone touch td_tv:/tv.bin
-    rclone touch td_music:/music.bin
+    rclone touch sb_movies:/movies.bin
+    rclone touch sb_tv:/tv.bin
+    rclone touch sb_music:/music.bin
+    deactivate
     ```

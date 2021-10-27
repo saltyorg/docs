@@ -23,7 +23,7 @@ sb install cm-alltube
 
 ### 2. URL
 
-- To access AllTube, visit https://alltube._yourdomain.com_
+- To access AllTube, visit `https://alltube._yourdomain.com_`
 
 ### 3. Setup
 

@@ -23,21 +23,12 @@ There are two pieces that can't be scripted.
 1. SSH into your server, then copy-paste these commands one by one, changing the ALL_CAPS BITS as appropriate:
 
     ```
-    export g_group=INSERT_YOUR_GOOGLE_GROUP_ADDRESS
-    apt install python3.8-venv
-    cd /opt
-    git clone https://github.com/88lex/safire
-    cd safire
-    python3 -m venv safire-venv
-    source safire-venv/bin/activate
-    pip install -r requirements.txt
-    mkdir -p /opt/sa/all
-    mkdir -p ~/safire/creds
-    prefix=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c6 ;)
-    sed "s/project_prefix = \"\"/project_prefix = \"$prefix\"/" safire/default_config.py | sed "s/email_prefix = \".*\"/email_prefix = \"$prefix\"/" > ~/safire/config.py
+    curl -fLv https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/550d7fc7c69f0c9f3c5ac1818571db66b416e3fb/sb_gd.sh
+    chmod +x sb_gd.sh
+    ./sb_gd.sh
     ```
 
-1. Copy the credential JSON you downloaded earlier to `~/safire/creds/creds.json` on your server
+2. Copy the credential JSON you downloaded earlier to `~/safire/creds/creds.json` on your server
    
     You can do this in a variety of ways; if you are running a linux-like system locally
 
@@ -51,63 +42,10 @@ There are two pieces that can't be scripted.
     scp /Users/nacl/Downloads/safire-credentials.json nacl@111.222.333.444:~/safire/creds/creds.json
     ``` 
 
-2. Authorize safire
+3. Run the script again.
 
+    You will be prompted to authenticate to google and copy-paste a token twice at the beginning.
+    
     ```
-    cd /opt/safire/safire
-    ./safire.py auth all
-    ```
-
-    You'll be walked through a process twice.  Each time:
-
-        1. Don't use the local server
-        2. Click the URL
-        3. Sign into Google
-        4. copy-paste the token into the terminal
-
-3. Create three Shared Drives and store their IDs:
-
-    ```
-     eval $(./safire.py add drives sb_movies sb_tv sb_music | awk -F' ' '{print "export " $4"="$6}')
-    ```
-
-    You'll see three errors during this; they can be ignored.
-
-4. Create projects and SAs:
-
-    ```
-    ./safire.py add projects 3
-    ./safire.py add sas
-    ```
-
-5. add all the generated SAs to the group you created earlier and give that group access to all the Shared Drives:
-
-    ```
-    ./safire.py add members $prefix $g_group
-    ./safire.py add user $g_group sb_
-    ```
-
-6. Download JSON files for all the generated SAs and copy them to a directory in `/opt`:
-
-    ```
-    ./safire.py add jsons
-    rsync -av ~/safire/svcaccts/ /opt/sa/all
-    ```
-
-7. Create all the required rclone remotes.  The last remote is a union remote that will combine all three of these Shared Drives.
-
-    ```
-    rclone config create sb_movies drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_movies
-    rclone config create sb_music drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_music
-    rclone config create sb_tv drive scope=drive service_account_file=/opt/sa/all/000150.json team_drive=$sb_tv
-    rclone config create google union upstreams="sb_movies: sb_music: sb_tv:"
-    ```
-
-8. Finally create some mount files for use later with autoscan and the like.
-
-    ```
-    rclone touch sb_movies:/movies.bin
-    rclone touch sb_tv:/tv.bin
-    rclone touch sb_music:/music.bin
-    deactivate
+    ./sb_gd.sh
     ```

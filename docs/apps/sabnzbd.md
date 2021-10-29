@@ -2,19 +2,19 @@
 
 - Login is set with what's in accounts.yml
 
-![](https://i.ibb.co/s3xkC4P/image.png)
+![](../images/sabnzbd/01-sabnzbd.png)
 
 - Go through the setup wizard.  YOu will need to enter server details:
 
-![](https://i.ibb.co/2h2kMpL/image.png)
+![](../images/sabnzbd/02-sabnzbd.png)
 
 - When you get to the end of the wizard, click "Go To SABnzbd"
 
-![](https://i.ibb.co/q73xL8L/image.png)
+![](../images/sabnzbd/03-sabnzbd.png)
 
 - Go to SABnzbd Config
 
-![](https://i.ibb.co/xjXdkFS/image.png)
+![](../images/sabnzbd/04-sabnzbd.png)
 
 - You will need to add in categories for `sonarr`, `radarr`, and `lidarr`. 
 
@@ -26,16 +26,16 @@
   
   **This needs to be done BEFORE adding sabnzbd as a downloader to any of those apps.**
 
-![](https://i.ibb.co/6gRXjJY/image.png)
+![](../images/sabnzbd/05-sabnzbd.png)
 
 - Direct unpack is disabled by default. Configure this as you prefer.
 
 - Make note of the API Key in the "General" section
 
-![](https://i.ibb.co/vXptd2H/image.png)
+![](../images/sabnzbd/06-sabnzbd.png)
 
 - When creating the connection in the arrs, use API Key rather than user/pass.
 
-![](https://i.ibb.co/ggGcmYj/image.png)
+![](../images/sabnzbd/07-sabnzbd.png)
 
    Note that the category matches between Radarr and Sab.  The specific category doesn't matter; just that they match.

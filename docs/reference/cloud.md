@@ -3,7 +3,9 @@
 
 Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
 
-It is advised that you do NOT use a educational GSuite account or any GSuite account you may buy on the secondary market [eBay and the like], unless you are aware of and planning for the likelihood that it disappears one day.
+It is advised that you do NOT use a educational GSuite account or any GSuite account or Shared Drive you may buy on the secondary market [eBay and the like], unless you are aware of and planning for the likelihood that it disappears one day.
+
+Note that rclone offering support for a storage backend does not mean that backend is suitable for the Saltbox use case.  The only backend that sees any significant testing and use is Google Drive.
 
 ## Basics
 
@@ -30,7 +32,7 @@ If you have media in other folders, you can simply move them into these folders 
 
 Note 1: For Google Drive, you can use the [Shift-Z trick](https://www.labnol.org/internet/add-files-multiple-drive-folders/28715/) to "symlink" folders here. 
 
-Note 2: All the paths/folders mentioned here, and elsewhere, are **CASE SENSITIVE** (see  [[Saltbox Paths|Basics: Saltbox Paths]]).
+Note 2: All the paths/folders mentioned here, and elsewhere, are **CASE SENSITIVE** (see [Saltbox Paths](../saltbox/basics/paths.md)).
 
 ## Google "My Drive" vs. "Shared Drives"
 
@@ -49,6 +51,14 @@ For those reasons, this documentation will discuss ONLY Shared Drives.
 As a note, if you are unable to create Shared Drives in the Google Drive Web UI, that's a sign that you have the wrong type of Google Drive account.
 
   ![](../images/google-drive-acct.png)
+
+## Running Saltbox without cloud storage
+
+While the typical use case for Saltbox includes cloud storage, nothing prevents using it without cloud storage.
+
+If, in `settings.yml`, you leave the rclone remote name blank, neither `cloudplow` nor the rclone_vfs mount will be configured.  Your media will be imported to `/mnt/local` and stay there.  You can mount whatever storage you wish to use at `/mnt/local`.
+
+Alternatively, you can configure an rclone remote pointing at your primary storage [named "google"], then install normally.  Everything would then work as it typically does, except that cloudplow would move media from the local system to your NAS or whatever.  Perhaps that would allow downloads and imports to go faster.
 
 ---
  <sub> <a id="note1" href="#note1ref"><sup>1</sup></a> If you would like to customize your Plex libraries beyond what is listed above, see [Customizing Plex Libraries](../reference/customizing-plex-libs.md).</sub>

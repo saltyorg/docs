@@ -142,6 +142,8 @@
 
         - Default is `google`.
 
+        - Can be left blank to run without cloud storage].
+
 - `shell`: Type of shell to use. 
 
     - Choices are `bash` or `zsh`. 

@@ -1,6 +1,6 @@
 ## Domain Name
 
-**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [[Basics: Accessing Saltbox Apps]]). The steps below will help you set up a domain and DNS settings for use with Saltbox.
+**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
@@ -10,7 +10,7 @@ Get a domain name from any domain name registry (e.g. [Namecheap](https://Namech
 
 If you already have one, you may skip this step.
 
-_Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), do not support wildcard DNS settings, and paid domain names can be had for less than a dollar per year (see promo deals on various sites). However, you can add them to [[Cloudflare|Prerequisites: Cloudflare]] and not have to worry about it._
+_Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), do not support wildcard DNS settings, and paid domain names can be had for less than a dollar per year (see promo deals on various sites). However, you can add them to Cloudflare and not have to worry about it._
 
 If you are planning to use the automatic Cloudflare integration, there are some top-level domains [TLDs] that will not work with it.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ).
 
@@ -52,9 +52,9 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
  - For DNS providers that do not allow wildcards (e.g. Freenom).
 
- - For [[Mediabox / Feederbox  install types|Basics: Saltbox Install Types]].
+ - For [Mediabox / Feederbox  install types](../saltbox/basics/install_types.md).
 
- - For [[Cloudflare|Prerequisites: Cloudflare]] users.
+ - For Cloudflare users.
 
    Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically, provided you enter a top-level domain in the settings [i.e. `DOMAIN.TLD`, not `WHATEVER.DOMAIN.TLD`]
 

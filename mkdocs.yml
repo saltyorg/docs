@@ -189,7 +189,7 @@ nav:
         - yacht: community/apps/yacht.md
       - Guides:
         - General:
-          - chazlarson Guides: community/guides/chazguides.md
+          - chazlarson Guides: community/guides/chazguides/chazguides.md
         - Linux:
           - aliases: community/guides/aliases.md
         - Plex:

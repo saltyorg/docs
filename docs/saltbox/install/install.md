@@ -46,7 +46,6 @@ plex:
 dockerhub:
   user: # (10)
   token: # (11)
-
 apprise: # (12)
 ```
 

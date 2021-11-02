@@ -189,7 +189,16 @@ nav:
         - yacht: community/apps/yacht.md
       - Guides:
         - General:
-          - chazlarson Guides: community/guides/chazguides/chazguides.md
+          - chazlarson Guides:
+              - Can I run Saltbox on this server?: community/guides/chazguides/server.md
+              - Did my Saltbox install succeed?: community/guides/chazguides/success.md
+              - Plex Autoscan Mappings; how do they work?: community/guides/chazguides/pas-map.md
+              - How do I mount a teamdrive?: community/guides/chazguides/teamdrive.md
+              - I can't see my media!: community/guides/chazguides/no-media.md
+              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: community/guides/chazguides/tip44.md
+              - I want some app to load at my base domain: community/guides/chazguides/base-domain.md
+              - Why is my disk full?: community/guides/chazguides/disk-full.md
+              - Installing Saltbox on a home server: community/guides/chazguides/home-server.md
         - Linux:
           - aliases: community/guides/aliases.md
         - Plex:
@@ -233,6 +242,8 @@ nav:
           - Accounts and Settings: reference/accounts.md
           - Preinstall: reference/preinstall.md
           - Google Drive: reference/safire.md
+          - Google Project: reference/google-project-setup.md
+          - Google Group: reference/google-group-setup.md
           - Rclone: reference/rclone.md
           - Install: reference/install.md
       - Other:

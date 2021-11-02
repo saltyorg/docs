@@ -20,7 +20,7 @@ There are two pieces that can't be scripted.
 
 ## `safire` Setup:
 
-1. SSH into your server, then copy-paste these commands one by one, changing the ALL_CAPS BITS as appropriate:
+1. SSH into your server, then copy-paste these commands one by one:
 
     ```
     curl -fLv https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/550d7fc7c69f0c9f3c5ac1818571db66b416e3fb/sb_gd.sh
@@ -28,8 +28,8 @@ There are two pieces that can't be scripted.
     ./sb_gd.sh
     ```
 
-2. Copy the credential JSON you downloaded earlier to `~/safire/creds/creds.json` on your server
-   
+1. Copy the credential JSON you downloaded earlier to `~/safire/creds/creds.json` on your server
+  
     You can do this in a variety of ways; if you are running a linux-like system locally
 
     ```
@@ -42,10 +42,13 @@ There are two pieces that can't be scripted.
     scp /Users/nacl/Downloads/safire-credentials.json nacl@111.222.333.444:~/safire/creds/creds.json
     ``` 
 
-3. Run the script again.
+1. Run the script again.
 
     You will be prompted to authenticate to google and copy-paste a token twice at the beginning.
     
     ```
     ./sb_gd.sh
     ```
+
+1. You should now have three new shared drives ready for use with Saltbox.
+

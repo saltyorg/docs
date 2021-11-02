@@ -42,7 +42,7 @@ Created an A Record for your subdomains with `*` for host and set the value to y
 
 Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*` for Host > Server IP for Value.
 
-![](../images/cloudflare-a-record.png)
+![](../images/cloudflare/cloudflare-a-record.png)
 
 </details>
 
@@ -152,13 +152,13 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 1. Here you will see that your domain will have an "Active" status. Click on your domain to continue.
 
-   ![](../images/cloudflare-active.png)
+   ![](../images/cloudflare/cloudflare-active.png)
 
 1. Click the **SSL/TLS** tab.
 
 1. Set **SSL** to `Full (strict)`.
 
-   ![](../images/cloudflare-full-strict.png)
+   ![](../images/cloudflare/cloudflare-full-strict.png)
 
 <!-- Temporarily commented out - may not be needed..
 
@@ -166,7 +166,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 1. Set **HTTP Strict Transport Security (HSTS)** to `disabled`.
 
-   ![](../images/cloudflare-always-redirect.png)
+   ![](../images/cloudflare/cloudflare-always-redirect.png)
 
 -->
 
@@ -178,19 +178,19 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 1. Click **Get your API token**.
 
-   ![](../images/cloudflare-api-token.png){ width=60% }
+   ![](../images/cloudflare/cloudflare-api-token.png){ width=60% }
 
 1. Under **API Keys** and then **Global API Key** click **View**.
 
-   ![](../images/cloudflare-global-api.png){ width=60% }
+   ![](../images/cloudflare/cloudflare-global-api.png){ width=60% }
 
 1. On the login popup, type in your **password** and click **View**.
 
-   ![](../images/cloudflare-api-password.png){ width=50% }
+   ![](../images/cloudflare/cloudflare-api-password.png){ width=50% }
 
 1. Save your API key.
 
-   ![](../images/cloudflare-api-show.png){ width=50% }
+   ![](../images/cloudflare/cloudflare-api-show.png){ width=50% }
 
 ### Post-Setup
 
@@ -214,4 +214,4 @@ You can do this by:
 
 4. Under "Status", click the switch next to the gray cloud icon (i.e. `DNS Only`) to switch to an orange one (i.e. `DNS and HTTP proxy (CDN)`).
 
-   ![](../images/cloudflare-proxy-off.png){ width=60% }
+   ![](../images/cloudflare/cloudflare-proxy-off.png){ width=60% }

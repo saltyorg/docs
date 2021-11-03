@@ -205,6 +205,8 @@ nav:
           - Tautulii Custom Scripts: community/guides/tautuliscripts.md
         - Downloading:
           - Hardlinking: community/guides/hardlinking.md
+        - Migration:
+          - cloudbox: community/guides/cloudbox.md
         - Further Reading and Links:
           - Suggested Reading: community/guides/suggested_reading.md
           - Links: community/guides/links.md

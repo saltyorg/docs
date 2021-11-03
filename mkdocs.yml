@@ -211,25 +211,25 @@ nav:
   - Apps:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md
-      - jackett: apps/jackett.md
-      - lidarr: apps/lidarr.md
-      - nzbget: apps/nzbget.md
-      - nzbhydra2: apps/nzbhydra2.md
-      - organizr: apps/organizr.md
       - overseerr: apps/overseerr.md
-      - plex: apps/plex.md
-      - portainer: apps/portainer.md
-      - radarr: apps/radarr.md
-      - rutorrent: apps/rutorrent.md
-      - sabnzbd: apps/sabnzbd.md
-      - sonarr: apps/sonarr.md
-      - sstv: apps/sstv.md
-      - tautulli: apps/tautulli.md
+      - TO BE UPDATED: 
+        - lidarr: apps/lidarr.md
+        - jackett: apps/jackett.md
+        - nzbget: apps/nzbget.md
+        - nzbhydra2: apps/nzbhydra2.md
+        - organizr: apps/organizr.md
+        - plex: apps/plex.md
+        - portainer: apps/portainer.md
+        - radarr: apps/radarr.md
+        - rutorrent: apps/rutorrent.md
+        - sabnzbd: apps/sabnzbd.md
+        - sonarr: apps/sonarr.md
+        - sstv: apps/sstv.md
+        - tautulli: apps/tautulli.md
   - FAQ: faq/faq.md
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
-      - Notes on Migrating from Cloudbox: advanced/cloudbox-migration.md
   - Reference:
       - Prerequisites:
           - Server: reference/server.md

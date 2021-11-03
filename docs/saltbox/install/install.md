@@ -96,6 +96,8 @@ rclone:
   version: latest # (4)
   remote: google # (5)
 shell: bash # (6)
+authelia:
+  subdomain: login # (7)
 ```
 
 1. Folder used for usenet downloads.
@@ -113,6 +115,12 @@ shell: bash # (6)
     Optional - Leave empty to avoid remote mount setup.
 
 6. Shell used by the system. Valid options are bash or zsh.
+
+7. Subdomain used for Authelia.
+
+    Use different values here when using a Mediabox + Feederbox setup.
+
+    Each instance needs a unique subdomain to function.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.

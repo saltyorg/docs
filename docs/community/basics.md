@@ -6,7 +6,7 @@ Community Guides are written by the community to help others make the most of th
 
 ### Update
 
-To update Saltbox Community run a standard saltbox update and both community and saltbox will be updated
+To update Saltbox Community run a standard saltbox update and both community and Saltbox will be updated
 
 ``` shell
 
@@ -41,11 +41,11 @@ sb install cm-jellyfin
 ```
 Before running any role you should first carefully read through the docs to see if there are any additional steps or pre configuration settings required.
 
-A list of roles can be called from the terminaL via:-
+A list of all roles available to Saltbox can be called from the terminal via:-
 
 ```shell
 
-sb cm-list
+sb list
 
 ```
 

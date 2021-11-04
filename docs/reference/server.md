@@ -9,6 +9,8 @@ Typically this server is remote to you; you can install on a home server, keepin
 
 Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
 
+A commonly-asked question is ["can I run cloudbox on this server?"](../community/guides/chazguides/server.md)
+
 You will need root access to install Saltbox.
 
 The server should be a completely fresh OS install. Do not try to install any dependencies on your own, Saltbox will do that for you. 
@@ -19,7 +21,7 @@ Get a server with at least 100GB+ of hard disk space. Even though media is uploa
 
 Practically, you should have more like 500GB of space available _at a minimum_.
 
-Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. To lower that, you'll need to go [here](../apps/cloudplow.md){target=_blank}
+Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. If you want to lower that, you can find details [here](../apps/cloudplow.md){target=_blank}
 
 If you are planning to use Usenet, SSD should be considered required, and NVME highly recommended.  Usenet is extremely disk I/O intensive.
 

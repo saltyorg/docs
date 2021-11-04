@@ -84,109 +84,133 @@ nav:
       - Basics: community/basics.md
       - Settings: community/settings.md
       - Apps:
-        - airdcpp: community/apps/airdcpp.md
-        - airsonic: community/apps/airsonic.md
-        - alltube: community/apps/alltube.md
-        - alternatrr: community/apps/alternatrr.md
-        - alternatrrx: community/apps/alternatrrx.md
-        - apprise: community/apps/apprise.md
-        - archivebox: community/apps/archivebox.md
-        - arrx: community/apps/arrx.md
-        - asshama: community/apps/asshama.md
-        - autoscan: community/apps/autoscan.md
-        - bazarr: community/apps/bazarr.md
-        - bazarrx: community/apps/bazarrx.md
-        - beets: community/apps/beets.md
-        - booksonic: community/apps/booksonic.md
-        - bookstack: community/apps/bookstack.md
-        - btrfsmaintenance: community/apps/btrfsmaintenance.md
-        - calibre: community/apps/calibre.md
-        - calibre_web: community/apps/calibre_web.md
-        - coder: community/apps/coder.md
-        - comicstreamer: community/apps/comicstreamer.md
-        - comixed: community/apps/comixed.md
-        - couchpotato: community/apps/couchpotato.md
-        - deemix: community/apps/deemix.md
-        - deluge: community/apps/deluge.md
-        - delugevpn: community/apps/delugevpn.md
-        - delugex: community/apps/delugex.md
-        - dozzle: community/apps/dozzle.md
-        - embystat: community/apps/embystat.md
-        - epms: community/apps/epms.md
-        - filebot: community/apps/filebot.md
-        - filebrowser: community/apps/filebrowser.md
-        - filezilla: community/apps/filezilla.md
-        - flaresolverr: community/apps/flaresolverr.md
-        - funkwhale: community/apps/funkwhale.md
-        - gitea: community/apps/gitea.md
-        - glances_web: community/apps/glances_web.md
-        - goaccess: community/apps/goaccess.md
-        - goplaxt: community/apps/goplaxt.md
-        - gotify: community/apps/gotify.md
-        - grafana: community/apps/grafana.md
-        - guacamole: community/apps/guacamole.md
-        - handbrake: community/apps/handbrake.md
-        - healthchecks: community/apps/healthchecks.md
-        - heimdall: community/apps/heimdall.md
-        - hetzner_nfs: community/apps/hetzner_nfs.md
-        - influxdb: community/apps/influxdb.md
-        - invoiceninja: community/apps/invoiceninja.md
-        - jdownloader2: community/apps/jdownloader2.md
-        - jellyfin: community/apps/jellyfin.md
-        - jirafeau: community/apps/jirafeau.md
-        - kavita: community/apps/kavita.md
-        - kcptun_client: community/apps/kcptun_client.md
-        - kcptun_server: community/apps/kcptun_server.md
-        - kitana: community/apps/kitana.md
-        - komga: community/apps/komga.md
-        - lazylibrarian: community/apps/lazylibrarian.md
-        - lidarrx: community/apps/lidarrx.md
-        - logarr: community/apps/logarr.md
-        - mediabutler: community/apps/mediabutler.md
-        - medusa: community/apps/medusa.md
-        - monitorr: community/apps/monitorr.md
-        - moviematch: community/apps/moviematch.md
-        - mylar3: community/apps/mylar3.md
-        - navidrome: community/apps/navidrome.md
-        - nextcloud: community/apps/nextcloud.md
-        - ombi: community/apps/ombi.md
-        - ombix: community/apps/ombix.md
-        - ouroboros: community/apps/ouroboros.md
-        - petio: community/apps/petio.md
-        - prowlarr: community/apps/prowlarr.md
-        - qbittorrent: community/apps/qbittorrent.md
-        - qbittorrentvpn: community/apps/qbittorrentvpn.md
-        - qbittorrentx: community/apps/qbittorrentx.md
-        - radarrx: community/apps/radarrx.md
-        - readarr: community/apps/readarr.md
-        - readarrx: community/apps/readarrx.md
-        - requestrr: community/apps/requestrr.md
-        - requestrrx: community/apps/requestrrx.md
-        - resilio_sync: community/apps/resilio_sync.md
-        - rflood: community/apps/rflood.md
-        - rfloodx: community/apps/rfloodx.md
-        - sickchill: community/apps/sickchill.md
-        - sonarrx: community/apps/sonarrx.md
-        - speedtest: community/apps/speedtest.md
-        - sshwifty: community/apps/sshwifty.md
-        - stash: community/apps/stash.md
-        - synclounge: community/apps/synclounge.md
-        - tautullix: community/apps/tautullix.md
-        - telegraf: community/apps/telegraf.md
-        - transfer: community/apps/transfer.md
-        - transmission: community/apps/transmission.md
-        - transmissionvpn: community/apps/transmissionvpn.md
-        - transmissionx: community/apps/transmissionx.md
-        - ubooquity: community/apps/ubooquity.md
-        - unifi: community/apps/unifi.md
-        - unmanic: community/apps/unmanic.md
-        - uptime_kuma: community/apps/uptime_kuma.md
-        - varken: community/apps/varken.md
-        - vaultwarden: community/apps/vaultwarden.md
-        - watchtower: community/apps/watchtower.md
-        - wordpress: community/apps/wordpress.md
-        - xteve: community/apps/xteve.md
-        - yacht: community/apps/yacht.md
+        - Books:
+          - booksonic: community/apps/booksonic.md
+          - bookstack: community/apps/bookstack.md
+          - calibre: community/apps/calibre.md
+          - calibre_web: community/apps/calibre_web.md
+          - comicstreamer: community/apps/comicstreamer.md
+          - kavita: community/apps/kavita.md
+          - komga: community/apps/komga.md
+          - lazylibrarian: community/apps/lazylibrarian.md
+          - mylar3: community/apps/mylar3.md
+          - readarr: community/apps/readarr.md
+          - readarrx: community/apps/readarrx.md
+          - ubooquity: community/apps/ubooquity.md
+        - Development:
+          - coder: community/apps/coder.md
+          - gitea: community/apps/gitea.md
+        - Docker:
+          - dozzle: community/apps/dozzle.md
+          - ouroboros: community/apps/ouroboros.md
+          - watchtower: community/apps/watchtower.md
+          - yacht: community/apps/yacht.md
+        - Downloading:
+          - alltube: community/apps/alltube.md
+          - jdownloader2: community/apps/jdownloader2.md
+          - medusa: community/apps/medusa.md
+        - Emby:
+          - embystat: community/apps/embystat.md
+        - File Management:
+          - filebot: community/apps/filebot.md
+          - filebrowser: community/apps/filebrowser.md
+          - filezilla: community/apps/filezilla.md
+          - jirafeau: community/apps/jirafeau.md
+          - nextcloud: community/apps/nextcloud.md
+          - resilio_sync: community/apps/resilio_sync.md
+          - transfer: community/apps/transfer.md
+        - Indexers:
+          - prowlarr: community/apps/prowlarr.md
+        - Landing Pages:
+          - heimdall: community/apps/heimdall.md
+        - Log Management:
+          - goaccess: community/apps/goaccess.md
+          - logarr: community/apps/logarr.md
+          - monitorr: community/apps/monitorr.md
+        - Media Servers:
+          - jellyfin: community/apps/jellyfin.md
+        - Metadata Management:
+          - alternatrr: community/apps/alternatrr.md
+          - alternatrrx: community/apps/alternatrrx.md
+          - bazarr: community/apps/bazarr.md
+          - bazarrx: community/apps/bazarrx.md
+          - comixed: community/apps/comixed.md
+          - unmanic: community/apps/unmanic.md
+        - Movies:
+          - arrx: community/apps/arrx.md
+          - couchpotato: community/apps/couchpotato.md
+          - radarrx: community/apps/radarrx.md
+        - Music:
+          - airsonic: community/apps/airsonic.md
+          - beets: community/apps/beets.md
+          - funkwhale: community/apps/funkwhale.md
+          - deemix: community/apps/deemix.md
+          - lidarrx: community/apps/lidarrx.md
+          - navidrome: community/apps/navidrome.md
+        - Networking:
+          - kcptun_client: community/apps/kcptun_client.md
+          - kcptun_server: community/apps/kcptun_server.md
+          - unifi: community/apps/unifi.md
+        - Plex:
+          - asshama: community/apps/asshama.md
+          - Extended Personal Media Scanner: community/apps/epms.md
+          - goplaxt: community/apps/goplaxt.md
+          - kitana: community/apps/kitana.md
+          - mediabutler: community/apps/mediabutler.md
+          - tautullix: community/apps/tautullix.md
+        - Requests:
+          - ombi: community/apps/ombi.md
+          - ombix: community/apps/ombix.md
+          - petio: community/apps/petio.md
+          - requestrr: community/apps/requestrr.md
+          - requestrrx: community/apps/requestrrx.md
+        - Social:
+          - airdcpp: community/apps/airdcpp.md
+          - gotify: community/apps/gotify.md
+          - moviematch: community/apps/moviematch.md
+          - synclounge: community/apps/synclounge.md
+        - System:
+          - apprise: community/apps/apprise.md
+          - autoscan: community/apps/autoscan.md
+          - btrfsmaintenance: community/apps/btrfsmaintenance.md
+          - glances_web: community/apps/glances_web.md
+          - healthchecks: community/apps/healthchecks.md
+          - hetzner_nfs: community/apps/hetzner_nfs.md
+        - Torrent:
+          - deluge: community/apps/deluge.md
+          - delugevpn: community/apps/delugevpn.md
+          - delugex: community/apps/delugex.md
+          - qbittorrent: community/apps/qbittorrent.md
+          - qbittorrentvpn: community/apps/qbittorrentvpn.md
+          - qbittorrentx: community/apps/qbittorrentx.md
+          - rflood: community/apps/rflood.md
+          - rfloodx: community/apps/rfloodx.md
+          - transmission: community/apps/transmission.md
+          - transmissionvpn: community/apps/transmissionvpn.md
+          - transmissionx: community/apps/transmissionx.md
+        - TV:
+          - arrx: community/apps/arrx.md
+          - sickchill: community/apps/sickchill.md
+          - sonarrx: community/apps/sonarrx.md
+          - xteve: community/apps/xteve.md
+        - Utilities:
+          - flaresolverr: community/apps/flaresolverr.md
+          - grafana: community/apps/grafana.md
+          - guacamole: community/apps/guacamole.md
+          - influxdb: community/apps/influxdb.md
+          - invoiceninja: community/apps/invoiceninja.md
+          - speedtest: community/apps/speedtest.md
+          - sshwifty: community/apps/sshwifty.md
+          - telegraf: community/apps/telegraf.md
+          - uptime_kuma: community/apps/uptime_kuma.md
+          - varken: community/apps/varken.md
+          - vaultwarden: community/apps/vaultwarden.md
+        - Video:
+          - handbrake: community/apps/handbrake.md
+          - stash: community/apps/stash.md
+        - Web:
+          - archivebox: community/apps/archivebox.md
+          - wordpress: community/apps/wordpress.md
       - Guides:
         - General:
           - chazlarson Guides:

@@ -22,9 +22,9 @@ The answer to this question depends on a whole bunch of things, including but no
 
 ## Server Hardware
 
-For example, at time of writing the author runs a [Hetzner EX42-NVME](https://www.hetzner.com/dedicated-rootserver/ex42-nvme) in Helsinki.  Nearly all users are in the Minneapolis area on Comcast cable.  One user in Utah, one in Brisbane, Australia.  The author doesn’t hoard any 4K.  The box is an AIO; usenet downloading happens on that box as well as streaming and as of this writing no throttles are in place to slow nzbget or Cloudplow while Plex is streaming.
+For example, at time of writing the author had a [Hetzner EX42-NVME](https://www.hetzner.com/dedicated-rootserver/ex42-nvme) in Helsinki.  Nearly all users were in the Minneapolis area on Comcast cable.  One user in Utah, one in Brisbane, Australia.  No 4K media.  The box was an AIO; usenet downloading happened on that box as well as streaming and no throttles were in place to slow NZBget or Cloudplow while Plex was streaming.
 
-For the most part, this box meets my needs.  All author's streaming happens over a 1G fiber line to an AppleTV.  Most other active streamers use Plex Web, Roku, or a Smart TV Plex app.  The guy in Brisbane has trouble streaming due to his local ISP.
+For the most part, this box met requirements during its tenure.  All author's streaming happened over a 1G fiber line to an AppleTV.  Most other active streamers used Plex Web, Roku, or a Smart TV Plex app.  The guy in Brisbane had trouble streaming due to his local ISP [Telstra], but streaming worked great from a Gold Coast hotel.
 
 However, another fellow, who lives blocks away from the author, got one of these same servers and found it unusable for his target usage.  Maybe that was a config issue [didn't seem to be], but it illustrates that there is no "one-size-fits-all" answer.
 

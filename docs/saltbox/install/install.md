@@ -89,8 +89,8 @@ settings.yml
 ``` { .yaml .annotate }
 ---
 downloads:
-  nzbs: /mnt/local/downloads/nzbs # (1)
-  torrents: /mnt/local/downloads/torrents # (2)
+  nzbs: /mnt/unionfs/downloads/nzbs # (1)
+  torrents: /mnt/unionfs/downloads/torrents # (2)
 transcodes: /mnt/local/transcodes # (3)
 rclone:
   version: latest # (4)

@@ -19,7 +19,6 @@ Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
 | Overseerr              | https://overseerr._yourdomain.com_      |
 | Plex                   | https://plex._yourdomain.com_           |
 | WebTools for Plex      | https://plex-webtools._yourdomain.com_  | 
-| Plexpy (Tautulli)      | https://plexpy._yourdomain.com_         |
 | Portainer              | https://portainer._yourdomain.com_      |
 | Radarr                 | https://radarr._yourdomain.com_         |
 | ruTorrent              | https://rutorrent._yourdomain.com_      |

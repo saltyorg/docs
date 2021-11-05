@@ -48,7 +48,7 @@
 
 ### Secure
 
-- Saltbox uses secure HTTPS provided by Let's Encrypt SSL certificates.
+- Saltbox uses secure HTTPS provided by Let's Encrypt SSL certificates or ZeroSSL.
 
 ### Easy Backup and Restore
 

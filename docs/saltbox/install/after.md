@@ -1,13 +1,14 @@
 All the apps are installed and configured, but here are some things you want to set up or do that aren't done automatically:
 
-1. Harden your SSH server.  There are some tips [here](https://linuxhandbook.com/ssh-hardening-tips/), but two simple actions to take are:
+1. Harden your SSH server.  There are some tips [here](https://linuxhandbook.com/ssh-hardening-tips/), but three simple actions to take are:
 
     1. [Change the default SSH port](https://linuxhandbook.com/change-ssh-port/) from 22 to something else.
 
     1. [Disable password login](https://linuxhandbook.com/ssh-disable-password-authentication/) and use only SSH keys to authenticate.
 
-2. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
+    1. Disable root login.
 
+2. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
 
 3. Take some time to verify disk space usage for the apps.
    

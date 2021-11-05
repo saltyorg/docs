@@ -107,28 +107,11 @@
 
        - Example: With the default path, ruTorrent downloads would go to `/mnt/unionfs/downloads/torrents/rutorrent/completed`.
 
-- `plex`: Plex options.
+- `transcodes`: Path of temporary transcoding files. 
 
-    - `tag`: Determines what version of Plex to install. 
+    - Default is `"/mnt/local/transcodes"`.
 
-
-        - Options are `public`, `beta`, or [[version tag|https://hub.docker.com/r/cloudb0x/plex/tags]] (e.g. `"1.12.3.4973-215c28d86"`). TODO CHANGE THIS LIST TO REFLECT ACTIVE IMAGE
-
-        - Default is `public`.
-
-        - Notes:
-
-            - Note 1: The `public` tag restricts this check to public versions only, where as, `beta` tag will fetch beta versions. If the server is not logged in or you do not have an active [Plex Pass](https://www.plex.tv/features/plex-pass/) on your Plex account, the `beta` tag will only install the publicly available versions only. 
-
-            - Note 2: Hardware Transcoding requires an  active [Plex Pass](https://www.plex.tv/features/plex-pass/). This can be enabled on either the `public` or `beta` tagged versions. 
-
-            - Note 3: If you decide to change the tags later, you will need to update Plex by running the Saltbox install command with the "plex" tag (i.e. `sb install plex`).
-
-    - `transcodes`: Path of temporary transcoding files. 
-
-        - Default is `"/mnt/local/transcodes"`.
-
-        - Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
+    - Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
 
 - `rclone`: Rclone options.
 
@@ -150,4 +133,77 @@
 
     - Default is `bash`.
 
+- `authelia`: Authelia options.
+
+    - `subdomain`: subdomain for the Authelia login page
+
+        - Default is `login`.
+
+---
+
+##  Options in adv_settings.yml
+
+---
+
+- `system`: Where things go.
+
+    - `timezone`: Some setting. 
+  
+      - Default is `auto`.
+
+- `dns`: Where things go.
+
+    - `enabled`: Some setting. 
+  
+      - Default is `yes`.
+
+    - `proxied`: Some setting. 
+  
+      - Default is `no`.
+
+    - `ipv6`: Some setting. 
+  
+      - Default is `no`.
+
+    - `zerossl`: Some setting. 
+  
+      - Default is `no`.
+
+- `traefik`: Where things go.
+
+    - `tls`: Some setting. 
+  
+      - Default is `no`.
+
+    - `metrics`: Some setting. 
+  
+      - Default is `no`.
+
+    - `tracing`: Some setting. 
+  
+      - Default is `no`.
+
+    - `hsts`: Some setting. 
+  
+      - Default is `no`.
+
+- `mounts`: Where things go.
+
+    - `remote`: Some setting. 
+  
+      - Default is `rclone_vfs`.
+
+    - `feeder`: Some setting. 
+  
+      - Default is `no`.
+
+- `gpu`: Where things go.
+
+    - `intel`: Some setting. 
+  
+      - Default is `yes`.
+
+    - `nvidia`: Some setting. 
+  
+      - Default is `no`.
 

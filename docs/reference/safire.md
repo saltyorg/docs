@@ -23,7 +23,7 @@ There are two pieces that can't be scripted.
 1. SSH into your server, then copy-paste these commands one by one:
 
     ```
-    curl -fLv https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/550d7fc7c69f0c9f3c5ac1818571db66b416e3fb/sb_gd.sh
+    curl -fLvO https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/ecb9edd3f4ba355cb5c058ca615259a82e602a2e/sb_gd.sh
     chmod +x sb_gd.sh
     ./sb_gd.sh
     ```

@@ -178,6 +178,15 @@ defaults
 
 This file provides the prototype settings file; if your role requires some new settings, add them to this file.  When the community repo is updated, your new settings will be added to the user's current settings file and they will be prompted to review it. 
 
+```
+templates
+└── my-cool-role.j2
+```
+
+Perhaps you need to create a config file, or a service file, or the like.  Create templates for them here and fill them in at install time.  THere are lots of examples in the existing roles.
+
+##### Testing:
+
 !!! warning
     BE SURE TO TEST YOUR ROLE.
 

@@ -256,6 +256,7 @@ nav:
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
+      - User crontab examples: advanced/user-crontab-examples.md
   - Reference:
       - Prerequisites:
           - Server: reference/server.md

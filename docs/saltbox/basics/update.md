@@ -7,3 +7,5 @@ To update Saltbox run:
 sb update
 
 ```
+
+This will also upgrade Ansible as needed and migrate the configuration files as additional options are added over time.

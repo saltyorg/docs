@@ -1,5 +1,5 @@
 # Saltbox Documentation
 
-This docs site is a very early work in progress.
+This docs site is a work in progress.
 
-Support will be limited for the project until the majority of the documentation has been completed.
+Please report any mistakes or provide suggestions on our discord or on the docs repo, would be much appreciated.

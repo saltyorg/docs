@@ -240,9 +240,10 @@ nav:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md
       - overseerr: apps/overseerr.md
-      - TO BE UPDATED: 
-        - lidarr: apps/lidarr.md
+      - REPLACE IMAGES: 
         - jackett: apps/jackett.md
+      - NEED UPDATING: 
+        - lidarr: apps/lidarr.md
         - nzbget: apps/nzbget.md
         - nzbhydra2: apps/nzbhydra2.md
         - organizr: apps/organizr.md

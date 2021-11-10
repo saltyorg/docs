@@ -2,9 +2,29 @@ Saltbox defaults to using service accounts for uploading to multiple teamdrives 
 
 To make the setup more straightforward, this guide will leverage `safire` to generate as much infrastructure as possible.
 
-This will set up three Shared Drives ["sb_movies", "sb_tv", "sb_music"] and setup all the infrastructure you need for Saltbox to use them.
+This will set up three Shared Drives and set up all the infrastructure you need for Saltbox to use them.
 
-Don't change those names; they're referenced a few places below, so things will break if you change them.
+## Assumptions and defaults:
+
+1. You have rclone installed
+
+2. You are running python 3.8 and have run `sudo apt install python3.8-venv -y`
+   Probably other python3 works, the assumption is that the script can create a venv
+
+3. The script will generate a random prefix and use this for the shared drives, service accounts, and projects.
+
+4. Default is to generate three shared drives:
+   |  Drive            |  media dir        |
+   |:-----------------:|:-----------------:|
+   |  [PREFIX]_Movies  |  `/Media/Movies`  |
+   |  [PREFIX]_Music   |  `/Media/Music`   |
+   |  [PREFIX]_TV      |  `/Media/TV`      |
+   
+   This can be modified with a config file.  The first half of the script will display the details.
+
+5. Default is to generate three projects with 100 service accounts each.  This can be modified at the beginning of the script itself.
+
+   There are a couple other user settings at the beginning of the script.
 
 ## Google Project and Group Setup
 
@@ -23,7 +43,7 @@ There are two pieces that can't be scripted.
 1. SSH into your server, then copy-paste these commands one by one:
 
     ```
-    curl -fLvO https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/6830e04f24cd53ce3a0a09b86efc06932c459904/sb_gd.sh
+    curl -fLvO https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/803f65665bc934962a8e6d1e983ae17725c0e325/sb_gd.sh
     chmod +x sb_gd.sh
     ./sb_gd.sh
     ```
@@ -44,11 +64,13 @@ There are two pieces that can't be scripted.
 
 1. Run the script again.
 
-    You will be prompted to authenticate to google and copy-paste a token twice at the beginning.
+    You will be prompted to authenticate to google and copy-paste a token [this will happen twice].
+
+    If you didn't enter your google group email address into the script, you will be asked for it.
     
     ```
     ./sb_gd.sh
     ```
 
-1. You should now have three new shared drives ready for use with Saltbox.
+2. You should now have three new shared drives ready for use with Saltbox.
 

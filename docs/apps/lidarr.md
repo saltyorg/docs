@@ -1,45 +1,12 @@
-
-
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
-
-- [1. Intro](#1-intro)
-- [2. URL](#2-url)
-- [3. Settings](#3-settings)
-  - [i. General](#i-general)
-    - [Host](#host)
-    - [Security](#security)
-    - [Proxy Settings](#proxy-settings)
-    - [Logging](#logging)
-    - [Analytics](#analytics)
-    - [Updates](#updates)
-    - [Save](#save)
-  - [ii. Media Management](#ii-media-management)
-  - [iii. Download Client](#iii-download-client)
-    - [NZBGet](#nzbget)
-    - [ruTorrent](#rutorrent)
-  - [iv. Indexers](#iv-indexers)
-    - [NZBHydra2](#nzbhydra2)
-    - [Jackett](#jackett)
-  - [v. Connect](#v-connect)
-    - [Torrent Cleanup](#torrent-cleanup)
-    - [Plex Autoscan](#plex-autoscan)
-  - [4. Music Path](#4-music-path)
-  - [5. API Key](#5-api-key)
-
-<!-- /TOC -->
-
----
 # 1. Intro
 
 [Lidarr](https://lidarr.audio) is basically Sonarr for music. It functions as a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds from Bittorrent trackers and Usenet Indexers, looking for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
-
 
 ![](https://i.imgur.com/MZJEij2.png)
 
 # 2. URL
 
 - To access Lidarr, visit https://lidarr._yourdomain.com_
-
 
 # 3. Settings
 
@@ -57,18 +24,9 @@
 
 - "URL Base": _blank_
 
-- "Enable SSL": `No` (_SSL is handled by Nginx-Proxy_)
+- "Enable SSL": `No` (_SSL is handled by Traefik_)
 
 - "Open browser on start": `No`
-
-### Security
-
-- "Authentication": `Forms (Login page)` (_can also be set to `Basic (Browser popup)`_)
-
-- "Username": _your Lidarr username_
-
-- "Password": _your Lidarr password_
-
 
 ### Proxy Settings
 
@@ -77,7 +35,6 @@
 ### Logging
 
 - "Log Level": `Debug`
-
 
 ### Analytics
 
@@ -127,8 +84,6 @@
 1. Click "Save".
 
 
-
-
 ## iii. Download Client
 
 1. Click "Settings" -> "Download Client".
@@ -136,7 +91,6 @@
 1. "Completed Download Handling": `Enabled` Selected (_your preference_)
 
 1. "Failed Download Handling": `Redownload` Selected.
-
 
 
 ### NZBGet

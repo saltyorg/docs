@@ -7,12 +7,11 @@ The guides in this wiki are only meant to setup Saltbox specific settings into t
 
 If you wish to learn more about them in detail, you can easily find a ton of guides for them online (e.g. [HTPC Guides](https://www.htpcguides.com){target=_blank}, [YouTube](https://www.youtube.com){target=_blank}, etc).
 
-There are, broadly, 5 prerequisites to installing Saltbox:
+There are, broadly, 4 prerequisites to installing Saltbox:
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [A Server](#server)
-- [A Domain Name](#domain)
 - [Cloud Storage](#cloud-storage)
 - [A Plex Account](#plex-account)
 - [Usenet or Bittorrent sources](#usenet-or-bittorrent-sources)
@@ -30,14 +29,6 @@ For best results, the assumed server environment for Saltbox is:
  - allowing root access
 
 See [here](../../reference/server.md) for more information about server requirements.
-
-##Domain
-
-**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [Accessing Apps](../basics/accessing_apps.md)).
-
-Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect externally** to the apps using `IP:PORT`.
-
-See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
 
 ##Cloud Storage
 

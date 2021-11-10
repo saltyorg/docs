@@ -15,18 +15,6 @@ _Note: If you don't use torrents, you may just skip this page._
    ![](../images/jackett-settings.png)
 
 
-### Setting Admin password
-
-Under "Jackett Configuration": 
-
-1. Set "Admin password" to your preferred password.
-
-1. Click "Set Password".
-
-1. Jackett will now refresh and ask you to log in with your admin password.
-
-   ![](../images/jackett-login.png)
-
 ### Disabling Auto Update
 
 Under "Jackett Configuration": 

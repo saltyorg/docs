@@ -6,6 +6,8 @@ site_description: Saltbox is an Ansible-based solution for rapidly deploying a D
 repo_name: docs
 repo_url: https://github.com/saltyorg/docs
 
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: overrides
@@ -238,9 +240,10 @@ nav:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md
       - overseerr: apps/overseerr.md
-      - TO BE UPDATED: 
-        - lidarr: apps/lidarr.md
+      - REPLACE IMAGES: 
         - jackett: apps/jackett.md
+      - NEED UPDATING: 
+        - lidarr: apps/lidarr.md
         - nzbget: apps/nzbget.md
         - nzbhydra2: apps/nzbhydra2.md
         - organizr: apps/organizr.md

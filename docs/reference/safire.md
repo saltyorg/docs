@@ -14,6 +14,7 @@ This will set up three Shared Drives and set up all the infrastructure you need 
 3. The script will generate a random prefix and use this for the shared drives, service accounts, and projects.
 
 4. Default is to generate three shared drives:
+
    |  Drive            |  media dir        |
    |:-----------------:|:-----------------:|
    |  [PREFIX]_Movies  |  `/Media/Movies`  |

@@ -44,7 +44,7 @@ There are two pieces that can't be scripted.
 1. SSH into your server, then copy-paste these commands one by one:
 
     ```
-    curl -fLvO https://gist.githubusercontent.com/chazlarson/63e2dfb274a3e3178fb88485fe62943f/raw/803f65665bc934962a8e6d1e983ae17725c0e325/sb_gd.sh
+    curl -fLvO https://raw.githubusercontent.com/chazlarson/sb_gd/main/sb_gd.sh
     chmod +x sb_gd.sh
     ./sb_gd.sh
     ```

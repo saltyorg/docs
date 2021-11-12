@@ -4,6 +4,8 @@ To make the setup more straightforward, this guide will leverage `safire` to gen
 
 This will set up three Shared Drives and set up all the infrastructure you need for Saltbox to use them.
 
+# This script is a work in progress; it probably has rough edges.  It's mostly intended for brand new users.
+
 ## Assumptions and defaults:
 
 1. You have rclone installed

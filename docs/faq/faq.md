@@ -255,7 +255,7 @@ The source code for the Restore Service Scripts are listed below:
 
 ### Ansible Tags
 
-Multiple Tags
+#### Multiple Tags
 
 Run multiple tags together by separating them with commas, no spaces. Quotes are optional. Order is not important.
 
@@ -267,7 +267,68 @@ Example:
 sb install core,emby,sonarr,radarr,nzbget,nzbhydra2
 ```
 
- Error while fetching server API version
+#### Skip Tags
+
+Skip tags you dont want to run by listing them with `--skip-tags` and separated by commas. Quotes are optional. Order is not important.
+
+Use this to skip containers or roles that are included in the "default" install types. 
+
+Example:
+
+```
+sb install saltbox --skip-tags rutorrent,jackett
+```
+
+_Note: But be careful on what you skip, as some things are needed by Saltbox to function properly._
+
+#### Merging Tags and Skip-Tags
+
+You can even merge `--tags` and `--skip-tags` into one command. Order is not important (e.g. skip tags can come before tags). 
+
+Example:
+
+```
+sb install core,emby,sonarr,radarr,nzbget,nzbhydra2 --skip-tags rutorrent,jackett
+```
+
+Can also be used along with one of the "default" tags (e.g. `cloudbox`).
+
+Example:
+
+```
+sb install cloudbox,sabnzbd --skip-tags rutorrent,jackett
+```
+
+#### Persistent Skip Tags
+
+You can "permanently" skip tags by adding the following lines to `/srv/git/saltbox/ansible.cfg`.
+
+Format: 
+
+```ini
+[tags]
+skip = TAG1,TAG2,etc
+```
+And then continue to install with the normal `--tags` command. 
+
+Example:
+
+```
+cat /srv/git/saltbox/ansible.cfg
+```
+
+```ini
+[tags]
+skip = rutorrent,jackett
+```
+
+```
+sb install saltbox,sabnzbd
+```
+
+In this example, the Saltbox installer will install with all the default items and sabnzbd, but will not install rutorrent and jackett.
+
+### Error while fetching server API version
 
 Full error message:
 

@@ -210,12 +210,46 @@ Nice table to see what is restored during simple backup/restore:
 | <pre>                         </pre> Items Backed UP              | <pre>     </pre> Backed Up From                   | <pre>     </pre> Restored To |
 |:----------------------------- |:-------------------------------- |:----------- |
 | Application Data              | `/opt/`                          | `/opt/`     |
-| Ansible Config                | `~/saltbox/ansible.cfg`         |             |
-| Account Settings              | `~/saltbox/accounts.yml`        |             |
-| Saltbox Settings             | `~/saltbox/settings.yml`        |             |
-| Saltbox Advanced Settings    | `~/saltbox/adv_settings.yml`    |             |
-| Backup Excludes List (custom) | `~/saltbox/backup_excludes_list.txt` |  `~/saltbox/backup_excludes_list.txt`           |
+| Ansible Config                | `/srv/git/saltbox/ansible.cfg`         |             |
+| Account Settings              | `/srv/git/saltbox/accounts.yml`        |             |
+| Saltbox Settings             | `/srv/git/saltbox/settings.yml`        |             |
+| Saltbox Advanced Settings    | `/srv/git/saltbox/adv_settings.yml`    |             |
+| Backup Excludes List (custom) | `/srv/git/saltbox/backup_excludes_list.txt` |  `~/saltbox/backup_excludes_list.txt`           |
 | Rclone Config                 | `~/.config/rclone/rclone.conf`   | `~/.config/rclone/rclone.conf`            |
+
+## What is Cloudbox Restore Service?
+
+An optional service that allows for easy backing up and restoring of CLIENT-SIDE ENCRYPTED config files.
+
+The config files that are backed up are: 
+
+- `ansible.cfg`
+
+- `accounts.yml`
+
+- `settings.yml`
+
+- `adv_settings.yml`
+
+- `backup_config.yml`
+
+- `rclone.conf`
+
+These files are the ones needed to run a successful restore. 
+
+_Note: `backup_excludes_list.txt` are not backed up into the Restore Service, simply because it is not important for a restore to work and also because it IS automatically restored during the restore process itself._
+
+How does this work?
+
+1. User fills in a username and password for Restore Service in the [[backup config |Saltbox-Backup-and-Restore-Settings]]. 
+
+2. During backup, config files are **encrypted** on the client-side, using a **salt-hashed** version of the username and password (your raw username is never sent to the Restore Service), and then uploaded to the Restore Service.
+
+3. When a user needs to restore their backup on a new box, they can pull their backed up config files from the Restore Service with a single command.
+
+The source code for the Restore Service Scripts are listed below:
+- https://github.com/saltyorg/Saltbox/blob/master/roles/backup/tasks/restore_service.yml (Backup Script)
+- https://github.com/saltyorg/scripts/blob/master/restore.sh (Restore Script)
 
 ## Saltbox Install
 

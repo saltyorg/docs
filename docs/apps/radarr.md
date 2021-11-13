@@ -6,7 +6,6 @@
 - [2. Settings](#2-settings)
   - [i. General](#i-general)
     - [Start-Up](#start-up)
-    - [Security](#security)
     - [Proxy Settings](#proxy-settings)
     - [Logging](#logging)
     - [Analytics](#analytics)
@@ -61,16 +60,6 @@
 - "Enable SSL": `No` (_SSL is handled by Nginx-Proxy_)
 
 - "Open browser on start": `No`
-
-### Security
-
-- "Authentication": `Forms (Login page)` (_can also be set to `Basic (Browser popup)`_)
-
-- "Username": _your Radarr username_
-
-- "Password": _your Radarr password_
-
-
 
 ### Proxy Settings
 
@@ -153,15 +142,22 @@
 
 
    <details>
-   <summary>Desimaniac's Naming Guide</summary> <br />
+   <summary>TRaSH' naming guide</summary> <br />
 
     Example:  <br />
     ```
-    /Guardians of the Galaxy (2014)/Guardians.of.the.Galaxy.2014.1080p.BluRay.x264-SPARKS.mkv
+    The Movie Title (2010) Ultimate Extended Edition [imdb-tt0066921][Surround Sound x264][Bluray-1080p Proper][3D][HDR][10bit][x264][DTS 5.1]-EVOLVE.mkv
     ```
 
-    Reference: https://github.com/desimaniac/docs/blob/master/my_sonarr_and_radarr_naming_guide.md
-   </details>
+    Standard Movie Format: <br />
+    ```
+    {Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}
+    ```
+
+    Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
+   </details><br />
+
+
 
 
 

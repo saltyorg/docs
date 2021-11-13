@@ -4,7 +4,6 @@
 - [2. Settings](#2-settings)
   - [i. General](#i-general)
     - [Start-Up](#start-up)
-    - [Security](#security)
     - [Proxy Settings](#proxy-settings)
     - [Logging](#logging)
     - [Analytics](#analytics)
@@ -57,15 +56,6 @@
 - "Enable SSL": `No` (_SSL is handled by Nginx-Proxy_)
 
 - "Open browser on start": `No` [This setting does not appear in Sonarr v3]
-
-### Security
-
-- "Authentication": `Forms (Login page)` (_can also be set to `Basic (Browser popup)`_)
-
-- "Username": _your Sonarr username_
-
-- "Password": _your Sonarr password_
-
 
 ### Proxy Settings
 
@@ -145,34 +135,27 @@
 
 
    <details>
-   <summary>Radarr's Wiki Example</summary> <br />
+   <summary>TRaSH' naming guide</summary> <br />
 
     Example:  <br />
     ```
-    The Series Title 2010 - S01E01 - [HDTV-720P PROPER][DTS 5.1][X264]-RLSGRP.mkv
+    Single Episode:
+
+    The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
+
+    Multi Episode:
+
+    The Series Title! (2010) - S01E01-E02-E03 - Episode Title [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
     ```
 
     Standard Episode Format: <br />
     ```
-    {Series Title} - S{season:00}E{episode:00} - {[QUALITY FULL]}{[MEDIAINFO AUDIOCODEC}{ MEDIAINFO AUDIOCHANNELS]}{[MEDIAINFO VIDEOCODEC]}{-RELEASE GROUP}
+    {Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{-Release Group}
     ```
 
-    Reference: https://github.com/Radarr/Radarr/wiki/Sorting-and-Renaming
+    for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
    </details><br />
 
-
-
-
-   <details>
-   <summary>Desimaniac's Naming Guide</summary> <br />
-
-    Example:  <br />
-    ```
-    /Gotham/Season 01/Gotham.S01E01.1080p.BluRay.x264-DEMAND.mkv
-    ```
-
-    Reference: https://github.com/desimaniac/docs/blob/master/my_sonarr_and_radarr_naming_guide.md
-   </details>
 
 
 ### Folders

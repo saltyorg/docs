@@ -242,6 +242,8 @@ nav:
       - overseerr: apps/overseerr.md
       - REPLACE IMAGES: 
         - jackett: apps/jackett.md
+        - radarr: apps/radarr.md
+        - sonarr: apps/sonarr.md
       - NEED UPDATING: 
         - lidarr: apps/lidarr.md
         - nzbget: apps/nzbget.md
@@ -249,10 +251,8 @@ nav:
         - organizr: apps/organizr.md
         - plex: apps/plex.md
         - portainer: apps/portainer.md
-        - radarr: apps/radarr.md
         - rutorrent: apps/rutorrent.md
         - sabnzbd: apps/sabnzbd.md
-        - sonarr: apps/sonarr.md
         - sstv: apps/sstv.md
         - tautulli: apps/tautulli.md
   - FAQ: faq/faq.md

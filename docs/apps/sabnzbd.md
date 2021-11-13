@@ -1,8 +1,10 @@
 - Install tag: `--tags sabnzbd`
 
-- Login is set with what's in accounts.yml
+## 1. URL
 
-![](../images/sabnzbd/01-sabnzbd.png)
+- To access ruTorrent, visit https://rutorrent._yourdomain.com_
+
+## 2. Basics
 
 - Go through the setup wizard.  YOu will need to enter server details:
 

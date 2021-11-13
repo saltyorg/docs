@@ -10,12 +10,6 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 ## 2. Basics
 
-
-### Login
-Login settings are preset out of the box (`user` / `passwd` as set in [[accounts.yml|Install: accounts.yml]]).
-
-_Note: If you need to change the password after installing Cloudbox, see the [[FAQ|FAQ#change-rutorrent-password-after-installation]]._
-
 ### Setup
 
 The setup for [[Sonarr|Install: Sonarr#rutorrent]], [[Radarr|Install: Radarr#rutorrent]], and [[Lidarr|Install: Lidarr#rutorrent]] are done on their respective wiki pages.

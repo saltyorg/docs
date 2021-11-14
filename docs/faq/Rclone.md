@@ -1,8 +1,6 @@
+# Rclone
 
 ---
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
 
 ## Rclone error: Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied
 

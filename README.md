@@ -1,5 +1,15 @@
 # Repo for https://docs.saltbox.dev
 
+## Previewing docs locally
+
+```bash
+git clone https://github.com/saltyorg/docs
+cd docs
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+```
+
+Docs will be accessible at http://localhost:8000
+
 ### Contributors
 
 <table>

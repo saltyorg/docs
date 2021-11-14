@@ -1,9 +1,5 @@
-
+# Cloud Storage
 ---
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
-
 
 ## Does Saltbox support encrypted data on the cloud?
 

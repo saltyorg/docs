@@ -1,8 +1,6 @@
+# Cloudplow
 
 ---
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
 
 ## Stuck on "Waiting for running upload to finish before proceeding..."
 

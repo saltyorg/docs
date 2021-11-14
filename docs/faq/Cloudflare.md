@@ -1,8 +1,6 @@
+# Cloudflare
 
 ---
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
 
 ## API request not authenticated
 
@@ -16,5 +14,6 @@ Make sure:
 
 - The `email` in [settings.yml](../reference/accounts.md) matches the one you have listed for your Cloudflare.com account.
 
-- The `cloudflare_api_key` in  [settings.yml](../reference/accounts.md matches your `domain`'s Cloudflare [Global API Key]().
+- The `cloudflare_api_key` in  [settings.yml](../reference/accounts.md) matches your `domain`'s Cloudflare [Global API Key]().
+
 

@@ -186,6 +186,7 @@ nav:
             - watchtower: community/apps/watchtower.md
             - yacht: community/apps/yacht.md
           - Networking:
+            - adguardhome: community/apps/adguardhome.md
             - kcptun_client: community/apps/kcptun_client.md
             - kcptun_server: community/apps/kcptun_server.md
             - unifi: community/apps/unifi.md

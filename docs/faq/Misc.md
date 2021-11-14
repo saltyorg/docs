@@ -82,7 +82,7 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 46 column 13 (char 1
 
 Fixes:
 
-1. Paste the JSON file at https://jsonformatter.curiousconcept.com/ and click `process`. This will tell you what the issue is and fix it for you.
+1. Paste the JSON file at [jsonformatter.curiousconcept.com](https://jsonformatter.curiousconcept.com/) and click `process`. This will tell you what the issue is and fix it for you.
 
    or
 

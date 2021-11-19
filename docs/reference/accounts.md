@@ -167,7 +167,7 @@
 
     - `zerossl`: Some setting. 
   
-      - Default is `no`.
+      - Default is `yes`.
 
 - `traefik`: Where things go.
 

@@ -53,7 +53,7 @@ sb install cm-varken
 
 4. Visit grafana `https://grafana._yourdomain.com_` <br />
 
-      - default login is `admin` and your default `SB password`.
+      - The configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 
 

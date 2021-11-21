@@ -1,5 +1,7 @@
 This guide will show you how to set up a Google SDK tools.
 
+It's assuming you're working through the steps from [here](rclone-manual.md).
+
 Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb):
 
 1. Run the following commands, one at a time:

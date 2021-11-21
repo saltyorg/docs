@@ -1,5 +1,7 @@
 This guide will show you how to create default Saltbox Shared Drives and add your group of SAs to them.
 
+It's assuming you're working through the steps from [here](rclone-manual.md).
+
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 1. Retrieve the `sb-gd` code
@@ -8,19 +10,19 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
     ```
 
-1. Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
     ```
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
     
-2. Install script requirements:
+3. Install script requirements:
 
     ```
     python -m pip install -r requirements.txt
     ```
 
-3. Edit the `config.py` script:
+4. Edit the `config.py` script:
 
     ```
     nano config.py
@@ -40,13 +42,13 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     }
     ```
 
-4. Copy your credential JSON into this directory:
+5. Copy your credential JSON into this directory:
 
     ```
     cp  /opt/sa/project-creds.json client_secrets.json
     ```
 
-5. Run the `sb_sd.py` script:
+6. Run the `sb_sd.py` script:
 
     ```
     python sb_sd.py
@@ -108,4 +110,4 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     Drive names and IDs will be written to `drive_create_log`.
 
-6. You're done.
+7. You're done.

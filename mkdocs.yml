@@ -280,7 +280,6 @@ nav:
           - Plex Account: reference/plex.md
           - Media Sources: reference/usenet-torrent.md
       - Google:
-          - Google Drive: reference/safire.md
           - Google SDK: reference/google-gcloud-tools-install.md
           - Google Project: reference/google-project-setup.md
           - Google Group: reference/google-group-setup.md

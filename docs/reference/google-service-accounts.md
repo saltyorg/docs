@@ -1,5 +1,7 @@
 This guide will show you how to create projects and service accounts using `sa-gen` and add them to a Google Group.
 
+It's assuming you're working through the steps from [here](rclone-manual.md).
+
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 1. Make sure /opt/sa is writable by you.
@@ -30,10 +32,10 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     KEYS_DIR=/opt/sa/all   <<<<
     ORGANIZATION_ID=""     <<<<
     GROUP_NAME="mygroup@mydomain.com"   <<<< the group you created previously
-    PROJECT_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated above
+    PROJECT_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3
-    SA_EMAIL_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated above
+    SA_EMAIL_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated previously
     FIRST_SA_NUM=1
     NUM_SAS_PER_PROJECT=100
     ...

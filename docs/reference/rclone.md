@@ -27,4 +27,4 @@ The manual steps that the script below will try to perform:
 
 With Saltbox we want to set up multiple teamdrives and service accounts form the get-go, with as few manual steps as possible.
 
-That process is still under construction.  Please take a look at the [automated version of this process](../reference/safire.md).
+That process is still under construction.  Please take a look at a [somewhat scripted version of this process](rclone-manual.md).

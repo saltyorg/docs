@@ -285,6 +285,7 @@ nav:
           - Google Project: reference/google-project-setup.md
           - Google Group: reference/google-group-setup.md
           - Google Service Accounts: reference/google-service-accounts.md
+          - Google Shared Drives: reference/google-shared-drives.md
       - Install:
           - Dependencies: reference/dependencies.md
           - Accounts and Settings: reference/accounts.md

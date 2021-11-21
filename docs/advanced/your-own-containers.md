@@ -28,7 +28,7 @@ docker run -d  \
     --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
-    --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=80 \
+    --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=<strong>80</strong> \
 	<strong>docker/image</strong>
 </pre>
 

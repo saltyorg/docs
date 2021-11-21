@@ -1,23 +1,24 @@
 This guide will show you how to set up a Google Group for use with service accounts.
 
-1. Open Google Groups site: https://groups.google.com/ and login with your Google account.  CLick on "Create Group":
+NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
-    ![](../images/group/01-groups.png)
+1. Open the Google Admin site: https://admin.google.com/ and login with your Google account.  Click on the groups heading:
+   
+   ![](../images/google-group/01-admin-top-level.png)
 
-2. Enter a name and email address for the group; the description is optional:
+1. You should now see a list of your groups [which may be empty].  Click on "Create Group":
+   
+   ![](../images/google-group/02-create-group.png)
 
-    ![](../images/group/02-add-group-01.png)
+2. Enter a name, description and email address for the group; choose an owner [this should be the account with which you just logged in]. Click "Next".
 
-    Click "Next" in the upper right.
+   ![](../images/google-group/03-group-detail.png)
 
-3. Change "Who can join" to "Only invited users":
+3. Scroll down, change "Who can join" to "Only invited users", and toggle "Allow members outside your organization". Click "Create Group".
 
-    ![](../images/group/03-add-group-02.png)
+   ![](../images/google-group/04-group-settings.png)
 
-4. Scroll to the bottom and set "subscription" to "No email" then click "Create Group" in the upper right:
+4. Click "Done".
 
-    ![](../images/group/04-add-group-03.png)
+   ![](../images/google-group/05-group-end.png)
 
-5. Your group will appear on the main page.  Make a note of the email address:
-
-    ![](../images/group/05-group-list.png) 

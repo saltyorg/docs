@@ -279,14 +279,18 @@ nav:
           - Cloud Storage: reference/cloud.md
           - Plex Account: reference/plex.md
           - Media Sources: reference/usenet-torrent.md
+      - Google:
+          - Google Drive: reference/safire.md
+          - Google SDK: reference/google-gcloud-tools-install.md
+          - Google Project: reference/google-project-setup.md
+          - Google Group: reference/google-group-setup.md
+          - Google Service Accounts: reference/google-service-accounts.md
       - Install:
           - Dependencies: reference/dependencies.md
           - Accounts and Settings: reference/accounts.md
           - Preinstall: reference/preinstall.md
-          - Google Drive: reference/safire.md
-          - Google Project: reference/google-project-setup.md
-          - Google Group: reference/google-group-setup.md
           - Rclone: reference/rclone.md
+          - Rclone [Manual]: reference/rclone-manual.md
           - Install: reference/install.md
       - Other:
           - Cloudplow Examples: reference/cloudplow.md

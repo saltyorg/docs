@@ -1,5 +1,7 @@
 This guide will show you how to set up a Google Project and create credentials that will work for safire.
 
+It's assuming you're working through the steps from [here](rclone-manual.md).
+
 This guide is assuming you are using a standard GSuite Business or GSuite Workspace account.
 
 1. Open Google APIs Console site: https://console.developers.google.com and login with your Google account.

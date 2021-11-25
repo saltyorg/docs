@@ -1,6 +1,6 @@
 # Ubooquity
 
-# **NOT YET INTEGRATED - SOON**
+# **NOT INTEGRATED - MAKE SANDBOX REQUEST IF NEEDED**
 
 ## What is it?
 

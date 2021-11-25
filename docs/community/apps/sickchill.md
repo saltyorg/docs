@@ -1,6 +1,6 @@
 # SickChill
 
-# **NOT YET INTEGRATED - SOON**
+# **NOT INTEGRATED**
 
 ## What is it?
 

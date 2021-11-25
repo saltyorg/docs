@@ -1,6 +1,6 @@
 # TransmissionVPN
 
-# **NOT YET INTEGRATED - SOON**
+# **NOT INTEGRATED - MAKE SANDBOX REQUEST IF NEEDED**
 ## What is it?
 
 [TransmissionVPN](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is a VPN version of [Transmission](../../community/apps/transmission.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.

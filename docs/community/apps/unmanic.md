@@ -1,7 +1,5 @@
 # Unmanic
 
-# **NOT YET INTEGRATED - SOON**
-
 ## What is it?
 
 [Unmanic](https://github.com/Unmanic/unmanic){: target=_blank rel="noopener noreferrer" } is a simple tool for optimising your file library. You can use it to convert your files into a single, uniform format, manage file movements based on timestamps, or execute custom commands against a file based on its file size.

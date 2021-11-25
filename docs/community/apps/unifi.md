@@ -1,6 +1,6 @@
 # UniFi Network Controller
 
-# **NOT YET INTEGRATED - SOON**
+# **NOT INTEGRATED - MAKE SANDBOX REQUEST IF WANTED**
 
 ## What is it?
 

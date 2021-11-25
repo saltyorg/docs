@@ -1,6 +1,5 @@
 # xTeVe
 
-# **NOT YET INTEGRATED - SOON**
 
 ## What is it?
 

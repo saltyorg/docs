@@ -85,6 +85,7 @@ nav:
   - Community:
       - Basics: community/basics.md
       - Settings: community/settings.md
+      - Index: community/index.md
       - Apps:
         - Content Management:
           - Wordpress: community/apps/wordpress.md
@@ -240,11 +241,11 @@ nav:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md
       - overseerr: apps/overseerr.md
-      - REPLACE IMAGES: 
+      - REPLACE IMAGES:
         - jackett: apps/jackett.md
         - radarr: apps/radarr.md
         - sonarr: apps/sonarr.md
-      - NEED UPDATING: 
+      - NEED UPDATING:
         - lidarr: apps/lidarr.md
         - nzbget: apps/nzbget.md
         - nzbhydra2: apps/nzbhydra2.md
@@ -299,5 +300,12 @@ nav:
           - Ports: reference/ports.md
           - Pushover: reference/pushover.md
           - Subdomains: reference/subdomain.md
-
+  - Sandbox:
+      - Basics: sandbox/basics.md
+      - Settings: sandbox/settings.md
+      - Index: sandbox/index.md
+      - Apps:
+        - General:
+          - adguardhome: sandbox/apps/adguardhome.md
+          - mkvtoolnix: sandbox/apps/mkvtoolnix.md
 copyright: Copyright &copy; 2021 Saltbox

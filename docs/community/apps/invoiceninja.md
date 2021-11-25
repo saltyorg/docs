@@ -1,5 +1,5 @@
 # Invoice Ninja
-# **NOT YET INTEGRATED - SOON**
+# **NOT INTEGRATED - MAKE SANDBOX REQUEST FOR LEGACY VERSION IF NEEDED**
 ## What is it?
 
 [Invoice Ninja](https://www.invoiceninja.com/){: target=_blank rel="noopener noreferrer" } is an invoicing application which makes sending invoices and receiving payments simple and easy. Our latest version is a clean slate rewrite of our popular invoicing application which builds on the existing feature set and adds a wide range of features and enhancements the community has asked for.

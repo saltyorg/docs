@@ -8,6 +8,14 @@ Providing documentation for Sandbox applications is encouraged but not required.
 
 All Saltbox Community applications **must** have documentation
 
+### Install
+
+``` shell
+
+sb install sandbox
+
+```
+
 ### Update
 
 To update Saltbox Sandbox run a standard saltbox update and Sandbox, Community, and Saltbox will all be updated

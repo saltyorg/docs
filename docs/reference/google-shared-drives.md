@@ -110,4 +110,28 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     Drive names and IDs will be written to `drive_create_log`.
 
+    <details>
+    <summary>What are those directories and files for?</summary>
+    <br />
+
+    This script creates an empty directory and a zero-byte file on the root of each shared drive.
+
+    The file will be useful later on when you need "is this disk mounted?" flags for things like `plex_autoscan`.
+
+    The directory is a belt-and-suspenders convenience you can use to see if your union remote and/or mergerfs config is including everything it should.  We create both a file and a dir so you will get this information whether you use `rclone ls REMOTE` or `rclone lsd REMOTE` or whatever other means:
+
+    ```
+     $ rclone lsd google:
+          -1 2021-11-21 17:09:13        -1 -- aZaSjsklaj-Movies Shared --
+          -1 2021-11-21 17:11:50        -1 -- aZaSjsklaj-Music Shared --
+          -1 2021-11-21 17:12:09        -1 -- aZaSjsklaj-TV Shared --
+          -3 2021-11-21 17:12:11        -1 Media
+
+     $ rclone ls google:
+            0 azasjsklaj-movies_mounted.bin
+            0 azasjsklaj-tv_mounted.bin
+            0 azasjsklaj-music_mounted.bin
+    ```
+    </details>
+
 7. You're done.

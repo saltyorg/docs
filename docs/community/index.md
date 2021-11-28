@@ -67,7 +67,6 @@
   -  **[ombix](../community/apps/ombix.md)**  - tag - `cm-ombix`
   -  **[ouroboros](../community/apps/ouroboros.md)**  - tag - `cm-ouroboros`
   -  **[petio](../community/apps/petio.md)**  - tag - `cm-petio`
-  -  **[plex_meta_manager](../community/apps/plex_meta_manager.md)**  - tag - `cm-plex-meta-manager`
   -  **[prowlarr](../community/apps/prowlarr.md)**  - tag - `cm-prowlarr`
   -  **[qbittorrent](../community/apps/qbittorrent.md)**  - tag - `cm-qbittorrent`
   -  **[qbittorrentx](../community/apps/qbittorrentx.md)**  - tag - `cm-qbittorrentx`
@@ -88,7 +87,6 @@
   -  **[transmission](../community/apps/transmission.md)**  - tag - `cm-transmission`
   -  **[transmissionx](../community/apps/transmissionx.md)**  - tag - `cm-transmissionx`
   -  **[unmanic](../community/apps/unmanic.md)**  - tag - `cm-unmanic`
-  -  **[unpackerr](../community/apps/unpackerr.md)**  - tag - `cm-unpackerr`
   -  **[uptime_kuma](../community/apps/uptime_kuma.md)**  - tag - `cm-uptime-kuma`
   -  **[varken](../community/apps/varken.md)**  - tag - `cm-varken`
   -  **[vaultwarden](../community/apps/vaultwarden.md)**  - tag - `cm-vaultwarden`

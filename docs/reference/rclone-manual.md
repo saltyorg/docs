@@ -1,6 +1,6 @@
 [Rclone](https://rclone.org) (by Nick Craig-Wood) is "rsync for the cloud". Basically, it is used to transfer data to or from a variety of supported cloud storage providers (eg Google Drive).
 
-Rclone is used by [[Cloudplow]] and [Backup](../saltbox/backup/backup.md) to upload media and backup Saltbox, respectively.
+Rclone is used by [Cloudplow](cloudplow.md) and [Backup](../saltbox/backup/backup.md) to upload media and backup Saltbox, respectively.
 
 The guide below assumes you are using Google Drive. 
 

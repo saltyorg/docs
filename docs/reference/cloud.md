@@ -1,6 +1,8 @@
 # Cloud Storage
 ## Provider
 
+If you want to forego cloud storage and put your media on something like your own NAS, there are some notes [here](local-storage.md).
+
 Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
 
 It is advised that you do NOT use a educational GSuite account or any GSuite account or Shared Drive you may buy on the secondary market [eBay and the like], unless you are aware of and planning for the likelihood that it disappears one day.

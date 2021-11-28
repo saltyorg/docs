@@ -47,6 +47,8 @@ A base assumption in Saltbox is that you are storing your media on cloud storage
 
 See [here](../../reference/cloud.md) for more information about Cloud Storage requirements and running Saltbox without it.
 
+
+
 ##Plex Account
 
 You'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already have one, for purposes of the install, *even if you're not planning to use Plex*.  

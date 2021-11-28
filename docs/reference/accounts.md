@@ -30,15 +30,15 @@
 
     - `domain`: Domain name for the Saltbox server. 
 
-        - If you don't have one, see [[here|Prerequisites: Domain Name]].
+        - If you don't have one, see [here](domain.md).
         - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
-        - This parameter is **required**.
-
+        - Leave this blank to run without the reverse proxy and access the apps via IP:PORT
+        
     - `email`: E-mail address. 
 
         - This is used for the Let's Encrypt SSL certificates.
         - It does not have to be an email address at the domain above.
-        - This parameter is **required**.
+        - This parameter is **required** if you're using the reverse proxy.
 
 - `cloudflare`: Cloudflare Account
     - `email`: E-mail address used for the Cloudflare account. 
@@ -67,9 +67,9 @@
 
     - This parameter is required. 
 
-    - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work evern with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
+    - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
 
-    - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.
+    - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.  Consider securing this file if you are running Saltbox on a shared machine.
 
 - `dockerhub`: DockerHub account credentials. 
 
@@ -99,7 +99,7 @@
   
       - Default is `/mnt/unionfs/downloads/nzbs`.
 
-       - Example: With the default path, NZBGet downloads would go to `/mnt/unionfs/downloads/nzbs/nzbget/completed`, where as, SABnzbd downloads would go to `/mnt/unionfs/downloads/nzbs/sabnzbd/complete`.
+       - Example: With the default path, NZBGet downloads would go to `/mnt/unionfs/downloads/nzbs/nzbget/completed` and SABnzbd downloads would go to `/mnt/unionfs/downloads/nzbs/sabnzbd/complete`.
 
     - `torrents`: Path for BitTorrent app downloads. 
 
@@ -145,65 +145,65 @@
 
 ---
 
-- `system`: Where things go.
+- `system`: Various system-level settings.
 
-    - `timezone`: Some setting. 
+    - `timezone`: Timezone to use on the server. 
   
-      - Default is `auto`.
+      - Default is `auto`, which will pick the timezone based on geolocation of the server.
 
-- `dns`: Where things go.
+- `dns`: DNS-related settings.
 
-    - `enabled`: Some setting. 
-  
-      - Default is `yes`.
-
-    - `proxied`: Some setting. 
-  
-      - Default is `no`.
-
-    - `ipv6`: Some setting. 
-  
-      - Default is `no`.
-
-    - `zerossl`: Some setting. 
+    - `enabled`: Controls whether subdomains are created at Cloudflare
   
       - Default is `yes`.
 
-- `traefik`: Where things go.
-
-    - `tls`: Some setting. 
+    - `proxied`: Controls whether Cloudflare records should be "proxied" or "DNS only". 
   
       - Default is `no`.
 
-    - `metrics`: Some setting. 
+    - `ipv6`: Enable/disable ipv6 configuration. 
   
       - Default is `no`.
 
-    - `tracing`: Some setting. 
+    - `zerossl`: Controls whether zerossl is used. 
+  
+      - Default is `yes`.
+
+- `traefik`: traefik-related settings.
+
+    - `tls`: Use TLS. 
   
       - Default is `no`.
 
-    - `hsts`: Some setting. 
+    - `metrics`: enable metrics subdomain. 
   
       - Default is `no`.
 
-- `mounts`: Where things go.
+    - `tracing`: Enable tracing. 
+  
+      - Default is `no`.
 
-    - `remote`: Some setting. 
+    - `hsts`: enable hsts. 
+  
+      - Default is `no`.
+
+- `mounts`: cloud storage mount settings.
+
+    - `remote`: What type of remote to use. 
   
       - Default is `rclone_vfs`.
 
-    - `feeder`: Some setting. 
+    - `feeder`: Should a feeder mount be created?
   
       - Default is `no`.
 
-- `gpu`: Where things go.
+- `gpu`: GPU settings.
 
-    - `intel`: Some setting. 
+    - `intel`: Should system be set up for Intel GPU?
   
       - Default is `yes`.
 
-    - `nvidia`: Some setting. 
+    - `nvidia`: Should system be set up for NVidia GPU?
   
       - Default is `no`.
 

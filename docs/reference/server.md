@@ -9,7 +9,7 @@ Typically this server is remote to you; you can install on a home server, keepin
 
 Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
 
-A commonly-asked question is ["can I run cloudbox on this server?"](../community/guides/chazguides/server.md)
+A commonly-asked question is ["can I run saltbox on this server?"](../community/guides/chazguides/server.md)
 
 You will need root access to install Saltbox.
 
@@ -37,6 +37,7 @@ If you are setting this up on a home server, verify, **before installing Saltbox
   2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network]
   3. Open the relevant [ports](ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
   4. Point your domain at your home IP and configure some dynamic DNS software to keep it updated.  Saltbox has a dynamic dns client available [it's not installed by default], but there are many ways to set this up.  Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
+  5. Review the notes about [local storage](local-storage.md) if you're not planning to use cloud storage.
 
 ### Tips
 

@@ -1,5 +1,11 @@
 # Repo for https://docs.saltbox.dev
 
+## Contributing
+
+Fork this repo.
+Make your changes and/or additions.
+Open a pull request.
+
 ## Previewing docs locally
 
 ```bash

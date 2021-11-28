@@ -2,9 +2,9 @@
 
 ## Contributing
 
-Fork this repo.
-Make your changes and/or additions.
-Open a pull request.
+1. Fork this repo.
+1. Make your changes and/or additions.
+1. Open a pull request.
 
 ## Previewing docs locally
 

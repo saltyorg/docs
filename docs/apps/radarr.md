@@ -10,6 +10,8 @@ Make changes in the following sections:
 
 === "Media Management"
 
+    These settings control management of media files.
+
     === "Movie Naming"
 
         - "Rename Movies": `Yes`
@@ -112,7 +114,7 @@ Make changes in the following sections:
     
 === "Indexers"
 
-    Add in your your favorite [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources).
+    This is where you define your [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources).
 
     === "NZBHydra2"
 
@@ -173,6 +175,8 @@ Make changes in the following sections:
 
 === "Download Clients"
 
+    These settings downloading behavior and clients.
+
     === "Completed Download Handling"
 
         - "Enable": `Yes`
@@ -221,9 +225,9 @@ Make changes in the following sections:
 
         1. Click Add (`+`)
 
-        1. Add a new "rTorrent" download client.
+        2. Add a new "rTorrent" download client.
 
-        2. Add the following:
+        3. Add the following:
 
             Name: ruTorrent
 
@@ -245,13 +249,15 @@ Make changes in the following sections:
 
             Directory: _Leave Blank_
 
-        3.  Your settings will now look like this:
+        4.  Your settings will now look like this:
 
              ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
-        4. Click "Save" to add ruTorrent.
+        5. Click "Save" to add ruTorrent.
    
 === "Connect"
+
+    These settings control conenctions to other applications or systems.
 
     === "Torrent Cleanup"
 
@@ -319,6 +325,8 @@ Make changes in the following sections:
 
 
 === "General"
+
+    These settings control general aspects of Radarr.
 
     === "Start-Up"
 

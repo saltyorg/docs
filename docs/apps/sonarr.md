@@ -240,9 +240,9 @@ Make changes in the following sections:
 
         Use SSL: `No`
 
-        Username: [Your ruTorrent Username](../rutorrent.md)
+        Username: [Your ruTorrent Username](../apps/rutorrent.md)
 
-        Password: [Your ruTorrent Password](../rutorrent.md)
+        Password: [Your ruTorrent Password](../apps/rutorrent.md)
 
         Category: `sonarr`
 

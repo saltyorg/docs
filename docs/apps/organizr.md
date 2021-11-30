@@ -1,22 +1,16 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:1 -->
-
-- [1. Intro](#1-intro)
-- [2. URL](#2-url)
-- [3. Initial Setup](#3-initial-setup)
-- [4. Settings](#4-settings)
-  - [Tabs](#tabs)
-  - [Homepage (Make you have Homepage ACTIVE in Tabs section)](#homepage-make-you-have-homepage-active-in-tabs-section)
-  - [Homepage Order](#homepage-order)
-
-<!-- /TOC -->
----
-## 1. Intro
+## What is it?
 
 [Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
 
-![](https://i.imgur.com/VvBS2dk.png)
+## Project Information
+
+- [:material-home: Organizr ](https://organizr.app){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/causefx/Organizr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/organizr/organizr){: .header-icons target=_blank rel="noopener noreferrer" }
+
 
 ## 2. URL
 

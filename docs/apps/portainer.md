@@ -1,10 +1,15 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-## 1. Intro
+## What is it?
 
 [Portainer](https://portainer.io/) is an open-source lightweight management UI which allows you to easily manage your Docker containers, images, networks and volumes.
 
-![](https://i.imgur.com/v3fukYX.png)
+## Project Information
+
+- [:material-home: Portainer ](https://portainer.io/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://docs.portainer.io//){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/portainer/portainer/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/portainer/portainer-ce){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ## 2. URL
 

@@ -1,10 +1,17 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
+## What is it?
+
 [ruTorrent](https://github.com/Novik/ruTorrent) (by Novik) is a front-end for the popular, lightweight, and extensible BitTorrent client [rtorrent](https://github.com/rakshasa/rtorrent) (by Jari Sundell aka rakshasa).
 
 _Note: public trackers are disabled by default in the standard install.  Refer to the FAQ for [instructions on re-enabling them](https://github.com/Cloudbox/Cloudbox/wiki/FAQ#enable-access-to-public-torrent-trackers)._
 
-![](https://i.imgur.com/30dxlTc.png)
+## Project Information
+
+- [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ## 1. URL
 

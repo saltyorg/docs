@@ -1,6 +1,16 @@
-# 1. Introduction
+## What is it?
 
 [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
+
+## Project Information
+
+- [:material-home: Emby ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }
+
+# 1. Introduction
+
 
 ![](../images/emby/emby-splash.jpg)
 

@@ -1,20 +1,15 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:1 -->
+## What is it?
 
-- [1. Intro](#1-intro)
-- [2. URL](#2-url)
-- [3. Setup Wizard](#3-setup-wizard)
-- [4. Settings](#4-settings)
+[Tautulli](http://tautulli.com/) (Tautulli), by JonnyWong16, is a web-based application runs alongside the Plex Media Server to monitor activity and track various statistics (eg most watched media). 
 
-<!-- /TOC -->
----
-## 1. Intro
+## Project Information
 
-[PlexPy](http://tautulli.com/) (Tautulli), by JonnyWong16, is a web-based application runs alongside the Plex Media Server to monitor activity and track various statistics (eg most watched media). 
-
-![](https://i.imgur.com/cyHtbaK.jpg)
-
+- [:material-home: Tautulli ](http://tautulli.com){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Tautulli/Tautulli){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/tautulli){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ## 2. URL
 

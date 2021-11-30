@@ -1,3 +1,14 @@
+## What is it?
+
+[Sonarr](https://sonarr.tv/) is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+
+## Project Information
+
+- [:material-home: Sonarr ](https://sonarr.tv/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://wiki.servarr.com/sonarr/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Sonarr/Sonarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/sonarr){: .header-icons target=_blank rel="noopener noreferrer" }
+
 ## URL
 
 - To access Sonarr, visit https://sonarr._yourdomain.com_

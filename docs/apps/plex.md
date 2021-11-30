@@ -1,3 +1,13 @@
+## What is it?
+
+[Plex](https://plex.tv/) brings together all the media that matters to you. Your personal collection will look beautiful alongside stellar streaming content. Enjoy Live TV & DVR, a growing catalog of great web shows, news, and podcasts. It's finally possible to enjoy all the media you love in a single app, on any device, no matter where you are.
+
+## Project Information
+
+- [:material-home: Plex ](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }
+
 ## URL
 
 1. To access Plex, visit https://plex._yourdomain.com_

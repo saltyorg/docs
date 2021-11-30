@@ -1,8 +1,13 @@
-# Intro
+## What is it?
 
 [Lidarr](https://lidarr.audio) is basically Sonarr for music. It functions as a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds from Bittorrent trackers and Usenet Indexers, looking for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
-![](https://i.imgur.com/MZJEij2.png)
+## Project Information
+
+- [:material-home: Lidarr ](https://lidarr.audio){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/Lidarr/Lidarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }
 
 # URL
 

@@ -1,23 +1,14 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:1 -->
-
-1. [Intro](#1-intro)
-2. [URL](#2-url)
-3. [Setup](#3-setup)
-4. [API](#4-api-key)
-
-<!-- /TOC -->
-
-## 1. Intro
-
+## What is it?
 
 [NZBHydra2](https://github.com/theotherp/nzbhydra2), by _TheOtherP_, is a meta search tool for NZB indexers. It provides easy access to a number of NZB indexers. You can search all your indexers from one place and use it as indexer source for tools like Sonarr or CouchPotato.
 
+## Project Information
 
-![](https://i.imgur.com/gjciEYd.png)
-
----
+- [:octicons-link-16: Docs](https://github.com/theotherp/nzbhydra2/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/theotherp/nzbhydra2){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/nzbhydra2){: .header-icons target=_blank rel="noopener noreferrer" }
 
 Three Ways to setup NZB indexers with Sonarr/Radarr/Lidarr: 
 

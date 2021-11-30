@@ -1,11 +1,14 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
+## What is it?
+
 [Plex Autoscan](https://github.com/l3uddz/plex_autoscan/) (by [l3uddz](https://github.com/l3uddz/)) is a script that assists Plex with the adding media files, that were imported by Sonarr / Radarr, by only scanning the folder that has been imported (vs the entire section library folder), thereby preventing Google API bans.
 
 Plex Autoscan comes configured out of the box (as related to Saltbox). However, there a few things that need to be set by you.
 
-_If you would like to learn more about what Plex Autoscan does and all the options available, visit https://github.com/l3uddz/plex_autoscan._
+## Project Information
 
+- [:octicons-mark-github-16: Github:](https://github.com/l3uddz/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### Do a One-Time, Manual Scan in Plex
 

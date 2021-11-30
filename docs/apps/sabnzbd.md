@@ -1,5 +1,18 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
+## What is it?
+
+[SABnzbd](https://github.com/Novik/ruTorrent) is an Open Source Binary Newsreader written in Python.
+
+It's totally free, easy to use, and works practically everywhere. SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction. SABnzbd offers an easy setup wizard and has self-analysis tools to verify your setup.
+
+## Project Information
+
+- [:material-home: SABnzbd ](https://sabnzbd.org/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-mark-github-16: Github:](https://github.com/sabnzbd/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" }
+
 - Install tag: `--tags sabnzbd`
 
 ## 1. URL

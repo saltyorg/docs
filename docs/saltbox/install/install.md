@@ -179,4 +179,22 @@ Saltbox assumes an rclone remote pointed at your google storage named `google` [
 
 ## Reboot
 
-You're now ready to install other apps and tweak the setup as you see fit. After rebooting!
+You're now ready to go through the basic setup for the apps. After rebooting!
+
+## App Setup:
+
+Go through these one at a time; some of the setups depend on previous setups.
+
+1. [NZBGet](../../apps/nzbget.md)
+1. [ruTorrent](../../apps/rutorrent.md)
+1. [NZBHydra2](../../apps/nzbhydra2.md)
+1. [Jackett](../../apps/jackett.md)
+1. [Plex Media Server](../../apps/plex.md)
+1. [Plex Autoscan](../../apps/plex-autoscan.md)
+1. [Sonarr](../../apps/sonarr.md)
+1. [Radarr](../../apps/radarr.md)
+1. [Lidarr](../../apps/lidarr.md)
+1. [Tautulli](../../apps/tautulli.md)
+1. [Overseerr](../../apps/overseerr.md)
+1. [Portainer](../../apps/portainer.md)
+1. [Organizr](../../apps/organizr.md)

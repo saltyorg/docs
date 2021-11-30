@@ -1,30 +1,28 @@
----
-
 ## URL
 
 1. To access Plex, visit https://plex._yourdomain.com_
 
 2. Login with your Plex account
 
-    ![](https://i.imgur.com/KMVu05O.png)
+    ![](../images/plex-media-server/plex-01-signin.png)
 
 ## Setup Wizard
 
 1. First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.
 
-    ![](https://i.imgur.com/CTG955C.png)
+    ![](../images/plex-media-server/plex-02-intro.png)
 
-1. Next screen will show you a list of servers, with a randomly generated name. Give it a friendly name and click "NEXT".
+2. Next screen will show you a list of servers, with a randomly generated name. Give it a friendly name and click "NEXT".
 
-    ![](https://i.imgur.com/soGxdGm.png)
+    ![](../images/plex-media-server/plex-03-server-setup-1.png)
 
-1. On the next screen, click "NEXT" (we will add Libraries later).
+3. On the next screen, click "NEXT" (we will add Libraries later).
 
-    ![](https://i.imgur.com/OQxsJd1.png)
+    ![](../images/plex-media-server/plex-04-server-setup-2.png)
 
-1. Click "DONE".
+4. Click "DONE".
 
-    ![](https://i.imgur.com/uRr3o61.png)
+    ![](../images/plex-media-server/plex-05-server-setup-3.png)
 
 
 ## Settings
@@ -49,7 +47,7 @@
 
 1. Click "SAVE CHANGES".
 
-    ![](https://i.imgur.com/g6RxFdF.jpg)
+    ![](../images/plex-media-server/plex-07-library.jpeg)
 
 
 ### Network
@@ -71,7 +69,7 @@
 
 1. Click "SAVE CHANGES".
 
-    ![](https://i.imgur.com/Qx9TcHX.jpg)
+    ![](../images/plex-media-server/plex-08-network.jpeg)
 
 
 ### Transcoder
@@ -90,7 +88,7 @@
 
 1. Click "SAVE CHANGES".
 
-    ![](https://i.imgur.com/QH3R8FF.png)
+    ![](../images/plex-media-server/plex-09-transcoder.png)
 
 
 
@@ -107,7 +105,7 @@
 
 1. Click "SAVE CHANGES".
 
-    ![](https://i.imgur.com/8XiyMEk.png)
+    ![](../images/plex-media-server/plex-10-dlna.png)
 
 
 
@@ -126,7 +124,7 @@
 
 3. Click "SAVE CHANGES".
 
-    ![](https://i.imgur.com/0SHIJCM.jpg)
+    ![](../images/plex-media-server/plex-11-schedule.jpeg)
 
 
 ## Add Media Libraries
@@ -139,29 +137,27 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
 
-    ![](https://i.imgur.com/zadq6ca.png)
+    ![](../images/plex-media-server/plex-12-add-library.png)
 
-1. In the "Add Library" window, select "Movies" and click "NEXT".
+2. In the "Add Library" window, select "Movies" and click "NEXT".
 
-    ![](https://i.imgur.com/UcUFCix.png)
+    ![](../images/plex-media-server/plex-13-movies-lib.png)
 
-1. Click "BROWSE FOR MEDIA FOLDER".
+3. Click "BROWSE FOR MEDIA FOLDER".
 
-    ![](https://i.imgur.com/5kywEro.png)
+    ![](../images/plex-media-server/plex-14-movies-add-folder.png)
 
-1. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
+4. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
 
-    NEED NEW IMAGE
-    ![ ](https://i.imgur.com/Embc9h9.png)
+    ![ ](../images/plex-media-server/plex-15-movies-choose-folder.png)
 
-1. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
+5. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
 
-    NEED NEW IMAGE
-    ![](https://i.imgur.com/qzlGMTN.png)
+    ![](../images/plex-media-server/plex-16-movies-path.png)
 
-1. Click "Advanced" on the left.
+6. Click "Advanced" on the left.
 
-1. Set the following:
+7. Set the following:
 
    - "Enable Cinema Trailers": `disabled` (optional)
 
@@ -169,50 +165,48 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
    - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional) 
 
-1. Click "ADD LIBRARY".
+8. Click "ADD LIBRARY".
 
-    ![](https://i.imgur.com/4JV0orf.png)
+    ![](../images/plex-media-server/plex-17-movies-advanced.png)
 
 ### Add the TV Library
 
 1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
 
-    ![](https://i.imgur.com/zadq6ca.png)
+    ![](../images/plex-media-server/plex-18-add-library.png)
 
-1. In the "Add Library" window, select "TV Shows" and click "NEXT".
+2. In the "Add Library" window, select "TV Shows" and click "NEXT".
 
-    ![](https://i.imgur.com/gZtUgtQ.png)
+    ![](../images/plex-media-server/plex-19-tv-lib.png)
 
-1. Click "BROWSE FOR MEDIA FOLDER".
+3. Click "BROWSE FOR MEDIA FOLDER".
 
-    ![](https://i.imgur.com/5kywEro.png)
+    ![](../images/plex-media-server/plex-20-tv-add-folder.png)
 
-1. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
+4. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
 
-    NEED NEW IMAGE
-    ![ ](https://i.imgur.com/Embc9h9.png)
+    ![ ](../images/plex-media-server/plex-21-tv-choose-folder.png)
 
-1. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
+5. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
 
-    NEED NEW IMAGE
-    ![](https://i.imgur.com/i03W0W0.png)
+    ![](../images/plex-media-server/plex-22-tv-path.png)
 
-1. Click "Advanced" on the left.
+6. Click "Advanced" on the left.
 
-1. Set the following:
+7. Set the following:
 
    - "Enable video preview thumbnails": `disabled`
 
    - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional)
 
-1. Click "ADD LIBRARY".
+8. Click "ADD LIBRARY".
 
-    ![](https://i.imgur.com/JuZif0B.png)
+    ![](../images/plex-media-server/plex-23-tv-advanced.png)
 
 
 ## Scan Media libraries
 
-As mentioned in the [[Introduction|Basics: Introduction#how-does-cloudbox-function-]] page, [[Plex Autoscan| Install: Plex Autoscan]] will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required. 
+As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Plex Autoscan](../apps/plex-autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required. 
 
 To do so:
 
@@ -220,7 +214,7 @@ To do so:
 
 2. Select "Scan Library Files". 
 
-   ![](https://i.imgur.com/38OCwU5.png)
+   ![](../images/plex-media-server/plex-24-scan-library.png)
 
 3. Repeat steps 1-2 for each library. 
 

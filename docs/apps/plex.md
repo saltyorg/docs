@@ -1,24 +1,6 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
-
-- [1. URL](#1-url)
-- [2. Setup Wizard](#2-setup-wizard)
-- [3. Settings](#3-settings)
-  - [Library](#library)
-  - [Network](#network)
-  - [Transcoder](#transcoder)
-  - [DLNA](#dlna)
-  - [Scheduled Tasks](#scheduled-tasks)
-- [4. Add Media Libraries](#4-add-media-libraries)
-  - [Add the Movie Library](#add-the-movie-library)
-  - [Add the TV Library](#add-the-tv-library)
-- [5. Scan Media libraries](#5-scan-media-libraries)
-- [6. Webtools](#6-webtools)
-
-<!-- /TOC -->
-
 ---
 
-## 1. URL
+## URL
 
 1. To access Plex, visit https://plex._yourdomain.com_
 
@@ -26,7 +8,7 @@
 
     ![](https://i.imgur.com/KMVu05O.png)
 
-## 2. Setup Wizard
+## Setup Wizard
 
 1. First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.
 
@@ -45,7 +27,7 @@
     ![](https://i.imgur.com/uRr3o61.png)
 
 
-## 3. Settings
+## Settings
 
 ### Library
 
@@ -147,7 +129,7 @@
     ![](https://i.imgur.com/0SHIJCM.jpg)
 
 
-## 4. Add Media Libraries
+## Add Media Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV.
 
@@ -167,13 +149,14 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
     ![](https://i.imgur.com/5kywEro.png)
 
+1. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
 
-1. In second column of the "Add Folder" window, select `data`, then `Movies`, and then click the "ADD" button.
-
+    NEED NEW IMAGE
     ![ ](https://i.imgur.com/Embc9h9.png)
 
-1. You will now see `/data/Movies` in the text box (don't click "ADD LIBRARY" yet).
+1. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
 
+    NEED NEW IMAGE
     ![](https://i.imgur.com/qzlGMTN.png)
 
 1. Click "Advanced" on the left.
@@ -190,8 +173,6 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
     ![](https://i.imgur.com/4JV0orf.png)
 
-
-
 ### Add the TV Library
 
 1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
@@ -206,13 +187,14 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
     ![](https://i.imgur.com/5kywEro.png)
 
+1. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
 
-1. In second column of the "Add Folder" window, select `data`, then `TV`, and then click the "ADD" button.
-
+    NEED NEW IMAGE
     ![ ](https://i.imgur.com/Embc9h9.png)
 
-1. You will now see `/data/TV` in the text box (don't click "ADD LIBRARY" yet).
+1. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
 
+    NEED NEW IMAGE
     ![](https://i.imgur.com/i03W0W0.png)
 
 1. Click "Advanced" on the left.
@@ -225,11 +207,10 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 1. Click "ADD LIBRARY".
 
-
     ![](https://i.imgur.com/JuZif0B.png)
 
 
-## 5. Scan Media libraries
+## Scan Media libraries
 
 As mentioned in the [[Introduction|Basics: Introduction#how-does-cloudbox-function-]] page, [[Plex Autoscan| Install: Plex Autoscan]] will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required. 
 
@@ -244,6 +225,6 @@ To do so:
 3. Repeat steps 1-2 for each library. 
 
 
-## 6. Webtools
+## Webtools
 
 Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to https://plex-webtools._yourdomain.com_ and log in with your Plex account.

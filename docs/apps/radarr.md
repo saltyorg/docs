@@ -1,55 +1,19 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
+Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
-
-
-- [1. URL](#1-url)
-- [2. Settings](#2-settings)
-  - [i. General](#i-general)
-    - [Start-Up](#start-up)
-    - [Proxy Settings](#proxy-settings)
-    - [Logging](#logging)
-    - [Analytics](#analytics)
-    - [Updates](#updates)
-    - [Save](#save)
-  - [ii. Media Management](#ii-media-management)
-    - [Movie Naming](#movie-naming)
-    - [Folders](#folders)
-    - [Importing](#importing)
-    - [File Management](#file-management)
-    - [Permissions](#permissions)
-    - [Save](#save-1)
-  - [iii. Download Client](#iii-download-client)
-    - [NZBGet](#nzbget)
-    - [ruTorrent](#rutorrent)
-  - [iv. Indexers](#iv-indexers)
-    - [NZBHydra2](#nzbhydra2)
-    - [Jackett](#jackett)
-  - [v. Connect](#v-connect)
-    - [Torrent Cleanup](#torrent-cleanup)
-    - [Plex Autoscan](#plex-autoscan)
-  - [3. Movies Path](#3-movies-path)
-  - [4. API Key](#4-api-key)
-
-
-<!-- /TOC -->
-
----
-
-
-# 1. URL
+# URL
 
 - To access Radarr, visit https://radarr._yourdomain.com_
 
-# 2. Settings
+## Settings
 
 
-## i. General
+### General
 
 1. Go to "Settings" -> "General".
 
 1. Set "Advanced Settings": `Shown`
 
-### Start-Up
+#### Start-Up
 
 - "Bind Address: `*`
 
@@ -57,40 +21,40 @@
 
 - "URL Base": _blank_
 
-- "Enable SSL": `No` (_SSL is handled by Nginx-Proxy_)
+- "Enable SSL": `No` (_SSL is handled by Traefik_)
 
 - "Open browser on start": `No`
 
-### Proxy Settings
+#### Proxy Settings
 
 - "Use Proxy": `No`
 
-### Logging
+#### Logging
 
 - "Log Level": `Debug`
 
-### Analytics
+#### Analytics
 
 - "Enable": `No` (_your preference_)
 
-### Updates
+#### Updates
 
 - "Branch": `nightly` or `develop`
 
 - "Automatic": `Off`
 
-### Save
+#### Save
 
 - Click "Save".
 
-## ii. Media Management
+### Media Management
 
 1. Go to "Settings" -> "Media Management".
 
 1. Set "Advanced Settings": `Shown`
 
 
-### Movie Naming
+#### Movie Naming
 
 - "Rename Movies": `Yes`
 
@@ -158,12 +122,7 @@
    </details><br />
 
 
-
-
-
-
-
-### Folders
+#### Folders
 
 - "Create empty movie folders": `No`
 
@@ -171,17 +130,17 @@
 
 - "Movie Paths Default to Static": `No`
 
-### Importing
+#### Importing
 
 - "Skip Free Space Check": `No`
 
 - "Use Hardlinks instead of Copy": `No`
 
-- "Import Extra Files": `Yes` (_can your preference_)
+- "Import Extra Files": `Yes` (_can be your preference_)
 
 - "Extra File Extensions": `srt, sub, idx`
 
-### File Management
+#### File Management
 
 - "Ignore Deleted Movies": `No` (_can be your preference_)
 
@@ -193,15 +152,15 @@
 
 - "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
 
-### Permissions
+#### Permissions
 
 - Set Permissions: `No`
 
-### Save
+#### Save
 
 - Click "Save".
 
-## iii. Download Client
+### Download Client
 
 1. Go to "Settings" -> "Download Client".
 
@@ -209,7 +168,7 @@
 
    - Enable: `Yes`
 
-   - Remove: `Yes` (_your preference_)
+   - Remove: `Yes` (_can be your preference_)
 
 1. Failed Download Handling
 
@@ -217,7 +176,7 @@
 
    - Remove: `Yes`
 
-### NZBGet
+#### NZBGet
 
 1. Add a new "NZBGet" download client.
 
@@ -248,7 +207,7 @@
 1. Click "Save" to add NZBGet.
 
 
-### ruTorrent
+#### ruTorrent
 
 1. Add a new "rTorrent" download client.
 
@@ -282,7 +241,7 @@
 
 
 
-## iv. Indexers
+### Indexers
 
 1. Go to "Settings" -> "Indexers".
 
@@ -291,7 +250,7 @@
 1. Add in your your favorite [[indexers|Prerequisites: Usenet vs BitTorrent]].
 
 
-### NZBHydra2
+#### NZBHydra2
 
 1. Click "Settings" -> "Indexers".
 
@@ -321,7 +280,7 @@
 
 Note: The "Test" will keep failing until you add an indexer in [[NZBHydra2|Install: NZBHydra2]].
 
-### Jackett
+#### Jackett
 
 Note: Each Indexer will need to be added separately.
 
@@ -352,9 +311,9 @@ Note: Each Indexer will need to be added separately.
 1. Click "Save" to add the indexer.
 
 
-## v. Connect
+### Connect
 
-###  Torrent Cleanup
+####  Torrent Cleanup
 
 Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
 
@@ -391,7 +350,7 @@ If the script detects that `.rar` files are in the folder that Radarr just impor
 1. Click "Save" to add the Torrent Cleanup script.
 
 
-### Plex Autoscan
+#### Plex Autoscan
 
 1. Click "Settings" -> "Connect".
 
@@ -411,34 +370,34 @@ If the script detects that `.rar` files are in the folder that Radarr just impor
 
    1. Filter Movie Tags: _Leave Blank_
 
-   1. URL: [[Your Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]]
+   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#obtaining-the-plex-autoscan-url)
 
-   1. Method:`POST`
+   3. Method:`POST`
 
-   1. Username: _Leave Blank_
+   4. Username: _Leave Blank_
 
-   1. Password: _Leave Blank_
+   5. Password: _Leave Blank_
 
-1. The settings will look like this:
+2. The settings will look like this:
 
     ![Radarr Plex Autoscan](https://i.imgur.com/jQJyvMA.png)
 
 
-1. Click "Save" to add Plex Autoscan.
+3. Click "Save" to add Plex Autoscan.
 
 
 
-## 3. Movies Path
+### Movies Path
 1. When you are ready to add your first movie to Radarr, click the "Path" drop-down and select "Add a different path".
 
-1. Click the blue "Browse" button, select the `movies` folder, scroll to the bottom, and select "OK".
+2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/Movies`, scroll to the bottom, and select "OK".
 
-1. Click the green "check" button to add the path.
+3. Click the green "check" button to add the path.
 
-1. All movies added now will have that path set.
+4. All movies added now will have that path set.
 
-## 4. API Key
+### API Key
 
-This is used during the setup of [[Ombi|Install: Ombi]] and [[Organizr|Install: Organizr]].
+This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organizr.md).
 
 * Go to "Settings" -> "General" -> "Security" -> "API Key".

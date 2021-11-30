@@ -1,16 +1,16 @@
-# 1. Intro
+# Intro
 
 [Lidarr](https://lidarr.audio) is basically Sonarr for music. It functions as a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds from Bittorrent trackers and Usenet Indexers, looking for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 ![](https://i.imgur.com/MZJEij2.png)
 
-# 2. URL
+# URL
 
 - To access Lidarr, visit https://lidarr._yourdomain.com_
 
-# 3. Settings
+# Settings
 
-## i. General
+## General
 
 1. Go to "Settings" -> "General".
 
@@ -51,7 +51,7 @@
 - Click "Save".
 
 
-## ii. Media Management
+## Media Management
 
 1. Click "Settings" -> "Media Management".
 
@@ -84,7 +84,7 @@
 1. Click "Save".
 
 
-## iii. Download Client
+## Download Client
 
 1. Click "Settings" -> "Download Client".
 
@@ -158,7 +158,7 @@
 
 
 
-## iv. Indexers
+## Indexers
 
 1. Go to "Settings" -> "Indexers".
 
@@ -233,7 +233,7 @@ Note: Each Indexer will need to be added separately.
 1. Click "Save" to add the indexer.
 
 
-## v. Connect
+## Connect
 
 ### Torrent Cleanup
 
@@ -299,18 +299,18 @@ Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorr
 
 1. Click "Save" to add Plex Autoscan.
 
-## 4. Music Path
+## Music Path
 
 1. When you are ready to add your first artist to Lidarr, click the "Path" drop-down and select "Add a different path".
 
-1. Click the blue "Browse" button, select the `music` folder, scroll to the bottom, and select "OK".
+1. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/Music`, scroll to the bottom, and select "OK".
 
 1. Click the green "check" button to add the path.
 
 1. All artist added now will have that path set.
 
 
-## 5. API Key
+## API Key
 
 This is used during the setup of [[Organizr|Install: Organizr]].
 

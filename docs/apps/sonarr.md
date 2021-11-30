@@ -1,45 +1,11 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 
-- [1. URL](#1-url)
-- [2. Settings](#2-settings)
-  - [i. General](#i-general)
-    - [Start-Up](#start-up)
-    - [Proxy Settings](#proxy-settings)
-    - [Logging](#logging)
-    - [Analytics](#analytics)
-    - [Updates](#updates)
-    - [Save](#save)
-  - [ii. Media Management](#ii-media-management)
-    - [Episode Naming](#episode-naming)
-    - [Folders](#folders)
-    - [Importing](#importing)
-    - [File Management](#file-management)
-    - [Permissions](#permissions)
-    - [Save](#save-1)
-  - [iii. Download Client](#iii-download-client)
-    - [NZBGet](#nzbget)
-    - [ruTorrent](#rutorrent)
-  - [iv. Indexers](#iv-indexers)
-    - [NZBHydra2](#nzbhydra2)
-    - [Jackett](#jackett)
-  - [v. Connect](#v-connect)
-    - [Torrent Cleanup](#torrent-cleanup)
-    - [Plex Autoscan](#plex-autoscan)
-  - [3. TV Path](#3-tv-path)
-  - [4. API Key](#4-api-key)
-
-<!-- /TOC -->
-
----
-
-
-# 1. URL
+# URL
 
 - To access Sonarr, visit https://sonarr._yourdomain.com_
 
-# 2. Settings
+#. Settings
 
-## i. General
+## General
 
 1. Go to "Settings" -> "General".
 
@@ -82,7 +48,7 @@
 
 
 
-## ii. Media Management
+## Media Management
 
 1. Go to "Settings" -> "Media Management".
 
@@ -197,7 +163,7 @@
 - Click "Save".
 
 
-## iii. Download Client
+## Download Client
 
 1. Go to "Settings" -> "Download Client".
 
@@ -280,7 +246,7 @@
 
 
 
-## iv. Indexers
+## Indexers
 
 1. Go to "Settings" -> "Indexers".
 
@@ -427,19 +393,19 @@ If the script detects that `.rar` files are in the folder that Sonarr just impor
 
 1. Click "Save" to add Plex Autoscan.
 
-## 3. TV Path
+## TV Path
 
 1. When you are ready to add your first show to Sonarr, click the "Path" drop-down and select "Add a different path".
 
-1. Click the blue "Browse" button, select the `tv` folder, scroll to the bottom, and select "OK".
+2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/TV`, scroll to the bottom, and select "OK".
 
-1. Click the green "check" button to add the path.
+3. Click the green "check" button to add the path.
 
-1. All TV shows added now will have that path set.
+4. All TV shows added now will have that path set.
 
 
-## 4. API Key
+## API Key
 
-This is used during the setup of [[Ombi|Install: Ombi]] and [[Organizr|Install: Organizr]].
+This is used during the setup of [Overseer](overseerr.md) and [Organizr](organizr.md).
 
 * Go to "Settings" -> "General" -> "Security" -> "API Key".

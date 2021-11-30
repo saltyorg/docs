@@ -245,12 +245,12 @@ nav:
         - jackett: apps/jackett.md
         - radarr: apps/radarr.md
         - sonarr: apps/sonarr.md
-      - NEED UPDATING:
+        - plex: apps/plex.md
         - lidarr: apps/lidarr.md
+      - NEED UPDATING:
         - nzbget: apps/nzbget.md
         - nzbhydra2: apps/nzbhydra2.md
         - organizr: apps/organizr.md
-        - plex: apps/plex.md
         - portainer: apps/portainer.md
         - rutorrent: apps/rutorrent.md
         - sabnzbd: apps/sabnzbd.md

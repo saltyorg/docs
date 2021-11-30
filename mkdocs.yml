@@ -251,6 +251,7 @@ nav:
         - nzbget: apps/nzbget.md
         - nzbhydra2: apps/nzbhydra2.md
         - organizr: apps/organizr.md
+        - plex-autoscan: apps/plex-autoscan.md
         - portainer: apps/portainer.md
         - rutorrent: apps/rutorrent.md
         - sabnzbd: apps/sabnzbd.md

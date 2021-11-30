@@ -376,22 +376,22 @@ If the script detects that `.rar` files are in the folder that Sonarr just impor
 
    1. Filter Series Tags: _Leave Blank_
 
-   1. URL: [[Your Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]]
+   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#obtaining-the-plex-autoscan-url)
 
-   1. Method:`POST`
+   3. Method:`POST`
 
-   1. Username: _Leave Blank_
+   4. Username: _Leave Blank_
 
-   1. Password: _Leave Blank_
+   5. Password: _Leave Blank_
 
 
 
-1. The settings will look like this:
+2. The settings will look like this:
 
     ![Sonarr Plex Autoscan](https://i.imgur.com/NLtXVZJ.png)
 
 
-1. Click "Save" to add Plex Autoscan.
+3. Click "Save" to add Plex Autoscan.
 
 ## TV Path
 

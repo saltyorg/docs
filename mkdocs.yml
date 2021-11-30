@@ -243,11 +243,11 @@ nav:
       - cloudplow: apps/cloudplow.md
       - emby: apps/emby.md
       - overseerr: apps/overseerr.md
+      - plex: apps/plex.md
+      - radarr: apps/radarr.md
+      - sonarr: apps/sonarr.md
       - REPLACE IMAGES:
         - jackett: apps/jackett.md
-        - radarr: apps/radarr.md
-        - sonarr: apps/sonarr.md
-        - plex: apps/plex.md
         - lidarr: apps/lidarr.md
       - NEED UPDATING:
         - nzbget: apps/nzbget.md

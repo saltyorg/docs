@@ -1,397 +1,359 @@
-
-# URL
+## URL
 
 - To access Sonarr, visit https://sonarr._yourdomain.com_
 
-#. Settings
+## Settings
 
-## General
+Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
-1. Go to "Settings" -> "General".
+Make changes in the following sections:
 
-1. Set "Advanced Settings": `Shown`
+=== "Media Management"
+    **Episode Naming**
 
-### Start-Up
+      - "Rename Episodes": `Yes`
 
-- "Bind Address: `*`
+      - "Replace Illegal Characters": `Yes`
 
-- "Port Number": `8989`
+      - Set your preferred naming format; here are some examples:
 
-- "URL Base": _blank_
+         <details>
+         <summary>Plex's Naming Preference</summary>
 
-- "Enable SSL": `No` (_SSL is handled by Nginx-Proxy_)
+           Example: <br />
+           ```
+           /Gotham/Season 01/Gotham - s01e01 - Pilot.mkv
+           ```
 
-- "Open browser on start": `No` [This setting does not appear in Sonarr v3]
+           Standard Episode Format: <br />
+           ```
+           {Series Title} - s{season:00}e{episode:00} - {Episode Title}
+           ```
 
-### Proxy Settings
+           Anime Episode Format: <br />
+           ```
+           {Series Title} - s{season:00}e{episode:00} - {Episode Title}
+           ```
 
-- "Use Proxy": `No`
+           Daily Episode Format: <br />
+           ```
+           {Series Title} - {Air-Date} - {Episode Title}
+           ```
 
-### Logging
+           Season Folder Format: <br />
+           ```
+           Season {season:00}
+           ```
 
-- "Log Level": `Debug`
+           Multi-Episode Style: <br />
+           ```
+           Prefixed Range
+           ```
 
+           Reference: https://support.plex.tv/articles/200220687-naming-series-season-based-tv-shows/  <br />
+         </details>
 
-### Analytics
 
-- "Enable": `No` (_your preference_)
+         <details>
+         <summary>TRaSH' naming guide</summary> <br />
 
-### Updates
+           Example:  <br />
+           ```
+           Single Episode:
 
-- "Branch": `phantom-develop`
+           The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
 
-- "Automatic": `Off`
+           Multi Episode:
 
-### Save
+           The Series Title! (2010) - S01E01-E02-E03 - Episode Title [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
+           ```
 
-- Click "Save".
+           Standard Episode Format: <br />
+           ```
+           {Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{-Release Group}
+           ```
 
+           for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
+         </details>
 
+    **Folders**
 
-## Media Management
+       - "Create empty series folders": `No`
 
-1. Go to "Settings" -> "Media Management".
+       - "Delete empty folders": `No`
 
-1. Set "Advanced Settings": `Shown`
+    **Importing**
 
+       - "Skip Free Space Check": `No`
 
-### Episode Naming
+       - "Use Hardlinks instead of Copy": `No`
 
-- "Rename Episodes": `Yes`
+       - "Import Extra Files": `Yes` (_can be your preference_)
 
-- "Replace Illegal Characters": `Yes`
+       - "Extra File Extensions": `srt, sub, idx`
 
-- Set your preferred naming format (you can use the ones mentioned below - CLICK to expand).
+    **File Management**
 
-   <details>
-   <summary>Plex's Naming Preference</summary> <br />
+       - "Ignore Deleted Episodes": `No` (_can be your preference_)
 
-    Example: <br />
-    ```
-    /Gotham/Season 01/Gotham - s01e01 - Pilot.mkv
-    ```
+       - "Download Propers": `No` (_can be your preference_)
 
-    Standard Episode Format: <br />
-    ```
-    {Series Title} - s{season:00}e{episode:00} - {Episode Title}
-    ```
+       - "Analyse video files": `No`
 
-    Anime Episode Format: <br />
-    ```
-    {Series Title} - s{season:00}e{episode:00} - {Episode Title}
-    ```
+       - "Change File Date": `None`
 
-    Daily Episode Format: <br />
-    ```
-    {Series Title} - {Air-Date} - {Episode Title}
-    ```
+       - "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
 
-    Season Folder Format: <br />
-    ```
-    Season {season:00}
-    ```
+    **Permissions**
 
-    Multi-Episode Style: <br />
-    ```
-    Prefixed Range
-    ```
+       - Set Permissions: `No`
 
-    Reference: https://support.plex.tv/articles/200220687-naming-series-season-based-tv-shows/  <br />
-   </details><br />
+    **Save**
 
+       - Click "Save".
+    
+=== "Indexers"
 
-   <details>
-   <summary>TRaSH' naming guide</summary> <br />
+    Add in your your favorite [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources).
 
-    Example:  <br />
-    ```
-    Single Episode:
+    **NZBHydra2**
 
-    The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
+    1. Click "Settings" -> "Indexers".
 
-    Multi Episode:
+    2. Click Add Indexer (`+`).
 
-    The Series Title! (2010) - S01E01-E02-E03 - Episode Title [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
-    ```
+    3. Select "Newznab".
 
-    Standard Episode Format: <br />
-    ```
-    {Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{-Release Group}
-    ```
+    4. Add the following:
 
-    for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
-   </details><br />
+        Name: NZBHydra2
 
+        Enable RSS Sync: _Your Preference_
 
+        Enable Search: _Your Preference_
 
-### Folders
+        URL: `http://nzbhydra2:5076`
 
-- "Create empty series folders": `No`
+        API Key: [Your NZBHydra2 API Key](../apps/nzbhydra2.md)
 
-- "Delete empty folders": `No`
+        Additional Parameters: _Leave Blank_
 
+    5. Your settings will look like this:
 
-### Importing
+        ![Radarr NZBHydra2](../images/radarr/radarr-nzbhydra.png)
 
-- "Skip Free Space Check": `No`
+    6. Click "Save" to add NZBHydra2.
 
-- "Use Hardlinks instead of Copy": `No`
+    Note: The "Test" will keep failing until you add an indexer in [NZBHydra2](../apps/nzbhydra2.md).
 
-- "Import Extra Files": `Yes` (_can be your preference_)
+    **Jackett**
 
-- "Extra File Extensions": `srt, sub, idx`
+    Note: Each Indexer will need to be added separately.
 
-### File Management
+    1. Click "Settings" -> "Indexers".
 
-- "Ignore Deleted Episodes": `No` (_can be your preference_)
+    2. Click Add Indexer (`+`)
 
-- "Download Propers": `Yes` (_can be your preference_)
+    3. Select "Torznab".
 
-- "Analyse video files": `No`
+    4. Add the following:
 
-- "Change File Date": `None`
+        Name: Indexer Name
 
-- "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
+        Enable RSS Sync: _Your Preference_
 
+        Enable Search: _Your Preference_
 
-### Permissions
+        URL: [Indexer's Torznab Feed](../apps/jackett.md)
 
-- Set Permissions: `No`
+        API Key: [Your Jackett API Key](../apps/jackett.md)
 
-### Save
+        Additional Parameters: _Leave Blank_
 
-- Click "Save".
+    5. Your settings will look like this:
 
+        ![Radarr Jackett](../images/radarr/radarr-jackett.png)
 
-## Download Client
+    6. Click "Save" to add the indexer.
 
-1. Go to "Settings" -> "Download Client".
 
-1. Completed Download Handling
+=== "Download Clients"
 
-   - Enable: `Yes`
+    **Completed Download Handling**
 
-   - Remove: `Yes` (_your preference_)
+       - "Enable": `Yes`
 
-1. Failed Download Handling
+       - "Remove": `Yes` (_can be your preference_)
 
-   - Redownload: `Yes`
+    **Failed Download Handling**
 
-   - Remove: `Yes`
+       - "Redownload": `Yes`
 
+       - "Remove": `Yes`
 
+    **NZBGet**
 
-### NZBGet
+    1. Add a new "NZBGet" download client.
 
-1. Add a new "NZBGet" download client.
+    2. Add the following:
 
-1. Add the following:
+        Name: NZBGet
 
-   1. Name: NZBGet
+        Enable: `Yes`
 
-   1. Enable: `Yes`
+        Host: `nzbget`
 
-   1. Host: `nzbget`
+        Port: `6789`
 
-   1. Port: `6789`
+        Username:  [Your NZBGet Username](../apps/nzbget.md)
 
-   1. Username:  [[Your NZBGet Username|Install: NZBGet#security]]
+        Password:  [Your NZBGet Password](../apps/nzbget.md)
 
-   1. Password:  [[Your NZBGet Password|Install: NZBGet#security]]
+        Category: `sonarr`
 
-   1. Category: `sonarr`
+        Use SSL: `No`
 
-   1. Use SSL: `No`
+        Add Paused: `No`
 
-   1. Add Paused: `No`
+    3. Your settings will look like this:
 
-1. Your settings will now look like this:
+        ![Sonarr NZBGet Downloader](../images/sonarr/sonarr-nzbget.png)
 
-    ![Sonarr NZBGet Downloader](https://i.imgur.com/2wUO8l2.png)
+    4. Click "Save" to add NZBGet.
 
-1. Click "Save" to add NZBGet.
 
+    **ruTorrent**
 
-### ruTorrent
+    1. Add a new "rTorrent" download client.
 
-1. Add a new "rTorrent" download client.
+    2. Add the following:
 
-1. Add the following:
+        Name: ruTorrent
 
-   1. Name: ruTorrent
+        Enable: `Yes`
 
-   1. Enable: `Yes`
+        Host: `rutorrent`
 
-   1. Host: `rutorrent`
+        Port: `80`
 
-   1. Port: `80`
+        URL Path: `RPC2`
 
-   1. URL Path: `RPC2`
+        Use SSL: `No`
 
-   1. Use SSL: `No`
+        Username: [Your ruTorrent Username](../rutorrent.md)
 
-   1. Username: [[Your ruTorrent Username|Install: ruTorrent#login]]
+        Password: [Your ruTorrent Password](../rutorrent.md)
 
-   1. Password: [[Your ruTorrent Password|Install: ruTorrent#login]]
+        Category: `sonarr`
 
-   1. Category: `sonarr`
+        Directory: _Leave Blank_
 
-   1. Directory: _Leave Blank_
+    3.  Your settings will now look like this:
 
-1. Your settings will look like this:
+         ![Sonarr ruTorrent Downloader](../images/sonarr/sonarr-rtorrent.png)
 
-   ![Sonarr ruTorrent Downloader](https://i.imgur.com/LPGPXHc.png)
+    4. Click "Save" to add ruTorrent.
+   
+=== "Connect"
 
-1. Click "Save" to add ruTorrent.
+    **Torrent Cleanup**
 
+    Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Sonarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
 
+    1. Click "Settings" -> "Connect".
 
-## Indexers
+    2. Add a new "Custom Script".
 
-1. Go to "Settings" -> "Indexers".
+    3. Add the following:
 
-1. Set "Advanced Settings": `Shown`
+        Name: Torrent Cleanup
 
-1. Add in your your favorite [[indexers|Prerequisites: Usenet vs BitTorrent]].
+        On Grab: `No`
 
+        On Download: `Yes`
 
-### NZBHydra2
+        On Upgrade:  `Yes`
 
-1. Click Add Indexer (`+`).
+        On Rename:`No`
 
-1. Select "Newznab".
+        Path: `/scripts/torrents/TorrentCleanup.py`
 
-1. Add the following:
+    4. The settings will look like this:
 
-   1. Name: NZBHydra2
+        ![Sonarr Torrent Cleanup Script CloudBox](../images/sonarr/sonarr-torrentcleanup.png)
 
-   1. Enable RSS Sync: _Your Preference_
+    5. Click "Save" to add the Torrent Cleanup script.
 
-   1. Enable Search: _Your Preference_
 
-   1. URL: `http://nzbhydra2:5076`
+    **Plex Autoscan**
 
-   1. API Path: `/api`
+    1. Click "Settings" -> "Connect".
 
-   1. API Key: [[Your NZBHydra2 API Key|Install: NZBHydra2#4-api-key]]
+    2. Add a new "Webhook".
 
-   1. Additional Parameters: _Leave Blank_
+    3. Add the following:
 
-1. Your settings will look like this:
+        Name: Plex Autoscan
 
-    ![Sonarr NZBHydra2](https://i.imgur.com/gPJu1Ur.png)
+        On Grab: `No`
 
-1. Click "Save" to add NZBHydra2.
+        On Download: `Yes`
 
-Note: The "Test" will keep failing until you add an indexer in [[NZBHydra2|Install: NZBHydra2]].
+        On Upgrade:  `Yes`
 
-### Jackett
+        On Rename: `Yes`
 
-Note: Each Indexer will need to be added separately.
+        Filter Movie Tags: _Leave Blank_
 
-1. Click Add Indexer (`+`)
+        URL: [Your Plex Autoscan URL](../plex-autoscan/#obtaining-the-plex-autoscan-url)
 
-1. Select "Torznab".
+        Method:`POST`
 
-1. Add the following:
+        Username: _Leave Blank_
 
-   1. Name: Indexer's Name
+        Password: _Leave Blank_
 
-   1. Enable RSS Sync: _Your Preference_
+    4. The settings will look like this:
 
-   1. Enable Search: _Your Preference_
+        ![Sonarr Plex Autoscan](../images/sonarr/sonarr-plex_autoscan.png)
 
-   1. URL: [[Indexer's Torznab Feed|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
 
-   1. API Path: `/api`
+    5. Click "Save" to add Plex Autoscan.
 
-   1. API Key: [[Your Jackett API Key|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
 
-   1. Additional Parameters: _Leave Blank_
+=== "General"
+    **Start-Up**
 
-1. Your settings will look like this:
+       - "Bind Address: `*`
 
-    (Note that the screenshot shows an `https` URL; this is incorrect.  It should be `http` as described above)
+       - "Port Number": `8989`
 
-    ![Sonarr Jackett](https://i.imgur.com/cdFUhnd.png)
+       - "URL Base": _blank_
 
+       - "Enable SSL": `No` (_SSL is handled by Traefik_)
 
-1. Click "Save" to add the indexer.
+    **Proxy Settings**
 
-## v. Connect
+       - "Use Proxy": `No`
 
-1. Go to "Settings" -> "Connect".
+    **Logging**
 
-1. Set "Advanced Settings": `Shown`
+       - "Log Level": `Debug`
 
+    **Analytics**
 
-### Torrent Cleanup
+       - "Enable": `No` (_your preference_)
 
-Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Sonarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
+    **Updates**
 
+       - "Branch": `main`
 
-<!--
-If the script detects that `.rar` files are in the folder that Sonarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
--->
+       - "Automatic": `Off`
 
+    **Save**
 
-1. Add a new "Custom Script".
+       - Click "Save".
 
-1. Add the following:
-
-   1. Name: Torrent Cleanup
-
-   1. On Grab: `No`
-
-   1. On Download: `Yes`
-
-   1. On Upgrade:  `Yes`
-
-   1. On Rename:`No`
-
-   1. Path: `/scripts/torrents/TorrentCleanup.py`
-
-1. The settings will look like this:
-
-   ![Sonarr Torrent Cleanup Script CloudBox](https://i.imgur.com/JHgExVI.png)
-
-1. Click "Save" to add the Torrent Cleanup script.
-
-
-### Plex Autoscan
-
-1. Add a new "Webhook".
-
-1. Add the following:
-
-   1. Name: Plex Autoscan
-
-   1. On Grab: `No`
-
-   1. On Download: `Yes`
-
-   1. On Upgrade:  `Yes`
-
-   1. On Rename: `Yes`
-
-   1. Filter Series Tags: _Leave Blank_
-
-   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#obtaining-the-plex-autoscan-url)
-
-   3. Method:`POST`
-
-   4. Username: _Leave Blank_
-
-   5. Password: _Leave Blank_
-
-
-
-2. The settings will look like this:
-
-    ![Sonarr Plex Autoscan](https://i.imgur.com/NLtXVZJ.png)
-
-
-3. Click "Save" to add Plex Autoscan.
 
 ## TV Path
 

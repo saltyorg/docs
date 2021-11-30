@@ -60,6 +60,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.tilde
   - toc:
       permalink: true
   - pymdownx.emoji:
@@ -298,9 +299,11 @@ nav:
           - Cloudplow Examples: reference/cloudplow.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md
           - Plex Auth Token: reference/plex_auth_token.md
+          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md
           - Pushover: reference/pushover.md
           - Subdomains: reference/subdomain.md
+          - Using Local Storage: reference/local-storage.md
   - Sandbox:
       - Basics: sandbox/basics.md
       - Settings: sandbox/settings.md

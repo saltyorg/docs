@@ -1,6 +1,7 @@
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
 ## Dependencies
+
 === "curl"
     ``` shell
     curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox

@@ -1,393 +1,360 @@
-Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
-
-# URL
+## URL
 
 - To access Radarr, visit https://radarr._yourdomain.com_
 
 ## Settings
 
+Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
-### General
+Make changes in the following sections:
 
-1. Go to "Settings" -> "General".
+=== "Media Management"
+    **Movie Naming**
 
-1. Set "Advanced Settings": `Shown`
+       - "Rename Movies": `Yes`
 
-#### Start-Up
+       - "Replace Illegal Characters": `Yes`
 
-- "Bind Address: `*`
+       - Colon Replacement Format: `Delete`
+       
+       _Note: You could use `Replace with Space Dash` but only if your file naming format is not using spaces (e.g. using dots) to separate words._ 
 
-- "Port Number": `7878`
+       - Set your preferred naming format; here are some examples.
 
-- "URL Base": _blank_
+       <details>
+       <summary>Plex's Naming Preference</summary> <br />
+         Example: <br />
+         ```
+         /Guardians of the Galaxy (2014)/Guardians of the Galaxy (2014).mkv
+         ```
 
-- "Enable SSL": `No` (_SSL is handled by Traefik_)
+         Standard Movie Format: <br />
+         ```
+         {Movie Title} ({Release Year})
+         ```
 
-- "Open browser on start": `No`
+         Movie Folder Format: <br />
+         ```
+         {Movie Title} ({Release Year})
+         ```
 
-#### Proxy Settings
+         Reference: https://support.plex.tv/articles/200381023-naming-movie-files/
+       </details>
 
-- "Use Proxy": `No`
+       <details>
+       <summary>Radarr's Wiki Example</summary> <br />
+         Example:  <br />
+         ```
+         The Movie Title (2010) - [ULTIMATE EXTENDED EDITION][BLURAY-1080P PROPER][DTS 5.1][X264]-EVOLVE.mkv
+         ```
 
-#### Logging
+         Standard Movie Format: <br />
+         ```
+         {Movie Title} ({Release Year}) - {[EDITION TAGS]}{[QUALITY FULL]}{[MEDIAINFO AUDIOCODEC}{ MEDIAINFO AUDIOCHANNELS]}{[MEDIAINFO VIDEOCODEC]}{-RELEASE GROUP}
+         ```
 
-- "Log Level": `Debug`
+         Reference: https://github.com/Radarr/Radarr/wiki/Sorting-and-Renaming
+       </details>
 
-#### Analytics
+       <details>
+       <summary>TRaSH' naming guide</summary> <br />
+         Example:  <br />
+         ```
+         The Movie Title (2010) Ultimate Extended Edition [imdb-tt0066921][Surround Sound x264][Bluray-1080p Proper][3D][HDR][10bit][x264][DTS 5.1]-EVOLVE.mkv
+         ```
 
-- "Enable": `No` (_your preference_)
+         Standard Movie Format: <br />
+         ```
+         {Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}
+         ```
 
-#### Updates
+         Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
+       </details>
 
-- "Branch": `nightly` or `develop`
 
-- "Automatic": `Off`
+    **Folders**
 
-#### Save
+       - "Create empty movie folders": `No`
 
-- Click "Save".
+       - "Automatically Rename Folders": `No`
 
-### Media Management
+       - "Movie Paths Default to Static": `No`
 
-1. Go to "Settings" -> "Media Management".
+    **Importing**
 
-1. Set "Advanced Settings": `Shown`
+       - "Skip Free Space Check": `No`
 
+       - "Use Hardlinks instead of Copy": `No`
 
-#### Movie Naming
+       - "Import Extra Files": `Yes` (_can be your preference_)
 
-- "Rename Movies": `Yes`
+       - "Extra File Extensions": `srt, sub, idx`
 
-- "Replace Illegal Characters": `Yes`
+    **File Management**
 
-- Colon Replacement Format: `Delete`
-  
-  _Note: You could use `Replace with Space Dash` but only if your file naming format is not using spaces (e.g. using dots) to separate words._ 
+       - "Ignore Deleted Movies": `No` (_can be your preference_)
 
-- Set your preferred naming format (you can use the ones mentioned below - CLICK to expand).
+       - "Download Propers": `No` (_can be your preference_)
 
-   <details>
-   <summary>Plex's Naming Preference</summary> <br />
+       - "Analyse video files": `No`
 
-    Example: <br />
-    ```
-    /Guardians of the Galaxy (2014)/Guardians of the Galaxy (2014).mkv
-    ```
+       - "Change File Date": `None`
 
-    Standard Movie Format: <br />
-    ```
-    {Movie Title} ({Release Year})
-    ```
+       - "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
 
-    Movie Folder Format: <br />
-    ```
-    {Movie Title} ({Release Year})
-    ```
+    **Permissions**
 
-    Reference: https://support.plex.tv/articles/200381023-naming-movie-files/  <br />
-   </details><br />
+       - Set Permissions: `No`
 
+    **Save**
 
-   <details>
-   <summary>Radarr's Wiki Example</summary> <br />
+       - Click "Save".
+    
+=== "Indexers"
 
-    Example:  <br />
-    ```
-    The Movie Title (2010) - [ULTIMATE EXTENDED EDITION][BLURAY-1080P PROPER][DTS 5.1][X264]-EVOLVE.mkv
-    ```
+    Add in your your favorite [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources).
 
-    Standard Movie Format: <br />
-    ```
-    {Movie Title} ({Release Year}) - {[EDITION TAGS]}{[QUALITY FULL]}{[MEDIAINFO AUDIOCODEC}{ MEDIAINFO AUDIOCHANNELS]}{[MEDIAINFO VIDEOCODEC]}{-RELEASE GROUP}
-    ```
+    **NZBHydra2**
 
-    Reference: https://github.com/Radarr/Radarr/wiki/Sorting-and-Renaming
-   </details><br />
+    1. Click "Settings" -> "Indexers".
 
+    2. Click Add Indexer (`+`).
 
-   <details>
-   <summary>TRaSH' naming guide</summary> <br />
+    3. Select "Newznab".
 
-    Example:  <br />
-    ```
-    The Movie Title (2010) Ultimate Extended Edition [imdb-tt0066921][Surround Sound x264][Bluray-1080p Proper][3D][HDR][10bit][x264][DTS 5.1]-EVOLVE.mkv
-    ```
+    4. Add the following:
 
-    Standard Movie Format: <br />
-    ```
-    {Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}
-    ```
+        Name: NZBHydra2
 
-    Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
-   </details><br />
+        Enable RSS Sync: _Your Preference_
 
+        Enable Search: _Your Preference_
 
-#### Folders
+        URL: `http://nzbhydra2:5076`
 
-- "Create empty movie folders": `No`
+        API Key: [Your NZBHydra2 API Key](../apps/nzbhydra2.md)
 
-- "Automatically Rename Folders": `No`
+        Additional Parameters: _Leave Blank_
 
-- "Movie Paths Default to Static": `No`
+    5. Your settings will look like this:
 
-#### Importing
+        ![Radarr NZBHydra2](../images/radarr/radarr-nzbhydra.png)
 
-- "Skip Free Space Check": `No`
+    6. Click "Save" to add NZBHydra2.
 
-- "Use Hardlinks instead of Copy": `No`
+    Note: The "Test" will keep failing until you add an indexer in [NZBHydra2](../apps/nzbhydra2.md).
 
-- "Import Extra Files": `Yes` (_can be your preference_)
+    **Jackett**
 
-- "Extra File Extensions": `srt, sub, idx`
+    Note: Each Indexer will need to be added separately.
 
-#### File Management
+    1. Click "Settings" -> "Indexers".
 
-- "Ignore Deleted Movies": `No` (_can be your preference_)
+    2. Click Add Indexer (`+`)
 
-- "Download Propers": `No` (_can be your preference_)
+    3. Select "Torznab".
 
-- "Analyse video files": `No`
+    4. Add the following:
 
-- "Change File Date": `None`
+        Name: Indexer Name
 
-- "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
+        Enable RSS Sync: _Your Preference_
 
-#### Permissions
+        Enable Search: _Your Preference_
 
-- Set Permissions: `No`
+        URL: [Indexer's Torznab Feed](../apps/jackett.md)
 
-#### Save
+        API Key: [Your Jackett API Key](../apps/jackett.md)
 
-- Click "Save".
+        Additional Parameters: _Leave Blank_
 
-### Download Client
+    5. Your settings will look like this:
 
-1. Go to "Settings" -> "Download Client".
+        ![Radarr Jackett](../images/radarr/radarr-jackett.png)
 
-1. Completed Download Handling
+    6. Click "Save" to add the indexer.
 
-   - Enable: `Yes`
 
-   - Remove: `Yes` (_can be your preference_)
+=== "Download Clients"
 
-1. Failed Download Handling
+    **Completed Download Handling**
 
-   - Redownload: `Yes`
+       - "Enable": `Yes`
 
-   - Remove: `Yes`
+       - "Remove": `Yes` (_can be your preference_)
 
-#### NZBGet
+    **Failed Download Handling**
 
-1. Add a new "NZBGet" download client.
+       - "Redownload": `Yes`
 
-1. Add the following:
+       - "Remove": `Yes`
 
-   1. Name: NZBGet
+    **NZBGet**
 
-   1. Enable: `Yes`
+    1. Add a new "NZBGet" download client.
 
-   1. Host: `nzbget`
+    2. Add the following:
 
-   1. Port: `6789`
+        Name: NZBGet
 
-   1. Username:  [[Your NZBGet Username|Install: NZBGet#security]]
+        Enable: `Yes`
 
-   1. Password:  [[Your NZBGet Password|Install: NZBGet#security]]
+        Host: `nzbget`
 
-   1. Category: `radarr`
+        Port: `6789`
 
-   1. Use SSL: `No`
+        Username:  [Your NZBGet Username](../apps/nzbget.md)
 
-   1. Add Paused: `No`
+        Password:  [Your NZBGet Password](../apps/nzbget.md)
 
-1. Your settings will look like this:
+        Category: `radarr`
 
-    ![Radarr NZBGet Downloader](https://i.imgur.com/PxgKer9.png)
+        Use SSL: `No`
 
-1. Click "Save" to add NZBGet.
+        Add Paused: `No`
 
+    3. Your settings will look like this:
 
-#### ruTorrent
+        ![Radarr NZBGet Downloader](../images/radarr/radarr-nzbget.png)
 
-1. Add a new "rTorrent" download client.
+    4. Click "Save" to add NZBGet.
 
-1. Add the following:
 
-   1. Name: ruTorrent
+    **ruTorrent**
 
-   1. Enable: `Yes`
+    1. Add a new "rTorrent" download client.
 
-   1. Host: `rutorrent`
+    2. Add the following:
 
-   1. Port: `80`
+        Name: ruTorrent
 
-   1. URL Path: `RPC2`
+        Enable: `Yes`
 
-   1. Use SSL: `No`
+        Host: `rutorrent`
 
-   1. Username: [[Your ruTorrent Username|Install: ruTorrent#login]]
+        Port: `80`
 
-   1. Password: [[Your ruTorrent Password|Install: ruTorrent#login]]
+        URL Path: `RPC2`
 
-   1. Category: `radarr`
+        Use SSL: `No`
 
-   1. Directory: _Leave Blank_
+        Username: [Your ruTorrent Username](../rutorrent.md)
 
-1. Your settings will now look like this:
+        Password: [Your ruTorrent Password](../rutorrent.md)
 
-    ![Radarr ruTorrent Downloader](http://i.imgur.com/XHB6NN2.png)
+        Category: `radarr`
 
-1. Click "Save" to add ruTorrent.
+        Directory: _Leave Blank_
 
+    3.  Your settings will now look like this:
 
+         ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
-### Indexers
+    4. Click "Save" to add ruTorrent.
+   
+=== "Connect"
 
-1. Go to "Settings" -> "Indexers".
+    **Torrent Cleanup**
 
-1. Set "Advanced Settings": `Shown`
+    Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
 
-1. Add in your your favorite [[indexers|Prerequisites: Usenet vs BitTorrent]].
+    1. Click "Settings" -> "Connect".
 
+    2. Add a new "Custom Script".
 
-#### NZBHydra2
+    3. Add the following:
 
-1. Click "Settings" -> "Indexers".
+        Name: Torrent Cleanup
 
-1. Click Add Indexer (`+`).
+        On Grab: `No`
 
-1. Select "Newznab".
+        On Download: `Yes`
 
-1. Add the following:
+        On Upgrade:  `Yes`
 
-   1. Name: NZBHydra2
+        On Rename:`No`
 
-   1. Enable RSS Sync: _Your Preference_
+        Path: `/scripts/torrents/TorrentCleanup.py`
 
-   1. Enable Search: _Your Preference_
+    4. The settings will look like this:
 
-   1. URL: `http://nzbhydra2:5076`
+        ![Radarr Torrent Cleanup Script CloudBox](../images/radarr/radarr-torrentcleanup.png)
 
-   1. API Key: [[Your NZBHydra2 API Key|Install: NZBHydra2#4-api-key]]
+    5. Click "Save" to add the Torrent Cleanup script.
 
-   1. Additional Parameters: _Leave Blank_
 
-1. Your settings will look like this:
+    **Plex Autoscan**
 
-    ![Radarr NZBHydra2](https://i.imgur.com/LRANTOU.png)
+    1. Click "Settings" -> "Connect".
 
-1. Click "Save" to add NZBHydra2.
+    2. Add a new "Webhook".
 
-Note: The "Test" will keep failing until you add an indexer in [[NZBHydra2|Install: NZBHydra2]].
+    3. Add the following:
 
-#### Jackett
+        Name: Plex Autoscan
 
-Note: Each Indexer will need to be added separately.
+        On Grab: `No`
 
-1. Click "Settings" -> "Indexers".
+        On Download: `Yes`
 
-1. Click Add Indexer (`+`)
+        On Upgrade:  `Yes`
 
-1. Select "Torznab".
+        On Rename: `Yes`
 
-1. Add the following:
+        Filter Movie Tags: _Leave Blank_
 
-   1. Name: Indexer Name
+        URL: [Your Plex Autoscan URL](../plex-autoscan/#obtaining-the-plex-autoscan-url)
 
-   1. Enable RSS Sync: _Your Preference_
+        Method:`POST`
 
-   1. Enable Search: _Your Preference_
+        Username: _Leave Blank_
 
-   1. URL: [[Indexer's Torznab Feed|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
+        Password: _Leave Blank_
 
-   1. API Key: [[Your Jackett API Key|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
+    4. The settings will look like this:
 
-   1. Additional Parameters: _Leave Blank_
+        ![Radarr Plex Autoscan](../images/radarr/radarr-plex_autoscan.png)
 
-1. Your settings will look like this:
 
-    ![Radarr Jackett](https://i.imgur.com/T9vrrAW.png)
+    5. Click "Save" to add Plex Autoscan.
 
-1. Click "Save" to add the indexer.
 
+=== "General"
+    **Start-Up**
 
-### Connect
+       - "Bind Address: `*`
 
-####  Torrent Cleanup
+       - "Port Number": `7878`
 
-Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
+       - "URL Base": _blank_
 
+       - "Enable SSL": `No` (_SSL is handled by Traefik_)
 
-<!--
-If the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
--->
+    **Proxy Settings**
 
-1. Click "Settings" -> "Connect".
+       - "Use Proxy": `No`
 
-1. Add a new "Custom Script".
+    **Logging**
 
-1. Add the following:
+       - "Log Level": `Debug`
 
-   1. Name: Torrent Cleanup
+    **Analytics**
 
-   1. On Grab: `No`
+       - "Enable": `No` (_your preference_)
 
-   1. On Download: `Yes`
+    **Updates**
 
-   1. On Upgrade:  `Yes`
+       - "Branch": `nightly` or `develop`
 
-   1. On Rename:`No`
+       - "Automatic": `Off`
 
-   1. Path: `/scripts/torrents/TorrentCleanup.py`
+    **Save**
 
+       - Click "Save".
 
-1. The settings will look like this:
 
-    ![Radarr Torrent Cleanup Script CloudBox](https://i.imgur.com/j4FV9ky.png)
 
-<!--  https://i.imgur.com/WL8Wym4.png -->
-
-1. Click "Save" to add the Torrent Cleanup script.
-
-
-#### Plex Autoscan
-
-1. Click "Settings" -> "Connect".
-
-1. Add a new "Webhook".
-
-1. Add the following:
-
-   1. Name: Plex Autoscan
-
-   1. On Grab: `No`
-
-   1. On Download: `Yes`
-
-   1. On Upgrade:  `Yes`
-
-   1. On Rename: `Yes`
-
-   1. Filter Movie Tags: _Leave Blank_
-
-   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#obtaining-the-plex-autoscan-url)
-
-   3. Method:`POST`
-
-   4. Username: _Leave Blank_
-
-   5. Password: _Leave Blank_
-
-2. The settings will look like this:
-
-    ![Radarr Plex Autoscan](https://i.imgur.com/jQJyvMA.png)
-
-
-3. Click "Save" to add Plex Autoscan.
-
-
-
-### Movies Path
+## Movies Path
 1. When you are ready to add your first movie to Radarr, click the "Path" drop-down and select "Add a different path".
 
 2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/Movies`, scroll to the bottom, and select "OK".
@@ -396,7 +363,7 @@ If the script detects that `.rar` files are in the folder that Radarr just impor
 
 4. All movies added now will have that path set.
 
-### API Key
+## API Key
 
 This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organizr.md).
 

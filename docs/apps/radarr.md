@@ -114,8 +114,8 @@ Make changes in the following sections:
     
 === "Indexers"
 
-    This is where you define your [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources).
-
+    These settings control [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources) and related behavior.
+    
     === "NZBHydra2"
 
         1. Click Add Indexer (`+`).
@@ -175,7 +175,7 @@ Make changes in the following sections:
 
 === "Download Clients"
 
-    These settings downloading behavior and clients.
+    These settings control downloading behavior and clients.
 
     === "Completed Download Handling"
 
@@ -257,7 +257,7 @@ Make changes in the following sections:
    
 === "Connect"
 
-    These settings control conenctions to other applications or systems.
+    These settings control connections to other applications or systems.
 
     === "Torrent Cleanup"
 

@@ -56,7 +56,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     You will be asked to authenticate in the usual Google way.  Follow the prompts.
 
-    `sa-gen` will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox :
+    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox:
 
     ```
     ** Team Drive aZaSjsklaj-Movies created, ID: 123456789

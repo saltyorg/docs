@@ -12,11 +12,11 @@ This process will use various scripts to do as much of this for you as possible,
 <summary>What about `safire`? Can't it do all this automatically?</summary>
 <br />
 
-    Sure, and the first version of this attempt at automation used safire to do everything from step 3 on with two runs of a script which asked a couple questions.  It always worked on the developer's machine, but failed half the time on not-the-developer's machine.  So this approach was built out to not use `safire`.
+  Sure, and the first version of this attempt at automation used safire to do everything from step 3 on with two runs of a script which asked a couple questions.  It always worked on the developer's machine, but failed half the time on not-the-developer's machine.  So this approach was built out to not use `safire`.
 
-    Eventually there will be an app or script that will take care of all this, but until that day, there is this.
+  Eventually there will be an app or script that will take care of all this, but until that day, there is this.
     
-    If you have suggestions about how this can be made more clear, by all means open an issue.
+  If you have suggestions about how this can be made more clear, by all means open an issue.
 
 </details>
 

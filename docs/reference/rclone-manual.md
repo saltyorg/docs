@@ -4,7 +4,42 @@ Rclone is used by [Cloudplow](cloudplow.md) and [Backup](../saltbox/backup/backu
 
 The guide below assumes you are using Google Drive. 
 
-If you would like to set this up with another cloud storage provider, but have not setup Rclone yet, then follow the guide [below](#new-rclone-setup) and replace all mentions of "Google Drive" with your preferred cloud storage provider's name. [Note that this does not mean that any arbitrary rclone backend will actually work in this context]
+Rclone supports many cloud provider backends, but the only one routinely used by the Saltbox team is Google Drive.
+
+This process will use various scripts to do as much of this for you as possible, but there are some things that can't be scripted easily, like steps 1 and 2 below.
+
+<details>
+<summary>What about `safire`? Can't it do all this automatically?</summary>
+<br />
+
+    Sure, and the first version of this attempt at automation used safire to do everything from step 3 on with two runs of a script which asked a couple questions.  It always worked on the developer's machine, but failed half the time on not-the-developer's machine.  So this approach was built out to not use `safire`.
+
+    Eventually there will be an app or script that will take care of all this, but until that day, there is this.
+    
+    If you have suggestions about how this can be made more clear, by all means open an issue.
+
+</details>
+
+The steps below will:
+
+1. Create a Google project. [not scripted, you'll do this manually]
+
+1. Create a Google group. [not scripted, you'll do this manually]
+
+1. Install the google SDK tools. [not scripted, you'll do this manually]
+
+1. Create a bunch of service accounts and put all the service accounts JSON files into /opt/sa. [scripted with minor config edits]
+
+1. Add all those service accounts to the Google group you just created. [Starting here scripted with minor config edits to a single script]
+
+1. Create three new shared drives in the Google Drive UI. [Movies, Music, TV]
+
+1. Add your Google Group to each of those drives as a "Manager"
+
+1. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
+
+1. Create a union rclone remote called "google", with the components set to the three td remotes you just created.
+
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup). 
 
@@ -36,7 +71,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
     [Instructions here](google-service-accounts.md)
 
-6. Create some Shared Drives
+6. Create some Shared Drives and related infrastructure
 
     [Instructions here](google-shared-drives.md)
 

@@ -1,6 +1,6 @@
 This guide will show you how to create projects and service accounts using `sa-gen` and add them to a Google Group.
 
-It's assuming you're working through the steps from [here](rclone-manual.md).
+It's assuming you're working through the steps from [here](rclone-manual.md), have already created the required [project](google-project-setup.md), have already created the required [group](google-group-setup.md), and have installed the [gcloud SDK tools](google-gcloud-tools-install.md).
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 

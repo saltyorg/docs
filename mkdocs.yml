@@ -284,9 +284,9 @@ nav:
           - Plex Account: reference/plex.md
           - Media Sources: reference/usenet-torrent.md
       - Google:
-          - Google SDK: reference/google-gcloud-tools-install.md
           - Google Project: reference/google-project-setup.md
           - Google Group: reference/google-group-setup.md
+          - Google SDK: reference/google-gcloud-tools-install.md
           - Google Service Accounts: reference/google-service-accounts.md
           - Google Shared Drives: reference/google-shared-drives.md
       - Install:

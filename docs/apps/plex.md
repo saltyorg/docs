@@ -4,9 +4,9 @@
 
 ## Project Information
 
-- [:material-home: Plex ](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }
+| []()        |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-mark-github-16: Github | [:material-docker: Docker ](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## URL
 
@@ -22,7 +22,7 @@
 
     ![](../images/plex-media-server/plex-02-intro.png)
 
-2. Next screen will show you a list of servers, with a randomly generated name. Give it a friendly name and click "NEXT".
+2. Next screen will show you your server, with a randomly generated name. Give it a friendly name and click "NEXT".
 
     ![](../images/plex-media-server/plex-03-server-setup-1.png)
 
@@ -34,184 +34,179 @@
 
     ![](../images/plex-media-server/plex-05-server-setup-3.png)
 
+!!! Settings
 
-## Settings
+    === "Library"
 
-### Library
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left).
 
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left).
+        2. Set the following:
 
-1. Set the following:
+            - "Empty trash automatically after every scan": `disabled`
 
-   - "Empty trash automatically after every scan": `disabled`
+                - _Plex Autoscan will take care of this._
 
-     - _Plex Autoscan will take care of this._
+            - "Allow media deletion": `enabled`
 
-   - "Allow media deletion": `enabled`
+            - "Generate video preview thumbnails": `never`
 
-   - "Generate video preview thumbnails": `never`
+            - "Generate chapter thumbnails": `never`
 
-   - "Generate chapter thumbnails": `never`
+                > The reasoning behind disabling these thumbnails is related to Google Drive API usage, data transfer, and disk space.  Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer.  Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all.  Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage.  These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
 
-> The reasoning behind disabling these thumbnails is related to Google Drive API usage, data transfer, and disk space.  Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer.  Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all.  Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage.  These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
+         1. Click "SAVE CHANGES".
 
-1. Click "SAVE CHANGES".
-
-    ![](../images/plex-media-server/plex-07-library.jpeg)
-
-
-### Network
-
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Network" (left).
-
-1. Set the following:
-
-   - "Secure Connections": `Preferred`.
-
-   - "Enable local network discovery (GDM)": `disabled`.
-
-   - "Remote streams allowed per user": _your preference_.
-
-   - "Custom server access URLs": `http://plex.yourdomain.com:80/,https://plex.yourdomain.com:443/` (pre-filled)
-
-      - NOTE: Enter your domain as you have it configured in accounts.yml, not literally "yourdomain.com".
+            ![](../images/plex-media-server/plex-07-library.jpeg)
 
 
-1. Click "SAVE CHANGES".
+    === "Network"
 
-    ![](../images/plex-media-server/plex-08-network.jpeg)
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Network" (left).
 
+        2. Set the following:
 
-### Transcoder
+            - "Secure Connections": `Preferred`.
 
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Transcoder" (left).
+            - "Enable local network discovery (GDM)": `disabled`.
 
-2. Set the following:
+            - "Remote streams allowed per user": _your preference_.
 
-   - "Transcoder temporary directory": `/transcode`
+            - "Custom server access URLs": `http://plex.yourdomain.com:80/,https://plex.yourdomain.com:443/` (pre-filled)
 
-   - "Transcoder default throttle buffer": `150`
+                - NOTE: Enter your domain as you have it configured in accounts.yml, not literally "yourdomain.com".
 
-   - "Use hardware acceleration when available": `enabled`
+         1. Click "SAVE CHANGES".
 
-   - "Maximum simultaneous video transcode": `unlimited`
-
-1. Click "SAVE CHANGES".
-
-    ![](../images/plex-media-server/plex-09-transcoder.png)
+            ![](../images/plex-media-server/plex-08-network.jpeg)
 
 
+    === "Transcoder"
 
-### DLNA
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Transcoder" (left).
 
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "DLNA" (left).
+        2. Set the following:
 
+            - "Transcoder temporary directory": `/transcode`
 
-1. Set the following:
+            - "Transcoder default throttle buffer": `150`
 
-    - "Enable the DLNA server": `disabled`
+            - "Use hardware acceleration when available": `enabled`
 
-    - "DLNA server timeline reporting": `disabled`
+            - "Maximum simultaneous video transcode": `unlimited`
 
-1. Click "SAVE CHANGES".
+        3. Click "SAVE CHANGES".
 
-    ![](../images/plex-media-server/plex-10-dlna.png)
-
-
-
-### Scheduled Tasks
-
-1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Scheduled Tasks" (left).
+            ![](../images/plex-media-server/plex-09-transcoder.png)
 
 
-2. Set the following:
+    === "DLNA"
 
-    - "Update all libraries during maintenance": `disabled`
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "DLNA" (left).
 
-    - "Upgrade media analysis during maintenance": `disabled`
+        2. Set the following:
 
-    - "Perform extensive media analysis during maintenance": `disabled`
+            - "Enable the DLNA server": `disabled`
 
-3. Click "SAVE CHANGES".
+            - "DLNA server timeline reporting": `disabled`
 
-    ![](../images/plex-media-server/plex-11-schedule.jpeg)
+        3. Click "SAVE CHANGES".
+
+            ![](../images/plex-media-server/plex-10-dlna.png)
+
+    === "Scheduled Tasks"
+
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Scheduled Tasks" (left).
+
+        1. Set the following:
+
+            - "Update all libraries during maintenance": `disabled`
+
+            - "Upgrade media analysis during maintenance": `disabled`
+
+            - "Perform extensive media analysis during maintenance": `disabled`
+
+        2. Click "SAVE CHANGES".
+
+            ![](../images/plex-media-server/plex-11-schedule.jpeg)
 
 
 ## Add Media Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV.
 
-_Note: If you would like to have custom Plex libraries (more than just a Movies and TV one), see [[Customizing Plex Libraries]]._
+_Note: If you would like to have custom Plex libraries (more than just a Movies and TV one), see [Customizing Plex Libraries](../reference/customizing-plex-libs.md)._
 
-### Add the Movie Library
+!!! Libraries
 
-1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
+    === "Add the Movie Library"
 
-    ![](../images/plex-media-server/plex-12-add-library.png)
+        1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
 
-2. In the "Add Library" window, select "Movies" and click "NEXT".
+            ![](../images/plex-media-server/plex-12-add-library.png)
 
-    ![](../images/plex-media-server/plex-13-movies-lib.png)
+        2. In the "Add Library" window, select "Movies" and click "NEXT".
 
-3. Click "BROWSE FOR MEDIA FOLDER".
+            ![](../images/plex-media-server/plex-13-movies-lib.png)
 
-    ![](../images/plex-media-server/plex-14-movies-add-folder.png)
+        3. Click "BROWSE FOR MEDIA FOLDER".
 
-4. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
+            ![](../images/plex-media-server/plex-14-movies-add-folder.png)
 
-    ![ ](../images/plex-media-server/plex-15-movies-choose-folder.png)
+        4. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
 
-5. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
+            ![ ](../images/plex-media-server/plex-15-movies-choose-folder.png)
 
-    ![](../images/plex-media-server/plex-16-movies-path.png)
+        5. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
 
-6. Click "Advanced" on the left.
+            ![](../images/plex-media-server/plex-16-movies-path.png)
 
-7. Set the following:
+        6. Click "Advanced" on the left.
 
-   - "Enable Cinema Trailers": `disabled` (optional)
+        7. Set the following:
 
-   - "Enable video preview thumbnails": `disabled`
+            - "Enable Cinema Trailers": `disabled` (optional)
 
-   - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional) 
+            - "Enable video preview thumbnails": `disabled`
 
-8. Click "ADD LIBRARY".
+            - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional) 
 
-    ![](../images/plex-media-server/plex-17-movies-advanced.png)
+        8. Click "ADD LIBRARY".
 
-### Add the TV Library
+            ![](../images/plex-media-server/plex-17-movies-advanced.png)
 
-1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
+    === "Add the TV Library"
 
-    ![](../images/plex-media-server/plex-18-add-library.png)
+        1. In the main Plex screen (Home icon on the top left), click "+" next to "LIBRARIES".
 
-2. In the "Add Library" window, select "TV Shows" and click "NEXT".
+            ![](../images/plex-media-server/plex-18-add-library.png)
 
-    ![](../images/plex-media-server/plex-19-tv-lib.png)
+        2. In the "Add Library" window, select "TV Shows" and click "NEXT".
 
-3. Click "BROWSE FOR MEDIA FOLDER".
+            ![](../images/plex-media-server/plex-19-tv-lib.png)
 
-    ![](../images/plex-media-server/plex-20-tv-add-folder.png)
+        3. Click "BROWSE FOR MEDIA FOLDER".
 
-4. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
+            ![](../images/plex-media-server/plex-20-tv-add-folder.png)
 
-    ![ ](../images/plex-media-server/plex-21-tv-choose-folder.png)
+        4. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
 
-5. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
+            ![ ](../images/plex-media-server/plex-21-tv-choose-folder.png)
 
-    ![](../images/plex-media-server/plex-22-tv-path.png)
+        5. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
 
-6. Click "Advanced" on the left.
+            ![](../images/plex-media-server/plex-22-tv-path.png)
 
-7. Set the following:
+        6. Click "Advanced" on the left.
 
-   - "Enable video preview thumbnails": `disabled`
+        7. Set the following:
 
-   - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional)
+            - "Enable video preview thumbnails": `disabled`
 
-8. Click "ADD LIBRARY".
+            - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional)
 
-    ![](../images/plex-media-server/plex-23-tv-advanced.png)
+        8. Click "ADD LIBRARY".
+
+            ![](../images/plex-media-server/plex-23-tv-advanced.png)
 
 
 ## Scan Media libraries

@@ -41,6 +41,13 @@ Docs will be accessible at http://localhost:8000
             <sub style="font-size:14px"><b>Max Kowalski</b></sub>
         </a>
     </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/CGH8>
+            <img src=https://avatars.githubusercontent.com/u/34379754?v=4 width="100;"  alt=CGH/>
+            <br />
+            <sub style="font-size:14px"><b>CGH</b></sub>
+        </a>
+    </td>
 </tr>
 </table>
 

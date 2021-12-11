@@ -54,7 +54,7 @@ To access Tautulli, visit https://tautulli._yourdomain_.com
 
     ![](https://i.imgur.com/wKukbLR.png)
 
-1. Click "Web Interface" on the left. Fill in "HTTP Username" and "HTTP Password (this will be the login for your PlexPy site), but don't click `Save` yet.  
+1. Click "Web Interface" on the left. Fill in "HTTP Username" and "HTTP Password (this will be the login for your Tautulli site), but don't click `Save` yet.  
 
     ![](https://i.imgur.com/iX6G2ca.png)
 

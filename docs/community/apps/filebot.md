@@ -8,12 +8,9 @@ This is a Docker container for FileBot.
 
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
 
-## Project Information
-
-- [:material-home: FileBot ](http://www.filebot.net/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://www.filebot.net/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/jlesage/docker-filebot){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/jlesage/filebot){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](http://www.filebot.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.filebot.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/jlesage/docker-filebot){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jlesage/filebot){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

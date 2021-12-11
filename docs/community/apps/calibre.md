@@ -4,12 +4,9 @@
 
 [Calibre](https://calibre-ebook.com/){: target=_blank rel="noopener noreferrer" } is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts.
 
-## Project Information
-
-- [:material-home: Calibre ](https://calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://manual.calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://registry.hub.docker.com/r/linuxserver/calibre){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://manual.calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/calibre){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

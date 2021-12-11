@@ -4,12 +4,9 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 [Tautulli](http://tautulli.com/) (Tautulli), by JonnyWong16, is a web-based application runs alongside the Plex Media Server to monitor activity and track various statistics (eg most watched media). 
 
-## Project Information
-
-- [:material-home: Tautulli ](http://tautulli.com){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/Tautulli/Tautulli){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/tautulli){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](http://tautulli.com){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/Tautulli/Tautulli){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/tautulli){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 2. URL
 

@@ -6,11 +6,10 @@
 
 Each of the tasks can be turned on/off and configured independently. The default config values were selected to fit the default installation profile with btrfs on the root filesystem.
 
-## Project Information
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
-- [:material-home: BTRFS Maintenance ](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" }
 
 
 ### 1. Installation

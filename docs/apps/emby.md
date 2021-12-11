@@ -2,12 +2,9 @@
 
 [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
 
-## Project Information
-
-- [:material-home: Emby ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 # 1. Introduction
 
@@ -31,7 +28,7 @@
   - Run the following command:
 
     ```bash
-    sb install emby  
+    sb install emby
     ```
 
 # 4. Setup Wizard
@@ -45,11 +42,11 @@
 
 1. **Type** the following and click **Next**:
 
-    - **Username:** _The username you wwant to use to log into Emby_ 
-   
-    - **New Password:** _A strong password you'll use to log into Emby_ 
+    - **Username:** _The username you wwant to use to log into Emby_
 
-    - **New Password Confirm:** _That same password again_ 
+    - **New Password:** _A strong password you'll use to log into Emby_
+
+    - **New Password Confirm:** _That same password again_
 
     - **Emby connect username or email address**: _your [Emby Connect username](https://emby.media/connect)_ (important)
 
@@ -58,8 +55,8 @@
 1. Confirm the message by clicking **Got It**.
 
    ![](../images/emby/emby-added.png)
-   
-1. **Confirm** the link in your email. 
+
+1. **Confirm** the link in your email.
 
    ![](../images/emby/emby-confirm-link.png)
 
@@ -125,7 +122,7 @@ In this section, we will add two libraries: one for Movies and one for TV Shows.
 
 1. Click **+ New Library**.
 
-1. Under **Content type**, select **Movies**. 
+1. Under **Content type**, select **Movies**.
 
    ![](../images/emby/emby-new-library.png)
 
@@ -151,7 +148,7 @@ In this section, we will add two libraries: one for Movies and one for TV Shows.
 
 1. Click **+ New Library**.
 
-1. Under **Content type**, select **TV shows**. 
+1. Under **Content type**, select **TV shows**.
 
    ![](../images/emby/emby-new-library.png)
 
@@ -178,7 +175,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
    ![](../images/emby/emby-new-api-key.png)
 
-3. Click **+ New API Key**. 
+3. Click **+ New API Key**.
 
    ![](../images/emby/emby-new-api-key-name.png)
 

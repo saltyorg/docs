@@ -4,12 +4,9 @@
 
 [DelugeVPN](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is a VPN version of [Deluge](../../community/apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
 
-## Project Information
-
-- [:material-home: Deluge ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

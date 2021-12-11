@@ -4,12 +4,9 @@
 
 [Funkwhale](https://funkwhale.audio/){: target=_blank rel="noopener noreferrer" } is a modern, self-hosted, free and open-source music server.
 
-## Project Information
-
-- [:material-home: Funkwhale ](https://funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://docs.funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://dev.funkwhale.audio/funkwhale){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/funkwhale/all-in-one){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://dev.funkwhale.audio/funkwhale){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/funkwhale/all-in-one){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

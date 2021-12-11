@@ -4,12 +4,9 @@
 
 [Apprise](https://github.com/caronc/apprise){: target=_blank rel="noopener noreferrer" } allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
 
-## Project Information
-
-- [:material-home: Apprise ](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/caronc/apprise/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/caronc/apprise/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

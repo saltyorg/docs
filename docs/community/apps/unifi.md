@@ -7,12 +7,9 @@
 [UniFi Network Controller ](https://www.ui.com/){: target=_blank rel="noopener noreferrer" } is a wireless network management
 software solution from Ubiquiti Networks™. It allows you to manage multiple wireless networks using a web browser.
 
-## Project Information
-
-- [:material-home: UniFi Network Controller  ](https://www.ui.com/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](http://documentation.ubnt.com/UniFi){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://www.ui.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](http://documentation.ubnt.com/UniFi){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

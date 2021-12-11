@@ -12,9 +12,12 @@ theme:
   name: material
   custom_dir: overrides
   features:
+    - announce.dismiss
+    - header.autohide
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.top
     - navigation.tracking
     - navigation.instant
     - toc.integrate

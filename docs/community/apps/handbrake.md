@@ -4,12 +4,9 @@
 
 [HandBrake](https://handbrake.fr/){: target=_blank rel="noopener noreferrer" } is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
 
-## Project Information
-
-- [:material-home: HandBrake ](https://handbrake.fr/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://handbrake.fr/docs){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/HandBrake/HandBrake){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/jlesage/handbrake){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://handbrake.fr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://handbrake.fr/docs){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/HandBrake/HandBrake){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jlesage/handbrake){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

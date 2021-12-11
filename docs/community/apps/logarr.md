@@ -4,12 +4,9 @@
 
 [Logarr ALPHA](https://www.github.com/Monitorr/logarr){: target=_blank rel="noopener noreferrer" } is a Self-hosted, single-page, log consolidation tool written in PHP.
 
-## Project Information
-
-- [:material-home: Logarr ALPHA ](https://www.github.com/Monitorr/logarr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/Monitorr/logarr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/Monitorr/logarr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/monitorr/logarr-alpha){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://www.github.com/Monitorr/logarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Monitorr/logarr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/Monitorr/logarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/monitorr/logarr-alpha){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

@@ -1,5 +1,7 @@
 # Saltbox Install Types
 
+Saltbox consists of a "Core" with various extra components added onto that core.  At a minimum, you need to install "core" to do anything further with the Saltbox infrastructure.
+
 |                                                                                                                                                                                                    |       `core`       |     `saltbox`     |     `mediabox`     |    `feederbox`     |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
 | System Tweaks                                                                                                                                                      |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |    ![Yes][yes]     |
@@ -30,6 +32,8 @@
   [yes]:../../images/check-mark.png
   [no]:../../images/cross-mark.png
 
+
+Next, let's move on to [Installing Saltbox](../install/install.md).
 
 <!--
 :heavy_check_mark:

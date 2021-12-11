@@ -6,12 +6,9 @@
 
 Varken is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend
 
-## Project Information
-
-- [:material-home: Varken ](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/boerderij/varken){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/boerderij/varken){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

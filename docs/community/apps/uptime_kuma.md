@@ -4,12 +4,9 @@
 
 [Uptime Kuma](https://github.com/louislam/uptime-kuma){: target=_blank rel="noopener noreferrer" } is a self-hosted monitoring tool like "Uptime Robot".
 
-## Project Information
-
-- [:material-home: Uptime Kuma ](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

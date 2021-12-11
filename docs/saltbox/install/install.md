@@ -1,5 +1,16 @@
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
+Please read through these steps prior to executing any of them, just to get a grounding in what is going to happen through out the process.  It could be that things in later steps inform your decisions in earlier steps.
+
+Broadly, the base install consists of six steps:
+
+1. Installing [dependencies](#dependencies)
+2. Preparing your [configuration file(s)](#configuration)
+3. Running a [pre-install script](#preinstall)
+4. Configuring your [cloud storage](#rclone)
+5. Running the [install script](#install-saltbox)
+6. Configuring installed [applications](#app-setup)
+
 ## Dependencies
 
 === "curl"
@@ -30,7 +41,15 @@ If you're migrating from Cloudbox you probably want the [Cloudbox migrations ins
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
 
-accounts.yml
+`accounts.yml`
+
+To edit [assuming you are still logged in as `root`]:
+
+```
+nano /srv/git/saltbox/accounts.yml
+```
+
+Contents:
 
 ``` { .yaml .annotate }
 ---
@@ -87,7 +106,16 @@ apprise: # (12)
 12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
 
-settings.yml
+`settings.yml`
+
+To edit [assuming you are still logged in as `root`]:
+
+```
+nano /srv/git/saltbox/settings.yml
+```
+
+Contents:
+
 
 ``` { .yaml .annotate }
 ---
@@ -109,7 +137,7 @@ authelia:
 
 3. Folder used for temporary transcode files.
 
-4. Rclone version that Saltbox will install. 
+4. Rclone version that Saltbox will install.
 
     Valid options are **latest**, **beta** or a specific version (**1.55**).
 
@@ -133,7 +161,7 @@ authelia:
 !!! warning
     Make sure that you have set up the configuration correctly before proceeding.
 
-This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration and install Rclone and reboot the server if needed.
+This step will create the user account specified in `accounts.yml`, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed.
 
 ``` shell
 sb install preinstall
@@ -164,7 +192,7 @@ Saltbox assumes an rclone remote pointed at your google storage named `google` [
     ``` shell
     sb install mediabox
     ```
-    
+
 === "Feederbox"
     ``` shell
     sb install feederbox
@@ -199,3 +227,5 @@ Go through these one at a time; some of the setups depend on previous setups.
 1. [Overseerr](../../apps/overseerr.md)
 1. [Portainer](../../apps/portainer.md)
 1. [Organizr](../../apps/organizr.md)
+
+Next, some tasks to perform [after installation is complete](after.md).

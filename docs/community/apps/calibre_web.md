@@ -9,12 +9,9 @@ Calibre-Web allows you to add users, and each user can set up a Kindle email add
 !!! info
     Calibre and Calibre-web do NOT need to be on the same server. But you do need to have a local copy of the Calibre `metadata.db` and a path to the books for calibre-web to operate.
 
-## Project Information
-
-- [:material-home: Calibre-Web ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

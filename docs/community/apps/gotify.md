@@ -4,12 +4,9 @@
 
 [Gotify](https://gotify.net/){: target=_blank rel="noopener noreferrer" } a simple server for sending and receiving messages.
 
-## Project Information
-
-- [:material-home: Gotify ](https://gotify.net/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://gotify.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

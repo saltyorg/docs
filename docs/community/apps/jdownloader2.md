@@ -4,12 +4,9 @@
 
 [JDownloader](https://beta.jdownloader.org/){: target=_blank rel="noopener noreferrer" } is a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!
 
-## Project Information
-
-- [:material-home: JDownloader ](https://beta.jdownloader.org/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://beta.jdownloader.org/support){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/jlesage/docker-jdownloader-2){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/jlesage/jdownloader-2){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://beta.jdownloader.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://beta.jdownloader.org/support){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/jlesage/docker-jdownloader-2){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jlesage/jdownloader-2){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

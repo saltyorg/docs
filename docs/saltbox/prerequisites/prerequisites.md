@@ -3,7 +3,7 @@ Saltbox presumes you have a basic understanding of Linux, Docker containers, Bit
 
 The Saltbox setup is all done on the command line in the linux shell.  There is no GUI and there are no plans to add one.  If you want to run Saltbox, you *will need* to be familiar with Linux.
 
-The guides in this wiki are only meant to setup Saltbox specific settings into the various apps that are installed with Saltbox (e.g. Sonarr, Radarr, Plex, etc) and are not meant to be a full setup for, or an introduction to, the workings of these apps. However, you may pick up a few things as you go thru the guides. 
+The guides in this wiki are only meant to setup Saltbox specific settings into the various apps that are installed with Saltbox (e.g. Sonarr, Radarr, Plex, etc) and are not meant to be a full setup for, or an introduction to, the workings of these apps. However, you may pick up a few things as you go thru the guides.
 
 If you wish to learn more about them in detail, you can easily find a ton of guides for them online (e.g. [HTPC Guides](https://www.htpcguides.com){target=_blank}, [YouTube](https://www.youtube.com){target=_blank}, etc).
 
@@ -23,10 +23,10 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 
 For best results, the assumed server environment for Saltbox is:
 
- - a dedicated remote x64 [Intel or AMD] server [not a VPS], 
- - from a server provider like Hetzner, OVH, kimsufi, etc., 
- - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/), 
- - with at least 500GB of disk space, and 
+ - a dedicated remote x64 [Intel or AMD] server [not a VPS],
+ - from a server provider like Hetzner, OVH, kimsufi, etc.,
+ - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/),
+ - with at least 500GB of disk space, and
  - allowing root access
 
 See [here](../../reference/server.md) for more information about server requirements.
@@ -51,7 +51,7 @@ See [here](../../reference/cloud.md) for more information about Cloud Storage re
 
 ##Plex Account
 
-You'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already have one, for purposes of the install, *even if you're not planning to use Plex*.  
+You'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already have one, for purposes of the install, *even if you're not planning to use Plex*.
 
 This may change in the future, but for now it's a requirement for the simplest Happy Path install described here.
 
@@ -65,3 +65,4 @@ You won't need these particular [media source] details for the initial install, 
 
 See [here](../../reference/usenet-torrent.md) for more information about media source requirements.
 
+Next, let's discuss Saltbox' [Install types](../basics/install_types.md).

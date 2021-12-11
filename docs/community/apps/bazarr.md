@@ -4,12 +4,9 @@
 
 [Bazarr](https://www.bazarr.media/){: target=_blank rel="noopener noreferrer" } is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
-## Project Information
-
-- [:material-home: Bazarr ](https://www.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://wiki.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://www.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.bazarr.media/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/bazarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

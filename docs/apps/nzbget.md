@@ -4,12 +4,9 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 [NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
 
-## Project Information
-
-- [:material-home: NZBGet ](https://nzbget.net){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://nzbget.net/documentation){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/nzbget/nzbget){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/hotio/nzbget){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://nzbget.net){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://nzbget.net/documentation){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/nzbget/nzbget){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/nzbget){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 1. Accessing NZBGet
 

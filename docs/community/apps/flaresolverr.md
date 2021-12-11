@@ -4,12 +4,9 @@
 
 [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr){: target=_blank rel="noopener noreferrer" } is a proxy server to bypass Cloudflare protection.
 
-## Project Information
-
-- [:material-home: FlareSolverr ](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

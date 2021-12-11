@@ -4,12 +4,9 @@
 
 [Monitorr](https://github.com/Monitorr/Monitorr){: target=_blank rel="noopener noreferrer" } is a self-hosted PHP web app that monitors the status of local and remote network services, websites, and applications.
 
-## Project Information
-
-- [:material-home: Monitorr ](https://github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/monitorr/monitorr){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/monitorr/monitorr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

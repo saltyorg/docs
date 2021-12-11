@@ -4,12 +4,9 @@
 
 [transfer.sh](https://transfer.sh/){: target=_blank rel="noopener noreferrer" } is an easy and fast file sharing from the command-line or web gui app.
 
-## Project Information
-
-- [:material-home: transfer.sh ](https://transfer.sh/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://transfer.sh/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/dutchcoders/transfer.sh){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

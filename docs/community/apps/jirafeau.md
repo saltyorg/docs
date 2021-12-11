@@ -6,12 +6,9 @@
 
 See [jirafeau.net](https://jirafeau.net/){: target=_blank rel="noopener noreferrer" } for a demo.
 
-## Project Information
-
-- [:material-home: Jirafeau ](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/jgeusebroek/jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://gitlab.com/mojo42/Jirafeau){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jgeusebroek/jirafeau){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

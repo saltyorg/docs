@@ -6,12 +6,9 @@
 
 A python-based alternative to watchtower
 
-## Project Information
-
-- [:material-home: Ouroboros ](https://github.com/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/pyouroboros/ouroboros/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/pyouroboros/ouroboros/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/pyouroboros/ouroboros){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

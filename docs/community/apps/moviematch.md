@@ -10,12 +10,9 @@ As many people as you want connect to your MovieMatch server and get a list of s
 
 If two (or more) people swipe right on the same movie, it'll show up in everyone's matches. The movies that the most people swiped right on will show up first.
 
-## Project Information
-
-- [:material-home: MovieMatch ](https://github.com/LukeChannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/LukeChannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/LukeChannings/moviematch#readme){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/lukechannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/LukeChannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/LukeChannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/LukeChannings/moviematch#readme){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/lukechannings/moviematch){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

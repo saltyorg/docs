@@ -4,12 +4,9 @@
 
 [CouchPotato](https://couchpota.to/){: target=_blank rel="noopener noreferrer" } is an automatic NZB and torrent downloader. You can keep a `movies I want` list and it will search for NZBs/torrents of these movies every X hours.
 
-## Project Information
-
-- [:material-home: CouchPotato ](https://couchpota.to/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://couchpota.to/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/CouchPotato/CouchPotatoServer/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://registry.hub.docker.com/r/linuxserver/couchpotato){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://couchpota.to/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://couchpota.to/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/CouchPotato/CouchPotatoServer/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/couchpotato){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

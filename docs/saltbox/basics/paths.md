@@ -3,7 +3,7 @@
 
 ## General Info
 
-It is recommended to assign all your disk space to `/`, as all of your imported media and app data will be saved to `/mnt/local/` and `/opt/`,  respectively.  This allows your application metadata and your staged media to  make the most use of your available disk space without worrying about partitioning. 
+It is recommended to assign all your disk space to `/`, as all of your imported media and app data will be saved to `/mnt/local/` and `/opt/`,  respectively.  This allows your application metadata and your staged media to  make the most use of your available disk space without worrying about partitioning.
 
 Note 1: **ALL** folders/paths mentioned below, and elsewhere on the wiki, are **CASE SENSITIVE** (e.g. Google Drive: `Media` not `media`, `Movies` not `movies`, `TV` not `tv`; Plex Requests: `/logs` not `/Logs`, etc). This is important, or else apps like Plex, Sonarr, and Radarr will not be able find your media.
 
@@ -67,7 +67,7 @@ _Note: For more info, see the [Cloudplow](../../reference/cloudplow.md) page._
 
 ## Docker Paths
 
-The Dockerized app (e.g. Plex) will "see" the **Docker Path**, but that path will actually be the **Host Path** on the server. 
+The Dockerized app (e.g. Plex) will "see" the **Docker Path**, but that path will actually be the **Host Path** on the server.
 
 By default, NZB and Torrent downloads are stored in `/mnt/local/downloads/nzbs/` and `/mnt/local/downloads/torrents/`, respectively. However, this can be changed to point elsewhere (e.g. a second hard drive) by editing the [settings.yml](../../reference/accounts.md#options-in-settingsyml) file. But regardless of the download location chosen, the **Docker Path** will always be the same.
 
@@ -133,3 +133,5 @@ That means that no path translation is required from context to context.  If nzb
 
 
 ---
+
+Next, let's discuss the [inventory](../inventory/index.md) system for customization.

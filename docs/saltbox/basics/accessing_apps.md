@@ -29,3 +29,5 @@ Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
 ## Additional Apps
 
 Coming soon.
+
+Next, let's discuss Saltbox' default [paths](paths.md).

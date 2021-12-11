@@ -6,12 +6,9 @@
 
 There are some concerns with the security of running a DNS server remotely so just be aware of this if you choose to run it on a public network.
 
-## Project Information
-
-- [:material-home: AdGuard Home ](https://adguard.com/en/adguard-home/overview.html){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://kb.adguard.com/en/home/overview){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/AdguardTeam/AdGuardHome){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/adguard/adguardhome){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://adguard.com/en/adguard-home/overview.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://kb.adguard.com/en/home/overview){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/AdguardTeam/AdGuardHome){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/adguard/adguardhome){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 !!! info
     AdGuard Home is a latency sensitive DNS server, so it's discouraged to use it when your server is far away from you.

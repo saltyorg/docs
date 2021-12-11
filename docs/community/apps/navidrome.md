@@ -4,12 +4,9 @@
 
 [Navidrome](https://www.navidrome.org/){: target=_blank rel="noopener noreferrer" } allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.
 
-## Project Information
-
-- [:material-home: Navidrome ](https://www.navidrome.org/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://www.navidrome.org/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/navidrome/navidrome/issues){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/deluan/navidrome){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://www.navidrome.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.navidrome.org/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/navidrome/navidrome/issues){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/deluan/navidrome){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

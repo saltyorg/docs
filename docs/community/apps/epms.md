@@ -8,11 +8,10 @@ The Extended Personal Media Shows Agent is a Metadata Agent for personal media f
 
 This scanner is not meant to be full replacement of the Plex Media Scanner. Requests for functionality will be considered but may be limited by what Plex currently allows in the TV Show sections.
 
-## Project Information
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
-- [:material-home: EPMS ](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 

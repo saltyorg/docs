@@ -4,12 +4,9 @@
 
 [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox){: target=_blank rel="noopener noreferrer" } is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
 
-## Project Information
-
-- [:material-home: ArchiveBox ](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/archivebox/archivebox){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/archivebox/archivebox){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

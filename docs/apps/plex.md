@@ -1,10 +1,8 @@
 ## What is it?
 
-[Plex](https://plex.tv/) brings together all the media that matters to you. Your personal collection will look beautiful alongside stellar streaming content. Enjoy Live TV & DVR, a growing catalog of great web shows, news, and podcasts. It's finally possible to enjoy all the media you love in a single app, on any device, no matter where you are.
+[Plex](https://plex.tv/) is a media server.
 
-## Project Information
-
-| []()        |             |             |             |
+| Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home ](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-mark-github-16: Github | [:material-docker: Docker ](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }|
 
@@ -168,7 +166,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
             - "Enable video preview thumbnails": `disabled`
 
-            - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional) 
+            - "Find trailers and extras automatically (Plex Pass required)": `disabled` (optional)
 
         8. Click "ADD LIBRARY".
 
@@ -211,17 +209,17 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 ## Scan Media libraries
 
-As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Plex Autoscan](../apps/plex-autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required. 
+As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Plex Autoscan](../apps/plex-autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
 To do so:
 
 1. Click the 3 dots next to a Plex library.
 
-2. Select "Scan Library Files". 
+2. Select "Scan Library Files".
 
    ![](../images/plex-media-server/plex-24-scan-library.png)
 
-3. Repeat steps 1-2 for each library. 
+3. Repeat steps 1-2 for each library.
 
 
 ## Webtools

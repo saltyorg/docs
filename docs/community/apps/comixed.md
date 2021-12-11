@@ -4,12 +4,9 @@
 
 [ComiXed](https://github.com/comixed/comixed){: target=_blank rel="noopener noreferrer" } is anapplication for managing digital comics.
 
-## Project Information
-
-- [:material-home: ComiXed ](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/comixed/comixed/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://registry.hub.docker.com/r/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/comixed/comixed/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

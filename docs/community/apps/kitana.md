@@ -8,12 +8,9 @@ Running one instance of Kitana can serve infinite amounts of servers and plugins
 
 Kitana was built for Sub-Zero originally, but handles other plugins just as well.
 
-## Project Information
-
-- [:material-home: Kitana ](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/pannal/kitana){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/pannal/kitana){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

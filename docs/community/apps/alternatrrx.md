@@ -4,12 +4,9 @@
 
 [alternatrr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../community/apps/alternatrr.md).
 
-## Project Information
-
-- [:material-home: alternatrr ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

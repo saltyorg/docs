@@ -2,10 +2,9 @@
 
 [Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
 
-## Project Information
-
-- [:material-home: Cloudplow ](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home ](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github:](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
 ## Remote Uploader Function
 
@@ -41,7 +40,7 @@ Note: Config changes require a restart: `sudo systemctl restart cloudplow`.
 
 ### Editing
 
-Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano. 
+Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
 
 ```
 nano /opt/cloudplow/config.json
@@ -71,14 +70,14 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
 
 `"max_size_gb":` Max size (in GB) Cloudplow allows `/mnt/local/Media` to get before starting an upload task.
 
-  - Note: `max_size_gb` is rounded up, so it is advised to have it minimum `2GB` or else it would attempt upload at each interval. Explanation below. 
+  - Note: `max_size_gb` is rounded up, so it is advised to have it minimum `2GB` or else it would attempt upload at each interval. Explanation below.
 
     - `1GB` is basically anything in there.
 
     - `2GB` is at least 1GB of data.
 
 
-### Plex Integration 
+### Plex Integration
 
 Cloudplow can throttle Rclone uploads during active, playing Plex streams (paused streams are ignored).
 
@@ -119,8 +118,8 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
 
   - `throttle_speeds` - Categorized option to configure upload speeds for various stream counts (where `5` represents 5 or more streams). `M` is MB/s.
 
-     - Format: 
-    
+     - Format:
+
        ```json
        "STREAM COUNT": "THROTTLED UPLOAD SPEED",
        ```
@@ -132,7 +131,7 @@ See [here](../reference/pushover.md#cloudplow).
 
 ### Restart
 
-Restart Cloudplow to apply the changes to the config. 
+Restart Cloudplow to apply the changes to the config.
 
 ```
 sudo systemctl restart cloudplow
@@ -142,12 +141,12 @@ sudo systemctl restart cloudplow
 ## CLI
 
 
-You can run a manual Cloudplow task from anywhere by just using the `cloudplow` command. 
+You can run a manual Cloudplow task from anywhere by just using the `cloudplow` command.
 
 
 ### Manual Upload
 
-To start uploading right away, regardless of what the folder size is: 
+To start uploading right away, regardless of what the folder size is:
 
 ```
 cloudplow upload

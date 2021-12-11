@@ -167,7 +167,7 @@
 
     - `zerossl`: Controls whether zerossl is used. 
   
-      - Default is `yes`.
+      - Default is `no`.
 
 - `traefik`: traefik-related settings.
 

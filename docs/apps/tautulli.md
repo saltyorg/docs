@@ -13,7 +13,7 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 ## 2. URL
 
-To access PlexPy, visit https://plexpy._yourdomain_.com
+To access Tautulli, visit https://tautulli._yourdomain_.com
 
 ## 3. Setup Wizard
 

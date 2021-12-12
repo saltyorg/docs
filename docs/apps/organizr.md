@@ -1,5 +1,3 @@
-THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
-
 ## What is it?
 
 [Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
@@ -16,23 +14,23 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 ## 3. Initial Setup
 1.  The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
 In the `Install Type` section select `Personal`
- 
+
     ![Main Setup-Install-Type](https://i.imgur.com/IgStX3L.png)
 
-1. In the `Admin Info` section enter your details such as the preferred password to log in and personal email. 
+1. In the `Admin Info` section enter your details such as the preferred password to log in and personal email.
 Note: it is suggested to enter your `plex username and password`
- 
+
     ![Main Setup-Admin-Info](https://i.imgur.com/clOLSdn.png)
 
-1. In the `Security` section enter your fill in the `Hash Key` and `Registration Password` any type of password will do but if you want a secure one then follow these steps; 
+1. In the `Security` section enter your fill in the `Hash Key` and `Registration Password` any type of password will do but if you want a secure one then follow these steps;
 * First for the `Hash Key` you can head over to [Base64 Encode](https://www.cleancss.com/base64-encode/) and convert a string to Base64. Keep in mind the `Hash Key` can be anywhere between 3 to 30 which mean you can enter string up to 21 characters in Base64
-* For the password just use any strong password you prefer, if you want a strong one then [Password Generator](https://passwordsgenerator.net/), there is no limit on the password section go crazy ;) 
+* For the password just use any strong password you prefer, if you want a strong one then [Password Generator](https://passwordsgenerator.net/), there is no limit on the password section go crazy ;)
 * The API key should be auto-generated so no need to worry about this if the API key is throwing an error such as shorter than it suppose to be or longer it's most likely due to the web browser auto-fill, make sure it's disabled or just use another browser that doesn't have auto-fill or you don't use much e.g Internet Explorer 👀.
 <br> <br>You should have something like this:
 
    ![Main Setup-Admin-Info](https://i.imgur.com/o7yp3YQ.png)
 
-4. In the `Database` section enter your preferred database name (there is 30 character limit), then after that for the "Database Location" set it as `/config/www` then click test path it should be a success. 
+4. In the `Database` section enter your preferred database name (there is 30 character limit), then after that for the "Database Location" set it as `/config/www` then click test path it should be a success.
 <br> <br>You should have something like this:
 
    ![Main Setup-Database](https://i.imgur.com/kJlIRpY.png)
@@ -93,7 +91,7 @@ Note: it is suggested to enter your `plex username and password`
 
 1. Click the Plex icon at the top.
 
-    - You'll have to Enable it and verify the Minimum Authentication 
+    - You'll have to Enable it and verify the Minimum Authentication
 
     - Click on the Connection Tab and set "Plex URL": `http://plex:32400`
 
@@ -113,7 +111,7 @@ Note: it is suggested to enter your `plex username and password`
 
     - Set "Sonarr API Key": [[Your Sonarr API Key|Install: Sonarr#9-retrieving-the-api-key]]
 
-    - Go over any other Miscellaneous Options on the next Tab and set your preferences. 
+    - Go over any other Miscellaneous Options on the next Tab and set your preferences.
 
     - Click "SAVE".
 
@@ -127,7 +125,7 @@ Note: it is suggested to enter your `plex username and password`
 
     - Set "Radarr API Key": [[Your Radarr API Key|Install: Radarr#9-retrieving-the-api-key]]
 
-    - Go over any other Miscellaneous Options on the next Tab and set your preferences. 
+    - Go over any other Miscellaneous Options on the next Tab and set your preferences.
 
     - Click "SAVE".
 
@@ -152,4 +150,4 @@ Note: it is suggested to enter your `plex username and password`
     ![Homepage Order](https://i.imgur.com/A2FPosN.png)
 
 
-Any additional question please reach out to the [Organizr](https://organizr.app/) team, either via their [Discord Server](https://organizr.app/discord) or their [subreddit](https://www.reddit.com/r/organizr/) 
+Any additional question please reach out to the [Organizr](https://organizr.app/) team, either via their [Discord Server](https://organizr.app/discord) or their [subreddit](https://www.reddit.com/r/organizr/)

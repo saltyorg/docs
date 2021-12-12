@@ -8,22 +8,17 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 |-------------|-------------|-------------|-------------|
 | :material-home: Project home | [:octicons-link-16: Docs](https://github.com/theotherp/nzbhydra2/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/theotherp/nzbhydra2){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/nzbhydra2){: .header-icons target=_blank rel="noopener noreferrer" }|
 
-Three Ways to setup NZB indexers with Sonarr/Radarr/Lidarr: 
+Three Ways to setup NZB indexers with Sonarr/Radarr/Lidarr:
 
-1) Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
+1. Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
 
-2) Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
+2. Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
 
-3) Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
-
-
-
+3. Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
 
 ---
 
 To Setup NZBHydra2, follow the steps below.
-
-
 
 ## 2. URL
 
@@ -39,15 +34,7 @@ Enter setup by clicking on "Config" at the top.
 
 ### Authorization
 
-- Login settings are preset out of the box (`user` / `passwd` as set in [[accounts.yml|Install: Settings]]).
-
-### Migration
-
- <details>
- <summary> You can migrate your previous NZBHydra 1 config by entering in the following: (click to expand)</summary> 
-  <br />
-  <img src="https://i.imgur.com/CneRSWw.png" alt="NZBHydra1 Migration"> 
- </details>
+- Login settings are preset out of the box (`user` / `passwd` as set in [accounts.yml](../reference/accounts.md)).
 
 ### Indexers
 
@@ -55,11 +42,8 @@ Enter setup by clicking on "Config" at the top.
 
 ### Downloaders
 
-- NZBGet settings are preset out of the box. 
-
-
-
+- NZBGet settings are preset out of the box.
 
 ## 4. API Key
 
-To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used later in [[Sonarr|Install: Sonarr#nzbhydra2]] and [[Radarr|Install: Radarr#nzbhydra2]].
+To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used later in [Sonarr](sonarr.md) and [Radarr](radarr.md).

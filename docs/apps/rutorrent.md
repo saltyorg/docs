@@ -6,12 +6,9 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 _Note: public trackers are disabled by default in the standard install.  Refer to the FAQ for [instructions on re-enabling them](https://github.com/Cloudbox/Cloudbox/wiki/FAQ#enable-access-to-public-torrent-trackers)._
 
-## Project Information
-
-- [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:octicons-mark-github-16: Github:](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" }
-- [:material-docker: Docker: ](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }
+| Details     |             |             |             |             |
+|-------------|-------------|-------------|-------------|-------------|
+| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github: ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github: rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 1. URL
 
@@ -21,33 +18,33 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 ### Setup
 
-The setup for [[Sonarr|Install: Sonarr#rutorrent]], [[Radarr|Install: Radarr#rutorrent]], and [[Lidarr|Install: Lidarr#rutorrent]] are done on their respective wiki pages.
+The setup for [Sonarr](sonarr.md#rutorrent), [Radarr](radarr.md#rutorrent), and [Lidarr](lidarr.md#rutorrent) are done on their respective wiki pages.
 
 ## 3. Enable AutoUnpack
 
-AutoUnpack is a plugin that will automatically unrar/unzip torrent data. 
+AutoUnpack is a plugin that will automatically unrar/unzip torrent data.
 
-_This will allow Sonarr/Radarr/Lidarr to import the media files that would otherwise be ignored. After Sonarr and Radarr import the media files, [[Torrent Cleanup Script|Reference: Cloudbox-Tools#torrent-cleanup-script]] will then delete the extracted media files and ruTorrent will continue to seed the torrents (until they are either removed manually or automatically via ruTorrent's Ratio Group rules)._
+_This will allow Sonarr/Radarr/Lidarr to import the media files that would otherwise be ignored. After Sonarr and Radarr import the media files, [Torrent Cleanup Script](../reference/saltbox-tools.md#torrent-cleanup-script) will then delete the extracted media files and ruTorrent will continue to seed the torrents (until they are either removed manually or automatically via ruTorrent's Ratio Group rules)._
 
 To enable AutoUnpack:
 
 1. Open "Settings" by clicking the gear icon ![](https://github.com/Novik/ruTorrent/wiki/images/icon06settings.png) at the top
 
-1. Go to "Unpack" on the left. 
+2. Go to "Unpack" on the left.
 
-1. Check "Enable autounpacking if torrents label matches filter" and add the following:
+3. Check "Enable autounpacking if torrents label matches filter" and add the following:
 
    ```
    /.*(radarr|sonarr|lidarr).*/i
    ```
 
-1. Leave the other fields blank. 
+4. Leave the other fields blank.
 
-1. Your settings will now look like this:
+5. Your settings will now look like this:
 
    ![](https://i.imgur.com/LqE16E1.png)
 
-1. Click "OK". 
+6. Click "OK".
 
 
 ## 3. Custom Plugins and Themes

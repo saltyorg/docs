@@ -109,21 +109,21 @@
 
    1. Port: `6789`
 
-   1. Username:  [[Your NZBGet Username|Install: NZBGet#security]]
+   2. Username:  [Your NZBGet Username](nzbget.md#security)
 
-   1. Password:  [[Your NZBGet Password|Install: NZBGet#security]]
+   3. Password:  [Your NZBGet Password](nzbget.md#security)
 
-   1. Category: `lidarr`
+   4. Category: `lidarr`
 
-   1. Use SSL: `No`
+   5. Use SSL: `No`
 
-   1. Add Paused: `No`
+   6. Add Paused: `No`
 
-1. Your settings will now look like this:
+2. Your settings will now look like this:
 
-    ![Lidarr NZBGet Downloader](https://i.ibb.co/LgDYFWT/image.png)
+    ![Lidarr NZBGet Downloader](../images/lidarr/01-lidarr-nzbget.png)
 
-1. Click "Save" to add NZBGet.
+3. Click "Save" to add NZBGet.
 
 
 ### ruTorrent
@@ -144,19 +144,19 @@
 
    1. Use SSL: `No`
 
-   1. Username: [[Your ruTorrent Username|Install: ruTorrent#login]]
+   2. Username: [Your ruTorrent Username](rutorrent.md#login)
 
-   1. Password: [[Your ruTorrent Password|Install: ruTorrent#login]]
+   3. Password: [Your ruTorrent Password](rutorrent.md#login)
 
-   1. Category: `lidarr`
+   4. Category: `lidarr`
 
-   1. Directory: _Leave Blank_
+   5. Directory: _Leave Blank_
 
-1. Your settings will look like this:
+2. Your settings will look like this:
 
-   ![Lidarr ruTorrent Downloader](https://i.imgur.com/NbWHz3c.png)
+   ![Lidarr ruTorrent Downloader](../images/lidarr/02-lidarr-rutorrent.png)
 
-1. Click "Save" to add ruTorrent.
+3. Click "Save" to add ruTorrent.
 
 
 
@@ -166,7 +166,7 @@
 
 1. Set "Advanced Settings": `Shown`
 
-1. Add in your your favorite [[indexers|Prerequisites: Usenet vs BitTorrent]].
+1. Add in your your favorite [indexers](../saltbox/prerequisites/prerequisites.md#usenet-vs-bittorrent).
 
 
 ### NZBHydra2
@@ -189,17 +189,17 @@
 
    1. API Path: `/api`
 
-   1. API Key: [[Your NZBHydra2 API Key|Install: NZBHydra2#7-api-key]]
+   2. API Key: [Your NZBHydra2 API Key](nzbhydra2.md#7-api-key)
 
-   1. Additional Parameters: _Leave Blank_
+   3. Additional Parameters: _Leave Blank_
 
 5. Your settings will look like this:
 
-    ![Lidarr NZBHydra2](https://i.imgur.com/isxTYGV.png)
+    ![Lidarr NZBHydra2](../images/lidarr/03-lidarr-nzbhydra.png)
 
 6. Click "Save" to add NZBHydra2.
 
-Note: The "Test" will keep failing until you add an indexer in [[NZBHydra2|Install: NZBHydra2]].
+Note: The "Test" will keep failing until you add an indexer in [NZBHydra2](nzbhydra2.md).
 
 ### Jackett
 
@@ -219,20 +219,20 @@ Note: Each Indexer will need to be added separately.
 
    1. Enable Search: _Your Preference_
 
-   1. URL: [[Indexer's Torznab Feed|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
+   2. URL: [Indexer's Torznab Feed](jackett.md#3-adding-indexers-to-sonarrradarr)
 
-   1. API Path: `/api`
+   3. API Path: `/api`
 
-   1. API Key: [[Your Jackett API Key|Install: Jackett#3-adding-indexers-to-sonarrradarr]]
+   4. API Key: [Your Jackett API Key](jackett.md#3-adding-indexers-to-sonarrradarr)
 
-   1. Additional Parameters: _Leave Blank_
+   5. Additional Parameters: _Leave Blank_
 
-1. Your settings will look like this:
+2. Your settings will look like this:
 
-    ![Lidarr Jackett](https://i.imgur.com/bOhRdSL.png)
+    ![Lidarr Jackett](../images/lidarr/04-lidarr-jackett.png)
 
 
-1. Click "Save" to add the indexer.
+3. Click "Save" to add the indexer.
 
 
 ## Connect
@@ -261,9 +261,9 @@ Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorr
 
 1. The settings will look like this:
 
-   ![Lidarr Torrent Cleanup Script CloudBox](https://i.imgur.com/i5OsaWi.png)
+   ![Lidarr Torrent Cleanup Script CloudBox](../images/lidarr/05-lidarr-torrent-cleanup.png)
 
-1. Click "Save" to add the Torrent Cleanup script.
+2. Click "Save" to add the Torrent Cleanup script.
 
 
 ### Plex Autoscan
@@ -284,22 +284,21 @@ Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorr
 
    1. On Rename: `Yes`
 
-   1. URL: [[Your Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]]
+   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#4-obtaining-the-plex-autoscan-url)
 
-   1. Method:`POST`
+   3. Method:`POST`
 
-   1. Username: _Leave Blank_
+   4. Username: _Leave Blank_
 
-   1. Password: _Leave Blank_
-
-
-
-1. The settings will look like this:
-
-    ![Lidarr Plex Autoscan](https://i.imgur.com/58MCXxM.png)
+   5. Password: _Leave Blank_
 
 
-1. Click "Save" to add Plex Autoscan.
+2. The settings will look like this:
+
+    ![Lidarr Plex Autoscan](../images/lidarr/06-lidarr-plex-autoscan.png)
+
+
+3. Click "Save" to add Plex Autoscan.
 
 ## Music Path
 
@@ -314,6 +313,6 @@ Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorr
 
 ## API Key
 
-This is used during the setup of [[Organizr|Install: Organizr]].
+This is used during the setup of [Organizr](organizr.md).
 
 * Go to "Settings" -> "General" -> "Security" -> "API Key".

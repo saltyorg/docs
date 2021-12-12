@@ -14,7 +14,7 @@ It's totally free, easy to use, and works practically everywhere. SABnzbd makes 
 
 ## 1. URL
 
-- To access ruTorrent, visit https://rutorrent._yourdomain.com_
+- To access sabnzbd, visit https://sabnzbd._yourdomain.com_
 
 ## 2. Basics
 
@@ -30,14 +30,14 @@ It's totally free, easy to use, and works practically everywhere. SABnzbd makes 
 
 ![](../images/sabnzbd/04-sabnzbd.png)
 
-- You will need to add in categories for `sonarr`, `radarr`, and `lidarr`. 
+- You will need to add in categories for `sonarr`, `radarr`, and `lidarr`.
 
-  Set a relative directory name for each category.  
-  
+  Set a relative directory name for each category.
+
   You will need a category for each instance of `sonarr`/`radarr`/`lidarr` [for example, if you have a `radarr` and `radarr4k` you will need a category for each]
-  
+
   SABnzbd requires the server to be filled in to set categories up.
-  
+
   **This needs to be done BEFORE adding sabnzbd as a downloader to any of those apps.**
 
 ![](../images/sabnzbd/05-sabnzbd.png)

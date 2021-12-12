@@ -29,7 +29,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ![](../images/overseerr/03-overseerr.png)
 
-1. Click "Add Radarr Server". 
+1. Click "Add Radarr Server".
 
 ![](../images/overseerr/04-overseerr.png)
 

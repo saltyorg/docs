@@ -249,19 +249,19 @@ nav:
       - plex: apps/plex.md
       - radarr: apps/radarr.md
       - sonarr: apps/sonarr.md
+      - nzbget: apps/nzbget.md
+      - nzbhydra2: apps/nzbhydra2.md
+      - plex-autoscan: apps/plex-autoscan.md
+      - portainer: apps/portainer.md
+      - rutorrent: apps/rutorrent.md
+      - sabnzbd: apps/sabnzbd.md
+      - tautulli: apps/tautulli.md
+      - lidarr: apps/lidarr.md
       - REPLACE IMAGES:
         - jackett: apps/jackett.md
-        - lidarr: apps/lidarr.md
       - NEED UPDATING:
-        - nzbget: apps/nzbget.md
-        - nzbhydra2: apps/nzbhydra2.md
         - organizr: apps/organizr.md
-        - plex-autoscan: apps/plex-autoscan.md
-        - portainer: apps/portainer.md
-        - rutorrent: apps/rutorrent.md
-        - sabnzbd: apps/sabnzbd.md
         - sstv: apps/sstv.md
-        - tautulli: apps/tautulli.md
   - FAQ:
       - System: faq/System.md
       - Cloud Storage: faq/Cloud Storage.md
@@ -306,6 +306,7 @@ nav:
           - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md
           - Pushover: reference/pushover.md
+          - Saltbox Tools: reference/saltbox-tools.md
           - Subdomains: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
   - Sandbox:

@@ -239,6 +239,7 @@ nav:
           - Hardlinking: community/guides/hardlinking.md
         - Migration:
           - cloudbox: community/guides/cloudbox.md
+          - plexguide: community/guides/plexguide.md
         - Further Reading and Links:
           - Suggested Reading: community/guides/suggested_reading.md
           - Links: community/guides/links.md

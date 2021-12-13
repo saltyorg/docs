@@ -281,26 +281,27 @@ nav:
       - Adding Your Own Containers: advanced/your-own-containers.md
       - User crontab examples: advanced/user-crontab-examples.md
   - Reference:
-      - Prerequisites:
+      -Topics:
+        - Prerequisites:
           - Server: reference/server.md
           - Domain Name: reference/domain.md
           - Cloud Storage: reference/cloud.md
           - Plex Account: reference/plex.md
           - Media Sources: reference/usenet-torrent.md
-      - Google:
+        - Google:
           - Google Project: reference/google-project-setup.md
           - Google Group: reference/google-group-setup.md
           - Google SDK: reference/google-gcloud-tools-install.md
           - Google Service Accounts: reference/google-service-accounts.md
           - Google Shared Drives: reference/google-shared-drives.md
-      - Install:
+        - Install:
           - Dependencies: reference/dependencies.md
           - Accounts and Settings: reference/accounts.md
           - Preinstall: reference/preinstall.md
           - Rclone: reference/rclone.md
           - Rclone [Manual]: reference/rclone-manual.md
           - Install: reference/install.md
-      - Other:
+        - Other:
           - Cloudplow Examples: reference/cloudplow.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md
           - Plex Auth Token: reference/plex_auth_token.md

@@ -41,7 +41,16 @@ Broadly, the base install consists of six steps:
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
 
-- accounts.yml
+`accounts.yml`
+
+To edit [assuming you are still logged in as `root`]:
+
+```
+nano /srv/git/saltbox/accounts.yml
+```
+
+Contents:
+
 ``` { .yaml .annotate }
 ---
 user:

@@ -91,7 +91,7 @@ apprise: # (12)
 
 5. Email used for the Cloudflare account.
 
-6. Cloudflare API Token.
+6. Cloudflare Global API Key.
 
 7. Plex.tv username or email address on the account.
 

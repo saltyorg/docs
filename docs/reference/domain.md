@@ -60,7 +60,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
 
 === "Saltbox Install Type"
-    You will need to create A Records for all Saltbox subdomains. 
+    You will need to create A Records for all Saltbox subdomains.
 
     | **Type** | **Host**     | **Value**               | **TTL**   |
     |:-------- |:------------ |:----------------------- |:--------- |
@@ -78,8 +78,8 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
 
 === "Mediabox / Feederbox Install Type"
-    You will need to create A Records for both IP addresses (Media and Feeder boxes) and set them to their respective subdomains. 
-    
+    You will need to create A Records for both IP addresses (Media and Feeder boxes) and set them to their respective subdomains.
+
     Mediabox
 
     | **Type** | **Host**     | **Value**               | **TTL**   |
@@ -97,7 +97,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | sonarr       | _Feederbox IP Address_ | 300 |
     | A Record | rutorrent    | _Feederbox IP Address_ | 300 |
     | A Record | nzbget       | _Feederbox IP Address_ | 300 |
-    | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 | 
+    | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 |
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
 
@@ -141,7 +141,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
     ![](../images/namecheap-dns.png)
 
 === "Namesilo.com"
-          
+
     "Manage My Domains" -> _your domain.tld_ -> "NameServers" -> "Change" ->  add the nameservers in.
 
     ![](../images/namesilo-dns.png)
@@ -196,7 +196,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  NOte, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 
-Do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK. 
+Do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK.
 
 This also applies to any app/subdomains you add in the future - wait till after you get certs before enabling CDN.
 

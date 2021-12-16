@@ -9,6 +9,8 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     sudo chown -R <user>:<group> /opt/sa
     ```
+    
+    Enter the user from `accounts.yml`; group is the same as the user.
 
 1. Retrieve the `sa-gen` code
 

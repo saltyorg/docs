@@ -95,7 +95,7 @@ apprise: # (12)
 
 7. Plex.tv username or email address on the account.
 
-8. Plex.tv password for the account.
+8. Plex.tv password for the account. Note - if your PLEX password is not the same color as your username or contains a $ the install will fail.
 
 9. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
 

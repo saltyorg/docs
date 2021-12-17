@@ -2,7 +2,11 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in  `/srv/git/saltbox/inventories/host_vars/localhost.yml`.  This implementation avoids git merge conflicts when updating Saltbox.
+Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in: 
+
+`/srv/git/saltbox/inventories/host_vars/localhost.yml`
+
+This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
@@ -42,7 +46,7 @@ When you next run the `sonarr` tag, everything that's based off that name will c
 - app data folder => /opt/BingBangBoing
 - and so on.
 
-A common use for these overrides will probably be changing the version of the docker container being used.
+A common use for these overrides but not limited to are specifiying the version of the docker container to be used.
 
 Looking further down in that defaults file:
 
@@ -71,3 +75,37 @@ sonarr_docker_image_tag: "nightly"
 ```
 
 Which would override the default and result in Saltbox using `hotio/sonarr:nightly`.
+
+
+
+
+# Additional Examples:
+```
+### Open Specificed Ports for a specified container ###
+##### Plex Ports for local access#####
+plex_docker_ports:
+  - "32400:32400/tcp"
+  - "3005:3005/tcp"
+  - "8324:8324/tcp"
+  - "33400:33400/tcp"
+  - "33443:33443/tcp"
+
+##### Plex Container Variables ####
+plex_docker_image_tag: beta
+plex_open_main_ports: true
+plex_db_cache_size: 30000000
+
+####Examples of specified container images: ####
+radarr_docker_image_tag: nightly
+sonarr_docker_image_tag: nightly
+petio_docker_image_tag: nightly
+
+APP_FORCE_PROXY: "true"
+
+#### BW Limiting speeds ####
+transfer_docker_envs_custom:
+  MAX_UPLOAD_SIZE: "104857546"
+
+#### Docker Service Variable ####
+docker_service_sleep: 0
+```

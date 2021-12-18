@@ -106,19 +106,16 @@ nav:
             - Delugevpn: community/apps/delugevpn.md
             - Delugex: community/apps/delugex.md
             - Qbittorrent: community/apps/qbittorrent.md
-            - Qbittorrentvpn: community/apps/qbittorrentvpn.md
             - Qbittorrentx: community/apps/qbittorrentx.md
             - Rflood: community/apps/rflood.md
             - Rfloodx: community/apps/rfloodx.md
             - Transmission: community/apps/transmission.md
-            - Transmissionvpn: community/apps/transmissionvpn.md
             - Transmissionx: community/apps/transmissionx.md
         - File Management:
           - Filebot: community/apps/filebot.md
           - Filebrowser: community/apps/filebrowser.md
           - Filezilla: community/apps/filezilla.md
           - Jirafeau: community/apps/jirafeau.md
-          - Resilio_sync: community/apps/resilio_sync.md
           - Transfer: community/apps/transfer.md
         - Landing Pages:
           - heimdall: community/apps/heimdall.md
@@ -136,7 +133,7 @@ nav:
             - mylar3: community/apps/mylar3.md
             - readarr: community/apps/readarr.md
             - readarrx: community/apps/readarrx.md
-            - ubooquity: community/apps/ubooquity.md
+            - ubooquity: community/apps/ubooquity.md  <<
           - Indexers:
             - prowlarr: community/apps/prowlarr.md
           - Metadata Management:
@@ -147,7 +144,6 @@ nav:
             - comixed: community/apps/comixed.md
             - unmanic: community/apps/unmanic.md
           - Movies:
-            - couchpotato: community/apps/couchpotato.md
             - radarrx: community/apps/radarrx.md
           - Music:
             - airsonic: community/apps/airsonic.md
@@ -157,7 +153,6 @@ nav:
             - lidarrx: community/apps/lidarrx.md
             - navidrome: community/apps/navidrome.md
           - TV:
-            - sickchill: community/apps/sickchill.md
             - sonarrx: community/apps/sonarrx.md
             - xteve: community/apps/xteve.md
         - Media Servers and add-ons:
@@ -169,7 +164,6 @@ nav:
             - Extended Personal Media Scanner: community/apps/epms.md
             - goplaxt: community/apps/goplaxt.md
             - kitana: community/apps/kitana.md
-            - mediabutler: community/apps/mediabutler.md
             - tautullix: community/apps/tautullix.md
           - Requests:
             - ombi: community/apps/ombi.md
@@ -183,7 +177,6 @@ nav:
           - airdcpp: community/apps/airdcpp.md
           - gotify: community/apps/gotify.md
           - moviematch: community/apps/moviematch.md
-          - synclounge: community/apps/synclounge.md
         - Utilities:
           - Docker:
             - dozzle: community/apps/dozzle.md
@@ -193,7 +186,6 @@ nav:
           - Networking:
             - kcptun_client: community/apps/kcptun_client.md
             - kcptun_server: community/apps/kcptun_server.md
-            - unifi: community/apps/unifi.md
           - flaresolverr: community/apps/flaresolverr.md
           - Log Management:
             - goaccess: community/apps/goaccess.md
@@ -202,7 +194,6 @@ nav:
           - guacamole: community/apps/guacamole.md
           - handbrake: community/apps/handbrake.md
           - influxdb: community/apps/influxdb.md
-          - invoiceninja: community/apps/invoiceninja.md
           - speedtest: community/apps/speedtest.md
           - sshwifty: community/apps/sshwifty.md
           - System:

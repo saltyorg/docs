@@ -46,7 +46,7 @@ When you next run the `sonarr` tag, everything that's based off that name will c
 - app data folder => /opt/BingBangBoing
 - and so on.
 
-A common use for these overrides but not limited to are specifiying the version of the docker container to be used.
+A common use for these overrides will be specifying the version of the docker image to be used, so let's look at how that's done.
 
 Looking further down in that defaults file:
 
@@ -81,7 +81,7 @@ Which would override the default and result in Saltbox using `hotio/sonarr:night
 
 # Additional Examples:
 ```
-### Open Specificed Ports for a specified container ###
+### Open Specified Ports for a specified container ###
 ##### Plex Ports for local access#####
 plex_docker_ports:
   - "32400:32400/tcp"

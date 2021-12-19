@@ -204,6 +204,7 @@ nav:
             - healthchecks: community/apps/healthchecks.md
             - hetzner_nfs: community/apps/hetzner_nfs.md
           - telegraf: community/apps/telegraf.md
+          - Unpackerr: community/apps/unpackerr.md
           - uptime_kuma: community/apps/uptime_kuma.md
           - vaultwarden: community/apps/vaultwarden.md
           - Visualization:

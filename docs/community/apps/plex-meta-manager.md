@@ -22,6 +22,6 @@ sb install cm-plex-meta-manager
 
 ```
 
-### 3. Setup
+### 2. Setup
 
 - [:octicons-link-16: Documentation](https://github.com/meisnate12/Plex-Meta-Manager/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -46,9 +46,7 @@ When you next run the `sonarr` tag, everything that's based off that name will c
 - app data folder => /opt/BingBangBoing
 - and so on.
 
-A common use for these overrides will be specifying the version of the docker image to be used, so let's look at how that's done.
-
-Looking further down in that defaults file:
+A common use for these overrides will be specifying the version of the docker image to be used, so let's see how that's done by looking further down in the defaults file:
 
 ``` yaml
 ################################
@@ -64,9 +62,9 @@ sonarr_docker_image_tag: "release"
 sonarr_docker_image: "hotio/sonarr:{{ sonarr_docker_image_tag }}"
 ```
 
-We see again the name flowing through down here. but look at `sonarr_docker_image_tag: "release"`
+We see again the name flowing through down here, but look at `sonarr_docker_image_tag: "release"`
 
-By default, for Sonarr, Saltbox will use the docker image `hotio/sonarr:release`.
+For Sonarr by default, Saltbox will use the docker image `hotio/sonarr:release`.
 
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
@@ -74,14 +72,14 @@ If you wanted to change that to "nightly", you'd add this line to `/srv/git/salt
 sonarr_docker_image_tag: "nightly"
 ```
 
-Which would override the default and result in Saltbox using `hotio/sonarr:nightly`.
+Which would override the default and result in Saltbox using `hotio/sonarr:nightly` docker image instead.
 
 
 
 
 # Additional Examples:
 ```
-### Open Specified Ports for a specified container ###
+### Open Specified Ports for the specified container ###
 ##### Plex Ports for local access#####
 plex_docker_ports:
   - "32400:32400/tcp"

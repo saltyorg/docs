@@ -133,7 +133,6 @@ nav:
             - mylar3: community/apps/mylar3.md
             - readarr: community/apps/readarr.md
             - readarrx: community/apps/readarrx.md
-            - ubooquity: community/apps/ubooquity.md  <<
           - Indexers:
             - prowlarr: community/apps/prowlarr.md
           - Metadata Management:
@@ -142,6 +141,7 @@ nav:
             - bazarr: community/apps/bazarr.md
             - bazarrx: community/apps/bazarrx.md
             - comixed: community/apps/comixed.md
+            - Plex Meta Manager: community/apps/plex-meta-manager.md
             - unmanic: community/apps/unmanic.md
           - Movies:
             - radarrx: community/apps/radarrx.md

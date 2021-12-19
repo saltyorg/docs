@@ -103,51 +103,99 @@ nav:
             - Transmissionx: community/apps/transmissionx.md
         - File Management:
           - Transfer: community/apps/transfer.md
+        - Landing Pages:
+          - Heimdall: community/apps/heimdall.md
         - Media Management:
           - ArrX: community/apps/arrx.md
           - Books:
-            - readarr: community/apps/readarr.md
-            - readarrx: community/apps/readarrx.md
+            - Booksonic: community/apps/booksonic.md
+            - Bookstack: community/apps/bookstack.md
+            - Calibre: community/apps/calibre.md
+            - Calibre_web: community/apps/calibre_web.md
+            - Comicstreamer: community/apps/comicstreamer.md
+            - Kavita: community/apps/kavita.md
+            - Komga: community/apps/komga.md
+            - Lazylibrarian: community/apps/lazylibrarian.md
+            - Mylar3: community/apps/mylar3.md
+            - Readarr: community/apps/readarr.md
+            - Readarrx: community/apps/readarrx.md
           - Indexers:
-            - prowlarr: community/apps/prowlarr.md
+            - Prowlarr: community/apps/prowlarr.md
           - Metadata Management:
-            - bazarr: community/apps/bazarr.md
-            - bazarrx: community/apps/bazarrx.md
+            - Alternatrr: community/apps/alternatrr.md
+            - Alternatrrx: community/apps/alternatrrx.md
+            - Bazarr: community/apps/bazarr.md
+            - Bazarrx: community/apps/bazarrx.md
+            - Comixed: community/apps/comixed.md
+            - Plex Meta Manager: community/apps/plex-meta-manager.md
+            - Unmanic: community/apps/unmanic.md
           - Movies:
-            - radarrx: community/apps/radarrx.md
+            - Radarrx: community/apps/radarrx.md
           - Music:
-            - lidarrx: community/apps/lidarrx.md
+            - Airsonic: community/apps/airsonic.md
+            - Beets: community/apps/beets.md
+            - Deemix: community/apps/deemix.md
+            - Funkwhale: community/apps/funkwhale.md
+            - Lidarrx: community/apps/lidarrx.md
+            - Navidrome: community/apps/navidrome.md
           - TV:
-            - sonarrx: community/apps/sonarrx.md
+            - Sonarrx: community/apps/sonarrx.md
+            - Xteve: community/apps/xteve.md
         - Media Servers and add-ons:
-          - jellyfin: community/apps/jellyfin.md
+          - Emby:
+            - Embystat: community/apps/embystat.md
+          - Jellyfin: community/apps/jellyfin.md
           - Plex:
-            - asshama: community/apps/asshama.md
-            - tautullix: community/apps/tautullix.md
+            - Asshama: community/apps/asshama.md
+            - Extended Personal Media Scanner: community/apps/epms.md
+            - Goplaxt: community/apps/goplaxt.md
+            - Kitana: community/apps/kitana.md
+            - Tautullix: community/apps/tautullix.md
           - Requests:
-            - ombi: community/apps/ombi.md
-            - ombix: community/apps/ombix.md
-            - petio: community/apps/petio.md
-            - requestrr: community/apps/requestrr.md
-            - requestrrx: community/apps/requestrrx.md
+            - Ombi: community/apps/ombi.md
+            - Ombix: community/apps/ombix.md
+            - Petio: community/apps/petio.md
+            - Requestrr: community/apps/requestrr.md
+            - Requestrrx: community/apps/requestrrx.md
+          - Stash: community/apps/stash.md
+        - Nextcloud: community/apps/nextcloud.md
+        - Social:
+          - Airdcpp: community/apps/airdcpp.md
+          - Gotify: community/apps/gotify.md
+          - Moviematch: community/apps/moviematch.md
         - Utilities:
           - Docker:
-            - dozzle: community/apps/dozzle.md
-            - yacht: community/apps/yacht.md
+            - Dozzle: community/apps/dozzle.md
+            - Ouroboros: community/apps/ouroboros.md
+            - Watchtower: community/apps/watchtower.md
+            - Yacht: community/apps/yacht.md
+          - Networking:
+            - Kcptun_client: community/apps/kcptun_client.md
+            - Kcptun_server: community/apps/kcptun_server.md
+          - FLaresolverr: community/apps/flaresolverr.md
           - Log Management:
-            - goaccess: community/apps/goaccess.md
-          - influxdb: community/apps/influxdb.md
+            - Goaccess: community/apps/goaccess.md
+            - Logarr: community/apps/logarr.md
+            - Monitorr: community/apps/monitorr.md
+          - Guacamole: community/apps/guacamole.md
+          - Handbrake: community/apps/handbrake.md
+          - Influxdb: community/apps/influxdb.md
+          - Speedtest: community/apps/speedtest.md
+          - Sshwifty: community/apps/sshwifty.md
           - System:
-            - autoscan: community/apps/autoscan.md
-            - btrfsmaintenance: community/apps/btrfsmaintenance.md
-            - healthchecks: community/apps/healthchecks.md
-            - hetzner_nfs: community/apps/hetzner_nfs.md
-          - telegraf: community/apps/telegraf.md
+            - Apprise: community/apps/apprise.md
+            - Autoscan: community/apps/autoscan.md
+            - BTRFSsmaintenance: community/apps/btrfsmaintenance.md
+            - Glances_web: community/apps/glances_web.md
+            - Healthchecks: community/apps/healthchecks.md
+            - Hetzner_nfs: community/apps/hetzner_nfs.md
+          - Telegraf: community/apps/telegraf.md
           - Unpackerr: community/apps/unpackerr.md
-          - uptime_kuma: community/apps/uptime_kuma.md
+          - Uptime_kuma: community/apps/uptime_kuma.md
+          - Vaultwarden: community/apps/vaultwarden.md
           - Visualization:
-            - grafana: community/apps/grafana.md
-            - varken: community/apps/varken.md
+            - Grafana: community/apps/grafana.md
+            - Varken: community/apps/varken.md
       - Guides:
         - General:
           - chazlarson Guides:
@@ -167,31 +215,31 @@ nav:
         - Downloading:
           - Hardlinking: community/guides/hardlinking.md
         - Migration:
-          - cloudbox: community/guides/cloudbox.md
-          - plexguide: community/guides/plexguide.md
+          - Cloudbox: community/guides/cloudbox.md
+          - Plexguide: community/guides/plexguide.md
         - Further Reading and Links:
           - Suggested Reading: community/guides/suggested_reading.md
           - Links: community/guides/links.md
   - Apps:
-      - cloudplow: apps/cloudplow.md
-      - emby: apps/emby.md
-      - overseerr: apps/overseerr.md
-      - plex: apps/plex.md
-      - radarr: apps/radarr.md
-      - sonarr: apps/sonarr.md
-      - nzbget: apps/nzbget.md
-      - nzbhydra2: apps/nzbhydra2.md
-      - plex-autoscan: apps/plex-autoscan.md
-      - portainer: apps/portainer.md
-      - rutorrent: apps/rutorrent.md
-      - sabnzbd: apps/sabnzbd.md
-      - tautulli: apps/tautulli.md
-      - lidarr: apps/lidarr.md
+      - Cloudplow: apps/cloudplow.md
+      - Emby: apps/emby.md
+      - Overseerr: apps/overseerr.md
+      - Plex: apps/plex.md
+      - Radarr: apps/radarr.md
+      - Sonarr: apps/sonarr.md
+      - Nzbget: apps/nzbget.md
+      - Nzbhydra2: apps/nzbhydra2.md
+      - Plex-autoscan: apps/plex-autoscan.md
+      - Portainer: apps/portainer.md
+      - Rutorrent: apps/rutorrent.md
+      - Sabnzbd: apps/sabnzbd.md
+      - Tautulli: apps/tautulli.md
+      - Lidarr: apps/lidarr.md
       - REPLACE IMAGES:
-        - jackett: apps/jackett.md
+        - Jackett: apps/jackett.md
       - NEED UPDATING:
-        - organizr: apps/organizr.md
-        - sstv: apps/sstv.md
+        - Organizr: apps/organizr.md
+        - SSTV: apps/sstv.md
   - FAQ:
       - System: faq/System.md
       - Cloud Storage: faq/Cloud Storage.md

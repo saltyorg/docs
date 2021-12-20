@@ -39,12 +39,9 @@ moviematch:  # (8)
 ombix:  # (9)
   roles:
     - 4k
-qbittorrentvpn:  # (10)
-  vpn_endpoint: netherlands.ovpn
-  vpn_user: your_vpn_username
-  vpn_pass: your_vpn_password
-  vpn_prov: pia
-  vpn_client: wireguard # 'wireguard' or 'openvpn'
+overseerrx: # (10)
+  roles:
+    - ""
 qbittorrentx:  # (11)
   roles:
     - 1080webdl
@@ -72,29 +69,22 @@ sonarrx:  # (16)
 tautullix:  # (17)
   tautulli: plex
   tautulli2: plex2
-transmissionvpn:  # (18)
-  vpn_endpoint: netherlands.ovpn
-  vpn_pass: your_vpn_password
-  vpn_prov: NORDVPN
-  vpn_user: your_vpn_username
-transmissionx:  # (19)
+transmissionx:  # (18)
   roles:
     - 1080webdl
     - 1080remux
-unifi:  # (20)
-  port: 8080
 ```
 
 1. AlternatrrX role, provide a list of "X's"
     For each listed item an Alternatrr instance will be created and the item set to the subdomain.
 
 2. BazarrX role, provide a list of "X's"
-    For each listed item a Bazarr instance will be created and the item set to the subdomain.
+   For each listed item a Bazarr instance will be created and the item set to the subdomain.
 
 3. DelugeVPN settings block, replace the examples given with your own information.
 
 4. DelugeX role, provide a list of "X's"
-    For each listed item a Deluge instance will be created and the item set to the subdomain.
+   For each listed item a Deluge instance will be created and the item set to the subdomain.
 
 5. Goplaxt
    Trakt App ID and Secret
@@ -106,10 +96,11 @@ unifi:  # (20)
 
 8. Moviematch
 
-9.  Ombix role, provide a list of "X's"
-    For each listed item an Ombi instance will be created and the item set to the subdomain.
+9. Ombix role, provide a list of "X's"
+   For each listed item an Ombi instance will be created and the item set to the subdomain.
 
-10. QbittorrentVPN
+10. OverseerrX role, provide a list of "X's"
+    For each listed item an Overseerr instance will be created and the item set to the subdomain.
 
 11. QbittorrentX role, provide a list of "X's"
     For each listed item a QBitorrent instance will be created and the item set to the subdomain.
@@ -132,10 +123,6 @@ unifi:  # (20)
 17. TautulliX role, provide a list of "X's"
     For each listed item a Tautulli instance will be created and the item set to the subdomain.
 
-18. TransmissionVPN
-
-19. TransmissionX role, provide a list of "X's"
+18. TransmissionX role, provide a list of "X's"
     For each listed item a Transmission instance will be created and the item set to the subdomain.
-
-20. Unifi
 

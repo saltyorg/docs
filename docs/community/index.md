@@ -1,4 +1,4 @@
-# Community - All Apps
+# Community - All Apps Index
 
   -  **[airdcpp](../community/apps/airdcpp.md)**  - tag - `cm-airdcpp`
   -  **[airsonic](../community/apps/airsonic.md)**  - tag - `cm-airsonic`
@@ -20,7 +20,6 @@
   -  **[coder](../community/apps/coder.md)**  - tag - `cm-coder`
   -  **[comicstreamer](../community/apps/comicstreamer.md)**  - tag - `cm-comicstreamer`
   -  **[comixed](../community/apps/comixed.md)**  - tag - `cm-comixed`
-  -  **[couchpotato](../community/apps/couchpotato.md)**  - tag - `cm-couchpotato`
   -  **[deemix](../community/apps/deemix.md)**  - tag - `cm-deemix`
   -  **[deluge](../community/apps/deluge.md)**  - tag - `cm-deluge`
   -  **[delugevpn](../community/apps/delugevpn.md)**  - tag - `cm-delugevpn`
@@ -66,7 +65,9 @@
   -  **[ombi](../community/apps/ombi.md)**  - tag - `cm-ombi`
   -  **[ombix](../community/apps/ombix.md)**  - tag - `cm-ombix`
   -  **[ouroboros](../community/apps/ouroboros.md)**  - tag - `cm-ouroboros`
+  -  **[overseerrx](../community/apps/overseerrx.md)**  - tag - `cm-overseerrx`
   -  **[petio](../community/apps/petio.md)**  - tag - `cm-petio`
+  -  **[plex-meta-manager](../community/apps/plex-meta-manager.md)**  - tag - `cm-plex-meta-manager`
   -  **[prowlarr](../community/apps/prowlarr.md)**  - tag - `cm-prowlarr`
   -  **[qbittorrent](../community/apps/qbittorrent.md)**  - tag - `cm-qbittorrent`
   -  **[qbittorrentx](../community/apps/qbittorrentx.md)**  - tag - `cm-qbittorrentx`
@@ -77,6 +78,7 @@
   -  **[requestrrx](../community/apps/requestrr.md)**  - tag - `cm-requestrrx`
   -  **[rflood](../community/apps/rflood.md)**  - tag - `cm-rflood`
   -  **[rfloodx](../community/apps/rfloodx.md)**  - tag - `cm-rfloodx`
+  -  **[settings](../community/settings.md)**  - tag - `cm-settings`
   -  **[sonarrx](../community/apps/sonarrx.md)**  - tag - `cm-sonarrx`
   -  **[speedtest](../community/apps/speedtest.md)**  - tag - `cm-speedtest`
   -  **[sshwifty](../community/apps/sshwifty.md)**  - tag - `cm-sshwifty`
@@ -87,6 +89,7 @@
   -  **[transmission](../community/apps/transmission.md)**  - tag - `cm-transmission`
   -  **[transmissionx](../community/apps/transmissionx.md)**  - tag - `cm-transmissionx`
   -  **[unmanic](../community/apps/unmanic.md)**  - tag - `cm-unmanic`
+  -  **[unpackerr](../community/apps/unpackerr.md)**  - tag - `cm-unpackerr`
   -  **[uptime_kuma](../community/apps/uptime_kuma.md)**  - tag - `cm-uptime-kuma`
   -  **[varken](../community/apps/varken.md)**  - tag - `cm-varken`
   -  **[vaultwarden](../community/apps/vaultwarden.md)**  - tag - `cm-vaultwarden`

@@ -39,50 +39,51 @@ moviematch:  # (8)
 ombix:  # (9)
   roles:
     - 4k
-qbittorrentvpn:  # (10)
+overseerrx: # (10)
+  roles:
+    - ""
+qbittorrentvpn:  # (11)
   vpn_endpoint: netherlands.ovpn
   vpn_user: your_vpn_username
   vpn_pass: your_vpn_password
   vpn_prov: pia
   vpn_client: wireguard # 'wireguard' or 'openvpn'
-qbittorrentx:  # (11)
+qbittorrentx:  # (12)
   roles:
     - 1080webdl
     - 1080remux
-radarrx:  # (12)
+radarrx:  # (13)
   roles:
     - 1080webdl
     - 1080remux
-readarrx:  # (13)
+readarrx:  # (14)
   roles:
     - ebooks
     - audiobooks
-requestrrx:  # (14)
+requestrrx:  # (15)
   roles:
     - 1080
     - 4k
-rfloodx:  # (15)
+rfloodx:  # (16)
   roles:
     - 1080webdl
     - 1080remux
-sonarrx:  # (16)
+sonarrx:  # (17)
   roles:
     - 1080webdl
     - 1080remux
-tautullix:  # (17)
+tautullix:  # (18)
   tautulli: plex
   tautulli2: plex2
-transmissionvpn:  # (18)
+transmissionvpn:  # (19)
   vpn_endpoint: netherlands.ovpn
   vpn_pass: your_vpn_password
   vpn_prov: NORDVPN
   vpn_user: your_vpn_username
-transmissionx:  # (19)
+transmissionx:  # (20)
   roles:
     - 1080webdl
     - 1080remux
-unifi:  # (20)
-  port: 8080
 ```
 
 1. AlternatrrX role, provide a list of "X's"
@@ -109,33 +110,34 @@ unifi:  # (20)
 9.  Ombix role, provide a list of "X's"
     For each listed item an Ombi instance will be created and the item set to the subdomain.
 
-10. QbittorrentVPN
+10. OverseerrX role, provide a list of "X's"
+    For each listed item an Overseerr instance will be created and the item set to the subdomain.
 
-11. QbittorrentX role, provide a list of "X's"
+11. QbittorrentVPN
+
+12. QbittorrentX role, provide a list of "X's"
     For each listed item a QBitorrent instance will be created and the item set to the subdomain.
 
-12. RadarrX role, provide a list of "X's"
+13. RadarrX role, provide a list of "X's"
     For each listed item a Radarr instance will be created and the item set to the subdomain.
 
-13. ReadarrX role, provide a list of "X's"
+14. ReadarrX role, provide a list of "X's"
     For each listed item a Readarr instance will be created and the item set to the subdomain.
 
-14. RequestrrX role, provide a list of "X's"
+15. RequestrrX role, provide a list of "X's"
     For each listed item a Requestrr instance will be created and the item set to the subdomain.
 
-15. RfloodX role, provide a list of "X's"
+16. RfloodX role, provide a list of "X's"
     For each listed item an RFlood instance will be created and the item set to the subdomain.
 
-16. SonarrX role, provide a list of "X's"
+17. SonarrX role, provide a list of "X's"
     For each listed item a Sonarr instance will be created and the item set to the subdomain.
 
-17. TautulliX role, provide a list of "X's"
+18. TautulliX role, provide a list of "X's"
     For each listed item a Tautulli instance will be created and the item set to the subdomain.
 
-18. TransmissionVPN
+19. TransmissionVPN
 
-19. TransmissionX role, provide a list of "X's"
+20. TransmissionX role, provide a list of "X's"
     For each listed item a Transmission instance will be created and the item set to the subdomain.
-
-20. Unifi
 

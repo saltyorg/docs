@@ -8,11 +8,14 @@
 
 ## Previewing docs locally
 
+Quick-n-dirty [some things may not preview accurately]:
 ```bash
 git clone https://github.com/saltyorg/docs
 cd docs
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
+
+Non-QnD: Contact chazlarson in the saltbox discord.
 
 Docs will be accessible at http://localhost:8000
 

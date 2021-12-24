@@ -69,8 +69,8 @@
   -  **[petio](../community/apps/petio.md)**  - tag - `cm-petio`
   -  **[plex-meta-manager](../community/apps/plex-meta-manager.md)**  - tag - `cm-plex-meta-manager`
   -  **[prowlarr](../community/apps/prowlarr.md)**  - tag - `cm-prowlarr`
-  -  **[qbittorrent](../community/apps/qbittorrent.md)**  - tag - `cm-qbittorrent`
-  -  **[qbittorrentx](../community/apps/qbittorrentx.md)**  - tag - `cm-qbittorrentx`
+  -  **[qBittorrent](../community/apps/qbittorrent.md)**  - tag - `cm-qbittorrent`
+  -  **[qBittorrentx](../community/apps/qbittorrentx.md)**  - tag - `cm-qbittorrentx`
   -  **[radarrx](../community/apps/radarrx.md)**  - tag - `cm-radarrx`
   -  **[readarr](../community/apps/readarr.md)**  - tag - `cm-readarr`
   -  **[readarrx](../community/apps/readarrx.md)**  - tag - `cm-readarrx`

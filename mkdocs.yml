@@ -308,6 +308,10 @@ nav:
       - Index: sandbox/index.md
       - Apps:
         - General:
-          - adguardhome: sandbox/apps/adguardhome.md
-          - mkvtoolnix: sandbox/apps/mkvtoolnix.md
-          - notifiarr: sandbox/apps/notifiarr.md
+          - AdGuard Home: sandbox/apps/adguardhome.md
+          - MKVToolNix: sandbox/apps/mkvtoolnix.md
+          - Notifiarr: sandbox/apps/notifiarr.md
+          - qBit Management: sandbox/apps/qbit_manage.md
+          - The Lounge: sandbox/apps/thelounge.md
+          - Wrapperr: sandbox/apps/wrapperr.md
+          - ZNC: sandbox/apps/znc.md

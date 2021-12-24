@@ -23,6 +23,6 @@ sb install cm-wrapperr
 
 ### 3. Setup
 
-- The very first thing you should do after installing Wrapperr is visit `https://wrapperr._yourdomain.com_` and configure an admin username/password. **Do this NOW.**
+- The very first thing you should do after installing Wrapperr is visit `https://wrapperr._yourdomain.com_` and configure an admin username/password. <br /> **Do this NOW.**
 
 - [:octicons-link-16: Documentation: Wrapperr Docs](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" }

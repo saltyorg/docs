@@ -8,16 +8,18 @@
 
 ## Previewing docs locally
 
-Quick-n-dirty [some things may not preview accurately]:
+Basic previewing [some things may not preview accurately]:
 ```bash
 git clone https://github.com/saltyorg/docs
 cd docs
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
-Non-QnD: Contact chazlarson in the saltbox discord.
-
 Docs will be accessible at http://localhost:8000
+
+Full previewing:
+
+The docs are actually built with a different release of mkdocs-material, so to preview them as they will appear when deployed you will need to be added to a private repo and do some local setup to enable the previewing.  Contact chazlarson through the Saltbox discord is you're interested in that.
 
 ### Contributors
 

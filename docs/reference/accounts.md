@@ -144,6 +144,10 @@
 
       - Default is `auto`, which will pick the timezone based on geolocation of the server.
 
+      - Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
+
+      - `timedatectl list-timezones` at your server's command prompt will also list the options.
+
 - `dns`: DNS-related settings.
 
     - `enabled`: Controls whether subdomains are created at Cloudflare

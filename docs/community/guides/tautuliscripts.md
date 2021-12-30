@@ -26,7 +26,7 @@ Enter Tautulli settings and find the **Notification Agents** link on the left si
 Click **Add a new notification agent** and scroll down to **Script** in the selection dialog.
 
 #### Configuration panel
-Enter `/scripts/plexpy/` in the script folder and exit the text input field.
+Enter `/scripts/tautulli/` in the script folder and exit the text input field.
 
 Select the script named `./kill_stream.py` in the Script File drop-down.\
 _Check your previous steps or bug someone on discord if the script is not listed._

@@ -65,8 +65,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | **Type** | **Host**     | **Value**               | **TTL**   |
     |:-------- |:------------ |:----------------------- |:--------- |
     | A Record | plex         | _Saltbox IP Address_   | 300 |
-    | A Record | plexpy       | _Saltbox IP Address_   | 300 |
-    | A Record | plexrequests | _Saltbox IP Address_   | 300 |
+    | A Record | tautulli     | _Saltbox IP Address_   | 300 |
     | A Record | jackett      | _Saltbox IP Address_   | 300 |
     | A Record | radarr       | _Saltbox IP Address_   | 300 |
     | A Record | sonarr       | _Saltbox IP Address_   | 300 |
@@ -85,8 +84,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | **Type** | **Host**     | **Value**               | **TTL**   |
     |:-------- |:------------ |:----------------------- |:--------- |
     | A Record | plex         | _Mediabox IP Address_  | 300 |
-    | A Record | plexpy       | _Mediabox IP Address_  | 300 |
-    | A Record | plexrequests | _Mediabox IP Address_  | 300 |
+    | A Record | tautulli     | _Mediabox IP Address_  | 300 |
 
     Feederbox
 

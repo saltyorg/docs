@@ -124,12 +124,12 @@ That means that no path translation is required from context to context.  If nzb
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Lidarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Lidarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
 
-### PlexPy (Tautulli)
+### Tautulli
 
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                                            </pre>                        | Description <pre>                                     </pre>                                                                |
 |:----------- |:-------------------------------------------------------------- |:------------------------------------- |
-| `/logs/`     | `/opt/plex/Library/Application Support/Plex Media Server/Logs/`| Location of the Plex logs used by PlexPy.  |
+| `/logs/`     | `/opt/plex/Library/Application Support/Plex Media Server/Logs/`| Location of the Plex logs used by Tautulli.  |
 
 
 ---

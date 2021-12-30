@@ -45,7 +45,7 @@ To access Tautulli, visit https://tautulli._yourdomain_.com
 
 ## 4. Settings
 
-1. Once the PlexPy page comes up, go to "Settings".
+1. Once the Tautulli page comes up, go to "Settings".
 
     ![](../images/tautulli/07-tautulli-settings.png)
 

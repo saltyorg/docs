@@ -127,7 +127,7 @@ That's all.  Your existing `sonarr` container will not be touched.
 
 Again, the same thing holds for every `arrX` variant discussed here.
 
-## Create multiple Sonarr v3 containers
+## Examples: multiple Sonarr containers
 
 1. Edit [`settings.yml`](../../community/settings.md) and change the sonarrx roles to what you want:
 

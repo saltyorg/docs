@@ -91,19 +91,9 @@ nav:
       - Settings: community/settings.md
       - Index: community/index.md
       - Apps:
-        - Content Management:
-          - Wordpress: community/apps/wordpress.md
-        - Development:
-          - Coder: community/apps/coder.md
-          - Gitea: community/apps/gitea.md
         - Downloading:
-          - Alltube: community/apps/alltube.md
-          - Archivebox: community/apps/archivebox.md
-          - Jdownloader2: community/apps/jdownloader2.md
-          - Medusa: community/apps/medusa.md
           - Torrents:
             - Deluge: community/apps/deluge.md
-            - Delugevpn: community/apps/delugevpn.md
             - Delugex: community/apps/delugex.md
             - Qbittorrent: community/apps/qbittorrent.md
             - Qbittorrentx: community/apps/qbittorrentx.md
@@ -112,58 +102,27 @@ nav:
             - Transmission: community/apps/transmission.md
             - Transmissionx: community/apps/transmissionx.md
         - File Management:
-          - Filebot: community/apps/filebot.md
-          - Filebrowser: community/apps/filebrowser.md
-          - Filezilla: community/apps/filezilla.md
-          - Jirafeau: community/apps/jirafeau.md
           - Transfer: community/apps/transfer.md
-        - Landing Pages:
-          - heimdall: community/apps/heimdall.md
         - Media Management:
           - ArrX: community/apps/arrx.md
           - Books:
-            - booksonic: community/apps/booksonic.md
-            - bookstack: community/apps/bookstack.md
-            - calibre: community/apps/calibre.md
-            - calibre_web: community/apps/calibre_web.md
-            - comicstreamer: community/apps/comicstreamer.md
-            - kavita: community/apps/kavita.md
-            - komga: community/apps/komga.md
-            - lazylibrarian: community/apps/lazylibrarian.md
-            - mylar3: community/apps/mylar3.md
             - readarr: community/apps/readarr.md
             - readarrx: community/apps/readarrx.md
           - Indexers:
             - prowlarr: community/apps/prowlarr.md
           - Metadata Management:
-            - alternatrr: community/apps/alternatrr.md
-            - alternatrrx: community/apps/alternatrrx.md
             - bazarr: community/apps/bazarr.md
             - bazarrx: community/apps/bazarrx.md
-            - comixed: community/apps/comixed.md
-            - Plex Meta Manager: community/apps/plex-meta-manager.md
-            - unmanic: community/apps/unmanic.md
           - Movies:
             - radarrx: community/apps/radarrx.md
           - Music:
-            - airsonic: community/apps/airsonic.md
-            - beets: community/apps/beets.md
-            - funkwhale: community/apps/funkwhale.md
-            - deemix: community/apps/deemix.md
             - lidarrx: community/apps/lidarrx.md
-            - navidrome: community/apps/navidrome.md
           - TV:
             - sonarrx: community/apps/sonarrx.md
-            - xteve: community/apps/xteve.md
         - Media Servers and add-ons:
-          - Emby:
-            - embystat: community/apps/embystat.md
           - jellyfin: community/apps/jellyfin.md
           - Plex:
             - asshama: community/apps/asshama.md
-            - Extended Personal Media Scanner: community/apps/epms.md
-            - goplaxt: community/apps/goplaxt.md
-            - kitana: community/apps/kitana.md
             - tautullix: community/apps/tautullix.md
           - Requests:
             - ombi: community/apps/ombi.md
@@ -171,42 +130,21 @@ nav:
             - petio: community/apps/petio.md
             - requestrr: community/apps/requestrr.md
             - requestrrx: community/apps/requestrrx.md
-          - stash: community/apps/stash.md
-        - Nextcloud: community/apps/nextcloud.md
-        - Social:
-          - airdcpp: community/apps/airdcpp.md
-          - gotify: community/apps/gotify.md
-          - moviematch: community/apps/moviematch.md
         - Utilities:
           - Docker:
             - dozzle: community/apps/dozzle.md
-            - ouroboros: community/apps/ouroboros.md
-            - watchtower: community/apps/watchtower.md
             - yacht: community/apps/yacht.md
-          - Networking:
-            - kcptun_client: community/apps/kcptun_client.md
-            - kcptun_server: community/apps/kcptun_server.md
-          - flaresolverr: community/apps/flaresolverr.md
           - Log Management:
             - goaccess: community/apps/goaccess.md
-            - logarr: community/apps/logarr.md
-            - monitorr: community/apps/monitorr.md
-          - guacamole: community/apps/guacamole.md
-          - handbrake: community/apps/handbrake.md
           - influxdb: community/apps/influxdb.md
-          - speedtest: community/apps/speedtest.md
-          - sshwifty: community/apps/sshwifty.md
           - System:
-            - apprise: community/apps/apprise.md
             - autoscan: community/apps/autoscan.md
             - btrfsmaintenance: community/apps/btrfsmaintenance.md
-            - glances_web: community/apps/glances_web.md
             - healthchecks: community/apps/healthchecks.md
             - hetzner_nfs: community/apps/hetzner_nfs.md
           - telegraf: community/apps/telegraf.md
           - Unpackerr: community/apps/unpackerr.md
           - uptime_kuma: community/apps/uptime_kuma.md
-          - vaultwarden: community/apps/vaultwarden.md
           - Visualization:
             - grafana: community/apps/grafana.md
             - varken: community/apps/varken.md
@@ -309,9 +247,90 @@ nav:
       - Apps:
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
-          - MKVToolNix: sandbox/apps/mkvtoolnix.md
+          - Nabarr: sandbox/apps/nabarr.md
           - Notifiarr: sandbox/apps/notifiarr.md
-          - qBit Management: sandbox/apps/qbit_manage.md
           - The Lounge: sandbox/apps/thelounge.md
           - Wrapperr: sandbox/apps/wrapperr.md
           - ZNC: sandbox/apps/znc.md
+        - Content Management:
+          - Wordpress: sandbox/apps/wordpress.md
+        - Development:
+          - Coder: sandbox/apps/coder.md
+          - Gitea: sandbox/apps/gitea.md
+        - Downloading:
+          - AirDC++: sandbox/apps/airdcpp.md
+          - Alltube: sandbox/apps/alltube.md
+          - Archivebox: sandbox/apps/archivebox.md
+          - Jdownloader2: sandbox/apps/jdownloader2.md
+          - Medusa: sandbox/apps/medusa.md
+          - Torrents:
+            - Delugevpn: sandbox/apps/delugevpn.md
+            - qBit Management: sandbox/apps/qbit_manage.md
+        - File Management:
+          - Filebot: sandbox/apps/filebot.md
+          - Filebrowser: sandbox/apps/filebrowser.md
+          - Filezilla: sandbox/apps/filezilla.md
+          - Jirafeau: sandbox/apps/jirafeau.md
+        - Landing Pages:
+          - heimdall: sandbox/apps/heimdall.md
+        - Media Management:
+          - Books:
+            - booksonic: sandbox/apps/booksonic.md
+            - bookstack: sandbox/apps/bookstack.md
+            - calibre: sandbox/apps/calibre.md
+            - calibre_web: sandbox/apps/calibre_web.md
+            - comicstreamer: sandbox/apps/comicstreamer.md
+            - kavita: sandbox/apps/kavita.md
+            - komga: sandbox/apps/komga.md
+            - lazylibrarian: sandbox/apps/lazylibrarian.md
+            - mylar3: sandbox/apps/mylar3.md
+          # - Indexers:
+          - Metadata Management:
+            - alternatrr: sandbox/apps/alternatrr.md
+            - alternatrrx: sandbox/apps/alternatrrx.md
+            - comixed: sandbox/apps/comixed.md
+            - MKVToolNix: sandbox/apps/mkvtoolnix.md
+            - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
+            - unmanic: sandbox/apps/unmanic.md
+          # - Movies:
+          - Music:
+            - airsonic: sandbox/apps/airsonic.md
+            - beets: sandbox/apps/beets.md
+            - funkwhale: sandbox/apps/funkwhale.md
+            - deemix: sandbox/apps/deemix.md
+            - navidrome: sandbox/apps/navidrome.md
+          - TV:
+            - xteve: sandbox/apps/xteve.md
+        - Media Servers and add-ons:
+          - Emby:
+            - embystat: sandbox/apps/embystat.md
+          - Plex:
+            - Extended Personal Media Scanner: sandbox/apps/epms.md
+            - goplaxt: sandbox/apps/goplaxt.md
+            - kitana: sandbox/apps/kitana.md
+            - Wrapperr: sandbox/apps/wrapperr.md
+          # - Requests:
+          - stash: sandbox/apps/stash.md
+        - Nextcloud: sandbox/apps/nextcloud.md
+        - Social:
+          - gotify: sandbox/apps/gotify.md
+          - moviematch: sandbox/apps/moviematch.md
+        - Utilities:
+          - Docker:
+            - ouroboros: sandbox/apps/ouroboros.md
+            - watchtower: sandbox/apps/watchtower.md
+          - Networking:
+            - kcptun_client: sandbox/apps/kcptun_client.md
+            - kcptun_server: sandbox/apps/kcptun_server.md
+          - flaresolverr: sandbox/apps/flaresolverr.md
+          - Log Management:
+            - logarr: sandbox/apps/logarr.md
+            - monitorr: sandbox/apps/monitorr.md
+          - guacamole: sandbox/apps/guacamole.md
+          - handbrake: sandbox/apps/handbrake.md
+          - speedtest: sandbox/apps/speedtest.md
+          - sshwifty: sandbox/apps/sshwifty.md
+          - System:
+            - apprise: sandbox/apps/apprise.md
+            - glances_web: sandbox/apps/glances_web.md
+          - vaultwarden: sandbox/apps/vaultwarden.md

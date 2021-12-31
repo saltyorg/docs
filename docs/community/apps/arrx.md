@@ -10,11 +10,11 @@ There are a number of roles in the saltbox community repo which can be used to c
 
 | Role          | Description                         |
 | ------------- | ----------------------------------- |
-| alternatrrx   | Sonarr alternative title management |
 | bazarrx       | Subtitle downloading                |
 | delugex       | Torrent client                      |
 | lidarrx       | Music management                    |
 | ombix         | Request management                  |
+| overseerrx    | Request management                  |
 | qbittorrentx  | Torrent client                      |
 | radarrx       | Movie management                    |
 | readarrx      | Ebook management                    |

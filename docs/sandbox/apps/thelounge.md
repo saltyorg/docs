@@ -39,7 +39,7 @@ sb install cm-thelounge
   - Once logged in, you can add an IRC network. Some defaults are preset for Freenode.
 
 ### ZNC
-To connect to **[znc](../sandbox/apps/znc.md)**, you need to have a **[znc](../sandbox/apps/znc.md)** server running. A guide to using The Lounge with ZNC can be found [here](https://thelounge.chat/docs/guides/znc)
+To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](../../sandbox/apps/znc.md)** server running. A guide to using The Lounge with ZNC can be found [here](https://thelounge.chat/docs/guides/znc)
 
 - In this image we have a ZNC network defined.
 

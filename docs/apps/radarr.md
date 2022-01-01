@@ -278,9 +278,13 @@ Make changes in the following sections:
 				Enable: 'Yes'
 				
 				Host: 'qBittorrent'
-				
+			
 				Port: '8080'
-				
+
+                Username: [Your qBittorrent Username](../community/apps/qbittorrent.md)
+
+                Password: [Your qBittorrent Password](../community/apps/qbittorrent.md)
+
 				Category: 'radarr'
 				
 			4.  Your settings will now look like this:

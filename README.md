@@ -53,6 +53,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>CGH</b></sub>
         </a>
     </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/After-Shock>
+            <img src=https://avatars.githubusercontent.com/u/17056047?v=4 width="100;"  alt=Sully/>
+            <br />
+            <sub style="font-size:14px"><b>Sully</b></sub>
+        </a>
+    </td>
 </tr>
 </table>
 

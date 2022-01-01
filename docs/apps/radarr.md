@@ -264,7 +264,30 @@ Make changes in the following sections:
                 ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
             5. Click "Save" to add ruTorrent.
-    
+			
+		=== "qBittorrent"
+			
+			1. Click Add ('+')
+			
+			2. Add a new "qBittorrent" download client.
+			
+			3. Add the following:
+			
+				Name: qBittorrent
+				
+				Enable: 'Yes'
+				
+				Host: 'qBittorrent'
+				
+				Port: '8080'
+				
+				Category: 'radarr'
+				
+			4.  Your settings will now look like this:
+				
+				![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
+				
+			5.  Click "Save" to add qBittorrent qb
     === "Connect"
 
         These settings control connections to other applications or systems.

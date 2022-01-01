@@ -64,7 +64,7 @@ sonarr_docker_image: "hotio/sonarr:{{ sonarr_docker_image_tag }}"
 
 We see again the name flowing through down here, but look at `sonarr_docker_image_tag: "release"`
 
-For Sonarr by default, Saltbox will use the docker image `hotio/sonarr:release`.
+For Example, for Sonarr, Saltbox will use the docker image `hotio/sonarr:release` by default.
 
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
@@ -73,8 +73,6 @@ sonarr_docker_image_tag: "nightly"
 ```
 
 Which would override the default and result in Saltbox using `hotio/sonarr:nightly` docker image instead.
-
-
 
 
 # Additional Examples:
@@ -93,7 +91,7 @@ plex_docker_image_tag: beta
 plex_open_main_ports: true
 plex_db_cache_size: 30000000
 
-####Examples of specified container images: ####
+#### Examples of specified container images: ####
 radarr_docker_image_tag: nightly
 sonarr_docker_image_tag: nightly
 petio_docker_image_tag: nightly

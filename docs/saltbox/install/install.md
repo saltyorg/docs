@@ -143,7 +143,7 @@ authelia:
 
     Valid options are **latest**, **beta** or a specific version (**1.55**).
 
-5. Rclone remote that Saltbox will mount by default and use in any automated configuration.
+5. Name of the rclone remote that Saltbox will mount by default and use in any automated configuration.
 
     Optional - Leave empty to avoid remote mount setup.
 

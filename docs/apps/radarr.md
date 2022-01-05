@@ -29,8 +29,8 @@ Make changes in the following sections:
             - "Replace Illegal Characters": `Yes`
 
             - Colon Replacement Format: `Delete`
-        
-            _Note: You could use `Replace with Space Dash` but only if your file naming format is not using spaces (e.g. using dots) to separate words._ 
+
+            _Note: You could use `Replace with Space Dash` but only if your file naming format is not using spaces (e.g. using dots) to separate words._
 
             - Set your preferred naming format; here are some examples.
 
@@ -87,7 +87,7 @@ Make changes in the following sections:
         === "Folders"
 
             - "Create empty movie folders": `No`
-    
+
             - "Automatically Rename Folders": `No`
 
             - "Movie Paths Default to Static": `No`
@@ -96,7 +96,7 @@ Make changes in the following sections:
 
             - "Skip Free Space Check": `No`
 
-            - "Use Hardlinks instead of Copy": `No`
+            - "Use Hardlinks instead of Copy": `Yes`
 
             - "Import Extra Files": `Yes` (_can be your preference_)
 
@@ -121,11 +121,11 @@ Make changes in the following sections:
         === "Save"
 
             - Click "Save".
-        
+
     === "Indexers"
 
         These settings control [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources) and related behavior.
-        
+
         === "NZBHydra2"
 
             1. Click Add Indexer (`+`).
@@ -264,21 +264,21 @@ Make changes in the following sections:
                 ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
             5. Click "Save" to add ruTorrent.
-			
+
 	=== "qBittorrent"
-			
+
 	    1. Click Add ('+')
-			
+
 	    2. Add a new "qBittorrent" download client.
-			
+
 	    3. Add the following:
-			
+
 		Name: qBittorrent
-			
+
 		Enable: 'Yes'
-		
+
 		Host: 'qBittorrent'
-			
+
 		Port: '8080'
 
                 Username: [Your qBittorrent Username](../community/apps/qbittorrent.md)
@@ -286,11 +286,11 @@ Make changes in the following sections:
                 Password: [Your qBittorrent Password](../community/apps/qbittorrent.md)
 
 		Category: 'radarr'
-				
+
 	    4.  Your settings will now look like this:
-				
+
 		![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
-				
+
 	    5.  Click "Save" to add qBittorrent qb
 
     === "Connect"

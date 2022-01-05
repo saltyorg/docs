@@ -99,7 +99,7 @@ Make changes in the following sections:
 
             - "Skip Free Space Check": `No`
 
-            - "Use Hardlinks instead of Copy": `No`
+            - "Use Hardlinks instead of Copy": `Yes`
 
             - "Import Extra Files": `Yes` (_can be your preference_)
 
@@ -124,11 +124,11 @@ Make changes in the following sections:
         === "Save"
 
             - Click "Save".
-        
+
     === "Indexers"
 
         These settings control [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources) and related behavior.
-        
+
         === "NZBHydra2"
 
             1. Click Add Indexer (`+`).
@@ -267,7 +267,7 @@ Make changes in the following sections:
                 ![sonarr ruTorrent Downloader](../images/sonarr/sonarr-rtorrent.png)
 
             5. Click "Save" to add ruTorrent.
-    
+
     === "Connect"
 
         These settings control connections to other applications or systems.

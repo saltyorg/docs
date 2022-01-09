@@ -3,6 +3,7 @@
 These are some rough notes on migrating from PlexGuide to Saltbox
 
 PG rclone.conf Location: `/opt/appdata/plexguide/rclone.conf`
+
 PG Service accounts Location: `/opt/appdata/plexguide/.blitzkeys`
 
 if you are restoring the arrs from pg to saltbox you will need to make the below changes in SB

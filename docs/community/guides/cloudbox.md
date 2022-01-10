@@ -25,6 +25,8 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
     ```
 
+    If you are using a service account to authenticate your rclone remote[s], you will need to put those files in place on the saltbox server before you run the restore.
+    
 - **Community files to keep handy: <br />**
   **These files should be found in `/opt/community/`**
 
@@ -75,4 +77,6 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
     ```
 
+    Remember that if you use a service account file to authenticate an rclone remote, you need to manually put that file into place before running the restore.
+    
     Then you should be able to install tags as you want.

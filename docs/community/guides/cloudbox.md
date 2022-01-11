@@ -65,7 +65,7 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
     ``` { .shell }
 
-      sb install preinstall`
+      sb install preinstall
 
     ```
 

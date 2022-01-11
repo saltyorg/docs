@@ -65,11 +65,13 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
     ``` { .shell }
 
-      sb install preinstall`
+      sb install preinstall
 
     ```
-
-- switch to the newly created user specified in your configuration. <br />
+- Modify the `/srv/git/saltbox/backup_config.yml` to include the path to your Backup directory in the `rclone` entry.<br />
+The default settings for Cloudbox is as follows: <br />
+` destination: google:/Backups/Cloubox`
+- Switch to the newly created user specified in your configuration. <br />
 
     ``` { .shell }
 

@@ -17,7 +17,7 @@ backup:
     port: 22 # (7)
   cron:
     cron_time: weekly # (8)
-    cron_state: absent # (9)
+    enable: no # (9)
   restore_service:
     user: # (10)
     pass: # (11)
@@ -55,7 +55,7 @@ backup:
 
 9. Toggle for enabling automatic backups.
 
-    Options are: `absent` or `present`
+    Options are: `no` or `yes`
 
     Depending on the option set here the cron entry created by Saltbox will be added, removed or modified.
 

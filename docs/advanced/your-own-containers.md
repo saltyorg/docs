@@ -13,23 +13,23 @@ If you want to create a role file that you can install like the built-in applica
 
 <pre>
 docker run -d  \
-    --name=<strong>APPNAME</strong>  \
-    --restart=unless-stopped  \
-	-e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
-	-v /opt/<strong>APPNAME</strong>:<strong>/CONFIG</strong>  \
-    -v /etc/localtime:/etc/localtime:ro  \
-    --network=saltbox \
-	--network-alias=<strong>APPNAME</strong>  \
-    --label com.github.saltbox.saltbox_managed=true \
-    --label traefik.enable=true \
-    --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
-    --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
-    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
-    --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
-    --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
-    --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
-    --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=<strong>APPPORT</strong> \
-	<strong>docker/image</strong>
+  --name=<strong>APPNAME</strong>  \
+  --restart=unless-stopped  \
+  -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
+  -v /opt/<strong>APPNAME</strong>:<strong>/CONFIG</strong>  \
+  -v /etc/localtime:/etc/localtime:ro  \
+  --network=saltbox \
+  --network-alias=<strong>APPNAME</strong>  \
+  --label com.github.saltbox.saltbox_managed=true \
+  --label traefik.enable=true \
+  --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
+  --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
+  --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
+  --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
+  --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
+  --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
+  --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=<strong>APPLICATION_PORT</strong> \
+  <strong>docker/image</strong>
 </pre>
 
 # Format (detailed)
@@ -55,13 +55,90 @@ docker run -d \
     --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
-    --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=<strong>APPPORT</strong> \
+    --label traefik.http.services.<strong>APPNAME</strong>.loadbalancer.server.port=<strong>APPLICATION_PORT</strong> \
     <strong>docker-hub-user/repo-name</strong>
 </pre>
 
 # Examples
 
-TBD
+Tautulli listens on port 8181
+<pre>
+docker run -d \
+    --name <strong>tautulli</strong> \
+    --restart=unless-stopped \
+    -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong> \
+    --network=saltbox \
+    --network-alias=<strong>tautulli</strong> \
+    -v /opt/<strong>tautulli</strong>/:/config \
+    -v /opt/<strong>tautulli/transcode</strong>:/transcode \
+    -v /mnt/:/mnt/ \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /opt/plex/Library/Application Support/Plex Media Server/Logs:/logs \
+    -v /opt:/opt \
+    --label com.github.saltbox.saltbox_managed=true \
+    --label traefik.enable=true \
+    --label traefik.http.routers.<strong>tautulli</strong>.entrypoints=websecure \
+    --label traefik.http.routers.<strong>tautulli</strong>.middlewares=secureHeaders@file \
+    --label traefik.http.routers.<strong>tautulli</strong>.rule=Host\(\`<strong>tautulli.yourdomain.com</strong>\`\) \
+    --label traefik.http.routers.<strong>tautulli</strong>.service=<strong>tautulli</strong> \
+    --label traefik.http.routers.<strong>tautulli</strong>.tls.certresolver=cfdns \
+    --label traefik.http.routers.<strong>tautulli</strong>.tls.options=securetls@file \
+    --label traefik.http.services.<strong>tautulli</strong>.loadbalancer.server.port=<strong>8181</strong> \
+    <strong>linuxserver/tautulli</strong>
+</pre>
+
+Speedtest listens on port 80, doesn't have a config dir
+<pre>
+docker run -d  \
+  --name=<strong>speedtest</strong>  \
+  --restart=unless-stopped  \
+  -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
+  -v /opt/speedtest:/var/www/html \
+  --network=saltbox \
+  --network-alias=<strong>speedtest</strong>  \
+  --label com.github.saltbox.saltbox_managed=true \
+  --label traefik.enable=true \
+  --label traefik.http.routers.<strong>speedtest</strong>.entrypoints=websecure \
+  --label traefik.http.routers.<strong>speedtest</strong>.middlewares=secureHeaders@file \
+  --label traefik.http.routers.<strong>speedtest</strong>.rule=Host\(\`<strong>speedtest.yourdomain.com</strong>\`\) \
+  --label traefik.http.routers.<strong>speedtest</strong>.service=<strong>speedtest</strong> \
+  --label traefik.http.routers.<strong>speedtest</strong>.tls.certresolver=cfdns \
+  --label traefik.http.routers.<strong>speedtest</strong>.tls.options=securetls@file \
+  --label traefik.http.services.<strong>speedtest</strong>.loadbalancer.server.port=<strong>80</strong> \
+  <strong>satzisa/html5-speedtest</strong>
+</pre>
+
+Plex-Patrol doesn't need to be behind the proxy, but you want it on the saltbox network and you want saltbox to take it down for backups.
+<pre>
+docker run -d  \
+  --name=<strong>plex_patrol</strong>  \
+  --restart=unless-stopped  \
+  -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
+  -v /opt/<strong>plex_patrol</strong>:<strong>/config</strong>  \
+  -v /opt/speedtest:/var/www/html \
+  --network=saltbox \
+  --network-alias=<strong>plex_patrol</strong>  \
+  --label com.github.saltbox.saltbox_managed=true \
+  --label traefik.enable=false \
+  <strong>cloudb0x/plex_patrol:latest</strong>
+</pre>
+
+Autoscan exposing an alternate port for perhaps a second instance, but only visisble on the host [not outside]
+<pre>
+docker run -d  \
+  --name=<strong>speedtest</strong>  \
+  --restart=unless-stopped  \
+  -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
+  -p <strong>127.0.0.1:3033</strong>:<strong>3030</strong> \
+  -v /etc/localtime:/etc/localtime:ro \
+  -v /opt/autoscan:/config \
+  -v /mnt:/mnt \
+  --network=saltbox \
+  --network-alias=<strong>autoscan</strong>  \
+  --label com.github.saltbox.saltbox_managed=true \
+  --label traefik.enable=false \
+  <strong>cloudb0x/autoscan:master</strong>
+</pre>
 
 # Details
 

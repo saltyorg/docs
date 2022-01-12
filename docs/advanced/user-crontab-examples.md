@@ -131,7 +131,7 @@ find /mnt/local/downloads/nzbget/completed/anime/* -type d -mmin +60 -ls -exec r
 cat "/opt/plex/Library/Application Support/Plex Media Server/Preferences.xml" |  \
 sed -e 's;^.* PlexOnlineToken=";;' | sed -e 's;".*$;;' | tail -1 > /tmp/plex.tmp
 
-curl --request PUT http://127.0.0.1:32400/library/optimize\?async=1\&X-Plex-Token=`cat /tmp/plex.tmp`
+curl --request PUT http://plex:32400/library/optimize\?async=1\&X-Plex-Token=`cat /tmp/plex.tmp`
 
 rm -f /tmp/plex.tmp
 ```

@@ -68,7 +68,7 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
       sb install preinstall
 
     ```
-- Either copy over the rest of your backed-up files from Cloudbox (such as your `accounts.yml`, `adv_settings.yml`, `ansible.cfg`, and `backup_config.yml`) into `/srv/git/saltbox` *or* modify the `/srv/git/saltbox/backup_config.yml` to include the path to your Backup directory in the `rclone` entry.<br />
+- Modify the `/srv/git/saltbox/backup_config.yml` to include the path to your Backup directory in the `rclone` entry.<br />
    - The default setting for Cloudbox is as follows: <br />
 ` destination: google:/Backups/Cloubox`
 - Switch to the newly created user specified in your configuration. <br />

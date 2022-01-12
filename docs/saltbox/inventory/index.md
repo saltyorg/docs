@@ -96,8 +96,6 @@ radarr_docker_image_tag: nightly
 sonarr_docker_image_tag: nightly
 petio_docker_image_tag: nightly
 
-APP_FORCE_PROXY: "true"
-
 #### BW Limiting speeds ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"

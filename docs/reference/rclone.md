@@ -5,7 +5,7 @@ This is the same process as you went through with [Cloudbox](https://github.com/
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
-The manual steps that the script below will try to perform:
+The manual steps that need doing:
 
 1. Create a [Google project](https://docs.saltbox.dev/reference/google-project-setup/)
 
@@ -27,4 +27,6 @@ The manual steps that the script below will try to perform:
 
 With Saltbox we want to set up multiple teamdrives and service accounts form the get-go, with as few manual steps as possible.
 
-That process is still under construction.  Please take a look at a [somewhat scripted version of this process](rclone-manual.md).
+That fully-automated process is still under construction.  
+
+Please follow this [partially scripted version of this process](rclone-manual.md).

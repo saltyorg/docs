@@ -25,8 +25,6 @@ For background, the steps that need to be done to set up rclone are:
 
 1. Create a `union` rclone remote called "google", with the components set to the three td remotes you just created.
 
-With Saltbox we ultimately want to set up multiple teamdrives and service accounts from the get-go, with as few manual steps as possible.
-
-That fully-automated process is still under construction.  
+With Saltbox we ultimately want to mnake this process as automatic as it can be, but that software is still under construction.  
 
 For now, please follow this [partially scripted version of this process](rclone-manual.md).

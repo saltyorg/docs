@@ -7,23 +7,25 @@ If you're migrating from Cloudbox you probably want the [Cloudbox migration inst
 
 The steps that need to be done to set up rclone are:
 
+Note that this is a general overview of the things that have to happen, not a list of instructions  Paths and names referenced in this list are must examples.  Please refer to the actual instructions further down for specifics.
+
 1. Create a Google project
 
 1. Create a Google group
 
 1. Create a bunch of service accounts
 
-1. Put all the service accounts JSON files into some directory where all relevant software can see them [like `/opt/sa` or the like]
+1. Put all the service accounts JSON files into some directory where all relevant software can see them.
 
 1. Add all those service accounts to the Google group you just created.
 
-1. Create three new shared drives in the Google Drive UI. [Movies, Music, TV]
+2. Create new shared drives in the Google Drive UI.
 
-1. Add your Google Group to each of those drives as a "Manager"
+3. Add your Google Group to each of those drives as a "Manager"
 
-1. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
+4. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
 
-1. Create a `union` rclone remote called "google", with the components set to the three td remotes you just created.
+5. Create a `union` rclone remote called "google", with the components set to the shared drive remotes you just created.
 
 ### Instructions:
 

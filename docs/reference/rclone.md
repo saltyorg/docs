@@ -1,7 +1,7 @@
 ## Rclone
 This step will take you through the configuration of Rclone.
 
-If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
 ### Overview
 

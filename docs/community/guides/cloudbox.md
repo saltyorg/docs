@@ -58,8 +58,9 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
     ```
 
-- Copy `rclone.conf` to `/srv/git/saltbox` <Br/>
-  and edit the configuration files as needed you can follow the [saltbox install instructions for saltbox for this](../../saltbox/install/install.md)<Br/>
+- Copy `rclone.conf` to `/srv/git/saltbox` <Br/> and edit the configuration files as needed. You can follow the [saltbox install instructions for saltbox for this](../../saltbox/install/install.md)<Br/>
+
+  You can refer to your Cloudbox configuration files and copy relevant settings over from them, but do not just copy your existing cloudbox config files into place.  Direct compatibility with cloudbox config files is not guaranteed and will not be maintained going forward.
 
 - Run the preinstall command.
 

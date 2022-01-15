@@ -27,6 +27,6 @@ The steps that need to be done to set up rclone are:
 
 ### Instructions:
 
-With Saltbox we ultimately want to mnake this process as automatic as it can be, but that software is still under construction.  
+[Automated](rclone-auto.md).
 
-For now, please follow this [partially scripted version of this process](rclone-manual.md).
+[Partially scripted](rclone-manual.md).

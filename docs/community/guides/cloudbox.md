@@ -26,7 +26,7 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
     ```
 
     If you are using a service account to authenticate your rclone remote[s], you will need to put those files in place on the saltbox server before you run the restore.
-    
+
 - **Community files to keep handy: <br />**
   **These files should be found in `/opt/community/`**
 
@@ -61,7 +61,9 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 - Copy `rclone.conf` to `/srv/git/saltbox` <Br/>
   and edit the configuration files as needed you can follow the [saltbox install instructions for saltbox for this](../../saltbox/install/install.md)<Br/>
 
-- Run the preinstall command, this step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed. <br />
+- Run the preinstall command.
+
+  This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed. <br />
 
     ``` { .shell }
 
@@ -71,6 +73,8 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
 - switch to the newly created user specified in your configuration. <br />
 
+- run the restore command. <br />
+
     ``` { .shell }
 
       sb install restore
@@ -78,5 +82,5 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
     ```
 
     Remember that if you use a service account file to authenticate an rclone remote, you need to manually put that file into place before running the restore.
-    
+
     Then you should be able to install tags as you want.

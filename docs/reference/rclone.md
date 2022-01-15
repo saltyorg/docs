@@ -1,11 +1,11 @@
 ## Rclone
 This step will take you through the configuration of Rclone.
 
-This is the same process as you went through with [Cloudbox](https://github.com/Cloudbox/Cloudbox/wiki/Install%3A-Rclone).
-
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
-For background, the steps that need to be done to set up rclone are:
+### Overview
+
+The steps that need to be done to set up rclone are:
 
 1. Create a Google project
 
@@ -24,6 +24,8 @@ For background, the steps that need to be done to set up rclone are:
 1. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
 
 1. Create a `union` rclone remote called "google", with the components set to the three td remotes you just created.
+
+### Instructions:
 
 With Saltbox we ultimately want to mnake this process as automatic as it can be, but that software is still under construction.  
 

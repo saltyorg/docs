@@ -15,7 +15,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
-    
+
 3. Install script requirements:
 
     ```
@@ -104,7 +104,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     --------------------
     [google]
     type = union
-    upstreams = aZaSjsklaj-Movies: aZaSjsklaj-Music: aZaSjsklaj-TV: 
+    upstreams = aZaSjsklaj-Movies: aZaSjsklaj-Music: aZaSjsklaj-TV:
     --------------------
     ```
 
@@ -135,3 +135,5 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     </details>
 
 7. You're done.
+
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual/#new-rclone-setup)

@@ -24,7 +24,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     ```
     gcloud init
     ```
-   
+
     Follow the prompts:
 
     ```
@@ -39,7 +39,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32...X4&code_challenge_method=S256
     ```
 1. Log into your Google account and approve the access request:
-   
+
     ![](../images/gcloud-sdk/02-sdk-approve.png)
 
     Copy the verification code.
@@ -50,7 +50,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     Enter verification code: 4/1AX4XfWjkg8C8r...ujs332G8
     You are logged in as: [YOUR_GOOGLE_ACCOUNT].
     ```
-    
+
     You will now be asked to choose a default project.  Choose the one you created earlier.
 
     ```
@@ -63,6 +63,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     ```
 
     You may be asked to choose a default zone/region.  If so, you can choose the closest to you, but since we are not creating any location-specific objects, you can skip that.
-    
+
 1. Google SDK is installed and configured.
 
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual/#new-rclone-setup)

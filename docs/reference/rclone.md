@@ -5,11 +5,11 @@ This is the same process as you went through with [Cloudbox](https://github.com/
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
-The manual steps that need doing:
+The steps that need to be done to set up rclone are:
 
-1. Create a [Google project](https://docs.saltbox.dev/reference/google-project-setup/)
+1. Create a Google project
 
-1. Create a [Google group](https://docs.saltbox.dev/reference/google-group-setup/)
+1. Create a Google group
 
 1. Create a bunch of service accounts
 
@@ -25,8 +25,8 @@ The manual steps that need doing:
 
 1. Create a `union` rclone remote called "google", with the components set to the three td remotes you just created.
 
-With Saltbox we want to set up multiple teamdrives and service accounts form the get-go, with as few manual steps as possible.
+With Saltbox we ultimately want to set up multiple teamdrives and service accounts from the get-go, with as few manual steps as possible.
 
 That fully-automated process is still under construction.  
 
-Please follow this [partially scripted version of this process](rclone-manual.md).
+For now, please follow this [partially scripted version of this process](rclone-manual.md).

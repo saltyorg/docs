@@ -5,7 +5,7 @@ This is the same process as you went through with [Cloudbox](https://github.com/
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
 
-The steps that need to be done to set up rclone are:
+For background, the steps that need to be done to set up rclone are:
 
 1. Create a Google project
 

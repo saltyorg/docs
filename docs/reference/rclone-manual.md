@@ -20,15 +20,17 @@ This process will use various scripts to do as much of this for you as possible,
 
 </details>
 
-The steps below will:
+Here's what you are going to do as you work through the instructions below:
+
+[These are not the instructions, just an overview]
 
 1. Create a Google project. [not scripted, you'll do this manually]
 
 1. Create a Google group. [not scripted, you'll do this manually]
 
-1. Install the google SDK tools. [not scripted, you'll do this manually]
+1. Install the Google SDK tools. [not scripted, you'll do this manually]
 
-1. Create a bunch of service accounts and put all the service accounts JSON files into /opt/sa. [scripted with minor config edits]
+1. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. [scripted with minor config edits]
 
 1. Add all those service accounts to the Google group you just created. [Starting here scripted with minor config edits to a single script]
 
@@ -66,6 +68,12 @@ If you already have Rclone configured, you can jump directly to the [relevant se
     ```
 
     Make a note of that prefix; you will use it in the next two steps.
+    
+    This prefix is used for two purposes:
+
+      1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
+
+      1. It helps these scripts unambiguously identify things that they have created.
 
 5. generate some service accounts
 
@@ -74,7 +82,6 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 6. Create some Shared Drives and related infrastructure
 
     [Instructions here](google-shared-drives.md)
-
 
 7. Verify that the union remote shows you the expected contents:
 

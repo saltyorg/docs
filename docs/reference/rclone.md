@@ -13,7 +13,7 @@ The steps that need to be done to set up rclone are:
 
 1. Create a bunch of service accounts
 
-1. Put all the service accounts JSON files into `/opt/sa`
+1. Put all the service accounts JSON files into some directory where all relevant software can see them [like `/opt/sa` or the like]
 
 1. Add all those service accounts to the Google group you just created.
 

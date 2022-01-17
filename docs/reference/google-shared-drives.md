@@ -136,4 +136,4 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 7. You're done.
 
-If you are going through the manual rclone instructions, [continue with the next step](rclone-manual/#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

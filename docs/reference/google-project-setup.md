@@ -108,4 +108,4 @@ This guide is assuming you are using a standard GSuite Business or GSuite Worksp
 
     ![](../images/gdrive-project/27-credentials-done.png)
 
-If you are going through the manual rclone instructions, [continue with the next step](rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

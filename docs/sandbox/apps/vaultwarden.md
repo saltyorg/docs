@@ -15,7 +15,7 @@
 
 ``` shell
 
-sb install cm-vaultwarden
+sb install sandbox-vaultwarden
 
 ```
 

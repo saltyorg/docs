@@ -40,7 +40,7 @@ Before installing qBit Management, you should have a **[qBittorrent](../../commu
 
 ``` shell
 
-sb install cm-qbit_manage
+sb install sandbox-qbit_manage
 
 ```
 After installation has finished, stop the qbit_manage docker container and edit the config file that will have been created at `/opt/qbit_manage/config.yml`
@@ -76,7 +76,7 @@ Apply the changes to the sandbox settings file with:
 
 ``` shell
 
-sb install cm-qbit_manage
+sb install sandbox-qbit_manage
 
 ```
 

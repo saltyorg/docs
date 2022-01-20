@@ -14,7 +14,7 @@ Mylar allows you to create a watchlist of series that it monitors for various th
 
 ``` shell
 
-sb install sandbox-ROLENAME
+sb install sandbox-mylar3
 
 ```
 

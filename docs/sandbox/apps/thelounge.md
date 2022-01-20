@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-thelounge
+sb install sandbox-thelounge
 
 ```
 

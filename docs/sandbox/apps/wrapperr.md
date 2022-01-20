@@ -13,7 +13,7 @@
 
 ``` shell
 
-sb install cm-wrapperr
+sb install sandbox-wrapperr
 
 ```
 

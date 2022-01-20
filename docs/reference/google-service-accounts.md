@@ -27,6 +27,18 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
              ^<user>         ^<group>
     ```
 
+1. [OPTIONAL] Create a dir within that:
+
+    ```
+    mkdir /opt/sa/all
+    ```
+    
+    This dir ['/opt/sa/all'] is used in the example configurations.  There's nothing special about it; it's how the author has it set up.  You can use any other path.
+    
+    This step is only required if you are planning on using the example configs as presented here.
+    
+    If you are using some other path in place of `/opt/sa/all` update it wherever you see it in a configuration.
+
 1. Verify that the google project has the right APIs enabled:
 
    ```

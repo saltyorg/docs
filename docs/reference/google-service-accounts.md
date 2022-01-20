@@ -81,7 +81,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     # See readme.md to understand the variables used in this script
 
     KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files
-    ORGANIZATION_ID=""                 <<<< organization ID from gcloud SDK step
+    ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
     GROUP_NAME="mygroup@mydomain.com"  <<<< the group you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1

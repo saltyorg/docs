@@ -115,7 +115,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     Total SA json keys AFTER running sa-gen  = 300
     Total SA jsons CREATED                   = 300
     ```
-2. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
+1. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
 
     ![](../images/google-service-account/01-all-members.png)
 
@@ -127,18 +127,18 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![](../images/google-service-account/03-group-list.png)
 
-2. Click on "BULK UPLOAD MEMBERS":
+1. Click on "BULK UPLOAD MEMBERS":
 
     ![](../images/google-service-account/04-bulk-upload.png)
 
-3. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
+1. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
 
     ![](../images/google-service-account/05-select-CSV.png)
 
-4. Click "UPLOAD".  Status will appear in the upper right:
+1. Click "UPLOAD".  Status will appear in the upper right:
 
     ![](../images/google-service-account/06-choose-csv.png)
 
-5. You're done.
+1. You're done.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

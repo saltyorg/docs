@@ -41,25 +41,25 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 1. Verify that the google project has the right APIs enabled:
 
-   ```
-   gcloud services list --enabled
-   ```
+    ```
+    gcloud services list --enabled
+    ```
+ 
+    You should see:
 
-   You should see:
-
-   ```
-   NAME                                 TITLE
-   admin.googleapis.com                 Admin SDK API
-   cloudresourcemanager.googleapis.com  Cloud Resource Manager API
-   drive.googleapis.com                 Google Drive API
-   iam.googleapis.com                   Identity and Access Management (IAM) API
-   iamcredentials.googleapis.com        IAM Service Account Credentials API
-   servicemanagement.googleapis.com     Service Management API
-   serviceusage.googleapis.com          Service Usage API
-   sheets.googleapis.com                Google Sheets API
-   ```
+    ```
+    NAME                                 TITLE
+    admin.googleapis.com                 Admin SDK API
+    cloudresourcemanager.googleapis.com  Cloud Resource Manager API
+    drive.googleapis.com                 Google Drive API
+    iam.googleapis.com                   Identity and Access Management (IAM) API
+    iamcredentials.googleapis.com        IAM Service Account Credentials API
+    servicemanagement.googleapis.com     Service Management API
+    serviceusage.googleapis.com          Service Usage API
+    sheets.googleapis.com                Google Sheets API
+    ```
    
-   If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
+    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
   
 1. Retrieve the `sa-gen` code
 

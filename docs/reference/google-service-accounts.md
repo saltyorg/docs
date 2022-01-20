@@ -33,7 +33,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     mkdir /opt/sa/all
     ```
     
-    This dir ['/opt/sa/all'] is used in the example configurations.  There's nothing special about it; it's how the author has it set up.  You can use any other path.
+    This dir [`/opt/sa/all`] is used in the example configurations.  There's nothing special about it; it's how the author has it set up.  You can use any other path.
     
     This step is only required if you are planning on using the example configs as presented here.
     

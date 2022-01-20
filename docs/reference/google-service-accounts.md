@@ -115,6 +115,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     Total SA json keys AFTER running sa-gen  = 300
     Total SA jsons CREATED                   = 300
     ```
+
 1. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
 
     ![](../images/google-service-account/01-all-members.png)

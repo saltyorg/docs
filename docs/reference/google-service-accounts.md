@@ -47,7 +47,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
    sheets.googleapis.com                Google Sheets API
    ```
    
-   If anything of thsee are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
+   If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
   
 1. Retrieve the `sa-gen` code
 

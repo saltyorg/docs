@@ -78,7 +78,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [don't edit if you're using Saltbox walkthrough and scripts]
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
-    GROUP_NAME="mygroup@mydomain.com"  <<<< the group you created previously
+    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3

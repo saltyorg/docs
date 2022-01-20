@@ -18,7 +18,7 @@ sb install sandbox-resiliosync
 
 ### 2. URL
 
-- To access JDownloader, visit `https://resiliosync._yourdomain.com_`
+- To access Resilio Sync, visit `https://resiliosync._yourdomain.com_`
 
 ### 3. Setup
 - [:octicons-link-16: Documentation: Resilio Sync Docs](https://help.resilio.com/hc/en-us/articles/204754939-Comprehensive-guide-to-syncing-Desktop-Desktop-){: .header-icons target=_blank rel="noopener noreferrer" }

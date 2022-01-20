@@ -27,17 +27,13 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
              ^<user>         ^<group>
     ```
 
-1. [OPTIONAL] Create a dir within that:
+1. Create a dir within that:
 
     ```
     mkdir /opt/sa/all
     ```
     
-    This dir [`/opt/sa/all`] is used in the example configurations.  There's nothing special about it; it's how the author has it set up.  You can use any other path.
-    
-    This step is only required if you are planning on using the example configs as presented here.
-    
-    If you are using some other path in place of `/opt/sa/all` update it wherever you see it in a configuration.
+    The scripts in this setup all use this location.  Don't change it it you are using these scripts.
 
 1. Verify that the google project has the right APIs enabled:
 
@@ -80,7 +76,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
-    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files
+    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [don't edit if you're using Saltbox walkthrough and scripts]
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
     GROUP_NAME="mygroup@mydomain.com"  <<<< the group you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously

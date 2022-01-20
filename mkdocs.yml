@@ -191,7 +191,6 @@ nav:
             - Hetzner_nfs: community/apps/hetzner_nfs.md
           - Telegraf: community/apps/telegraf.md
           - Unpackerr: community/apps/unpackerr.md
-          - Uptime_kuma: community/apps/uptime_kuma.md
           - Vaultwarden: community/apps/vaultwarden.md
           - Visualization:
             - Grafana: community/apps/grafana.md
@@ -383,4 +382,5 @@ nav:
           - System:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
+          - Uptime_kuma: sandbox/apps/uptime_kuma.md
           - vaultwarden: sandbox/apps/vaultwarden.md

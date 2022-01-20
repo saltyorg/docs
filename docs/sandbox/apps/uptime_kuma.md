@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-uptime-kuma
+sb install sandbox-uptime-kuma
 
 ```
 

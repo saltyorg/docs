@@ -58,6 +58,7 @@
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
+  -  **[uptime_kuma](../sandbox/apps/uptime_kuma.md)**  - tag - `sandbox-uptime-kuma`
   -  **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
   -  **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`

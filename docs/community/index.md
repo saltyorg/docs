@@ -39,6 +39,5 @@
   -  **[transmission](../community/apps/transmission.md)**  - tag - `cm-transmission`
   -  **[transmissionx](../community/apps/transmissionx.md)**  - tag - `cm-transmissionx`
   -  **[unpackerr](../community/apps/unpackerr.md)**  - tag - `cm-unpackerr`
-  -  **[uptime_kuma](../community/apps/uptime_kuma.md)**  - tag - `cm-uptime-kuma`
   -  **[varken](../community/apps/varken.md)**  - tag - `cm-varken`
   -  **[yacht](../community/apps/yacht.md)**  - tag - `cm-yacht`

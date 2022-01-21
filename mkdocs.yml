@@ -165,7 +165,6 @@ nav:
           - Moviematch: community/apps/moviematch.md
         - Utilities:
           - Docker:
-            - Dozzle: community/apps/dozzle.md
             - Ouroboros: community/apps/ouroboros.md
             - Watchtower: community/apps/watchtower.md
             - Yacht: community/apps/yacht.md
@@ -306,6 +305,8 @@ nav:
         - Development:
           - Coder: sandbox/apps/coder.md
           - Gitea: sandbox/apps/gitea.md
+        - Docker:
+            - Dozzle: sandbox/apps/dozzle.md
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Alltube: sandbox/apps/alltube.md

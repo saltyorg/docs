@@ -18,6 +18,7 @@
   -  **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
   -  **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
   -  **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
+  -  **[dozzle](../sandbox/apps/dozzle.md)**  - tag - `sandbox-dozzle`
   -  **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
   -  **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
   -  **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`

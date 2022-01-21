@@ -7,8 +7,7 @@
   -  **[bazarrx](../community/apps/bazarrx.md)**  - tag - `cm-bazarrx`
   -  **[btrfsmaintenance](../community/apps/btrfsmaintenance.md)**  - tag - `cm-btrfsmaintenance`
   -  **[deluge](../community/apps/deluge.md)**  - tag - `cm-deluge`
-  -  **[delugex](../community/apps/delugex.md)**  - tag - `cm-delugex`
-  -  **[dozzle](../community/apps/dozzle.md)**  - tag - `cm-dozzle`
+  -  **[delugex](../community/apps/delugex.md)**  - tag - `cm-delugex``
   -  **[goaccess](../community/apps/goaccess.md)**  - tag - `cm-goaccess`
   -  **[grafana](../community/apps/grafana.md)**  - tag - `cm-grafana`
   -  **[healthchecks](../community/apps/healthchecks.md)**  - tag - `cm-healthchecks`

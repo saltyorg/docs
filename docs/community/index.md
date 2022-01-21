@@ -7,13 +7,9 @@
   -  **[bazarrx](../community/apps/bazarrx.md)**  - tag - `cm-bazarrx`
   -  **[btrfsmaintenance](../community/apps/btrfsmaintenance.md)**  - tag - `cm-btrfsmaintenance`
   -  **[deluge](../community/apps/deluge.md)**  - tag - `cm-deluge`
-  -  **[delugex](../community/apps/delugex.md)**  - tag - `cm-delugex``
-  -  **[goaccess](../community/apps/goaccess.md)**  - tag - `cm-goaccess`
-  -  **[grafana](../community/apps/grafana.md)**  - tag - `cm-grafana`
-  -  **[healthchecks](../community/apps/healthchecks.md)**  - tag - `cm-healthchecks`
+  -  **[delugex](../community/apps/delugex.md)**  - tag - `cm-delugex`
   -  **[hetzner_nfs](../community/apps/hetzner_nfs.md)***  <br />
         - tags - `cm-hetzner_nfs_server', 'hetzner_nfs_server_uninstall', 'hetzner_nfs_client_mount', 'hetzner_nfs_client_unmount`
-  -  **[influxdb](../community/apps/influxdb.md)**  - tag - `cm-influxdb`
   -  **[jellyfin](../community/apps/jellyfin.md)**  - tag - `cm-jellyfin`
   -  **[lidarrx](../community/apps/lidarrx.md)**  - tag - `cm-lidarrx`
   -  **[ombi](../community/apps/ombi.md)**  - tag - `cm-ombi`
@@ -26,8 +22,6 @@
   -  **[radarrx](../community/apps/radarrx.md)**  - tag - `cm-radarrx`
   -  **[readarr](../community/apps/readarr.md)**  - tag - `cm-readarr`
   -  **[readarrx](../community/apps/readarrx.md)**  - tag - `cm-readarrx`
-  -  **[requestrr](../community/apps/requestrr.md)**  - tag - `cm-requestrr`
-  -  **[requestrrx](../community/apps/requestrrx.md)**  - tag - `cm-requestrrx`
   -  **[rflood](../community/apps/rflood.md)**  - tag - `cm-rflood`
   -  **[rfloodx](../community/apps/rfloodx.md)**  - tag - `cm-rfloodx`
   -  **[settings](../community/settings.md)**  - tag - `cm-settings`
@@ -38,5 +32,4 @@
   -  **[transmission](../community/apps/transmission.md)**  - tag - `cm-transmission`
   -  **[transmissionx](../community/apps/transmissionx.md)**  - tag - `cm-transmissionx`
   -  **[unpackerr](../community/apps/unpackerr.md)**  - tag - `cm-unpackerr`
-  -  **[varken](../community/apps/varken.md)**  - tag - `cm-varken`
   -  **[yacht](../community/apps/yacht.md)**  - tag - `cm-yacht`

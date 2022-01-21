@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-requestrr
+sb install sandbox-requestrr
 
 ```
 

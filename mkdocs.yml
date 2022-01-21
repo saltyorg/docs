@@ -155,8 +155,6 @@ nav:
             - Ombi: community/apps/ombi.md
             - Ombix: community/apps/ombix.md
             - Petio: community/apps/petio.md
-            - Requestrr: community/apps/requestrr.md
-            - Requestrrx: community/apps/requestrrx.md
           - Stash: community/apps/stash.md
         - Nextcloud: community/apps/nextcloud.md
         - Social:
@@ -173,12 +171,10 @@ nav:
             - Kcptun_server: community/apps/kcptun_server.md
           - FLaresolverr: community/apps/flaresolverr.md
           - Log Management:
-            - Goaccess: community/apps/goaccess.md
             - Logarr: community/apps/logarr.md
             - Monitorr: community/apps/monitorr.md
           - Guacamole: community/apps/guacamole.md
           - Handbrake: community/apps/handbrake.md
-          - Influxdb: community/apps/influxdb.md
           - Speedtest: community/apps/speedtest.md
           - Sshwifty: community/apps/sshwifty.md
           - System:
@@ -186,14 +182,10 @@ nav:
             - Autoscan: community/apps/autoscan.md
             - BTRFSsmaintenance: community/apps/btrfsmaintenance.md
             - Glances_web: community/apps/glances_web.md
-            - Healthchecks: community/apps/healthchecks.md
             - Hetzner_nfs: community/apps/hetzner_nfs.md
           - Telegraf: community/apps/telegraf.md
           - Unpackerr: community/apps/unpackerr.md
           - Vaultwarden: community/apps/vaultwarden.md
-          - Visualization:
-            - Grafana: community/apps/grafana.md
-            - Varken: community/apps/varken.md
       - Guides:
         - General:
           - chazlarson Guides:
@@ -302,6 +294,8 @@ nav:
           - ZNC: sandbox/apps/znc.md
         - Content Management:
           - Wordpress: sandbox/apps/wordpress.md
+        - Database:
+          - Influxdb: sandbox/apps/influxdb.md
         - Development:
           - Coder: sandbox/apps/coder.md
           - Gitea: sandbox/apps/gitea.md
@@ -323,6 +317,8 @@ nav:
           - Jirafeau: sandbox/apps/jirafeau.md
         - Landing Pages:
           - heimdall: sandbox/apps/heimdall.md
+        - Log Management:
+          - Goaccess: sandbox/apps/goaccess.md
         - Media Management:
           - Books:
             - booksonic: sandbox/apps/booksonic.md
@@ -362,6 +358,9 @@ nav:
           # - Requests:
           - stash: sandbox/apps/stash.md
         - Nextcloud: sandbox/apps/nextcloud.md
+        - Requests:
+          - Requestrr: sandbox/apps/requestrr.md
+          - Requestrrx: sandbox/apps/requestrrx.md
         - Social:
           - gotify: sandbox/apps/gotify.md
           - moviematch: sandbox/apps/moviematch.md
@@ -382,6 +381,10 @@ nav:
           - sshwifty: sandbox/apps/sshwifty.md
           - System:
             - apprise: sandbox/apps/apprise.md
+            - Healthchecks: sandbox/apps/healthchecks.md
             - glances_web: sandbox/apps/glances_web.md
           - Uptime_kuma: sandbox/apps/uptime_kuma.md
           - vaultwarden: sandbox/apps/vaultwarden.md
+          - Visualization:
+            - Grafana: sandbox/apps/grafana.md
+            - Varken: sandbox/apps/varken.md

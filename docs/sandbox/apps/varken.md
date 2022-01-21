@@ -14,7 +14,7 @@ Varken is a standalone application to aggregate data from the Plex ecosystem int
 
 ``` shell
 
-sb install cm-varken
+sb install sandbox-varken
 
 ```
 
@@ -28,7 +28,7 @@ sb install cm-varken
 
     ``` { .shell }
 
-        sb install cm-varken
+        sb install sandbox-varken
 
     ```
 

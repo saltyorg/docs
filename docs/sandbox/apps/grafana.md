@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-grafana
+sb install sandbox-grafana
 
 ```
 

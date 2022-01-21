@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-healthchecks
+sb install sandbox-healthchecks
 
 ```
 

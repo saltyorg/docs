@@ -14,7 +14,7 @@ It provides fast and valuable HTTP statistics for system administrators that req
 
 ``` shell
 
-sb install cm-goaccess
+sb install sandbox-goaccess
 
 ```
 

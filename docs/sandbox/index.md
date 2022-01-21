@@ -28,11 +28,15 @@
   -  **[funkwhale](../sandbox/apps/funkwhale.md)**  - tag - `sandbox-funkwhale`
   -  **[gitea](../sandbox/apps/gitea.md)**  - tag - `sandbox-gitea`
   -  **[glances_web](../sandbox/apps/glances_web.md)**  - tag - `sandbox-glances-web`
+  -  **[goaccess](../sandbox/apps/goaccess.md)**  - tag - `sandbox-goaccess`
   -  **[goplaxt](../sandbox/apps/goplaxt.md)**  - tag - `sandbox-goplaxt`
   -  **[gotify](../sandbox/apps/gotify.md)**  - tag - `sandbox-gotify`
+  -  **[grafana](../sandbox/apps/grafana.md)**  - tag - `sandbox-grafana`
   -  **[guacamole](../sandbox/apps/guacamole.md)**  - tag - `sandbox-guacamole`
   -  **[handbrake](../sandbox/apps/handbrake.md)**  - tag - `sandbox-handbrake`
+  -  **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
   -  **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
+  -  **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
   -  **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
   -  **[jirafeau](../sandbox/apps/jirafeau.md)**  - tag - `sandbox-jirafeau`
   -  **[kavita](../sandbox/apps/kavita.md)**  - tag - `sandbox-kavita`
@@ -54,12 +58,15 @@
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
   -  **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`
+  -  **[requestrr](../sandbox/apps/requestrr.md)**  - tag - `sandbox-requestrr`
+  -  **[requestrrx](../sandbox/apps/requestrrx.md)**  - tag - `sandbox-requestrrx`
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
   -  **[uptime_kuma](../sandbox/apps/uptime_kuma.md)**  - tag - `sandbox-uptime-kuma`
+  -  **[varken](../sandbox/apps/varken.md)**  - tag - `sandbox-varken`
   -  **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
   -  **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`

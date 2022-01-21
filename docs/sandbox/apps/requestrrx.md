@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-requestrrx
+sb install sandbox-requestrrx
 
 ```
 
@@ -37,7 +37,7 @@ sb install cm-requestrrx
 
       ``` { .shell }
 
-          sb install cm-requestrrx
+          sb install sandbox-requestrrx
 
       ```
 

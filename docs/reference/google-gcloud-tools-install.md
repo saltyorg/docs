@@ -64,6 +64,22 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
 
     You may be asked to choose a default zone/region.  If so, you can choose the closest to you, but since we are not creating any location-specific objects, you can skip that.
 
+1. Run the following command:
+
+    ```
+    gcloud organizations list
+    ```
+    
+    Your organization ID will be displayed in the table:
+    
+    ```
+    DISPLAY_NAME            ID  DIRECTORY_CUSTOMER_ID
+    YOUR-DOMAIN   123456789098              XXXXXXXXX
+                  ^^^ HERE ^^^
+    ```
+    
+    Make a note of that ID; if you're going through the manual rclone instructions you'll need it in the next step.
+
 1. Google SDK is installed and configured.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

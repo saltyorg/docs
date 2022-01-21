@@ -10,8 +10,53 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     sudo chown -R <user>:<group> /opt/sa
     ```
 
-    Enter the user from `accounts.yml`; group is the same as the user.
+    Enter the user name that you entered in `accounts.yml`; group is the same as the user.
+    
+    ```
+    ---
+    user:
+      name: seed #   <<< THIS VALUE
+    ...
+    ```
+    
+    You can also run `id` to get this information:
 
+    ```
+    ~ id
+    uid=1000(marco) gid=1000(marco) groups=1000(marco),4(adm),24(cdrom),27(sudo),30(dip),44(video),46(plugdev),116(lxd),1001(docker)
+             ^<user>         ^<group>
+    ```
+
+1. Create a dir within that:
+
+    ```
+    mkdir /opt/sa/all
+    ```
+    
+    The scripts in this setup all use this location.  Don't change it it you are using these scripts.
+
+1. Verify that the google project has the right APIs enabled:
+
+    ```
+    gcloud services list --enabled
+    ```
+ 
+    You should see:
+
+    ```
+    NAME                                 TITLE
+    admin.googleapis.com                 Admin SDK API
+    cloudresourcemanager.googleapis.com  Cloud Resource Manager API
+    drive.googleapis.com                 Google Drive API
+    iam.googleapis.com                   Identity and Access Management (IAM) API
+    iamcredentials.googleapis.com        IAM Service Account Credentials API
+    servicemanagement.googleapis.com     Service Management API
+    serviceusage.googleapis.com          Service Usage API
+    sheets.googleapis.com                Google Sheets API
+    ```
+   
+    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
+  
 1. Retrieve the `sa-gen` code
 
     ```
@@ -31,13 +76,13 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
-    KEYS_DIR=/opt/sa/all   <<<<
-    ORGANIZATION_ID=""     <<<<
-    GROUP_NAME="mygroup@mydomain.com"   <<<< the group you created previously
-    PROJECT_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated previously
+    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [don't edit if you're using Saltbox walkthrough and scripts]
+    ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
+    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full address as shown] you created previously
+    PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3
-    SA_EMAIL_BASE_NAME="mgbtbnfkkt"  <<<< the prefix you generated previously
+    SA_EMAIL_BASE_NAME="mgbtbnfkkt"    <<<< the prefix you generated previously
     FIRST_SA_NUM=1
     NUM_SAS_PER_PROJECT=100
     ...
@@ -66,7 +111,8 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     Total SA json keys AFTER running sa-gen  = 300
     Total SA jsons CREATED                   = 300
     ```
-2. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
+
+1. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
 
     ![](../images/google-service-account/01-all-members.png)
 
@@ -78,18 +124,18 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![](../images/google-service-account/03-group-list.png)
 
-2. Click on "BULK UPLOAD MEMBERS":
+1. Click on "BULK UPLOAD MEMBERS":
 
     ![](../images/google-service-account/04-bulk-upload.png)
 
-3. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
+1. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
 
     ![](../images/google-service-account/05-select-CSV.png)
 
-4. Click "UPLOAD".  Status will appear in the upper right:
+1. Click "UPLOAD".  Status will appear in the upper right:
 
     ![](../images/google-service-account/06-choose-csv.png)
 
-5. You're done.
+1. You're done.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

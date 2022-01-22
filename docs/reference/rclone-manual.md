@@ -51,7 +51,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
     [Instructions here](google-project-setup.md)
 
-    Save that credential file at `/opt/sa/project-creds.json`
+    Save that credential file on your server at `/opt/sa/project-creds.json`
 
 2. Create a Google Group to hold service accounts:
 

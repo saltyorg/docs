@@ -33,7 +33,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     mkdir /opt/sa/all
     ```
     
-    The scripts in this setup all use this location.  Don't change it it you are using these scripts.
+    The scripts in this setup all use this location.  Don't change it if you are using these scripts. 
 
 1. Verify that the google project has the right APIs enabled:
 
@@ -44,30 +44,30 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     You should see:
 
     ```
-   NAME                                 TITLE
-   admin.googleapis.com                 Admin SDK API
-   bigquery.googleapis.com              BigQuery API
-   bigquerystorage.googleapis.com       BigQuery Storage API
-   cloudapis.googleapis.com             Google Cloud APIs
-   clouddebugger.googleapis.com         Cloud Debugger API
-   cloudresourcemanager.googleapis.com  Cloud Resource Manager API
-   cloudtrace.googleapis.com            Cloud Trace API
-   datastore.googleapis.com             Cloud Datastore API
-   drive.googleapis.com                 Google Drive API
-   iam.googleapis.com                   Identity and Access Management (IAM) API
-   iamcredentials.googleapis.com        IAM Service Account Credentials API
-   logging.googleapis.com               Cloud Logging API
-   monitoring.googleapis.com            Cloud Monitoring API
-   servicemanagement.googleapis.com     Service Management API
-   serviceusage.googleapis.com          Service Usage API
-   sheets.googleapis.com                Google Sheets API
-   sql-component.googleapis.com         Cloud SQL
-   storage-api.googleapis.com           Google Cloud Storage JSON API
-   storage-component.googleapis.com     Cloud Storage
-   storage.googleapis.com               Cloud Storage API
-   ```
+    NAME                                 TITLE
+    admin.googleapis.com                 Admin SDK API
+    bigquery.googleapis.com              BigQuery API
+    bigquerystorage.googleapis.com       BigQuery Storage API
+    cloudapis.googleapis.com             Google Cloud APIs
+    clouddebugger.googleapis.com         Cloud Debugger API
+    cloudresourcemanager.googleapis.com  Cloud Resource Manager API
+    cloudtrace.googleapis.com            Cloud Trace API
+    datastore.googleapis.com             Cloud Datastore API
+    drive.googleapis.com                 Google Drive API
+    iam.googleapis.com                   Identity and Access Management (IAM) API
+    iamcredentials.googleapis.com        IAM Service Account Credentials API
+    logging.googleapis.com               Cloud Logging API
+    monitoring.googleapis.com            Cloud Monitoring API
+    servicemanagement.googleapis.com     Service Management API
+    serviceusage.googleapis.com          Service Usage API
+    sheets.googleapis.com                Google Sheets API
+    sql-component.googleapis.com         Cloud SQL
+    storage-api.googleapis.com           Google Cloud Storage JSON API
+    storage-component.googleapis.com     Cloud Storage
+    storage.googleapis.com               Cloud Storage API
+    ```
    
-    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add all the APIs in the list.
+    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add all the APIs shown there to the project.
   
 1. Retrieve the `sa-gen` code
 
@@ -88,7 +88,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
-    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [don't edit if you're using Saltbox walkthrough and scripts]
+    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [you will need to add the /all here, most likely]
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
     GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously

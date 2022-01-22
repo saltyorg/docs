@@ -44,18 +44,30 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     You should see:
 
     ```
-    NAME                                 TITLE
-    admin.googleapis.com                 Admin SDK API
-    cloudresourcemanager.googleapis.com  Cloud Resource Manager API
-    drive.googleapis.com                 Google Drive API
-    iam.googleapis.com                   Identity and Access Management (IAM) API
-    iamcredentials.googleapis.com        IAM Service Account Credentials API
-    servicemanagement.googleapis.com     Service Management API
-    serviceusage.googleapis.com          Service Usage API
-    sheets.googleapis.com                Google Sheets API
-    ```
+   NAME                                 TITLE
+   admin.googleapis.com                 Admin SDK API
+   bigquery.googleapis.com              BigQuery API
+   bigquerystorage.googleapis.com       BigQuery Storage API
+   cloudapis.googleapis.com             Google Cloud APIs
+   clouddebugger.googleapis.com         Cloud Debugger API
+   cloudresourcemanager.googleapis.com  Cloud Resource Manager API
+   cloudtrace.googleapis.com            Cloud Trace API
+   datastore.googleapis.com             Cloud Datastore API
+   drive.googleapis.com                 Google Drive API
+   iam.googleapis.com                   Identity and Access Management (IAM) API
+   iamcredentials.googleapis.com        IAM Service Account Credentials API
+   logging.googleapis.com               Cloud Logging API
+   monitoring.googleapis.com            Cloud Monitoring API
+   servicemanagement.googleapis.com     Service Management API
+   serviceusage.googleapis.com          Service Usage API
+   sheets.googleapis.com                Google Sheets API
+   sql-component.googleapis.com         Cloud SQL
+   storage-api.googleapis.com           Google Cloud Storage JSON API
+   storage-component.googleapis.com     Cloud Storage
+   storage.googleapis.com               Cloud Storage API
+   ```
    
-    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add the missing APIs.
+    If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add all the APIs in the list.
   
 1. Retrieve the `sa-gen` code
 

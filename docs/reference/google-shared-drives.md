@@ -7,7 +7,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 1. Retrieve the `sb-gd` code
 
     ```
-    git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
+    cd ~ && git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
     ```
 
 2. Create and activate a virtual environment:
@@ -15,6 +15,28 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
+    
+    If you see this:
+    ```
+    The virtual environment was not created successfully because ensurepip is not
+    available.  On Debian/Ubuntu systems, you need to install the python3-venv
+    package using the following command.
+
+        apt install python3.8-venv
+
+    You may need to use sudo with that command.  After installing the python3-venv
+    package, recreate your virtual environment.
+
+    Failing command: ['/home/YOU/sb_gd/sb_gd/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
+    ```
+    
+    run:
+    ```
+    sudo apt install python3.8-venv
+    ```
+
+    Then try the first command above again.
+
 
 3. Install script requirements:
 

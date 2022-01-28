@@ -130,7 +130,8 @@ rclone:
   remote: google # (5)
 shell: bash # (6)
 authelia:
-  subdomain: login # (7)
+  master: yes # (7)
+  subdomain: login # (8)
 ```
 
 1. Folder used for usenet downloads.
@@ -149,11 +150,13 @@ authelia:
 
 6. Shell used by the system. Valid options are bash or zsh.
 
-7. Subdomain used for Authelia.
+7. If the current server should have Authelia installed or use one installed elsewhere.
 
-    Use different values here when using a Mediabox + Feederbox setup.
+8. Subdomain used for Authelia.
 
-    Each instance needs a unique subdomain to function.
+    Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
+
+    On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox).
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.

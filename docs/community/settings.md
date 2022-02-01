@@ -29,47 +29,35 @@ goplaxt:  # (5)
   trakt_secret: ~
 handbrake:  # (6)
   handbrake_pass: saltbox # must be less than eight characters
-lidarrx:  # (7)
-  roles:
-    - flac
-    - mp3
-moviematch:  # (8)
+moviematch:  # (7)
   libraries: Movies
   plex_url: http://plex:32400
-ombix:  # (9)
+ombix:  # (8)
   roles:
     - 4k
-overseerrx: # (10)
+overseerrx: # (9)
   roles:
     - ""
-qbittorrentx:  # (11)
+qbittorrentx:  # (10)
   roles:
     - 1080webdl
     - 1080remux
-radarrx:  # (12)
-  roles:
-    - 1080webdl
-    - 1080remux
-readarrx:  # (13)
+readarrx:  # (11)
   roles:
     - ebooks
     - audiobooks
-requestrrx:  # (14)
+requestrrx:  # (12)
   roles:
     - 1080
     - 4k
-rfloodx:  # (15)
+rfloodx:  # (13)
   roles:
     - 1080webdl
     - 1080remux
-sonarrx:  # (16)
-  roles:
-    - 1080webdl
-    - 1080remux
-tautullix:  # (17)
+tautullix:  # (14)
   tautulli: plex
   tautulli2: plex2
-transmissionx:  # (18)
+transmissionx:  # (15)
   roles:
     - 1080webdl
     - 1080remux
@@ -91,38 +79,29 @@ transmissionx:  # (18)
 
 6. Handbrake
 
-7. LidarrX role, provide a list of "X's"
-    For each listed item a Lidarr instance will be created and the item set to the subdomain.
+7. Moviematch
 
-8. Moviematch
-
-9. Ombix role, provide a list of "X's"
+8. Ombix role, provide a list of "X's"
    For each listed item an Ombi instance will be created and the item set to the subdomain.
 
-10. OverseerrX role, provide a list of "X's"
+9.  OverseerrX role, provide a list of "X's"
     For each listed item an Overseerr instance will be created and the item set to the subdomain.
 
-11. QbittorrentX role, provide a list of "X's"
+10. QbittorrentX role, provide a list of "X's"
     For each listed item a QBitorrent instance will be created and the item set to the subdomain.
 
-12. RadarrX role, provide a list of "X's"
-    For each listed item a Radarr instance will be created and the item set to the subdomain.
-
-13. ReadarrX role, provide a list of "X's"
+11. ReadarrX role, provide a list of "X's"
     For each listed item a Readarr instance will be created and the item set to the subdomain.
 
-14. RequestrrX role, provide a list of "X's"
+12. RequestrrX role, provide a list of "X's"
     For each listed item a Requestrr instance will be created and the item set to the subdomain.
 
-15. RfloodX role, provide a list of "X's"
+13. RfloodX role, provide a list of "X's"
     For each listed item an RFlood instance will be created and the item set to the subdomain.
 
-16. SonarrX role, provide a list of "X's"
-    For each listed item a Sonarr instance will be created and the item set to the subdomain.
-
-17. TautulliX role, provide a list of "X's"
+14. TautulliX role, provide a list of "X's"
     For each listed item a Tautulli instance will be created and the item set to the subdomain.
 
-18. TransmissionX role, provide a list of "X's"
+15. TransmissionX role, provide a list of "X's"
     For each listed item a Transmission instance will be created and the item set to the subdomain.
 

@@ -1,6 +1,10 @@
 This guide will show you how to set up a Google SDK tools.
 
-It's assuming you're working through the steps from [here](rclone-manual.md) and have already created the required [project](google-project-setup.md) and [group](google-group-setup.md).
+It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
+
+  - verified [account drive permissions](google-account-perms.md)
+  - created the required [project](google-project-setup.md)
+  - created the required [group](google-group-setup.md)
 
 Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb):
 
@@ -19,7 +23,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     sudo apt-get update && sudo apt-get install google-cloud-sdk -y
     ```
 
-1. Run the following command:
+2. Run the following command:
 
     ```
     gcloud init
@@ -38,13 +42,13 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
 
     https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32...X4&code_challenge_method=S256
     ```
-1. Log into your Google account and approve the access request:
+3. Log into your Google account and approve the access request:
 
     ![](../images/gcloud-sdk/02-sdk-approve.png)
 
     Copy the verification code.
 
-1. Continue in the terminal:
+4. Continue in the terminal:
 
     ```
     Enter verification code: 4/1AX4XfWjkg8C8r...ujs332G8
@@ -69,15 +73,15 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     ```
     gcloud organizations list
     ```
-    
+
     Your organization ID will be displayed in the table:
-    
+
     ```
     DISPLAY_NAME            ID  DIRECTORY_CUSTOMER_ID
     YOUR-DOMAIN   123456789098              XXXXXXXXX
                   ^^^ HERE ^^^
     ```
-    
+
     Make a note of that ID; if you're going through the manual rclone instructions you'll need it in the next step.
 
 1. Google SDK is installed and configured.

@@ -1,6 +1,11 @@
 This guide will show you how to create projects and service accounts using `sa-gen` and add them to a Google Group.
 
-It's assuming you're working through the steps from [here](rclone-manual.md), have already created the required [project](google-project-setup.md), have already created the required [group](google-group-setup.md), and have installed the [gcloud SDK tools](google-gcloud-tools-install.md).
+It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
+
+  - verified [account drive permissions](google-account-perms.md)
+  - created the required [project](google-project-setup.md)
+  - created the required [group](google-group-setup.md)
+  - installed the [gcloud SDK tools](google-gcloud-tools-install.md)
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
@@ -11,14 +16,14 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
 
     Enter the user name that you entered in `accounts.yml`; group is the same as the user.
-    
+
     ```
     ---
     user:
       name: seed #   <<< THIS VALUE
     ...
     ```
-    
+
     You can also run `id` to get this information:
 
     ```
@@ -32,15 +37,15 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     mkdir /opt/sa/all
     ```
-    
-    The scripts in this setup all use this location.  Don't change it if you are using these scripts. 
+
+    The scripts in this setup all use this location.  Don't change it if you are using these scripts.
 
 1. Verify that the google project has the right APIs enabled:
 
     ```
     gcloud services list --enabled
     ```
- 
+
     You should see:
 
     ```
@@ -66,16 +71,16 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     storage-component.googleapis.com     Cloud Storage
     storage.googleapis.com               Cloud Storage API
     ```
-   
+
     If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add all the APIs shown there to the project.
-  
+
 1. Retrieve the `sa-gen` code
 
     ```
     git clone https://github.com/88lex/sa-gen && cd sa-gen
     ```
 
-1. Edit the `sa-gan` script:
+3. Edit the `sa-gan` script:
 
     ```
     nano sa-gen
@@ -100,7 +105,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ...
     ```
 
-1. Run the `sa-gan` script:
+4. Run the `sa-gan` script:
 
     ```
     ./sa-gen
@@ -128,11 +133,11 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![](../images/google-service-account/01-all-members.png)
 
-1. Open the Google Admin site: https://admin.google.com/ and login with your Google account.  Click on the groups heading:
+6. Open the Google Admin site: https://admin.google.com/ and login with your Google account.  Click on the groups heading:
 
     ![](../images/google-service-account/02-admin-top-level.png)
 
-1. Click on your group:
+7. Click on your group:
 
     ![](../images/google-service-account/03-group-list.png)
 

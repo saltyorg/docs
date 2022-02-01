@@ -1,11 +1,12 @@
-##  Multiple Instances [ArrX replacement]
+## [ArrX replacement]
 
-Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, invertory-driven approach.
+Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inverntory-driven approach.
 
 The general idea is to move all the configuration into the `localhost.yml` along with other customizations.
 
 Sonarr, Radarr and Lidarr support this new method as of this writing.
 
+### Overview
 
 Define a list of all the instances of the all you want to create; if you don't want to customize them beyond that, this is all that's required.
 
@@ -32,13 +33,23 @@ sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 
 Note a primary changepoint is that the **entire name of the instance** is specified.  The role will no longer prepend the name of the app.
 
+Given the config above, `sb install sonarr` would install:
+
+| entry         | Container    | Config dir         | Subdomain                    |
+| ------------- | ------------ | ------------------ | ---------------------------- |
+| sonarr        | sonarr       | `/opt/sonarr`      | sonarr.YOURDOMAIN.TLD        |
+| sonarrbing    | sonarrbing   | `/opt/sonarrbing`  | sonarrbing.YOURDOMAIN.TLD    |
+| sonarrbang    | sonarrbang   | `/opt/sonarrbang`  | sonarrbang.YOURDOMAIN.TLD    |
+| sonarrboing   | sonarrboing  | `/opt/sonarrboing` | sonarrboing.YOURDOMAIN.TLD   |
+
+
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 
-## per-instance customization
+### Per-instance customization
 
 Any instance defined can edit the following set of variables on a per instance basis in `localhost.yml`:
 
-[replacing instance with the actual instance, of course, i.e. sonarr2_web_subdomain, etc.]
+[replacing "instance" with the actual **instance name**, of course, i.e. sonarrbing_web_subdomain, etc.]
 
 ```
 instance_web_subdomain

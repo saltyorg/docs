@@ -115,8 +115,6 @@ nav:
             - Bazarrx: community/apps/bazarrx.md
           - Movies:
             - Radarrx: community/apps/radarrx.md
-          - Music:
-            - Lidarrx: community/apps/lidarrx.md
           - TV:
             - Sonarrx: community/apps/sonarrx.md
         - Media Servers and add-ons:
@@ -135,22 +133,22 @@ nav:
             - Dozzle: community/apps/dozzle.md
             - Yacht: community/apps/yacht.md
           - Log Management:
-            - Goaccess: community/apps/goaccess.md
+            - GoAccess: community/apps/goaccess.md
           - Influxdb: community/apps/influxdb.md
           - System:
             - Autoscan: community/apps/autoscan.md
-            - BTRFSsmaintenance: community/apps/btrfsmaintenance.md
+            - BTRFS Maintenance: community/apps/btrfsmaintenance.md
             - Healthchecks: community/apps/healthchecks.md
-            - Hetzner_nfs: community/apps/hetzner_nfs.md
+            - Hetzner NFS: community/apps/hetzner_nfs.md
           - Telegraf: community/apps/telegraf.md
           - Unpackerr: community/apps/unpackerr.md
-          - Uptime_kuma: community/apps/uptime_kuma.md
+          - Uptime Kuma: community/apps/uptime_kuma.md
           - Visualization:
             - Grafana: community/apps/grafana.md
             - Varken: community/apps/varken.md
       - Guides:
         - General:
-          - chazlarson Guides:
+          - Chazlarson Guides:
               - Can I run Saltbox on this server?: community/guides/chazguides/server.md
               - Did my Saltbox install succeed?: community/guides/chazguides/success.md
               - Plex Autoscan Mappings; how do they work?: community/guides/chazguides/pas-map.md
@@ -161,7 +159,7 @@ nav:
               - Why is my disk full?: community/guides/chazguides/disk-full.md
               - Installing Saltbox on a home server: community/guides/chazguides/home-server.md
         - Linux:
-          - aliases: community/guides/aliases.md
+          - Aliases: community/guides/aliases.md
         - Plex:
           - Tautulii Custom Scripts: community/guides/tautuliscripts.md
         - Downloading:
@@ -211,7 +209,7 @@ nav:
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
   - Reference:
-      -Topics:
+      - Topics:
         - Prerequisites:
           - Server: reference/server.md
           - Domain Name: reference/domain.md
@@ -240,7 +238,6 @@ nav:
           - Plex Auth Token: reference/plex_auth_token.md
           - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md
-          - Pushover: reference/pushover.md
           - Saltbox Tools: reference/saltbox-tools.md
           - Subdomains: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
@@ -253,6 +250,7 @@ nav:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Nabarr: sandbox/apps/nabarr.md
           - Notifiarr: sandbox/apps/notifiarr.md
+          - Resilio Sync: sandbox/apps/resilio_sync.md
           - The Lounge: sandbox/apps/thelounge.md
           - Wrapperr: sandbox/apps/wrapperr.md
           - ZNC: sandbox/apps/znc.md

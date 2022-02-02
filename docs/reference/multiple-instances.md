@@ -1,4 +1,4 @@
-## [ArrX replacement]
+# Multiple App Instances
 
 Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inverntory-driven approach.
 
@@ -27,7 +27,7 @@ That would be set up in `settings.yml`.
 
 With this new method, that will be replaced with this in `localhost.yml`:
 
-```
+``` yaml
 sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
 
@@ -49,8 +49,8 @@ Those names have to be unique across all of your containers, so it is suggested 
 
 Any instance defined can edit the following set of variables on a per instance basis in `localhost.yml`:
 
-[replacing "instance" with the actual **instance name**, of course, i.e. sonarrbing_web_subdomain, etc.]
-
+!!! note
+    Replacing "instance" with the actual **instance name**, of course, i.e. sonarrbing_web_subdomain, etc.
 ```
 instance_web_subdomain
 instance_web_domain

@@ -1,44 +1,42 @@
 # Community - All Apps Index
 
-
-  -  **[asshama](../community/apps/asshama.md)**  - tag - `cm-asshama`
-  -  **[autoscan](../community/apps/autoscan.md)**  - tag - `cm-autoscan`
-  -  **[bazarr](../community/apps/bazarr.md)**  - tag - `cm-bazarr`
-  -  **[bazarrx](../community/apps/bazarrx.md)**  - tag - `cm-bazarrx`
-  -  **[btrfsmaintenance](../community/apps/btrfsmaintenance.md)**  - tag - `cm-btrfsmaintenance`
-  -  **[deluge](../community/apps/deluge.md)**  - tag - `cm-deluge`
-  -  **[delugex](../community/apps/delugex.md)**  - tag - `cm-delugex`
-  -  **[dozzle](../community/apps/dozzle.md)**  - tag - `cm-dozzle`
-  -  **[goaccess](../community/apps/goaccess.md)**  - tag - `cm-goaccess`
-  -  **[grafana](../community/apps/grafana.md)**  - tag - `cm-grafana`
-  -  **[healthchecks](../community/apps/healthchecks.md)**  - tag - `cm-healthchecks`
-  -  **[hetzner_nfs](../community/apps/hetzner_nfs.md)***  <br />
-        - tags - `cm-hetzner_nfs_server', 'hetzner_nfs_server_uninstall', 'hetzner_nfs_client_mount', 'hetzner_nfs_client_unmount`
-  -  **[influxdb](../community/apps/influxdb.md)**  - tag - `cm-influxdb`
-  -  **[jellyfin](../community/apps/jellyfin.md)**  - tag - `cm-jellyfin`
-  -  **[lidarrx](../community/apps/lidarrx.md)**  - tag - `cm-lidarrx`
-  -  **[ombi](../community/apps/ombi.md)**  - tag - `cm-ombi`
-  -  **[ombix](../community/apps/ombix.md)**  - tag - `cm-ombix`
-  -  **[overseerrx](../community/apps/overseerrx.md)**  - tag - `cm-overseerrx`
-  -  **[petio](../community/apps/petio.md)**  - tag - `cm-petio`
-  -  **[prowlarr](../community/apps/prowlarr.md)**  - tag - `cm-prowlarr`
-  -  **[qBittorrent](../community/apps/qbittorrent.md)**  - tag - `cm-qbittorrent`
-  -  **[qBittorrentx](../community/apps/qbittorrentx.md)**  - tag - `cm-qbittorrentx`
-  -  **[radarrx](../community/apps/radarrx.md)**  - tag - `cm-radarrx`
-  -  **[readarr](../community/apps/readarr.md)**  - tag - `cm-readarr`
-  -  **[readarrx](../community/apps/readarrx.md)**  - tag - `cm-readarrx`
-  -  **[requestrr](../community/apps/requestrr.md)**  - tag - `cm-requestrr`
-  -  **[requestrrx](../community/apps/requestrrx.md)**  - tag - `cm-requestrrx`
-  -  **[rflood](../community/apps/rflood.md)**  - tag - `cm-rflood`
-  -  **[rfloodx](../community/apps/rfloodx.md)**  - tag - `cm-rfloodx`
-  -  **[settings](../community/settings.md)**  - tag - `cm-settings`
-  -  **[sonarrx](../community/apps/sonarrx.md)**  - tag - `cm-sonarrx`
-  -  **[tautullix](../community/apps/tautullix.md)**  - tag - `cm-tautullix`
-  -  **[telegraf](../community/apps/telegraf.md)**  - tag - `cm-telegraf`
-  -  **[transfer](../community/apps/transfer.md)**  - tag - `cm-transfer`
-  -  **[transmission](../community/apps/transmission.md)**  - tag - `cm-transmission`
-  -  **[transmissionx](../community/apps/transmissionx.md)**  - tag - `cm-transmissionx`
-  -  **[unpackerr](../community/apps/unpackerr.md)**  - tag - `cm-unpackerr`
-  -  **[uptime_kuma](../community/apps/uptime_kuma.md)**  - tag - `cm-uptime-kuma`
-  -  **[varken](../community/apps/varken.md)**  - tag - `cm-varken`
-  -  **[yacht](../community/apps/yacht.md)**  - tag - `cm-yacht`
+| Role                                                          | Tags                                 |
+| ------------------------------------------------------------- | ------------------------------------ |
+| **[asshama](../community/apps/asshama.md)**                   | cm-asshama                           |
+| **[autoscan](../community/apps/autoscan.md)**                 | cm-autoscan                          |
+| **[bazarr](../community/apps/bazarr.md)**                     | cm-bazarr                            |
+| **[bazarrx](../community/apps/bazarrx.md)**                   | cm-bazarrx                           |
+| **[btrfsmaintenance](../community/apps/btrfsmaintenance.md)** | cm-btrfsmaintenance                  |
+| **[deluge](../community/apps/deluge.md)**                     | cm-deluge                            |
+| **[delugex](../community/apps/delugex.md)**                   | cm-delugex                           |
+| **[dozzle](../community/apps/dozzle.md)**                     | cm-dozzle                            |
+| **[goaccess](../community/apps/goaccess.md)**                 | cm-goaccess                          |
+| **[grafana](../community/apps/grafana.md)**                   | cm-grafana                           |
+| **[healthchecks](../community/apps/healthchecks.md)**         | cm-healthchecks                      |
+| **[hetzner_nfs](../community/apps/hetzner_nfs.md)**           | cm-hetzner_nfs_server, cm-hetzner_nfs_server_uninstall, cm-hetzner_nfs_client_mount, cm-hetzner_nfs_client_unmount        |
+| **[influxdb](../community/apps/influxdb.md)**                 | cm-influxdb                          |
+| **[jellyfin](../community/apps/jellyfin.md)**                 | cm-jellyfin                          |
+| **[ombi](../community/apps/ombi.md)**                         | cm-ombi                              |
+| **[ombix](../community/apps/ombix.md)**                       | cm-ombix                             |
+| **[petio](../community/apps/petio.md)**                       | cm-petio                             |
+| **[prowlarr](../community/apps/prowlarr.md)**                 | cm-prowlarr                          |
+| **[qBittorrent](../community/apps/qbittorrent.md)**           | cm-qbittorrent                       |
+| **[qBittorrentx](../community/apps/qbittorrentx.md)**         | cm-qbittorrentx                      |
+| **[radarrx](../community/apps/radarrx.md)**                   | cm-radarrx                           |
+| **[readarr](../community/apps/readarr.md)**                   | cm-readarr                           |
+| **[readarrx](../community/apps/readarrx.md)**                 | cm-readarrx                          |
+| **[requestrr](../community/apps/requestrr.md)**               | cm-requestrr                         |
+| **[requestrrx](../community/apps/requestrrx.md)**             | cm-requestrrx                        |
+| **[rflood](../community/apps/rflood.md)**                     | cm-rflood                            |
+| **[rfloodx](../community/apps/rfloodx.md)**                   | cm-rfloodx                           |
+| **[settings](../community/settings.md)**                      | cm-settings                          |
+| **[sonarrx](../community/apps/sonarrx.md)**                   | cm-sonarrx                           |
+| **[tautullix](../community/apps/tautullix.md)**               | cm-tautullix                         |
+| **[telegraf](../community/apps/telegraf.md)**                 | cm-telegraf                          |
+| **[transfer](../community/apps/transfer.md)**                 | cm-transfer                          |
+| **[transmission](../community/apps/transmission.md)**         | cm-transmission                      |
+| **[transmissionx](../community/apps/transmissionx.md)**       | cm-transmissionx                     |
+| **[unpackerr](../community/apps/unpackerr.md)**               | cm-unpackerr                         |
+| **[uptime_kuma](../community/apps/uptime_kuma.md)**           | cm-uptime-kuma                       |
+| **[varken](../community/apps/varken.md)**                     | cm-varken                            |
+| **[yacht](../community/apps/yacht.md)**                       | cm-yacht                             |

@@ -124,11 +124,6 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
        "STREAM COUNT": "THROTTLED UPLOAD SPEED",
        ```
 
-### Pushover Notifications
-
-See [here](../reference/pushover.md#cloudplow).
-
-
 ### Restart
 
 Restart Cloudplow to apply the changes to the config.

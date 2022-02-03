@@ -162,6 +162,10 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     </details>
 
-7. You're done.
+7. You're done.  Deactivate the virtual env used by this script.
+
+    ```
+     deactivate
+    ```
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

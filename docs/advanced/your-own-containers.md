@@ -168,7 +168,7 @@ docker run -d  \
 
 - `-e PUID=<your_user_ID> -e PGID=<your_group_ID>`
 
-  - Replace `<user>` and `<group>` to match yours (see [here](FAQ#find-your-user-id-uid-and-group-id-gid)).
+  - Replace `<user>` and `<group>` to match yours (see [here](https://docs.saltbox.dev/faq/System/?h=find+user+id+group+uid+gid#find-your-user-id-uid-and-group-id-gid)).
 - `--label com.github.saltbox.saltbox_managed=true`
 
   - Is used to determine whether the container is shut down or not during Saltbox backup and other tasks. If you want this container to not be shut down, leave the label out or set it to `false`.

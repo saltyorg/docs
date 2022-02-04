@@ -126,7 +126,7 @@ docker run -d  \
 Autoscan exposing an alternate port for perhaps a second instance, but only visisble on the host [not outside]
 <pre>
 docker run -d  \
-  --name=<strong>speedtest</strong>  \
+  --name=<strong>autoscan</strong>  \
   --restart=unless-stopped  \
   -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
   -p <strong>127.0.0.1:3033</strong>:<strong>3030</strong> \

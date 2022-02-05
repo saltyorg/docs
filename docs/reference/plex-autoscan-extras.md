@@ -88,7 +88,7 @@ To set this up:
 1. Next, you will need to authorize Google Drive. To do so, run the following command:
 
    ```shell
-   /opt/plex_autoscan/venv/bin/python3 /opt/plex_autoscan/scan.py authorize
+   plex_autoscan authorize
    ```
 
 1. Visit the link shown to get the authorization code and paste that in and hit `enter`.

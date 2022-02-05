@@ -168,12 +168,12 @@ docker run -d  \
 
 - `-e PUID=<your_user_ID> -e PGID=<your_group_ID>`
 
-  - Replace `<user>` and `<group>` to match yours (see [here](https://docs.saltbox.dev/faq/System/?h=find+user+id+group+uid+gid#find-your-user-id-uid-and-group-id-gid)).
+  - Replace `<user>` and `<group>` to match yours (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid)).
 - `--label com.github.saltbox.saltbox_managed=true`
 
   - Is used to determine whether the container is shut down or not during Saltbox backup and other tasks. If you want this container to not be shut down, leave the label out or set it to `false`.
 
-  - If you do decide leave this out or set this to `false`, it will probably be a good idea to store the config files at another location other than `/opt` as a running container could cause issues during Saltbox Backup. 
+  - If you do decide leave this out or set this to `false`, it will probably be a good idea to store the config files at another location other than `/opt` as a running container could cause issues during Saltbox Backup.
 
 ## Mount Paths
 
@@ -189,7 +189,7 @@ docker run -d  \
 
       - Set ownership: `sudo chown -R <user>:<group> /opt/<name>`
 
-        - Replace `<user>` and `<group>` to match yours' (see [here](FAQ#find-your-user-id-uid-and-group-id-gid))
+        - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
 
       - Set permissions: `sudo chmod -R ugo+X /opt<name>`
 
@@ -207,7 +207,7 @@ docker run -d  \
 
       - Set ownership: `sudo chown -R <user>:<group> /mnt/local/downloads/<name>`
 
-        - Replace `<user>` and `<group>` to match yours' (see [here](FAQ#find-your-user-id-uid-and-group-id-gid))
+        - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
 
       - Set permissions: `sudo chmod -R ugo+X /mnt/local/downloads/<name>`
 
@@ -240,7 +240,7 @@ Note: These are important, but leave them out if your docker run command require
       - These are accessible from the net.
 
   - If this is a home install, you will probably need to forward the port to the cloudbox machine.
-      
+
 ## Traefik Proxy
 
 ``` { .sh .annotate }

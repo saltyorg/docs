@@ -1,0 +1,19 @@
+The default Cloudplow setup uploads to the `google` remote using a single account, which limits you to 750GB/day of upload.
+
+To utilize rotating service accounts to upload more than this, you'll need to configure cloudplow to upload to the individual shared drives.
+
+If you used the [scripted rclone method](rclone-manual.md), there is a script in the sb_gd repo that will make the required modifications to the cloudplow config.
+
+1. Run the script
+
+    ```
+        cd ~/sb_gd
+        source sb_gd/bin/activate
+        python sb_cp.py
+    ```
+
+2. Restart the cloudplow service:
+
+    ```
+        sudo systemctl restart cloudplow
+    ```

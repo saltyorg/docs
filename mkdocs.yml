@@ -233,6 +233,7 @@ nav:
           - Install: reference/install.md
         - Other:
           - Cloudplow Examples: reference/cloudplow.md
+          - Cloudplow Mutiple-Drive Setup: reference/cloudplow-config.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md
           - Multiple App Instances: reference/multiple-instances.md
           - Plex Auth Token: reference/plex_auth_token.md

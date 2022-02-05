@@ -83,12 +83,12 @@ To set this up:
     Note: If you are using [[Scenario 2 Custom Library Setup|Customizing Plex Libraries#scenario-2]], you will need to tweak this section of the config.
 
 
-1. Save and Exit. 
+1. Save and Exit.
 
 1. Next, you will need to authorize Google Drive. To do so, run the following command:
 
    ```shell
-   /opt/plex_autoscan/scan.py authorize
+   /opt/plex_autoscan/venv/bin/python3 /opt/plex_autoscan/scan.py authorize
    ```
 
 1. Visit the link shown to get the authorization code and paste that in and hit `enter`.
@@ -115,7 +115,7 @@ To set this up:
    ```
 
 
-1. Plex Autoscan will now start monitoring Google Drive. 
+1. Plex Autoscan will now start monitoring Google Drive.
 
 
 # Make Plex scan a specific file or folder
@@ -130,16 +130,16 @@ Setup instructions:
 1. Enable `SERVER_ALLOW_MANUAL_SCAN` in your `/opt/plex_autoscan/config/config.json` file.
 
    ```json
-   "SERVER_ALLOW_MANUAL_SCAN": true, 
+   "SERVER_ALLOW_MANUAL_SCAN": true,
    ```
 
-2. Visit your [[Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]] webpage. 
+2. Visit your [[Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]] webpage.
 
-3. Enter in the path to scan. 
+3. Enter in the path to scan.
 
    _Note: The path can be in any form (e.g. `/data/Media/...`, `/mnt/unionfs/Media/...`, `My Drive/Media/....`). The 'Server Path Mappings' will redirect the scan to the correct location._
 
-4. The request will now show up under Plex Autoscan logs. 
+4. The request will now show up under Plex Autoscan logs.
 
 ## HTTP
 
@@ -161,10 +161,10 @@ Setup instructions:
       ```shell
       curl -d "eventType=Manual&filepath=/data/Movies/Shut In (2016)/Shut In (2016) - Bluray-1080p.x264.DTS-GECKOS.mkv" http://ipaddress:3468/0c1fa3c9867e48b1bb3aa055cb86`
       ```
- 
-4. The request will now show up under Plex Autoscan logs. 
 
-For more details on both options, see [[here|https://github.com/l3uddz/plex_autoscan#misc]]. 
+4. The request will now show up under Plex Autoscan logs.
+
+For more details on both options, see [[here|https://github.com/l3uddz/plex_autoscan#misc]].
 
 
 ## CLI

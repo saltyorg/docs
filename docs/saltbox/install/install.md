@@ -185,7 +185,7 @@ Saltbox assumes an rclone remote pointed at your google storage named `google` [
 
 You may already have this remote configured or know how to do it if you are coming from a similar setup like Cloudbox or PlexGuide.
 
-If not, the process is documented in the wiki [here](../../reference/rclone.md)
+If not, the process is documented [here](../../reference/rclone.md).
 
 ## Install Saltbox
 

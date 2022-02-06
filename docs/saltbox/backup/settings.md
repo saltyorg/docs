@@ -74,3 +74,17 @@ backup:
     Options are: `true` or `false`
 
     Requires BTRFS on `/` or `/opt`
+
+IMPORTANT:
+
+These values:
+
+```yml
+  restore_service:
+    user: # 
+    pass: # 
+ ```
+
+SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
+
+These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.

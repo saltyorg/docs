@@ -49,7 +49,7 @@ backup:
 
 8. Schedule for when the backup task will be executed.
 
-    Options are: `reboot`, `yearly`, `annually`, `weekly`, `daily`, `hourly`.
+    Options are: `reboot`, `yearly`, `annually`, `monthly`, `weekly`, `daily`, `hourly`.
 
     Should you desire more granular control over the schedule you can edit the crontab for the Saltbox user once setup.
 

@@ -102,7 +102,7 @@ _Note 3: If you use different mount paths for your libraries in Plex this change
 
 Example:
 
-```
+```json
   "SERVER_PATH_MAPPINGS": {
     "/mnt/unionfs/Media/Movies/": [
       "/movies/",
@@ -121,29 +121,28 @@ See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#make-pl
 
 ### Plex Autoscan is installed in a Virtual Environment
 
-What this means for you is that you will need to account for that virtual environment when running PAS commands you may see described elsewhere.
+To make this transparent to the user, saltbox installs a wrapper script that accounts for this.  This means that you can run Plex Autoscan manually like this:
 
-**If you never run plex-autoscan manually, you will never have to think about this.**
+```shell
+plex_autoscan COMMAND
+```
 
-There are two ways to do that:
+For example, if some documentation says you should run:
 
-=== "Activate virtual env first"
-    ```shell
-    cd /opt/plex_autoscan
-    source venv/bin/activate
-    ```
+```shell
+python scan.py sections
+```
 
-    Now you can run `python scan.py sections` or the like without any errors or missing requirements.
+In saltbox you'd run:
 
-    If you're going to run several plex-autoscan commands, this may be simplest.
+```shell
+plex_autoscan sections
+```
 
-    The drawback, such as it is, is that you have to be in `/opt/plex_autoscan` to do this.
+If this doesn't work for you, update saltbox and rerun the plex-autoscan role:
 
-=== "Without activating virtual env"
-    ``` shell
-    /opt/plex_autoscan/venv/bin/python3 /opt/plex_autoscan/scan.py sections
-    ```
+```shell
+sb update
+sb install plex-autoscan
+```
 
-    You can provide the full paths to the python executable inside the virtual environment from anywhere.
-
-    This is useful if you are running PAS commands from scripts or other contexts where the activation process is cumbersome

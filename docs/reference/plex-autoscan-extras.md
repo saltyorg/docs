@@ -91,6 +91,13 @@ To set this up:
    plex_autoscan authorize
    ```
 
+   If this doesn't work for you, update saltbox and rerun the plex-autoscan role:
+
+   ```shell
+   sb update
+   sb install plex-autoscan
+   ```
+
 1. Visit the link shown to get the authorization code and paste that in and hit `enter`.
 
     ```

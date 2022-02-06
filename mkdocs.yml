@@ -56,6 +56,7 @@ extra:
     name: GitHub
 
 markdown_extensions:
+  - meta
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -179,7 +180,7 @@ nav:
       - Sonarr: apps/sonarr.md
       - Nzbget: apps/nzbget.md
       - Nzbhydra2: apps/nzbhydra2.md
-      - Plex-autoscan: apps/plex-autoscan.md
+      - Plex Autoscan: apps/plex-autoscan.md
       - Portainer: apps/portainer.md
       - Rutorrent: apps/rutorrent.md
       - Sabnzbd: apps/sabnzbd.md
@@ -200,7 +201,7 @@ nav:
       - Backup and Restore: faq/Backup and Restore.md
       - Rclone: faq/Rclone.md
       - Plex: faq/Plex.md
-      - Plex-Autoscan: faq/Plex-Autoscan.md
+      - Plex Autoscan: faq/Plex-Autoscan.md
       - ruTorrent: faq/ruTorrent.md
       - Misc: faq/Misc.md
   - Advanced:

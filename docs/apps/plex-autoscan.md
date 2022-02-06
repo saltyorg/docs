@@ -1,3 +1,5 @@
+# Plex Autoscan
+
 ## What is it?
 
 [Plex Autoscan](https://github.com/l3uddz/plex_autoscan/) (by [l3uddz](https://github.com/l3uddz/)) is a script that assists Plex with the adding media files, that were imported by Sonarr / Radarr, by only scanning the folder that has been imported (vs the entire section library folder), thereby preventing Google API bans.
@@ -108,3 +110,40 @@ Example:
       "My Drive/Media/Movies/"
     ],
 ```
+
+### Enabling Google Drive Monitoring in Plex Autoscan
+
+See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#google-drive-monitoring)
+
+### Invoking a manual scan in Plex Autoscan
+
+See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#make-plex-scan-a-specific-file-or-folder)
+
+### Plex Autoscan is installed in a Virtual Environment
+
+What this means for you is that you will need to account for that virtual environment when running PAS commands you may see described elsewhere.
+
+**If you never run plex-autoscan manually, you will never have to think about this.**
+
+There are two ways to do that:
+
+=== "Activate virtual env first"
+    ```shell
+    cd /opt/plex_autoscan
+    source venv/bin/activate
+    ```
+
+    Now you can run `python scan.py sections` or the like without any errors or missing requirements.
+
+    If you're going to run several plex-autoscan commands, this may be simplest.
+
+    The drawback, such as it is, is that you have to be in `/opt/plex_autoscan` to do this.
+
+=== "Without activating virtual env"
+    ``` shell
+    /opt/plex_autoscan/venv/bin/python3 /opt/plex_autoscan/scan.py sections
+    ```
+
+    You can provide the full paths to the python executable inside the virtual environment from anywhere.
+
+    This is useful if you are running PAS commands from scripts or other contexts where the activation process is cumbersome

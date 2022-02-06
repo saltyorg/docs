@@ -21,7 +21,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     ```
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
-    
+
     If you see something like this:
     ```
     The virtual environment was not created successfully because ensurepip is not
@@ -35,14 +35,13 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     Failing command: ['/home/YOU/sb_gd/sb_gd/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
     ```
-    
+
     run the suggested command with `sudo`:
     ```
     sudo apt install python3.8-venv
     ```
 
     Then try the virtual-environment command in step 2 again.
-
 
 3. Install script requirements:
 

@@ -19,7 +19,7 @@ Docs will be accessible at http://localhost:8000
 
 Full previewing:
 
-The docs are actually built with a different release of mkdocs-material, so to preview them as they will appear when deployed you will need to be added to a private repo and do some local setup to enable the previewing.  Contact chazlarson through the Saltbox discord is you're interested in that.
+The docs are actually built with a different release of mkdocs-material, so to preview them as they will appear when deployed you will need to be added to a private repo and do some local setup to enable the previewing.  Contact chazlarson through the Saltbox discord if you're interested in that.
 
 ### Contributors
 

@@ -14,9 +14,11 @@ It’s not complete until then.
 
 What does success look like?
 
-After running the SALTbox install command:
+After running the Saltbox install command:
 
+```
 ~$ sb install saltbox
+```
 
 A lot of logging information will scroll by.
 
@@ -24,6 +26,7 @@ Eventually, it will stop, and if successful, will display something like this:
 
 TODO: REPLACE WITH SALTBOX VERSION
 
+```
 PLAY RECAP ************************************************************************************
 localhost              	: ok=713  changed=180  unreachable=0	failed=0
 
@@ -186,9 +189,9 @@ c4b5b3a73aeb   organizrtools/organizr-v2:plex       	  29 minutes ago  	Up 29 mi
 bed4af6dc439   cloudb0x/plex:latest                 	  31 minutes ago  	Up 30 minutes
 18b10e11029a   jrcs/letsencrypt-nginx-proxy-companion  31 minutes ago  	Up 31 minutes
 51b214fdf273   jwilder/nginx-proxy                  	  31 minutes ago  	Up 31 minutes
-chaz@oberon:~/cloudbox$
+```
 
-That’s the list of containers installed by the default setup on master branch at the time of writing.
+That’s the list of containers installed by the default setup at the time of writing.
 
 There should be no way for the install to complete without errors, but leave no containers running.
 Is the proxy running?
@@ -197,6 +200,7 @@ You can verify the proxy with curl:
 
 (nothing special about my choice of ombi here)
 
+```
 chaz@oberon:~/cloudbox$ curl http://ombi.DOMAIN.TLD | head -n 20
   % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
                              	Dload  Upload   Total   Spent	Left  Speed
@@ -208,6 +212,7 @@ chaz@oberon:~/cloudbox$ curl http://ombi.DOMAIN.TLD | head -n 20
 <hr><center>nginx/1.17.6</center>
 </body>
 </html>
+```
 
 That’s expected, it’s the standard cloudbox behavior where the non-secure URL forwards to the secure URL.
 

@@ -140,7 +140,7 @@ Setup instructions:
    "SERVER_ALLOW_MANUAL_SCAN": true,
    ```
 
-2. Visit your [[Plex Autoscan URL|Install: Plex-Autoscan#4-obtaining-the-plex-autoscan-url]] webpage.
+2. Visit your [Plex Autoscan URL](plex-autoscan-extras.md#obtaining-the-plex-autoscan-url) webpage.
 
 3. Enter in the path to scan.
 

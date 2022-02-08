@@ -4,6 +4,8 @@ To utilize rotating service accounts to upload more than this, you'll need to co
 
 If you used the [scripted rclone method](rclone-manual.md), there is a script in the sb_gd repo that will make the required modifications to the cloudplow config.
 
+NOTE: This script is assuming that your service account file are in `/opt/sa/all`, which is where the [scripted rclone method](rclone-manual.md) puts them.
+
 1. Run the script
 
     ```

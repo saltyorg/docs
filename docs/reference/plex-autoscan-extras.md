@@ -14,7 +14,7 @@ To set this up:
    nano /opt/plex_autoscan/config/config.json
    ```
 
-1. Under the `GOOGLE` section of the config, enable Google Drive monitoring and fill in your [[Google Drive API Client ID and Secret|Google-Drive-API-Client-ID-and-Client-Secret]].
+2. Under the `GOOGLE` section of the config, enable Google Drive monitoring and fill in your [Google Drive API Client ID and Secret](google-project-setup.md) [Step 15 of that process].
 
     ```json
     "ENABLED": true,
@@ -22,7 +22,7 @@ To set this up:
     "CLIENT_SECRET": "yourclientsecret",
     ```
 
-1. So that the entire section now looks like this (any order is fine):
+3. So that the entire section now looks like this (any order is fine):
 
    ```json
    "GOOGLE": {
@@ -56,7 +56,7 @@ To set this up:
    },
    ```
 
-1. Google Drive paths (e.g. `"My Drive/Media/Movies/"`) go under `SERVER_PATH_MAPPINGS` and should look like this:
+4. Google Drive paths (e.g. `"My Drive/Media/Movies/"`) go under `SERVER_PATH_MAPPINGS` and should look like this:
 
    _Note: This is usually set pre-filled by default._
 
@@ -83,9 +83,9 @@ To set this up:
     Note: If you are using [[Scenario 2 Custom Library Setup|Customizing Plex Libraries#scenario-2]], you will need to tweak this section of the config.
 
 
-1. Save and Exit.
+5. Save and Exit.
 
-1. Next, you will need to authorize Google Drive. To do so, run the following command:
+6. Next, you will need to authorize Google Drive. To do so, run the following command:
 
    ```shell
    plex_autoscan authorize
@@ -98,14 +98,14 @@ To set this up:
    sb install plex-autoscan
    ```
 
-1. Visit the link shown to get the authorization code and paste that in and hit `enter`.
+7. Visit the link shown to get the authorization code and paste that in and hit `enter`.
 
     ```
     Visit https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=&access_type=offline and authorize against the account you wish to use
     Enter authorization code:
     ```
 
-1. When access token retrieval is successfull, you'll see this:
+8. When access token retrieval is successfull, you'll see this:
 
    ```
    2018-06-24 05:57:58,252 -     INFO -    GDRIVE [140007964366656]: Requesting access token for auth code '4/AAAfPHmX9H_kMkMasfdsdfE4r8ImXI_BddbLF-eoCOPsdfasdfHBBzffKto'
@@ -115,14 +115,14 @@ To set this up:
 
    _Note: Ignore any `Segmentation fault` messages._
 
-1. Restart the service:
+9. Restart the service:
 
     ```shell
    sudo systemctl restart plex_autoscan
    ```
 
 
-1. Plex Autoscan will now start monitoring Google Drive.
+10. Plex Autoscan will now start monitoring Google Drive.
 
 
 # Make Plex scan a specific file or folder

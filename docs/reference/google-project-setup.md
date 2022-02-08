@@ -106,7 +106,7 @@ This guide is assuming you are using a standard GSuite Business or GSuite Worksp
 
     ![](../images/gdrive-project/26-credentials-type-name.png)
 
-15. You'll be presented with the Client ID and Secret.  Copy and save them if you like.  Click on "DOWNLOAD JSON" to download the credential file:
+15. You'll be presented with the Client ID and Secret.  Copy and save them somewhere; you will need them to configure Plex Autoscan Google Drive Monitoring later.  Click on "DOWNLOAD JSON" to download the credential file:
 
     ![](../images/gdrive-project/27-credentials-done.png)
 

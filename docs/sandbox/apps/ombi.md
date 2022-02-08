@@ -14,7 +14,7 @@ Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless 
 
 ``` shell
 
-sb install cm-ombi
+sb install sandbox-ombi
 
 ```
 

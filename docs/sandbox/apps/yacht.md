@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-yacht
+sb install sandbox-yacht
 
 ```
 

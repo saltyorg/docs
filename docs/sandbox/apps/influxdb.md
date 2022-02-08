@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-influxdb
+sb install sandbox-influxdb
 
 ```
 

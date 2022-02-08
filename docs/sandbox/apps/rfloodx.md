@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[rFloodX](https://github.com/jesec/flood){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [rFlood](../../community/apps/rflood.md).
+[rFloodX](https://github.com/jesec/flood){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [rFlood](../../sandbox/apps/rflood.md).
 
 ## Project Information
 - [:material-home: rFlood ](https://github.com/jesec/flood){: .header-icons target=_blank rel="noopener noreferrer" }
@@ -15,7 +15,7 @@
 
 ``` shell
 
-sb install cm-rfloodx
+sb install sandbox-rfloodx
 
 ```
 
@@ -45,6 +45,6 @@ sb install cm-rfloodx
       ```
 
 - For app specific instructions refer to the parent role,
-     - [rflood](../../community/apps/rflood.md)<Br/>
+     - [rflood](../../sandbox/apps/rflood.md)<Br/>
      - and the rflood upstream documentation <BR/>
        [:octicons-link-16: Documentation ](https://github.com/jesec/flood/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

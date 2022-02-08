@@ -16,7 +16,7 @@
 
 ``` shell
 
-sb install cm-rflood
+sb install sandbox-rflood
 
 ```
 

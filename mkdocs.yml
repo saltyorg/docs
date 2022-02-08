@@ -99,18 +99,10 @@ nav:
             - Delugex: community/apps/delugex.md
             - Qbittorrent: community/apps/qbittorrent.md
             - Qbittorrentx: community/apps/qbittorrentx.md
-            - Rflood: community/apps/rflood.md
-            - Rfloodx: community/apps/rfloodx.md
-            - Transmission: community/apps/transmission.md
-            - Transmissionx: community/apps/transmissionx.md
-        - File Management:
-          - Transfer: community/apps/transfer.md
         - Media Management:
           - Books:
             - Readarr: community/apps/readarr.md
             - Readarrx: community/apps/readarrx.md
-          - Indexers:
-            - Prowlarr: community/apps/prowlarr.md
           - Metadata Management:
             - Bazarr: community/apps/bazarr.md
             - Bazarrx: community/apps/bazarrx.md
@@ -119,34 +111,11 @@ nav:
           - TV:
             - Sonarrx: community/apps/sonarrx.md
         - Media Servers and add-ons:
-          - Jellyfin: community/apps/jellyfin.md
           - Plex:
-            - Asshama: community/apps/asshama.md
             - Tautullix: community/apps/tautullix.md
-          - Requests:
-            - Ombi: community/apps/ombi.md
-            - Ombix: community/apps/ombix.md
-            - Petio: community/apps/petio.md
-            - Requestrr: community/apps/requestrr.md
-            - Requestrrx: community/apps/requestrrx.md
         - Utilities:
-          - Docker:
-            - Dozzle: community/apps/dozzle.md
-            - Yacht: community/apps/yacht.md
-          - Log Management:
-            - GoAccess: community/apps/goaccess.md
-          - Influxdb: community/apps/influxdb.md
           - System:
-            - Autoscan: community/apps/autoscan.md
-            - BTRFS Maintenance: community/apps/btrfsmaintenance.md
-            - Healthchecks: community/apps/healthchecks.md
             - Hetzner NFS: community/apps/hetzner_nfs.md
-          - Telegraf: community/apps/telegraf.md
-          - Unpackerr: community/apps/unpackerr.md
-          - Uptime Kuma: community/apps/uptime_kuma.md
-          - Visualization:
-            - Grafana: community/apps/grafana.md
-            - Varken: community/apps/varken.md
       - Guides:
         - General:
           - Chazlarson Guides:
@@ -172,25 +141,36 @@ nav:
           - Suggested Reading: community/guides/suggested_reading.md
           - Links: community/guides/links.md
   - Apps:
-      - Cloudplow: apps/cloudplow.md
-      - Emby: apps/emby.md
-      - Overseerr: apps/overseerr.md
-      - Plex: apps/plex.md
-      - Radarr: apps/radarr.md
-      - Sonarr: apps/sonarr.md
-      - Nzbget: apps/nzbget.md
-      - Nzbhydra2: apps/nzbhydra2.md
-      - Plex Autoscan: apps/plex-autoscan.md
-      - Portainer: apps/portainer.md
-      - Rutorrent: apps/rutorrent.md
-      - Sabnzbd: apps/sabnzbd.md
-      - Tautulli: apps/tautulli.md
-      - Lidarr: apps/lidarr.md
-      - REPLACE IMAGES:
+      - Core:
+        - Cloudplow: apps/cloudplow.md
+        - Overseerr: apps/overseerr.md
+        - Radarr: apps/radarr.md
+        - Sonarr: apps/sonarr.md
+        - Nzbget: apps/nzbget.md
+        - Nzbhydra2: apps/nzbhydra2.md
+        - Plex Autoscan: apps/plex-autoscan.md
+        - Portainer: apps/portainer.md
+        - Rutorrent: apps/rutorrent.md
+        - Sabnzbd: apps/sabnzbd.md
+        - Tautulli: apps/tautulli.md
+        - Lidarr: apps/lidarr.md
+      - Media Servers:
+        - Plex: apps/plex.md
+        - Emby: apps/emby.md
+        - Jellyfin: apps/jellyfin.md
+      - Optional:
+        - Asshama: apps/asshama.md
+        - Autoscan: apps/autoscan.md
+        - BTRFS Maintenance: apps/btrfsmaintenance.md
+        - Petio: apps/petio.md
+        - Prowlarr: apps/prowlarr.md
+        - Transfer: apps/transfer.md
+      - TODO - REPLACE IMAGES:
         - Jackett: apps/jackett.md
-      - NEED UPDATING:
+      - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md
+
   - FAQ:
       - System: faq/System.md
       - Cloud Storage: faq/Cloud Storage.md
@@ -261,6 +241,9 @@ nav:
         - Development:
           - Coder: sandbox/apps/coder.md
           - Gitea: sandbox/apps/gitea.md
+          - Docker:
+            - Dozzle: sandbox/apps/dozzle.md
+            - Yacht: sandbox/apps/yacht.md
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Alltube: sandbox/apps/alltube.md
@@ -270,6 +253,10 @@ nav:
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - qBit Management: sandbox/apps/qbit_manage.md
+            - Rflood: sandbox/apps/rflood.md
+            - Rfloodx: sandbox/apps/rfloodx.md
+            - Transmission: sandbox/apps/transmission.md
+            - Transmissionx: sandbox/apps/transmissionx.md
         - File Management:
           - Filebot: sandbox/apps/filebot.md
           - Filebrowser: sandbox/apps/filebrowser.md
@@ -314,6 +301,11 @@ nav:
             - kitana: sandbox/apps/kitana.md
             - Wrapperr: sandbox/apps/wrapperr.md
           # - Requests:
+          - Requests:
+            - Ombi: sandbox/apps/ombi.md
+            - Ombix: sandbox/apps/ombix.md
+            - Requestrr: sandbox/apps/requestrr.md
+            - Requestrrx: sandbox/apps/requestrrx.md
           - stash: sandbox/apps/stash.md
         - Nextcloud: sandbox/apps/nextcloud.md
         - Social:
@@ -323,6 +315,9 @@ nav:
           - Docker:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
+          - Log Management:
+            - GoAccess: sandbox/apps/goaccess.md
+          - Influxdb: sandbox/apps/influxdb.md
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
@@ -337,4 +332,11 @@ nav:
           - System:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
+            - Healthchecks: sandbox/apps/healthchecks.md
+          - Telegraf: sandbox/apps/telegraf.md
+          - Unpackerr: sandbox/apps/unpackerr.md
+          - Uptime Kuma: sandbox/apps/uptime_kuma.md
           - vaultwarden: sandbox/apps/vaultwarden.md
+          - Visualization:
+            - Grafana: sandbox/apps/grafana.md
+            - Varken: sandbox/apps/varken.md

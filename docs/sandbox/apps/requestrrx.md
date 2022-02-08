@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[RequestrrX](https://github.com/darkalfx/requestrr){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Requestrr](../../community/apps/requestrr.md).
+[RequestrrX](https://github.com/darkalfx/requestrr){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Requestrr](../../sandbox/apps/requestrr.md).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-requestrrx
+sb install sandbox-requestrrx
 
 ```
 
@@ -42,6 +42,6 @@ sb install cm-requestrrx
       ```
 
 - For app specific instructions refer to the parent role,
-     - [requestrr](../../community/apps/requestrr.md)<Br/>
+     - [requestrr](../../sandbox/apps/requestrr.md)<Br/>
      - and the requestrr upstream documentation <BR/>
        [:octicons-link-16: Documentation ](https://github.com/darkalfx/requestrr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

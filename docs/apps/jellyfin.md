@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-jellyfin
+sb install jellyfin
 
 ```
 

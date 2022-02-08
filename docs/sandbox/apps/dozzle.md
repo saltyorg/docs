@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-dozzle
+sb install sandbox-dozzle
 
 ```
 

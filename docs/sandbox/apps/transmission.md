@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-transmission
+sb install sandbox-transmission
 
 ```
 

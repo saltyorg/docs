@@ -14,7 +14,7 @@ Autoscan is a rewrite of the original Plex Autoscan written in the Go language. 
 
 ``` shell
 
-sb install cm-autoscan
+sb install autoscan
 
 ```
 

@@ -30,7 +30,7 @@ HAMA is a plex agent specifically for anime and its various challenges. It is re
 
 ``` shell
 
-sb install cm-asshama
+sb install asshama
 
 ```
 

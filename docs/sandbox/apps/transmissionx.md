@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Transmission**X**](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Transmission](../../community/apps/transmission.md).
+[Transmission**X**](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Transmission](../../sandbox/apps/transmission.md).
 
 [Transmission](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is a fast, easy, and free BitTorrent client.
 
@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install cm-transmissionx
+sb install sandbox-transmissionx
 
 ```
 
@@ -39,11 +39,11 @@ sb install cm-transmissionx
 
       ``` { .shell }
 
-          sb install cm-transmissionx
+          sb install sandbox-transmissionx
 
       ```
 
 - For app specific instructions refer to the parent role,
-     - [transmission](../../community/apps/transmission.md)<Br/>
+     - [transmission](../../sandbox/apps/transmission.md)<Br/>
      - and the transmission upstream documentation <BR/>
        [:octicons-link-16: Documentation ](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }

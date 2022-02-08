@@ -14,7 +14,7 @@ Petio is an ongoing, forever free, always evolving project currently in alpha pr
 
 ``` shell
 
-sb install cm-petio
+sb install petio
 
 ```
 

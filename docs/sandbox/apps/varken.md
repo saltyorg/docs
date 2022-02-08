@@ -14,7 +14,7 @@ Varken is a standalone application to aggregate data from the Plex ecosystem int
 
 ``` shell
 
-sb install cm-varken
+sb install sandbox-varken
 
 ```
 
@@ -28,7 +28,7 @@ sb install cm-varken
 
     ``` { .shell }
 
-        sb install cm-varken
+        sb install sandbox-varken
 
     ```
 
@@ -110,7 +110,7 @@ sb install cm-varken
 
 - For app specific instructions refer to the grafana role,
 
-     - [grafana](../../community/apps/grafana.md)<Br/>
+     - [grafana](../../sandbox/apps/grafana.md)<Br/>
 
      - and the upstream documentation <BR/>
        [:octicons-link-16: Documentation](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -16,7 +16,7 @@ Each of the tasks can be turned on/off and configured independently. The default
 
 ``` shell
 
-sb install cm-btrfsmaintenance
+sb install btrfsmaintenance
 
 ```
 

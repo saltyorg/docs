@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Ombi**X**](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Ombi](../../community/apps/ombi.md).
+[Ombi**X**](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Ombi](../../sandbox/apps/ombi.md).
 
 [Ombi](https://ombi.io/){: target=_blank rel="noopener noreferrer" } is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
 
@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install cm-ombix
+sb install sandbox-ombix
 
 ```
 
@@ -36,6 +36,6 @@ sb install cm-ombix
    ```
 
 - For app specific instructions refer to the parent role,
-     - [Ombi](../../community/apps/ombi.md)<Br/>
+     - [Ombi](../../sandbox/apps/ombi.md)<Br/>
      - and the upstream documentation <BR/>
        [:octicons-link-16: Documentation ](https://docs.ombi.app/guides/installation/){: .header-icons target=_blank rel="noopener noreferrer" }

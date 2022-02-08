@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-unpackerr
+sb install sandbox-unpackerr
 
 ```
 

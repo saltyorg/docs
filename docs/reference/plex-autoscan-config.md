@@ -20,5 +20,5 @@ If you used the [scripted rclone method](rclone-manual.md), there is a script in
 2. Restart the Plex Autoscan service:
 
     ```
-        sudo systemctl restart plex-autoscan
+        sudo systemctl restart plex_autoscan
     ```

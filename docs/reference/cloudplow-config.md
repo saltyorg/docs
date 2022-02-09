@@ -4,12 +4,16 @@ To utilize rotating service accounts to upload more than this, you'll need to co
 
 If you used the [scripted rclone method](rclone-manual.md), there is a script in the sb_gd repo that will make the required modifications to the cloudplow config.
 
+This script is not useful if you did not go through that scripted process.
+
 NOTE: This script is assuming that your service account file are in `/opt/sa/all`, which is where the [scripted rclone method](rclone-manual.md) puts them.
+
+The script is also assuming a totally stock Cloudplow `config.json` as it comes from the original saltbox install.  If yout have added `remote`s or `uploader`s it will fail with an error.
 
 1. Run the script
 
     ```
-        cd ~/sb_gd
+        cd /opt/sb_gd
         source sb_gd/bin/activate
         python sb_cp.py
     ```

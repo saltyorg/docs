@@ -13,7 +13,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 1. Retrieve the `sb-gd` code
 
     ```
-    cd ~ && git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
+    cd /opt && git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
     ```
 
 2. Create and activate a virtual environment:

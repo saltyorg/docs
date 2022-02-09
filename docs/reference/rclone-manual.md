@@ -47,7 +47,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
 ## New Rclone Setup
 
-1. Verify that the Shared Drive permissions are correct on your Googleaccount:
+1. Verify that the Shared Drive permissions are correct on your Google account:
 
     [Instructions here](google-account-perms.md)
 

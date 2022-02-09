@@ -77,7 +77,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 1. Retrieve the `sa-gen` code
 
     ```
-    git clone https://github.com/88lex/sa-gen && cd sa-gen
+    cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen
     ```
 
 3. Edit the `sa-gan` script:

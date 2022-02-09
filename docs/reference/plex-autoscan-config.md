@@ -12,7 +12,7 @@ If you used the [scripted rclone method](rclone-manual.md), there is a script in
 1. Run the script
 
     ```
-        cd ~/sb_gd
+        cd /opt/sb_gd
         source sb_gd/bin/activate
         python sb_pas.py
     ```

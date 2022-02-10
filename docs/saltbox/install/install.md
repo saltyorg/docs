@@ -189,6 +189,8 @@ If not, the process is documented [here](../../reference/rclone.md).
 
 ## Install Saltbox
 
+If you are installing a Feederbox/Mediabox setup, set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+
 === "Saltbox"
     ``` shell
     sb install saltbox

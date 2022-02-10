@@ -9,6 +9,10 @@ If you don't want to enable GDM, you don't need to do this.
 
 If you used the [scripted rclone method](rclone-manual.md), there is a script in the sb_gd repo that will make the required modifications to the stock Plex Autoscan config.
 
+This script is only useful if you have used the [scripted rclone method](rclone-manual.md).  It is expecting a stock plex autoscan config file as you will have when you have completed the install.
+
+You will have to have completed `sb install saltbox` before using this script.
+
 1. Run the script
 
     ```

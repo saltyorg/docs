@@ -215,7 +215,7 @@ nav:
         - Other:
           - Cloudplow Examples: reference/cloudplow.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
-          - Shared-Drive Plex Autoscan Setup: reference/p[lex-autoscan-config.md
+          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md
           - Multiple App Instances: reference/multiple-instances.md
           - Plex Auth Token: reference/plex_auth_token.md

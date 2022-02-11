@@ -4,9 +4,18 @@ Apps that used to be supported by the "ArrX" system which allowed the user to de
 
 The general idea is to move all the configuration into the `localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
-Sonarr, Radarr and Lidarr support this new method as of this writing.
+Roles which support this new method:
+ - radarr
+ - overseerr
+ - deluge
+ - qbittorrent
+ - lidarr
+ - sonarr
+ - tautulli
+ - readarr
+ - bazarr
 
-### Overview
+## Overview
 
 Define a list of all the instances of the all you want to create; if you don't want to customize them beyond that, this is all that's required.
 

@@ -87,55 +87,7 @@ nav:
         - Settings: saltbox/backup/settings.md
         - Backup: saltbox/backup/backup.md
         - Restore: saltbox/backup/restore.md
-  - Community:
-      - Basics: community/basics.md
-      - Settings: community/settings.md
-      - Index: community/index.md
-      - Apps:
-        - ArrX: community/apps/arrx.md
-        - Downloading:
-          - Torrents:
-            - Deluge: community/apps/deluge.md
-            - Delugex: community/apps/delugex.md
-            - Qbittorrent: community/apps/qbittorrent.md
-            - Qbittorrentx: community/apps/qbittorrentx.md
-        - Media Management:
-          - Books:
-            - Readarr: community/apps/readarr.md
-            - Readarrx: community/apps/readarrx.md
-          - Metadata Management:
-            - Bazarr: community/apps/bazarr.md
-            - Bazarrx: community/apps/bazarrx.md
-        - Media Servers and add-ons:
-          - Plex:
-            - Tautullix: community/apps/tautullix.md
-        - Utilities:
-          - System:
-            - Hetzner NFS: community/apps/hetzner_nfs.md
-      - Guides:
-        - General:
-          - Chazlarson Guides:
-              - Can I run Saltbox on this server?: community/guides/chazguides/server.md
-              - Did my Saltbox install succeed?: community/guides/chazguides/success.md
-              - Plex Autoscan Mappings; how do they work?: community/guides/chazguides/pas-map.md
-              - How do I mount a teamdrive?: community/guides/chazguides/teamdrive.md
-              - I can't see my media!: community/guides/chazguides/no-media.md
-              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: community/guides/chazguides/tip44.md
-              - I want some app to load at my base domain: community/guides/chazguides/base-domain.md
-              - Why is my disk full?: community/guides/chazguides/disk-full.md
-              - Installing Saltbox on a home server: community/guides/chazguides/home-server.md
-        - Linux:
-          - Aliases: community/guides/aliases.md
-        - Plex:
-          - Tautulii Custom Scripts: community/guides/tautuliscripts.md
-        - Downloading:
-          - Hardlinking: community/guides/hardlinking.md
-        - Migration:
-          - Cloudbox: community/guides/cloudbox.md
-          - Plexguide: community/guides/plexguide.md
-        - Further Reading and Links:
-          - Suggested Reading: community/guides/suggested_reading.md
-          - Links: community/guides/links.md
+
   - Apps:
       - Core:
         - Cloudplow: apps/cloudplow.md
@@ -147,25 +99,32 @@ nav:
         - Plex Autoscan: apps/plex-autoscan.md
         - Portainer: apps/portainer.md
         - Rutorrent: apps/rutorrent.md
-        - Sabnzbd: apps/sabnzbd.md
         - Tautulli: apps/tautulli.md
         - Lidarr: apps/lidarr.md
       - Media Servers:
         - Plex: apps/plex.md
         - Emby: apps/emby.md
         - Jellyfin: apps/jellyfin.md
-      - Optional:
-        - Asshama: apps/asshama.md
+      - Optional Alternatives to Core Apps:
         - Autoscan: apps/autoscan.md
-        - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Petio: apps/petio.md
         - Prowlarr: apps/prowlarr.md
+        - Sabnzbd: apps/sabnzbd.md
+      - Others:
+        - Autoscan: apps/autoscan.md
+        - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Transfer: apps/transfer.md
       - TODO - REPLACE IMAGES:
         - Jackett: apps/jackett.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md
+      - TODO - FROM COMMUNITY:
+        - Deluge: community/apps/deluge.md
+        - Qbittorrent: community/apps/qbittorrent.md
+        - Readarr: community/apps/readarr.md
+        - Bazarr: community/apps/bazarr.md
+        - Hetzner NFS: community/apps/hetzner_nfs.md
 
   - FAQ:
       - System: faq/System.md
@@ -180,11 +139,13 @@ nav:
       - Plex Autoscan: faq/Plex-Autoscan.md
       - ruTorrent: faq/ruTorrent.md
       - Misc: faq/Misc.md
+
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
+
   - Reference:
       - Topics:
         - Prerequisites:
@@ -220,11 +181,37 @@ nav:
           - Saltbox Tools: reference/saltbox-tools.md
           - Subdomains: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
+      - Guides:
+        - General:
+          - Chazlarson Guides:
+              - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
+              - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
+              - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
+              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
+              - I can't see my media!: reference/guides/chazguides/no-media.md
+              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
+              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
+              - Why is my disk full?: reference/guides/chazguides/disk-full.md
+              - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
+        - Linux:
+          - Aliases: reference/guides/aliases.md
+        - Plex:
+          - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
+        - Downloading:
+          - Hardlinking: reference/guides/hardlinking.md
+        - Migration:
+          - Cloudbox: reference/guides/cloudbox.md
+          - Plexguide: reference/guides/plexguide.md
+        - Further Reading and Links:
+          - Suggested Reading: reference/guides/suggested_reading.md
+          - Links: reference/guides/links.md
+
   - Sandbox:
       - Basics: sandbox/basics.md
       - Settings: sandbox/settings.md
       - Index: sandbox/index.md
       - Apps:
+        - ArrX: sandbox/apps/arrx.md
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Nabarr: sandbox/apps/nabarr.md

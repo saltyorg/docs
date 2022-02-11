@@ -2,7 +2,7 @@
 
 Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inverntory-driven approach.
 
-The general idea is to move all the configuration into the `localhost.yml` along with other customizations.
+The general idea is to move all the configuration into the `localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
 Sonarr, Radarr and Lidarr support this new method as of this writing.
 

@@ -17,9 +17,9 @@ You will have to have completed `sb install saltbox` before using this script.
 1. Run the script
 
     ```shell
-        cd /opt/sb_gd
-        source sb_gd/bin/activate
-        python sb_pas.py
+    cd /opt/sb_gd
+    source sb_gd/bin/activate
+    python sb_pas.py
     ```
 
     If that doesn't work, update to the latest version of the files from the repo with `git pull` and try again.
@@ -57,5 +57,5 @@ You will have to have completed `sb install saltbox` before using this script.
 1. Restart the Plex Autoscan service:
 
     ```
-        sudo systemctl restart plex_autoscan
+    sudo systemctl restart plex_autoscan
     ```

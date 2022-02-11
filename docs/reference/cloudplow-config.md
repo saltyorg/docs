@@ -15,13 +15,15 @@ You will have to have completed `sb install saltbox` before using this script.
 1. Run the script
 
     ```
-        cd /opt/sb_gd
-        source sb_gd/bin/activate
-        python sb_cp.py
+    cd /opt/sb_gd
+    source sb_gd/bin/activate
+    python sb_cp.py
     ```
+
+    If that doesn't work, update to the latest version of the files from the repo with `git pull` and try again.
 
 2. Restart the cloudplow service:
 
     ```
-        sudo systemctl restart cloudplow
+    sudo systemctl restart cloudplow
     ```

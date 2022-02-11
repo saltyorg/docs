@@ -6,7 +6,7 @@ In addition to Plex Autoscan receiving scan requests from Sonarr/Radarr/Lidarr, 
 
 Note: For details on setting up Teamdrives and/or Rclone-crypted remotes, visit [https://github.com/l3uddz/plex_autoscan](https://github.com/l3uddz/plex_autoscan).
 
-If you used the [scripted rclone method](rclone-manual), there is a [script in the sb_gd repo](plex-autoscan-config) that will do some of this setup for you.  You will still need to do step 1-3 and 6-9.
+If you used the [scripted rclone method](rclone-manual), there is a [script in the sb_gd repo](plex-autoscan-config) that will help with this setup.
 
 To set this up:
 
@@ -107,7 +107,7 @@ To set this up:
     Enter authorization code:
     ```
 
-8.  When access token retrieval is successfull, you'll see this:
+8.  When access token retrieval is successful, you'll see this:
 
     ```
     2018-06-24 05:57:58,252 -     INFO -    GDRIVE [140007964366656]: Requesting access token for auth code '4/AAAfPHmX9H_kMkMasfdsdfE4r8ImXI_BddbLF-eoCOPsdfasdfHBBzffKto'

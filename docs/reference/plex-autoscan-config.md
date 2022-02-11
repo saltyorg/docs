@@ -13,6 +13,9 @@ This script is only useful if you have used the [scripted rclone method](rclone-
 
 You will have to have completed `sb install saltbox` before using this script.
 
+This does a portion of the full setup [here](plex-autoscan-extras#google-drive-monitoring).  You will still need to do step 1-3 and 6-9.
+
+
 1. Run the script
 
     ```

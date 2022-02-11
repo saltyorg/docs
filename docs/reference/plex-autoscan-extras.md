@@ -4,7 +4,9 @@ Other options for [Plex Autoscan](https://github.com/l3uddz/plex_autoscan).
 
 In addition to Plex Autoscan receiving scan requests from Sonarr/Radarr/Lidarr, it can also monitor Google Drive directly for updates. When a new file is detected, it is checked against the Plex database and if this file is missing, a new scan request is sent to Plex.
 
-Note: For details on setting up Teamdrives and/or Rclone-crypted remotes, visit https://github.com/l3uddz/plex_autoscan.
+Note: For details on setting up Teamdrives and/or Rclone-crypted remotes, visit [https://github.com/l3uddz/plex_autoscan](https://github.com/l3uddz/plex_autoscan).
+
+If you used the [scripted rclone method](rclone-manual), there is a [script in the sb_gd repo](plex-autoscan-config) that will do some of this setup for you.  YOu will still need to do step 1-3 and 6-9.
 
 To set this up:
 
@@ -12,7 +14,7 @@ To set this up:
 
     ```shell
     nano /opt/plex_autoscan/config/config.json
-    ```
+    ``9
 
 2.  Under the `GOOGLE` section of the config, enable Google Drive monitoring and fill in your [Google Drive API Client ID and Secret](google-project-setup.md) [Step 15 of that process].
 

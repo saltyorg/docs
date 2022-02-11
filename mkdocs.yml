@@ -105,7 +105,7 @@ nav:
         - Plex: apps/plex.md
         - Emby: apps/emby.md
         - Jellyfin: apps/jellyfin.md
-      - Optional Alternatives to Core Apps:
+      - Alternatives to Core Apps:
         - Autoscan: apps/autoscan.md
         - Petio: apps/petio.md
         - Prowlarr: apps/prowlarr.md
@@ -120,11 +120,11 @@ nav:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md
       - TODO - FROM COMMUNITY:
-        - Deluge: community/apps/deluge.md
-        - Qbittorrent: community/apps/qbittorrent.md
-        - Readarr: community/apps/readarr.md
-        - Bazarr: community/apps/bazarr.md
-        - Hetzner NFS: community/apps/hetzner_nfs.md
+        - Deluge: apps/deluge.md
+        - Qbittorrent: apps/qbittorrent.md
+        - Readarr: apps/readarr.md
+        - Bazarr: apps/bazarr.md
+        - Hetzner NFS: apps/hetzner_nfs.md
 
   - FAQ:
       - System: faq/System.md

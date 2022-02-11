@@ -9,9 +9,7 @@
 | **[hetzner_nfs](../community/apps/hetzner_nfs.md)**           | cm-hetzner_nfs_server, cm-hetzner_nfs_server_uninstall, cm-hetzner_nfs_client_mount, cm-hetzner_nfs_client_unmount        |
 | **[qBittorrent](../community/apps/qbittorrent.md)**           | cm-qbittorrent                       |
 | **[qBittorrentx](../community/apps/qbittorrentx.md)**         | cm-qbittorrentx                      |
-| **[radarrx](../community/apps/radarrx.md)**                   | cm-radarrx                           |
 | **[readarr](../community/apps/readarr.md)**                   | cm-readarr                           |
 | **[readarrx](../community/apps/readarrx.md)**                 | cm-readarrx                          |
 | **[settings](../community/settings.md)**                      | cm-settings                          |
-| **[sonarrx](../community/apps/sonarrx.md)**                   | cm-sonarrx                           |
 | **[tautullix](../community/apps/tautullix.md)**               | cm-tautullix                         |

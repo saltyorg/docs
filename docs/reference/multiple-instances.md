@@ -2,7 +2,7 @@
 
 Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inventory-driven approach.
 
-The general idea is to move all the configuration into the `localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
+The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
 Roles which support this new method:
  - radarr

@@ -6,7 +6,7 @@ In addition to Plex Autoscan receiving scan requests from Sonarr/Radarr/Lidarr, 
 
 Note: For details on setting up Teamdrives and/or Rclone-crypted remotes, visit [https://github.com/l3uddz/plex_autoscan](https://github.com/l3uddz/plex_autoscan).
 
-If you used the [scripted rclone method](rclone-manual), there is a [script in the sb_gd repo](plex-autoscan-config) that will help with this setup.
+If you used the [scripted rclone method](rclone-manual.md), there is a [script in the sb_gd repo](plex-autoscan-config.md) that will help with this setup.
 
 To set this up:
 

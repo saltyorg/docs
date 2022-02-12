@@ -41,7 +41,7 @@ If you are having issues upgrading the kernel on ovh, where the kernel upgrade i
 
  `uname -r` to see if you have `grs` in kernel version string...
 
- if so, see https://pterodactyl-daemon.readme.io/v0.4/docs/updating-ovh-kernel on how to update the kernel.
+ if so, see https://pterodactyl.io/daemon/0.6/kernel_modifications.html on how to update the kernel.
 
 
 

@@ -88,124 +88,6 @@ nav:
         - Backup: saltbox/backup/backup.md
         - Restore: saltbox/backup/restore.md
 
-  - Apps:
-      - Core:
-        - Cloudplow: apps/cloudplow.md
-        - Overseerr: apps/overseerr.md
-        - Radarr: apps/radarr.md
-        - Sonarr: apps/sonarr.md
-        - Nzbget: apps/nzbget.md
-        - Nzbhydra2: apps/nzbhydra2.md
-        - Plex Autoscan: apps/plex-autoscan.md
-        - Portainer: apps/portainer.md
-        - Rutorrent: apps/rutorrent.md
-        - Tautulli: apps/tautulli.md
-        - Lidarr: apps/lidarr.md
-      - Media Servers:
-        - Plex: apps/plex.md
-        - Emby: apps/emby.md
-        - Jellyfin: apps/jellyfin.md
-      - Alternatives to Core Apps:
-        - Autoscan: apps/autoscan.md
-        - Petio: apps/petio.md
-        - Prowlarr: apps/prowlarr.md
-        - Sabnzbd: apps/sabnzbd.md
-      - Others:
-        - Autoscan: apps/autoscan.md
-        - BTRFS Maintenance: apps/btrfsmaintenance.md
-        - Transfer: apps/transfer.md
-      - TODO - REPLACE IMAGES:
-        - Jackett: apps/jackett.md
-      - TODO - NEED UPDATING:
-        - Organizr: apps/organizr.md
-        - SSTV: apps/sstv.md
-      - TODO - FROM COMMUNITY:
-        - Deluge: apps/deluge.md
-        - Qbittorrent: apps/qbittorrent.md
-        - Readarr: apps/readarr.md
-        - Bazarr: apps/bazarr.md
-        - Hetzner NFS: apps/hetzner_nfs.md
-
-  - FAQ:
-      - System: faq/System.md
-      - Cloud Storage: faq/Cloud Storage.md
-      - CloudFlare: faq/Cloudflare.md
-      - Cloudplow: faq/Cloudplow.md
-      - Docker: faq/Docker.md
-      - Install: faq/Install.md
-      - Backup and Restore: faq/Backup and Restore.md
-      - Rclone: faq/Rclone.md
-      - Plex: faq/Plex.md
-      - Plex Autoscan: faq/Plex-Autoscan.md
-      - ruTorrent: faq/ruTorrent.md
-      - Misc: faq/Misc.md
-
-  - Advanced:
-      - Index: advanced/index.md
-      - Adding Your Own Containers: advanced/your-own-containers.md
-      - User crontab examples: advanced/user-crontab-examples.md
-      - Feeder Mount: advanced/feeder.md
-
-  - Reference:
-      - Topics:
-        - Prerequisites:
-          - Server: reference/server.md
-          - Domain Name: reference/domain.md
-          - Cloud Storage: reference/cloud.md
-          - Plex Account: reference/plex.md
-          - Media Sources: reference/usenet-torrent.md
-        - Google:
-          - Google Permissions: reference/google-account-perms.md
-          - Google Project: reference/google-project-setup.md
-          - Google Group: reference/google-group-setup.md
-          - Google SDK: reference/google-gcloud-tools-install.md
-          - Google Service Accounts: reference/google-service-accounts.md
-          - Google Shared Drives: reference/google-shared-drives.md
-        - Install:
-          - Dependencies: reference/dependencies.md
-          - Accounts and Settings: reference/accounts.md
-          - Preinstall: reference/preinstall.md
-          - Rclone: reference/rclone.md
-          - Rclone [Auto]: reference/rclone-auto.md
-          - Rclone [Manual]: reference/rclone-manual.md
-          - Install: reference/install.md
-        - Other:
-          - Cloudplow Examples: reference/cloudplow.md
-          - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
-          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
-          - Customizing Plex Libraries: reference/customizing-plex-libs.md
-          - Multiple App Instances: reference/multiple-instances.md
-          - Plex Auth Token: reference/plex_auth_token.md
-          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
-          - Ports: reference/ports.md
-          - Saltbox Tools: reference/saltbox-tools.md
-          - Subdomains: reference/subdomain.md
-          - Using Local Storage: reference/local-storage.md
-      - Guides:
-        - General:
-          - Chazlarson Guides:
-              - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
-              - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
-              - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
-              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
-              - I can't see my media!: reference/guides/chazguides/no-media.md
-              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
-              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
-              - Why is my disk full?: reference/guides/chazguides/disk-full.md
-              - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
-        - Linux:
-          - Aliases: reference/guides/aliases.md
-        - Plex:
-          - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
-        - Downloading:
-          - Hardlinking: reference/guides/hardlinking.md
-        - Migration:
-          - Cloudbox: reference/guides/cloudbox.md
-          - Plexguide: reference/guides/plexguide.md
-        - Further Reading and Links:
-          - Suggested Reading: reference/guides/suggested_reading.md
-          - Links: reference/guides/links.md
-
   - Sandbox:
       - Basics: sandbox/basics.md
       - Settings: sandbox/settings.md
@@ -324,3 +206,121 @@ nav:
           - Visualization:
             - Grafana: sandbox/apps/grafana.md
             - Varken: sandbox/apps/varken.md
+
+  - Apps:
+      - Core:
+        - Cloudplow: apps/cloudplow.md
+        - Overseerr: apps/overseerr.md
+        - Radarr: apps/radarr.md
+        - Sonarr: apps/sonarr.md
+        - Nzbget: apps/nzbget.md
+        - Nzbhydra2: apps/nzbhydra2.md
+        - Plex Autoscan: apps/plex-autoscan.md
+        - Portainer: apps/portainer.md
+        - Rutorrent: apps/rutorrent.md
+        - Tautulli: apps/tautulli.md
+        - Lidarr: apps/lidarr.md
+      - Media Servers:
+        - Plex: apps/plex.md
+        - Emby: apps/emby.md
+        - Jellyfin: apps/jellyfin.md
+      - Alternatives to Core Apps:
+        - Autoscan: apps/autoscan.md
+        - Petio: apps/petio.md
+        - Prowlarr: apps/prowlarr.md
+        - Sabnzbd: apps/sabnzbd.md
+      - Others:
+        - Autoscan: apps/autoscan.md
+        - BTRFS Maintenance: apps/btrfsmaintenance.md
+        - Transfer: apps/transfer.md
+      - TODO - REPLACE IMAGES:
+        - Jackett: apps/jackett.md
+      - TODO - NEED UPDATING:
+        - Organizr: apps/organizr.md
+        - SSTV: apps/sstv.md
+      - TODO - FROM COMMUNITY:
+        - Deluge: apps/deluge.md
+        - Qbittorrent: apps/qbittorrent.md
+        - Readarr: apps/readarr.md
+        - Bazarr: apps/bazarr.md
+        - Hetzner NFS: apps/hetzner_nfs.md
+
+  - FAQ:
+      - System: faq/System.md
+      - Cloud Storage: faq/Cloud Storage.md
+      - CloudFlare: faq/Cloudflare.md
+      - Cloudplow: faq/Cloudplow.md
+      - Docker: faq/Docker.md
+      - Install: faq/Install.md
+      - Backup and Restore: faq/Backup and Restore.md
+      - Rclone: faq/Rclone.md
+      - Plex: faq/Plex.md
+      - Plex Autoscan: faq/Plex-Autoscan.md
+      - ruTorrent: faq/ruTorrent.md
+      - Misc: faq/Misc.md
+
+  - Advanced:
+      - Index: advanced/index.md
+      - Adding Your Own Containers: advanced/your-own-containers.md
+      - User crontab examples: advanced/user-crontab-examples.md
+      - Feeder Mount: advanced/feeder.md
+
+  - Reference:
+      - Topics:
+        - Prerequisites:
+          - Server: reference/server.md
+          - Domain Name: reference/domain.md
+          - Cloud Storage: reference/cloud.md
+          - Plex Account: reference/plex.md
+          - Media Sources: reference/usenet-torrent.md
+        - Google:
+          - Google Permissions: reference/google-account-perms.md
+          - Google Project: reference/google-project-setup.md
+          - Google Group: reference/google-group-setup.md
+          - Google SDK: reference/google-gcloud-tools-install.md
+          - Google Service Accounts: reference/google-service-accounts.md
+          - Google Shared Drives: reference/google-shared-drives.md
+        - Install:
+          - Dependencies: reference/dependencies.md
+          - Accounts and Settings: reference/accounts.md
+          - Preinstall: reference/preinstall.md
+          - Rclone: reference/rclone.md
+          - Rclone [Auto]: reference/rclone-auto.md
+          - Rclone [Manual]: reference/rclone-manual.md
+          - Install: reference/install.md
+        - Other:
+          - Cloudplow Examples: reference/cloudplow.md
+          - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
+          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
+          - Customizing Plex Libraries: reference/customizing-plex-libs.md
+          - Multiple App Instances: reference/multiple-instances.md
+          - Plex Auth Token: reference/plex_auth_token.md
+          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
+          - Ports: reference/ports.md
+          - Saltbox Tools: reference/saltbox-tools.md
+          - Subdomains: reference/subdomain.md
+          - Using Local Storage: reference/local-storage.md
+      - Guides:
+        - General:
+          - Chazlarson Guides:
+              - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
+              - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
+              - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
+              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
+              - I can't see my media!: reference/guides/chazguides/no-media.md
+              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
+              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
+              - Why is my disk full?: reference/guides/chazguides/disk-full.md
+              - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
+        - Linux:
+          - Aliases: reference/guides/aliases.md
+        - Plex:
+          - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
+        - Downloading:
+          - Hardlinking: reference/guides/hardlinking.md
+        - Migration:
+          - Cloudbox: reference/guides/cloudbox.md
+          - Plexguide: reference/guides/plexguide.md
+        - Further Reading and Links:
+          - Suggested Reading: reference/guides/suggested_reading.md
+          - Links: reference/guides/links.md

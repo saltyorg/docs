@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install cm-bazarr
+sb install bazarr
 
 ```
 

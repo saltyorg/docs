@@ -229,21 +229,20 @@ nav:
         - Petio: apps/petio.md
         - Prowlarr: apps/prowlarr.md
         - Sabnzbd: apps/sabnzbd.md
+        - Deluge: apps/deluge.md
+        - Qbittorrent: apps/qbittorrent.md
       - Others:
         - Autoscan: apps/autoscan.md
+        - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
+        - Hetzner NFS: apps/hetzner_nfs.md
         - Transfer: apps/transfer.md
+        - Readarr: apps/readarr.md
       - TODO - REPLACE IMAGES:
         - Jackett: apps/jackett.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md
-      - TODO - FROM COMMUNITY:
-        - Deluge: apps/deluge.md
-        - Qbittorrent: apps/qbittorrent.md
-        - Readarr: apps/readarr.md
-        - Bazarr: apps/bazarr.md
-        - Hetzner NFS: apps/hetzner_nfs.md
 
   - FAQ:
       - System: faq/System.md

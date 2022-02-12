@@ -12,7 +12,7 @@
 
 ``` { .shell }
 
-sb install cm-deluge
+sb install deluge
 
 ```
 
@@ -53,6 +53,6 @@ sb install cm-deluge
 
 To add Deluge as a download client in Sonarr/Radarr use the following settings. Both are able to remove completed torrents after they have finished seeding.
 
-  ![](../../community/images/deluge_add_to_arr.png)
+  ![](../images/community/deluge_add_to_arr.png)
 
 - [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }

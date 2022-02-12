@@ -18,7 +18,7 @@ Note that only one type of a given book is supported. <br />
 
 ``` shell
 
-sb install cm-readarr
+sb install readarr
 
 ```
 

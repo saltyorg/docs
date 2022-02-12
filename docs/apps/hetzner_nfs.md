@@ -26,12 +26,12 @@ There are 3 phases to the setup. They are broken down below.
 
       - Mediabox:
 
-      ![](../../community/images/hetzner_mbox.png)
+      ![](../../images/community/hetzner_mbox.png)
 
 
       - Feederbox:
 
-      ![](../../community/images/hetzner_fbox.png)
+      ![](../../images/community/hetzner_fbox.png)
 
 ### NFS Server (Feederbox)
 
@@ -56,7 +56,7 @@ There are 3 phases to the setup. They are broken down below.
 
     ``` { .shell }
 
-    sb install cm-hetzner_nfs_server
+    sb install hetzner_nfs_server
 
     ```
 
@@ -85,7 +85,7 @@ There are 3 phases to the setup. They are broken down below.
 
     ``` { .shell }
 
-    sb install cm-hetzner_nfs_server
+    sb install hetzner_nfs_server
 
     ```
 
@@ -96,11 +96,11 @@ Simply run the following commands on their respective servers:
 ### NFS Server (Feederbox)
 
 ```
-sb install cm-hetzner_nfs_server_uninstall
+sb install hetzner_nfs_server_uninstall
 ```
 
 ### NFS Client (Mediabox)
 
 ```
-sb install cm-hetzner_nfs_client_unmount
+sb install hetzner_nfs_client_unmount
 ```

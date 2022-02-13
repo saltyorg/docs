@@ -123,7 +123,7 @@ docker run -d  \
   <strong>cloudb0x/plex_patrol:latest</strong>
 </pre>
 
-Autoscan exposing an alternate port for perhaps a second instance, but only visisble on the host [not outside]
+Autoscan exposing an alternate port for perhaps a second instance, but only visible on the host [not outside]
 <pre>
 docker run -d  \
   --name=<strong>autoscan</strong>  \

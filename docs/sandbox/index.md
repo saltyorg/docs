@@ -57,6 +57,7 @@
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
+  -  **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
   -  **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`

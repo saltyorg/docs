@@ -187,6 +187,7 @@ nav:
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
+            - unifi : sandbox/apps/unifi.md
           - flaresolverr: sandbox/apps/flaresolverr.md
           - Log Management:
             - logarr: sandbox/apps/logarr.md

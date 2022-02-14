@@ -27,7 +27,7 @@ The default theme is `l7-dark`.
 Changing the theme can be done via the [inventory](../saltbox/inventory/index.md):
 
 ```
-error_pages_template: "hack-terminal"
+error_pages_template: "hacker-terminal"
 ```
 
 ## Can I create a theme?

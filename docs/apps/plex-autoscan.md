@@ -100,7 +100,7 @@ _Note 2: Above command requires Rclone version 1.39+_
 
 ## 5. Edit the control files in the Plex Autoscan config file.
 
-If you DID NOT use the [scripted rclone setup](../reference/rclone-manual.md); you can skip this step
+If you did step 4; you can skip this step.
 
    1. On the server's shell, run the following command:
 

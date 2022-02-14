@@ -117,6 +117,7 @@ If you did step 4; you can skip this step.
       ```
       nano /opt/plex_autoscan/config/config.json
       ```
+
    3. Find the following:
 
       ```json

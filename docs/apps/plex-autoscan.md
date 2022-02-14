@@ -86,7 +86,7 @@ The following step is important so that Plex Autoscan can remove missing/replace
 
 For more details on what the control file is, see [here](../faq/Plex-Autoscan.md#purpose-of-a-control-file-in-plex-autoscan).
 
-If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you, and you can skip this step
+If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you, and you can skip this step.
 
 To upload the mounted.bin control file, run the following command:
 

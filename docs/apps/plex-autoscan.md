@@ -82,17 +82,26 @@ _Note 4: The PAS URL is not meant to be accessed via a browser by default (i.e. 
 
 ## 4. Upload Control File to Google Drive
 
-If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you.
-
 The following step is important so that Plex Autoscan can remove missing/replaced media files out of Plex (i.e. empty trash). Without it, Plex will be left with "unavailable" media that can't play (i.e. media posters with trash icons on them).
 
 For more details on what the control file is, see [here](../faq/Plex-Autoscan.md#purpose-of-a-control-file-in-plex-autoscan).
+
+If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you.
+
+User this commaand:
+```
+rclone ls google:/*.bin
+```
+
+To get the file names that you will need to enter into the Plex-autoscan config in place of 'mounted.bin'
 
 To upload the mounted.bin control file, run the following command:
 
 ```
 rclone touch google:/mounted.bin
 ```
+
+**This command will not work if your `google` remote is a union remote.**
 
 _Note 1: If your Rclone remote config has a different name for Google Drive, replace `google:` with yours._
 

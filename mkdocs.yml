@@ -261,6 +261,7 @@ nav:
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
+      - Styled Error Pages: advanced/styled-error-pages.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
 

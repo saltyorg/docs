@@ -184,6 +184,30 @@
 
       - Default is `no`.
 
+    - `provider`: DNS provider.
+
+      - Default is `cloudflare`.
+
+    - `subdomains`: traefik subdomains.
+
+      - `dash`: traefik dashboard subdomain.
+
+        - Default is `dash`.
+
+      - `metrics`: traefik metrics subdomain.
+
+        - Default is `metrics`.
+
+      - `jaeger`: traefik jaeger subdomain.
+
+        - Default is `jaeger`.
+
+    - `error_pages`: enable styled error pages.
+
+      - Default is `no`.
+
+      - see [here](../advanced/styled-error-pages.md) for configuration details.
+
 - `mounts`: cloud storage mount settings.
 
     - `remote`: What type of remote to use.

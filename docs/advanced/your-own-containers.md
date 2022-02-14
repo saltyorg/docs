@@ -11,6 +11,7 @@ If you want to create a role file that you can install like the built-in applica
 
 # Format
 
+
 <pre>
 docker run -d  \
   --name=<strong>APPNAME</strong>  \
@@ -22,9 +23,13 @@ docker run -d  \
   --network-alias=<strong>APPNAME</strong>  \
   --label com.github.saltbox.saltbox_managed=true \
   --label traefik.enable=true \
+  --label traefik.http.routers.<strong>APPNAME</strong>-http.entrypoints=web \
+  --label traefik.http.routers.<strong>APPNAME</strong>-http.middlewares=redirect-to-https,gzip \
+  --label traefik.http.routers.<strong>APPNAME</strong>-http.rule=Host\(\`<strong>APPNAME</strong>.yourdomain.com\`\) \
+  --label traefik.http.routers.<strong>APPNAME</strong>-http.service=<strong>APPNAME</strong> \
   --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
   --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
-  --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
+  --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME</strong>.yourdomain.com\`\) \
   --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
   --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
   --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
@@ -49,9 +54,13 @@ docker run -d \
     -v /mnt/:/mnt/ \
     --label com.github.saltbox.saltbox_managed=true \
     --label traefik.enable=true \
+    --label traefik.http.routers.<strong>APPNAME</strong>-http.entrypoints=web \
+    --label traefik.http.routers.<strong>APPNAME</strong>-http.middlewares=redirect-to-https,gzip \
+    --label traefik.http.routers.<strong>APPNAME</strong>-http.rule=Host\(\`<strong>APPNAME</strong>.yourdomain.com\`\) \
+    --label traefik.http.routers.<strong>APPNAME</strong>-http.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.entrypoints=websecure \
     --label traefik.http.routers.<strong>APPNAME</strong>.middlewares=secureHeaders@file \
-    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME.yourdomain.com</strong>\`\) \
+    --label traefik.http.routers.<strong>APPNAME</strong>.rule=Host\(\`<strong>APPNAME</strong>.yourdomain.com\`\) \
     --label traefik.http.routers.<strong>APPNAME</strong>.service=<strong>APPNAME</strong> \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>APPNAME</strong>.tls.options=securetls@file \
@@ -77,13 +86,17 @@ docker run -d \
     -v /opt:/opt \
     --label com.github.saltbox.saltbox_managed=true \
     --label traefik.enable=true \
+    --label traefik.http.routers.<strong>tautulli</strong>-http.entrypoints=web \
+    --label traefik.http.routers.<strong>tautulli</strong>-http.middlewares=redirect-to-https,gzip \
+    --label traefik.http.routers.<strong>tautulli</strong>-http.rule=Host\(\`<strong>tautulli.yourdomain.com</strong>\`\) \
+    --label traefik.http.routers.<strong>tautulli</strong>-http.service=<strong>tautulli</strong> \
     --label traefik.http.routers.<strong>tautulli</strong>.entrypoints=websecure \
     --label traefik.http.routers.<strong>tautulli</strong>.middlewares=secureHeaders@file \
     --label traefik.http.routers.<strong>tautulli</strong>.rule=Host\(\`<strong>tautulli.yourdomain.com</strong>\`\) \
     --label traefik.http.routers.<strong>tautulli</strong>.service=<strong>tautulli</strong> \
     --label traefik.http.routers.<strong>tautulli</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>tautulli</strong>.tls.options=securetls@file \
-    --label traefik.http.services.<strong>tautulli</strong>.loadbalancer.server.port=<strong>8181</strong> \
+    --label traefik.http.services.<strong>tautulli</strong>.loadbalancer.server.port=<strong>8181</strong> \    
     <strong>linuxserver/tautulli</strong>
 </pre>
 
@@ -98,6 +111,10 @@ docker run -d  \
   --network-alias=<strong>speedtest</strong>  \
   --label com.github.saltbox.saltbox_managed=true \
   --label traefik.enable=true \
+  --label traefik.http.routers.<strong>speedtest</strong>-http.entrypoints=web \
+  --label traefik.http.routers.<strong>speedtest</strong>-http.middlewares=redirect-to-https,gzip \
+  --label traefik.http.routers.<strong>speedtest</strong>-http.rule=Host\(\`<strong>speedtest.yourdomain.com</strong>\`\) \
+  --label traefik.http.routers.<strong>speedtest</strong>-http.service=<strong>speedtest</strong> \
   --label traefik.http.routers.<strong>speedtest</strong>.entrypoints=websecure \
   --label traefik.http.routers.<strong>speedtest</strong>.middlewares=secureHeaders@file \
   --label traefik.http.routers.<strong>speedtest</strong>.rule=Host\(\`<strong>speedtest.yourdomain.com</strong>\`\) \
@@ -245,12 +262,16 @@ Note: These are important, but leave them out if your docker run command require
 
 ``` { .sh .annotate }
   --label traefik.enable=true
-  --label traefik.http.routers.<name>.entrypoints=websecure
-  --label traefik.http.routers.<name>.middlewares=secureHeaders@file
-  --label traefik.http.routers.<name>.rule=Host\(\`<name>.<yourdomain>\`\)
-  --label traefik.http.routers.<name>.service=<name>
-  --label traefik.http.routers.<name>.tls.certresolver=cfdns
-  --label traefik.http.routers.<name>.tls.options=securetls@file
+  --label traefik.http.routers.<name>-http.entrypoints=web \
+  --label traefik.http.routers.<name>-http.middlewares=redirect-to-https,gzip \
+  --label traefik.http.routers.<name>-http.rule=Host\(\`<name>.yourdomain.com\`\) \
+  --label traefik.http.routers.<name>-http.service=<name> \
+  --label traefik.http.routers.<name>.entrypoints=websecure \
+  --label traefik.http.routers.<name>.middlewares=secureHeaders@file \
+  --label traefik.http.routers.<name>.rule=Host\(\`<name>.yourdomain.com\`\) \
+  --label traefik.http.routers.<name>.service=<name> \
+  --label traefik.http.routers.<name>.tls.certresolver=cfdns \
+  --label traefik.http.routers.<name>.tls.options=securetls@file \
   --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (1)
 ```
 

@@ -34,7 +34,6 @@ sb install sandbox-doplarr
 
 !!! Note
       📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr. Additional informations here [:octicons-link-16: Documentation](https://github.com/kiranshila/Doplarr/blob/main/README.md#sonarrradarr) .
-
       The recommended way to customize these parameters is to use the [inventory](https://docs.saltbox.dev/saltbox/inventory/) :
       You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section:
 

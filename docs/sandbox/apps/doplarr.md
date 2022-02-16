@@ -20,9 +20,9 @@
 
 ### 2. Set up overseer parameters.
 
-1. In `/opt/sandbox/settings.yaml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize satlbox settings, the defalut url `http://overseerr:5055` should be correct.
+1. In `/opt/sandbox/settings.yaml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct.
 2. In `/opt/sandbox/settings.yaml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
-You can get your api keys in your main setting page in overseer: https://overseerr._yourdomain.com_/settings
+You can get your api keys in your main setting page in overseer: `https://overseerr._yourdomain.com_/settings`
 
 ### 3. Installation
 

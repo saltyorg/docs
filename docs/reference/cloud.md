@@ -50,6 +50,8 @@ The primary disadvantage ot Shared Drives is that they have a fixed limit of 400
 
 For those reasons, this documentation will discuss ONLY Shared Drives.
 
+However, if your data is currently on My Drive and you want to keep it there, Saltbox works fine with that as well.  Rather than littering the docs with "If you're using My Drive to this, Shared drives do that" decision points, we standardized on Shared Drives.  You'll just need to skip some stuff aht refers to shared drives.
+
 As a note, if you are unable to create Shared Drives in the Google Drive Web UI, that's a sign that you have the wrong type of Google Drive account.
 
   ![](../images/google-drive-acct.png)

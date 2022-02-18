@@ -1,13 +1,18 @@
 ## Installing Saltbox on a home server
 
 Prerequisites:
+
  - Domain
+
  - Static IP OR Dynamic DNS configured
+
  - Router supports port forwarding
+
  - ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
+
  - Router supports hairpin NAT [or NAT loopback]
    Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
-    Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing.
+   Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing.
 
 NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.
 

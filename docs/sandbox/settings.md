@@ -4,22 +4,57 @@ The configuration file for Saltbox Sandbox settings is called settings.yml and i
 
 settings.yml
 
-``` { .yaml .annotate }
+``` yaml
 ---
-example:  # (1)
-  roles:
-    - podcasts
-    - poetry
-notifiarr:  # (2)
+alternatrrx:
+  roles: ["1080webdl", "1080remux"]
+delugevpn:
+  vpn_endpoint: netherlands.ovpn
+  vpn_pass: your_vpn_password
+  vpn_prov: pia
+  vpn_user: your_vpn_username
+  vpn_client: wireguard # 'wireguard' or 'openvpn'
+doplarr:
+  discord_token: your_discord_bot_token
+  overseerr_url: "http://overseerr:5055"
+  overseerr_api: your_overseer_api_key
+goplaxt:
+  trakt_id: ~
+  trakt_secret: ~
+handbrake:
+  handbrake_pass: saltbox # must be less than eight characters
+moviematch:
+  libraries: Movies
+  plex_url: http://plex:32400
+notifiarr:
   api_key: "api-key-from-notifiarr.com"
-unifi:  # (3)
-  port: 8080
+ombix:
+  roles: ["4k"]
+plex_meta_manager:
+  time: "03:00"
+qbit_manage:
+  qbt_run: "false" # Default is "false"
+  qbt_schedule: "30" # Default is "30"
+  qbt_config: "config.yml" # Default is "config.yml"
+  qbt_logfile: "activity.log" # Default is "activity.log"
+  qbt_cross_seed: "false" # Default is "false"
+  qbt_recheck: "false" # Default is "false"
+  qbt_cat_update: "false" # Default is "false"
+  qbt_tag_update: "false" # Default is "false"
+  qbt_rem_unregistered: "false" # Default is "false"
+  qbt_rem_orphaned: "false" # Default is "false"
+  qbt_tag_nohardlinks: "false" # Default is "false"
+  qbt_skip_recycle: "false" # Default is "false"
+  qbt_dry_run: "true" # Default is "false"
+  qbt_log_level: "INFO" # Default is "INFO"
+  qbt_divider: "=" # Default is "="
+  qbt_width: "100" # Default is "100"
+  qbt_debug: "false"
+  qbt_trace: "false"
+requestrrx:
+  roles: ["1080p", "4k"]
+rfloodx:
+  roles: [""]
+transmissionx:
+  roles: [""]
 ```
-
-1. Example role, provide a list of "examples's"
-    For each listed item an Example instance will be created and the item set to the subdomain.
-
-2. Notifiarr
-    Add your notifiarr api key here.
-
-3. Unifi

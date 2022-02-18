@@ -20,18 +20,19 @@ NOTE: None of this initial setup is Saltbox-specific. If you want to run a serve
 
 You need a domain.  They’re cheap or even free.
 
-You can find cheap ones here:  https://tld-list.com/
-There are a variety of places that provide free domains.  Here’s one offered with no endorsement [It was the first google result for “free domain”]: https://www.freenom.com/en/freeandpaiddomains.html
+You can find cheap ones [here](https://tld-list.com/).
+
+There are a variety of places that provide free domains.  Here’s one offered with no endorsement; [the first Google result for “free domain”](https://www.freenom.com/en/freeandpaiddomains.html).
 
 Configure the DNS at your registrar to point your domain at your home external IP address.
 
-You can find that using something like: https://whatismyipaddress.com/
+You can find that using something like: [https://whatismyipaddress.com/](https://whatismyipaddress.com/)
 
 You will need to configure “dynamic DNS” to make sure that domain keeps pointing to your home IP, which is subject to change, most likely.
 
 Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  If you use Cloudflare for DNS, the ddns client configuration will be automatically done when you run the role.
 
-The saltbox role is ddclient, and you run it like any other saltbox role:
+The saltbox role is `ddclient`, and you run it like any other saltbox role:
 
 ```
 sb install ddclient
@@ -42,10 +43,12 @@ You’ll do this AFTER you’ve installed saltbox.
 ### Machine:
 
 I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
-I enabled OpenSSH and imported my SSH keys from github
+
+  - I enabled OpenSSH and imported my SSH keys from github
+
 That’s all.
 
-Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as that user from the start rather than starting as root like you would on a remote server.
+Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as that user from the start rather than starting as `root` like you would on a remote server.
 
 ## Router:
 
@@ -54,10 +57,12 @@ You need some ports forwarded to that machine on your router.  Explaining how to
 A remote server like one at Hetzner is just exposed to the open internet, so when you connect to that server on port 123, you’re connecting directly to that specific machine.  Your home network doesn’t work like that.  Your ISP gives you a single IP address, and your router translates all traffic in and out of your network to make sure it gets to the correct place.  Thas means that when a connection from the outside comes in, it is connecting to the router, not any individual machine.  You need to set up port forwarding so that when you try to connect to Radarr, for example, your router knows to send this request to the machine where you’ve installed Radarr.
 
 There are two parts to what you need to do:
-GIve your server an unchanging local IP address
-Forward requests from the outside on relevant ports to that IP address.
 
-The first is required because typically your router will be able to configure port forwarding to an IP address, so you don’t want the IP of your server changing.  Typically, on your router, everything gets an IP assigned automagically by the router’s DHCP server, so the IP address of a specific thing might change.  Depending on how your network is set up, it may be unlikely, but it’s a possibility nonetheless, so we’re going to make sure it doesn’t happen by telling the router “Always give this machine the IP address 1.2.3.4”.
+  - Give your server an unchanging local IP address
+
+  - Forward requests from the outside on relevant ports to that IP address.
+
+The first is required because typically your router will be able to configure port forwarding to an IP address, so you don’t want the IP of your server changing.  Typically, on your router, everything gets an IP assigned automaically by the router’s DHCP server, so the IP address of a specific thing might change.  Depending on how your network is set up, it may be unlikely, but it’s a possibility nonetheless, so we’re going to make sure it doesn’t happen by telling the router “Always give this machine the IP address 1.2.3.4”.
 
 On my Netgear, they call this “Address Reservation” and it’s found under “LAN Setup”:
 
@@ -80,20 +85,25 @@ If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run
 
 At this point, you should be able to SSH to that machine using your domain.
 
+```
 ssh YOU@YOUR_DOMAIN -p 2207
+```
 
 That should work just like:
 
-
+```
 ssh YOU@192.168.X.Y
+```
 
 If it doesn’t, verify all the port-forwarding details.
 
 You should also be able to connect to a web server running on that machine.
 
 Verify this part is working by installing apache on your server:
-sudo apt install apache2
 
+```
+sudo apt install apache2
+```
 Then open a web browser and go to your domain [http://yourdomain.tld] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.
 
 If you see the default apache page, you’re set to go.
@@ -101,16 +111,19 @@ If you see the default apache page, you’re set to go.
 
 
 Once verified, remove apache:
+
+```
 sudo apt remove apache2
+```
 
 With that done, we can move on to the install.
 
-
 IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
 
-From this point on there is nothing special about the install process on this home server as opposed to a remote server.  I’m just following the wiki.
+From this point on there is nothing special about the install process on this home server as opposed to a remote server.  I’m just following the docs.
 
 I ran the first (“Combined”) dependency/repo script on this page:
+
 https://github.com/Saltbox/Saltbox/wiki/Install%3A-Dependencies-%28Master-Branch%29
 
 That ran for a while, and ended here:
@@ -143,7 +156,10 @@ I made no changes to settings.yml.
 
 
 Run the preinstall:
-sudo ansible-playbook saltbox.yml --tags preinstall
+
+```
+sb install preinstall
+```
 
 In my case there were no kernel updates required, so the preinstall didn’t reboot:
 
@@ -154,8 +170,9 @@ I then set up rclone remote as usual.
 
 Next, I ran saltbox setup:
 
-
-sudo ansible-playbook saltbox.yml --tags saltbox
+```
+sb install saltbox
+```
 
 In my case the setup ran through without problems the first time:
 
@@ -188,7 +205,7 @@ lidarr : Create and start container --------------------------------------------
 chaz@oberon:~/saltbox$
 
 
-Now I did one last log out and back in so I could access the docker command.
+Now I did one last log out and back in so I could access the `docker` command.
 
 At this point, everything is running and I’m ready to go through the application setup.
 

@@ -66,20 +66,21 @@ The first is required because typically your router will be able to configure po
 
 On my Netgear, they call this “Address Reservation” and it’s found under “LAN Setup”:
 
+  ![](../../../images/chaz-guides/address-reservation-01.png)
 
 I scroll to the end of that list, click “Add”, then choose a device and type in the address I want that thing to have.
 
-The server I’m installing Saltbox on is “oberon”, and I’ve assigned it 192.168.1.5.
+The server I’m installing Saltbox on is “random”, and I’ve assigned it 192.168.1.11.
 
-
-
-
+  ![](../../../images/chaz-guides/address-reservation-02.png)
 
 Next, port forwarding:
 
+  ![](../../../images/chaz-guides/port-forward.png)
 
 You can see here that I’ve set it such that outside requests to port 80, 443, 2205, and 3468 get forwarded on to the IP we just assigned to the saltbox server.
-Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy, ssh, and Plex-Autoscan.
+
+Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (2207), and Plex-Autoscan (3468).
 
 If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
 
@@ -104,11 +105,12 @@ Verify this part is working by installing apache on your server:
 ```
 sudo apt install apache2
 ```
+
 Then open a web browser and go to your domain [http://yourdomain.tld] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.
 
 If you see the default apache page, you’re set to go.
 
-
+  ![](../../../images/chaz-guides/ubuntu-default.png)
 
 Once verified, remove apache:
 
@@ -122,16 +124,14 @@ IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwar
 
 From this point on there is nothing special about the install process on this home server as opposed to a remote server.  I’m just following the docs.
 
-I ran the first (“Combined”) dependency/repo script on this page:
+I ran the first dependency script on [this page](../../../saltbox/install/install.md):
 
-https://github.com/Saltbox/Saltbox/wiki/Install%3A-Dependencies-%28Master-Branch%29
+That ran for a while and finished without errors.
 
-That ran for a while, and ended here:
+In my `accounts.yml`, I’m entering an existing account on the ubuntu machine [this is the account I created when I installed Ubuntu]:
 
-
-In my accounts.yml, I’m entering an existing account on the ubuntu machine:
-
----
+```
+-
 user:
   name: chaz
   pass: REDACTED
@@ -140,6 +140,7 @@ user:
 plex:
   user: REDACTED
   pass: REDACTED
+  tfa: no
 cloudflare:
   email: REDACTED
   api: REDACTED
@@ -148,12 +149,14 @@ pushover:
   user_key:
   priority:
 apprise:
+dockerhub:
+  user:
+  token:
+```
 
 I entered my cloudflare credentials because DNS for the domain I’m using is set up there, so the saltbox install is going to create the subdomains for me.
 
-I made no changes to settings.yml.
-
-
+I made no changes to `settings.yml`.
 
 Run the preinstall:
 
@@ -161,12 +164,11 @@ Run the preinstall:
 sb install preinstall
 ```
 
-In my case there were no kernel updates required, so the preinstall didn’t reboot:
+In my case there were no kernel updates required, so the preinstall didn’t reboot.
 
+I am already logged in as the user I specified in `accounts.yml`, so I didn’t have to log out of the `root` account and log back in as `chaz`.  If you specified a new account that the preinstall created, you need to log out and log in as that account.
 
-I am already logged in as the user I specified in accounts.yml, so I didn’t have to log out of the root account and log back in as chaz.  If you specified a new account that the preinstall created, you need to log out and log in as that account.
-
-I then set up rclone remote as usual.
+I then set up the rclone remote as usual.
 
 Next, I ran saltbox setup:
 
@@ -176,34 +178,33 @@ sb install saltbox
 
 In my case the setup ran through without problems the first time:
 
+```
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok=787  changed=197  unreachable=0    failed=0    skipped=329  rescued=0    ignored=0
 
-PLAY RECAP ************************************************************************************
-localhost              	: ok=713  changed=180  unreachable=0	failed=0
-
-Tuesday 14 April 2020  11:31:47 -0500 (0:00:00.040)   	0:13:22.200 *********
+Friday 18 February 2022  15:15:15 -0600 (0:00:02.386)       0:33:08.898 *******
 ===============================================================================
-docker : Start docker service -----------------------------------------------------...- 121.63s
-docker : Wait for 30 seconds before commencing ------------------------------------...- 30.65s
-iperf3 : Build and install iperf3 -------------------------------------------------...- 17.04s
-system : APT | APT upgrade --------------------------------------------------------...- 16.82s
-plex : Extra | Stop Plex Container ------------------------------------------------...- 11.39s
-plex : Create and start container -------------------------------------------------...- 11.30s
-remote : Rclone VFS | Start 'rclone_vfs.service' ----------------------------------...- 11.03s
-rutorrent : Settings | Wait for 10 seconds before stopping rutorrent container ----...- 10.43s
-ombi : Create and start container -------------------------------------------------...- 9.39s
-docker : Stop docker service ------------------------------------------------------...- 8.48s
-system : sysctl | Tuning ----------------------------------------------------------...- 7.49s
-nodejs : Install nodejs -----------------------------------------------------------...- 7.37s
-plexpy : Create and start container -----------------------------------------------...- 7.03s
-jackett : Create and start container ----------------------------------------------...- 6.78s
-nzbhydra2 : Create and start container --------------------------------------------...- 6.22s
-nodejs : Update npm ---------------------------------------------------------------...- 6.12s
-remote : Rclone VFS | "Wait for 5 seconds" ----------------------------------------...- 5.42s
-sanity_check : Get all available TAGS ---------------------------------------------...- 5.08s
-sonarr : Create and start container -----------------------------------------------...- 4.96s
-lidarr : Create and start container -----------------------------------------------...- 4.88s
-chaz@oberon:~/saltbox$
-
+user : User Account | Reset ownership of '/opt/' path ----------------------------------------------------- 651.36s
+system : APT | APT full-upgrade --------------------------------------------------------------------------- 226.68s
+docker : Binary | Get 'Docker CE CLI' version ------------------------------------------------------------- 121.57s
+unionfs : Docker | Daemon | Restart docker service -------------------------------------------------------- 121.49s
+unionfs : Docker | Containers Stop | Stop all running Docker containers ----------------------------------- 109.26s
+docker : Wait for 60 seconds before commencing ------------------------------------------------------------ 60.49s
+unionfs : Docker | Daemon | Wait for 30 seconds before commencing ----------------------------------------- 30.33s
+iperf3 : Build and install iperf3 ------------------------------------------------------------------------- 19.05s
+plex_extra_tasks : Stop Docker Container ------------------------------------------------------------------ 16.10s
+docker : Re-start all previously running Docker containers ------------------------------------------------ 15.95s
+system : APT | Remove dependencies that are no longer required -------------------------------------------- 15.61s
+unionfs : Docker | Containers Start | Start all previously running Docker containers ---------------------- 15.58s
+docker : Stop docker service ------------------------------------------------------------------------------ 14.77s
+plex_extra_tasks : Post-Install Checks | Wait for Plex executable to be created --------------------------- 11.76s
+remote : Rclone VFS | Start 'rclone_vfs.service' ---------------------------------------------------------- 11.41s
+traefik : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container ------------------ 11.28s
+nzbget : Post-Install | Wait for 10 seconds --------------------------------------------------------------- 10.25s
+plex : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container --------------------- 10.05s
+system : Populate Service Facts --------------------------------------------------------------------------- 9.70s
+rutorrent : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container ---------------- 7.45s
+```
 
 Now I did one last log out and back in so I could access the `docker` command.
 

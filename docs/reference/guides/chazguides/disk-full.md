@@ -34,7 +34,7 @@ What’s that command?
 sudo	run with root privileges
 ncdu	show graphic display of disk usage
 -x	don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your google drive]
---exclude /opt/plex	ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here. 
+--exclude /opt/plex	ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here.
 /	starting point of scan
 ```
 
@@ -124,7 +124,7 @@ You can import things from here after telling Radarr what movie it is or the lik
 If the bulk of the space is in staged-for-upload files sitting in `/mnt/local/Media`, then cloudplow hasn’t uploaded those files yet.
 
 This is typically due to one of the following:
- 
+
    - Upload threshold hasn’t been reached.
    - You’ve reached the Google Drive upload cap of 750GB/day
 
@@ -162,9 +162,9 @@ That’s going to check every 30 minutes, and start uploading when the folder re
 In the default setup, you can upload 750GB per day.
 
 To see if you’ve hit that quota, run a cloudplow upload manually.  At a command prompt, type:
- 
+
 ```
-cloudplow upload 
+cloudplow upload
 ```
 
 This will kick off an upload without regard for the threshold.  You can run this anytime you want to upload whatever’s pending right this very minute.
@@ -183,7 +183,7 @@ If you find yourself hitting that 750GB cap regularly, you may want to set up [s
 
 ## Rclone cache is out of control!
 
-If the bulk of the space is in your rclone VFS cache, you’ll want to check the vfs_cache configuration for all your mounts to control this.  
+If the bulk of the space is in your rclone VFS cache, you’ll want to check the vfs_cache configuration for all your mounts to control this.
 
 Perhaps you used a copy-pasted config that is setting the max cache to 200G or so, and applied that to four mounts.  That means your rclone cache might grow to 800GB, so adjust the configs on the mounts you're caching.
 

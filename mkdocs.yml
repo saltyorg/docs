@@ -169,6 +169,7 @@ nav:
             - Wrapperr: sandbox/apps/wrapperr.md
           # - Requests:
           - Requests:
+            - Doplarr: sandbox/apps/doplarr.md
             - Ombi: sandbox/apps/ombi.md
             - Ombix: sandbox/apps/ombix.md
             - Requestrr: sandbox/apps/requestrr.md

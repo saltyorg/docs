@@ -10,11 +10,11 @@ sb install sandbox-coder
 
 By default, coder will be available at [https://coder.yourdomain.tld].
 
-   ![](../images/coder-setup/01-login.png)
+   ![](../../images/coder-setup/01-login.png)
 
 The password is the one you set in `accounts.yml`
 
-   ![](../images/coder-setup/02-screen.png)
+   ![](../../images/coder-setup/02-screen.png)
 
 VSCode will by default be pointing to `/home/coder`, and on first startup you'll be presented with a checklist of "getting started" items.
 
@@ -22,7 +22,7 @@ If you've never used VSCode before, take a few minutes to go through the fundame
 
 You can change the default theme if you wish.  I'm going to choose the dark theme.
 
-   ![](../images/coder-setup/03-dark-mode-home-dir.png)
+   ![](../../images/coder-setup/03-dark-mode-home-dir.png)
 
 Probably, you want to edit config files for the apps, which are in `/opt`.
 
@@ -30,7 +30,7 @@ The host `/opt` dir is mounted into the container as `/host_opt/`.
 
 Choose `File -> Open Folder...` from the hamburger menu on the upper left:
 
-   ![](../images/coder-setup/04-file-open-folder.png)
+   ![](../../images/coder-setup/04-file-open-folder.png)
 
 Navigate to `/host_opt/`, click the arrow:
 

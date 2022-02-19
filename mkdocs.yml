@@ -317,6 +317,7 @@ nav:
               - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
         - Linux:
           - Aliases: reference/guides/aliases.md
+          - Coder for easier file editing: reference/guides/coder-setup.md
         - Plex:
           - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
         - Downloading:

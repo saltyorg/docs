@@ -116,6 +116,7 @@ nav:
           - Archivebox: sandbox/apps/archivebox.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Medusa: sandbox/apps/medusa.md
+          - Resilio Sync: sandbox/apps/resiliosync.md
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - qBit Management: sandbox/apps/qbit_manage.md
@@ -187,6 +188,7 @@ nav:
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
+            - unifi : sandbox/apps/unifi.md
           - flaresolverr: sandbox/apps/flaresolverr.md
           - Log Management:
             - logarr: sandbox/apps/logarr.md

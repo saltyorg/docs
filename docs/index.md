@@ -9,7 +9,7 @@ You can read more about what Saltbox is [here](saltbox/basics/basics.md).
 Install instructions start [here](saltbox/prerequisites/prerequisites.md).
 
 ### Can I migrate from Cloudbox or PlexGuide?
-There are notes on migration from [Cloudbox](community/guides/cloudbox.md) and [Plexguide](community/guides/plexguide.md).
+There are notes on migration from [Cloudbox](reference/guides/cloudbox.md) and [Plexguide](reference/guides/plexguide.md).
 
 ### Is there a Discord server for support?
 Why [yes there is](https://discord.gg/ugfKXpFND8).

@@ -8,6 +8,8 @@ Coder is a version of VS Code that runs on your server.  It's friendlier than so
 sb install sandbox-coder
 ```
 
+## initial setup
+
 By default, coder will be available at [https://coder.yourdomain.tld].
 
    ![](../../images/coder-setup/01-login.png)
@@ -16,13 +18,15 @@ The password is the one you set in `accounts.yml`
 
    ![](../../images/coder-setup/02-screen.png)
 
-VSCode will by default be pointing to `/home/coder`, and on first startup you'll be presented with a checklist of "getting started" items.
+VSCode will present with a checklist of "getting started" items.
 
 If you've never used VSCode before, take a few minutes to go through the fundamentals tutorial.
 
 You can change the default theme if you wish.  I'm going to choose the dark theme.
 
    ![](../../images/coder-setup/03-dark-mode-home-dir.png)
+
+## point it at the host `/opt` dir
 
 Probably, you want to edit config files for the apps, which are in `/opt`.
 
@@ -39,6 +43,10 @@ Navigate to `/host_opt/`, click the arrow:
 and you should be presented with your `/opt` directory.  Most of the things you will want to edit are here.
 
    ![](../../images/coder-setup/06-host-opt.png)
+
+This should stick the next time you load the app.
+
+## install some extensions
 
 I suggest you install a few extensions:
 

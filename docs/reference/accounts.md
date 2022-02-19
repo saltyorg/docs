@@ -142,67 +142,91 @@
 
     - `timezone`: Timezone to use on the server.
 
-      - Default is `auto`, which will pick the timezone based on geolocation of the server.
+        - Default is `auto`, which will pick the timezone based on geolocation of the server.
 
-      - Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
+        - Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
 
-      - `timedatectl list-timezones` at your server's command prompt will also list the options.
+        - `timedatectl list-timezones` at your server's command prompt will also list the options.
 
 - `dns`: DNS-related settings.
 
     - `enabled`: Controls whether subdomains are created at Cloudflare
 
-      - Default is `yes`.
+        - Default is `yes`.
 
     - `proxied`: Controls whether Cloudflare records should be "proxied" or "DNS only".
 
-      - Default is `no`.
+        - Default is `no`.
 
     - `ipv6`: Enable/disable ipv6 configuration.
 
-      - Default is `no`.
+        - Default is `no`.
 
     - `zerossl`: Controls whether zerossl is used.
 
-      - Default is `no`.
+        - Default is `no`.
 
 - `traefik`: traefik-related settings.
 
     - `tls`: Use TLS.
 
-      - Default is `no`.
+        - Default is `no`.
 
     - `metrics`: enable metrics subdomain.
 
-      - Default is `no`.
+        - Default is `no`.
 
     - `tracing`: Enable tracing.
 
-      - Default is `no`.
+        - Default is `no`.
 
     - `hsts`: enable hsts.
 
-      - Default is `no`.
+        - Default is `no`.
+
+    - `provider`: DNS provider.
+
+        - Default is `cloudflare`.
+
+    - `subdomains`: traefik subdomains.
+
+        - `dash`: traefik dashboard subdomain.
+
+            - Default is `dash`.
+
+        - `metrics`: traefik metrics subdomain.
+
+            - Default is `metrics`.
+
+        - `jaeger`: traefik jaeger subdomain.
+
+            - Default is `jaeger`.
+
+    - `error_pages`: enable styled error pages.
+
+        - Default is `no`.
+
+        - see [here](../advanced/styled-error-pages.md) for configuration details.
 
 - `mounts`: cloud storage mount settings.
 
     - `remote`: What type of remote to use.
 
-      - Default is `rclone_vfs`.
+        - Default is `rclone_vfs`.
 
     - `feeder`: Should a feeder mount be created?
 
-      - Default is `no`.
+        - Default is `no`.
 
 - `gpu`: GPU settings.
 
     - `intel`: Should system be set up for Intel GPU?
 
-      - Default is `yes`.
+        - Default is `yes`.
 
     - `nvidia`: Should system be set up for NVidia GPU?
 
-      - Default is `no`.
+        - Default is `no`.
 
 
 ---

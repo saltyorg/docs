@@ -82,11 +82,11 @@ _Note 4: The PAS URL is not meant to be accessed via a browser by default (i.e. 
 
 ## 4. Upload Control File to Google Drive
 
-If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you.
-
 The following step is important so that Plex Autoscan can remove missing/replaced media files out of Plex (i.e. empty trash). Without it, Plex will be left with "unavailable" media that can't play (i.e. media posters with trash icons on them).
 
 For more details on what the control file is, see [here](../faq/Plex-Autoscan.md#purpose-of-a-control-file-in-plex-autoscan).
+
+If you used the [scripted rclone setup](../reference/rclone-manual.md); these control files were created for you, and you can skip this step.
 
 To upload the mounted.bin control file, run the following command:
 
@@ -98,18 +98,47 @@ _Note 1: If your Rclone remote config has a different name for Google Drive, rep
 
 _Note 2: Above command requires Rclone version 1.39+_
 
-_Note 3: If you use different mount paths for your libraries in Plex this change must also be reflected in `/opt/plex_autoscan/config/config.json` in `SERVER_PATH_MAPPINGS`_:
+## 5. Edit the control files in the Plex Autoscan config file.
 
-Example:
+If you did step 4; you can skip this step.
 
-```json
-  "SERVER_PATH_MAPPINGS": {
-    "/mnt/unionfs/Media/Movies/": [
-      "/movies/",
-      "/mnt/unionfs/Media/Movies/",
-      "My Drive/Media/Movies/"
-    ],
-```
+   1. On the server's shell, run the following command:
+
+      ```
+      ls /mnt/remote/*.bin
+      ```
+
+      To get the file names that you will need to enter into the Plex-autoscan config.
+
+      They'll look like: `aarsqytesx-movies_mounted.bin`, and in the default case there will be three of them.
+
+   2. On the server's shell, run the following command:
+
+      ```
+      nano /opt/plex_autoscan/config/config.json
+      ```
+
+   3. Find the following:
+
+      ```json
+      "PLEX_EMPTY_TRASH_CONTROL_FILES": [
+        "/mnt/unionfs/mounted.bin"
+      ],
+      ```
+
+      Change it to [of course, these should match the file names you found in step 2]:
+
+      ```json
+      "PLEX_EMPTY_TRASH_CONTROL_FILES": [
+          "/mnt/unionfs/aarsqytesx-movies_mounted.bin",
+          "/mnt/unionfs/aarsqytesx-music_mounted.bin",
+          "/mnt/unionfs/aarsqytesx-tv_mounted.bin"
+      ],
+      ```
+
+      Note: Make sure there is a comma (`,`) after each line except the last.
+
+   4. <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd> to save.
 
 ### Enabling Google Drive Monitoring in Plex Autoscan
 

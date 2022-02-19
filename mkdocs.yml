@@ -116,6 +116,7 @@ nav:
           - Archivebox: sandbox/apps/archivebox.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Medusa: sandbox/apps/medusa.md
+          - Resilio Sync: sandbox/apps/resiliosync.md
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - qBit Management: sandbox/apps/qbit_manage.md
@@ -263,6 +264,7 @@ nav:
   - Advanced:
       - Index: advanced/index.md
       - Adding Your Own Containers: advanced/your-own-containers.md
+      - Styled Error Pages: advanced/styled-error-pages.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
 

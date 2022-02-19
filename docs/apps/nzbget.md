@@ -40,6 +40,6 @@
 
 ## 3. Extensions
 
-- Location on server: `/opt/scripts/nzb`.
+- Location on server: `/opt/scripts/nzbget`.
 
-- Location within NZBGet: `/scripts/nzb`.
+- Location within NZBGet: `/scripts/nzbget`.

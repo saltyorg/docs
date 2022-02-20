@@ -5,7 +5,7 @@
 Read through this entire page, even if you are only installing one of the apps.
 
 NOTE:
-This functionality is being moved to a more generalized and customizable [multiple instances](../../reference/multiple-instances.md) system.  As roles are transitioned, they will be removed from the table below.  As of this writing, Radarr, Sonarr, and Lidarr have been transitioned.
+This functionality is being moved to a more generalized and customizable [multiple instances](../../reference/multiple-instances.md) system.  As roles are transitioned, they will be removed from the table below.
 
 ## Background
 
@@ -13,15 +13,10 @@ There are a number of roles in the saltbox community repo which can be used to c
 
 | Role          | Description                         |
 | ------------- | ----------------------------------- |
-| bazarrx       | Subtitle downloading                |
-| delugex       | Torrent client                      |
+| alternatarrx  | Alternate Name Management           |
 | ombix         | Request management                  |
-| overseerrx    | Request management                  |
-| qbittorrentx  | Torrent client                      |
-| readarrx      | Ebook management                    |
 | requestrrx    | Discord request bot                 |
 | rfloodx       | Torrent client                      |
-| tautullix     | Plex stats, data, actions           |
 | transmissionx | Torrent client                      |
 
 They're all named something*X* because they allow creation of *X* number of *something*.

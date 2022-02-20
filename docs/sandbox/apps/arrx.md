@@ -23,7 +23,7 @@ They're all named something*X* because they allow creation of *X* number of *som
 
 They are all configured in the same way.
 
-In general terms, you'll enter the instances you want into the [community `settings.yml`:](../../community/settings.md)
+In general terms, you'll enter the instances you want into the [sandbox `settings.yml`:](../../sandbox/settings)
 
 ```yaml
 appnamex:

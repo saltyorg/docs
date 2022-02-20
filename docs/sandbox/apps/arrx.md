@@ -46,7 +46,7 @@ as docker containers, subdomain, and data directories in `/opt`.
 For example, with this configuration:
 
 ```yaml
-bazarrx:
+ombix:
   roles:
     - ""
     - bing
@@ -56,12 +56,12 @@ bazarrx:
 
 Running the saltbox community `sonarrx` tag would produce:
 
-| entry         | Container    | Config dir         | Subdomain                    | Note                         |
-| ------------- | ------------ | ------------------ | ---------------------------- | ---------------------------- |
-| ""            | bazarr       | `/opt/bazarr`      | bazarr.YOURDOMAIN.TLD        | Replaces the stock container |
-| bing          | bazarrbing   | `/opt/bazarrbing`  | bazarrbing.YOURDOMAIN.TLD    |                              |
-| bang          | bazarrbang   | `/opt/bazarrbang`  | bazarrbang.YOURDOMAIN.TLD    |                              |
-| boing         | bazarrboing  | `/opt/bazarrboing` | bazarrboing.YOURDOMAIN.TLD   |                              |
+| entry         | Container  | Config dir       | Subdomain                  | Note                         |
+| ------------- | ---------- | ---------------- | -------------------------- | ---------------------------- |
+| ""            | ombi       | `/opt/ombi`      | ombi.YOURDOMAIN.TLD        | Replaces the stock container |
+| bing          | ombibing   | `/opt/ombibing`  | ombibing.YOURDOMAIN.TLD    |                              |
+| bang          | ombibang   | `/opt/ombibang`  | ombibang.YOURDOMAIN.TLD    |                              |
+| boing         | ombiboing  | `/opt/ombiboing` | ombiboing.YOURDOMAIN.TLD   |                              |
 
 NOTE: the names have to be compliant with both domain names and docker names, so no funny business. Do not use anything but a-z and 0-9, no spaces, no commas, no colons, no dash, no exclamation marks, no nothing!
 

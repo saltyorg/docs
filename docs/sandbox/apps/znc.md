@@ -23,6 +23,10 @@ sb install cm-znc
 
 - To access ZNC, visit `https://znc._yourdomain.com_`
 
+Default user/password: admin/admin
+
+Change that password ASAP.
+
 ### 3. Setup
 
 - [:octicons-link-16: Documentation: ZNC Docs](https://wiki.znc.in/ZNC){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -69,9 +69,7 @@
 
             - "Remote streams allowed per user": _your preference_.
 
-            - "Custom server access URLs": `http://plex.yourdomain.com:80/,https://plex.yourdomain.com:443/` (pre-filled)
-
-                - NOTE: Enter your domain as you have it configured in accounts.yml, not literally "yourdomain.com".
+            - "Custom server access URLs" will be prefilled; do not edit this field as it will be overwritten.
 
          1. Click "SAVE CHANGES".
 

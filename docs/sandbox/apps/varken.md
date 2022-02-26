@@ -98,14 +98,14 @@ sb install sandbox-varken
 
       - **World Map w/ geoIP**
 
-      ![](../../community/images/vrkn_worldmap_1.png)
-      ![](../../community/images/vrkn_worldmap_2.png)
+      ![](../../images/community/vrkn_worldmap_1.png)
+      ![](../../images/community/vrkn_worldmap_2.png)
 
       - [**Device Type Pie Chart:**](https://gist.github.com/samwiseg0/fab103fdf4b176a11517e478ce7c216f){: target=_blank rel="noopener noreferrer" }
 
       - **Basic Panel Structure**
 
-      ![](../../community/images/vrkn_basic_panel_structure.png)
+      ![](../../images/community/vrkn_basic_panel_structure.png)
 
 
 - For app specific instructions refer to the grafana role,

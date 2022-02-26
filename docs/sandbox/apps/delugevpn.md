@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[DelugeVPN](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is a VPN version of [Deluge](../../community/apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
+[DelugeVPN](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -24,9 +24,9 @@ sb install sandbox-delugevpn
 
 ### 3. Setup
 
-See the parent[Deluge](../../community/apps/deluge.md) role for app setup.
+See the parent [Deluge](../../apps/deluge.md) role for app setup.
 
-- Edit the DelugeVPN settings in the delugevpn section in [community `settings.yml`:](../../community/settings.md) as shown below.
+- Edit the DelugeVPN settings in the delugevpn section in [saltbox `settings.yml`:](../settings.md) as shown below.
 
    ``` { .yaml }
     delugevpn:
@@ -138,6 +138,6 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 - Follow installation steps above again
 
 ### For app specific instructions refer to the parent role
- - [deluge](../../community/apps/deluge.md) <br />
+ - [Deluge](../../apps/deluge.md) <br />
  - and the upstream documentation <br />
    [:octicons-link-16: Documentation ](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }

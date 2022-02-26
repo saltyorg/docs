@@ -130,6 +130,7 @@ nav:
           - Filezilla: sandbox/apps/filezilla.md
           - Jirafeau: sandbox/apps/jirafeau.md
         - Landing Pages:
+          - VNStat: sandbox/apps/vnstat.md
           - heimdall: sandbox/apps/heimdall.md
         - Media Management:
           - Books:
@@ -202,6 +203,7 @@ nav:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
             - Healthchecks: sandbox/apps/healthchecks.md
+          - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Unpackerr: sandbox/apps/unpackerr.md
           - Uptime Kuma: sandbox/apps/uptime_kuma.md
@@ -291,6 +293,10 @@ nav:
           - Rclone [Auto]: reference/rclone-auto.md
           - Rclone [Manual]: reference/rclone-manual.md
           - Install: reference/install.md
+        - Applications:
+          - Removing apps: reference/guides/app-remove.md
+          - Resetting apps: reference/guides/app-reset.md
+          - Updating apps: reference/guides/app-update.md
         - Other:
           - Cloudplow Examples: reference/cloudplow.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md

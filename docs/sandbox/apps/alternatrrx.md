@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[alternatrr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](../../community/apps/arrx.md) for [alternatrr](../../sandbox/apps/alternatrr.md).
+[alternatrr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](arrx.md) for [alternatrr](../../sandbox/apps/alternatrr.md).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -22,7 +22,7 @@ sb install sandbox-alternatrrx
 
 ### 3. Setup
 
-1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](arrx.md).
 
 2. Add your **X** instance names to the alternatrr**X** section in [sandbox `settings.yml`:](../../sandbox/settings.md) using a list format as below.
 

@@ -36,7 +36,7 @@
 
 ### 1. Installation
 
-Before installing qBit Management, you should have a **[qBittorrent](../../community/apps/qbittorrent.md)** instance running on your local machine.
+Before installing qBit Management, you should have a **[qBittorrent](../../apps/qbittorrent.md)** instance running on your local machine.
 
 ``` shell
 

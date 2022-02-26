@@ -24,7 +24,7 @@ sb install sandbox-navidrome
 
 - After installing Navidrome in your platform, you need to create your first user. This will be your admin user, a super user that can manage all aspects of Navidrome, including the ability to manage other users. Just browse to Navidrome’s homepage at`https://navidrome._yourdomain.com_` and you will be greeted with a screen like this: <br />
 
-     ![](../../community/images/navidrome_first_user.png)
+     ![](../../images/community/navidrome_first_user.png)
 
     Just fill out the username and password you want to use, confirm the password and click on the “Create Admin” button.
 

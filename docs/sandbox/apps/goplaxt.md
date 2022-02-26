@@ -24,7 +24,7 @@ sb install sandbox-goplaxt
 
 1. Create an API application through Trakt [here](https://trakt.tv/oauth/applications). The Redirect URI should be your goplaxt.domain + `/authorize`, so it reads as: `https://goplaxt.domain.com/authorize`.
 
-2. Edit the Goplaxt section in [community `settings.yml`:](../../community/settings.md) substituting your own `ID` and `secret`.
+2. Edit the Goplaxt section in [saltbox `settings.yml`:](../settings.md) substituting your own `ID` and `secret`.
 
     ``` { .yaml }
     goplaxt:

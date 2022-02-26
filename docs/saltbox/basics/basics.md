@@ -82,6 +82,6 @@ During this migration, the media files will continue to be accessible to Media S
 
 <sup><b name="f4">[4](#a4)</b> By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local`; if there is, all that data is pushed to your Google Drive.  This threshold can be adjusted as needed in the Cloudplow config. </sup>
 
-<sup><b name="f5">[5](#a5)</b> There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will describe setting up a Google Drive remote pointed at your My Drive.  This limit can be eliminated by cycling through a set of service accounts [each of which can upload 750GB] to upload to one or more Shared Drives [aka Teamdrives].  See [Tip44 Doc](../../community/guides/chazguides/tip44.md) for details.  </sup>
+<sup><b name="f5">[5](#a5)</b> There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will describe setting up a Google Drive remote pointed at your My Drive.  This limit can be eliminated by cycling through a set of service accounts [each of which can upload 750GB] to upload to one or more Shared Drives [aka Teamdrives].  See [Tip44 Doc](../../reference/guides/chazguides/tip44.md) for details.  </sup>
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[RequestrrX](https://github.com/darkalfx/requestrr){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Requestrr](../../sandbox/apps/requestrr.md).
+[RequestrrX](https://github.com/darkalfx/requestrr){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](arrx.md) for [Requestrr](../../sandbox/apps/requestrr.md).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -22,9 +22,9 @@ sb install sandbox-requestrrx
 
 ### 3. Setup
 
-1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](arrx.md).
 
-2. Add your **X** instance names to the Requestrr**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the Requestrr**X** section in [saltbox `settings.yml`:](../settings.md) using a list format as below.
 
     ``` { .yaml }
         requestrrx:

@@ -9,15 +9,15 @@ Typically this server is remote to you; you can install on a home server, keepin
 
 Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
 
-A commonly-asked question is ["can I run saltbox on this server?"](../community/guides/chazguides/server.md)
+A commonly-asked question is ["can I run saltbox on this server?"](guides/chazguides/server.md)
 
 You will need root access to install Saltbox.
 
-The server should be a completely fresh OS install. Do not try to install any dependencies on your own, Saltbox will do that for you. 
+The server should be a completely fresh OS install. Do not try to install any dependencies on your own, Saltbox will do that for you.
 
 Saltbox only supports x64 (i.e. Intel or AMD 64) machines. ARM based hardware [such as the Raspberry Pi] is not supported.
 
-Get a server with at least 100GB+ of hard disk space. Even though media is uploaded to the cloud, there is still a need local storage for things like app data and backups. 
+Get a server with at least 100GB+ of hard disk space. Even though media is uploaded to the cloud, there is still a need local storage for things like app data and backups.
 
 Practically, you should have more like 500GB of space available _at a minimum_.
 
@@ -25,14 +25,14 @@ Cloudplow's default folder size threshold, to upload media to the cloud, is set 
 
 If you are planning to use Usenet, SSD should be considered required, and NVME highly recommended.  Usenet is extremely disk I/O intensive.
 
-If you are planning to use torrents, you should have much more disk space than that available for seeding.  Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding. 
+If you are planning to use torrents, you should have much more disk space than that available for seeding.  Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding.
 
 If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox.  Depending on the size of your library, that metadata can be quite large.
 
 ### Home Server considerations
 
 If you are setting this up on a home server, verify, **before installing Saltbox**:
- 
+
   1. Make sure your ISP doesn't block ports 80 and 443 [if your ISP blocks these ports, it won't work.]
   2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network]
   3. Open the relevant [ports](ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
@@ -47,7 +47,7 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
   ![](../images/ubuntu-selection.png)
 
-- Install OpenSSH server if asked. 
+- Install OpenSSH server if asked.
 
 #### Partitioning:
 - If you have multiple hard drives on the server (eg. 2 x 4 TB), put them in RAID 0 to maximize space and speed (you don't need redundancy as you can schedule backups of Saltbox).
@@ -81,7 +81,7 @@ Examples:
          #
          # http://wiki.hetzner.de/index.php/Installimage
          #
-         
+
          DRIVE1 /dev/nvme0n1
          DRIVE2 /dev/nvme1n1
          SWRAID 1
@@ -107,7 +107,7 @@ Examples:
          #
          # http://wiki.hetzner.de/index.php/Installimage
          #
-         
+
          DRIVE1 /dev/nvme0n1
          DRIVE2 /dev/nvme1n1
          SWRAID 1

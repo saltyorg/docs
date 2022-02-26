@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Ombi**X**](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](../../community/apps/arrx.md) for [Ombi](../../sandbox/apps/ombi.md).
+[Ombi**X**](https://ombi.io){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](arrx.md) for [Ombi](../../sandbox/apps/ombi.md).
 
 [Ombi](https://ombi.io/){: target=_blank rel="noopener noreferrer" } is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
 
@@ -24,9 +24,9 @@ sb install sandbox-ombix
 
 ### 3. Setup
 
-1. Read through the general [arr**X** role instructions](../../community/apps/arrx.md).
+1. Read through the general [arr**X** role instructions](arrx.md).
 
-2. Add your **X** instance names to the Ombi**X** section in [community `settings.yml`:](../../community/settings.md) using a list format as below.
+2. Add your **X** instance names to the Ombi**X** section in [saltbox `settings.yml`:](../settings.md) using a list format as below.
 
    ``` { .yaml }
     ombix:

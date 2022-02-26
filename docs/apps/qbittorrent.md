@@ -32,11 +32,11 @@ sb install qbittorrent
 
 - **First** go to `Options` -> `Web UI` and set a new username and password.
 
-    ![Authentication Section Screenshot](../../images/community/qbit_auth.png)
+    ![Authentication Section Screenshot](../images/community/qbit_auth.png)
 
 - Under `Options` -> `Connection`, set the port to 56881.
 
-    ![Port Section Screenshot](../../images/community/qbit_port.png)
+    ![Port Section Screenshot](../images/community/qbit_port.png)
 
 - Under `Options` -> `Downloads`, set the following;
 
@@ -52,7 +52,7 @@ sb install qbittorrent
 
     - tick `Run external program on torrent completion` and paste this into the box: `/usr/bin/unrar x -r "%F/." "%F/"`
 
-    ![Hard Disk Section Screenshot](../../images/community/qbit_hdd.png)
+    ![Hard Disk Section Screenshot](../images/community/qbit_hdd.png)
 
 !!! Note
       if you're using private trackers be sure to go to `Options` -> `BittTorrent` and uncheck everything in Privacy section.

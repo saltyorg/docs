@@ -124,7 +124,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
 
 ## Examples: multiple Bazarr containers
 
-1. Edit [`settings.yml`](../../community/settings.md) and change the bazarrx roles to what you want:
+1. Edit [`settings.yml`](../../sandbox/settings.md) and change the bazarrx roles to what you want:
 
    <details>
      <summary>I want to add a BING [4K, kids, German, whatever] version and leave my existing container untouched.</summary>

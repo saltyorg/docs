@@ -328,6 +328,8 @@ nav:
           - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
         - Downloading:
           - Hardlinking: reference/guides/hardlinking.md
+        - Rclone:
+          - Creating a remote: reference/guides/rclone-remote.md
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md
           - Plexguide: reference/guides/plexguide.md

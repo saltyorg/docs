@@ -24,7 +24,9 @@ The Saltbox Community Autoscan role will attempt to partially configure your aut
 
 ### 3. A-Train
 
-Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the satate of Google Drive and miss thing.  "A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image.  At some poin t it may be integrated into autoscan.
+Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the satate of Google Drive and miss things.  
+
+"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image.  At some point it may be integrated into autoscan.
 
 To run A-Train in place of Bernard:
 
@@ -57,14 +59,15 @@ password = "password"
 
 [drive]
 # Path to the Service Account key file,
-# relative to the current working directory (`/data` on Docker).
-account = "./1001.json"
+account = "/data/NAME_OF_SERVICE_FILE.json"
 # One or more Shared Drive IDs
 # These are IDs, not names
 drives = ["driveid1", "driveid2"]
 ```
 
 Of course, you need to change the details noted in the comments.
+
+This example is assuming you copy one of your service account files from its current location to `/opt/a-train/NAME_OF_SERVICE_FILE.json`.  Chances are you want to use some name other than "`NAME_OF_SERVICE_FILE.json`".
 
 Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard` trigger section with the following:
 
@@ -79,7 +82,7 @@ Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard
 Run the autoscan tag to rebuild the container with the new image:
 
 ```
-sb install cm-autoscan
+sb install autoscan
 ```
 
 Create and run the a-train container:
@@ -99,14 +102,11 @@ docker run -d \
 
 Further documentation:
 
-A-Train Docker page:
-https://github.com/users/m-rots/packages/container/package/a-train
+[A-Train Docker page](https://github.com/users/m-rots/packages/container/package/a-train)
 
-A-Train initial documentation:
-https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612
+[A-Train initial documentation](https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612)
 
-Updated Autoscan documentation:
-https://github.com/Cloudbox/autoscan/tree/bernard-rs#a-train
+[Updated Autoscan documentation](https://github.com/Cloudbox/autoscan/tree/bernard-rs#a-train)
 
 
 - [:octicons-link-16: Documentation](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" }

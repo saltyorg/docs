@@ -1,6 +1,6 @@
-If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/community/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
-If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/community/guides/plexguide/).  Expansions to those notes would be welcome.
+If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
 
 Please read through these steps prior to executing any of them, just to get a grounding in what is going to happen through out the process.  It could be that things in later steps inform your decisions in earlier steps.
 

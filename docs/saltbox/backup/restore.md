@@ -71,8 +71,10 @@ Retrieve the following configuration files from your backup manually and place t
 * settings.yml
 * adv_settings.yml
 * backup_config.yml
+* providers.yml
+* hetzner_nfs.yml
 * rclone.conf
-* localhost.yml (if present)
+* localhost.yml
 
 Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
 

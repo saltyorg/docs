@@ -30,7 +30,7 @@ Then retrieve the configuration files from a backup.
 
 === "curl"
     ``` { .sh .annotate }
-    curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)
+    curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
     ```
 
     1. Use the username and password defined for the service when last backup was executed.
@@ -39,7 +39,7 @@ Then retrieve the configuration files from a backup.
 
 === "wget"
     ``` { .sh .annotate }
-    wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)
+    wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
     ```
 
     1. Use the username and password defined for the service when last backup was executed.

@@ -91,4 +91,8 @@ Start the restore process.
 sb install restore
 ```
 
-Once succesfully completed you can now follow the installation guide from this [step](../../saltbox/install/install.md#install-saltbox).
+Once successfully completed you can now continue:
+
+If you are migrating from one server to another, return to the [migration guide](migrate.md)
+
+If you are restoring to the same server, you can now follow the installation guide from this [step](../../saltbox/install/install.md#install-saltbox).

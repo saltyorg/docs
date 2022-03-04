@@ -87,6 +87,7 @@ nav:
         - Settings: saltbox/backup/settings.md
         - Backup: saltbox/backup/backup.md
         - Restore: saltbox/backup/restore.md
+        - Migrate: saltbox/backup/migrate.md
 
   - Sandbox:
       - Basics: sandbox/basics.md

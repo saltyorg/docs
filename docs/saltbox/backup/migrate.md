@@ -1,5 +1,3 @@
- # Migrate
-
 This guide will outline some basic steps to copy/move your Saltbox setup to another server and/or another domain name.
 
 Listed below are some common scenarios and their migration instructions.
@@ -16,9 +14,9 @@ Listed below are some common scenarios and their migration instructions.
 
 2. If you are not using Cloudflare:
 
-   - Point your domain's [DNS]([../prerequisites/prerequisites/#domain) to the new server.
+   - Point your domain's [DNS](../prerequisites/prerequisites/#domain) to the new server.
 
-3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [[Feederbox].
+3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
@@ -44,7 +42,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. If you are not using Cloudflare:
 
-   - Point your new domain's [DNS]([../prerequisites/prerequisites/#domain) to the new server.
+   - Point your new domain's [DNS](../prerequisites/prerequisites/#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
@@ -62,7 +60,7 @@ Listed below are some common scenarios and their migration instructions.
 
    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
-3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [[Feederbox].
+3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
@@ -82,7 +80,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. If you are not using Cloudflare:
 
-   - Point your new domain's [DNS]([../prerequisites/prerequisites/#domain) to the new server.
+   - Point your new domain's [DNS](../prerequisites/prerequisites/#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
@@ -100,7 +98,7 @@ Listed below are some common scenarios and their migration instructions.
 
    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
-3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [[Feederbox].
+3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 

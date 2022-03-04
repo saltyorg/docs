@@ -20,7 +20,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
-5. Check to see if your [Plex Autoscan URL]([../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
+5. Check to see if your [Plex Autoscan URL](../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
 
 ## Move Saltbox to Another Server and Change the Domain Name
 
@@ -42,7 +42,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. If you are not using Cloudflare:
 
-   - Point your new domain's [DNS](../prerequisites/prerequisites/#domain) to the new server.
+   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
@@ -64,7 +64,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
-5. Check to see if your [Plex Autoscan URL]([../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
+5. Check to see if your [Plex Autoscan URL](../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
 
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
@@ -80,7 +80,7 @@ Listed below are some common scenarios and their migration instructions.
 
 4. If you are not using Cloudflare:
 
-   - Point your new domain's [DNS](../prerequisites/prerequisites/#domain) to the new server.
+   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
@@ -102,6 +102,6 @@ Listed below are some common scenarios and their migration instructions.
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
-5. Check to see if your [Plex Autoscan URL]([../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
+5. Check to see if your [Plex Autoscan URL](../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr], [Radarr], and [Lidarr] accordingly.
 
 ---

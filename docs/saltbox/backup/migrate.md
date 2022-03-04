@@ -14,7 +14,7 @@ Listed below are some common scenarios and their migration instructions.
 
 2. If you are not using Cloudflare:
 
-   - Point your domain's [DNS](../prerequisites/prerequisites.md#domain) to the new server.
+   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 

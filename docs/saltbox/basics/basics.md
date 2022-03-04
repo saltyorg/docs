@@ -17,7 +17,7 @@
 
 ### Fast Deployment
 
-- Have a system running in minutes with minimal input (a full server setup from scratch within minutes.
+- Have a system running in minutes with minimal input.
 
 ### Docker-Based Applications
 
@@ -48,7 +48,7 @@
 
 ### Secure
 
-- Saltbox uses secure HTTPS provided by Let's Encrypt SSL certificates or ZeroSSL.
+- Saltbox uses secure HTTPS provided by Let's Encrypt or ZeroSSL.
 
 ### Easy Backup and Restore
 

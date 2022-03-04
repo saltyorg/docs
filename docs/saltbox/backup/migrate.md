@@ -14,7 +14,7 @@ Listed below are some common scenarios and their migration instructions.
 
 2. If you are not using Cloudflare:
 
-   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
+    - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 
@@ -36,29 +36,29 @@ Listed below are some common scenarios and their migration instructions.
 
 3. If you are using Cloudflare:
 
-   1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
+    1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-   2. Add the Cloudflare API into [Settings](settings.md).
+    2. Add the Cloudflare API into [Settings](settings.md).
 
 4. If you are not using Cloudflare:
 
-   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
+    - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
-   - `/opt/cloudplow/config.json`
+    - `/opt/cloudplow/config.json`
 
-   - `/opt/emby/config/system.xml` (only if installed)
+    - `/opt/emby/config/system.xml` (only if installed)
 
-   - `/opt/motd/config.json`
+    - `/opt/motd/config.json`
 
-   - `/opt/traktarr/config.json` (only if installed)
+    - `/opt/traktarr/config.json` (only if installed)
 
-   - `/opt/plex_dupefinder/config.json` (only if installed)
+    - `/opt/plex_dupefinder/config.json` (only if installed)
 
-   - `/opt/plex_patrol/settings.ini` (only if installed)
+    - `/opt/plex_patrol/settings.ini` (only if installed)
 
-   - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
+    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
 3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 
@@ -74,29 +74,29 @@ Listed below are some common scenarios and their migration instructions.
 
 3. If you are using Cloudflare:
 
-   1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
+    1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-   2. Add the Cloudflare API into [Settings](settings.md).
+    2. Add the Cloudflare API into [Settings](settings.md).
 
 4. If you are not using Cloudflare:
 
-   - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
+    - Point your domain's [DNS](../saltbox/prerequisites/prerequisites.md#domain) to the new server.
 
 5. Replace the domain name in app specific config files:
 
-   - `/opt/cloudplow/config.json`
+    - `/opt/cloudplow/config.json`
 
-   - `/opt/emby/config/system.xml` (only if installed)
+    - `/opt/emby/config/system.xml` (only if installed)
 
-   - `/opt/motd/config.json`
+    - `/opt/motd/config.json`
 
-   - `/opt/traktarr/config.json` (only if installed)
+    - `/opt/traktarr/config.json` (only if installed)
 
-   - `/opt/plex_dupefinder/config.json` (only if installed)
+    - `/opt/plex_dupefinder/config.json` (only if installed)
 
-   - `/opt/plex_patrol/settings.ini` (only if installed)
+    - `/opt/plex_patrol/settings.ini` (only if installed)
 
-   - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
+    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
 3. Install the relevant Saltbox type: [Saltbox], [Mediabox], or [Feederbox].
 

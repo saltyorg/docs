@@ -129,7 +129,7 @@ overseerr_docker_labels_custom:
 
 #### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
 overseerr_docker_labels_custom:
-  traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'request.' + overseerr_web_domain }}`)"
-  traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'request.' + overseerr_web_domain }}`)"
+  traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
+  traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
 ```
 Note that this last set of examples requires you to add DNS records manually.

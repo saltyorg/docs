@@ -2,7 +2,7 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
 
-Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in: 
+Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` or `/opt/sandbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in: 
 
 `/srv/git/saltbox/inventories/host_vars/localhost.yml`
 
@@ -74,9 +74,16 @@ sonarr_docker_image_tag: "nightly"
 
 Which would override the default and result in Saltbox using `hotio/sonarr:nightly` docker image instead.
 
-
-# Additional Examples:
+Previously undefined variables may be added as well. Typical use would be to pass new Docker parameters under variables with the name ending in `custom`:
+```yaml
+jackett_docker_labels_custom:
+  com.centurylinklabs.watchtower.enable: "true"
 ```
+
+
+# Additional Examples
+## Various
+```yaml
 ### Open Specified Ports for the specified container ###
 ##### Plex Ports for local access#####
 plex_docker_ports:
@@ -103,3 +110,26 @@ transfer_docker_envs_custom:
 #### Docker Service Variable ####
 docker_service_sleep: 0
 ```
+
+## Subdomain Customization
+### Overrides:
+```yaml
+#### Make Organizr available only at the base domain ####
+organizr_web_subdomain: ""
+
+#### Make Tautulli available only at `stats.domain.tld` ####
+tautulli_web_subdomain: "stats"
+```
+### Additions:
+```yaml
+#### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
+overseerr_docker_labels_custom:
+  traefik.http.routers.organizr-http.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
+  traefik.http.routers.organizr.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
+
+#### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
+overseerr_docker_labels_custom:
+  traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'request.' + overseerr_web_domain }}`)"
+  traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'request.' + overseerr_web_domain }}`)"
+```
+Note that this last set of examples requires you to add DNS records manually.

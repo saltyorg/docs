@@ -123,7 +123,7 @@ tautulli_web_subdomain: "stats"
 ### Additions:
 ```yaml
 #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
-overseerr_docker_labels_custom:
+organizr_docker_labels_custom:
   traefik.http.routers.organizr-http.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
   traefik.http.routers.organizr.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
 

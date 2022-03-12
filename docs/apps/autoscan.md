@@ -71,7 +71,7 @@ Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard
           to: /mnt/unionfs/Media/
 ```
 
-Run the autoscan tag to rebuild the container with the new image:
+Run the autoscan tag to rebuild the container:
 
 ```
 sb install autoscan

@@ -98,7 +98,4 @@ Further documentation:
 
 [A-Train initial documentation](https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612)
 
-[Updated Autoscan documentation](https://github.com/Cloudbox/autoscan/tree/bernard-rs#a-train)
-
-
 - [:octicons-link-16: Documentation](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" }

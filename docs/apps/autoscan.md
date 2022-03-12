@@ -30,14 +30,6 @@ Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The c
 
 To run A-Train in place of Bernard:
 
-You must be running the cloudb0x/autoscan:bernard-rs Docker image during the testing period, together with ghcr.io/m-rots/a-train:latest.
-
-To do this, edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following line:
-
-```
-autoscan_docker_image_tag: "bernard-rs"
-```
-
 Create an a-train config file:
 
 ```

@@ -30,36 +30,13 @@ Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The c
 
 To run A-Train in place of Bernard:
 
-Create an a-train config file:
+Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/){: target=_blank rel="noopener noreferrer" }. The Remotes can be either drive remotes or union remotes.
 
 ```
-mkdir /opt/a-train
-nano  /opt/a-train/a-train.toml
+a_train: ["remote1", "remote2"]
 ```
 
-Insert the following into `atrain.toml`:
-
-```
-# a-train.toml
-[autoscan]
-# Replace the URL with your Autoscan URL.
-url = "http://autoscan:3030"
-# If you have set a username and password
-# on autoscan enter them here
-username = "user"
-password = "password"
-
-[drive]
-# Path to the Service Account key file,
-account = "/data/NAME_OF_SERVICE_FILE.json"
-# One or more Shared Drive IDs
-# These are IDs, not names
-drives = ["driveid1", "driveid2"]
-```
-
-Of course, you need to change the details noted in the comments.
-
-This example is assuming you copy one of your service account files from its current location to `/opt/a-train/NAME_OF_SERVICE_FILE.json`.  Chances are you want to use some name other than "`NAME_OF_SERVICE_FILE.json`".
+This is assuming you copy one of your service account files from its current location to `/opt/a_train/account.json`.  Remember to rename your service account file to "`account.json`".
 
 Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard` trigger section with the following:
 
@@ -77,19 +54,10 @@ Run the autoscan tag to rebuild the container with the new image:
 sb install autoscan
 ```
 
-Create and run the a-train container:
+Run the a-train tag to create the container:
 
 ```
-docker run -d \
-    --name a-train \
-    --restart unless-stopped \
-    -e PUID=1000 \
-    -e PGID=1001 \
-    -v /opt/a-train:/data \
-    --label com.github.saltbox.saltbox_managed=true \
-    --network=saltbox \
-    --network-alias=a-train \
-    ghcr.io/m-rots/a-train
+sb install sandbox-a_train
 ```
 
 Further documentation:

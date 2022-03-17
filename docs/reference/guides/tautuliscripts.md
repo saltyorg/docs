@@ -1,5 +1,5 @@
 # Introduction
-This is a quick guide to installing and configuring a Tautulli custom script. It will teach you how to download and configure a Tautulli (plexpy) custom script that drops Plex video streams transcoding from a 4K source.
+This is a quick guide to installing and configuring a Tautulli custom script. It will teach you how to download and configure a Tautulli custom script that drops Plex video streams transcoding from a 4K source.
 
 ## Install the script
 Access your Saltbox server as your normal non-root user.
@@ -7,7 +7,7 @@ Access your Saltbox server as your normal non-root user.
 We'll be installing the [Killstream.py script](https://github.com/blacktwin/JBOPS/tree/master/killstream){: target=_blank rel="noopener noreferrer" } from the [JBOPS](https://github.com/blacktwin/JBOPS){: target=_blank rel="noopener noreferrer" } script collection.
 
 ### Download the script using curl:
-```
+```shell
 cd /opt/scripts/plexpy/
 curl -O https://raw.githubusercontent.com/blacktwin/JBOPS/master/killstream/kill_stream.py
 sudo chown seed:seed kill_stream.py
@@ -63,5 +63,5 @@ You can test the agent by attempting to play a 4K movie through the Plex web app
 
 There is a list of when a notification agent is triggered in the **Notification logs** section of Tautulli logs.
 
-### Credits to @blacktwin
+### Credits goes to blacktwin
 * [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS){: target=_blank rel="noopener noreferrer" }

@@ -7,7 +7,7 @@ This article describes how to create an rclone remote
 To go through this process, you will need either one of these for your Google account:
 
    1. ClientID/Secret
-   2. Service Account JSON file[s]
+   2. Service Account JSON file(s)
 
 ## Walkthrough
 
@@ -19,8 +19,8 @@ To go through this process, you will need either one of these for your Google ac
 
 2. Type `n` for "New remote" and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
-     $ rclone config
+    ```shell
+    $ rclone config
     2022/02/26 15:29:40 NOTICE: Config file "/Users/geezer/.config/rclone/rclone.conf" not found - using defaults
     No remotes found - make a new one
     n) New remote
@@ -31,14 +31,14 @@ To go through this process, you will need either one of these for your Google ac
 
 3. For "name", type in the name of your choice and and press <kbd class="platform-all">Enter</kbd>. [This name is arbitrary, aside from rclone's limitations on name; we're using `google` in this example]
 
-    ```
+    ```shell
     n/s/q> n
     name> google
     ```
 
 4. For "Type of storage", type in `drive`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>.  Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here.  **Read what's on the screen.**
 
-    ```
+    ```shell
     Option Storage.
     Type of storage to configure.
     Enter a string value. Press Enter for the default ("").
@@ -72,7 +72,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using a Client ID and secret to connect"
         Enter the Client ID and Client Secret when prompted
-        ``` shell
+        ```shell
         Storage> drive
         Option client_id.
         Google Application Client Id
@@ -90,7 +90,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using a service account to connect"
         Leave the Client ID and Client Secret blank when prompted
-        ``` shell
+        ```shell
         Storage> drive
         Option client_id.
         Google Application Client Id
@@ -108,7 +108,7 @@ To go through this process, you will need either one of these for your Google ac
 
 6. For the "Scope that rclone should use when requesting access from drive", type in `drive`, or the corresponding number (i.e. `1`), to select "Full access all files, excluding Application Data Folder", and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
+    ```shell
     Option scope.
     Scope that rclone should use when requesting access from drive.
     Enter a string value. Press Enter for the default ("").
@@ -132,7 +132,7 @@ To go through this process, you will need either one of these for your Google ac
 
 2. For "ID of the root folder", leave blank and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
+    ```shell
     Option root_folder_id.
     ID of the root folder.
     Leave blank normally.
@@ -146,7 +146,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using a Client ID and secret to connect"
         leave blank and press <kbd class="platform-all">Enter</kbd>
-        ``` shell
+        ```shell
         Option service_account_file.
         Service Account Credentials JSON file path.
         Leave blank normally.
@@ -158,7 +158,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using a service account to connect"
         Enter the path to a service account JSON file and press <kbd class="platform-all">Enter</kbd>
-        ``` shell
+        ```shell
         Option service_account_file.
         Service Account Credentials JSON file path.
         Leave blank normally.
@@ -170,7 +170,7 @@ To go through this process, you will need either one of these for your Google ac
 
 4.  For "Edit advanced config", type `n` and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
+    ```shell
     Edit advanced config?
     y) Yes
     n) No (default)
@@ -179,7 +179,7 @@ To go through this process, you will need either one of these for your Google ac
 
 5.  For "Use auto config?", type `n` for "...remote or headless machine" and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
+    ```shell
     Use auto config?
      * Say Y if not sure
      * Say N if you are working on a remote or headless machine
@@ -191,7 +191,7 @@ To go through this process, you will need either one of these for your Google ac
 
 6.  In the next section, copy the link shown, and open it in your host PC's browser.
 
-    ```
+    ```shell
     Verification code
     Go to this URL, authenticate then paste the code here.
     https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=JOHNNYJOEYDEEDEE&redirect_uri=urn...
@@ -213,7 +213,7 @@ To go through this process, you will need either one of these for your Google ac
 
 10. Paste the "verification code" at the command prompt and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
+    ```shell
     Verification code
     Go to this URL, authenticate then paste the code here.
     https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=JOHNNYJOEYDEEDEE&redirect_uri=urn...
@@ -225,7 +225,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using My Drive"
         Type `n` and press <kbd class="platform-all">Enter</kbd>.
-        ``` shell
+        ```shell
         Configure this as a Shared Drive (Team Drive)?
 
         y) Yes
@@ -235,7 +235,7 @@ To go through this process, you will need either one of these for your Google ac
 
     === "Using a shared drive"
         Type `y` and press <kbd class="platform-all">Enter</kbd>.
-        ``` shell
+        ```shell
         Configure this as a Shared Drive (Team Drive)?
 
         y) Yes
@@ -244,7 +244,7 @@ To go through this process, you will need either one of these for your Google ac
         ```
         You'll be presented with a list of shared drives you have access to.  Enter a number and press <kbd class="platform-all">Enter</kbd>.
 
-        ``` shell
+        ```shell
         Option config_team_drive.
         Shared Drive
         Enter a string value. Press Enter for the default ("0AF3NBtE4KF_iUk9PVA").
@@ -263,41 +263,41 @@ To go through this process, you will need either one of these for your Google ac
 
 12. To confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
 
-        ```
-        --------------------
-        [google]
-        type = drive
-        client_id = JOHNNYJOEYDEEDEE
-        client_secret = OZZYTONYGEEZERBILL
-        scope = drive
-        token = {"access_token":"...","token_type":"Bearer","refresh_token":"...","expiry":"2022-02-26T17:56:24.53802-06:00"}
-        team_drive = BINGBANGBOING
-        root_folder_id =
-        --------------------
-        y) Yes this is OK (default)
-        e) Edit this remote
-        d) Delete this remote
-        y/e/d> y
-        ```
+    ```shell
+    --------------------
+    [google]
+    type = drive
+    client_id = JOHNNYJOEYDEEDEE
+    client_secret = OZZYTONYGEEZERBILL
+    scope = drive
+    token = {"access_token":"...","token_type":"Bearer","refresh_token":"...","expiry":"2022-02-26T17:56:24.53802-06:00"}
+    team_drive = BINGBANGBOING
+    root_folder_id =
+    --------------------
+    y) Yes this is OK (default)
+    e) Edit this remote
+    d) Delete this remote
+    y/e/d> y
+    ```
 
 20. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
-        ```
-        Current remotes:
+    ```shell
+    Current remotes:
 
-        Name                 Type
-        ====                 ====
-        google               drive
+    Name                 Type
+    ====                 ====
+    google               drive
 
-        e) Edit existing remote
-        n) New remote
-        d) Delete remote
-        r) Rename remote
-        c) Copy remote
-        s) Set configuration password
-        q) Quit config
-        e/n/d/r/c/s/q> q
-        ```
+    e) Edit existing remote
+    n) New remote
+    d) Delete remote
+    r) Rename remote
+    c) Copy remote
+    s) Set configuration password
+    q) Quit config
+    e/n/d/r/c/s/q> q
+    ```
 
 
 
@@ -309,7 +309,7 @@ If you are using Google Drive and the Rclone remote in your config has a differe
 
 - Rename your current Rclone remote to the default one (i.e. `google`). Instructions for this are below.
 
-  Or
+OR
 
 - Edit the Rclone remote entry in [settings.yml](../accounts.md) with yours.
 

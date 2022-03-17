@@ -2,7 +2,7 @@
 
 Saltbox can be configured to forego the cloud storage requirements discussed [here](cloud.md).
 
-This article will discuss the simplest case.  THere are of course a bunch of ways you could possibly do this that you may want to choose based on performance or whatever other requirements, but this is the Simplest Thing That Could Possibly Work.
+This article will discuss the simplest case.  There are of course a bunch of ways you could possibly do this that you may want to choose based on performance or whatever other requirements you may have, but this is the Simplest Thing That Could Possibly Work.
 
 I'm assuming you are using some local NAS for storage and running saltbox on a different machine.
 

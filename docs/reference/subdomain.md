@@ -17,7 +17,7 @@ _Note 2: There may be some subdomains that you have to add in yourself if Saltbo
 
 You don't need to do anything.
 
-### Does Not Allow Wilcards
+### Does Not Allow Wildcards
 
 You will need to add the subdomain via your domain's DNS provider's website.
 

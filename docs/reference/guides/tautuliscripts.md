@@ -63,5 +63,5 @@ You can test the agent by attempting to play a 4K movie through the Plex web app
 
 There is a list of when a notification agent is triggered in the **Notification logs** section of Tautulli logs.
 
-### Credits goes to blacktwin
+### Credit goes to blacktwin
 * [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS){: target=_blank rel="noopener noreferrer" }

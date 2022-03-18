@@ -57,4 +57,6 @@ rfloodx:
   roles: [""]
 transmissionx:
   roles: [""]
+a_train:
+  remotes: [""]
 ```

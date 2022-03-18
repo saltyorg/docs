@@ -308,7 +308,7 @@ nav:
           - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md
           - Saltbox Tools: reference/saltbox-tools.md
-          - Subdomains: reference/subdomain.md
+          - Adding a Subdomain: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
       - Guides:
         - General:

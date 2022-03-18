@@ -8,6 +8,8 @@ Rclone supports many cloud provider backends, but the only one routinely used by
 
 This process will use various scripts to do as much of this for you as possible, but there are some things that can't be scripted easily, like steps 1 and 2 below.
 
+It also assumes you are using a [Google Workspace](https://workspace.google.com/) account, since it assumes you can create shared drives.  You can do some of this without a Workspace account, but the differences are not documented here.  You won't be able to directly follow the steps below, and most of the scripts won't work for you.
+
 <details>
 <summary>What about `safire`? Can't it do all this automatically?</summary>
 <br />
@@ -26,21 +28,21 @@ Here's what you are going to do as you work through the instructions below:
 
 1. Create a Google project. [not scripted, you'll do this manually]
 
-1. Create a Google group. [not scripted, you'll do this manually]
+2. Create a Google group. [not scripted, you'll do this manually]
 
-1. Install the Google SDK tools. [not scripted, you'll do this manually]
+3. Install the Google SDK tools. [not scripted, you'll do this manually]
 
-1. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. [scripted with minor config edits]
+4. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. [scripted with minor config edits]
 
-1. Add all those service accounts to the Google group you just created. [Starting here scripted with minor config edits to a single script]
+5. Add all those service accounts to the Google group you just created. [Starting here scripted with minor config edits to a single script]
 
-1. Create three new shared drives in the Google Drive UI. [Movies, Music, TV]
+6. Create three new shared drives in the Google Drive UI. [Movies, Music, TV]
 
-1. Add your Google Group to each of those drives as a "Manager"
+7. Add your Google Group to each of those drives as a "Manager"
 
-1. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
+8. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
 
-1. Create a union rclone remote called "google", with the components set to the three td remotes you just created.
+9. Create a union rclone remote called "google", with the components set to the three td remotes you just created.
 
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
@@ -77,7 +79,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
       1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
 
-      1. It helps these scripts unambiguously identify things that they have created.
+      2. It helps these scripts unambiguously identify things that they have created.
 
 6. generate some service accounts
 
@@ -87,7 +89,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
     [Instructions here](google-shared-drives.md)
 
-7. Verify that the union remote shows you the expected contents:
+8. Verify that the union remote shows you the expected contents:
 
     ```
     rclone tree google:/
@@ -113,7 +115,7 @@ If you already have Rclone configured, you can jump directly to the [relevant se
 
 9. You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.  You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
 
-9. If you want to use Plex Autoscan's Google Drive Monitoring, there are some changes that will be required in the configuration. See [this guide](plex-autoscan-config.md).
+10. If you want to use Plex Autoscan's Google Drive Monitoring, there are some changes that will be required in the configuration. See [this guide](plex-autoscan-config.md).
 
 ## Existing Rclone Setup
 

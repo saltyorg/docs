@@ -71,7 +71,7 @@ This guide is assuming you are using a standard GSuite Business or GSuite Worksp
 
     ![](../images/gdrive-project/18-credentials-dash.png)
 
-9. Choose "Internal" user type and click "Create":
+9. Choose "External" user type and click "Create":
 
     ![](../images/gdrive-project/19-consent-user-type.png)
 
@@ -94,19 +94,35 @@ This guide is assuming you are using a standard GSuite Business or GSuite Worksp
 
     ![](../images/gdrive-project/23-consent-last.png)
 
-12. Click "Credentials" in the sidebar:
+12. Click  "SAVE AND CONTINUE" on the test users screen:
+
+    ![](../images/gdrive-project/225-test-users.png)
+
+    And "BACK TO DASHBOARD" on the final summary:
+
+    ![](../images/gdrive-project/23-consent-last.png)
+
+13. Click "PUBLISH APP" on the dashboard :
+
+    ![](../images/gdrive-project/235-publish-app.png)
+
+    Then "CONFIRM":
+
+    ![](../images/gdrive-project/237-confirm.png)
+
+14. Click "Credentials" in the sidebar:
 
     ![](../images/gdrive-project/24-consent-dash.png)
 
-13. Click "Create Credentials", then "OAuth client ID":
+15. Click "Create Credentials", then "OAuth client ID":
 
     ![](../images/gdrive-project/25-credentials-dropdown.png)
 
-14. Choose "Desktop App", give the app a name, and click "CREATE":
+16. Choose "Desktop App", give the app a name, and click "CREATE":
 
     ![](../images/gdrive-project/26-credentials-type-name.png)
 
-15. You'll be presented with the Client ID and Secret.  Copy and save them somewhere; you will need them to configure Plex Autoscan Google Drive Monitoring later.  Click on "DOWNLOAD JSON" to download the credential file:
+17. You'll be presented with the Client ID and Secret.  Copy and save them somewhere; you will need them to configure Plex Autoscan Google Drive Monitoring later.  Click on "DOWNLOAD JSON" to download the credential file:
 
     ![](../images/gdrive-project/27-credentials-done.png)
 

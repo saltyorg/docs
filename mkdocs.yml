@@ -215,30 +215,29 @@ nav:
 
   - Apps:
       - Core:
+        - Autoscan: apps/autoscan.md
         - Cloudplow: apps/cloudplow.md
         - Overseerr: apps/overseerr.md
         - Radarr: apps/radarr.md
         - Sonarr: apps/sonarr.md
         - Nzbget: apps/nzbget.md
         - Nzbhydra2: apps/nzbhydra2.md
-        - Plex Autoscan: apps/plex-autoscan.md
         - Portainer: apps/portainer.md
         - Rutorrent: apps/rutorrent.md
         - Tautulli: apps/tautulli.md
         - Lidarr: apps/lidarr.md
       - Media Servers:
+        - Plex Autoscan: apps/plex-autoscan.md
         - Plex: apps/plex.md
         - Emby: apps/emby.md
         - Jellyfin: apps/jellyfin.md
       - Alternatives to Core Apps:
-        - Autoscan: apps/autoscan.md
         - Petio: apps/petio.md
         - Prowlarr: apps/prowlarr.md
         - Sabnzbd: apps/sabnzbd.md
         - Deluge: apps/deluge.md
         - Qbittorrent: apps/qbittorrent.md
       - Others:
-        - Autoscan: apps/autoscan.md
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Hetzner NFS: apps/hetzner_nfs.md

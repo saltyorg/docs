@@ -71,6 +71,18 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
 - switch to the newly created user specified in your configuration. <br />
 
+- If you are restoring a Cloudbox backup, you should change the default rclone backup path in `/srv/git/saltbox/backup_config.yml` to point to your Cloudbox backup.  Once you've done this initial restore, change it back to the location of your choice.
+
+  ```yaml
+  ---
+  backup:
+  ...
+    rclone:
+      enable: true
+      destination: google:/Backups/Saltbox               <<<  THIS ONE HERE
+   ...
+  ```
+
 - run the restore command. <br />
 
   ``` shell

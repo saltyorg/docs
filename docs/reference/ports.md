@@ -17,7 +17,7 @@ hide:
 | Organizr          |                                              |                                                                                                                                            |
 | Plex (main)       | 32400                                        | Not needed when using reverse proxy. <br> <br> If 32400 needs to be open, set `plex_open_main_ports: true` using the inventory system.     |
 | Plex (extras)     | TCP: 3005, 8324, 32469  <br><br> UDP: 1900, 5353, 8324, 32410, 32412, 32413, 32414                           | Non essential for remote servers. See [here](https://support.plex.tv/articles/201543147-what-network-ports-do-i-need-to-allow-through-my-firewall/){target=_blank}. <br><br> If ports need to be open, add the ones needed to `plex_docker_ports_custom: []` using the inventory system.      |
-| Plex Autoscan     | 3468                                         | To disable this port in the FW and run it locally, see [here](../../faq/faq/#plex-autoscan-localhost-setup){target=_blank}.                |
+| Autoscan          | 3030                                         |                 |
 | Tautulli          |                                              |                                                                                                                                            |
 | Portainer         |                                              |                                                                                                                                            |
 | Radarr            |                                              |                                                                                                                                            |

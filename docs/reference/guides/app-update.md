@@ -13,7 +13,7 @@ The info below will show you how to update your Saltbox apps, individually.
 |:------------- |:--------------------- |
 | Plex          | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Tautulli      | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
-| Plex AutoScan | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
+| AutoScan      | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Sonarr        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Radarr        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | NZBGet        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
@@ -71,7 +71,7 @@ When in doubt, you can always rerun the relevant Ansible tag to update the app.
 | ruTorrent                   | `rutorrent`     |
 | Jackett                     | `jackett`       |
 | NZBHydra2                   | `nzbhydra2`     |
-| Plex Autoscan               | `plex_autoscan` |
+| Autoscan                    | `autoscan`      |
 | Ombi                        | `ombi`          |
 | Organizr                    | `organizr`      |
 | Portainer                   | `portainer`     |

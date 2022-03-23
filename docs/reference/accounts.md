@@ -50,7 +50,7 @@
 
     - This will be used to:
         - claim the Plex server under your username, and
-        - generate Plex Access Tokens for apps such as Plex Autoscan, etc.
+        - generate Plex Access Tokens for apps such as Autoscan, etc.
 
     - `user` - Plex username or email address on the profile.
 

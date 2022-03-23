@@ -20,17 +20,107 @@ sb install autoscan
 
 ### 2. Setup
 
-The Saltbox Community Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. If you wish to monitor sharedrive activity you should probably consider using [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } rather than soon to be shelved bernard trigger.
+The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. If you wish to monitor sharedrive activity you should probably consider using [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } rather than soon to be shelved bernard trigger.
+
+The generated config file will look something like this:
+
+```
+# <- processor ->
+
+# Override the minimum age before a scan request is sent to the target (Default 10m):
+minimum-age: 10m
+
+# Override the delay between processed scans (Default 5s):
+scan-delay: 5s
+
+# Set anchor files for remote storage. If these are missing no scans will be sent to the target to avoid files being trashed when a mount fails
+anchors:
+  - /mnt/unionfs/mounted.bin
+
+# <- triggers ->
+
+# Optionally, protect your webhooks with authentication
+authentication:
+  username: USERNAME_FROM_SETTINGS
+  password: PASSWORD_FROM_SETTINGS
+
+# Port for Autoscan webhooks to listen on
+port: 3030
+
+triggers:
+  # bernard:
+  #   - account: /config/sa.json # Path inside the container where your SA is located
+  #     cron: "*/5 * * * *" # every five minutes (the "" are important)
+  #     priority: 0
+  #     drives:
+  #       - id: drive_id #Friendly title
+
+  #     # Rewrite gdrive to the local filesystem
+  #     rewrite:
+  #       - from: ^/Media/
+  #         to: /mnt/unionfs/Media/
+
+  #     # Filter with regular expressions
+  #     include:
+  #       - ^/mnt/unionfs/Media/
+  #     exclude:
+  #       - '\.srt$'
+
+  inotify:
+    - priority: 0
+
+      # Filter with regular expressions
+      include:
+        - ^/mnt/unionfs/Media/
+      exclude:
+        - '\.(srt|pdf)$'
+
+      # rewrite inotify path to unified filesystem
+      rewrite:
+        - from: ^/mnt/local/Media/
+          to: /mnt/unionfs/Media/
+
+      # Local filesystem paths to monitor
+      paths:
+        - path: /mnt/local/Media
+
+  sonarr:
+    - name: sonarr # /triggers/sonarr
+      priority: 2
+
+  radarr:
+    - name: radarr # /triggers/radarr
+      priority: 2
+
+  lidarr:
+    - name: lidarr # /triggers/lidarr
+      priority: 1
+
+# <- targets ->
+
+targets:
+  plex:
+    - url: https://plex.DOMAIN.TLD # plex
+      token: YOUR_PLEX_TOKEN
+```
+
+You will probably need to edit the anchors section:
+```
+anchors:
+  - /mnt/unionfs/mounted.bin
+```
+To reflect your own configuration.  Everything else should be ready to go for standard usage.
+
 
 ### 3. A-Train
 
-Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the satate of Google Drive and miss things.  
+Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the satate of Google Drive and miss things.
 
-"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image.  At some point it may be integrated into autoscan.
+"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  At some point it may be integrated into autoscan.
 
 To run A-Train in place of Bernard:
 
-Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/){: target=_blank rel="noopener noreferrer" }. The Remotes can be either drive remotes or union remotes.
+Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes.
 
 ```
 a_train:

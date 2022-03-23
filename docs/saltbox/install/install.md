@@ -183,9 +183,13 @@ If your server did not need to reboot you can run `su username` to switch user o
 ## Rclone
 Saltbox assumes an rclone remote pointed at your google storage named `google` [as shown in the settings.yml above].
 
+There is nothing special about saltbox's implementation of this setup, aside from its opinions about the media paths.
+
 You may already have this remote configured or know how to do it if you are coming from a similar setup like Cloudbox or PlexGuide.
 
-If not, the process is documented [here](../../reference/rclone.md).
+If you are coming from Cloudbox, you can and should use your existing rclone setup rather than going through the setup again.
+
+If you are starting from scratch, the process is documented [here](../../reference/rclone.md).
 
 ## Install Saltbox
 

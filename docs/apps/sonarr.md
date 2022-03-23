@@ -301,7 +301,7 @@ Make changes in the following sections:
             5. Click "Save" to add the Torrent Cleanup script.
 
 
-        === "Plex Autoscan"
+        === "Autoscan"
 
             1. Click "Settings" -> "Connect".
 
@@ -309,32 +309,38 @@ Make changes in the following sections:
 
             3. Add the following:
 
-                Name: Plex Autoscan
+                Name: Autoscan
 
                 On Grab: `No`
 
-                On Download: `Yes`
+                On Import: `Yes`
 
                 On Upgrade:  `Yes`
 
                 On Rename: `Yes`
 
-                Filter Movie Tags: _Leave Blank_
+                On Series Delete: `Yes`
 
-                URL: [Your Plex Autoscan URL](../plex-autoscan/#obtaining-the-plex-autoscan-url)
+                On Episode File Delete: `Yes`
+
+                On Episode File Delete For Upgrade: `Yes`
+
+                Tags: _Leave Blank_
+
+                URL: `http://autoscan:3030/triggers/sonarr`
 
                 Method:`POST`
 
-                Username: _Leave Blank_
+                Username: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
 
-                Password: _Leave Blank_
+                Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
 
             4. The settings will look like this:
 
-                ![sonarr Plex Autoscan](../images/sonarr/sonarr-plex_autoscan.png)
+                ![Sonarr Autoscan](../images/sonarr/sonarr-autoscan.png)
 
 
-            5. Click "Save" to add Plex Autoscan.
+            5. Click "Save" to add Autoscan.
 
 
     === "General"

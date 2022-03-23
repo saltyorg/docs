@@ -12,293 +12,380 @@
 
 # Settings
 
-## General
+Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
-1. Go to "Settings" -> "General".
+Make changes in the following sections:
 
-1. Set "Advanced Settings": `Shown`
+!!! Settings
 
-### Host
+    === "Media Management"
 
-- "Bind Address: `*`
+        These settings control management of media files.
 
-- "Port Number": `8686`
+        === "Movie Naming"
 
-- "URL Base": _blank_
+            - "Rename Tracks": `Yes`
 
-- "Enable SSL": `No` (_SSL is handled by Traefik_)
+            - "Replace Illegal Characters": `Yes`
 
-- "Open browser on start": `No`
+            - Set your preferred naming format; here are some examples.
 
-### Proxy Settings
+            <details>
+            <summary>Plex's Naming Preference</summary> <br />
 
-- "Use Proxy": `No`
+            Example: <br />
+            ```
+            01 - Shine On You Crazy Diamond (Parts I-V).m4a
+            ```
 
-### Logging
+            Standard Track Format: <br />
+            ```
+            {track:00} - {Track Title}
+            ```
 
-- "Log Level": `Debug`
+            Artist Folder Format: <br />
+            ```
+            {Artist Name}
+            ```
 
-### Analytics
+            Album Folder Format: <br />
+            ```
+            {Artist Name} - {Album Title}
+            ```
 
-- "Send Anonymous Usage Data": `No` (_your preference_)
+            Reference: https://support.plex.tv/articles/categories/media-preparation/naming-and-organizing-music-media/
+            </details>
 
-### Updates
+        === "Folders"
 
-- "Branch": `develop`
+            - "Create empty artist folders": `No`
 
-- "Automatic": `Off`
+            - "Delete empty folders": `No`
 
-### Save
+        === "Importing"
 
-- Click "Save".
+            - "Skip Free Space Check": `No`
 
+            - "Minimum Free Space": `100` (_can be your preference so long as you use a reasonable value_)
 
-## Media Management
+            - "Use Hardlinks instead of Copy": `Yes`
 
-1. Click "Settings" -> "Media Management".
+            - "Import Extra Files": `Yes` (_can be your preference_)
 
-1. Enable "Rename Tracks".
+            - "Extra File Extensions": `srt` (_can be your preference_)
 
-1. Enable "Replace Illegal Characters".
+        === "File Management"
 
-1. Set your preferred naming format (you can use the ones mentioned below).
+            - "Ignore Deleted Tracks": `No` (_can be your preference_)
 
-   <details>
-   <summary>Plex's Naming Preference</summary> <br />
+            - "Propers and Repacks": `Prefer and Upgrade` (_can be your preference_)
 
-      Example: <br />
-      `01 - Shine On You Crazy Diamond (Parts I-V).m4a`
+            - "Watch Root Folders for file changes": 'Yes'
 
-      Standard Track Format: <br />
-      `{track:00} - {Track Title}`
+            - "Rescan Artist Folder after Refresh": `Never`
 
-      Artist Folder Format: <br />
-      `{Artist Name}`
+            - "Allow Fingerprinting": `For new imports only`
 
-      Album Folder Format: <br />
-      `{Artist Name} - {Album Title}`
+            - "Change File Date": `Album Release Date` (_can be your preference_)
 
-      Ref: https://support.plex.tv/articles/categories/media-preparation/naming-and-organizing-music-media/  <br />
-   </details>
+            - "Recycle Bin": _blank_ (Rclone deletes are sent to Gdrive trash folder, anyway)
 
-1. Disable "Analyse audio files".
+            - "Recycling Bin Cleanup": '0'
 
-1. Click "Save".
+        === "Permissions"
 
+            - Set Permissions: `No`
 
-## Download Client
+        === "Save"
 
-1. Click "Settings" -> "Download Client".
+            - Click "Save".
 
-1. "Completed Download Handling": `Enabled` Selected (_your preference_)
+    === "Indexers"
 
-1. "Failed Download Handling": `Redownload` Selected.
+        These settings control [indexers](../saltbox/prerequisites/prerequisites.md#usenet-or-bittorrent-sources) and related behavior.
 
+        === "NZBHydra2"
 
-### NZBGet
+            1. Click Add Indexer (`+`).
 
-1. Add a new "NZBGet" download client.
+            2. Select "Newznab".
 
-1. Add the following:
+            3. Add the following:
 
-   1. Name: NZBGet
+                Name: NZBHydra2
 
-   1. Enable: `Yes`
+                Enable RSS Sync: _Your Preference_
 
-   1. Host: `nzbget`
+                Enable Automatic Search: _Your Preference_
 
-   1. Port: `6789`
+                Enable Interactive Search: _Your Preference_
 
-   2. Username:  [Your NZBGet Username](nzbget.md#security)
+                URL: `http://nzbhydra2:5076`
 
-   3. Password:  [Your NZBGet Password](nzbget.md#security)
+                API Key: [Your NZBHydra2 API Key](../apps/nzbhydra2.md)
 
-   4. Category: `lidarr`
+                Early Download Limit: _Your Preference_
 
-   5. Use SSL: `No`
+                Additional Parameters: _Leave Blank_
 
-   6. Add Paused: `No`
+            4. Your settings will look like this:
 
-2. Your settings will now look like this:
+                ![Lidarr NZBHydra2](../images/lidarr/lidarr-nzbhydra.png)
 
-    ![Lidarr NZBGet Downloader](../images/lidarr/01-lidarr-nzbget.png)
+            5. Click "Save" to add NZBHydra2.
 
-3. Click "Save" to add NZBGet.
+            Note: The "Test" will keep failing until you add an indexer in [NZBHydra2](../apps/nzbhydra2.md).
 
+        === "Jackett"
 
-### ruTorrent
+            Note: Each Indexer you have defined in Jackett will need to be added separately.
 
-1. Add a new "rTorrent" download client.
+            1. Click Add Indexer (`+`)
 
-1. Add the following:
+            2. Select "Torznab".
 
-   1. Name: ruTorrent
+            3. Add the following:
 
-   1. Enable: `Yes`
+                Name: Indexer Name
 
-   1. Host: `rutorrent`
+                Enable RSS Sync: _Your Preference_
 
-   1. Port: `80`
+                Enable Automatic Search: _Your Preference_
 
-   1. URL Path: `RPC2`
+                Enable Interactive Search: _Your Preference_
 
-   1. Use SSL: `No`
+                URL: [Indexer's Torznab Feed](../apps/jackett.md)
 
-   2. Username: [Your ruTorrent Username](rutorrent.md#login)
+                API Key: [Your Jackett API Key](../apps/jackett.md)
 
-   3. Password: [Your ruTorrent Password](rutorrent.md#login)
+                Early Download Limit: _Your Preference_
 
-   4. Category: `lidarr`
+                Additional Parameters: _Leave Blank_
 
-   5. Directory: _Leave Blank_
+            4. Your settings will look like this:
 
-2. Your settings will look like this:
+                ![Lidarr Jackett](../images/lidarr/lidarr-jackett.png)
 
-   ![Lidarr ruTorrent Downloader](../images/lidarr/02-lidarr-rutorrent.png)
+            5. Click "Save" to add the indexer.
 
-3. Click "Save" to add ruTorrent.
 
+    === "Download Clients"
 
+        These settings control downloading behavior and clients.
 
-## Indexers
+        === "Completed Download Handling"
 
-1. Go to "Settings" -> "Indexers".
+            - "Enable": `Yes`
 
-1. Set "Advanced Settings": `Shown`
+            - "Remove": `Yes` (_can be your preference_)
 
-1. Add in your your favorite [indexers](../saltbox/prerequisites/prerequisites.md#usenet-vs-bittorrent).
+        === "Failed Download Handling"
 
+            - "Redownload": `Yes`
 
-### NZBHydra2
+            - "Remove": `Yes`
 
-1. Click "Settings" -> "Indexers".
+        === "NZBGet"
 
-2. Click Add Indexer (`+`).
+            1. Click Add (`+`)
 
-3. Select "Newznab".
+            2. Add a new "NZBGet" download client.
 
-4. Add the following:
+            3. Add the following:
 
-   1. Name: NZBHydra2
+                Name: NZBGet
 
-   1. Enable RSS Sync: _Your Preference_
+                Enable: `Yes`
 
-   1. Enable Search: _Your Preference_
+                Host: `nzbget`
 
-   1. URL: `http://nzbhydra2:5076`
+                Port: `6789`
 
-   1. API Path: `/api`
+                Username:  [Your NZBGet Username](../apps/nzbget.md)
 
-   2. API Key: [Your NZBHydra2 API Key](nzbhydra2.md#7-api-key)
+                Password:  [Your NZBGet Password](../apps/nzbget.md)
 
-   3. Additional Parameters: _Leave Blank_
+                Category: `lidarr`
 
-5. Your settings will look like this:
+                Use SSL: `No`
 
-    ![Lidarr NZBHydra2](../images/lidarr/03-lidarr-nzbhydra.png)
+                Add Paused: `No`
 
-6. Click "Save" to add NZBHydra2.
+            4. Your settings will look like this:
 
-Note: The "Test" will keep failing until you add an indexer in [NZBHydra2](nzbhydra2.md).
+                ![Lidarr NZBGet Downloader](../images/lidarr/01-lidarr-nzbget.png)
 
-### Jackett
+            5. Click "Save" to add NZBGet.
 
-Note: Each Indexer will need to be added separately.
+        === "ruTorrent"
 
-1. Click "Settings" -> "Indexers".
+            1. Click Add (`+`)
 
-1. Click Add Indexer (`+`)
+            2. Add a new "rTorrent" download client.
 
-1. Select "Torznab".
+            3. Add the following:
 
-1. Add the following:
+                Name: ruTorrent
 
-   1. Name: Indexer's Name
+                Enable: `Yes`
 
-   1. Enable RSS Sync: _Your Preference_
+                Host: `rutorrent`
 
-   1. Enable Search: _Your Preference_
+                Port: `80`
 
-   2. URL: [Indexer's Torznab Feed](jackett.md#3-adding-indexers-to-sonarrradarr)
+                URL Path: `RPC2`
 
-   3. API Path: `/api`
+                Use SSL: `No`
 
-   4. API Key: [Your Jackett API Key](jackett.md#3-adding-indexers-to-sonarrradarr)
+                Username: [Your ruTorrent Username](../apps/rutorrent.md)
 
-   5. Additional Parameters: _Leave Blank_
+                Password: [Your ruTorrent Password](../apps/rutorrent.md)
 
-2. Your settings will look like this:
+                Category: `lidarr`
 
-    ![Lidarr Jackett](../images/lidarr/04-lidarr-jackett.png)
+                Directory: _Leave Blank_
 
+            4.  Your settings will now look like this:
 
-3. Click "Save" to add the indexer.
+                ![Radarr ruTorrent Downloader](../images/lidarr/lidarr-rtorrent.png)
 
+            5. Click "Save" to add ruTorrent.
 
-## Connect
+        === "qBittorrent"
 
-### Torrent Cleanup
+            1. Click Add ('+')
 
-Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Lidarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
+            2. Add a new "qBittorrent" download client.
 
-1. Click "Settings" -> "Connect".
+            3. Add the following:
 
-1. Add a new "Custom Script".
+                Name: qBittorrent
 
-1. Add the following:
+                Enable: 'Yes'
 
-   1. Name: Torrent Cleanup
+                Host: 'qBittorrent'
 
-   1. On Grab: `No`
+                Port: '8080'
 
-   1. On Download: `Yes`
+                Username: [Your qBittorrent Username](../apps/qbittorrent.md)
 
-   1. On Upgrade:  `Yes`
+                Password: [Your qBittorrent Password](../apps/qbittorrent.md)
 
-   1. On Rename:`No`
+                Category: 'lidarr'
 
-   1. Path: `/scripts/torrents/TorrentCleanup.py`
+            4.  Your settings will now look like this:
 
-1. The settings will look like this:
+                ![Lidarr qBittorent Downloader](../images/lidarr/lidarr-qbittorrent.png)
 
-   ![Lidarr Torrent Cleanup Script CloudBox](../images/lidarr/05-lidarr-torrent-cleanup.png)
+	         5.  Click "Save" to add qBittorrent qb
 
-2. Click "Save" to add the Torrent Cleanup script.
+    === "Connect"
 
+        These settings control connections to other applications or systems.
 
-### Plex Autoscan
-**Plex Autoscan no longers work with music libraries as of version 1.18, so this feature will not work.**
-1. Click "Settings" -> "Connect".
+        === "Torrent Cleanup"
 
-1. Add a new "Webhook".
+            Torrent Cleanup Script is a custom script that will clean up torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported audio file(s), leaving just the `.rar` files for seeding.
 
-1. Add the following:
+            1. Click "Settings" -> "Connect".
 
-   1. Name: Plex Autoscan
+            2. Add a new "Custom Script".
 
-   1. On Grab: `No`
+            3. Add the following:
 
-   1. On Download: `Yes`
+                Name: Torrent Cleanup
 
-   1. On Upgrade:  `Yes`
+                On Grab: `No`
 
-   1. On Rename: `Yes`
+                On Release Import: `Yes`
 
-   2. URL: [Your Plex Autoscan URL](plex-autoscan.md#4-obtaining-the-plex-autoscan-url)
+                On Upgrade:  `Yes`
 
-   3. Method:`POST`
+                On Rename:`No`
 
-   4. Username: _Leave Blank_
+                Path: `/scripts/torrents/TorrentCleanup.py`
 
-   5. Password: _Leave Blank_
+            4. The settings will look like this:
 
+                ![Lidarr Torrent Cleanup Script CloudBox](../images/lidarr/lidarr-torrentcleanup.png)
 
-2. The settings will look like this:
+            5. Click "Save" to add the Torrent Cleanup script.
 
-    ![Lidarr Plex Autoscan](../images/lidarr/06-lidarr-plex-autoscan.png)
+        === "Autoscan"
 
+            1. Click "Settings" -> "Connect".
 
-3. Click "Save" to add Plex Autoscan.
+            2. Add a new "Webhook".
+
+            3. Add the following:
+
+                Name: Autoscan
+
+                On Grab: `No`
+
+                On Release Import: `Yes`
+
+                On Upgrade:  `Yes`
+
+                On Rename: `Yes`
+
+                On Track Retag: `No`
+
+                On Health Issue: `No`
+
+                Tags: _Leave Blank_
+
+                URL: `http://autoscan:3030/triggers/lidarr`
+
+                Method:`POST`
+
+                Username: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
+
+                Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
+
+            4. The settings will look like this:
+
+                ![lidarr Autoscan](../images/lidarr/lidarr-autoscan.png)
+
+            5. Click "Save" to add Autoscan.
+
+    === "General"
+
+        These settings control general aspects of Radarr.
+
+        === "Start-Up"
+
+            - "Bind Address: `*`
+
+            - "Port Number": `7878`
+
+            - "URL Base": _blank_
+
+            - "Enable SSL": `No` (_SSL is handled by Traefik_)
+
+            - "Open browser on start": `No`
+
+        === "Proxy Settings"
+
+            - "Use Proxy": `No`
+
+        === "Logging"
+
+            - "Log Level": `Debug`
+
+        === "Analytics"
+
+            - "Send Anonymous Usage Data": `No` (_your preference_)
+
+        === "Updates"
+
+            - "Branch": `develop`
+
+            - "Automatic": `Off`
+
+        === "Save"
+
+            - Click "Save".
 
 ## Music Path
 
@@ -308,7 +395,7 @@ Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorr
 
 1. Click the green "check" button to add the path.
 
-1. All artist added now will have that path set.
+1. All artists added now will have that path set.
 
 
 ## API Key

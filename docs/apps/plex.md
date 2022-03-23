@@ -40,9 +40,11 @@
 
         2. Set the following:
 
-            - "Empty trash automatically after every scan": `disabled`
+            - "Empty trash automatically after every scan": `enabled`
 
-                - _Plex Autoscan will take care of this._
+                - THIS IS A CHANGE FROM WHEN _Plex Autoscan_ WAS THE DEFAULT
+
+                - Autoscan is now the default scan app, and it does not empty trash
 
             - "Allow media deletion": `enabled`
 
@@ -113,7 +115,7 @@
 
         1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Scheduled Tasks" (left).
 
-        1. Set the following:
+        2. Set the following:
 
             - "Update all libraries during maintenance": `disabled`
 
@@ -121,7 +123,7 @@
 
             - "Perform extensive media analysis during maintenance": `disabled`
 
-        2. Click "SAVE CHANGES".
+        3. Click "SAVE CHANGES".
 
             ![](../images/plex-media-server/plex-11-schedule.jpeg)
 
@@ -207,7 +209,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 ## Scan Media libraries
 
-As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Plex Autoscan](../apps/plex-autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
+As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](../apps/autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
 To do so:
 

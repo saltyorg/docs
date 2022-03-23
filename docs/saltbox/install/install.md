@@ -231,7 +231,7 @@ Go through these one at a time; some of the setups depend on previous setups.
 1. [NZBHydra2](../../apps/nzbhydra2.md)
 1. [Jackett](../../apps/jackett.md)
 1. [Plex Media Server](../../apps/plex.md)
-1. [Plex Autoscan](../../apps/plex-autoscan.md)
+1. [utoscan](../../apps/autoscan.md)
 1. [Sonarr](../../apps/sonarr.md)
 1. [Radarr](../../apps/radarr.md)
 1. [Lidarr](../../apps/lidarr.md)

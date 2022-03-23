@@ -271,7 +271,7 @@ Take a look at the “`Binds`” section.  Each entry there shows a path on the 
 | sonarr                |  `/tv`             | `/mnt/unionfs/Media/TV`     |
 | radarr                | `/movies`            | `/mnt/unionfs/Media/Movies` |
 | lidarr                | `/music`             | `/mnt/unionfs/Media/Music` |
-| plex                  | `/data`              | `/mnt/unionfs/Media`       |  
+| plex                  | `/data`              | `/mnt/unionfs/Media`       |
 
 
 
@@ -300,7 +300,7 @@ plex
 
 Then try the “`docker exec plex ls -al /data`” command again.
 
-You may notice above that the /mnt directory is passed through to the container, as well.  This means that, inside the container, 
+You may notice above that the /mnt directory is passed through to the container, as well.  This means that, inside the container,
 	`/data` and `/mnt/unionfs/Media`
 point to the very same location, so these two directory listings should look the same:
 

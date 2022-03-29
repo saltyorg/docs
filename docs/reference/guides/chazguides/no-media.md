@@ -14,8 +14,8 @@ If any layer is having problems, Plex isn’t going to see your media.
 
 For purposes of these notes, I’m assuming your setup is based on the current standard Saltbox configuration:
 
-  - rclone remote is mounted via `rclone_vfs` [this used to be done by plexdrive]
-  - /mnt/unionfs directory is created using `merger_fs` [used to be done by unionfs]
+  - rclone remote is mounted via `rclone_vfs`
+  - /mnt/unionfs directory is created using `merger_fs`
 
 I’m further assuming that you are using the default file structure as suggested in the Saltbox wiki.
 
@@ -29,7 +29,7 @@ In most cases, running the mounts tag will clear up any problems you may be havi
 
 
 ```
-cd ~/cloudbox && sudo ansible-playbook cloudbox.yml --tags mounts
+sb install mounts
 ```
 
 ## A quick look
@@ -77,11 +77,11 @@ You should be able to get a file listing from that remote:
 ➜  ~
 ```
 
-That file listing should match what’s displayed on the Google Drive website.
+That file listing should match what’s displayed on the Google Drive website.  If you've used the Saltbox scripted setup, those directories witll be spread across the three shared drives that get created.
 
 Yours will probably contain “Movies” and “TV”.
 
-If it doesn’t, step one is to fix that.  Recreate or edit that google: rclone remote until the file listings match.
+If it doesn’t, step one is to fix that.  Recreate or edit that `google:` rclone remote until the file listings match.  If you've used the Saltbox scripted setup, examine the three shared drive remotes; trhe `google` remote is just a union of those.
 
 Do not continue until those two file listings match.  They won’t match mine; they should both show the same files from YOUR gdrive.
 
@@ -247,7 +247,6 @@ All the docker containers that need to access your media files have the relevant
 ...
     	"HostConfig": {
         	"Binds": [
-            	"/mnt/unionfs/Media:/data:rw",
             	"/tmp:/tmp:rw",
             	"/mnt/local/transcodes/plex:/transcode:rw",
             	"/opt/plex:/config:rw",
@@ -266,19 +265,18 @@ Take a look at the “`Binds`” section.  Each entry there shows a path on the 
 ## Media-related defaults:
 
 
-| Container/Application |  INSIDE CONTAINER  |  ON HOST                  |
-|:----------------------|:------------------:|:-------------------------:|
-| sonarr                |  `/tv`             | `/mnt/unionfs/Media/TV`     |
-| radarr                | `/movies`            | `/mnt/unionfs/Media/Movies` |
-| lidarr                | `/music`             | `/mnt/unionfs/Media/Music` |
-| plex                  | `/data`              | `/mnt/unionfs/Media`       |
+| Container/Application |  INSIDE CONTAINER  |  ON HOST   |
+|:----------------------|:------------------:|:----------:|
+| sonarr                | `/mnt`             | `/mnt`     |
+| radarr                | `/mnt`             | `/mnt`     |
+| lidarr                | `/mnt`             | `/mnt`     |
+| plex                  | `/mnt`             | `/mnt`     |
 
 
-
-For example, that plex line shows that `/mnt/unionfs/Media` appears inside the container at `/data`.  Let’s check that:
+Let’s check that in Plex:
 
 ```
-➜  ~ docker exec plex ls -al /data
+➜  ~ docker exec plex ls -al /mnt/unionfs/Media
 total 4
 drwxrwxr-x 1 plex plex   120 Sep 28 18:32 .
 drwxr-xr-x 1 root root  4096 Oct 16 22:45 ..
@@ -298,30 +296,7 @@ plex
 ➜  ~
 ```
 
-Then try the “`docker exec plex ls -al /data`” command again.
-
-You may notice above that the /mnt directory is passed through to the container, as well.  This means that, inside the container,
-	`/data` and `/mnt/unionfs/Media`
-point to the very same location, so these two directory listings should look the same:
-
-
-```
-➜  ~ docker exec plex ls -al /data
-...
-drwxrwxr-x 1 plex plex   338 Oct 18 20:21 Music
-drwxrwxr-x 1 plex plex    78 May  3  2019 Movies
-drwxrwxr-x 1 plex plex 28196 Nov  2 01:42 TV
-```
-```
-➜  ~ docker exec plex ls -al /mnt/unionfs/Media
-total 4
-...
-drwxrwxr-x 1 plex plex   338 Oct 18 20:21 Music
-drwxrwxr-x 1 plex plex    78 May  3  2019 Movies
-drwxrwxr-x 1 plex plex 28196 Nov  2 01:42 TV
-```
-
-On my own servers, I typically don’t use the “`/data`” style mounts.  Since the `/mnt` directory is mapped into all the containers that use it, I point Radarr, Sonarr, Plex, etc.  all at `/mnt/unionfs/Media/BLAH` directly.  I do this so that I never have to translate any paths in things like Plex AutoScan.  A given movie file is at `/mnt/unionfs/Media/Movies/Whatever (2019)` no matter the context.
+Then try the “`docker exec plex ls -al /mnt/unionfs/Media`” command again.
 
 Some common problems are:
 
@@ -341,7 +316,7 @@ ubuntu systemd[1]: Failed to start MergerFS Mount.
 If you see this, rerunning the mounts tag, with or without rebuild, actually checks for non empty paths left there as part of a previous failure, and moves the folder to `/mnt/unionfs_<date>` before mounting again.
 
 ```
-cd ~/cloudbox && sudo ansible-playbook cloudbox.yml --tags mounts
+sb install mounts
 ```
 
 If this is the result of something writing into that directory while the mergerfs service was down, the mounts tag won’t address it.  You’ll have to clean out `/mnt/unionfs` yourself first.
@@ -350,14 +325,12 @@ If this is the result of something writing into that directory while the mergerf
 
 There are a few things you can look at:
 
-If you installed recently, rclone_vfs and mergerfs have become the default, so you’re probably using them.  If you installed over a year ago, you’re probably using plexdrive/unionfs.
-
 In the following examples, you’re typing the part in blue and looking for the part highlighted in orange.
 
 Look at the settings file:
 
 ```
-➜  cloudbox git:(master) head adv_settings.yml
+➜  saltbox git:(master) head adv_settings.yml
 ---
 System:
   timezone: auto
@@ -373,13 +346,13 @@ Plex:
 
 Check the status of the services
 ```
-➜  cloudbox git:(master) service rclone_vfs status
+➜  ~ service rclone_vfs status
 ● rclone_vfs.service - Rclone VFS Mount
    Loaded: loaded (/etc/systemd/system/rclone_vfs.service; enabled; vendor preset: enabled)
    Active: active (running) since Sun 2019-06-16 22:41:58 EEST; 1 day 18h ago
 …
 
-➜  cloudbox git:(master) service mergerfs status
+➜  ~ service mergerfs status
 ● mergerfs.service - MergerFS Mount
    Loaded: loaded (/etc/systemd/system/mergerfs.service; enabled; vendor preset: enabled)
    Active: active (running) since Sun 2019-06-16 22:41:48 EEST; 1 day 18h ago
@@ -388,13 +361,11 @@ Check the status of the services
 
 If you’re not using either rclone_vfs or mergerfs you’ll see errors there instead.
 
-
 Check the filesystem behind the mounts:
 
 ```
-➜  cloudbox git:(master) sudo mount | egrep "remote"
+➜  ~ sudo mount | egrep "remote"
 local:remote on /mnt/unionfs type fuse.mergerfs …  <<<< Mergerfs
 google: on /mnt/remote type fuse.rclone …          <<<< RClone
-➜  cloudbox git:(master)
 ```
 

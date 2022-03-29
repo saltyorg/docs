@@ -81,7 +81,7 @@ That file listing should match what’s displayed on the Google Drive website.  
 
 Yours will probably contain “Movies” and “TV”.
 
-If it doesn’t, step one is to fix that.  Recreate or edit that `google:` rclone remote until the file listings match.  If you've used the Saltbox scripted setup, examine the three shared drive remotes; trhe `google` remote is just a union of those.
+If it doesn’t, step one is to fix that.  Recreate or edit that `google:` rclone remote until the file listings match.  If you've used the Saltbox scripted setup, examine the three shared drive remotes; the `google` remote is just a union of those.
 
 Do not continue until those two file listings match.  They won’t match mine; they should both show the same files from YOUR gdrive.
 

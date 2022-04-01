@@ -183,7 +183,9 @@ There is nothing special about saltbox's implementation of this setup, aside fro
 
 You may already have this remote configured or know how to do it if you are coming from a similar setup like Cloudbox or PlexGuide.
 
-If you are coming from Cloudbox, you can and should use your existing rclone setup rather than going through the setup again.
+If you do, you are probably best served to use your existing setup.
+
+If you are coming from Cloudbox, you *can and should* use your existing rclone setup rather than going through the setup again.
 
 If you are starting from scratch, the process is documented [here](../../reference/rclone.md).
 

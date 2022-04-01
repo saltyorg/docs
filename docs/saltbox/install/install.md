@@ -56,21 +56,21 @@ Contents:
 ``` { .yaml .annotate }
 ---
 user:
-  name: seed # (1)
-  pass: password123 # (2)
-  domain: testsaltbox.ml # (3)
-  email: your@email.com # (4)
+  name: seed # (1)!
+  pass: password123 # (2)!
+  domain: testsaltbox.ml # (3)!
+  email: your@email.com # (4)!
 cloudflare:
-  email: # (5)
-  api: # (6)
+  email: # (5)!
+  api: # (6)!
 plex:
-  user: # (7)
-  pass: # (8)
-  tfa: no # (9)
+  user: # (7)!
+  pass: # (8)!
+  tfa: no # (9)!
 dockerhub:
-  user: # (10)
-  token: # (11)
-apprise: # (12)
+  user: # (10)!
+  token: # (11)!
+apprise: # (12)!
 ```
 
 1. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
@@ -121,38 +121,34 @@ Contents:
 
 ``` { .yaml .annotate }
 ---
-downloads:
-  nzbs: /mnt/unionfs/downloads/nzbs # (1)
-  torrents: /mnt/unionfs/downloads/torrents # (2)
-transcodes: /mnt/local/transcodes # (3)
+downloads: /mnt/unionfs/downloads # (1)!!
 rclone:
-  version: latest # (4)
-  remote: google # (5)
-shell: bash # (6)
+  version: latest # (3)!
+  remote: google # (4)!
+shell: bash # (5)!
 authelia:
-  master: yes # (7)
-  subdomain: login # (8)
+  master: yes # (6)!
+  subdomain: login # (7)!
 ```
 
-1. Folder used for usenet downloads.
+1. Folder used for downloads.
 
-2. Folder used for torrent downloads.
 
-3. Folder used for temporary transcode files.
+2. Folder used for temporary transcode files.
 
-4. Rclone version that Saltbox will install.
+3. Rclone version that Saltbox will install.
 
     Valid options are **latest**, **beta** or a specific version (**1.55**).
 
-5. Name of the rclone remote that Saltbox will mount by default and use in any automated configuration.
+4. Name of the rclone remote that Saltbox will mount by default and use in any automated configuration.
 
     Optional - Leave empty to avoid remote mount setup.
 
-6. Shell used by the system. Valid options are bash or zsh.
+5. Shell used by the system. Valid options are bash or zsh.
 
-7. If the current server should have Authelia installed or use one installed elsewhere.
+6. If the current server should have Authelia installed or use one installed elsewhere.
 
-8. Subdomain used for Authelia.
+7. Subdomain used for Authelia.
 
     Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 

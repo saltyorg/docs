@@ -298,7 +298,7 @@ nav:
           - Resetting apps: reference/guides/app-reset.md
           - Updating apps: reference/guides/app-update.md
         - Other:
-          - Sallbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
+          - Saltbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
           - Cloudplow Examples: reference/cloudplow.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
           - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md

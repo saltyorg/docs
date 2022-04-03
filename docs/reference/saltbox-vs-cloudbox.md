@@ -13,7 +13,7 @@ In terms of functionality the high points are
  - Inventory system for simpler, upgrade-protected customization
  - Authelia single sign-on
  - Choice of SSL provider [Let's Encrypt or ZeroSSL]
- - ability to use a subdomain
+ - ability to use a subdomain rather than a TLD (`rolename.subdomain.domain.tld` rather than `rolename.domain.tld`)
  - support for running without a domain in local installs
  - Generalized support for multiple app instances [replacement for the "ArrX" system]
  - Ongoing maintenance and active development

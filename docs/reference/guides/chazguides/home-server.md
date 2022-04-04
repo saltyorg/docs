@@ -78,9 +78,9 @@ Next, port forwarding:
 
   ![](../../../images/chaz-guides/port-forward.png)
 
-You can see here that I’ve set it such that outside requests to port 80, 443, 2205, and 3468 get forwarded on to the IP we just assigned to the saltbox server.
+You can see here that I’ve set it such that outside requests to port 80, 443, 3526, and 3468 get forwarded on to the IP we just assigned to the saltbox server.
 
-Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (2207), and Plex-Autoscan (3468).
+Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (3526), and Plex-Autoscan (3468).
 
 If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
 

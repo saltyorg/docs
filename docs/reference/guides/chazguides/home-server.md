@@ -26,11 +26,15 @@ There are a variety of places that provide free domains.  Here’s one offered w
 
 Configure the DNS at your registrar to point your domain at your home external IP address.
 
-You can find that using something like: [https://whatismyipaddress.com/](https://whatismyipaddress.com/)
+You can find your home external IP address using something like: [https://whatismyipaddress.com/](https://whatismyipaddress.com/)
+
+### Dynamic DNS:
 
 You will need to configure “dynamic DNS” to make sure that domain keeps pointing to your home IP, which is subject to change, most likely.
 
-Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  If you use Cloudflare for DNS, the ddns client configuration will be automatically done when you run the role.
+When you set up a server in a data center, typically that server has a fixed unchanging IP address, so you set up DNS one time.  Most residential internet connections do not get a fixed address; your home IP will change periodically.  "Dynamic DNS" updates your DNS setup whenever your IP address changes, ensuring that "myhomeaddress.com" always points at the correct IP address.
+
+Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  If you use Cloudflare for DNS, the ddns client configuration will be automatically done for you when you run the role.
 
 The saltbox role is `ddclient`, and you run it like any other saltbox role:
 
@@ -48,7 +52,7 @@ I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
 
 That’s all.
 
-Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as that user from the start rather than starting as `root` like you would on a remote server.
+Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as **that user** from the start rather than starting as `root` like you would on a remote server.
 
 ## Router:
 

@@ -78,7 +78,7 @@ Next, port forwarding:
 
   ![](../../../images/chaz-guides/port-forward.png)
 
-You can see here that I’ve set it such that outside requests to port 80, 443, 3526, and 3468 get forwarded on to the IP we just assigned to the saltbox server.
+You can see here that I’ve set it such that outside requests to port 80, 443, 3526, and 3468 get forwarded on to the IP we just assigned to the saltbox server.  Note this example assumes you have not modified either the SSH listening port or the plex-autoscan listening port on the Saltbox machine.  If you have done, then you should forward to the relevant ports instead of to 22 and 3468.
 
 Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (3526), and Plex-Autoscan (3468).
 

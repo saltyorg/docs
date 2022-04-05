@@ -100,3 +100,25 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
   Remember that if you use a service account file to authenticate an rclone remote, you need to manually put that file into place before running the restore.
 
   Then you should be able to install tags as you want.
+
+- install top-level tag [if desired] <br />
+
+  ``` shell
+
+    sb install saltbox
+
+  ```
+- install individual tags [if desired] <br />
+
+  ``` shell
+
+    sb install emby
+
+  ```
+- install sandbox tags [if required] <br />
+
+  ``` shell
+
+    sb install sandbox-nextcloud
+
+  ```

@@ -87,6 +87,16 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     You will be asked to authenticate in the usual Google way.  Follow the prompts.
 
+    For the time being, due to changes in the Google OAuth process, this will try to redirect you to a `localhost` URL, which will fail.  The URL will look like:
+    
+    ```
+    http://localhost:8000/oauth2callback?code=4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive
+    ```
+
+    Copy everything following `code=` [i.e. `4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive`] and paste it at the prompt where the script is waiting.
+    
+    We're working on making this a bit more friendly.
+
     This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox:
 
     ```

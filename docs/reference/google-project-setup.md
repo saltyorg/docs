@@ -126,4 +126,6 @@ This guide is assuming you are using a standard GSuite Business or GSuite Worksp
 
     ![](../images/gdrive-project/27-credentials-done.png)
 
+    Later on, I'm going to assume you put it in `/opt/sa/` and named it `project-creds.json`.
+
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

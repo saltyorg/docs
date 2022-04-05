@@ -24,13 +24,13 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
   ```
 
-  If you are using a service account to authenticate your rclone backup remote, you will need to put those files in place on the saltbox server before you run the restore.
+  If you are using a service account to authenticate your rclone backup remote, you will need to put that service account file in place on the saltbox server before you run the restore.
   
   This trips people up frequently, so it bears repeating:
 
-  If you are using a service account to authenticate your rclone backup remote, you will need to put those files in place on the saltbox server before you run the restore.
+  If you are using a service account to authenticate your rclone backup remote, you will need to put that service account file in place on the saltbox server before you run the restore.
   
-  If you don't understand what this means, ask on the Discord befor you attempt this migration; it will save you a failure that will drive you to the discord anyway.
+  If you don't understand what this means, ask on the Discord before you attempt this migration; doing so will save you a failure that will drive you to the Discord anyway.
 
 - **Community files to keep handy (these files should be found in `/opt/community/`):**
 

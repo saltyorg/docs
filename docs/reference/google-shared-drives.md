@@ -75,6 +75,10 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
     cp  /opt/sa/project-creds.json client_secrets.json
     ```
 
+    This is the credential file you downloaded a couple steps ago.  Recall that in that step I said I would later assume you'd put it at `/opt/sa/project_creds.json`.  Here's that assumption.
+    
+    If you've stored the file elsewhere, copy it from there via whatever means.  It just has to end up at `/opt/sb_gd/client_secrets.json`.
+
 6. Run the `sb_sd.py` script:
 
     ```

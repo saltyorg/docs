@@ -357,7 +357,7 @@ Make changes in the following sections:
 
             - "Bind Address: `*`
 
-            - "Port Number": `7878`
+            - "Port Number": `8686`
 
             - "URL Base": _blank_
 

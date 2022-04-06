@@ -10,6 +10,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
+IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY PRODUCE A SECOND SET OF SHARED DRIVES, AND THERE IS NO REASON FOR THIS.
+
 1. Retrieve the `sb-gd` code
 
     ```

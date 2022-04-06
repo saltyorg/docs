@@ -5,7 +5,7 @@ Note that this is just some examples, not a list of things that any particular u
 ```
 @daily cd /opt/python-plexlibrary/plexlibrary.sh
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
-@daily sb update && sb install saltbox
+@daily PATH='/usr/bin:/bin:/usr/local/bin' sb update && PATH='/usr/bin:/bin:/usr/local/bin' sb install saltbox
 * * * * * /opt/scripts/nzbget/cleanup.sh
 0 10 * * * /opt/scripts/plex/optimize.sh
 0 * * * * PATH='/usr/bin:/bin:/usr/local/bin' cd /opt/SonarrSync/ ; /usr/bin/python SonarrSync.py

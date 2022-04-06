@@ -26,7 +26,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
 2. Run the following command:
 
     ```
-    gcloud init
+    gcloud init --console-only
     ```
 
     Follow the prompts:

@@ -151,6 +151,7 @@ nav:
             - comixed: sandbox/apps/comixed.md
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
             - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
+            - plex-utills: sandbox/apps/plex-utills.md
             - unmanic: sandbox/apps/unmanic.md
           # - Movies:
           - Music:

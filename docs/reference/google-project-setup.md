@@ -6,6 +6,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 This guide is assuming you are using a standard GSuite Business or GSuite Workspace account.
 
+IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.
+
 1. Open Google APIs Console site: https://console.developers.google.com and login with your Google account.
 
     Click on the project or organization at the top:

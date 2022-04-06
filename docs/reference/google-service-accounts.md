@@ -9,6 +9,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
+IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 SERVICE ACCOUNTS CREATED THE FIRST TIME.
+
 1. Make sure /opt/sa is writable by you.
 
     ```

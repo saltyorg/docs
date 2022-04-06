@@ -3,6 +3,7 @@ Note that this is just some examples, not a list of things that any particular u
 `crontab -e`
 
 ```
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 @daily cd /opt/python-plexlibrary/plexlibrary.sh
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
 @daily sb update && sb install saltbox
@@ -10,19 +11,20 @@ Note that this is just some examples, not a list of things that any particular u
 0 10 * * * /opt/scripts/plex/optimize.sh
 0 * * * * PATH='/usr/bin:/bin:/usr/local/bin' cd /opt/SonarrSync/ ; /usr/bin/python SonarrSync.py
 ```
+**Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - Allows using `sb` commands in cronjobs. e.g `sb update`
 
-**Line 1:** `python-plexlibrary` script to make Plex libraries. - [Runs midnight daily **server time**]
+**Line 2:** `python-plexlibrary` script to make Plex libraries. - [Runs midnight daily **server time**]
 
-**Line 2:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**]
+**Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**]
 
-**Line 3:** Update Saltbox and do auto-updates - [Runs daily]
+**Line 4:** Update Saltbox and do auto-updates - [Runs daily]
 
-**Line 4:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
+**Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
 
-**Line 5:** Script to optimize the Plex database. - [Runs daily @ 10AM **server time**] 
+**Line 6:** Script to optimize the Plex database. - [Runs daily @ 10AM **server time**] 
 `Note: Scroll down for script.`
 
-**Line 6:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]
+**Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]
 
 ***
 ### pho's cleanup.sh

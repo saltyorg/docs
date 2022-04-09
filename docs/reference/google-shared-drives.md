@@ -99,7 +99,11 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     
     We're working on making this a bit more friendly.
 
-    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox:
+    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
+    
+    You should see output similar to this:
+    
+    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     ```
     ** Team Drive aZaSjsklaj-Movies created, ID: 123456789

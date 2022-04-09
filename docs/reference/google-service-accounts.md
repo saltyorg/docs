@@ -11,9 +11,10 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 SERVICE ACCOUNTS CREATED THE FIRST TIME.
 
-1. Make sure /opt/sa is writable by you.
+1. Create /opt/sa and make sure it's writable by you.
 
     ```
+    sudo mkdir /opt/sa
     sudo chown -R <user>:<group> /opt/sa
     ```
 

@@ -188,9 +188,10 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     ```
 
 BEFORE YOU DO ANYTHING ELSE:
-BACK UP `/opt/sa` TO YOUR LOCAL COMPUTER
-BACK UP `/home/YOU/.config/rclone/rclone.conf` TO YOUR LOCAL COMPUTER
-If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files.
-You can just restore them rather than going through this whole process again.
+
+  - BACK UP `/opt/sa` TO YOUR LOCAL COMPUTER
+  - BACK UP `/home/YOU/.config/rclone/rclone.conf` TO YOUR LOCAL COMPUTER
+
+If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

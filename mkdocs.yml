@@ -186,8 +186,6 @@ nav:
           - Docker:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
-          - Log Management:
-            - GoAccess: sandbox/apps/goaccess.md
           - Influxdb: sandbox/apps/influxdb.md
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
@@ -195,6 +193,7 @@ nav:
             - unifi : sandbox/apps/unifi.md
           - flaresolverr: sandbox/apps/flaresolverr.md
           - Log Management:
+            - GoAccess: sandbox/apps/goaccess.md
             - logarr: sandbox/apps/logarr.md
             - monitorr: sandbox/apps/monitorr.md
           - guacamole: sandbox/apps/guacamole.md

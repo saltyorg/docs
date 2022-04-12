@@ -228,12 +228,12 @@ nav:
         - Tautulli: apps/tautulli.md
         - Lidarr: apps/lidarr.md
       - Media Servers:
-        - Plex Autoscan: apps/plex-autoscan.md
         - Plex: apps/plex.md
         - Emby: apps/emby.md
         - Jellyfin: apps/jellyfin.md
       - Alternatives to Core Apps:
         - Petio: apps/petio.md
+        - Plex Autoscan: apps/plex-autoscan.md
         - Prowlarr: apps/prowlarr.md
         - Sabnzbd: apps/sabnzbd.md
         - Deluge: apps/deluge.md

@@ -10,7 +10,19 @@ Plex Autoscan comes configured out of the box (as related to Saltbox). However, 
 |-------------|-------------|-------------|-------------|
 | :material-home: Project home | :octicons-link-16: Docs | [:octicons-mark-github-16: Github:](https://github.com/l3uddz/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
-### Do a One-Time, Manual Scan in Plex
+### 1. Installation
+
+``` shell
+
+sb install plex_autoscan
+
+```
+
+### 2. Setup
+
+The role will configure Plex Autoscan, which should leave it ready to go.  However, there are some details you may need to tweak yourself.
+
+#### Do a One-Time, Manual Scan in Plex
 
  - For Plex Autoscan to work, at least one item needs to exist in each library before new items can show up.
 
@@ -20,7 +32,7 @@ Plex Autoscan comes configured out of the box (as related to Saltbox). However, 
 
  - For more info, see [this](plex.md).
 
-### Add Your Plex Access Token into Plex Autoscan Config
+#### Add Your Plex Access Token into Plex Autoscan Config
 
 _You can skip this step if you entered in your Plex credentials in [accounts.yml](../reference/accounts.md) during setup._
 
@@ -44,7 +56,7 @@ _Note: For Mediabox / Feederbox setups, the following will be done on the Mediab
 
    4. <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd> to save.
 
-### Obtaining the Plex Autoscan URL
+#### Obtaining the Plex Autoscan URL
 
 _Note: For Mediabox / Feederbox setup, the following will be done on the Mediabox._
 
@@ -80,7 +92,7 @@ _Note 3: For Mediabox setups, make sure that the port is open in the firewall an
 
 _Note 4: The PAS URL is not meant to be accessed via a browser by default (i.e. going there will give you a `401 Unauthorized` error). However, you can enable a web UI for manual scan requests, see [here](../reference/plex-autoscan-extras.md#web-app)._
 
-## 4. Upload Control File to Google Drive
+#### Upload Control File to Google Drive
 
 The following step is important so that Plex Autoscan can remove missing/replaced media files out of Plex (i.e. empty trash). Without it, Plex will be left with "unavailable" media that can't play (i.e. media posters with trash icons on them).
 
@@ -98,7 +110,7 @@ _Note 1: If your Rclone remote config has a different name for Google Drive, rep
 
 _Note 2: Above command requires Rclone version 1.39+_
 
-## 5. Edit the control files in the Plex Autoscan config file.
+#### Edit the control files in the Plex Autoscan config file.
 
 If you did step 4; you can skip this step.
 
@@ -140,7 +152,7 @@ If you did step 4; you can skip this step.
 
    4. <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd> to save.
 
-### Enabling Google Drive Monitoring in Plex Autoscan
+#### Enabling Google Drive Monitoring in Plex Autoscan
 
 See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#google-drive-monitoring)
 
@@ -148,7 +160,7 @@ See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#google-
 
 See the [Plex-autoscan Extras page](../reference/plex-autoscan-extras.md#make-plex-scan-a-specific-file-or-folder)
 
-### Plex Autoscan is installed in a Virtual Environment
+### Plex Autoscan and its Virtual Environment
 
 To make this transparent to the user, saltbox installs a wrapper script that accounts for this.  This means that you can run Plex Autoscan manually like this:
 

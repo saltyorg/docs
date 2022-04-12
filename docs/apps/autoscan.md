@@ -10,15 +10,7 @@ Autoscan is a rewrite of the original Plex Autoscan written in the Go language. 
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home ](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/cloudb0x/autoscan){: .header-icons target=_blank rel="noopener noreferrer" }|
 
-### 1. Installation
-
-``` shell
-
-sb install autoscan
-
-```
-
-### 2. Setup
+## Setup
 
 The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. If you wish to monitor sharedrive activity you should probably consider using [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } rather than soon to be shelved bernard trigger.
 
@@ -112,7 +104,7 @@ anchors:
 To reflect your own configuration.  Everything else should be ready to go for standard usage.
 
 
-### 3. A-Train
+### A-Train
 
 Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the satate of Google Drive and miss things.
 

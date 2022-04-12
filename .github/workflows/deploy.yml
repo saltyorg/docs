@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - '.github/**'
       - '/README.md'
+    workflow_dispatch:
 
 jobs:
   deploy:

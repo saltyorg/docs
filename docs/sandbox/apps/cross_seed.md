@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[FlareSolverr](https://github.com/mmgoodnow/cross-seed){: target=_blank rel="noopener noreferrer" }  is an app designed to help you download torrents that you can cross seed based on your existing torrents. Cross-seed can inject the torrents it finds directly into your torrent client. Currently the supported clients are qBittorrent and rTorrent. If your client isn't supported, cross-seed will download a bunch of torrent files to a folder you specify. 
+[Cross-seed](https://github.com/mmgoodnow/cross-seed){: target=_blank rel="noopener noreferrer" }  is an app designed to help you download torrents that you can cross seed based on your existing torrents. Cross-seed can inject the torrents it finds directly into your torrent client. Currently the supported clients are qBittorrent and rTorrent. If your client isn't supported, cross-seed will download a bunch of torrent files to a folder you specify. 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

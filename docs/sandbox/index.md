@@ -16,6 +16,7 @@
   -  **[coder](../sandbox/apps/coder.md)**  - tag - `sandbox-coder`
   -  **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
   -  **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
+  -  **[cross-seed](../sandbox/apps/cross-seed.md)**  - tag - `sandbox-cross-seed`
   -  **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
   -  **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
   -  **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`

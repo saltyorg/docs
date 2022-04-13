@@ -56,7 +56,7 @@ sb install preinstall
     From this point you'll want to make sure you run commands as the user specified in the accounts.yml
 
 !!! info
-    If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA Json file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
+    If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
 
 Start the restore process.
 
@@ -89,7 +89,7 @@ sb install preinstall
     From this point you'll want to make sure you run commands as the user specified in the accounts.yml
 
 !!! info
-    If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA Json file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
+    If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
 
 Start the restore process.
 

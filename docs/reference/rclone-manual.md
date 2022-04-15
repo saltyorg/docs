@@ -49,6 +49,8 @@ Here's what you are going to do as you work through the instructions below:
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
+If you already have media on shared drives from you time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.
+
 ## New Rclone Setup
 
 1. Verify that the Shared Drive permissions are correct on your Google account:

@@ -34,26 +34,9 @@ Define a list of all the instances of the all you want to create; if you don't w
 
 The standard app tag will now set up all those instances.
 
-For example, a SonarrX config might have looked like this:
-
-```yaml
-sonarrx:
-  roles:
-    - ""
-    - bing
-    - bang
-    - boing
-```
-
-That would be set up in `settings.yml`.
-
-With this new method, that will be replaced with this in `localhost.yml`:
-
 ``` yaml
 sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
-
-Note a primary changepoint is that the **entire name of the instance** is specified.  The role will no longer prepend the name of the app.
 
 Given the config above, `sb install sonarr` would install:
 

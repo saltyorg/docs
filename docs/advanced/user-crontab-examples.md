@@ -1,10 +1,14 @@
 Note that this is just some examples, not a list of things that any particular user should have in their crontab.
 
-`crontab -e`
+Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is sugeesting that you *should* do all these things.
+
+It's just a catalog of examples.
+
+To edit your crontab, enter `crontab -e`
 
 ```
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-@daily cd /opt/python-plexlibrary/plexlibrary.sh
+@daily cd /opt/plex-meta-manager && python plex-meta-manager.py -r
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
 @daily sb update && sb install saltbox
 * * * * * /opt/scripts/nzbget/cleanup.sh
@@ -13,7 +17,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 ```
 **Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - Allows using `sb` commands in cronjobs. e.g `sb update`
 
-**Line 2:** `python-plexlibrary` script to make Plex libraries. - [Runs midnight daily **server time**]
+**Line 2:** `plex-meta-manager` script to make Plex collections. - [Runs midnight daily **server time**]
 
 **Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**]
 

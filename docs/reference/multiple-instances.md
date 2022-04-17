@@ -7,7 +7,7 @@ The general idea is to move all the configuration into the `/srv/git/saltbox/inv
 You can find roles that support this new method with the following command:
 
 ```shell
-grep -Ril "_instances" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u | awk '!(/plex_autoscan/ || /plex_plugins/ || /nzbthrottle/)'
+grep -Ril "_instances:" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u
 ```
 
 At the time of writing the roles supported are:

@@ -52,6 +52,7 @@
   -  **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
   -  **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
+  -  **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`
   -  **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`

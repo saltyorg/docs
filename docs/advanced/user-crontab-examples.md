@@ -1,8 +1,8 @@
 Note that this is just some examples, not a list of things that any particular user should have in their crontab.
 
-Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is sugeesting that you *should* do all these things.
+Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is sugeesting that you *should* do all these things.  They may not work as shown here, dependin gon your setup.
 
-It's just a catalog of examples.
+It's just a catalog of examples to demonstrate how one might set this sort of thing up.
 
 To edit your crontab, enter `crontab -e`
 
@@ -21,7 +21,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 **Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**]
 
-**Line 4:** Update Saltbox and do auto-updates - [Runs daily]
+**Line 4:** Update Saltbox and do auto-updates - [Runs daily]  NOTE: Doing this in an unattended context carries risk. If an error occurs during the process, it could leave all the containers shut down.
 
 **Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
 

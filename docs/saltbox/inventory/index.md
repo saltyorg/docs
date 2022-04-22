@@ -10,43 +10,7 @@ This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
-For example, an excerpt from `/srv/git/saltbox/roles/sonarr/defaults/main.yml`:
-
-``` yaml
-################################
-# Basics
-################################
-
-sonarr_name: sonarr
-
-################################
-# Paths
-################################
-
-sonarr_paths_folder: "{{ sonarr_name }}"
-sonarr_paths_location: "{{ server_appdata_path }}/{{ sonarr_paths_folder }}"
-sonarr_paths_folders_list:
-  - "{{ sonarr_paths_location }}"
-sonarr_paths_config_location: "{{ sonarr_paths_location }}/config.xml"
-...
-```
-
-We can see there that Sonarr gets the name "sonarr", and that name then flows through to those next four settings.
-
-If you wanted to change the name of the Sonarr app to BingBangBoing, you'd add this to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
-
-``` yaml
-sonarr_name: BingBangBoing
-```
-
-When you next run the `sonarr` tag, everything that's based off that name will change:
-
-- docker container name => BingBangBoing
-- subdomain => BingBangBoing.DOMAIN.TLD
-- app data folder => /opt/BingBangBoing
-- and so on.
-
-A common use for these overrides will be specifying the version of the docker image to be used, so let's see how that's done by looking further down in the defaults file:
+A common use for these overrides will be specifying the version of the docker image to be used, so let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 85:
 
 ``` yaml
 ################################
@@ -58,13 +22,15 @@ sonarr_docker_container: "{{ sonarr_name }}"
 
 # Image
 sonarr_docker_image_pull: true
+sonarr_docker_image_repo: "cr.hotio.dev/hotio/sonarr"
 sonarr_docker_image_tag: "release"
-sonarr_docker_image: "hotio/sonarr:{{ sonarr_docker_image_tag }}"
+sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', default=sonarr_docker_image_repo)
+                         + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
 ```
 
-We see again the name flowing through down here, but look at `sonarr_docker_image_tag: "release"`
+Note: `sonarr_docker_image_tag: "release"`
 
-For Example, for Sonarr, Saltbox will use the docker image `hotio/sonarr:release` by default.
+For Sonarr, Saltbox will use the docker image `cr.hotio.dev/hotio/sonarr:release` by default.
 
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
@@ -72,14 +38,14 @@ If you wanted to change that to "nightly", you'd add this line to `/srv/git/salt
 sonarr_docker_image_tag: "nightly"
 ```
 
-Which would override the default and result in Saltbox using `hotio/sonarr:nightly` docker image instead.
+Which would override the default [`release`] and result in Saltbox using the `cr.hotio.dev/hotio/sonarr:nightly` docker image instead, wihtout you modifying this file.  If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
 
 Previously undefined variables may be added as well. Typical use would be to pass new Docker parameters under variables with the name ending in `custom`:
+
 ```yaml
 jackett_docker_labels_custom:
   com.centurylinklabs.watchtower.enable: "true"
 ```
-
 
 # Additional Examples
 ## Various

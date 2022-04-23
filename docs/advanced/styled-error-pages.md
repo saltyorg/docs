@@ -8,7 +8,7 @@ If this flag is set in the `adv_settings.yml`:
   error_pages: yes
 ```
 
-All common error pages will be displayed with some consistent styling, based on [this system](https://github.com/tarampampam/error-pages).
+Common error pages can be displayed with some consistent styling, based on [this system](https://github.com/tarampampam/error-pages).
 
 ## What themes are available?
 
@@ -28,6 +28,28 @@ Changing the theme can be done via the [inventory](../saltbox/inventory/index.md
 
 ```
 error_pages_template: "hacker-terminal"
+```
+
+## How do I enable the error pages?
+
+Enable error pages per role by adding the following to the [inventory](../saltbox/inventory/index.md) as desired:
+
+```
+rolename_traefik_error_pages_enabled: true
+```
+
+`rolename` is, of course, the name of the role, as:
+
+```
+sonarr_traefik_error_pages_enabled: true
+```
+
+These error pages do not work with every app; do your own a/b testing to verify that nothing unexpected results.
+
+You can find roles that are known to NOT work with:
+
+```
+grep -Ril "_traefik_error_pages_enabled: false" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u
 ```
 
 ## Can I create a theme?

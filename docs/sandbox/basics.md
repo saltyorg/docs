@@ -18,7 +18,7 @@ sb install sandbox
 
 ### Update
 
-To update Saltbox Sandbox run a standard saltbox update and Sandbox, Community, and Saltbox will all be updated
+To update Saltbox Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
 
 ``` shell
 

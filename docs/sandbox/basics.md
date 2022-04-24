@@ -1,12 +1,12 @@
 # Basics
 
-The [Saltbox Sandbox](https://github.com/saltyorg/Sandbox){: target=_blank rel="noopener noreferrer" } repository is installed with [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } as part of a standard install. The Saltbox Sandbox application installers are provided and maintained by the community but are subject to approval. The applications are not part of a standard Saltbox install, but they should all be compatible with the Saltbox ecosystem. Sandbox is not a free-for-all no-rules repository but what will be accepted is a much broader range of applications which may not necessarily have anything to do with running a media server. Applications that are newly submitted or need testing will primarily land in the Sandbox repo and if relevant, stable, and maintained may end up in the Saltbox Community repo.
+The [Saltbox Sandbox](https://github.com/saltyorg/Sandbox){: target=_blank rel="noopener noreferrer" } repository is installed with [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } as part of a standard install. The Saltbox Sandbox application installers are provided and maintained by the community but are subject to approval. The applications are not part of a standard Saltbox install, but they should all be compatible with the Saltbox ecosystem. Sandbox is not a free-for-all no-rules repository but what will be accepted is a much broader range of applications which may not necessarily have anything to do with running a media server. Applications that are newly submitted or need testing will primarily land in the Sandbox repo and if relevant, stable, and maintained may end up in the Saltbox repo.
 
 Saltbox documentation is written by community members to help others make the most of their systems.
 
 Providing documentation for Sandbox applications is encouraged but not required.
 
-All Saltbox Community applications **must** have documentation
+All Saltbox applications **must** have documentation
 
 ### Install
 
@@ -45,7 +45,7 @@ sb install sandbox-mkvtoolnix
 ```
 Before running any role you should first carefully read through any docs to see if there are any additional steps or pre configuration settings required.
 
-A list of all roles available to Saltbox including Community and Sandbox can be called from the terminal via:-
+A list of all roles available to Saltbox including Sandbox can be called from the terminal via:-
 
 ```shell
 
@@ -62,13 +62,13 @@ sb list
 
 Note: If you just want to install a container into the Saltbox system without creating a role, see [this article](../advanced/your-own-containers.md).
 
-That work will also help you determine what you will need to do in a Community role, so starting there would not be wasted effort.
+That work will also help you determine what you will need to do in a role, so starting there would not be wasted effort.
 
-If you want to create a Community role to allow others to install your role, keep reading.
+If you want to create a role to allow others to install your role, keep reading.
 
 #### Editing an existing role:
 
-If you want to make a change to an existing role [for example, changing the docker image it uses], you don't have [or want to] to create a new role. You make changes like this for either core or community roles using the [inventory system](../saltbox/inventory/index.md)
+If you want to make a change to an existing role [for example, changing the docker image it uses], you don't have [or want to] to create a new role. You make changes like this for either core or sandbox roles using the [inventory system](../saltbox/inventory/index.md)
 
 #### Preparatory work:
 

@@ -1,4 +1,4 @@
-Here are two ways of obtaining a Plex Access Token for your Plex account.
+Here is a way of obtaining a Plex Access Token for your Plex account.
 
 ## Saltbox Role
 

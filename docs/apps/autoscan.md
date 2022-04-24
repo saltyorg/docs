@@ -119,7 +119,7 @@ a_train:
   remotes: ["remote1", "remote2"]
 ```
 
-This is assuming you copy one of your service account files from its current location to `/opt/a_train/account.json`.  Remember to rename your service account file to "`account.json`".
+This is assuming you copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
 
 Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard` trigger section with the following:
 

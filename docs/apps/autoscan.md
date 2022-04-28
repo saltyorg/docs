@@ -153,4 +153,4 @@ Further documentation:
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Sonarr](../../apps/sonarr.md).
+Are you setting Saltbox up for the first time?  Continue to [Sonarr](../apps/sonarr.md).

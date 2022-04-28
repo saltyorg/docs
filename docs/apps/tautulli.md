@@ -60,3 +60,7 @@ To access Tautulli, visit https://tautulli._yourdomain_.com
 4. On the "Restart" popup window, click `Restart`.
 
     ![](../images/tautulli/10-tautulli-reboot.png)
+
+## 5. Next
+
+Are you setting Saltbox up for the first time?  Continue to [Overseerr](../../apps/overseerr.md).

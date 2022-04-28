@@ -52,3 +52,7 @@ Under "Configured Indexers":
            - `jackett.yourdomain.com` with `jackett:9117`
 
     2. Jacket API Key
+
+## 4. Next
+
+Are you setting Saltbox up for the first time?  Continue to [Plex Media Server](../../apps/plex.md).

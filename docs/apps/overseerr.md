@@ -74,3 +74,7 @@ You will need your API Keys from both Radarr and Sonarr.
 1. Setup is complete.
 
 ![](../images/overseerr/12-overseerr.png)
+
+## 3. Next
+
+Are you setting Saltbox up for the first time?  Continue to [Portainer](../../apps/portainer.md).

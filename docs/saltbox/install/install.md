@@ -222,7 +222,7 @@ You're now ready to go through the basic setup for the apps. After rebooting!
 
 ## App Setup:
 
-Go through these one at a time; some of the setups depend on previous setups.
+Go through these one at a time in order; some of the setups depend on previous setups.
 
 1. [NZBGet](../../apps/nzbget.md)
 1. [ruTorrent](../../apps/rutorrent.md)

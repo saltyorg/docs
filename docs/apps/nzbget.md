@@ -43,3 +43,7 @@
 - Location on server: `/opt/scripts/nzbget`.
 
 - Location within NZBGet: `/scripts/nzbget`.
+
+## 4. Next
+
+Are you setting Saltbox up for the first time?  Continue to [ruTorrent](../../apps/rutorrent.md).

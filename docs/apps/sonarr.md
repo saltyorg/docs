@@ -396,3 +396,7 @@ Make changes in the following sections:
 This is used during the setup of [Overseer](overseerr.md) and [Organizr](organizr.md).
 
 * Go to "Settings" -> "General" -> "Security" -> "API Key".
+
+## Next
+
+Are you setting Saltbox up for the first time?  Continue to [Radarr](../../apps/radarr.md).

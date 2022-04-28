@@ -150,3 +150,7 @@ Further documentation:
 - [A-Train initial documentation](https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612)
 
 - [:octicons-link-16: Documentation](https://github.com/Cloudbox/autoscan){: .header-icons target=_blank rel="noopener noreferrer" }
+
+## Next
+
+Are you setting Saltbox up for the first time?  Continue to [Sonarr](../../apps/sonarr.md).

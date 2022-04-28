@@ -225,3 +225,14 @@ To do so:
 ## Webtools
 
 Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to https://plex-webtools._yourdomain.com_ and log in with your Plex account.
+
+## Next
+
+Are you setting Saltbox up for the first time?  Continue to [Autoscan](../../apps/autoscan.md).
+4. [Sonarr](../../apps/sonarr.md)
+5. [Radarr](../../apps/radarr.md)
+6. [Lidarr](../../apps/lidarr.md)
+7. [Tautulli](../../apps/tautulli.md)
+8. [Overseerr](../../apps/overseerr.md)
+9. [Portainer](../../apps/portainer.md)
+10. [Organizr](../../apps/organizr.md)

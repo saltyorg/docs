@@ -46,4 +46,4 @@
 
 ## 4. Next
 
-Are you setting Saltbox up for the first time?  Continue to [ruTorrent](../apps/rutorrent/).
+Are you setting Saltbox up for the first time?  Continue to [ruTorrent](../rutorrent/).

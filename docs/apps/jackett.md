@@ -55,4 +55,4 @@ Under "Configured Indexers":
 
 ## 4. Next
 
-Are you setting Saltbox up for the first time?  Continue to [Plex Media Server](../apps/plex/).
+Are you setting Saltbox up for the first time?  Continue to [Plex Media Server](../plex/).

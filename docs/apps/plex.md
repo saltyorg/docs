@@ -228,7 +228,7 @@ Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Autoscan](../apps/autoscan/).
+Are you setting Saltbox up for the first time?  Continue to [Autoscan](../autoscan/).
 4. [Sonarr](../../apps/sonarr.md)
 5. [Radarr](../../apps/radarr.md)
 6. [Lidarr](../../apps/lidarr.md)

@@ -14,3 +14,5 @@ This script will:
 6. run [`sb_repo.sh`](https://github.com/saltyorg/sb/blob/master/sb_repo.sh)
 
 At the end of this you will have a local copy of the Saltbox repo, and all the things that Saltbox relies on to install will be available.
+
+Go [back to the install process](../install/install/#dependencies).

@@ -406,4 +406,4 @@ This is used during the setup of [Organizr](organizr.md).
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Tautulli](../apps/tautulli.md).
+Are you setting Saltbox up for the first time?  Continue to [Tautulli](../apps/tautulli/).

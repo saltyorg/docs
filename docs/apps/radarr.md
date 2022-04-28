@@ -421,4 +421,4 @@ This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organi
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Lidarr](../apps/lidarr.md).
+Are you setting Saltbox up for the first time?  Continue to [Lidarr](../apps/lidarr/).

@@ -77,4 +77,4 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ## 3. Next
 
-Are you setting Saltbox up for the first time?  Continue to [Portainer](../apps/portainer.md).
+Are you setting Saltbox up for the first time?  Continue to [Portainer](../apps/portainer/).

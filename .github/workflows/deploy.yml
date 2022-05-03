@@ -20,7 +20,6 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      - run: pip install pygments==2.10
       - run: mkdocs gh-deploy --force
       - uses: sarisia/actions-status-discord@v1
         if: always()

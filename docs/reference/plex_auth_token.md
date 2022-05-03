@@ -1,4 +1,4 @@
-Here are two ways of obtaining a Plex Access Token for your Plex account.
+Here is a way of obtaining a Plex Access Token for your Plex account.
 
 ## Saltbox Role
 
@@ -42,21 +42,3 @@ You will need your Plex credentials filled in `~/saltbox/accounts.yml`. If you a
         "msg": "Your Plex Auth Token is: XXXXXXXXXXXXXXXX"
     }
     ```
-
-## Script
-
-
-1.  On the server's shell, run the following command<a href="#note1" id="note1ref"><sup>[1]</sup></a>:
-
-    ```shell
-    /opt/scripts/plex/plex_token.sh
-    ```
-   
-2.  You will be prompted to enter your Plex login and then presented with the Plex Access Token (under `Your X_PLEX_TOKEN:`)
-
-
-## 
-
----
-
-<sub> <a id="note1" href="#note1ref"><sup>1</sup></a> Credit: https://github.com/wernight</sub><br>

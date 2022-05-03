@@ -75,6 +75,11 @@ transfer_docker_envs_custom:
 
 #### Docker Service Variable ####
 docker_service_sleep: 0
+
+#### Specify Overseerr DNS server - can fix name resolution issue with TMDb ####
+overseerr_docker_dns_servers:
+  - 8.8.8.8
+  - 8.8.4.4
 ```
 
 ## Subdomain Customization

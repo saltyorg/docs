@@ -103,25 +103,32 @@ Let’s go!
 
         Edit /etc/systemd/system/teamdrive_vfs.service:
 
-        Change the port [5572] in this line [line 26 at this writing]:
+        Change the port [5572] in two lines [lines 27 and 42 at this writing]:
         ```
           --rc-addr=localhost:5572 \
+          ...
+          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --rc-addr localhost:5572 _async=true
         ```
+
         The specific port you use doesn’t matter, but maybe just use 5573.
         ```
           --rc-addr=localhost:5573 \
+          ...
+          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --rc-addr localhost:5573 _async=true
         ```
-        Change the remote name and mount directory in this line [line 44 at this writing]:
+        Change the remote name and mount directory in this line [line 41 at this writing]:
         ````
           google: /mnt/remote
         ````
         The first bit before the colon is the name of the rclone remote from step 1.
         The path is the mount point directory you created a moment ago.
-        For example, you might end up with something like this:
+        For example, you *might* end up with something like this:
 
         ```
           teamdrive: /mnt/remote-teamdrive
         ```
+        What you will enter specifically depneds entirely on how *you* just configured the remote and moutn directory above.  This example is almost certainly *not* what you should enter.
+        
         Change the next line to match the path you just entered:
         ```
         ExecStop=/bin/fusermount -uz /mnt/remote

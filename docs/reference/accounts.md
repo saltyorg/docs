@@ -25,7 +25,6 @@
 
         - If you don't have one, see [here](domain.md).
         - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
-        - Leave this blank to run without the reverse proxy and access the apps via IP:PORT
 
     - `email`: E-mail address.
 

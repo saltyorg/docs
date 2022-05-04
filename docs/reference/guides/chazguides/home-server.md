@@ -1,16 +1,16 @@
 ## Installing Saltbox on a home server
 
+This article discusses details to consider when running Saltbox on a home server behind a residential router.  It's not meant to replace the existing install documentation.  Things here may not be discussed in sequence, as it's not intended as an install guide.
+
 Prerequisites:
 
- - Domain
+ - [Domain](#domain)
 
- - Static IP OR Dynamic DNS configured
-
- - Router supports port forwarding
+ - [Static IP OR Dynamic DNS configured](#dynamic-dns)
 
  - ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
 
- - Router supports hairpin NAT [or NAT loopback]
+ - [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
    Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
    Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing.
 
@@ -44,17 +44,9 @@ sb install ddclient
 
 You’ll do this AFTER you’ve installed saltbox.
 
-### Machine:
+### Router:
 
-I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
-
-  - I enabled OpenSSH and imported my SSH keys from github
-
-That’s all.
-
-Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as **that user** from the start rather than starting as `root` like you would on a remote server.
-
-## Router:
+#### Port Forwardind:
 
 You need some ports forwarded to that machine on your router.  Explaining how to do that for any arbitrary router is out of scope, but I’ll show you where it is on my Netgear.
 
@@ -104,6 +96,8 @@ If it doesn’t, verify all the port-forwarding details.
 
 You should also be able to connect to a web server running on that machine.
 
+#### Port Forward Testing:
+
 Verify this part is working by installing apache on your server:
 
 ```
@@ -126,7 +120,19 @@ With that done, we can move on to the install.
 
 IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
 
+## Example Install
+
 From this point on there is nothing special about the install process on this home server as opposed to a remote server.  I’m just following the docs.
+
+This is just an example of the install.  You should refer to the actual [install docs](../../../saltbox/install/install.md).
+
+I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
+
+  - I enabled OpenSSH and imported my SSH keys from github
+
+That’s all.
+
+Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as **that user** from the start rather than starting as `root` like you would on a remote server.
 
 I ran the first dependency script on [this page](../../../saltbox/install/install.md):
 

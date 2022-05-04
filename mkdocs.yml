@@ -303,10 +303,11 @@ nav:
         - Other:
           - Saltbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
           - Cloudplow Examples: reference/cloudplow.md
+          - Customizing Plex Libraries: reference/customizing-plex-libs.md
+          - Viewing Logs: reference/logs.md
+          - Multiple App Instances: reference/multiple-instances.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
           - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
-          - Customizing Plex Libraries: reference/customizing-plex-libs.md
-          - Multiple App Instances: reference/multiple-instances.md
           - Plex Auth Token: reference/plex_auth_token.md
           - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md

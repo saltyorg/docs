@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Basics
 
 # What is Saltbox?
@@ -35,14 +39,14 @@
 
 ### Can Choose Your Preferred Media Server Application
 
-- You can decide whether to use Plex or Emby.
+- You can decide whether to use Plex, Emby or Jellyfin.
 
 
 ### Custom Server Deployment
 
 - You can deploy Saltbox on an all-in-one server, for downloading and streaming.
 
-  or
+    or
 
 - You can deploy Saltbox between two servers: a Mediabox, as streaming server, and a Feederbox, as a downloading server.
 

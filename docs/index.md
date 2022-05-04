@@ -1,12 +1,15 @@
-# Saltbox Documentation
-
-## Welcome to Saltbox.
+---
+hide:
+  - navigation
+  - toc
+---
+# Welcome to Saltbox
 
 ### What is it?
 You can read more about what Saltbox is [here](saltbox/basics/basics.md).
 
 ### How do I install it?
-Install instructions start [here](saltbox/prerequisites/prerequisites.md).
+Installation instructions are located [here](saltbox/prerequisites/prerequisites.md).
 
 ### Can I migrate from Cloudbox or PlexGuide?
 There are notes on migration from [Cloudbox](reference/guides/cloudbox.md) and [Plexguide](reference/guides/plexguide.md).
@@ -18,7 +21,9 @@ See [here](reference/saltbox-vs-cloudbox.md).
 Why, [yes there is](https://discord.gg/ugfKXpFND8).
 
 ### What if I see a mistake in or have a suggestion about the docs?
-Please report any mistakes or provide suggestions on our [discord](https://discord.gg/ugfKXpFND8) or on the [docs repo](https://github.com/saltyorg/docs), would be much appreciated.
+Please report any mistakes or suggestions for improving the documentation on our [discord](https://discord.gg/ugfKXpFND8) or on the [docs repository](https://github.com/saltyorg/docs), would be much appreciated.
 
-[Issues](https://github.com/saltyorg/docs/issues)
+* Docs: [Issues](https://github.com/saltyorg/docs/issues)
+* Saltbox: [Issues](https://github.com/saltyorg/Saltbox/issues)
+* Sandbox: [Issues](https://github.com/saltyorg/Sandbox/issues)
 

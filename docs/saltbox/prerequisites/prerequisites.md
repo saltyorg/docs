@@ -39,8 +39,6 @@ Ports are [for the most part] bound only to the internal `saltbox` docker networ
 
 See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
 
-Note: there is planned support for running without a domain, but it is not complete and is not well-tested.
-
 ##Cloud Storage
 
 A base assumption in Saltbox is that you are storing your media on cloud storage.  Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the preferred choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
@@ -65,4 +63,4 @@ You won't need these particular [media source] details for the initial install, 
 
 See [here](../../reference/usenet-torrent.md) for more information about media source requirements.
 
-Next, let's discuss Saltbox' [Install types](../basics/install_types.md).
+Next, let's discuss Saltbox [Install types](../basics/install_types.md).

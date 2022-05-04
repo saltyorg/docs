@@ -189,7 +189,7 @@ If you are coming from Cloudbox, you *can and should* use your existing rclone s
 
 If you are starting from scratch, the process is documented [here](../../reference/rclone.md).
 
-## Install Saltbox
+## Saltbox
 
 If you are installing a Feederbox/Mediabox setup, set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
@@ -220,7 +220,7 @@ If you are installing a Feederbox/Mediabox setup, set up the Feederbox first, th
 
 You're now ready to go through the basic setup for the apps. After rebooting!
 
-## App Setup:
+## App Setup
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

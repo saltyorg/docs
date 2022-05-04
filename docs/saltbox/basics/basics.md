@@ -46,7 +46,7 @@ hide:
 
 - You can deploy Saltbox on an all-in-one server, for downloading and streaming.
 
-    or
+  or
 
 - You can deploy Saltbox between two servers: a Mediabox, as streaming server, and a Feederbox, as a downloading server.
 

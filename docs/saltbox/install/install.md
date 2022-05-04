@@ -85,8 +85,6 @@ apprise: # (12)!
 
 3. Domain that you want to use for the server.
 
-    If this is left blank, applications will be accessible at IP:PORT instead of via subdomains.
-
 4. Email address used for Let's Encrypt SSL certificates.
 
     Required.

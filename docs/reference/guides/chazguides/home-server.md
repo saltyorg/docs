@@ -1,6 +1,6 @@
 ## Installing Saltbox on a home server
 
-This article discusses details to consider when running Saltbox on a home server behind a residential router.  It's not meant to replace the existing install documentation.  Things here may not be discussed in sequence, as it's not intended as an install guide.
+This article discusses details to consider when running Saltbox on a home server behind a residential router.  It's not meant to replace the existing install documentation.  Things here may not be discussed in sequence, as it's not intended as an install guide.  For that, refer to the install guide on the menu bar above.
 
 Prerequisites:
 
@@ -46,7 +46,7 @@ You’ll do this AFTER you’ve installed saltbox.
 
 ### Router:
 
-#### Port Forwardind:
+#### Port Forwarding:
 
 You need some ports forwarded to that machine on your router.  Explaining how to do that for any arbitrary router is out of scope, but I’ll show you where it is on my Netgear.
 
@@ -120,7 +120,7 @@ With that done, we can move on to the install.
 
 IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
 
-## Example Install
+## Narrated example install
 
 From this point on there is nothing special about the install process on this home server as opposed to a remote server.  I’m just following the docs.
 
@@ -134,7 +134,9 @@ That’s all.
 
 Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as **that user** from the start rather than starting as `root` like you would on a remote server.
 
-I ran the first dependency script on [this page](../../../saltbox/install/install.md):
+First, I set up the post forwards and the like as detailed above.
+
+I ran the first dependency script on [this page](../../../saltbox/install/install.md).
 
 That ran for a while and finished without errors.
 

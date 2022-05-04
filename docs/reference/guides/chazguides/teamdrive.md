@@ -11,9 +11,9 @@ Here, I’m assuming you have access to a teamdrive, and you want to set it up s
 There are three steps:
 
 1. Create an rclone remote [this tells rclone about the teamdrive]
-2. Create the rclone_vfs service files [this makes rclone mount the teamdrive at /mnt/WHATEVER
-3. Modify your mergerfs service file [this will include the contents of the new teamdrive in /mnt/unionfs for use in your apps]
-   This step is actually optional, but it makes app configuration a little more straightforward since all your media files are in the same directory rather then some in /mnt/unionfs and some in /mnt/bing-bang-boing
+2. Create the rclone_vfs service files [this makes rclone mount the teamdrive at `/mnt/WHATEVER`]
+3. Modify your mergerfs service file [this will include the contents of the new teamdrive in `/mnt/unionfs` for use in your apps]
+   This step is actually optional, but it makes app configuration a little more straightforward since all your media files are in the same directory rather then some in `/mnt/unionfs` and some in `/mnt/bing-bang-boing`
 
 ## Not “Teamdrive” specific
 
@@ -25,7 +25,7 @@ The concepts here are not specific to teamdrives.  It’s described in terms of 
 2. Either one of these for an account with access to the teamdrive
     1. ClientID/Secret
     2. Service Account JSON file[s]
-       Put this/these in some fixed location like /opt/sa
+       Put this/these in some fixed location like `/opt/sa`
 3. Basic linux knowledge
 
     Like all of these docs and guides, we are assuming basic familiarity with Linux systems and concepts.  You are going to be copying files, editing files, etc.  This guide is not here to explain how to do those things.
@@ -53,25 +53,25 @@ Let’s go!
 
 2. Get that remote mounted in the filesystem
 
-    Now you have an rclone remote.  You can use this with rclone commands like rclone copy or rclone move or what have you.
+    Now you have an rclone remote.  You can use this with rclone commands like `rclone copy` or `rclone move` or what have you.
 
-    To use it with Plex/Emby/whatever other application, you need to create service files to “mount” the teamdrive in your filesystem.  Saltbox does this with your Google Drive at /mnt/remote.
+    To use it with Plex/Emby/whatever other application, you need to create service files to “mount” the teamdrive in your filesystem.  Saltbox does this with your Google Drive at `/mnt/remote`.
 
     You’re going to create an analogous setup that does the same thing for that teamdrive remote you just created.
 
-    First, you need to create the folder where you want the teamdrive contents to appear:
+    First, you need to create the folder where you want the teamdrive contents to appear.  Generally, I recommend using the same name as the remote for clarity:
 
     1. Create a mount point for the teamdrive
 
-        Create a directory where you want to mount this teamdrive under the /mnt directory: for example: `/mnt/remote-teamdrive`
+        Create a directory where you want to mount this teamdrive under the /mnt directory: for example: `/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED`
 
         You may have to use sudo to create the directory:
-        `sudo mkdir /mnt/remote-teamdrive`
+        `sudo mkdir /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED`
 
         It should be on the root level of `/mnt`; not within any other remote mount directory.
-        NOT, for example, `/mnt/remote/remote-teamdrive` OR `/mnt/unionfs/remote-teamdrive` OR `/mnt/local/remote-teamdrive` etc.
+        NOT, for example, `/mnt/remote/NAME_OF_THE_REMOTE_YOU_JUST_CREATED` OR `/mnt/unionfs/NAME_OF_THE_REMOTE_YOU_JUST_CREATED` OR `/mnt/local/NAME_OF_THE_REMOTE_YOU_JUST_CREATED` etc.
 
-        Make sure it has the same ownership and permissions as the existing /mnt/remote:
+        Make sure it has the same ownership and permissions as the existing `/mnt/remote`:
 
         ```
         ➜  ~ ls -al /mnt
@@ -86,10 +86,10 @@ Let’s go!
         To do this:
 
         ```
-        sudo chown -R seed:seed /mnt/remote-teamdrive
-        sudo chmod -R g+w /mnt/remote-teamdrive
+        sudo chown -R seed:seed /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
+        sudo chmod -R g+w /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ```
-
+        Of course, `seed:seed` is YOUR USER AND GROUP if it differs from `seed:seed`
 
         You will use this mountpoint when you configure the rclone_vfs service.
 
@@ -98,10 +98,10 @@ Let’s go!
         Make copies of the rclone_vfs service file: `/etc/systemd/system/rclone_vfs.service`
 
         ```
-        sudo cp /etc/systemd/system/rclone_vfs.service /etc/systemd/system/teamdrive_vfs.service
+        sudo cp /etc/systemd/system/rclone_vfs.service /etc/systemd/system/NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service
         ```
 
-        Edit /etc/systemd/system/teamdrive_vfs.service:
+        Edit /etc/systemd/system/NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service:
 
         Change the port [5572] in two lines [lines 27 and 42 at this writing]:
         ```
@@ -118,14 +118,14 @@ Let’s go!
         ```
         Change the remote name and mount directory in this line [line 41 at this writing]:
         ````
-          google: /mnt/remote
+          NAME_OF_THE_REMOTE_YOU_JUST_CREATED: /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ````
         The first bit before the colon is the name of the rclone remote from step 1.
         The path is the mount point directory you created a moment ago.
         For example, you *might* end up with something like this:
 
         ```
-          teamdrive: /mnt/remote-teamdrive
+          teamdrive-movies: /mnt/teamdrive-movies
         ```
         What you will enter specifically depneds entirely on how *you* just configured the remote and moutn directory above.  This example is almost certainly *not* what you should enter.
         
@@ -135,7 +135,7 @@ Let’s go!
         ```
         For example:
         ```
-        ExecStop=/bin/fusermount -uz /mnt/remote-teamdrive
+        ExecStop=/bin/fusermount -uz /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ```
         Lastly enable and start that new service:
         Reload all the services
@@ -144,19 +144,19 @@ Let’s go!
         ```
         Start/restart the service
         ```
-        sudo systemctl restart teamdrive_vfs.service
+        sudo systemctl restart NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service
         ```
         Enable the new service you created
         ```
-        sudo systemctl enable teamdrive_vfs.service
+        sudo systemctl enable NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service
         ```
 
     Now, before you continue, verify that the mount is working correctly.
 
-    Type `ls -haltr /mnt/THE_DIRECTORY_YOU_USED`.  It should show you the same thing that you saw in the `rclone lsd`, and the same stuff you see in the Google Drive Web UI:
+    Type `ls -haltr /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED`.  It should show you the same thing that you saw in the `rclone lsd`, and the same stuff you see in the Google Drive Web UI:
 
     ```
-    ➜  ~ ls -haltr /mnt/remote-movies
+    ➜  ~ ls -haltr /mnt/teamdrive-movies
     total 14M
     drwxrwxr-x 1 seed seed   0 Mar 21  2019  Media
     -rw-rw-r-- 1 seed seed   0 Dec  3 16:14  mounted-movies.bin
@@ -181,17 +181,9 @@ Let’s go!
     ```
     For example:
     ```
-    /mnt/local=RW:/mnt/remote=NC:/mnt/remote-teamdrive=NC /mnt/unionfs
+    /mnt/local=RW:/mnt/remote=NC:/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED=NC /mnt/unionfs
     ```
-    Note: that MUST BE all one line, just as it is in the original unedited file.  If you want to split this into two lines for readability, add a line continuation character to the previous line, like this:
-    ```
-    /mnt/local=RW:/mnt/remote=NC:/mnt/remote-teamdrive=NC \
-    /mnt/unionfs
-    ```
-    THAT IS TWO LINES. This will not work:
-    ```
-    /mnt/local=RW:/mnt/remote=NC:/mnt/remote-teamdrive=NC \ /mnt/unionfs
-    ```
+    Note: that MUST BE all one line, just as it is in the original unedited file.
 
     Just like the rclone_vfs service, reload and restart:
 

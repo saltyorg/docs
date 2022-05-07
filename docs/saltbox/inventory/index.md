@@ -73,9 +73,6 @@ petio_docker_image_tag: nightly
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"
 
-#### Docker Service Variable ####
-docker_service_sleep: 0
-
 #### Specify Overseerr DNS server - can fix name resolution issue with TMDb ####
 overseerr_docker_dns_servers:
   - 8.8.8.8

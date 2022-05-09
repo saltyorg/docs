@@ -20,7 +20,7 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
   There is an issue with the permissions on that folder that you'll need to fix manually (Saltbox can't fix this as Plex creates this folder after the first scan)
 
-   To fix this, Run the following command. Replace `user` and `group` to match yours' (see [here](FAQ#find-your-user-id-uid-and-group-id-gid)).
+   To fix this, Run the following command. Replace `user` and `group` to match yours (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
 
    ```
    docker stop plex
@@ -81,7 +81,7 @@ Solution 1:
    sudo systemctl status rclone_vfs
    ```
 
-2. Make sure the union mount is working OK. 
+2. Make sure the union mount is working OK.
 
    The current default used for creating the union mount is MergerFS:
 
@@ -238,13 +238,13 @@ _Note: This method benefits from completely closing off Plex Autoscan to the out
 
 ## Why is SERVER_SCAN_DELAY set to 180 seconds by default?
 
-When Plex Autoscan gets a scan request from Sonarr, it tells Plex to scan the relevant TV Show season folder. So to avoid multiple Plex scans of the same season when more episodes of that same season come in, Plex Autoscan can wait (ala SERVER_SCAN_DELAY) and merge multiple scan requests into a single one. This is particularly noticeable when consecutive episodes are being downloaded/imported into Sonarr. 
+When Plex Autoscan gets a scan request from Sonarr, it tells Plex to scan the relevant TV Show season folder. So to avoid multiple Plex scans of the same season when more episodes of that same season come in, Plex Autoscan can wait (ala SERVER_SCAN_DELAY) and merge multiple scan requests into a single one. This is particularly noticeable when consecutive episodes are being downloaded/imported into Sonarr.
 
-During this SERVER_SCAN_DELAY, if another request comes in for the same season folder, it will restart the delay timer again, thus allowing for even more time for new items to come in. 
+During this SERVER_SCAN_DELAY, if another request comes in for the same season folder, it will restart the delay timer again, thus allowing for even more time for new items to come in.
 
-SERVER_SCAN_DELAY of 180 seconds was calculated with an average episode download time of a few minutes each. 
+SERVER_SCAN_DELAY of 180 seconds was calculated with an average episode download time of a few minutes each.
 
-There is no harm in multiple Plex scans of the same season folder, except for more busyness of Plex, and perhaps more stress to it, so this delay will try to alleviate that. 
+There is no harm in multiple Plex scans of the same season folder, except for more busyness of Plex, and perhaps more stress to it, so this delay will try to alleviate that.
 
-Alternative recommended settings are: 120 and 90 seconds. 
+Alternative recommended settings are: 120 and 90 seconds.
 

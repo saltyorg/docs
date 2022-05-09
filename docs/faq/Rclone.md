@@ -4,7 +4,7 @@
 
 ## Rclone error: Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied
 
-Replace `user` and `group` to match yours' (see [here](FAQ#find-your-user-id-uid-and-group-id-gid)).
+Replace `user` and `group` to match yours (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
 
 
 ```

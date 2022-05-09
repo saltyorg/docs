@@ -81,7 +81,7 @@ Reorder the Plex agents for TV/Movies so that local assets are at the bottom.
 ## Fix permission issues with Plex logs
 
 
-Replace `user` and `group` to match yours' (see [here](FAQ#find-your-user-id-uid-and-group-id-gid)).
+Replace `user` and `group` to match yours' (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
 
 ```
 sudo chown -R user:group /opt/plex/Library/Logs

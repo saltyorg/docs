@@ -75,6 +75,14 @@
 
     - This will be used to send out messages during certain tasks (e.g. backup).
     - This parameter is not nested like the others in this file.
+      -  ```
+         apprise: discord://somewebhook
+         ```
+         not
+         ```
+         apprise: 
+            discord://somewebhook
+         ```
     - This parameter is optional.
 
 ---

@@ -9,6 +9,10 @@ To go through this process, you will need either one of these for your Google ac
    1. ClientID/Secret
    2. Service Account JSON file(s)
 
+The project associated with these needs to be set to "external".  See step 9 on [this page](../google-project-setup.md).
+
+You will need rclone and a web browser installed on a machine local to you [this machine needs a GUI].
+
 ## Walkthrough
 
 1. Run the following command:
@@ -189,14 +193,19 @@ To go through this process, you will need either one of these for your Google ac
     y/n> n
     ```
 
-6.  In the next section, copy the link shown, and open it in your host PC's browser.
+6.  In the next section, follow the instructions on your local machine.
 
     ```shell
-    Verification code
-    Go to this URL, authenticate then paste the code here.
-    https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=JOHNNYJOEYDEEDEE&redirect_uri=urn...
-    Enter a string value. Press Enter for the default ("").
-    config_verification_code>
+    Option config_token.
+    For this to work, you will need rclone available on a machine that has
+    a web browser available.
+    For more help and alternate methods see: https://rclone.org/remote_setup/
+    Execute the following on the machine with the web browser (same rclone
+    version recommended):
+    	rclone authorize "drive" "eyJjbGllbnRfaWQiOiI2OTUxMzMzNjg1ODMtcmU5MmE3Y3F0cGdqc2JvOGlscGwxamIzN2draXRibmwuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiOVRCQ2p2WHBlNlhxaFlPUG5JUGpRTkdIIiwic2NvcGUiOiJkcml2ZSJ9"
+    Then paste the result.
+    Enter a value.
+    config_token>
     ```
 
 7.  If asked to login, use the Google Drive account you want to store your data in.
@@ -207,21 +216,26 @@ To go through this process, you will need either one of these for your Google ac
 
     [](../../images/rclone-remote/google-permission.png)
 
-9.  You will now be given a "verification code". Copy it.
+9.  The browser should report success.
 
-    [](../../images/rclone-remote/google-verification.png)
+10. And a token should show up in the terminal on your local computer:
 
-10. Paste the "verification code" at the command prompt and press <kbd class="platform-all">Enter</kbd>.
+    ```
+    2022/05/09 22:56:09 NOTICE: Log in and authorize rclone for access
+    2022/05/09 22:56:09 NOTICE: Waiting for code...
+    2022/05/09 22:56:16 NOTICE: Got code
+    Paste the following into your remote machine --->
+    ROGERPETEJOHNKEITH
+    <---End paste
+    ```
+11. Paste the token at the rclone prompt and press Enter.
 
-    ```shell
-    Verification code
-    Go to this URL, authenticate then paste the code here.
-    https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=JOHNNYJOEYDEEDEE&redirect_uri=urn...
-    Enter a string value. Press Enter for the default ("").
-    config_verification_code> ROGERPETEJOHNKEITH
+    ```
+    Enter a value.
+    config_token>  ROGERPETEJOHNKEITH
     ```
 
-11. For "Configure this as a team drive?":
+12. For "Configure this as a team drive?":
 
     === "Using My Drive"
         Type `n` and press <kbd class="platform-all">Enter</kbd>.
@@ -261,7 +275,7 @@ To go through this process, you will need either one of these for your Google ac
         config_team_drive> 6
         ```
 
-12. To confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
+13. Confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     --------------------
@@ -280,7 +294,7 @@ To go through this process, you will need either one of these for your Google ac
     y/e/d> y
     ```
 
-20. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
+14. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Current remotes:

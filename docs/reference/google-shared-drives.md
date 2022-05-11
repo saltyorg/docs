@@ -59,15 +59,17 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     Edit as indicated by `<<<<` below:
 
-    ```
-    prefix = 'akIhSwlKdf'                <<<< the prefix you generated previously
+    ```python
+    prefix = 'akIhSwlKdf'                # the prefix you generated previously
 
-    group_email = "all-sa@DOMAIN.com"    <<<< the group you created previously
+    group_email = "all-sa@DOMAIN.com"    # the group you created previously
 
-    drive_data = {
-        'Movies':'/Media/Movies',
-        'Music':'/Media/Music',
-        'TV':'/Media/TV'
+    sa_file = "/opt/sa/all/150.json"     # edit this path if required; if you've followed all previous steps correctly it's not required
+
+    drive_data = {                       # add additional drives and media paths here if needed.  Media paths should be unique per drive.
+        'Movies': '/Media/Movies',
+        'Music': '/Media/Music',
+        'TV': '/Media/TV'
     }
     ```
 
@@ -81,11 +83,14 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     
     If you've stored the file elsewhere, copy it from there via whatever means.  It just has to end up at `/opt/sb_gd/client_secrets.json`.
 
+
 6. Run the `sb_sd.py` script:
 
     ```
     python sb_sd.py
     ```
+    
+    You will be asked a bunch of questions about the previsou steps.  If the answers are not all "YES", you'll need to go complete those steps.  If you lie and answer YES when you haven't completed those steps, this script will fail in some way.  There is no way to avoid performing all the steps.
 
     You will be asked to authenticate in the usual Google way.  Follow the prompts.
 
@@ -99,11 +104,11 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     
     We're working on making this a bit more friendly.
 
-    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
+    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
     
     You should see output similar to this:
     
-    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
+    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     ```
     ** Team Drive aZaSjsklaj-Movies created, ID: 123456789
@@ -163,7 +168,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     This script creates an empty directory and a zero-byte file on the root of each shared drive.
 
-    The file will be useful later on when you need "is this disk mounted?" flags for things like `plex_autoscan`.
+    The file will be useful later on when you need "is this disk mounted?" flags for things like `plex_autoscan` or `autoscan`.
 
     The directory is a belt-and-suspenders convenience you can use to see if your union remote and/or mergerfs config is including everything it should.  We create both a file and a dir so you will get this information whether you use `rclone ls REMOTE` or `rclone lsd REMOTE` or whatever other means:
 

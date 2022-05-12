@@ -64,7 +64,7 @@ Start the restore process.
 sb install restore
 ```
 
-Once succesfully completed you can now follow the installation guide from this [step](../../saltbox/install/install.md#install-saltbox).
+Once succesfully completed you can now follow the installation guide from this [step](../../saltbox/install/install.md#saltbox).
 
 ## Without Restore Service
 

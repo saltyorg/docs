@@ -37,12 +37,12 @@ The standard app tag will now set up all those instances.
 
 Given the example above, `sb install sonarr` would install:
 
-| entry         | Container    | Config dir         | Subdomain                    |
-| ------------- | ------------ | ------------------ | ---------------------------- |
-| sonarr        | sonarr       | `/opt/sonarr`      | sonarr.YOURDOMAIN.TLD        |
-| sonarrbing    | sonarrbing   | `/opt/sonarrbing`  | sonarrbing.YOURDOMAIN.TLD    |
-| sonarrbang    | sonarrbang   | `/opt/sonarrbang`  | sonarrbang.YOURDOMAIN.TLD    |
-| sonarrboing   | sonarrboing  | `/opt/sonarrboing` | sonarrboing.YOURDOMAIN.TLD   |
+| List entry    | Container Name | Config Directory   | Subdomain                    |
+| ------------- | -------------- | ------------------ | ---------------------------- |
+| sonarr        | sonarr         | `/opt/sonarr`      | sonarr.YOURDOMAIN.TLD        |
+| sonarrbing    | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.YOURDOMAIN.TLD    |
+| sonarrbang    | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.YOURDOMAIN.TLD    |
+| sonarrboing   | sonarrboing    | `/opt/sonarrboing` | sonarrboing.YOURDOMAIN.TLD   |
 
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.

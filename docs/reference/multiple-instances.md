@@ -25,7 +25,7 @@ Ther is a command at the end of this page you can use to get an updated list of 
 
 ## Overview
 
-Define a list of all the instances of the variations you want to create; if you don't want to customize them beyond that, this is all that's required.
+Define a list of all the instances of the container you want to create; if you don't want to customize them beyond that, this is all that's required.
 
 Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git/saltbox/inventories/host_vars/localhost.yml`, formatted as so:
 

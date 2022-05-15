@@ -135,6 +135,8 @@ nav:
         - Landing Pages:
           - VNStat: sandbox/apps/vnstat.md
           - heimdall: sandbox/apps/heimdall.md
+        - Game Servers:
+          - Minecraft: sandbox/apps/minecraft.md
         - Media Management:
           - Books:
             - booksonic: sandbox/apps/booksonic.md

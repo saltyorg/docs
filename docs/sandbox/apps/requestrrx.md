@@ -37,7 +37,7 @@ sb install sandbox-requestrrx
 
       ``` { .shell }
 
-          sb install cm-requestrrx
+          sb install sandbox-requestrrx
 
       ```
 

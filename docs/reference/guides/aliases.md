@@ -37,14 +37,14 @@ Handy guide to Saltbox Command line aliases.
 
     ```
 
-## sb install cm-`<package>`
+## sb install sandbox-`<package>`
 
-- Install community `<package>`
+- Install Sandbox `<package>`
 
 - Usage:
 
     ``` { .shell }
 
-        sb install cm-jellyfin
+        sb install sandbox-dozzle
 
     ```

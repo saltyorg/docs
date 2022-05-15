@@ -15,7 +15,7 @@ It can detach the client from the actual IRC server, and also from selected chan
 
 ``` shell
 
-sb install cm-znc
+sb install sandbox-znc
 
 ```
 

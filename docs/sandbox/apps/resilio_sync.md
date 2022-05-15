@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install cm-resilio-sync
+sb install sandbox-resilio-sync
 
 ```
 

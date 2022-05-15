@@ -40,7 +40,7 @@ sb install sandbox-rfloodx
 
       ``` { .shell }
 
-          sb install cm-rfloodx
+          sb install sandbox-rfloodx
 
       ```
 

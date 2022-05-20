@@ -77,6 +77,19 @@ transfer_docker_envs_custom:
 overseerr_docker_dns_servers:
   - 8.8.8.8
   - 8.8.4.4
+
+#### Add custom aliases to bash shell ####
+#### Note the syntax - a pipe and two space indentation for the contents ####
+shell_bash_bashrc_block_custom: |
+  alias sbu='sb update'
+  alias sbi='sb install'
+
+#### Add custom aliases to zsh shell ###
+#### Note the syntax - a pipe and two space indentation for the contents ####
+shell_zsh_zshrc_block_custom: |
+  alias sbu='sb update'
+  alias sbi='sb install'
+
 ```
 
 ## Subdomain Customization

@@ -75,12 +75,23 @@ frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_cus
 
 
 ### To create an alias for this:
+Determine your default shell in `settings.yml`
 
-Edit ~/.bashrc file and add the following (you may change the user and password):
+For your default shell, add `shell_<shell>_<shell>rc_block_custom:` to your [Inventory](https://docs.saltbox.dev/saltbox/inventory/) file:
+Example for Bash (default):
 ```
-## custom aliases
-alias ftail='frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed '
+shell_bash_bashrc_block_custom: |
+  ## Custom frontail alias
+  alias ftail='frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed '
 ```
+Example for ZSH:
+```
+shell_zsh_zshrc_block_custom: |
+  ## Custom frontail alias
+  alias ftail='frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed '
+```
+
+Run `sb install shell`
 
 You can now use:
 

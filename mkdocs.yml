@@ -73,7 +73,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Install: saltbox/install/install.md
   - Saltbox:
       - Basics: saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md

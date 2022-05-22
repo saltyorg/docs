@@ -17,7 +17,7 @@ Generate the key using:
 ``` shell
 docker run --rm -it invoiceninja/invoiceninja php artisan key:generate --show
 ```
-insert this in the invoiceninka.app_key setting in settings.yml
+insert this in the invoiceninja.app_key setting in settings.yml
 
 ``` shell
 

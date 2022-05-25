@@ -128,6 +128,6 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.
 
     ![](../images/gdrive-project/27-credentials-done.png)
 
-    Later on, I'm going to assume you put it in `/opt/sa/` and named it `project-creds.json`.
+    Later on, I'm going to assume you put it on the saltbox server in `/opt/sa/` and named it `project-creds.json`.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)

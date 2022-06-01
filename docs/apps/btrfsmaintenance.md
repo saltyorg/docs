@@ -8,7 +8,7 @@ Each of the tasks can be turned on/off and configured independently. The default
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
+| [:material-home: Project home ](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/kdave/btrfsmaintenance){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
 
 

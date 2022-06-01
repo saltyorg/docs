@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://ghcr.io/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://ghcr.io/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## Setup Doplarr
 

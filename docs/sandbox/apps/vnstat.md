@@ -10,7 +10,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/amarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/amarston/vnstat-dashboard){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

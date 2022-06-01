@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 # 1. Introduction
 

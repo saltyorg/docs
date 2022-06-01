@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github:](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
+| [:material-home: Project home ](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
 ## Remote Uploader Function
 

@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-- [:material-home: Wrapperr ](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hub.docker.com/r/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } |
+- [:material-home: Wrapperr ](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hub.docker.com/r/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 
 ### 1. Installation

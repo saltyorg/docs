@@ -7,7 +7,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: qBit Management ](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hotio.dev/containers/qbitmanage/){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: qBit Management ](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hotio.dev/containers/qbitmanage/){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 
 **Functions include:-** <br />

@@ -11,7 +11,7 @@ Calibre-Web allows you to add users, and each user can set up a Kindle email add
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

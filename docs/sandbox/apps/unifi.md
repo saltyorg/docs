@@ -7,7 +7,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://www.ui.com/download/unifi/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-controller/blob/master/README.md){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/linuxserver/docker-unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://www.ui.com/download/unifi/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-controller/blob/master/README.md){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

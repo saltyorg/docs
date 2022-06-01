@@ -8,7 +8,7 @@ Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket,
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://gitea.io/en-us/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.gitea.io/en-us/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/go-gitea/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gitea/gitea){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://gitea.io/en-us/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.gitea.io/en-us/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/go-gitea/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gitea/gitea){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

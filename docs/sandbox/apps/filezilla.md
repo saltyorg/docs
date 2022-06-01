@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://filezilla-project.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.filezilla-project.org/Main_Page){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/jlesage/docker-filezilla){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jlesage/filezilla/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://filezilla-project.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.filezilla-project.org/Main_Page){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-filezilla){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jlesage/filezilla/){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

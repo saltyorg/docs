@@ -8,7 +8,7 @@ Plex Autoscan comes configured out of the box (as related to Saltbox). However, 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| :material-home: Project home | :octicons-link-16: Docs | [:octicons-mark-github-16: Github:](https://github.com/l3uddz/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
+| :material-home: Project home | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
 ### 1. Installation
 

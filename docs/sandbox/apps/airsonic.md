@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/airsonic/airsonic){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://airsonic.github.io/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/airsonic/airsonic){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/airsonic){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://github.com/airsonic/airsonic){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://airsonic.github.io/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/airsonic/airsonic){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/airsonic){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 
 ### 1. Installation

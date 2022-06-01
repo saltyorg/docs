@@ -8,7 +8,7 @@ With watchtower you can update the running version of your containerized app sim
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://containrrr.dev/watchtower/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://containrrr.github.io/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://containrrr.dev/watchtower/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://containrrr.github.io/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

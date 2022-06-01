@@ -8,7 +8,7 @@ Beets is a music library manager and not, for the most part, a music player. It 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://beets.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](http://beets.readthedocs.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](http://github.com/beetbox/beets){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/beets){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://beets.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](http://beets.readthedocs.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](http://github.com/beetbox/beets){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/beets){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

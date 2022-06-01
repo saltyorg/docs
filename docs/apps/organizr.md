@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://organizr.app){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/causefx/Organizr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/organizr/organizr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://organizr.app){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/causefx/Organizr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/organizr/organizr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 
 ## 2. URL

@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://filebrowser.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://filebrowser.org/features){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/filebrowser/filebrowser){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/filebrowser/filebrowser){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://filebrowser.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://filebrowser.org/features){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/filebrowser/filebrowser){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/filebrowser/filebrowser){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

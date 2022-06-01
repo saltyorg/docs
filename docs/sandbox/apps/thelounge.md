@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: The Lounge ](https://thelounge.chat/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://thelounge.chat/docs){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://github.com/thelounge/thelounge ){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://docs.linuxserver.io/images/docker-thelounge){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: The Lounge ](https://thelounge.chat/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://thelounge.chat/docs){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/thelounge/thelounge ){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://docs.linuxserver.io/images/docker-thelounge){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 ### 1. Installation
 

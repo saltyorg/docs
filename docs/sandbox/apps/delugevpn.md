@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

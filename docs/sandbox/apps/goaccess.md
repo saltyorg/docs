@@ -8,7 +8,7 @@ It provides fast and valuable HTTP statistics for system administrators that req
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://goaccess.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://goaccess.io/man){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github:](https://goaccess.io/github){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gregyankovoy/goaccess){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home ](https://goaccess.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://goaccess.io/man){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://goaccess.io/github){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gregyankovoy/goaccess){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

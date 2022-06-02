@@ -1,10 +1,6 @@
----
-hide:
-  - toc
----
 # Basics
 
-# What is Saltbox?
+## What is Saltbox?
 
 - [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } is an [Ansible](https://www.ansible.com/how-ansible-works) and [docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server using Ubuntu Server 20.04.
 
@@ -13,7 +9,7 @@ hide:
 - NOTE: Saltbox does not have a dashboard or GUI of its own. All Saltbox-specific setup and commands are done on the linux command-line.
 
 
-# Why use Saltbox?
+## Why use Saltbox?
 
 ### Custom Domains
 
@@ -59,7 +55,7 @@ hide:
 - Configuration and data files for all key applications are conveniently stored in /opt, which makes backup so easy. Easily pack up your server and move to another one with Saltbox's built-in Backup.
 
 
-# How does Saltbox function ?
+## How does Saltbox function ?
 
 [Sonarr](https://sonarr.tv/) manages downloading your favorite TV Shows and [Radarr](https://radarr.video/) manages downloading your favorite movies. Both use either Usenet (via [NZBGet](https://nzbget.net/)) and/or Torrents (via [ruTorrent](https://github.com/Novik/ruTorrent)) to do this.<sup name="a1">[\[1\]](#f1) </sup><sup name="a2">[\[2\]](#f2)</sup>
 

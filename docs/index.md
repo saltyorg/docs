@@ -1,6 +1,5 @@
 ---
 hide:
-  - navigation
   - toc
 ---
 # Welcome to Saltbox

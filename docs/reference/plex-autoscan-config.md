@@ -1,3 +1,5 @@
+NOTE: plex_autoscan is no longer installed in the default Saltbox setup; it has been replaced by Autoscan.  Chances are you do not need to do this setup.
+
 The default Plex Autoscan [PAS] setup does not enable Google Drive Monitoring, and the config does not match the automated shared drive setup.
 
 To utilize Google Drive Monitoring [GDM], you'll need to make a few changes to the config to account for your own shared drives.
@@ -9,10 +11,15 @@ If you don't want to enable GDM, you don't need to do this.
 
 If you used the [scripted rclone method](rclone-manual.md), there is a script in the sb_gd repo that will make the required modifications to the stock Plex Autoscan config.
 
-This script is only useful if you have used the [scripted rclone method](rclone-manual.md).  It is expecting a stock plex autoscan config file as you will have when you have completed the install.
+This script is only useful if you have used the [scripted rclone method](rclone-manual.md).  
+
+AGAIN: This script is **only useful if you have used the [scripted rclone method](rclone-manual.md).**
+
+This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix found in the config, which you create as part of that process] it will exit with a message to that effect.  There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
+
+It is expecting a stock plex_autoscan config file as you will have when you have completed the install.
 
 You will have to have completed `sb install saltbox` before using this script.
-
 
 1. Run the script
 

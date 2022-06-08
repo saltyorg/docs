@@ -1,5 +1,7 @@
 ##  Options in accounts.yml
 
+**Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
+
 ---
 - `user`: User information.
 
@@ -37,13 +39,13 @@
 
     - `api`: [Global API Key](domain.md#cloudflare-api-key).
 
-    - This parameter is optional.
+        - This parameter is optional.
 
-    - Default is blank.
+        - Default is blank.
 
-    - Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
+        - Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
 
-    - Note: if you are using a subdomain, like WHATEVER.DOMAIN.TLD, as your domain above, leave these blank. The Cloudflare automation does not work in that case and the install will stop with an error.
+        - Note: if you are using a subdomain, like WHATEVER.DOMAIN.TLD, as your domain above, leave these blank. The Cloudflare automation does not work in that case and the install will stop with an error.
 
 - `plex`: Plex.tv account credentials.
 
@@ -91,19 +93,21 @@
 
 **Note:** Having `{{user}}` in the path tells Ansible to fill in the username, automatically. You do not need to fill in your actual username.
 
+**Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
+
 ---
 
 - `downloads`: Where downloads go.
 
     - `nzbs`: Path for Usenet app downloads.
 
-      - Default is `/mnt/unionfs/downloads/nzbs`.
+       - Default is `/mnt/unionfs/downloads/nzbs`.
 
        - Example: With the default path, NZBGet downloads would go to `/mnt/unionfs/downloads/nzbs/nzbget/completed` and SABnzbd downloads would go to `/mnt/unionfs/downloads/nzbs/sabnzbd/complete`.
 
     - `torrents`: Path for BitTorrent app downloads.
 
-        - Default is `/mnt/unionfs/downloads/torrents`.
+       - Default is `/mnt/unionfs/downloads/torrents`.
 
        - Example: With the default path, ruTorrent downloads would go to `/mnt/unionfs/downloads/torrents/rutorrent/completed`.
 
@@ -117,7 +121,7 @@
 
     - `version`: Rclone version that is installed by Saltbox.
 
-        - Choices are `latest` (or `current`), `beta`, or a specific version number (e.g. `1.42`).
+        - Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
 
         - Default is `latest`.
 
@@ -142,6 +146,8 @@
 ---
 
 ##  Options in adv_settings.yml
+
+**Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
 
 ---
 

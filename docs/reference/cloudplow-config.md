@@ -12,7 +12,7 @@ This script is only useful if you have used the [scripted rclone method](rclone-
 
 AGAIN: This script is **only useful if you have used the [scripted rclone method](rclone-manual.md).**
 
-This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix foudn in the config, which you create as part of that process] it will exit with a message to that effect.  There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created wiht that prefix, etc.
+This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix foudn in the config, which you create as part of that process] it will exit with a message to that effect.  There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
 
 You will have to have completed `sb install saltbox` before using this script.
 

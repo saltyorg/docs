@@ -1,5 +1,8 @@
 # Restore
 
+!!! info
+    Just like the initial install, these instructions are assuming you are running as `root` until told otherwise below.
+
 ## Dependencies
 
 Start by installing dependencies.

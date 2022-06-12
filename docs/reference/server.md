@@ -60,6 +60,8 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 Examples:
 
+**IMPORTANT**: Note taht these examples are just taht, examples, and may not reflect currently-avaiable OS versions or the current state of the UI.  They were accurate at the time of capture, but things change.  You will need to review for accuracy and possibly adapt them to your specific situation.  You're partitioning the disk of your remote server; you generally shouldn't trust that to copy-pasting some text from a web page.
+
 === "Online.net"
     ![](../images/online-net-partitioning.png)
 
@@ -70,6 +72,7 @@ Examples:
 
 === "Hetzner"
      - Hetzner installimage
+     
          ``` bash
          # Hetzner Online GmbH - installimage
          #

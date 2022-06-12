@@ -102,7 +102,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     http://localhost:8000/oauth2callback?code=4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive
     ```
 
-    Copy everything following `code=` [i.e. `4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive`] and paste it at the prompt where the script is waiting.
+    Copy the ENTIRE URL and paste it at the prompt where the script is waiting.
     
     We're working on making this a bit more friendly.
 

@@ -86,6 +86,8 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
 6. Run the `sb_sd.py` script:
 
+    **IMPORTANT**: If you are running a server on your local machine that is listening for HTTP requests on port 8080, disable it before running this script.  This process willl send you to a `localhost` URL, and is expecting that this will fail so you can copy the URL.  If you have a local server running on this port, you will probably see some other error instead.
+    
     ```
     python sb_sd.py
     ```

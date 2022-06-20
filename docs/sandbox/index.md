@@ -8,6 +8,7 @@
   -  **[alternatrrx](../sandbox/apps/alternatrrx.md)**  - tag - `sandbox-alternatrrx`
   -  **[apprise](../sandbox/apps/apprise.md)**  - tag - `sandbox-apprise`
   -  **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
+  -  **[autobrr](../sandbox/apps/autobrr.md)**  - tag - `sandbox-autobrr`
   -  **[beets](../sandbox/apps/beets.md)**  - tag - `sandbox-beets`
   -  **[booksonic](../sandbox/apps/booksonic.md)**  - tag - `sandbox-booksonic`
   -  **[bookstack](../sandbox/apps/bookstack.md)**  - tag - `sandbox-bookstack`

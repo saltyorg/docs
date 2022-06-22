@@ -34,7 +34,7 @@ sb install sandbox-xteve
 
 ### 2. URL
 
-- To access xTeVe, visit `https://ROLENAME._yourdomain.com_`
+- To access xTeVe, visit `https://ROLENAME._yourdomain.com_/web`
 
 ### 3. Setup
 

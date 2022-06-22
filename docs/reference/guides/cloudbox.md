@@ -68,6 +68,8 @@ Do not proceed unless the machine you're using is a fresh install of Ubuntu 20.0
   ```
 
 - Copy `rclone.conf` to `/srv/git/saltbox` <Br/> and edit the configuration files as needed. You can follow the [saltbox install instructions for saltbox for this](../../saltbox/install/install.md)<Br/>
+  
+  Saltbox is going to move this file into the correct location; you're putting it here only so saltbox knows where to find it.
 
   You can refer to your Cloudbox configuration files and copy relevant settings over from them, but do not just copy your existing Cloudbox config files into place.  Direct compatibility with Cloudbox config files is not guaranteed and will not be maintained going forward.
 

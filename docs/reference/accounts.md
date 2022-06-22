@@ -99,17 +99,7 @@
 
 - `downloads`: Where downloads go.
 
-    - `nzbs`: Path for Usenet app downloads.
-
-       - Default is `/mnt/unionfs/downloads/nzbs`.
-
-       - Example: With the default path, NZBGet downloads would go to `/mnt/unionfs/downloads/nzbs/nzbget/completed` and SABnzbd downloads would go to `/mnt/unionfs/downloads/nzbs/sabnzbd/complete`.
-
-    - `torrents`: Path for BitTorrent app downloads.
-
-       - Default is `/mnt/unionfs/downloads/torrents`.
-
-       - Example: With the default path, ruTorrent downloads would go to `/mnt/unionfs/downloads/torrents/rutorrent/completed`.
+    - Default is `/mnt/unionfs/downloads`.
 
 - `transcodes`: Path of temporary transcoding files.
 

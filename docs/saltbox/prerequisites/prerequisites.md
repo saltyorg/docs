@@ -23,8 +23,8 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 
 For best results, the assumed server environment for Saltbox is:
 
- - a dedicated remote x64 [Intel or AMD] server [not a VPS, not an ARM processor],
- - from a server provider like Hetzner, OVH, kimsufi, etc.,
+ - a dedicated remote x64 [Intel or AMD; ARM NOT SUPPORTED] server [not a VPS],
+ - from a server provider like Hetzner, OVH, kimsufi, etc.
  - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/),
  - with at least 500GB of disk space, and
  - allowing root access

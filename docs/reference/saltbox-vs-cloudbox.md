@@ -8,7 +8,7 @@ There isn't a maintained list of differences as the improvements have happened s
 
 In terms of functionality the high points are
 
- - Validated Ubuntu 20.04 support (Saltbox will try to support newer releases quicker than Cloudbox has) which is useful in terms of hardware acceleration support with newer CPUs.
+ - Validated Ubuntu 20.04 and 22.04 support (Saltbox will try to support newer releases quicker than Cloudbox has) which is useful in terms of hardware acceleration support with newer CPUs.
  - Support for IPv6 (has seen limited testing so far though) within the docker container network using NAT since we still want to keep things behind the reverse proxy.
  - Inventory system for simpler, upgrade-protected customization
  - Authelia single sign-on

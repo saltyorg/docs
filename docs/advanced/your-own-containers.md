@@ -132,7 +132,6 @@ docker run -d  \
   --restart=unless-stopped  \
   -e PGID=<strong>1000</strong> -e PUID=<strong>1000</strong>  \
   -v /opt/<strong>plex_patrol</strong>:<strong>/config</strong>  \
-  -v /opt/plex_patrol:/var/www/html \
   --network=saltbox \
   --network-alias=<strong>plex_patrol</strong>  \
   --label com.github.saltbox.saltbox_managed=true \

@@ -26,52 +26,69 @@ _NOTE: IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFU
 
 Here's what you are going to do as you work through the instructions below:
 
-[These are not the instructions, just an overview]
+[These are not the instructions, just an overview; they are grouped this way to line up with the actual steps below]
 
-1. Create a Google project. [not scripted, you'll do this manually]
+1. Verify Google accoutn permissions. 
 
-2. Create a Google group. [not scripted, you'll do this manually]
+2. Create a Google project. 
+   [not scripted, you'll do this manually]
 
-3. Install the Google SDK tools. [not scripted, you'll do this manually]
+3. Create a Google group.
+   [not scripted, you'll do this manually]
 
-4. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. [scripted with minor config edits]
+4. Install the Google SDK tools.
+   [not scripted, you'll do this manually]
 
-5. Add all those service accounts to the Google group you just created. [Starting here scripted with minor config edits to a single script]
+5. Generate a random prefix; the rest of this process will use it to identify things it has created.
+   [not scripted, you'll do this manually]
 
-6. Create three new shared drives in the Google Drive UI. [Movies, Music, TV]
+6. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. 
+   [scripted with minor config edits]
 
-7. Add your Google Group to each of those drives as a "Manager"
+7. Add all those service accounts to the Google group you just created.
+   [Everything in this step is scripted with minor config edits to a single script]
 
-8. Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files.
+   Create three new shared drives in the Google Drive UI.
+   [one each for Movies, Music, TV]
 
-9. Create a union rclone remote called "google", with the components set to the three td remotes you just created.
+   Add your Google Group to each of those drives as a "Manager"
 
+   Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files from step 4.
+
+   Create a union rclone remote called "google", with the components set to the three td remotes created in step 8.
+
+8. Verify rclone configuration. 
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
-If you already have media on shared drives from you time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.
+If you already have media on shared drives from your time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.
 
 ## New Rclone Setup
 
-1. Verify that the Shared Drive permissions are correct on your Google account:
+### Step 1:
+Verify that the Shared Drive permissions are correct on your Google account:
 
     [Instructions here](google-account-perms.md)
 
-2. Create a new project and generate a credential file:
+### Step 2:
+Create a new project and generate a credential file:
 
     [Instructions here](google-project-setup.md)
 
     Save that credential file on your server at `/opt/sa/project-creds.json`
 
-3. Create a Google Group to hold service accounts:
+### Step 3:
+Create a Google Group to hold service accounts:
 
     [Instructions here](google-group-setup.md)
 
-4. Set up the GCloud SDK:
+### Step 4:
+Set up the GCloud SDK:
 
     [Instructions here](google-gcloud-tools-install.md)
 
-5. Generate a random prefix
+### Step 5:
+Generate a random prefix
 
     ```
     prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
@@ -85,15 +102,18 @@ If you already have media on shared drives from you time with Cloudbox or PlexGu
 
       2. It helps these scripts unambiguously identify things that they have created.
 
-6. generate some service accounts
+### Step 6:
+Generate some service accounts
 
     [Instructions here](google-service-accounts.md)
 
-7. Create some Shared Drives and related infrastructure
+### Step 7:
+Create some Shared Drives and related infrastructure
 
     [Instructions here](google-shared-drives.md)
 
-8. Verify that the union remote shows you the expected contents:
+### Step 8:
+Verify that the union remote shows you the expected contents:
 
     ```
     rclone tree google:/
@@ -117,9 +137,9 @@ If you already have media on shared drives from you time with Cloudbox or PlexGu
     7 directories, 3 files
     ```
 
-9. You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.  You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
+You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.  You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
 
-10. If you want to use Plex Autoscan's Google Drive Monitoring, there are some changes that will be required in the configuration. See [this guide](plex-autoscan-config.md).
+If you want to use Plex Autoscan's Google Drive Monitoring, there are some changes that will be required in the configuration. See [this guide](plex-autoscan-config.md).
 
 ## Existing Rclone Setup
 

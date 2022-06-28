@@ -27,4 +27,4 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
    ![](../images/google-group/05-group-end.png)
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-4-set-up-the-gcloud-sdk)

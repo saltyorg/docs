@@ -85,7 +85,7 @@ Save that credential file on your server at `/opt/sa/project-creds.json`
 
 ### Step 5: Generate a random prefix
 
-[Type this at a commadn prompt on your server]
+[Type this at a command prompt on your server]
 
 ```
 prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix

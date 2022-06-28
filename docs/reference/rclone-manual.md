@@ -95,9 +95,9 @@ Make a note of that prefix; you will use it in the next two steps.
 
 This prefix is used for two purposes:
 
-    1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
+  1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
 
-    2. It helps these scripts unambiguously identify things that they have created.
+  2. It helps these scripts unambiguously identify things that they have created.
 
 ### Step 6: Generate some service accounts
 

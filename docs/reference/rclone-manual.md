@@ -65,69 +65,71 @@ If you already have media on shared drives from your time with Cloudbox or PlexG
 
 ## New Rclone Setup
 
-1. Verify that the Shared Drive permissions are correct on your Google account:
+### Step 1: Verify that the Shared Drive permissions are correct on your Google account:
 
 [Instructions here](google-account-perms.md)
 
-2. Create a new project and generate a credential file:
+### Step 2: Create a new project and generate a credential file:
 
-    [Instructions here](google-project-setup.md)
+[Instructions here](google-project-setup.md)
 
-    Save that credential file on your server at `/opt/sa/project-creds.json`
+Save that credential file on your server at `/opt/sa/project-creds.json`
 
-3. Create a Google Group to hold service accounts:
+### Step 3: Create a Google Group to hold service accounts:
 
-    [Instructions here](google-group-setup.md)
+[Instructions here](google-group-setup.md)
 
-4. Set up the GCloud SDK:
+### Step 4: Set up the GCloud SDK:
 
-    [Instructions here](google-gcloud-tools-install.md)
+[Instructions here](google-gcloud-tools-install.md)
 
-5. Generate a random prefix
+### Step 5: Generate a random prefix
 
-    ```
-    prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
-    ```
+[Type this at a commadn prompt on your server]
 
-    Make a note of that prefix; you will use it in the next two steps.
+```
+prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
+```
 
-    This prefix is used for two purposes:
+Make a note of that prefix; you will use it in the next two steps.
 
-      1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
+This prefix is used for two purposes:
 
-      2. It helps these scripts unambiguously identify things that they have created.
+    1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
 
-6. Generate some service accounts
+    2. It helps these scripts unambiguously identify things that they have created.
 
-    [Instructions here](google-service-accounts.md)
+### Step 6: Generate some service accounts
 
-7. Create some Shared Drives and related infrastructure
+[Instructions here](google-service-accounts.md)
 
-    [Instructions here](google-shared-drives.md)
+### Step 7: Create some Shared Drives and related infrastructure
 
-8. Verify that the union remote shows you the expected contents:
+[Instructions here](google-shared-drives.md)
 
-    ```
-    rclone tree google:/
-    ```
+### Step 8: Verify that the union remote shows you the expected contents:
 
-    This should display something like:
+```
+rclone tree google:/
+```
 
-    ```
-    /
-    ├── -- aZaSjsklaj-Movies Shared --
-    ├── -- aZaSjsklaj-Music Shared --
-    ├── -- aZaSjsklaj-TV Shared --
-    ├── Media
-    │   ├── Movies
-    │   ├── Music
-    │   └── TV
-    ├── azasjsklaj-movies_mounted.bin
-    ├── azasjsklaj-music_mounted.bin
-    └── azasjsklaj-tv_mounted.bin
+This should display something like:
 
-    7 directories, 3 files
-    ```
+```
+/
+├── -- aZaSjsklaj-Movies Shared --
+├── -- aZaSjsklaj-Music Shared --
+├── -- aZaSjsklaj-TV Shared --
+├── Media
+│   ├── Movies
+│   ├── Music
+│   └── TV
+├── azasjsklaj-movies_mounted.bin
+├── azasjsklaj-music_mounted.bin
+└── azasjsklaj-tv_mounted.bin
+
+7 directories, 3 files
+```
 
 You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.  You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
 

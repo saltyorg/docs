@@ -65,30 +65,25 @@ If you already have media on shared drives from your time with Cloudbox or PlexG
 
 ## New Rclone Setup
 
-### Step 1:
-Verify that the Shared Drive permissions are correct on your Google account:
+1: Verify that the Shared Drive permissions are correct on your Google account:
 
     [Instructions here](google-account-perms.md)
 
-### Step 2:
-Create a new project and generate a credential file:
+2: Create a new project and generate a credential file:
 
     [Instructions here](google-project-setup.md)
 
     Save that credential file on your server at `/opt/sa/project-creds.json`
 
-### Step 3:
-Create a Google Group to hold service accounts:
+3: Create a Google Group to hold service accounts:
 
     [Instructions here](google-group-setup.md)
 
-### Step 4:
-Set up the GCloud SDK:
+4: Set up the GCloud SDK:
 
     [Instructions here](google-gcloud-tools-install.md)
 
-### Step 5:
-Generate a random prefix
+5: Generate a random prefix
 
     ```
     prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
@@ -102,18 +97,15 @@ Generate a random prefix
 
       2. It helps these scripts unambiguously identify things that they have created.
 
-### Step 6:
-Generate some service accounts
+6: Generate some service accounts
 
     [Instructions here](google-service-accounts.md)
 
-### Step 7:
-Create some Shared Drives and related infrastructure
+7: Create some Shared Drives and related infrastructure
 
     [Instructions here](google-shared-drives.md)
 
-### Step 8:
-Verify that the union remote shows you the expected contents:
+8: Verify that the union remote shows you the expected contents:
 
     ```
     rclone tree google:/

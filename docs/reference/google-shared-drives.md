@@ -201,4 +201,4 @@ BEFORE YOU DO ANYTHING ELSE:
 
 If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)

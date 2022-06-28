@@ -158,4 +158,4 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
 1. You're done.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-7-create-some-shared-drives-and-related-infrastructure)

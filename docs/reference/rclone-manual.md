@@ -28,7 +28,7 @@ Here's what you are going to do as you work through the instructions below:
 
 [These are not the instructions, just an overview; they are grouped this way to line up with the actual steps below]
 
-1. Verify Google accoutn permissions. 
+1. Verify Google account permissions. 
 
 2. Create a Google project. 
    [not scripted, you'll do this manually]

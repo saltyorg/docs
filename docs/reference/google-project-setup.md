@@ -130,4 +130,5 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.
 
     Later on, I'm going to assume you put it on the saltbox server in `/opt/sa/` and named it `project-creds.json`.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-3-create-a-google-group-to-hold-service-accounts)
+

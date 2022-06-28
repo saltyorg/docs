@@ -86,4 +86,5 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
 
 1. Google SDK is installed and configured.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#new-rclone-setup)
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-5-generate-a-random-prefix)
+

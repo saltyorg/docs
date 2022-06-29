@@ -73,6 +73,8 @@ Do not proceed unless the machine you're using is a fresh install of Ubuntu 20.0
 
   You can refer to your Cloudbox configuration files and copy relevant settings over from them, but do not just copy your existing Cloudbox config files into place.  Direct compatibility with Cloudbox config files is not guaranteed and will not be maintained going forward.
 
+IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste individual values [values like your plex username and token, not sections like the entire plex section] from yoru cloudbox files, but DO NOT use the originals.  Things have moved from file to file compared to Cloudbox, there are new values that are required, there are values that have been deprecated.  Work on the new default settings files and edit them using your cloudbox files as a reference.
+
 - Run the preinstall command.
 
   This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed. <br />

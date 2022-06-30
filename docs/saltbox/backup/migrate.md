@@ -48,8 +48,6 @@ Listed below are some common scenarios and their migration instructions.
 
     - `/opt/cloudplow/config.json`
 
-    - `/opt/emby/config/system.xml` (only if installed)
-
     - `/opt/motd/config.json`
 
     - `/opt/traktarr/config.json` (only if installed)
@@ -57,8 +55,6 @@ Listed below are some common scenarios and their migration instructions.
     - `/opt/plex_dupefinder/config.json` (only if installed)
 
     - `/opt/plex_patrol/settings.ini` (only if installed)
-
-    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
 3. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#install-saltbox).
 
@@ -86,8 +82,6 @@ Listed below are some common scenarios and their migration instructions.
 
     - `/opt/cloudplow/config.json`
 
-    - `/opt/emby/config/system.xml` (only if installed)
-
     - `/opt/motd/config.json`
 
     - `/opt/traktarr/config.json` (only if installed)
@@ -95,8 +89,6 @@ Listed below are some common scenarios and their migration instructions.
     - `/opt/plex_dupefinder/config.json` (only if installed)
 
     - `/opt/plex_patrol/settings.ini` (only if installed)
-
-    - `/opt/sabnzbd/app/sabnzbd.ini` (only if installed)
 
 3. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#install-saltbox).
 

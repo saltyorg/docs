@@ -56,6 +56,7 @@
   -  **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
   -  **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`
+  -  **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
   -  **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`

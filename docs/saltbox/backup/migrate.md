@@ -32,13 +32,13 @@ Listed below are some common scenarios and their migration instructions.
 
 1. [Restore](restore.md) Saltbox to the new server.
 
-2. Add your new domain name into [Settings](settings.md).
+2. Add your new domain name into [Accounts](../install/install/#configuration).
 
 3. If you are using Cloudflare:
 
     1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-    2. Add the Cloudflare API into [Settings](settings.md).
+    2. Add the Cloudflare API into [Accounts](../install/install/#configuration).
 
 4. If you are not using Cloudflare:
 
@@ -66,13 +66,13 @@ Listed below are some common scenarios and their migration instructions.
 
 1. [Back up](backup.md) your current Saltbox server.
 
-2. Add your new domain name into [Settings](settings.md).
+2. Add your new domain name into [Accounts](../install/install/#configuration).
 
 3. If you are using Cloudflare:
 
     1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-    2. Add the Cloudflare API into [Settings](settings.md).
+    2. Add the Cloudflare API into [Accounts](../install/install/#configuration).
 
 4. If you are not using Cloudflare:
 

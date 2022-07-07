@@ -262,7 +262,7 @@ Note: These are important, but leave them out if your docker run command require
 ``` { .sh .annotate }
   --label traefik.enable=true
   --label traefik.http.routers.<name>-http.entrypoints=web \
-  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,redirect-to-https,gzip \
+  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,redirect-to-https,gzip,authelia \ # (1)
   --label traefik.http.routers.<name>-http.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>-http.service=<name> \
   --label traefik.http.routers.<name>.entrypoints=websecure \
@@ -271,10 +271,11 @@ Note: These are important, but leave them out if your docker run command require
   --label traefik.http.routers.<name>.service=<name> \
   --label traefik.http.routers.<name>.tls.certresolver=cfdns \
   --label traefik.http.routers.<name>.tls.options=securetls@file \
-  --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (1)
+  --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (2)
 ```
 
-1. The port for the web admin page for the container.
+1. Omit `authelia` to disable SSO.
+2. The port for the web admin page for the container.
 
 
 You'll need to add the subdomain manually at your DNS provider if you're not using wild-card DNS.

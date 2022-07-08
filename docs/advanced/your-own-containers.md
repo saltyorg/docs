@@ -274,7 +274,7 @@ Note: These are important, but leave them out if your docker run command require
   --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (2)
 ```
 
-1. Omit `authelia` to disable SSO.
+1. Omit `authelia@docker` to disable SSO. If your Authelia master instance is on another server (i.e. split feederbox/mediabox setup) modify this to be `authelia` only.
 2. The port for the web admin page for the container.
 
 

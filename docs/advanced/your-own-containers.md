@@ -262,11 +262,11 @@ Note: These are important, but leave them out if your docker run command require
 ``` { .sh .annotate }
   --label traefik.enable=true
   --label traefik.http.routers.<name>-http.entrypoints=web \
-  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,redirect-to-https,gzip,authelia \ # (1)
+  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,redirect-to-https,gzip \
   --label traefik.http.routers.<name>-http.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>-http.service=<name> \
   --label traefik.http.routers.<name>.entrypoints=websecure \
-  --label traefik.http.routers.<name>.middlewares=globalHeaders@file,secureHeaders@file \
+  --label traefik.http.routers.<name>.middlewares=globalHeaders@file,secureHeaders@file,authelia@docker \ # (1)
   --label traefik.http.routers.<name>.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>.service=<name> \
   --label traefik.http.routers.<name>.tls.certresolver=cfdns \

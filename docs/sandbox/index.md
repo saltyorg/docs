@@ -50,9 +50,11 @@
   -  **[mylar3](../sandbox/apps/mylar3.md)**  - tag - `sandbox-mylar3`
   -  **[nabarr](../sandbox/apps/nabarr.md)**  - tag - `sandbox-nabarr`
   -  **[navidrome](../sandbox/apps/navidrome.md)**  - tag - `sandbox-navidrome`
+  -  **[netdata](../sandbox/apps/netdata.md)**  - tag - `sandbox-netdata`
   -  **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
   -  **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
+  -  **[plex_dupefinder](../sandbox/apps/plex_dupefinder.md)**  - tag - `sandbox-plex_dupefinder`
   -  **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
   -  **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`

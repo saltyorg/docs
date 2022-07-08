@@ -177,6 +177,7 @@ nav:
             - Extended Personal Media Scanner: sandbox/apps/epms.md
             - goplaxt: sandbox/apps/goplaxt.md
             - kitana: sandbox/apps/kitana.md
+            - plex_dupefinder: sandbox/apps/plex_dupefinder.md
             - Wrapperr: sandbox/apps/wrapperr.md
           # - Requests:
           - Requests:
@@ -212,6 +213,7 @@ nav:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
             - Healthchecks: sandbox/apps/healthchecks.md
+            - netdata: sandbox/apps/netdata.md
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md

@@ -52,9 +52,6 @@ sb install sandbox-unifi
       ### Open Specified Ports for the specified container ###
       ##### Unifi Ports for aditional services #####
       unifi_docker_ports_custom:
-        - "3478:3478/udp" #Unifi STUN port
-        - "10001:10001/udp" #Required for AP discovery
-        - "8080:8080/tcp" #Required for device communication
         - "1900:1900/udp" #Required for Make controller discoverable on L2 network option
         - "8843:8843/tcp" #Unifi guest portal HTTPS redirect port
         - "8880:8880/tcp" #Unifi guest portal HTTP redirect port

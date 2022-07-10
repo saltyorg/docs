@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.x'
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${GH_TOKEN}@github.com/chazlarson/automaticSpoon.git
       - run: mkdocs gh-deploy --force
       - uses: sarisia/actions-status-discord@v1
         if: always()

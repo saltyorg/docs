@@ -92,7 +92,7 @@ shell_zsh_zshrc_block_custom: |
 
 ```
 # Authelia App Bypass
-Some may not want the additional layer of security that Autheli supplies, good news is that it can be disabled with an simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
+Some may not want the additional layer of security that Authelia supplies, good news is that it can be disabled with a simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
 
 `grep -Ril "_traefik_sso_middleware:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u`
 

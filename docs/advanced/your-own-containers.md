@@ -278,3 +278,40 @@ Note: These are important, but leave them out if your docker run command require
 
 
 You'll need to add the subdomain manually at your DNS provider if you're not using wild-card DNS.
+
+## Docker Compose
+Here is the example in compose format and connecting to the `saltbox` Docker network to be served by Traefik.
+<pre>
+version: "3"
+services:
+  APPNAME:
+    restart: unless-stopped
+    container_name: APPNAME
+    image: docker/image:tag
+    hostname: APPNAME
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    networks:
+      - saltbox
+    labels:
+      traefik.enable: true
+      traefik.http.routers.chann-http.entrypoints: web
+      traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https,gzip
+      traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`)
+      traefik.http.routers.APPNAME-http.service: APPNAME
+      traefik.http.routers.APPNAME.entrypoints: websecure
+      traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file
+      traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`)
+      traefik.http.routers.APPNAME.service: APPNAME
+      traefik.http.routers.APPNAME.tls.certresolver: cfdns
+      traefik.http.routers.APPNAME.tls.options: securetls@file
+      traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT
+    volumes:
+      - /opt/APPNAME:/CONFIG
+      - /etc/localtime:/etc/localtime:ro
+networks:
+  saltbox:
+    external: true
+</pre>

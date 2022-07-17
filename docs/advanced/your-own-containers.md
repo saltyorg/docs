@@ -281,7 +281,7 @@ You'll need to add the subdomain manually at your DNS provider if you're not usi
 
 ## Docker Compose
 Here is the example in compose format and connecting to the `saltbox` Docker network to be served by Traefik.
-<pre>
+```yaml
 version: "3"
 services:
   APPNAME:
@@ -314,4 +314,4 @@ services:
 networks:
   saltbox:
     external: true
-</pre>
+```

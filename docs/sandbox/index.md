@@ -60,6 +60,7 @@
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`
   -  **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
   -  **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`
+  -  **[sabthrottle](../sandbox/apps/sabthrottle.md)**  - tag - `sandbox-sabthrottle`
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`

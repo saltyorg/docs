@@ -12,7 +12,7 @@
 
 You will need to create a config file prior to running the tag:
 
-`/opt/plex-meta-manager/config/config.yml`
+`/opt/plex-meta-manager/config.yml`
 
 There is a Docker-based walkthrough on the PMM wiki [here](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Walkthrough-Docker) that you can use to learn how to create these files.  Once you've created those files, move them into `/opt/plex-meta-manager/config/` and then run the tag.
 

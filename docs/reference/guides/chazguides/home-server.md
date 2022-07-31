@@ -50,7 +50,13 @@ You’ll do this AFTER you’ve installed saltbox.
 
 You need some ports forwarded to that machine on your router.  Explaining how to do that for any arbitrary router is out of scope, but I’ll show you where it is on my Netgear.
 
-A remote server like one at Hetzner is just exposed to the open internet, so when you connect to that server on port 123, you’re connecting directly to that specific machine.  Your home network doesn’t work like that.  Your ISP gives you a single IP address, and your router translates all traffic in and out of your network to make sure it gets to the correct place.  Thas means that when a connection from the outside comes in, it is connecting to the router, not any individual machine.  You need to set up port forwarding so that when you try to connect to Radarr, for example, your router knows to send this request to the machine where you’ve installed Radarr.
+Port forwarding is rather like ordering a pizza at a fancy hotel rather than at home.  When I order a pizza at home, the delivery comes right to my door; when I order a pizza at a fancy hotel, the delivery arrives at the front door of the hotel, and the front desk clerk has to make sure it gets routed to the correct room.
+
+A remote server like one at Hetzner is just exposed to the open internet, so when you connect to that server on port 123, you’re connecting directly to that specific machine.  This is the "pizza at home" scenario.
+
+Your home network doesn’t work like that.  Your ISP gives you a single IP address, and your router translates all traffic in and out of your network to make sure it gets to the correct place.  This is the "pizza at a fancy hotel" scenario.
+
+This means that when a connection from the outside comes in, it is connecting to the router, not any individual machine.  You need to set up port forwarding so that when you try to connect to Radarr, for example, your router knows to send this request to the machine where you’ve installed Radarr.
 
 There are two parts to what you need to do:
 
@@ -58,7 +64,7 @@ There are two parts to what you need to do:
 
   - Forward requests from the outside on relevant ports to that IP address.
 
-The first is required because typically your router will be able to configure port forwarding to an IP address, so you don’t want the IP of your server changing.  Typically, on your router, everything gets an IP assigned automaically by the router’s DHCP server, so the IP address of a specific thing might change.  Depending on how your network is set up, it may be unlikely, but it’s a possibility nonetheless, so we’re going to make sure it doesn’t happen by telling the router “Always give this machine the IP address 1.2.3.4”.
+The first is required because typically your router will be able to configure port forwarding to an IP address, so you don’t want the IP of your server changing.  Typically, on your router, everything gets an IP assigned automatically by the router’s DHCP server, so the IP address of a specific thing might change.  Depending on how your network is set up, it may be unlikely, but it’s a possibility nonetheless, so we’re going to make sure it doesn’t happen by telling the router “Always give this machine the IP address 1.2.3.4”.
 
 On my Netgear, they call this “Address Reservation” and it’s found under “LAN Setup”:
 
@@ -78,7 +84,10 @@ You can see here that I’ve set it such that outside requests to port 80, 443, 
 
 Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (3526), and Plex-Autoscan (3468).
 
-If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
+!!! warning
+    If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
+
+#### Port Forward Testing:
 
 At this point, you should be able to SSH to that machine using your domain.
 
@@ -94,9 +103,7 @@ ssh YOU@192.168.X.Y
 
 If it doesn’t, verify all the port-forwarding details.
 
-You should also be able to connect to a web server running on that machine.
-
-#### Port Forward Testing:
+You should also be able to connect to a web server running on that machine.  Let's test that.
 
 Verify this part is working by installing apache on your server:
 
@@ -116,9 +123,13 @@ Once verified, remove apache:
 sudo apt remove apache2
 ```
 
+!!! warning
+    You MUST remove apache before installing saltbox
+
 With that done, we can move on to the install.
 
-IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
+!!! warning
+    IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
 
 ## Narrated example install
 

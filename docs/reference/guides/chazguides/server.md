@@ -40,6 +40,8 @@ For example:
 
 Here Plex has 9640 movies and 137140 TV episodes.  Radarr is tracking 11608 movies and Sonarr 3070 series.
 
+[These displays are produced by `ncdu` a command-line tool that shows disk usage; they're showing the content of the /opt directory]
+
 ```
 ncdu 1.14.1 ~ Use the arrow keys to navigate, press ? for help
 --- /opt -------------------------------------------------------
@@ -48,16 +50,14 @@ ncdu 1.14.1 ~ Use the arrow keys to navigate, press ? for help
     4.2 GiB [          ] /sonarr
 ```
 
-Here Plex has a lot more than that.
+Here Plex contains has a lot more than that.
 
 ```
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- /opt -------------------------------------------------------
   274.5 GiB [##########] /plex
-   23.2 GiB [          ] /cj1
     7.4 GiB [          ] /tautulli
 ```
-
 
 ## Plex transcoding:
 

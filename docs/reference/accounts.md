@@ -1,3 +1,7 @@
+!!! warning
+    This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#configuration).
+    If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
+
 ##  Options in accounts.yml
 
 **Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
@@ -82,7 +86,7 @@
          ```
          not
          ```
-         apprise: 
+         apprise:
             discord://somewebhook
          ```
     - This parameter is optional.

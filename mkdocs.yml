@@ -282,46 +282,6 @@ nav:
       - Feeder Mount: advanced/feeder.md
 
   - Reference:
-      - Topics:
-        - Prerequisites:
-          - Server: reference/server.md
-          - Domain Name: reference/domain.md
-          - Cloud Storage: reference/cloud.md
-          - Plex Account: reference/plex.md
-          - Media Sources: reference/usenet-torrent.md
-        - Google:
-          - Google Permissions: reference/google-account-perms.md
-          - Google Project: reference/google-project-setup.md
-          - Google Group: reference/google-group-setup.md
-          - Google SDK: reference/google-gcloud-tools-install.md
-          - Google Service Accounts: reference/google-service-accounts.md
-          - Google Shared Drives: reference/google-shared-drives.md
-        - Install:
-          - Dependencies: reference/dependencies.md
-          - Accounts and Settings: reference/accounts.md
-          - Preinstall: reference/preinstall.md
-          - Rclone: reference/rclone.md
-          - Rclone [Auto]: reference/rclone-auto.md
-          - Rclone [Manual]: reference/rclone-manual.md
-          - Install: reference/install.md
-        - Applications:
-          - Removing apps: reference/guides/app-remove.md
-          - Resetting apps: reference/guides/app-reset.md
-          - Updating apps: reference/guides/app-update.md
-        - Other:
-          - Saltbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
-          - Cloudplow Examples: reference/cloudplow.md
-          - Customizing Plex Libraries: reference/customizing-plex-libs.md
-          - Viewing Logs: reference/logs.md
-          - Multiple App Instances: reference/multiple-instances.md
-          - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
-          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
-          - Plex Auth Token: reference/plex_auth_token.md
-          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
-          - Ports: reference/ports.md
-          - Saltbox Tools: reference/saltbox-tools.md
-          - Adding a Subdomain: reference/subdomain.md
-          - Using Local Storage: reference/local-storage.md
       - Guides:
         - General:
           - Chazlarson Guides:
@@ -349,3 +309,44 @@ nav:
         - Further Reading and Links:
           - Suggested Reading: reference/guides/suggested_reading.md
           - Links: reference/guides/links.md
+
+      - Topics:
+        - Prerequisite References:
+          - Server: reference/server.md
+          - Domain Name: reference/domain.md
+          - Cloud Storage: reference/cloud.md
+          - Plex Account: reference/plex.md
+          - Media Sources: reference/usenet-torrent.md
+        - Install References:
+          - Dependencies: reference/dependencies.md
+          - Accounts and Settings: reference/accounts.md
+          - Preinstall: reference/preinstall.md
+          - Rclone: reference/rclone.md
+          - Rclone [Auto]: reference/rclone-auto.md
+          - Rclone [Manual]: reference/rclone-manual.md
+          - Install: reference/install.md
+        - Google References:
+          - Google Permissions: reference/google-account-perms.md
+          - Google Project: reference/google-project-setup.md
+          - Google Group: reference/google-group-setup.md
+          - Google SDK: reference/google-gcloud-tools-install.md
+          - Google Service Accounts: reference/google-service-accounts.md
+          - Google Shared Drives: reference/google-shared-drives.md
+        - Application References:
+          - Removing apps: reference/guides/app-remove.md
+          - Resetting apps: reference/guides/app-reset.md
+          - Updating apps: reference/guides/app-update.md
+        - Other References:
+          - Saltbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
+          - Cloudplow Examples: reference/cloudplow.md
+          - Customizing Plex Libraries: reference/customizing-plex-libs.md
+          - Viewing Logs: reference/logs.md
+          - Multiple App Instances: reference/multiple-instances.md
+          - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
+          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
+          - Plex Auth Token: reference/plex_auth_token.md
+          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
+          - Ports: reference/ports.md
+          - Saltbox Tools: reference/saltbox-tools.md
+          - Adding a Subdomain: reference/subdomain.md
+          - Using Local Storage: reference/local-storage.md

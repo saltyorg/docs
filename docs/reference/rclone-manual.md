@@ -22,15 +22,15 @@ It also assumes you are using a [Google Workspace](https://workspace.google.com/
 
 </details>
 
-_NOTE: IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD PROBABLY REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S RARELY A REASON TO CREATE A SECOND SET._
+_NOTE: IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S RARELY A REASON TO CREATE A SECOND SET._
 
 Here's what you are going to do as you work through the instructions below:
 
 [These are not the instructions, just an overview; they are grouped this way to line up with the actual steps below]
 
-1. Verify Google account permissions. 
+1. Verify Google account permissions.
 
-2. Create a Google project. 
+2. Create a Google project.
    [not scripted, you'll do this manually]
 
 3. Create a Google group.
@@ -42,7 +42,7 @@ Here's what you are going to do as you work through the instructions below:
 5. Generate a random prefix; the rest of this process will use it to identify things it has created.
    [not scripted, you'll do this manually]
 
-6. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`. 
+6. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`.
    [scripted with minor config edits]
 
 7. Add all those service accounts to the Google group you just created.
@@ -57,7 +57,7 @@ Here's what you are going to do as you work through the instructions below:
 
    Create a union rclone remote called "google", with the components set to the three td remotes created in step 8.
 
-8. Verify rclone configuration. 
+8. Verify rclone configuration.
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 

@@ -255,7 +255,7 @@ Note: These are important, but leave them out if your docker run command require
 
       - These are accessible from the net.
 
-  - If this is a home install, you will probably need to forward the port to the cloudbox machine.
+  - If this is a home install, you will probably need to forward the port to the Saltbox machine.
 
 ## Traefik Proxy
 

@@ -48,7 +48,7 @@ Nice table to see what is restored during simple backup/restore:
 | Backup Excludes List (custom) | `/srv/git/saltbox/backup_excludes_list.txt` |  `~/saltbox/backup_excludes_list.txt`           |
 | Rclone Config                 | `~/.config/rclone/rclone.conf`   | `~/.config/rclone/rclone.conf`            |
 
-## What is Cloudbox Restore Service?
+## What is Saltbox Restore Service?
 
 An optional service that allows for easy backing up and restoring of CLIENT-SIDE ENCRYPTED config files.
 

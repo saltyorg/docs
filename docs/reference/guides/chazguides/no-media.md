@@ -341,7 +341,7 @@ Plex:
   open_port: no
   force_auto_adjust_quality: no
   force_high_output_bitrates: no
-➜  cloudbox git:(master)
+➜  saltbox git:(master)
 ```
 
 Check the status of the services

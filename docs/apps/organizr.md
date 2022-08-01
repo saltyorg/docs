@@ -53,7 +53,7 @@ Note: it is suggested to enter your `plex username and password`
     ![Settings Tab](https://i.imgur.com/M7wfb1z.png)
     ![Tabs Editor](https://i.imgur.com/DJIvrh2.png)
 
-1. Things to note on this page, the Homepage is disabled by default and note the "Type" is set to "Internal".  Your normal Apps with Cloudbox will all need to have a Type: "iFrame" unless you have a particular app you wish to open in another window which is also a Type option.  Go ahead and click "+ on the right". You will be prompted for information regarding the tab.
+1. Things to note on this page, the Homepage is disabled by default and note the "Type" is set to "Internal".  Your normal Apps with Saltbox will all need to have a Type: "iFrame" unless you have a particular app you wish to open in another window which is also a Type option.  Go ahead and click "+ on the right". You will be prompted for information regarding the tab.
 
     ![](https://i.imgur.com/KiXsQUI.png)
 

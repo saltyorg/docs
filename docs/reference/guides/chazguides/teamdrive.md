@@ -17,7 +17,7 @@ There are three steps:
 
 ## Not “Teamdrive” specific
 
-The concepts here are not specific to teamdrives.  It’s described in terms of Teamdrives since this is aimed at Cloudbox users who use Google Drive almost exclusively.  You can go through this exercise with any rclone backend that supports the relevant setup, of course modifying the rclone setup described to suit your OneDrive or Box or whatever other backend.
+The concepts here are not specific to teamdrives.  It’s described in terms of Teamdrives since this is aimed at Saltbox users who use Google Drive almost exclusively.  You can go through this exercise with any rclone backend that supports the relevant setup, of course modifying the rclone setup described to suit your OneDrive or Box or whatever other backend.
 
 ## Prerequisites
 

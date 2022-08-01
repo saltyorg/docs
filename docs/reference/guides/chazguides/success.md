@@ -52,7 +52,7 @@ remote : Rclone VFS | "Wait for 5 seconds" -------------------------------------
 sanity_check : Get all available TAGS ---------------------------------------------...- 5.08s
 sonarr : Create and start container -----------------------------------------------...- 4.96s
 lidarr : Create and start container -----------------------------------------------...- 4.88s
-chaz@oberon:~/cloudbox$
+chaz@oberon:~/saltbox$
 
 Note this part: it’s even color-coded:
 PLAY RECAP ************************************************************************************
@@ -65,7 +65,7 @@ ok=713   changed=180   unreachable=0   failed=0
 
 Zero failures.
 
-If you are not left at a prompt like this after running the cloudbox install, chances are an error occurred during the install, and typically that error is shown at the end here.
+If you are not left at a prompt like this after running the saltbox install, chances are an error occurred during the install, and typically that error is shown at the end here.
 
 If you come to the discord asking for help, this log will be the first thing we ask you for.
 
@@ -86,7 +86,7 @@ user:
 
 It runs for a bit and stops here:
 
-TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'cloudbox' subdomain to 'bing.bang.boing'] *********************************************************************************
+TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'bing.bang.boing'] *********************************************************************************
 Tuesday 14 April 2020  11:53:29 -0500 (0:00:00.142)   	0:00:52.680 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "No zone found with name bing.bang.boing"}
 
@@ -101,7 +101,7 @@ Gathering Facts ----------------------------------------------------------------
 TRIMMED FOR SPACE
 ...
 settings : Copy | Check if 'ansible.cfg' exists ---------------------------------------------------------------------------------...- 0.35s
-chaz@oberon:~/cloudbox$
+chaz@oberon:~/saltbox$
 
 Lots of red there, showing exactly what went wrong.
 
@@ -114,7 +114,7 @@ cloudflare:
 ...
 
 
-TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'cloudbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
+TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
 Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)   	0:00:52.892 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=DOMAIN.TLD; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
 
@@ -130,7 +130,7 @@ TRIMMED FOR SPACE
 ...
 
 settings : Start | Check to see if yyq is installed ---------------------------------------------------------------------------------...- 0.35s
-chaz@oberon:~/cloudbox$
+chaz@oberon:~/saltbox$
 
 Again, lots of red there, showing exactly what went wrong.
 
@@ -154,7 +154,7 @@ You can verify this with the ping utility:
 
 You should see something like:
 
-chaz@oberon:~/cloudbox$ ping ombi.YOURDOMAIN.TLD
+chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
 PING ombi.YOURDOMAIN.TLD (111.222.333.444): 56 data bytes
 64 bytes from 111.222.333.444: icmp_seq=0 ttl=48 time=114.425 ms
 
@@ -162,7 +162,7 @@ That IP address should be the IP address of the server.  If this is a home serve
 
 If instead you should see something like:
 
-chaz@oberon:~/cloudbox$ ping ombi.YOURDOMAIN.TLD
+chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
 ping: cannot resolve ombi.YOURDOMAIN.TLD: Unknown host
 
 ...then you need to fix your DNS setup.  Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
@@ -173,7 +173,7 @@ Verify this with docker ps
 
 (The display here has been edited for readability and space)
 
-chaz@oberon:~/cloudbox$ docker ps
+chaz@oberon:~/saltbox$ docker ps
 CONTAINER ID   IMAGE                                	  CREATED         	STATUS
 99c552628534   hotio/lidarr                         	  27 minutes ago  	Up 27 minutes
 fae88a0e46d1   hotio/radarr                         	  27 minutes ago  	Up 27 minutes
@@ -201,7 +201,7 @@ You can verify the proxy with curl:
 (nothing special about my choice of ombi here)
 
 ```
-chaz@oberon:~/cloudbox$ curl http://ombi.DOMAIN.TLD | head -n 20
+chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
   % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
                              	Dload  Upload   Total   Spent	Left  Speed
 100   169  100   169	0 	0  12071  	0 --:--:-- --:--:-- --:--:-- 12071
@@ -214,7 +214,7 @@ chaz@oberon:~/cloudbox$ curl http://ombi.DOMAIN.TLD | head -n 20
 </html>
 ```
 
-That’s expected, it’s the standard cloudbox behavior where the non-secure URL forwards to the secure URL.
+That’s expected, it’s the standard saltbox behavior where the non-secure URL forwards to the secure URL.
 
 Tell curl to follow the redirect by adding -L:
 

@@ -42,12 +42,12 @@ Example:
 sb install core,emby,sonarr,radarr,nzbget,nzbhydra2 --skip-tags rutorrent,jackett
 ```
 
-Can also be used along with one of the "default" tags (e.g. `cloudbox`).
+Can also be used along with one of the "default" tags (e.g. `saltbox`).
 
 Example:
 
 ```
-sb install cloudbox,sabnzbd --skip-tags rutorrent,jackett
+sb install saltbox,sabnzbd --skip-tags rutorrent,jackett
 ```
 
 ### Persistent Skip Tags

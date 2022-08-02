@@ -175,7 +175,11 @@
 
 - `traefik`: traefik-related settings.
 
-    - `tls`: Use TLS.
+    - `tls`: Use TLS (ALPN-01) certificate validation method.
+
+        - Default is `no`.
+
+    - `http`: Use HTTP (HTTP-01) certificate validation method.
 
         - Default is `no`.
 

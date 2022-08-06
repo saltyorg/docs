@@ -65,6 +65,12 @@ If you already have media on shared drives from your time with Cloudbox or PlexG
 
 ## New Rclone Setup
 
+YOU CANNOT SKIP STEPS HERE: EACH OF THESE STEPS IS ASSUMING YOU HAVE PREFORMED THE PREVIOUS ONE.
+
+IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT [Cloudbox, PG, etc] USE THAT CONFIG [NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS] IN A MIGRATION.
+
+THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES
+
 ### Step 1: Verify that the Shared Drive permissions are correct on your Google account:
 
 [Instructions here](google-account-perms.md)
@@ -108,6 +114,8 @@ This prefix is used for two purposes:
 [Instructions here](google-shared-drives.md)
 
 ### Step 8: Verify that the union remote shows you the expected contents:
+
+IF YOU HAVE SKIPPED ANY OF THE PREVIOUS STEPS THIS VALIDATION WILL NOT WORK.
 
 ```
 rclone tree google:/

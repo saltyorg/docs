@@ -39,7 +39,7 @@ Initial setup guide thanks to `erisheaded` on CB discord.
    ```
 4. Initialize with setup to create a web admin:
    ``` { .shell }
-   archivebox init —setup
+   archivebox init -—setup
    ```
 5. Enter username, email, and password
 6. Load URL and test login

@@ -62,6 +62,7 @@
   -  **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
   -  **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
+  -  **[sqlitebrowser](../sandbox/apps/sqlitebrowser.md)**  - tag - `sandbox-sqlitebrowser`
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
   -  **[tandoor](../sandbox/apps/tandoor.md)**  - tag - `sandbox-tandoor`

@@ -54,6 +54,7 @@
   -  **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
   -  **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
+  -  **[plex_credits_detect](../sandbox/apps/plex-credits-detect.md)**  - tag - `sandbox-plex_credits_detect`
   -  **[plex_dupefinder](../sandbox/apps/plex_dupefinder.md)**  - tag - `sandbox-plex_dupefinder`
   -  **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
   -  **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
@@ -63,6 +64,7 @@
   -  **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
+  -  **[tandoor](../sandbox/apps/tandoor.md)**  - tag - `sandbox-tandoor`
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
   -  **[traefik_robotstxt](../sandbox/apps/traefik_robotstxt.md)**  - tag - `sandbox-traefik_robotstxt`
   -  **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`

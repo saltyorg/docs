@@ -108,6 +108,7 @@ nav:
           - Wrapperr: sandbox/apps/wrapperr.md
           - ZNC: sandbox/apps/znc.md
         - Content Management:
+          - Tandoor Recipes: sandbox/apps/tandoor.md
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
           - Coder: sandbox/apps/coder.md
@@ -177,6 +178,7 @@ nav:
             - Extended Personal Media Scanner: sandbox/apps/epms.md
             - goplaxt: sandbox/apps/goplaxt.md
             - kitana: sandbox/apps/kitana.md
+            - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
             - Wrapperr: sandbox/apps/wrapperr.md
           # - Requests:

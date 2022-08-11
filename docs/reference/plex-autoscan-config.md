@@ -17,6 +17,13 @@ AGAIN: This script is **only useful if you have used the [scripted rclone method
 
 This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix found in the config, which you create as part of that process] it will exit with a message to that effect.  There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
 
+SPECIFICALLY, it's expecting:
+
+  - You've changed the prefix in `/opt/sb_gd/config.py`
+  - `/opt/plex_autoscan/config/config.json` exists
+  - `/opt/sb_gd/client_secrets.json` exists
+  - The `SERVER_PATH_MAPPINGS` element in `/opt/plex_autoscan/config/config.json` is empty
+
 It is expecting a stock plex_autoscan config file as you will have when you have completed the install.
 
 You will have to have completed `sb install saltbox` before using this script.
@@ -28,7 +35,9 @@ You will have to have completed `sb install saltbox` before using this script.
     source sb_gd/bin/activate
     python sb_pas.py
     ```
-
+    
+    This is assuming you've setup the virtual environment as described in the last step of the [scripted rclone method](rclone-manual.md)
+    
     If that doesn't work, update to the latest version of the files from the repo with `git pull` and try again.
 
 1.  Next, you will need to authorize Google Drive. To do so, run the following command:

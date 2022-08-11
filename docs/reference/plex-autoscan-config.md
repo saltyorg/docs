@@ -1,4 +1,5 @@
-NOTE: plex_autoscan is no longer installed in the default Saltbox setup; it has been replaced by Autoscan.  Chances are you do not need to do this setup.
+!!! info
+    NOTE: plex_autoscan is no longer installed in the default Saltbox setup; it has been replaced by Autoscan.  Chances are you **do not need** to do this setup.
 
 The default Plex Autoscan [PAS] setup does not enable Google Drive Monitoring, and the config does not match the automated shared drive setup.
 

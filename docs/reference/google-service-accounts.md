@@ -93,7 +93,9 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     
     For these edits, you will need:
     1. The "Organization ID" from GCloud SDK step
+    
     2. The full email address of the group you created a couple steps ago
+    
     3. The prefix you generated previously
 
     ```

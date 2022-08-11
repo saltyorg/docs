@@ -90,6 +90,11 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     ```
 
     Edit the beginning of the script as indicated by `<<<<` below:
+    
+    For these edits, you will need:
+    1. The "Organization ID" from GCloud SDK step
+    2. The full email address of the group you created a couple steps ago
+    3. The prefix you generated previously
 
     ```
     #!/bin/bash
@@ -98,7 +103,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
     KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [you will need to add the /all here, most likely]
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
-    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full address as shown] you created previously
+    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full email address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3

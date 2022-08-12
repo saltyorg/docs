@@ -81,7 +81,7 @@ IMPORTANT:
 
 These values:
 
-```yml
+``` yaml
   restore_service:
     user: # 
     pass: # 

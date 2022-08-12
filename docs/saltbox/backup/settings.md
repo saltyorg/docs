@@ -75,6 +75,8 @@ backup:
 
     Requires BTRFS on `/` or `/opt`
 
+Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
+
 IMPORTANT:
 
 These values:
@@ -83,7 +85,7 @@ These values:
   restore_service:
     user: # 
     pass: # 
- ```
+```
 
 SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
 

@@ -1,0 +1,341 @@
+site_name: docs.saltbox.dev
+site_url: https://docs.saltbox.dev/
+site_author: salty
+site_description: Saltbox is an Ansible-based solution for rapidly deploying a Docker containerized cloud media server.
+
+repo_name: docs
+repo_url: https://github.com/saltyorg/docs
+
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    # - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  generator: false
+  social:
+  - icon: fontawesome/solid/heart
+    link: 'https://github.com/sponsors/saltydk'
+    name: Donate
+  - icon: fontawesome/brands/discord
+    link: 'https://discord.gg/ugfKXpFND8'
+    name: Discord
+  - icon: fontawesome/brands/github
+    link: 'https://github.com/saltyorg/Saltbox'
+    name: GitHub
+
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Saltbox:
+      - Basics: saltbox/basics/basics.md
+      - Prerequisites: saltbox/prerequisites/prerequisites.md
+      - Install Types: saltbox/basics/install_types.md
+      - Install: saltbox/install/install.md
+      - After-Install: saltbox/install/after.md
+      - Update: saltbox/basics/update.md
+      - Accessing Apps: saltbox/basics/accessing_apps.md
+      - Paths: saltbox/basics/paths.md
+      - Inventory: saltbox/inventory/index.md
+      - Backup/Restore:
+        - Settings: saltbox/backup/settings.md
+        - Backup: saltbox/backup/backup.md
+        - Restore: saltbox/backup/restore.md
+        - Migrate: saltbox/backup/migrate.md
+
+  - Sandbox:
+      - Basics: sandbox/basics.md
+      - Settings: sandbox/settings.md
+      - Index: sandbox/index.md
+      - Apps:
+        - ArrX: sandbox/apps/arrx.md
+        - General:
+          - AdGuard Home: sandbox/apps/adguardhome.md
+          - Nabarr: sandbox/apps/nabarr.md
+          - Notifiarr: sandbox/apps/notifiarr.md
+          - Resilio Sync: sandbox/apps/resilio_sync.md
+          - The Lounge: sandbox/apps/thelounge.md
+          - Wrapperr: sandbox/apps/wrapperr.md
+          - ZNC: sandbox/apps/znc.md
+        - Content Management:
+          - Wordpress: sandbox/apps/wordpress.md
+        - Development:
+          - Coder: sandbox/apps/coder.md
+          - Gitea: sandbox/apps/gitea.md
+          - Docker:
+            - Dozzle: sandbox/apps/dozzle.md
+            - Yacht: sandbox/apps/yacht.md
+        - Downloading:
+          - AirDC++: sandbox/apps/airdcpp.md
+          - Alltube: sandbox/apps/alltube.md
+          - Archivebox: sandbox/apps/archivebox.md
+          - Jdownloader2: sandbox/apps/jdownloader2.md
+          - Medusa: sandbox/apps/medusa.md
+          - Resilio Sync: sandbox/apps/resiliosync.md
+          - Torrents:
+            - Delugevpn: sandbox/apps/delugevpn.md
+            - qBit Management: sandbox/apps/qbit_manage.md
+            - Rflood: sandbox/apps/rflood.md
+            - Rfloodx: sandbox/apps/rfloodx.md
+            - Transmission: sandbox/apps/transmission.md
+            - Transmissionx: sandbox/apps/transmissionx.md
+        - File Management:
+          - Filebot: sandbox/apps/filebot.md
+          - Filebrowser: sandbox/apps/filebrowser.md
+          - Filezilla: sandbox/apps/filezilla.md
+          - Jirafeau: sandbox/apps/jirafeau.md
+        - Landing Pages:
+          - VNStat: sandbox/apps/vnstat.md
+          - heimdall: sandbox/apps/heimdall.md
+        - Game Servers:
+          - Minecraft: sandbox/apps/minecraft.md
+        - Media Management:
+          - Books:
+            - booksonic: sandbox/apps/booksonic.md
+            - bookstack: sandbox/apps/bookstack.md
+            - calibre: sandbox/apps/calibre.md
+            - calibre_web: sandbox/apps/calibre_web.md
+            - comicstreamer: sandbox/apps/comicstreamer.md
+            - kavita: sandbox/apps/kavita.md
+            - komga: sandbox/apps/komga.md
+            - lazylibrarian: sandbox/apps/lazylibrarian.md
+            - mylar3: sandbox/apps/mylar3.md
+          # - Indexers:
+          - Metadata Management:
+            - alternatrr: sandbox/apps/alternatrr.md
+            - alternatrrx: sandbox/apps/alternatrrx.md
+            - comixed: sandbox/apps/comixed.md
+            - MKVToolNix: sandbox/apps/mkvtoolnix.md
+            - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
+            - unmanic: sandbox/apps/unmanic.md
+          # - Movies:
+          - Music:
+            - airsonic: sandbox/apps/airsonic.md
+            - beets: sandbox/apps/beets.md
+            - funkwhale: sandbox/apps/funkwhale.md
+            - deemix: sandbox/apps/deemix.md
+            - navidrome: sandbox/apps/navidrome.md
+          - TV:
+            - xteve: sandbox/apps/xteve.md
+        - Media Servers and add-ons:
+          - Emby:
+            - embystat: sandbox/apps/embystat.md
+          - Plex:
+            - Extended Personal Media Scanner: sandbox/apps/epms.md
+            - goplaxt: sandbox/apps/goplaxt.md
+            - kitana: sandbox/apps/kitana.md
+            - Wrapperr: sandbox/apps/wrapperr.md
+          # - Requests:
+          - Requests:
+            - Doplarr: sandbox/apps/doplarr.md
+            - Ombi: sandbox/apps/ombi.md
+            - Ombix: sandbox/apps/ombix.md
+            - Requestrr: sandbox/apps/requestrr.md
+            - Requestrrx: sandbox/apps/requestrrx.md
+          - stash: sandbox/apps/stash.md
+        - Nextcloud: sandbox/apps/nextcloud.md
+        - Social:
+          - gotify: sandbox/apps/gotify.md
+          - moviematch: sandbox/apps/moviematch.md
+        - Utilities:
+          - Docker:
+            - ouroboros: sandbox/apps/ouroboros.md
+            - watchtower: sandbox/apps/watchtower.md
+          - Log Management:
+            - GoAccess: sandbox/apps/goaccess.md
+          - Influxdb: sandbox/apps/influxdb.md
+          - Networking:
+            - kcptun_client: sandbox/apps/kcptun_client.md
+            - kcptun_server: sandbox/apps/kcptun_server.md
+            - unifi : sandbox/apps/unifi.md
+          - flaresolverr: sandbox/apps/flaresolverr.md
+          - Log Management:
+            - logarr: sandbox/apps/logarr.md
+            - monitorr: sandbox/apps/monitorr.md
+          - guacamole: sandbox/apps/guacamole.md
+          - handbrake: sandbox/apps/handbrake.md
+          - speedtest: sandbox/apps/speedtest.md
+          - sshwifty: sandbox/apps/sshwifty.md
+          - System:
+            - apprise: sandbox/apps/apprise.md
+            - glances_web: sandbox/apps/glances_web.md
+            - Healthchecks: sandbox/apps/healthchecks.md
+          - SyncThing: sandbox/apps/syncthing.md
+          - Telegraf: sandbox/apps/telegraf.md
+          - Unpackerr: sandbox/apps/unpackerr.md
+          - Uptime Kuma: sandbox/apps/uptime_kuma.md
+          - vaultwarden: sandbox/apps/vaultwarden.md
+          - Visualization:
+            - Grafana: sandbox/apps/grafana.md
+            - Varken: sandbox/apps/varken.md
+
+  - Apps:
+      - Core:
+        - Cloudplow: apps/cloudplow.md
+        - Overseerr: apps/overseerr.md
+        - Radarr: apps/radarr.md
+        - Sonarr: apps/sonarr.md
+        - Nzbget: apps/nzbget.md
+        - Nzbhydra2: apps/nzbhydra2.md
+        - Plex Autoscan: apps/plex-autoscan.md
+        - Portainer: apps/portainer.md
+        - Rutorrent: apps/rutorrent.md
+        - Tautulli: apps/tautulli.md
+        - Lidarr: apps/lidarr.md
+      - Media Servers:
+        - Plex: apps/plex.md
+        - Emby: apps/emby.md
+        - Jellyfin: apps/jellyfin.md
+      - Alternatives to Core Apps:
+        - Autoscan: apps/autoscan.md
+        - Petio: apps/petio.md
+        - Prowlarr: apps/prowlarr.md
+        - Sabnzbd: apps/sabnzbd.md
+        - Deluge: apps/deluge.md
+        - Qbittorrent: apps/qbittorrent.md
+      - Others:
+        - Autoscan: apps/autoscan.md
+        - Bazarr: apps/bazarr.md
+        - BTRFS Maintenance: apps/btrfsmaintenance.md
+        - Hetzner NFS: apps/hetzner_nfs.md
+        - Transfer: apps/transfer.md
+        - Readarr: apps/readarr.md
+      - TODO - REPLACE IMAGES:
+        - Jackett: apps/jackett.md
+      - TODO - NEED UPDATING:
+        - Organizr: apps/organizr.md
+        - SSTV: apps/sstv.md
+
+  - FAQ:
+      - System: faq/System.md
+      - Cloud Storage: faq/Cloud Storage.md
+      - CloudFlare: faq/Cloudflare.md
+      - Cloudplow: faq/Cloudplow.md
+      - Docker: faq/Docker.md
+      - Install: faq/Install.md
+      - Backup and Restore: faq/Backup and Restore.md
+      - Rclone: faq/Rclone.md
+      - Plex: faq/Plex.md
+      - Plex Autoscan: faq/Plex-Autoscan.md
+      - ruTorrent: faq/ruTorrent.md
+      - Misc: faq/Misc.md
+
+  - Advanced:
+      - Index: advanced/index.md
+      - Adding Your Own Containers: advanced/your-own-containers.md
+      - Styled Error Pages: advanced/styled-error-pages.md
+      - User crontab examples: advanced/user-crontab-examples.md
+      - Feeder Mount: advanced/feeder.md
+
+  - Reference:
+      - Topics:
+        - Prerequisites:
+          - Server: reference/server.md
+          - Domain Name: reference/domain.md
+          - Cloud Storage: reference/cloud.md
+          - Plex Account: reference/plex.md
+          - Media Sources: reference/usenet-torrent.md
+        - Google:
+          - Google Permissions: reference/google-account-perms.md
+          - Google Project: reference/google-project-setup.md
+          - Google Group: reference/google-group-setup.md
+          - Google SDK: reference/google-gcloud-tools-install.md
+          - Google Service Accounts: reference/google-service-accounts.md
+          - Google Shared Drives: reference/google-shared-drives.md
+        - Install:
+          - Dependencies: reference/dependencies.md
+          - Accounts and Settings: reference/accounts.md
+          - Preinstall: reference/preinstall.md
+          - Rclone: reference/rclone.md
+          - Rclone [Auto]: reference/rclone-auto.md
+          - Rclone [Manual]: reference/rclone-manual.md
+          - Install: reference/install.md
+        - Applications:
+          - Removing apps: reference/guides/app-remove.md
+          - Resetting apps: reference/guides/app-reset.md
+          - Updating apps: reference/guides/app-update.md
+        - Other:
+          - Cloudplow Examples: reference/cloudplow.md
+          - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
+          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
+          - Customizing Plex Libraries: reference/customizing-plex-libs.md
+          - Multiple App Instances: reference/multiple-instances.md
+          - Plex Auth Token: reference/plex_auth_token.md
+          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
+          - Ports: reference/ports.md
+          - Saltbox Tools: reference/saltbox-tools.md
+          - Adding a Subdomain: reference/subdomain.md
+          - Using Local Storage: reference/local-storage.md
+      - Guides:
+        - General:
+          - Chazlarson Guides:
+              - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
+              - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
+              - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
+              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
+              - I can't see my media!: reference/guides/chazguides/no-media.md
+              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
+              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
+              - Why is my disk full?: reference/guides/chazguides/disk-full.md
+              - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
+        - Linux:
+          - Aliases: reference/guides/aliases.md
+          - Coder for easier file editing: reference/guides/coder-setup.md
+        - Plex:
+          - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
+        - Downloading:
+          - Hardlinking: reference/guides/hardlinking.md
+        - Rclone:
+          - Creating a remote: reference/guides/rclone-remote.md
+        - Migration:
+          - Cloudbox: reference/guides/cloudbox.md
+          - Plexguide: reference/guides/plexguide.md
+        - Further Reading and Links:
+          - Suggested Reading: reference/guides/suggested_reading.md
+          - Links: reference/guides/links.md

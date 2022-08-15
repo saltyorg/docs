@@ -90,7 +90,7 @@ Examples:
          SWRAID 1
          SWRAIDLEVEL 0
          HOSTNAME sb.domain.com
-         PART /boot  ext4     512M
+         PART /boot  ext4     2G
          PART lvm    vg0       all
          LV vg0   swap   swap      swap         8G
          LV vg0   root    /     ext4      all
@@ -116,7 +116,7 @@ Examples:
          SWRAID 1
          SWRAIDLEVEL 0
          HOSTNAME sb.domain.com
-         PART /boot  ext4     512M
+         PART /boot  ext4     2G
          PART lvm    vg0       all
          LV vg0   swap   swap      swap         8G
          LV vg0   opt   /opt     btrfs         250G

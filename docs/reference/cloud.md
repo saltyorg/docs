@@ -46,11 +46,11 @@ The primary advantage of Shared Drives is that access to them can be controlled 
 
 Some newer related utilities [like the Golang "Autoscan" replacement for plex-autoscan] have features that work exclusively with Shared Drives.
 
-The primary disadvantage ot Shared Drives is that they have a fixed limit of 400,000 files.  For this reason one common strategy is to create separate Shared Drives for each media type.
+The primary disadvantage of Shared Drives is that they have a fixed limit of 400,000 files.  For this reason one common strategy is to create separate Shared Drives for each media type.
 
 For those reasons, this documentation will discuss ONLY Shared Drives.
 
-However, if your data is currently on My Drive and you want to keep it there, Saltbox works fine with that as well.  Rather than littering the docs with "If you're using My Drive to this, Shared drives do that" decision points, we standardized on Shared Drives.  You'll just need to skip some stuff aht refers to shared drives.
+However, if your data is currently on My Drive and you want to keep it there, Saltbox works fine with that as well.  Rather than littering the docs with "If you're using My Drive to this, Shared drives do that" decision points, we standardized on Shared Drives.  You'll just need to skip some stuff that refers to shared drives.
 
 As a note, if you are unable to create Shared Drives in the Google Drive Web UI, that's a sign that you have the wrong type of Google Drive account.
 

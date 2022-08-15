@@ -266,15 +266,16 @@ Note: These are important, but leave them out if your docker run command require
   --label traefik.http.routers.<name>-http.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>-http.service=<name> \
   --label traefik.http.routers.<name>.entrypoints=websecure \
-  --label traefik.http.routers.<name>.middlewares=globalHeaders@file,secureHeaders@file \
+  --label traefik.http.routers.<name>.middlewares=globalHeaders@file,secureHeaders@file,authelia@docker \ # (1)
   --label traefik.http.routers.<name>.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>.service=<name> \
   --label traefik.http.routers.<name>.tls.certresolver=cfdns \
   --label traefik.http.routers.<name>.tls.options=securetls@file \
-  --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (1)
+  --label traefik.http.services.<name>.loadbalancer.server.port=<container_webpage_port> # (2)
 ```
 
-1. The port for the web admin page for the container.
+1. Omit `authelia@docker` to disable SSO. If your Authelia master instance is on another server (i.e. split feederbox/mediabox setup) modify this to be `authelia` only.
+2. The port for the web admin page for the container.
 
 
 You'll need to add the subdomain manually at your DNS provider if you're not using wild-card DNS.

@@ -22,7 +22,7 @@ sb install sandbox-yacht
 
 ### 3. Setup
 
-- The default login is the email and user password from accounts.yml
+- The default login is the email accounts.yml and the password is `pass`
 
 - Check out [the getting started guide](https://yacht.sh/docs/Installation/Getting_Started){: target=_blank rel="noopener noreferrer" } if this is the first time you've used Yacht.
 

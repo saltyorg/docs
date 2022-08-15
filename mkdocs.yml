@@ -116,6 +116,7 @@ nav:
           - Docker:
             - Dozzle: sandbox/apps/dozzle.md
             - Yacht: sandbox/apps/yacht.md
+          - OliveTin: sandbox/apps/olivetin.md
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Alltube: sandbox/apps/alltube.md

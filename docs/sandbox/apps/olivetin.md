@@ -1,4 +1,4 @@
-# Yacht
+# OliveTin
 
 ## What is it?
 

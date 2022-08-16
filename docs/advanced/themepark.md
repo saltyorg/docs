@@ -14,6 +14,11 @@ NZBGet with the "nord" theme:
 ![](images/nzbget-nord.png)
 
 
+NZBGet with the "hotline" theme:
+
+![](images/nzbget-hotline.png)
+
+
 Choose the theme and apply it to containers in in inventory:
 
 ```

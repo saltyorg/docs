@@ -70,6 +70,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/thatsnasty>
+            <img src=https://avatars.githubusercontent.com/u/17760366?v=4 width="100;"  alt=thatsnasty/>
+            <br />
+            <sub style="font-size:14px"><b>thatsnasty</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/TurboCheetah>
             <img src=https://avatars.githubusercontent.com/u/19479111?v=4 width="100;"  alt=Turbo/>
             <br />
@@ -81,13 +88,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <img src=https://avatars.githubusercontent.com/u/953679?v=4 width="100;"  alt=keldian/>
             <br />
             <sub style="font-size:14px"><b>keldian</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/thatsnasty>
-            <img src=https://avatars.githubusercontent.com/u/17760366?v=4 width="100;"  alt=thatsnasty/>
-            <br />
-            <sub style="font-size:14px"><b>thatsnasty</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

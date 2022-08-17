@@ -16,6 +16,7 @@ Broadly, the base install consists of six steps:
 ## IMPORTANT:
 
 If your server does not meet these requirements:
+
  - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/),
  - nothing else [docker, for example] preinstalled
 

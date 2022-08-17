@@ -13,6 +13,14 @@ Broadly, the base install consists of six steps:
 5. Running the [install script](#saltbox)
 6. Configuring installed [applications](#app-setup)
 
+## IMPORTANT:
+
+If your server does not meet these requirements:
+ - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/),
+ - nothing else [docker, for example] preinstalled
+
+Chances are this process is going to fail.  You can save yourself some time by rectifying that now, before getting a mysterious error and coming to the discord where you will be told to do a fresh install of 20.04 or 22.04 without installing anything else.
+
 ## Dependencies
 
 === "curl"

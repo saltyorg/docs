@@ -3,7 +3,9 @@
 
 About the requirements:
 
-You will need a dedicated server, from a server provider (e.g. Hetzner, kimsufi, OVH, etc), installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/).
+You will need a dedicated server, from a server provider (e.g. Hetzner, kimsufi, OVH, etc), installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+
+The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error.
 
 Typically this server is remote to you; you can install on a home server, keeping in mind some [home server considerations](#home-server-considerations)
 

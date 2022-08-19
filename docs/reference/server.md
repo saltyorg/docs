@@ -74,6 +74,8 @@ Examples:
 
 === "Hetzner"
      - Hetzner installimage
+
+         [What to do with this "installimage"](https://docs.hetzner.com/robot/dedicated-server/operating-systems/installimage/)
      
          ``` bash
          # Hetzner Online GmbH - installimage

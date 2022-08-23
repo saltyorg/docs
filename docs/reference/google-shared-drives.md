@@ -92,7 +92,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     python sb_sd.py
     ```
     
-    You will be asked a bunch of questions about the previsou steps.  If the answers are not all "YES", you'll need to go complete those steps.  If you lie and answer YES when you haven't completed those steps, this script will fail in some way.  There is no way to avoid performing all the steps.
+    You will be asked a bunch of questions about the previous steps.  If the answers are not all "YES", you'll need to go complete those steps.  If you lie and answer YES when you haven't completed those steps, this script will fail in some way.  There is no way to avoid performing all the steps.
 
     You will be asked to authenticate in the usual Google way.  Follow the prompts.
 

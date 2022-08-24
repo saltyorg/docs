@@ -283,7 +283,7 @@ You'll need to add the subdomain manually at your DNS provider if you're not usi
 ## Docker Compose
 Here is the example in compose format and connecting to the `saltbox` Docker network to be served by Traefik.
 
-As noted above, you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create any required `/opt/APPNAME` directory tree manually.  Creating the container using `docker-compose` will not do those things automatically the way an 'sb install APPNAME` Ansible run would.
+As noted above, you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create any required `/opt/APPNAME` directory tree manually.  Creating the container using `docker-compose` will not do those things automatically the way an `sb install APPNAME` Ansible run would.
 
 ```yaml
 version: "3"

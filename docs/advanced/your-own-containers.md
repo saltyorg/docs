@@ -301,7 +301,7 @@ services:
       - saltbox
     labels:
       traefik.enable: true
-      traefik.http.routers.chann-http.entrypoints: web
+      traefik.http.routers.APPNAME-http.entrypoints: web
       traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https,gzip
       traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`)
       traefik.http.routers.APPNAME-http.service: APPNAME

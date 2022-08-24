@@ -3,7 +3,7 @@
 
 When you install existing roles in saltbox, some things get handled behind the scenes for you.  Notably, this includes creating the subdomain[s] at cloudflare and creating the `/opt/APPNAME ` directory tree.
 
-When you add a container manually as outlined on this page, neither of those things will be done for you, so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME ` directory tree.
+When you add a container manually as outlined on this page, neither of those things will be done for you, so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
 
 The examples below are `docker run` commands that you would execute in an SSH session on your server.
 
@@ -282,6 +282,9 @@ You'll need to add the subdomain manually at your DNS provider if you're not usi
 
 ## Docker Compose
 Here is the example in compose format and connecting to the `saltbox` Docker network to be served by Traefik.
+
+As noted above, you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create any required `/opt/APPNAME` directory tree manually.  Creating the container using `docker-compose` will not do those things automatically the way an 'sb install APPNAME` Ansible run would.
+
 ```yaml
 version: "3"
 services:

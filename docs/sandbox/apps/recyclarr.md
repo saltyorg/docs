@@ -19,7 +19,7 @@ sb install sandbox-recyclarr
 
 ### 2. Setup
 
-Edit the Recyclarr section in [saltbox `settings.yml`:](../settings.md) and enter your desired update schedule using standard cron syntax.
+Edit the Recyclarr section in [sandbox `settings.yml`:](../settings.md) and enter your desired update schedule using standard cron syntax.
 
      ``` { .yaml }
      recyclarr:

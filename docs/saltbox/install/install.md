@@ -6,12 +6,12 @@ Please read through these steps prior to executing any of them, just to get a gr
 
 Broadly, the base install consists of six steps:
 
-1. Installing [dependencies](#dependencies)
-2. Preparing your [configuration file(s)](#configuration)
-3. Running a [pre-install script](#preinstall)
-4. Configuring your [cloud storage](#rclone)
-5. Running the [install script](#saltbox)
-6. Configuring installed [applications](#app-setup)
+1. Installing [dependencies](#step-1-dependencies))
+2. Preparing your [configuration file(s)](#step-2-configuration)
+3. Running a [pre-install script](#step-3-preinstall)
+4. Configuring your [cloud storage](#step-4-rclone)
+5. Running the [install script](#step-5-saltbox)
+6. Configuring installed [applications](#step-6-app-setup)
 
 ## IMPORTANT:
 
@@ -22,7 +22,7 @@ If your server does not meet these requirements:
 
 Chances are this process is going to fail.  You can save yourself some time by rectifying that now, before getting a mysterious error and coming to the discord where you will be told to do a fresh install of 20.04 or 22.04 without installing anything else.
 
-## Dependencies
+## Step 1: Dependencies
 
 === "curl"
     ``` shell
@@ -48,7 +48,7 @@ Chances are this process is going to fail.  You can save yourself some time by r
     See [here](../../reference/dependencies.md) for more information about the dependencies.
 
 
-## Configuration
+## Step 2: Configuration
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
 
@@ -164,7 +164,7 @@ authelia:
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.
 
-## Preinstall
+## Step 3: Preinstall
 
 !!! warning
     Make sure that you have set up the configuration correctly before proceeding.
@@ -183,7 +183,7 @@ If your server did not need to reboot you can run `su username` to switch user o
 !!! info
     See [here](../../reference/preinstall.md) for more information about the preinstall.
 
-## Rclone
+## Step 4: Rclone
 Saltbox assumes an rclone remote pointed at your google storage named `google` [as shown in the settings.yml above].
 
 There is nothing special about saltbox's implementation of this setup, aside from its opinions about the media paths.
@@ -199,7 +199,7 @@ If you are starting from scratch, the process is documented [here](../../referen
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.
 
-## Saltbox
+## Step 5: Saltbox
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
@@ -230,7 +230,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 After rebooting, you're now ready to go through the basic setup for the apps!
 
-## App Setup
+## Step 6: App Setup
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

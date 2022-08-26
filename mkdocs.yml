@@ -230,20 +230,20 @@ nav:
             - Varken: sandbox/apps/varken.md
 
   - Apps:
-      - Core:
-        - Autoscan: apps/autoscan.md
-        - Cloudplow: apps/cloudplow.md
-        - Overseerr: apps/overseerr.md
-        - Radarr: apps/radarr.md
-        - Sonarr: apps/sonarr.md
+      - Core [set up in this order]:
         - Nzbget: apps/nzbget.md
-        - Nzbhydra2: apps/nzbhydra2.md
-        - Portainer: apps/portainer.md
         - Rutorrent: apps/rutorrent.md
-        - Tautulli: apps/tautulli.md
-        - Lidarr: apps/lidarr.md
-      - Media Servers:
+        - Nzbhydra2: apps/nzbhydra2.md
+        - Jackett: apps/jackett.md
         - Plex: apps/plex.md
+        - Autoscan: apps/autoscan.md
+        - Sonarr: apps/sonarr.md
+        - Radarr: apps/radarr.md
+        - Lidarr: apps/lidarr.md
+        - Tautulli: apps/tautulli.md
+        - Overseerr: apps/overseerr.md
+        - Portainer: apps/portainer.md
+      - Other Media Servers:
         - Emby: apps/emby.md
         - Jellyfin: apps/jellyfin.md
       - Alternatives to Core Apps:
@@ -254,13 +254,12 @@ nav:
         - Deluge: apps/deluge.md
         - Qbittorrent: apps/qbittorrent.md
       - Others:
+        - Cloudplow: apps/cloudplow.md
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Hetzner NFS: apps/hetzner_nfs.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
-      - TODO - REPLACE IMAGES:
-        - Jackett: apps/jackett.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md

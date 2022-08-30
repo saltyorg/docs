@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install sandbox-plex_credits_cetect
+sb install sandbox-plex_credits_detect
 
 ```
 

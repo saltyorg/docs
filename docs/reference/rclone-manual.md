@@ -75,7 +75,9 @@ Your randomly-generated prefix is:
 <details>
 <summary>That says '10 RANDOM CHARACTERS SHOULD APPEAR HERE'</summary>
 <br />
-Apparently the Javascript didn't work.
+Apparently the Javascript didn't work or you have Javascript disabled.
+
+Try reloading the page.  If that doesn't work, generate it manually:
 
 [Type this at a command prompt on your server]
 
@@ -85,7 +87,10 @@ prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
 
 </details>
 
-Make a note of that prefix; you will use it in the next two steps.  When you reload this page, the prefix will change.  That's fine.  It's generated every time the page loads.  The specific prefix doesn't matter; just pick one and use it.
+Make a note of that prefix; you will use it in the next two steps.
+
+!!! info
+    There is nothing special about that prefix; it is ten random characters.  IT's not tied to *you* literally.  When you reload this page, the prefix will change.  That's fine.  The specific prefix doesn't matter; just pick one and use it.
 
 <details>
 <summary>Why do I need this?</summary>

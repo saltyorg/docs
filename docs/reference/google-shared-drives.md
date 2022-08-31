@@ -14,11 +14,15 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
 1. Retrieve the `sb-gd` code
 
+    [copy-paste this into your terminal window]
+
     ```
     cd /opt && git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
     ```
 
 2. Create and activate a virtual environment:
+
+    [copy-paste this into your terminal window]
 
     ```
     python3 -m venv sb_gd && source sb_gd/bin/activate
@@ -39,6 +43,9 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     ```
 
     run the suggested command with `sudo`:
+
+    [copy-paste this into your terminal window]
+
     ```
     sudo apt install python3.8-venv
     ```
@@ -47,11 +54,15 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
 3. Install script requirements:
 
+    [copy-paste this into your terminal window]
+
     ```
     python -m pip install -r requirements.txt
     ```
 
 4. Edit the `config.py` script:
+
+    [copy-paste this into your terminal window]
 
     ```
     nano config.py
@@ -73,44 +84,50 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     }
     ```
 
+    Save the file with control-x, y, enter
+
 5. Copy your credential JSON into this directory:
+
+    [copy-paste this into your terminal window]
 
     ```
     cp  /opt/sa/project-creds.json client_secrets.json
     ```
 
     This is the credential file you downloaded a couple steps ago.  Recall that in that step I said I would later assume you'd put it at `/opt/sa/project_creds.json`.  Here's that assumption.
-    
+
     If you've stored the file elsewhere, copy it from there via whatever means.  It just has to end up at `/opt/sb_gd/client_secrets.json`.
 
 
 6. Run the `sb_sd.py` script:
 
-    **IMPORTANT**: If you are running a server on your local machine that is listening for HTTP requests on port 8080, disable it before running this script.  This process willl send you to a `localhost` URL, and is expecting that this will fail so you can copy the URL.  If you have a local server running on this port, you will probably see some other error instead.
-    
+    **IMPORTANT**: If you are running a server on your local machine that is listening for HTTP requests on port 8080, disable it before running this script.  This process will send you to a `localhost` URL, and is expecting that this will fail so you can copy the URL.  If you have a local server running on this port, you will probably see some other error instead.
+
+    [copy-paste this into your terminal window]
+
     ```
     python sb_sd.py
     ```
-    
+
     You will be asked a bunch of questions about the previous steps.  If the answers are not all "YES", you'll need to go complete those steps.  If you lie and answer YES when you haven't completed those steps, this script will fail in some way.  There is no way to avoid performing all the steps.
 
     You will be asked to authenticate in the usual Google way.  Follow the prompts.
 
     For the time being, due to changes in the Google OAuth process, this will try to redirect you to a `localhost` URL, which will fail.  The URL will look like:
-    
+
     ```
     http://localhost:8000/oauth2callback?code=4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive
     ```
 
     Copy the ENTIRE URL and paste it at the prompt where the script is waiting.
-    
+
     We're working on making this a bit more friendly.
 
     This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
-    
+
     You should see output similar to this:
-    
-    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
+
+    Note: the script uses `/opt/sa/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     ```
     ** Team Drive aZaSjsklaj-Movies created, ID: 123456789
@@ -123,7 +140,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-Movies]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/all/150.json
+    service_account_file = /opt/sa/150.json
     team_drive = 123456789
     --------------------
     0
@@ -137,7 +154,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-Music]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/all/150.json
+    service_account_file = /opt/sa/150.json
     team_drive = 123456789
     --------------------
     0
@@ -151,7 +168,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-TV]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/all/150.json
+    service_account_file = /opt/sa/150.json
     team_drive = 123456789
     --------------------
     0

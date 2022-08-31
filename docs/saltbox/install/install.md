@@ -1,4 +1,4 @@
-If you're migrating from Cloudbox you probably want the [Cloudbox migrations instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
 If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
 
@@ -6,21 +6,12 @@ Please read through these steps prior to executing any of them, just to get a gr
 
 Broadly, the base install consists of six steps:
 
-1. Installing [dependencies](#step-1-dependencies))
-2. Preparing your [configuration file(s)](#step-2-configuration)
-3. Running a [pre-install script](#step-3-preinstall)
-4. Configuring your [cloud storage](#step-4-rclone)
-5. Running the [install script](#step-5-saltbox)
-6. Configuring installed [applications](#step-6-app-setup)
-
-## IMPORTANT:
-
-If your server does not meet these requirements:
-
- - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/),
- - nothing else [docker, for example] preinstalled
-
-Chances are this process is going to fail.  You can save yourself some time by rectifying that now, before getting a mysterious error and coming to the discord where you will be told to do a fresh install of 20.04 or 22.04 without installing anything else.
+1. Installing [dependencies](#dependencies)
+2. Preparing your [configuration file(s)](#configuration)
+3. Running a [pre-install script](#preinstall)
+4. Configuring your [cloud storage](#rclone)
+5. Running the [install script](#saltbox)
+6. Configuring installed [applications](#app-setup)
 
 ## Step 1: Dependencies
 
@@ -184,17 +175,57 @@ If your server did not need to reboot you can run `su username` to switch user o
     See [here](../../reference/preinstall.md) for more information about the preinstall.
 
 ## Step 4: Rclone
-Saltbox assumes an rclone remote pointed at your google storage named `google` [as shown in the settings.yml above].
+
+!!! warning
+    As noted in the previous step, from this point you'll want to make sure you are logged into the server as the user specified in the `accounts.yml`.
+
+!!! info
+    THIS IS AN OPTIONAL STEP, required only if you plan to use cloud storage [Google Drive, for instance]
+
+    If you do not plan to use cloud storage, leave the `rclone -> remote:` setting blank in your `settings.yml`, and skip this step.
+
+Saltbox defaults to an rclone remote pointed at your Google Drive named `google` [as shown in the settings.yml above].
 
 There is nothing special about saltbox's implementation of this setup, aside from its opinions about the media paths.
 
-You may already have this remote configured or know how to do it if you are coming from a similar setup like Cloudbox or PlexGuide.
+If you already know how to set that up, do so with your usual methods.  If not:
 
-If you do, you are probably best served to use your existing setup.
+=== "Cloudbox users"
+    You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
-If you are coming from Cloudbox, you *can and should* use your existing rclone setup rather than going through the setup again.
+    [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
-If you are starting from scratch, the process is documented [here](../../reference/rclone.md).
+=== "PlexGuide users"
+    You already have the required setup complete.  You should use your existing Google setup at least to start with.
+
+    The issues you will have to deal with will largely be around:
+
+    1. Encrypted drives
+    2. File system differences
+    3. Service account files [PlexGuide removed the `.json` extension from what it calls "BlitzKeys", Saltbox expects them to be there]
+
+    [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
+
+=== "I'm totally new to this"
+    If you have a brand new Google Drive account and want to be walked through allt he steps you need to perform, start [here](../../reference/rclone.md)
+
+    That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
+
+    That eight-step process will create three shared drives, 300 service accounts, and will configure rclone for you.
+
+    This should be enough capacity for quite a while for most users.
+
+=== "Minimal setup, please"
+
+    The simplest possible case is:
+
+    1. Set up a Google Project and OAuth Credential file if you don't already have one.
+       This process is described [here](../../reference/google-project-setup.md)  YOu will need the ID and Secret from that process in step 3 below.
+    2. Create a Shared Drive in the Google Web UI.
+       This process is described [here](../../reference/guides/google-shared-drive.md)
+    3. Create an rclone remote pointing at that shared drive.
+       This process is described [here](../../reference/guides/rclone-remote.md)
+
 
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.

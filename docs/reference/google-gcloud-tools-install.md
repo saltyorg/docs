@@ -1,4 +1,8 @@
-This guide will show you how to set up a Google SDK tools.
+This guide will show you how to set up the Google SDK tools.
+
+These tools are used by scripts in the next two steps that have to interact with google.
+
+Unfortunately, these can't be installed in an automated fashion, so you will have to go through these manual steps, which are largely copy-paste.
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 
@@ -6,7 +10,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
   - created the required [project](google-project-setup.md)
   - created the required [group](google-group-setup.md)
 
-Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb):
+This is a simplified extract from the original docs, which can be found [here](https://cloud.google.com/sdk/docs/quickstart#deb):
 
 1. Run the following commands, one at a time:
 
@@ -66,9 +70,9 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
     Your current project has been set to: [THE_PROJECT_YOUR_CREATED_FOR_SALTBOX].
     ```
 
-    You may be asked to choose a default zone/region.  If so, you can choose the closest to you, but since we are not creating any location-specific objects, you can skip that.
+    You may be asked to choose a default zone/region.  If so, you can choose the closest to you.
 
-1. Run the following command:
+5. Run the following command:
 
     ```
     gcloud organizations list
@@ -84,7 +88,7 @@ Simplified extract from [here](https://cloud.google.com/sdk/docs/quickstart#deb)
 
     Make a note of that ID; if you're going through the manual rclone instructions you'll need it in the next step.
 
-1. Google SDK is installed and configured.
+6. Google SDK is installed and configured.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-5-generate-a-random-prefix)
 

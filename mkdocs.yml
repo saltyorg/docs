@@ -74,6 +74,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - js/prefix.js
+
 nav:
   - Home: index.md
   - Saltbox:
@@ -306,6 +309,8 @@ nav:
           - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
         - Downloading:
           - Hardlinking: reference/guides/hardlinking.md
+        - Google:
+          - Creating a Shared Drive: reference/guides/google-shared-drive.md
         - Rclone:
           - Creating a remote: reference/guides/rclone-remote.md
         - Migration:

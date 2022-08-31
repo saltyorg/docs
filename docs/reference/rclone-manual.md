@@ -1,3 +1,21 @@
+<script>
+   document.addEventListener("DOMContentLoaded", function(){
+    var length           = 10;
+    var result           = '';
+    var characters       = 'abcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() *
+ charactersLength));
+   }
+   var paragraph = document.getElementById("prefix");
+
+   paragraph.textContent = result;
+
+});
+
+</script>
+
 [Rclone](https://rclone.org) (by Nick Craig-Wood) is "rsync for the cloud". Basically, it is used to transfer data to or from a variety of supported cloud storage providers (eg Google Drive).
 
 Rclone is used by [Cloudplow](cloudplow.md) and [Backup](../saltbox/backup/backup.md) to upload media and backup Saltbox, respectively.
@@ -10,86 +28,54 @@ This process will use various scripts to do as much of this for you as possible,
 
 It also assumes you are using a [Google Workspace](https://workspace.google.com/) account, since it assumes you can create shared drives.  You can do some of this without a Workspace account, but the differences are not documented here.  You won't be able to directly follow the steps below, and most of the scripts won't work for you.
 
-<details>
-<summary>What about `safire`? Can't it do all this automatically?</summary>
-<br />
-
-  Sure, and the first version of this attempt at automation used safire to do everything from step 3 on with two runs of a script which asked a couple questions.  It always worked on the developer's machine, but failed half the time on not-the-developer's machine.  So this approach was built out to not use `safire`.
-
-  Eventually there will be an app or script that will take care of all this, but until that day, there is this.
-
-  If you have suggestions about how this can be made more clear, by all means open an issue.
-
-</details>
-
-_NOTE: IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S RARELY A REASON TO CREATE A SECOND SET._
-
-Here's what you are going to do as you work through the instructions below:
-
-[These are not the instructions, just an overview; they are grouped this way to line up with the actual steps below]
-
-1. Verify Google account permissions.
-
-2. Create a Google project.
-   [not scripted, you'll do this manually]
-
-3. Create a Google group.
-   [not scripted, you'll do this manually]
-
-4. Install the Google SDK tools.
-   [not scripted, you'll do this manually]
-
-5. Generate a random prefix; the rest of this process will use it to identify things it has created.
-   [not scripted, you'll do this manually]
-
-6. Create a bunch of service accounts and put all the service accounts' JSON files into a subdirectory of `/opt`.
-   [scripted with minor config edits]
-
-7. Add all those service accounts to the Google group you just created.
-   [Everything in this step is scripted with minor config edits to a single script]
-
-   Create three new shared drives in the Google Drive UI.
-   [one each for Movies, Music, TV]
-
-   Add your Google Group to each of those drives as a "Manager"
-
-   Create rclone remotes pointing to each of those shared drives, authenticated using one of those service files from step 4.
-
-   Create a union rclone remote called "google", with the components set to the three td remotes created in step 8.
-
-8. Verify rclone configuration.
+!!! warning
+    IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S RARELY A REASON TO CREATE A SECOND SET.
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
 If you already have media on shared drives from your time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.
 
+That said, let's proceed.
+
 ## New Rclone Setup
 
-YOU CANNOT SKIP STEPS HERE: EACH OF THESE STEPS IS ASSUMING YOU HAVE PERFORMED THE PREVIOUS ONE.
+!!! warning
+    YOU CANNOT SKIP STEPS HERE: EACH OF THESE STEPS IS ASSUMING YOU HAVE PERFORMED THE PREVIOUS ONE.
 
-IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT [Cloudbox, PG, etc] USE THAT CONFIG [NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS] IN A MIGRATION.
+!!! info
+    IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT [Cloudbox, PG, etc] USE THAT CONFIG [NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS] IN A MIGRATION.
 
-THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
+!!! warning
+    THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
 
 ### Step 1: Verify that the Shared Drive permissions are correct on your Google account:
 
-[Instructions here](google-account-perms.md)
+[Detailed instructions here](google-account-perms.md)
 
 ### Step 2: Create a new project and generate a credential file:
 
-[Instructions here](google-project-setup.md)
+[Detailed instructions here](google-project-setup.md)
 
 Save that credential file on your server at `/opt/sa/project-creds.json`
 
 ### Step 3: Create a Google Group to hold service accounts:
 
-[Instructions here](google-group-setup.md)
+[Detailed instructions here](google-group-setup.md)
 
 ### Step 4: Set up the GCloud SDK:
 
-[Instructions here](google-gcloud-tools-install.md)
+[Detailed instructions here](google-gcloud-tools-install.md)
 
 ### Step 5: Generate a random prefix
+
+Your randomly-generated prefix is:
+
+<p id="prefix">10 RANDOM CHARACTERS SHOULD APPEAR HERE</p>
+
+<details>
+<summary>That says '10 RANDOM CHARACTERS SHOULD APPEAR HERE'</summary>
+<br />
+Apparently the Javascript didn't work.
 
 [Type this at a command prompt on your server]
 
@@ -97,25 +83,32 @@ Save that credential file on your server at `/opt/sa/project-creds.json`
 prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
 ```
 
-Make a note of that prefix; you will use it in the next two steps.
+</details>
 
-This prefix is used for two purposes:
+Make a note of that prefix; you will use it in the next two steps.  When you reload this page, the prefix will change.  That's fine.  It's generated every time the page loads.  The specific prefix doesn't matter; just pick one and use it.
 
-  1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].
+<details>
+<summary>Why do I need this?</summary>
+<br />
+This prefix is used for two purposes:<br /><br />
 
-  2. It helps these scripts unambiguously identify things that they have created.
+  1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].<br /><br />
 
-### Step 6: Generate some service accounts
+  2. It helps these scripts unambiguously identify things that they have created, so they don't affect any projects, service accounts, or drives you may already have created.
+</details>
 
-[Instructions here](google-service-accounts.md)
+### Step 6: Generate 300 service accounts
 
-### Step 7: Create some Shared Drives and related infrastructure
+[Detailed instructions here](google-service-accounts.md)
 
-[Instructions here](google-shared-drives.md)
+### Step 7: Create 3 Shared Drives and related infrastructure
+
+[Detailed instructions here](google-shared-drives.md)
 
 ### Step 8: Verify that the union remote shows you the expected contents:
 
-IF YOU HAVE SKIPPED ANY OF THE PREVIOUS STEPS THIS VALIDATION WILL NOT WORK.
+!!! warning
+    IF YOU HAVE SKIPPED ANY OF THE PREVIOUS STEPS THIS VALIDATION WILL NOT WORK.
 
 ```
 rclone tree google:/
@@ -139,13 +132,17 @@ This should display something like:
 7 directories, 3 files
 ```
 
-You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.  You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
+You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.
 
-If you want to use Plex Autoscan's Google Drive Monitoring, there are some changes that will be required in the configuration. See [this guide](plex-autoscan-config.md).
+## After the saltbox install
+
+There is one thing you may wish to do after the saltbox install is complete.
+
+You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
 
 ## Existing Rclone Setup
 
-The default remote specified in [[settings.yml|Install: settings.yml]] is `google` for Google Drive. If the Rclone remote in your config has the same name, then you are OK to skip this page and go on to the next.
+The default remote specified in [settings.yml](accounts.md) is `google` for Google Drive. If the Rclone remote in your config has the same name, then you are OK to skip this page and go on to the next.
 
 If you are using Google Drive and the Rclone remote in your config has a different name, then you will need to either:
 
@@ -153,9 +150,9 @@ If you are using Google Drive and the Rclone remote in your config has a differe
 
   Or
 
-- Edit the Rclone remote entry in [[settings.yml|Install: settings.yml]] with yours.
+- Edit the Rclone remote entry in [settings.yml](accounts.md) to reflect yours.
 
-If you prefer to use another cloud storage provider, you can add the name of the Rclone remote in to [[settings.yml|Install: settings.yml]].
+If you prefer to use another cloud storage provider, you can add the name of the Rclone remote in to [settings.yml](accounts.md).
 
 ### Rename Existing Rclone Remote
 
@@ -173,9 +170,9 @@ To rename the Google Drive remote to `google`:
    ```
    [google]
    type = drive
-   client_id = 1234567890123-mjffsmxvendscftuvnyngkhegapovgnv.apps.googleusercontent.com
-   client_secret = klflzftkrwuwuedesxzewsfz
-   token = {"access_token":"ya30.gelftvrymioiilvdtfegfvhfgallrhocewjckdnnvmxdjpjzbdhkmgulvqhgbafkdtpottzthhnyzysxwlpf-38ikRIxZvimyoxyKdse$
+   client_id = JOHNNY.apps.googleusercontent.com
+   client_secret = JOEY
+   token = {"access_token":"ya30.DEEDEE-38ikRIxZvimyoxyKdse$
    ```
 1. Save the file and exit: <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd>.
 

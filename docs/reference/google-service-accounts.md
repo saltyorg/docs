@@ -18,32 +18,32 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     sudo chown -R <user>:<group> /opt/sa
     ```
 
-    Enter the user name that you entered in `accounts.yml`; group is the same as the user.
+<details>
+<summary>What do I put in for `user` and `group`?</summary>
+<br />
+Enter the user name that you entered in `accounts.yml`; group is the same as the user.
 
-    ```
-    ---
-    user:
-      name: seed #   <<< THIS VALUE
-    ...
-    ```
+Don't enter the `<` and `>`.
 
-    You can also run `id` to get this information:
+```
+---
+user:
+    name: seed #   <<< THIS VALUE
+...
+```
 
-    ```
-    ~ id
-    uid=1000(marco) gid=1000(marco) groups=1000(marco),4(adm),24(cdrom),27(sudo),30(dip),44(video),46(plugdev),116(lxd),1001(docker)
-             ^<user>         ^<group>
-    ```
+You can also run `id` to get this information:
 
-1. Create a dir within that:
-
-    ```
-    mkdir /opt/sa/all
-    ```
-
-    The scripts in this setup all use this location.  Don't change it if you are using these scripts.
+```
+~ id
+uid=1000(marco) gid=1000(marco) groups=1000(marco),...
+            ^<user>         ^<group>
+```
+</details>
 
 1. Verify that the google project has the right APIs enabled:
+
+    [copy-paste this into your terminal window]
 
     ```
     gcloud services list --enabled
@@ -77,7 +77,9 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
     If any of these are missing from your list, go back to the [project setup](google-project-setup.md) and add all the APIs shown there to the project.
 
-1. Retrieve the `sa-gen` code
+2. Retrieve the `sa-gen` code
+
+    [copy-paste this into your terminal window]
 
     ```
     cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen
@@ -85,12 +87,14 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
 3. Edit the `sa-gan` script:
 
+    [copy-paste this into your terminal window]
+
     ```
     nano sa-gen
     ```
 
     Edit the beginning of the script as indicated by `<<<<` below:
-    
+
     For these edits, you will need: the "Organization ID" from gcloud SDK step, the full email address of the group you created a couple steps ago, and the prefix you generated earlier.
 
     ```
@@ -98,7 +102,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
-    KEYS_DIR=/opt/sa/all               <<<< path where you want to store sa JSON files [you will need to add the /all here, most likely]
+    KEYS_DIR=/opt/sa
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
     GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full email address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
@@ -110,13 +114,15 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     ...
     ```
 
+    Save the file with control-x, y, enter
+
 4. Run the `sa-gan` script:
 
     ```
     ./sa-gen
     ```
 
-    `sa-gen` will create three projects, 300 SAs, and download them to `/opt/sa/all`:
+    `sa-gen` will create three projects, 300 SAs, and download them to `/opt/sa`:
 
 
     ```
@@ -134,7 +140,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
     Total SA jsons CREATED                   = 300
     ```
 
-1. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
+5. Download the `members.csv` file that sa-gen created next to the service account files to your local computer using sftp or whatever other means.
 
     ![](../images/google-service-account/01-all-members.png)
 
@@ -146,18 +152,18 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
     ![](../images/google-service-account/03-group-list.png)
 
-1. Click on "BULK UPLOAD MEMBERS":
+8. Click on "BULK UPLOAD MEMBERS":
 
     ![](../images/google-service-account/04-bulk-upload.png)
 
-1. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
+9.  Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
 
     ![](../images/google-service-account/05-select-CSV.png)
 
-1. Click "UPLOAD".  Status will appear in the upper right:
+10. Click "UPLOAD".  Status will appear in the upper right:
 
     ![](../images/google-service-account/06-choose-csv.png)
 
-1. You're done.
+11. You're done.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-7-create-some-shared-drives-and-related-infrastructure)

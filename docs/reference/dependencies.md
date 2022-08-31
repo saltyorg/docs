@@ -19,4 +19,4 @@ This script will:
 
 At the end of this you will have a local copy of the Saltbox repo, and all the things that Saltbox relies on to install will be available.
 
-Go [back to the install process](../../saltbox/install/install/#dependencies).
+Go [back to the install process](../../saltbox/install/install/#step-1-dependencies).

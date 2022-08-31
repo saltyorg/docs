@@ -140,6 +140,8 @@ There is one thing you may wish to do after the saltbox install is complete.
 
 You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
 
+Go [back to the install process](../../saltbox/install/install/#step-5-saltbox).
+
 ## Existing Rclone Setup
 
 The default remote specified in [settings.yml](accounts.md) is `google` for Google Drive. If the Rclone remote in your config has the same name, then you are OK to skip this page and go on to the next.

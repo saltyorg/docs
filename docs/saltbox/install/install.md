@@ -6,12 +6,12 @@ Please read through these steps prior to executing any of them, just to get a gr
 
 Broadly, the base install consists of six steps:
 
-1. Installing [dependencies](#dependencies)
-2. Preparing your [configuration file(s)](#configuration)
-3. Running a [pre-install script](#preinstall)
-4. Configuring your [cloud storage](#rclone)
-5. Running the [install script](#saltbox)
-6. Configuring installed [applications](#app-setup)
+1. Installing [dependencies](#step-1-dependencies)
+2. Preparing your [configuration file(s)](#step-2-configuration)
+3. Running a [pre-install script](#step-3-preinstall)
+4. Configuring your [cloud storage](#step-4-rclone)
+5. Running the [install script](#step-5-saltbox)
+6. Configuring installed [applications](#step-6-app-setup)
 
 ## Step 1: Dependencies
 

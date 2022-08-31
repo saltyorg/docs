@@ -332,7 +332,7 @@ nav:
           - Accounts and Settings: reference/accounts.md
           - Preinstall: reference/preinstall.md
           - Rclone: reference/rclone.md
-          - Rclone [Auto]: reference/rclone-auto.md
+          # - Rclone [Auto]: reference/rclone-auto.md
           - Rclone [Manual]: reference/rclone-manual.md
           - Install: reference/install.md
         - Google References:

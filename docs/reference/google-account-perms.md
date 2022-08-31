@@ -24,6 +24,10 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![](../images/google-shared-drive-settings/05-DND-sharing-settings.png)
 
-6. You're done.
+6. Scroll down to "Shared drive creation" and verify that your settings match these:
+
+    ![](../images/google-shared-drive-settings/06-DND-creation-settings.png)
+
+7. You're done.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-2-create-a-new-project-and-generate-a-credential-file)

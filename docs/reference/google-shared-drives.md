@@ -77,13 +77,15 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     Edit as indicated by `<<<<` below:
 
     ```python
-    prefix = 'akIhSwlKdf'                # the prefix you generated previously
+    prefix = 'akIhSwlKdf'                # <<<< the prefix you generated previously
 
-    group_email = "all-sa@DOMAIN.com"    # the group you created previously
+    group_email = "all-sa@DOMAIN.com"    # <<<< the group you created previously
 
-    sa_file = "/opt/sa/all/150.json"     # edit this path if required; if you've followed all previous steps correctly it's not required
+    sa_file = "/opt/sa/150.json"         # <<<< edit this path if required; 
+                                         # if you've followed all previous steps correctly
+                                         # it shouldn't be required.
 
-    drive_data = {                       # add additional drives and media paths here if needed.  Media paths should be unique per drive.
+    drive_data = {                       # <<<< add additional drives and media paths here if needed.  Media paths should be unique per drive.
         'Movies': '/Media/Movies',
         'Music': '/Media/Music',
         'TV': '/Media/TV'

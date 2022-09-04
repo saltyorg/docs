@@ -28,6 +28,10 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
 
+    <details>
+    <summary>If that command produces an error:</summary>
+    <br />
+
     If you see something like this:
     ```
     The virtual environment was not created successfully because ensurepip is not
@@ -51,6 +55,8 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     ```
 
     Then try the virtual-environment command in step 2 again.
+
+    </details>
 
 3. Install script requirements:
 

@@ -48,12 +48,12 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     run the suggested command with `sudo`:
 
-    [copy-paste this into your terminal window]
+    [copy-paste the command from the error into your terminal window]
 
     ```
-    sudo apt install python3.8-venv
+    sudo COMMAND FROM ERROR ABOVE
     ```
-
+    
     Then try the virtual-environment command in step 2 again.
 
     </details>

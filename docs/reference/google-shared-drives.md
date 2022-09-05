@@ -81,7 +81,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     group_email = "all-sa@DOMAIN.com"    # <<<< the group you created previously
 
-    sa_file = "/opt/sa/150.json"         # <<<< edit this path if required; 
+    sa_file = "/opt/sa/all/150.json"     # <<<< edit this path if required; 
                                          # if you've followed all previous steps correctly
                                          # it shouldn't be required.
 

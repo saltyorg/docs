@@ -29,7 +29,7 @@ Much like the 4K poster script, this will go through your films and add a 3D ban
 
 ``` shell
 
-sb install sandbox-plex-utills
+sb install sandbox-plex_utills
 
 ```
 

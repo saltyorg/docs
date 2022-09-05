@@ -102,7 +102,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
-    KEYS_DIR=/opt/sa
+    KEYS_DIR=/opt/sa/all
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
     GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full email address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously

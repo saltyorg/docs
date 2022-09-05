@@ -135,7 +135,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     You should see output similar to this:
 
-    Note: the script uses `/opt/sa/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
+    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     ```
     ** Team Drive aZaSjsklaj-Movies created, ID: 123456789
@@ -148,7 +148,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-Movies]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/150.json
+    service_account_file = /opt/sa/all/150.json
     team_drive = 123456789
     --------------------
     0
@@ -162,7 +162,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-Music]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/150.json
+    service_account_file = /opt/sa/all/150.json
     team_drive = 123456789
     --------------------
     0
@@ -176,7 +176,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     [aZaSjsklaj-TV]
     type = drive
     scope = drive
-    service_account_file = /opt/sa/150.json
+    service_account_file = /opt/sa/all/150.json
     team_drive = 123456789
     --------------------
     0

@@ -90,7 +90,7 @@ prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
 Make a note of that prefix; you will use it in the next two steps.
 
 !!! info
-    There is nothing special about that prefix; it is ten random characters.  IT's not tied to *you* literally.  When you reload this page, the prefix will change.  That's fine.  The specific prefix doesn't matter; just pick one and use it.
+    There is nothing special about that prefix; it is ten random characters.  It's not tied to *you* literally.  When you reload this page, the prefix will change.  That's fine.  The specific prefix doesn't matter; just pick one and use it.
 
 <details>
 <summary>Why do I need this?</summary>
@@ -106,7 +106,7 @@ This prefix is used for two purposes:<br /><br />
 
 [Detailed instructions here](google-service-accounts.md)
 
-### Step 7: Create 3 Shared Drives and related infrastructure
+### Step 7: Create Shared Drives and related infrastructure
 
 [Detailed instructions here](google-shared-drives.md)
 
@@ -119,7 +119,7 @@ This prefix is used for two purposes:<br /><br />
 rclone tree google:/
 ```
 
-This should display something like:
+This should display something like [the number and names of the files and folders may vary somewhat depending on your config]:
 
 ```
 /
@@ -137,7 +137,23 @@ This should display something like:
 7 directories, 3 files
 ```
 
-You now have three shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the three shared drives by path.
+<details>
+<summary>What if I don't see that?</summary>
+<br />
+If you see an error like this:
+
+```
+Failed to tree: 3 errors: aZaSjsklaj-Movies: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BINGBANGBOING, notFound; aZaSjsklaj-Music: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BANGBOINGBING, notFound; aZaSjsklaj-TV: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BOINGBINGBANG, notFound
+```
+
+The most likely cause is that something went wrong in the group setup.  Perhaps all the service accounts didn't get added to the group.
+Repeat the last part of [this step](google-group-setup.md) where you upload the members.csv and verify that the group shows at least 300 members after you're done.
+
+</details>
+
+
+
+You now have shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the shared drives by path.
 
 ## After the saltbox install
 

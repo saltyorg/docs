@@ -53,7 +53,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     ```
     sudo COMMAND FROM ERROR ABOVE
     ```
-    
+
     Then try the virtual-environment command in step 2 again.
 
     </details>
@@ -77,20 +77,27 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     Edit as indicated by `<<<<` below:
 
     ```python
-    prefix = 'akIhSwlKdf'                # <<<< the prefix you generated previously
+    prefix = 'aZaSjsklaj'                # <<<< the prefix you generated previously
 
-    group_email = "all-sa@DOMAIN.com"    # <<<< the group you created previously
+    group_email = "all-sa@bing.bang"     # <<<< the group you created previously
 
-    sa_file = "/opt/sa/all/150.json"     # <<<< edit this path if required; 
+    sa_file = "/opt/sa/all/150.json"     # <<<< edit this path if required;
                                          # if you've followed all previous steps correctly
                                          # it shouldn't be required.
 
+    # `drive name`: '/directory/on/this/drive`
     drive_data = {                       # <<<< add additional drives and media paths here if needed.  Media paths should be unique per drive.
+        'Anime': '/Media/Anime',
+        'Books': '/Media/Books',
         'Movies': '/Media/Movies',
+        'Movies-4K': '/Media/Movies-4K',
         'Music': '/Media/Music',
-        'TV': '/Media/TV'
+        'TV': '/Media/TV',
+        'TV-4K': '/Media/TV-4K'
     }
     ```
+
+    If you don't want to create some of those shared drives, remove the line.  It's safe to go ahead and create them for simplicity later in the event you want to start using them.
 
     Save the file with control-x, y, enter
 
@@ -131,7 +138,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     We're working on making this a bit more friendly.
 
-    This script will create three shared drives, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
+    This script will create shared drives as listed in the config, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
 
     You should see output similar to this:
 

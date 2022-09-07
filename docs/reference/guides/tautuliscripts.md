@@ -8,9 +8,8 @@ We'll be installing the [Killstream.py script](https://github.com/blacktwin/JBOP
 
 ### Download the script using curl:
 ```shell
-cd /opt/scripts/plexpy/
+cd /opt/scripts/tautulli/
 curl -O https://raw.githubusercontent.com/blacktwin/JBOPS/master/killstream/kill_stream.py
-sudo chown seed:seed kill_stream.py
 chmod a+x kill_stream.py
 ```
 
@@ -18,8 +17,6 @@ chmod a+x kill_stream.py
 ```
 ls -la kill_stream.py
 ```
-
-The file should be around 9700 bytes in size.
 
 ## Configure Tautulli Notification Agent
 Enter Tautulli settings and find the **Notification Agents** link on the left side menu.\

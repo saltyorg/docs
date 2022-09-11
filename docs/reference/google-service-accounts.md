@@ -85,7 +85,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
     cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen
     ```
 
-3. Edit the `sa-gan` script:
+3. Edit the `sa-gen` script:
 
     [copy-paste this into your terminal window]
 

@@ -241,7 +241,7 @@ Note: These are important, but leave them out if your docker run command require
 
   - For the main, web admin/page port (e.g. 32400 in Plex):
 
-    - You do not need to specify this port with `-p`. Since this port will not be accessible over the net or from the host. Instead, Nginx-Proxy will redirect the subdomain to it.
+    - You do not need to specify this port with `-p`. Since this port will not be accessible over the net or from the host. Instead, Traefik will redirect the subdomain to it.
 
     - If you do want the port accessible from the host (but not from the net), simply add `127.0.0.1:` to it and specify it via:
 

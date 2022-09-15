@@ -202,6 +202,7 @@ nav:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
           - Influxdb: sandbox/apps/influxdb.md
+          - Invoice Ninja: sandbox/apps/invoiceninja.md
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
@@ -263,6 +264,7 @@ nav:
         - Hetzner NFS: apps/hetzner_nfs.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
+        - asshama: apps/asshama.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md
@@ -313,6 +315,7 @@ nav:
           - Creating a Shared Drive: reference/guides/google-shared-drive.md
         - Rclone:
           - Creating a remote: reference/guides/rclone-remote.md
+          - SAFire: reference/safire.md
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md
           - Plexguide: reference/guides/plexguide.md

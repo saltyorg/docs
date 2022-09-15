@@ -97,7 +97,7 @@ Some may not want the additional layer of security that Authelia supplies, good 
 `grep -Ril "_traefik_sso_middleware:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u`
 
 ### Override example:
-```
+```yaml
 ### Authelia App Bypass ###
 sonarr_traefik_sso_middleware: ""
 tautulli_traefik_sso_middleware: ""
@@ -106,6 +106,15 @@ nzbget_traefik_sso_middleware: ""
 prowlarr_traefik_sso_middleware: ""`
 ```
 After making this change in the inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
+
+# Authorize with App Credentials
+## Inject an Authorization header - Traefik performs basic auth with the backend app
+Use (https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents
+```yaml
+sonarr_docker_labels_custom:
+  traefik.http.middlewares.appAuth.headers.customrequestheaders.Authorization: "Basic <base64 header>"
+sonarr_traefik_middleware_custom: "appAuth"
+```
 
 ## Subdomain Customization
 ### Overrides:

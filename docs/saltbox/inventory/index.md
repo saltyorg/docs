@@ -108,8 +108,10 @@ prowlarr_traefik_sso_middleware: ""`
 After making this change in the inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
 
 # Authorize with App Credentials
-## Inject an Authorization header - Traefik performs basic auth with the backend app
-Use (https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents
+### Inject an Authorization header - Traefik performs basic auth with the backend app
+This allows you to keep basic auth enabled within apps but not have the hassle of entering the credentials manually. The authorization header is only inserted if the request is authorized through the SSO middleware (Authelia) and is not applied to the API endpoint(s).
+
+Use [this tool](https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents based on your credentials.
 ```yaml
 sonarr_docker_labels_custom:
   traefik.http.middlewares.appAuth.headers.customrequestheaders.Authorization: "Basic <base64 header>"

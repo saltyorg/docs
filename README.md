@@ -91,6 +91,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/skeeve42>
+            <img src=https://avatars.githubusercontent.com/u/8098897?v=4 width="100;"  alt=skeeve42/>
+            <br />
+            <sub style="font-size:14px"><b>skeeve42</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Cajs>
             <img src=https://avatars.githubusercontent.com/u/6383356?v=4 width="100;"  alt=Cameron Stephen/>
             <br />
@@ -104,6 +111,8 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>James Shopland</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/JohnClementine>
             <img src=https://avatars.githubusercontent.com/u/52635735?v=4 width="100;"  alt=JohnClementine/>
@@ -111,8 +120,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>JohnClementine</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/RaneyDazed>
             <img src=https://avatars.githubusercontent.com/u/95461636?v=4 width="100;"  alt=CHAIR/>
@@ -132,13 +139,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=kaizen/>
             <br />
             <sub style="font-size:14px"><b>kaizen</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/skeeve42>
-            <img src=https://avatars.githubusercontent.com/u/8098897?v=4 width="100;"  alt=skeeve42/>
-            <br />
-            <sub style="font-size:14px"><b>skeeve42</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

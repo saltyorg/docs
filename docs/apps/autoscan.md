@@ -114,12 +114,14 @@ To run A-Train in place of Bernard:
 
 Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes.
 
+These are the names of the rclone remotes as defined in the rclone config file.  `rclone listremotes` will show you the available remote names.
+
 ```yaml
 a_train:
   remotes: ["remote1", "remote2"]
 ```
 
-This is assuming you copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
+The role is assuming you copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
 
 Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard` trigger section with the following:
 

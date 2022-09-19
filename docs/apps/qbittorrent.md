@@ -30,7 +30,7 @@ sb install qbittorrent
       password: `adminadmin`.
     ```
 
-- **First** go to `Options` -> `Web UI` and set a new username and password.
+- **First** go to `Options` -> `Web UI` and set a new username and a strong password.
 
     ![Authentication Section Screenshot](../images/community/qbit_auth.png)
 
@@ -53,6 +53,15 @@ sb install qbittorrent
     - tick `Run external program on torrent completion` and paste this into the box: `/usr/bin/unrar x -r "%F/." "%F/"`
 
     ![Hard Disk Section Screenshot](../images/community/qbit_hdd.png)
+
+!!! Warning
+      Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!<br>
+      If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).<br><br>
+      If you don't need the Web API exposed, you can do so using the [inventory system](/saltbox/inventory/) with
+      ``` { .yaml }
+       qbittorrent_traefik_api_enabled: false
+      ```
+      and by rerunning the `qbittorrent` tag.
 
 !!! Note
       if you're using private trackers be sure to go to `Options` -> `BittTorrent` and uncheck everything in Privacy section.

@@ -12,7 +12,7 @@ Autoscan is a rewrite of the original Plex Autoscan written in the Go language. 
 
 ## Setup
 
-The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. If you wish to monitor shared drive activity you should probably consider using [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } rather than soon to be shelved bernard trigger.
+The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } is now replacing the bernard trigger.
 
 The generated config file will look something like this:
 
@@ -40,23 +40,12 @@ authentication:
 port: 3030
 
 triggers:
-  # bernard:
-  #   - account: /config/sa.json # Path inside the container where your SA is located
-  #     cron: "*/5 * * * *" # every five minutes (the "" are important)
-  #     priority: 0
-  #     drives:
-  #       - id: drive_id #Friendly title
+  a-train:
+      priority: 5
+      rewrite: # Global rewrites
+        - from: ^/Media/
+          to: /mnt/unionfs/Media/
 
-  #     # Rewrite gdrive to the local filesystem
-  #     rewrite:
-  #       - from: ^/Media/
-  #         to: /mnt/unionfs/Media/
-
-  #     # Filter with regular expressions
-  #     include:
-  #       - ^/mnt/unionfs/Media/
-  #     exclude:
-  #       - '\.srt$'
 
   inotify:
     - priority: 0
@@ -96,41 +85,49 @@ targets:
       token: YOUR_PLEX_TOKEN
 ```
 
-You will probably need to edit the anchors section:
+Then edit the anchors section:
 ```yaml
 anchors:
   - /mnt/unionfs/mounted.bin
 ```
-To reflect your own configuration.  Everything else should be ready to go for standard usage.
-
+To reflect your own configuration.
+Example:
+```yaml
+anchors:
+  - /mnt/unionfs/bvoiwepopz-movies_mounted.bin
+  - /mnt/unionfs/bvoiwepopz-tv_mounted.bin
+```
+Everything else should be ready to go for standard usage.
 
 ### A-Train
 
-Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things.
+Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
+"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan.
 
-"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  At some point it may be integrated into autoscan.
+Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes. You may use ```rclone listremotes``` to get your drive remotes.
 
-To run A-Train in place of Bernard:
-
-Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes.
-
-These are the names of the rclone remotes as defined in the rclone config file.  `rclone listremotes` will show you the available remote names.
-
+Example:
 ```yaml
 a_train:
-  remotes: ["remote1", "remote2"]
+  remotes: ["bvoiwepopz-Movies", "bvoiwepopz-TV"]
+```
+or
+```yaml
+a_train:
+  remotes: ["google"]
 ```
 
-The role is assuming you copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
+Run the a-train tag to create the container:
 
-Edit your Autoscan config file: `/opt/autoscan/config.yml`; replace the `bernard` trigger section with the following:
+```
+sb install sandbox-a_train
+```
 
-```yaml
-  a-train:
-      priority: 5
-      rewrite: # Global rewrites
-        - from: ^/Media/
-          to: /mnt/unionfs/Media/
+Copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
+
+Example:
+```
+cp /opt/sa/all/160.json /opt/a-train/account.json
 ```
 
 Run the autoscan tag to rebuild the container:
@@ -139,10 +136,33 @@ Run the autoscan tag to rebuild the container:
 sb install autoscan
 ```
 
-Run the a-train tag to create the container:
+Run the a-train tag to rebuild the container:
 
 ```
 sb install sandbox-a_train
+```
+
+###Bernard
+
+If for some reason you still wanted to use Bernard, it would look like this:
+
+```yaml
+triggers:
+  bernard:
+    - account: /config/sa.json # Path inside the container where your SA is located
+      cron: "*/5 * * * *" # every five minutes (the "" are important)
+      priority: 0
+      drives:
+        - id: drive_id #Friendly title
+      # Rewrite gdrive to the local filesystem
+      rewrite:
+        - from: ^/Media/
+          to: /mnt/unionfs/Media/
+      # Filter with regular expressions
+      include:
+        - ^/mnt/unionfs/Media/
+      exclude:
+        - '\.srt$'
 ```
 
 Further documentation:

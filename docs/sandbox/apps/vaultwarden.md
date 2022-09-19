@@ -29,7 +29,7 @@ sb install sandbox-vaultwarden
 
   2. Sign up with any email address and password.
 
-  3. To access the Admin Panel go to `https://vaultwarden._yourdomain.com_admin`
+  3. To access the Admin Panel go to `https://vaultwarden._yourdomain.com_/admin`
 
   4. You will need to enter an authentication key which you can find in `/opt/vaultwarden/env`. Look for `ADMIN_TOKEN=`.
 

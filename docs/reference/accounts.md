@@ -82,12 +82,12 @@
     - This will be used to send out messages during certain tasks (e.g. backup).
     - This parameter is not nested like the others in this file.
          ```
-         apprise: discord://somewebhook
+         apprise: somescheme://something_else_here/perhaps_a_token
          ```
          not
          ```
          apprise:
-            discord://somewebhook
+            somescheme://something_else_here/perhaps_a_token
          ```
     - This parameter is optional.
 

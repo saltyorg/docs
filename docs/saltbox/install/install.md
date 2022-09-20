@@ -279,4 +279,7 @@ Go through these one at a time in order; some of the setups depend on previous s
 1. [Portainer](../../apps/portainer.md)
 1. [Organizr](../../apps/organizr.md)
 
+!!! info
+    These are not all the available applications, just the core set that are installed by the `saltbox` tag.  Click on the "Apps" header at the top for a full listing of applications available in Saltbox.  Click the "Sandbox" heading for a listing of commmunity-supplied applications.
+
 Next, some tasks to perform [after installation is complete](after.md).

@@ -6,23 +6,23 @@ The configuration file for backup/restore is called `backup_config.yml` and is l
 ---
 backup:
   local:
-    enable: true # (1)
-    destination: /mnt/local/Backups/Saltbox # (2)
+    enable: true # (1)!
+    destination: /mnt/local/Backups/Saltbox # (2)!
   rclone:
-    enable: true # (3)
-    destination: google:/Backups/Saltbox # (4)
+    enable: true # (3)!
+    destination: google:/Backups/Saltbox # (4)!
   rsync:
-    enable: false # (5)
-    destination: rsync://somehost.com/Backups/Saltbox # (6)
-    port: 22 # (7)
+    enable: false # (5)!
+    destination: rsync://somehost.com/Backups/Saltbox # (6)!
+    port: 22 # (7)!
   cron:
-    cron_time: weekly # (8)
-    enable: no # (9)
+    cron_time: weekly # (8)!
+    enable: no # (9)!
   restore_service:
-    user: # (10)
-    pass: # (11)
+    user: # (10)!
+    pass: # (11)!
   misc:
-    snapshot: true # (12)
+    snapshot: true # (12)!
 ```
 
 1. Toggle for keeping a local copy of the backup.
@@ -77,16 +77,26 @@ backup:
 
 Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
-IMPORTANT:
+!!! important
 
-These values:
+    These values:
 
-``` yaml
-  restore_service:
-    user: # 
-    pass: # 
-```
+    ``` { .yaml .annotate }
+      restore_service:
+        user: # (1)!
+        pass: # (2)!
+    ```
 
-SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
+    1. Username used for the restore service.
 
-These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
+        Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
+
+        Usernames are hashed before requests are sent to the restore service.
+
+    2. Password used encrypt/decrypt the configuration files. 
+
+        Only used on the client side in scripts.
+
+    SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
+
+    These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.

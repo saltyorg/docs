@@ -79,6 +79,7 @@
 
 - `apprise`: apprise url.
 
+    - Information about construction the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
     - This will be used to send out messages during certain tasks (e.g. backup).
     - This parameter is not nested like the others in this file.
          ```

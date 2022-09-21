@@ -13,13 +13,7 @@ This is the default config; it contains a single remote/uploader pair.  This set
         "dry_run": false,
 	"rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
-    "hidden": {
-        "/mnt/local/.unionfs-fuse": {
-            "hidden_remotes": [
-                "google"
-            ]
-        }
-    },
+    "hidden": {},
     "notifications": {
     },
     "remotes": {
@@ -87,14 +81,7 @@ A couple points:
         "rclone_binary_path": "/usr/bin/rclone",
         "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
-    "hidden": {
-        "/mnt/local/.unionfs-fuse": {
-            "hidden_remotes": [
-                "google",
-                "dropbox"
-            ]
-        }
-    },
+    "hidden": {},
     "notifications": {
         "Pushover": {
             "app_token": "xxxxx",
@@ -218,13 +205,7 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
         "rclone_binary_path": "/usr/bin/rclone",
         "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
-    "hidden": {
-        "/mnt/local/.unionfs-fuse": {
-            "hidden_remotes": [
-                "google"
-            ]
-        }
-    },
+    "hidden": {},
     "notifications": {
         "Pushover": {
             "app_token": "xxxxx",
@@ -349,13 +330,7 @@ This is the default config with Pushover notifications configured.
         "dry_run": false,
 	"rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
-    "hidden": {
-        "/mnt/local/.unionfs-fuse": {
-            "hidden_remotes": [
-                "google"
-            ]
-        }
-    },
+    "hidden": {},
     "notifications": {
         "Pushover": {
             "app_token": "XXXXXXXXXXX",

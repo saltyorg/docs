@@ -36,7 +36,7 @@
 
     === "Library"
 
-        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left).
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left).  Click "SHOW ADVANCED" in the upper right.
 
         2. Set the following:
 
@@ -50,13 +50,19 @@
 
             - "Generate video preview thumbnails": `never`
 
+            - "Generate intro video markers": `never`
+
             - "Generate chapter thumbnails": `never`
 
-                > The reasoning behind disabling these thumbnails is related to Google Drive API usage, data transfer, and disk space.  Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer.  Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all.  Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage.  These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
+            - "Analyze audio tracks for loudness": `never`
+
+            - "Analyze audio tracks for sonic features": `never`
+
+                > The reasoning behind disabling these things is mostly related to Google Drive API usage, data transfer, and disk space.  Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer.  Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all.  Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage.  These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
 
          1. Click "SAVE CHANGES".
 
-            ![](../images/plex-media-server/plex-07-library.jpeg)
+            ![](../images/plex-media-server/plex-07-library.png)
 
 
     === "Network"

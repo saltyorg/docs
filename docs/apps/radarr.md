@@ -35,6 +35,26 @@ Make changes in the following sections:
             - Set your preferred naming format; here are some examples.
 
             <details>
+            <summary>TRaSH' naming guide [Recommended]</summary> <br />
+
+            Go [here](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
+
+            Example:  <br />
+            ```
+            The Movie Title (2010) Ultimate Extended Edition [imdb-tt0066921][Surround Sound x264][Bluray-1080p Proper][3D][HDR][10bit][x264][DTS 5.1]-EVOLVE.mkv
+            ```
+
+            Standard Movie Format: <br />
+            ```
+            {Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}
+            ```
+
+            Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
+            </details>
+
+            The TRaSH naming guide is recommended since some other tools, notably Plex Meta Manager, expect it in their default setup.
+
+            <details>
             <summary>Plex's Naming Preference</summary> <br />
             Example: <br />
             ```
@@ -67,21 +87,6 @@ Make changes in the following sections:
             ```
 
             Reference: https://github.com/Radarr/Radarr/wiki/Sorting-and-Renaming
-            </details>
-
-            <details>
-            <summary>TRaSH' naming guide</summary> <br />
-            Example:  <br />
-            ```
-            The Movie Title (2010) Ultimate Extended Edition [imdb-tt0066921][Surround Sound x264][Bluray-1080p Proper][3D][HDR][10bit][x264][DTS 5.1]-EVOLVE.mkv
-            ```
-
-            Standard Movie Format: <br />
-            ```
-            {Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRange]}[{Mediainfo VideoBitDepth}bit][{Mediainfo VideoCodec}]{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}]{-Release Group}
-            ```
-
-            Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
             </details>
 
         === "Folders"
@@ -395,6 +400,8 @@ Make changes in the following sections:
 
         === "Updates"
 
+            These settings may be grayed out or unavailable; skip this if that's the case.
+
             - "Branch": `nightly` or `develop`
 
             - "Automatic": `Off`
@@ -403,15 +410,17 @@ Make changes in the following sections:
 
             - Click "Save".
 
-
 ## Movies Path
-1. When you are ready to add your first movie to Radarr, click the "Path" drop-down and select "Add a different path".
+1. When you are ready to add your first movie to Radarr, click the "Path" drop-down and select "Add a new path".
 
 2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/Movies`, scroll to the bottom, and select "OK".
 
 3. Click the green "check" button to add the path.
 
 4. All movies added now will have that path set.
+
+![Radarr Add](../images/radarr/radarr-add.png)
+
 
 ## API Key
 

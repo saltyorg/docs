@@ -31,6 +31,33 @@ Make changes in the following sections:
             - Set your preferred naming format; here are some examples:
 
                 <details>
+                <summary>TRaSH' naming guide [Recommended[</summary> <br />
+
+                Go [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
+
+                Example:  <br />
+                ```
+                Single Episode:
+
+                The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
+
+                Multi Episode:
+
+                The Series Title! (2010) - S01E01-E02-E03 - Episode Title [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
+                ```
+
+                Standard Episode Format: <br />
+                ```
+                {Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{-Release Group}
+                ```
+
+                for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
+                </details>
+
+                The TRaSH naming guide is recommended since some other tools, notably Plex Meta Manager, expect it in their default setup.
+
+
+                <details>
                 <summary>Plex's Naming Preference</summary>
 
                 Example: <br />
@@ -64,29 +91,6 @@ Make changes in the following sections:
                 ```
 
                 Reference: https://support.plex.tv/articles/200220687-naming-series-season-based-tv-shows/  <br />
-                </details>
-
-
-                <details>
-                <summary>TRaSH' naming guide</summary> <br />
-
-                Example:  <br />
-                ```
-                Single Episode:
-
-                The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
-
-                Multi Episode:
-
-                The Series Title! (2010) - S01E01-E02-E03 - Episode Title [AMZN WEBDL-1080p Proper][HDR][10bit][x264][DTS 5.1]-RlsGrp
-                ```
-
-                Standard Episode Format: <br />
-                ```
-                {Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{-Release Group}
-                ```
-
-                for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
                 </details>
 
         === "Folders"
@@ -371,6 +375,8 @@ Make changes in the following sections:
 
         === "Updates"
 
+            These settings may be grayed out or unavailable; skip this if that's the case.
+
             - "Branch": `main`
 
             - "Automatic": `Off`
@@ -382,13 +388,15 @@ Make changes in the following sections:
 
 ## TV Path
 
-1. When you are ready to add your first show to Sonarr, click the "Path" drop-down and select "Add a different path".
+1. When you are ready to add your first show to Sonarr, click the "Root Path" drop-down and select "Add a different path".
 
-2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/TV`, scroll to the bottom, and select "OK".
+1. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/TV`, scroll to the bottom, and select "OK".
 
-3. Click the green "check" button to add the path.
+2. Click the green "check" button to add the path.
 
-4. All TV shows added now will have that path set.
+3. All TV shows added now will have that path set.
+
+![Sonarr Add](../images/sonarr/sonarr-add.png)
 
 
 ## API Key

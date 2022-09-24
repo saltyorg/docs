@@ -275,6 +275,7 @@ nav:
       - CloudFlare: faq/Cloudflare.md
       - Cloudplow: faq/Cloudplow.md
       - Docker: faq/Docker.md
+      - Hetzner & Google IPv6: faq/Hetzner.md
       - Install: faq/Install.md
       - Backup and Restore: faq/Backup and Restore.md
       - Rclone: faq/Rclone.md

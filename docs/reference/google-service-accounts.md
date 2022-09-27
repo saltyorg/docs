@@ -14,7 +14,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 1. Create /opt/sa and make sure it's writable by you.
 
     ```
-    sudo mkdir /opt/sa
+    sudo mkdir -p /opt/sa
     sudo chown -R <user>:<group> /opt/sa
     ```
 

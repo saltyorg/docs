@@ -45,7 +45,7 @@ Edit the file `/opt/recyclarr/recyclarr.yml`.
 !!! danger
     When running Recyclarr manually via `docker exec`, ensure you pass your user/group.
     
-    Example: `docker exec recyclarr --user=$(id -u):$(id -g) recyclarr radarr --list-custom-formats`
+    Example: `docker exec --user=$(id -u):$(id -g) recyclarr recyclarr radarr --list-custom-formats`
 
 
 Follow documentation to complete configuration

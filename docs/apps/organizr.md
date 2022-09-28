@@ -154,4 +154,4 @@ Any additional question please reach out to the [Organizr](https://organizr.app/
 
 ## Next
 
-Are you setting Saltbox up for the first time?  You're ready to explore Saltbox.
+Are you setting Saltbox up for the first time?  You're ready to explore Saltbox! You can start checking out community apps in [Sandbox](https://docs.saltbox.dev/sandbox/basics/) if you wish.

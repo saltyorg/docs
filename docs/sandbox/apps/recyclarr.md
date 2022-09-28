@@ -42,6 +42,12 @@ Edit the file `/opt/recyclarr/recyclarr.yml`.
         - api_key: your_radarr_api_key
       ```
 
+!!! danger
+    When running Recyclarr manually via `docker exec`, ensure you pass your user/group.
+    
+    Example: `docker exec recyclarr --user=$(id -u):$(id -g) recyclarr radarr --list-custom-formats`
+
+
 Follow documentation to complete configuration
 
 - [:octicons-link-16: Documentation](https://github.com/recyclarr/recyclarr/wiki/Configuration-Reference){: .header-icons target=_blank rel="noopener noreferrer" }

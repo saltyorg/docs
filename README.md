@@ -105,14 +105,21 @@ The docs are actually built with a different release of mkdocs-material, so to p
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/DiscDuck>
+            <img src=https://avatars.githubusercontent.com/u/77843475?v=4 width="100;"  alt=DiscDuck/>
+            <br />
+            <sub style="font-size:14px"><b>DiscDuck</b></sub>
+        </a>
+    </td>
+</tr>
+<tr>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/jolbol1>
             <img src=https://avatars.githubusercontent.com/u/5064896?v=4 width="100;"  alt=James Shopland/>
             <br />
             <sub style="font-size:14px"><b>James Shopland</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/JohnClementine>
             <img src=https://avatars.githubusercontent.com/u/52635735?v=4 width="100;"  alt=JohnClementine/>
@@ -148,6 +155,8 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>stayupthetree</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/8a8al00ey>
             <img src=https://avatars.githubusercontent.com/u/109389709?v=4 width="100;"  alt=8a8al00ey/>
@@ -155,8 +164,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>8a8al00ey</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/ben-burns>
             <img src=https://avatars.githubusercontent.com/u/3254870?v=4 width="100;"  alt=Ben Burns/>
@@ -169,13 +176,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <img src=https://avatars.githubusercontent.com/u/34379754?v=4 width="100;"  alt=CGH/>
             <br />
             <sub style="font-size:14px"><b>CGH</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/DiscDuck>
-            <img src=https://avatars.githubusercontent.com/u/77843475?v=4 width="100;"  alt=DiscDuck/>
-            <br />
-            <sub style="font-size:14px"><b>DiscDuck</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

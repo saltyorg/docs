@@ -85,8 +85,15 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
                                          # if you've followed all previous steps correctly
                                          # it shouldn't be required.
 
+    backup_drive = "automatic"           # <<<< edit this if desired
+                                         # If this is set to "automatic", the backup drive
+                                         # will be the last shared drive the script sees.
+                                         # Enter one of the names below to use that one.
+                                         # Enter anything else to disable.
+                                         # backup discussed below.
+
     # `drive name`: '/directory/on/this/drive`
-    drive_data = {                       # <<<< add additional drives and media paths here if needed.  Media paths should be unique per drive.
+    drive_data = {                       # <<<< add additional drives and media paths here.  Media paths must be unique per drive.
         'Anime': '/Media/Anime',
         'Books': '/Media/Books',
         'Movies': '/Media/Movies',
@@ -97,7 +104,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     }
     ```
 
-    If you don't want to create some of those shared drives, remove the line.  It's safe to go ahead and create them for simplicity later in the event you want to start using them.
+    If you don't want to create some of those shared drives, remove the line.  It's safe to go ahead and create them for simplicity later in the event you want to start using them.  The list should not have a comma at the end, as shown above.
 
     Save the file with control-x, y, enter
 
@@ -139,60 +146,56 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     We're working on making this a bit more friendly.
 
     This script will create shared drives as listed in the config, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
+    
+    It will fill in anything that is missing; if the shared drives are there but the media folders haven't been created, those will be created.  If everything has been created but the rclone remotes are missing; those will be filled in.
 
-    You should see output similar to this:
+    If you defined a "backup_drive" in the config [or left it as "automatic"], then script will zip up:
 
-    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
+    1. All your service account JSON files
+    1. Your rclone config file
+    1. Your `client_secret.json` file
+    1. Your `storage.json` file
+    1. The log file of shared drives created and IDs
+    
+    It will zip those files up and upload them to `BACKUP_DRIVE\saltbox_sd_backup\backup.zip`
+    
+    Future runs will delete the current backup and overwrite the remote file.
+    
+    This of course takes the place of the BEFORE YOU DO ANYTHING ELSE admonition at the bottom of this page:
+
+    You should see output similar to this [of course, you will see more than one shared drive creation; the rest are left out here for space]:
 
     ```
-    ** Team Drive aZaSjsklaj-Movies created, ID: 123456789
-    ** user all-sa@domain.com created as organizer, ID: 123456789
-    ** Folder -- aZaSjsklaj-Movies Shared -- created, ID 123456789
-    ** bin file created on root, ID 123456789
-    ** Folder Media created, ID 123456789
-    ** Folder Movies created, ID 123456789
-    --------------------
-    [aZaSjsklaj-Movies]
+    [previous shared drive creations removed]
+    
+    ** Team Drive heilung-TV-4K created, ID: AAAAAAAAAAAAAAAAAAA
+    ** user all-sa@XXXXXXXX.com set as organizer, ID: BBBBBBBBBBBBBBBBBBBB
+    ** Created folder -- heilung-TV-4K Shared --, ID CCCCCC-CCCCCCCCCCCCCCCCCCCCCCCCCC
+    ** Created file -- heilung-TV-4K Shared --, ID D-DDDDDDDDDDDD-DDDDDDDDDDDDDDDDDD
+    ** Created folder Media, ID EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+    ** Created folder TV-4K, ID FFFFFFFFFFFFFFF-FFFFFFFFFFFFFFFFF
+    Creating rclone remote: heilung-TV-4K
+    rclone remote definition ========
+    [heilung-TV-4K]
     type = drive
     scope = drive
     service_account_file = /opt/sa/all/150.json
-    team_drive = 123456789
-    --------------------
-    0
-    ** Team Drive aZaSjsklaj-Music created, ID: 123456789
-    ** user all-sa@domain.com created as organizer, ID: 123456789
-    ** Folder -- aZaSjsklaj-Music Shared -- created, ID 123456789
-    ** bin file created on root, ID 123456789
-    ** Folder Media created, ID 123456789
-    ** Folder Music created, ID 123456789
-    --------------------
-    [aZaSjsklaj-Music]
-    type = drive
-    scope = drive
-    service_account_file = /opt/sa/all/150.json
-    team_drive = 123456789
-    --------------------
-    0
-    ** Team Drive aZaSjsklaj-TV created, ID: 123456789
-    ** user all-sa@domain.com created as organizer, ID: 123456789
-    ** Folder -- aZaSjsklaj-TV Shared -- created, ID 123456789
-    ** bin file created on root, ID 123456789
-    ** Folder Media created, ID 123456789
-    ** Folder TV created, ID 123456789
-    --------------------
-    [aZaSjsklaj-TV]
-    type = drive
-    scope = drive
-    service_account_file = /opt/sa/all/150.json
-    team_drive = 123456789
-    --------------------
-    0
-    --------------------
+    team_drive = AAAAAAAAAAAAAAAAAAA
+
+    Creating rclone union remote 'google':
+    rclone remote definition ========
     [google]
     type = union
-    upstreams = aZaSjsklaj-Movies: aZaSjsklaj-Music: aZaSjsklaj-TV:
-    --------------------
+    upstreams = heilung-Anime:/ heilung-Books:/ heilung-Movies:/ heilung-Movies-4K:/ heilung-Music:/ heilung-TV:/ heilung-TV-4K:/ 
+    Deleting previous backup files...
+    Preparing backup files...
+    Creating backup archive...
+    Uploading backup archive to heilung-TV-4K/saltbox_sd_backup...
+    Upload Complete!
+    All done.
     ```
+
+    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above].  That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     Drive names and IDs will be written to `drive_create_log`.
 
@@ -231,11 +234,15 @@ BEFORE YOU DO ANYTHING ELSE:
   - BACK UP `/opt/sa` TO YOUR LOCAL COMPUTER
   - BACK UP `/home/YOU/.config/rclone/rclone.conf` TO YOUR LOCAL COMPUTER
 
-If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
+The automatic backup above would have done this for you.  If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
+
+If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)
 
 IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
 
 1. Go to the directory and activate the virtual environment:
+
+    [copy-paste this into your terminal window]
 
     ```
     cd /opt/sb_gd && source sb_gd/bin/activate
@@ -256,4 +263,3 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
      deactivate
     ```
    
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)

@@ -70,11 +70,12 @@ Note: it is suggested to enter your `plex username and password`
     | Radarr        | https://radarr.yourdomain.ltd       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | NZBGet        | https://nzbget.yourdomain.ltd       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | Rutorrent     | https://rutorrent.yourdomain.ltd    | images/rutorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBHydra2      | https://nzbhydra2.yourdomain.ltd   | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | NZBHydra2     | https://nzbhydra2.yourdomain.ltd    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | Jackett       | https://jackett.yourdomain.ltd      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Plex          | https://plex.yourdomain.ltd         | images/plex.png               |   Unsorted   |  User   |   iFrame   |     Y    |
-    | Tautulli        | https://tautulli.yourdomain.ltd       | images/tautulli.png             |   Unsorted   |  User   |   iFrame   |     Y     |
-    | Ombi          | https://ombi.yourdomain.ltd         | images/ombi.png               |   Unsorted   |  User   |   iFrame   |     Y     |
+    | Plex          | https://plex.yourdomain.ltd         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Tautulli      | https://tautulli.yourdomain.ltd     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Ombi          | https://ombi.yourdomain.ltd         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Overseerr     | https://overseerr.yourdomain.ltd    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
 
 
     ![Tab Editor](https://i.imgur.com/aXwGxpx.png)
@@ -95,9 +96,9 @@ Note: it is suggested to enter your `plex username and password`
 
     - Click on the Connection Tab and set "Plex URL": `http://plex:32400`
 
-    - Currently there is no "GET PLEX TOKEN" button like there was in v1 of Organizr so you will need to follow `https://github.com/Cloudbox/Cloudbox/wiki/Plex-Access-Token` in order to get your Plex access Token.
-
-    - Set your preferred options on the remaining tabs.
+    - Click "Retrieve" under Get Plex Token
+    - Click "Save" icon at the top right
+    - Set your preferred options on the remaining tabs
 
     - Click "SAVE".
 

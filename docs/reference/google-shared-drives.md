@@ -233,4 +233,27 @@ BEFORE YOU DO ANYTHING ELSE:
 
 If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
 
+IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
+
+1. Go to the directory and activate the virtual environment:
+
+    ```
+    cd /opt/sb_gd && source sb_gd/bin/activate
+    ```
+
+2. Edit the `config.py` script to add the additional shared drives:
+
+3. Run the script:
+
+    [copy-paste this into your terminal window]
+
+    ```
+    python sb_sd.py
+    ```
+4. Deactivate the virtual env used by this script.
+
+    ```
+     deactivate
+    ```
+   
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)

@@ -1,8 +1,8 @@
-# Trillium Notes
+# Trilium Notes
 
 ## What is it?
 
-[Trillium Notes](https://github.com/zadam/trilium){: target=_blank rel="noopener noreferrer" } is a hierarchical note taking application with focus on building large personal knowledge bases.
+[Trilium Notes](https://github.com/zadam/trilium){: target=_blank rel="noopener noreferrer" } is a hierarchical note taking application with focus on building large personal knowledge bases.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -12,13 +12,13 @@
 
 ``` shell
 
-sb install sandbox-trillium
+sb install sandbox-trilium
 
 ```
 
 ### 2. URL
 
-- To access Trillium Notes, visit `https://trillium._yourdomain.com_`
+- To access Trilium Notes, visit `https://trilium._yourdomain.com_`
 
 ### 3. Documentation
 

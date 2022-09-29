@@ -263,6 +263,8 @@ After rebooting, you're now ready to go through the basic setup for the apps!
 
 ## Step 6: App Setup
 
+If you would like to configure cloudplow to use service accounts to exceed the 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now.  Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+
 Go through these one at a time in order; some of the setups depend on previous setups.
 
 1. [NZBGet](../../apps/nzbget.md)

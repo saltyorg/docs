@@ -31,3 +31,9 @@ You will have to have completed `sb install saltbox` before using this script.
     ```
     sudo systemctl restart cloudplow
     ```
+
+3. Deactivate the virtual environment:
+
+    ```
+    deactivate
+    ```

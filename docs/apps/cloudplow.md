@@ -26,6 +26,8 @@ Cloudplow can also use service accounts to upload and work around this limitatio
 
 ## Config
 
+Note that this is an extract from the cloudplow docs and does not cover everythign that cloudplow can do.  Please refer to the Cloudplow github for complete details on available options.
+
 ### Default config.json file
 
 See [Example Cloudplow configs](../reference/cloudplow.md).
@@ -124,6 +126,56 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
        "STREAM COUNT": "THROTTLED UPLOAD SPEED",
        ```
 
+### NZBget Integration
+
+Cloudplow can pause the NZBGet download queue when an upload starts; and then resume it upon the upload finishing.
+
+```
+"nzbget": {
+    "enabled": false,
+    "url": "https://user:pass@nzbget.domain.com"
+},
+```
+
+`enabled` - `true` to enable.
+
+### Sabnzbd Integration
+
+Cloudplow can pause the Sabnzbd download queue when an upload starts; and then resume it upon the upload finishing.
+
+```
+"sabnzbd": {
+    "enabled": false,
+    "url": "https://sabnzbd.domain.com"
+    "apikey": "1314234234"
+},
+```
+
+`enabled` - `true` to enable.
+
+### Service account uploading
+
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past hte daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+
+```
+"uploader": {
+    "google": {
+        "check_interval": 30,
+        "exclude_open_files": true,
+        "max_size_gb": 500,
+        "opened_excludes": [
+            "/downloads/"
+        ],
+        "size_excludes": [
+            "downloads/*"
+        ],
+        "service_account_path":"/home/user/config/cloudplow/service_accounts/"
+      }
+}
+```
+
+If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+
 ### Restart
 
 Restart Cloudplow to apply the changes to the config.
@@ -132,9 +184,12 @@ Restart Cloudplow to apply the changes to the config.
 sudo systemctl restart cloudplow
 ```
 
+## Logs and status
+
+[Details here](https://docs.saltbox.dev/reference/logs/?h=logs#cloudplow)
+
 
 ## CLI
-
 
 You can run a manual Cloudplow task from anywhere by just using the `cloudplow` command.
 

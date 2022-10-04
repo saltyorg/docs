@@ -20,7 +20,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![](../images/google-shared-drive-settings/04-DND-sharing.png)
 
-5. Scroll down and verify that and verify that your "Shared Drive Settings" match these.  Change them if required and save:
+5. Scroll down and verify that your "Shared Drive Settings" match these.  Change them if required and save:
 
     ![](../images/google-shared-drive-settings/05-DND-sharing-settings.png)
 

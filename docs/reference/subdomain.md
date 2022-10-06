@@ -1,4 +1,4 @@
-Setup instructions are separated based on the DNS Provider you use and the tpye of install.
+Setup instructions are separated based on the DNS Provider you use and the type of install.
 
 # Cloudflare
 

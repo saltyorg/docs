@@ -1,8 +1,8 @@
-# KCPtun server
+# kcptun server
 
 ## What is it?
 
-[KCPtun Server](https://github.com/xtaci/kcptun){: target=_blank rel="noopener noreferrer" } is a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
+[kcptun Server](https://github.com/xtaci/kcptun){: target=_blank rel="noopener noreferrer" } is a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

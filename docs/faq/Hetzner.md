@@ -80,3 +80,5 @@ After doing any changes to Cloudplow or crop configuration remember to restart t
 ## Use a script to bind traffic to Google API endpoints to a specific IP
 
 Setup this [script](https://github.com/Nebarik/mediscripts-shared/blob/main/googleapis.sh) and let it modify your hosts file.
+
+[Markshrik](https://github.com/markschrik) has created a version of the script that will do the required setup for you if you are using the default Saltbox setup; it can be found [here](https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh).  Download it, mark it executable, and run it.

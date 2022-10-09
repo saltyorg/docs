@@ -50,14 +50,9 @@ jackett_docker_labels_custom:
 # Additional Examples
 ## Various
 ```yaml
-### Open Specified Ports for the specified container ###
 ##### Plex Ports for local access#####
-plex_docker_ports:
-  - "32400:32400/tcp"
-  - "3005:3005/tcp"
-  - "8324:8324/tcp"
-  - "33400:33400/tcp"
-  - "33443:33443/tcp"
+plex_open_main_ports: true
+plex_open_local_ports: true
 
 ##### Plex Container Variables ####
 plex_docker_image_tag: beta

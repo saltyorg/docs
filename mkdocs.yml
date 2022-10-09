@@ -96,9 +96,6 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - js/prefix.js
-
 nav:
   - Home: index.md
   - Saltbox:

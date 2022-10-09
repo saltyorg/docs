@@ -10,6 +10,9 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  icon:
+    logo: material/sofa
+    repo: fontawesome/brands/github-alt
   custom_dir: overrides
   features:
     - header.autohide
@@ -19,24 +22,39 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.instant
+    - navigation.prune
     # - toc.integrate
+    - toc.follow
     - search.suggest
     - search.highlight
     - search.share
   language: en
   palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: red
+      primary: teal
+      accent: teal
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-7
         name: Switch to dark mode
+
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: red
+      primary: teal
+      accent: teal
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+        icon: material/brightness-4
+        name: Switch to system preference
 
 plugins:
   - search:
@@ -46,18 +64,22 @@ extra:
   generator: false
   social:
   - icon: fontawesome/solid/heart
+    class: md-social__link heart
     link: 'https://github.com/sponsors/saltydk'
     name: Donate
   - icon: fontawesome/brands/discord
+    class: md-social__link
     link: 'https://discord.gg/ugfKXpFND8'
     name: Discord
   - icon: fontawesome/brands/github
+    class: md-social__link
     link: 'https://github.com/saltyorg/Saltbox'
     name: GitHub
 
 markdown_extensions:
   - meta
   - pymdownx.highlight
+  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true

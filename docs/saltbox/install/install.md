@@ -186,7 +186,7 @@ If your server did not need to reboot you can run `su username` to switch user o
 
 Saltbox defaults to an rclone remote pointed at your Google Drive named `google` [as shown in the settings.yml above].
 
-There is nothing special about saltbox's implementation of this setup, aside from its opinions about the media paths.
+There is nothing special about Saltbox's implementation of this setup, aside from its opinions about the media paths.
 
 If you already know how to set that up, do so with your usual methods.  If not:
 
@@ -263,7 +263,7 @@ After rebooting, you're now ready to go through the basic setup for the apps!
 
 ## Step 6: App Setup
 
-If you would like to configure cloudplow to use service accounts to exceed the 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now.  Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+If you would like to configure cloudplow to use service accounts to exceed the 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

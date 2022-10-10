@@ -226,7 +226,8 @@ nav:
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
-            - unifi : sandbox/apps/unifi.md
+            - unifi: sandbox/apps/unifi.md
+            - wireguard: sandbox/apps/wireguard.md
           - flaresolverr: sandbox/apps/flaresolverr.md
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md

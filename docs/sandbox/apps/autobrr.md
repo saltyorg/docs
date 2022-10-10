@@ -26,4 +26,4 @@ sb install sandbox-autobrr
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://autobrr.com/getting-started){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons target=_blank rel="noopener noreferrer" }

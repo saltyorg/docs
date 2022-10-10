@@ -74,6 +74,7 @@
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
   -  **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
+  -  **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`
   -  **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`
   -  **[wrapperr](../sandbox/apps/wrapperr.md)**  - tag - `sandbox-wrapperr`
   -  **[xteve](../sandbox/apps/xteve.md)**  - tag - `sandbox-xteve`

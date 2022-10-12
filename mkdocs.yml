@@ -122,6 +122,7 @@ nav:
         - ArrX: sandbox/apps/arrx.md
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
+          - Joplin: sandbox/apps/joplin.md
           - Nabarr: sandbox/apps/nabarr.md
           - Notifiarr: sandbox/apps/notifiarr.md
           - Recyclarr: sandbox/apps/recyclarr.md

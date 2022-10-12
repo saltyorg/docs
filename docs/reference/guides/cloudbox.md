@@ -53,6 +53,43 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
   ```
 
+  <details>
+  <summary>What's this about service accounts?</summary>
+  <br />
+
+  On your cloudbox machine, run:
+
+  ```
+  rclone config show REMOTENAME
+  ```
+
+  Using an SA:
+  ```
+  ➜  ~ rclone config show REMOTE
+  [REMOTE]
+  type = drive
+  scope = drive
+  service_account_file = /opt/sa/all/1500.json
+  team_drive = OZZY
+  root_folder_id =
+  ```
+
+  Using clientid:
+  ```
+  ➜  ~ rclone config show REMOTE:
+  [REMOTE]
+  type = drive
+  client_id = OZZY.apps.googleusercontent.com
+  client_secret = TONY
+  server_side_across_configs = true
+  scope = drive
+  token = {"access_token":"GEEZER","token_type":"Bearer","refresh_token":"BILL","expiry":"2022-04-30T17:37:41.485179628-05:00"}
+  root_folder_id = RONNIE
+  ```
+
+  If the rclone remote contains `service_account_file`, you will need to make sure that service account file is available on the saltbox machine at that same path.
+  </details>
+
 ## Migration
 
 IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04 and try to run this migration.  It won't work.

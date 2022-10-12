@@ -1,6 +1,7 @@
 # Sandbox - All Apps Index
 
   -  **[adguardhome](../sandbox/apps/adguardhome.md)**  - tag - `sandbox-adguardhome`
+  -  **[adminer](../sandbox/apps/adminer.md)**  - tag - `sandbox-adminer`
   -  **[airdcpp](../sandbox/apps/airdcpp.md)**  - tag - `sandbox-airdcpp`
   -  **[airsonic](../sandbox/apps/airsonic.md)**  - tag - `sandbox-airsonic`
   -  **[alltube](../sandbox/apps/alltube.md)**  - tag - `sandbox-alltube`

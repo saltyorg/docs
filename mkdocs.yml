@@ -166,6 +166,7 @@ nav:
           - heimdall: sandbox/apps/heimdall.md
         - Game Servers:
           - Minecraft: sandbox/apps/minecraft.md
+          - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
         - Media Management:
           - Books:
             - booksonic: sandbox/apps/booksonic.md

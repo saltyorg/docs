@@ -28,14 +28,14 @@ Choose the theme and apply it to containers in in inventory:
 global_themepark_theme: "nord"
 
 # enable Traefik plugin
-global_themepark_plugin_enabled: "true"
+global_themepark_plugin_enabled: true
 
 # apps using global theme:
-container_name_themepark_enabled: "true"
+container_name_themepark_enabled: true
 
 # different theme for an app:
-container_name_themepark_theme: "hotline"
-container_name_themepark_enabled: "true"
+container_name_themepark_theme: hotline
+container_name_themepark_enabled: true
 
 ```
 for example, in `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
@@ -47,18 +47,18 @@ for example, in `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 global_themepark_theme: "nord"
 
 # apps using global theme:
-nzbget_themepark_enabled: "true"
+nzbget_themepark_enabled: true
 
 # different theme for an app:
 sonarr_themepark_theme: "hotline"
-sonarr_themepark_enabled: "true"
+sonarr_themepark_enabled: true
 
 # enable Traefik plugin
-global_themepark_plugin_enabled: "true"
+global_themepark_plugin_enabled: true
 
 # apps using Traefik plugin
-plex_themepark_enabled: "true"
-nzbhydra2_themepark_enabled: "true"
+plex_themepark_enabled: true
+nzbhydra2_themepark_enabled: true
 ```
 
 Available themes can be found [here](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
@@ -76,3 +76,5 @@ overseerr
 nord
 maroon
 ```
+
+Note: If you are utilizing Theme.Park on any roles, you must run `sb install traefik` after changing any themes via inventory variables.

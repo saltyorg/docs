@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Joplin](https://joplinapp.org/){: target=_blank rel="noopener noreferrer" } is a hierarchical note taking application with focus on building large personal knowledge bases.
+[Joplin](https://joplinapp.org/){: target=_blank rel="noopener noreferrer" } is an open source note-taking app. Capture your thoughts and securely access them from any device.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

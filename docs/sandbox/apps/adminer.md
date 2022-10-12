@@ -26,7 +26,7 @@ sb install sandbox-Adminer
 
 ### 3. Setup
 
-- Default login for [mariadb](../../saltbox/support%20apps/mariadb.md)
+- Default login for [mariadb](../../apps/mariadb.md)
   ``` { .yaml}
   System: Mysql
   Server: mariadb:3306
@@ -34,7 +34,7 @@ sb install sandbox-Adminer
   Password: password321
   ```
 
-- Default login for [postgres](../../saltbox/support%20apps/postgres.md)
+- Default login for [postgres](../../apps/postgres.md)
   ``` { .yaml}
   System: PostgreSQL
   Server: postgres:5432

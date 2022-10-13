@@ -21,22 +21,7 @@ sb install sandbox-minecraft-bedrock
 
 ### 2. Join Server
 
-- By default, the server will be accesible at `_yourserverip_:19132`
-- You can set up a SRV record to access the server at a subdomain of your choice (See SRV instructions below)
-
-### 3. Setup SRV record
-
-!!! Note
-    In this example we will be using `minecraft._yourdomain.com_`
-
-- Create A record `minecraft` pointing to your server ip
-- Create SRV entry like this
-    - Name: `minecraft`
-    - Service: `_minecraft`
-    - Protocol: UDP
-    - Port: 19132
-    - Target: `minecraft._yourdomain.com_`
-- Now you can access the server at `minecraft._yourdomain.com_`
+- The server will be accesible at `minecraft-bedrock._yourdomain.com_` or `_yourserverip_:19132`
 
 ### Change server version
 

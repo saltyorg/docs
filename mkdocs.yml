@@ -287,6 +287,10 @@ nav:
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
         - asshama: apps/asshama.md
+      - Support Apps:
+        - apps/diun.md
+        - apps/mariadb.md
+        - apps/postgres.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md

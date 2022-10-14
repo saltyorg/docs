@@ -169,6 +169,7 @@ nav:
           - Minecraft: sandbox/apps/minecraft.md
         - Media Management:
           - Books:
+            - audiobookshelf: sandbox/apps/audiobookshelf.md
             - booksonic: sandbox/apps/booksonic.md
             - bookstack: sandbox/apps/bookstack.md
             - calibre: sandbox/apps/calibre.md

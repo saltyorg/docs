@@ -208,6 +208,7 @@ nav:
             - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
             - Wrapperr: sandbox/apps/wrapperr.md
+            - Wizarr: sandbox/apps/wizarr.md
           # - Requests:
           - Requests:
             - Doplarr: sandbox/apps/doplarr.md

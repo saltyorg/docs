@@ -47,6 +47,7 @@
   -  **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
   -  **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
   -  **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`
+  -  **[minecraft-bedrock](../sandbox/apps/minecraft-bedrock.md)**  - tag - `sandbox-minecraft-bedrock`
   -  **[mkvtoolnix](../sandbox/apps/mkvtoolnix.md)**  - tag - `sandbox-mkvtoolnix`
   -  **[monitorr](../sandbox/apps/monitorr.md)**  - tag - `sandbox-monitorr`
   -  **[moviematch](../sandbox/apps/moviematch.md)**  - tag - `sandbox-moviematch`

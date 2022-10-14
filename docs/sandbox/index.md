@@ -79,6 +79,7 @@
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
   -  **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
+  -  **[wizarr](../sandbox/apps/wizarr.md)**  - tag - `sandbox-wizarr`
   -  **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`
   -  **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`
   -  **[wrapperr](../sandbox/apps/wrapperr.md)**  - tag - `sandbox-wrapperr`

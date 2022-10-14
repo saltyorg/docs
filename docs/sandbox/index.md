@@ -57,6 +57,7 @@
   -  **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
   -  **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
+  -  **[paperless-ngx](../sandbox/apps/paperless-ngx.md)**  - tag - `sandbox-paperless-ngx`
   -  **[pgadmin](../sandbox/apps/pgadmin.md)**  - tag - `sandbox-pgadmin`
   -  **[plex_credits_detect](../sandbox/apps/plex-credits-detect.md)**  - tag - `sandbox-plex_credits_detect`
   -  **[plex_dupefinder](../sandbox/apps/plex_dupefinder.md)**  - tag - `sandbox-plex_dupefinder`

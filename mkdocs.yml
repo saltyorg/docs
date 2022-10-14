@@ -170,6 +170,7 @@ nav:
           - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
         - Media Management:
           - Books:
+            - audiobookshelf: sandbox/apps/audiobookshelf.md
             - booksonic: sandbox/apps/booksonic.md
             - bookstack: sandbox/apps/bookstack.md
             - calibre: sandbox/apps/calibre.md

@@ -45,6 +45,7 @@
   -  **[kitana](../sandbox/apps/kitana.md)**  - tag - `sandbox-kitana`
   -  **[komga](../sandbox/apps/komga.md)**  - tag - `sandbox-komga`
   -  **[lazylibrarian](../sandbox/apps/lazylibrarian.md)**  - tag - `sandbox-lazylibrarian`
+  -  **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
   -  **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
   -  **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
   -  **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`

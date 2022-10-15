@@ -123,6 +123,7 @@ nav:
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Joplin: sandbox/apps/joplin.md
+          - Linkding: sandbox/apps/linkding.md
           - Nabarr: sandbox/apps/nabarr.md
           - Notifiarr: sandbox/apps/notifiarr.md
           - Recyclarr: sandbox/apps/recyclarr.md

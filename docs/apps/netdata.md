@@ -18,7 +18,7 @@ Netdata is free, open-source software.
 
 ``` shell
 
-sb install sandbox-netdata
+sb install netdata
 
 ```
 

@@ -55,7 +55,6 @@
   -  **[mylar3](../sandbox/apps/mylar3.md)**  - tag - `sandbox-mylar3`
   -  **[nabarr](../sandbox/apps/nabarr.md)**  - tag - `sandbox-nabarr`
   -  **[navidrome](../sandbox/apps/navidrome.md)**  - tag - `sandbox-navidrome`
-  -  **[netdata](../sandbox/apps/netdata.md)**  - tag - `sandbox-netdata`
   -  **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
   -  **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
   -  **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`

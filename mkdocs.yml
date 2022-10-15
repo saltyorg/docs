@@ -248,7 +248,6 @@ nav:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
             - Healthchecks: sandbox/apps/healthchecks.md
-            - netdata: sandbox/apps/netdata.md
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md
@@ -288,6 +287,7 @@ nav:
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Hetzner NFS: apps/hetzner_nfs.md
+        - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
         - asshama: apps/asshama.md

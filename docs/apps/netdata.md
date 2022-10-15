@@ -8,7 +8,7 @@ Netdata provides insights, in real-time, of everything happening on the systems 
 
 Netdata is designed to permanently run on all systems (physical & virtual servers, containers, IoT devices), without disrupting their core function.
 
-Netdata is free, open-source software. 
+Netdata is free, open-source software.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -25,3 +25,5 @@ sb install sandbox-netdata
 ### 2. URL
 
 - To access Netdata, visit `https://netdata._yourdomain.com_`
+
+- [:octicons-link-16: Documentation: Netdata Docs](https://learn.netdata.cloud/docs/){: .header-icons target=_blank rel="noopener noreferrer" }

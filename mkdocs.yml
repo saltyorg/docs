@@ -246,6 +246,7 @@ nav:
           - speedtest: sandbox/apps/speedtest.md
           - sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - sshwifty: sandbox/apps/sshwifty.md
+          - Tdarr: sandbox/apps/tdarr.md
           - System:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md

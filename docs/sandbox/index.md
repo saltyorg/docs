@@ -74,6 +74,7 @@
   -  **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
   -  **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
   -  **[tandoor](../sandbox/apps/tandoor.md)**  - tag - `sandbox-tandoor`
+  -  **[tdarr](../sandbox/apps/tdarr.md)**  - tag - `sandbox-tdarr`
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
   -  **[traefik_robotstxt](../sandbox/apps/traefik_robotstxt.md)**  - tag - `sandbox-traefik_robotstxt`
   -  **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`

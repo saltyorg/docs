@@ -18,9 +18,20 @@ sb install sandbox-tdarr_node
 
 ```
 
-### 2. URL
+### 2. Usage
 
-- To access Tdarr, visit `https://tdarr._yourdomain.com_`
+The Tdarr Node is configured with the following defaults which can be modified via the inventory system.
+
+``` yaml
+tdarr_node_server_ip: "tdarr"
+tdarr_node_server_port: "8266"
+tdarr_node_node_id: "MainNode"
+tdarr_node_node_ip: "0.0.0.0"
+tdarr_node_node_port: "8267"
+tdarr_node_external: false
+```
+
+By switching `tdarr_node_external` to `true` the node will be accessible externally via the specified `tdarr_node_node_port` on any hostname or IP address pointing to the server.
 
 ### 3. Setup
 

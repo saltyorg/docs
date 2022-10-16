@@ -225,6 +225,9 @@ nav:
           - gotify: sandbox/apps/gotify.md
           - moviematch: sandbox/apps/moviematch.md
         - Utilities:
+          - Database Management:
+            - adminer: sandbox/apps/adminer.md
+            - PGAdmin: sandbox/apps/pgadmin.md
           - Docker:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
@@ -295,9 +298,9 @@ nav:
         - Readarr: apps/readarr.md
         - asshama: apps/asshama.md
       - Support Apps:
-        - apps/diun.md
-        - apps/mariadb.md
-        - apps/postgres.md
+        - diun: apps/diun.md
+        - MariaDB: apps/mariadb.md
+        - PostgreSQL: apps/postgres.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
         - SSTV: apps/sstv.md

@@ -16,7 +16,7 @@
 
 ``` shell
 
-sb install sandbox-pgadmin
+sb install sandbox-linkding
 
 ```
 
@@ -32,4 +32,4 @@ sb install sandbox-pgadmin
   Password: password from accounts.yml
   ```
 
-- [:octicons-link-16: Documentation: Linkding Docs](https://github.com/sissbruecker/linkding#documentation){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/sissbruecker/linkding#documentation){: .header-icons target=_blank rel="noopener noreferrer" }

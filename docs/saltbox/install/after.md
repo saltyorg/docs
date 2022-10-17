@@ -8,8 +8,6 @@ All the apps are installed and configured, but here are some things you want to 
 
     1. Disable root login.
 
-    The above tips can be implemented via [adv_settings.yml](../../reference/accounts.md#options-in-adv_settingsyml).
-
 2. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
 
 3. Take some time to verify disk space usage for the apps.

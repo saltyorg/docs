@@ -60,7 +60,6 @@ user:
   pass: password123 # (2)!
   domain: testsaltbox.ml # (3)!
   email: your@email.com # (4)!
-  ssh_key: # (13)!
 cloudflare:
   email: # (5)!
   api: # (6)!
@@ -105,8 +104,6 @@ apprise: # (12)!
 11. Docker Hub account token
 
 12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
-
-13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 
 `settings.yml`

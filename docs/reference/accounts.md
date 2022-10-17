@@ -162,6 +162,15 @@
 
         - `timedatectl list-timezones` at your server's command prompt will also list the options.
 
+- `sshd`: Various SSH configurations and hardening options.
+    - `port`: The port to reach the server via SSH. Default: `22`
+
+    - `password_authentication`: This allows disabling of password authentication for SSH. Requires `ssh_key` be set in `accounts.yml` for the configured user to facilitate public key authentication. Default: `true`
+
+    - `root_login`: This allows disabling of logging in to SSH via `root`. Default: `true`
+
+    **Note:** These settings will take effect after the `sshd` service is restarted which can be done manually (`sudo service restart sshd`) or with a server reboot.
+
 - `dns`: DNS-related settings.
 
     - `enabled`: Controls whether subdomains are created at Cloudflare

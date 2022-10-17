@@ -38,6 +38,12 @@
         - It does not have to be an email address at the domain above.
         - This parameter is **required** if you're using the reverse proxy.
 
+    - `ssh_key`: SSH Key
+
+        - This parameter is optional
+        - This is used to provision a SSH key in your user's `authorized_keys` file
+        - This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+
 - `cloudflare`: Cloudflare Account
     - `email`: E-mail address used for the Cloudflare account.
 

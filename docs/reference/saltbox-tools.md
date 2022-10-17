@@ -10,7 +10,7 @@
 
 # Overview
 
-Saltbox comes with some useful command line tools and scripts. Some are meant to be utilized by Saltbox, automatically (e.g. fail2ban, torrentcleanup.py, etc), and some are for your usage.
+Saltbox comes with some useful command line tools and scripts. Some are meant to be utilized by Saltbox, automatically (e.g. ncdu, torrentcleanup.py, etc), and some are for your usage.
 
 |  <pre>                          </pre>  Name                 | <pre>     </pre>  Type       | <pre>                                                                    </pre> Description                                                                                    |    <pre>                                     </pre> Invoked by                        |  <pre>                                                                  </pre> Homepage                                                           |
 |:---------------------- |:----------- |:---------------------------------------------------------------------------------------------- |:------------------------------------ |:------------------------------------------------------------------- |
@@ -22,7 +22,6 @@ Saltbox comes with some useful command line tools and scripts. Some are meant to
 | nethogs                | application | Small 'net top' tool that groups bandwidth by process.                                         | `nethogs`                            | https://github.com/raboof/nethogs                                   |
 | ngrok                  | application | Secure tunnels to localhost.                                                                   | `ngrok`                              | https://ngrok.com/                                                  |
 | ufw                    | application | UFW, or Uncomplicated Firewall, is a front-end to iptables.                                    | `ufw`                                | https://launchpad.net/ufw                                           |
-| fail2ban               | application | Ban hosts that cause multiple authentication errors.                                           | `fail2ban`                           | http://www.fail2ban.org                                             |
 | speedtest-cli          | application | Command line interface for testing internet bandwidth using speedtest.net                      | `speedtest`                          | https://github.com/sivel/speedtest-cli                              |
 | Rclone                 | application | "rsync for cloud storage".                                                                     | `rclone`                             | https://rclone.org/                                                 |
 | tree                   | application | Displays an indented directory tree, in color.                                                 | `tree`                               | http://mama.indstate.edu/users/ice/tree/                            |

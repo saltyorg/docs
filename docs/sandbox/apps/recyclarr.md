@@ -21,26 +21,26 @@ sb install sandbox-recyclarr
 
 Edit the Recyclarr section in [sandbox `settings.yml`:](../settings.md) and enter your desired update schedule using standard cron syntax.
 
-     ``` { .yaml }
+``` { .yaml }
      recyclarr:
        cron_schedule: "@daily"
-     ```
+```
 
 Edit the file `/opt/recyclarr/recyclarr.yml`.
 
 - Configure Sonarr section
-      ``` { .yaml }
+  ``` { .yaml }
       sonarr:
         - base_url: http://sonarr:8989
         - api_key: your_sonarr_api_key
-      ```
+  ```
 
 - Configure Radarr section
-      ``` { .yaml }
+  ``` { .yaml }
       radarr:
         - base_url: http://radarr:7878
         - api_key: your_radarr_api_key
-      ```
+  ```
 
 !!! danger
     When running Recyclarr manually via `docker exec`, ensure you pass your user/group.

@@ -1,6 +1,6 @@
 Note that this is just some examples, not a list of things that any particular user should have in their crontab.
 
-Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is sugeesting that you *should* do all these things.  They may not work as shown here, dependin gon your setup.
+Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is sugeesting that you *should* do all these things.  They may not work as shown here, depending on your setup.
 
 It's just a catalog of examples to demonstrate how one might set this sort of thing up.
 

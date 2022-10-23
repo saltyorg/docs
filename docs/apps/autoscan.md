@@ -106,9 +106,9 @@ Everything else should be ready to go for standard usage.
 <details>
 <summary>What are those mount files?</summary>
 <br />
-Autoscan uses these mount files to determine if your cloud storage is mounted; if not, no scans will be sent since doing so would empty your library as PLex removed all the files it can no longer see.
+Autoscan uses these to determine if your cloud storage is mounted and visible; if autoscan can't see these files, no scans will be sent to Plex since doing so would empty your library as Plex removed all the files it can no longer see [assuming that "empty trash on scan" is enabled].
 
-There's nothing special about the contents of these files; autoscan just needs to see that they exist.
+There's nothing special about the contents of these files; autoscan just needs to see that they exist.  Typically they are empty.
 
 If you went through the saltbox rclone setup, these files got created for you.  `ls /mnt/unionfs/*.bin` will give you the linst of files you should enter here.
 </details>

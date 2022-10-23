@@ -10,7 +10,6 @@ To edit your crontab, enter `crontab -e`
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 @daily cd /opt/plex-meta-manager && python plex-meta-manager.py -r
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
-@daily sb update && sb install saltbox
 * * * * * /opt/scripts/nzbget/cleanup.sh
 0 10 * * * /opt/scripts/plex/optimize.sh
 0 * * * * PATH='/usr/bin:/bin:/usr/local/bin' cd /opt/SonarrSync/ ; /usr/bin/python SonarrSync.py

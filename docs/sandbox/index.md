@@ -16,6 +16,7 @@
   -  **[bookstack](../sandbox/apps/bookstack.md)**  - tag - `sandbox-bookstack`
   -  **[calibre](../sandbox/apps/calibre.md)**  - tag - `sandbox-calibre`
   -  **[calibre_web](../sandbox/apps/calibre_web.md)**  - tag - `sandbox-calibre-web`
+  -  **[cherry](../sandbox/apps/cherry.md)**  - tag - `sandbox-cherry`
   -  **[coder](../sandbox/apps/coder.md)**  - tag - `sandbox-coder`
   -  **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
   -  **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`

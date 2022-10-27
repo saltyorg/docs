@@ -36,6 +36,7 @@
   -  **[guacamole](../sandbox/apps/guacamole.md)**  - tag - `sandbox-guacamole`
   -  **[handbrake](../sandbox/apps/handbrake.md)**  - tag - `sandbox-handbrake`
   -  **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
+  -  **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
   -  **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
   -  **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
   -  **[jirafeau](../sandbox/apps/jirafeau.md)**  - tag - `sandbox-jirafeau`

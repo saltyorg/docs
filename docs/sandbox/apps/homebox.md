@@ -5,11 +5,11 @@
 [Homebox](https://hay-kot.github.io/homebox/){: target=_blank rel="noopener noreferrer" } is the inventory and organization system built for the Home User! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs.
 
 !!!info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself. 
+    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home ](https://hay-kot.github.io/homebox/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/hay-kot/homebox){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: Project home](https://hay-kot.github.io/homebox/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/hay-kot/homebox){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 ### 1. Installation
 
@@ -25,10 +25,6 @@ sb install sandbox-homebox
 
 ### 3. Setup
 
-- Default login:
-  ``` { .yaml}
-  Username: "your email from accounts.yml"
-  Password: your_normal_password
-  ```
+- Create a user in the web ui, add your email and password, then log in.
 
 - [:octicons-link-16: Documentation: Homebox Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons target=_blank rel="noopener noreferrer" }

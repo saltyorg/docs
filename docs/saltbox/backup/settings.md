@@ -59,13 +59,13 @@ backup:
 
     Depending on the option set here the cron entry created by Saltbox will be added, removed or modified.
 
-10. Username used for the restore service.
+10. Username used for the OPTIONAL restore service.
 
     Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
 
     Usernames are hashed before requests are sent to the restore service.
 
-11. Password used encrypt/decrypt the configuration files. 
+11. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service. 
 
     Only used on the client side in scripts.
 
@@ -74,6 +74,8 @@ backup:
     Options are: `true` or `false`
 
     Requires BTRFS on `/` or `/opt`
+
+Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
@@ -87,13 +89,13 @@ Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
         pass: # (2)!
     ```
 
-    1. Username used for the restore service.
+    1. Username used for the OPTIONAL restore service.
 
         Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
 
         Usernames are hashed before requests are sent to the restore service.
 
-    2. Password used encrypt/decrypt the configuration files. 
+    2. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
 
         Only used on the client side in scripts.
 

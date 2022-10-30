@@ -154,6 +154,7 @@ nav:
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Torrents:
             - Autobrr: sandbox/apps/autobrr.md
+              - Omegabrr: sandbox/apps/omegabrr.md
             - Delugevpn: sandbox/apps/delugevpn.md
             - qBit Management: sandbox/apps/qbit_manage.md
             - Rflood: sandbox/apps/rflood.md
@@ -212,6 +213,7 @@ nav:
             - kitana: sandbox/apps/kitana.md
             - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
+            - PlexTraktSync: sandbox/apps/plextraktsync.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md
           # - Requests:

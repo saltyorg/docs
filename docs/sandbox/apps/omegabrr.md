@@ -8,7 +8,7 @@
 |-------------|
 | [:octicons-mark-github-16: Github](https://github.com/autobrr/omegabrr){: .header-icons target=_blank rel="noopener noreferrer" } |
 
-Suitable install type: Feederbox
+Recommended install types: Feederbox, Saltbox
 
 ### 1. Installation
 

@@ -26,6 +26,9 @@ sb update
 
 ```
 
+!!! info
+    Note that `sb update` updates only the saltbox files themselves; it does not update any applications.  You will need to follow this with an `sb install <tags here>` command to update applications or installed components.
+
 ### How to Install Sandbox Apps
 
 For most apps it is as simple as running the `sb install` command in a shell with a `sandbox-` prefix followed by the name of the role.

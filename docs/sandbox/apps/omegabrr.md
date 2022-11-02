@@ -28,7 +28,7 @@ Restart the Docker container for the changes to take effect.
 
 ### 3. URL
 
-By default, the built-in HTTP server is not exposed to the web and can be queried locally via `http://omegabrr:7441`. If you wish to enable external access, add the following to your Saltbox inventory and redeploy the role:
+By default, the built-in HTTP server is not exposed to the web and can be reached by other applications in your server via `http://omegabrr:7441`. If you wish to enable remote access, add the following to your Saltbox inventory and redeploy the role:
 
 ```yaml
 omegabrr_web_enabled: true

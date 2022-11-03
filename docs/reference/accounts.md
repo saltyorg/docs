@@ -57,6 +57,8 @@
 
         - Note: if you are using a subdomain, like WHATEVER.DOMAIN.TLD, as your domain above, leave these blank. The Cloudflare automation does not work in that case and the install will stop with an error.
 
+        - Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
+
 - `plex`: Plex.tv account credentials.
 
     - This will be used to:

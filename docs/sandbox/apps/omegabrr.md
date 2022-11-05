@@ -12,17 +12,13 @@ Recommended install types: Feederbox, Saltbox
 
 ### 1. Installation
 
-``` shell
+```shell
 sb install sandbox-omegabrr
 ```
 
 ### 2. URL (API)
 
-Applications on the server may reach the Omegabrr server via `http://omegabrr:7441`. For external use:
-
-```
-https://omegabrr.domain.tld
-```
+Local applications may reach the Omegabrr server via `http://omegabrr:7441`. For external use, `https://omegabrr._yourdomain.com_` is available.
 
 ### 3. Setup
 

@@ -58,6 +58,7 @@
   -  **[lazylibrarian](../sandbox/apps/lazylibrarian.md)**  - tag - `sandbox-lazylibrarian`
   -  **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
   -  **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
+  -  **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
   -  **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
   -  **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
   -  **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`

@@ -34,6 +34,7 @@
   -  **[flaresolverr](../sandbox/apps/flaresolverr.md)**  - tag - `sandbox-flaresolverr`
   -  **[freshrss](../sandbox/apps/freshrss.md)**  - tag - `sandbox-freshrss`
   -  **[funkwhale](../sandbox/apps/funkwhale.md)**  - tag - `sandbox-funkwhale`
+  -  **[gaps](../sandbox/apps/gaps.md)**  - tag - `sandbox-gaps`
   -  **[gitea](../sandbox/apps/gitea.md)**  - tag - `sandbox-gitea`
   -  **[glances_web](../sandbox/apps/glances_web.md)**  - tag - `sandbox-glances-web`
   -  **[goaccess](../sandbox/apps/goaccess.md)**  - tag - `sandbox-goaccess`

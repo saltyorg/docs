@@ -89,6 +89,7 @@
   -  **[plextraktsync](../sandbox/apps/plextraktsync.md)**  - tag - `sandbox-plextraktsync`
   -  **[plex_utills](../sandbox/apps/plex_utills.md)**  - tag - `sandbox-plex_utills`
   -  **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
+  -  **[Puddletag](../sandbox/apps/puddletag.md)**  - tag - `sandbox-puddletag`
   -  **[pyload](../sandbox/apps/pyload.md)**  - tag - `pyload`
   -  **[python-plexlibrary](../sandbox/apps/python-plexlibrary.md)**  - tag - `python-plexlibrary`
   -  **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit_manage`

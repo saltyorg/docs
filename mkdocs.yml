@@ -251,6 +251,7 @@ nav:
           - guacamole: sandbox/apps/guacamole.md
           - handbrake: sandbox/apps/handbrake.md
           - MakeMKV: sandbox/apps/makemkv.md
+          - Puddletag: sandbox/apps/puddletag.md
           - sabthrottle: sandbox/apps/sabthrottle.md
           - speedtest: sandbox/apps/speedtest.md
           - sqlitebrowser: sandbox/apps/sqlitebrowser.md

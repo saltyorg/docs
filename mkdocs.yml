@@ -209,6 +209,7 @@ nav:
             - embystat: sandbox/apps/embystat.md
           - Plex:
             - Extended Personal Media Scanner: sandbox/apps/epms.md
+            - Gaps: sandbox/apps/gaps.md
             - goplaxt: sandbox/apps/goplaxt.md
             - kitana: sandbox/apps/kitana.md
             - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md

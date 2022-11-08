@@ -252,7 +252,7 @@ nav:
           - handbrake: sandbox/apps/handbrake.md
           - MakeMKV: sandbox/apps/makemkv.md
           - sabthrottle: sandbox/apps/sabthrottle.md
-          - sarotate: sandbox/apps/sarotate.md
+          - Sarotate: sandbox/apps/sarotate.md
           - speedtest: sandbox/apps/speedtest.md
           - sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - sshwifty: sandbox/apps/sshwifty.md

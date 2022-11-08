@@ -18,7 +18,7 @@ sb install sandbox-sarotate
 
 ```
 
-### 3. Usage
+### 2. Usage
 
 - After installing the role, add your SA path to the settings file in `/opt/sandbox/settings.yml`
 

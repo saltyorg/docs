@@ -250,6 +250,7 @@ nav:
             - monitorr: sandbox/apps/monitorr.md
           - guacamole: sandbox/apps/guacamole.md
           - handbrake: sandbox/apps/handbrake.md
+          - MakeMKV: sandbox/apps/makemkv.md
           - sabthrottle: sandbox/apps/sabthrottle.md
           - speedtest: sandbox/apps/speedtest.md
           - sqlitebrowser: sandbox/apps/sqlitebrowser.md

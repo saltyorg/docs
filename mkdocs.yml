@@ -155,8 +155,8 @@ nav:
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Torrents:
             - Autobrr: sandbox/apps/autobrr.md
-              - Omegabrr: sandbox/apps/omegabrr.md
             - Delugevpn: sandbox/apps/delugevpn.md
+            - Omegabrr: sandbox/apps/omegabrr.md
             - qBit Management: sandbox/apps/qbit_manage.md
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md

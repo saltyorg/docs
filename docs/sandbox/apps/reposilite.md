@@ -1,8 +1,5 @@
 # reposilite
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
-
 ## What is it?
 
 [reposilite](https://reposilite.com/){: target=_blank rel="noopener noreferrer" } is a...
@@ -21,7 +18,7 @@ sb install sandbox-reposilite
 
 ### 2. URL
 
-- To access rdtclient, visit `https://reposilite._yourdomain.com_`
+- To access reposilite, visit `https://reposilite._yourdomain.com_`
 
 ### 3. Usage
 

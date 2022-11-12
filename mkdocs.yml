@@ -262,6 +262,7 @@ nav:
             - apprise: sandbox/apps/apprise.md
             - glances_web: sandbox/apps/glances_web.md
             - Healthchecks: sandbox/apps/healthchecks.md
+            - Duplicati: sandbox/apps/duplicati.md
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md

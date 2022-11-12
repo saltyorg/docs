@@ -26,6 +26,7 @@
   -  **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
   -  **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
   -  **[dozzle](../sandbox/apps/dozzle.md)**  - tag - `sandbox-dozzle`
+  -  **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
   -  **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
   -  **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
   -  **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`

@@ -96,6 +96,7 @@
   -  **[qbittorrentvpn](../sandbox/apps/qbittorrentvpn.md)**  - tag - `sandbox-qbittorrentvpn`
   -  **[rdtclient](../sandbox/apps/rdtclient.md)**  - tag - `sandbox-rdtclient`
   -  **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
+  -  **[reposilite](../sandbox/apps/reposilite.md)**  - tag - `sandbox-reposilite`
   -  **[requestrr](../sandbox/apps/requestrr.md)**  - tag - `sandbox-requestrr`
   -  **[requestrrx](../sandbox/apps/requestrrx.md)**  - tag - `sandbox-requestrrx`
   -  **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`

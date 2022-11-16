@@ -9,9 +9,9 @@
 !!! Note
       📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/l3uddz/tqm#example-configuration) is an example config you can grab and fill in with your own details.
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/l3uddz/tqm#example-configuration){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/tqm){: .header-icons target=_blank rel="noopener noreferrer" }|
+| Details     |
+|-------------|
+| [:octicons-mark-github-16: Github](https://github.com/l3uddz/tqm){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -31,9 +31,10 @@ nano /opt/tqm/config.yaml
 
 ```
 
-As setup for Saltbox, tqm uses this path to find your downloads  `/mnt/unionfs/downloads/...` (see [Paths](../saltbox/basics/paths.md#media))
-
 ### Modify "Client" section
+
+!!! Note
+      📢 As setup for Saltbox, tqm uses this path to find your downloaded files:  `/mnt/unionfs/downloads/...` (see [Paths](../saltbox/basics/paths.md#media))
 
 Client Example:
 
@@ -72,6 +73,8 @@ Client Example:
 Filter Example:
 
 ```yaml
+
+...
 filters:
   default:
     ignore:
@@ -83,7 +86,9 @@ filters:
       - IsUnregistered()
       - Label contains "-imported" && TrackerName contains "avistaz.to" && (Ratio > 2.0 || SeedingDays >= 21.0)
       - Label contains "-imported" && TrackerName contains "nebulance.io" && SeedingDays >= 6.0
-      - Label in ["sonarr-imported", "radarr-imported", "lidarr-imported"] && (Ratio > 4.0 || SeedingDays >= 15.0)
+      - Label in ["readarr-imported", "lidarr-imported"] && (Ratio > 5.0 || SeedingDays >= 25.0)
+      - Label in ["autoremove-btn"] && (Ratio > 3.0 || SeedingDays >= 15.0)
+...
 
 ```
 
@@ -93,6 +98,29 @@ filters:
 
 Note: There are many ways to do the same thing. Check the **language definitions** for an explanation [here](https://github.com/antonmedv/expr/blob/586b86b462d22497d442adbc924bfb701db3075d/docs/Language-Definition.md){: .header-icons target=_blank rel="noopener noreferrer" }
 
+### Modify "Label" section
 
+Label Example:
+
+```yaml
+
+...
+    label:
+      # Permaseed Animebytes torrents
+      - name: permaseed-AB
+        update:
+          - SeedingSeconds > 1000.0
+          - Label contains "-imported"
+          - TrackerName contains "animebytes.tv"
+      # cleanup btn season packs to autoremove-btn (all must evaluate to true)
+      - name: autoremove-btn
+        update:
+          - Label == "sonarr-imported"
+          - TrackerName == "landof.tv"
+          - not (Name contains "1080p")
+          - len(Files) >= 3
+...
+
+```
 
 - [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -4,10 +4,10 @@
 
 [tqm](https://github.com/l3uddz/tqm){: target=_blank rel="noopener noreferrer" } is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
 
-- Duplicates can be either in bulk (automatic) or one-by-one (interactively).
+- The tqm binary is downloaded and a service and timer file created when the config is identified.
 
 !!! Note
-      📢 You will need to have a `config.yaml` in place for the role to run successfully.  [Here](https://github.com/l3uddz/tqm#plex) is an example config you can grab and fill in with your own details.
+      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/l3uddz/tqm#example-configuration) is an example config you can grab and fill in with your own details.
 
 | Details     |             |             |
 |-------------|-------------|-------------|
@@ -22,5 +22,77 @@ sb install sandbox-tqm
 ```
 
 ### 2. Setup
+
+Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
+
+``` shell
+
+nano /opt/tqm/config.yaml
+
+```
+
+As setup for Saltbox, tqm uses this path to find your downloads  `/mnt/unionfs/downloads/...` (see [Paths](../saltbox/basics/paths.md#media))
+
+### Modify "Client" section
+
+Client Example:
+
+```yaml
+
+...
+  qbt:
+    download_path: /mnt/unionfs/downloads/torrents/qbittorrent/completed
+    free_space_path: /mnt/local/downloads/torrents/qbittorrent/completed
+    download_path_mapping:
+      /mnt/unionfs/downloads/torrents/qbittorrent/completed: /mnt/unionfs/downloads/torrents/qbittorrent/completed
+    enabled: true
+    filter: default
+    type: qbittorrent
+    url: http://qbittorrent:8080
+    user: seed
+    password: super_strong_password
+...
+
+```
+
+`download_path:` The absolute path to your download clients download files.
+
+`free_space_path:` Typically the local mergerfs path to show available space.
+
+`enabled:` Set to boolean value (true, false) depending on the client you use.
+
+`url:` Set to the examples equivalent of your client.
+
+`user:` your default user from **accounts.yml**
+
+`password:` your default password from **accounts.yml**
+
+### Modify "Filter" section
+
+Filter Example:
+
+```yaml
+filters:
+  default:
+    ignore:
+      - TrackerName contains "sportscult"
+      - TrackerStatus contains "Tracker is down"
+      - Label contains "upload"
+      - Downloaded == false && !IsUnregistered()
+    remove:
+      - IsUnregistered()
+      - Label contains "-imported" && TrackerName contains "avistaz.to" && (Ratio > 2.0 || SeedingDays >= 21.0)
+      - Label contains "-imported" && TrackerName contains "nebulance.io" && SeedingDays >= 6.0
+      - Label in ["sonarr-imported", "radarr-imported", "lidarr-imported"] && (Ratio > 4.0 || SeedingDays >= 15.0)
+
+```
+
+`ignore:` Instructs **tqm** to ignore anything defined.
+
+`remove:` Instructs **tqm** what files to delete based on what is defined in the **filter**.
+
+Note: There are many ways to do the same thing. Check the **language definitions** for an explanation [here](https://github.com/antonmedv/expr/blob/586b86b462d22497d442adbc924bfb701db3075d/docs/Language-Definition.md){: .header-icons target=_blank rel="noopener noreferrer" }
+
+
 
 - [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" }

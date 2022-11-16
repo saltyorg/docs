@@ -123,4 +123,12 @@ Label Example:
 
 ```
 
+!!! Note
+      📢 tqm will not create a category for you, so be sure to create the category first. If you
+      want the file moved as well, you will need to set **Default Torrent Management Mode: Automatic**.
+
+`name:` The category (label) you want the torrent changed to.
+
+`update:` Define what is to be moved by tqm.
+
 - [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -41,6 +41,19 @@ Client Example:
 ```yaml
 
 ...
+  deluge:
+    enabled: false
+    filter: default
+    download_path: /mnt/unionfs/downloads/torrents/deluge
+    free_space_path: /mnt/local/downloads/torrents/deluge
+    download_path_mapping:
+      /downloads/torrents/deluge: /mnt/unionfs/downloads/torrents/deluge
+    host: deluge
+    login: localclient
+    password: password-from-/opt/deluge/auth
+    port: 58846
+    type: deluge
+    v2: true
   qbt:
     download_path: /mnt/unionfs/downloads/torrents/qbittorrent/completed
     free_space_path: /mnt/local/downloads/torrents/qbittorrent/completed
@@ -106,7 +119,7 @@ Label Example:
 
 ...
     label:
-      # Permaseed Animebytes torrents
+      # Permaseed Animebytes torrents (all must evaluate to true)
       - name: permaseed-AB
         update:
           - SeedingSeconds > 1000.0

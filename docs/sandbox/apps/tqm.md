@@ -15,15 +15,7 @@
 
 Recommended install types: Feederbox, Saltbox, Core
 
-### 1. Installation
-
-``` shell
-
-sb install sandbox-tqm
-
-```
-
-### 2. Setup
+### 1. Setup
 
 Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
 
@@ -145,5 +137,29 @@ Label Example:
 `name:` The category (label) you want the torrent changed to.
 
 `update:` Define what is to be moved by tqm.
+
+### 2. Installation
+
+``` shell
+
+sb install sandbox-tqm
+
+```
+
+To check the status of the service, you can run:
+
+```shell
+
+sudo systemctl status tqm.service
+
+```
+
+You can also follow the logs with:
+
+```shell
+
+tail -f /opt/tqm/activity.log
+
+```
 
 - [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" }

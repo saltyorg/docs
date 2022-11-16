@@ -17,7 +17,7 @@ Recommended install types: Feederbox, Saltbox, Core
 
 ### 1. Setup
 
-Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
+Edit in your favorite code editor  (with yaml highlighting) or even a unix editor like nano.
 
 ``` shell
 

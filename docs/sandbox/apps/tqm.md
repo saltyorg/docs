@@ -138,6 +138,41 @@ Label Example:
 
 `update:` Define what is to be moved by tqm.
 
+### Modify the "Service" file
+
+If you don't feel comfortable editing the service file directly, you can edit the **settings.yml** file in `/opt/sandbox/`. Once you set your download client, run the role again and it will update the service.
+
+Shortened example of **settings.yml**:
+
+```yaml
+
+...
+tandoor:
+  secret_key:
+tqm:
+  download_client: "qbt" # Change this to deluge or whatever you specify in config.yaml
+transmissionvpn:
+  vpn_user:
+  vpn_pass:
+  vpn_prov:
+...
+
+```
+
+However, if you want to risk it all and edit the service file, you can change the tqm command to relabel, or run it manually from command line. An example of an edited service could look like this:
+
+```yaml
+
+...
+Type=oneshot
+ExecStart=/opt/tqm/tqm \
+  clean qbt
+ExecStartPost=/opt/tqm/tqm \
+  relabel qbt
+...
+
+```
+
 ### 2. Installation
 
 ``` shell

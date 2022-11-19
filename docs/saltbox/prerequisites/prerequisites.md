@@ -19,16 +19,22 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 
 <!-- /TOC -->
 
-##Server
+## System Requirements
+### Operating Systems
+At this time, we only support LTS releases of Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) and [22.04](https://releases.ubuntu.com/22.04/), freshly installed.
 
+!!! warning
+    Desktop editions are excluded. While Saltbox may technically run alongside a desktop environment, we will decline all forms of support around this use case.
+
+### Server
 For best results, the assumed server environment for Saltbox is:
 
- - a dedicated remote x64 [Intel or AMD; ARM NOT SUPPORTED] server [not a VPS],
- - from a server provider like Hetzner, OVH, kimsufi, etc.
- - freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/),
- - nothing else [docker, for example] preinstalled, 
+ - a dedicated remote server [not a VPS],
+ - a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
+ - from a server provider like Hetzner, OVH, kimsufi, etc.,
+ - nothing else [docker, for example] preinstalled,
  - with at least 500GB of disk space, and
- - allowing root access
+ - allowing root access.
 
 See [here](../../reference/server.md) for more information about server requirements.
 

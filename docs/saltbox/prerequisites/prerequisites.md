@@ -24,7 +24,7 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 At this time, we only support LTS releases of Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) and [22.04](https://releases.ubuntu.com/22.04/), freshly installed.
 
 !!! warning
-    Desktop editions are excluded. While Saltbox may technically run alongside a desktop environment, we will decline support around this use case.
+    Desktop editions are excluded. While Saltbox may technically run alongside a desktop environment, we will decline all forms of support around this use case.
 
 ### Server
 For best results, the assumed server environment for Saltbox is:

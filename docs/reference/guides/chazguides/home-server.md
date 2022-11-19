@@ -84,6 +84,8 @@ You can see here that I’ve set it such that outside requests to port 80, 443, 
 
 Depending on the applications you end up installing, you may need to forward other ports.  That example covers the reverse proxy (80 $ 443), ssh (3526), and Plex-Autoscan (3468).
 
+Ports used by the stock saltbox apps can be found [here](https://docs.saltbox.dev/reference/ports/).
+
 !!! warning
     If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
 

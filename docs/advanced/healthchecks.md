@@ -87,7 +87,7 @@ lunasea_docker_healthcheck:
   start_period: 10s
 
 omegabrr_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ omegabrr_web_port }}"]
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ omegabrr_web_port }}/api/webhook/trigger"]
   interval: 10s
   timeout: 5s
   retries: 10

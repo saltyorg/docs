@@ -61,19 +61,19 @@ The docs are actually built with a different release of mkdocs-material, so to p
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/BeansIsFat>
-            <img src=https://avatars.githubusercontent.com/u/24848012?v=4 width="100;"  alt=BeansIsFat/>
+        <a href=https://github.com/keldian>
+            <img src=https://avatars.githubusercontent.com/u/953679?v=4 width="100;"  alt=keldian/>
             <br />
-            <sub style="font-size:14px"><b>BeansIsFat</b></sub>
+            <sub style="font-size:14px"><b>keldian</b></sub>
         </a>
     </td>
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/keldian>
-            <img src=https://avatars.githubusercontent.com/u/953679?v=4 width="100;"  alt=keldian/>
+        <a href=https://github.com/BeansIsFat>
+            <img src=https://avatars.githubusercontent.com/u/24848012?v=4 width="100;"  alt=BeansIsFat/>
             <br />
-            <sub style="font-size:14px"><b>keldian</b></sub>
+            <sub style="font-size:14px"><b>BeansIsFat</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

@@ -63,7 +63,7 @@ Client Example:
 
 ```
 
-`download_path:` The absolute path to your download clients download files.
+`download_path:` Where your downloaded files are stored.
 
 `free_space_path:` Typically the local mergerfs path to show available space.
 
@@ -158,6 +158,7 @@ transmissionvpn:
 ...
 
 ```
+
 ### 2. Installation
 
 ``` shell

@@ -140,7 +140,7 @@ Label Example:
 
 ### Modify the "Settings" file
 
-If you don't feel comfortable editing the service file directly, you can edit the **settings.yml** file in `/opt/sandbox/`. Once you set your download client, run the role again and it will update the service.
+You can edit the **settings.yml** file in `/opt/sandbox/`. Once you set your download client, run the role again and it will update the service.
 
 Shortened example of **settings.yml**:
 

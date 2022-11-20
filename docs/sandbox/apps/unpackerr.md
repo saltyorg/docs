@@ -19,3 +19,17 @@ sb install sandbox-unpackerr
 ### 2. Setup
 
 - [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons target=_blank rel="noopener noreferrer" }
+
+The important part of the setup is the setup for the applications.  You'll need to change these three settings for each:
+
+```
+[[sonarr]]
+  url = "http://sonarr:8989"
+  api_key = "YOUR_API_KEY"
+# File system path where downloaded Sonarr items are located.
+  paths = ['/mnt/unionfs/downloads/torrents/rutorrent/completed']
+```
+
+The `path` will depend on the torrent client you are using and its configuration.
+
+Same setup is required for radarr, lidarr, and readarr if you are using them.

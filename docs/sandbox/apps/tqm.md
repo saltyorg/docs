@@ -138,7 +138,7 @@ Label Example:
 
 `update:` Define what is to be moved by tqm.
 
-### Modify the "Service" file
+### Modify the "Settings" file
 
 If you don't feel comfortable editing the service file directly, you can edit the **settings.yml** file in `/opt/sandbox/`. Once you set your download client, run the role again and it will update the service.
 
@@ -158,21 +158,6 @@ transmissionvpn:
 ...
 
 ```
-
-However, if you want to risk it all and edit the service file, you can change the tqm command to relabel, or run it manually from command line. An example of an edited service could look like this:
-
-```yaml
-
-...
-Type=oneshot
-ExecStart=/opt/tqm/tqm \
-  clean qbt
-ExecStartPost=/opt/tqm/tqm \
-  relabel qbt
-...
-
-```
-
 ### 2. Installation
 
 ``` shell

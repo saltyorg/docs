@@ -124,6 +124,7 @@
   -  **[transmissionvpn](../sandbox/apps/transmissionvpn.md)**  - tag - `sandbox-transmissionvpn`
   -  **[transmissionx](../sandbox/apps/transmissionx.md)**  - tag - `sandbox-transmissionx`
   -  **[trilium](../sandbox/apps/trilium.md)**  - tag - `sandbox-trilium`
+  -  **[tubearchivist](../sandbox/apps/tubearchivist.md)**  - tag - `sandbox-tubearchivist`
   -  **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`
   -  **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
   -  **[unpackerr](../sandbox/apps/unpackerr.md)**  - tag - `sandbox-unpackerr`

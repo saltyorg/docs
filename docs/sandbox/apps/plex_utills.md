@@ -5,7 +5,7 @@
 
 ## What is it?
 
-[plex_utills](https://appname.url{: target=_blank rel="noopener noreferrer" } is a...
+[plex_utills](https://github.com/jkirkcaldy/plex-utills){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

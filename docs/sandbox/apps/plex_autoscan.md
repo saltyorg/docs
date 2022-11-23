@@ -5,7 +5,7 @@
 
 ## What is it?
 
-[plex_autoscan](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[plex_autoscan](https://github.com/l3uddz/plex_autoscan){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -1,7 +1,7 @@
 
-# Prerequisites:
+# Prerequisites
 
-When you install existing roles in saltbox, some things get handled behind the scenes for you.  Notably, this includes creating the subdomain[s] at cloudflare and creating the `/opt/APPNAME ` directory tree.
+When you install existing roles in saltbox, some things get handled behind the scenes for you.  Notably, this includes creating the subdomain[s] at cloudflare and creating the `/opt/APPNAME` directory tree.
 
 When you add a container manually as outlined on this page, neither of those things will be done for you, so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
 
@@ -10,7 +10,6 @@ The examples below are `docker run` commands that you would execute in an SSH se
 If you want to create a role file that you can install like the built-in applications, see [here](../../sandbox/basics/#contributing-to-sandbox-apps).
 
 # Format
-
 
 <pre>
 docker run -d  \
@@ -96,7 +95,7 @@ docker run -d \
     --label traefik.http.routers.<strong>tautulli</strong>.service=<strong>tautulli</strong> \
     --label traefik.http.routers.<strong>tautulli</strong>.tls.certresolver=cfdns \
     --label traefik.http.routers.<strong>tautulli</strong>.tls.options=securetls@file \
-    --label traefik.http.services.<strong>tautulli</strong>.loadbalancer.server.port=<strong>8181</strong> \    
+    --label traefik.http.services.<strong>tautulli</strong>.loadbalancer.server.port=<strong>8181</strong> \
     <strong>linuxserver/tautulli</strong>
 </pre>
 
@@ -277,10 +276,10 @@ Note: These are important, but leave them out if your docker run command require
 1. Omit `authelia@docker` to disable SSO. If your Authelia master instance is on another server (i.e. split feederbox/mediabox setup) modify this to be `authelia` only.
 2. The port for the web admin page for the container.
 
-
 You'll need to add the subdomain manually at your DNS provider if you're not using wild-card DNS.
 
 ## Docker Compose
+
 Here is the example in compose format and connecting to the `saltbox` Docker network to be served by Traefik.
 
 As noted above, you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create any required `/opt/APPNAME` directory tree manually.  Creating the container using `docker-compose` will not do those things automatically the way an `sb install APPNAME` Ansible run would.

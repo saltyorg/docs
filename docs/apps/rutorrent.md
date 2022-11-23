@@ -1,6 +1,6 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-## What is it?
+# What is it?
 
 [ruTorrent](https://github.com/Novik/ruTorrent) (by Novik) is a front-end for the popular, lightweight, and extensible BitTorrent client [rtorrent](https://github.com/rakshasa/rtorrent) (by Jari Sundell aka rakshasa).
 
@@ -8,11 +8,11 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 | Details     |             |             |             |             |
 |-------------|-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }|
+| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 1. URL
 
-- To access ruTorrent, visit https://rutorrent._yourdomain.com_
+- To access ruTorrent, visit `https://rutorrent._yourdomain.com_`
 
 ## 2. Basics
 
@@ -34,9 +34,9 @@ To enable AutoUnpack:
 
 3. Check "Enable autounpacking if torrents label matches filter" and add the following:
 
-   ```
+```text
    /.*(radarr|sonarr|lidarr).*/i
-   ```
+```
 
 4. Leave the other fields blank.
 
@@ -46,22 +46,21 @@ To enable AutoUnpack:
 
 6. Click "OK".
 
-
 ## 3. Custom Plugins and Themes
 
 You can have custom plugins and themes imported during Docker container rebuild. Just place them in the following paths:
 
-```
+```text
 /opt/rutorrent/plugins/
 ```
 
-```
+```text
 /opt/rutorrent/themes/
 ```
 
 And then restart the Docker container:
 
-```
+```bash
 docker restart rutorrent
 ```
 

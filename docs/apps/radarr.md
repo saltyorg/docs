@@ -1,14 +1,14 @@
-## What is it?
+# What is it?
 
 [Radarr](https://radarr.video/) is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://radarr.video/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/radarr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Radarr/Radarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/radarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://radarr.video/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/radarr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Radarr/Radarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/radarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## URL
 
-- To access Radarr, visit https://radarr._yourdomain.com_
+- To access Radarr, visit `https://radarr._yourdomain.com_`
 
 ## Settings
 
@@ -270,33 +270,33 @@ Make changes in the following sections:
 
             5. Click "Save" to add ruTorrent.
 
-	=== "qBittorrent"
+    === "qBittorrent"
 
-	    1. Click Add ('+')
+        1. Click Add ('+')
 
-	    2. Add a new "qBittorrent" download client.
+        2. Add a new "qBittorrent" download client.
 
-	    3. Add the following:
+        3. Add the following:
 
-		Name: qBittorrent
+        Name: qBittorrent
 
-		Enable: 'Yes'
+        Enable: 'Yes'
 
-		Host: 'qBittorrent'
+        Host: 'qBittorrent'
 
-		Port: '8080'
+        Port: '8080'
 
                 Username: [Your qBittorrent Username](../community/apps/qbittorrent.md)
 
                 Password: [Your qBittorrent Password](../community/apps/qbittorrent.md)
 
-		Category: 'radarr'
+        Category: 'radarr'
 
-	    4.  Your settings will now look like this:
+        4.  Your settings will now look like this:
 
-		![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
+        ![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
 
-	    5.  Click "Save" to add qBittorrent qb
+        5.  Click "Save" to add qBittorrent qb
 
     === "Connect"
 
@@ -411,6 +411,7 @@ Make changes in the following sections:
             - Click "Save".
 
 ## Movies Path
+
 1. When you are ready to add your first movie to Radarr, click the "Path" drop-down and select "Add a new path".
 
 2. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/Movies`, scroll to the bottom, and select "OK".
@@ -420,7 +421,6 @@ Make changes in the following sections:
 4. All movies added now will have that path set.
 
 ![Radarr Add](../images/radarr/radarr-add.png)
-
 
 ## API Key
 

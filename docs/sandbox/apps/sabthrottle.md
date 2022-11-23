@@ -1,4 +1,4 @@
-# SABThrottle 
+# SABThrottle
 
 ## What is it?
 
@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/8a8al00ey/sabthrottle){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -22,7 +22,8 @@ sb install sandbox-sabthrottle
 
     - Running the role will autopopulate plex token and plex url.
     - If you require more then 5 stream count just follow the example and add more using proper yml formatting.
-    - You can always check logs via 
+    - You can always check logs via
+
         ``` shell
         docker logs -f sabthrottle
         ```

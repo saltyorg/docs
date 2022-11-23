@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://reposilite.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://reposilite.com/guide/about){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/dzikoysk/reposilite){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/dzikoysk/reposilite){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://reposilite.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://reposilite.com/guide/about){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/dzikoysk/reposilite){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/dzikoysk/reposilite){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

@@ -1,17 +1,16 @@
-## What is it?
+# What is it?
 
 [NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://nzbget.net){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://nzbget.net/documentation){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/nzbget/nzbget){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/nzbget){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://nzbget.net){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://nzbget.net/documentation){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/nzbget/nzbget){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/nzbget){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 1. Accessing NZBGet
 
-- To access NZBGet, visit https://nzbget._yourdomain.com_
+- To access NZBGet, visit `https://nzbget._yourdomain.com_`
 
 ## 2. Settings
-
 
 ### Paths
 
@@ -37,7 +36,6 @@
 
     - If you set up the 300 [service accounts in Rclone](https://docs.saltbox.dev/reference/rclone-manual/) you can ignore this.
     - Otherwise it's recommended you set this to `750000` (i.e. 750GB), to coincide with the Google Drive daily upload limit.
-
 
 ## 3. Extensions
 

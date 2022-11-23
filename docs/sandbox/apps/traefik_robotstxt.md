@@ -8,7 +8,7 @@ __Robots.txt__ basically works like a “No Trespassing” sign. It actually, te
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -17,11 +17,13 @@ sb install sandbox-traefik_robotstxt
 ```
 
 ### 2. Result
-```
+
+```text
 HTTP/1.1 200 OK
 Content-Length: 26
 
 User-agent: *
 Disallow: /
 ```
+
 When you want to reach `*.yourdomain.tld/robots.txt`

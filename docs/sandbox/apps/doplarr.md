@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://ghcr.io/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://ghcr.io/kiranshila/doplarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## Setup Doplarr
 
@@ -18,7 +18,7 @@
 4. Go to OAuth2 and under "OAuth2 URL Generator", enable `applications.commands` and `bot`
 5. Copy the resulting URL and open it in your browser in order to invite your bot to your discord channel.
 
-### 2. Set up overseer parameters.
+### 2. Set up overseer parameters
 
 1. In `/opt/sandbox/settings.yaml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct.
 2. In `/opt/sandbox/settings.yaml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
@@ -37,7 +37,7 @@ sb install sandbox-doplarr
       The recommended way to customize these parameters is to use the [inventory](https://docs.saltbox.dev/saltbox/inventory/) :
       You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section:
 
-      ```
+  ```yaml
       ### Custom settings for Doplarr ###
       doplarr_docker_envs_defaults:
         SONARR__URL: "http://sonarr:8989"

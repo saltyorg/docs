@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -15,8 +15,6 @@
 sb install sandbox-delugevpn
 
 ```
-
-
 
 ### 2. URL
 
@@ -37,7 +35,6 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
       vpn_client: wireguard # 'wireguard' or 'openvpn'
    ```
 
-
 **For Private Internet Access** <br />
 
 - Add your user name and password
@@ -50,7 +47,7 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
 - Leave `vpn_endpoint` as `netherlands.ovpn`
 - Follow step 2 below then immediately follow step 3
 
-###**Run the DelugeVPN Role**
+### **Run the DelugeVPN Role**
 
 ``` { .shell }
 
@@ -71,22 +68,26 @@ The steps above have created some files in `/opt/delugevpn/openvpn`.
 - `credentials.conf`  - Leave this. Your VPN username and password are stored here.
 - `netherlands.ovpn`  - Your server details are stored here. We will change this.
 
-```
+```shell
 docker stop delugevpn
 cd /opt/delugevpn/openvpn
 rm netherlands.ovpn
 ```
+
 Now you can upload your own .ovpn file from your VPN provider, renamed as `netherlands.ovpn`. If your VPN provider has also included a `ca.crt` file, upload that file as well. Upload one or both files into `/opt/delugevpn/openvpn`.
 
 ### Note
+
 Do not rename the original `netherlands.ovpn` file if you're using Filezilla. delugevpn will automatically use the renamed file instead of `netherlands.ovpn` and your newly uploaded .ovpn file will still be ignored.
 
 Now you can restart the docker
-```
+
+```shell
 docker start delugevpn
 ```
 
 ## Configuration
+
 **FOR PIA**
 
   - **vpn_user:** Your PIA user name
@@ -138,6 +139,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 - Follow installation steps above again
 
 ### For app specific instructions refer to the parent role
+
  - [Deluge](../../apps/deluge.md) <br />
  - and the upstream documentation <br />
-   [:octicons-link-16: Documentation ](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }
+   [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }

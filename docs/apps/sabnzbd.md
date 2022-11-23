@@ -1,6 +1,6 @@
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-## What is it?
+# What is it?
 
 [SABnzbd](https://github.com/Novik/ruTorrent) is an Open Source Binary Newsreader written in Python.
 
@@ -8,17 +8,17 @@ It's totally free, easy to use, and works practically everywhere. SABnzbd makes 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://sabnzbd.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://sabnzbd.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 1. Installation
 
-```
+```bash
 sb install sabnzbd
 ```
 
 ## 1. URL
 
-- To access sabnzbd, visit https://sabnzbd._yourdomain.com_
+- To access sabnzbd, visit `https://sabnzbd._yourdomain.com_`
 
 ## 2. Basics
 

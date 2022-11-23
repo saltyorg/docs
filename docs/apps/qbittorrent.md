@@ -8,7 +8,7 @@ It aims to be a good alternative to all other bittorrent clients out there. qBit
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://www.qbittorrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/qbittorrent/qBittorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/saltydk/qbittorrent){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.qbittorrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/qbittorrent/qBittorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/saltydk/qbittorrent){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -25,10 +25,11 @@ sb install qbittorrent
 ### 3. Setup
 
 - Access qbittorrent at `https://qbittorrent._yourdomain.com_`
-    ``` { .yaml }
+
+``` { .yaml }
       username: `admin`
       password: `adminadmin`.
-    ```
+```
 
 - **First** go to `Options` -> `Web UI` and set a new username and a strong password.
 
@@ -58,9 +59,11 @@ sb install qbittorrent
       Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!<br>
       If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).<br><br>
       If you don't need the Web API exposed, you can do so using the [inventory system](/saltbox/inventory/) with
-      ``` { .yaml }
+
+``` { .yaml }
        qbittorrent_traefik_api_enabled: false
-      ```
+```
+
       and by rerunning the `qbittorrent` tag.
 
 !!! Note

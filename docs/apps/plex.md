@@ -1,14 +1,14 @@
-## What is it?
+# What is it?
 
 [Plex](https://plex.tv/) is a media server.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-mark-github-16: Github | [:material-docker: Docker ](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-mark-github-16: Github | [:material-docker: Docker](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## URL
 
-1. To access Plex, visit https://plex._yourdomain.com_
+1. To access Plex, visit `https://plex._yourdomain.com_`
 
 2. Login with your Plex account
 
@@ -227,10 +227,9 @@ To do so:
 
 3. Repeat steps 1-2 for each library.
 
-
 ## Webtools
 
-Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to https://plex-webtools._yourdomain.com_ and log in with your Plex account.
+Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to `https://plex-webtools._yourdomain.com_` and log in with your Plex account.
 
 ## Next
 

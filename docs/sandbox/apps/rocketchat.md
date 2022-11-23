@@ -2,14 +2,13 @@
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-
 ## What is it?
 
 [rocketchat](https://rocketchat.url){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://rocketchat.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://rocketchat.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/rocketchat/rocketchat){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/rocketchat/rocketchat){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://rocketchat.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://rocketchat.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/rocketchat/rocketchat){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/rocketchat/rocketchat){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

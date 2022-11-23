@@ -11,7 +11,7 @@ Paperless-NGX is forked from paperless-ng to continue the great work and distrib
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/paperless-ngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/paperlessngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/paperless-ngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/paperlessngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

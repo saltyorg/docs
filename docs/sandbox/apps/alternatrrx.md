@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/theultimatecoder/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -36,4 +36,4 @@ sb install sandbox-alternatrrx
 - For app specific instructions refer to the parent role,
      - [alternatrr](../../sandbox/apps/alternatrr.md)<Br/>
      - and the upstream documentation <BR/>
-       [:octicons-link-16: Documentation ](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }
+       [:octicons-link-16: Documentation](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }

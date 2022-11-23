@@ -1,17 +1,16 @@
-## What is it?
+# What is it?
 
 [Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://overseerr.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.overseerr.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/sct/overseerr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/sctx/overseerr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://overseerr.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.overseerr.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/sct/overseerr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/sctx/overseerr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
+## 1. URL
 
-# 1. URL
+- To access Overseerr, visit `https://overseerr._yourdomain.com_`
 
-- To access Overseerr, visit https://overseerr._yourdomain.com_
-
-# 2. Settings
+## 2. Settings
 
 This setup needs to take place **AFTER** you've set up Plex, Radarr, and Sonarr, since it involves connections to all three of those.
 

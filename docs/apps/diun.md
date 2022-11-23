@@ -6,8 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://crazymax.dev/diun){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://crazymax.dev/diun/notif/discord){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/crazy-max/diun){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/crazymax/diun){: .header-icons target=_blank rel="noopener noreferrer" }|
-
+| [:material-home: Project home](https://crazymax.dev/diun){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://crazymax.dev/diun/notif/discord){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/crazy-max/diun){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/crazymax/diun){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -16,7 +15,6 @@
 sb install diun
 
 ```
-
 
 ### 2. Setup
 

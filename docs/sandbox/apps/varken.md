@@ -8,7 +8,7 @@ Varken is a standalone application to aggregate data from the Plex ecosystem int
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/boerderij/varken){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Boerderij/Varken){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/boerderij/varken){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -52,25 +52,21 @@ sb install sandbox-varken
 
       - The configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-
-
 5. Add data source InfluxDB named InfluxDB:
 
-      1. **HTTP**: URL = http://influxdb:8086
+      1. **HTTP**: URL = `http://influxdb:8086`
 
       2. **InfluxDB Details**: Database = varken
 
       3. Save & Test
 
-
 6. Add data source InfluxDB named Telegraf:
 
-      1. **HTTP**: URL = http://influxdb:8086
+      1. **HTTP**: URL = `http://influxdb:8086`
 
       2. **InfluxDB Details**: Database = telegraf
 
       3. Save & Test
-
 
 2. Grafana Example from Organizrr Discord  (imported via `Dashboards > Manage > Import`) :
 
@@ -92,7 +88,7 @@ sb install sandbox-varken
 
 3. Grafana Examples from Varken Discord:
 
-      - [**Varken Official Supported Dashboards:** ](https://grafana.com/dashboards?search=varken%20%5Bofficial%5D){: target=_blank rel="noopener noreferrer" }
+      - [**Varken Official Supported Dashboards:**](https://grafana.com/dashboards?search=varken%20%5Bofficial%5D){: target=_blank rel="noopener noreferrer" }
 
       - [**Online Users Table Example (Tautulli):**](https://gist.github.com/samwiseg0/91223c1e089d78a3ae6294c23d81e977){: target=_blank rel="noopener noreferrer" }
 
@@ -106,7 +102,6 @@ sb install sandbox-varken
       - **Basic Panel Structure**
 
       ![](../../images/community/vrkn_basic_panel_structure.png)
-
 
 - For app specific instructions refer to the grafana role,
 

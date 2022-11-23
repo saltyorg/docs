@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://joplinapp.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://joplinapp.org/desktop/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/laurent22/joplin){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/florider89/joplin-server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://joplinapp.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://joplinapp.org/desktop/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/laurent22/joplin){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/florider89/joplin-server){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -27,7 +27,7 @@ sb install sandbox-joplin
     `email: admin@localhost`
     `password: admin`
 
-Change this asap. 
+Change this asap.
 
 - Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encryption. (Very simple)
 

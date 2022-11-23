@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://git.deluge-torrent.org/deluge){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/deluge){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://git.deluge-torrent.org/deluge){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/deluge){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -21,11 +21,13 @@ sb install deluge
 - To access Deluge, visit `https://deluge._yourdomain.com_`
 
 !!! info
-    **default login** <br />
-    ``` { .yaml }
+    **default login**
+
+```yaml
         user: admin
     password: deluge
-    ```
+```
+
 ### 3. Setup
 
 - Change login password.

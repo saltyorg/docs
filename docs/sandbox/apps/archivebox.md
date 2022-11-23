@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/archivebox/archivebox){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/archivebox/archivebox){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -25,22 +25,30 @@ sb install sandbox-archivebox
 Initial setup guide thanks to `erisheaded` on CB discord.
 
 1. Run tag:
+
     ``` { .shell }
     sb install sandbox-archivebox
     ```
+
 2. Connect to container:
+
    ``` { .shell }
    docker exec -it archivebox /bin/bash
    ```
+
    - NOTE: (This drops you in the /data folder. DO NOT switch to /data/archive directory)
 3. Switch to `archivebox` user for config:
+
    ``` { .shell }
    su archivebox
    ```
+
 4. Initialize with setup to create a web admin:
+
    ``` { .shell }
    archivebox init -—setup
    ```
+
 5. Enter username, email, and password
 6. Load URL and test login
 

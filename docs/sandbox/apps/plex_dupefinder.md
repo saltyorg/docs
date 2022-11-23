@@ -11,7 +11,7 @@
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/l3uddz/plex_dupefinder#introduction/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/l3uddz/plex_dupefinder#configuration/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/plex_dupefinder/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/l3uddz/plex_dupefinder#introduction/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/l3uddz/plex_dupefinder#configuration/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/plex_dupefinder/){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

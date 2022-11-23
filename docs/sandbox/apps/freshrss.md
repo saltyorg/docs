@@ -2,14 +2,13 @@
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-
 ## What is it?
 
 [freshrss](https://freshrss.org/){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://freshrss.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://freshrss.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://freshrss.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://freshrss.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

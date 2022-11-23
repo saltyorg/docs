@@ -2,7 +2,11 @@
 
 ## What is it?
 
-[Wikijs](https://js.wiki/){: target=_blank rel="noopener noreferrer" } is a popular and feature rich Open Source administration and development platform for PostgreSQL.
+[Wikijs](https://js.wiki/){: target=_blank rel="noopener noreferrer" } is a modern, lightweight and powerful wiki app built on NodeJS.
+
+- Manage all aspects of your wiki using the extensive and intuitive admin area.
+- Fully customize the appearance of your wiki, including a light and dark mode.
+- Make your wiki public, completely private or a mix of both.
 
 !!!info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into Wikijs with the email and password you set up upon instalation.

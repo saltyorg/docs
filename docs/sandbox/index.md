@@ -135,6 +135,7 @@
   -  **[vnstat](../sandbox/apps/vnstat.md)**  - tag - `sandbox-vnstat`
   -  **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
   -  **[whisparr](../sandbox/apps/whisparr.md)**  - tag - `sandbox-whisparr`
+  -  **[wikijs](../sandbox/apps/wikijs.md)**  - tag - `sandbox-wikijs`
   -  **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`
   -  **[wizarr](../sandbox/apps/wizarr.md)**  - tag - `sandbox-wizarr`
   -  **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`

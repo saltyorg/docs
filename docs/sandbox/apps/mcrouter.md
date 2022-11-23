@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[mcrouter](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[mcrouter](https://github.com/itzg/mc-router){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[pyload](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[pyload](https://pyload.net/){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

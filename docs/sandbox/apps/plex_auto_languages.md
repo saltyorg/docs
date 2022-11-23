@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[plex_auto_languages](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[plex_auto_languages](https://github.com/RemiRigal/Plex-Auto-Languages){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

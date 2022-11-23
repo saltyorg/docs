@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[gotenberg](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[gotenberg](https://gotenberg.dev/){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[freshrss](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
+[freshrss](https://freshrss.org/){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,11 +2,15 @@
 
 These are some rough notes on migrating from PlexGuide to Saltbox
 
-PG rclone.conf Location: `/opt/appdata/plexguide/rclone.conf`
+Some important files and their locations:
 
-PG Service accounts Location: `/opt/appdata/plexguide/.blitzkeys`
+|     file       |           PlexGuide location         |         saltbox default location        |
+|:---------------|:-------------------------------------|:----------------------------------------|
+| `rclone.conf`  | `/opt/appdata/plexguide/rclone.conf` | `/home/seed/.config/rclone/rclone.conf` |
+| SA JSON files  | `/opt/appdata/plexguide/.blitzkeys`  | `/opt/sa/all`                           |
 
-if you are restoring the arrs from pg to saltbox you will need to make the below changes in SB
+
+if you are restoring the arrs from pg to saltbox you will need to make these changes in SB
 
 ```shell
 sudo mkdir /mnt/gdrive
@@ -47,3 +51,5 @@ ExecStop=/bin/fusermount -uz /mnt/gdrive
 sudo systemctl enable gdrive.service
 sudo systemctl start gdrive.service
 ```
+
+These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation aroudn migration.

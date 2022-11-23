@@ -210,7 +210,7 @@ If you already know how to set that up, do so with your usual methods.  If not:
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
 === "I'm totally new to this"
-    If you have a brand new Google Drive account and want to be walked through allt he steps you need to perform, start [here](../../reference/rclone.md)
+    If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 
     That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
 
@@ -223,7 +223,7 @@ If you already know how to set that up, do so with your usual methods.  If not:
     The simplest possible case is:
 
     1. Set up a Google Project and OAuth Credential file if you don't already have one.
-       This process is described [here](../../reference/google-project-setup.md)  YOu will need the ID and Secret from that process in step 3 below.
+       This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.
     2. Create a Shared Drive in the Google Web UI.
        This process is described [here](../../reference/guides/google-shared-drive.md)
     3. Create an rclone remote pointing at that shared drive.

@@ -16,7 +16,7 @@ The following steps will be done on the Mediabox.
 
 2. Edit the `mounts` section of `adv_settings.yml` and set `feeder` to "yes":
 
-   ```text
+   ```yaml
    mounts:
      remote: rclone_vfs
      feeder: yes

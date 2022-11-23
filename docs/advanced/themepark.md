@@ -10,16 +10,13 @@ NZBGet default appearance:
 
 ![](images/nzbget-before.png)
 
-
 NZBGet with the "nord" theme:
 
 ![](images/nzbget-nord.png)
 
-
 Sonarr with the "hotline" theme:
 
 ![](images/sonarr-hotline.png)
-
 
 Choose the theme and apply it to containers in in inventory:
 
@@ -36,8 +33,8 @@ container_name_themepark_enabled: true
 # different theme for an app:
 container_name_themepark_theme: hotline
 container_name_themepark_enabled: true
-
 ```
+
 for example, in `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
 ```yaml
@@ -63,7 +60,7 @@ nzbhydra2_themepark_enabled: true
 
 Available themes can be found [here](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
 
-```
+```text
 organizr
 dark
 dracula

@@ -52,4 +52,6 @@ sudo systemctl enable gdrive.service
 sudo systemctl start gdrive.service
 ```
 
-These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation aroudn migration.
+These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation around migration.
+
+For example, PlexGuide apparently removed the `.json` extension from its service account files, which it called "BlitzKeys".  Most things that interact with service accounts in saltbox expect that those files will have the extension.

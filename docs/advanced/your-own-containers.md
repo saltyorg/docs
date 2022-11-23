@@ -299,6 +299,7 @@ services:
     networks:
       - saltbox
     labels:
+      com.github.saltbox.saltbox_managed: true 
       traefik.enable: true
       traefik.http.routers.APPNAME-http.entrypoints: web
       traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https,gzip

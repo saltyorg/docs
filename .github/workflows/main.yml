@@ -1,0 +1,18 @@
+name: Lint
+
+on: [push, pull_request]
+
+jobs:
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: markdownlint
+        run: |
+          find "${GITHUB_WORKSPACE}" -name '*.md' -exec \
+            docker run --rm \
+            -v "${GITHUB_WORKSPACE}":"${GITHUB_WORKSPACE}" \
+            markdownlint/markdownlint \
+            -r ~MD013,~MD033,~MD034,~MD046,~MD041 \
+            {} +

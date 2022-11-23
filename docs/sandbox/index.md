@@ -46,6 +46,7 @@
   -  **[handbrake](../sandbox/apps/handbrake.md)**  - tag - `sandbox-handbrake`
   -  **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
   -  **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
+  -  **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
   -  **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
   -  **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
   -  **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`

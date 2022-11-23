@@ -1,17 +1,17 @@
-## What is it?
+# What is it?
 
 [Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://organizr.app){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/causefx/Organizr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/organizr/organizr){: .header-icons target=_blank rel="noopener noreferrer" }|
-
+| [:material-home: Project home](https://organizr.app){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/causefx/Organizr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/organizr/organizr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## 2. URL
 
-- To access Organizr, visit https://organizr._yourdomain_.com
+- To access Organizr, visit `https://organizr._yourdomain_.com`
 
 ## 3. Initial Setup
+
 1.  The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
 In the `Install Type` section select `Personal`
 
@@ -65,24 +65,21 @@ Note: it is suggested to enter your `plex username and password`
 
     | Tab Name      | Tab URL                             | Icon URL                      | Category | Group | Type | Active |
     | ------------- | ----------------------------------- | ----------------------------- |:------:|:----:|:-----:|:---------:|
-    | Portainer     | https://portainer.yourdomain.ltd    | images/organizr.png (default) |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Sonarr        | https://sonarr.yourdomain.ltd       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Radarr        | https://radarr.yourdomain.ltd       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBGet        | https://nzbget.yourdomain.ltd       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Rutorrent     | https://rutorrent.yourdomain.ltd    | images/rutorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBHydra2     | https://nzbhydra2.yourdomain.ltd    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Jackett       | https://jackett.yourdomain.ltd      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Plex          | https://plex.yourdomain.ltd         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Tautulli      | https://tautulli.yourdomain.ltd     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Ombi          | https://ombi.yourdomain.ltd         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Overseerr     | https://overseerr.yourdomain.ltd    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
-
+    | Portainer     | `https://portainer.yourdomain.tld`    | images/organizr.png (default) |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Sonarr        | `https://sonarr.yourdomain.tld`       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Radarr        | `https://radarr.yourdomain.tld`       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | NZBGet        | `https://nzbget.yourdomain.tld`       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Rutorrent     | `https://rutorrent.yourdomain.tld`    | images/rutorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | NZBHydra2     | `https://nzbhydra2.yourdomain.tld`    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Jackett       | `https://jackett.yourdomain.tld`      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Plex          | `https://plex.yourdomain.tld`         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Tautulli      | `https://tautulli.yourdomain.tld`     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Ombi          | `https://ombi.yourdomain.tld`         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Overseerr     | `https://overseerr.yourdomain.tld`    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
 
     ![Tab Editor](https://i.imgur.com/aXwGxpx.png)
 
-
-  - Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: https://sonarr.yourdomain.com/calendar ; Radarr: https://radarr.yourdomain.com/activity/history)
-
+  - Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: `https://sonarr.yourdomain.com/calendar` ; Radarr: `https://radarr.yourdomain.com/activity/history`)
 
 ### Homepage (Make you have Homepage ACTIVE in Tabs section)
 
@@ -149,7 +146,6 @@ Note: it is suggested to enter your `plex username and password`
 1. This is where you organize the apps and other items and how they will appear on your Homepage.  There's no right or wrong order so simply move things around and find out what works for you.
 
     ![Homepage Order](https://i.imgur.com/A2FPosN.png)
-
 
 Any additional question please reach out to the [Organizr](https://organizr.app/) team, either via their [Discord Server](https://organizr.app/discord) or their [subreddit](https://www.reddit.com/r/organizr/)
 

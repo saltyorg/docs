@@ -1,14 +1,14 @@
-## What is it?
+# What is it?
 
 [Sonarr](https://sonarr.tv/) is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://sonarr.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/sonarr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Sonarr/Sonarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/sonarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://sonarr.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/sonarr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Sonarr/Sonarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sonarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ## URL
 
-- To access Sonarr, visit https://sonarr._yourdomain.com_
+- To access Sonarr, visit `https://sonarr._yourdomain.com_`
 
 ## Settings
 
@@ -385,7 +385,6 @@ Make changes in the following sections:
 
             - Click "Save".
 
-
 ## TV Path
 
 1. When you are ready to add your first show to Sonarr, click the "Root Path" drop-down and select "Add a different path".
@@ -397,7 +396,6 @@ Make changes in the following sections:
 3. All TV shows added now will have that path set.
 
 ![Sonarr Add](../images/sonarr/sonarr-add.png)
-
 
 ## API Key
 

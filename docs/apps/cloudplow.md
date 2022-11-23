@@ -1,17 +1,16 @@
-## What is it?
+# What is it?
 
 [Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
+| [:material-home: Project home](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/cloudplow){: .header-icons target=_blank rel="noopener noreferrer" } | :material-docker: Docker |
 
 ## Remote Uploader Function
 
 As setup for Saltbox, Cloudplow uploads all the content in `/mnt/local/Media/` (see [Paths](../saltbox/basics/paths.md#cloudplow)) to your cloud storage provider (e.g. Google Drive), after the folder reaches a `200` GB size threshold, when checked every `30` minutes.
 
 _Note: The size threshold and the check interval can be changed via steps mentioned on this page._
-
 
 <details>
 <summary>Google Drive Daily Upload Limit (click to expand)</summary><br />
@@ -34,7 +33,7 @@ See [Example Cloudplow configs](../reference/cloudplow.md).
 
 ### Location
 
-```
+```text
 /opt/cloudplow/config.json
 ```
 
@@ -44,7 +43,7 @@ Note: Config changes require a restart: `sudo systemctl restart cloudplow`.
 
 Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
 
-```
+```bash
 nano /opt/cloudplow/config.json
 ```
 
@@ -67,7 +66,6 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
         }
 ```
 
-
 `"check_interval":` How often (in minutes) Cloudplow checks the size of `/mnt/local/Media`.
 
 `"max_size_gb":` Max size (in GB) Cloudplow allows `/mnt/local/Media` to get before starting an upload task.
@@ -77,7 +75,6 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
     - `1GB` is basically anything in there.
 
     - `2GB` is at least 1GB of data.
-
 
 ### Plex Integration
 
@@ -130,7 +127,7 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
 
 Cloudplow can pause the NZBGet download queue when an upload starts; and then resume it upon the upload finishing.
 
-```
+```json
 "nzbget": {
     "enabled": false,
     "url": "https://user:pass@nzbget.domain.com"
@@ -143,7 +140,7 @@ Cloudplow can pause the NZBGet download queue when an upload starts; and then re
 
 Cloudplow can pause the Sabnzbd download queue when an upload starts; and then resume it upon the upload finishing.
 
-```
+```json
 "sabnzbd": {
     "enabled": false,
     "url": "https://sabnzbd.domain.com"
@@ -157,7 +154,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past hte daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
-```
+```json
 "uploader": {
     "google": {
         "check_interval": 30,
@@ -180,7 +177,7 @@ If you used the saltbox scripted rclone setup, there is a script that will make 
 
 Restart Cloudplow to apply the changes to the config.
 
-```
+```bash
 sudo systemctl restart cloudplow
 ```
 
@@ -188,16 +185,14 @@ sudo systemctl restart cloudplow
 
 [Details here](https://docs.saltbox.dev/reference/logs/?h=logs#cloudplow)
 
-
 ## CLI
 
 You can run a manual Cloudplow task from anywhere by just using the `cloudplow` command.
-
 
 ### Manual Upload
 
 To start uploading right away, regardless of what the folder size is:
 
-```
+```bash
 cloudplow upload
 ```

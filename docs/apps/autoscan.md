@@ -86,13 +86,16 @@ targets:
 ```
 
 Then edit the anchors section:
+
 ```yaml
 anchors:
   - /mnt/unionfs/mounted.bin
 ```
+
 To reflect your own configuration.
 
 For example, if you went through the saltbox rclone setup process, you'll need to enter something like this:
+
 ```yaml
 anchors:
   - /mnt/unionfs/bvoiwepopz-movies_mounted.bin
@@ -101,6 +104,7 @@ anchors:
   - /mnt/unionfs/bvoiwepopz-anime_mounted.bin
 ...
 ```
+
 Everything else should be ready to go for standard usage.
 
 <details>
@@ -123,11 +127,14 @@ Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The c
 Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes. You may use ```rclone listremotes``` to get your drive remotes.
 
 Example:
+
 ```yaml
 a_train:
   remotes: ["bvoiwepopz-Movies", "bvoiwepopz-TV"]
 ```
+
 or
+
 ```yaml
 a_train:
   remotes: ["google"]
@@ -135,30 +142,31 @@ a_train:
 
 Run the a-train tag to create the container:
 
-```
+```bash
 sb install sandbox-a_train
 ```
 
 Copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
 
 Example:
-```
+
+```bash
 cp /opt/sa/all/160.json /opt/a-train/account.json
 ```
 
 Run the autoscan tag to rebuild the container:
 
-```
+```bash
 sb install autoscan
 ```
 
 Run the a-train tag to rebuild the container:
 
-```
+```bash
 sb install sandbox-a_train
 ```
 
-###Bernard
+### Bernard
 
 If for some reason you still wanted to use Bernard, it would look like this:
 

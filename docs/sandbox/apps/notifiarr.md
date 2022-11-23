@@ -4,12 +4,9 @@
 
 [Notifiarr Client](https://notifiarr.com/){: target=_blank rel="noopener noreferrer" } is the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/){: target=_blank rel="noopener noreferrer" }
 
-
-
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://notifiarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/golift/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" }|
-
+| [:material-home: Project home](https://notifiarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/golift/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -46,6 +43,7 @@ Now run the installer
 sb install sandbox-notifiarr
 
 ```
+
 Now go to the Notifiarr website and configure your integrations and discord server.
 Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.
 

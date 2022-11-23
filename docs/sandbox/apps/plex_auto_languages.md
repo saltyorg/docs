@@ -2,14 +2,13 @@
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-
 ## What is it?
 
-[plex_auto_languages](https://appname.url{: target=_blank rel="noopener noreferrer" } is a...
+[plex_auto_languages](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://plex_auto_languages.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://plex_auto_languages.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/plex_auto_languages/plex_auto_languages){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/plex_auto_languages/plex_auto_languages){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://plex_auto_languages.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://plex_auto_languages.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/plex_auto_languages/plex_auto_languages){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/plex_auto_languages/plex_auto_languages){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

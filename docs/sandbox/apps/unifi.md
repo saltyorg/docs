@@ -4,10 +4,9 @@
 
 [Unifi Controller](https://www.ui.com/download/unifi/){: target=_blank rel="noopener noreferrer" } software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
 
-
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://www.ui.com/download/unifi/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-controller/blob/master/README.md){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.ui.com/download/unifi/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-controller/blob/master/README.md){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/unifi-controller){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -29,7 +28,7 @@ sb install sandbox-unifi
 
   In order to manually adopt a device take these steps:
 
-  ```
+  ```shell
   ssh ubnt@$AP-IP
   set-inform http://$address:8080/inform
   ```
@@ -37,7 +36,6 @@ sb install sandbox-unifi
   The default device password is `ubnt`. `$address` is the IP address of the host you are running this container on and `$AP-IP` is the Access Point IP address.
 
   When using a Security Gateway (router) it could be that network connected devices are unable to obtain an ip address. This can be fixed by setting "DHCP Gateway IP", under Settings > Networks > network_name, to a correct (and accessible) ip address.
-
 
 - [:octicons-link-16: Documentation](https://github.com/linuxserver/docker-unifi-controller/blob/master/README.md){: .header-icons target=_blank rel="noopener noreferrer" }
 

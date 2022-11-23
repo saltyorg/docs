@@ -11,7 +11,7 @@ Calibre-Web allows you to add users, and each user can set up a Kindle email add
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/janeczku/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -28,10 +28,12 @@ sb install sandbox-calibre-web
 ### 3. Setup
 
 - Default admin login:
+
   ``` { .yaml}
   Username: admin
   Password: admin123
   ```
+
   Change the default log in details immediately.
 
 - **Unrar** is included by default and needs to be set in the Calibre-Web admin page (Basic Configuration:External Binaries) with a path of `/usr/bin/unrar`.
@@ -56,16 +58,15 @@ Useful docker commands
 - Image version number: <br />
   `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web`
 
-
 ### 4. SK's Calibre-Web Usage Tips
 
-##### SMTP Email Server Setup
+#### SMTP Email Server Setup
 
 A useful function of Calibre-Web is sending ebooks by email.  Therefore, you need to set up SMTP e-mail server settings.
 
 I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles.
 
-```
+```text
 Hostname: smtp-relay.gmail.com, Port:  25,  SSL: No
 ```
 
@@ -82,7 +83,6 @@ If you (or your users) want to have books sent directly to a Kindle from Calibre
       * Scroll down to Personal Document Settings. Click the title to open up that section of the page.
       * Under `Approved Personal Document E-mail List`, click the link for `"Add a new approved e-mail address"`
       * In the popup, add `@yourdomain.com` and save.  Done!
-
 
     Before closing the website, you might want to grab your device email address for the next step.  Under the Send-to-Kindle E-Mail Settings, copy the email address where you want the books sent by default. <br />
 
@@ -101,4 +101,3 @@ Enjoy!
 Since only the `metadata.db` file has to be local, you can keep the metadata.db file in `/mnt/local/Media/Books` as **RW** and the actual book files in `teamdrive:Books` as **RO** and mergerfs them together. Use the latest rclone `--vfs-cache-mode=full` and related cloud-seeding settings for your teamdrive mount so that it does not get laggy. Have a script that copies the metadata.db file regularly to the local disk, and leave the books in the cloud.
 
 If this paragraph does not make sense to you, then please do not try it.
-

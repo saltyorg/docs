@@ -10,7 +10,7 @@ Thanks to HTML5, once Guacamole is installed on a server, all you need to access
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://guacamole.apache.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://guacamole.apache.org/doc/gug/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/jason-bean/docker-guacamole){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/jasonbean/guacamole){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://guacamole.apache.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://guacamole.apache.org/doc/gug/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/jason-bean/docker-guacamole){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/jasonbean/guacamole){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://gotify.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://gotify.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -28,5 +28,5 @@ sb install sandbox-gotify
 
 !!! info
     Android App <br />
-    https://github.com/gotify/android <br />
-    https://f-droid.org/de/packages/com.github.gotify/ <br />
+    <https://github.com/gotify/android>
+    <https://f-droid.org/de/packages/com.github.gotify/>

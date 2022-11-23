@@ -1,21 +1,20 @@
-## What is it?
+# What is it?
 
 [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://emby.media){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/MediaBrowser/Emby){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/emby/embyserver){: .header-icons target=_blank rel="noopener noreferrer" }|
 
-# 1. Introduction
-
+## 1. Introduction
 
 ![](../images/emby/emby-splash.jpg)
 
-# 2. URL
+## 2. URL
 
- - To access Emby, visit https://emby._yourdomain.com_
+ - To access Emby, visit `https://emby._yourdomain.com_`
 
-# 3. Initial Setup
+## 3. Initial Setup
 
 ## i. Domain
 
@@ -31,10 +30,9 @@
     sb install emby
     ```
 
-# 4. Setup Wizard
+## 4. Setup Wizard
 
-1. Visit https://emby._yourdomain.com_.
-
+1. Visit `https://emby._yourdomain.com_`.
 
 1. Select your **preferred display language**. Click **Next**.
 
@@ -85,9 +83,7 @@
 
 7. You will now be taken to the **Dashboard** view.
 
-
-
-# 5. Settings
+## 5. Settings
 
 ## i. Transcoding
 
@@ -106,7 +102,6 @@
    ![](../images/emby/emby-transcoding-hardware-path.png)
 
 3. Click **Save**.
-
 
 ## iii. Libraries
 
@@ -164,8 +159,7 @@ In this section, we will add two libraries: one for Movies and one for TV Shows.
 
 2. Click **OK** once more.
 
-
-# 6. API Key
+## 6. API Key
 
 Instructions below will guide you through creating an API Key for a specific app.
 
@@ -184,4 +178,3 @@ Instructions below will guide you through creating an API Key for a specific app
 5. You have now have created an **Api Key** for your app.
 
    ![](../images/emby/emby-new-api-show.png)
-

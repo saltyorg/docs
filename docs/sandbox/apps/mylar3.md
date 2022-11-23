@@ -8,7 +8,7 @@ Mylar allows you to create a watchlist of series that it monitors for various th
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/mylar3/mylar3){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/mylar3/mylar3/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mylar3/mylar3){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/mylar3){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/mylar3/mylar3){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/mylar3/mylar3/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mylar3/mylar3){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/mylar3){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -43,8 +43,11 @@ sb install sandbox-ROLENAME
 
 !!! Note
       If you enable to OPDS server, DO NOT ENABLE `OPDS Fetch MetaInfo`. It queries the file system.
+
 ### Download settings
+
 (These instructions are for NZBGet. Adapt for other Download Apps)
+
 #### Configure NZBGet
 
 1. Log into `https://nzbget._youdomain_.com`
@@ -54,6 +57,7 @@ sb install sandbox-ROLENAME
 3. Scroll to bottom, click `Add Another Category`
 
 4. Name it `mylar`
+
 #### Configure Mylar
 
 1. Set Usenet client to NZBGet
@@ -77,6 +81,7 @@ sb install sandbox-ROLENAME
    6. NZBGet Download Directory: Leave Blank
 
    7. Enable Completed Download Handling: `X`
+
 ### Search Providers
 
 1. Click Add Indexer (`+`).
@@ -108,6 +113,7 @@ sb install sandbox-ROLENAME
 1. When Post-Processing `move` the files
 
 ### Advanced Settings
+
 These settings are up to the user
 
 1. Rename Files: `X`
@@ -117,4 +123,5 @@ These settings are up to the user
 1. File Format: `$Series $Annual $Issue ($Year)` _(My recommendation)_
 
 ### See the Mylar Wiki for more information
+
 - [:octicons-link-16: Documentation](https://github.com/mylar3/mylar3/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

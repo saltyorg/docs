@@ -1,6 +1,6 @@
 # Resilio Sync
 
-# **NOT INTEGRATED - MAKE SANDBOX REQUEST IF NEEDED**
+! **NOT INTEGRATED - MAKE SANDBOX REQUEST IF NEEDED**
 
 ## What is it?
 
@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://www.resilio.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.resilio.com/tech/sync-tutorials-and-howto/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github]() | [:material-docker: Docker ](https://hub.docker.com/r/resilio/sync){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.resilio.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.resilio.com/tech/sync-tutorials-and-howto/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github]() | [:material-docker: Docker](https://hub.docker.com/r/resilio/sync){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

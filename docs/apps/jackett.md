@@ -1,22 +1,20 @@
-## What is it?
+# What is it?
 
 [Jackett](https://github.com/Jackett/Jackett) (based on the original work of Matthew Little aka _zone117x_) is a web-based app that acts like a proxy server, directing search queries from download clients (e.g. Sonarr) to torrent tracker sites and sending the results back. Download clients can also use Jackett to fetch RSS feeds from tracker sites. Finally, it can be used as a meta search tool to find torrents, right from within the app.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/jackett){: .header-icons target=_blank rel="noopener noreferrer" }|
-
+| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jackett){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 _Note: If you don't use torrents, you may just skip this page._
 
 ## 1. URL
 
- - To access Jackett, visit http://jackett._yourdomain.com_
+ - To access Jackett, visit `http://jackett._yourdomain.com_`
 
 ## 2. Settings
 
    ![](../images/jackett-settings.png)
-
 
 ### Disabling Auto Update
 
@@ -29,9 +27,6 @@ Under "Jackett Configuration":
 1. Click "Apply server settings".
 
 1. The page will now reload.
-
-
-
 
 ## 3. Adding Indexers to Sonarr/Radarr
 

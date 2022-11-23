@@ -1,16 +1,16 @@
-## What is it?
+# What is it?
 
 [Lidarr](https://lidarr.audio) is basically Sonarr for music. It functions as a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds from Bittorrent trackers and Usenet Indexers, looking for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://lidarr.audio){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Lidarr/Lidarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/hotio/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://lidarr.audio){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Lidarr/Lidarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/lidarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
-# URL
+## URL
 
-- To access Lidarr, visit https://lidarr._yourdomain.com_
+- To access Lidarr, visit `https://lidarr._yourdomain.com_`
 
-# Settings
+## Settings
 
 Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
@@ -277,7 +277,7 @@ Make changes in the following sections:
 
                 ![Lidarr qBittorent Downloader](../images/lidarr/lidarr-qbittorrent.png)
 
-	         5.  Click "Save" to add qBittorrent qb
+            5.  Click "Save" to add qBittorrent qb
 
     === "Connect"
 
@@ -396,7 +396,6 @@ Make changes in the following sections:
 1. Click the green "check" button to add the path.
 
 1. All artists added now will have that path set.
-
 
 ## API Key
 

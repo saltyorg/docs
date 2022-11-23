@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://dev.funkwhale.audio/funkwhale){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/funkwhale/all-in-one){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.funkwhale.audio/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://dev.funkwhale.audio/funkwhale){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/funkwhale/all-in-one){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

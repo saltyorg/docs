@@ -2,14 +2,13 @@
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-
 ## What is it?
 
-[mcrouter](https://appname.url{: target=_blank rel="noopener noreferrer" } is a...
+[mcrouter](https://appname.url){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://mcrouter.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://mcrouter.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mcrouter/mcrouter){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/mcrouter/mcrouter){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://mcrouter.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://mcrouter.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mcrouter/mcrouter){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/mcrouter/mcrouter){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

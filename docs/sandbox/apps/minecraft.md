@@ -1,14 +1,13 @@
-# Minecraft 
+# Minecraft
 
 ## What is it?
 
-Run one or multiple minecraft servers with custom domains. Utilises minecraft server and mc-router to allow each server to have its own subdomain with the default port. 
-
+Run one or multiple minecraft servers with custom domains. Utilises minecraft server and mc-router to allow each server to have its own subdomain with the default port.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home ](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" }
-| [:material-home: Project home ](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker ](https://hub.docker.com/r/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" }
+| [:material-home: Project home](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" }
+| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
@@ -28,7 +27,8 @@ This will install mc-router and the minecraft server. If you have listed multipl
 ### 3. Multi Server Set Up
 
 To add multiple instances, add:
-```
+
+```yaml
 
 minecraft_instances: ["server1", "server2"]
 

@@ -1,4 +1,4 @@
-# Absolute Series Scanner and HAMA role for anime.
+# Absolute Series Scanner and HAMA role for anime
 
 ## What is it?
 
@@ -19,7 +19,6 @@ HAMA is a plex agent specifically for anime and its various challenges. It is re
 * Unique posters by using the anidbid rank in the mapping to rotate the posters
 * when a serie is not found in AniDB, search TVDB and TMDB automatically
 * Trakt scrobbling supports Hama guids
-
 
 ## Project Information
 

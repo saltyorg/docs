@@ -17,8 +17,6 @@
 sb install sandbox-trackarr
 ```
 
-The `trackarr` role will provision a config file with your pvr and server info. After you run the role, you will need to set up your config. [Here](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration/Sample) is an example config from the wiki that has a broader example of possible options and tracker configuration.
-
 ### 2. Setup
 
 - Default login:
@@ -27,6 +25,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
   Username: "your user from accounts.yml"
   Password: your_normal_password
   ```
+
+The `trackarr` role will provision a config file with your pvr and server info. After you run the role, you will need to set up your config. [Here](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration/Sample) is an example config from the wiki that has a broader example of possible options and tracker configuration.
 
 ### 3. URL
 

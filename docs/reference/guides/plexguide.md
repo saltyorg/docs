@@ -9,7 +9,6 @@ Some important files and their locations:
 | `rclone.conf`  | `/opt/appdata/plexguide/rclone.conf` | `/home/seed/.config/rclone/rclone.conf` |
 | SA JSON files  | `/opt/appdata/plexguide/.blitzkeys`  | `/opt/sa/all`                           |
 
-
 ## Service Accounts
 
 PlexGuide removed the `.json` extension from its service account files, which it called "BlitzKeys".  Most things that interact with service accounts in saltbox expect that those files will have the extension.
@@ -29,8 +28,8 @@ remotes = gdrive: tdrive: gcrypt: tcrypt: /mnt/move'
 1. Rename pgunion to google
 2. Remove /mnt/move
 AND
-4. If you are using encryption - Remove gdrive: and tdrive
-5. If you are not using encryption - Remove gcrypt: and tcrypt: if they exist.
+3. If you are using encryption - Remove gdrive: and tdrive
+4. If you are not using encryption - Remove gcrypt: and tcrypt: if they exist.
 
 Final should look like:
 '
@@ -49,9 +48,9 @@ If you are using encryption, you definitly need to change this.  If not, unsure 
 
 'nano /opt/cloudplow/config.json'
 
-Under "Remotes":, locate 
+Under "Remotes":, locate
 '"upload_remote": "google"'
-Change this to 
+Change this to
 '"upload_remote": "tcrypt:"'
 
 Now we need to add your service accounts..  Under the "uploader" section change:
@@ -59,7 +58,6 @@ Now we need to add your service accounts..  Under the "uploader" section change:
 to
 '"service_account_path": "/opt/sa/all"'
 ^ Assuming you put the service accounts in that location, if not, change accordingly.
-
 
 ## Migrating Aars
 
@@ -78,7 +76,9 @@ chmod 775 /mnt/gdrive
 sudo cp "/etc/systemd/system/rclone_vfs.service" "/etc/systemd/system/gdrive.service"
 sudo nano "/etc/systemd/system/gdrive.service"
 ```
+
 Changes:
+
 ```yaml
   google: /mnt/remote
 ```
@@ -88,6 +88,7 @@ becomes
 ```yaml
   google: /mnt/gdrive
 ```
+
 AND
 
 ```ini
@@ -106,5 +107,3 @@ sudo systemctl start gdrive.service
 ```
 
 These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation around migration.
-
-

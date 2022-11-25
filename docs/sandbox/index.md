@@ -120,6 +120,7 @@
   -  **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
   -  **[tika](../sandbox/apps/tika.md)**  - tag - `sandbox-tika`
   -  **[tqm](../sandbox/apps/tqm.md)**  - tag - `sandbox-tqm`
+  -  **[Trackarr](../sandbox/apps/trackarr.md)**  - tag - `sandbox-trackarr`
   -  **[traefik_robotstxt](../sandbox/apps/traefik_robotstxt.md)**  - tag - `sandbox-traefik_robotstxt`
   -  **[transmission](../sandbox/apps/transmission.md)**  - tag - `sandbox-transmission`
   -  **[transmissionvpn](../sandbox/apps/transmissionvpn.md)**  - tag - `sandbox-transmissionvpn`

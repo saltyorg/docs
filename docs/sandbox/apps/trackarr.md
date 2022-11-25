@@ -1,0 +1,37 @@
+# Trackarr
+
+## What is it?
+
+[Trackarr](https://gitlab.com/cloudb0x/trackarr){: target=_blank rel="noopener noreferrer" } monitors tracker announce IRC channel, parses the announcements, and forwards those announcements to ARR PVRs (eg Sonarr/Radarr).
+
+!!!info
+    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log into the app itself (basic auth).
+
+| Details     |             |             |             |
+|-------------|-------------|-------------|-------------|
+| [:material-home: Project home](https://gitlab.com/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Gitlab](https://gitlab.com/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+
+### 1. Installation
+
+``` shell
+
+sb install sandbox-trackarr
+
+```
+
+### 2. URL
+
+- To access Trackarr, visit `https://trackarr._yourdomain.com_`
+
+### 3. Setup
+
+- Default login:
+
+  ``` { .yaml}
+  Username: "your user from accounts.yml"
+  Password: your_normal_password
+  ```
+
+You will need to set up your config file once the role has completed. [Here](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration/Sample) is an example config from the wiki that has a broader example of possible options and tracker configuration.
+
+- [:octicons-link-16: Documentation: Trackarr Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons target=_blank rel="noopener noreferrer" }

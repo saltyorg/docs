@@ -12,7 +12,7 @@
 - Widgets that can display all types of information.
 
 !!!info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself. 
+    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

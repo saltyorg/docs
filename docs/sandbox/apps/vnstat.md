@@ -3,6 +3,7 @@
 ## What is it?
 
 [vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard){: target=_blank rel="noopener noreferrer" } is a user-friendly web dashboard for viewing the following:
+
 * Hourly Statistics Chart (using Google Charts)
 * Daily & Monthly Statistics Overview
 * Top 10 Day Statistics
@@ -22,4 +23,4 @@ sb install sandbox-vnstat
 
 ### 2. URL
 
-- To access vnStat, visit `https://vnstat._yourdomain.com_`
+* To access vnStat, visit `https://vnstat._yourdomain.com_`

@@ -26,6 +26,7 @@ sb install sandbox-puddletag
 ### 3. Setup
 
 - Default login:
+
   ``` { .yaml}
   Username: "your user from accounts.yml"
   Password: your_normal_password

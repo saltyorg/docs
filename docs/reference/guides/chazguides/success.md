@@ -28,9 +28,9 @@ TODO: REPLACE WITH SALTBOX VERSION
 
 ```
 PLAY RECAP ************************************************************************************
-localhost              	: ok=713  changed=180  unreachable=0	failed=0
+localhost               : ok=713  changed=180  unreachable=0 failed=0
 
-Tuesday 14 April 2020  11:31:47 -0500 (0:00:00.040)   	0:13:22.200 *********
+Tuesday 14 April 2020  11:31:47 -0500 (0:00:00.040)    0:13:22.200 *********
 ===============================================================================
 docker : Start docker service -----------------------------------------------------...- 121.63s
 docker : Wait for 30 seconds before commencing ------------------------------------...- 30.65s
@@ -56,7 +56,7 @@ chaz@oberon:~/saltbox$
 
 Note this part: it’s even color-coded:
 PLAY RECAP ************************************************************************************
-localhost              	: ok=713  changed=180  unreachable=0	failed=0
+localhost               : ok=713  changed=180  unreachable=0 failed=0
 
 No red there.
 
@@ -87,13 +87,13 @@ user:
 It runs for a bit and stops here:
 
 TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'bing.bang.boing'] *********************************************************************************
-Tuesday 14 April 2020  11:53:29 -0500 (0:00:00.142)   	0:00:52.680 *********
+Tuesday 14 April 2020  11:53:29 -0500 (0:00:00.142)    0:00:52.680 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "No zone found with name bing.bang.boing"}
 
 PLAY RECAP **********************************************************************
-localhost              	: ok=131  changed=3	unreachable=0	failed=1
+localhost               : ok=131  changed=3 unreachable=0 failed=1
 
-Tuesday 14 April 2020  11:53:30 -0500 (0:00:00.779)   	0:00:53.460 *********
+Tuesday 14 April 2020  11:53:30 -0500 (0:00:00.779)    0:00:53.460 *********
 ===============================================================================
 sanity_check : Get all available TAGS ---------------------------------------------------------------------------------...- 5.02s
 Gathering Facts ---------------------------------------------------------------------------------...- 1.51s
@@ -115,13 +115,13 @@ cloudflare:
 
 
 TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
-Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)   	0:00:52.892 *********
+Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)    0:00:52.892 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=DOMAIN.TLD; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
 
 PLAY RECAP *********************************************************************************
-localhost              	: ok=131  changed=2	unreachable=0	failed=1
+localhost               : ok=131  changed=2 unreachable=0 failed=1
 
-Tuesday 14 April 2020  11:56:55 -0500 (0:00:00.686)   	0:00:53.579 *********
+Tuesday 14 April 2020  11:56:55 -0500 (0:00:00.686)    0:00:53.579 *********
 ===============================================================================
 sanity_check : Get all available TAGS ---------------------------------------------------------------------------------...- 5.06s
 Gathering Facts ---------------------------------------------------------------------------------...- 1.52s
@@ -174,21 +174,21 @@ Verify this with docker ps
 (The display here has been edited for readability and space)
 
 chaz@oberon:~/saltbox$ docker ps
-CONTAINER ID   IMAGE                                	  CREATED         	STATUS
-99c552628534   hotio/lidarr                         	  27 minutes ago  	Up 27 minutes
-fae88a0e46d1   hotio/radarr                         	  27 minutes ago  	Up 27 minutes
-a5858358c3f8   hotio/sonarr:phantom                 	  27 minutes ago  	Up 27 minutes
-84e39d15fbdd   hotio/nzbhydra2                      	  27 minutes ago  	Up 27 minutes
-a579ca009eb2   hotio/jackett                        	  27 minutes ago  	Up 27 minutes
-0d879c79a547   horjulf/rutorrent-autodl             	  28 minutes ago  	Up 28 minutes
-a1d387692b30   hotio/nzbget                         	  28 minutes ago  	Up 28 minutes
-c4b5b3a73aeb   organizrtools/organizr-v2:plex       	  29 minutes ago  	Up 29 minutes
-974f5bc87364   portainer/portainer                  	  29 minutes ago  	Up 29 minutes
-7ac30109104c   hotio/ombi                           	  29 minutes ago  	Up 29 minutes
-0cb9c230f5f1   tautulli/tautulli:nightly            	  30 minutes ago  	Up 30 minutes
-bed4af6dc439   cloudb0x/plex:latest                 	  31 minutes ago  	Up 30 minutes
-18b10e11029a   jrcs/letsencrypt-nginx-proxy-companion  31 minutes ago  	Up 31 minutes
-51b214fdf273   jwilder/nginx-proxy                  	  31 minutes ago  	Up 31 minutes
+CONTAINER ID   IMAGE                                   CREATED          STATUS
+99c552628534   hotio/lidarr                            27 minutes ago   Up 27 minutes
+fae88a0e46d1   hotio/radarr                            27 minutes ago   Up 27 minutes
+a5858358c3f8   hotio/sonarr:phantom                    27 minutes ago   Up 27 minutes
+84e39d15fbdd   hotio/nzbhydra2                         27 minutes ago   Up 27 minutes
+a579ca009eb2   hotio/jackett                           27 minutes ago   Up 27 minutes
+0d879c79a547   horjulf/rutorrent-autodl                28 minutes ago   Up 28 minutes
+a1d387692b30   hotio/nzbget                            28 minutes ago   Up 28 minutes
+c4b5b3a73aeb   organizrtools/organizr-v2:plex          29 minutes ago   Up 29 minutes
+974f5bc87364   portainer/portainer                     29 minutes ago   Up 29 minutes
+7ac30109104c   hotio/ombi                              29 minutes ago   Up 29 minutes
+0cb9c230f5f1   tautulli/tautulli:nightly               30 minutes ago   Up 30 minutes
+bed4af6dc439   cloudb0x/plex:latest                    31 minutes ago   Up 30 minutes
+18b10e11029a   jrcs/letsencrypt-nginx-proxy-companion  31 minutes ago   Up 31 minutes
+51b214fdf273   jwilder/nginx-proxy                     31 minutes ago   Up 31 minutes
 ```
 
 That’s the list of containers installed by the default setup at the time of writing.
@@ -202,9 +202,9 @@ You can verify the proxy with curl:
 
 ```
 chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
-  % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
-                             	Dload  Upload   Total   Spent	Left  Speed
-100   169  100   169	0 	0  12071  	0 --:--:-- --:--:-- --:--:-- 12071
+  % Total % Received % Xferd  Average Speed   Time Time  Time  Current
+                              Dload  Upload   Total   Spent Left  Speed
+100   169  100   169 0  0  12071   0 --:--:-- --:--:-- --:--:-- 12071
 <html>
 <head><title>301 Moved Permanently</title></head>
 <body>
@@ -217,7 +217,5 @@ chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
 That’s expected, it’s the standard saltbox behavior where the non-secure URL forwards to the secure URL.
 
 Tell curl to follow the redirect by adding -L:
-
-
 
 You're ready to start the application setup in the wiki.

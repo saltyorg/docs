@@ -24,7 +24,8 @@ Note: it is suggested to enter your `plex username and password`
 
 1. In the `Security` section enter your fill in the `Hash Key` and `Registration Password` any type of password will do but if you want a secure one then follow these steps;
 
-* First for the `Hash Key` you can head over to [Base64 Encode](https://www.cleancss.com/base64-encode/) and convert a string to Base64. Keep in mind the `Hash Key` can be anywhere between 3 to 30 which mean you can enter string up to 21 characters in Base64
+- First for the `Hash Key` you can head over to [Base64 Encode](https://www.cleancss.com/base64-encode/) and convert a string to Base64. Keep in mind the `Hash Key` can be anywhere between 3 to 30 which mean you can enter string up to 21 characters in Base64
+
 - For the password just use any strong password you prefer, if you want a strong one then [Password Generator](https://passwordsgenerator.net/), there is no limit on the password section go crazy ;)
 - The API key should be auto-generated so no need to worry about this if the API key is throwing an error such as shorter than it suppose to be or longer it's most likely due to the web browser auto-fill, make sure it's disabled or just use another browser that doesn't have auto-fill or you don't use much e.g Internet Explorer 👀.
 <br> <br>You should have something like this:

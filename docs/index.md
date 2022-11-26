@@ -39,6 +39,6 @@ Why, [yes there is](https://discord.gg/ugfKXpFND8).
 
 Please report any mistakes or suggestions for improving the documentation on our [discord](https://discord.gg/ugfKXpFND8){target=_blank} or on the [docs repository](https://github.com/saltyorg/docs){target=_blank}, would be much appreciated.
 
-* Docs: [Issues](https://github.com/saltyorg/docs/issues){target=_blank}
-* Saltbox: [Issues](https://github.com/saltyorg/Saltbox/issues){target=_blank}
-* Sandbox: [Issues](https://github.com/saltyorg/Sandbox/issues){target=_blank}
+- Docs: [Issues](https://github.com/saltyorg/docs/issues){target=_blank}
+- Saltbox: [Issues](https://github.com/saltyorg/Saltbox/issues){target=_blank}
+- Sandbox: [Issues](https://github.com/saltyorg/Sandbox/issues){target=_blank}

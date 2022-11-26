@@ -20,9 +20,9 @@ sb install sandbox-sabthrottle
 
 - See [documentation](https://github.com/8a8al00ey/sabthrottle#installation){: target=_blank rel="noopener noreferrer" } for configuration and instructions see the sample configuration and description below it.
 
-    - Running the role will autopopulate plex token and plex url.
-    - If you require more then 5 stream count just follow the example and add more using proper yml formatting.
-    - You can always check logs via
+  - Running the role will autopopulate plex token and plex url.
+  - If you require more then 5 stream count just follow the example and add more using proper yml formatting.
+  - You can always check logs via
 
         ``` shell
         docker logs -f sabthrottle

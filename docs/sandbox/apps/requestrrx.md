@@ -42,6 +42,6 @@ sb install sandbox-requestrrx
       ```
 
 - For app specific instructions refer to the parent role,
-     - [requestrr](../../sandbox/apps/requestrr.md)<Br/>
-     - and the requestrr upstream documentation <BR/>
+  - [requestrr](../../sandbox/apps/requestrr.md)<Br/>
+  - and the requestrr upstream documentation <BR/>
        [:octicons-link-16: Documentation](https://github.com/darkalfx/requestrr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

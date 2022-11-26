@@ -21,6 +21,7 @@ readarr
 sonarr
 tautulli
 ```
+
 Ther is a command at the end of this page you can use to get an updated list of roles that support this method.
 
 ## Overview
@@ -43,7 +44,6 @@ Given the example above, `sb install sonarr` would install:
 | sonarrbing    | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.YOURDOMAIN.TLD    |
 | sonarrbang    | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.YOURDOMAIN.TLD    |
 | sonarrboing   | sonarrboing    | `/opt/sonarrboing` | sonarrboing.YOURDOMAIN.TLD   |
-
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 
@@ -95,4 +95,3 @@ You can find roles that support this new method with the following command:
 ```shell
 grep -Ril "_instances:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
 ```
-

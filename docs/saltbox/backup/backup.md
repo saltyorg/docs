@@ -8,12 +8,12 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
 === "Without Screen"
-    ``` shell
+    ```shell
     sb install backup
     ```
 
 === "With Screen"
-    ``` shell
+    ```shell
     screen -dmS saltbox-backup sb install backup
     ```
 
@@ -31,12 +31,12 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
 === "Have Saltbox configure cron"
-    ``` shell
+    ```shell
     sb install set-backup
     ```
 
 === "Configure cron manually"
-    ``` shell
+    ```shell
     crontab -e
     ```
 

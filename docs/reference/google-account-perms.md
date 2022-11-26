@@ -4,7 +4,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md).
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
-1. Go to https://admin.google.com; from the left-hand menu select "Apps > Google Workspace > Drive and Docs":
+1. Go to <https://admin.google.com>; from the left-hand menu select "Apps > Google Workspace > Drive and Docs":
 
     ![](../images/google-shared-drive-settings/01-DND-menu.png)
 

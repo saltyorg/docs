@@ -44,6 +44,6 @@ sb install sandbox-transmissionx
       ```
 
 - For app specific instructions refer to the parent role,
-     - [transmission](../../sandbox/apps/transmission.md)<Br/>
-     - and the transmission upstream documentation <BR/>
+  - [transmission](../../sandbox/apps/transmission.md)<Br/>
+  - and the transmission upstream documentation <BR/>
        [:octicons-link-16: Documentation](DOCSLINK){: .header-icons target=_blank rel="noopener noreferrer" }

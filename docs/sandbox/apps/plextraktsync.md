@@ -39,6 +39,7 @@ Most of these fields can be manually edited in `/opt/plextraktsync/.env`.
 By default, the PlexTraktSync instance's only assignment is to listen to your configured user's Plex activity and scrobble it. You may also wish to sync your backlog on a schedule, for example, by adding a crontab line containing `docker exec plextraktsync python3 -m plextraktsync`.
 
 To get a list of commands, run:
+
 ```shell
 docker exec -it plextraktsync python3 -m plextraktsync --help
 ```

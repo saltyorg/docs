@@ -20,10 +20,10 @@ This script is going to load the config from the last script in that process, an
 
 SPECIFICALLY, it's expecting:
 
-  - You've changed the prefix in `/opt/sb_gd/config.py`
-  - `/opt/plex_autoscan/config/config.json` exists
-  - `/opt/sb_gd/client_secrets.json` exists
-  - The `SERVER_PATH_MAPPINGS` element in `/opt/plex_autoscan/config/config.json` is empty
+- You've changed the prefix in `/opt/sb_gd/config.py`
+- `/opt/plex_autoscan/config/config.json` exists
+- `/opt/sb_gd/client_secrets.json` exists
+- The `SERVER_PATH_MAPPINGS` element in `/opt/plex_autoscan/config/config.json` is empty
 
 It is expecting a stock plex_autoscan config file as you will have when you have completed the install.
 
@@ -36,12 +36,12 @@ You will have to have completed `sb install saltbox` before using this script.
     source sb_gd/bin/activate
     python sb_pas.py
     ```
-    
+
     This is assuming you've setup the virtual environment as described in the last step of the [scripted rclone method](rclone-manual.md)
-    
+
     If that doesn't work, update to the latest version of the files from the repo with `git pull` and try again.
 
-1.  Next, you will need to authorize Google Drive. To do so, run the following command:
+1. Next, you will need to authorize Google Drive. To do so, run the following command:
 
     ```shell
     plex_autoscan authorize
@@ -54,14 +54,14 @@ You will have to have completed `sb install saltbox` before using this script.
     sb install plex_autoscan
     ```
 
-1.  Visit the link shown to get the authorization code and paste that in and hit `enter`.
+1. Visit the link shown to get the authorization code and paste that in and hit `enter`.
 
     ```shell
     Visit https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=&access_type=offline and authorize against the account you wish to use
     Enter authorization code:
     ```
 
-1.  When access token retrieval is successful, you'll see this:
+1. When access token retrieval is successful, you'll see this:
 
     ```shell
     2018-06-24 05:57:58,252 -     INFO -    GDRIVE [140007964366656]: Requesting access token for auth code '4/AAAfPHmX9H_kMkMasfdsdfE4r8ImXI_BddbLF-eoCOPsdfasdfHBBzffKto'

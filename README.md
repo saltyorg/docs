@@ -1,4 +1,4 @@
-# Repo for https://docs.saltbox.dev
+# Repo for <https://docs.saltbox.dev>
 
 ## Contributing
 
@@ -9,13 +9,14 @@
 ## Previewing docs locally
 
 Basic previewing [some things may not preview accurately]:
+
 ```bash
 git clone https://github.com/saltyorg/docs
 cd docs
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
-Docs will be accessible at http://localhost:8000
+Docs will be accessible at <http://localhost:8000>
 
 Full previewing:
 
@@ -312,4 +313,3 @@ The docs are actually built with a different release of mkdocs-material, so to p
     </td>
 </tr>
 </table>
-

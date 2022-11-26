@@ -6,7 +6,6 @@ In the default Saltbox install, there only two main Plex libraries: one for Movi
 
 The idea being that all movies are to be placed within the `/Media/Movies` folder in Google Drive. and all TV shows under `/Media/TV`.
 
-
 Default Paths:
 
    ```
@@ -18,21 +17,17 @@ Default Paths:
 
 ![](https://i.imgur.com/kwnNjni.png)
 
-
-
 If you would like to have custom libraries in Plex, you may do so with this guide.
 
 But regardless of whatever scenario you choose below, the media folders will ALWAYS be located within the `Media` folder (`/Media/` on Google Drive and `/mnt/unionfs/Media/` on the server).
 
 _Note: This guide discusses the setup in terms of movies. You can of course do the same with TV shows using the same concepts with your `Media/TV` directory and Sonarr, but to keep this document simple we're not covering both cases since they're just about identical._
 
-
 ## Scenarios
 
 - Adding folders (i.e. libraries) directly under `Media/Movies/` (or `Media/TV/`) (i.e. the standard paths) &rightarrow; [Scenario 1](#scenario-1). This is the recommended option.
 
 - Adding folders (i.e. libraries) directly under `Media/` &rightarrow; [Scenario 2](#scenario-2).
-
 
 ## Example
 
@@ -59,12 +54,6 @@ Here is an example library setup, which is based on [Scenario 1](#scenario-1).
 
 - `/Movies/Movies-Anime/` folder is for Japanese, animated films.
 
-
-
-
-
-
-
 # Scenario 1
 
 Movie libraries under `/Media/Movies`.
@@ -85,10 +74,7 @@ Media
 └── TV
 ```
 
-
-
 ## 1. Create Folders in Google Drive
-
 
 Let's say you wanted to have separate movie libraries for:
 
@@ -120,7 +106,6 @@ Screenshots:
 
   ![](https://i.imgur.com/VG5zT7y.png)
 
-
 ## 2. Add Libraries to Plex
 
 You will add each of these folders as separate libraries within Plex (see [[example|Install: Plex-Media-Server#adding-the-movie-library]]). You may name these libraries as whatever you want.
@@ -136,7 +121,6 @@ In our example, this will be:
 - `/mnt/unionfs/Media/Movies/Movies-Kids`
 
 *_Note: This can be called anything else, such as `/mnt/unionfs/Media/Movies-Main` or `/mnt/unionfs/Media/Movies-All`._
-
 
 ## 3. Modify Cloudplow Config
 
@@ -160,7 +144,6 @@ _Note 2: This is the default setting and may be skipped if you haven't changed i
 
 1. Restart Cloudplow: `sudo systemctl restart cloudplow`.
 
-
 ## 4. Change Root Paths in Radarr
 
 Set your Movie Paths in [[Radarr|Install: Radarr#8-adding-the-movies-path]] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies/3D`).
@@ -175,7 +158,6 @@ Movie libraries under `/Media`.
 
 This setup is not recommended as it requires more config setup than Scenario 1. It also the changing of Sonarr/Radarr root paths and updating of those root paths for existing movies.
 
-
 Example:
 
 ```
@@ -189,8 +171,6 @@ Media
 └── TV
 
 ```
-
-
 
 ## 1. Create Folders in Google Drive
 
@@ -237,7 +217,6 @@ In our example, this will be:
 - `/mnt/unionfs/Media/Movies-Kids`
 
 *_Note: This can be called anything else, such as `/mnt/unionfs/Media/Movies-Main` or `/mnt/unionfs/Media/Movies-All`._
-
 
 ## 3. Modify Plex Autoscan Config
 
@@ -307,7 +286,6 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Mediabox._
 
 1. Restart Plex Autoscan: `sudo systemctl restart plex_autoscan`
 
-
 ## 4. Modify Cloudplow Config
 
 _Note: For Mediabox / Feederbox setups, this will be done on the Feederbox._
@@ -327,7 +305,6 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Feederbox._
 1. <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd> to save.
 
 1. Restart Cloudplow: `sudo systemctl restart cloudplow`.
-
 
 ## 5. Change Root Paths in Radarr
 

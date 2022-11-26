@@ -1,4 +1,5 @@
 ## Server
+
 ### Getting a Server
 
 About the requirements:
@@ -51,7 +52,8 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 - Install OpenSSH server if asked.
 
-#### Partitioning:
+#### Partitioning
+
 - If you have multiple hard drives on the server (eg. 2 x 4 TB), put them in RAID 0 to maximize space and speed (you don't need redundancy as you can schedule backups of Saltbox).
 
 - Set all available space to `/` (remove `/home` and `/data` partitions).
@@ -62,7 +64,7 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 Examples:
 
-**IMPORTANT**: Note that these examples are just that, *examples*, and may not reflect currently-available OS versions or the current state of the UI.  They were accurate at the time of capture, but things change that are outside saltbox' control.  You will need to review for accuracy and possibly adapt them to your specific situation.  You're partitioning the disk of your remote server; you generally shouldn't trust that to copy-pasting some text from a web page.
+**IMPORTANT**: Note that these examples are just that, _examples_, and may not reflect currently-available OS versions or the current state of the UI.  They were accurate at the time of capture, but things change that are outside saltbox' control.  You will need to review for accuracy and possibly adapt them to your specific situation.  You're partitioning the disk of your remote server; you generally shouldn't trust that to copy-pasting some text from a web page.
 
 === "Online.net"
     ![](../images/online-net-partitioning.png)
@@ -128,7 +130,3 @@ Examples:
          LV vg0   root    /     ext4      all
          IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
          ```
-
-
-
-

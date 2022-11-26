@@ -5,22 +5,22 @@
 ## Install Saltbox
 
 === "Saltbox"
-    ``` shell
+    ```shell
     sb install saltbox
     ```
 
 === "Mediabox"
-    ``` shell
+    ```shell
     sb install mediabox
     ```
 
 === "Feederbox"
-    ``` shell
+    ```shell
     sb install feederbox
     ```
 
 === "Core"
-    ``` shell
+    ```shell
     sb install core
     ```
 
@@ -30,7 +30,7 @@ Eventually, it will stop, and if successful, will display something like this:
 
 ```
 PLAY RECAP ************************************************************************************
-localhost              	: ok=713  changed=180  unreachable=0	failed=0
+localhost               : ok=713  changed=180  unreachable=0 failed=0
 ```
 
 Note the `failed=0`.

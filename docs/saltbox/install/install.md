@@ -16,28 +16,27 @@ Broadly, the base install consists of six steps:
 ## Step 1: Dependencies
 
 === "curl"
-    ``` shell
+    ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
     ```
 
 === "wget"
-    ``` shell
+    ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
     ```
 
 === "curl (verbose)"
-    ``` shell
+    ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
     ```
 
 === "wget (verbose)"
-    ``` shell
+    ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
     ```
 
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.
-
 
 ## Step 2: Configuration
 
@@ -108,7 +107,6 @@ apprise: # (12)!
 
 13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
-
 `settings.yml`
 
 To edit [assuming you are still logged in as `root`]:
@@ -118,7 +116,6 @@ nano /srv/git/saltbox/settings.yml
 ```
 
 Contents:
-
 
 ``` { .yaml .annotate }
 ---
@@ -133,7 +130,6 @@ authelia:
 ```
 
 1. Folder used for downloads.
-
 
 2. Folder used for temporary transcode files.
 
@@ -229,7 +225,6 @@ If you already know how to set that up, do so with your usual methods.  If not:
     3. Create an rclone remote pointing at that shared drive.
        This process is described [here](../../reference/guides/rclone-remote.md)
 
-
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.
 
@@ -238,22 +233,22 @@ If you already know how to set that up, do so with your usual methods.  If not:
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
 === "Saltbox"
-    ``` shell
+    ```shell
     sb install saltbox
     ```
 
 === "Mediabox"
-    ``` shell
+    ```shell
     sb install mediabox
     ```
 
 === "Feederbox"
-    ``` shell
+    ```shell
     sb install feederbox
     ```
 
 === "Core"
-    ``` shell
+    ```shell
     sb install core
     ```
 

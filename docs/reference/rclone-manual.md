@@ -48,21 +48,21 @@ That said, let's proceed.
 !!! warning
     THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
 
-### Step 1: Verify that the Shared Drive permissions are correct on your Google account:
+### Step 1: Verify that the Shared Drive permissions are correct on your Google account
 
 [Detailed instructions here](google-account-perms.md)
 
-### Step 2: Create a new project and generate a credential file:
+### Step 2: Create a new project and generate a credential file
 
 [Detailed instructions here](google-project-setup.md)
 
 Save that credential file on your server at `/opt/sa/project-creds.json`
 
-### Step 3: Create a Google Group to hold service accounts:
+### Step 3: Create a Google Group to hold service accounts
 
 [Detailed instructions here](google-group-setup.md)
 
-### Step 4: Set up the GCloud SDK:
+### Step 4: Set up the GCloud SDK
 
 [Detailed instructions here](google-gcloud-tools-install.md)
 
@@ -100,6 +100,7 @@ This prefix is used for two purposes:<br /><br />
   1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].<br /><br />
 
   2. It helps these scripts unambiguously identify things that they have created, so they don't affect any projects, service accounts, or drives you may already have created.
+
 </details>
 
 ### Step 6: Generate 300 service accounts
@@ -110,7 +111,7 @@ This prefix is used for two purposes:<br /><br />
 
 [Detailed instructions here](google-shared-drives.md)
 
-### Step 8: Verify that the union remote shows you the expected contents:
+### Step 8: Verify that the union remote shows you the expected contents
 
 !!! warning
     IF YOU HAVE SKIPPED ANY OF THE PREVIOUS STEPS THIS VALIDATION WILL NOT WORK.
@@ -151,8 +152,6 @@ Repeat the last part of [this step](google-group-setup.md) where you upload the 
 
 </details>
 
-
-
 You now have shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the shared drives by path.
 
 ## After the saltbox install
@@ -186,6 +185,7 @@ To rename the Google Drive remote to `google`:
    ```
    nano $(rclone config file | tail -n 1)
    ```
+
 1. Rename the Google Drive drive remote (name between the brackets) to `google`.
 
 1. It will now look like this:
@@ -197,6 +197,7 @@ To rename the Google Drive remote to `google`:
    client_secret = JOEY
    token = {"access_token":"ya30.DEEDEE-38ikRIxZvimyoxyKdse$
    ```
+
 1. Save the file and exit: <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd>.
 
 1. Copy the config file to `~/.config/rclone/rclone.conf` (if it isn't there already):

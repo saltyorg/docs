@@ -36,7 +36,7 @@ backup:
     Options are: `true` or `false`
 
 4. Path used for the Rclone remote. Backups outside of the most recent one will be located in the `archived` folder.
-    
+
     Make sure that this path is unique if you run multiple instances of Saltbox.
 
 5. Toggle for using Rsync backups.
@@ -65,7 +65,7 @@ backup:
 
     Usernames are hashed before requests are sent to the restore service.
 
-11. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service. 
+11. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service.
 
     Only used on the client side in scripts.
 

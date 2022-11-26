@@ -22,6 +22,6 @@ sb install sandbox-bookstack
 
 ### 3. Setup
 
--  Log in using the default admin details `admin@admin.com` with a password of `password`. You should change these details **immediately** after logging in for the first time.
+- Log in using the default admin details `admin@admin.com` with a password of `password`. You should change these details **immediately** after logging in for the first time.
 
 - [:octicons-link-16: Documentation](https://www.bookstackapp.com/docs){: .header-icons target=_blank rel="noopener noreferrer" }

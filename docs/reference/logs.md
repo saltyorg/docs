@@ -2,37 +2,39 @@
 
 ## Autoscan
 
+### Check Status
 
-### Check Status:
 ```
 sudo systemctl status autoscan.service
 ```
 
-### Restart Service:
+### Restart Service
+
 ```
 sudo systemctl restart autoscan.service
 ```
 
-### Previous Activity:
+### Previous Activity
 
 ```
 cat /opt/autoscan/activity.log
 ```
 
-### Live Log:
+### Live Log
+
 ```
 tail -F /opt/autoscan/activity.log
 ```
 
 ## Cloudplow
 
+### Check Status
 
-### Check Status:
 ```
 sudo systemctl status cloudplow.service
 ```
 
-### Previous Activity:
+### Previous Activity
 
 ```
 cat /opt/cloudplow/cloudplow.log
@@ -40,11 +42,14 @@ cat /opt/cloudplow/cloudplow.log
 
 Older logs are named as cloudplow.log.1, cloudplow.log.2, etc.
 
-### Live Log:
+### Live Log
+
 ```
 tail -F /opt/cloudplow/cloudplow.log
 ```
+
 or
+
 ```
 sudo journalctl -o cat -fu cloudplow.service
 ```
@@ -64,45 +69,48 @@ Restart=always
 
 You should only enable debug logging while you need it to track down a problem.
 
-
 # Remote Mount
 
 Pick one of these.
 
 ## Rclone VFS
 
-### Check Status:
+### Check Status
+
 ```
 sudo systemctl status rclone_vfs.service
 ```
 
-### See a live log:
+### See a live log
+
 ```
 sudo journalctl -o cat -fu rclone_vfs.service
 ```
 
 ## Rclone Cache
 
-### Check Status:
+### Check Status
+
 ```
 sudo systemctl status rclone_cache.service
 ```
 
-### See a live log:
+### See a live log
+
 ```
 sudo journalctl -o cat -fu rclone_cache.service
 ```
 
-
 # Union Mount
 
+### Check Status
 
-### Check Status:
 ```
 sudo systemctl status mergerfs.service
 ```
 
-### See a live log:
+### See a live log
+
 ```
 sudo journalctl -o cat -fu mergerfs.service
 ```
@@ -113,18 +121,19 @@ Find the container name: `docker ps -a`
 
 ## Live logs
 
-### Live log (from the beginning of the log):
+### Live log (from the beginning of the log)
+
 ```
 docker logs --follow <container_name>
 ```
 
-### Live log (from the last 10 lines of the log):
+### Live log (from the last 10 lines of the log)
+
 ```
 docker logs --follow --tail 10 <container_name>
 ```
 
-
-### Examples:
+### Examples
 
 ```
 docker logs -f plex

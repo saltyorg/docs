@@ -8,14 +8,14 @@ There isn't a maintained list of differences as the improvements have happened s
 
 In terms of functionality the high points are
 
- - Validated Ubuntu 20.04 and 22.04 support (Saltbox will try to support newer releases quicker than Cloudbox has) which is useful in terms of hardware acceleration support with newer CPUs.
- - Support for IPv6 (has seen limited testing so far though) within the docker container network using NAT since we still want to keep things behind the reverse proxy.
- - Inventory system for simpler, upgrade-protected customization
- - Authelia single sign-on
- - Choice of SSL provider [Let's Encrypt or ZeroSSL]
- - ability to use a subdomain rather than a TLD (`rolename.subdomain.domain.tld` rather than `rolename.domain.tld`)
- - support for running without a domain in local installs
- - Generalized support for multiple app instances [replacement for the "ArrX" system]
- - Ongoing maintenance and active development
+- Validated Ubuntu 20.04 and 22.04 support (Saltbox will try to support newer releases quicker than Cloudbox has) which is useful in terms of hardware acceleration support with newer CPUs.
+- Support for IPv6 (has seen limited testing so far though) within the docker container network using NAT since we still want to keep things behind the reverse proxy.
+- Inventory system for simpler, upgrade-protected customization
+- Authelia single sign-on
+- Choice of SSL provider [Let's Encrypt or ZeroSSL]
+- ability to use a subdomain rather than a TLD (`rolename.subdomain.domain.tld` rather than `rolename.domain.tld`)
+- support for running without a domain in local installs
+- Generalized support for multiple app instances [replacement for the "ArrX" system]
+- Ongoing maintenance and active development
 
 In development is an automated system to set up shared drives and service accounts for the user [for Cloudbox users, this is the "tip 44" setup].

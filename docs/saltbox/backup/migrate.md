@@ -62,6 +62,7 @@ Listed below are some common scenarios and their migration instructions.
 
 5. Check to see if your [Plex Autoscan URL](../../../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly, if you are using Plex Autoscan.
 6.
+
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
 1. [Back up](backup.md) your current Saltbox server.

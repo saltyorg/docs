@@ -1,3 +1,5 @@
+# Install
+
 If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
 If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
@@ -18,22 +20,26 @@ Broadly, the base install consists of six steps:
 === "curl"
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-```
+
+    ```
 
 === "wget"
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-```
+
+    ```
 
 === "curl (verbose)"
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-```
+
+    ```
 
 === "wget (verbose)"
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-```
+
+    ```
 
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.
@@ -46,9 +52,7 @@ Make sure you fill out the following configuration files before proceeding. Each
 
 To edit [assuming you are still logged in as `root`]:
 
-```
-nano /srv/git/saltbox/accounts.yml
-```
+    # nano /srv/git/saltbox/accounts.yml
 
 Contents:
 
@@ -111,7 +115,7 @@ apprise: # (12)!
 
 To edit [assuming you are still logged in as `root`]:
 
-```
+```shell
 nano /srv/git/saltbox/settings.yml
 ```
 
@@ -161,7 +165,7 @@ authelia:
 
 This step will create the user account specified in `accounts.yml`, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed.
 
-``` shell
+```shell
 sb install preinstall
 ```
 
@@ -235,22 +239,26 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 === "Saltbox"
     ```shell
     sb install saltbox
-```
+
+    ```
 
 === "Mediabox"
     ```shell
     sb install mediabox
-```
+
+    ```
 
 === "Feederbox"
     ```shell
     sb install feederbox
-```
+
+    ```
 
 === "Core"
     ```shell
     sb install core
-```
+
+    ```
 
 !!! info
     See [here](../../reference/install.md) for more information about the install.

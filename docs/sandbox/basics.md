@@ -8,7 +8,7 @@ Providing documentation for Sandbox applications is encouraged but not required.
 
 All Saltbox applications **must** have documentation
 
-### Install
+## Install
 
 ``` shell
 
@@ -16,7 +16,7 @@ sb install sandbox
 
 ```
 
-### Update
+## Update
 
 To update Saltbox Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
 
@@ -29,7 +29,7 @@ sb update
 !!! info
     Note that `sb update` updates only the saltbox files themselves; it does not update any applications.  You will need to follow this with an `sb install <tags here>` command to update applications or installed components.
 
-### How to Install Sandbox Apps
+## How to Install Sandbox Apps
 
 For most apps it is as simple as running the `sb install` command in a shell with a `sandbox-` prefix followed by the name of the role.
 
@@ -82,25 +82,25 @@ On your development machine [which should probably be a machine running saltbox,
 
 clone your Sandbox fork:
 
-```
+```shell
 git clone https://github.com/YOURNAMEHERE/Sandbox.git sandbox
 ```
 
 go into that local sandbox dir:
 
-```
+```shell
 cd sandbox
 ```
 
 make sure your local repo is up-to-date:
 
-```
+```shell
 git pull
 ```
 
 create your feature branch:
 
-```
+```shell
 git checkout -b my-cool-role
 ```
 
@@ -112,7 +112,7 @@ A good starting point is to find a role that is similar to the one you want to a
 
 copy the "starting point" role to your role:
 
-```
+```shell
 cp -R roles/bookstack roles/my-cool-role
 ```
 
@@ -120,7 +120,7 @@ cp -R roles/bookstack roles/my-cool-role
 
 Next step is to create the role. At a minimum, you will need to modify:
 
-```
+```text
 roles
 └── my-cool-role
     ├── defaults
@@ -134,13 +134,13 @@ There may be other things required; there may be templates or sub-tasks or what 
 
 What are those things?
 
-```
+```text
 roles/my-cool-role/defaults/main.yml
 ```
 
 This file contains various details for your role; the docker image, the name, subdomain, that sort of thing. The stuff in there should be self-explanatory or understandable with comparisons to existing roles; if it's not, then with all respect you probably shouldn't be creating a role right now.
 
-```
+```text
 roles/my-cool-role/tasks/main.yml
 ```
 
@@ -150,7 +150,7 @@ There is a wiki article on adding new containers [here](../advanced/your-own-con
 
 Don't forget the header in both these files:
 
-```
+```text
 #########################################################################
 # Title:            Sandbox: my-cool-role                               #
 # Author(s):        some-guy, salty                                     #
@@ -164,13 +164,13 @@ Don't forget the header in both these files:
 
 Be sure you edit this to reflect your role, name, and such depending on what's there in your prototype
 
-```
+```text
 sandbox.yml
 ```
 
 This file drives the ansible install system by providing the valid tags that you can use with:
 
-```
+```shell
 sb install sandbox-TAG
 ```
 
@@ -178,14 +178,14 @@ Again, it's a simple file, and it should be quite apparent what needs to be adde
 
 ##### Other files you may need to edit
 
-```
+```text
 defaults
 └── settings.yml.default
 ```
 
 This file provides the prototype settings file; if your role requires some new settings, add them to this file.  When the sandbox repo is updated, your new settings will be added to the user's current settings file and they will be prompted to review it.
 
-```
+```text
 templates
 └── my-cool-role.j2
 ```

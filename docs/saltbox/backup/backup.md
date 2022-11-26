@@ -10,6 +10,7 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
 === "Without Screen"
     ```shell
     sb install backup
+
 ```
 
 === "With Screen"
@@ -33,6 +34,7 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
 === "Have Saltbox configure cron"
     ```shell
     sb install set-backup
+
 ```
 
 === "Configure cron manually"

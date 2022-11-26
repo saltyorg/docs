@@ -54,7 +54,7 @@ Steps to do so are as follows:
 
 ### Base command
 
-```
+```shell
 frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed <path of log file> &
 ```
 
@@ -73,7 +73,7 @@ Determine your default shell in `settings.yml`
 For your default shell, add `shell_<shell>_<shell>rc_block_custom:` to your [Inventory](https://docs.saltbox.dev/saltbox/inventory/) file:
 Example for Bash (default):
 
-```
+```yaml
 shell_bash_bashrc_block_custom: |
   ## Custom frontail alias
   alias ftail='frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed '
@@ -81,7 +81,7 @@ shell_bash_bashrc_block_custom: |
 
 Example for ZSH:
 
-```
+```yaml
 shell_zsh_zshrc_block_custom: |
   ## Custom frontail alias
   alias ftail='frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed '
@@ -91,13 +91,13 @@ Run `sb install shell`
 
 You can now use:
 
-```
+```shell
 ftail --port <port number> <log path> &
 ```
 
 ### To quit the frontail
 
-```
+```shell
 pkill -f frontail
 ```
 
@@ -105,19 +105,19 @@ pkill -f frontail
 
 #### Plex Autoscan
 
-```
+```shell
 frontail --port 9001 --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed /opt/plex_autoscan/plex_autoscan.log &
 ```
 
 or via alias...
 
-```
+```shell
 ftail --port 9001 /opt/plex_autoscan/plex_autoscan.log &
 ```
 
 or via docker...
 
-```
+```shell
 docker run --restart=always --name "frontail_plex_autoscan" -d -p 9001:9001 -v /opt/plex_autoscan:/logs -v /opt/scripts/frontail/frontail_custom_preset.json:/preset/custom.json mthenw/frontail --ui-highlight  --ui-highlight-preset /preset/custom.json --theme dark --user <user> --password <pass> /logs/plex_autoscan.log
 ```
 
@@ -125,7 +125,7 @@ Log: <http://serveripaddress:9001>
 
 #### Cloudplow log
 
-```
+```shell
 frontail --ui-highlight --port 9002 --ui-highlight-preset /opt/scripts/frontail/frontail_custom_preset.json --theme dark --user seed --password seed /opt/cloudplow/cloudplow.log &
 ```
 
@@ -133,13 +133,13 @@ Log: <http://serveripaddress:9002>
 
 or via alias...
 
-```
+```shell
 ftail --port 9002  /opt/cloudplow/cloudplow.log &
 ```
 
 or via docker...
 
-```
+```shell
 docker run --restart=always --name "frontail_cloudplow" -d -p 9002:9001 -v /opt/cloudplow:/logs -v /opt/scripts/frontail/frontail_custom_preset.json:/preset/custom.json mthenw/frontail --ui-highlight  --ui-highlight-preset /preset/custom.json --theme dark --user <user> --password <pass> /logs/cloudplow.log
 ```
 
@@ -149,7 +149,7 @@ Log: <http://serveripaddress:9002>
 
 If you want to share your log with someone (forums, slack, etc), but don't want to reveal your IP address, you can use ngrok to hide your IP address.
 
-```
+```shell
 ngrok http <port>
 ```
 

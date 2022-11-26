@@ -47,9 +47,9 @@ jackett_docker_labels_custom:
   com.centurylinklabs.watchtower.enable: "true"
 ```
 
-# Additional Examples
+## Additional Examples
 
-## Various
+### Various
 
 ```yaml
 ##### Plex Ports for local access#####
@@ -89,7 +89,7 @@ shell_zsh_zshrc_block_custom: |
 
 ```
 
-# Authelia App Bypass
+## Authelia App Bypass
 
 Some may not want the additional layer of security that Authelia supplies, good news is that it can be disabled with a simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
 
@@ -108,7 +108,7 @@ prowlarr_traefik_sso_middleware: ""`
 
 After making this change in the inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
 
-# Authorize with App Credentials
+## Authorize with App Credentials
 
 ### Inject an Authorization header - Traefik performs basic auth with the backend app
 

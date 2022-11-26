@@ -317,7 +317,6 @@ nav:
         - PostgreSQL: apps/postgres.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
-        - SSTV: apps/sstv.md
 
   - FAQ:
       - System: faq/System.md

@@ -162,6 +162,7 @@ nav:
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md
             - tqm: sandbox/apps/tqm.md
+            - Trackarr: sandbox/apps/trackarr.md
             - Transmission: sandbox/apps/transmission.md
             - Transmissionx: sandbox/apps/transmissionx.md
         - File Management:

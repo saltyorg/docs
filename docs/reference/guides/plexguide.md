@@ -10,47 +10,46 @@ Some important files and their locations:
 | SA JSON files  | `/opt/appdata/plexguide/.blitzkeys`  | `/opt/sa/all`                           |
 
 
-if you are restoring the arrs from pg to saltbox you will need to make these changes in SB
+Use cloudcmd or ftp to copy keys from .blitzkeys and rename from GDSA01, GDSA02 to 
+001.json, 002.json etc. and upload to `/opt/sa/all`
+Then copy rclone.conf and edit to look like this:
 
 ```shell
-sudo mkdir /mnt/gdrive
+[gdrive]
+client_id = bingbangbong
+client_secret = bongbangbing
+type = drive
+server_side_across_configs = true
+token = tokenbingbang
+
+[tdrive]
+type = drive
+server_side_across_configs = true
+service_account_file = /opt/sa/all/001.json
+team_drive = TEAMDRIVEIDbingbang
+
+[google]
+type = union
+remotes = gdrive: tdrive: /mnt/move
+```
+Removing the extra lines for:
+```
+[GDSA01]
+type = drive
+scope = drive
+service_account_file = /opt/appdata/plexguide/.blitzkeys/GDSA01
+team_drive = TEAMDRIVEIDbingbang
+
+[GDSA02]
+type = drive
+scope = drive
+service_account_file = /opt/appdata/plexguide/.blitzkeys/GDSA02
+team_drive = TEAMDRIVEIDbingbang
 ```
 
-```shell
-sudo chown $USER:$USER /mnt/gdrive
-chmod 775 /mnt/gdrive
-```
 
-```shell
-sudo cp "/etc/systemd/system/rclone_vfs.service" "/etc/systemd/system/gdrive.service"
-sudo nano "/etc/systemd/system/gdrive.service"
-```
-Changes:
-```yaml
-  google: /mnt/remote
-```
-
-becomes
-
-```yaml
-  google: /mnt/gdrive
-```
-AND
-
-```ini
-ExecStop=/bin/fusermount -uz /mnt/remote
-```
-
-becomes
-
-```ini
-ExecStop=/bin/fusermount -uz /mnt/gdrive
-```
-
-```shell
-sudo systemctl enable gdrive.service
-sudo systemctl start gdrive.service
-```
+Then upload to `/home/seed/.config/rclone/` replacing `seed` with your user name if not default.
+You will likely need to change paths in Arrs as well, as SB uses different paths.
 
 These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation around migration.
 

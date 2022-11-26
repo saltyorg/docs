@@ -133,7 +133,6 @@
 
             ![](../images/plex-media-server/plex-11-schedule.jpeg)
 
-
 ## Add Media Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV.
@@ -211,7 +210,6 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
         8. Click "ADD LIBRARY".
 
             ![](../images/plex-media-server/plex-23-tv-advanced.png)
-
 
 ## Scan Media libraries
 

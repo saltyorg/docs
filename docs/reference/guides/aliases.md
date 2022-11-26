@@ -1,6 +1,7 @@
 # Saltbox Aliases
 
 Handy guide to Saltbox Command line aliases.
+
 ## sb update
 
 - Update Saltbox

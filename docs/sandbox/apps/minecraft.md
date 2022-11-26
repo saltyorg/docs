@@ -47,4 +47,5 @@ For individual servers, you can change things such as memory using custom docker
 For a single install, the inventory paths will look like this `minecraft_docker_image_tag`
 
 When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`
+
 - [:octicons-link-16: Documentation](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" }

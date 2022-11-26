@@ -26,13 +26,13 @@ You will need a notifiar account api key to use notifiarr. You can get one by [s
 
 After logging in, you should be redirected to your profile screen.
 
-  - Click on Generate API Key (This needs to be done)
-  - Select your Country
-  - Select your Timezone
-  - Change your Time Format to your liking
-  - Select your Site Theme
-  - Select your Notification Language
-  - **Don't forget to Save your changes**
+- Click on Generate API Key (This needs to be done)
+- Select your Country
+- Select your Timezone
+- Change your Time Format to your liking
+- Select your Site Theme
+- Select your Notification Language
+- **Don't forget to Save your changes**
 
 Add your API key to the **[Sandbox settings file](../../sandbox/settings.md)**
 

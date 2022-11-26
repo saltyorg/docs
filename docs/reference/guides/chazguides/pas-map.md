@@ -2,7 +2,7 @@
 
 There are these things in the Plex Autoscan config, and they seem to cause a great deal of consternation.
 
-## `SERVER_PATH_MAPPINGS`:
+## `SERVER_PATH_MAPPINGS`
 
 Here is one of mine, for example:
 
@@ -81,7 +81,7 @@ If there is no Plex Library that matches the path, PAS will display an error in 
 
 This can also happen if the Plex path is incorrectly entered [It’s not actually the folder configured in a library] or if one of the source paths is incorrect [Radarr isn’t set to save files in the path listed] or some combination of that sort of thing.
 
-### Actual example from a working setup:
+### Actual example from a working setup
 
 Let’s look at one of my sections.
 
@@ -92,7 +92,7 @@ Let’s look at one of my sections.
   ],
 ```
 
-#### Plex:
+#### Plex
 
 One Plex Movie library is pointed at "/mnt/unionfs/Media/Movies/Movies":
 
@@ -107,7 +107,7 @@ So that’s the “heading” on this map:
   ],
 ```
 
-#### Radarr:
+#### Radarr
 
 Radarr is configured to send updates to Plex Autoscan, so let’s go take a look at it:
 
@@ -128,7 +128,7 @@ So that’s an element of this map:
   ],
 ```
 
-#### Google Drive:
+#### Google Drive
 
 Lastly, I have Google Drive monitoring enabled, and all my movies get uploaded to a Teamdrive:
 
@@ -212,76 +212,97 @@ Given this SERVER_PATH_MAPPING:
 
 ```json
 "PATH_WHERE_PLEX_LOOKS":[
-	"PATH_WHERE_RADARR_LOOKS",
-	"PATH_WHERE_APP_TWO_LOOKS",
-	"PATH_ON_GOOGLE_DRIVE"
+ "PATH_WHERE_RADARR_LOOKS",
+ "PATH_WHERE_APP_TWO_LOOKS",
+ "PATH_ON_GOOGLE_DRIVE"
 ],
 ```
 
 #### Example 1
+
 Plex Autoscan processes
+
 ```
 PATH_WHERE_RADARR_LOOKS/bing/bang/boing
 ```
+
 based on a request from Radarr.
 
 Plex Autoscan finds
+
 ```
 PATH_WHERE_RADARR_LOOKS
 ```
+
 in the list, so it does a substitution based on the map and tells Plex to scan:
+
 ```
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
 #### Example 2
+
 Plex Autoscan processes
+
 ```
 PATH_WHERE_APP_TWO_LOOKS/bing/bang/boing
 ```
+
 based on a request from a second application; maybe it's a second Radarr, or Couch Potato, or a custom script.  Whatever the source, this source sees those same files at `PATH_WHERE_APP_TWO_LOOKS`, so that’s what it sends to Plex Autoscan.
 
 Plex Autoscan finds
+
 ```
 PATH_WHERE_APP_TWO_LOOKS
 ```
+
 in the list, so it does a substitution based on the map and tells Plex to scan
+
 ```
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
 #### Example 3
+
 Plex Autoscan processes
+
 ```
 PATH_ON_GOOGLE_DRIVE/bing/bang/boing
 ```
+
 based on Google Drive Monitoring.
 
 Plex Autoscan finds
+
 ```
 PATH_ON_GOOGLE_DRIVE
 ```
+
 in the list, so it does a substitution based on the map and tells Plex to scan
+
 ```
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
 #### Example 4 [error case]
+
 Plex Autoscan processes
+
 ```
 SOME_RANDOM_PATH/bing/bang/boing
 ```
+
 based on some trigger, maybe a manual scan.
 
 Plex Autoscan DOES NOT find `SOME_RANDOM_PATH` in the list, so no substitution is done and PAS tells Plex to scan
+
 ```
 SOME_RANDOM_PATH/bing/bang/boing
 ```
 
 Plex Autoscan then logs: `“unable to map to a section ID”` since that path doesn't correspond to any library in Plex.
 
-
-## `SERVER_FILE_EXIST_PATH_MAPPINGS`:
+## `SERVER_FILE_EXIST_PATH_MAPPINGS`
 
 PAS uses this map to alter path mappings before checking that the file exists.
 

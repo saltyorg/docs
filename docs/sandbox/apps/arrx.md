@@ -75,13 +75,14 @@ Also, you probably want to put some thought into the directory and library struc
 
 The example above shows a `""` config entry.  For those apps which are also found in the stock saltbox install, this will *overwrite* the existing container.  Then, when you rerun the saltbox tag, this container will get overwritten by the stock one again.  You probably don't want that.
 
-For one thing, these "arrX" roles _may_ be based on different images than the stock images.
+For one thing, these "arrX" roles *may* be based on different images than the stock images.
 
 You probably want to overwrite your existing role with this one; that will ensure that all your instances of Bazarr are based on the same image and get updated in the same way.  It's up to you, though, how you want to manage them.
 
-### If you want to use this to overwrite your existing Bazarr/etc container:
+### If you want to use this to overwrite your existing Bazarr/etc container
 
 1. Include a `""` entry in the config:
+
    ```yaml
     bazarrx:
       roles:
@@ -90,14 +91,19 @@ You probably want to overwrite your existing role with this one; that will ensur
         - bang
         - boing
    ```
+
 2. Run the role as described below.
    ```bash
+
   sb install cm-bazarrx
+
    ```
 3. Add the stock tag to the `[skip]` section in `"/srv/git/saltbox/ansible.cfg"`:
    ```
+
    [tags]
    skip = bazarr,whatever,whatever
+
    ```
 
 That will ensure that the stock `bazarr` tag doesn't overwrite the container you are creating here.
@@ -135,6 +141,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
      roles:
        - BING
    ```
+
    </details>
 
    <details>
@@ -147,6 +154,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
        - BING
        - BANG
    ```
+
    </details>
 
    <details>
@@ -160,6 +168,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
        - BANG
        - BOING
    ```
+
    **Refer to the notes above about overwriting the default container.**
 
    </details>

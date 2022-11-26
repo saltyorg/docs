@@ -31,8 +31,11 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 **Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]
 
 ***
+
 ## pho's cleanup.sh
+
 This script deletes
+
 * everything under a size of 100M
 * every unwanted file immediately
 * everything but the wanted files after 10 hours

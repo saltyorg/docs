@@ -70,11 +70,11 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
 
 `"max_size_gb":` Max size (in GB) Cloudplow allows `/mnt/local/Media` to get before starting an upload task.
 
-  - Note: `max_size_gb` is rounded up, so it is advised to have it minimum `2GB` or else it would attempt upload at each interval. Explanation below.
+- Note: `max_size_gb` is rounded up, so it is advised to have it minimum `2GB` or else it would attempt upload at each interval. Explanation below.
 
-    - `1GB` is basically anything in there.
+  - `1GB` is basically anything in there.
 
-    - `2GB` is at least 1GB of data.
+  - `2GB` is at least 1GB of data.
 
 ### Plex Integration
 
@@ -113,11 +113,11 @@ Cloudplow can throttle Rclone uploads during active, playing Plex streams (pause
 
 `rclone`
 
-  - `url` - Leave as default.
+- `url` - Leave as default.
 
-  - `throttle_speeds` - Categorized option to configure upload speeds for various stream counts (where `5` represents 5 or more streams). `M` is MB/s.
+- `throttle_speeds` - Categorized option to configure upload speeds for various stream counts (where `5` represents 5 or more streams). `M` is MB/s.
 
-     - Format:
+  - Format:
 
        ```json
        "STREAM COUNT": "THROTTLED UPLOAD SPEED",

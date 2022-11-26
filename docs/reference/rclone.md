@@ -6,7 +6,6 @@ If you have an existing rclone setup from Cloudbox or PTS or something else you 
 
 If you are reinstalling saltbox there is no reason to do this again provided you have run a Saltbox backup or followed the instructions the first time you did this and have backed up the important files.
 
-
 <details>
 <summary>Overview of what this process is going to do</summary>
 <br />
@@ -33,6 +32,6 @@ Note that this is a general overview of the things that are going to happen, not
 
 </details>
 
-### Instructions:
+### Instructions
 
 [Start here](rclone-manual.md).

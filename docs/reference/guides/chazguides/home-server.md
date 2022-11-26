@@ -4,19 +4,19 @@ This article discusses details to consider when running Saltbox on a home server
 
 Prerequisites:
 
- - [Domain](#domain)
+- [Domain](#domain)
 
- - [Static IP OR Dynamic DNS configured](#dynamic-dns)
+- [Static IP OR Dynamic DNS configured](#dynamic-dns)
 
- - ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
+- ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
 
- - [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
+- [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
    Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
    Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing.
 
 NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.
 
-### Domain:
+### Domain
 
 You need a domain.  They’re cheap or even free.
 
@@ -28,7 +28,7 @@ Configure the DNS at your registrar to point your domain at your home external I
 
 You can find your home external IP address using something like: [https://whatismyipaddress.com/](https://whatismyipaddress.com/)
 
-### Dynamic DNS:
+### Dynamic DNS
 
 You will need to configure “dynamic DNS” to make sure that domain keeps pointing to your home IP, which is subject to change, most likely.
 
@@ -44,9 +44,9 @@ sb install ddclient
 
 You’ll do this AFTER you’ve installed saltbox.
 
-### Router:
+### Router
 
-#### Port Forwarding:
+#### Port Forwarding
 
 You need some ports forwarded to that machine on your router.  Explaining how to do that for any arbitrary router is out of scope, but I’ll show you where it is on my Netgear.
 
@@ -60,9 +60,9 @@ This means that when a connection from the outside comes in, it is connecting to
 
 There are two parts to what you need to do:
 
-  - Give your server an unchanging local IP address
+- Give your server an unchanging local IP address
 
-  - Forward requests from the outside on relevant ports to that IP address.
+- Forward requests from the outside on relevant ports to that IP address.
 
 The first is required because typically your router will be able to configure port forwarding to an IP address, so you don’t want the IP of your server changing.  Typically, on your router, everything gets an IP assigned automatically by the router’s DHCP server, so the IP address of a specific thing might change.  Depending on how your network is set up, it may be unlikely, but it’s a possibility nonetheless, so we’re going to make sure it doesn’t happen by telling the router “Always give this machine the IP address 1.2.3.4”.
 
@@ -89,7 +89,7 @@ Ports used by the stock saltbox apps can be found [here](https://docs.saltbox.de
 !!! warning
     If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.
 
-#### Port Forward Testing:
+#### Port Forward Testing
 
 At this point, you should be able to SSH to that machine using your domain.
 
@@ -141,7 +141,7 @@ This is just an example of the install.  You should refer to the actual [install
 
 I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
 
-  - I enabled OpenSSH and imported my SSH keys from github
+- I enabled OpenSSH and imported my SSH keys from github
 
 That’s all.
 
@@ -234,4 +234,3 @@ rutorrent : Resources | Tasks | Docker | Remove Docker Container | Remove Docker
 Now I did one last log out and back in so I could access the `docker` command.
 
 At this point, everything is running and I’m ready to go through the application setup.
-

@@ -1,8 +1,8 @@
 # Inventory
 
-Advanced use cases that would normally require editing roles can now be handled through the inventory system instead. 
+Advanced use cases that would normally require editing roles can now be handled through the inventory system instead.
 
-Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` or `/opt/sandbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in: 
+Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` or `/opt/sandbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in:
 
 `/srv/git/saltbox/inventories/host_vars/localhost.yml`
 
@@ -47,8 +47,10 @@ jackett_docker_labels_custom:
   com.centurylinklabs.watchtower.enable: "true"
 ```
 
-# Additional Examples
-## Various
+## Additional Examples
+
+### Various
+
 ```yaml
 ##### Plex Ports for local access#####
 plex_open_main_ports: true
@@ -86,12 +88,15 @@ shell_zsh_zshrc_block_custom: |
   alias sbi='sb install'
 
 ```
-# Authelia App Bypass
+
+## Authelia App Bypass
+
 Some may not want the additional layer of security that Authelia supplies, good news is that it can be disabled with a simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
 
 `grep -Ril "_traefik_sso_middleware:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u`
 
-### Override example:
+### Override example
+
 ```yaml
 ### Authelia App Bypass ###
 sonarr_traefik_sso_middleware: ""
@@ -100,13 +105,17 @@ radarr_traefik_sso_middleware: ""
 nzbget_traefik_sso_middleware: ""
 prowlarr_traefik_sso_middleware: ""`
 ```
+
 After making this change in the inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
 
-# Authorize with App Credentials
+## Authorize with App Credentials
+
 ### Inject an Authorization header - Traefik performs basic auth with the backend app
+
 This allows you to keep basic auth enabled within apps but not have the hassle of entering the credentials manually. The authorization header is only inserted if the request is authorized through the SSO middleware (Authelia) and is not applied to the API endpoint(s).
 
 Use [this tool](https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents based on your credentials.
+
 ```yaml
 sonarr_docker_labels_custom:
   traefik.http.middlewares.appAuth.headers.customrequestheaders.Authorization: "Basic <base64 header>"
@@ -114,7 +123,9 @@ sonarr_traefik_middleware_custom: "appAuth"
 ```
 
 ## Subdomain Customization
-### Overrides:
+
+### Overrides
+
 ```yaml
 #### Make Organizr available only at the base domain ####
 organizr_web_subdomain: ""
@@ -122,7 +133,9 @@ organizr_web_subdomain: ""
 #### Make Tautulli available only at `stats.domain.tld` ####
 tautulli_web_subdomain: "stats"
 ```
-### Additions:
+
+### Additions
+
 ```yaml
 #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
 organizr_docker_labels_custom:
@@ -134,4 +147,5 @@ overseerr_docker_labels_custom:
   traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
   traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
 ```
+
 Note that this last set of examples requires you to add DNS records manually.

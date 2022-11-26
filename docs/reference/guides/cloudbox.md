@@ -59,12 +59,13 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
   On your cloudbox machine, run:
 
-  ```
+  ```shell
   rclone config show REMOTENAME
   ```
 
   Using an SA:
-  ```
+
+  ```text
   ➜  ~ rclone config show REMOTE
   [REMOTE]
   type = drive
@@ -75,7 +76,8 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
   ```
 
   Using clientid:
-  ```
+
+  ```text
   ➜  ~ rclone config show REMOTE:
   [REMOTE]
   type = drive
@@ -155,6 +157,7 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
     sb install saltbox
 
   ```
+
 - install individual tags [if desired] <br />
 
   ``` shell
@@ -162,6 +165,7 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
     sb install emby
 
   ```
+
 - install sandbox tags [if required] <br />
 
   ``` shell

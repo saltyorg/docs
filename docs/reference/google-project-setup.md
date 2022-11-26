@@ -2,13 +2,13 @@ This guide will show you how to set up a Google Project and create credentials t
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 
-  - verified [account drive permissions](google-account-perms.md)
+- verified [account drive permissions](google-account-perms.md)
 
 This guide is assuming you are using a standard GSuite Business or GSuite Workspace account.
 
 IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.
 
-1. Open Google APIs Console site: https://console.developers.google.com and login with your Google account.
+1. Open Google APIs Console site: <https://console.developers.google.com> and login with your Google account.
 
     Click on the project or organization at the top:
 
@@ -131,4 +131,3 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.
     Later on, I'm going to assume you put it on the saltbox server in `/opt/sa/` and named it `project-creds.json`.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-3-create-a-google-group-to-hold-service-accounts)
-

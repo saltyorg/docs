@@ -1,4 +1,5 @@
 # Cloud Storage
+
 ## Provider
 
 If you want to forego cloud storage and put your media on something like your own NAS, there are some notes [here](local-storage.md).

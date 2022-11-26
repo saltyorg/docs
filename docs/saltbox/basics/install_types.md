@@ -30,8 +30,6 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 | [Lidarr](https://lidarr.audio) ([Docker](https://github.com/hotio/docker-lidarr))                                                                                  |                    |    ![Yes][yes]     |                    |    ![Yes][yes]     |
 
   [yes]:../../images/check-mark.png
-  [no]:../../images/cross-mark.png
-
 
 Next, let's move on to [Installing Saltbox](../install/install.md).
 

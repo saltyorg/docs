@@ -194,67 +194,67 @@ docker run -d  \
 
   Mount paths are in the format of `path/on/host:path/within/container`. You may change the path on host (left side), but not the path set for the container, internally (right side).
 
-  - `-v /opt/<name>:<container_config_path>`
+- `-v /opt/<name>:<container_config_path>`
 
-    - This is where your config files will go
+  - This is where your config files will go
 
-    - You will need to:
+  - You will need to:
 
-      - Create the folder: `mkdir /opt/<name>`
+    - Create the folder: `mkdir /opt/<name>`
 
-      - Set ownership: `sudo chown -R <user>:<group> /opt/<name>`
+    - Set ownership: `sudo chown -R <user>:<group> /opt/<name>`
 
-        - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
+      - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
 
-      - Set permissions: `sudo chmod -R ugo+X /opt<name>`
+    - Set permissions: `sudo chmod -R ugo+X /opt<name>`
 
-  - `-v /mnt/local/downloads/<name>:/downloads/<name>`
+- `-v /mnt/local/downloads/<name>:/downloads/<name>`
 
-    - Only required if your Docker app needs a path for downloads.
+  - Only required if your Docker app needs a path for downloads.
 
-    - You will need to set `/downloads/<name>` as the downloads path in your app.
+  - You will need to set `/downloads/<name>` as the downloads path in your app.
 
-    - This path will be accessible to Sonarr and Radarr.
+  - This path will be accessible to Sonarr and Radarr.
 
-    - You will need to:
+  - You will need to:
 
-      - Create the folder: `mkdir /mnt/local/downloads/<name>`
+    - Create the folder: `mkdir /mnt/local/downloads/<name>`
 
-      - Set ownership: `sudo chown -R <user>:<group> /mnt/local/downloads/<name>`
+    - Set ownership: `sudo chown -R <user>:<group> /mnt/local/downloads/<name>`
 
-        - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
+      - Replace `<user>` and `<group>` to match yours' (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid))
 
-      - Set permissions: `sudo chmod -R ugo+X /mnt/local/downloads/<name>`
+    - Set permissions: `sudo chmod -R ugo+X /mnt/local/downloads/<name>`
 
 ## Network
 
 Note: These are important, but leave them out if your docker run command requires `--net=host`.
 
-  - `--network=saltbox`
+- `--network=saltbox`
 
-  - `--network-alias=<name>`   (aliases are shortcuts to communicate across dockers)
+- `--network-alias=<name>`   (aliases are shortcuts to communicate across dockers)
 
 ## Ports
 
   Ports are in the format of `host_port:container_port`.
 
-  - For the main, web admin/page port (e.g. 32400 in Plex):
+- For the main, web admin/page port (e.g. 32400 in Plex):
 
-    - You do not need to specify this port with `-p`. Since this port will not be accessible over the net or from the host. Instead, Traefik will redirect the subdomain to it.
+  - You do not need to specify this port with `-p`. Since this port will not be accessible over the net or from the host. Instead, Traefik will redirect the subdomain to it.
 
-    - If you do want the port accessible from the host (but not from the net), simply add `127.0.0.1:` to it and specify it via:
+  - If you do want the port accessible from the host (but not from the net), simply add `127.0.0.1:` to it and specify it via:
 
       `-p 127.0.0.1:<host_port>:<container_webadmin_port>`
 
       If you expose ports to the host like this, make sure they don't conflict with another one on that host.
 
-  - For all other ports:
+- For all other ports:
 
-    - `-p <host_port>:<container_other_ports>`
+  - `-p <host_port>:<container_other_ports>`
 
-      - These are accessible from the net.
+    - These are accessible from the net.
 
-  - If this is a home install, you will probably need to forward the port to the Saltbox machine.
+- If this is a home install, you will probably need to forward the port to the Saltbox machine.
 
 ## Traefik Proxy
 

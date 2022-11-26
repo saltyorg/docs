@@ -2,7 +2,7 @@
 
 ## TRaSH Guides
 
-- [:material-home: TRaSH Guides ](https://trash-guides.info/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: TRaSH Guides](https://trash-guides.info/){: .header-icons target=_blank rel="noopener noreferrer" }
 
 - [:fontawesome-brands-discord: Discord](https://trash-guides.info/discord){: .header-icons target=_blank rel="noopener noreferrer" }
 
@@ -10,7 +10,7 @@
 
 The servarr wiki is home to information on Lidarr, Prowlarr, Radarr, Readarr, and Sonarr.
 
-- [:material-home: Servarr ](https://wiki.servarr.com/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Servarr](https://wiki.servarr.com/){: .header-icons target=_blank rel="noopener noreferrer" }
 
   Servarr Discussion
 
@@ -36,4 +36,4 @@ The servarr wiki is home to information on Lidarr, Prowlarr, Radarr, Readarr, an
 
 ## Kasper56's Plex Client End User setup Wiki
 
-  - [:material-home: Media Clients Wiki ](https://mediaclients.wiki/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:material-home: Media Clients Wiki](https://mediaclients.wiki/){: .header-icons target=_blank rel="noopener noreferrer" }

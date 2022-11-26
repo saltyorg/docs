@@ -17,7 +17,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 1. Run the following command:
 
-    ```
+    ```shell
     rclone config
     ```
 
@@ -72,7 +72,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     Storage> drive
     ```
 
-4. Client ID and Secret:
+5. Client ID and Secret:
 
     === "Using a Client ID and secret to connect"
         Enter the Client ID and Client Secret when prompted
@@ -81,7 +81,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         Option client_id.
         Google Application Client Id
         Setting your own is recommended.
-        See https://rclone.org/drive/#making-your-own-client-id for how to create your own.
+        See `https://rclone.org/drive/#making-your-own-client-id` for how to create your own.
         If you leave this blank, it will use an internal key which is low performance.
         Enter a string value. Press Enter for the default ("").
         client_id> JOHNNYJOEYDEEDEE
@@ -90,8 +90,8 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leave blank normally.
         Enter a string value. Press Enter for the default ("").
         client_secret> OZZYTONYGEEZERBILL
-        ```
 
+    ```text
     === "Using a service account to connect"
         Leave the Client ID and Client Secret blank when prompted
         ```shell
@@ -108,7 +108,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leave blank normally.
         Enter a string value. Press Enter for the default ("").
         client_secret>
-        ```
+    ```
 
 6. For the "Scope that rclone should use when requesting access from drive", type in `drive`, or the corresponding number (i.e. `1`), to select "Full access all files, excluding Application Data Folder", and press <kbd class="platform-all">Enter</kbd>.
 
@@ -134,7 +134,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     scope> 1
     ```
 
-2. For "ID of the root folder", leave blank and press <kbd class="platform-all">Enter</kbd>.
+7. For "ID of the root folder", leave blank and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Option root_folder_id.
@@ -146,7 +146,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     root_folder_id>
     ```
 
-3.  For "Service Account Credentials JSON file path":
+8. For "Service Account Credentials JSON file path":
 
     === "Using a Client ID and secret to connect"
         leave blank and press <kbd class="platform-all">Enter</kbd>
@@ -158,7 +158,8 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leading `~` will be expanded in the file name as will environment variables such as `${RCLONE_CONFIG_DIR}`.
         Enter a string value. Press Enter for the default ("").
         service_account_file>
-        ```
+
+    ```text
 
     === "Using a service account to connect"
         Enter the path to a service account JSON file and press <kbd class="platform-all">Enter</kbd>
@@ -170,9 +171,9 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leading `~` will be expanded in the file name as will environment variables such as `${RCLONE_CONFIG_DIR}`.
         Enter a string value. Press Enter for the default ("").
         service_account_file> /path/to/service-account.json
-        ```
+    ```
 
-4.  For "Edit advanced config", type `n` and press <kbd class="platform-all">Enter</kbd>.
+9. For "Edit advanced config", type `n` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Edit advanced config?
@@ -181,7 +182,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/n> n
     ```
 
-5.  For "Use auto config?", type `n` for "...remote or headless machine" and press <kbd class="platform-all">Enter</kbd>.
+10. For "Use auto config?", type `n` for "...remote or headless machine" and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Use auto config?
@@ -193,7 +194,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/n> n
     ```
 
-6.  In the next section, follow the instructions on your local machine.
+11. In the next section, follow the instructions on your local machine.
 
     ```shell
     Option config_token.
@@ -202,25 +203,25 @@ You will need rclone and a web browser installed on a machine local to you [this
     For more help and alternate methods see: https://rclone.org/remote_setup/
     Execute the following on the machine with the web browser (same rclone
     version recommended):
-    	rclone authorize "drive" "eyJjbGllbnRfaWQiOiI2OTUxMzMzNjg1ODMtcmU5MmE3Y3F0cGdqc2JvOGlscGwxamIzN2draXRibmwuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiOVRCQ2p2WHBlNlhxaFlPUG5JUGpRTkdIIiwic2NvcGUiOiJkcml2ZSJ9"
+     rclone authorize "drive" "eyJjbGllbnRfaWQiOiI2OTUxMzMzNjg1ODMtcmU5MmE3Y3F0cGdqc2JvOGlscGwxamIzN2draXRibmwuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiOVRCQ2p2WHBlNlhxaFlPUG5JUGpRTkdIIiwic2NvcGUiOiJkcml2ZSJ9"
     Then paste the result.
     Enter a value.
     config_token>
     ```
 
-7.  If asked to login, use the Google Drive account you want to store your data in.
+12. If asked to login, use the Google Drive account you want to store your data in.
 
     [](../../images/rclone-remote/google-login.png)
 
-8.  Give access by clicking "Allow".
+13. Give access by clicking "Allow".
 
     [](../../images/rclone-remote/google-permission.png)
 
-9.  The browser should report success.
+14. The browser should report success.
 
-10. And a token should show up in the terminal on your local computer:
+15. And a token should show up in the terminal on your local computer:
 
-    ```
+    ```text
     2022/05/09 22:56:09 NOTICE: Log in and authorize rclone for access
     2022/05/09 22:56:09 NOTICE: Waiting for code...
     2022/05/09 22:56:16 NOTICE: Got code
@@ -228,14 +229,15 @@ You will need rclone and a web browser installed on a machine local to you [this
     ROGERPETEJOHNKEITH
     <---End paste
     ```
-11. Paste the token at the rclone prompt and press Enter.
 
-    ```
+16. Paste the token at the rclone prompt and press Enter.
+
+    ```text
     Enter a value.
     config_token>  ROGERPETEJOHNKEITH
     ```
 
-12. For "Configure this as a team drive?":
+17. For "Configure this as a team drive?":
 
     === "Using My Drive"
         Type `n` and press <kbd class="platform-all">Enter</kbd>.
@@ -275,7 +277,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         config_team_drive> 6
         ```
 
-13. Confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
+18. Confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     --------------------
@@ -294,7 +296,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/e/d> y
     ```
 
-14. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
+19. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Current remotes:
@@ -313,8 +315,6 @@ You will need rclone and a web browser installed on a machine local to you [this
     e/n/d/r/c/s/q> q
     ```
 
-
-
 ## Existing Rclone Setup
 
 The default remote specified in [[settings.yml|Install: settings.yml]] is `google` for Google Drive. If the Rclone remote in your config has the same name, then you are OK to skip this page and go on to the next.
@@ -326,4 +326,3 @@ If you are using Google Drive and the Rclone remote in your config has a differe
 OR
 
 - Edit the Rclone remote entry in [settings.yml](../accounts.md) with yours.
-

@@ -90,13 +90,13 @@ docker start delugevpn
 
 **FOR PIA**
 
-  - **vpn_user:** Your PIA user name
+- **vpn_user:** Your PIA user name
 
-  - **vpn_pass:** Your PIA password
+- **vpn_pass:** Your PIA password
 
-  - **vpn_prov:** pia
+- **vpn_prov:** pia
 
-  - **vpn_endpoint:** netherlands.ovpn
+- **vpn_endpoint:** netherlands.ovpn
 
 **Included PIA OpenVPN end point options are.**
 
@@ -140,6 +140,6 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 ### For app specific instructions refer to the parent role
 
- - [Deluge](../../apps/deluge.md) <br />
- - and the upstream documentation <br />
+- [Deluge](../../apps/deluge.md) <br />
+- and the upstream documentation <br />
    [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }

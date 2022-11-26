@@ -1,5 +1,5 @@
+# Plex Autoscan
 
----
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 [PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
@@ -7,13 +7,14 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 ## Newly downloaded media from Sonarr and Radarr are not being added to Plex?
 
 - Test another download and run the following command:
-  ```
+
+  ```shell
    tail -f /opt/plex_autoscan/plex_autoscan.log
   ```
 
 - If you see this...
 
-   ```
+   ```text
    terminate called after throwing an instance of 'boost::filesystem::filesystem_error'
    boost::filesystem::create_directories: Permission denied: "/config/Library/Logs"
    ```
@@ -22,16 +23,15 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
    To fix this, Run the following command. Replace `user` and `group` to match yours (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
 
-   ```
+   ```shell
    docker stop plex
    sudo chown -R user:group /opt/plex
    docker start plex
    ```
 
-
    Example of a successful scan:
 
-   ```
+   ```text
    2017-10-10 17:48:26,429 -    DEBUG -      PLEX [ 6185]: Waiting for turn in the scan request backlog...
    2017-10-10 17:48:26,429 -     INFO -      PLEX [ 6185]: Scan request is now being processed
    2017-10-10 17:48:26,474 -     INFO -      PLEX [ 6185]: No 'Plex Media Scanner' processes were found.
@@ -45,25 +45,22 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
    2017-10-10 17:48:39,201 -     INFO -      PLEX [ 6185]: Finished scan!
    ```
 
-
 ## Plex Autoscan log shows error during empty trash request
 
-```
+```text
 ERROR - PLEX [10490]: Unexpected response status_code for empty trash request: 401
 ```
 
-You need to generate another token and re-add that back into the config. See [Plex Autoscan]().
-
-
+You need to generate another token and re-add that back into the config.
 
 ## Plex Autoscan error with metadata item id
 
 Example Log:
-```
+
+```text
  2017-11-21 04:26:32,619 -    ERROR -      PLEX [ 7089]: Exception finding metadata_item_id for '/data/TV/Gotham/Season 01/Gotham - S01E01 - Pilot.mkv':
  2017-11-21 04:26:32,619 -     INFO -      PLEX [ 7089]: Aborting analyze of '/data/TV/Gotham/Season 01/Gotham - S01E01 - Pilot.mkv' because could not find a metadata_item_id for it
 ```
-
 
 Possible Issues:
 
@@ -77,7 +74,7 @@ Solution 1:
 
    The current default used for mounting cloud storage is Rclone VFS:
 
-   ```
+   ```shell
    sudo systemctl status rclone_vfs
    ```
 
@@ -85,12 +82,13 @@ Solution 1:
 
    The current default used for creating the union mount is MergerFS:
 
-   ```
+   ```shell
    sudo systemctl status mergerfs
    ```
 
 3. Restart Plex:
-   ```
+
+   ```shell
    docker stop plex && docker start plex
    ```
 
@@ -100,22 +98,21 @@ If all else fails, disable analyze in config.
 
 1. Open `/opt/plex_autoscan/config/config.json`
 
-   ```
+   ```shell
    nano /opt/plex_autoscan/config/config.json
    ```
 
 1. Make the following edit:
 
-   ```
+   ```json
    "PLEX_ANALYZE_TYPE": "off",
    ```
 
 1. Restart Plex Autoscan
 
-   ```
+   ```shell
    sudo systemctl restart plex_autoscan
    ```
-
 
 ## Purpose of a Control File in Plex Autoscan
 
@@ -125,11 +122,9 @@ If the remote mount for you cloud storage provider (e.g. Google Drive) ever disc
 
 Once the remote is remounted, all the files marked unavailable in Plex will be playable again and Plex Autoscan will resume its emptying trash duties post-scan.
 
-To learn more about Plex Autoscan, visit https://github.com/l3uddz/plex_autoscan.
+To learn more about Plex Autoscan, visit <https://github.com/l3uddz/plex_autoscan>.
 
 **TLDR: Plex Autoscan will not remove deleted media out of Plex without it.**
-
-
 
 ## Plex Autoscan Localhost Setup
 
@@ -139,18 +134,17 @@ To do so, follow these steps:
 
  Option 1
 
-
 **Plex Autoscan:** (only if changed from default)
 
 1. Open `/opt/plex_autoscan/config/config.json`
 
-   ```
+   ```shell
    nano /opt/plex_autoscan/config/config.json
    ```
 
 2. Make the following edit:
 
-   ```
+   ```json
    "SERVER_IP": "0.0.0.0",
    ```
 
@@ -158,7 +152,7 @@ To do so, follow these steps:
 
 3. Restart Plex Autoscan
 
-   ```
+   ```shell
    sudo systemctl restart plex_autoscan
    ```
 
@@ -166,21 +160,17 @@ To do so, follow these steps:
 
 - Retrieve the 'Docker Gateway IP Address' by running the following:
 
-  ```
+  ```shell
   docker inspect -f '{{ .NetworkSettings.Networks.saltbox.Gateway }}' sonarr
   ```
 
 - Replace the Plex Autoscan URL with:
 
-  ```
-  http://docker_gateway_ip_address:3468/yourserverpass
-  ```
+  `http://docker_gateway_ip_address:3468/yourserverpass`
 
 - You Plex Autoscan URL will now look like this:
 
-  ```
-  http://172.18.0.1:3468/yourserverpass
-  ```
+  `http://172.18.0.1:3468/yourserverpass`
 
  Option 2
 
@@ -188,36 +178,35 @@ Alternatively, you can set it up this way:
 
 _Note: This method benefits from completely closing off Plex Autoscan to the outside._
 
-
 **Plex Autoscan:**
 
 1. Retrieve the 'Docker Gateway IP Address' by running the following:
 
-   ```
+   ```shell
    docker inspect -f '{{ .NetworkSettings.Networks.saltbox.Gateway }}' sonarr
    ```
 
 2. Open `/opt/plex_autoscan/config/config.json`
 
-   ```
+   ```shell
    nano /opt/plex_autoscan/config/config.json
    ```
 
 3. Make the following edit:
 
-   ```
+   ```json
    "SERVER_IP": "docker_network_gateway_ip_address",
    ```
 
 4. This will now look like this:
 
-   ```
+   ```json
    "SERVER_IP": "172.18.0.1",
    ```
 
 5. Restart Plex Autoscan
 
-   ```
+   ```shell
    sudo systemctl restart plex_autoscan
    ```
 
@@ -225,16 +214,11 @@ _Note: This method benefits from completely closing off Plex Autoscan to the out
 
 - Replace the Plex Autoscan URL with:
 
-  ```
-  http://docker_gateway_ip_address:3468/yourserverpass
-  ```
+  `http://docker_gateway_ip_address:3468/yourserverpass`
 
 - You Plex Autoscan URL will now look like this:
 
-  ```
-  http://172.18.0.1:3468/yourserverpass
-  ```
-
+  `http://172.18.0.1:3468/yourserverpass`
 
 ## Why is SERVER_SCAN_DELAY set to 180 seconds by default?
 
@@ -247,4 +231,3 @@ SERVER_SCAN_DELAY of 180 seconds was calculated with an average episode download
 There is no harm in multiple Plex scans of the same season folder, except for more busyness of Plex, and perhaps more stress to it, so this delay will try to alleviate that.
 
 Alternative recommended settings are: 120 and 90 seconds.
-

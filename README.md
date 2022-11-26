@@ -1,4 +1,4 @@
-# Repo for https://docs.saltbox.dev
+# Repo for <https://docs.saltbox.dev>
 
 ## Contributing
 
@@ -9,13 +9,14 @@
 ## Previewing docs locally
 
 Basic previewing [some things may not preview accurately]:
+
 ```bash
 git clone https://github.com/saltyorg/docs
 cd docs
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
-Docs will be accessible at http://localhost:8000
+Docs will be accessible at <http://localhost:8000>
 
 Full previewing:
 
@@ -253,6 +254,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/RichardMawdsley>
+            <img src=https://avatars.githubusercontent.com/u/26411043?v=4 width="100;"  alt=Richard Mawdsley/>
+            <br />
+            <sub style="font-size:14px"><b>Richard Mawdsley</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/tzockt>
             <img src=https://avatars.githubusercontent.com/u/67980380?v=4 width="100;"  alt=Tim/>
             <br />
@@ -280,6 +288,8 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>phob</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/xplorer990>
             <img src=https://avatars.githubusercontent.com/u/76548373?v=4 width="100;"  alt=xplorer990/>
@@ -287,8 +297,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>xplorer990</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/tipdec-siblyn>
             <img src=https://avatars.githubusercontent.com/u/99356862?v=4 width="100;"  alt=~tipdec-siblyn/>
@@ -305,4 +313,3 @@ The docs are actually built with a different release of mkdocs-material, so to p
     </td>
 </tr>
 </table>
-

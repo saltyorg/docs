@@ -24,13 +24,13 @@ The role will configure Plex Autoscan, which should leave it ready to go.  Howev
 
 #### Do a One-Time, Manual Scan in Plex
 
- - For Plex Autoscan to work, at least one item needs to exist in each library before new items can show up.
+- For Plex Autoscan to work, at least one item needs to exist in each library before new items can show up.
 
- - If you already have media, simply add it to the library and do a manual scan within Plex, for each library you have, to build the DB.
+- If you already have media, simply add it to the library and do a manual scan within Plex, for each library you have, to build the DB.
 
- - If you currently don’t have any media, continue on with the setup, and when you have acquired some media, you will then perform a do a manual scan within Plex, for each library, to build the DB.
+- If you currently don’t have any media, continue on with the setup, and when you have acquired some media, you will then perform a do a manual scan within Plex, for each library, to build the DB.
 
- - For more info, see [this](plex.md).
+- For more info, see [this](plex.md).
 
 #### Add Your Plex Access Token into Plex Autoscan Config
 
@@ -38,17 +38,17 @@ _You can skip this step if you entered in your Plex credentials in [accounts.yml
 
 _Note: For Mediabox / Feederbox setups, the following will be done on the Mediabox._
 
-
    1. Get your Plex Autoscan Token [here](../reference/plex_auth_token.md).
 
    2. On the server's shell, run the following command:
 
-      ```
+      ```shell
       nano /opt/plex_autoscan/config/config.json
       ```
+
    3. Add the Plex Access Token to `"PLEX_TOKEN":` so that it now appears as:
 
-      ```
+      ```json
       "PLEX_TOKEN": "xxxxxxxxxxxxxx",
       ```
 
@@ -62,7 +62,6 @@ _Note: For Mediabox / Feederbox setup, the following will be done on the Mediabo
 
 The Plex Autoscan URL is needed during the setup of [Sonarr](sonarr#plex-autoscan), [Radarr](radarr#plex-autoscan), and [Lidarr](lidarr#plex-autoscan).
 
-
 To get your Plex Autoscan URL, run the following command:
 
  ```shell
@@ -70,19 +69,15 @@ To get your Plex Autoscan URL, run the following command:
  ```
 
 This will be in the format of:
+`http://subdomain.domain.com:plex_autoscan_port/plex_autoscan_pass`
 
-```
-http://subdomain.domain.com:plex_autoscan_port/plex_autoscan_pass
-```
 or
-```
-http://server_ip_address:plex_autoscan_port/plex_autoscan_pass
-```
+
+`http://server_ip_address:plex_autoscan_port/plex_autoscan_pass`
 
 Example:
-```
-http://plex.domain.com:3468/aiG7Uwie9iodTTlaisahcieNaeVonu6I
-```
+
+`http://plex.domain.com:3468/aiG7Uwie9iodTTlaisahcieNaeVonu6I`
 
 _Note 1: The url will not use `plex.domain.com` if the IP address it points to does not match the server's IP address (e.g. Cloudflare CDN enabled)._
 
@@ -102,7 +97,7 @@ If you used the [scripted rclone setup](../reference/rclone-manual.md); these co
 
 To upload the mounted.bin control file, run the following command:
 
-```
+```shell
 rclone touch google:/mounted.bin
 ```
 
@@ -110,13 +105,13 @@ _Note 1: If your Rclone remote config has a different name for Google Drive, rep
 
 _Note 2: Above command requires Rclone version 1.39+_
 
-#### Edit the control files in the Plex Autoscan config file.
+#### Edit the control files in the Plex Autoscan config file
 
 If you did step 4; you can skip this step.
 
    1. On the server's shell, run the following command:
 
-      ```
+      ```shell
       ls /mnt/remote/*.bin
       ```
 
@@ -126,7 +121,7 @@ If you did step 4; you can skip this step.
 
    2. On the server's shell, run the following command:
 
-      ```
+      ```shell
       nano /opt/plex_autoscan/config/config.json
       ```
 
@@ -186,4 +181,3 @@ If this doesn't work for you, update saltbox and rerun the plex-autoscan role:
 sb update
 sb install plex-autoscan
 ```
-

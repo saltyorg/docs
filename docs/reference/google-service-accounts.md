@@ -2,10 +2,10 @@ This guide will show you how to create projects and service accounts using `sa-g
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 
-  - verified [account drive permissions](google-account-perms.md)
-  - created the required [project](google-project-setup.md)
-  - created the required [group](google-group-setup.md)
-  - installed the [gcloud SDK tools](google-gcloud-tools-install.md)
+- verified [account drive permissions](google-account-perms.md)
+- created the required [project](google-project-setup.md)
+- created the required [group](google-group-setup.md)
+- installed the [gcloud SDK tools](google-gcloud-tools-install.md)
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
@@ -39,6 +39,7 @@ You can also run `id` to get this information:
 uid=1000(marco) gid=1000(marco) groups=1000(marco),...
             ^<user>         ^<group>
 ```
+
 </details>
 
 1. Verify that the google project has the right APIs enabled:
@@ -124,7 +125,6 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     `sa-gen` will create three projects, 300 SAs, and download them to `/opt/sa`:
 
-
     ```
     Total SA json keys before running sa-gen = 0
     Creating project = mgbtbnfkkt1
@@ -144,7 +144,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     ![](../images/google-service-account/01-all-members.png)
 
-6. Open the Google Admin site: https://admin.google.com/ and login with your Google account.  Click on the groups heading:
+6. Open the Google Admin site: <https://admin.google.com/> and login with your Google account.  Click on the groups heading:
 
     ![](../images/google-service-account/02-admin-top-level.png)
 
@@ -156,7 +156,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     ![](../images/google-service-account/04-bulk-upload.png)
 
-9.  Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
+9. Click on "ATTACH CSV", and find the `members.csv` you downloaded a moment ago:
 
     ![](../images/google-service-account/05-select-CSV.png)
 

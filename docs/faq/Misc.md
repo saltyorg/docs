@@ -1,5 +1,5 @@
+# Misc
 
----
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 [PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
@@ -10,14 +10,13 @@ DB data is stored in /opt/mariadb and backed up along with Saltbox Backup.
 
 However, you can separately make a backup of the DB into a single `nextcloud_backup.sql` file, by running the following command.
 
-```
+```shell
 docker exec mariadb /usr/bin/mysqldump -u root --password=password321 nextcloud  > nextcloud_backup.sql
-
 ```
 
 And restoring it back:
 
-```
+```shell
 cat nextcloud_backup.sql | docker exec -i mariadb /usr/bin/mysql -u root --password=password321 nextcloud
 
 ```
@@ -79,7 +78,6 @@ Traceback (most recent call last):
 json.decoder.JSONDecodeError: Expecting ',' delimiter: line 46 column 13 (char 1354)
 ```
 
-
 Fixes:
 
 1. Paste the JSON file at [jsonformatter.curiousconcept.com](https://jsonformatter.curiousconcept.com/) and click `process`. This will tell you what the issue is and fix it for you.
@@ -88,15 +86,14 @@ Fixes:
 
 2. Run:
 
-   ```
+   ```shell
    jq '.' config.json
    ```
 
    If there are no issues, it will simply print out the full JSON file.
 
-
    If there is an issue, a msg will display the location of the issue:
 
-   ```
+   ```text
    parse error: Expected separator between values at line 7, column 10
    ```

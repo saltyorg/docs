@@ -33,7 +33,7 @@ sb install sandbox-calibre
 
     Both Calibre and Calibre-Web expect to find your library in `/mnt/unionfs/Media/Books`. Note that per standard Saltbox setup, `/mnt/local` is included inside `/mnt/unionfs`. However, both dockers also include access to anything in your `/mnt` directory.
 
-### 4. Handy commands for managing your calibre docker:
+### 4. Handy commands for managing your calibre docker
 
 You can access advanced features of the Guacamole remote desktop using ctrl+alt+shift enabling you to use remote copy/paste and different languages.
 

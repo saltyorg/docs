@@ -8,7 +8,7 @@ Providing documentation for Sandbox applications is encouraged but not required.
 
 All Saltbox applications **must** have documentation
 
-### Install
+## Install
 
 ``` shell
 
@@ -16,7 +16,7 @@ sb install sandbox
 
 ```
 
-### Update
+## Update
 
 To update Saltbox Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
 
@@ -29,7 +29,7 @@ sb update
 !!! info
     Note that `sb update` updates only the saltbox files themselves; it does not update any applications.  You will need to follow this with an `sb install <tags here>` command to update applications or installed components.
 
-### How to Install Sandbox Apps
+## How to Install Sandbox Apps
 
 For most apps it is as simple as running the `sb install` command in a shell with a `sandbox-` prefix followed by the name of the role.
 
@@ -46,6 +46,7 @@ For example, to install mkvtoolnix you would run the mkvtoolnix role:-
 sb install sandbox-mkvtoolnix
 
 ```
+
 Before running any role you should first carefully read through any docs to see if there are any additional steps or pre configuration settings required.
 
 A list of all roles available to Saltbox including Sandbox can be called from the terminal via:-
@@ -59,9 +60,7 @@ sb list
 !!! Tip
     Where possible the configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml` and used to create a default user an password for logging in.
 
-
 ### Contributing to Sandbox Apps
-
 
 Note: If you just want to install a container into the Saltbox system without creating a role, see [this article](../advanced/your-own-containers.md).
 
@@ -69,11 +68,11 @@ That work will also help you determine what you will need to do in a role, so st
 
 If you want to create a role to allow others to install your role, keep reading.
 
-#### Editing an existing role:
+#### Editing an existing role
 
 If you want to make a change to an existing role [for example, changing the docker image it uses], you don't have [or want to] to create a new role. You make changes like this for either core or sandbox roles using the [inventory system](../saltbox/inventory/index.md)
 
-#### Preparatory work:
+#### Preparatory work
 
 Start by making your own fork of the Sandbox repo by clicking on the "Fork" button up and to the right.
 
@@ -83,29 +82,29 @@ On your development machine [which should probably be a machine running saltbox,
 
 clone your Sandbox fork:
 
-```
+```shell
 git clone https://github.com/YOURNAMEHERE/Sandbox.git sandbox
 ```
 
 go into that local sandbox dir:
 
-```
+```shell
 cd sandbox
 ```
 
 make sure your local repo is up-to-date:
 
-```
+```shell
 git pull
 ```
 
 create your feature branch:
 
-```
+```shell
 git checkout -b my-cool-role
 ```
 
-#### Creating a role:
+#### Creating a role
 
 Now you're ready to start work on your new role.
 
@@ -113,7 +112,7 @@ A good starting point is to find a role that is similar to the one you want to a
 
 copy the "starting point" role to your role:
 
-```
+```shell
 cp -R roles/bookstack roles/my-cool-role
 ```
 
@@ -121,7 +120,7 @@ cp -R roles/bookstack roles/my-cool-role
 
 Next step is to create the role. At a minimum, you will need to modify:
 
-```
+```text
 roles
 └── my-cool-role
     ├── defaults
@@ -135,13 +134,13 @@ There may be other things required; there may be templates or sub-tasks or what 
 
 What are those things?
 
-```
+```text
 roles/my-cool-role/defaults/main.yml
 ```
 
 This file contains various details for your role; the docker image, the name, subdomain, that sort of thing. The stuff in there should be self-explanatory or understandable with comparisons to existing roles; if it's not, then with all respect you probably shouldn't be creating a role right now.
 
-```
+```text
 roles/my-cool-role/tasks/main.yml
 ```
 
@@ -151,7 +150,7 @@ There is a wiki article on adding new containers [here](../advanced/your-own-con
 
 Don't forget the header in both these files:
 
-```
+```text
 #########################################################################
 # Title:            Sandbox: my-cool-role                               #
 # Author(s):        some-guy, salty                                     #
@@ -165,41 +164,42 @@ Don't forget the header in both these files:
 
 Be sure you edit this to reflect your role, name, and such depending on what's there in your prototype
 
-```
+```text
 sandbox.yml
 ```
+
 This file drives the ansible install system by providing the valid tags that you can use with:
 
-```
+```shell
 sb install sandbox-TAG
 ```
 
 Again, it's a simple file, and it should be quite apparent what needs to be added for a new role.
 
-##### Other files you may need to edit:
+##### Other files you may need to edit
 
-```
+```text
 defaults
 └── settings.yml.default
 ```
 
 This file provides the prototype settings file; if your role requires some new settings, add them to this file.  When the sandbox repo is updated, your new settings will be added to the user's current settings file and they will be prompted to review it.
 
-```
+```text
 templates
 └── my-cool-role.j2
 ```
 
 Perhaps you need to create a config file, or a service file, or the like.  Create templates for them here and fill them in at install time.  THere are lots of examples in the existing roles.
 
-##### Testing:
+##### Testing
 
 !!! warning
     BE SURE TO TEST YOUR ROLE.
 
 You want to make sure that your role works, so be sure you run it several times. Run it on fresh installs, reinstalls, enlist someone else to run it for you. The point of doing this is to add something to sandbox for others to use; if you don't verify that it works, why are you doing it?
 
-#### Creating the Pull Request:
+#### Creating the Pull Request
 
 Now it's complete, and tested, and you want it to be added to sandbox for other users to enjoy.
 

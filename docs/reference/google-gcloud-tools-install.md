@@ -6,9 +6,9 @@ Unfortunately, these can't be installed in an automated fashion, so you will hav
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 
-  - verified [account drive permissions](google-account-perms.md)
-  - created the required [project](google-project-setup.md)
-  - created the required [group](google-group-setup.md)
+- verified [account drive permissions](google-account-perms.md)
+- created the required [project](google-project-setup.md)
+- created the required [group](google-group-setup.md)
 
 This is a simplified extract from the original docs, which can be found [here](https://cloud.google.com/sdk/docs/quickstart#deb):
 
@@ -17,12 +17,15 @@ This is a simplified extract from the original docs, which can be found [here](h
     ```
     sudo apt-get install apt-transport-https ca-certificates gnupg
     ```
+
     ```
     echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
     ```
+
     ```
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
     ```
+
     ```
     sudo apt-get update && sudo apt-get install google-cloud-sdk -y
     ```
@@ -46,6 +49,7 @@ This is a simplified extract from the original docs, which can be found [here](h
 
     https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32...X4&code_challenge_method=S256
     ```
+
 3. Log into your Google account and approve the access request:
 
     ![](../images/gcloud-sdk/02-sdk-approve.png)
@@ -91,4 +95,3 @@ This is a simplified extract from the original docs, which can be found [here](h
 6. Google SDK is installed and configured.
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-5-generate-a-random-prefix)
-

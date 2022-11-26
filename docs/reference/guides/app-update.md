@@ -1,3 +1,5 @@
+# App Update
+
 The info below will show you how to update your Saltbox apps, individually.
 
 ## Notes
@@ -7,7 +9,6 @@ The info below will show you how to update your Saltbox apps, individually.
 - Do not update the following apps within the app itself: Sonarr, Radarr, Lidarr, NZBGet, Ombi, Jackett, NZBHydra2, and Bazarr. If you do you may get the following error: `Update process failed: Cannot install update because startup folder '/app' is not writable by the user 'hotio'.`
 
 ## Update to a newer version
-
 
 | Saltbox Apps  | How to update         |
 |:------------- |:--------------------- |
@@ -27,7 +28,6 @@ The info below will show you how to update your Saltbox apps, individually.
 | Emby          | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 <br />
 
-
 **"How to update" options:**
 
 - **"Ansible tag"**
@@ -42,24 +42,23 @@ The info below will show you how to update your Saltbox apps, individually.
 
    This means that the Docker container will auto-update the app on container restart.  _Currently nothing in Saltbox is updated in this way._
 
-   ```
+   ```shell
    docker stop <name> && docker start <name>
    ```
+
    or
-   ```
+
+   ```shell
    docker restart <name>
    ```
 
    _Note: It's recommended to use `docker stop/start <container>` vs `docker restart <container>`, to prevent corrupting data, especially on apps like ruTorrent._
 
-
 <br />
-
 
 ## Ansible tags to update apps
 
 When in doubt, you can always rerun the relevant Ansible tag to update the app.
-
 
 | Apps                        | Ansible Tags    |
 |:--------------------------- |:--------------- |
@@ -80,12 +79,11 @@ When in doubt, you can always rerun the relevant Ansible tag to update the app.
 | Emby                        | `emby`          |
 | Traefik                     | `traefik`       |
 
-
 **Instructions:**
 
 1. Run the tag command:
 
-   ```
+   ```shell
    sb install TAG
    ```
 

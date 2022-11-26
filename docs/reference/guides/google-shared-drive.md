@@ -10,7 +10,7 @@ To go through this process, you will need a Google account capable of creating s
 
 ## Walkthrough
 
-1. Go to https://drive.google.com in a browser; log in with the relevant account.
+1. Go to <https://drive.google.com> in a browser; log in with the relevant account.
 
 2. Right-click on "Shared Drives" and choose "New shared drive..."
 
@@ -20,11 +20,11 @@ To go through this process, you will need a Google account capable of creating s
 
     ![](images/google-shared-02.png)
 
-5. You're done.
+4. You're done.
 
     ![](images/google-shared-04.png)
 
-6. You may need the ID of the Shared Drive for use with some tools; you can find it in the URL:
+5. You may need the ID of the Shared Drive for use with some tools; you can find it in the URL:
 
     ![](images/google-shared-03.png)
 
@@ -43,4 +43,3 @@ Perhaps you want to give access to this shared drive to an individual, service a
 3. Choose "Manager" from the dropdown on the right, uncheck the "Notify people" box if you wish, and click "Share".
 
     ![](images/google-shared-06.png)
-

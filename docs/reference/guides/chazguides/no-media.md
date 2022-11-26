@@ -1,21 +1,22 @@
-# I can’t see my media!
+# I can’t see my media
+
 [in Plex, Emby, Radarr, Sonarr, etc]
 
 Usually this is a simple problem, but there are several places where it could be.
 
 There are several layers between your Google Drive and Plex [or other app].
 
-  - rclone remote, which provides the link to your Google Drive.  This is where you sign into your Google account.
-  - rclone_vfs service, which makes that rclone remote visible at `/mnt/remote`
-  - mergerfs service which combines that mount point with a local “staging” directory at `/mnt/unionfs`.
-  - mapping of the mergerfs into the various docker containers.
+- rclone remote, which provides the link to your Google Drive.  This is where you sign into your Google account.
+- rclone_vfs service, which makes that rclone remote visible at `/mnt/remote`
+- mergerfs service which combines that mount point with a local “staging” directory at `/mnt/unionfs`.
+- mapping of the mergerfs into the various docker containers.
 
 If any layer is having problems, Plex isn’t going to see your media.
 
 For purposes of these notes, I’m assuming your setup is based on the current standard Saltbox configuration:
 
-  - rclone remote is mounted via `rclone_vfs`
-  - /mnt/unionfs directory is created using `merger_fs`
+- rclone remote is mounted via `rclone_vfs`
+- /mnt/unionfs directory is created using `merger_fs`
 
 I’m further assuming that you are using the default file structure as suggested in the Saltbox wiki.
 
@@ -26,7 +27,6 @@ See the end of this doc for some notes on how to tell if 1 and 2 are true.
 When I refer to a shell command throughout, you’re typing the part highlighted in blue and looking for the part highlighted in orange.
 
 In most cases, running the mounts tag will clear up any problems you may be having with the various auto-generated service files.
-
 
 ```
 sb install mounts
@@ -52,15 +52,16 @@ If this looks good, your problem is most likely in the bind mounts within the co
 Now we’ll step through the various layers involved in this and check them one at a time.
 
 ## rclone remote
+
 The rclone config command should show you the google remote you defined during setup:
 
 ```
 ➜  ~ rclone config
 Current remotes:
 
-Name             	Type
-====             	====
-google           	drive
+Name              Type
+====              ====
+google            drive
 
 e) Edit existing remote
 ...
@@ -71,9 +72,9 @@ You should be able to get a file listing from that remote:
 
 ```
 ➜  ~ rclone lsd google:/Media
-      	-1 2018-12-01 20:16:06    	-1 Music
-      	-1 2019-03-15 19:26:14    	-1 Movies
-      	-1 2018-12-01 20:14:35    	-1 TV
+       -1 2018-12-01 20:16:06     -1 Music
+       -1 2019-03-15 19:26:14     -1 Movies
+       -1 2018-12-01 20:14:35     -1 TV
 ➜  ~
 ```
 
@@ -88,6 +89,7 @@ Do not continue until those two file listings match.  They won’t match mine; t
 Now that the rclone remote is known good, let’s move to the next layer, the rclone_vfs mount.
 
 ## rclone_vfs mount
+
 First, let’s check that the service is running:
 
 ```
@@ -97,14 +99,15 @@ First, let’s check that the service is running:
    Active: active (running) since Sat 2019-11-02 06:45:34 EET; 10h ago
   Process: 1053 ExecStartPre=/bin/sleep 10 (code=exited, status=0/SUCCESS)
  Main PID: 1247 (rclone)
-	Tasks: 23 (limit: 4915)
+ Tasks: 23 (limit: 4915)
    CGroup: /system.slice/rclone_vfs.service
-       	└─1247 /usr/bin/rclone mount --config=/home/seed/.config/rclone/rclone.conf --user-agent . . .
+        └─1247 /usr/bin/rclone mount --config=/home/seed/.config/rclone/rclone.conf --user-agent . . .
 
 Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Starting Rclone VFS Mount...
 Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal rclone[1247]: Serving remote control on http://127.0.0.1:5572/
 Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal systemd[1]: Started Rclone VFS Mount.
 ```
+
 You want to see “`active (running)`” there.
 
 You can look at the log to find out what’s wrong if it’s not “`active (running)`”
@@ -124,7 +127,6 @@ Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Starting Rclone VFS Mo
 Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal rclone[1247]: Serving remote control on http://127.0.0.1:5572/
 Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal systemd[1]: Started Rclone VFS Mount.
 ```
-
 
 In that log you can see an error from last night when my server ran out of disk space, the rclone_vfs service died, then a reboot [after clearing space]  and it came back up.
 
@@ -181,9 +183,9 @@ Just like we did with the rclone_vfs service, check the mergerfs status:
    Loaded: loaded (/etc/systemd/system/mergerfs.service; enabled; vendor preset: enabled)
    Active: active (running) since Sat 2019-11-02 06:45:24 EET; 11h ago
   Process: 1034 ExecStart=/usr/bin/mergerfs -o category.create=ff,minfreespace=0,allow_other -o dropcacheonclose=true,security_capability=false,xattr=nosys -o statfs_ignore=ro,use_ino,auto_
-	Tasks: 9 (limit: 4915)
+ Tasks: 9 (limit: 4915)
    CGroup: /system.slice/mergerfs.service
-       	└─1074 /usr/bin/mergerfs -o category.create=ff,minfreespace=0,allow_other -o dropcacheonclose=true,security_capability=false,xattr=nosys -o statfs_ignore=ro,use_ino,auto_cache,um
+        └─1074 /usr/bin/mergerfs -o category.create=ff,minfreespace=0,allow_other -o dropcacheonclose=true,security_capability=false,xattr=nosys -o statfs_ignore=ro,use_ino,auto_cache,um
 
 Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Starting MergerFS Mount...
 Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Started MergerFS Mount.
@@ -214,7 +216,7 @@ If everything looks good, you can check the contents of the filesystem:
 ➜  ~ ls -al /mnt/unionfs/Media
 total 0
 drwxrwxr-x 1 seed seed   120 Sep 28 18:32 .
-drwxrwxr-x 1 seed seed	  62 Sep 28 18:31 ..
+drwxrwxr-x 1 seed seed   62 Sep 28 18:31 ..
 drwxrwxr-x 1 seed seed   338 Oct 18 20:21 Music
 drwxrwxr-x 1 seed seed    78 May  3  2019 Movies
 drwxrwxr-x 1 seed seed 28196 Nov  2 01:42 TV
@@ -233,27 +235,26 @@ So at this point we know that all the layers on the host are working, so the las
 
 All the docker containers that need to access your media files have the relevant directories mapped inside them.  You can have a look at specifically how with the docker inspect command:
 
-
 ```
 ➜  ~ docker inspect plex | head -n 90
 [
-	{
-    	"Id": "070d5fc16d4372156c39a6cf2923e6edb2e8576817cbcf9b6432f88f2237a2e8",
-    	"Created": "2019-10-16T19:45:29.93111423Z",
-    	"Path": "/init",
-    	"Args": [],
-    	"State": {
-        	"Status": "running",
+ {
+     "Id": "070d5fc16d4372156c39a6cf2923e6edb2e8576817cbcf9b6432f88f2237a2e8",
+     "Created": "2019-10-16T19:45:29.93111423Z",
+     "Path": "/init",
+     "Args": [],
+     "State": {
+         "Status": "running",
 ...
-    	"HostConfig": {
-        	"Binds": [
-            	"/tmp:/tmp:rw",
-            	"/mnt/local/transcodes/plex:/transcode:rw",
-            	"/opt/plex:/config:rw",
-            	"/mnt:/mnt:rw",
-            	"/opt/scripts:/scripts:rw",
-            	"/dev/shm:/dev/shm:rw"
-        	],
+     "HostConfig": {
+         "Binds": [
+             "/tmp:/tmp:rw",
+             "/mnt/local/transcodes/plex:/transcode:rw",
+             "/opt/plex:/config:rw",
+             "/mnt:/mnt:rw",
+             "/opt/scripts:/scripts:rw",
+             "/dev/shm:/dev/shm:rw"
+         ],
 ...
 ➜  ~
 ```
@@ -262,8 +263,7 @@ I’ve trimmed some stuff out there particularly on the top].  If the “Binds�
 
 Take a look at the “`Binds`” section.  Each entry there shows a path on the host [on the left] and the location where those files appear inside the container.
 
-## Media-related defaults:
-
+## Media-related defaults
 
 | Container/Application |  INSIDE CONTAINER  |  ON HOST   |
 |:----------------------|:------------------:|:----------:|
@@ -271,7 +271,6 @@ Take a look at the “`Binds`” section.  Each entry there shows a path on the 
 | radarr                | `/mnt`             | `/mnt`     |
 | lidarr                | `/mnt`             | `/mnt`     |
 | plex                  | `/mnt`             | `/mnt`     |
-
 
 Let’s check that in Plex:
 
@@ -288,7 +287,6 @@ drwxrwxr-x 1 plex plex 28196 Nov  2 01:42 TV
 Again, all the same files as always.
 
 If that doesn’t show your files as expected, chances are something happened to the mounts while the container was running and the map has broken.  First restart the container and if that doesn’t work restart the server.
-
 
 ```
 ➜  ~ docker restart plex
@@ -345,6 +343,7 @@ Plex:
 ```
 
 Check the status of the services
+
 ```
 ➜  ~ service rclone_vfs status
 ● rclone_vfs.service - Rclone VFS Mount
@@ -368,4 +367,3 @@ Check the filesystem behind the mounts:
 local:remote on /mnt/unionfs type fuse.mergerfs …  <<<< Mergerfs
 google: on /mnt/remote type fuse.rclone …          <<<< RClone
 ```
-

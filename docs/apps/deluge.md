@@ -33,20 +33,20 @@ sb install deluge
 - Change login password.
 
 - Click Preferences in the top bar and on the Downloads section enter the following paths: <br />
-    - Download to: <br />
+  - Download to: <br />
     `/mnt/unionfs/downloads/torrents/deluge/incoming`
-    - Move completed to: <br />
+  - Move completed to: <br />
     `/mnt/unionfs/downloads/torrents/deluge/completed`
-    - Autoadd `.torrent files` from: <br />
+  - Autoadd `.torrent files` from: <br />
     `/mnt/unionfs/downloads/torrents/deluge/watched`
 
 - Select Network section, uncheck `Use Random Ports` under Incoming Ports and set both input fields to `58112`.
 
 - Click the `Plugins` section
-    - enable the `labels` plugin.
-    - enable and the `Extractor` plugin. <br />
+  - enable the `labels` plugin.
+  - enable and the `Extractor` plugin. <br />
       In order for Sonarr or Radarr to import media packaged within .rar files, they will have to be extracted.
-    - After clicking `"Apply"`, select the `Extractor`  plugin on the left. <br />
+  - After clicking `"Apply"`, select the `Extractor`  plugin on the left. <br />
       Make sure the directory points to the `completed` folder within your Deluge data directory.  <br />
       `/mnt/unionfs/downloads/torrents/deluge/completed` <br />
       Also, make sure that the Create torrent name sub-folder setting is checked.

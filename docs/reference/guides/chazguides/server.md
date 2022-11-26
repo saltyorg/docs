@@ -32,7 +32,7 @@ Ultimately, there’s not really a sure way to answer this question.
 
 Plex’ article on the topic is [here](https://support.plex.tv/articles/200375666-plex-media-server-requirements/).
 
-## Plex Metadata:
+## Plex Metadata
 
 Plex saves metadata [posters, etc] for all your media; that gets stored in `/opt/plex` and as your library grows so does that directory.  Required disk space therefore grows over time.  This directory can be quite large.
 
@@ -59,7 +59,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
     7.4 GiB [          ] /tautulli
 ```
 
-## Plex transcoding:
+## Plex transcoding
 
 Ideally, all your clients would Direct Play everything; in that case the server is just shoveling bits out as fast as it can and you don’t need any CPU power.  In practice, some transcoding will be happening.
 
@@ -69,19 +69,19 @@ Some Intel CPUs support hardware transcoding, a smaller subset of AMD processors
 
 But that’s just Plex.
 
-## Context Acquisition:
+## Context Acquisition
 
 You’re looking to run Saltbox, so chances are you’re downloading via Usenet or torrents, so there are other concerns.
 
-### Usenet:
+### Usenet
 
 Usenet is all about speed of disk access as things are unrar’ed.  An SSD should be considered required, and NVME highly recommended.  In practical terms, you should have at least 300GB of space available for downloading and extracting.  That’s a general idea; sure you can make do with less, but it may be tight.  The author's first cloud server had a 160GB disk, and it was very tight.
 
-### Torrents:
+### Torrents
 
 If you’re downloading torrents from private servers, you probably need to seed things for some minimal amount of time; so multiple TBs of disk space are a plus.
 
-## Client Peering to the Server:
+## Client Peering to the Server
 
 Depending on where you are in the world, peering to cloud servers will be different.  If you’re in the US, Hetzner’s German data centers are typically pretty good, but YMMV.
 

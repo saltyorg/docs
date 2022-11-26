@@ -42,12 +42,12 @@ sb install sandbox-funkwhale
 
 The above line explained:
 
-  - `docker exec -it funkwhale /usr/bin/python3 /app/api/manage.py import_files` tells funkwhale to import music.
-  - `da8bd97b-3c3f-4e7b-92cb-6ba45721837b` is your library id
-  - `"/music/Media/Audio/Music/**/**/*.flac"` is the path to your media.
-  - `--in-place` means do not copy the media into Funkwhale and leave it where it is.
-  - `--async` means it will import the music first and then pull the metadata`
-  - `--recursive` will recursively scan the folders
+- `docker exec -it funkwhale /usr/bin/python3 /app/api/manage.py import_files` tells funkwhale to import music.
+- `da8bd97b-3c3f-4e7b-92cb-6ba45721837b` is your library id
+- `"/music/Media/Audio/Music/**/**/*.flac"` is the path to your media.
+- `--in-place` means do not copy the media into Funkwhale and leave it where it is.
+- `--async` means it will import the music first and then pull the metadata`
+- `--recursive` will recursively scan the folders
 
 If everything goes as planned you'll get prompted like this:
 
@@ -64,7 +64,7 @@ If everything goes as planned you'll get prompted like this:
 
 ```
 
- - Answer yes at the prompt and the import will begin.
+- Answer yes at the prompt and the import will begin.
 
 !!! info
     Useful URLs <br />

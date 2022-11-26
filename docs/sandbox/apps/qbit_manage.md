@@ -4,35 +4,32 @@
 
 [qBit Management](https://github.com/StuffAnThings/qbit_manage){: target=_blank rel="noopener noreferrer" } is a program used to manage your qBittorrent instance.
 
-
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: qBit Management ](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hotio.dev/containers/qbitmanage/){: .header-icons target=_blank rel="noopener noreferrer" } |
-
+| [:material-home: qBit Management](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker:](https://hotio.dev/containers/qbitmanage/){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 **Functions include:-** <br />
 
-  - Tag torrents based on tracker and then set seed goals/limit upload speed by tag.
+- Tag torrents based on tracker and then set seed goals/limit upload speed by tag.
 
-  - Update categories based on save directory.
+- Update categories based on save directory.
 
-  - Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent).
+- Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent).
 
-  - Automatically add cross-seed torrents in paused state. <br />
+- Automatically add cross-seed torrents in paused state. <br />
     *Note: cross-seed now allows for torrent injections directly to qBit, making this feature obsolete.*
 
-  - Recheck paused torrents sorted by lowest size and resume if completed.
+- Recheck paused torrents sorted by lowest size and resume if completed.
 
-  - Remove orphaned files from your root directory that are not referenced by qBittorrent.
+- Remove orphaned files from your root directory that are not referenced by qBittorrent.
 
-  - Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded.
+- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded.
 
-  - RecycleBin function to move files into a RecycleBin folder instead of deleting the data directly when deleting a torrent.
+- RecycleBin function to move files into a RecycleBin folder instead of deleting the data directly when deleting a torrent.
 
-  - Built-in scheduler to run the script every x minutes. (Can use --run command to run without the scheduler).
+- Built-in scheduler to run the script every x minutes. (Can use --run command to run without the scheduler).
 
-  - Webhook notifications with Notifiarr and Apprise API integration.
-
+- Webhook notifications with Notifiarr and Apprise API integration.
 
 ### 1. Installation
 
@@ -43,11 +40,13 @@ Before installing qBit Management, you should have a **[qBittorrent](../../apps/
 sb install sandbox-qbit_manage
 
 ```
+
 After installation has finished, stop the qbit_manage docker container and edit the config file that will have been created at `/opt/qbit_manage/config.yml`
 
 ```shell
 docker stop qbit_manage
 ```
+
 Minimally you will need to change the following items in order to connect with your qBittorrent instance:-
 
 ```yaml
@@ -61,6 +60,7 @@ Minimally you will need to change the following items in order to connect with y
       root_dir: "/mnt/unionfs/downloads/torrents/qbittorrent/completed/"
       remote_dir: "/mnt/unionfs/torrents/your/path/here/"
 ```
+
 An indepth explanation of the config file settings can [be found here.](https://github.com/StuffAnThings/qbit_manage/wiki/Config-Setup#config-file)
 
 The config file is full of examples that more than likely will not work for you, sections you aren't using can be safely commented out or left blank. An up to date example configuration file [can be found here](https://github.com/StuffAnThings/qbit_manage/blob/master/config/config.yml.sample) when you wish to add newer features or restore a self mangled section. YAML spacing matters.
@@ -70,6 +70,7 @@ After making adjustments to the config file, you can start the docker container 
 ```shell
 docker start qbit_manage
 ```
+
 Either tail the log ( `tail -f "/opt/qbit_manage/activity.log"` ) or open the log file after a few minutes to check for any errors or behaviour that may have been unexpected. The container has been deliberately set to **DRY RUN MODE** initially so you can see what the script will do without actually moving deleting, tagging, or categorising anything.. Once you are happy your life's work will not be destroyed and any errors have been resolved you can edit the qbit_manage variables in the sandbox settings.yml file and then run the role again. Set `qbt_dry_run: false` to run in live mode. This will delete and move files according to your settings.
 
 Apply the changes to the sandbox settings file with:

@@ -391,9 +391,9 @@ Make changes in the following sections:
 
 1. Click the blue "Browse" button, navigate to `/mnt/unionfs/Media/TV`, scroll to the bottom, and select "OK".
 
-2. Click the green "check" button to add the path.
+1. Click the green "check" button to add the path.
 
-3. All TV shows added now will have that path set.
+1. All TV shows added now will have that path set.
 
 ![Sonarr Add](../images/sonarr/sonarr-add.png)
 
@@ -401,7 +401,7 @@ Make changes in the following sections:
 
 This is used during the setup of [Overseer](overseerr.md) and [Organizr](organizr.md).
 
-* Go to "Settings" -> "General" -> "Security" -> "API Key".
+- Go to "Settings" -> "General" -> "Security" -> "API Key".
 
 ## Guides
 

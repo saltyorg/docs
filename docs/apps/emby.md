@@ -12,7 +12,7 @@
 
 ## 2. URL
 
- - To access Emby, visit `https://emby._yourdomain.com_`
+- To access Emby, visit `https://emby._yourdomain.com_`
 
 ## 3. Initial Setup
 
@@ -24,7 +24,7 @@
 
 ## ii. Install
 
-  - Run the following command:
+- Run the following command:
 
     ```bash
     sb install emby
@@ -67,7 +67,6 @@
 3. Select your **Preferred Metadata Language** and **Country** (_`English` and `United States` are recommended_) and click **Next**.
 
    ![](../images/emby/emby-preferred-metadata.png)
-
 
 4. Uncheck **Enable automatic port mapping**. Click **Next**.
 

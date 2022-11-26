@@ -22,7 +22,6 @@ Media
 
   ![](../../images/google-drive-filesystem.png)
 
-
 | Path  <pre>                 </pre>                 | Description  <pre>                                                                                              </pre>                                                                                                                                                          |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/Media/`     | Location of all your media folders.                                                                                                                         |
@@ -31,7 +30,6 @@ Media
 | `/Media/TV/`   | Location of all your TV shows (folder format: `/Media/TV/TV Show Name/Season 00/episode file.ext`). |
 
 _Note: If you would like to customize your Plex libraries differently, see [Customizing Plex Libraries](../../reference/customizing-plex-libs.md)._
-
 
 ## Local Paths
 
@@ -57,13 +55,11 @@ _Note: Make sure `/mnt/local/` has enough space to store the imported media (bef
 
 ### Cloudplow
 
-
 | Path<pre>                 </pre>               | Description <pre>                 </pre>                                                                                                                                                                                      |
 |:------------------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/mnt/local/Media/` | Location of media stored on the server. <br /><br /> Size of this path is checked periodically (default 30 min). When the folder size reaches its target (default 200GB), media files are moved off/uploaded to the cloud, freeing up local disk space. |
 
 _Note: For more info, see the [Cloudplow](../../reference/cloudplow.md) page._
-
 
 ## Docker Paths
 
@@ -73,14 +69,11 @@ By default, NZB and Torrent downloads are stored in `/mnt/local/downloads/nzbs/`
 
 _Note: It is advised to leave at least 100GB free on `/opt` for the storage of Docker data_.
 
-
 ### Any container that requires disk access
-
 
 | Docker Path <pre>                 </pre>   | Host Path <pre>                 </pre>                  | Description <pre>                 </pre>                     |
 |:-------------- |:--------------------------- |:---------------------------- |
 | `/mnt` | `/mnt` | Provides access to all standard mounted storage.   |
-
 
 Every container sees any path inside `/mnt` the same as the host and same as any other container.
 
@@ -88,16 +81,13 @@ That means that no path translation is required from context to context.  If nzb
 
 ### Plex
 
-
 | Docker Path <pre>                 </pre>   | Host Path <pre>                 </pre>                  | Description <pre>                 </pre>                     |
 |:-------------- |:--------------------------- |:---------------------------- |
 | `/mnt/unionfs/Media/Movies/` | `/mnt/unionfs/Media/Movies/` | Plex reads this for Movies.   |
 | `/mnt/unionfs/Media/TV/`     | `/mnt/unionfs/Media/TV/`    | Plex reads this for TV Shows. |
 | `/mnt/unionfs/Media/Music/`   | `/mnt/unionfs/Media/Music/`     | Plex reads this for Music. |
 
-
 ### Sonarr
-
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
@@ -105,9 +95,7 @@ That means that no path translation is required from context to context.  If nzb
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Sonarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Sonarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
 
-
 ### Radarr
-
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
@@ -117,7 +105,6 @@ That means that no path translation is required from context to context.  If nzb
 
 ### Lidarr
 
-
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
 | `/mnt/unionfs/Media/Music/`              | `/mnt/unionfs/Media/Music/`       | Lidarr will import to `/music/`, which is actually `/mnt/unionfs/Media/Music/` on host system. |
@@ -126,11 +113,9 @@ That means that no path translation is required from context to context.  If nzb
 
 ### Tautulli
 
-
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                                            </pre>                        | Description <pre>                                     </pre>                                                                |
 |:----------- |:-------------------------------------------------------------- |:------------------------------------- |
 | `/logs/`     | `/opt/plex/Library/Application Support/Plex Media Server/Logs/`| Location of the Plex logs used by Tautulli.  |
-
 
 ---
 

@@ -1,6 +1,6 @@
 ## Domain Name
 
-**You will need a domain name** as Saltbox apps are only accessed via https://appname._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
+**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
@@ -24,19 +24,17 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
 **Notes:**
 
- - For DNS providers that allow wildcards.
+- For DNS providers that allow wildcards.
 
- - For [[Saltbox install type|Basics: Saltbox Install Types]].
+- For [[Saltbox install type|Basics: Saltbox Install Types]].
 
 **Steps:**
-
 
 Created an A Record for your subdomains with `*` for host and set the value to your server IP address.
 
    | **Type** | **Host** | **Value**           | **TTL**   |
    |:-------- |:-------- |:------------------- |:--------- |
    | A Record | *        | _Server IP Address_ | 300       |
-
 
 <details><summary>Example</summary>
 
@@ -50,14 +48,13 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
 **Notes:**
 
- - For DNS providers that do not allow wildcards (e.g. Freenom).
+- For DNS providers that do not allow wildcards (e.g. Freenom).
 
- - For [Mediabox / Feederbox  install types](../saltbox/basics/install_types.md).
+- For [Mediabox / Feederbox  install types](../saltbox/basics/install_types.md).
 
- - For Cloudflare users.
+- For Cloudflare users.
 
    Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically, provided you enter a top-level domain in the settings [i.e. `DOMAIN.TLD`, not `WHATEVER.DOMAIN.TLD`]
-
 
 === "Saltbox Install Type"
     You will need to create A Records for all Saltbox subdomains.
@@ -74,7 +71,6 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | nzbhydra2    | _Saltbox IP Address_   | 300 |
     | A Record | organizr     | _Saltbox IP Address_   | 300 |
     | A Record | portainer    | _Saltbox IP Address_   | 300 |
-
 
 === "Mediabox / Feederbox Install Type"
     You will need to create A Records for both IP addresses (Media and Feeder boxes) and set them to their respective subdomains.
@@ -98,7 +94,6 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 |
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
-
 
 ## Cloudflare
 

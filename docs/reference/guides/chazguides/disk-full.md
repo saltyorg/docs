@@ -31,11 +31,11 @@ sudo ncdu -x --exclude /opt/plex /
 What’s that command?
 
 ```
-sudo	run with root privileges
-ncdu	show graphic display of disk usage
--x	don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your google drive]
---exclude /opt/plex	ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here.
-/	starting point of scan
+sudo run with root privileges
+ncdu show graphic display of disk usage
+-x don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your google drive]
+--exclude /opt/plex ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here.
+/ starting point of scan
 ```
 
 You'll probably see something like this:
@@ -96,7 +96,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 
 That’s your VFS cache.
 
-## Radarr/Sonarr didn’t import stuff!
+## Radarr/Sonarr didn’t import stuff
 
 Drill into downloads to examine what's there in more detail.  Chances are you’ll find /mnt/local/nzbs/nzbget/downloads/completed is where all the files are.  Those are downloads that Radarr/Sonarr didn’t import.
 
@@ -114,28 +114,29 @@ Maybe it doesn’t look like an upgrade for one reason or another:
 
 ![](../images/../../../images/low-disk/04-low-disk-filesize.png)
 
-
 That same information is also available in the logs.
 
 You can import things from here after telling Radarr what movie it is or the like, or you can delete them from within ncdu or via whatever other means.
 
-## Cloudplow isn’t uploading stuff!
+## Cloudplow isn’t uploading stuff
 
 If the bulk of the space is in staged-for-upload files sitting in `/mnt/local/Media`, then cloudplow hasn’t uploaded those files yet.
 
 This is typically due to one of the following:
 
-   - Upload threshold hasn’t been reached.
-   - You’ve reached the Google Drive upload cap of 750GB/day
+- Upload threshold hasn’t been reached.
+- You’ve reached the Google Drive upload cap of 750GB/day
 
 The default threshold to start a Google upload is 200GB, so in my case above cloudplow wouldn’t do anything until 150GB more gets put into `/mnt/local/Media`.
 
 At a command prompt, type:
+
 ```
 tail /opt/cloudplow/cloudplow.log
 ```
 
 You should see something like:
+
 ```
 Uploader: google. Local folder size is currently 44 GB. Still have 156 GB remaining before its eligible to begin uploading...
 ```
@@ -181,7 +182,7 @@ You'll get a great deal of information about what cloudplow is doing and why.
 
 If you find yourself hitting that 750GB cap regularly, you may want to set up [service-account uploading](tip44.md).
 
-## Rclone cache is out of control!
+## Rclone cache is out of control
 
 If the bulk of the space is in your rclone VFS cache, you’ll want to check the vfs_cache configuration for all your mounts to control this.
 

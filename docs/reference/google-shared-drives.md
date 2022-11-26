@@ -2,11 +2,11 @@ This guide will show you how to create default Saltbox Shared Drives and add you
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 
-  - verified [account drive permissions](google-account-perms.md)
-  - created the required [project](google-project-setup.md)
-  - created the required [group](google-group-setup.md)
-  - installed the [gcloud SDK tools](google-gcloud-tools-install.md)
-  - created the expected [projects and service accounts](google-service-accounts.md)
+- verified [account drive permissions](google-account-perms.md)
+- created the required [project](google-project-setup.md)
+- created the required [group](google-group-setup.md)
+- installed the [gcloud SDK tools](google-gcloud-tools-install.md)
+- created the expected [projects and service accounts](google-service-accounts.md)
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
@@ -33,6 +33,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     <br />
 
     If you see something like this:
+
     ```
     The virtual environment was not created successfully because ensurepip is not
     available.  On Debian/Ubuntu systems, you need to install the python3-venv
@@ -120,7 +121,6 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     If you've stored the file elsewhere, copy it from there via whatever means.  It just has to end up at `/opt/sb_gd/client_secrets.json`.
 
-
 6. Run the `sb_sd.py` script:
 
     **IMPORTANT**: If you are running a server on your local machine that is listening for HTTP requests on port 8080, disable it before running this script.  This process will send you to a `localhost` URL, and is expecting that this will fail so you can copy the URL.  If you have a local server running on this port, you will probably see some other error instead.
@@ -146,7 +146,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     We're working on making this a bit more friendly.
 
     This script will create shared drives as listed in the config, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
-    
+
     It will fill in anything that is missing; if the shared drives are there but the media folders haven't been created, those will be created.  If everything has been created but the rclone remotes are missing; those will be filled in.
 
     If you defined a "backup_drive" in the config [or left it as "automatic"], then script will zip up:
@@ -156,11 +156,11 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
     1. Your `client_secret.json` file
     1. Your `storage.json` file
     1. The log file of shared drives created and IDs
-    
+
     It will zip those files up and upload them to `BACKUP_DRIVE\saltbox_sd_backup\backup.zip`
-    
+
     Future runs will delete the current backup and overwrite the remote file.
-    
+
     This of course takes the place of the BEFORE YOU DO ANYTHING ELSE admonition at the bottom of this page:
 
     You should see output similar to this [of course, you will see more than one shared drive creation; the rest are left out here for space]:
@@ -221,6 +221,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
             0 azasjsklaj-tv_mounted.bin
             0 azasjsklaj-music_mounted.bin
     ```
+
     </details>
 
 7. You're done.  Deactivate the virtual env used by this script.
@@ -231,8 +232,8 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
 BEFORE YOU DO ANYTHING ELSE:
 
-  - BACK UP `/opt/sa` TO YOUR LOCAL COMPUTER
-  - BACK UP `/home/YOU/.config/rclone/rclone.conf` TO YOUR LOCAL COMPUTER
+- BACK UP `/opt/sa` TO YOUR LOCAL COMPUTER
+- BACK UP `/home/YOU/.config/rclone/rclone.conf` TO YOUR LOCAL COMPUTER
 
 The automatic backup above would have done this for you.  If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
 
@@ -257,9 +258,9 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
     ```
     python sb_sd.py
     ```
+
 4. Deactivate the virtual env used by this script.
 
     ```
      deactivate
     ```
-   

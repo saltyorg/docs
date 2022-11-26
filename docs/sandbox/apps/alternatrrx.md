@@ -34,6 +34,6 @@ sb install sandbox-alternatrrx
    ```
 
 - For app specific instructions refer to the parent role,
-     - [alternatrr](../../sandbox/apps/alternatrr.md)<Br/>
-     - and the upstream documentation <BR/>
+  - [alternatrr](../../sandbox/apps/alternatrr.md)<Br/>
+  - and the upstream documentation <BR/>
        [:octicons-link-16: Documentation](https://www.github.com/TheUltimateC0der/alternatrr){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -6,7 +6,7 @@ If you want to set up a teamdrive and upload to it, see the [“Tip #44” docum
 
 Here, I’m assuming you have access to a teamdrive, and you want to set it up so you can point Plex or Emby at it.  No more than that.
 
-## Overview:
+## Overview
 
 There are three steps:
 
@@ -42,7 +42,7 @@ Let’s go!
 
     ```
      $ rclone lsd teamdrive-movies:/
-          	-1 2019-03-21 10:59:48    	-1 Media
+           -1 2019-03-21 10:59:48     -1 Media
     ```
 
     It should show you the directories on the root level of the teamdrive you are adding.  Verify this with the Google Drive Web UI if necessary.  If the teamdrive is empty, create a folder and verify that rclone shows that folder.  Nothing after this will work if this connection is not set up correctly.
@@ -89,6 +89,7 @@ Let’s go!
         sudo chown -R seed:seed /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         sudo chmod -R g+w /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ```
+
         Of course, `seed:seed` is YOUR USER AND GROUP if it differs from `seed:seed`
 
         You will use this mountpoint when you configure the rclone_vfs service.
@@ -104,6 +105,7 @@ Let’s go!
         Edit /etc/systemd/system/NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service:
 
         Change the port [5572] in two lines [lines 27 and 42 at this writing]:
+
         ```
           --rc-addr=localhost:5572 \
           ...
@@ -111,15 +113,19 @@ Let’s go!
         ```
 
         The specific port you use doesn’t matter, but maybe just use 5573.
+
         ```
           --rc-addr=localhost:5573 \
           ...
           ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --rc-addr localhost:5573 _async=true
         ```
+
         Change the remote name and mount directory in this line [line 41 at this writing]:
+
         ````
           NAME_OF_THE_REMOTE_YOU_JUST_CREATED: /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ````
+
         The first bit before the colon is the name of the rclone remote from step 1.
         The path is the mount point directory you created a moment ago.
         For example, you *might* end up with something like this:
@@ -127,26 +133,36 @@ Let’s go!
         ```
           teamdrive-movies: /mnt/teamdrive-movies
         ```
+
         What you will enter specifically depneds entirely on how *you* just configured the remote and moutn directory above.  This example is almost certainly *not* what you should enter.
-        
+
         Change the next line to match the path you just entered:
+
         ```
         ExecStop=/bin/fusermount -uz /mnt/remote
         ```
+
         For example:
+
         ```
         ExecStop=/bin/fusermount -uz /mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED
         ```
+
         Lastly enable and start that new service:
         Reload all the services
+
         ```
         sudo systemctl daemon-reload
         ```
+
         Start/restart the service
+
         ```
         sudo systemctl restart NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service
         ```
+
         Enable the new service you created
+
         ```
         sudo systemctl enable NAME_OF_THE_REMOTE_YOU_JUST_CREATED_vfs.service
         ```
@@ -172,33 +188,45 @@ Let’s go!
 
     Edit the mergerfs service file to include the new teamdrive in the mergerfs.
     Edit this file:
+
     ```
     /etc/systemd/system/mergerfs.service
     ```
+
     Edit this line to include your new teamdrive:
+
     ```
     /mnt/local=RW:/mnt/remote=NC /mnt/unionfs
     ```
+
     For example:
+
     ```
     /mnt/local=RW:/mnt/remote=NC:/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED=NC /mnt/unionfs
     ```
+
     Note: that MUST BE all one line, just as it is in the original unedited file.
 
     Just like the rclone_vfs service, reload and restart:
 
     Reload all the services
+
     ```
     sudo systemctl daemon-reload
     ```
+
     Start/restart the mergerfs
+
     ```
     sudo systemctl restart mergerfs.service
     ```
+
     Enable the mergerfs just for good measure
+
     ```
     sudo systemctl enable mergerfs.service
     ```
+
     Now, verify that the mergerfs is working correctly.
 
     Type `ls -haltr /mnt/unionfs`.  The files from your teamdrive should now be included in the listing.  Depending on how busy the root of your drive[s] are, this listing may be pretty long, but look through it to verify that the files you expect as shown in the previous two steps are there [I’ve edited my listing for space]:
@@ -207,11 +235,10 @@ Let’s go!
     ➜  ~ ls -haltr /mnt/unionfs/
     total 1.4G
     ...
-    -rwxrwxr-x  1 seed seed 	0 Dec  3 16:14  mounted-movies.bin
+    -rwxrwxr-x  1 seed seed  0 Dec  3 16:14  mounted-movies.bin
     ...
     ➜  ~
     ```
-
 
     If they don’t show up, go back over the mergerfs config.
 

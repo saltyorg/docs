@@ -19,11 +19,11 @@ Copy these BlitzKeys and set appropriate permissions.  You do not need to add th
 
 Once you have moved the Rclone.conf file, you need to edit it.  At the bottom of the file, you will have something like this:
 
-'
+```
 [pgunion]
 type = union
-remotes = gdrive: tdrive: gcrypt: tcrypt: /mnt/move'
-'
+remotes = gdrive: tdrive: gcrypt: tcrypt: /mnt/move
+```
 
 1. Rename pgunion to google
 2. Remove /mnt/move
@@ -32,36 +32,49 @@ AND
 4. If you are not using encryption - Remove gcrypt: and tcrypt: if they exist.
 
 Final should look like:
-'
+```
 [google]
 type = union
 remotes = gcrypt: tcrypt:
-'
+```
 
 Once this is saved, you need to install the mount service:
 
-'sb install mounts'
+```shell
+sb install mounts
+```
 
 ## Cloudplow changes
 
 If you are using encryption, you definitly need to change this.  If not, unsure but see for yourself:
 
-'nano /opt/cloudplow/config.json'
+```shell
+nano /opt/cloudplow/config.json
+```
 
 Under "Remotes":, locate
-'"upload_remote": "google"'
+```
+"upload_remote": "google"
+```
 Change this to
-'"upload_remote": "tcrypt:"'
+```
+"upload_remote": "tcrypt:"
+```
 
 Now we need to add your service accounts..  Under the "uploader" section change:
-'"service_account_path": ""'
+```
+"service_account_path": ""
+```
 to
-'"service_account_path": "/opt/sa/all"'
+```
+"service_account_path": "/opt/sa/all"
+```
 ^ Assuming you put the service accounts in that location, if not, change accordingly.
 
-## Migrating Aars
+## Migrating Arrs
 
-if you are restoring the arrs from pg to saltbox you will need to make these changes in SB
+If you are restoring the arrs from pg to saltbox you will need to make these changes in SB.
+Repeat for tdrive, gcrypt, and tcrypt as needed for your setup.
 
 ```shell
 sudo mkdir /mnt/gdrive

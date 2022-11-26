@@ -46,10 +46,16 @@ sonarr_traefik_error_pages_enabled: true
 
 These error pages do not work with every app; do your own a/b testing to verify that nothing unexpected results.
 
-You can find the roles [across saltbox and sandbox] that are known to NOT work with:
+You can find the Saltbox roles that are known to NOT work with:
 
 ```bash
-grep -Ril "_traefik_error_pages_enabled: false" /srv/git/saltbox/roles /opt/sandbox | cut -d/ -f6 | sort -u
+grep -Ril "_traefik_error_pages_enabled: false" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u
+```
+
+You can find the Sandbox roles that are known to NOT work with:
+
+```bash
+grep -Ril "_traefik_error_pages_enabled: false" /opt/sandbox/roles | cut -d/ -f5 | sort -u
 ```
 
 ## Can I create a theme?

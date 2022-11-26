@@ -18,22 +18,22 @@ Broadly, the base install consists of six steps:
 === "curl"
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-    ```
+```
 
 === "wget"
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-    ```
+```
 
 === "curl (verbose)"
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-    ```
+```
 
 === "wget (verbose)"
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-    ```
+```
 
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.
@@ -235,22 +235,22 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 === "Saltbox"
     ```shell
     sb install saltbox
-    ```
+```
 
 === "Mediabox"
     ```shell
     sb install mediabox
-    ```
+```
 
 === "Feederbox"
     ```shell
     sb install feederbox
-    ```
+```
 
 === "Core"
     ```shell
     sb install core
-    ```
+```
 
 !!! info
     See [here](../../reference/install.md) for more information about the install.

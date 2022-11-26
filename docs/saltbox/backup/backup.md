@@ -10,12 +10,12 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
 === "Without Screen"
     ```shell
     sb install backup
-    ```
+```
 
 === "With Screen"
     ```shell
     screen -dmS saltbox-backup sb install backup
-    ```
+```
 
     ``` shell
     screen -r
@@ -33,12 +33,12 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
 === "Have Saltbox configure cron"
     ```shell
     sb install set-backup
-    ```
+```
 
 === "Configure cron manually"
     ```shell
     crontab -e
-    ```
+```
 
     ``` shell
     0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/home/seed/logs/saltbox_backup.log' 2>&1

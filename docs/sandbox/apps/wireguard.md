@@ -8,7 +8,7 @@ The Wireguard server is deployed using the [WG-Easy](https://github.com/WeeJeWel
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Wireguard](https://www.wireguard.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/WeeJeWel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/WeeJeWel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker: ](https://hub.docker.com/r/weejewel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: Wireguard](https://www.wireguard.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/WeeJeWel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/WeeJeWel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker:](https://hub.docker.com/r/weejewel/wg-easy){: .header-icons target=_blank rel="noopener noreferrer" } |
 
 ### 1. Installation
 

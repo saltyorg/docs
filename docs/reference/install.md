@@ -7,22 +7,22 @@
 === "Saltbox"
     ```shell
     sb install saltbox
-    ```
+```
 
 === "Mediabox"
     ```shell
     sb install mediabox
-    ```
+```
 
 === "Feederbox"
     ```shell
     sb install feederbox
-    ```
+```
 
 === "Core"
     ```shell
     sb install core
-    ```
+```
 
 A lot of logging information will scroll by.
 

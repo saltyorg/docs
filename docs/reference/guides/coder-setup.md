@@ -4,7 +4,7 @@ Coder is a version of VS Code that runs on your server.  It's friendlier than so
 
 ## install coder
 
-```
+```shell
 sb install sandbox-coder
 ```
 

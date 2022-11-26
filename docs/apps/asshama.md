@@ -22,8 +22,9 @@ HAMA is a plex agent specifically for anime and its various challenges. It is re
 
 ## Project Information
 
-- [:material-home: Absolute Series Scanner (A.S.S.)](https://github.com/ZeroQI/Absolute-Series-Scanner){: target=_blank rel="noopener noreferrer" }
-- [:material-home: HTTP Anidb Metadata Agent (HAMA)](https://github.com/ZeroQI/Hama.bundle){: target=_blank rel="noopener noreferrer" }
+* [:material-home: Absolute Series Scanner (A.S.S.)](https://github.com/ZeroQI/Absolute-Series-Scanner){: target=_blank rel="noopener noreferrer" }
+
+* [:material-home: HTTP Anidb Metadata Agent (HAMA)](https://github.com/ZeroQI/Hama.bundle){: target=_blank rel="noopener noreferrer" }
 
 ### 1. Installation
 
@@ -35,4 +36,4 @@ sb install asshama
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/ZeroQI/Hama.bundle){: .header-icons target=_blank rel="noopener noreferrer" }
+* [:octicons-link-16: Documentation](https://github.com/ZeroQI/Hama.bundle){: .header-icons target=_blank rel="noopener noreferrer" }

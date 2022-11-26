@@ -41,17 +41,17 @@ sb install qbittorrent
 
 - Under `Options` -> `Downloads`, set the following;
 
-    - Save files to location: `/mnt/unionfs/downloads/torrents/qbittorrent/completed/`
+  - Save files to location: `/mnt/unionfs/downloads/torrents/qbittorrent/completed/`
 
-    - Keep incomplete torrents in: `/mnt/unionfs/downloads/torrents/qbittorrent/incoming/`
+  - Keep incomplete torrents in: `/mnt/unionfs/downloads/torrents/qbittorrent/incoming/`
 
-    - Copy .torrent files to: `/mnt/unionfs/downloads/torrents/qbittorrent/torrents/`
+  - Copy .torrent files to: `/mnt/unionfs/downloads/torrents/qbittorrent/torrents/`
 
-    - Copy .torrent files for finished downloads to: `/mnt/unionfs/downloads/torrents/qbittorrent/torrents/`
+  - Copy .torrent files for finished downloads to: `/mnt/unionfs/downloads/torrents/qbittorrent/torrents/`
 
-    - Additionally you can set monitored folder to: `/mnt/unionfs/downloads/torrents/qbittorrent/watched/`
+  - Additionally you can set monitored folder to: `/mnt/unionfs/downloads/torrents/qbittorrent/watched/`
 
-    - tick `Run external program on torrent completion` and paste this into the box: `/usr/bin/unrar x -r "%F/." "%F/"`
+  - tick `Run external program on torrent completion` and paste this into the box: `/usr/bin/unrar x -r "%F/." "%F/"`
 
     ![Hard Disk Section Screenshot](../images/community/qbit_hdd.png)
 
@@ -64,7 +64,7 @@ sb install qbittorrent
        qbittorrent_traefik_api_enabled: false
 ```
 
-      and by rerunning the `qbittorrent` tag.
+and by rerunning the `qbittorrent` tag.
 
 !!! Note
       if you're using private trackers be sure to go to `Options` -> `BittTorrent` and uncheck everything in Privacy section.

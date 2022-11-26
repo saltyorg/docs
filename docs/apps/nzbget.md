@@ -28,14 +28,14 @@
 
 - Disk Space
 
-    - By default, minimum disk space is set at _100000_ (i.e. 100GB). When space goes lower than this, NZBGet will pause the queue. If you have a smaller hard drive, you will need to lower this setting.
+  - By default, minimum disk space is set at _100000_ (i.e. 100GB). When space goes lower than this, NZBGet will pause the queue. If you have a smaller hard drive, you will need to lower this setting.
 
 ### Connection
 
 - DailyQuota
 
-    - If you set up the 300 [service accounts in Rclone](https://docs.saltbox.dev/reference/rclone-manual/) you can ignore this.
-    - Otherwise it's recommended you set this to `750000` (i.e. 750GB), to coincide with the Google Drive daily upload limit.
+  - If you set up the 300 [service accounts in Rclone](https://docs.saltbox.dev/reference/rclone-manual/) you can ignore this.
+  - Otherwise it's recommended you set this to `750000` (i.e. 750GB), to coincide with the Google Drive daily upload limit.
 
 ## 3. Extensions
 

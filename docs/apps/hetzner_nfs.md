@@ -28,7 +28,6 @@ There are 3 phases to the setup. They are broken down below.
 
       ![](../images/community/hetzner_mbox.png)
 
-
       - Feederbox:
 
       ![](../images/community/hetzner_fbox.png)
@@ -40,7 +39,6 @@ There are 3 phases to the setup. They are broken down below.
    1. Add `vlan_id`.
 
    2. `mount_client` setting is ignored for the NFS server (i.e. it will just use `2`).
-
 
       ``` { .shell }
       nano /opt/community/hetzner_nfs.yml
@@ -61,7 +59,6 @@ There are 3 phases to the setup. They are broken down below.
     ```
 
 ### NFS Client (Mediabox)
-
 
 1. Setup the Ansible role config.
 
@@ -95,12 +92,12 @@ Simply run the following commands on their respective servers:
 
 ### NFS Server (Feederbox)
 
-```
+```shell
 sb install hetzner_nfs_server_uninstall
 ```
 
 ### NFS Client (Mediabox)
 
-```
+```shell
 sb install hetzner_nfs_client_unmount
 ```

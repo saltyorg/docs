@@ -14,7 +14,7 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
 Add the following to `/etc/sysctl.conf`
 
-```
+```text
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.lo.disable_ipv6=1
@@ -22,13 +22,13 @@ net.ipv6.conf.lo.disable_ipv6=1
 
 Then run
 
-```
+```shell
 sudo sysctl -p
 ```
 
 Alternately you can disable IPv6 using GRUB by editing `/etc/default/grub` and adding the following to `GRUB_CMDLINE_LINUX_DEFAULT` and `GRUB_CMDLINE_LINUX`
 
-```
+```text
 ipv6.disable=1
 ```
 
@@ -47,7 +47,7 @@ mounts:
 
 Then run
 
-```
+```shell
 sb install mounts_override
 ```
 

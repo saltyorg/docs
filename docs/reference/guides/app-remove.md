@@ -1,14 +1,16 @@
+# App Removal
+
 Perhaps you want to remove one of the apps that Saltbox installed for you.
 
 Maybe you're not planning to ever use rutorrent, or you want to install it fresh, or some other reason.
 
 This page describes doing this for something that was installed as a docker container.
 
-### THIS MAY DESTROY DATA; BACK UP FIRST IF YOU ARE UNSURE WHAT YOU'RE DOING
+## THIS MAY DESTROY DATA; BACK UP FIRST IF YOU ARE UNSURE WHAT YOU'RE DOING
 
 First, stop and remove the docker container:
 
-```
+```shell
 docker stop CONTAINER_NAME
 docker rm CONTAINER_NAME
 ```
@@ -21,7 +23,7 @@ If you reinstall using the standard saltbox install mechanism, it will come back
 
 If you want to remove that configuration for whatever reason [will never use it, want to start fresh, etc.]:
 
-```
+```shell
 rm -fr /opt/CONTAINER_NAME
 ```
 
@@ -29,7 +31,7 @@ Now it's as if that app was never installed on this machine.
 
 Now you can reinstall the container using the standard saltbox tag:
 
-```
+```shell
 sb install TAG_GOES_HERE
 ```
 
@@ -39,7 +41,7 @@ The same concepts apply to sandbox apps.
 
 If you're not planning to reinstall and want to save a tiny bit of disk space [or you want to be sure you pull a new image when you reinstall]:
 
-```
+```shell
 docker image prune
 ```
 

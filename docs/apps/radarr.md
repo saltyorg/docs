@@ -426,7 +426,7 @@ Make changes in the following sections:
 
 This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organizr.md).
 
-* Go to "Settings" -> "General" -> "Security" -> "API Key".
+- Go to "Settings" -> "General" -> "Security" -> "API Key".
 
 ## Guide
 

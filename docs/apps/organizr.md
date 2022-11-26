@@ -12,7 +12,7 @@
 
 ## 3. Initial Setup
 
-1.  The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
+1. The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
 In the `Install Type` section select `Personal`
 
     ![Main Setup-Install-Type](https://i.imgur.com/IgStX3L.png)
@@ -23,9 +23,10 @@ Note: it is suggested to enter your `plex username and password`
     ![Main Setup-Admin-Info](https://i.imgur.com/clOLSdn.png)
 
 1. In the `Security` section enter your fill in the `Hash Key` and `Registration Password` any type of password will do but if you want a secure one then follow these steps;
+
 * First for the `Hash Key` you can head over to [Base64 Encode](https://www.cleancss.com/base64-encode/) and convert a string to Base64. Keep in mind the `Hash Key` can be anywhere between 3 to 30 which mean you can enter string up to 21 characters in Base64
-* For the password just use any strong password you prefer, if you want a strong one then [Password Generator](https://passwordsgenerator.net/), there is no limit on the password section go crazy ;)
-* The API key should be auto-generated so no need to worry about this if the API key is throwing an error such as shorter than it suppose to be or longer it's most likely due to the web browser auto-fill, make sure it's disabled or just use another browser that doesn't have auto-fill or you don't use much e.g Internet Explorer 👀.
+- For the password just use any strong password you prefer, if you want a strong one then [Password Generator](https://passwordsgenerator.net/), there is no limit on the password section go crazy ;)
+- The API key should be auto-generated so no need to worry about this if the API key is throwing an error such as shorter than it suppose to be or longer it's most likely due to the web browser auto-fill, make sure it's disabled or just use another browser that doesn't have auto-fill or you don't use much e.g Internet Explorer 👀.
 <br> <br>You should have something like this:
 
    ![Main Setup-Admin-Info](https://i.imgur.com/o7yp3YQ.png)
@@ -79,7 +80,7 @@ Note: it is suggested to enter your `plex username and password`
 
     ![Tab Editor](https://i.imgur.com/aXwGxpx.png)
 
-  - Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: `https://sonarr.yourdomain.com/calendar` ; Radarr: `https://radarr.yourdomain.com/activity/history`)
+- Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: `https://sonarr.yourdomain.com/calendar` ; Radarr: `https://radarr.yourdomain.com/activity/history`)
 
 ### Homepage (Make you have Homepage ACTIVE in Tabs section)
 

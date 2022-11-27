@@ -8,23 +8,22 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
 === "Without Screen"
-    ```shell
-    sb install backup
-
+```shell
+sb install backup
 ```
 
 === "With Screen"
-    ```shell
-    screen -dmS saltbox-backup sb install backup
+```shell
+screen -dmS saltbox-backup sb install backup
 ```
 
-    ``` shell
-    screen -r
-    ```
+```shell
+screen -r
+```
 
-    ``` shell
-    CTRL A + D
-    ```
+```
+CTRL A + D
+```
 
 ## Scheduled Backup
 
@@ -32,19 +31,18 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
 === "Have Saltbox configure cron"
-    ```shell
-    sb install set-backup
-
+```shell
+sb install set-backup
 ```
 
 === "Configure cron manually"
-    ```shell
-    crontab -e
+```shell
+crontab -e
 ```
 
-    ``` shell
-    0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/home/seed/logs/saltbox_backup.log' 2>&1
-    ```
+```
+0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/home/seed/logs/saltbox_backup.log' 2>&1
+```
 
     Remember to edit the seed username if you changed the Saltbox user in the `accounts.yml`.
 

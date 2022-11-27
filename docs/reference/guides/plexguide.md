@@ -35,6 +35,12 @@ Final should look like:
 ```
 [google]
 type = union
+remotes = gdrive: tdrive:
+```
+or
+```
+[google]
+type = union
 remotes = gcrypt: tcrypt:
 ```
 
@@ -46,7 +52,6 @@ sb install mounts
 
 ## Cloudplow changes
 
-If you are using encryption, you definitly need to change this.  If not, unsure but see for yourself:
 
 ```shell
 nano /opt/cloudplow/config.json
@@ -56,7 +61,11 @@ Under "Remotes":, locate
 ```
 "upload_remote": "google"
 ```
-Change this to
+Change this to:
+```
+"upload_remote": "tdrive:"
+```
+or
 ```
 "upload_remote": "tcrypt:"
 ```

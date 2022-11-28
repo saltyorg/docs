@@ -15,87 +15,87 @@ On this page, we break down the options available in the following files:
 
 - `user`: User information.
 
-  - `name`: User name for the server.
+    - `name`: User name for the server.
 
-    - If user account with this name does not already exist, it will be created during install.
-    - Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
-    - Default is `seed`.
-    - This parameter is **required**.
+        - If user account with this name does not already exist, it will be created during install.
+        - Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
+        - Default is `seed`.
+        - This parameter is **required**.
 
-  - `pass`: Password for the user account and for misc apps.
+    - `pass`: Password for the user account and for misc apps.
 
-    - Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
-    - Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
-    - This parameter is **required**.
-    - Don't leave it blank. Even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Community, and a blank password may cause trouble there.
+        - Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
+        - Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
+        - This parameter is **required**.
+        - Don't leave it blank. Even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Community, and a blank password may cause trouble there.
 
-    - [Relevant XKCD](https://xkcd.com/936/)
+        - [Relevant XKCD](https://xkcd.com/936/)
 
-    - See the [password considerations](#password-considerations) below.
+        - See the [password considerations](#password-considerations) below.
 
-  - `domain`: Domain name for the Saltbox server.
+    - `domain`: Domain name for the Saltbox server.
 
-    - If you don't have one, see [here](domain.md).
-    - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
+        - If you don't have one, see [here](domain.md).
+        - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
 
-  - `email`: E-mail address.
+    - `email`: E-mail address.
 
-    - This is used for the Let's Encrypt SSL certificates.
-    - It does not have to be an email address at the domain above.
-    - This parameter is **required** if you're using the reverse proxy.
+        - This is used for the Let's Encrypt SSL certificates.
+        - It does not have to be an email address at the domain above.
+        - This parameter is **required** if you're using the reverse proxy.
 
   - `ssh_key`: SSH Key
 
-    - This parameter is optional
-    - This is used to provision a SSH key in your user's `authorized_keys` file
-    - This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+        - This parameter is optional
+        - This is used to provision a SSH key in your user's `authorized_keys` file
+        - This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 - `cloudflare`: Cloudflare Account
-  - `email`: E-mail address used for the Cloudflare account.
+    - `email`: E-mail address used for the Cloudflare account.
 
-  - `api`: [Global API Key](domain.md#cloudflare-api-key).
+    - `api`: [Global API Key](domain.md#cloudflare-api-key).
 
-    - This parameter is optional.
+        - This parameter is optional.
 
-    - Default is blank.
+        - Default is blank.
 
-    - Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
+        - Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
 
-    - Note: if you are using a subdomain, like WHATEVER.DOMAIN.TLD, as your domain above, leave these blank. The Cloudflare automation does not work in that case and the install will stop with an error.
+        - Note: if you are using a subdomain, like WHATEVER.DOMAIN.TLD, as your domain above, leave these blank. The Cloudflare automation does not work in that case and the install will stop with an error.
 
-    - Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
+        - Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
 - `plex`: Plex.tv account credentials.
 
-  - This will be used to:
-    - claim the Plex server under your username, and
-    - generate Plex Access Tokens for apps such as Autoscan, etc.
+    - This will be used to:
+        - claim the Plex server under your username, and
+        - generate Plex Access Tokens for apps such as Autoscan, etc.
 
-  - `user` - Plex username or email address on the profile.
+    - `user` - Plex username or email address on the profile.
 
-  - `pass` - Plex password. See the [password considerations](#password-considerations) below.
+    - `pass` - Plex password. See the [password considerations](#password-considerations) below.
 
-  - `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
+    - `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
 
-  - This parameter is required.
+    - This parameter is required.
 
-  - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
+    - Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
 
-  - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.  Consider securing this file if you are running Saltbox on a shared machine.
+    - If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.  Consider securing this file if you are running Saltbox on a shared machine.
 
 - `dockerhub`: DockerHub account credentials.
 
-  - Entering Dockerhub credentials increases the number of images one can pull
+    - Entering Dockerhub credentials increases the number of images one can pull
 
-  - `user` - Docker Hub username.
+    - `user` - Docker Hub username.
 
-  - `token` - Docker Hub access token.
+    - `token` - Docker Hub access token.
 
 - `apprise`: apprise url.
 
-  - Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
-  - This will be used to send out messages during certain tasks (e.g. backup).
-  - This parameter is not nested like the others in this file.
+    - Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
+    - This will be used to send out messages during certain tasks (e.g. backup).
+    - This parameter is not nested like the others in this file.
 
          ```
          apprise: somescheme://something_else_here/perhaps_a_token
@@ -107,7 +107,7 @@ On this page, we break down the options available in the following files:
          apprise:
             somescheme://something_else_here/perhaps_a_token
          ```
-  - This parameter is optional.
+    - This parameter is optional.
 
 ---
 

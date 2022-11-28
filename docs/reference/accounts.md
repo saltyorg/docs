@@ -2,6 +2,11 @@
     This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#configuration).
     If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
 
+On this page, we break down the options available in the following files:
+- `/srv/git/saltbox/accounts.yml`
+- `/srv/git/saltbox/settings.yml`
+- `/srv/git/saltbox/adv_settings.yml`
+
 ## Options in accounts.yml
 
 **Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`

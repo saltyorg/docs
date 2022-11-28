@@ -36,6 +36,7 @@ On this page, we break down the options available in the following files:
     - `domain`: Domain name for the Saltbox server.
 
         - If you don't have one, see [here](domain.md).
+
         - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
 
     - `email`: E-mail address.
@@ -44,13 +45,14 @@ On this page, we break down the options available in the following files:
         - It does not have to be an email address at the domain above.
         - This parameter is **required** if you're using the reverse proxy.
 
-  - `ssh_key`: SSH Key
+    - `ssh_key`: SSH Key
 
         - This parameter is optional
         - This is used to provision a SSH key in your user's `authorized_keys` file
         - This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 - `cloudflare`: Cloudflare Account
+
     - `email`: E-mail address used for the Cloudflare account.
 
     - `api`: [Global API Key](domain.md#cloudflare-api-key).
@@ -68,7 +70,9 @@ On this page, we break down the options available in the following files:
 - `plex`: Plex.tv account credentials.
 
     - This will be used to:
+
         - claim the Plex server under your username, and
+
         - generate Plex Access Tokens for apps such as Autoscan, etc.
 
     - `user` - Plex username or email address on the profile.
@@ -94,7 +98,9 @@ On this page, we break down the options available in the following files:
 - `apprise`: apprise url.
 
     - Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
+
     - This will be used to send out messages during certain tasks (e.g. backup).
+
     - This parameter is not nested like the others in this file.
 
          ```
@@ -121,39 +127,39 @@ On this page, we break down the options available in the following files:
 
 - `downloads`: Where downloads go.
 
-  - Default is `/mnt/unionfs/downloads`.
+    - Default is `/mnt/unionfs/downloads`.
 
 - `transcodes`: Path of temporary transcoding files.
 
-  - Default is `"/mnt/local/transcodes"`.
+    - Default is `"/mnt/local/transcodes"`.
 
-  - Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
+    - Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
 
 - `rclone`: Rclone options.
 
-  - `version`: Rclone version that is installed by Saltbox.
+    - `version`: Rclone version that is installed by Saltbox.
 
-    - Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
+        - Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
 
-    - Default is `latest`.
+        - Default is `latest`.
 
-  - `remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
+    - `remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
 
-    - Default is `google`.
+        - Default is `google`.
 
-    - Can be left blank to run without cloud storage].
+        - Can be left blank to run without cloud storage].
 
 - `shell`: Type of shell to use.
 
-  - Choices are `bash` or `zsh`.
+    - Choices are `bash` or `zsh`.
 
-  - Default is `bash`.
+    - Default is `bash`.
 
 - `authelia`: Authelia options.
 
-  - `subdomain`: subdomain for the Authelia login page
+    - `subdomain`: subdomain for the Authelia login page
 
-    - Default is `login`.
+        - Default is `login`.
 
 ---
 

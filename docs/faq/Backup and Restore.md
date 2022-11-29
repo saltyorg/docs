@@ -69,7 +69,8 @@ The config files that are backed up are:
 
 These files are the ones needed to run a successful restore.
 
-_Note: `backup_excludes_list.txt` are not backed up into the Restore Service, simply because it is not important for a restore to work and also because it IS automatically restored during the restore process itself._
+!!! note
+    `backup_excludes_list.txt` are not backed up into the Restore Service, simply because it is not important for a restore to work and also because it IS automatically restored during the restore process itself.
 
 How does this work?
 

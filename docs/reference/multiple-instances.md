@@ -54,7 +54,7 @@ You can edit the following set of variables on a per instance basis in `localhos
 !!! note
     Replacing "instance" with the actual **instance name**, of course, i.e. sonarrbing_web_subdomain, etc.
 
-```
+```text
 instance_web_subdomain
 instance_web_domain
 instance_web_port

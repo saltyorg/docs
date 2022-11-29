@@ -20,7 +20,7 @@ Saltbox is opinionated about this `/Media/<type>` file structure; changing it is
 
 ## Setup
 
-```
+```text
 Media
 ├── Movies
 ├── Music

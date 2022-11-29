@@ -93,18 +93,19 @@ You probably want to overwrite your existing role with this one; that will ensur
    ```
 
 2. Run the role as described below.
-   ```bash
 
+```bash
   sb install cm-bazarrx
+```
 
-   ```
 3. Add the stock tag to the `[skip]` section in `"/srv/git/saltbox/ansible.cfg"`:
-   ```
+
+```text
 
    [tags]
    skip = bazarr,whatever,whatever
 
-   ```
+```
 
 That will ensure that the stock `bazarr` tag doesn't overwrite the container you are creating here.
 
@@ -112,9 +113,10 @@ When you want to update Bazarr, you'll run the Saltbox Community `bazarrx` tag i
 
 The same thing holds for every `arrX` variant discussed here.
 
-### If you **DO NOT** want to overwrite your existing Bazarr/etc container:
+### If you **DO NOT** want to overwrite your existing Bazarr/etc container
 
 1. Make sure there IS NOT a `""` entry in the config:
+
    ```yaml
    bazarrx:
      roles:

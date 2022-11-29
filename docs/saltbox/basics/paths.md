@@ -13,7 +13,7 @@ For this reason it is important that you run commands as the appropriate user as
 
 ## Google Drive Paths
 
-```
+```text
 Media
 ├── Movies
 ├── Music
@@ -33,7 +33,7 @@ _Note: If you would like to customize your Plex libraries differently, see [Cust
 
 ## Local Paths
 
-```
+```text
 mnt
 ├──local
 |  └── Media

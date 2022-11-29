@@ -1,3 +1,5 @@
+# Rclone
+
 <script>
    document.addEventListener("DOMContentLoaded", function(){
     var length           = 10;
@@ -81,7 +83,7 @@ Try reloading the page.  If that doesn't work, generate it manually:
 
 [Type this at a command prompt on your server]
 
-```
+```shell
 prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
 ```
 
@@ -116,13 +118,13 @@ This prefix is used for two purposes:<br /><br />
 !!! warning
     IF YOU HAVE SKIPPED ANY OF THE PREVIOUS STEPS THIS VALIDATION WILL NOT WORK.
 
-```
+```shell
 rclone tree google:/
 ```
 
 This should display something like [the number and names of the files and folders may vary somewhat depending on your config]:
 
-```
+```text
 /
 ├── -- aZaSjsklaj-Movies Shared --
 ├── -- aZaSjsklaj-Music Shared --
@@ -143,7 +145,7 @@ This should display something like [the number and names of the files and folder
 <br />
 If you see an error like this:
 
-```
+```text
 Failed to tree: 3 errors: aZaSjsklaj-Movies: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BINGBANGBOING, notFound; aZaSjsklaj-Music: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BANGBOINGBING, notFound; aZaSjsklaj-TV: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BOINGBINGBANG, notFound
 ```
 
@@ -182,7 +184,7 @@ To rename the Google Drive remote to `google`:
 
 1. Find and edit your Rclone configuration file.
 
-   ```
+   ```shell
    nano $(rclone config file | tail -n 1)
    ```
 
@@ -190,7 +192,7 @@ To rename the Google Drive remote to `google`:
 
 1. It will now look like this:
 
-   ```
+   ```ini
    [google]
    type = drive
    client_id = JOHNNY.apps.googleusercontent.com
@@ -202,13 +204,13 @@ To rename the Google Drive remote to `google`:
 
 1. Copy the config file to `~/.config/rclone/rclone.conf` (if it isn't there already):
 
-   ```
+   ```shell
    cp -n $(rclone config file | tail -n 1) ~/.config/rclone/rclone.conf
    ```
 
 1. Give it the proper ownership and permissions. Replace `user` and `group` to match yours (see [here](../../faq/System#find-your-user-id-uid-and-group-id-gid)):
 
-   ```
+   ```shell
    sudo chown user:group ~/.config/rclone/rclone.conf
    sudo chmod 755 ~/.config/rclone/rclone.conf
    ```

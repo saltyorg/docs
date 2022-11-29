@@ -28,7 +28,7 @@ When I refer to a shell command throughout, you’re typing the part highlighted
 
 In most cases, running the mounts tag will clear up any problems you may be having with the various auto-generated service files.
 
-```
+```shell
 sb install mounts
 ```
 
@@ -36,7 +36,7 @@ sb install mounts
 
 The df command can give you a quick look at things:
 
-```
+```text
 ➜  ~ df -h
 Filesystem   Size   Used  Avail  Use%  Mounted on
 ...
@@ -55,7 +55,7 @@ Now we’ll step through the various layers involved in this and check them one 
 
 The rclone config command should show you the google remote you defined during setup:
 
-```
+```text
 ➜  ~ rclone config
 Current remotes:
 
@@ -70,7 +70,7 @@ e/n/d/r/c/s/q> q
 
 You should be able to get a file listing from that remote:
 
-```
+```text
 ➜  ~ rclone lsd google:/Media
        -1 2018-12-01 20:16:06     -1 Music
        -1 2019-03-15 19:26:14     -1 Movies
@@ -92,7 +92,7 @@ Now that the rclone remote is known good, let’s move to the next layer, the rc
 
 First, let’s check that the service is running:
 
-```
+```text
 ➜  ~ sudo systemctl status rclone_vfs.service
 ● rclone_vfs.service - Rclone VFS Mount
    Loaded: loaded (/etc/systemd/system/rclone_vfs.service; enabled; vendor preset: enabled)
@@ -112,7 +112,7 @@ You want to see “`active (running)`” there.
 
 You can look at the log to find out what’s wrong if it’s not “`active (running)`”
 
-```
+```text
 ➜  ~ sudo journalctl -fu rclone_vfs.service
 -- Logs begin at Mon 2019-08-05 16:56:44 EEST. --
 Nov 02 06:42:44 Ubuntu-1804-bionic-64-minimal rclone[9625]: Serving remote control on http://127.0.0.1:5572/
@@ -132,7 +132,7 @@ In that log you can see an error from last night when my server ran out of disk 
 
 If there are errors there, first try restarting the service:
 
-```
+```shell
 sudo systemctl restart rclone_vfs
 ```
 
@@ -144,7 +144,7 @@ Now that the service is running, let’s make sure the files are showing up wher
 
 You can extract the location where the rclone_vfs service is mounting your google storage with a quick egrep command:
 
-```
+```text
 ➜  ~ egrep -i -e "/mnt/" /etc/systemd/system/rclone_vfs.service
   google: /mnt/remote
 ExecStop=/bin/fusermount -uz /mnt/remote
@@ -154,7 +154,7 @@ You can see in that output that rclone_vfs is mounting your google: remote at /m
 
 That means that the content of your google drive should also appear at that location.  Let’s check that:
 
-```
+```text
 ➜  ~ ls -al /mnt/remote/Media
 total 0
 drwxrwxr-x 1 seed seed 0 Dec  1  2018 Music
@@ -177,7 +177,7 @@ The next step is the mergerfs mount where all the apps look for your files.
 
 Just like we did with the rclone_vfs service, check the mergerfs status:
 
-```
+```text
 ➜  ~ sudo systemctl status mergerfs.service
 ● mergerfs.service - MergerFS Mount
    Loaded: loaded (/etc/systemd/system/mergerfs.service; enabled; vendor preset: enabled)
@@ -193,7 +193,7 @@ Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Started MergerFS Mount
 
 As before, if not “`active (running)`”, you can check the mergerfs log for some clue:
 
-```
+```text
 ➜  ~ sudo journalctl -fu mergerfs.service
 -- Logs begin at Mon 2019-08-05 16:56:44 EEST. --
 Oct 13 17:00:11 Ubuntu-1804-bionic-64-minimal systemd[1]: Starting MergerFS Mount...
@@ -212,7 +212,7 @@ Nov 02 06:45:24 Ubuntu-1804-bionic-64-minimal systemd[1]: Started MergerFS Mount
 
 If everything looks good, you can check the contents of the filesystem:
 
-```
+```text
 ➜  ~ ls -al /mnt/unionfs/Media
 total 0
 drwxrwxr-x 1 seed seed   120 Sep 28 18:32 .
@@ -235,7 +235,7 @@ So at this point we know that all the layers on the host are working, so the las
 
 All the docker containers that need to access your media files have the relevant directories mapped inside them.  You can have a look at specifically how with the docker inspect command:
 
-```
+```text
 ➜  ~ docker inspect plex | head -n 90
 [
  {
@@ -274,7 +274,7 @@ Take a look at the “`Binds`” section.  Each entry there shows a path on the 
 
 Let’s check that in Plex:
 
-```
+```text
 ➜  ~ docker exec plex ls -al /mnt/unionfs/Media
 total 4
 drwxrwxr-x 1 plex plex   120 Sep 28 18:32 .
@@ -288,7 +288,7 @@ Again, all the same files as always.
 
 If that doesn’t show your files as expected, chances are something happened to the mounts while the container was running and the map has broken.  First restart the container and if that doesn’t work restart the server.
 
-```
+```text
 ➜  ~ docker restart plex
 plex
 ➜  ~
@@ -302,7 +302,7 @@ Some common problems are:
 
 The log in that case will look something like this:
 
-```
+```text
 ubuntu systemd[1]: Starting MergerFS Mount...
 Ubuntu mergerfs[10803]: fuse: mountpoint is not empty
 ubuntu mergerfs[10803]: fuse: if you are sure this is safe, use the 'nonempty' mount option
@@ -313,7 +313,7 @@ ubuntu systemd[1]: Failed to start MergerFS Mount.
 
 If you see this, rerunning the mounts tag, with or without rebuild, actually checks for non empty paths left there as part of a previous failure, and moves the folder to `/mnt/unionfs_<date>` before mounting again.
 
-```
+```shell
 sb install mounts
 ```
 
@@ -327,7 +327,7 @@ In the following examples, you’re typing the part in blue and looking for the 
 
 Look at the settings file:
 
-```
+```text
 ➜  saltbox git:(master) head adv_settings.yml
 ---
 System:
@@ -344,7 +344,7 @@ Plex:
 
 Check the status of the services
 
-```
+```text
 ➜  ~ service rclone_vfs status
 ● rclone_vfs.service - Rclone VFS Mount
    Loaded: loaded (/etc/systemd/system/rclone_vfs.service; enabled; vendor preset: enabled)
@@ -362,7 +362,7 @@ If you’re not using either rclone_vfs or mergerfs you’ll see errors there in
 
 Check the filesystem behind the mounts:
 
-```
+```text
 ➜  ~ sudo mount | egrep "remote"
 local:remote on /mnt/unionfs type fuse.mergerfs …  <<<< Mergerfs
 google: on /mnt/remote type fuse.rclone …          <<<< RClone

@@ -103,7 +103,7 @@ rclone touch google:/mounted.bin
 
 _Note 1: If your Rclone remote config has a different name for Google Drive, replace `google:` with yours._
 
-_Note 2: Above command requires Rclone version 1.39+_
+_Note 2: Above command requires Rclone version 1.39+._
 
 #### Edit the control files in the Plex Autoscan config file
 

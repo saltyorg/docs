@@ -1,3 +1,5 @@
+# Google Shared Drives
+
 This guide will show you how to create default Saltbox Shared Drives and add your group of SAs to them.
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
@@ -16,7 +18,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     cd /opt && git clone https://github.com/chazlarson/sb_gd.git  && cd sb_gd
     ```
 
@@ -24,7 +26,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     python3 -m venv sb_gd && source sb_gd/bin/activate
     ```
 
@@ -34,7 +36,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     If you see something like this:
 
-    ```
+    ```text
     The virtual environment was not created successfully because ensurepip is not
     available.  On Debian/Ubuntu systems, you need to install the python3-venv
     package using the following command.
@@ -51,7 +53,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste the command from the error into your terminal window]
 
-    ```
+    ```shell
     sudo COMMAND FROM ERROR ABOVE
     ```
 
@@ -63,7 +65,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     python -m pip install -r requirements.txt
     ```
 
@@ -71,7 +73,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     nano config.py
     ```
 
@@ -113,7 +115,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     cp  /opt/sa/project-creds.json client_secrets.json
     ```
 
@@ -127,7 +129,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     python sb_sd.py
     ```
 
@@ -137,9 +139,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     For the time being, due to changes in the Google OAuth process, this will try to redirect you to a `localhost` URL, which will fail.  The URL will look like:
 
-    ```
-    http://localhost:8000/oauth2callback?code=4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive
-    ```
+    `http://localhost:8000/oauth2callback?code=4/NUMBERS_AND_STUFF&scope=https://www.googleapis.com/auth/drive`
 
     Copy the ENTIRE URL and paste it at the prompt where the script is waiting.
 
@@ -165,7 +165,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     You should see output similar to this [of course, you will see more than one shared drive creation; the rest are left out here for space]:
 
-    ```
+    ```text
     [previous shared drive creations removed]
     
     ** Team Drive heilung-TV-4K created, ID: AAAAAAAAAAAAAAAAAAA
@@ -209,7 +209,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
     The directory is a belt-and-suspenders convenience you can use to see if your union remote and/or mergerfs config is including everything it should.  We create both a file and a dir so you will get this information whether you use `rclone ls REMOTE` or `rclone lsd REMOTE` or whatever other means:
 
-    ```
+    ```shell
      $ rclone lsd google:
           -1 2021-11-21 17:09:13        -1 -- aZaSjsklaj-Movies Shared --
           -1 2021-11-21 17:11:50        -1 -- aZaSjsklaj-Music Shared --
@@ -226,7 +226,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY 
 
 7. You're done.  Deactivate the virtual env used by this script.
 
-    ```
+    ```shell
      deactivate
     ```
 
@@ -245,7 +245,7 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     cd /opt/sb_gd && source sb_gd/bin/activate
     ```
 
@@ -255,12 +255,12 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     python sb_sd.py
     ```
 
 4. Deactivate the virtual env used by this script.
 
-    ```
+    ```shell
      deactivate
     ```

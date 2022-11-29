@@ -1,3 +1,5 @@
+# Google GCloud Tools Installation
+
 This guide will show you how to set up the Google SDK tools.
 
 These tools are used by scripts in the next two steps that have to interact with google.
@@ -14,31 +16,31 @@ This is a simplified extract from the original docs, which can be found [here](h
 
 1. Run the following commands, one at a time:
 
-    ```
+    ```shell
     sudo apt-get install apt-transport-https ca-certificates gnupg
     ```
 
-    ```
+    ```shell
     echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
     ```
 
-    ```
+    ```shell
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
     ```
 
-    ```
+    ```shell
     sudo apt-get update && sudo apt-get install google-cloud-sdk -y
     ```
 
 2. Run the following command:
 
-    ```
+    ```shell
     gcloud init --console-only
     ```
 
     Follow the prompts:
 
-    ```
+    ```text
     Welcome! This command will take you through the configuration of gcloud.
 
     ...
@@ -58,14 +60,14 @@ This is a simplified extract from the original docs, which can be found [here](h
 
 4. Continue in the terminal:
 
-    ```
+    ```text
     Enter verification code: 4/1AX4XfWjkg8C8r...ujs332G8
     You are logged in as: [YOUR_GOOGLE_ACCOUNT].
     ```
 
     You will now be asked to choose a default project.  Choose the one you created earlier.
 
-    ```
+    ```text
     Pick cloud project to use:
      [1] THE_PROJECT_YOUR_CREATED_FOR_SALTBOX
      [2] Create a new project
@@ -78,13 +80,13 @@ This is a simplified extract from the original docs, which can be found [here](h
 
 5. Run the following command:
 
-    ```
+    ```shell
     gcloud organizations list
     ```
 
     Your organization ID will be displayed in the table:
 
-    ```
+    ```text
     DISPLAY_NAME            ID  DIRECTORY_CUSTOMER_ID
     YOUR-DOMAIN   123456789098              XXXXXXXXX
                   ^^^ HERE ^^^

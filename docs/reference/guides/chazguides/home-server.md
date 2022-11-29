@@ -1,4 +1,4 @@
-## Installing Saltbox on a home server
+# Installing Saltbox on a home server
 
 This article discusses details to consider when running Saltbox on a home server behind a residential router.  It's not meant to replace the existing install documentation.  Things here may not be discussed in sequence, as it's not intended as an install guide.  For that, refer to the install guide on the menu bar above.
 
@@ -16,7 +16,7 @@ Prerequisites:
 
 NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.
 
-### Domain
+## Domain
 
 You need a domain.  They’re cheap or even free.
 
@@ -38,7 +38,7 @@ Probably your router has this available.  If not, there’s a Dynamic DNS Client
 
 The saltbox role is `ddclient`, and you run it like any other saltbox role:
 
-```
+```shell
 sb install ddclient
 ```
 
@@ -93,13 +93,13 @@ Ports used by the stock saltbox apps can be found [here](https://docs.saltbox.de
 
 At this point, you should be able to SSH to that machine using your domain.
 
-```
+```shell
 ssh YOU@YOUR_DOMAIN -p 2207
 ```
 
 That should work just like:
 
-```
+```shell
 ssh YOU@192.168.X.Y
 ```
 
@@ -109,7 +109,7 @@ You should also be able to connect to a web server running on that machine.  Let
 
 Verify this part is working by installing apache on your server:
 
-```
+```shell
 sudo apt install apache2
 ```
 
@@ -121,7 +121,7 @@ If you see the default apache page, you’re set to go.
 
 Once verified, remove apache:
 
-```
+```shell
 sudo apt remove apache2
 ```
 
@@ -155,7 +155,7 @@ That ran for a while and finished without errors.
 
 In my `accounts.yml`, I’m entering an existing account on the ubuntu machine [this is the account I created when I installed Ubuntu]:
 
-```
+```yaml
 -
 user:
   name: chaz
@@ -185,7 +185,7 @@ I made no changes to `settings.yml`.
 
 Run the preinstall:
 
-```
+```shell
 sb install preinstall
 ```
 
@@ -197,13 +197,13 @@ I then set up the rclone remote as usual.
 
 Next, I ran saltbox setup:
 
-```
+```shell
 sb install saltbox
 ```
 
 In my case the setup ran through without problems the first time:
 
-```
+```text
 PLAY RECAP ********************************************************************************************************
 localhost                  : ok=787  changed=197  unreachable=0    failed=0    skipped=329  rescued=0    ignored=0
 

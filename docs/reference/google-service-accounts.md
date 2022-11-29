@@ -1,3 +1,5 @@
+# Google Service Accounts
+
 This guide will show you how to create projects and service accounts using `sa-gen` and add them to a Google Group.
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
@@ -13,7 +15,7 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
 1. Create /opt/sa and make sure it's writable by you.
 
-    ```
+    ```shell
     sudo mkdir -p /opt/sa
     sudo chown -R <user>:<group> /opt/sa
     ```
@@ -25,7 +27,7 @@ Enter the user name that you entered in `accounts.yml`; group is the same as the
 
 Don't enter the `<` and `>`.
 
-```
+```text
 ---
 user:
     name: seed #   <<< THIS VALUE
@@ -34,7 +36,7 @@ user:
 
 You can also run `id` to get this information:
 
-```
+```shell
 ~ id
 uid=1000(marco) gid=1000(marco) groups=1000(marco),...
             ^<user>         ^<group>
@@ -46,13 +48,13 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     gcloud services list --enabled
     ```
 
     You should see:
 
-    ```
+    ```text
     NAME                                 TITLE
     admin.googleapis.com                 Admin SDK API
     bigquery.googleapis.com              BigQuery API
@@ -82,7 +84,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen
     ```
 
@@ -90,7 +92,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     [copy-paste this into your terminal window]
 
-    ```
+    ```shell
     nano sa-gen
     ```
 
@@ -98,7 +100,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     For these edits, you will need: the "Organization ID" from gcloud SDK step, the full email address of the group you created a couple steps ago, and the prefix you generated earlier.
 
-    ```
+    ```bash
     #!/bin/bash
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
@@ -119,13 +121,13 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 4. Run the `sa-gan` script:
 
-    ```
+    ```shell
     ./sa-gen
     ```
 
     `sa-gen` will create three projects, 300 SAs, and download them to `/opt/sa`:
 
-    ```
+    ```text
     Total SA json keys before running sa-gen = 0
     Creating project = mgbtbnfkkt1
     ++ gcloud projects create mgbtbnfkkt1 --organization=

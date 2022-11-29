@@ -22,25 +22,25 @@ Broadly, the base install consists of six steps:
 
 === "curl"
     ```shell
-    curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+    curl -sL <https://install.saltbox.dev> | sudo -H bash && cd /srv/git/saltbox
 
     ```
 
 === "wget"
     ```shell
-    wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+    wget -qO- <https://install.saltbox.dev> | sudo -H bash && cd /srv/git/saltbox
 
     ```
 
 === "curl (verbose)"
     ```shell
-    curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
+    curl -sL <https://install.saltbox.dev> | sudo -H bash -s -- -v && cd /srv/git/saltbox
 
     ```
 
 === "wget (verbose)"
     ```shell
-    wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
+    wget -qO- <https://install.saltbox.dev> | sudo -H bash -s -- -v && cd /srv/git/saltbox
 
     ```
 

@@ -88,7 +88,7 @@ docker start delugevpn
 
 ## Configuration
 
-**FOR PIA**
+### FOR PIA
 
 - **vpn_user:** Your PIA user name
 

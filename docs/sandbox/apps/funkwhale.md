@@ -22,13 +22,13 @@ sb install sandbox-funkwhale
 
 ### 3. Setup
 
-**First create the superuser**
+- First create the superuser
 
 - `docker exec -it funkwhale manage createsuperuser` <br />
    (for ease of access, set it as your Saltbox user and password.)
 - enter the `exit` command when finished to return to your server's shell.
 
-**Now configure these settings via the web GUI**
+- Now configure these settings via the web GUI
 
 - Access Funkwhale, visit `https://funkwhale._yourdomain.com_` and log in with the user and password you just created.
 - Enter `Music->Add Content->Create a new Library` and fill out the information.
@@ -36,7 +36,7 @@ sb install sandbox-funkwhale
   `https://funkwhale.domain.com/federation/music/libraries/da8bd97b-3c3f-4e7b-92cb-6ba45721837b`
 - Copy out the last portion: `da8bd97b-3c3f-4e7b-92cb-6ba45721837b`
 
-**Return to the shell session to import music library**
+- Return to the shell session to import music library
 
 - `docker exec -it funkwhale /usr/bin/python3 /app/api/manage.py import_files da8bd97b-3c3f-4e7b-92cb-6ba45721837b "/music/Media/Audio/Music/**/**/*.flac" --in-place --async --recursive`
 

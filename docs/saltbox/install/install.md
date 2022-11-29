@@ -15,6 +15,9 @@ Broadly, the base install consists of six steps:
 5. Running the [install script](#step-5-saltbox)
 6. Configuring installed [applications](#step-6-app-setup)
 
+!!! warning
+    There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but things that are installed in the OS, for example rclone, are not tracked in a way that would allow uninstalling them.
+
 ## Step 1: Dependencies
 
 === "curl"

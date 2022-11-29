@@ -21,24 +21,28 @@ Broadly, the base install consists of six steps:
 ## Step 1: Dependencies
 
 === "curl"
+
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
 
     ```
 
 === "wget"
+
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
 
     ```
 
 === "curl (verbose)"
+
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
 
     ```
 
 === "wget (verbose)"
+
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
 

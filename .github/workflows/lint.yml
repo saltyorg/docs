@@ -13,4 +13,4 @@ jobs:
           docker run --rm -v ${GITHUB_WORKSPACE}:/workdir \
           ghcr.io/igorshubovych/markdownlint-cli:latest \
           "/workdir/**/*.md" \
-          --disable MD013 MD033 MD034 MD046 MD041 MD045 MD051 MD029 MD024
+          --disable MD013 MD033 MD046 MD041 MD045 MD051 MD029 MD024

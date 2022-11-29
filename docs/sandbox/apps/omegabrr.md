@@ -34,4 +34,4 @@ Restart the Docker container for the changes to take effect.
 
 ### 4. Usage
 
-You may use the URL with the provided API token to trigger filter refreshes via webhook: [Service](https://github.com/autobrr/omegabrr#service){: .header-icons target=_blank rel="noopener noreferrer" }
+If desired, use the URL with the provided API token to trigger filter refreshes via webhook: [Service](https://github.com/autobrr/omegabrr#service){: .header-icons target=_blank rel="noopener noreferrer" }

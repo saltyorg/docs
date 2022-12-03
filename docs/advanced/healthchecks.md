@@ -16,6 +16,48 @@ The syntax for this
 Below are some samples for various available roles:
 
 ```yaml
+sonarr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ sonarr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
+radarr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ radarr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
+prowlarr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ prowlarr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
+lidarr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ lidarr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
+readarr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ readarr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
+whisparr_docker_healthcheck:
+  test: ["CMD", "curl", "--fail", "http://localhost:{{ whisparr_web_port }}/login"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+
 postgres_docker_healthcheck:
   test: ["CMD-SHELL", "pg_isready", "-d", "{{ postgres_docker_env_db }}"]
   interval: 10s

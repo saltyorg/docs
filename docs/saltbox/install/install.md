@@ -200,12 +200,12 @@ There is nothing special about Saltbox's implementation of this setup, aside fro
 
 If you already know how to set that up, do so with your usual methods.  If not:
 
-=== "Cloudbox users"
+=== "Migrating from Cloudbox"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
-=== "PlexGuide users"
+=== "Migrating from PlexGuide"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     The issues you will have to deal with will largely be around:
@@ -221,7 +221,7 @@ If you already know how to set that up, do so with your usual methods.  If not:
 
     That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
 
-    That eight-step process will create three shared drives, 300 service accounts, and will configure rclone for you.
+    That eight-step process will create seven shared drives, 300 service accounts, and will configure rclone for you.
 
     This should be enough capacity for quite a while for most users.
 

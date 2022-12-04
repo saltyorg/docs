@@ -57,7 +57,7 @@ Then retrieve the configuration files from a backup.
 
 Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
-``` shell
+```shell
 sb install preinstall
 ```
 
@@ -69,7 +69,7 @@ sb install preinstall
 
 Start the restore process.
 
-``` shell
+```shell
 sb install restore
 ```
 
@@ -90,7 +90,7 @@ Retrieve the following configuration files from your backup manually and place t
 
 Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
-``` shell
+```shell
 sb install preinstall
 ```
 
@@ -102,7 +102,7 @@ sb install preinstall
 
 Start the restore process.
 
-``` shell
+```shell
 sb install restore
 ```
 

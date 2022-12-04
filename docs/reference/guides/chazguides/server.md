@@ -42,7 +42,7 @@ Here Plex has 9640 movies and 137140 TV episodes.  Radarr is tracking 11608 movi
 
 [These displays are produced by `ncdu` a command-line tool that shows disk usage; they're showing the content of the /opt directory]
 
-```
+```text
 ncdu 1.14.1 ~ Use the arrow keys to navigate, press ? for help
 --- /opt -------------------------------------------------------
    78.3 GiB [##########] /plex
@@ -52,7 +52,7 @@ ncdu 1.14.1 ~ Use the arrow keys to navigate, press ? for help
 
 Here Plex contains has a lot more than that.
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- /opt -------------------------------------------------------
   274.5 GiB [##########] /plex
@@ -95,7 +95,7 @@ Maybe; try it and see.
 
 The other way this question is posed is:
 
-# What is the cheapest VPS or dedi on which I can run saltbox?
+## What is the cheapest VPS or dedi on which I can run saltbox?
 
 That question cannot be answered in any meaningful sense other than the requirements laid out in the docs.
 

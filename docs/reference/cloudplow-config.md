@@ -1,3 +1,5 @@
+# Cloudplow Config
+
 The default Cloudplow setup uploads to the `google` remote using a single account, which limits you to 750GB/day of upload.
 
 To utilize rotating service accounts to upload more than this, you'll need to configure cloudplow to upload to the individual shared drives.
@@ -18,7 +20,7 @@ You will have to have completed `sb install saltbox` before using this script.
 
 1. Run the script
 
-    ```
+    ```shell
     cd /opt/sb_gd
     source sb_gd/bin/activate
     python sb_cp.py
@@ -28,12 +30,12 @@ You will have to have completed `sb install saltbox` before using this script.
 
 2. Restart the cloudplow service:
 
-    ```
+    ```shell
     sudo systemctl restart cloudplow
     ```
 
 3. Deactivate the virtual environment:
 
-    ```
+    ```shell
     deactivate
     ```

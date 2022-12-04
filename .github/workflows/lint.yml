@@ -1,6 +1,6 @@
 name: Lint
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
 
@@ -10,9 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: markdownlint
         run: |
-          find "${GITHUB_WORKSPACE}" -name '*.md' -exec \
-            docker run --rm \
-            -v "${GITHUB_WORKSPACE}":"${GITHUB_WORKSPACE}" \
-            markdownlint/markdownlint \
-            -r ~MD033 \
-            {} +
+          docker run --rm -v ${GITHUB_WORKSPACE}:/workdir \
+          ghcr.io/igorshubovych/markdownlint-cli:latest \
+          "/workdir/**/*.md" \
+          --disable MD013 MD033 MD046 MD041 MD045 MD051 MD029 MD024

@@ -8,23 +8,27 @@
 Start by installing dependencies.
 
 === "curl"
+
 ```shell
-curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
+    curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
 ```
 
 === "wget"
+
 ```shell
-wget -qO- https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
+    wget -qO- https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
 ```
 
 === "curl (verbose)"
+
 ```shell
-curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
+    curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
 ```
 
 === "wget (verbose)"
+
 ```shell
-wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
+    wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
 ```
 
 Then retrieve the configuration files from a backup.
@@ -32,8 +36,9 @@ Then retrieve the configuration files from a backup.
 ## Using Restore Service
 
 === "curl"
+
 ```{ .sh .annotate }
-curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
+    curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
 ```
 
     1. Use the username and password defined for the service when last backup was executed.
@@ -41,8 +46,9 @@ curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
         Must wrap the username and password in quotes.
 
 === "wget"
+
 ```{ .sh .annotate }
-wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
+    wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
 ```
 
     1. Use the username and password defined for the service when last backup was executed.

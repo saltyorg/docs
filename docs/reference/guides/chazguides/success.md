@@ -1,4 +1,4 @@
-Did my Saltbox install succeed?
+# Did my Saltbox install succeed?
 
 If you started with the first install [step](../../../saltbox/install/install.md)
 
@@ -16,7 +16,7 @@ What does success look like?
 
 After running the Saltbox install command:
 
-```
+```text
 ~$ sb install saltbox
 ```
 
@@ -26,7 +26,7 @@ Eventually, it will stop, and if successful, will display something like this:
 
 TODO: REPLACE WITH SALTBOX VERSION
 
-```
+```text
 PLAY RECAP ************************************************************************************
 localhost               : ok=713  changed=180  unreachable=0 failed=0
 
@@ -200,7 +200,7 @@ You can verify the proxy with curl:
 
 (nothing special about my choice of ombi here)
 
-```
+```text
 chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
   % Total % Received % Xferd  Average Speed   Time Time  Time  Current
                               Dload  Upload   Total   Spent Left  Speed

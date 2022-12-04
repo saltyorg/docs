@@ -54,7 +54,7 @@ Here's a generic setup just for this example:
 
 Plex Autoscan gets a request for a path like this:
 
-```
+```text
 /radarr/movie/path/Big Space Movie (2022)/Big Space Movie (2022).mkv
 ```
 
@@ -69,7 +69,7 @@ It looks at the table above to find which one matches the path.  In this case it
 
 PAS then changes "`/radarr/movie/path/`" to "`/plex/Movie/path/`" to make it into
 
-```
+```text
 /plex/Movie/path/Big Space Movie (2022)/Big Space Movie (2022).mkv
 ```
 
@@ -222,7 +222,7 @@ Given this SERVER_PATH_MAPPING:
 
 Plex Autoscan processes
 
-```
+```text
 PATH_WHERE_RADARR_LOOKS/bing/bang/boing
 ```
 
@@ -230,13 +230,13 @@ based on a request from Radarr.
 
 Plex Autoscan finds
 
-```
+```text
 PATH_WHERE_RADARR_LOOKS
 ```
 
 in the list, so it does a substitution based on the map and tells Plex to scan:
 
-```
+```text
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
@@ -244,7 +244,7 @@ PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 
 Plex Autoscan processes
 
-```
+```text
 PATH_WHERE_APP_TWO_LOOKS/bing/bang/boing
 ```
 
@@ -252,13 +252,13 @@ based on a request from a second application; maybe it's a second Radarr, or Cou
 
 Plex Autoscan finds
 
-```
+```text
 PATH_WHERE_APP_TWO_LOOKS
 ```
 
 in the list, so it does a substitution based on the map and tells Plex to scan
 
-```
+```text
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
@@ -266,7 +266,7 @@ PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 
 Plex Autoscan processes
 
-```
+```text
 PATH_ON_GOOGLE_DRIVE/bing/bang/boing
 ```
 
@@ -274,13 +274,13 @@ based on Google Drive Monitoring.
 
 Plex Autoscan finds
 
-```
+```text
 PATH_ON_GOOGLE_DRIVE
 ```
 
 in the list, so it does a substitution based on the map and tells Plex to scan
 
-```
+```text
 PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 ```
 
@@ -288,7 +288,7 @@ PATH_WHERE_PLEX_LOOKS/bing/bang/boing
 
 Plex Autoscan processes
 
-```
+```text
 SOME_RANDOM_PATH/bing/bang/boing
 ```
 
@@ -296,7 +296,7 @@ based on some trigger, maybe a manual scan.
 
 Plex Autoscan DOES NOT find `SOME_RANDOM_PATH` in the list, so no substitution is done and PAS tells Plex to scan
 
-```
+```text
 SOME_RANDOM_PATH/bing/bang/boing
 ```
 

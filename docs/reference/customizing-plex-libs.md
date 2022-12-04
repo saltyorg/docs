@@ -8,7 +8,7 @@ The idea being that all movies are to be placed within the `/Media/Movies` folde
 
 Default Paths:
 
-   ```
+   ```text
    Media
    ├── Movies
    ├── Music
@@ -33,7 +33,7 @@ _Note: This guide discusses the setup in terms of movies. You can of course do t
 
 Here is an example library setup, which is based on [Scenario 1](#scenario-1).
 
- ```
+ ```text
  Media
  ├── Movies
  │   ├── Movies
@@ -54,7 +54,7 @@ Here is an example library setup, which is based on [Scenario 1](#scenario-1).
 
 - `/Movies/Movies-Anime/` folder is for Japanese, animated films.
 
-# Scenario 1
+## Scenario 1
 
 Movie libraries under `/Media/Movies`.
 
@@ -62,7 +62,7 @@ This setup is recommended over Scenario 2 as it is somewhat user-friendly and re
 
 Example:
 
-```
+```text
 Media
 ├── Movies
 │   ├── Movies
@@ -74,7 +74,7 @@ Media
 └── TV
 ```
 
-## 1. Create Folders in Google Drive
+### 1. Create Folders in Google Drive
 
 Let's say you wanted to have separate movie libraries for:
 
@@ -106,7 +106,7 @@ Screenshots:
 
   ![](https://i.imgur.com/VG5zT7y.png)
 
-## 2. Add Libraries to Plex
+### 2. Add Libraries to Plex
 
 You will add each of these folders as separate libraries within Plex (see [[example|Install: Plex-Media-Server#adding-the-movie-library]]). You may name these libraries as whatever you want.
 
@@ -122,7 +122,7 @@ In our example, this will be:
 
 *_Note: This can be called anything else, such as `/mnt/unionfs/Media/Movies-Main` or `/mnt/unionfs/Media/Movies-All`._
 
-## 3. Modify Cloudplow Config
+### 3. Modify Cloudplow Config
 
 _Note 1: For Mediabox / Feederbox setups, this will be done on the Feederbox._
 
@@ -130,7 +130,7 @@ _Note 2: This is the default setting and may be skipped if you haven't changed i
 
 1. On the server's shell, run the following command:
 
-    ```
+    ```shell
     nano /opt/cloudplow/config.json
     ```
 
@@ -144,15 +144,15 @@ _Note 2: This is the default setting and may be skipped if you haven't changed i
 
 1. Restart Cloudplow: `sudo systemctl restart cloudplow`.
 
-## 4. Change Root Paths in Radarr
+### 4. Change Root Paths in Radarr
 
 Set your Movie Paths in [[Radarr|Install: Radarr#8-adding-the-movies-path]] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies/3D`).
 
-## 6. Misc
+### 6. Misc
 
 ***
 
-# Scenario 2
+## Scenario 2
 
 Movie libraries under `/Media`.
 
@@ -160,7 +160,7 @@ This setup is not recommended as it requires more config setup than Scenario 1. 
 
 Example:
 
-```
+```text
 Media
 ├── Movies
 ├── Movies-4K
@@ -172,7 +172,7 @@ Media
 
 ```
 
-## 1. Create Folders in Google Drive
+### 1. Create Folders in Google Drive
 
 Let's say you wanted to have separate movie libraries for:
 
@@ -224,7 +224,7 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Mediabox._
 
 1. On the server's shell, run the following command:
 
-    ```
+    ```shell
     nano /opt/plex_autoscan/config/config.json
     ```
 
@@ -234,7 +234,7 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Mediabox._
 
         The format will look like:
 
-        ```
+        ```text
         "/data/<folder>": [                <----- Plex Library Path
           "/mnt/unionfs/Media/<folder>",   <----- Incoming folder path from webhooks (e.g. Radarr root path)
           "My Drive/Media/<folder>/"       <----- Incoming folder path from Google Drive Monitoring (optional)
@@ -292,7 +292,7 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Feederbox._
 
 1. On the server's shell, run the following command:
 
-    ```
+    ```shell
     nano /opt/cloudplow/config.json
     ```
 

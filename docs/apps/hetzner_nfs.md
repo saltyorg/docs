@@ -22,7 +22,7 @@ There are 3 phases to the setup. They are broken down below.
 
   ![](../images/community/hetzner_vswitch.png)
 
-2. Setup Firewall.
+1. Setup Firewall.
 
       - Mediabox:
 
@@ -90,13 +90,13 @@ There are 3 phases to the setup. They are broken down below.
 
 Simply run the following commands on their respective servers:
 
-### NFS Server (Feederbox)
+### Uninstall NFS Server (Feederbox)
 
 ```shell
 sb install hetzner_nfs_server_uninstall
 ```
 
-### NFS Client (Mediabox)
+### Uninstall NFS Client (Mediabox)
 
 ```shell
 sb install hetzner_nfs_client_unmount

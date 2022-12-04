@@ -2,6 +2,12 @@
     This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#configuration).
     If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
 
+On this page, we break down the options available in the following files:
+
+- `/srv/git/saltbox/accounts.yml`
+- `/srv/git/saltbox/settings.yml`
+- `/srv/git/saltbox/adv_settings.yml`
+
 ## Options in accounts.yml
 
 **Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
@@ -31,6 +37,7 @@
   - `domain`: Domain name for the Saltbox server.
 
     - If you don't have one, see [here](domain.md).
+
     - This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
 
   - `email`: E-mail address.
@@ -46,6 +53,7 @@
     - This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 - `cloudflare`: Cloudflare Account
+
   - `email`: E-mail address used for the Cloudflare account.
 
   - `api`: [Global API Key](domain.md#cloudflare-api-key).
@@ -63,7 +71,9 @@
 - `plex`: Plex.tv account credentials.
 
   - This will be used to:
+
     - claim the Plex server under your username, and
+
     - generate Plex Access Tokens for apps such as Autoscan, etc.
 
   - `user` - Plex username or email address on the profile.
@@ -89,7 +99,9 @@
 - `apprise`: apprise url.
 
   - Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
+
   - This will be used to send out messages during certain tasks (e.g. backup).
+
   - This parameter is not nested like the others in this file.
 
          ```

@@ -1,6 +1,8 @@
+# Plex Autoscan Extras
+
 Other options for [Plex Autoscan](https://github.com/l3uddz/plex_autoscan).
 
-# Google Drive Monitoring
+## Google Drive Monitoring
 
 !!! warning
 
@@ -105,14 +107,14 @@ To set this up:
 
 7. Visit the link shown to get the authorization code and paste that in and hit `enter`.
 
-    ```
+    ```text
     Visit https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=&access_type=offline and authorize against the account you wish to use
     Enter authorization code:
     ```
 
 8. When access token retrieval is successful, you'll see this:
 
-    ```
+    ```text
     2018-06-24 05:57:58,252 -     INFO -    GDRIVE [140007964366656]: Requesting access token for auth code '4/AAAfPHmX9H_kMkMasfdsdfE4r8ImXI_BddbLF-eoCOPsdfasdfHBBzffKto'
     2018-06-24 05:57:58,509 -     INFO -    GDRIVE [140007964366656]: Retrieved first access token!
     2018-06-24 05:57:58,511 -     INFO -  AUTOSCAN [140007964366656]: Access tokens were successfully retrieved!
@@ -128,7 +130,7 @@ To set this up:
 
 10. Plex Autoscan will now start monitoring Google Drive.
 
-# Make Plex scan a specific file or folder
+## Make Plex scan a specific file or folder
 
 ## Web app
 
@@ -158,7 +160,7 @@ Setup instructions:
 
     Format:
 
-    ```
+    ```shell
     curl -d "eventType=Manual&filepath=<PATH TO FILE/FOLDER>" <YOUR PLEX AUTOSCAN URL>
     ```
 

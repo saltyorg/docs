@@ -10,11 +10,11 @@ Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt
 Chances are, if your disk is full, the cause is one of two things:
 
 1. Sonarr/Radarr are not importing downloaded media
-2. Cloudplow isn't uploading things to the cloud.
+1. Cloudplow isn't uploading things to the cloud.
 
 If you are using rclone’s --vfs-cache=full, then there’s a third likely cause:
 
-3. Your rclone vfs cache is filling your disk
+1. Your rclone vfs cache is filling your disk
 
 This is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered.  You can use these tools to find out if that's the issue, though.
 
@@ -24,13 +24,13 @@ The first step is to find out where the space is going on your disk; which direc
 
 At a command prompt, type:
 
-```
+```shell
 sudo ncdu -x --exclude /opt/plex /
 ```
 
 What’s that command?
 
-```
+```shell
 sudo run with root privileges
 ncdu show graphic display of disk usage
 -x don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your google drive]
@@ -40,7 +40,7 @@ ncdu show graphic display of disk usage
 
 You'll probably see something like this:
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- / ------------------------------------------------------
   558.0 GiB [##########] /mnt
@@ -50,7 +50,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 
 Drill into /mnt/local:
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- /mnt/local ---------------------------------------------
                          /..
@@ -64,7 +64,7 @@ Here, I have 473 GB of unimported downloads and 44 GB waiting to be uploaded by 
 
 Rclone vfs cache is more install-dependent.  I’m going to assume that if you’re reading this you didn’t change things from the defaults, and chances are you’ll see something like this:
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help ------------------------------------------------------------
   252.3 GiB [##########] /home
   119.6 GiB [####      ] /mnt
@@ -74,7 +74,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help -------------------
 
 Drill into /home/YOUR_USERNAME/:
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- /home/seed ---------------------------------------------
                          /..
@@ -85,7 +85,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 
 And further into .cache/rclone:
 
-```
+```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 --- /home/seed/.cache/rclone -------------------------------
                          /..
@@ -131,19 +131,19 @@ The default threshold to start a Google upload is 200GB, so in my case above clo
 
 At a command prompt, type:
 
-```
+```shell
 tail /opt/cloudplow/cloudplow.log
 ```
 
 You should see something like:
 
-```
+```text
 Uploader: google. Local folder size is currently 44 GB. Still have 156 GB remaining before its eligible to begin uploading...
 ```
 
 If you do, cloudplow is working as expected.  If you want cloudplow to start uploading stuff sooner, you can adjust those thresholds in your cloudplow config file.  At the bottom of `/opt/cloudplow/config.json`, you’ll find something like this:
 
-```
+```json
 "google": {
     "check_interval": 30,
     "exclude_open_files": true,
@@ -164,7 +164,7 @@ In the default setup, you can upload 750GB per day.
 
 To see if you’ve hit that quota, run a cloudplow upload manually.  At a command prompt, type:
 
-```
+```shell
 cloudplow upload
 ```
 
@@ -174,7 +174,7 @@ PAY ATTENTION TO WHAT THE LOG SAYS.  The errors should let you know what’s goi
 
 If you want more detail:
 
-```
+```shell
 cloudplow upload --loglevel=DEBUG
 ```
 

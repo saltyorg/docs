@@ -10,7 +10,7 @@ First, mount your NAS storage at `/mnt/local/Media`.  Make sure that the user ru
 
 Then leave the rclone remote entry in the settings blank:
 
-```
+```ini
 rclone:
   version: latest 
   remote: 

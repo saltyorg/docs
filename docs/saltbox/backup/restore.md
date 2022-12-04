@@ -9,27 +9,27 @@ Start by installing dependencies.
 
 === "curl"
 
-```shell
+    ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
-```
+    ```
 
 === "wget"
 
-```shell
+    ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash; cd /srv/git/saltbox
-```
+    ```
 
 === "curl (verbose)"
 
-```shell
+    ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
-```
+    ```
 
 === "wget (verbose)"
 
-```shell
+    ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
-```
+    ```
 
 Then retrieve the configuration files from a backup.
 
@@ -37,9 +37,9 @@ Then retrieve the configuration files from a backup.
 
 === "curl"
 
-```{ .sh .annotate }
+    ```{ .sh .annotate }
     curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
-```
+    ```
 
     1. Use the username and password defined for the service when last backup was executed.
 
@@ -47,9 +47,9 @@ Then retrieve the configuration files from a backup.
 
 === "wget"
 
-```{ .sh .annotate }
+    ```{ .sh .annotate }
     wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
-```
+    ```
 
     1. Use the username and password defined for the service when last backup was executed.
 

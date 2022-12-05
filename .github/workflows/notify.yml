@@ -1,8 +1,10 @@
 name: Notify
 on: push
 jobs:
-  build:
+  await:
     runs-on: ubuntu-latest
+    outputs:
+      deploy_status: ${{ steps.cf-pages.outputs.success }}
     permissions:
       contents: read
       deployments: write
@@ -21,7 +23,7 @@ jobs:
   webhook:
     name: 'webhook'
     runs-on: self-hosted
-    needs: install
+    needs: await
     if: always()
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
@@ -29,4 +31,4 @@ jobs:
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_TEST }}
-          status: ${{ cf-pages.success }}
+          status: ${{ needs.deploy_status.outputs.deploy_status }}

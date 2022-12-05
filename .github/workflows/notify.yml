@@ -3,8 +3,6 @@ on: push
 jobs:
   await:
     runs-on: ubuntu-latest
-    outputs:
-      deploy_status: ${{ steps.cf-pages.outputs.success }}
     permissions:
       contents: read
       deployments: write
@@ -31,4 +29,4 @@ jobs:
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_TEST }}
-          status: ${{ needs.deploy_status.outputs.deploy_status }}
+          status: ${{ env.WORKFLOW_CONCLUSION }}

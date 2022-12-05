@@ -22,7 +22,7 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.instant
-    - navigation.pruneasd
+    - navigation.prune
     # - toc.integrate
     - toc.follow
     - search.suggest

@@ -1,0 +1,32 @@
+name: Notify
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+    - name: Await CF Pages
+      id: cf-pages
+      uses: WalshyDev/cf-pages-await@v1
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+
+        accountId: '86b9f680e99b6d172395cc7309a9d8a8'
+        project: 'docs'
+        # Add this if you want GitHub Deployments (see below)
+        githubToken: ${{ secrets.GH_TOKEN }}
+
+  webhook:
+    name: 'webhook'
+    runs-on: self-hosted
+    needs: install
+    if: always()
+    steps:
+      - uses: technote-space/workflow-conclusion-action@v3
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_TEST }}
+          status: ${{ cf-pages.success }}

@@ -97,7 +97,7 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Home: index.md
+  - Home: index2.md
   - Saltbox:
       - Basics: saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md

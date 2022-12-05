@@ -22,7 +22,7 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.instant
-    - navigation.prune
+    - navigation.pruneasd
     # - toc.integrate
     - toc.follow
     - search.suggest
@@ -97,7 +97,7 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Home: index2.md
+  - Home: index.md
   - Saltbox:
       - Basics: saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md

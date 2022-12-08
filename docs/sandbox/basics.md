@@ -60,6 +60,15 @@ sb list
 !!! Tip
     Where possible the configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml` and used to create a default user an password for logging in.
 
+### Requesting Sandbox Apps
+
+If you have an idea for a container that you think fits into the Saltbox system but you don't feel you have the required skills to create a role, open an issue in the sandbox repo [here](https://github.com/saltyorg/Sandbox/issues).  Take a look at some other app requests and follow the same pattern.  If your suggestion catches a developer's interest, perhaps they will pick it up.
+
+!!! note
+    Requests are just that, *requests*.  Nobody is being paid for their work on this.  Requests may not be implemented in a timely manner or at all.
+
+The person requesting is often the best person to implement it, since that person has the interest along with knowledge of the task and the test environment.  An arbitrary developer probably won't install and set up SomeRandomApp in order to fill a request for something that works alongside SomeRandomApp.
+
 ### Contributing to Sandbox Apps
 
 Note: If you just want to install a container into the Saltbox system without creating a role, see [this article](../advanced/your-own-containers.md).

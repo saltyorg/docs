@@ -56,7 +56,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+        uses: cloudflare/pages-action@v1.2.0
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

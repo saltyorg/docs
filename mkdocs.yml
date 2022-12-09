@@ -59,6 +59,7 @@ theme:
 plugins:
   - search:
       lang: en
+  - meta
 
 extra:
   generator: false

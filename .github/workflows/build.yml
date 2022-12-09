@@ -1,0 +1,79 @@
+name: Build & Deploy
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  add-contributors:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: BobAnkh/add-contributors@master
+      with:
+        REPO_NAME: 'saltyorg/docs'
+        CONTRIBUTOR: '### Contributors'
+        COLUMN_PER_ROW: '6'
+        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        IMG_WIDTH: '100'
+        FONT_SIZE: '14'
+        PATH: '/README.md'
+        COMMIT_MESSAGE: 'docs(README): update contributors'
+        AVATAR_SHAPE: 'square'
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: markdownlint
+        run: |
+          docker run --rm -v ${GITHUB_WORKSPACE}:/workdir \
+          ghcr.io/igorshubovych/markdownlint-cli:latest \
+          "/workdir/**/*.md" \
+          --disable MD013 MD033 MD046 MD041 MD045 MD051 MD029 MD024
+
+  build:
+    runs-on: ubuntu-latest
+    needs: markdownlint
+    if: github.event.repository.fork == false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install mkdocs material insiders
+        run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+
+      - name: Install lightgallery
+        run: pip install lightgallery
+
+      - name: Build mkdocs
+        run: mkdocs build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@1
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: 86b9f680e99b6d172395cc7309a9d8a8
+          projectName: docs
+          directory: site
+          gitHubToken: ${{ secrets.GH_TOKEN }}
+
+  webhook:
+    name: 'webhook'
+    runs-on: self-hosted
+    needs: deploy
+    if: always()
+    steps:
+      - name: Send Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+

@@ -19,7 +19,7 @@ Copy these BlitzKeys and set appropriate permissions.  You do not need to add th
 
 Once you have moved the Rclone.conf file, you need to edit it.  At the bottom of the file, you will have something like this:
 
-```
+```ini
 [pgunion]
 type = union
 remotes = gdrive: tdrive: gcrypt: tcrypt: /mnt/move
@@ -38,7 +38,7 @@ type = union
 remotes = gdrive: tdrive:
 ```
 or
-```
+```ini
 [google]
 type = union
 remotes = gcrypt: tcrypt:
@@ -58,24 +58,24 @@ nano /opt/cloudplow/config.json
 ```
 
 Under "Remotes":, locate
-```
+```json
 "upload_remote": "google"
 ```
 Change this to:
-```
+```json
 "upload_remote": "tdrive:"
 ```
 or
-```
+```json
 "upload_remote": "tcrypt:"
 ```
 
 Now we need to add your service accounts..  Under the "uploader" section change:
-```
+```json
 "service_account_path": ""
 ```
 to
-```
+```json
 "service_account_path": "/opt/sa/all"
 ```
 ^ Assuming you put the service accounts in that location, if not, change accordingly.

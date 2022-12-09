@@ -32,12 +32,15 @@ AND
 4. If you are not using encryption - Remove gcrypt: and tcrypt: if they exist.
 
 Final should look like:
+
 ```
 [google]
 type = union
 remotes = gdrive: tdrive:
 ```
+
 or
+
 ```ini
 [google]
 type = union
@@ -58,26 +61,35 @@ nano /opt/cloudplow/config.json
 ```
 
 Under "Remotes":, locate
+
 ```json
 "upload_remote": "google"
 ```
+
 Change this to:
+
 ```json
 "upload_remote": "tdrive:"
 ```
+
 or
+
 ```json
 "upload_remote": "tcrypt:"
 ```
 
 Now we need to add your service accounts..  Under the "uploader" section change:
+
 ```json
 "service_account_path": ""
 ```
+
 to
+
 ```json
 "service_account_path": "/opt/sa/all"
 ```
+
 ^ Assuming you put the service accounts in that location, if not, change accordingly.
 
 ## Migrating Arrs

@@ -8,6 +8,7 @@ With Saltbox you can either run a backup task manually or schedule it to run aut
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
 === "Without Screen"
+
     ```shell
     sb install backup
     ```

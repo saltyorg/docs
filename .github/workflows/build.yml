@@ -68,7 +68,7 @@ jobs:
   webhook:
     name: 'webhook'
     runs-on: self-hosted
-    needs: deploy
+    needs: build
     if: always()
     steps:
       - name: Send Discord Notification

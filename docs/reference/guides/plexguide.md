@@ -33,7 +33,7 @@ AND
 
 Final should look like:
 
-```
+```ini
 [google]
 type = union
 remotes = gdrive: tdrive:
@@ -54,7 +54,6 @@ sb install mounts
 ```
 
 ## Cloudplow changes
-
 
 ```shell
 nano /opt/cloudplow/config.json

@@ -25,28 +25,28 @@ Edit the Recyclarr section in [sandbox `settings.yml`:](../settings.md) and ente
        cron_schedule: "@daily"
 ```
 
-Edit the file `/opt/recyclarr/recyclarr.yml`.
+!!! note
+    If you change this value, you must re-run `sb install sandbox-recyclarr` for it take effect.
+
+If a config file does not exist, a default config is generated but it is not functional out of the box. Edit the file `/opt/recyclarr/recyclarr.yml` to provision your Sonarr/Radarr details and preferred settings.
 
 - Configure Sonarr section
 
   ``` { .yaml }
       sonarr:
-        - base_url: http://sonarr:8989
-        - api_key: your_sonarr_api_key
+        sonarr:
+          base_url: http://sonarr:8989
+          api_key: your_sonarr_api_key
   ```
 
 - Configure Radarr section
 
   ``` { .yaml }
       radarr:
-        - base_url: http://radarr:7878
-        - api_key: your_radarr_api_key
+        radarr:
+          base_url: http://radarr:7878
+          api_key: your_radarr_api_key
   ```
-
-!!! danger
-    When running Recyclarr manually via `docker exec`, ensure you pass your user/group.
-
-    Example: `docker exec --user=$(id -u):$(id -g) recyclarr recyclarr radarr --list-custom-formats`
 
 Follow documentation to complete configuration
 

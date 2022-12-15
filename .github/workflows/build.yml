@@ -74,13 +74,15 @@ jobs:
   webhook:
     name: 'webhook'
     runs-on: self-hosted
-    needs: [markdownlint, build]
+    needs: [build]
     if: always()
     steps:
+      - uses: technote-space/workflow-conclusion-action@v3
       - name: Send Discord Notification
         uses: sarisia/actions-status-discord@v1
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "URL: ${{ needs.build.outputs.url }}"
+          status: ${{ env.WORKFLOW_CONCLUSION }}
 

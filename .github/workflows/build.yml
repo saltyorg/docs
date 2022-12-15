@@ -75,12 +75,11 @@ jobs:
     name: 'webhook'
     runs-on: self-hosted
     needs: [build]
-    if: always()
+    if: github.event_name != 'pull_request'
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - name: Send Discord Notification
         uses: sarisia/actions-status-discord@v1
-        if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "URL: ${{ needs.build.outputs.url }}"

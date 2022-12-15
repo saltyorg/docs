@@ -120,7 +120,7 @@ nav:
       - Settings: sandbox/settings.md
       - Index: sandbox/index.md
       - Apps:
-        - ArrX: sandbox/apps/arrx.md
+        - Multiple Instances (legacy): sandbox/apps/arrx.md
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md

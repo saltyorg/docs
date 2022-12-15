@@ -1,6 +1,4 @@
-# arr**X**
-
-## Create multiple container instances
+# Multiple container instances (Cloudbox legacy style)
 
 Read through this entire page, even if you are only installing one of the apps.
 

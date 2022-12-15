@@ -117,7 +117,6 @@ apprise: # (12)!
 12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
     ```yaml
-
     apprise: discord://webhook_id/webhook_token
 
     ```

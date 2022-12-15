@@ -10,6 +10,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  add-contributors:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - uses: BobAnkh/add-contributors@master
+      with:
+        REPO_NAME: 'saltyorg/docs'
+        CONTRIBUTOR: '### Contributors'
+        COLUMN_PER_ROW: '6'
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        IMG_WIDTH: '100'
+        FONT_SIZE: '14'
+        PATH: '/README.md'
+        COMMIT_MESSAGE: 'docs(README): update contributors'
+        AVATAR_SHAPE: 'square'
+
   markdownlint:
     runs-on: ubuntu-22.04
     steps:
@@ -20,23 +36,6 @@ jobs:
           ghcr.io/igorshubovych/markdownlint-cli:latest \
           "/workdir/**/*.md" \
           --disable MD013 MD033 MD046 MD041 MD045 MD051 MD029 MD024
-
-  add-contributors:
-    runs-on: ubuntu-22.04
-    needs: markdownlint
-    steps:
-    - uses: actions/checkout@v3
-    - uses: BobAnkh/add-contributors@master
-      with:
-        REPO_NAME: 'saltyorg/docs'
-        CONTRIBUTOR: '### Contributors'
-        COLUMN_PER_ROW: '6'
-        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        IMG_WIDTH: '100'
-        FONT_SIZE: '14'
-        PATH: '/README.md'
-        COMMIT_MESSAGE: 'docs(README): update contributors'
-        AVATAR_SHAPE: 'square'
 
   build:
     runs-on: ubuntu-22.04
@@ -75,11 +74,12 @@ jobs:
   webhook:
     name: 'webhook'
     runs-on: self-hosted
-    needs: build
+    needs: [markdownlint, build]
     if: always()
     steps:
       - name: Send Discord Notification
         uses: sarisia/actions-status-discord@v1
+        if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "URL: ${{ needs.build.outputs.url }}"

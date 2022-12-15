@@ -104,16 +104,16 @@ On this page, we break down the options available in the following files:
 
   - This parameter is not nested like the others in this file.
 
-         ```
+    ```
          apprise: somescheme://something_else_here/perhaps_a_token
-         ```
+    ```
 
-         not
+    not
 
-         ```
+    ```
          apprise:
             somescheme://something_else_here/perhaps_a_token
-         ```
+    ```
   - This parameter is optional.
 
 ---

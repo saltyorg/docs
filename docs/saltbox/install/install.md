@@ -115,6 +115,9 @@ apprise: # (12)!
 11. Docker Hub account token
 
 12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
+    ```yaml
+    apprise: discord://webhook_id/webhook_token
+    ```
 
 13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 

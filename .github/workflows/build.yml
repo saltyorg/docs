@@ -41,6 +41,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: markdownlint
     if: github.event.repository.fork == false
+    outputs:
+      url: ${{ steps.cloudflare.outputs.url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -60,6 +62,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to Cloudflare Pages
+        id: cloudflare
         uses: cloudflare/pages-action@v1.2.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

@@ -75,9 +75,9 @@ jobs:
     if: always()
     steps:
       - name: Send Discord Notification
-        description: "URL: ${{ needs.build.outputs.url }}"
         uses: sarisia/actions-status-discord@v1
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: "URL: ${{ needs.build.outputs.url }}"
 

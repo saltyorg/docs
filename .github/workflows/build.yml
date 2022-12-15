@@ -5,6 +5,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   add-contributors:
     runs-on: ubuntu-22.04
@@ -57,7 +61,6 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1.2.0
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: 86b9f680e99b6d172395cc7309a9d8a8
@@ -72,6 +75,7 @@ jobs:
     if: always()
     steps:
       - name: Send Discord Notification
+        description: "URL: ${{ needs.build.outputs.url }}"
         uses: sarisia/actions-status-discord@v1
         if: always()
         with:

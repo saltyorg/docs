@@ -52,7 +52,7 @@ ombix:
     - boing
 ```
 
-Running the saltbox community `sonarrx` tag would produce:
+Running the saltbox community `ombix` tag would produce:
 
 | entry         | Container  | Config dir       | Subdomain                  | Note                         |
 | ------------- | ---------- | ---------------- | -------------------------- | ---------------------------- |

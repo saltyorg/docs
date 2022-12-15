@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - radarrx
+  - radarr4k
+  - sonarrx
+  - sonarr4k
+---
+
 # Multiple App Instances
 
 Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inventory-driven approach.

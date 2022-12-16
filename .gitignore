@@ -2,3 +2,5 @@
 /.vscode/
 /mkdocs-serve/
 go.sh
+# Visual Studio
+/.vs

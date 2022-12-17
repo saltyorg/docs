@@ -15,7 +15,7 @@
 
 ``` shell
 
-sb install sandbox-Adminer
+sb install sandbox-adminer
 
 ```
 

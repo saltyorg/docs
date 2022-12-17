@@ -203,6 +203,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/EvilHidden>
+            <img src=https://avatars.githubusercontent.com/u/14209422?v=4 width="100;"  alt=EvilHidden/>
+            <br />
+            <sub style="font-size:14px"><b>EvilHidden</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/GiorgioBrux>
             <img src=https://avatars.githubusercontent.com/u/18328525?v=4 width="100;"  alt=GiorgioBrux/>
             <br />
@@ -228,13 +235,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <img src=https://avatars.githubusercontent.com/u/8655212?v=4 width="100;"  alt=Kieron/>
             <br />
             <sub style="font-size:14px"><b>Kieron</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/kylefmohr>
-            <img src=https://avatars.githubusercontent.com/u/6644803?v=4 width="100;"  alt=Kyle Mohr/>
-            <br />
-            <sub style="font-size:14px"><b>Kyle Mohr</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

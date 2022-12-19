@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/recyclarr/recyclarr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://ghcr.io/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://recyclarr.dev/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://ghcr.io/recyclarr/recyclarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 
@@ -50,4 +50,4 @@ If a config file does not exist, a default config is generated but it is not fun
 
 Follow documentation to complete configuration
 
-- [:octicons-link-16: Documentation](https://github.com/recyclarr/recyclarr/wiki/Configuration-Reference){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://recyclarr.dev/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -106,7 +106,7 @@ nav:
         - Content Management:
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
-          - Coder: sandbox/apps/coder.md
+          - code-server: sandbox/apps/code-server.md
           - Gitea: sandbox/apps/gitea.md
           - Docker:
             - Dozzle: sandbox/apps/dozzle.md
@@ -326,7 +326,7 @@ nav:
               - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
         - Linux:
           - Aliases: reference/guides/aliases.md
-          - Coder for easier file editing: reference/guides/coder-setup.md
+          - code-server for easier file editing: reference/guides/code-server-setup.md
         - Plex:
           - Tautulii Custom Scripts: reference/guides/tautuliscripts.md
         - Downloading:

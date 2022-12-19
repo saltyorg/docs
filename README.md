@@ -129,6 +129,13 @@ The docs are actually built with a different release of mkdocs-material, so to p
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/GiorgioBrux>
+            <img src=https://avatars.githubusercontent.com/u/18328525?v=4 width="100;"  alt=GiorgioBrux/>
+            <br />
+            <sub style="font-size:14px"><b>GiorgioBrux</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/jolbol1>
             <img src=https://avatars.githubusercontent.com/u/5064896?v=4 width="100;"  alt=James Shopland/>
             <br />
@@ -149,6 +156,8 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>Kris</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/After-Shock>
             <img src=https://avatars.githubusercontent.com/u/17056047?v=4 width="100;"  alt=Sully/>
@@ -156,8 +165,6 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>Sully</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kaizensh>
             <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=kaizen/>
@@ -193,6 +200,8 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>Ben Burns</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/CGH8>
             <img src=https://avatars.githubusercontent.com/u/34379754?v=4 width="100;"  alt=CGH/>
@@ -200,20 +209,11 @@ The docs are actually built with a different release of mkdocs-material, so to p
             <sub style="font-size:14px"><b>CGH</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/EvilHidden>
             <img src=https://avatars.githubusercontent.com/u/14209422?v=4 width="100;"  alt=EvilHidden/>
             <br />
             <sub style="font-size:14px"><b>EvilHidden</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/GiorgioBrux>
-            <img src=https://avatars.githubusercontent.com/u/18328525?v=4 width="100;"  alt=GiorgioBrux/>
-            <br />
-            <sub style="font-size:14px"><b>GiorgioBrux</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

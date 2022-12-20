@@ -34,4 +34,5 @@ In order to migrate to the new role, if you aren't using a custom folder for `co
 sb install sandbox-code_server -e 'code_server_migrate_coder=true'
 
 ```
+
 The `coder` role is currently deprecated and won't receive any updates, so please run the migration to the new role as soon as possible.

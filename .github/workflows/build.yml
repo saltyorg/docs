@@ -41,7 +41,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     needs: markdownlint
-    if: github.event.repository.fork == false
+    if: github.event.repository.fork == false && github.event_name != 'pull_request'
     outputs:
       url: ${{ steps.cloudflare.outputs.url }}
     steps:

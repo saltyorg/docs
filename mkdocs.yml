@@ -141,7 +141,7 @@ nav:
           - Tandoor Recipes: sandbox/apps/tandoor.md
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
-          - code-server: sandbox/apps/code-server.md
+          - code-server: sandbox/apps/code_server.md
           - Gitea: sandbox/apps/gitea.md
           - Docker:
             - Dozzle: sandbox/apps/dozzle.md

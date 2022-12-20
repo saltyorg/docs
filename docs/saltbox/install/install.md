@@ -160,13 +160,13 @@ authelia:
 
 5. Shell used by the system. Valid options are bash or zsh.
 
-6. If the current server should have Authelia installed or use one installed elsewhere.
+6. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
 7. Subdomain used for Authelia.
 
     Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 
-    On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox).
+    On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.

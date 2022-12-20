@@ -33,7 +33,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 
 ## Feederbox/Mediabox Setup Considerations
 
-- It is preferred to run only one instance of Authelia. This can run either on the feederbox or mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [Here](../install/install.md#__code_8_annotation_6)
+- If your servers will share a domain, it is preferred to run only one instance of Authelia. This can run either on the feederbox or mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [here](../install/install.md#__code_8_annotation_6).
 
 - On the server hosting Authelia, it is advised to set the `traefik_trusted_ips` variable in your [Inventories](../inventory/index.md) file following the format below. This is for a mediabox hosting Authelia. If the feederbox will be hosting, the mediabox IP would be substituted.
 

@@ -107,17 +107,17 @@ Let’s go!
         Change the port [5572] in two lines [lines 27 and 42 at this writing]:
 
         ```text
-          --rc-addr=localhost:5572 \
+          --url=http://localhost:5572 \
           ...
-          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --rc-addr localhost:5572 _async=true
+          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5572 _async=true
         ```
 
         The specific port you use doesn’t matter, but maybe just use 5573.
 
         ```text
-          --rc-addr=localhost:5573 \
+          --url=http://localhost:5573 \
           ...
-          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --rc-addr localhost:5573 _async=true
+          ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5573 _async=true
         ```
 
         Change the remote name and mount directory in this line [line 41 at this writing]:

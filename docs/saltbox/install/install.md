@@ -92,6 +92,8 @@ apprise: # (12)!
 
 2. Password used for username account during the installation and apps that have automatic user configuration.
 
+    See the [password considerations.](../../reference/accounts.md#password-considerations)
+
     Required.
 
 3. Domain that you want to use for the server.

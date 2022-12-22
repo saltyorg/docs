@@ -363,7 +363,7 @@ Make changes in the following sections:
 
                 Username: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
 
-                Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
+                Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Password]
 
             4. The settings will look like this:
 

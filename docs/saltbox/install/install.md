@@ -148,7 +148,7 @@ authelia:
   subdomain: login # (7)!
 ```
 
-1. Folder used for downloads.
+1. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
 
 2. Folder used for temporary transcode files.
 

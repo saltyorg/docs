@@ -26,7 +26,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
 - For DNS providers that allow wildcards.
 
-- For [[Saltbox install type|Basics: Saltbox Install Types]].
+- For [Saltbox install type](../saltbox/basics/install_types.md).
 
 **Steps:**
 
@@ -54,7 +54,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
 - For Cloudflare users.
 
-   Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically, provided you enter a top-level domain in the settings [i.e. `DOMAIN.TLD`, not `WHATEVER.DOMAIN.TLD`]
+   Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically.
 
 === "Saltbox Install Type"
     You will need to create A Records for all Saltbox subdomains.

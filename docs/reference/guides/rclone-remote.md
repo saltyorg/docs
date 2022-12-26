@@ -93,9 +93,9 @@ You will need rclone and a web browser installed on a machine local to you [this
         Enter a string value. Press Enter for the default ("").
         client_secret> OZZYTONYGEEZERBILL
         ```
-        
+
     === "Using a service account to connect"
-    
+
         Leave the Client ID and Client Secret blank when prompted
 
         ```shell

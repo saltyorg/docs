@@ -153,7 +153,9 @@ You will need rclone and a web browser installed on a machine local to you [this
 8. For "Service Account Credentials JSON file path":
 
     === "Using a Client ID and secret to connect"
+
         leave blank and press <kbd class="platform-all">Enter</kbd>
+
         ```shell
         Option service_account_file.
         Service Account Credentials JSON file path.
@@ -162,11 +164,12 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leading `~` will be expanded in the file name as will environment variables such as `${RCLONE_CONFIG_DIR}`.
         Enter a string value. Press Enter for the default ("").
         service_account_file>
-
-    ```text
+        ```
 
     === "Using a service account to connect"
+
         Enter the path to a service account JSON file and press <kbd class="platform-all">Enter</kbd>
+
         ```shell
         Option service_account_file.
         Service Account Credentials JSON file path.
@@ -175,7 +178,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leading `~` will be expanded in the file name as will environment variables such as `${RCLONE_CONFIG_DIR}`.
         Enter a string value. Press Enter for the default ("").
         service_account_file> /path/to/service-account.json
-    ```
+        ```
 
 9. For "Edit advanced config", type `n` and press <kbd class="platform-all">Enter</kbd>.
 
@@ -244,7 +247,9 @@ You will need rclone and a web browser installed on a machine local to you [this
 17. For "Configure this as a team drive?":
 
     === "Using My Drive"
+
         Type `n` and press <kbd class="platform-all">Enter</kbd>.
+
         ```shell
         Configure this as a Shared Drive (Team Drive)?
 
@@ -254,7 +259,9 @@ You will need rclone and a web browser installed on a machine local to you [this
         ```
 
     === "Using a shared drive"
+
         Type `y` and press <kbd class="platform-all">Enter</kbd>.
+
         ```shell
         Configure this as a Shared Drive (Team Drive)?
 

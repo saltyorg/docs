@@ -8,21 +8,21 @@ _Note 2: If pages don't load at all, make sure you've set up your [domain](../..
 
 Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
 
-| **App  Name**          | **with domain**                         |
-|:---------------------- |:--------------------------------------- |
-| Jackett                | https://jackett._yourdomain.com_        |
-| Lidarr                 | https://lidarr._yourdomain.com_         |
-| NZBGet                 | https://nzbget._yourdomain.com_         |
-| NZBHydra2              | https://nzbhydra2._yourdomain.com_      |
-| Organizr               | https://organizr._yourdomain.com_       |
-| Overseerr              | https://overseerr._yourdomain.com_      |
-| Plex                   | https://plex._yourdomain.com_           |
-| WebTools for Plex      | https://plex-webtools._yourdomain.com_  |
-| Portainer              | https://portainer._yourdomain.com_      |
-| Radarr                 | https://radarr._yourdomain.com_         |
-| ruTorrent              | https://rutorrent._yourdomain.com_      |
-| Sonarr                 | https://sonarr._yourdomain.com_         |
-| Tautulli               | https://tautulli._yourdomain.com_       |
+| **App  Name**          | **with domain**                           |
+|:---------------------- |:----------------------------------------- |
+| Jackett                | <https://jackett._yourdomain.com_>        |
+| Lidarr                 | <https://lidarr._yourdomain.com_>         |
+| NZBGet                 | <https://nzbget._yourdomain.com_>         |
+| NZBHydra2              | <https://nzbhydra2._yourdomain.com_>      |
+| Organizr               | <https://organizr._yourdomain.com_>       |
+| Overseerr              | <https://overseerr._yourdomain.com_>      |
+| Plex                   | <https://plex._yourdomain.com_>           |
+| WebTools for Plex      | <https://plex-webtools._yourdomain.com_>  |
+| Portainer              | <https://portainer._yourdomain.com_>      |
+| Radarr                 | <https://radarr._yourdomain.com_>         |
+| ruTorrent              | <https://rutorrent._yourdomain.com_>      |
+| Sonarr                 | <https://sonarr._yourdomain.com_>         |
+| Tautulli               | <https://tautulli._yourdomain.com_>       |
 
 ## Additional Apps
 

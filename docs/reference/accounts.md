@@ -189,10 +189,6 @@ On this page, we break down the options available in the following files:
 
 - `dns`: DNS-related settings.
 
-  - `enabled`: Controls whether subdomains are created at Cloudflare
-
-    - Default is `yes`.
-
   - `proxied`: Controls whether Cloudflare records should be "proxied" or "DNS only".
 
     - Default is `no`.

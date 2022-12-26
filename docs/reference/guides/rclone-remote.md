@@ -75,7 +75,9 @@ You will need rclone and a web browser installed on a machine local to you [this
 5. Client ID and Secret:
 
     === "Using a Client ID and secret to connect"
+    
         Enter the Client ID and Client Secret when prompted
+
         ```shell
         Storage> drive
         Option client_id.
@@ -90,8 +92,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leave blank normally.
         Enter a string value. Press Enter for the default ("").
         client_secret> OZZYTONYGEEZERBILL
-
-    ```text
+        ```
     === "Using a service account to connect"
         Leave the Client ID and Client Secret blank when prompted
         ```shell
@@ -108,7 +109,7 @@ You will need rclone and a web browser installed on a machine local to you [this
         Leave blank normally.
         Enter a string value. Press Enter for the default ("").
         client_secret>
-    ```
+        ```
 
 6. For the "Scope that rclone should use when requesting access from drive", type in `drive`, or the corresponding number (i.e. `1`), to select "Full access all files, excluding Application Data Folder", and press <kbd class="platform-all">Enter</kbd>.
 

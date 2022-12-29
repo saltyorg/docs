@@ -28,6 +28,7 @@ sb install sandbox-filebrowser
     password: admin
    ```
     Change the default user and password immediately.
+
 ### 3. Setup
 
 - [:octicons-link-16: Documentation](https://filebrowser.org/features){: .header-icons target=_blank rel="noopener noreferrer" }

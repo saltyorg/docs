@@ -27,7 +27,7 @@ sb install sandbox-filebrowser
         user: admin
     password: admin
    ```
- 
+
     Change the default user and password immediately.
 
 ### 3. Setup

@@ -53,6 +53,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install wheel
+        run: pip install wheel
+
       - name: Install mkdocs material insiders
         run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
 

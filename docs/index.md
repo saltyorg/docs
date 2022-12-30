@@ -1,7 +1,6 @@
 ---
 hide:
   - toc
-ᴴₒᴴₒᴴₒ: true
 ---
 # Welcome to Saltbox
 

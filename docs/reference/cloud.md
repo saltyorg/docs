@@ -18,8 +18,8 @@ The conversation about whether or not to encrypt has happened many times, and it
 
 Not to rehash the conversation or invite argument, but a couple reasons behind this recommendation are:
 
- - Some functionality [Autoscan's "A-Train" Google Drive Monitoring, for example] does not work with encrypted remotes, so using encryption will prevent use of such features.
- - Supporting encryption as an option means more code paths, more maintenance, and more bug opportunities within Saltbox code.
+- Some functionality [Autoscan's "A-Train" Google Drive Monitoring, for example] does not work with encrypted remotes, so using encryption will prevent use of such features.
+- Supporting encryption as an option means more code paths, more maintenance, and more bug opportunities within Saltbox code.
 
 Encryption works fine if you know what you're doing and can make the required modifications and can accept the limitations it imposes.  Our recommendation to a new user would be not to use encryption unless and until that user understands what that entails, and this is reflected in this documentation.
 

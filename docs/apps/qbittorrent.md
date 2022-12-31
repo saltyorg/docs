@@ -54,19 +54,20 @@ sb install qbittorrent
   - tick `Run external program on torrent completion` and paste this into the box: `/usr/bin/unrar x -r "%F/." "%F/"`
 
     ![Hard Disk Section Screenshot](../images/community/qbit_hdd.png)
-
+<!-- markdownlint-disable MD046 -->
 !!! Warning
-      Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!<br>
-      If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).<br><br>
-      If you don't need the Web API exposed, you can do so using the [inventory system](/saltbox/inventory/) with
+      Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!  
+      If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).  
+      If you don't need the API endpoints exposed, you can disable them using the [inventory system](/saltbox/inventory/) with
 
-``` { .yaml }
-       qbittorrent_traefik_api_enabled: false
-```
+      ``` { .yaml }
+      qbittorrent_traefik_api_enabled: false
+      ```
 
-and by rerunning the `qbittorrent` tag.
+      and by rerunning the `qbittorrent` tag.
+<!-- markdownlint-enable MD046 -->
 
 !!! Note
-      if you're using private trackers be sure to go to `Options` -> `BittTorrent` and uncheck everything in Privacy section.
+      if you're using private trackers be sure to go to `Options` -> `BitTorrent` and uncheck everything in Privacy section.
 
 - [:octicons-link-16: Documentation](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

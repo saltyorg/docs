@@ -189,6 +189,7 @@ nav:
             - calibre: sandbox/apps/calibre.md
             - calibre_web: sandbox/apps/calibre_web.md
             - comicstreamer: sandbox/apps/comicstreamer.md
+            - comixed: sandbox/apps/comixed.md
             - kavita: sandbox/apps/kavita.md
             - komga: sandbox/apps/komga.md
             - lazylibrarian: sandbox/apps/lazylibrarian.md
@@ -198,7 +199,6 @@ nav:
           - Metadata Management:
             - alternatrr: sandbox/apps/alternatrr.md
             - alternatrrx: sandbox/apps/alternatrrx.md
-            - comixed: sandbox/apps/comixed.md
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
             - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
             - plex-utills: sandbox/apps/plex-utills.md

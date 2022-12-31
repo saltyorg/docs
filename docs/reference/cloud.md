@@ -16,12 +16,12 @@ Out of the box, Saltbox stores the media unencrypted in cloud storage utilizing 
 
 The conversation about whether or not to encrypt has happened many times, and it is the opinion of the Saltbox team that there is not a compelling argument in favor of defaulting to encryption for the media that Saltbox stores.  There is nothing *preventing* one from using encrypted cloud storage, but there is no testing done around it.
 
+Encryption works fine if you know what you're doing and can make the required modifications and can accept the limitations it imposes.  Our recommendation to a new user would be not to use encryption unless and until that user understands what that entails, and this is reflected in this documentation.
+
 Not to rehash the conversation or invite argument, but a couple reasons behind this recommendation are:
 
 - Some functionality [Autoscan's "A-Train" Google Drive Monitoring, for example] does not work with encrypted remotes, so using encryption will prevent use of such features.
 - Supporting encryption as an option means more code paths, more maintenance, and more bug opportunities within Saltbox code.
-
-Encryption works fine if you know what you're doing and can make the required modifications and can accept the limitations it imposes.  Our recommendation to a new user would be not to use encryption unless and until that user understands what that entails, and this is reflected in this documentation.
 
 If you use the default scripts to set up Google Shared Drives, they will not be encrypted.
 

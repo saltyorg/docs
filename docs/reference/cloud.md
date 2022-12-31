@@ -14,7 +14,12 @@ Note that rclone offering support for a storage backend does not mean that backe
 
 Out of the box, Saltbox stores the media unencrypted in cloud storage utilizing an Rclone VFS mount to access it. If you prefer your data is stored encrypted, you will need to do some tweaking to the Rclone config. There are no plans to document these tweaks here.
 
-The conversation about whether or not to encrypt has happened many times, and it is the opinion of the Saltbox team that there is not a compelling argument in favor of defaulting to encryption for the media that saltbox stores.  There is nothing *preventing* one from using encrypted cloud storage, but there is no testing done around it.
+The conversation about whether or not to encrypt has happened many times, and it is the opinion of the Saltbox team that there is not a compelling argument in favor of defaulting to encryption for the media that Saltbox stores.  There is nothing *preventing* one from using encrypted cloud storage, but there is no testing done around it.
+
+Not to rehash the conversation or invite argument, but a couple reasons behind this recommendation are:
+
+ - Some functionality [Autoscan's "A-Train" Google Drive Monitoring, for example] does not work with encrypted remotes, so using encryption will prevent use of such features.
+ - Supporting encryption as an option means more code paths, more maintenance, and more bug opportunities within Saltbox code.
 
 Encryption works fine if you know what you're doing and can make the required modifications and can accept the limitations it imposes.  Our recommendation to a new user would be not to use encryption unless and until that user understands what that entails, and this is reflected in this documentation.
 

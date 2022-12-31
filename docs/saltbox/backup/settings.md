@@ -75,6 +75,14 @@ backup:
 
     Requires BTRFS on `/` or `/opt`
 
+!!! important
+
+    Nothing that is stored on the rclone or rsync destinations is encrypted by this backup process, so take care not to set those destinations to systems you do not control.
+
+    If you are concerned about that, set up an encrypted rclone remote for use with the backup rather than using the default saltbox unencrypted `google` remote.
+
+    Securing the rsync destination is outside the scoope of this document.
+
 Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.

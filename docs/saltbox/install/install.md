@@ -206,14 +206,14 @@ Saltbox defaults to an rclone remote pointed at your Google Drive named `google`
 
 There is nothing special about Saltbox's implementation of this setup, aside from its opinions about the media paths.
 
-If you already know how to set that up, do so with your usual methods.  If not, here are four options:
+If you already know how to set that up, do so with your usual methods.  If not, here are five options:
 
-=== "Migrating from Cloudbox"
+=== "Cloudbox Migration"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
-=== "Migrating from PlexGuide"
+=== "PlexGuide/PTS Migration"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     The issues you will have to deal with will largely be around:
@@ -224,7 +224,16 @@ If you already know how to set that up, do so with your usual methods.  If not, 
 
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
+=== "Other Migration"
+    You probably already have the required setup complete.  You should use your existing Google setup at least to start with.
+
+    You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the settings.
+
+    [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
+
 === "I'm totally new to this"
+    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP YOU SHOULD NOT DO THIS.
+
     If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 
     That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.

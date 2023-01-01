@@ -29,4 +29,3 @@ You may be able to import the data from your various applications, depending on 
 You will need to address paths, most likely.
 
 Saltbox stores application data in the `/opt` directory.
-

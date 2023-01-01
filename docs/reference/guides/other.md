@@ -12,7 +12,7 @@ In the rclone install step, copy your `rclone.conf` into place at `/home/seed/.c
 
 If your cloud storage remote is not called `google`, you can either rename it, or change the `remote` in settings.yml:
 
-```ini
+```yml
 rclone:
   version: latest
   remote: google    ## << HERE

@@ -24,8 +24,8 @@ Saltbox is assuming that your media is stored in particular [paths](../../saltbo
 
 ## Application Data
 
-You may be able to import the data from your various applications, depending on the versions of the applications that generated it.
+You may be able to import the data from your various applications, depending on the versions of the applications that generated it and perhaps the specific containers.
 
-You will need to address paths, most likely.
+You will need to address paths, most likely.  There are a variety of ways to do this.
 
 Saltbox stores application data in the `/opt` directory.

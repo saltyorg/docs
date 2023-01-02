@@ -206,7 +206,9 @@ Saltbox defaults to an rclone remote pointed at your Google Drive named `google`
 
 There is nothing special about Saltbox's implementation of this setup, aside from its opinions about the media paths.
 
-If you already know how to set that up, do so with your usual methods.  If not, here are five options:
+If you already know how to set that up, do so with your usual methods.  If not, here are five options.
+
+Note that generally speaking these five options are mutually exclusive.
 
 === "Cloudbox Migration"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.

@@ -149,7 +149,8 @@ tautulli_web_subdomain: "stats"
 
 #### Additions
 
-!!! warning The following examples require adding DNS records manually.
+!!! warning
+    The following examples require adding DNS records manually.
 
 ```yaml
 #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####

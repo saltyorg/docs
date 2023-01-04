@@ -4,13 +4,19 @@ Advanced use cases that would normally require editing roles can now be handled 
 
 Any variables defined in `/srv/git/saltbox/roles/<role_name>/defaults/main.yml` or `/opt/sandbox/roles/<role_name>/defaults/main.yml` are available to be overridden by the user in:
 
-`/srv/git/saltbox/inventories/host_vars/localhost.yml`
+```shell
+/srv/git/saltbox/inventories/host_vars/localhost.yml
+```
 
 This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
-A common use for these overrides will be specifying the version of the docker image to be used, so let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 85:
+## 'Default' variables
+
+!!! info For the purpose of this guide, this refers to variables that are defined with actual data and are not empty (i.e., not followed by an empty string `""`, list `[]` or dictionary `{}`), as well as all variables suffixed with `_default` even if they are empty, in a given role's _defaults_ YAML file. Using the inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be omitted.
+
+A common use for these overrides will be specifying the version of the Docker image to be used, so let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 85:
 
 ``` yaml
 ################################
@@ -30,7 +36,7 @@ sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', defa
 
 Note: `sonarr_docker_image_tag: "release"`
 
-For Sonarr, Saltbox will use the docker image `cr.hotio.dev/hotio/sonarr:release` by default.
+For Sonarr, Saltbox will use the Docker image `cr.hotio.dev/hotio/sonarr:release` by default.
 
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
@@ -38,13 +44,19 @@ If you wanted to change that to "nightly", you'd add this line to `/srv/git/salt
 sonarr_docker_image_tag: "nightly"
 ```
 
-Which would override the default [`release`] and result in Saltbox using the `cr.hotio.dev/hotio/sonarr:nightly` docker image instead, wihtout you modifying this file.  If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
+Which would override the default [`release`] and result in Saltbox using the `cr.hotio.dev/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
 
-Previously undefined variables may be added as well. Typical use would be to pass new Docker parameters under variables with the name ending in `custom`:
+## 'Custom' variables
+
+!!! info Suffixed with `_custom`, these are available in case you wish to add values to a list or dictionary type setting, without dropping existing values.
+
+Typical use would be to pass new Docker parameters:
 
 ```yaml
-jackett_docker_labels_custom:
-  com.centurylinklabs.watchtower.enable: "true"
+#### Extra mounts for Sonarr containers ####
+sonarr_docker_volumes_custom:
+  - "/mnt/unionfs/Media/Anime:/anime"
+  - "/mnt/unionfs/Media/Kids:/kids"
 ```
 
 ## Additional Examples
@@ -86,16 +98,17 @@ shell_bash_bashrc_block_custom: |
 shell_zsh_zshrc_block_custom: |
   alias sbu='sb update'
   alias sbi='sb install'
-
 ```
 
-## Authelia App Bypass
+### Authelia App Bypass
 
 Some may not want the additional layer of security that Authelia supplies, good news is that it can be disabled with a simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
 
-`grep -Ril "_traefik_sso_middleware:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u`
+```shell
+grep -Ril "_traefik_sso_middleware:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
+```
 
-### Override example
+#### Override example
 
 ```yaml
 ### Authelia App Bypass ###
@@ -106,11 +119,11 @@ nzbget_traefik_sso_middleware: ""
 prowlarr_traefik_sso_middleware: ""`
 ```
 
-After making this change in the inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
+After making this change in the Inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
 
-## Authorize with App Credentials
+### Authorize with App Credentials
 
-### Inject an Authorization header - Traefik performs basic auth with the backend app
+#### Inject an Authorization header - Traefik performs basic auth with the backend app
 
 This allows you to keep basic auth enabled within apps but not have the hassle of entering the credentials manually. The authorization header is only inserted if the request is authorized through the SSO middleware (Authelia) and is not applied to the API endpoint(s).
 
@@ -122,9 +135,9 @@ sonarr_docker_labels_custom:
 sonarr_traefik_middleware_custom: "appAuth"
 ```
 
-## Subdomain Customization
+### Subdomain Customization
 
-### Overrides
+#### Overrides
 
 ```yaml
 #### Make Organizr available only at the base domain ####
@@ -134,7 +147,9 @@ organizr_web_subdomain: ""
 tautulli_web_subdomain: "stats"
 ```
 
-### Additions
+#### Additions
+
+!!! warning The following examples require adding DNS records manually.
 
 ```yaml
 #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
@@ -147,5 +162,3 @@ overseerr_docker_labels_custom:
   traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
   traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
 ```
-
-Note that this last set of examples requires you to add DNS records manually.

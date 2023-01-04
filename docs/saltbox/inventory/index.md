@@ -98,10 +98,6 @@ shell_bash_bashrc_block_custom: |
 shell_zsh_zshrc_block_custom: |
   alias sbu='sb update'
   alias sbi='sb install'
-
-#### Allow Jackett to be updated by Watchtower ####
-jackett_docker_labels_custom:
-  com.centurylinklabs.watchtower.enable: "true"
 ```
 
 ### Authelia App Bypass

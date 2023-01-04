@@ -12,7 +12,7 @@ This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
-- ## 'Default' variables
+## 'Default' variables
 
 !!! info For the purpose of this guide, this refers to variables that are defined with actual data and are not empty (i.e., not followed by an empty string `""`, list `[]` or dictionary `{}`), as well as all variables suffixed with `_default` even if they are empty, in a given role's _defaults_ YAML file. Using the inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be omitted.
 
@@ -46,7 +46,7 @@ sonarr_docker_image_tag: "nightly"
 
 Which would override the default [`release`] and result in Saltbox using the `cr.hotio.dev/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
 
-- ## 'Custom' variables
+## 'Custom' variables
 
 !!! info Suffixed with `_custom`, these are available in case you wish to add values to a list or dictionary type setting, without dropping existing values.
 

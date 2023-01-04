@@ -14,7 +14,8 @@ Should you require additional functionality then by all means create an issue on
 
 ## 'Default' variables
 
-!!! info For the purpose of this guide, this refers to variables that are defined with actual data and are not empty (i.e., not followed by an empty string `""`, list `[]` or dictionary `{}`), as well as all variables suffixed with `_default` even if they are empty, in a given role's _defaults_ YAML file. Using the inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be omitted.
+!!! info
+    For the purpose of this guide, this refers to variables that are defined with actual data and are not empty (i.e., not followed by an empty string `""`, list `[]` or dictionary `{}`), as well as all variables suffixed with `_default` even if they are empty, in a given role's _defaults_ YAML file. Using the inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be omitted.
 
 A common use for these overrides will be specifying the version of the Docker image to be used, so let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 85:
 
@@ -48,7 +49,8 @@ Which would override the default [`release`] and result in Saltbox using the `cr
 
 ## 'Custom' variables
 
-!!! info Suffixed with `_custom`, these are available in case you wish to add values to a list or dictionary type setting, without dropping existing values.
+!!! info
+    Suffixed with `_custom`, these are available in case you wish to add values to a list or dictionary type setting, without dropping existing values.
 
 Typical use would be to pass new Docker parameters:
 

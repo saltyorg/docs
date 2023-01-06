@@ -20,6 +20,9 @@ Broadly, the base install consists of six steps:
 
 ## Step 1: Dependencies
 
+!!! info
+    This is assuming you are logged into your freshly installed remote server as `root`.
+
 === "curl"
 
     ```shell

@@ -85,7 +85,6 @@
 - **[photoprism](../sandbox/apps/photoprism.md)**  - tag - `sandbox-photoprism`
 - **[plex_auto_languages](../sandbox/apps/plex_auto_languages.md)**  - tag - `sandbox-plex_auto_languages`
 - **[plex_autoscan](../sandbox/apps/plex_autoscan.md)**  - tag - `sandbox-plex_autoscan`
-- **[plex_credits_detect](../sandbox/apps/plex-credits-detect.md)**  - tag - `sandbox-plex_credits_detect`
 - **[plex_dupefinder](../sandbox/apps/plex_dupefinder.md)**  - tag - `sandbox-plex_dupefinder`
 - **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
 - **[plex_patrol](../sandbox/apps/plex_patrol.md)**  - tag - `sandbox-plex_patrol`

@@ -145,19 +145,25 @@ nav:
           - Tandoor Recipes: sandbox/apps/tandoor.md
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
+          - changedetection: sandbox/apps/changedetection.md
           - code-server: sandbox/apps/code_server.md
           - Gitea: sandbox/apps/gitea.md
+          - Gotenberg: sandbox/apps/gotenberg.md
           - Docker:
             - Dozzle: sandbox/apps/dozzle.md
             - Yacht: sandbox/apps/yacht.md
+          - Mcrouter: sandbox/apps/mcrouter.md
           - OliveTin: sandbox/apps/olivetin.md
           - Reposilite: sandbox/apps/reposilite.md
+          - Tika: sandbox/apps/tika.md
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Alltube: sandbox/apps/alltube.md
           - Archivebox: sandbox/apps/archivebox.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Medusa: sandbox/apps/medusa.md
+          - pyLoad: sandbox/apps/pyload.md
+          - rdt-client: sandbox/apps/rdtclient.md
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Tubearchivist: sandbox/apps/tubearchivist.md
           - Torrents:
@@ -165,11 +171,13 @@ nav:
             - Delugevpn: sandbox/apps/delugevpn.md
             - Omegabrr: sandbox/apps/omegabrr.md
             - qBit Management: sandbox/apps/qbit_manage.md
+            - qBittorrentVPN: sandbox/apps/qbittorrentvpn.md
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md
             - tqm: sandbox/apps/tqm.md
             - Trackarr: sandbox/apps/trackarr.md
             - Transmission: sandbox/apps/transmission.md
+            - Transmission VPN: sandbox/apps/transmissionvpn.md
             - Transmissionx: sandbox/apps/transmissionx.md
         - File Management:
           - Filebot: sandbox/apps/filebot.md
@@ -178,6 +186,7 @@ nav:
           - Jirafeau: sandbox/apps/jirafeau.md
           - Paperless-NGX: sandbox/apps/paperless-ngx.md
           - PrivateBin: sandbox/apps/privatebin.md
+          - XBackBone: sandbox/apps/xbackbone.md
         - Landing Pages:
           - VNStat: sandbox/apps/vnstat.md
           - heimdall: sandbox/apps/heimdall.md
@@ -206,6 +215,7 @@ nav:
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
             - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
             - plex-utills: sandbox/apps/plex-utills.md
+            - python-plexlibrary: sandbox/apps/python-plexlibrary.md
             - unmanic: sandbox/apps/unmanic.md
           # - Movies:
           - Music:
@@ -224,9 +234,13 @@ nav:
             - Gaps: sandbox/apps/gaps.md
             - goplaxt: sandbox/apps/goplaxt.md
             - kitana: sandbox/apps/kitana.md
-            - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md
+            - Plex Auto Languages: sandbox/apps/plex_auto_languages.md
+            - Plex Autoscan: sandbox/apps/plex_autoscan.md
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
+            - Plex Patrol: sandbox/apps/plex_patrol.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
+            - Plex_Utills: sandbox/apps/plex_utills.md
+            - Plex-Credits-Detect: sandbox/apps/plex-credits-detect.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md
           # - Requests:
@@ -237,17 +251,22 @@ nav:
             - Requestrr: sandbox/apps/requestrr.md
             - Requestrrx: sandbox/apps/requestrrx.md
           - stash: sandbox/apps/stash.md
+          - Whisparr: sandbox/apps/whisparr.md
         - Nextcloud: sandbox/apps/nextcloud.md
         - Social:
           - gotify: sandbox/apps/gotify.md
           - moviematch: sandbox/apps/moviematch.md
+          - RocketChat: sandbox/apps/rocketchat.md
+          - Teamspeak: sandbox/apps/teamspeak.md
         - Utilities:
+          - A-Train: sandbox/apps/a_train.md
           - Database Management:
             - adminer: sandbox/apps/adminer.md
             - PGAdmin: sandbox/apps/pgadmin.md
           - Docker:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
+          - FreshRSS: sandbox/apps/freshrss.md
           - Influxdb: sandbox/apps/influxdb.md
           - Invoice Ninja: sandbox/apps/invoiceninja.md
           - Networking:
@@ -265,6 +284,7 @@ nav:
           - MakeMKV: sandbox/apps/makemkv.md
           - Puddletag: sandbox/apps/puddletag.md
           - sabthrottle: sandbox/apps/sabthrottle.md
+          - sarotate: sandbox/apps/sarotate.md
           - speedtest: sandbox/apps/speedtest.md
           - sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - sshwifty: sandbox/apps/sshwifty.md

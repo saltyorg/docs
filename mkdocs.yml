@@ -345,6 +345,7 @@ nav:
         - Deluge: apps/deluge.md
         - Qbittorrent: apps/qbittorrent.md
       - Others:
+        - Authelia: apps/authelia.md
         - Cloudplow: apps/cloudplow.md
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md

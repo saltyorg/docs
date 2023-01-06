@@ -16,5 +16,4 @@ In terms of functionality the high points are
 - ability to use a subdomain rather than a TLD (`rolename.subdomain.domain.tld` rather than `rolename.domain.tld`)
 - Generalized support for multiple app instances [replacement for the "ArrX" system]
 - Ongoing maintenance and active development
-
-In development is an automated system to set up shared drives and service accounts for the user [for Cloudbox users, this is the "tip 44" setup].
+- largely automated system to set up shared drives and service accounts for the user [for Cloudbox users, this is the "tip 44" setup].

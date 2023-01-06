@@ -15,7 +15,11 @@ theme:
     repo: fontawesome/brands/github-alt
   custom_dir: overrides
   features:
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
     - header.autohide
+    - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections

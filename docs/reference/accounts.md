@@ -56,7 +56,6 @@ On this page, we break down the options available in the following files:
   - `email`: E-mail address used for the Cloudflare account.
 
   - `api`: [Global API Key](domain.md#cloudflare-api-key).
- 
 
 - `plex`: Plex.tv account credentials.
   This will be used to claim the Plex server under your username and generate Plex Access Tokens for apps such as Autoscan, etc.
@@ -208,7 +207,7 @@ On this page, we break down the options available in the following files:
 
 - `gpu`: GPU settings.
 
-    - `intel`: Should system be set up for Intel GPU?
+  - `intel`: Should system be set up for Intel GPU?
     Default is `no`.
 
 - `nvidia`: Should system be set up for NVidia GPU?

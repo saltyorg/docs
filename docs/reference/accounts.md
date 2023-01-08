@@ -14,97 +14,115 @@ On this page, we break down the options available in the following files:
 
 **Note**: There must always be a space betwen the key and the value in YAML files.  `key: value` NOT `key:value`
 
+```yaml
+---
+user:
+  name: seed
+  pass: password123
+  domain: testsaltbox.ml
+  email: your@email.com
+  ssh_key:
+```
+`user:name`: User name for the server.
+
+This parameter is **required**.
+If user account with this name does not already exist, it will be created during install.
+Also used to create first-time logins for various apps.
+Default is `seed`.
+
+`user:pass`: Password for the user account and for misc apps.
+
+This parameter is **required**.
+Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
+Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
+Don't leave it blank, even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
+Don't leave it as `password123`.
+See the [password considerations](#password-considerations) below.
+[Relevant XKCD](https://xkcd.com/936/)
+
+`user:domain`: Domain name for the Saltbox server.
+
+This parameter is **required**.
+If you don't have one, see [here](domain.md).
+This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
+
+`user:email`: E-mail address.
+
+This parameter is **required** if you're using the reverse proxy.
+This is used for the Let's Encrypt SSL certificates.
+It does not have to be an email address at the domain above.
+
+`user:ssh_key`: SSH Key
+
+This parameter is optional.
+This is used to provision a SSH key in your user's `authorized_keys` file
+This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+
+```
+cloudflare:
+  email:
+  api:
+```
+
+`cloudflare:email`: E-mail address used for the Cloudflare account.
+
+`cloudflare:api`: [Global API Key](domain.md#cloudflare-api-key).
+
+These parameters are optional.
+Default is blank.
+Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
+Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
+
+```
+plex:
+  user:
+  pass:
+  tfa: no
+```
+`plex:user` - Plex username or email address on the profile.
+
+`plex:pass` - Plex password. See the [password considerations](#password-considerations) below.
+
+`plex:tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
+
+This parameter is required.
+This will be used to claim the Plex server under your username and generate Plex Access Tokens for apps such as Autoscan, etc.
+Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
+If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.  Consider securing this file if you are running Saltbox on a shared machine.
+
+```
+dockerhub:
+  user:
+  token:
+```
+`dockerhub:user` - Docker Hub username.
+
+`dockerhub:token` - Docker Hub access token.
+
+This parameter is optional.
+Entering Dockerhub credentials increases the number of images one can pull.
+
+```
+apprise:
+```
 ---
 
-- `user`: User information.
+`apprise` - Apprise notification URL
 
-  - `name`: User name for the server.
+This parameter is optional.
+Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
+This will be used to send out messages during certain tasks (e.g. backup).
 
-    This parameter is **required**.
-    If user account with this name does not already exist, it will be created during install.
-    Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
-    Default is `seed`.
+This parameter is not nested:
 
-  - `pass`: Password for the user account and for misc apps.
-
-    This parameter is **required**.
-    Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
-    Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
-    Don't leave it blank. Even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
-    [Relevant XKCD](https://xkcd.com/936/)
-    See the [password considerations](#password-considerations) below.
-
-  - `domain`: Domain name for the Saltbox server.
-
-    This parameter is **required**.
-    If you don't have one, see [here](domain.md).
-    This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
-
-  - `email`: E-mail address.
-
-    This parameter is **required** if you're using the reverse proxy.
-    This is used for the Let's Encrypt SSL certificates.
-    It does not have to be an email address at the domain above.
-
-  - `ssh_key`: SSH Key
-
-    This parameter is optional
-    This is used to provision a SSH key in your user's `authorized_keys` file
-    This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
-
-- `cloudflare`: Cloudflare Account
-
-  This parameter is optional.
-  Default is blank.
-  Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
-  Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
-
-  - `email`: E-mail address used for the Cloudflare account.
-
-  - `api`: [Global API Key](domain.md#cloudflare-api-key).
-
-- `plex`: Plex.tv account credentials.
-
-  This will be used to claim the Plex server under your username and generate Plex Access Tokens for apps such as Autoscan, etc.
-  This parameter is required.
-  Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
-  If you use the `tfa` workflow, a random client ID and a Plex Access Token will be stored in `/opt/saltbox/plex.ini` for later use.  Consider securing this file if you are running Saltbox on a shared machine.
-
-  - `user` - Plex username or email address on the profile.
-
-  - `pass` - Plex password. See the [password considerations](#password-considerations) below.
-
-  - `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
-
-- `dockerhub`: DockerHub account credentials.
-
-  Entering Dockerhub credentials increases the number of images one can pull
-
-  - `user` - Docker Hub username.
-
-  - `token` - Docker Hub access token.
-
-- `apprise`: apprise url.
-
-  Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
-  This will be used to send out messages during certain tasks (e.g. backup).
-  This parameter is not nested like the others in this file.
-  This parameter is optional.
-
-  ```yaml
-
-    apprise: somescheme://something_else_here/perhaps_a_token
-
-  ```
-
-  not
-
-  ```yaml
-
-  apprise:
-    somescheme://something_else_here/perhaps_a_token
-
-  ```
+```yaml
+apprise: somescheme://something_else_here/perhaps_a_token
+```
+not
+```yaml
+apprise:
+  somescheme://something_else_here/perhaps_a_token
+```
 
 ---
 
@@ -116,38 +134,55 @@ On this page, we break down the options available in the following files:
 
 ---
 
-- `downloads`: Where downloads go.
+```
+---
+downloads: /mnt/unionfs/downloads
+```
+`downloads`: Where downloads go.
 
-  - Default is `/mnt/unionfs/downloads`.
+Default is `/mnt/unionfs/downloads`.
 
-- `transcodes`: Path of temporary transcoding files.
+```
+transcodes: /mnt/local/transcodes
+```
+`transcodes`: Path of temporary transcoding files.
 
-  - Default is `"/mnt/local/transcodes"`.
+Default is `"/mnt/local/transcodes"`.
 
-  - Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
+Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
 
-- `rclone`: Rclone options.
+```
+rclone:
+  version: latest
+  remote: google
+```
+`rclone:version`: Rclone version that is installed by Saltbox.
 
-  - `version`: Rclone version that is installed by Saltbox.
+Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
+Default is `latest`.
 
-    Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
-    Default is `latest`.
+`rclone:remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
 
-  - `remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
+Default is `google`.
+Can be left blank to run without cloud storage].
+```
+shell: bash
+```
+`shell`: Type of shell to use.
 
-    Default is `google`.
-    Can be left blank to run without cloud storage].
+Choices are `bash` or `zsh`.
+Default is `bash`.
+```
+authelia:
+  master: yes
+  subdomain: login
+```
 
-- `shell`: Type of shell to use.
+`authelia:master` - Is this the master machine in a split feeder/media setup?
 
-  Choices are `bash` or `zsh`.
-  Default is `bash`.
+`authelia:subdomain` - subdomain for the Authelia login page
 
-- `authelia`: Authelia options.
-
-  - `subdomain`: subdomain for the Authelia login page
-
-    Default is `login`.
+Default is `login`.
 
 ---
 

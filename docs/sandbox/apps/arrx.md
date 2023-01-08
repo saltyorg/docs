@@ -7,7 +7,7 @@ This functionality is being moved to a more generalized and customizable [multip
 
 ## Background
 
-There are a number of roles in the saltbox community repo which can be used to create multiple instances of an application.  Some of these include:
+There are a number of roles in the saltbox Sandbox repo which can be used to create multiple instances of an application.  Some of these include:
 
 | Role          | Description                         |
 | ------------- | ----------------------------------- |
@@ -52,7 +52,7 @@ ombix:
     - boing
 ```
 
-Running the saltbox community `ombix` tag would produce:
+Running the Saltbox Sandbox `ombix` tag would produce:
 
 | entry         | Container  | Config dir       | Subdomain                  | Note                         |
 | ------------- | ---------- | ---------------- | -------------------------- | ---------------------------- |
@@ -107,7 +107,7 @@ You probably want to overwrite your existing role with this one; that will ensur
 
 That will ensure that the stock `bazarr` tag doesn't overwrite the container you are creating here.
 
-When you want to update Bazarr, you'll run the Saltbox Community `bazarrx` tag instead.
+When you want to update Bazarr, you'll run the Saltbox Sandbox `bazarrx` tag instead.
 
 The same thing holds for every `arrX` variant discussed here.
 
@@ -173,7 +173,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
 
    </details>
 
-1. Run the bazarrx role as a normal saltbox community role.
+1. Run the bazarrx role as a normal Saltbox Sandbox role.
 
    ```bash
    sb install cm-bazarrx

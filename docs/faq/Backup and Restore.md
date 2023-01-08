@@ -9,7 +9,7 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 Only app data located in `/opt` and relevant config files (as listed below) are backed up.  The backup script does this by creating tarball files (*.tar) for each folder in `/opt`/ and placing them into your backup folder (as set in `backup_config.yml`). The folders in `/opt` are*all* backed up without regard for whether Saltbox created them in the first place.  For example, if you create `/opt/bingbangboing` it will be backed up and restored by Saltbox.
 
-If you have set it up, the community repo is located in `/opt`, so it will get backed up [this includes any changes you've made in that repo to the config or roles].  There is no catalog kept of what community roles you may have run, so none of the roles themselves will be run automatically on restore, but the data will be backed up and restored.
+If you have set it up, the Sandbox repo is located in `/opt`, so it will get backed up [this includes any changes you've made in that repo to the config or roles].  There is no catalog kept of what Sandbox roles you may have run, so none of the roles themselves will be run automatically on restore, but the data will be backed up and restored.
 
 Service files from `/etc/systemd/system` are synced to `/opt/systemd-backup` as part of the backup, so they are included in the tarball creation.  This includes things like the `rclone_vfs`, `mergerfs`, `cloudplow`, `plex_autoscan`, and other system service files.  If you have added additional mounts and the like via your own service files [perhaps with tip #44 or `samount` or the like], these extra service files will be backed up, but will not be automatically restored.
 

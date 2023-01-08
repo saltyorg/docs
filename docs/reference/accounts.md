@@ -19,12 +19,14 @@ On this page, we break down the options available in the following files:
 - `user`: User information.
 
   - `name`: User name for the server.
+
     This parameter is **required**.
     If user account with this name does not already exist, it will be created during install.
     Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
     Default is `seed`.
 
   - `pass`: Password for the user account and for misc apps.
+
     This parameter is **required**.
     Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
     Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.

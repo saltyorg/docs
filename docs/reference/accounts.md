@@ -35,21 +35,25 @@ On this page, we break down the options available in the following files:
     See the [password considerations](#password-considerations) below.
 
   - `domain`: Domain name for the Saltbox server.
+
     This parameter is **required**.
     If you don't have one, see [here](domain.md).
     This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
 
   - `email`: E-mail address.
+
     This parameter is **required** if you're using the reverse proxy.
     This is used for the Let's Encrypt SSL certificates.
     It does not have to be an email address at the domain above.
 
   - `ssh_key`: SSH Key
+
     This parameter is optional
     This is used to provision a SSH key in your user's `authorized_keys` file
     This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 - `cloudflare`: Cloudflare Account
+
   This parameter is optional.
   Default is blank.
   Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
@@ -60,6 +64,7 @@ On this page, we break down the options available in the following files:
   - `api`: [Global API Key](domain.md#cloudflare-api-key).
 
 - `plex`: Plex.tv account credentials.
+
   This will be used to claim the Plex server under your username and generate Plex Access Tokens for apps such as Autoscan, etc.
   This parameter is required.
   Note: The "tfa" setting controls whether Saltbox uses the newer authentication method or not; this newer method is *required* for use with TFA, but will work even with it off; it's the "Open an URL, log into Plex, grant access to this app" workflow you may be familiar with from other contexts.
@@ -72,6 +77,7 @@ On this page, we break down the options available in the following files:
   - `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
 
 - `dockerhub`: DockerHub account credentials.
+
   Entering Dockerhub credentials increases the number of images one can pull
 
   - `user` - Docker Hub username.
@@ -79,6 +85,7 @@ On this page, we break down the options available in the following files:
   - `token` - Docker Hub access token.
 
 - `apprise`: apprise url.
+
   Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
   This will be used to send out messages during certain tasks (e.g. backup).
   This parameter is not nested like the others in this file.
@@ -122,20 +129,24 @@ On this page, we break down the options available in the following files:
 - `rclone`: Rclone options.
 
   - `version`: Rclone version that is installed by Saltbox.
+
     Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
     Default is `latest`.
 
   - `remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
+
     Default is `google`.
     Can be left blank to run without cloud storage].
 
 - `shell`: Type of shell to use.
+
   Choices are `bash` or `zsh`.
   Default is `bash`.
 
 - `authelia`: Authelia options.
 
   - `subdomain`: subdomain for the Authelia login page
+
     Default is `login`.
 
 ---
@@ -149,6 +160,7 @@ On this page, we break down the options available in the following files:
 - `system`: Various system-level settings.
 
   - `timezone`: Timezone to use on the server.
+
     Default is `auto`, which will pick the timezone based on geolocation of the server.
     Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
     `timedatectl list-timezones` at your server's command prompt will also list the options.
@@ -156,63 +168,80 @@ On this page, we break down the options available in the following files:
 - `dns`: DNS-related settings.
 
   - `proxied`: Controls whether Cloudflare records should be "proxied" or "DNS only".
+
     Default is `no`.
 
   - `ipv6`: Enable/disable ipv6 configuration.
+
     Default is `no`.
 
   - `zerossl`: Controls whether zerossl is used.
+
     Default is `no`.
 
 - `traefik`: traefik-related settings.
 
   - `tls`: Use TLS (ALPN-01) certificate validation method.
+
     Default is `no`.
 
   - `http`: Use HTTP (HTTP-01) certificate validation method.
+
     Default is `no`.
 
   - `metrics`: enable metrics subdomain.
+
     Default is `no`.
 
   - `tracing`: Enable tracing.
+
     Default is `no`.
 
   - `hsts`: enable hsts.
+
     Default is `no`.
 
   - `provider`: DNS provider.
+
     Default is `cloudflare`.
 
   - `subdomains`: traefik subdomains.
 
     - `dash`: traefik dashboard subdomain.
+
       Default is `dash`.
 
     - `metrics`: traefik metrics subdomain.
+
       Default is `metrics`.
 
     - `jaeger`: traefik jaeger subdomain.
+
       Default is `jaeger`.
 
   - `error_pages`: enable styled error pages.
+
     Default is `no`.
     see [here](../advanced/styled-error-pages.md) for configuration details.
 
 - `mounts`: cloud storage mount settings.
 
   - `remote`: What type of remote to use.
+
     Default is `rclone_vfs`. Options are `rclone_vfs` and `rclone_vfs_cache`. If selecting `rclone_vfs_cache` it is recommended to review the [rclone documentation](https://rclone.org/commands/rclone_mount/#vfs-file-caching) and review the `rclone_vfs_cache_max_size`, `rclone_vfs_cache_max_age` and (optionally) `rclone_vfs_cache_max_dir` variables for any configuration required.via the inventory system.
 
   - `feeder`: Should a feeder mount be created?
+
     Default is `no`.
 
 - `gpu`: GPU settings.
 
   - `intel`: Should system be set up for Intel GPU?
+
     Default is `no`.
 
 - `nvidia`: Should system be set up for NVidia GPU?
+
     Default is `no`.
 
 ---

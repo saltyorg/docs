@@ -12,22 +12,22 @@ The following steps will be done on the Mediabox.
 
 1. In rclone config, create an sftp remote to your Feederbox called `feeder` ([asciicast](https://asciinema.org/a/184084?t=0&speed=1&size=medium&cols=75&rows=25)).
 
-   _Note: If you don't already have one, add the `feederbox` [[subdomain|Adding a Subdomain]] and point it to your Feederbox's IP address. If you are using Cloudflare, make sure CDN/Proxy is not enabled for this subdomain._
+      _Note: If you don't already have one, add the `feederbox` [[subdomain|Adding a Subdomain]] and point it to your Feederbox's IP address. If you are using Cloudflare, make sure CDN/Proxy is not enabled for this subdomain._
 
-2. Edit the `mounts` section of `adv_settings.yml` and set `feeder` to "yes":
+1. Edit the `mounts` section of `adv_settings.yml` and set `feeder` to "yes":
 
-   ```yaml
-   mounts:
-     remote: rclone_vfs
-     feeder: yes
-   ```
+      ```yaml
+      mounts:
+        remote: rclone_vfs
+        feeder: yes
+      ```
 
-3. Run the following command:
+1. Run the following command:
 
-   ```shell
-   sb install mounts
-   ```
+      ```yaml
+      sb install mounts
+      ```
 
-4. Your docker containers will restart and media on Feederbox will be available to them.
+1. Your docker containers will restart and media on Feederbox will be available to them.
 
-  _Note: You do not need to do anything to your apps (eg no need to edit Plex library paths etc)._
+      _Note: You do not need to do anything to your apps (eg no need to edit Plex library paths etc)._

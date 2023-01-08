@@ -24,14 +24,14 @@ user:
   ssh_key:
 ```
 
-`user:name`: User name for the server.
+`name`: User name for the server.
 
 This parameter is **required**.
 If user account with this name does not already exist, it will be created during install.
 Also used to create first-time logins for various apps.
 Default is `seed`.
 
-`user:pass`: Password for the user account and for misc apps.
+`pass`: Password for the user account and for misc apps.
 
 This parameter is **required**.
 Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
@@ -41,19 +41,19 @@ Don't leave it as `password123`.
 See the [password considerations](#password-considerations) below.
 [Relevant XKCD](https://xkcd.com/936/)
 
-`user:domain`: Domain name for the Saltbox server.
+`domain`: Domain name for the Saltbox server.
 
 This parameter is **required**.
 If you don't have one, see [here](domain.md).
 This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
 
-`user:email`: E-mail address.
+`email`: E-mail address.
 
 This parameter is **required** if you're using the reverse proxy.
 This is used for the Let's Encrypt SSL certificates.
 It does not have to be an email address at the domain above.
 
-`user:ssh_key`: SSH Key
+`ssh_key`: SSH Key
 
 This parameter is optional.
 This is used to provision a SSH key in your user's `authorized_keys` file
@@ -65,9 +65,9 @@ cloudflare:
   api:
 ```
 
-`cloudflare:email`: E-mail address used for the Cloudflare account.
+`email`: E-mail address used for the Cloudflare account.
 
-`cloudflare:api`: [Global API Key](domain.md#cloudflare-api-key).
+`api`: [Global API Key](domain.md#cloudflare-api-key).
 
 These parameters are optional.
 Default is blank.
@@ -81,11 +81,11 @@ plex:
   tfa: no
 ```
 
-`plex:user` - Plex username or email address on the profile.
+`user` - Plex username or email address on the profile.
 
-`plex:pass` - Plex password. See the [password considerations](#password-considerations) below.
+`pass` - Plex password. See the [password considerations](#password-considerations) below.
 
-`plex:tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
+`tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
 
 This parameter is required.
 This will be used to claim the Plex server under your username and generate Plex Access Tokens for apps such as Autoscan, etc.
@@ -98,9 +98,9 @@ dockerhub:
   token:
 ```
 
-`dockerhub:user` - Docker Hub username.
+`user` - Docker Hub username.
 
-`dockerhub:token` - Docker Hub access token.
+`token` - Docker Hub access token.
 
 This parameter is optional.
 Entering Dockerhub credentials increases the number of images one can pull.
@@ -163,12 +163,12 @@ rclone:
   remote: google
 ```
 
-`rclone:version`: Rclone version that is installed by Saltbox.
+`version`: Rclone version that is installed by Saltbox.
 
 Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
 Default is `latest`.
 
-`rclone:remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
+`remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
 
 Default is `google`.
 Can be left blank to run without cloud storage].
@@ -188,9 +188,9 @@ authelia:
   subdomain: login
 ```
 
-`authelia:master` - Is this the master machine in a split feeder/media setup?
+`master` - Is this the master machine in a split feeder/media setup?
 
-`authelia:subdomain` - subdomain for the Authelia login page
+`subdomain` - subdomain for the Authelia login page
 
 Default is `login`.
 
@@ -206,7 +206,7 @@ system:
   timezone: auto
 ```
 
-`system:timezone`: Timezone to use on the server.
+`timezone`: Timezone to use on the server.
 
 Default is `auto`, which will pick the timezone based on geolocation of the server.
 Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
@@ -217,7 +217,7 @@ docker:
   json_driver: no
 ```
 
-`docker:json_driver` - make docker logs available as JSON
+`json_driver` - make docker logs available as JSON
 
 ```yaml
 dns:
@@ -228,15 +228,15 @@ dns:
   zerossl: no
 ```
 
-`dns:proxied` - Controls whether Cloudflare records should be "proxied" or "DNS only".
+`proxied` - Controls whether Cloudflare records should be "proxied" or "DNS only".
 
 Default is `no`.
 
-`dns:ipv6`: Enable/disable ipv6 configuration.
+`ipv6`: Enable/disable ipv6 configuration.
 
 Default is `no`.
 
-`dns:zerossl`: Controls whether zerossl is used.
+`zerossl`: Controls whether zerossl is used.
 
 Default is `no`.
 
@@ -255,43 +255,43 @@ traefik:
   error_pages: no
 ```
 
-`traefik:tls`: Use TLS (ALPN-01) certificate validation method.
+`tls`: Use TLS (ALPN-01) certificate validation method.
 
 Default is `no`.
 
-`traefik:http`: Use HTTP (HTTP-01) certificate validation method.
+`http`: Use HTTP (HTTP-01) certificate validation method.
 
 Default is `no`.
 
-`traefik:metrics`: enable metrics subdomain.
+`metrics`: enable metrics subdomain.
 
 Default is `no`.
 
-`traefik:tracing`: Enable tracing.
+`tracing`: Enable tracing.
 
 Default is `no`.
 
-`traefik:hsts`: enable hsts.
+`hsts`: enable hsts.
 
 Default is `no`.
 
-`traefik:provider`: DNS provider.
+`provider`: DNS provider.
 
 Default is `cloudflare`.
 
-`traefik:subdomains:dash`: traefik dashboard subdomain.
+`dash`: traefik dashboard subdomain.
 
 Default is `dash`.
 
-`traefik:subdomains:metrics`: traefik metrics subdomain.
+`metrics`: traefik metrics subdomain.
 
 Default is `metrics`.
 
-`traefik:subdomains:jaeger`: traefik jaeger subdomain.
+`jaeger`: traefik jaeger subdomain.
 
 Default is `jaeger`.
 
-`traefik:error_pages`: enable styled error pages.
+`error_pages`: enable styled error pages.
 
 Default is `no`.
 See [here](../advanced/styled-error-pages.md) for configuration details.
@@ -303,16 +303,16 @@ mounts:
   feeder: no
 ```
 
-`mounts:remote`: What type of remote to use.
+`remote`: What type of remote to use.
 
 Default is `rclone_vfs`.
 Options are `rclone_vfs` and `rclone_vfs_cache`. If selecting `rclone_vfs_cache` it is recommended to review the [rclone documentation](https://rclone.org/commands/rclone_mount/#vfs-file-caching) and review the `rclone_vfs_cache_max_size`, `rclone_vfs_cache_max_age` and (optionally) `rclone_vfs_cache_max_dir` variables for any configuration required.via the inventory system.
 
-`mounts:ipv4_only`: Should rclone use ipv4 only?
+`ipv4_only`: Should rclone use ipv4 only?
 
 Default is `no`.
 
-`mounts:feeder`: Should a feeder mount be created?
+`feeder`: Should a feeder mount be created?
 
 Default is `no`.
 
@@ -322,11 +322,11 @@ gpu:
   nvidia: no
 ```
 
-`gpu:intel`: Should system be set up for Intel GPU?
+`intel`: Should system be set up for Intel GPU?
 
 Default is `no`.
 
-`gpu:nvidia`: Should system be set up for NVidia GPU?
+`nvidia`: Should system be set up for NVidia GPU?
 
 Default is `no`.
 

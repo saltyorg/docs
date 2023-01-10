@@ -146,7 +146,7 @@ Each tab shows a "section" in the file.
 
 Each tab shows a "section" in the file.
 
-=== "downlaods"
+=== "downloads"
     ```yaml
     ---
     downloads: /mnt/unionfs/downloads

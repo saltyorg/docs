@@ -26,7 +26,7 @@ Add your API key to the **[Sandbox settings file](../../sandbox/settings.md)**
 
 You also need to define a username and password for the Notifiarr client webui in the [Sandbox settings file](../../sandbox/settings.md). You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
 
-### 1. Installation
+### 2. Installation
 
 ``` shell
 
@@ -34,7 +34,7 @@ sb install sandbox-notifiarr
 
 ```
 
-### 1. URL
+### 3. URL
 
 - The Notifiarr url will only display the app status `https://notifiarr._yourdomain.com_`
 

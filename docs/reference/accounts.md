@@ -13,7 +13,8 @@ On this page, we break down the options available in the following files:
 ## Options in accounts.yml
 
 **Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
-## Install Saltbox
+
+Each tab shows a "section" in the file.
 
 === "user"
     ```yaml
@@ -143,7 +144,7 @@ On this page, we break down the options available in the following files:
 
 **Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
 
----
+Each tab shows a "section" in the file.
 
 === "downlaods"
     ```yaml
@@ -211,6 +212,8 @@ On this page, we break down the options available in the following files:
 ## Options in adv_settings.yml
 
 **Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
+
+Each tab shows a "section" in the file.
 
 === "system"
     ```yaml

@@ -49,7 +49,7 @@ NOTE: This will overwrite the customized config.json, losing any changes you hav
 ```shell
 cd /opt/sb_gd
 source sb_gd/bin/activate
-cp config.json.old config.json
+cp /opt/cloudplow/config.json.old /opt/cloudplow/config.json
 python sb_cp.py
 sudo systemctl restart cloudplow
 deactivate

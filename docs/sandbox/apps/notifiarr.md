@@ -8,19 +8,7 @@
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://notifiarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/golift/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
-### 1. Installation
-
-``` shell
-
-sb install sandbox-notifiarr
-
-```
-
-### 2. URL
-
-- The Notifiarr url will only display the app status `https://notifiarr._yourdomain.com_`
-
-### 3. Setup
+### 1. Setup
 
 You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/register.php){: .header-icons target=_blank rel="noopener noreferrer" }
 
@@ -36,13 +24,19 @@ After logging in, you should be redirected to your profile screen.
 
 Add your API key to the **[Sandbox settings file](../../sandbox/settings.md)**
 
-Now run the installer
+You also need to define a username and password for the Notifiarr client webui in the [Sandbox settings file](../../sandbox/settings.md). You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
+
+### 1. Installation
 
 ``` shell
 
 sb install sandbox-notifiarr
 
 ```
+
+### 1. URL
+
+- The Notifiarr url will only display the app status `https://notifiarr._yourdomain.com_`
 
 Now go to the Notifiarr website and configure your integrations and discord server.
 Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.

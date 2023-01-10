@@ -49,6 +49,9 @@ A quickstart guide can be found on the [Trash Guides website.](https://trash-gui
 
 You can configure the Notifiarr client to not require it's own username and password with the use of a [Traefik plugin](https://github.com/tommoulard/htransformation).
 
+!!! note
+    Your Authelia username must match the username that the Notifiarr client was configured for.
+
 1. Add the following to your Inventory file to enable the plugin:
 
       ```yaml

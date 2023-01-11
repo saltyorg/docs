@@ -102,4 +102,4 @@ You can configure the Notifiarr client to not require it's own username and pass
       sb install sandbox-notifiarr
       ```
 
-- [:octicons-link-16: Documentation: Notifiarr Client Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" }
+[:octicons-link-16: Documentation: Notifiarr Client Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" }

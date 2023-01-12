@@ -73,7 +73,6 @@ plex_open_local_ports: true
 ##### Plex Container Variables ####
 plex_docker_image_tag: beta
 plex_open_main_ports: true
-plex_db_cache_size: 30000000
 
 #### Examples of specified container images: ####
 radarr_docker_image_tag: nightly

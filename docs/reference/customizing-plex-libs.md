@@ -5,8 +5,6 @@
 
     As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place.
 
-    The concepts discussed here may still be useful.
-
     Current default directory structure [each on its own shared drive]
 
     ```text
@@ -19,14 +17,18 @@
     ├── TV
     └── TV-4K
     ```
+    
+    You can point Plex libraries at those existing directories, and use those directories as root dirs in the *arrs, whether you create multiple instances or not.
+
+    If you ran the optional cloudplow script as part of that process, the cloudplow mods discussed below are done for you.
+
+    The concepts discussed here may still be useful if you did not use that process.
 
 ## Basics
 
 In the default Saltbox install, there are only two main Plex libraries: one for Movies and one for TV Shows.
 
 The idea being that all movies are to be placed within the `/Media/Movies` folder in Google Drive. and all TV shows under `/Media/TV`.
-
-If you use the scripted rclone setup, you will end up with the following default paths:
 
    ```text
    Media

@@ -2,20 +2,23 @@
 
 !!! info
     This guide was written before the default shared drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
-    As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place:
 
-   ```text
-   Media
-   ├── Anime
-   ├── Books
-   ├── Movies
-   ├── Movies-4K
-   ├── Music
-   ├── TV
-   └── TV-4K
-   ```
+    As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place.
 
-   The concepts discussed here may still be useful.
+    The concepts discussed here may still be useful.
+
+    Current default directory structure [each on its own shared drive]
+
+    ```text
+    Media
+    ├── Anime
+    ├── Books
+    ├── Movies
+    ├── Movies-4K
+    ├── Music
+    ├── TV
+    └── TV-4K
+    ```
 
 ## Basics
 

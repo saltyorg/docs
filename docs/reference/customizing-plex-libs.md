@@ -1,12 +1,29 @@
 # Customizing Plex Libraries
 
+!!! info
+    This guide was written before the default sahred drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
+    As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place:
+
+   ```text
+   Media
+   ├── Anime
+   ├── Books
+   ├── Movies
+   ├── Movies-4K
+   ├── Music
+   ├── TV
+   └── TV-4K
+   ```
+
+   The concepts discussed here may still be useful.
+
 ## Basics
 
-In the default Saltbox install, there only two main Plex libraries: one for Movies and one for TV Shows.
+In the default Saltbox install, there are only two main Plex libraries: one for Movies and one for TV Shows.
 
 The idea being that all movies are to be placed within the `/Media/Movies` folder in Google Drive. and all TV shows under `/Media/TV`.
 
-Default Paths:
+If you use the scripted rclone setup, you will end up with the following default paths:
 
    ```text
    Media

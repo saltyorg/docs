@@ -1,7 +1,7 @@
 # Customizing Plex Libraries
 
 !!! info
-    This guide was written before the default sahred drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
+    This guide was written before the default shared drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
     As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place:
 
    ```text

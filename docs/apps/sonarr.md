@@ -300,7 +300,7 @@ Make changes in the following sections:
 
             5.  Click "Save" to add qBittorrent
 
-=== "Connect"
+    === "Connect"
 
         These settings control connections to other applications or systems.
 

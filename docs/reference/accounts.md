@@ -345,7 +345,7 @@ Each tab shows a "section" in the file.
 
     `intel`: Should system be set up for Intel GPU?
 
-    Default is `no`.
+    Default is `yes`.
 
     `nvidia`: Should system be set up for NVidia GPU?
 

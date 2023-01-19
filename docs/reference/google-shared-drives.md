@@ -12,7 +12,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
-IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT.  THIS SCRIPT MAY PRODUCE A SECOND SET OF SHARED DRIVES, AND THERE IS NO REASON FOR THIS.
+If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It may overwrite aspects of an existing rclone setup with no undo.
 
 1. Retrieve the `sb-gd` code
 

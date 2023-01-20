@@ -14,7 +14,7 @@ _Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), 
 
 If you are planning to use the automatic Cloudflare integration, there are some top-level domains [TLDs] that will not work with it.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).
 
-As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
+As of 2023/01/20:  "The DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
 # 2. DNS Setup
 
@@ -121,13 +121,13 @@ Although Cloudflare is not required for Saltbox, it is still recommended because
 
 2. It's free.
 
-_Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [[below|Prerequisites: Cloudflare#post-setup]])._
+_Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [below](#post-setup)._
 
 ### Sign Up
 
 1. Sign up for a free [Cloudflare](https://www.cloudflare.com/) account.
 
-2. On your Domain Registrar's website (e.g. GoDaddy, Namecheap, etc), set the Name Servers to what Cloudflare instructs you to.
+2. On your Domain Registrar's website (e.g. GoDaddy, Namecheap, etc), set the Name Servers to what Cloudflare instructs you to.  Here are two examples; Saltbox does not require either of these registrars, and every registrar will, or should, allow you to change these same settings in some way.
 
 === "Namecheap.com"
 

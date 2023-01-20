@@ -22,6 +22,8 @@ Media
 
   ![](../../images/google-drive-filesystem.png)
 
+There may be other mediatype directories here depending on your specific setup.  The current automated rclone setup creates several more [Movies-4K, Books, Anime, and so forth].
+
 | Path  <pre>                 </pre>                 | Description  <pre>                                                                                              </pre>                                                                                                                                                          |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/Media/`     | Location of all your media folders.                                                                                                                         |
@@ -110,12 +112,6 @@ That means that no path translation is required from context to context.  If nzb
 | `/mnt/unionfs/Media/Music/`              | `/mnt/unionfs/Media/Music/`       | Lidarr will import to `/mnt/unionfs/Media/Music/`. |
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Lidarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Lidarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
-
-### Tautulli
-
-| Docker Path  <pre>                 </pre>          | Host Path <pre>                                                            </pre>                        | Description <pre>                                     </pre>                                                                |
-|:----------- |:-------------------------------------------------------------- |:------------------------------------- |
-| `/logs/`     | `/opt/plex/Library/Application Support/Plex Media Server/Logs/`| Location of the Plex logs used by Tautulli.  |
 
 ---
 

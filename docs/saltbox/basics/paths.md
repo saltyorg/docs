@@ -91,7 +91,7 @@ That means that no path translation is required from context to context.  If nzb
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
-| `/mnt/unionfs/Media/TV/`              | `/mnt/unionfs/Media/TV/`       | Sonarr will import to `/tv/`, which is actually `/mnt/unionfs/Media/TV/` on host system. |
+| `/mnt/unionfs/Media/TV/`              | `/mnt/unionfs/Media/TV/`       | Sonarr will import to `/mnt/unionfs/Media/TV/`. |
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Sonarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Sonarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
 
@@ -99,7 +99,7 @@ That means that no path translation is required from context to context.  If nzb
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
-| `/mnt/unionfs/Media/movies/`              | `/mnt/unionfs/Media/Movies/`       | Radarr will import to `/movies/`, which is actually `/mnt/unionfs/Media/Movies/` on host system. |
+| `/mnt/unionfs/Media/movies/`              | `/mnt/unionfs/Media/Movies/`       | Radarr will import to `/mnt/unionfs/Media/Movies/`. |
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Radarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Radarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
 
@@ -107,7 +107,7 @@ That means that no path translation is required from context to context.  If nzb
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
-| `/mnt/unionfs/Media/Music/`              | `/mnt/unionfs/Media/Music/`       | Lidarr will import to `/music/`, which is actually `/mnt/unionfs/Media/Music/` on host system. |
+| `/mnt/unionfs/Media/Music/`              | `/mnt/unionfs/Media/Music/`       | Lidarr will import to `/mnt/unionfs/Media/Music/`. |
 | `/mnt/unionfs/downloads/nzbs/`    | `/mnt/local/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Lidarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is essentially `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
 | `/mnt/unionfs/downloads/torrents/` | `/mnt/local/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using ruTorrent, Lidarr will import from `/mnt/unionfs/downloads/torrents/rutorrent/`, which is essentially `/mnt/local/downloads/torrents/rutorrent/` on host system.                     |
 

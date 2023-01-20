@@ -54,7 +54,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
 
 - For Cloudflare users.
 
-   Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically.
+   Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically.  See below for details on getting this API Key.
 
 === "Saltbox Install Type"
     You will need to create A Records for all Saltbox subdomains.
@@ -94,6 +94,8 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 |
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
+
+--
 
 ## Getting a Cloudflare API Key
 

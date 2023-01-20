@@ -95,7 +95,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
 
-## Cloudflare
+## Getting a Cloudflare API Key
 
 ### Intro
 

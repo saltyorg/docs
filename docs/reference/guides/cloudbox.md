@@ -157,8 +157,14 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
     sb install saltbox
 
   ```
+  At a minimum [if you don't want all the apps that `saltbox` installs] you need to run:
+  ``` shell
 
-- install individual tags [if desired] <br />
+    sb install core
+
+  ```
+
+- install individual tags [if required] <br />
 
   ``` shell
 

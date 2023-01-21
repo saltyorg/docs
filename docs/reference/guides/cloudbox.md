@@ -150,14 +150,27 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
 
   Then you should be able to install tags as you want.
 
-- install top-level tag [if desired] <br />
+- install top-level tag [as appropriate] <br />
+  
+  Note: These are options, not a list of commands to run.
 
   ``` shell
 
     sb install saltbox
 
   ```
-  At a minimum [if you don't want all the apps that `saltbox` installs] you need to run:
+  ``` shell
+
+    sb install feederbox
+
+  ```
+  ``` shell
+
+    sb install mediabox
+
+  ```
+  At a minimum [if you don't want all the apps that those tags install] you need to run:
+
   ``` shell
 
     sb install core

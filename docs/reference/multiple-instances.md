@@ -14,22 +14,30 @@ Apps that used to be supported by the "ArrX" system which allowed the user to de
 
 The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
-At the time of writing the roles supported are:
+As of 01-24-2023 the roles supported are:
 
 ```yaml
+autoscan
 bazarr
 deluge
 emby
 jellyfin
+jellyseerr
 lidarr
+mcrouter
+minecraft
 nginx
+node_red
 overseerr
 plex
 qbittorrent
+qbittorrentvpn
 radarr
 readarr
 sonarr
 tautulli
+traktarr
+whisparr
 ```
 
 Ther is a command at the end of this page you can use to get an updated list of roles that support this method.

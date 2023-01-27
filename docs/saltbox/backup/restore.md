@@ -67,6 +67,26 @@ sb install preinstall
 !!! info
     If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
 
+ <details>
+  <summary>What's this about service accounts?</summary>
+  <br />
+
+  Open `rclone.conf` in a text editor and look through the remotes defined in there.
+
+  If the look like this:
+
+  ```text
+  [SOME REMOTE]
+  type = drive
+  scope = drive
+  service_account_file = /opt/sa/all/1500.json
+  team_drive = OZZY
+  root_folder_id =
+  ```
+
+  You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
+  </details>
+
 Start the restore process.
 
 ```shell

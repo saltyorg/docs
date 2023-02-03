@@ -62,7 +62,7 @@ Make sure you fill out the following configuration files before proceeding. Each
 
 To edit [assuming you are still logged in as `root`]:
 
-    # nano /srv/git/saltbox/accounts.yml
+    nano /srv/git/saltbox/accounts.yml
 
 Contents:
 

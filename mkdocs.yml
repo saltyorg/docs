@@ -191,6 +191,7 @@ nav:
           - VNStat: sandbox/apps/vnstat.md
           - heimdall: sandbox/apps/heimdall.md
           - Homarr: sandbox/apps/homarr.md
+          - Homepage: sandbox/apps/homepage.md
         - Game Servers:
           - Minecraft: sandbox/apps/minecraft.md
           - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md

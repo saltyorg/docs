@@ -42,4 +42,4 @@ sb install sandbox-homarr
 
   ```
 
-- [:octicons-link-16: Documentation: Homarr Docs]([https://homarr.dev/docs/integrations/](https://homarr.dev/docs/integrations/)){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/integrations/){: .header-icons target=_blank rel="noopener noreferrer" }

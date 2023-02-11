@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[plex_utills](https://github.com/jkirkcaldy/plex-utills){: target=_blank rel="noopener noreferrer" } is a...
+[plex-utills](https://github.com/jkirkcaldy/plex-utills){: target=_blank rel="noopener noreferrer" } is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -20,8 +20,8 @@ sb install sandbox-plex_utills
 
 ### 2. URL
 
-- To access plex_utills, visit `https://plex_utills._yourdomain.com_`
+- To access plex-utills, visit `https://plex-utills._yourdomain.com_`
 
 ### 3. Usage
 
-- Instructions for plex_utills
+- Instructions for plex-utills

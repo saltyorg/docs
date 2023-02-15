@@ -14,7 +14,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 ---
 
-1. Install the Google CLI tools; this is an extract from tha original docs found [here](https://cloud.google.com/sdk/docs/install-sdk).  Enter these commands in your terminal:
+1. Install the Google CLI tools.  Enter these commands in your terminal:
 
 === "Ubuntu 20.04"
 

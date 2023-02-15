@@ -288,9 +288,9 @@ Make changes in the following sections:
 
                 Port: '8080'
 
-                Username: [Your qBittorrent Username](../community/apps/qbittorrent.md)
+                Username: [Your qBittorrent Username](../apps/qbittorrent.md)
 
-                Password: [Your qBittorrent Password](../community/apps/qbittorrent.md)
+                Password: [Your qBittorrent Password](../apps/qbittorrent.md)
 
                 Category: 'sonarr'
 

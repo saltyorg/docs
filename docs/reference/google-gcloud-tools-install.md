@@ -13,10 +13,44 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 - created the required [group](google-group-setup.md)
 
 
+1. Install the Google CLI tools; this is an extract from tha original docs found [here](https://cloud.google.com/sdk/docs/install-sdk).  Enter these commands in your terminal:
 
-1. Follow the installation process you will find [here](https://cloud.google.com/sdk/docs/install-sdk).
+=== "Ubuntu 20.04"
+    1. Add the gcloud CLI distribution URI as a package source:
 
-   When you get to step 5, come back here.  DON'T RUN STEP 5.
+       '''
+       echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+       ```
+       
+    2. Import the Google Cloud public key:
+
+       ```
+       curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+       ```
+    3. Update and install the gcloud CLI:
+
+       ```
+       sudo apt-get update && sudo apt-get install google-cloud-cli
+       ```
+
+=== "Ubuntu 22.04"
+    1. Add the gcloud CLI distribution URI as a package source:
+
+       '''
+       echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+       ```
+       
+    2. Import the Google Cloud public key:
+
+       ```
+       curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+       ```
+       
+    3. Update and install the gcloud CLI:
+
+       ```
+       sudo apt-get update && sudo apt-get install google-cloud-cli
+       ```
    
 2. Run the following command:
 

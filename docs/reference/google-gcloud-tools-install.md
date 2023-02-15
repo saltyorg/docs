@@ -12,6 +12,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 - created the required [project](google-project-setup.md)
 - created the required [group](google-group-setup.md)
 
+
+
 1. Follow the installation process you will find [here](https://cloud.google.com/sdk/docs/install-sdk).
 
    When you get to step 5, come back here.  DON'T RUN STEP 5.

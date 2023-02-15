@@ -18,22 +18,23 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 === "Ubuntu 20.04"
 
-    1. Add the gcloud CLI distribution URI as a package source:
+    Add the gcloud CLI distribution URI as a package source:
 
-       ```
-       echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-       ```
+    ```
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    ```
        
-    2. Import the Google Cloud public key:
+    Import the Google Cloud public key:
 
-       ```
-       curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-       ```
-    3. Update and install the gcloud CLI:
+    ```
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    ```
+    
+    Update and install the gcloud CLI:
 
-       ```
-       sudo apt-get update && sudo apt-get install google-cloud-cli
-       ```
+    ```
+    sudo apt-get update && sudo apt-get install google-cloud-cli
+    ```
 
 === "Ubuntu 22.04"
 

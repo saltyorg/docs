@@ -12,13 +12,15 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 - created the required [project](google-project-setup.md)
 - created the required [group](google-group-setup.md)
 
+---
 
 1. Install the Google CLI tools; this is an extract from tha original docs found [here](https://cloud.google.com/sdk/docs/install-sdk).  Enter these commands in your terminal:
 
 === "Ubuntu 20.04"
+
     1. Add the gcloud CLI distribution URI as a package source:
 
-       '''
+       ```
        echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
        ```
        
@@ -34,9 +36,10 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
        ```
 
 === "Ubuntu 22.04"
+
     1. Add the gcloud CLI distribution URI as a package source:
 
-       '''
+       ```
        echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
        ```
        

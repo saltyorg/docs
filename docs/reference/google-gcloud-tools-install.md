@@ -14,7 +14,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 ---
 
-1. Install the Google CLI tools.  Enter these commands in your terminal:
+First, install the Google CLI tools.  Enter these commands in your terminal:
 
 === "Ubuntu 20.04"
 
@@ -56,7 +56,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
     sudo apt-get update && sudo apt-get install google-cloud-cli
     ```
    
-2. Run the following command:
+
+1. Run the following command:
 
     ```shell
     gcloud init --console-only
@@ -76,13 +77,13 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
     https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32...X4&code_challenge_method=S256
     ```
 
-3. Log into your Google account and approve the access request:
+2. Log into your Google account and approve the access request:
 
     ![](../images/gcloud-sdk/02-sdk-approve.png)
 
     Copy the verification code.
 
-4. Continue in the terminal:
+3. Continue in the terminal:
 
     ```text
     Enter verification code: 4/1AX4XfWjkg8C8r...ujs332G8
@@ -102,7 +103,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
     You may be asked to choose a default zone/region.  If so, you can choose the closest to you.
 
-5. Run the following command:
+4. Run the following command:
 
     ```shell
     gcloud organizations list
@@ -118,6 +119,8 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
     Make a note of that ID; if you're going through the manual rclone instructions you'll need it in the next step.
 
-6. Google SDK is installed and configured.
+5. Google SDK is installed and configured.
+
+If you have problems with these steps, Google's own documentation is found [here](https://cloud.google.com/sdk/docs/install-sdk)
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-5-generate-a-random-prefix)

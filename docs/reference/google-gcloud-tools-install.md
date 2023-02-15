@@ -12,26 +12,10 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 - created the required [project](google-project-setup.md)
 - created the required [group](google-group-setup.md)
 
-This is a simplified extract from the original docs, which can be found [here](https://cloud.google.com/sdk/docs/quickstart#deb):
+1. Follow the installation process you will find [here](https://cloud.google.com/sdk/docs/install-sdk).
 
-1. Run the following commands, one at a time:
-
-    ```shell
-    sudo apt-get install apt-transport-https ca-certificates gnupg
-    ```
-
-    ```shell
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    ```
-
-    ```shell
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-    ```
-
-    ```shell
-    sudo apt-get update && sudo apt-get install google-cloud-sdk -y
-    ```
-
+   When you get to step 5, come back here.  DON'T RUN STEP 5.
+   
 2. Run the following command:
 
     ```shell

@@ -124,6 +124,9 @@ If you went through the saltbox rclone setup, these files got created for you.
 Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
 "A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan.
 
+!!! warning
+    A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts.  It *does not* support encrypted drives nor My Drive.
+
 Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes. You may use ```rclone listremotes``` to get your drive remotes.
 
 Example:

@@ -5,13 +5,13 @@
 ### Check Status
 
 ```shell
-sudo systemctl status autoscan.service
+docker ps autoscan
 ```
 
-### Restart Service
+### Restart Container
 
 ```shell
-sudo systemctl restart autoscan.service
+docker restart autoscan
 ```
 
 ### Previous Activity

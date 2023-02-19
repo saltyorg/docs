@@ -5,7 +5,7 @@
 ### Check Status
 
 ```shell
-docker ps autoscan
+docker ps | grep autoscan
 ```
 
 ### Restart Container

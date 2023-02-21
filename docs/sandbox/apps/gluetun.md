@@ -50,6 +50,4 @@ To route a Saltbox-configured container through Gluetun, you must set `<rolename
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
 
-### 3. Setup
-
 - [:octicons-link-16: Documentation](https://github.com/qdm12/gluetun){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -266,21 +266,22 @@ nav:
           - Docker:
             - ouroboros: sandbox/apps/ouroboros.md
             - watchtower: sandbox/apps/watchtower.md
+          - flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
+          - Gluetun: sandbox/apps/gluetun.md
+          - guacamole: sandbox/apps/guacamole.md
+          - handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
           - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Log Management:
+            - GoAccess: sandbox/apps/goaccess.md
+            - logarr: sandbox/apps/logarr.md
+            - monitorr: sandbox/apps/monitorr.md
           - Networking:
             - kcptun_client: sandbox/apps/kcptun_client.md
             - kcptun_server: sandbox/apps/kcptun_server.md
             - unifi: sandbox/apps/unifi.md
             - wireguard: sandbox/apps/wireguard.md
-          - flaresolverr: sandbox/apps/flaresolverr.md
-          - Log Management:
-            - GoAccess: sandbox/apps/goaccess.md
-            - logarr: sandbox/apps/logarr.md
-            - monitorr: sandbox/apps/monitorr.md
-          - guacamole: sandbox/apps/guacamole.md
-          - handbrake: sandbox/apps/handbrake.md
           - MakeMKV: sandbox/apps/makemkv.md
           - Puddletag: sandbox/apps/puddletag.md
           - sabthrottle: sandbox/apps/sabthrottle.md

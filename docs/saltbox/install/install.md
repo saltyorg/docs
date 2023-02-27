@@ -264,9 +264,9 @@ Note that generally speaking these five options are mutually exclusive.
 
 ## Step 5: Saltbox
 
-If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
-=== "Saltbox standard set of apps"
+=== "Saltbox"
 
     `saltbox' is an all-in-one media server for downloading and playback.  It installs saltbox core and a set of application as described [here](../basics/install_types)
     
@@ -275,7 +275,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
     ```
 
-=== "Mediabox [just playback]"
+=== "Mediabox [playback]"
 
     `mediabox' is just the parts required for playback.  It installs saltbox core and a set of application as described [here](../basics/install_types)
     
@@ -284,7 +284,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
     ```
 
-=== "Feederbox [just downloading]"
+=== "Feederbox [downloading]"
 
     `feederbox' is just the parts required for downloading.  It installs saltbox core and a set of application as described [here](../basics/install_types)
     
@@ -293,7 +293,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
     ```
 
-=== "Core [minimal requirements]"
+=== "Core [minimal]"
 
     `core' is the bare minimum required for saltbox.  It installs the basics as described [here](../basics/install_types)
     
@@ -302,7 +302,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
     ```
 
-=== "Apps of your choice"
+=== "Dealer's choice"
 
     If you want to install a personal selection of app, install corea and the app tags you want as listed [here](../basics/install_types)
     

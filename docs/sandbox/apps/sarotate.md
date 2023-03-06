@@ -12,56 +12,48 @@ Parses the specified Service Account files and automatically identifies the proj
 
 ### 1. Installation
 
-``` shell
-
-sb install sandbox-sarotate
-
-```
-
-### 2. Usage
-
-- After installing the role, add your SA path to the settings file in `/opt/sandbox/settings.yml`
+- Before installing the role, add your SA path to the settings file in `/opt/sandbox/settings.yml` and supply the remotes or union in your rclone.conf file.
 
 - Example
 
   ``` { .yaml}
+  ...
   sarotate: 
-  remotes: ["google"]
+  remotes: ["your_remote", "your_remote2", "your_union"]
   sa_path: "/opt/sa/all" # Change this as needed
   sleeptime: # Optional. Default is 300
   rc_port: # Default is localhost:5572
   rc_user: # Optional. Default is blank
   rc_pass: # Optional. Default is blank
   apprise: # Optional. Add an apprise url if it suits you
-
+  ...
   ```
 
-**remotes:** if you have a different union in your rclone.conf (typically located @ `/home/user/.config/rclone/`) you will want to supply that name here. The saltbox default is google.
+**remotes:** This will take individual drives, or a union remote, like `google`. Sarotate will  resolve the backend remotes for building the config from `/home/user/.config/rclone/`. You will want to supply that name here. If you don't use a union, list all of the remotes individually here instead, formatted like it is above.
 
-**sa_path:** supply the path to your service accounts. Saltbox default is `/opt/sa/all`
+**sa_path:** Supply the path to the directory holding your service accounts. Our automated shared drive script uses `/opt/sa/all`.
 
-Heres a short example of the `config.yaml` in `/opt/sarotate/`.
+Run the tag and install the service.
 
-```yaml
+``` shell
 
-rclone:
-  sleeptime: 300
+sb install sandbox-sarotate
 
-remotes:
-  '/opt/sa/all':
-    random_header-TV:
-      address: localhost:5572
-      user:
-      pass:
-    random_header-Anime:
-      address: localhost:5572
-      user:
-      pass:
+```
 
-notification:
-  errors_only: y
-  apprise:
-    - ''
+To check the status of the service, you can run:
+
+```shell
+
+sudo systemctl status sarotate.service
+
+```
+
+You can also follow the logs with:
+
+```shell
+
+tail -f /opt/sarotate/sarotate.log
 
 ```
 

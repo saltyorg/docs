@@ -19,13 +19,13 @@ Parses the specified Service Account files and automatically identifies the proj
   ``` { .yaml}
   ...
   sarotate: 
-  remotes: ["your_remote", "your_remote2", "your_union"]
-  sa_path: "/opt/sa/all" # Change this as needed
-  sleeptime: # Optional. Default is 300
-  rc_port: # Default is localhost:5572
-  rc_user: # Optional. Default is blank
-  rc_pass: # Optional. Default is blank
-  apprise: # Optional. Add an apprise url if it suits you
+    remotes: ["your_remote", "your_remote2", "your_union"]
+    sa_path: "/opt/sa/all" # Change this as needed
+    sleeptime: # Optional. Default is 300
+    rc_port: # Default is localhost:5572
+    rc_user: # Optional. Default is blank
+    rc_pass: # Optional. Default is blank
+    apprise: # Optional. Add an apprise url if it suits you
   ...
   ```
 

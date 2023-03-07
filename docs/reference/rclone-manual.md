@@ -62,13 +62,12 @@ Save that credential file on your server at `/opt/sa/project-creds.json`.  You m
 
 <details>
 <summary>How do I do that?</summary>
-<br />
 ```
 sudo mkdir -p /opt/sa
 sudo chown -R <user>:<group> /opt/sa
 ```
-Where <user> and <group> are the Saltbox user and group [by default `seed:seed`]
-   
+Where `<user>` and `<group>` are the Saltbox user and group [by default `seed:seed`]
+<br />
 </details>
 
 ### Step 3: Create a Google Group to hold service accounts

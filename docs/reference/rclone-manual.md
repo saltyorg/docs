@@ -58,7 +58,18 @@ That said, let's proceed.
 
 [Detailed instructions here](google-project-setup.md)
 
-Save that credential file on your server at `/opt/sa/project-creds.json`
+Save that credential file on your server at `/opt/sa/project-creds.json`.  You may need to create `/opt/sa` and make sure it's writable by you.
+
+<details>
+<summary>How do I do that?</summary>
+<br />
+```
+sudo mkdir -p /opt/sa
+sudo chown -R <user>:<group> /opt/sa
+```
+Where <user> and <group> are the Saltbox user and group [by default `seed:seed`]
+   
+</details>
 
 ### Step 3: Create a Google Group to hold service accounts
 

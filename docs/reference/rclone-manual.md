@@ -66,7 +66,7 @@ Save that credential file on your server at `/opt/sa/project-creds.json`.  You m
 sudo mkdir -p /opt/sa
 sudo chown -R <user>:<group> /opt/sa
 ```
-Where `<user>` and `<group>` are the Saltbox user and group [by default `seed:seed`]
+Where the two placeholders are the Saltbox user and group [by default `seed:seed`]
 <br />
 </details>
 

@@ -134,12 +134,12 @@ To do that you may need to create `/opt/sa` and make sure it's writable by you.
 
 <details>
 <summary>How do I do that?</summary>
-<br />
 ```
 sudo mkdir -p /opt/sa
 sudo chown -R <user>:<group> /opt/sa
 ```
-Where <user> and <group> are the Saltbox user and group [by default `seed:seed`]
+Where the two placeholders are the Saltbox user and group [by default `seed:seed`]
+<br />
 </details>
 
 If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-3-create-a-google-group-to-hold-service-accounts)

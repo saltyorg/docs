@@ -43,7 +43,7 @@ sb install sandbox-tandoor
 
 To create your initial user you need to
 
-- execute into the container using `docker exec -it tandoor sh`
+- execute a shell in the container using `docker exec -it tandoor sh`
 
 - activate the virtual environment `source venv/bin/activate`
 
@@ -59,7 +59,7 @@ To create your initial user you need to
 
 To reset a lost password if access to the container is lost you need to
 
-- execute into the container using `docker exec -it tandoor sh`
+- execute a shell in the container using `docker exec -it tandoor sh`
 
 - activate the virtual environment `source venv/bin/activate`
 

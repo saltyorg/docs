@@ -41,7 +41,7 @@ There are 3 phases to the setup. They are broken down below.
    2. `mount_client` setting is ignored for the NFS server (i.e. it will just use `2`).
 
       ``` { .shell }
-      nano /opt/community/hetzner_nfs.yml
+      nano /srv/git/saltbox/hetzner_nfs.yml
       ```
 
       ``` { .yaml }
@@ -69,7 +69,7 @@ There are 3 phases to the setup. They are broken down below.
       Note: `mount_client` will need to be either `3` or a number > `250`.
 
       ``` { .shell }
-      nano /opt/community/hetzner_nfs.yml
+      nano /srv/git/saltbox/hetzner_nfs.yml
       ```
 
       ``` { .yaml }

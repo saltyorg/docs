@@ -119,6 +119,10 @@ If you went through the saltbox rclone setup, these files got created for you.
 `ls /mnt/unionfs/*.bin` will give you the list of files you should enter here.
 </details>
 
+### Manual Scan URL
+
+The manual scan URL will be https://autoscan.YOUR_DOMAIN/triggers/manual.  Usage is described in the autoscan docs linked below.
+
 ### A-Train
 
 Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.

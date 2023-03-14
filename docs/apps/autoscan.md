@@ -12,6 +12,8 @@ Autoscan is a rewrite of the original Plex Autoscan written in the Go language. 
 
 ## Setup
 
+The Plex API is known to have trouble when scanning items into empty libraries.  You shoudl add at least one item to each Plex library and perform a manual scan as a first step.  If you don't do this, things may not get scanned into Plex in response to autoscan's requests.
+
 The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } is now replacing the bernard trigger.
 
 The generated config file will look something like this:

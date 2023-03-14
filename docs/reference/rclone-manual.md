@@ -166,13 +166,15 @@ Repeat the last part of [this step](google-group-setup.md) where you upload the 
 
 You now have shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the shared drives by path.
 
-## After the saltbox install
+## After the Final Rose
 
-There is one thing you may wish to do after the saltbox install is complete.
+US-centric trash-TV reference aside, there is one thing you may wish to do after the saltbox install is complete.
 
-You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).
+The "saltbox install" is the full installation of saltbox using `sb install saltbox` or the like, not the process you just completed above.
 
-Go [back to the install process](../../saltbox/install/install/#step-5-saltbox).
+You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).  The script described there operates on the default cloudplow config file, which does not exist yet if you are going through this for the first time.
+
+For now, go [back to the install process](../../saltbox/install/install/#step-5-saltbox).
 
 ## Existing Rclone Setup
 

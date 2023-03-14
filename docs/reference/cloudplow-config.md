@@ -16,6 +16,8 @@ AGAIN: This script is **only useful if you have used the [scripted rclone method
 
 This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix found in the config, which you create as part of that process] it will exit with a message to that effect.  There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
 
+### Important
+
 You will have to have completed `sb install saltbox` before using this script.
 
 1. Run the script
@@ -27,6 +29,12 @@ You will have to have completed `sb install saltbox` before using this script.
     ```
 
     If that doesn't work, update to the latest version of the files from the repo with `git pull` and try again.
+
+    If you see:
+    ```
+    There is no /opt/cloudplow/config.json here.
+    ```
+    You apparently ignored [this](#important) and have not completed the saltbox install, so cloudplow has not been installed, so its default config file in not present.  Complete the saltbox install then come back here.
 
 2. Restart the cloudplow service:
 

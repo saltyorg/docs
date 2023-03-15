@@ -51,10 +51,12 @@ Then retrieve the configuration files from a backup.
   ```
 
   If you did so, you can leverage the restore service.  If you didn't, you cannot leverage the restore service.
+  
 
   If those values are provided, the saltbox backup stores encvrypted copies of your config files on a saltbox-controlled server, so they can be retrieved and restored for you in this step.
 
-  Those values would be things *you made up*.  Nobody but you knows what they are.  If you do not know them, or have misplaced them, you will have to proceed [without the restore service](#without-restore-service).
+  
+  Those values would be things *you made up*.  Nobody but you knows what they are.  If you do not know them, or have misplaced them, you will have to proceed [without the restore service](#without-restore-service).<br/>
   </details>
 
 === "curl"

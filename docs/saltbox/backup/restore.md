@@ -35,6 +35,26 @@ Then retrieve the configuration files from a backup.
 
 ## Using Restore Service
 
+ <details>
+  <summary>How do I know if this applies?  What's the "restore service"?</summary>
+  <br />
+
+  When you set up the backup, you may have entered values in these two fields in the backup config file:
+    
+  ```text
+  ---
+  backup:
+  ...
+  restore_service:
+    user: 
+    pass: 
+  ```
+
+  If you did so, you can leverage the restore service.  If you didn't, you cannot leverage the restore service. 
+
+  Those values would be things *you made up*.  Nobody but you knows what they are.  If you do not know them, or have misplaced them, you will have to proceed without the restore service.
+  </details>
+
 === "curl"
 
     ```{ .sh .annotate }

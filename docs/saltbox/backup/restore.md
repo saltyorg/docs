@@ -46,8 +46,8 @@ Then retrieve the configuration files from a backup.
   backup:
   ...
     restore_service:
-      user: 
-      pass: 
+      user: SOMEUSERNAME
+      pass: SOMEPASSWORD
   ```
 
   If you did so, you can leverage the restore service.  If you didn't, you cannot leverage the restore service. 

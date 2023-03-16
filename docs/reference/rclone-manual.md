@@ -24,6 +24,10 @@ Rclone is used by [Cloudplow](cloudplow.md) and [Backup](../saltbox/backup/backu
 
 The guide below assumes you are using Google Drive.
 
+Further, it is assuming you are starting from nothing; a new Google account with no existing media on Google Drive.
+
+THIS PROCESS IS OPTIONAL.  THIS IS NOT A REQUIRED PART OF THE SALTBOX INSTALL.
+
 Rclone supports many cloud provider backends, but the only one routinely used by the Saltbox team is Google Drive.
 
 This process will use various scripts to do as much of this for you as possible, but there are some things that can't be scripted easily, like steps 1 and 2 below.
@@ -31,11 +35,11 @@ This process will use various scripts to do as much of this for you as possible,
 It also assumes you are using a [Google Workspace](https://workspace.google.com/) account, since it assumes you can create shared drives.  You can do some of this without a Workspace account, but the differences are not documented here.  You won't be able to directly follow the steps below, and most of the scripts won't work for you.
 
 !!! warning
-    IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S RARELY A REASON TO CREATE A SECOND SET.
+    IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S NO REASON TO CREATE A SECOND SET USING THE SAME GOOGLE ACCOUNT.
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
-If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or PlexGuide or the like, you most likely DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It will overwrite aspects of an existing rclone setup with no undo.
+If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or PlexGuide or the like, you DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It will overwrite aspects of an existing rclone setup with no undo.
 
 That said, let's proceed.
 

@@ -214,12 +214,14 @@ If you already know how to set that up, do so with your usual methods.  If not, 
 
 Note that generally speaking these five options are mutually exclusive.
 
-=== "Cloudbox Migration"
+=== "Cloudbox User"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
+    
+    Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup.  If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
 
     [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
-=== "PlexGuide/PTS Migration"
+=== "PlexGuide/PTS User"
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     The issues you will have to deal with will largely be around:
@@ -230,8 +232,10 @@ Note that generally speaking these five options are mutually exclusive.
 
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
-=== "Other Migration"
+=== "Media on Google Drive"
     You probably already have the required setup complete.  You should use your existing Google setup at least to start with.
+
+    If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential from the Google Dev Console.
 
     You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the settings.
 
@@ -239,6 +243,8 @@ Note that generally speaking these five options are mutually exclusive.
 
 === "I'm totally new to this"
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP YOU SHOULD NOT DO THIS.
+
+    THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
 
     If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 
@@ -256,8 +262,10 @@ Note that generally speaking these five options are mutually exclusive.
        This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.
     2. Create a Shared Drive in the Google Web UI.
        This process is described [here](../../reference/guides/google-shared-drive.md)
-    3. Create an rclone remote pointing at that shared drive.
+    3. Create an rclone remote with those credentials.
        This process is described [here](../../reference/guides/rclone-remote.md)
+
+    Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
 
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.

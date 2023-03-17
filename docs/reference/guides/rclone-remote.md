@@ -191,6 +191,8 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 10. For "Use auto config?", type `n` for "...remote or headless machine" and press <kbd class="platform-all">Enter</kbd>.
 
+    If you entered a service account above, skip to step 17.
+
     ```shell
     Use auto config?
      * Say Y if not sure
@@ -267,7 +269,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
         y) Yes
         n) No (default)
-        y/n> n
+        y/n> y
         ```
         You'll be presented with a list of shared drives you have access to.  Enter a number and press <kbd class="platform-all">Enter</kbd>.
 

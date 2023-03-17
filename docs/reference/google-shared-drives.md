@@ -69,11 +69,12 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
     python -m pip install -r requirements.txt
     ```
 
-4. Edit the `config.py` script:
+4. Create and edit the `config.py` file:
 
     [copy-paste this into your terminal window]
 
     ```shell
+    cp config.py.example config.py
     nano config.py
     ```
 
@@ -148,6 +149,8 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
     This script will create shared drives as listed in the config, add your group email as a manager, create mount files and ID folders on the root of each drive, build the folder structure as defined in the config, and create rclone remotes for the individual shared drives and a union rclone remote for use with Saltbox.
 
     It will fill in anything that is missing; if the shared drives are there but the media folders haven't been created, those will be created.  If everything has been created but the rclone remotes are missing; those will be filled in.
+    
+    NOTE: It will not touch any shared drives which it didn't create itself, and it does not delete data from any shared drives.
 
     If you defined a "backup_drive" in the config [or left it as "automatic"], then script will zip up:
 
@@ -262,5 +265,11 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
 4. Deactivate the virtual env used by this script.
 
     ```shell
-     deactivate
+    deactivate
+    ```
+
+5. Reboot your server
+
+    ```shell
+    sudo reboot
     ```

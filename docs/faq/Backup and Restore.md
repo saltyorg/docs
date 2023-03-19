@@ -7,7 +7,7 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 ## What is backed up?
 
-Only app data located in `/opt` and relevant config files (as listed below) are backed up.  The backup script does this by creating tarball files for each folder in `/opt` and placing them into your backup folder (as set in [`backup_config.yml`](/saltbox/backup/settings.md).). The folders in `/opt` are*all* backed up without regard for whether Saltbox created them in the first place.  For example, if you create `/opt/bingbangboing` it will be backed up and restored by Saltbox.
+Only app data located in `/opt` and relevant config files (as listed below) are backed up.  The backup script does this by creating tarball files for each folder in `/opt` and placing them into your backup folder (as set in [`backup_config.yml`](/saltbox/backup/settings/).). The folders in `/opt` are*all* backed up without regard for whether Saltbox created them in the first place.  For example, if you create `/opt/bingbangboing` it will be backed up and restored by Saltbox.
 
 If you have set it up, the Sandbox repo is located in `/opt`, so it will get backed up [this includes any changes you've made in that repo to the config or roles].  There is no catalog kept of what Sandbox roles you may have run, so none of the roles themselves will be run automatically on restore, but the data will be backed up and restored.
 

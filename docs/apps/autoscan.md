@@ -121,6 +121,8 @@ If you went through the saltbox rclone setup, these files got created for you.
 `ls /mnt/unionfs/*.bin` will give you the list of files you should enter here.
 </details>
 
+You will set up the webhooks for radarr/sonarr/lidarr as part of their setup.
+
 ### Manual Scan URL
 
 The manual scan URL will be https://autoscan.YOUR_DOMAIN/triggers/manual.  Usage is described in the autoscan docs linked below.

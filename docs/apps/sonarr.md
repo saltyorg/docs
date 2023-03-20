@@ -427,7 +427,7 @@ Make changes in the following sections:
 
 ## API Key
 
-This is used during the setup of [Overseer](overseerr.md) and [Organizr](organizr.md).
+This is used during the setup of [Overseer](overseerr.md), [Organizr](organizr.md), and [Prowlarr](prowlarr.md).
 
 - Go to "Settings" -> "General" -> "Security" -> "API Key".
 

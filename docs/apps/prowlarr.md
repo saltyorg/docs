@@ -25,4 +25,24 @@ sb install prowlarr
 
 ### 3. Setup
 
+#### 1. Adding Indexers to Sonarr/Radarr via Prowlarr
+
+Under "Settings >> Apps":
+
+1. Click the big `+` sign to add an App.
+2. 
+3. Click "Add Indexer" to add your favorite indexers (i.e. [torrent trackers](../reference/usenet-torrent.md)).
+
+4. When adding indexers into [Sonarr](../apps/sonarr.md#jackett)/[Radarr](../apps/radarr.md#jackett), you will need:
+
+    1. Indexer's Torznab Feed
+
+         - Copy this by clicking on "Copy Torznab Feed" button next to the Indexer.
+
+         - You will need to replace...
+
+           - `https` with `http`
+
+           - `jackett.yourdomain.com` with `jackett:9117`
+
 - [:octicons-link-16: Documentation](https://wiki.servarr.com/prowlarr){: .header-icons target=_blank rel="noopener noreferrer" }

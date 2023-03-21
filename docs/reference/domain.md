@@ -71,6 +71,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | nzbhydra2    | _Saltbox IP Address_   | 300 |
     | A Record | organizr     | _Saltbox IP Address_   | 300 |
     | A Record | portainer    | _Saltbox IP Address_   | 300 |
+    | A Record | login        | _Saltbox IP Address_   | 300 |
 
 === "Mediabox / Feederbox Install Type"
     You will need to create A Records for both IP addresses (Media and Feeder boxes) and set them to their respective subdomains.
@@ -81,6 +82,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     |:-------- |:------------ |:----------------------- |:--------- |
     | A Record | plex         | _Mediabox IP Address_  | 300 |
     | A Record | tautulli     | _Mediabox IP Address_  | 300 |
+    | A Record | login        | _Mediabox IP Address_  | 300 |
 
     Feederbox
 

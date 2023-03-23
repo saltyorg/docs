@@ -1,5 +1,3 @@
-THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
-
 # What is it?
 
 [SABnzbd](https://github.com/Novik/ruTorrent) is an Open Source Binary Newsreader written in Python.

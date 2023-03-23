@@ -18,11 +18,11 @@ sb install sabnzbd
 
 ## 1. URL
 
-- To access sabnzbd, visit `https://sabnzbd._yourdomain.com_`
+- To access SABnzbd, visit `https://sabnzbd._yourdomain.com_`
 
 ## 2. Basics
 
-- Go through the setup wizard.  YOu will need to enter server details:
+- Go through the setup wizard.  You will need to enter server details:
 
 ![](../images/sabnzbd/02-sabnzbd.png)
 
@@ -42,7 +42,7 @@ sb install sabnzbd
 
   SABnzbd requires the server to be filled in to set categories up.
 
-  **This needs to be done BEFORE adding sabnzbd as a downloader to any of those apps.**
+  **This needs to be done BEFORE adding SABnzbd as a downloader to any of those apps.**
 
 ![](../images/sabnzbd/05-sabnzbd.png)
 
@@ -56,4 +56,4 @@ sb install sabnzbd
 
 ![](../images/sabnzbd/07-sabnzbd.png)
 
-   Note that the category matches between Radarr and Sab.  The specific category doesn't matter; just that they match.
+   Note that the category matches between Radarr and SABnzbd.  The specific category doesn't matter; just that they match.

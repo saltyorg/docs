@@ -111,7 +111,7 @@ apprise: # (12)!
 
 7. Plex.tv username or email address on the account.
 
-8. Plex.tv password for the account.
+8. Plex.tv password for the account.  It should be wrapped in quotes if it contains any non alphanumeric characters.
 
 9. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
 

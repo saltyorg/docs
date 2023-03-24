@@ -88,7 +88,7 @@ Each tab shows a "section" in the file.
 
     `user` - Plex username or email address on the profile.
 
-    `pass` - Plex password. See the [password considerations](#password-considerations) below.
+    `pass` - Plex password. See the [password considerations](#password-considerations) below.  Wrap the password in quotes if it contains anything other than letters and numbers.
 
     `tfa` - "yes" or "no" depending on whether you want to use the two-factor authentication [TFA] compatible Plex connection system.
 

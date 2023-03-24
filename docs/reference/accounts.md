@@ -179,9 +179,10 @@ Each tab shows a "section" in the file.
     Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
     Default is `latest`.
 
-    `remote`: Rclone remote that Saltbox will use to setup Rclone VFS mount and Cloudplow.
+    `remote`: Name of rclone remote [as set in the rclone config] that Saltbox will use to setup Rclone VFS mount and Cloudplow.  
+    This is independent of the *type* of the remote, it is the name as you have set it in the rclone config.
 
-    Default is `google`.
+    Default is `google` [for historical reasons].
     Can be left blank to run without cloud storage].
 
 === "shell"

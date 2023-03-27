@@ -107,6 +107,10 @@ anchors:
 ...
 ```
 
+You should enter the entire list of bin files that were created by the automated script here.
+
+`ls /mnt/unionfs/*.bin` will give you the list of files you should enter here.
+
 Everything else should be ready to go for standard usage.
 
 <details>
@@ -117,8 +121,6 @@ Autoscan uses these to determine if your cloud storage is mounted and visible; i
 There's nothing special about the contents of these files; autoscan just needs to see that they exist.  Typically they are empty.
 <br />
 If you went through the saltbox rclone setup, these files got created for you.  
-<br />
-`ls /mnt/unionfs/*.bin` will give you the list of files you should enter here.
 </details>
 
 You will set up the webhooks for radarr/sonarr/lidarr as part of their setup.

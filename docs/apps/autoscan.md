@@ -147,7 +147,7 @@ You only need to set this up if you are planning to add media to Google Drive di
 "A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan at some point in the future.
 
 !!! warning
-    A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts.  It *does not* support encrypted drives nor My Drive.
+    A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts.  It *does not* support encrypted drives, My Drive, or authentication via Client ID/Secret or other means.
 
 Enter the names of the remotes you want to monitor in the [sandbox settings.yml](https://docs.saltbox.dev/sandbox/settings/). The Remotes can be either drive remotes or union remotes. You may use ```rclone listremotes``` to get your drive remotes.
 

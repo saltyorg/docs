@@ -5,7 +5,7 @@ tags:
   - mount
   - teamdrive
   - shared drive
-  - rcone_vfs
+  - rclone_vfs
 ---
 
 # How do I mount a teamdrive?

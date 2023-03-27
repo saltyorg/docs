@@ -12,7 +12,7 @@ Autoscan is a rewrite of the original Plex Autoscan written in the Go language. 
 
 ## Setup
 
-The Plex API is known to have trouble when scanning items into empty libraries.  You shoudl add at least one item to each Plex library and perform a manual scan as a first step.  If you don't do this, things may not get scanned into Plex in response to autoscan's requests.
+The Plex API is known to have trouble when scanning items into empty libraries.  You should add at least one item to each Plex library and perform a manual scan as a first step.  If you don't do this, things may not get scanned into Plex in response to autoscan's requests.
 
 The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train){: target=_blank rel="noopener noreferrer" } is now replacing the bernard trigger.
 
@@ -123,7 +123,15 @@ There's nothing special about the contents of these files; autoscan just needs t
 If you went through the saltbox rclone setup, these files got created for you.  
 </details>
 
-You will set up the webhooks for radarr/sonarr/lidarr as part of their setup.
+<details>
+<summary>Do I really need to include all seven or eight or however many?</summary>
+<br />
+Strictly speaking, no, not with the way saltbox sets up the mounts.  All those shared drives are part of a union remote, and the union remote is mounted, so there's really no possibility that some of those files would be present but not others.  Any one of them is probably sufficient.
+<br />
+However, there's no reason *not* to include them all as you can grab the list with a single command and a copy-paste.  You save a few keystrokes by not including all of them [you don't have to copy-paste `  - ` in front of those few lines], but in thinking about it at all you've spent the same amount of time.  Reading this question and answer have taken more time than it would have taken to include all of them as a belt-and-suspenders measure.
+</details>
+
+You will set up the webhooks for radarr/sonarr/lidarr as part of their setup, so they aren't discussed here
 
 ### Manual Scan URL
 
@@ -132,7 +140,11 @@ The manual scan URL will be https://autoscan.YOUR_DOMAIN/triggers/manual.  Usage
 ### A-Train
 
 Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
-"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan.
+
+**IMPORTANT**:
+You only need to set this up if you are planning to add media to Google Drive directly, *outside* the usual Radarr/Sonarr channels, or if you are monitoring a Shared Drive where new media appears outside those channels.  If you are not planning to do that, you can skip this portion of the setup.
+
+"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan at some point in the future.
 
 !!! warning
     A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts.  It *does not* support encrypted drives nor My Drive.

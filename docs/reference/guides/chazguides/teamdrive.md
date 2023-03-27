@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - mount
+  - teamdrive
+  - shared drive
+  - rcone_vfs
+---
+
 # How do I mount a teamdrive?
 
 You have a teamdrive you want to add to your Saltbox server so Plex can see it.  In this article I’m assuming that’s ALL you want to do.

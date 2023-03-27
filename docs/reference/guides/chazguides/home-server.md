@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - home
+  - port forward
+---
+
 # Installing Saltbox on a home server
 
 This article discusses details to consider when running Saltbox on a home server behind a residential router.  It's not meant to replace the existing install documentation.  Things here may not be discussed in sequence, as it's not intended as an install guide.  For that, refer to the install guide on the menu bar above.

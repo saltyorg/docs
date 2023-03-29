@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - VPN
+  - server
+---
+
 # Wireguard
 
 ## What is it?

@@ -302,6 +302,7 @@ nav:
           - Updating apps: reference/guides/app-update.md
         - Other:
           - Cloudplow Examples: reference/cloudplow.md
+          - Rclone in Cloudbox vs Saltbox: reference/rclone_cb_vs_sb.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
           - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md

@@ -235,9 +235,9 @@ Note that generally speaking these five options are mutually exclusive.
 === "Media on Google Drive"
     You probably already have the required setup complete.  You should use your existing Google setup at least to start with.
 
-    If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential from the Google Dev Console.
+    You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the [settings](../../reference/accounts.md).
 
-    You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the settings.
+    If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential from the Google Dev Console.
 
     [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
 
@@ -255,20 +255,25 @@ Note that generally speaking these five options are mutually exclusive.
     This should be enough capacity for quite a while for most users.
 
 === "Minimal setup, please"
+    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP THIS IS PROBABLY NOT WHAT YOU WANT.
 
     The simplest possible case is:
 
     1. Set up a Google Project and OAuth Credential file if you don't already have one.
-       This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.
+       This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.  That link takes you to one step in a multi-step process.  Don't continue to follow that.  Follow the steps on that page and then come back here.
     2. Create a Shared Drive in the Google Web UI.
-       This process is described [here](../../reference/guides/google-shared-drive.md)
+       This process is described [here](../../reference/guides/google-shared-drive.md)  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
     3. Create an rclone remote with those credentials.
        This process is described [here](../../reference/guides/rclone-remote.md)
 
     Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
+    
+    Note: This is the SIMPLEST POSSIBLE CASE as noted above; it doesn't discuss service accounts mltiple disks because it's the SIMPLEST POSSIBLE CASE.
 
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.
+
+How do you know if your rclone remote[s] are configured?  `rclone lsd google:/` should show you the root of your cloud storage.
 
 ## Step 5: Saltbox
 

@@ -168,7 +168,7 @@ Repeat the last part of [this step](google-group-setup.md) where you upload the 
 
 </details>
 
-You now have shared drives and union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union mount, which will distribute media to the shared drives by path.
+You now have shared drives and and a union combining them; the saltbox install will merge this with your local drive and cloudplow will upload to the union remote, which will distribute media to the shared drives by path.
 
 ## After the Final Rose
 

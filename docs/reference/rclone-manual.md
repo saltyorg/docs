@@ -54,7 +54,7 @@ That said, let's proceed.
 !!! warning
     THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
 
-## [OMG CLOUDBOX WASN'T THIS COMPLICATED](rclone_cb_vs_sb)
+#### [OMG CLOUDBOX WASN'T THIS COMPLICATED](rclone_cb_vs_sb.md)
    
 ### Step 1: Verify that the Shared Drive permissions are correct on your Google account
 

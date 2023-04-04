@@ -40,4 +40,12 @@ sb install sandbox-xteve
 
 - Run through the Configuration Wizard.
 
+- Use the following URLs when configuring your media server (e.g. Plex, Emby, Jellyfin)
+
+  - HDHomerun Device Address (Plex) `http://xteve:34400`
+
+  - Playlist (Emby, Jellyfin) `http://xteve:34400/m3u/xteve.m3u`
+
+  - EPG (all) `http://xteve:34400/xmltv/xteve.xml`
+
 - [:octicons-link-16: Documentation](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -19,13 +19,15 @@ PlexGuide removed the `.json` extension from its service account files, which it
 
 Most things that interact with service accounts in Saltbox expect that those files will have the extension.  If you want to use these service account files with Cloudplow [for uploading to Google Drive] or SARotate [for spreading Google Drive API usage across service accounts], they will need to have the `.json` extension restored.
 
-ONe way to add the extension to all these files woudl be to cd to the directory containing them and run:
+One way to add the extension to all these files:
+
+`cd` to the directory containing the "BlitzKeys" and run:
 
 ```
 rename 's/$/\.json/' *
 ```
 
-Copy these BlitzKeys and set appropriate permissions.
+Copy these "BlitzKeys" to `/opt/sa/all` and set appropriate permissions.
 
 ## Rclone.conf
 

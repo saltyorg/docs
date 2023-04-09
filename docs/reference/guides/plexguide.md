@@ -1,6 +1,10 @@
 # Migrating from PlexGuide to Saltbox
 
-These are some rough notes on migrating from PlexGuide to Saltbox
+These are some rough notes on migrating from PlexGuide to Saltbox.
+
+If you are a PlexGuide/PTS user moving to Saltbox, additions and corrections to these notes are appreciated and encouraged.  None of the Saltbox Team have used PlexGuide, and these notes have been provided for the most part by people who have made the switch to Saltbox.
+
+
 
 Some important files and their locations:
 
@@ -11,9 +15,17 @@ Some important files and their locations:
 
 ## Service Accounts
 
-PlexGuide removed the `.json` extension from its service account files, which it called "BlitzKeys".  Most things that interact with service accounts in saltbox expect that those files will have the extension.
+PlexGuide removed the `.json` extension from its service account files, which it called "BlitzKeys".  As with many design decisions in PlexGuide/PTS, the rationale for both the action and the rebranding is unclear.
 
-Copy these BlitzKeys and set appropriate permissions.  You do not need to add the .json extention, we just need to make sure they are being referenced later.
+Most things that interact with service accounts in Saltbox expect that those files will have the extension.  If you want to use these service account files with Cloudplow [for uploading to Google Drive] or SARotate [for spreading Google Drive API usage across service accounts], they will need to have the `.json` extension restored.
+
+ONe way to add the extension to all these files woudl be to cd to the directory containing them and run:
+
+```
+rename 's/$/\.json/' *
+```
+
+Copy these BlitzKeys and set appropriate permissions.
 
 ## Rclone.conf
 

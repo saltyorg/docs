@@ -2,7 +2,7 @@
 
 ## What is Saltbox?
 
-- [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } is an [Ansible](https://www.ansible.com/how-ansible-works) and [Docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server using LTS releases of Ubuntu Server 20.04 or 22.04, running on AMD64. Non-LTS releases of Ubuntu and Linux distros other than Ubuntu are not supported.  ARM processors, Raspberry Pi notably, are not supported.
+- [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } is an [Ansible](https://www.ansible.com/how-ansible-works) and [Docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server using LTS releases of Ubuntu Server 20.04 or 22.04, running on AMD64.  Non-LTS releases of Ubuntu are not supported.  Linux distros other than Ubuntu are not supported.  ARM processors, Raspberry Pi notably, are not supported.
 
 - Primary functions are: the automatic acquisition of media, storing that media on the cloud, and being able to  play it back from anywhere and from any device.
 

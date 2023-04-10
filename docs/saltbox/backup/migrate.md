@@ -92,7 +92,7 @@ Listed below are some common scenarios and their migration instructions.
 
     - `/opt/plex_patrol/settings.ini` (only if installed)
 
-6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#install-saltbox).
+6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
 7. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 

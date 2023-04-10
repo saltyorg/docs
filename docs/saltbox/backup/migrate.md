@@ -18,7 +18,7 @@ Listed below are some common scenarios and their migration instructions.
 
     - Point your domain's [DNS](../prerequisites/prerequisites.md#domain) to the new server.
 
-3. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#install-saltbox).
+3. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
@@ -40,7 +40,7 @@ Listed below are some common scenarios and their migration instructions.
 
     1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-    2. Add the Cloudflare API into [Accounts](../install/install/#configuration).
+    2. Add the Cloudflare API into [Accounts](../install/install/#step-2-configuration).
 
 4. If you are not using Cloudflare:
 
@@ -58,7 +58,7 @@ Listed below are some common scenarios and their migration instructions.
 
     - `/opt/plex_patrol/settings.ini` (only if installed)
 
-6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#install-saltbox).
+6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
 7. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
@@ -68,13 +68,13 @@ Listed below are some common scenarios and their migration instructions.
 
 1. [Back up](backup.md) your current Saltbox server.
 
-2. Add your new domain name into [Accounts](../install/install/#configuration).
+2. Add your new domain name into [Accounts](../install/install/#step-2-configuration).
 
 3. If you are using Cloudflare:
 
     1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
 
-    2. Add the Cloudflare API into [Accounts](../install/install/#configuration).
+    2. Add the Cloudflare API into [Accounts](../install/install/#step-2-configuration).
 
 4. If you are not using Cloudflare:
 

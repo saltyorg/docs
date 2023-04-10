@@ -60,9 +60,11 @@ Listed below are some common scenarios and their migration instructions.
 
 6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
-7. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
-8. Check to see if your [Plex Autoscan URL](../../../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly, if you are using Plex Autoscan.
+8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+
+9. Check to see if your [Plex Autoscan URL](../../../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly, if you are using Plex Autoscan.
 
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
@@ -94,6 +96,8 @@ Listed below are some common scenarios and their migration instructions.
 
 6. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
-7. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
-8. Check to see if your [Plex Autoscan URL](../../../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly, if you are using Plex Autoscan.
+8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+
+9. Check to see if your [Plex Autoscan URL](../../../apps/plex-autoscan/#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly, if you are using Plex Autoscan.

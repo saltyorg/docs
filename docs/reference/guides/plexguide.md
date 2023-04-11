@@ -4,7 +4,7 @@ These are some rough notes on migrating from PlexGuide to Saltbox.
 
 If you are a PlexGuide/PTS user moving to Saltbox, additions and corrections to these notes are appreciated and encouraged.  None of the Saltbox Team have used PlexGuide, and these notes have been provided for the most part by people who have made the switch to Saltbox.
 
-
+If you find things missing or unclear, PLEASE provide updates.
 
 Some important files and their locations:
 
@@ -152,5 +152,18 @@ ExecStop=/bin/fusermount -uz /mnt/gdrive
 sudo systemctl enable gdrive.service
 sudo systemctl start gdrive.service
 ```
+
+If you get an error about port 5572 already being in use, you will need to update the port in `gdrive.service`:
+
+```
+  --rc-addr=localhost:5572 \
+```
+to
+```
+  --rc-addr=localhost:5573 \
+```
+
+Or some other unused port number.
+
 
 These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation around migration.

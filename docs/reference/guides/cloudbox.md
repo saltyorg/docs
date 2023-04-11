@@ -194,3 +194,4 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
     sb install sandbox-nextcloud
 
   ```
+As with a Cloudbox restore, any non-standard service files will be present in `/opt/service-files`, but you will need to copy them into `/etc/systemd/system`, then activate and start them.  If you used the "tip44" method for adding teamdrives, for example, you'll need to do this.

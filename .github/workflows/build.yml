@@ -55,7 +55,7 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         id: cloudflare
-        uses: cloudflare/pages-action@v1.3.0
+        uses: cloudflare/pages-action@v1.4.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: 86b9f680e99b6d172395cc7309a9d8a8
@@ -76,4 +76,3 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "URL: ${{ needs.build.outputs.url }}"
           status: ${{ env.WORKFLOW_CONCLUSION }}
-

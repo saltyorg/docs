@@ -48,7 +48,7 @@ sb install sandbox-varken
 
     ```
 
-4. Visit grafana `https://grafana._yourdomain.com_` <br />
+4. Visit grafana `https://grafana._yourdomain.com_`
 
       - The configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
@@ -68,44 +68,6 @@ sb install sandbox-varken
 
       3. Save & Test
 
-2. Grafana Example from Organizrr Discord  (imported via `Dashboards > Manage > Import`) :
+7. You can find an example dashboard [here](https://raw.githubusercontent.com/thezak48/Varken/develop/dashboard_overseerr.json) which can be uploaded or pasted into Grafana to import.
 
-      from: GilbN -- Plex dashboard for Grafana
-      @Grafana-Group for anyone using [Varken](https://github.com/Boerderij/Varken){: target=_blank rel="noopener noreferrer" } Thought I'd share the [dashboard I made](https://grafana.com/dashboards/9558){: target=_blank rel="noopener noreferrer" }. (with the help of Rox and Tron)
-      You will need to add the piechart and worldmap plugins for the dashboard to work. Use the variables to set the
-      different data sources.
-
-      To Install PieChart/WorldMap: <br />
-
-      ``` { .shell }
-
-          cd /opt/grafana/plugins && git clone https://github.com/grafana/piechart-panel.git && git clone
-        https://github.com/grafana/worldmap-panel.git && docker restart grafana
-
-      ```
-
-      ![](https://grafana.com/api/dashboards/9558/images/5941/image)
-
-3. Grafana Examples from Varken Discord:
-
-      - [**Varken Official Supported Dashboards:**](https://grafana.com/dashboards?search=varken%20%5Bofficial%5D){: target=_blank rel="noopener noreferrer" }
-
-      - [**Online Users Table Example (Tautulli):**](https://gist.github.com/samwiseg0/91223c1e089d78a3ae6294c23d81e977){: target=_blank rel="noopener noreferrer" }
-
-      - **World Map w/ geoIP**
-
-      ![](../../images/community/vrkn_worldmap_1.png)
-      ![](../../images/community/vrkn_worldmap_2.png)
-
-      - [**Device Type Pie Chart:**](https://gist.github.com/samwiseg0/fab103fdf4b176a11517e478ce7c216f){: target=_blank rel="noopener noreferrer" }
-
-      - **Basic Panel Structure**
-
-      ![](../../images/community/vrkn_basic_panel_structure.png)
-
-- For app specific instructions refer to the grafana role,
-
-  - [grafana](../../sandbox/apps/grafana.md)<Br/>
-
-  - and the upstream documentation <BR/>
-       [:octicons-link-16: Documentation](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" }
+- For app specific instructions refer to the [grafana role](../../sandbox/apps/grafana.md) and the upstream documentation [:octicons-link-16: Documentation](https://wiki.cajun.pro/books/varken){: .header-icons target=_blank rel="noopener noreferrer" }

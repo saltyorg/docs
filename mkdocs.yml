@@ -303,7 +303,6 @@ nav:
           - Uptime Kuma: sandbox/apps/uptime_kuma.md
           - vaultwarden: sandbox/apps/vaultwarden.md
           - Visualization:
-            - Grafana: sandbox/apps/grafana.md
             - Varken: sandbox/apps/varken.md
 
   - Apps:
@@ -343,6 +342,8 @@ nav:
         - diun: apps/diun.md
         - MariaDB: apps/mariadb.md
         - PostgreSQL: apps/postgres.md
+      - Visualization:
+        - Grafana: sandbox/apps/grafana.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
 

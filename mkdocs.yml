@@ -343,7 +343,7 @@ nav:
         - MariaDB: apps/mariadb.md
         - PostgreSQL: apps/postgres.md
       - Visualization:
-        - Grafana: sandbox/apps/grafana.md
+        - Grafana: apps/grafana.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
 

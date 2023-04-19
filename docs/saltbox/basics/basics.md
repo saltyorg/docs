@@ -58,7 +58,7 @@ Once the downloads are complete, Sonarr & Radarr will move [or copy in the case 
 
 The original seeding torrents will remain in the download directory [they never leave the local machine] until they are deleted by you or some form of automation.
 
-[AutoScan](https://github.com/cloudbox/autoscan/) will, in turn, tell Plex to scan for the newly downloaded TV Show or Movie, by only scanning the specific season or movie folder. This will
+[AutoScan](https://github.com/cloudbox/autoscan/) will, in turn, tell Plex to scan for the newly downloaded show or movie, by only scanning the specific season or movie folder. This will
 
 - make the media appear in Plex sooner than what a full library scan would have been able to do, and
 - reduce the chances of Cloud Storage API bans for excessive activity.

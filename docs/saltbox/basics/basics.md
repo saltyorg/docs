@@ -63,7 +63,9 @@ The original seeding torrents will remain in the download directory [they never 
 - make the media appear in Plex sooner than what a full library scan would have been able to do, and
 - reduce the chances of Cloud Storage API bans for excessive activity.
 
-[Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually<sup name="a4">[\[4\]](#f4) </sup> move everything<sup name="a5">[\[5\]](#f5) </sup> from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage, thereby reducing the storage used on the (local) server.
+In the default config, this scan occurs **ten minutes**<sup name="a4">[\[4\]](#f4) </sup> after radarr/sonarr sent the notification.
+
+[Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually<sup name="a5">[\[5\]](#f5) </sup> move everything<sup name="a6">[\[6\]](#f6) </sup> from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage, thereby reducing the storage used on the (local) server.
 
 During this migration, the media files will continue to be accessible to Media Servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
 
@@ -77,8 +79,10 @@ During this migration, the media files will continue to be accessible to Media S
 
 <sup><b name="f3">[3](#a3)</b> The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however,  `/mnt/local` is the only _writeable_ part of the mergerfs [for the purpose of  creating new files], so the newly-written files will be placed in `/mnt/local`. </sup>
 
-<sup><b name="f4">[4](#a4)</b> By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive.  This threshold can be adjusted as needed in the Cloudplow config. </sup>
+<sup><b name="f4">[4](#a4)</b> This ten-minute delay can be changed in the Autoscan config file.  It's here for two reasons; it ensures that the file is completely copied into the media directory before Plex scans it, and it allows a season of TV to be collected and send to Plex as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to Plex ten minutes after the last epsiode completed downloading.</sup>
 
-<sup><b name="f5">[5](#a5)</b> There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceeed this limit on uploads [750 GB/day/service account]. </sup>
+<sup><b name="f5">[5](#a5)</b> By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive.  This threshold can be adjusted as needed in the Cloudplow config. </sup>
+
+<sup><b name="f6">[6](#a6)</b> There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceeed this limit on uploads [750 GB/day/service account]. </sup>
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

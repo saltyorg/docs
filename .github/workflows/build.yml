@@ -66,6 +66,9 @@ jobs:
       - name: Build mkdocs
         run: mkdocs build
 
+      - name: Debug
+        run: ls -la
+
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
         id: cloudflare

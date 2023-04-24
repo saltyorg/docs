@@ -46,13 +46,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
-      - name: Set up build cache
-        uses: actions/cache@v3
-        id: cache
-        with:
-          key: ${{ runner.os }}-${{ hashFiles('.cache/**') }}
-          path: .cache
+          cache: 'pip'
 
       - name: Install wheel
         run: pip install wheel
@@ -65,9 +59,6 @@ jobs:
 
       - name: Build mkdocs
         run: mkdocs build
-
-      - name: Debug
-        run: ls -la
 
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false

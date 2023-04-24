@@ -48,15 +48,6 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
-      - name: Install wheel
-        run: pip install wheel
-
-      - name: Install mkdocs material insiders
-        run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
-
-      - name: Install lightgallery
-        run: pip install lightgallery
-
       - name: Build mkdocs
         run: mkdocs build
 

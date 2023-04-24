@@ -1,0 +1,3 @@
+wheel
+git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+lightgallery

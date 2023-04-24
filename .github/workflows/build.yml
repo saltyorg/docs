@@ -14,18 +14,22 @@ jobs:
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
     steps:
-    - uses: actions/checkout@v3
-    - uses: BobAnkh/add-contributors@master
-      with:
-        REPO_NAME: 'saltyorg/docs'
-        CONTRIBUTOR: '### Contributors'
-        COLUMN_PER_ROW: '6'
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        IMG_WIDTH: '100'
-        FONT_SIZE: '14'
-        PATH: '/README.md'
-        COMMIT_MESSAGE: 'docs(README): update contributors'
-        AVATAR_SHAPE: 'square'
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: BobAnkh/add-contributors@master
+        with:
+          REPO_NAME: 'saltyorg/docs'
+          CONTRIBUTOR: '### Contributors'
+          COLUMN_PER_ROW: '6'
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IMG_WIDTH: '100'
+          FONT_SIZE: '14'
+          PATH: '/README.md'
+          COMMIT_MESSAGE: 'docs(README): update contributors'
+          AVATAR_SHAPE: 'square'
 
   build:
     runs-on: ubuntu-22.04
@@ -33,13 +37,22 @@ jobs:
     outputs:
       url: ${{ steps.cloudflare.outputs.url }}
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Setup Python 3
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
+      - name: Set up build cache
+        uses: actions/cache@v3
+        id: cache
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('.cache/**') }}
+          path: .cache
 
       - name: Install wheel
         run: pip install wheel
@@ -54,6 +67,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to Cloudflare Pages
+        if: github.event.repository.fork == false
         id: cloudflare
         uses: cloudflare/pages-action@v1.4.1
         with:

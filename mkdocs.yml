@@ -125,6 +125,8 @@ nav:
       - Accessing Apps: saltbox/basics/accessing_apps.md
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
+      - Major Upgrade Guide:
+        - Traefik 3.0 Upgrade: saltbox/upgrade/traefik3.md
       - Backup/Restore:
         - Settings: saltbox/backup/settings.md
         - Backup: saltbox/backup/backup.md

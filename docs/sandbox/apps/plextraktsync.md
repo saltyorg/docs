@@ -23,23 +23,27 @@ Set your general preferences in `/opt/plextraktsync/config.yml`.
 The following command will launch an interactive script prompting you for missing credentials (use this to set up Trakt.tv):
 
 ```shell
-docker exec -it plextraktsync python3 -m plextraktsync login
+docker exec -it plextraktsync plextraktsync login
 ```
 
 By default, the target Plex server is set to your main Plex Saltbox instance, and the sync user is set to that server's owner account. If you wish to reset this, run:
 
 ```shell
-docker exec -it plextraktsync python3 -m plextraktsync plex-login
+docker exec -it plextraktsync plextraktsync plex-login
 ```
-
-Most of these fields can be manually edited in `/opt/plextraktsync/.env`.
 
 ### 3. Usage
 
-By default, the PlexTraktSync instance's only assignment is to listen to your configured user's Plex activity and scrobble it. You may also wish to sync your backlog on a schedule, for example, by adding a crontab line containing `docker exec plextraktsync python3 -m plextraktsync`.
+Unattended, the PlexTraktSync instance's only task is to listen to your configured user's Plex activity and scrobble it.
+
+The following will perform a one-time sync of the data you have specified in the configuration file.
+
+```shell
+docker exec -it plextraktsync plextraktsync sync
+```
 
 To get a list of commands, run:
 
 ```shell
-docker exec -it plextraktsync python3 -m plextraktsync --help
+docker exec -it plextraktsync plextraktsync --help
 ```

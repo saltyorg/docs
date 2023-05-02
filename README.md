@@ -174,9 +174,9 @@ The docs are actually built with a different release of mkdocs-material, so to p
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kaizensh>
-            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=kaizen/>
+            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=Logan Honeycutt/>
             <br />
-            <sub style="font-size:14px"><b>kaizen</b></sub>
+            <sub style="font-size:14px"><b>Logan Honeycutt</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

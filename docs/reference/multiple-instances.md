@@ -125,7 +125,7 @@ For example, this will install a single standard instance of photoprism:
 sb install sandbox-photoprism
 ```
 
-Then if you wanted a second at `photprism_again.DOMAIN.TLD`:
+Then if you wanted a second at `photoprism_again.DOMAIN.TLD`:
 
 ```shell
 sb install sandbox-photoprism  -e photoprism_name=photoprism_again

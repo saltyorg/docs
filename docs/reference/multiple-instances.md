@@ -114,3 +114,21 @@ You can find roles that support this new method with the following command:
 ```shell
 grep -Ril "_instances:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
 ```
+
+### What about roles that aren't listed here?
+
+You can create multiple instances of nearly any role with an environment variable:
+
+For example, this will install a single standard instance of photoprism:
+
+```shell
+sb install sandbox-photoprism
+```
+
+Then if you wanted a second at `photprism_again.DOMAIN.TLD`:
+
+```shell
+sb install sandbox-photoprism  -e photoprism_name=photoprism_again
+```
+
+

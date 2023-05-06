@@ -46,6 +46,10 @@
 
 - Saltbox uses secure HTTPS backed by [Let's Encrypt](https://letsencrypt.org/) or [ZeroSSL](https://zerossl.com/) certificates.
 
+### Single-sign-on
+
+- Saltbox can put all your media apps behind Authelia security rather than relying on individual app logins.
+
 ### Easy Backup and Restore
 
 - Configuration and data files for all key applications are conveniently stored in /opt, which makes backup so easy. Easily pack up your server and move to another one with Saltbox's built-in Backup.

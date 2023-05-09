@@ -48,7 +48,7 @@ See [here](../../reference/server.md) for more information about server requirem
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect** to the apps using `IP:PORT`.
 
-See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
+If you use Cloudflare for DNS [which is free and doesn't require that you register your domain through Cloudflare], the Saltbox setup can make the required DNS settings for you.  If you aren't using Cloudflare, you will have to set this up at your DNS provider yourself.  See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
 
 ## Cloud Storage
 

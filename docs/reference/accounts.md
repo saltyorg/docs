@@ -108,6 +108,8 @@ Each tab shows a "section" in the file.
 
     `token` - Docker Hub access token.
 
+    Note that this is a Docker Hub *token*, not your Docker Hub password.  You create one of these in the security tab of your account settings at dockerhub, and it will look something like: `dckr_pat_EZ-YVvzrb_OzZyToNyGeEzErBiLl`
+    
     This parameter is optional.
     Entering Dockerhub credentials increases the number of images one can pull.
 

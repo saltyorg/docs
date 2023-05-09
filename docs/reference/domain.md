@@ -97,11 +97,11 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
 
---
+## iii. Using the Cloudflare API
 
-## Getting a Cloudflare API Key
+### Getting a Cloudflare API Key
 
-### Intro
+#### Intro
 
 [Cloudflare](https://www.cloudflare.com) a service that, among other things, protects and accelerates a wide network of websites. By being the "man in the middle", it can act like a free DNS provider.
 
@@ -125,7 +125,7 @@ Although Cloudflare is not required for Saltbox, it is still recommended because
 
 _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [below](#post-setup)._
 
-### Sign Up
+#### Sign Up
 
 1. Sign up for a free [Cloudflare](https://www.cloudflare.com/) account.
 
@@ -143,7 +143,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
     ![](../images/namesilo-dns.png)
 
-### Setup
+#### Setup
 
 1. Go to [Cloudflare.com](https://www.cloudflare.com/).
 
@@ -167,7 +167,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 -->
 
-### Cloudflare API Key
+#### Cloudflare API Key
 
 1. Go to [Cloudflare.com](https://www.cloudflare.com/).
 
@@ -189,7 +189,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
    ![](../images/cloudflare/cloudflare-api-show.png){ width=50% }
 
-### Post-Setup
+#### Post-Setup
 
 After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  NOte, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 

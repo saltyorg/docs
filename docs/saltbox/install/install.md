@@ -117,7 +117,7 @@ apprise: # (12)!
 
 10. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
 
-11. Docker Hub account token
+11. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
 
 12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 

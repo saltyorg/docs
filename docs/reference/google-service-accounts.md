@@ -15,6 +15,8 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
 IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT [CLOUDBOX, PTS, ETC.]  YOU CAN USE THOSE.  THERE IS NO REQUIREMENT TO CREATE MORE.
 
+SA-GEN has recently [May 2023] changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
+
 1. Create /opt/sa and make sure it's writable by you.
 
     ```shell
@@ -87,7 +89,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
     [copy-paste this into your terminal window]
 
     ```shell
-    cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen
+    cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen/old
     ```
 
 3. Edit the `sa-gen` script:
@@ -95,7 +97,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
     [copy-paste this into your terminal window]
 
     ```shell
-    nano sa-gen
+    nano sa-gen_2022
     ```
 
     Edit the beginning of the script as indicated by `<<<<` below:
@@ -124,10 +126,10 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 4. Run the `sa-gan` script:
 
     ```shell
-    ./sa-gen
+    ./sa-gen_2022
     ```
 
-    `sa-gen` will create three projects, 300 SAs, and download them to `/opt/sa`:
+    `sa-gen_2022` will create three projects, 300 SAs, and download them to `/opt/sa`:
 
     ```text
     Total SA json keys before running sa-gen = 0

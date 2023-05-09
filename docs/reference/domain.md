@@ -10,7 +10,7 @@ Get a domain name from any domain name registry (e.g. [Namecheap](https://Namech
 
 If you already have one, you may skip this step.
 
-_Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), do not support wildcard DNS settings, and paid domain names can be had for less than a dollar per year (see promo deals on various sites). However, you can add them to Cloudflare and not have to worry about it._
+_Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), do not support wildcard DNS settings, and paid domain names can be had for less than a dollar per year ([tld-list](https://tld-list.com/) is useful in this regard)._
 
 If you are planning to use the automatic Cloudflare integration, there are some top-level domains [TLDs] that will not work with it.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).
 
@@ -97,7 +97,7 @@ Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*
     | A Record | organizr     | _Feederbox IP Address_ | 300 |
     | A Record | portainer    | _Feederbox IP Address_ | 300 |
 
-## iii. Using the Cloudflare API
+## iii. Automatic Cloudflare integration
 
 ### Getting a Cloudflare API Key
 

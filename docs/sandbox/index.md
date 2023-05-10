@@ -66,6 +66,7 @@
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
+- **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`
 - **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`
 - **[minecraft-bedrock](../sandbox/apps/minecraft-bedrock.md)**  - tag - `sandbox-minecraft-bedrock`
 - **[miniflux](../sandbox/apps/miniflux.md)**  - tag - `sandbox-miniflux`

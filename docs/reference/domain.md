@@ -191,7 +191,7 @@ _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yoursel
 
 #### Post-Setup
 
-After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  NOte, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
+After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like.  Note, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 
 Do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK.
 

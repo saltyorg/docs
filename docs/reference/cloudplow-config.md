@@ -50,6 +50,8 @@ You will have to have completed `sb install saltbox` before using this script.
 
 ---
 
+# Updating Cloudplow Config for additional shared drives
+
 A backup of the stock `config.json` will be created as `config.json.old`; if you want to run this script a second time [perhaps you ran the previous script again and added some shared drives], run `cp config.json.old config.json` before running the script:
 
 NOTE: This will overwrite the customized config.json, losing any changes you have made.  If the only changes you've made were via this script, that's totally safe.  If you've made other changes, they will be overwritten and you will have to repeat them

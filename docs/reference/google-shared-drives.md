@@ -268,7 +268,9 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
     deactivate
     ```
 
-5. Reboot your server
+5. Rerun the cloudplow setup script if desired. [notes](../cloudplow-config#updating-cloudplow-config-for-additional-shared-drives)
+
+6. Reboot your server
 
     ```shell
     sudo reboot

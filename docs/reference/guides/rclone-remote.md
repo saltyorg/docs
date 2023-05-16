@@ -2,6 +2,8 @@
 
 This article describes how to create an rclone remote
 
+This article walks through creating a Google Drive remote, but basically the same process is followed for any type of remote; dropbox, sftp, whatever.  Choose the desired type of remote in step 4 and follow the prompts.
+
 ## Prerequisites
 
 To go through this process, you will need either one of these for your Google account:

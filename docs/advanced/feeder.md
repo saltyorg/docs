@@ -12,7 +12,7 @@ The following steps will be done on the Mediabox.
 
 1. In rclone config, create an sftp remote to your Feederbox called `feeder` (Here is an [asciicast](https://asciinema.org/a/184084?t=0&speed=1&size=medium&cols=75&rows=25) video walking through the process).
 
-      _Note: If you don't already have one, add the `feederbox` [subdomain](../reference/subdomain) and point it to your Feederbox's IP address. If you are using Cloudflare, make sure CDN/Proxy is not enabled for this subdomain._
+      _Note: If you don't already have one, add the `feederbox` [subdomain](../../reference/subdomain) and point it to your Feederbox's IP address. If you are using Cloudflare, make sure CDN/Proxy is not enabled for this subdomain._
 
 1. Edit the `mounts` section of `adv_settings.yml` and set `feeder` to "yes":
 

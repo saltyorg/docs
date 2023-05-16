@@ -33,14 +33,15 @@ At this time, we only support LTS releases of Ubuntu Server [20.04](https://rele
 
 For best results, the assumed server environment for Saltbox is:
 
-- a dedicated remote server [not a VPS],
-- a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
+- a dedicated remote server [not a VPS or a virtualized setup like proxmox],
+- with a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
+- running the server version of Ubuntu 20.04 or 22.04,
 - from a server provider like Hetzner, OVH, kimsufi, etc.,
 - nothing else [docker, for example] preinstalled,
 - with at least 500GB of disk space, and
 - allowing root access.
 
-See [here](../../reference/server.md) for more information about server requirements.
+See [here](../../reference/server.md) for more details about server requirements.
 
 ## Domain
 
@@ -54,7 +55,9 @@ If you use Cloudflare for DNS [which is free and doesn't require that you regist
 
 A base assumption in Saltbox is that you are storing your media on cloud storage.  Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the preferred choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in plex-autoscan and the service-account rotation in cloudplow.
 
-See [here](../../reference/cloud.md) for more information about Cloud Storage requirements and running Saltbox without it.
+With recent Google changes, Dropbox is becoming more popular, but this documentation has not yet been updated to cover Dropbox speficis or idiosyncrasies.
+
+See [here](../../reference/cloud.md) for more details about Cloud Storage requirements and running Saltbox without it.
 
 ## Plex Account
 
@@ -62,7 +65,7 @@ You'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already
 
 This may change in the future, but for now it's a requirement for the simplest Happy Path install described here.
 
-See [here](../../reference/plex.md) for more information about Plex account requirements.
+See [here](../../reference/plex.md) for more details about Plex account requirements.
 
 ## Usenet or Bittorrent sources
 
@@ -70,6 +73,6 @@ If you are planning to set up a standard Saltbox or a feederbox, you will need a
 
 You won't need these particular [media source] details for the initial install, but you will need them for application setup.
 
-See [here](../../reference/usenet-torrent.md) for more information about media source requirements.
+See [here](../../reference/usenet-torrent.md) for more details about media source requirements.
 
 Next, let's discuss Saltbox [Install types](../basics/install_types.md).

@@ -10,7 +10,7 @@ The install assumes that this is a fresh setup without anything else installed. 
 
 Typically this server is remote to you; you can install on a home server, keeping in mind some [home server considerations](#home-server-considerations)
 
-Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
+Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like or a virtualized setup like proxmox.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
 
 A commonly-asked question is ["can I run saltbox on this server?"](guides/chazguides/server.md)
 
@@ -30,14 +30,14 @@ If you are planning to use Usenet, SSD should be considered required, and NVME h
 
 If you are planning to use torrents, you should have much more disk space than that available for seeding.  Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding.
 
-If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox.  Depending on the size of your library, that metadata can be quite large.
+If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives the disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox.  Depending on the size of your library, that metadata can be quite large.
 
 ### Home Server considerations
 
 If you are setting this up on a home server, verify, **before installing Saltbox**:
 
   1. Make sure your ISP doesn't block ports 80 and 443 [if your ISP blocks these ports, it won't work.]
-  2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network]
+  2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network or you will have to do manual setup to allow it]
   3. Open the relevant [ports](ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
   4. Point your domain at your home IP and configure some dynamic DNS software to keep it updated.  Saltbox has a dynamic dns client available [it's not installed by default], but there are many ways to set this up.  Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
   5. Review the notes about [local storage](local-storage.md) if you're not planning to use cloud storage.
@@ -60,7 +60,9 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 - Leave ample space in `/boot` (e.g. 2+ GB).
 
-- putting the `/opt` directory on a `btrfs` partition can dramatically reduce the amount of time your containers are down during backup.
+- putting the `/opt` directory on a `btrfs` partition can dramatically reduce the amount of time your containers are down during [backup](../saltbox/backup).  A reasonable starting size for `/opt` is 250G.
+
+- You can use a simgle partition formatted as BTRFS, but if you do so *make sure* you install the `btrfs-mainentance` tag after setup.
 
 Examples:
 

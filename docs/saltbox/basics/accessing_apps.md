@@ -10,19 +10,19 @@ Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
 
 | **App  Name**          | **with domain**                           |
 |:---------------------- |:----------------------------------------- |
-| Jackett                | <https://jackett._yourdomain.com_>        |
-| Lidarr                 | <https://lidarr._yourdomain.com_>         |
-| NZBGet                 | <https://nzbget._yourdomain.com_>         |
-| NZBHydra2              | <https://nzbhydra2._yourdomain.com_>      |
-| Organizr               | <https://organizr._yourdomain.com_>       |
-| Overseerr              | <https://overseerr._yourdomain.com_>      |
-| Plex                   | <https://plex._yourdomain.com_>           |
-| WebTools for Plex      | <https://plex-webtools._yourdomain.com_>  |
-| Portainer              | <https://portainer._yourdomain.com_>      |
-| Radarr                 | <https://radarr._yourdomain.com_>         |
-| ruTorrent              | <https://rutorrent._yourdomain.com_>      |
-| Sonarr                 | <https://sonarr._yourdomain.com_>         |
-| Tautulli               | <https://tautulli._yourdomain.com_>       |
+| Jackett                | <https://jackett.yourdomain.com>        |
+| Lidarr                 | <https://lidarr.yourdomain.com>         |
+| NZBGet                 | <https://nzbget.yourdomain.com>         |
+| NZBHydra2              | <https://nzbhydra2.yourdomain.com>      |
+| Organizr               | <https://organizr.yourdomain.com>       |
+| Overseerr              | <https://overseerr.yourdomain.com>      |
+| Plex                   | <https://plex.yourdomain.com>           |
+| WebTools for Plex      | <https://plex-webtools.yourdomain.com>  |
+| Portainer              | <https://portainer.yourdomain.com>      |
+| Radarr                 | <https://radarr.yourdomain.com>         |
+| ruTorrent              | <https://rutorrent.yourdomain.com>      |
+| Sonarr                 | <https://sonarr.yourdomain.com>         |
+| Tautulli               | <https://tautulli.yourdomain.com>       |
 
 ## Additional Apps
 

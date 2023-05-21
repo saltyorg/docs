@@ -151,7 +151,7 @@ A couple points:
             ],
             "rclone_extras": {
                 "--checkers": 8,
-                "--drive-chunk-size": "128M",
+                "--dropbox-chunk-size": "128M",
                 "--stats": "60s",
                 "--transfers": 8,
                 "--verbose": 1

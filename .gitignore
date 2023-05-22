@@ -4,3 +4,5 @@
 go.sh
 # Visual Studio
 /.vs
+# direnv
+.direnv/**

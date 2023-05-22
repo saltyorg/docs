@@ -2,6 +2,7 @@
 
 This article describes how to create an rclone remote for Dropbox
 
+## NOTE: THIS ARTICLE IS A WORK IN PROGRESS
 ## Prerequisites
 
 To go through this process, you will need the following:
@@ -123,13 +124,13 @@ To go through this process, you will need the following:
 
 10. Give access by clicking through these two dialogs.
 
-    [](../../images/rclone-remote/dropbox-verification.png)
+    ![](/images/rclone-remote/dropbox-verification.png)
 
-    [](../../images/rclone-remote/dropbox-permission.png)
+    ![](/images/rclone-remote/dropbox-permission.png)
 
 11. The browser should report success.
 
-    [](../../images/rclone-remote/dropbox-success.png)
+    ![](/images/rclone-remote/dropbox-success.png)
 
 12. And a token should show up in the terminal on your local computer:
 

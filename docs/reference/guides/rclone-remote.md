@@ -222,13 +222,15 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 12. If asked to login, use the Google Drive account you want to store your data in.
 
-    [](../../images/rclone-remote/google-login.png)
+    ![](/images/rclone-remote/google-login.png)
 
 13. Give access by clicking "Allow".
 
-    [](../../images/rclone-remote/google-permission.png)
+    ![](/images/rclone-remote/google-permission.png)
 
 14. The browser should report success.
+
+    ![](/images/rclone-remote/dropbox-success.png)
 
 15. And a token should show up in the terminal on your local computer:
 

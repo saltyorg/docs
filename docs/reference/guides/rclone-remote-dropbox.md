@@ -121,13 +121,15 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 9. If asked to login, use the Dropbox account you want to store your data in.
 
-    [](../../images/rclone-remote/dropbox-login.png)
+10. Give access by clicking through these two dialogs.
 
-10. Give access by clicking "Allow".
+    [](../../images/rclone-remote/dropbox-verification.png)
 
     [](../../images/rclone-remote/dropbox-permission.png)
 
 11. The browser should report success.
+
+    [](../../images/rclone-remote/dropbox-success.png)
 
 12. And a token should show up in the terminal on your local computer:
 
@@ -402,3 +404,16 @@ You will need rclone and a web browser installed on a machine local to you [this
           -1 2023-05-22 17:07:58        -1 encrypt
     ```
 
+ADJVAHBX9i5dw
+
+App key
+y2cyd2y4ea9x3x1
+App secret
+9xvcqws60neklwy
+
+c9DRi2mTuNc
+
+App key
+h80s0ew3tgqsm1x
+App secret
+gn96vf1sglak009

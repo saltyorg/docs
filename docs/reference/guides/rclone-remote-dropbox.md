@@ -208,7 +208,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 21. Press <kbd class="platform-all">Enter</kbd> to select the defaults for the next two settings:
 
-    ```
+    ```shell
     Option filename_encryption.
     How to encrypt the filenames.
     Choose a number from below, or type in your own string value.
@@ -221,7 +221,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     / Don't encrypt the file names.
     3 | Adds a ".bin" extension only.
     \ (off)
-    filename_encryption> 1
+    filename_encryption>
 
     Option directory_name_encryption.
     Option to either encrypt directory names or leave them intact.
@@ -232,12 +232,12 @@ You will need rclone and a web browser installed on a machine local to you [this
     \ (true)
     2 / Don't encrypt directory names, leave them intact.
     \ (false)
-    directory_name_encryption> 1
+    directory_name_encryption>
     ```
 
 22. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you.  Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
 
-    ```
+    ```shell
     Option password.
     Password or pass phrase for encryption.
     Choose an alternative below.
@@ -282,7 +282,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 23. Answer `y` and press <kbd class="platform-all">Enter</kbd> to enter advanced config:
 
-    ```
+    ```shell
     Edit advanced config?
     y) Yes
     n) No (default)
@@ -291,7 +291,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 24. Press <kbd class="platform-all">Enter</kbd> to accept the defaults on the first two options:
 
-    ```
+    ```shell
     Option server_side_across_configs.
     Allow server-side operations (e.g. copy) to work across different crypt configs.
     Normally this option is not what you want, but if you have two crypts
@@ -317,7 +317,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 25. Answer `3` [base32768 if the numbers have changed] and press <kbd class="platform-all">Enter</kbd> when asked about filename encoding:
 
-    ```
+    ```shell
     Option filename_encoding.
     How to encode the encrypted filename to text string.
     This option could help with shortening the encrypted filename. The
@@ -337,7 +337,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 26. answer `n` and press <kbd class="platform-all">Enter</kbd> this time when asked about advanced options:
 
-    ```
+    ```shell
     Edit advanced config?
     y) Yes
     n) No (default)
@@ -346,7 +346,7 @@ You will need rclone and a web browser installed on a machine local to you [this
 
 27. Review the remote configuration and answer `y` and press <kbd class="platform-all">Enter</kbd> if it looks like you expect:
 
-    ```
+    ```shell
     Configuration complete.
     Options:
     - type: crypt

@@ -206,7 +206,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     remote> dropbox:encrypt
     ```
 
-21. Hit return to select the defaults for the next two settings:
+21. Press <kbd class="platform-all">Enter</kbd> to select the defaults for the next two settings:
 
     ```
     Option filename_encryption.
@@ -280,7 +280,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/n> y
     ```
 
-23. Answer `y` to enter advanced config:
+23. Answer `y` and press <kbd class="platform-all">Enter</kbd> to enter advanced config:
 
     ```
     Edit advanced config?
@@ -289,7 +289,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/n> y
     ```
 
-24. Hit return to accept the defaults on the first two options:
+24. Press <kbd class="platform-all">Enter</kbd> to accept the defaults on the first two options:
 
     ```
     Option server_side_across_configs.
@@ -315,7 +315,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     no_data_encryption>
     ```
 
-25. Answer `3` [base32768 if the numbers have changed] when asked about filename encoding:
+25. Answer `3` [base32768 if the numbers have changed] and press <kbd class="platform-all">Enter</kbd> when asked about filename encoding:
 
     ```
     Option filename_encoding.
@@ -335,7 +335,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     filename_encoding> 3
     ```
 
-26. answer `n` this time when asked about advanced options:
+26. answer `n` and press <kbd class="platform-all">Enter</kbd> this time when asked about advanced options:
 
     ```
     Edit advanced config?
@@ -344,7 +344,7 @@ You will need rclone and a web browser installed on a machine local to you [this
     y/n>
     ```
 
-27. Review the remote configuration and answer `y` if it looks like you expect:
+27. Review the remote configuration and answer `y` and press <kbd class="platform-all">Enter</kbd> if it looks like you expect:
 
     ```
     Configuration complete.

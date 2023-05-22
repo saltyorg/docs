@@ -384,3 +384,21 @@ You will need rclone and a web browser installed on a machine local to you [this
     q) Quit config
     e/n/d/r/c/s/q> q
     ```
+
+30. Create the `encrypt` directory on the `dropbox` remote:
+
+    ```shell
+    rclone mkdir dropbox:encrypt
+    ```
+
+31. Verify that the directory is there, if you wish:
+
+    ```shell
+    rclone lsd dropbox:/
+    ```
+
+    Display should look something like this:
+    ```shell
+          -1 2023-05-22 17:07:58        -1 encrypt
+    ```
+

@@ -206,9 +206,164 @@ You will need rclone and a web browser installed on a machine local to you [this
     remote> dropbox:encrypt
     ```
 
-21. repeat steps 17-20 with your `dropbox-upload` remote, if you have one.
+21. Hit return to select the defaults for the next two settings:
 
-22. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
+    ```
+    Option filename_encryption.
+    How to encrypt the filenames.
+    Choose a number from below, or type in your own string value.
+    Press Enter for the default (standard).
+    / Encrypt the filenames.
+    1 | See the docs for the details.
+    \ (standard)
+    2 / Very simple filename obfuscation.
+    \ (obfuscate)
+    / Don't encrypt the file names.
+    3 | Adds a ".bin" extension only.
+    \ (off)
+    filename_encryption> 1
+
+    Option directory_name_encryption.
+    Option to either encrypt directory names or leave them intact.
+    NB If filename_encryption is "off" then this option will do nothing.
+    Choose a number from below, or type in your own boolean value (true or false).
+    Press Enter for the default (true).
+    1 / Encrypt directory names.
+    \ (true)
+    2 / Don't encrypt directory names, leave them intact.
+    \ (false)
+    directory_name_encryption> 1
+    ```
+
+22. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you.  Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
+
+    ```
+    Option password.
+    Password or pass phrase for encryption.
+    Choose an alternative below.
+    y) Yes, type in my own password
+    g) Generate random password
+    y/g> g
+    Password strength in bits.
+    64 is just about memorable
+    128 is secure
+    1024 is the maximum
+    Bits> 128
+    Your password is: GsgEchLQllKRKmi-6BuA6w
+    Use this password? Please note that an obscured version of this
+    password (and not the password itself) will be stored under your
+    configuration file, so keep this generated password in a safe place.
+    y) Yes (default)
+    n) No
+    y/n> y
+
+    Option password2.
+    Password or pass phrase for salt.
+    Optional but recommended.
+    Should be different to the previous password.
+    Choose an alternative below. Press Enter for the default (n).
+    y) Yes, type in my own password
+    g) Generate random password
+    n) No, leave this optional password blank (default)
+    y/g/n> g
+    Password strength in bits.
+    64 is just about memorable
+    128 is secure
+    1024 is the maximum
+    Bits> 128
+    Your password is: NsGyJb78XwW1OJwtcakHNw
+    Use this password? Please note that an obscured version of this
+    password (and not the password itself) will be stored under your
+    configuration file, so keep this generated password in a safe place.
+    y) Yes (default)
+    n) No
+    y/n> y
+    ```
+
+23. Answer `y` to enter advanced config:
+
+    ```
+    Edit advanced config?
+    y) Yes
+    n) No (default)
+    y/n> y
+    ```
+
+24. Hit return to accept the defaults on the first two options:
+
+    ```
+    Option server_side_across_configs.
+    Allow server-side operations (e.g. copy) to work across different crypt configs.
+    Normally this option is not what you want, but if you have two crypts
+    pointing to the same backend you can use it.
+    This can be used, for example, to change file name encryption type
+    without re-uploading all the data. Just make two crypt backends
+    pointing to two different directories with the single changed
+    parameter and use rclone move to move the files between the crypt
+    remotes.
+    Enter a boolean value (true or false). Press Enter for the default (false).
+    server_side_across_configs>
+
+    Option no_data_encryption.
+    Option to either encrypt file data or leave it unencrypted.
+    Choose a number from below, or type in your own boolean value (true or false).
+    Press Enter for the default (false).
+    1 / Don't encrypt file data, leave it unencrypted.
+    \ (true)
+    2 / Encrypt file data.
+    \ (false)
+    no_data_encryption>
+    ```
+
+25. Answer `3` [base32768 if the numbers have changed] when asked about filename encoding:
+
+    ```
+    Option filename_encoding.
+    How to encode the encrypted filename to text string.
+    This option could help with shortening the encrypted filename. The
+    suitable option would depend on the way your remote count the filename
+    length and if it's case sensitive.
+    Choose a number from below, or type in your own string value.
+    Press Enter for the default (base32).
+    1 / Encode using base32. Suitable for all remote.
+    \ (base32)
+    2 / Encode using base64. Suitable for case sensitive remote.
+    \ (base64)
+    / Encode using base32768. Suitable if your remote counts UTF-16 or
+    3 | Unicode codepoint instead of UTF-8 byte length. (Eg. Onedrive)
+    \ (base32768)
+    filename_encoding> 3
+    ```
+
+26. answer `n` this time when asked about advanced options:
+
+    ```
+    Edit advanced config?
+    y) Yes
+    n) No (default)
+    y/n>
+    ```
+
+27. Review the remote configuration and answer `y` if it looks like you expect:
+
+    ```
+    Configuration complete.
+    Options:
+    - type: crypt
+    - remote: dropbox:encrypt
+    - password: *** ENCRYPTED ***
+    - password2: *** ENCRYPTED ***
+    - filename_encoding: base32768
+    Keep this "dropbox-crypt" remote?
+    y) Yes this is OK (default)
+    e) Edit this remote
+    d) Delete this remote
+    y/e/d> y
+    ```
+
+28. repeat steps 17-27 with your `dropbox-upload` remote, if you have one.
+
+29. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
     ```shell
     Current remotes:
@@ -229,10 +384,3 @@ You will need rclone and a web browser installed on a machine local to you [this
     q) Quit config
     e/n/d/r/c/s/q> q
     ```
-
-Add the following to the crypt section in rclone.conf
-
-directory_name_encryption = true
-filename_encryption = standard
-filename_encoding = base32768
-IMPORTANT: filename_encoding must be this value: base32768

@@ -229,3 +229,10 @@ You will need rclone and a web browser installed on a machine local to you [this
     q) Quit config
     e/n/d/r/c/s/q> q
     ```
+
+Add the following to the crypt section in rclone.conf
+
+directory_name_encryption = true
+filename_encryption = standard
+filename_encoding = base32768
+IMPORTANT: filename_encoding must be this value: base32768

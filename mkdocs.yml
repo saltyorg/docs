@@ -393,7 +393,8 @@ nav:
         - Google:
           - Creating a Shared Drive: reference/guides/google-shared-drive.md
         - Rclone:
-          - Creating a remote: reference/guides/rclone-remote.md
+          - Creating a Dropbox remote: reference/guides/rclone-remote-dropbox.md
+          - Creating a Google remote: reference/guides/rclone-remote.md
           - SAFire: reference/safire.md
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md

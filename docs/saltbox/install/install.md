@@ -201,6 +201,10 @@ If your server did not need to reboot you can run `su username` to switch user o
 !!! warning
     As noted in the previous step, from this point you'll want to make sure you are logged into the server as the user specified in the `accounts.yml`.
 
+    TO BE PERFECTLY CLEAR: FORGET THAT THE ROOT USER EXISTS.  DO NOT LOG INTO YOUR SALTBOX MACHINE AS ROOT ANY MORE.
+
+    IF YOU THINK THIS DOESN"T APPLY TO YOU, THINK HARD ABOUT WHY YOU HAVE THAT IMPRESSION.  ALMOST CERTAINLY YOU ARE MISTAKEN.
+
 !!! info
     THIS IS AN OPTIONAL STEP, required only if you plan to use cloud storage [Google Drive, for instance]
 

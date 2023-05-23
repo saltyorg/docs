@@ -395,6 +395,7 @@ nav:
         - Rclone:
           - Creating a Dropbox remote: reference/guides/rclone-remote-dropbox.md
           - Creating a Google remote: reference/guides/rclone-remote.md
+          - Creating a Crypt remote: reference/guides/rclone-remote-encrypted.md
           - SAFire: reference/safire.md
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md

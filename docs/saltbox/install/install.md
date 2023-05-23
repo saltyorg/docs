@@ -236,43 +236,55 @@ Note that generally speaking these five options are mutually exclusive.
 
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
-=== "Media on Google Drive"
-    You probably already have the required setup complete.  You should use your existing Google setup at least to start with.
+=== "Media on cloud storage"
+    You probably already have the required setup complete.  You should use your existing setup at least to start with.
 
     You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the [settings](../../reference/accounts.md).
 
-    If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential from the Google Dev Console.
+    If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential.
 
     [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
 
 === "I'm totally new to this"
-    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP YOU SHOULD NOT DO THIS.
+    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED GOOGLE SETUP YOU SHOULD NOT DO THIS.
 
-    THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
+    === "Google Drive"
 
-    If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
+        THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
 
-    That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
+        If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 
-    That eight-step process will create seven shared drives, 300 service accounts, and will configure rclone for you.
+        That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
 
-    This should be enough capacity for quite a while for most users.
+        That eight-step process will create seven shared drives, 300 service accounts, and will configure rclone for you.
+
+        This should be enough capacity for quite a while for most users.
+
+    === "Dropbox"
+
+        Create rclone remote[s] pointing at Dropbox as described [here]((../../reference/guides/rclone-remote-dropbox.md))
 
 === "Minimal setup, please"
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP THIS IS PROBABLY NOT WHAT YOU WANT.
 
-    The simplest possible case is:
+    === "Google Drive"
 
-    1. Set up a Google Project and OAuth Credential file if you don't already have one.
-       This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.  That link takes you to one step in a multi-step process.  Don't continue to follow that.  Follow the steps on that page and then come back here.
-    2. Create a Shared Drive in the Google Web UI.
-       This process is described [here](../../reference/guides/google-shared-drive.md)  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
-    3. Create an rclone remote with those credentials.
-       This process is described [here](../../reference/guides/rclone-remote.md)
+        The simplest possible case is:
 
-    Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
-    
-    Note: This is the SIMPLEST POSSIBLE CASE as noted above; it doesn't discuss service accounts mltiple disks because it's the SIMPLEST POSSIBLE CASE.
+        1. Set up a Google Project and OAuth Credential file if you don't already have one.
+        This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.  That link takes you to one step in a multi-step process.  Don't continue to follow that.  Follow the steps on that page and then come back here.
+        2. Create a Shared Drive in the Google Web UI.
+        This process is described [here](../../reference/guides/google-shared-drive.md)  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
+        3. Create an rclone remote with those credentials.
+        This process is described [here](../../reference/guides/rclone-remote.md)
+
+        Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
+        
+        Note: This is the SIMPLEST POSSIBLE CASE as noted above; it doesn't discuss service accounts or multiple disks because it's the SIMPLEST POSSIBLE CASE.
+
+    === "Dropbox"
+
+        Create rclone remote[s] pointing at Dropbox as described [here]((../../reference/guides/rclone-remote-dropbox.md))
 
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.
@@ -337,7 +349,7 @@ After rebooting, you're now ready to go through the basic setup for the apps!
 
 ## Step 6: App Setup
 
-If you would like to configure cloudplow to use service accounts to exceed the 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

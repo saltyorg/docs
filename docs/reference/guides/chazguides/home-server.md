@@ -80,7 +80,7 @@ On my Netgear, they call this “Address Reservation” and it’s found under �
 
 I scroll to the end of that list, click “Add”, then choose a device and type in the address I want that thing to have.
 
-The server I’m installing Saltbox on is “random”, and I’ve assigned it 192.168.1.11.
+The server I’m installing Saltbox on is named “random”, and I’ve assigned it 192.168.1.11.  The "MAC Address" is an identifier built into the the piece of hardware; typically you'll choose that from a list of connected devices.
 
   ![](../../../images/chaz-guides/address-reservation-02.png)
 

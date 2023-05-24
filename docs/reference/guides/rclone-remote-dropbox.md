@@ -275,3 +275,52 @@ Running lsd on dbox is empty as expected as there are no folders and 2 files in 
 ## Dropbox Performance Guide
 
 https://developers.dropbox.com/dbx-performance-guide
+
+## sample mount service:
+
+```
+[Unit]
+Description=Rclone VFS Mount
+After=network-online.target
+
+[Service]
+User=salty
+Group=salty
+Type=notify
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/rclone mount \
+  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' \
+  --config=/home/salty/.config/rclone/rclone.conf \
+  --allow-other \
+  --async-read=true \
+  --dir-cache-time=5000h \
+  --buffer-size=32M \
+  --poll-interval=15s \
+  --rc \
+  --rc-no-auth \
+  --rc-addr=localhost:5729 \
+  --use-mmap \
+  --vfs-read-ahead=128M \
+  --vfs-read-chunk-size=32M \
+  --vfs-read-chunk-size-limit=2G \
+  --vfs-cache-max-age=504h \
+  --vfs-cache-mode=full \
+  --vfs-cache-poll-interval=30s \
+  --vfs-cache-max-size=500G \
+  --disable-http2 \
+  --tpslimit 12 \
+  --tpslimit-burst 0 \
+  --umask=002 \
+  --syslog \
+  -v \
+  dropboxcrypt: /mnt/dropbox
+ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5729 _async=true
+ExecStop=/bin/fusermount -uz /mnt/dropbox
+Restart=on-abort
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+[Install]
+WantedBy=default.target
+```

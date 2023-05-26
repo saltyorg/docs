@@ -142,7 +142,7 @@ To go through this process, you will need the following:
     <---End paste
     ```
 
-13. Copy this token and it at the rclone prompt in the saltbox session and press Enter.
+13. Copy this token and paste it at the rclone prompt in the saltbox session and press Enter.
 
     ```text
     Enter a value.
@@ -165,7 +165,7 @@ To go through this process, you will need the following:
     y/e/d> y
     ```
 
-15. repeat steps 1-14 with your second App ID/App Secret, if you have one.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
+15. repeat steps 2-14 with your second App ID/App Secret, if you have one.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
 
 16. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 

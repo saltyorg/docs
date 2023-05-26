@@ -26,6 +26,8 @@ sb install sandbox-bookstack
 
 - Optional configuration such as SMTP can be done by editing the `.env` file located at: 
 
-```/opt/bookstack/www/.env```
+```
+/opt/bookstack/www/.env
+```
 
 - [:octicons-link-16: Documentation](https://www.bookstackapp.com/docs){: .header-icons target=_blank rel="noopener noreferrer" }

@@ -1,4 +1,6 @@
-# Note that this is just some examples, not a list of things that any particular user should have in their crontab
+# Example crontab commands
+
+## Note that these are just some examples, not a list of things that any particular user should have in their crontab
 
 Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is suggesting that you *should* do all these things.  They may not work as shown here, depending on your setup.
 
@@ -12,22 +14,23 @@ To edit your crontab, enter `crontab -e`
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 @daily cd /opt/plex-meta-manager && python plex-meta-manager.py -r
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
+0 4 * * * sb install plex-db >/dev/null 2>&1
 * * * * * /opt/scripts/nzbget/cleanup.sh
 0 10 * * * /opt/scripts/plex/optimize.sh
 0 * * * * PATH='/usr/bin:/bin:/usr/local/bin' cd /opt/SonarrSync/ ; /usr/bin/python SonarrSync.py
 ```
 
-**Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - Allows using `sb` commands in cronjobs. e.g `sb update`
+**Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - REQUIRED to use `sb` commands in cronjobs. e.g `sb update`
 
 **Line 2:** `plex-meta-manager` script to make Plex collections. - [Runs midnight daily **server time**]
 
-**Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**]
+**Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**] [This requires line 1]
 
-**Line 4:** Update Saltbox and do auto-updates - [Runs daily]  NOTE: Doing this in an unattended context carries risk. If an error occurs during the process, it could leave all the containers shut down.
+**Line 4:** optimize the plex database using the `plex-db` tag. - [Runs daily @ 4AM **server time**] [This requires line 1]
 
 **Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
 
-**Line 6:** Script to optimize the Plex database. - [Runs daily @ 10AM **server time**]
+**Line 6:** Different script to optimize the Plex database. - [Runs daily @ 10AM **server time**]
 `Note: Scroll down for script.`
 
 **Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]

@@ -8,6 +8,8 @@ It's just a catalog of examples to demonstrate how one might set this sort of th
 
 There are scripts in here that DELETE files.  DO NOT enable such things without understanding WHAT files will be deleted, WHY, and WHEN.
 
+If you are unfamiliar with the syntax shown below, [crontab generator](https://crontab-generator.org/) can be useful, but you should be familiar with what cron does before blindly enabling things in this way.
+
 To edit your crontab, enter `crontab -e`
 
 ```bash

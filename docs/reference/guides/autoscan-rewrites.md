@@ -78,7 +78,7 @@ So even in the default saltbox case, the `inotify` trigger will require a rewrit
 
 ## Example:
 
-Based on the Sonarr and PLex setups above, we need to change:
+Based on the Sonarr and Plex setups above, we need to change:
 ```
 /tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```

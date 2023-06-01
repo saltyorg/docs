@@ -180,4 +180,3 @@ and Plex accepts the path as is.
 
 Of course, that works best when there's only a single target. 
 
-Hopefully this helps demystify Autoscan rewrites. 

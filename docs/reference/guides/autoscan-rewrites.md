@@ -4,9 +4,29 @@ These rewrites seem to cause a lot of consternation.
 
 This article will attempt to clear them up.
 
+## Why are rewrites needed in autoscan?
+
 Basically, autoscan rewrites are a way to convert a path as one thing [typically an app like Sonarr] sees it to a path where another thing [typically an app like Plex] sees it.
 
-## Prerequisites
+The source of the scan [Sonarr, for example] sees a thing at one path, and the target of scan [Plex, for example] may see the same file at a different path.  Autoscan uses "rewrites" to convert the source path to the target path.
+
+## Do I always need rewrites?
+
+No.
+
+If Sonarr and Plex both see an episode at `/mnt/unionfs/Media/TV/SomeShow/Season 01/SomeShow S01E01.mkv`, then no rewrite is needed.
+
+If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for [Sonarr/Radarr/Lidarr].
+
+Rewrites *are* needed when:
+```
+/the/path/where/the/trigger/sees/files
+```
+and 
+```
+/the/path/where/the/target/sees/files
+```
+are different.
 
 Sonarr has a root directory:
 
@@ -32,61 +52,39 @@ And things in that library are relative to that root:
 
 ![](images/autoscan-05-plex-episode.png)
 
-## What happens during a scan:
-
-Sonarr tells Autoscan:
-
-> "Here's a new thing at `/tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv`, tell your friends."
-
-Autoscan first needs to figure out which library to tell Plex about, since it's going to say:
-
-> "Please scan this folder: `/tv/#killerpost (2016) (tvdb-307250)/Season 1/`; it's in library something-or-other."
-
-So Autoscan looks for a Plex library that has `/tv/` as one of its root directories.  If it finds that to be library ID 12, it tells Plex:
-
-> "Please scan this folder: `/tv/#killerpost (2016) (tvdb-307250)/Season 1/`; it's in library 12."
-
-Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library [there isn't one with `/tv/` as one of its root dirs], so Autoscan will report:
-
-```
-No target libraries found error="/tv/#killerpost (2016) (tvdb-307250)/Season 1/: failed determining libraries" target=plex url=https://plex.mydomain.tld/
-```
-
-This problem is what rewrites are used to solve.
-
-## Do I always need rewrites?
-
-No.
-
-If Sonarr and Plex both see that episode at `/mnt/unionfs/Media/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv`, then no rewrite is needed, since Sonarr tells Autoscan about that path, Autoscan goes to find the Plex library, which it is able to do since the path is the same, and tells Plex to scan the directory.
-
-Again, if Sonarr and the Plex TV library both point to the same path, whatever that path is, no rewrites are needed.
-
-If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for these apps.
-
-Rewrites are always needed when:
-```
-/the/path/where/the/trigger/sees/files
-```
-and 
-```
-/the/path/where/the/target/sees/files
-```
-are different.
-
-So even in the default saltbox case, the `inotify` trigger will require a rewrite, since it's looking at `/mnt/local/Media/...` rather than `/mnt/unionfs/Media/...`
-
-## Example:
-
-Based on the Sonarr and Plex setups above, we need to change:
+Those two paths are different, so Autoscan needs a rewrite to change this path:
 ```
 /tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
-to
+to this path:
 ```
 /data/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
 so Plex can see it.
+
+## What happens during a scan:
+
+Sonarr tells Autoscan:
+
+> "Here's a new thing at `/tv/#killerpost (2016)/Season 1/#killerpost - S01E01.mkv`, tell your friends."
+
+Autoscan first needs to figure out which library to tell Plex about, since it's going to say:
+
+> "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library something-or-other."
+
+So Autoscan looks for a Plex library that has `/tv/` as one of its root directories.  If it finds that to be library ID 12, it tells Plex:
+
+> "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library 12."
+
+Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library [there isn't one with `/tv/` as one of its root dirs], so Autoscan will report:
+
+```
+No target libraries found error="/tv/#killerpost (2016)/Season 1/: failed determining libraries" target=plex url=https://plex.mydomain.tld/
+```
+
+This problem is what rewrites are used to solve.
+
+## Example rewarite process:
 
 One way to do this is shown in [Autoscan's README](https://github.com/Cloudbox/autoscan#full-config-file):
 

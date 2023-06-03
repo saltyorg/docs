@@ -189,7 +189,7 @@ To go through this process, you will need the following:
 
 The name of this remote [`dropbox` in this case] is what you should enter in the rclone settings as you proceed with the install.
 
-If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted)
+If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted)
 
 LEX NOTES TO INCORPORATE:
 

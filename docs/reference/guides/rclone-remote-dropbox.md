@@ -142,7 +142,7 @@ To go through this process, you will need the following:
     <---End paste
     ```
 
-13. Copy this token and it at the rclone prompt in the saltbox session and press Enter.
+13. Copy this token and paste it at the rclone prompt in the saltbox session and press Enter.
 
     ```text
     Enter a value.
@@ -165,7 +165,7 @@ To go through this process, you will need the following:
     y/e/d> y
     ```
 
-15. repeat steps 1-14 with your second App ID/App Secret, if you have one.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
+15. repeat steps 2-14 with your second App ID/App Secret, if you have one.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
 
 16. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
@@ -189,16 +189,17 @@ To go through this process, you will need the following:
 
 The name of this remote [`dropbox` in this case] is what you should enter in the rclone settings as you proceed with the install.
 
-If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted)
+If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted)
 
 LEX NOTES TO INCORPORATE:
 
+```
 HOW THE FREAKING FRACK DO TEAM FOLDERS VS PERSONAL FOLDERS ON DROPBOX WORK WITH RCLONE REMOTES?
 WITH ENCRYPTION? WTF?
 
 # Start with two rclone remotes. One of type = dropbox and one type = crypt pointing at the dropbox remote.
 
-```
+` ``
 rclone config show dbox
 
 [dbox]
@@ -215,38 +216,38 @@ password = *** ENCRYPTED ***
 remote = dbox:
 directory_name_encryption = TRUE
 filename_encoding = base32768
-```
+` ``
 
 # The account name is "88"
 # The dropbox personal folder for user 88 has 0 folders and 2 files, one encrypted the other not
 # The dropbox shared folders ( in / ) have many folders and files
 
 Running lsd on dbox is empty as expected as there are no folders and 2 files in the personal area.
-```
+` ``
 ➜  rclone lsd dbox:
-```
+` ``
 
 # Running lsd on dbox:/ shows both personal files under "88" and encrypted shared files in "☍觐觐駔觐觐駔" (fake)
 # Note: dbox:/88 is equivalent to dbox: and contains personal files which are not visible by any team
-```
+` ``
 ➜  rclone lsd dbox:/
           -1 2023-05-23 14:22:17        -1 88
           -1 2023-05-23 14:22:17        -1 ☍觐觐駔觐觐駔
-```
+` ``
 
 # rclone lsd on dbox-crypt: ( no slash / ) are both empty as expected
-```
+` ``
 ➜  rclone lsd dbox-crypt:
-```
+` ``
 
 # rclone lsd on dbox-crypt:/  ( with slash / ) decrypts ☍觐觐駔觐觐駔 correctly as "media"
-```
+` ``
 ➜  rclone lsd dbox-crypt:/
           -1 2023-05-23 14:16:27        -1 media
-```
+` ``
 
 # rclone ls on dbox: and on dbox:/88 are identical as expected
-```
+` ``
 ➜  rclone ls dbox:
           88.bin
           衟衟衟衟衟
@@ -254,29 +255,29 @@ Running lsd on dbox is empty as expected as there are no folders and 2 files in 
 ➜  rclone ls dbox:/88
           88.bin
           衟衟衟衟衟
-```
+` ``
 
 # rclone ls on dbox-crypt: decrypts 衟衟衟衟衟 correctly as 88.bin
-```
+` ``
 ➜  rclone ls dbox-crypt:
           88.bin
-```
+` ``
 
 # rclone ls on dbox-crypt:/ will show all encrypted files in the shared folders, in their unencrypted form
-```
+` ``
 ➜  rclone ls dbox-crypt:/
           media/files1/a.txt
           media/files1/b.txt
           media/files2/c.txt
           ...
           media/files8/s.txt
+` ``
 ```
-
 ## Dropbox Performance Guide
 
 https://developers.dropbox.com/dbx-performance-guide
 
-## sample mount service:
+## example mount service:
 
 ```
 [Unit]
@@ -284,13 +285,13 @@ Description=Rclone VFS Mount
 After=network-online.target
 
 [Service]
-User=salty
-Group=salty
+User=YOUR_USER_NAME_GOES_HERE
+Group=YOUR_USER_NAME_GOES_HERE
 Type=notify
 ExecStartPre=/bin/sleep 10
 ExecStart=/usr/bin/rclone mount \
   --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' \
-  --config=/home/salty/.config/rclone/rclone.conf \
+  --config=/home/YOUR_USER_NAME_GOES_HERE/.config/rclone/rclone.conf \
   --allow-other \
   --async-read=true \
   --dir-cache-time=5000h \

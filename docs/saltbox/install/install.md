@@ -262,7 +262,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Dropbox"
 
-        Create rclone remote[s] pointing at Dropbox as described [here]((../../reference/guides/rclone-remote-dropbox.md))
+        Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
 
 === "Minimal setup, please"
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP THIS IS PROBABLY NOT WHAT YOU WANT.
@@ -284,7 +284,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Dropbox"
 
-        Create rclone remote[s] pointing at Dropbox as described [here]((../../reference/guides/rclone-remote-dropbox.md))
+        Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
 
 !!! warning
     Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.

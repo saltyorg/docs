@@ -431,6 +431,7 @@ nav:
           - Resetting apps: reference/guides/app-reset.md
           - Updating apps: reference/guides/app-update.md
         - Other References:
+          - Autoscan rewrites: reference/guides/autoscan-rewrites.md
           - Saltbox vs Cloudbox: reference/saltbox-vs-cloudbox.md
           - Cloudplow Examples: reference/cloudplow.md
           - Customizing Plex Libraries: reference/customizing-plex-libs.md

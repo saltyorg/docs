@@ -16,7 +16,7 @@ No.
 
 If Sonarr and Plex both see an episode at `/mnt/unionfs/Media/TV/SomeShow/Season 01/SomeShow S01E01.mkv`, then no rewrite is needed.
 
-If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for [Sonarr/Radarr/Lidarr].
+If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for Sonarr/Radarr/Lidarr [a-train or inotify triggers probably still need rewrites].
 
 Rewrites *are* needed when:
 ```
@@ -74,7 +74,7 @@ Autoscan first needs to figure out which library to tell Plex about, since it's 
 
 So Autoscan looks for a Plex library that has `/tv/` as one of its root directories.  If it finds that to be library ID 12, it tells Plex:
 
-> "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library 12."
+> "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library **12**."
 
 Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library [there isn't one with `/tv/` as one of its root dirs], so Autoscan will report:
 
@@ -84,7 +84,7 @@ No target libraries found error="/tv/#killerpost (2016)/Season 1/: failed determ
 
 This problem is what rewrites are used to solve.
 
-## Example rewarite process:
+## Example rewrite process:
 
 One way to do this is shown in [Autoscan's README](https://github.com/Cloudbox/autoscan#full-config-file):
 

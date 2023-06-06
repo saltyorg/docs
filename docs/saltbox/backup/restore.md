@@ -48,7 +48,7 @@ backup:
     pass: SOMEPASSWORD
 ```
 
-If you did so, you can leverage the restore service.  If you didn't, you cannot leverage the restore service.
+If you did so, you used the restore service.  If you didn't, you did not the restore service.
 <br/>
 <br/>
 If those values are provided, the saltbox backup stores encrypted copies of your config files on a saltbox-controlled server, so they can be retrieved and restored for you in this step.
@@ -137,14 +137,14 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     !!! info
         Don't copy any other files; they will be downloaded as needed by the restore process that you will run in a couple minutes.
     
-    Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
+    Run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
     ```shell
     sb install preinstall
     ```
 
     !!! info
-        From this point you'll want to make sure you run commands as the user specified in the accounts.yml
+        From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
 
     !!! info
         If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.

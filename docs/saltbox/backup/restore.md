@@ -31,6 +31,8 @@ Start by installing dependencies.
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
     ```
 
+## Configuration files and restore
+
 Then retrieve the configuration files from a backup by following the instructions below.  Note that the instructions are different if you used the restore service or not.
 
 <details>
@@ -119,8 +121,6 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     sb install restore
     ```
 
-    Once succesfully completed you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).
-
 === "I did not use the Restore Service"
 
     Retrieve the following configuration files from your backup manually and place them in `/srv/git/saltbox`:
@@ -137,7 +137,7 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     !!! info
         Don't copy any other files; they will be downloaded as needed by the restore process that you will run in a couple minutes.
     
-    Run `preinstall` which will setup the user account and a few other dependencies for the restore.
+    Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
     ```shell
     sb install preinstall
@@ -155,8 +155,10 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     sb install restore
     ```
 
-    Once successfully completed you can now continue:
+## Next Steps
 
-    If you are migrating from one server to another, return to the [migration guide](migrate.md)
+Once successfully completed you can now continue:
 
-    If you are restoring to the same server, you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).
+If you are migrating from one server to another, return to the [migration guide](migrate.md)
+
+If you are restoring to the same server, you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).

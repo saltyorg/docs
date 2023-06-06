@@ -31,7 +31,7 @@ Start by installing dependencies.
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
     ```
 
-Then retrieve the configuration files from a backup.
+Then retrieve the configuration files from a backup by following the instructions below.  Note that the instructions are different if you used the restore service or not.
 
 <details>
 <summary>How do I know if this applies?  What's the "restore service"?</summary>
@@ -59,7 +59,7 @@ Those values would be things you made up.  Nobody but you knows what they are.  
 <br/>
 </details>
 
-=== "Using Restore Service"
+=== "I used the Restore Service"
 
     === "curl"
 
@@ -121,7 +121,7 @@ Those values would be things you made up.  Nobody but you knows what they are.  
 
     Once succesfully completed you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).
 
-=== "Without Restore Service"
+=== "I did not use the Restore Service"
 
     Retrieve the following configuration files from your backup manually and place them in `/srv/git/saltbox`:
 
@@ -134,6 +134,9 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     * rclone.conf
     * localhost.yml
 
+    !!! info
+        Don't copy any other files; they will be downloaded as needed by the restore process that you will run in a couple minutes.
+    
     Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
     ```shell

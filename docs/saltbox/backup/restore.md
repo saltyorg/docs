@@ -146,7 +146,7 @@ backup:
           -1 2023-03-16 19:26:19        -1 archived
           -1 2023-03-16 19:27:26        -1 opt
     ```
-    if instead you see somethign like:
+    if instead you see something like:
     ```shell
     $ rclone lsd google:/Backups/Saltbox
     2023/06/07 16:41:09 Failed to create file system for "google:/Backups/Saltbox": drive: failed when making oauth client: error opening service account credentials file...

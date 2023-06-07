@@ -31,9 +31,10 @@ Start by installing dependencies.
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
     ```
 
-## Configuration files and restore
 
-Then retrieve the configuration files from a backup by following the instructions below.  Note that the instructions are different if you used the restore service or not.
+## Configuration files
+
+Next retrieve the configuration files from a backup by following the instructions below.  Note that the instructions are different if you used the restore service or not.
 
 <details>
 <summary>How do I know if this applies?  What's the "restore service"?</summary>
@@ -83,44 +84,6 @@ Those values would be things you made up.  Nobody but you knows what they are.  
 
             Must wrap the username and password in quotes.
 
-    Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
-
-    ```shell
-    sb install preinstall
-    ```
-
-    !!! info
-        From this point you'll want to make sure you run commands as the user specified in the accounts.yml
-
-    !!! info
-        If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
-
-    <details>
-    <summary>What's this about service accounts?</summary>
-    <br />
-
-    Open `rclone.conf` in a text editor and look through the remotes defined in there.
-
-    If the look like this:
-
-    ```text
-    [SOME REMOTE]
-    type = drive
-    scope = drive
-    service_account_file = /opt/sa/all/1500.json
-    team_drive = OZZY
-    root_folder_id =
-    ```
-
-    You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
-    </details>
-
-    Start the restore process.
-
-    ```shell
-    sb install restore
-    ```
-
 === "I did not use the Restore Service"
 
     Retrieve the following configuration files from your backup manually and place them in `/srv/git/saltbox`:
@@ -135,25 +98,86 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     * localhost.yml
 
     !!! info
-        Don't copy any other files; they will be downloaded as needed by the restore process that you will run in a couple minutes.
+        Don't copy any other files; they will be dealt with in a couple minutes.
     
-    Then run `preinstall` which will setup the user account and a few other dependencies for the restore.
+## Preinstall
 
-    ```shell
-    sb install preinstall
-    ```
+Next run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
-    !!! info
-        From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
+```shell
+sb install preinstall
+```
 
-    !!! info
-        If you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
+Now log out of the `root` account and log in as the user defined in `accounts.yml`
 
-    Start the restore process.
+## Backup files
 
-    ```shell
-    sb install restore
-    ```
+The restore process expects that the backup tar archives will be accessible in either the rclone destination or the local destination as defined in `backup_config.yml`:
+
+default contents:
+```
+---
+backup:
+  local:
+    enable: true
+    destination: /mnt/local/Backups/Saltbox
+  rclone:
+    enable: true
+    destination: google:/Backups/Saltbox
+...
+```
+If you have, for example, disabled `rclone` you will need to make sure that the tar archives are available in `/mnt/local/Backups/Saltbox/opt`:
+```
+/mnt/local/Backups/Saltbox/
+├── opt
+│   ├── authelia.tar
+│   ├── autoscan.tar
+...
+```
+If those files are not available at that local path or at the rclone location, the restore will not be able to find them.
+
+For example, with rclone disabled and nothing in `/mnt/local/Backups/Saltbox/opt`:
+```
+fatal: [localhost]: FAILED! => {"changed": false, "msg": ["Rclone is not enabled and no local backup exists.", "You must either enable rclone, in the backup settings, or provide backup tarball files locally, to perform a restore."]}
+```
+
+Ensure the tar archives are available in the proper location depending on your own backup config.
+
+## Restore
+
+!!! info
+    From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
+
+!!! info
+    If you are restoring from an rclone backup and you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
+
+<details>
+<summary>What's this about service accounts?</summary>
+<br />
+
+Open `rclone.conf` in a text editor and look through the remotes defined in there.
+
+If the remote you're using for the backup looks like this:
+
+```text
+[SOME REMOTE]
+type = drive
+scope = drive
+service_account_file = /opt/sa/all/1500.json
+team_drive = OZZY
+root_folder_id =
+```
+
+You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
+</details>
+
+Start the restore process.
+
+```shell
+sb install restore
+```
+
+Saltbox will retrieve and extract the tar archives.
 
 ## Next Steps
 

@@ -126,6 +126,7 @@ backup:
     destination: google:/Backups/Saltbox
 ...
 ```
+
 === "I want to pull the backup from the rclone location"
 
     You have just restored the rclone config files which contains the rclone remote mentioned in your `backup_config.yml`

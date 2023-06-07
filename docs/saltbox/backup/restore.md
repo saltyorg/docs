@@ -126,50 +126,82 @@ backup:
     destination: google:/Backups/Saltbox
 ...
 ```
-If you have, for example, disabled `rclone` you will need to make sure that the tar archives are available in `/mnt/local/Backups/Saltbox/opt`:
-```
-/mnt/local/Backups/Saltbox/
-├── opt
-│   ├── authelia.tar
-│   ├── autoscan.tar
-...
-```
-If those files are not available at that local path or at the rclone location, the restore will not be able to find them.
+=== "I want to pull the backup from the rclone location"
 
-For example, with rclone disabled and nothing in `/mnt/local/Backups/Saltbox/opt`:
-```
-fatal: [localhost]: FAILED! => {"changed": false, "msg": ["Rclone is not enabled and no local backup exists.", "You must either enable rclone, in the backup settings, or provide backup tarball files locally, to perform a restore."]}
-```
+    You have just restored the rclone config files which contains the rclone remote mentioned in your `backup_config.yml`
+    
+    The only thing you need to ensure is that this machine can access that remote to copy files from it, and typically the only complication here is if you are using a service account to authenticate that remote.
 
-Ensure the tar archives are available in the proper location depending on your own backup config.
+    run:
+    ```shell
+    rclone lsd google:/Backups/Saltbox
+    ```
+    
+    [where that path is the one in the rclone section of your `backup_config.yml`]
+    
+    You should see something like:
+    ```shell
+    $ rclone lsd google:/Backups/Saltbox
+          -1 2023-03-16 19:26:19        -1 archived
+          -1 2023-03-16 19:27:26        -1 opt
+    ```
+    if instead you see somethign like:
+    ```shell
+    $ rclone lsd google:/Backups/Saltbox
+    2023/06/07 16:41:09 Failed to create file system for "google:/Backups/Saltbox": drive: failed when making oauth client: error opening service account credentials file...
+    ```
+    
+    Then you are authenticating with a service account and will have to copy that service account file onto this machine to the location shown in the error.
+    
+    !!! info
+        If you are restoring from an rclone backup and you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
+
+    <details>
+    <summary>What's this about service accounts?</summary>
+    <br />
+
+    Open `rclone.conf` in a text editor and look through the remotes defined in there.
+
+    If the remote you're using for the backup looks like this:
+
+    ```text
+    [SOME REMOTE]
+    type = drive
+    scope = drive
+    service_account_file = /opt/sa/all/1500.json
+    team_drive = OZZY
+    root_folder_id =
+    ```
+
+    You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
+    </details>
+
+    Once `rclone lsd google:/Backups/Saltbox` shows you the expected `opt` directory, you are clear to continue.
+
+=== "I want to pull the backup from the local location"
+
+    You will need to make sure that the tar archives are available in `/mnt/local/Backups/Saltbox/opt` [or whatever path is specicfied in *your* `backup_config.yml` if you've changed it]:
+    ```
+    /mnt/local/Backups/Saltbox/
+    ├── opt
+    │   ├── authelia.tar
+    │   ├── autoscan.tar
+    ...
+    ```
+    If those files are not available at that local path or at the rclone location, the restore will not be able to find them.
+
+    For example, with rclone disabled and nothing in `/mnt/local/Backups/Saltbox/opt`:
+    ```
+    fatal: [localhost]: FAILED! => {"changed": false, "msg": ["Rclone is not enabled and no local backup exists.", "You must either enable rclone, in the backup settings, or provide backup tarball files locally, to perform a restore."]}
+    ```
+
+    Copy your backup tar files from wherever they are now to that location.  Once you have done this and the backup tar archives are present in `/mnt/local/Backups/Saltbox/opt` [or whatever path *you* set that to], you are clear to continue.
 
 ## Restore
 
 !!! info
     From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
 
-!!! info
-    If you are restoring from an rclone backup and you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
-
-<details>
-<summary>What's this about service accounts?</summary>
-<br />
-
-Open `rclone.conf` in a text editor and look through the remotes defined in there.
-
-If the remote you're using for the backup looks like this:
-
-```text
-[SOME REMOTE]
-type = drive
-scope = drive
-service_account_file = /opt/sa/all/1500.json
-team_drive = OZZY
-root_folder_id =
-```
-
-You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
-</details>
 
 Start the restore process.
 

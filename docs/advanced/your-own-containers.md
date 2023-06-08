@@ -261,7 +261,7 @@ Note: These are important, but leave them out if your docker run command require
 ``` { .sh .annotate }
   --label traefik.enable=true
   --label traefik.http.routers.<name>-http.entrypoints=web \
-  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,redirect-to-https,gzip \
+  --label traefik.http.routers.<name>-http.middlewares=globalHeaders@file,authelia@docker,redirect-to-https,gzip \
   --label traefik.http.routers.<name>-http.rule=Host\(\`<name>.yourdomain.com\`\) \
   --label traefik.http.routers.<name>-http.service=<name> \
   --label traefik.http.routers.<name>.entrypoints=websecure \
@@ -302,11 +302,11 @@ services:
       com.github.saltbox.saltbox_managed: true 
       traefik.enable: true
       traefik.http.routers.APPNAME-http.entrypoints: web
-      traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https,gzip
+      traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,authelia@docker,redirect-to-https,gzip
       traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`)
       traefik.http.routers.APPNAME-http.service: APPNAME
       traefik.http.routers.APPNAME.entrypoints: websecure
-      traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file
+      traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,authelia@docker
       traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`)
       traefik.http.routers.APPNAME.service: APPNAME
       traefik.http.routers.APPNAME.tls.certresolver: cfdns

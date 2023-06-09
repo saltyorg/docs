@@ -216,7 +216,9 @@ rclone:
 
 ### rclone vfs service
 
-The default rclone_vfs.service is intended and tuned for Google Drive; after the install completes you should replace or update to match this sample:
+The default rclone_vfs.service is intended and tuned for Google Drive; after the install completes you may want to update it to match this sample:
+
+If you do a standard install with the settings as expected, this is not absolutely necessary, as the Google-specific stuff will just be ignored, but there may be some differences to adopt.
 
 Changes to make:
 

@@ -3,6 +3,7 @@
 This article describes how to create an rclone remote for Dropbox
 
 ## NOTE: THIS ARTICLE IS A WORK IN PROGRESS
+
 ## Prerequisites
 
 To go through this process, you will need the following:
@@ -191,6 +192,120 @@ The name of this remote [`dropbox` in this case] is what you should enter in the
 
 If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted)
 
+## Dropbox Performance Guide
+
+https://developers.dropbox.com/dbx-performance-guide
+
+## Install considerations:
+
+### rclone remote in settings:
+
+You will want to change the [rclone remote name in the settings](https://docs.saltbox.dev/reference/accounts/#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
+
+```yaml
+rclone:
+  version: latest
+  remote: dropbox
+```
+OR
+```yaml
+rclone:
+  version: latest
+  remote: dropbox-encrypt
+```
+
+### rclone vfs service
+
+The default rclone_vfs.service is intended and tuned for Google Drive; after the install completes you should replace or update to match this sample:
+
+Changes to make:
+
+Replace `YOUR_USER_NAME_GOES_HERE` with the user name you enterd in the settings [default is `seed`]
+Replace `YOUR_REMOTE_NAME_GOES_HERE` with the rclone remote you created here.  Use the encrypted remote if you created one.
+
+This example assumes your system is using ONLY DROPBOX.  If you are adding this mount to a system that already has Google Drive set up, change `/mnt/remote` to something else.
+
+```
+[Unit]
+Description=Rclone VFS Mount
+After=network-online.target
+
+[Service]
+User=YOUR_USER_NAME_GOES_HERE
+Group=YOUR_USER_NAME_GOES_HERE
+Type=notify
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/rclone mount \
+  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' \
+  --config=/home/YOUR_USER_NAME_GOES_HERE/.config/rclone/rclone.conf \
+  --allow-other \
+  --async-read=true \
+  --dir-cache-time=5000h \
+  --buffer-size=32M \
+  --poll-interval=15s \
+  --rc \
+  --rc-no-auth \
+  --rc-addr=localhost:5729 \
+  --use-mmap \
+  --vfs-read-ahead=128M \
+  --vfs-read-chunk-size=32M \
+  --vfs-read-chunk-size-limit=2G \
+  --vfs-cache-max-age=504h \
+  --vfs-cache-mode=full \
+  --vfs-cache-poll-interval=30s \
+  --vfs-cache-max-size=500G \
+  --disable-http2 \
+  --tpslimit 12 \
+  --tpslimit-burst 0 \
+  --umask=002 \
+  --syslog \
+  -v \
+  YOUR_REMOTE_NAME_GOES_HERE: /mnt/remote
+ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5729 _async=true
+ExecStop=/bin/fusermount -uz /mnt/remote
+Restart=on-abort
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+[Install]
+WantedBy=default.target
+```
+
+### cloudplow config
+
+The default cloudplow config contains "rclone_extras" targeted at Google Drive.  After install you can remove the Google-specific flags if you wish:
+
+These two lines can be removed from any `rclone_extras` on a dropbox-targeting `remote`:
+```
+    "--drive-chunk-size": "128M",
+    "--drive-stop-on-upload-limit": null,
+```
+
+The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts.  This is meaningless for dropbox, so you can remove these if you wish
+
+Before:
+```
+"rclone_sleeps": {
+    " 0/s,": {
+        "count": 16,
+        "sleep": 25,
+        "timeout": 62
+    },
+    "Failed to copy: googleapi: Error 403: User rate limit exceeded": {
+        "count": 10,
+        "sleep": 25,
+        "timeout": 7200
+    }
+},
+```
+After:
+```
+"rclone_sleeps": {
+},
+```
+
+
 LEX NOTES TO INCORPORATE:
 
 ```
@@ -272,56 +387,4 @@ Running lsd on dbox is empty as expected as there are no folders and 2 files in 
           ...
           media/files8/s.txt
 ` ``
-```
-## Dropbox Performance Guide
-
-https://developers.dropbox.com/dbx-performance-guide
-
-## example mount service:
-
-```
-[Unit]
-Description=Rclone VFS Mount
-After=network-online.target
-
-[Service]
-User=YOUR_USER_NAME_GOES_HERE
-Group=YOUR_USER_NAME_GOES_HERE
-Type=notify
-ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/rclone mount \
-  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' \
-  --config=/home/YOUR_USER_NAME_GOES_HERE/.config/rclone/rclone.conf \
-  --allow-other \
-  --async-read=true \
-  --dir-cache-time=5000h \
-  --buffer-size=32M \
-  --poll-interval=15s \
-  --rc \
-  --rc-no-auth \
-  --rc-addr=localhost:5729 \
-  --use-mmap \
-  --vfs-read-ahead=128M \
-  --vfs-read-chunk-size=32M \
-  --vfs-read-chunk-size-limit=2G \
-  --vfs-cache-max-age=504h \
-  --vfs-cache-mode=full \
-  --vfs-cache-poll-interval=30s \
-  --vfs-cache-max-size=500G \
-  --disable-http2 \
-  --tpslimit 12 \
-  --tpslimit-burst 0 \
-  --umask=002 \
-  --syslog \
-  -v \
-  dropboxcrypt: /mnt/dropbox
-ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5729 _async=true
-ExecStop=/bin/fusermount -uz /mnt/dropbox
-Restart=on-abort
-RestartSec=5
-StartLimitInterval=60s
-StartLimitBurst=3
-
-[Install]
-WantedBy=default.target
 ```

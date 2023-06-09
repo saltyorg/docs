@@ -220,8 +220,8 @@ The default rclone_vfs.service is intended and tuned for Google Drive; after the
 
 Changes to make:
 
-Replace `YOUR_USER_NAME_GOES_HERE` with the user name you enterd in the settings [default is `seed`]
-Replace `YOUR_REMOTE_NAME_GOES_HERE` with the rclone remote you created here.  Use the encrypted remote if you created one.
+1. Replace `YOUR_USER_NAME_GOES_HERE` with the user name you enterd in the settings [default is `seed`]
+2. Replace `YOUR_REMOTE_NAME_GOES_HERE` with the rclone remote you created here.  Use the encrypted remote if you created one.
 
 This example assumes your system is using ONLY DROPBOX.  If you are adding this mount to a system that already has Google Drive set up, change `/mnt/remote` to something else.
 
@@ -282,7 +282,7 @@ These two lines can be removed from any `rclone_extras` on a dropbox-targeting `
     "--drive-stop-on-upload-limit": null,
 ```
 
-The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts.  This is meaningless for dropbox, so you can remove these if you wish
+The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts.  One of these is meaningless for dropbox, so you can remove it if you wish.
 
 Before:
 ```
@@ -302,6 +302,11 @@ Before:
 After:
 ```
 "rclone_sleeps": {
+    " 0/s,": {
+        "count": 16,
+        "sleep": 25,
+        "timeout": 62
+    }
 },
 ```
 

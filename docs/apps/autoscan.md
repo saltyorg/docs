@@ -139,13 +139,13 @@ The manual scan URL will be https://autoscan.YOUR_DOMAIN/triggers/manual.  Usage
 
 ### A-Train
 
-Autoscan can monitor Google Drive changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
+Autoscan can monitor **Google Drive** changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
 
 **IMPORTANT**:
 You only need to set this up if you are planning to add media to **Google Drive** directly, *outside* the usual Radarr/Sonarr channels, or if you are monitoring a Shared Drive where new media appears outside those channels.  If you are not planning to do that, you can skip this portion of the setup.
 
 **IMPORTANT**:
-A-Train does not support any other rclone backend [like, for example, Dropbox].  It is **Google Drive** specific.
+A-Train does not support anything other than **Google Drive**, as it uses the Google Drive API to do its work.
 
 "A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox.  It will likely be integrated into autoscan at some point in the future.
 
@@ -197,7 +197,7 @@ sb install sandbox-a_train
 ### Bernard
 
 **IMPORTANT**:
-Bernard does not support any other rclone backend [like, for example, Dropbox].  It is **Google Drive** specific.
+Bernard does not support anything other than **Google Drive**, as it uses the Google Drive API to do its work.
 
 If for some reason you still wanted to use Bernard, it would look like this:
 

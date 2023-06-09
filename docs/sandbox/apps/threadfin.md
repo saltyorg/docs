@@ -30,10 +30,10 @@ sb install sandbox-threadfin
 
 - Use the following URLs when configuring your media server (e.g. Plex, Emby, Jellyfin)
 
-    * HDHomerun Device Address (Plex) `http://threadfin:34400`
+  - HDHomerun Device Address (Plex) `http://threadfin:34400`
 
-    * Playlist (Emby, Jellyfin) `http://threadfin:34400/m3u/threadfin.m3u`
+  - Playlist (Emby, Jellyfin) `http://threadfin:34400/m3u/threadfin.m3u`
 
-    * EPG (all) `http://threadfin:34400/xmltv/threadfin.xml`
+  - EPG (all) `http://threadfin:34400/xmltv/threadfin.xml`
 
 - [:octicons-link-16: Documentation](https://github.com/Threadfin/Threadfin){: .header-icons target=_blank rel="noopener noreferrer" }

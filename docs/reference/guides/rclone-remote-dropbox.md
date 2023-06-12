@@ -8,7 +8,7 @@ This article describes how to create an rclone remote for Dropbox
 
 To go through this process, you will need the following:
 
-   1. App Key/App Secret from two applications you create at Dropbox. The process is described [here](https://rclone.org/dropbox/#get-your-own-dropbox-app-id).  You want two because you will probably want separate remotes for mount and upload.
+   1. App Key/App Secret from two applications you create at Dropbox. The process is described [here](https://rclone.org/dropbox/#get-your-own-dropbox-app-id).  Two are suggested here because you **may** want separate apps for mount and upload, and you may as well create both while you're there.  Using two is not required.
    2. rclone installed on your saltbox machine [which means the preinstall has been run]
    3. rclone [same or higher version as on the saltbox machine] and a web browser installed on a machine local to you [this machine needs a GUI].  NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
 
@@ -166,7 +166,7 @@ To go through this process, you will need the following:
     y/e/d> y
     ```
 
-15. repeat steps 2-14 with your second App ID/App Secret, if you have one.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
+15. repeat steps 2-14 with your second App ID/App Secret, if you have one, which again is a totally optional thing that you may not want to do.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
 
 16. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
@@ -188,9 +188,7 @@ To go through this process, you will need the following:
     e/n/d/r/c/s/q> q
     ```
 
-The name of this remote [`dropbox` in this case] is what you should enter in the rclone settings as you proceed with the install.
-
-If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted)
+If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted).
 
 ## Dropbox Performance Guide
 
@@ -211,7 +209,7 @@ OR
 ```yaml
 rclone:
   version: latest
-  remote: dropbox-encrypt
+  remote: dropbox-crypt
 ```
 
 ### rclone vfs service
@@ -276,7 +274,9 @@ WantedBy=default.target
 
 ### cloudplow config
 
-The default cloudplow config contains "rclone_extras" targeted at Google Drive.  After install you can remove the Google-specific flags if you wish:
+The default cloudplow config [found at `/opt/cloudplow/config.json`] contains "rclone_extras" targeted at Google Drive.  After install you can remove the Google-specific flags if you wish.
+
+There's no compelling reason to remove them, since they will be ignored by rclone; they're listed here for completeness sake.
 
 These two lines can be removed from any `rclone_extras` on a dropbox-targeting `remote`:
 ```
@@ -284,7 +284,7 @@ These two lines can be removed from any `rclone_extras` on a dropbox-targeting `
     "--drive-stop-on-upload-limit": null,
 ```
 
-The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts.  One of these is meaningless for dropbox, so you can remove it if you wish.
+The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts or halt uploading.  One of these is meaningless for dropbox, so you can remove it if you wish.
 
 Before:
 ```

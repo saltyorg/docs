@@ -54,7 +54,7 @@ jobs:
         run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
 
       - name: Install apt packages
-        run: apt-get install pngquant
+        run: sudo apt-get install -y pngquant
 
       - name: Install requirements.txt
         run: pip install -r requirements.txt

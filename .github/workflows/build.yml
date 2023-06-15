@@ -53,8 +53,8 @@ jobs:
       - name: Install mkdocs material insiders
         run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
 
-      - name: Install lightgallery
-        run: pip install lightgallery
+      - name: Install requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Build mkdocs
         run: mkdocs build

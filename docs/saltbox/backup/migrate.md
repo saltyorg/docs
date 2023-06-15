@@ -12,6 +12,10 @@ This guide will outline some basic steps to copy/move your Saltbox setup to anot
 
 Listed below are some common scenarios and their migration instructions.
 
+## Migrating another setup *to* Saltbox:
+
+There are guides for [Cloudbox](../../reference/guides/cloudbox), [PlexGuide](../../reference/guides/plexguide), or [arbitrary](../../reference/guides/other) setups.
+
 ## Move Saltbox to Another Server and Keep the Same Domain Name
 
 ### Current Server

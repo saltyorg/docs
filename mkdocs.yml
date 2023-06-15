@@ -71,7 +71,7 @@ plugins:
       optimize_png: true
       optimize_png_speed: 1
       optimize_png_strip: true
-      optimize_jpg: true
+      optimize_jpg: false
       optimize_jpg_quality: 75
       optimize_jpg_progressive: true
 

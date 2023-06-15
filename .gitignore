@@ -6,3 +6,4 @@ go.sh
 /.vs
 # direnv
 .direnv/**
+/venv

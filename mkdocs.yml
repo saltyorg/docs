@@ -64,6 +64,16 @@ plugins:
   - search:
       lang: en
   - meta
+  - optimize:
+      cache: true
+      cache_dir: .cache/plugins/optimize
+      enabled: !ENV [CI, false]
+      optimize_png: true
+      optimize_png_speed: 1
+      optimize_png_strip: true
+      optimize_jpg: true
+      optimize_jpg_quality: 75
+      optimize_jpg_progressive: true
 
 extra:
   generator: false

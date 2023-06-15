@@ -10,11 +10,11 @@ tags:
 
 This guide will outline some basic steps to copy/move your Saltbox setup to another server and/or another domain name.
 
+If you are looking to migrate your existing setup *to* Saltbox, there are guides for [Cloudbox](../../reference/guides/cloudbox), [PlexGuide](../../reference/guides/plexguide), or [arbitrary](../../reference/guides/other) setups.
+
+This page discusses migrating an existing Saltbox setup.
+
 Listed below are some common scenarios and their migration instructions.
-
-## Migrating another setup *to* Saltbox:
-
-There are guides for [Cloudbox](../../reference/guides/cloudbox), [PlexGuide](../../reference/guides/plexguide), or [arbitrary](../../reference/guides/other) setups.
 
 ## Move Saltbox to Another Server and Keep the Same Domain Name
 

@@ -58,15 +58,18 @@ Broadly, the base install consists of six steps:
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
 
-`accounts.yml`
+???+ info
+    The following steps assumes you are still logged in as root or using sudo with the following commands.
 
-To edit [assuming you are still logged in as `root`]:
+Run the following command to edit the configuration file.
 
-    nano /srv/git/saltbox/accounts.yml
+``` shell
+nano /srv/git/saltbox/accounts.yml
+```
 
-Contents:
+Content with explanations:
 
-``` { .yaml .annotate }
+``` yaml title="accounts.yml"
 ---
 user:
   name: seed # (1)!
@@ -129,17 +132,15 @@ apprise: # (12)!
 
 13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
-`settings.yml`
+Run the following command to edit the configuration file.
 
-To edit [assuming you are still logged in as `root`]:
-
-```shell
+``` shell
 nano /srv/git/saltbox/settings.yml
 ```
 
-Contents:
+Content with explanations:
 
-``` { .yaml .annotate }
+``` yaml title="settings.yml"
 ---
 downloads: /mnt/unionfs/downloads # (1)!!
 transcodes: /mnt/local/transcodes # (2)!

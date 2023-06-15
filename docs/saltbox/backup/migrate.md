@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - migrate
+  - migration
+---
+
 # Migration
 
 This guide will outline some basic steps to copy/move your Saltbox setup to another server and/or another domain name.

@@ -1,6 +1,6 @@
 # Restore
 
-!!! info
+???+ info
     Just like the initial install, these instructions are assuming you are running as `root` until told otherwise below.
 
 ## Dependencies
@@ -36,38 +36,32 @@ Start by installing dependencies.
 
 Next retrieve the configuration files from a backup by following the instructions below.  Note that the instructions are different if you used the restore service or not.
 
-<details>
-<summary>How do I know if this applies?  What's the "restore service"?</summary>
-<br />
-
-When you set up the backup, you may have entered values in these two fields in the backup config file:
+??? note "How do I know if this applies?  What's the "restore service"?"
     
-```yaml
----
-backup:
-...
-  restore_service:
-    user: SOMEUSERNAME
-    pass: SOMEPASSWORD
-```
 
-If you did so, you used the restore service.  If you didn't, you did not the restore service.
-<br/>
-<br/>
-If those values are provided, the saltbox backup stores encrypted copies of your config files on a saltbox-controlled server, so they can be retrieved and restored for you in this step.
-<br/>
-<br/>
-Those values would be things you made up.  Nobody but you knows what they are.  If you do not know them, or have misplaced them, you will have to proceed without the restore service.
-<br/>
-<br/>
-</details>
+    When you set up the backup, you may have entered values in these two fields in the backup config file:
+        
+    ```yaml
+    ---
+    backup:
+    ...
+    restore_service:
+        user: SOMEUSERNAME
+        pass: SOMEPASSWORD
+    ```
+
+    If you did so, you used the restore service.  If you didn't, you did not the restore service.
+
+    If those values are provided, the saltbox backup stores encrypted copies of your config files on a saltbox-controlled server, so they can be retrieved and restored for you in this step.
+
+    Those values would be things you made up.  Nobody but you knows what they are.  If you do not know them, or have misplaced them, you will have to proceed without the restore service.
 
 === "I used the Restore Service"
 
     === "curl"
 
         ```{ .sh .annotate }
-        curl -sL https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
+        curl -sL https://restore.saltbox.dev | sudo bash -s 'USERNAME' 'PASSWORD' # (1)!
         ```
 
         1. Use the username and password defined for the service when last backup was executed.
@@ -77,7 +71,7 @@ Those values would be things you made up.  Nobody but you knows what they are.  
     === "wget"
 
         ```{ .sh .annotate }
-        wget -qO- https://restore.saltbox.dev | bash -s 'USERNAME' 'PASSWORD' # (1)!
+        wget -qO- https://restore.saltbox.dev | sudo bash -s 'USERNAME' 'PASSWORD' # (1)!
         ```
 
         1. Use the username and password defined for the service when last backup was executed.
@@ -154,28 +148,24 @@ backup:
     
     Then you are authenticating with a service account and will have to copy that service account file onto this machine to the location shown in the error.
     
-    !!! info
+    ???+ info
         If you are restoring from an rclone backup and you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
 
-    <details>
-    <summary>What's this about service accounts?</summary>
-    <br />
+    ??? note "What's this about service accounts?"
+        Open `rclone.conf` in a text editor and look through the remotes defined in there.
 
-    Open `rclone.conf` in a text editor and look through the remotes defined in there.
+        If the remote you're using for the backup looks like this:
 
-    If the remote you're using for the backup looks like this:
+        ```text
+        [SOME REMOTE]
+        type = drive
+        scope = drive
+        service_account_file = /opt/sa/all/1500.json
+        team_drive = OZZY
+        root_folder_id =
+        ```
 
-    ```text
-    [SOME REMOTE]
-    type = drive
-    scope = drive
-    service_account_file = /opt/sa/all/1500.json
-    team_drive = OZZY
-    root_folder_id =
-    ```
-
-    You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
-    </details>
+        You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
 
     Once `rclone lsd google:/Backups/Saltbox` shows you the expected `opt` directory, you are clear to continue.
 
@@ -200,9 +190,8 @@ backup:
 
 ## Restore
 
-!!! info
+???+ info
     From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
-
 
 Start the restore process.
 

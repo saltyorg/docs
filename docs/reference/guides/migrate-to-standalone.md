@@ -1,15 +1,21 @@
 # Migrating from Google to [your remote STFP box here]
 
-## Example Setup:
-### mediabox AX51  
-### storage Hetzner Server Auction Server
+## Example Setup
+
+### Mediabox: AX51
+
+- standard mediabox sb install
+
+### Storage: Hetzner Server Auction Server
+
 - raidz2 configuration
 - Files stored at `/mnt/local/Media`
 
 ## Setup New Rclone remote
+
 Pretty self explanitory. I am using SFTP for my remote. Leave the name as whatever else for now.
 
-```
+```bash
 [temp-storage]
 type = sftp
 host = [your ip or domain name]
@@ -26,21 +32,23 @@ chunk_size = 252k
 
 Some notes on this config:
 This assumes you're SSH'ing to your box with `ssh [name-of-server]` setup in `~/.ssh/config`.
-Read https://forum.rclone.org/t/increasing-sftp-transfer-speed/29928/5 on speeding up SFTP transfers. tl;dr I boosted my concurrency because I have ram for days on both systems and packet/chunk size from what I read is capped at 256k so 252k keeps it just low enough to fit any overhead.
+Read [here](https://forum.rclone.org/t/increasing-sftp-transfer-speed/29928/5) on speeding up SFTP transfers. tl;dr I boosted my concurrency because I have ram for days on both systems and packet/chunk size from what I read is capped at 256k so 252k keeps it just low enough to fit any overhead.
 
 ## Move all your files from Google to your new box
+
 This is what I ran and never ran into any data cap/tfs limits/errors: `rclone sync google:/Media /mnt/local/Media -vP --bwlimit 100M --tpslimit 12 --fast-list --drive-stop-on-download-limit`. This took a few days running 24/7.
 
 Then once that is done, do one last `cloudplow upload` to make sure everything is on Drive and then run the rclone command above once more to make sure your storage box and Drive have the same files.
 
 ## Update the rclone_vfs.service
+
 Take a backup first, just in case.
 `sudo cp /etc/systemd/system/rclone_vfs.service /etc/systemd/system/rclone_vfs.service.BACKUP`
 
 Edit the service:
 `sudo vi /etc/systemd/system/rclone_vfs.service`
 
-```
+```bash
 #########################################################################
 
 [Unit]
@@ -99,19 +107,24 @@ to
 My setup allows for a larger vfs cache. Double check your values before copying blindly!
 
 ## Edit RClone config
+
 Now go back into `~/.config/rclone/rclone.config`. I commented out my Drive setup just in case. Rename `temp-storage` to `google`.
 
 ## Edit Cloudplow config
+
 `vi /opt/cloudplow/config.json`
 I had to change these lines:
-```
+
+```bash
 "sync_remote": "google:/mnt/local/Media",
 "upload_folder": "/mnt/local/Media",
 "upload_remote": "google:/mnt/local/Media"
 ```
+
 I ran `cloudplow config-update`. No idea what this does.
 
 ## Final Steps
+
 Run `sudo systemctl daemon-reload` to refresh the daemons.
 
 Run `sudo service rclone_vfs restart`. This should switch your Drive mount to your new storage box mount.
@@ -119,8 +132,5 @@ Run `sudo service rclone_vfs restart`. This should switch your Drive mount to yo
 That's it! Jump into Plex and play something to test. I noticed a small increase in latency vs Drive but other than that things seem to be running well. I also downloaded another file and tested Cloudplow as well with `cloudplow upload` which seemed to also work.
 
 ## Closing Thoughts
+
 You could probably use the Hetzner NFS thing but I don't understand enough of what's going on to use that and the documentation is currently very sparse.
-
-
-
-

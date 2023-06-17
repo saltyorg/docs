@@ -313,6 +313,7 @@ nav:
           - Saltbox Tools: reference/saltbox-tools.md
           - Adding a Subdomain: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
+          - Migrating to standalone storage server: reference/guides/migrate-to-standalone.md
       - Guides:
         - General:
           - Chazlarson Guides:

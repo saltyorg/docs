@@ -82,14 +82,14 @@ Next retrieve the configuration files from a backup by following the instruction
 
     Retrieve the following configuration files from your backup manually and place them in `/srv/git/saltbox`:
 
-    * accounts.yml
-    * settings.yml
-    * adv_settings.yml
-    * backup_config.yml
-    * providers.yml
-    * hetzner_nfs.yml
-    * rclone.conf
-    * localhost.yml
+    * `accounts.yml`
+    * `settings.yml`
+    * `adv_settings.yml`
+    * `backup_config.yml`
+    * `providers.yml`
+    * `hetzner_nfs.yml`
+    * `rclone.conf`
+    * `localhost.yml`
 
     !!! info
         Don't copy any other files; they will be dealt with in a couple minutes.

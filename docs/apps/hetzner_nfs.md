@@ -82,7 +82,7 @@ There are 3 phases to the setup. They are broken down below.
 
     ``` { .shell }
 
-    sb install hetzner_nfs_server
+    sb install hetzner_nfs_client_mount
 
     ```
 

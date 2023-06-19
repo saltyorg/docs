@@ -405,6 +405,8 @@ nav:
           - Hardlinking: reference/guides/hardlinking.md
         - Google:
           - Creating a Shared Drive: reference/guides/google-shared-drive.md
+        - Dropbox:
+          - General Dropbox Topics: reference/guides/dropbox-general.md
         - Rclone:
           - Creating a Dropbox remote: reference/guides/rclone-remote-dropbox.md
           - Creating a Google remote: reference/guides/rclone-remote.md

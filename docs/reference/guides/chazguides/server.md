@@ -50,7 +50,7 @@ ncdu 1.14.1 ~ Use the arrow keys to navigate, press ? for help
     4.2 GiB [          ] /sonarr
 ```
 
-Here Plex contains has a lot more than that.
+Here Plex contains a lot more than that.
 
 ```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
@@ -63,9 +63,11 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 
 Ideally, all your clients would Direct Play everything; in that case the server is just shoveling bits out as fast as it can and you don’t need any CPU power.  In practice, some transcoding will be happening.
 
-There are two types of transcoding; hardware or software.  Software transcoding is CPU intensive, but higher-quality.  Hardware transcoding doesn’t burden your CPU [so it’s free to continue extracting rar files or something], but it’s typically lower quality.  Depending on the specific CPU, dramatically lower quality.
+There are two types of video transcoding; hardware or software.  Software video transcoding is CPU intensive, but higher-quality.  Hardware video transcoding doesn’t burden your CPU [so it’s free to continue extracting rar files or something], but it’s typically lower quality.  Depending on the specific CPU, dramatically lower quality.
 
-Some Intel CPUs support hardware transcoding, a smaller subset of AMD processors support hardware transcoding, so if you want hardware transcoding you probably want Intel [assuming you’re not using a separate GPU on a video card to do it].
+Some Intel CPUs support hardware video transcoding, a smaller subset of AMD processors support hardware video transcoding, so if you want hardware video transcoding you probably want Intel [assuming you’re not using a separate GPU on a video card to do it].
+
+Audio transcoding is always done by the CPU, but is generally far less resource-intensive.
 
 But that’s just Plex.
 

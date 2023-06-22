@@ -96,7 +96,9 @@ anchors:
 
 To reflect your own configuration.
 
-For example, if you went through the saltbox rclone setup process, you'll need to enter something like this:
+YOU POSSIBLY NEED TO CREATE THIS FILE OR FILES YOURSELF.  The regular saltbox install does not do it for you.
+
+If you went through the OPTIONAL google-drive rclone setup process, these files *did* get created for you, and you'll need to enter something like:
 
 ```yaml
 anchors:
@@ -109,26 +111,56 @@ anchors:
 
 You should enter the entire list of bin files that were created by the automated script here.
 
-`ls /mnt/unionfs/*.bin` will give you the list of files you should enter here.
+If you didn't do this, use:
+```
+rclone touch NAME_OF_CLOUD_REMOTE:mounted.bin
+```
+To create one of these files on *each distinct element* of cloud storage.  If you're using Dropbox, there is just one.  If you have eleven OneDrive mounts, you need to create eleven of these.
+
+Once you've done that, verify that they show up in the union moutn with:
+
+```
+ls /mnt/unionfs/*.bin
+```
+
+then enter that list of files into the autoscan config as shown.
 
 Everything else should be ready to go for standard usage.
 
 <details>
 <summary>What are those mount files?</summary>
 <br />
+<br />
 Autoscan uses these to determine if your cloud storage is mounted and visible; if autoscan can't see these files, no scans will be sent to Plex since doing so would empty your library as Plex removed all the files it can no longer see [assuming that "empty trash on scan" is enabled].
+<br />
 <br />
 There's nothing special about the contents of these files; autoscan just needs to see that they exist.  Typically they are empty.
 <br />
+<br />
 If you went through the saltbox rclone setup, these files got created for you.  
+<br />
+<br />
 </details>
 
 <details>
 <summary>Do I really need to include all seven or eight or however many?</summary>
 <br />
+<br />
 Strictly speaking, no, not with the way saltbox sets up the mounts.  All those shared drives are part of a union remote, and the union remote is mounted, so there's really no possibility that some of those files would be present but not others.  Any one of them is probably sufficient.
 <br />
+<br />
 However, there's no reason *not* to include them all as you can grab the list with a single command and a copy-paste.  You save a few keystrokes by not including all of them [you don't have to copy-paste `  - ` in front of those few lines], but in thinking about it at all you've spent the same amount of time.  Reading this question and answer have taken more time than it would have taken to include all of them as a belt-and-suspenders measure.
+<br />
+<br />
+</details>
+
+<details>
+<summary>Is there something magic about the name `mounted.bin`?</summary>
+<br />
+<br />
+No.  These files can be named whatever you want.  If you don't like `mounted.bin` and woudl rather use `black.sabbath` or whatever, go ahead.  Autoscan is just going to verify that the file you specify exists so autoscan knows it is safe to send scans to Plex.
+<br />
+<br />
 </details>
 
 You will set up the webhooks for radarr/sonarr/lidarr as part of their setup, so they aren't discussed here

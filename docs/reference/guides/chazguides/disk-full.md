@@ -31,11 +31,11 @@ sudo ncdu -x --exclude /opt/plex /
 What’s that command?
 
 ```shell
-sudo run with root privileges
-ncdu show graphic display of disk usage
--x don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your google drive]
---exclude /opt/plex ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here.
-/ starting point of scan
+sudo                 - run with root privileges
+ncdu                 - show graphic display of disk usage
+-x                   - don’t cross filesystem boundaries [this will show only local space used and won't cross over to remote file systems like your cloud storage]
+--exclude /opt/plex  - ignore this directory; it’s full of thousands of tiny files that take forever to scan and MOST LIKELY you’re not going to want to delete anything from here.
+/                    - starting point of scan
 ```
 
 You'll probably see something like this:

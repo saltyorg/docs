@@ -111,13 +111,13 @@ anchors:
 
 You should enter the entire list of bin files that were created by the automated script here.
 
-If you didn't do this, use:
+If you didn't go through that process, use:
 ```
 rclone touch NAME_OF_CLOUD_REMOTE:mounted.bin
 ```
 To create one of these files on *each distinct element* of cloud storage.  If you're using Dropbox, there is just one.  If you have eleven OneDrive mounts, you need to create eleven of these.
 
-Once you've done that, verify that they show up in the union moutn with:
+Once you've done that, verify that they show up in the union mount with:
 
 ```
 ls /mnt/unionfs/*.bin

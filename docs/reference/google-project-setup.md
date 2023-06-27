@@ -1,4 +1,4 @@
-This guide will show you how to set up a Google Project and create credentials that will work for safire or sa-gen or similar tools.
+This guide will show you how to set up a Google Project and create credentials that will work for sa-gen or similar tools.
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:
 

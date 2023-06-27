@@ -13,7 +13,7 @@ As setup for Saltbox, Cloudplow uploads all the content in `/mnt/local/Media/` (
 _Note: The size threshold and the check interval can be changed via steps mentioned on this page._
 
 <details>
-<summary>Google Drive Daily Upload Limit (click to expand)</summary><br />
+<summary> Drive Daily Upload Limit (click to expand)</summary><br />
 
 Google Drive has a max upload limit of about 750GB per day. When this limit is reached, Google Drive will put you in a 24 hour soft ban. When Cloudplow detects this (with the phrase `Failed to copy: googleapi: Error 403: User rate limit exceeded`), uploading will be suspended for 25 hours (i.e. a 25 hour ban sleep), and upon waking up, it will resume its checking and uploading tasks. This feature is enabled by default. This method is better than running Rclone task with a `bwlimit`, because you can just upload in bursts when the uploading resumes.
 
@@ -25,7 +25,7 @@ Cloudplow can also use service accounts to upload and work around this limitatio
 
 ## Config
 
-Note that this is an extract from the cloudplow docs and does not cover everythign that cloudplow can do.  Please refer to the Cloudplow github for complete details on available options.
+Note that this is an extract from the cloudplow docs and does not cover everything that cloudplow can do.  Please refer to the Cloudplow github for complete details on available options.
 
 ### Default config.json file
 
@@ -152,7 +152,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 ### Service account uploading
 
-You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past hte daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
 ```json
 "uploader": {

@@ -1,5 +1,8 @@
 # Customizing Plex Libraries
 
+!!! important
+    This guide was written before Dropbox was a popular choice; all the concepts here apply to Dropbox as well.  Nothing here is Google-specific, though all the examples use Google Drive.
+
 !!! info
     This guide was written before the default shared drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
 
@@ -28,7 +31,7 @@
 
 In the default Saltbox install, there are only two main Plex libraries: one for Movies and one for TV Shows.
 
-The idea being that all movies are to be placed within the `/Media/Movies` folder in Google Drive. and all TV shows under `/Media/TV`.
+The idea being that all movies are to be placed within the `/Media/Movies` folder in your cloud storage. and all TV shows under `/Media/TV`.
 
    ```text
    Media

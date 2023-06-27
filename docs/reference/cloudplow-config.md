@@ -1,5 +1,7 @@
 # Cloudplow Config
 
+NOTE: Everything here is specific to Google Drive.  If you are using Dropbox, there is nothing here that applies to you.
+
 The default Cloudplow setup uploads to the `google` remote using a single account, which limits you to 750GB/day of upload.
 
 To utilize rotating service accounts to upload more than this, you'll need to configure cloudplow to upload to the individual shared drives.

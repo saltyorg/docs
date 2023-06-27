@@ -1,7 +1,7 @@
 ## Automated rclone setup
 
-Ultimately, saltbox will have an automated rclone setup that does as much as possible for the user.
+There were initially plans for saltbox to have an automated rclone setup for google drive.
 
-This software is still under construction.
+Changes to Google's "unlimited" offering have back-burnered this effort indefinitely.
 
-Please follow the [partially scripted version of this process](rclone-manual.md).
+If you want to set up saltbox using Google Drive, please follow the [partially scripted version of this process](rclone-manual.md).

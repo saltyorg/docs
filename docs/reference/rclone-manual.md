@@ -28,6 +28,8 @@ Further, it is assuming you are starting from nothing; a new Google account with
 
 THIS PROCESS IS OPTIONAL.  THIS IS NOT A REQUIRED PART OF THE SALTBOX INSTALL.
 
+IF YOU ARE USING A BACKEND OTHER THAN GOOGLE DRIVE [say, Dropbox], THIS DOES NOT APPLY TO YOU.
+
 Rclone supports many cloud provider backends, but the only one routinely used by the Saltbox team is Google Drive.
 
 This process will use various scripts to do as much of this for you as possible, but there are some things that can't be scripted easily, like steps 1 and 2 below.

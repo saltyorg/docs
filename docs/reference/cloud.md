@@ -4,26 +4,15 @@
 
 If you want to forego cloud storage and put your media on something like your own NAS, there are some notes [here](local-storage.md).
 
-Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. However, Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) is the popular choice among users.  Some of the components are designed expressly for Google Drive, like the Google Drive monitoring in autoscan and the service-account rotation in cloudplow or crop.
+Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) has historically been the preferred choice among users, but with recent changes to the Google offering (Dropbox)[https://www.dropbox.com/] has now become a primary choice.  Some of the components are designed expressly for Google Drive, like the A-Train Google Drive monitoring in autoscan and the service-account rotation in cloudplow.
 
-We advise that you do NOT use a educational GSuite account or any GSuite account or Shared Drive you may buy on the secondary market [eBay and the like] or get free from some random website, unless you are aware of and planning for the likelihood that it disappears without warning one day.
+This documentation has not yet been fully updated to cover Dropbox specifics or idiosyncrasies.
 
-Note that rclone offering support for a storage backend does not mean that backend is suitable for the Saltbox use case.  The only backend that sees any significant testing and use is Google Drive.
+We advise that you do NOT use a educational account or any account or drive access plan you may buy on the secondary market [eBay and the like] or get free from some random website, unless you are aware of and planning for the likelihood that it disappears without warning one day.
+
+Note that rclone offering support for a storage backend does not mean that backend is suitable for the Saltbox use case.  The only backends that see any significant testing and use are Google Drive and Dropbox.
 
 ## Basics
-
-Out of the box, Saltbox stores the media unencrypted in cloud storage utilizing an Rclone VFS mount to access it. If you prefer your data is stored encrypted, you will need to do some tweaking to the Rclone config. There are no plans to document these tweaks here.
-
-The conversation about whether or not to encrypt has happened many times, and it is the opinion of the Saltbox team that there is not a compelling argument in favor of defaulting to encryption for the media that Saltbox stores.  There is nothing *preventing* one from using encrypted cloud storage, but there is no testing done around it.
-
-Encryption works fine if you know what you're doing and can make the required modifications and can accept the limitations it imposes.  Our recommendation to a new user would be not to use encryption unless and until that user understands what that entails, and this is reflected in this documentation.
-
-Not to rehash the conversation or invite argument, but a couple reasons behind this recommendation are:
-
-- Some functionality [Autoscan's "A-Train" Google Drive Monitoring, for example] does not work with encrypted remotes, so using encryption will prevent use of such features.
-- Supporting encryption as an option means more code paths, more maintenance, and more bug opportunities within Saltbox code.
-
-If you use the default scripts to set up Google Shared Drives, they will not be encrypted.
 
 Media will be stored in `Movies` and `TV` folders, all within a `Media` folder in root (i.e. `/Media`). <a href="#note1" id="note1ref"><sup>[1]</sup></a>
 
@@ -47,6 +36,46 @@ If you have media in other folders, you can simply move them into these folders 
 Note 1: For Google Drive, you can use the [Shift-Z trick](https://www.labnol.org/internet/add-files-multiple-drive-folders/28715/) to "symlink" folders here.
 
 Note 2: All the paths/folders mentioned here, and elsewhere, are **CASE SENSITIVE** (see [Saltbox Paths](../saltbox/basics/paths.md)).
+
+## Dropbox "personal folder" vs "shared folders"
+
+Dropbox has both "personal folders" and "shared folders".
+
+An rclone remote without a trailing slash shows your personal folder:
+```
+> rclone lsd dropbox-saltbox:
+          -1 2023-06-26 10:26:58        -1 in-my-personal-folder
+```
+
+With a trailing slash shows the "shared folders":
+```
+> rclone lsd dropbox-saltbox:/
+          -1 2023-06-26 10:21:03        -1 Content
+          -1 2023-06-26 10:21:03        -1 USERNAME
+          -1 2023-06-26 10:21:03        -1 USERNAME@email.tld
+          -1 2023-06-26 10:21:03        -1 crypt
+          -1 2023-06-26 10:21:03        -1 slash-dir
+```
+
+`USERNAME@email.tld` is my personal folder, as shown here:
+```
+> rclone lsd dropbox-saltbox:/USERNAME@email.tld
+          -1 2023-06-26 10:26:58        -1 in-my-personal-folder
+```
+
+It's mostly up to you which you use, just keep the differences in mind.
+
+The reasons why one would choose one or the other will be added here at some point.
+
+NOTE: This is a changepoint from Google Drive, where that leading slash doesn't change anything:
+
+```
+> rclone mkdir google-saltbox:bing
+> rclone lsd google-saltbox:
+          -1 2023-06-26 10:41:45        -1 bing
+> rclone lsd google-saltbox:/
+          -1 2023-06-26 10:41:45        -1 bing
+```
 
 ## Google "My Drive" vs. "Shared Drives"
 

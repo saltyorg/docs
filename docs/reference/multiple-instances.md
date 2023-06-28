@@ -40,7 +40,7 @@ traktarr
 whisparr
 ```
 
-Ther is a command at the end of this page you can use to get an updated list of roles that support this method.
+There is a command at the end of this page you can use to get an updated list of roles that support this method.
 
 ## Overview
 

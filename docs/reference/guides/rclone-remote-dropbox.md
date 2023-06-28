@@ -253,7 +253,7 @@ ExecStart=/usr/bin/rclone mount \
   --vfs-cache-max-age=504h \
   --vfs-cache-mode=full \
   --vfs-cache-poll-interval=30s \
-  --vfs-cache-max-size=500G \
+  --vfs-cache-max-size=50G \
   --disable-http2 \
   --tpslimit 12 \
   --tpslimit-burst 0 \
@@ -271,6 +271,12 @@ StartLimitBurst=3
 [Install]
 WantedBy=default.target
 ```
+
+Note that you may want to edit this value:
+```
+  --vfs-cache-max-size=50G \
+```
+This cache will be placed in your home directory by default, so make sure it is set to a value that wil not fill your disk.
 
 ### cloudplow config
 

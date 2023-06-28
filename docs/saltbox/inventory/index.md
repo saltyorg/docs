@@ -2,6 +2,14 @@
 
 Advanced use cases that would normally require editing roles can now be handled through the inventory system instead.
 
+You will enter your new values in:
+
+```shell
+/srv/git/saltbox/inventories/host_vars/localhost.yml
+```
+
+This implementation avoids git merge conflicts when updating Saltbox.
+
 Any variables defined in role files are available to be overridden by the user.
 
 These roles files can be found on your saltbox machine as:
@@ -14,14 +22,6 @@ or
 ```
 
 These files can also be reviewed in the github repo for [saltbox](https://github.com/saltyorg/Saltbox/tree/master/roles) and [sandbox](https://github.com/saltyorg/Saltbox/tree/master/roles).
-
-You will enter your new values in:
-
-```shell
-/srv/git/saltbox/inventories/host_vars/localhost.yml
-```
-
-This implementation avoids git merge conflicts when updating Saltbox.
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 

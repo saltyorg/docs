@@ -2,7 +2,7 @@
 
 This article describes how to create an rclone remote for Dropbox
 
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS
+## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
 
 ## Prerequisites
 
@@ -196,6 +196,8 @@ https://developers.dropbox.com/dbx-performance-guide
 
 ## Install considerations:
 
+## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
+
 ### rclone remote in settings:
 
 You will want to change the [rclone remote name in the settings](https://docs.saltbox.dev/reference/accounts/#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
@@ -211,6 +213,8 @@ rclone:
   version: latest
   remote: dropbox-crypt
 ```
+
+## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
 
 ### rclone vfs service
 
@@ -278,16 +282,22 @@ Note that you may want to edit this value:
 ```
 This cache will be placed in your home directory by default, so make sure it is set to a value that wil not fill your disk.
 
+## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
+
 ### cloudplow config
 
 The default cloudplow config [found at `/opt/cloudplow/config.json`] contains "rclone_extras" targeted at Google Drive.  After install you can remove the Google-specific flags if you wish.
 
 There's no compelling reason to remove them, since they will be ignored by rclone; they're listed here for completeness sake.
 
-These two lines can be removed from any `rclone_extras` on a dropbox-targeting `remote`:
+These two lines can be **removed** from any `rclone_extras` on a dropbox-targeting `remote`:
 ```
     "--drive-chunk-size": "128M",
     "--drive-stop-on-upload-limit": null,
+```
+And this line **added**:
+```
+    "--dropbox-chunk-size": "150M",
 ```
 
 The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts or halt uploading.  One of these is meaningless for dropbox, so you can remove it if you wish.
@@ -319,7 +329,7 @@ After:
 ```
 
 
-LEX NOTES TO INCORPORATE:
+LEX NOTES ABOUT ENCRYPTION AND PATHING TO INCORPORATE SOMEWHERE:
 
 ```
 HOW THE FREAKING FRACK DO TEAM FOLDERS VS PERSONAL FOLDERS ON DROPBOX WORK WITH RCLONE REMOTES?

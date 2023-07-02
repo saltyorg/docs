@@ -68,7 +68,7 @@ This backup will take some time, likely hours, and all your containers may be do
 !!! info
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
-    Specifically, if you want this to **create** the cron task, set `enabled` to `yes`:
+    Specifically, you should make sure you have defined and enabled your desired destination(s) for the backup, **and** if you want this to **create** the cron task, set `enabled` to `yes`:
 
     ```yaml
     cron:

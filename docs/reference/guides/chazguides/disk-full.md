@@ -189,3 +189,11 @@ If the bulk of the space is in your rclone VFS cache, you’ll want to check the
 Perhaps you used a copy-pasted config that is setting the max cache to 200G or so, and applied that to four mounts.  That means your rclone cache might grow to 800GB, so adjust the configs on the mounts you're caching.
 
 Don’t just delete the existing cached files.  You’ll need to stop the mounts first before you adjust the cache sizes.
+
+1. change mount service files
+2. stop all containers
+3. stop mount services [stock would be rclone_vfs and mergerfs but may vary]
+4. delete old cache files
+5. reload service files
+6. restart services
+7. restart containers

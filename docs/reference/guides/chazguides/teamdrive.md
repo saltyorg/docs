@@ -6,15 +6,17 @@ tags:
   - teamdrive
   - shared drive
   - rclone_vfs
+  - mergerfs
+  - unionfs
 ---
 
-# How do I mount a teamdrive?
+# How do I mount a cloud drive?
 
-You have a teamdrive you want to add to your Saltbox server so Plex can see it.  In this article I’m assuming that’s ALL you want to do.
+You have a cloud drive you want to add to your Saltbox server so Plex can see it.  In this article I’m assuming that’s ALL you want to do.
 
-If you want to set up a teamdrive and upload to it, see the [“Tip #44” document](tip44.md)
+If you want to set up a Google Teamdrive and upload to it, see the [“Tip #44” document](tip44.md)
 
-Here, I’m assuming you have access to a teamdrive, and you want to set it up so you can point Plex or Emby at it.  No more than that.
+Here, I’m assuming you have access to a cloud drive, and you want to set it up so you can point Plex or Emby at it.  No more than that.
 
 ## Overview
 
@@ -196,46 +198,59 @@ Let’s go!
 
     Last step; you’re going to add the teamdrive to the mergerfs configuration so that the files from it show up under /mnt/unionfs with the rest of your files.
 
-    Edit the mergerfs service file to include the new teamdrive in the mergerfs.
-    Edit this file:
+    === "Using inventory"
+        Add the following to the inventory file at `/srv/git/saltbox/local/inventory`:
 
-    ```text
-    /etc/systemd/system/mergerfs.service
-    ```
+        ```
+        mergerfs_mount_branches: "{{ local_mount_branch }}=RW:/mnt/remote=NC:/mnt/YOUR_NEW_MOUNT=NC"
+        ```
+        then run the `mounts_override` tag:
+        ```
+        sb install mounts_override
+        ```
+    
+    === "Editing service file directly"
+        Edit the mergerfs service file to include the new teamdrive in the mergerfs.
 
-    Edit this line to include your new teamdrive:
-
-    ```text
-    /mnt/local=RW:/mnt/remote=NC /mnt/unionfs
-    ```
-
-    For example:
-
-    ```text
-    /mnt/local=RW:/mnt/remote=NC:/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED=NC /mnt/unionfs
-    ```
-
-    Note: that MUST BE all one line, just as it is in the original unedited file.
-
-    Just like the rclone_vfs service, reload and restart:
-
-    Reload all the services
-
-    ```shell
-    sudo systemctl daemon-reload
-    ```
-
-    Start/restart the mergerfs
-
-    ```shell
-    sudo systemctl restart mergerfs.service
-    ```
-
-    Enable the mergerfs just for good measure
-
-    ```shell
-    sudo systemctl enable mergerfs.service
-    ```
+        Edit this file:
+    
+        ```text
+        /etc/systemd/system/mergerfs.service
+        ```
+    
+        Edit this line to include your new teamdrive:
+    
+        ```text
+        /mnt/local=RW:/mnt/remote=NC /mnt/unionfs
+        ```
+    
+        For example:
+    
+        ```text
+        /mnt/local=RW:/mnt/remote=NC:/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED=NC /mnt/unionfs
+        ```
+    
+        Note: that MUST BE all one line, just as it is in the original unedited file.
+    
+        Just like the rclone_vfs service, reload and restart:
+    
+        Reload all the services
+    
+        ```shell
+        sudo systemctl daemon-reload
+        ```
+    
+        Start/restart the mergerfs
+    
+        ```shell
+        sudo systemctl restart mergerfs.service
+        ```
+    
+        Enable the mergerfs just for good measure
+    
+        ```shell
+        sudo systemctl enable mergerfs.service
+        ```
 
     Now, verify that the mergerfs is working correctly.
 

@@ -388,7 +388,7 @@ nav:
           - Chazlarson Guides:
               - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
               - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
-              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
+              - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
               - I can't see my media!: reference/guides/chazguides/no-media.md
               - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
               - Why is my disk full?: reference/guides/chazguides/disk-full.md

@@ -48,18 +48,27 @@ The variables that can be used for customization within the Inventory are listed
     /opt/sandbox/roles/<role_name>/defaults/main.yml
     ```
 
-=== "Something Missing?"
+=== "Docker Parameters Reference"
 
-    !!! example inline end ""
-        
-        Some variables, though not listed, are implicitly available. Example:
+    !!! example inline end "Example"
+    
+        To obtain a `shm_size` variable for Plex, simply prepend `plex_docker_` to the parameter name: 
+      
         ```yaml
-        overseerr_docker_dns_servers
+        plex_docker_shm_size
         ```
 
-    In some cases, usually resulting from incomplete role migration, certain settings may not be currently exposed for use in the Inventory system.
+    For use cases involving Docker parameters beyond those exposed in the role files, it is still possible to construct usable Saltbox variables. The following resources provide the required syntax elements:
 
-    If you require additional functionality, feel free to create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we will consider accommodating it.
+    <sub><https://github.com/saltyorg/Saltbox/blob/master/resources/tasks/docker/create_docker_container.yml></sub>
+
+    <sub><https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html></sub>
+
+=== "Something Missing?"
+
+    In some cases, usually resulting from incomplete role migration, certain settings may not be exposed for use in the Inventory system. 
+
+    Should you require additional functionality, feel free to create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we will consider accommodating it.
 
 ## Demo
 

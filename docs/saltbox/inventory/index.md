@@ -132,13 +132,10 @@ To expose additional host locations (in this case, `/srv` and our home directory
 ```yaml
 code_server_docker_volumes_custom:
   - "/srv:/host_srv"
-  - "{{ user_paths_home_location }}:{{ user_paths_home_location }}" # (1)!
-
+  - "/home:/host_home"
 ```
 
-1. On this hypothetical Saltbox host, the default of "seed" was kept as the configured user, so `{{ user_paths_home_location }}` will be rendered into `/home/seed`.
-
-The container will then be created with the new volumes included, and the corresponding locations will be accessible to code-server via `/host_srv` and `/home/seed`.
+The container will then be created with the new volumes included, and the target locations will be accessible to code-server at `/host_srv` and `/host_home`.
 
 ## Additional Examples
 

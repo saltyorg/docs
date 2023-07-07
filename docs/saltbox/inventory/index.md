@@ -118,9 +118,9 @@ A common use for additions is to specify extra Docker mappings or flags. Let's e
 ```yaml linenums="87" hl_lines="7" title="https://github.com/saltyorg/Sandbox/blob/master/roles/code_server/defaults/main.yml#L87"
 # Volumes
 code_server_docker_volumes_default:
-  - "{{ code_server_paths_location }}/project:/home/code_server/project"
-  - "{{ code_server_paths_location }}/.config:/home/code_server/.config"
-  - "{{ code_server_paths_location }}/.local:/home/code_server/.local"
+  - "{{ code_server_paths_location }}/project:/home/coder/project"
+  - "{{ code_server_paths_location }}/.config:/home/coder/.config"
+  - "{{ code_server_paths_location }}/.local:/home/coder/.local"
   - "{{ server_appdata_path }}:/host_opt"
 code_server_docker_volumes_custom: []
 ```

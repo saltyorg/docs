@@ -199,7 +199,7 @@ Let’s go!
     Last step; you’re going to add the teamdrive to the mergerfs configuration so that the files from it show up under /mnt/unionfs with the rest of your files.
 
     === "Using inventory"
-        Add the following to the inventory file at `/srv/git/saltbox/local/inventory`:
+        Add the following to the inventory file at `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
         ```
         mergerfs_mount_branches: "{{ local_mount_branch }}=RW:/mnt/remote=NC:/mnt/YOUR_NEW_MOUNT=NC"

@@ -8,10 +8,8 @@ DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COM
 
 ## If you are unable to find your Plex server
 
-You may resolve this by either
-
-- Installing Saltbox again (do this for new Plex DBs/installs):
-
+=== "Delete everything and start again"
+    
     - **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
 
     - Remove Plex Container (it may show "Error response from daemon: No such container" if not created yet):
@@ -34,7 +32,7 @@ You may resolve this by either
        sb install plex
        ```
 
-- Installing Saltbox again (do this for existing Plex DBs/installs):
+=== "Keep my data and rebuild Plex"
 
     - **THIS WILL LEAVE ANY EXISTING PLEX LIBRARIES AND METADATA INTACT**
 
@@ -50,17 +48,19 @@ You may resolve this by either
        sb install plex
        ```
 
-- Using SSH Tunneling to log into Plex and set your credentials:
+=== "Use SSH to tunnel to my server and claim it"
 
-    - On your host PC (replace `<user>` with your user name and `<yourserveripaddress>` with your serveripaddress - no arrows):
+    - On your local machine (the one that you uise to ssh into your saltbox machine):
 
        ```shell
        ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N
        ```
-
+       
+       Of course, replace `<user>` with your user name and `<yourserveripaddress>` with your serveripaddress - no arrows
+       
        This will just hang there without any message. That is normal.
 
-    - In a browser, go to <http://localhost:32400/web>.
+    - In a browser **ON THAT MACHINE**, go to <http://localhost:32400/web>.
 
     - Log in with your Plex account.
 
@@ -76,7 +76,7 @@ You may resolve this by either
 
 ## If Plex shows you an incorrect title with the filename (eg RARBG releases)
 
-Reorder the Plex agents for TV/Movies so that local assets are at the bottom.
+Reorder the Plex agents for trhe library so that local assets are at the bottom.
 
 ## Fix permission issues with Plex logs
 

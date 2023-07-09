@@ -22,9 +22,15 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
        !!! warning
            **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
     
-       ```shell
-       sudo rm -rf /opt/plex
-       ```
+        <details>
+        <summary>I understand the risk!  Show me!</summary>
+        <br />
+
+        ```shell
+        sudo rm -rf /opt/plex
+        ```
+
+        </details>
 
     - Reinstall the Plex container:
 

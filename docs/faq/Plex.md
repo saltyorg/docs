@@ -1,16 +1,15 @@
 # Plex
 
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
-
 DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COMMANDS DO.
+
+SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
 ## If you are unable to find your Plex server
 
 === "Delete everything and start again"
     
-    - **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
+    !!! warning
+        **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
 
     - Remove Plex Container (it may show "Error response from daemon: No such container" if not created yet):
 
@@ -20,7 +19,8 @@ DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COM
 
     - Remove the Plex folder:
  
-       THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.
+       !!! warning
+           **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
     
        ```shell
        sudo rm -rf /opt/plex
@@ -34,7 +34,8 @@ DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COM
 
 === "Keep my data and rebuild Plex"
 
-    - **THIS WILL LEAVE ANY EXISTING PLEX LIBRARIES AND METADATA INTACT**
+    !!! info
+        THIS WILL LEAVE ANY EXISTING PLEX LIBRARIES AND METADATA INTACT
 
     - Remove Plex Preferences file.
 

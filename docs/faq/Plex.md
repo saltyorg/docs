@@ -13,14 +13,14 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
     - Remove Plex Container (it may show "Error response from daemon: No such container" if not created yet):
 
-       ```shell
-       sudo docker rm -f plex
-       ```
+        ```shell
+        sudo docker rm -f plex
+        ```
 
     - Remove the Plex folder:
  
-       !!! warning
-           **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
+        !!! warning
+            **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
     
         <details>
         <summary>I understand the risk!  Show me!</summary>
@@ -34,9 +34,9 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
     - Reinstall the Plex container:
 
-       ```shell
-       sb install plex
-       ```
+        ```shell
+        sb install plex
+        ```
 
 === "Keep my data and rebuild Plex"
 

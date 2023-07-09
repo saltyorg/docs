@@ -4,6 +4,8 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 [PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
 
+DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS TOU UNDERSTAND WHAT THESE COMMANDS DO.
+
 ## If you are unable to find your Plex server
 
 You may resolve this by either
@@ -19,7 +21,9 @@ You may resolve this by either
      ```
 
   - Remove the Plex folder:
-
+ 
+     THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.
+    
      ```shell
      sudo rm -rf /opt/plex
      ```

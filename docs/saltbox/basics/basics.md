@@ -26,6 +26,8 @@
 
 - Quickly install and uninstall apps.
 
+- Built-in config-driven method to deploy multiple instances of many apps [multiple radarr, sonarr, plex, etc]
+
 ### Cloud Storage
 
 - Store media on cloud storage to save on local drive space.

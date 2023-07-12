@@ -242,7 +242,7 @@ Note that generally speaking these five options are mutually exclusive.
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
 === "I have media on cloud storage"
-    This option is aimed at you if you are using some other setup with an rclone-based connction to cloud storage.
+    This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
     
     You probably already have the required setup complete.  You should use your existing setup at least to start with.
 
@@ -260,6 +260,8 @@ Note that generally speaking these five options are mutually exclusive.
     === "Google Drive"
 
         THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
+
+        IF YOU ARE STARTING FRESH LATER THAN JUNE 2023 YOU PROBABLY DON'T WANT TO GO THROUGH THIS.  Changes to Google's "unlimited" offering have made this mostly needless and obsolete.
 
         If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 

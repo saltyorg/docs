@@ -172,8 +172,8 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     1. Set **SSL** to `Full (strict)`.
    
        ![](../images/cloudflare/cloudflare-full-strict.png)
-   
-    <!-- Temporarily commented out - may not be needed..
+
+<!-- Temporarily commented out - may not be needed..
    
     1. Set **Always Use HTTPS** to `off`.
    
@@ -181,7 +181,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
        ![](../images/cloudflare/cloudflare-always-redirect.png)
    
-    -->
+-->
    
     #### Get a [free] Cloudflare API Key
    

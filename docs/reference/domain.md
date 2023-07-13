@@ -30,11 +30,11 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     **Steps:**
    
-    Created an A Record for your subdomains with `*` for host and set the value to your server IP address.
+    Create an A Record for your subdomains with `*` for host and set the value to your server IP address.
    
-        | **Type** | **Host** | **Value**           | **TTL**   |
-        |:-------- |:-------- |:------------------- |:--------- |
-        | A Record | *        | _Server IP Address_ | 300       |
+    | **Type** | **Host** | **Value**           | **TTL**   |
+    |:-------- |:-------- |:------------------- |:--------- |
+    | A Record | *        | _Server IP Address_ | 300       |
    
     <details><summary>Example</summary>
    

@@ -172,16 +172,6 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     1. Set **SSL** to `Full (strict)`.
    
        ![](../images/cloudflare/cloudflare-full-strict.png)
-
-<!-- Temporarily commented out - may not be needed..
-   
-    1. Set **Always Use HTTPS** to `off`.
-   
-    1. Set **HTTP Strict Transport Security (HSTS)** to `disabled`.
-   
-       ![](../images/cloudflare/cloudflare-always-redirect.png)
-   
--->
    
     #### Get a [free] Cloudflare API Key
    
@@ -232,3 +222,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     4. Under "Status", click the switch next to the gray cloud icon (i.e. `DNS Only`) to switch to an orange one (i.e. `DNS and HTTP proxy (CDN)`).
    
        ![](../images/cloudflare/cloudflare-proxy-off.png){ width=60% }
+
+<!-- Temporarily removed from setup [last steps] - may not be needed..
+   
+    1. Set **Always Use HTTPS** to `off`.
+   
+    1. Set **HTTP Strict Transport Security (HSTS)** to `disabled`.
+   
+       ![](../images/cloudflare/cloudflare-always-redirect.png)
+   
+-->

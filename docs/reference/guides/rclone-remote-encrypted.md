@@ -17,9 +17,20 @@ First, create a directory on the backing remote at which to point the crypt remo
 
 1. Create the `encrypt` directory on the backing remote:
 
-    ```
-    rclone mkdir dropbox:encrypt
-    ```
+    === "I want to use my personal folder"
+
+        ```shell
+        rclone mkdir dropbox:encrypt
+
+        ```
+
+    === "I want to use a team folder"
+
+        ```shell
+        rclone mkdir dropbox:/encrypt
+
+        ```
+
     **MAKE NOTE OF THIS; YOU WILL NEED IT LATER**
 
 1. Verify that the directory is there, if you wish:
@@ -74,14 +85,27 @@ Now move on to creating the actual crypt remote.
 
 5. For "Option remote", type in the name of your backing remote plus `:encrypt` and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
-    Option remote.
-    Remote to encrypt/decrypt.
-    Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
-    "myremote:bucket" or maybe "myremote:" (not recommended).
-    Enter a value.
-    remote> dropbox:encrypt
-    ```
+    === "I am using my personal folder"
+
+        ```shell
+        Option remote.
+        Remote to encrypt/decrypt.
+        Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
+        "myremote:bucket" or maybe "myremote:" (not recommended).
+        Enter a value.
+        remote> dropbox:encrypt
+        ```
+
+    === "I want to use a team folder"
+
+        ```shell
+        Option remote.
+        Remote to encrypt/decrypt.
+        Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
+        "myremote:bucket" or maybe "myremote:" (not recommended).
+        Enter a value.
+        remote> dropbox:/encrypt
+        ```
 
     This is the directory on the cloud storage that will contain the encrypted data.
 

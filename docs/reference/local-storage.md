@@ -6,7 +6,9 @@
 
 In this setup, the absolute simplest thing would be to mount the root of your media storage, whether it's a single disk or a RAID array or whatever, at `/mnt/local/Media`
 
-If this disk is faster than your boot disk, maybe you want to mount it at `/mnt/local/Media`, which would mean that all your downlaod activity will happen on it.  IF you are downloading from Usent and this disk is not solid state, you don't want to do that.  If your boot disk is a small HD and you're adding a giant NVME, then you probably _DO_ want to do that.
+If this disk is faster than your boot disk, maybe you want to mount it at `/mnt/local`, which would mean that all your download activity will happen on it.  
+
+If you are downloading from Usenet and this disk is not solid state, you don't want to do that.  If your boot disk is a small HD and you're adding a giant NVME, then you probably _DO_ want to do that.
 
 Then leave the rclone remote entry in the settings blank:
 
@@ -16,7 +18,7 @@ rclone:
   remote: 
 ```
 
-Saltbox will not do any of the remote mount setup.
+Saltbox will not do any of the remote mount setup when you run the install.
 
 Once everything is installed and configured, Sonarr/Radarr/etc will move your completed downloads to `/mnt/local/Media/WHATEVER`, which will be on that physical disk.
 
@@ -37,3 +39,5 @@ rclone:
 ```
 
 Then run the regular saltbox install.  Your NAS [or whatever] will be mounted at `/mnt/remote`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.
+
+You may want to examine the rclone_vfs service file at `/etc/systemd/system/rclone_vfs.service` to adjust the rclone flags to suit your connection scheme, since the defaults are intended for Google Drive.

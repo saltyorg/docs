@@ -1,6 +1,6 @@
 # Local Storage
 
-"Local storage" can mean a couple differnet things.
+"Local storage" can mean a couple different things.
 
 ## Truly *Local* storage, as in a physical disk or disks installed in the Saltbox server machine
 

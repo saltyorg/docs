@@ -22,6 +22,8 @@ Saltbox will not do any of the remote mount setup when you run the install.
 
 Once everything is installed and configured, Sonarr/Radarr/etc will move your completed downloads to `/mnt/local/Media/WHATEVER`, which will be on that physical disk.
 
+As you will recall from the earlier "How does Saltbox Work" lesson, this means everything shows up in the union at `/mnt/unionfs/` for application use.
+
 ## *Local to your site* storage, as in a NAS or the like on your network
 
 In this case, it's best to use the same rclone + cloudplow model that the standard cloud storage setup uses.

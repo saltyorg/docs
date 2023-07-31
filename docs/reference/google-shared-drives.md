@@ -108,6 +108,8 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
     }
     ```
 
+    If you noticed and deleted some empty JSON files in the previous step, verify that `/opt/sa/all/150.json` exists; if it doesn't, change that line in `config.py` to any other JSON file that *does* exist.   There's nothing magic about `150.json`.
+
     If you don't want to create some of those shared drives, remove the line.  It's safe to go ahead and create them for simplicity later in the event you want to start using them.  The list should not have a comma at the end, as shown above.
 
     Save the file with control-x, y, enter

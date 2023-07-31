@@ -1,4 +1,4 @@
-# PLex DB
+# Plex DB
 
 ## What is it?
 

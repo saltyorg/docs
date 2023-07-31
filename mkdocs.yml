@@ -381,6 +381,8 @@ nav:
       - Themepark Styles for apps: advanced/themepark.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
+      - Utility tags:
+        - Plex-DB: advanced/utility_tags/plex-db.md
 
   - Reference:
       - Guides:

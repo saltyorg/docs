@@ -29,3 +29,5 @@ Further information:
 - [:octicons-link-16: Sqlite VACUUM](https://www.sqlite.org/lang_vacuum.html)
 
 - [:octicons-link-16: Sqlite REINDEX](https://www.sqlite.org/lang_reindex.html)
+
+- [:octicons-link-16: A more comprehensive utility with similar purpose](https://github.com/ChuckPa/PlexDBRepair)

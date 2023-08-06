@@ -32,8 +32,6 @@ First, create an rclone remote pointing to your NAS using whatever connection sc
 
 If you give it a name other than `google`, change the rclone remote entry in the settings to match:
 
-Then leave the rclone remote entry in the settings blank:
-
 ```ini
 rclone:
   version: latest 

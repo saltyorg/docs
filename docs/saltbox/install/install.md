@@ -309,6 +309,9 @@ How do you know if your rclone remote[s] are configured?  `rclone lsd google:/` 
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
+!!! warning
+    You must run at least `core` prior to any other Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags.
+
 === "Saltbox"
 
     `saltbox` is an all-in-one media server for downloading and playback.  It installs `core` and a set of application as described [here](../../basics/install_types)
@@ -347,7 +350,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Dealer's choice"
 
-    If you want to install a personal selection of app, install `core` and the app tags you want as listed [here](../../basics/install_types)
+    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../../basics/install_types)
     
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent

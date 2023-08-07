@@ -8,11 +8,11 @@
 
 ## Previewing docs locally
 
-Local previewing is currently not available, as the docs use plugins that are only imncluded in the Insiders' edition of `squidfunk/mkdocs-material`.
+Local previewing is currently not available, as the docs use plugins that are only included in the Insiders' edition of `squidfunk/mkdocs-material`.
 
 ## Full previewing:
 
-The docs are actually built with the Insiders' edition of `squidfunk/mkdocs-material`, so to preview them you will need to be added to a private repo and do some local setup to enable the previewing. Contact the devs through the Saltbox discord if you're interested in that.
+The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so to preview them you will need to be added to a private repo and do some local setup to enable the previewing. Contact the devs through the Saltbox discord if you're interested in that.
 
 ### Contributors
 

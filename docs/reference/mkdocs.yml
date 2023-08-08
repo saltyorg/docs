@@ -173,6 +173,7 @@ nav:
             - Wrapperr: sandbox/apps/wrapperr.md
           # - Requests:
           - Requests:
+            - DiscoFlix: sandbox/apps/discoflix.md
             - Doplarr: sandbox/apps/doplarr.md
             - Ombi: sandbox/apps/ombi.md
             - Ombix: sandbox/apps/ombix.md

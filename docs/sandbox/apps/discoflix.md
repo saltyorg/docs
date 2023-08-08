@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[DiscoFlix](https://github.com/nickheyer/discoflix){: target=_blank rel="noopener noreferrer" } is a user-request-management system for your media server. With Radarr / Sonarr / Discord integration and many more features on the way, DiscoFlix has you covered.
+[DiscoFlix](https://github.com/nickheyer/discoflix){: target=_blank rel="noopener noreferrer" } is a user-request-management system for your media server. With Radarr / Sonarr / Discord integration, DiscoFlix facilitates requests by your users for your media server.
 
 Also comes with a [REST-API](https://tinyurl.com/discoflix).
 

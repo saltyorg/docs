@@ -63,10 +63,11 @@ remotes = gcrypt: tcrypt:
 
 Once this is saved, you need to install the mount service:
 
+IMPORTANT: if you are going through the initial setup DO NOT RUN THIS `mounts` TAG until you've installed saltbox `core` at least [which will run the `mounts` tag].
+
 ```shell
 sb install mounts
 ```
-IMPORTANT: if you are going through the initial setup DO NOT RUN THIS `mounts` TAG until you've installed saltbox `core` at least [which will run the `mounts` tag].
 
 ## Cloudplow changes
 

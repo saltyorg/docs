@@ -120,6 +120,7 @@
 - **[teamspeak](../sandbox/apps/teamspeak.md)**  - tag - `sandbox-teamspeak`
 - **[telegraf](../sandbox/apps/telegraf.md)**  - tag - `sandbox-telegraf`
 - **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
+- **[threadfin](../sandbox/apps/threadfin.md)**  - tag - `sandbox-threadfin`
 - **[tika](../sandbox/apps/tika.md)**  - tag - `sandbox-tika`
 - **[tqm](../sandbox/apps/tqm.md)**  - tag - `sandbox-tqm`
 - **[Trackarr](../sandbox/apps/trackarr.md)**  - tag - `sandbox-trackarr`

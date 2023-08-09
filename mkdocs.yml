@@ -239,6 +239,7 @@ nav:
             - Funkwhale: sandbox/apps/funkwhale.md
             - Navidrome: sandbox/apps/navidrome.md
           - TV:
+            - Threadfin: sandbox/apps/threadfin.md
             - Xteve: sandbox/apps/xteve.md
         - Media Servers and add-ons:
           - Embystat: sandbox/apps/embystat.md

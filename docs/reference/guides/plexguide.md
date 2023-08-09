@@ -63,13 +63,15 @@ remotes = gcrypt: tcrypt:
 
 Once this is saved, you need to install the mount service:
 
-IMPORTANT: if you are going through the initial setup DO NOT RUN THIS `mounts` TAG until you've installed saltbox `core` at least [which will run the `mounts` tag].
+IMPORTANT: if you are going through the initial setup DO NOT RUN THIS `mounts` TAG until you've installed saltbox `core` at least [which will run the `mounts` tag].  The `mounts` tag depends on other things that the `core` tag installs.
 
 ```shell
 sb install mounts
 ```
 
 ## Cloudplow changes
+
+NOTE: This is assuming you want to keep uploading to the drives you had set up in PG/PTS.
 
 ```shell
 nano /opt/cloudplow/config.json
@@ -169,3 +171,5 @@ Or some other unused port number.
 
 
 These notes do not represent everything you need to do to migrate; the two systems are very different and there is no automation around migration.
+
+You will need to understand what you are doing and why.

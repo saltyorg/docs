@@ -142,4 +142,4 @@ Where the two placeholders are the Saltbox user and group [by default `seed:seed
 <br />
 </details>
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-3-create-a-google-group-to-hold-service-accounts)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-3-create-a-google-group-to-hold-service-accounts)

@@ -125,13 +125,13 @@ To go through this process, you will need the following:
 
 10. Give access by clicking through these two dialogs.
 
-    ![](/images/rclone-remote/dropbox-verification.png)
+    ![](../../images/rclone-remote/dropbox-verification.png)
 
-    ![](/images/rclone-remote/dropbox-permission.png)
+    ![](../../images/rclone-remote/dropbox-permission.png)
 
 11. The browser should report success.
 
-    ![](/images/rclone-remote/dropbox-success.png)
+    ![](../../images/rclone-remote/dropbox-success.png)
 
 12. And a token should show up in the terminal on your local computer:
 
@@ -188,7 +188,7 @@ To go through this process, you will need the following:
     e/n/d/r/c/s/q> q
     ```
 
-If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted).
+If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md).
 
 ## Dropbox Performance Guide
 

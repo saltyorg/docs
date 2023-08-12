@@ -194,7 +194,7 @@ The "saltbox install" is the full installation of saltbox using `sb install salt
 
 You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).  The script described there operates on the default cloudplow config file, which does not exist yet if you are going through this for the first time.
 
-For now, go [back to the install process](../../saltbox/install/install/#step-5-saltbox).
+For now, go [back to the install process](../saltbox/install/install.md#step-5-saltbox).
 
 ## Existing Rclone Setup
 
@@ -240,7 +240,7 @@ To rename the Google Drive remote to `google`:
    cp -n $(rclone config file | tail -n 1) ~/.config/rclone/rclone.conf
    ```
 
-1. Give it the proper ownership and permissions. Replace `user` and `group` to match yours (see [here](../../faq/System#find-your-user-id-uid-and-group-id-gid)):
+1. Give it the proper ownership and permissions. Replace `user` and `group` to match yours (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid)):
 
    ```shell
    sudo chown user:group ~/.config/rclone/rclone.conf

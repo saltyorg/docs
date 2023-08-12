@@ -21,7 +21,7 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
   There is an issue with the permissions on that folder that you'll need to fix manually (Saltbox can't fix this as Plex creates this folder after the first scan)
 
-   To fix this, Run the following command. Replace `user` and `group` to match yours (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
+   To fix this, Run the following command. Replace `user` and `group` to match yours (see [here](System.md#find-your-user-id-uid-and-group-id-gid)).
 
    ```shell
    docker stop plex

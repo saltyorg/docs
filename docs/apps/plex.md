@@ -213,7 +213,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 ## Scan Media libraries
 
-As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](../apps/autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
+As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
 To do so:
 
@@ -231,11 +231,4 @@ Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Autoscan](../autoscan/).
-4. [Sonarr](../../apps/sonarr)
-5. [Radarr](../../apps/radarr)
-6. [Lidarr](../../apps/lidarr)
-7. [Tautulli](../../apps/tautulli)
-8. [Overseerr](../../apps/overseerr)
-9. [Portainer](../../apps/portainer)
-10. [Organizr](../../apps/organizr)
+Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.md).

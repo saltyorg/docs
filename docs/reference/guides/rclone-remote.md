@@ -216,15 +216,15 @@ To go through this process, you will need the following:
 
 12. If asked to login, use the Google Drive account you want to store your data in.
 
-    ![](/images/rclone-remote/google-login.png)
+    ![](../../images/rclone-remote/google-login.png)
 
 13. Give access by clicking "Allow".
 
-    ![](/images/rclone-remote/google-permission.png)
+    ![](../../images/rclone-remote/google-permission.png)
 
 14. The browser should report success.
 
-    ![](/images/rclone-remote/dropbox-success.png)
+    ![](../../images/rclone-remote/dropbox-success.png)
 
 15. And a token should show up in the terminal on your local computer:
 
@@ -328,7 +328,7 @@ To go through this process, you will need the following:
 
 The name of this remote [`google` in this case] is what you should enter in the rclone settings as you proceed with the install.
 
-If you wish to encrypt this remote, proceed with [creating a crypt remote](../rclone-remote-encrypted)
+If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md)
 
 ## Existing Rclone Setup
 

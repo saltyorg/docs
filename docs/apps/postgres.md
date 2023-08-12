@@ -20,6 +20,6 @@ sb install postgres
 
 !!!info
     The default password for this container is `password4321`
-    To easily manage the db, consider [adminer](/sandbox/apps/adminer.md)
+    To easily manage the db, consider [adminer](../sandbox/apps/adminer.md)
 
 - [:octicons-link-16: Documentation: Postgres Docs](https://www.postgresql.org/docs/12/index.html){: .header-icons target=_blank rel="noopener noreferrer" }

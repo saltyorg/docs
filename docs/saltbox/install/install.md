@@ -317,7 +317,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Saltbox"
 
-    `saltbox` is an all-in-one media server for downloading and playback.  It installs `core` and a set of application as described [here](../../basics/install_types)
+    `saltbox` is an all-in-one media server for downloading and playback.  It installs `core` and a set of application as described [here](../basics/install_types.md)
     
     ```shell
     sb install saltbox
@@ -326,7 +326,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Mediabox [playback]"
 
-    `mediabox` is just the parts required for playback.  It installs `core` and a set of application as described [here](../../basics/install_types)
+    `mediabox` is just the parts required for playback.  It installs `core` and a set of application as described [here](../basics/install_types.md)
     
     ```shell
     sb install mediabox
@@ -335,7 +335,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Feederbox [downloading]"
 
-    `feederbox` is just the parts required for downloading.  It installs `core` and a set of application as described [here](../../basics/install_types)
+    `feederbox` is just the parts required for downloading.  It installs `core` and a set of application as described [here](../basics/install_types.md)
     
     ```shell
     sb install feederbox
@@ -344,7 +344,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Core [minimal]"
 
-    `core` is the bare minimum required for saltbox.  It installs the basics as described [here](../../basics/install_types)
+    `core` is the bare minimum required for saltbox.  It installs the basics as described [here](../basics/install_types.md)
     
     ```shell
     sb install core
@@ -353,7 +353,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Dealer's choice"
 
-    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../../basics/install_types)
+    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install_types.md)
     
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent

@@ -1,8 +1,8 @@
 # Accounts and Settings
 
 !!! warning
-    This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#configuration).
-    If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#configuration).
+    If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
 
 On this page, we break down the options available in the following files:
 
@@ -329,7 +329,7 @@ Each tab shows a "section" in the file.
     `remote`: What type of remote to use.
 
     Default is `rclone_vfs`.
-    Options are `rclone_vfs` and `rclone_vfs_cache`. If selecting `rclone_vfs_cache` it is recommended to review the [rclone documentation](https://rclone.org/commands/rclone_mount/#vfs-file-caching) and review the `rclone_vfs_cache_max_size`, `rclone_vfs_cache_max_age` and (optionally) `rclone_vfs_cache_max_dir` variables for any configuration required via the [inventory system](/saltbox/inventory).
+    Options are `rclone_vfs` and `rclone_vfs_cache`. If selecting `rclone_vfs_cache` it is recommended to review the [rclone documentation](https://rclone.org/commands/rclone_mount/#vfs-file-caching) and review the `rclone_vfs_cache_max_size`, `rclone_vfs_cache_max_age` and (optionally) `rclone_vfs_cache_max_dir` variables for any configuration required via the [inventory system](../saltbox/inventory/index.md).
 
     `ipv4_only`: Should rclone use ipv4 only?
 

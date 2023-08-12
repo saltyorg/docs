@@ -60,7 +60,7 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 - Leave ample space in `/boot` (e.g. 2+ GB).
 
-- putting the `/opt` directory on a `btrfs` partition can dramatically reduce the amount of time your containers are down during [backup](../saltbox/backup).  A reasonable starting size for `/opt` is 250G.
+- putting the `/opt` directory on a `btrfs` partition can dramatically reduce the amount of time your containers are down during [backup](../saltbox/backup/backup.md).  A reasonable starting size for `/opt` is 250G.
 
 - You can use a single partition formatted as BTRFS, but if you do so *make sure* you install the `btrfsmaintenance` tag after setup.
 

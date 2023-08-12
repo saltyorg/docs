@@ -23,6 +23,6 @@ As configured, the instance runs on the Docker network accessible to other saltb
 as well as via the reverse proxy at <br />
 `https://apprise.domain.tld`.
 
-The configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
+The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 - [:octicons-link-16: Documentation: Apprise Client Docs](https://github.com/caronc/apprise/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

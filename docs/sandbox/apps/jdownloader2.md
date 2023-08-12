@@ -22,7 +22,7 @@ sb install sandbox-jdownloader2
 
 ### 3. Setup
 
-1. The configured password is taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
+1. The configured password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 2. Configure your myjdownloader account (Create at <https://my.jdownloader.org/> if needed) and name your instance so you can connect via web or browser extensions. Use clipboard for two step copy and paste if needed. Note that some settings are only accessible via `jdownloader2.yourdomain.com`. Premium accounts such as mega.nz can be added via web interface.
 

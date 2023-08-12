@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://yacht.sh/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](GITHUBLINK){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://yacht.sh/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/SelfhostedPro/Yacht){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

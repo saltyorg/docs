@@ -437,4 +437,4 @@ This is used during the setup of [Overseer](overseerr.md) and [Organizr](organiz
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Radarr](../radarr/).
+Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).

@@ -63,4 +63,4 @@ To access Tautulli, visit `https://tautulli._yourdomain_.com`
 
 ## 5. Next
 
-Are you setting Saltbox up for the first time?  Continue to [Overseerr](../overseerr/).
+Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseerr.md).

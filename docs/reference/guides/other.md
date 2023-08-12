@@ -20,7 +20,7 @@ rclone:
 
 ## Paths
 
-Saltbox is assuming that your media is stored in particular [paths](../../../saltbox/basics/paths) on your cloud storage.  Changing those paths is not trivial, so you will be best served to nove your media to match the expected folder hierarchy.
+Saltbox is assuming that your media is stored in particular [paths](../../saltbox/basics/paths.md) on your cloud storage.  Changing those paths is not trivial, so you will be best served to nove your media to match the expected folder hierarchy.
 
 ## Application Data
 

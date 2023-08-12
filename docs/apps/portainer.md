@@ -32,4 +32,4 @@ To access Portainer, visit  `https://portainer._yourdomain.com_`
 
 ## 4. Next
 
-Are you setting Saltbox up for the first time?  Continue to [Organizr](../organizr/).
+Are you setting Saltbox up for the first time?  Continue to [Organizr](organizr.md).

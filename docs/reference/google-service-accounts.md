@@ -175,4 +175,4 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 !!! warning
     If you see errors that leave some of the service account JSON files empty, the simplest thing to do is to jsut delete those empty files and carry on.  300 was overkill even when this was a useful setup, so 240 or so will be more than sufficient now.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-7-create-some-shared-drives-and-related-infrastructure)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-7-create-some-shared-drives-and-related-infrastructure)

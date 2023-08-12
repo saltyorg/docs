@@ -50,4 +50,4 @@ To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used late
 
 ## 5. Next
 
-Are you setting Saltbox up for the first time?  Continue to [Jackett](../jackett/).
+Are you setting Saltbox up for the first time?  Continue to [Jackett](jackett.md).

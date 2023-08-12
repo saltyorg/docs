@@ -1,6 +1,6 @@
 !!! warning
-    This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#dependencies).
-    If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#step-1-dependencies).
+    If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
 
 If you want to examine the dependencies script before running it:
 
@@ -19,4 +19,4 @@ This script will:
 
 At the end of this you will have a local copy of the Saltbox repo, and all the things that Saltbox relies on to install will be available.
 
-Go [back to the install process](../../saltbox/install/install/#step-1-dependencies).
+Go [back to the install process](../saltbox/install/install.md#dependencies).

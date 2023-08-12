@@ -1,8 +1,8 @@
 # Installation
 
 !!! warning
-    This is a reference discussing an aspect of the [install process](../../saltbox/install/install/#install).
-    If you are looking for the steps to follow to install, they are [here](../../saltbox/install/install).
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#install).
+    If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
 
 ## Install Saltbox
 

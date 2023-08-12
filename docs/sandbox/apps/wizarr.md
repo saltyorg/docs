@@ -8,7 +8,7 @@ With Wizarr you can invite people to your plex server with a single invite URL. 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](ghcr.io/wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://ghcr.io/wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" }|
 
 ### 1. Installation
 

@@ -30,4 +30,4 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 7. You're done.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-2-create-a-new-project-and-generate-a-credential-file)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-2-create-a-new-project-and-generate-a-credential-file)

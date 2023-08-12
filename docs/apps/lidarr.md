@@ -405,4 +405,4 @@ This is used during the setup of [Organizr](organizr.md).
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Tautulli](../tautulli/).
+Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.md).

@@ -7,7 +7,7 @@ When you add a container manually as outlined on this page, neither of those thi
 
 The examples below are `docker run` commands that you would execute in an SSH session on your server.
 
-If you want to create a role file that you can install like the built-in applications, see [here](../../sandbox/basics/#contributing-to-sandbox-apps).
+If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
 
 # Format
 

@@ -87,7 +87,7 @@ Reorder the Plex agents for trhe library so that local assets are at the bottom.
 
 ## Fix permission issues with Plex logs
 
-Replace `user` and `group` to match yours' (see [here](../System#find-your-user-id-uid-and-group-id-gid)).
+Replace `user` and `group` to match yours' (see [here](System.md#find-your-user-id-uid-and-group-id-gid)).
 
 ```shell
 sudo chown -R user:group /opt/plex/Library/Logs

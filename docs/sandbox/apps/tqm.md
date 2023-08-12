@@ -28,7 +28,7 @@ nano /opt/tqm/config.yaml
 ### Modify "Client" section
 
 !!! Note
-      📢 As setup for Saltbox, tqm uses this path to find your downloaded files:  `/mnt/unionfs/downloads/...` (see [Paths](/saltbox/basics/paths.md#media))
+      📢 As setup for Saltbox, tqm uses this path to find your downloaded files:  `/mnt/unionfs/downloads/...` (see [Paths](../../saltbox/basics/paths.md#media))
 
 Client Example:
 

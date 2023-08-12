@@ -58,7 +58,7 @@ sb install qbittorrent
 !!! Warning
       Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!  
       If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).  
-      If you don't need the API endpoints exposed, you can disable them using the [inventory system](/saltbox/inventory/) with
+      If you don't need the API endpoints exposed, you can disable them using the [inventory system](../saltbox/inventory/index.md) with
 
       ``` { .yaml }
       qbittorrent_traefik_api_enabled: false

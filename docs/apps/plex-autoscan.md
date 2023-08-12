@@ -60,7 +60,7 @@ _Note: For Mediabox / Feederbox setups, the following will be done on the Mediab
 
 _Note: For Mediabox / Feederbox setup, the following will be done on the Mediabox._
 
-The Plex Autoscan URL is needed during the setup of [Sonarr](sonarr#plex-autoscan), [Radarr](radarr#plex-autoscan), and [Lidarr](lidarr#plex-autoscan).
+The Plex Autoscan URL is needed during the setup of [Sonarr](sonarr.md#plex-autoscan), [Radarr](radarr.md#plex-autoscan), and [Lidarr](lidarr.md#plex-autoscan).
 
 To get your Plex Autoscan URL, run the following command:
 

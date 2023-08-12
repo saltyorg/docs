@@ -22,6 +22,6 @@ sb install sandbox-sshwifty
 
 ### 3. Setup
 
-- The pre-configured password is taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
+- The pre-configured password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 - [:octicons-link-16: Documentation](https://github.com/nirui/sshwifty){: .header-icons target=_blank rel="noopener noreferrer" }

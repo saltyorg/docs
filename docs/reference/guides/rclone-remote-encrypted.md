@@ -9,7 +9,7 @@ To go through this process, you will need the following:
    1. rclone installed on your saltbox machine [which means the preinstall has been run]
    2. the backing rclone remote pointing to your cloud storage must be created and working
 
-When I say "backing remote" here I am referring to the rclone remote that points directly at your cloud storage, like [`google`](../rclone-remote) or [`dropbox`](../rclone-remote-dropbox) or whatever.  This article uses `dropbox`, but that should be considered a placeholder for the name of *your* cloud-storage rclone remote.
+When I say "backing remote" here I am referring to the rclone remote that points directly at your cloud storage, like [`google`](rclone-remote.md) or [`dropbox`](rclone-remote-dropbox.md) or whatever.  This article uses `dropbox`, but that should be considered a placeholder for the name of *your* cloud-storage rclone remote.
 
 ## Walkthrough
 

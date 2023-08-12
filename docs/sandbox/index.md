@@ -81,8 +81,8 @@
 - **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
 - **[olivetin](../sandbox/apps/olivetin.md)**  - tag - `sandbox-olivetin`
 - **[ombi](../sandbox/apps/ombi.md)**  - tag - `sandbox-ombi`
-- **[ombix](../sandbox/apps/ombix)**  - tag - `sandbox-ombix`
-- **[omegabrr](../sandbox/apps/omegabrr)**  - tag - `sandbox-omegabrr`
+- **[ombix](../sandbox/apps/ombix.md)**  - tag - `sandbox-ombix`
+- **[omegabrr](../sandbox/apps/omegabrr.md)**  - tag - `sandbox-omegabrr`
 - **[ouroboros](../sandbox/apps/ouroboros.md)**  - tag - `sandbox-ouroboros`
 - **[paperless-ngx](../sandbox/apps/paperless-ngx.md)**  - tag - `sandbox-paperless-ngx`
 - **[pgadmin](../sandbox/apps/pgadmin.md)**  - tag - `sandbox-pgadmin`

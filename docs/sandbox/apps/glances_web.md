@@ -22,5 +22,5 @@ sb install sandbox-glances-web
 
 ### 3. Setup
 
-- The configured username/password are taken from your Saltbox [`accounts.yml`](../../../saltbox/install/install/#configuration) file located in `/srv/git/saltbox/accounts.yml`
+- The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 - [:octicons-link-16: Documentation](https://github.com/nicolargo/glances/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

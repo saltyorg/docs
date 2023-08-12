@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[alternatrr**X**](APPHOMEPAGE){: target=_blank rel="noopener noreferrer" } is an [arrX role](arrx.md) for [alternatrr](../../sandbox/apps/alternatrr.md).
+alternatrr**X** is an [arrX role](arrx.md) for [alternatrr](../../sandbox/apps/alternatrr.md).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

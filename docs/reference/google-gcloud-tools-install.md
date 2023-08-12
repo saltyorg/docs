@@ -94,4 +94,4 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 If you have problems with these steps, Google's own documentation is found [here](https://cloud.google.com/sdk/docs/install-sdk)
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-5-generate-a-random-prefix)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-5-generate-a-random-prefix)

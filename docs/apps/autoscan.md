@@ -262,4 +262,4 @@ Further documentation:
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Sonarr](../sonarr/).
+Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).

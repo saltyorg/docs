@@ -242,7 +242,7 @@ BEFORE YOU DO ANYTHING ELSE:
 
 The automatic backup above would have done this for you.  If for some reason you want to wipe your machine and start again OUTSIDE THE USUAL BACKUP/RESTORE you will need those files. You can just restore them rather than going through this whole process again.
 
-If you are going through the manual rclone instructions, [continue with the next step](../rclone-manual#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-8-verify-that-the-union-remote-shows-you-the-expected-contents)
 
 IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
 
@@ -270,7 +270,7 @@ IF YOU WANT TO RUN THIS AGAIN TO ADD MORE SHARED DRIVES:
     deactivate
     ```
 
-5. Rerun the cloudplow setup script if desired. [notes](../cloudplow-config#updating-cloudplow-config-for-additional-shared-drives)
+5. Rerun the cloudplow setup script if desired. [notes](cloudplow-config.md#updating-cloudplow-config-for-additional-shared-drives)
 
 6. Reboot your server
 

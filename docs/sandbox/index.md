@@ -24,6 +24,7 @@
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
 - **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
+- **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
 - **[dozzle](../sandbox/apps/dozzle.md)**  - tag - `sandbox-dozzle`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`

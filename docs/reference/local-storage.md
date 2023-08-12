@@ -28,7 +28,7 @@ As you will recall from the earlier "How does Saltbox Work" lesson, this means e
 
 In this case, it's best to use the same rclone + cloudplow model that the standard cloud storage setup uses.
 
-First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; NFS, SMB, SFTP, etc.  Call it whatever you like.  `google` would be fine if you don't want to change any other settings.
+First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc.  Call it whatever you like.  `google` would be fine if you don't want to change any other settings.
 
 If you give it a name other than `google`, change the rclone remote entry in the settings to match:
 

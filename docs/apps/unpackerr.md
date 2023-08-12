@@ -27,7 +27,7 @@ The important part of the setup is the setup for the applications.  You'll need 
   url = "http://sonarr:8989"
   api_key = "YOUR_API_KEY"
 # File system path where downloaded Sonarr items are located.
-  paths = ['/mnt/unionfs/downloads/torrents/rutorrent/completed']
+  paths = ['/mnt/unionfs/downloads/torrents/qbittorrent/completed']
 ```
 
 The `path` will depend on the torrent client you are using and its configuration.

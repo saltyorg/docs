@@ -71,3 +71,7 @@ sb install qbittorrent
       if you're using private trackers be sure to go to `Options` -> `BitTorrent` and uncheck everything in Privacy section.
 
 - [:octicons-link-16: Documentation](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+
+## 4. Next
+
+Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra2.md).

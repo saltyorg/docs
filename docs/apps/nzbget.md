@@ -45,4 +45,4 @@
 
 ## 4. Next
 
-Are you setting Saltbox up for the first time?  Continue to [ruTorrent](rutorrent.md).
+Are you setting Saltbox up for the first time?  Continue to [Qbittorrent](qbittorrent.md).

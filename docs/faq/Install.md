@@ -28,7 +28,7 @@ Use this to skip containers or roles that are included in the "default" install 
 Example:
 
 ```shell
-sb install saltbox --skip-tags rutorrent,jackett
+sb install saltbox --skip-tags qbittorrent,jackett
 ```
 
 _Note: But be careful on what you skip, as some things are needed by Saltbox to function properly._
@@ -40,7 +40,7 @@ You can even merge `--tags` and `--skip-tags` into one command. Order is not imp
 Example:
 
 ```shell
-sb install saltbox,sabnzbd --skip-tags rutorrent,jackett
+sb install saltbox,sabnzbd --skip-tags qbittorrent,jackett
 ```
 
 ### Persistent Skip Tags
@@ -64,14 +64,14 @@ cat /srv/git/saltbox/ansible.cfg
 
 ```ini
 [tags]
-skip = rutorrent,jackett
+skip = qbittorrent,jackett
 ```
 
 ```shell
 sb install saltbox,sabnzbd
 ```
 
-In this example, the Saltbox installer will install with all the default items and sabnzbd, but will not install rutorrent and jackett.
+In this example, the Saltbox installer will install with all the default items and sabnzbd, but will not install qbittorrent and jackett.
 
 ## Error while fetching server API version
 

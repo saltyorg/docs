@@ -374,7 +374,7 @@ If you would like to configure cloudplow to use service accounts to exceed Googl
 Go through these one at a time in order; some of the setups depend on previous setups.
 
 1. [NZBGet](../../apps/nzbget.md)
-1. [ruTorrent](../../apps/rutorrent.md)
+1. [qBittorrent](../../apps/qbittorrent.md)
 1. [NZBHydra2](../../apps/nzbhydra2.md)
 1. [Jackett](../../apps/jackett.md)
 1. [Plex Media Server](../../apps/plex.md)

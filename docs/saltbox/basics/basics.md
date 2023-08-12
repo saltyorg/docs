@@ -60,7 +60,7 @@
 
 ## How does Saltbox function ?
 
-[Sonarr](https://sonarr.tv/) manages downloading your favorite TV Shows and [Radarr](https://radarr.video/) manages downloading your favorite movies. Both use either Usenet (via [NZBGet](https://nzbget.net/)) and/or Torrents (via [ruTorrent](https://github.com/Novik/ruTorrent)) to do this.<sup name="a1">[\[1\]](#f1) </sup><sup name="a2">[\[2\]](#f2)</sup>
+[Sonarr](https://sonarr.tv/) manages downloading your favorite TV Shows and [Radarr](https://radarr.video/) manages downloading your favorite movies. Both use either Usenet (via [NZBGet](https://nzbget.net/)) and/or Torrents (via [qBittorrent](https://github.com/qbittorrent/qBittorrent)) to do this.<sup name="a1">[\[1\]](#f1) </sup><sup name="a2">[\[2\]](#f2)</sup>
 
 Once the downloads are complete, Sonarr & Radarr will move [or copy/link in the case of torrents] these downloads to your server's `/mnt/local/Media/` folder<sup name="a3">[\[3\]](#f3) </sup> and send a notification to _Autoscan_.
 

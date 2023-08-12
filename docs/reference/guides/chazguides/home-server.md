@@ -242,7 +242,7 @@ traefik : Resources | Tasks | Docker | Remove Docker Container | Remove Docker C
 nzbget : Post-Install | Wait for 10 seconds --------------------------------------------------------------- 10.25s
 plex : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container --------------------- 10.05s
 system : Populate Service Facts --------------------------------------------------------------------------- 9.70s
-rutorrent : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container ---------------- 7.45s
+qbittorrent : Resources | Tasks | Docker | Remove Docker Container | Remove Docker Container --------------- 7.45s
 ```
 
 Now I did one last log out and back in so I could access the `docker` command.

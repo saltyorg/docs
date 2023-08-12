@@ -101,6 +101,7 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - attr_list
+  - footnotes
   - md_in_html
   - pymdownx.tilde
   - pymdownx.snippets
@@ -321,7 +322,7 @@ nav:
   - Apps:
       - Core [set up in this order]:
         - Nzbget: apps/nzbget.md
-        - Rutorrent: apps/rutorrent.md
+        - Qbittorrent: apps/qbittorrent.md
         - Nzbhydra2: apps/nzbhydra2.md
         - Jackett: apps/jackett.md
         - Plex: apps/plex.md
@@ -339,9 +340,9 @@ nav:
         - Petio: apps/petio.md
         - Plex Autoscan: apps/plex-autoscan.md
         - Prowlarr: apps/prowlarr.md
-        - Sabnzbd: apps/sabnzbd.md
+        - Rutorrent: apps/rutorrent.md
         - Deluge: apps/deluge.md
-        - Qbittorrent: apps/qbittorrent.md
+        - Sabnzbd: apps/sabnzbd.md
       - Others:
         - Authelia: apps/authelia.md
         - Autobrr: apps/autobrr.md

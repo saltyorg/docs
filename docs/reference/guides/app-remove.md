@@ -2,7 +2,7 @@
 
 Perhaps you want to remove one of the apps that Saltbox installed for you.
 
-Maybe you're not planning to ever use rutorrent, or you want to install it fresh, or some other reason.
+Maybe you're not planning to ever use qbittorrent, or you want to install it fresh, or some other reason.
 
 This page describes doing this for something that was installed as a docker container.
 

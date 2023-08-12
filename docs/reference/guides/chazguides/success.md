@@ -39,7 +39,7 @@ system : APT | APT upgrade -----------------------------------------------------
 plex : Extra | Stop Plex Container ------------------------------------------------...- 11.39s
 plex : Create and start container -------------------------------------------------...- 11.30s
 remote : Rclone VFS | Start 'rclone_vfs.service' ----------------------------------...- 11.03s
-rutorrent : Settings | Wait for 10 seconds before stopping rutorrent container ----...- 10.43s
+qbittorrent : Settings | Wait for 10 seconds before stopping qbittorrent container --...- 10.43s
 ombi : Create and start container -------------------------------------------------...- 9.39s
 docker : Stop docker service ------------------------------------------------------...- 8.48s
 system : sysctl | Tuning ----------------------------------------------------------...- 7.49s
@@ -180,7 +180,6 @@ fae88a0e46d1   hotio/radarr                            27 minutes ago   Up 27 mi
 a5858358c3f8   hotio/sonarr:phantom                    27 minutes ago   Up 27 minutes
 84e39d15fbdd   hotio/nzbhydra2                         27 minutes ago   Up 27 minutes
 a579ca009eb2   hotio/jackett                           27 minutes ago   Up 27 minutes
-0d879c79a547   horjulf/rutorrent-autodl                28 minutes ago   Up 28 minutes
 a1d387692b30   hotio/nzbget                            28 minutes ago   Up 28 minutes
 c4b5b3a73aeb   organizrtools/organizr-v2:plex          29 minutes ago   Up 29 minutes
 974f5bc87364   portainer/portainer                     29 minutes ago   Up 29 minutes

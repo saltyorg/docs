@@ -63,7 +63,3 @@ And then restart the Docker container:
 ```bash
 docker restart rutorrent
 ```
-
-## 4. Next
-
-Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra2.md).

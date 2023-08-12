@@ -18,7 +18,7 @@ The info below will show you how to update your Saltbox apps, individually.
 | Sonarr        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Radarr        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | NZBGet        | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
-| ruTorrent     | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
+| qbittorrent    | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Jackett       | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | NZBHydra2     | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
 | Ombi          | [Ansible tag](../../saltbox/basics/update.md#updating-apps) |
@@ -52,7 +52,7 @@ The info below will show you how to update your Saltbox apps, individually.
    docker restart <name>
    ```
 
-   _Note: It's recommended to use `docker stop/start <container>` vs `docker restart <container>`, to prevent corrupting data, especially on apps like ruTorrent._
+   _Note: It's recommended to use `docker stop/start <container>` vs `docker restart <container>`, to prevent corrupting data, especially on apps like qbittorrent._
 
 <br />
 
@@ -67,7 +67,7 @@ When in doubt, you can always rerun the relevant Ansible tag to update the app.
 | Sonarr                      | `sonarr`        |
 | Radarr                      | `radarr`        |
 | NZBGet                      | `nzbget`        |
-| ruTorrent                   | `rutorrent`     |
+| qbittorrent                  | `qbittorrent`     |
 | Jackett                     | `jackett`       |
 | NZBHydra2                   | `nzbhydra2`     |
 | Autoscan                    | `autoscan`      |

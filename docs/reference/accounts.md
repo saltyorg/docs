@@ -38,7 +38,7 @@ Each tab shows a "section" in the file.
 
     This parameter is **required**.
     Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
-    Also used to create first-time logins for NZBGet, ruTorrent, NZBHydra2, and potentially other apps.
+    Also used to create first-time logins for NZBGet, qbittorrent, NZBHydra2, and potentially other apps.
     Don't leave it blank, even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
     Don't leave it as `password123`.
     See the [password considerations](#password-considerations) below.

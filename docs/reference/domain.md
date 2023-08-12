@@ -66,7 +66,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
         | A Record | jackett      | _Saltbox IP Address_   | 300 |
         | A Record | radarr       | _Saltbox IP Address_   | 300 |
         | A Record | sonarr       | _Saltbox IP Address_   | 300 |
-        | A Record | rutorrent    | _Saltbox IP Address_   | 300 |
+        | A Record | qbittorrent   | _Saltbox IP Address_   | 300 |
         | A Record | nzbget       | _Saltbox IP Address_   | 300 |
         | A Record | nzbhydra2    | _Saltbox IP Address_   | 300 |
         | A Record | organizr     | _Saltbox IP Address_   | 300 |
@@ -91,7 +91,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
         | A Record | jackett      | _Feederbox IP Address_ | 300 |
         | A Record | radarr       | _Feederbox IP Address_ | 300 |
         | A Record | sonarr       | _Feederbox IP Address_ | 300 |
-        | A Record | rutorrent    | _Feederbox IP Address_ | 300 |
+        | A Record | qbittorrent   | _Feederbox IP Address_ | 300 |
         | A Record | nzbget       | _Feederbox IP Address_ | 300 |
         | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 |
         | A Record | organizr     | _Feederbox IP Address_ | 300 |

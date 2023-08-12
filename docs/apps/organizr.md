@@ -71,7 +71,7 @@ Note: it is suggested to enter your `plex username and password`
     | Sonarr        | `https://sonarr.yourdomain.tld`       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | Radarr        | `https://radarr.yourdomain.tld`       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | NZBGet        | `https://nzbget.yourdomain.tld`       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Rutorrent     | `https://rutorrent.yourdomain.tld`    | images/rutorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | qbittorrent     | `https://qbittorrent.yourdomain.tld`    | images/qbittorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | NZBHydra2     | `https://nzbhydra2.yourdomain.tld`    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | Jackett       | `https://jackett.yourdomain.tld`      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
     | Plex          | `https://plex.yourdomain.tld`         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |

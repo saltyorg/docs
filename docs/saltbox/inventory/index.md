@@ -79,7 +79,12 @@ sonarr_docker_volumes_custom:
 ### Various
 
 ```yaml
-##### Plex Ports for local access#####
+
+##### Enabling different donloaders and indexers #####
+download_clients_enabled: ["deluge", "sabnzbd"]
+download_indexers_enabled: ["prowlarr"]
+
+##### Plex Ports for local access #####
 plex_open_main_ports: true
 plex_open_local_ports: true
 

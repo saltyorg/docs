@@ -194,7 +194,7 @@ A couple points:
 
 ## Cloudplow with Multiple Folders
 
-This config uploads everything from `/mnt/local/Media` to `google:/Media` [triggered at 100GB] and  everything in `/mnt/local/downloads/torrents/rutorrent/completed/` to `google:/Downloads/` [triggered at 50GB].
+This config uploads everything from `/mnt/local/Media` to `google:/Media` [triggered at 100GB] and  everything in `/mnt/local/downloads/torrents/qbittorrent/completed/` to `google:/Downloads/` [triggered at 50GB].
 
 <details>
 <summary>Example config.json (click to expand)</summary><br />
@@ -287,7 +287,7 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
                 }
             },
             "remove_empty_dir_depth": 1,
-            "upload_folder": "/mnt/local/downloads/torrents/rutorrent/completed/",
+            "upload_folder": "/mnt/local/downloads/torrents/qbittorrent/completed/",
             "upload_remote": "google:/Downloads/"
         }
     },

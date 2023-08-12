@@ -1,5 +1,7 @@
 # Local Storage
 
+You may want to set saltbox up to use "local storage".  This article is assuming you ware doing this as part of the initial setup, not switching from cloud to local.
+
 "Local storage" can mean a couple different things.
 
 ## Truly *Local* storage, as in a physical disk or disks installed in the Saltbox server machine
@@ -37,6 +39,7 @@ rclone:
   version: latest 
   remote: THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED
 ```
+It should go without saying that you need to change `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to whatevcer you called the rclone remote you created pointing at the NAS.
 
 Then run the regular saltbox install.  Your NAS [or whatever] will be mounted at `/mnt/remote`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.
 

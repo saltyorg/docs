@@ -16,7 +16,7 @@ autobrr monitors IRC announce channels and torznab RSS feeds to get releases as 
 
 ``` shell
 
-sb install sandbox-autobrr
+sb install autobrr
 
 ```
 

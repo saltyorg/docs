@@ -11,7 +11,6 @@
 - **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
 - **[a_train](../sandbox/apps/a_train.md)**  - tag - `sandbox-a_train`
 - **[audiobookshelf](../sandbox/apps/audiobookshelf.md)**  - tag - `sandbox-audiobookshelf`
-- **[autobrr](../sandbox/apps/autobrr.md)**  - tag - `sandbox-autobrr`
 - **[beets](../sandbox/apps/beets.md)**  - tag - `sandbox-beets`
 - **[booksonic](../sandbox/apps/booksonic.md)**  - tag - `sandbox-booksonic`
 - **[bookstack](../sandbox/apps/bookstack.md)**  - tag - `sandbox-bookstack`
@@ -26,7 +25,6 @@
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
 - **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
-- **[dozzle](../sandbox/apps/dozzle.md)**  - tag - `sandbox-dozzle`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
 - **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
@@ -135,13 +133,11 @@
 - **[tubearchivist](../sandbox/apps/tubearchivist.md)**  - tag - `sandbox-tubearchivist`
 - **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`
 - **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
-- **[unpackerr](../sandbox/apps/unpackerr.md)**  - tag - `sandbox-unpackerr`
 - **[uptime-kuma](../sandbox/apps/uptime_kuma.md)**  - tag - `sandbox-uptime-kuma`
 - **[varken](../sandbox/apps/varken.md)**  - tag - `sandbox-varken`
 - **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
 - **[vnstat](../sandbox/apps/vnstat.md)**  - tag - `sandbox-vnstat`
 - **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
-- **[whisparr](../sandbox/apps/whisparr.md)**  - tag - `sandbox-whisparr`
 - **[wikijs](../sandbox/apps/wikijs.md)**  - tag - `sandbox-wikijs`
 - **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`
 - **[wizarr](../sandbox/apps/wizarr.md)**  - tag - `sandbox-wizarr`

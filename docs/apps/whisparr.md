@@ -5,7 +5,7 @@
 [Whisparr](https://wiki.servarr.com/whisparr){: target=_blank rel="noopener noreferrer" } is an adult movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported. If you want both an 4k version and 1080p version of a given movie you will need multiple instances.
 
 !!!info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into whisparr with the email and password you set up upon instalation.
+    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into whisparr with the email and password you set up upon installation.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -15,7 +15,7 @@
 
 ``` shell
 
-sb install sandbox-whisparr
+sb install whisparr
 
 ```
 

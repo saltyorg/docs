@@ -164,7 +164,6 @@ nav:
           - Gitea: sandbox/apps/gitea.md
           - Gotenberg: sandbox/apps/gotenberg.md
           - Docker:
-            - Dozzle: sandbox/apps/dozzle.md
             - Yacht: sandbox/apps/yacht.md
           - Mcrouter: sandbox/apps/mcrouter.md
           - OliveTin: sandbox/apps/olivetin.md
@@ -181,7 +180,6 @@ nav:
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Tubearchivist: sandbox/apps/tubearchivist.md
           - Torrents:
-            - Autobrr: sandbox/apps/autobrr.md
             - Delugevpn: sandbox/apps/delugevpn.md
             - Omegabrr: sandbox/apps/omegabrr.md
             - QBit Management: sandbox/apps/qbit_manage.md
@@ -268,7 +266,6 @@ nav:
             - Requestrr: sandbox/apps/requestrr.md
             - Requestrrx: sandbox/apps/requestrrx.md
           - Stash: sandbox/apps/stash.md
-          - Whisparr: sandbox/apps/whisparr.md
         - Nextcloud: sandbox/apps/nextcloud.md
         - Social:
           - Gotify: sandbox/apps/gotify.md
@@ -317,7 +314,6 @@ nav:
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md
-          - Unpackerr: sandbox/apps/unpackerr.md
           - Uptime Kuma: sandbox/apps/uptime_kuma.md
           - Vaultwarden: sandbox/apps/vaultwarden.md
           - Varken: sandbox/apps/varken.md
@@ -348,14 +344,18 @@ nav:
         - Qbittorrent: apps/qbittorrent.md
       - Others:
         - Authelia: apps/authelia.md
+        - Autobrr: apps/autobrr.md
         - Cloudplow: apps/cloudplow.md
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
+        - Dozzle: apps/dozzle.md
         - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
         - asshama: apps/asshama.md
+        - Unpackerr: apps/unpackerr.md
+        - Whisparr: apps/whisparr.md
       - Support Apps:
         - diun: apps/diun.md
         - MariaDB: apps/mariadb.md

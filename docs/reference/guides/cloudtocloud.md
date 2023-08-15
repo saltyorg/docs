@@ -12,15 +12,15 @@ Is the basic case, you need to:
 2. create mount service for that last remote in the chain. [this mounts it in the file system]
 3. add that mount point to the mergerfs [this makes the files appear in `/mnt/unionfs` where the apps are looking]
 
-Optionally, if you want to upload to Cloud B:
+Steps 1-3 are covered [here](chazguides/teamdrive.md).
+
+_Optionally_, if you want to upload to Cloud B:
 
 4. point cloudplow at remote from step 1 instead of the original.
 
-Steps 1-3 are covered [here](chazguides/teamdrive.md).
-
 There are Cloudplow config examples [here](../cloudplow/md).
 
-Optionally, if you want to abandon Cloud A:
+_Optionally_, if you want to abandon Cloud A:
 
 5. copy all or some of your data from Cloud A to Cloud B.
 

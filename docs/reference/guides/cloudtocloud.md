@@ -6,7 +6,7 @@ A typical scenario is moving from Google to Dropbox.  However, this article will
 
 Throughout, I will refer to "Cloud A" and "Cloud B", where "A" is your current provider and "B" is the new one.
 
-Is the basic case, you need to:
+In the basic case, you need to:
 
 1. create remote[s] for Cloud B [this might be just one, or base + encrypted, or base + encrypted + chunker, depending on what *you* want to do.]
 2. create mount service for that last remote in the chain. [this mounts it in the file system]

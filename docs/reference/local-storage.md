@@ -3,7 +3,7 @@
 You may want to set saltbox up to use "local storage".  This article is assuming you ware doing this as part of the initial setup, not switching from cloud to local.
 
 !!! info
-    This article is also assuming that you are using a all-in-one `saltbox` in your home, not something like multiple hetzner boxes pointed at a hetzner storage server.  That's not "local storage" for the purposes of this article.  As one specific example, the [Hetzner NFS stuff](../apps/hetzner_nfs.md) instructions are incompatible with the suggestions made here.
+    This article is also assuming that you are using an all-in-one `saltbox` in your home, not something like multiple hetzner boxes pointed at a hetzner storage server.  That's not "local storage" for the purposes of this article.  As one specific example, the [Hetzner NFS stuff](../apps/hetzner_nfs.md) instructions are incompatible with the suggestions made here.
 
 "Local storage" can mean a couple different things.
 

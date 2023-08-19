@@ -2,7 +2,7 @@
 
 This article discusses adding a new cloud provider into your setup.
 
-A typical scenario is moving from Google to Dropbox.  However, this article will cover this in a generalized manner, since the concepts are universal.  Maybe you're transitioning from Google to Dropbox.  Maybe you're adding Box but keeping Dropbox.  Conceptually that part dioesn't matter.  You need to do basically the same things either way.
+A typical scenario is moving from Google to Dropbox.  However, this article will cover this in a generalized manner, since the concepts are universal.  Maybe you're transitioning from Google to Dropbox.  Maybe you're adding Box but keeping Dropbox.  Conceptually that part doesn't matter.  You need to do basically the same things either way.
 
 Throughout, I will refer to "Cloud A" and "Cloud B", where "A" is your current provider and "B" is the new one.
 

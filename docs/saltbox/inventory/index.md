@@ -42,7 +42,7 @@ sonarr_docker_container: "{{ sonarr_name }}"
 
 # Image
 sonarr_docker_image_pull: true
-sonarr_docker_image_repo: "cr.hotio.dev/hotio/sonarr"
+sonarr_docker_image_repo: "ghcr.io/hotio/sonarr"
 sonarr_docker_image_tag: "release"
 sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', default=sonarr_docker_image_repo)
                          + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
@@ -50,7 +50,7 @@ sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', defa
 
 Note: `sonarr_docker_image_tag: "release"`
 
-For Sonarr, Saltbox will use the Docker image `cr.hotio.dev/hotio/sonarr:release` by default.
+For Sonarr, Saltbox will use the Docker image `ghcr.io/hotio/sonarr:release` by default.
 
 If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
@@ -58,7 +58,7 @@ If you wanted to change that to "nightly", you'd add this line to `/srv/git/salt
 sonarr_docker_image_tag: "nightly"
 ```
 
-Which would override the default [`release`] and result in Saltbox using the `cr.hotio.dev/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
+Which would override the default [`release`] and result in Saltbox using the `ghcr.io/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
 
 ## 'Custom' variables
 

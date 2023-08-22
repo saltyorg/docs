@@ -52,6 +52,8 @@ Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git
 sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
 
+The standard app tag [in this case `sb install sonarr`] will now set up all those instances.  If one or more of the instances already exist, their existing configurations will not be touched or overwritten.
+
 !!! info
     Note that the first entry in the list is `sonarr`, the standard instance of the app.  You probably want to follow this pattern, since other tags might iterate through this list of "sonarr"s to take some action and if an instance is not listed here it will be skipped in that case.
 
@@ -64,8 +66,6 @@ sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
     ```yaml
     sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
     ```
-
-The standard app tag [in this case `sb install sonarr`] will now set up all those instances.  If one or more of the instances already exist, their existing configurations will not be touched or overwritten.
 
 Given the example above, `sb install sonarr` would install:
 

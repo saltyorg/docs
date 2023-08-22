@@ -57,6 +57,8 @@ There are 3 phases to the setup. They are broken down below.
     sb install hetzner_nfs_server
 
     ```
+!!! info
+    If your feederbox storage array is ZFS and mounted to `/mnt/local/Media` this is not going to work correctly. You will want to mount your storage array to `/mnt/local` instead.
 
 ### NFS Client (Mediabox)
 
@@ -85,6 +87,7 @@ There are 3 phases to the setup. They are broken down below.
     sb install hetzner_nfs_client_mount
 
     ```
+To check if the setup was successful on your Mediabox you should now have a new mount located at `/mnt/feeder` that is pointing to your Feederbox `/mnt/local`.
 
 ## Uninstall
 

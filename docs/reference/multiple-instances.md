@@ -46,17 +46,6 @@ There is a command at the end of this page you can use to get an updated list of
 
 Define a list of all the instances of the container you want to create; if you don't want to customize them beyond that, this is all that's required.
 
-!!! info
-    This list should include *all* instances of the app that you want to end up with, *including* the stock one if you are retaining it.
-
-    ```yaml
-    sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
-    ```
-    not
-    ```yaml
-    sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
-    ```
-
 Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git/saltbox/inventories/host_vars/localhost.yml`, formatted as so:
 
 ```yaml
@@ -66,6 +55,15 @@ sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 !!! info
     Note that the first entry in the list is `sonarr`, the standard instance of the app.  You probably want to follow this pattern, since other tags might iterate through this list of "sonarr"s to take some action and if an instance is not listed here it will be skipped in that case.
 
+    This list should include *all* instances of the app that you want to end up with, *including* the stock one if you are retaining it.
+
+    ```yaml
+    sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
+    ```
+    not
+    ```yaml
+    sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
+    ```
 
 The standard app tag [in this case `sb install sonarr`] will now set up all those instances.  If one or more of the instances already exist, their existing configurations will not be touched or overwritten.
 

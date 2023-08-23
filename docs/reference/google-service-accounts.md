@@ -123,7 +123,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     Save the file with control-x, y, enter
 
-4. Run the `sa-gan` script:
+4. Run the `sa-gen` script:
 
     ```shell
     ./sa-gen_2022

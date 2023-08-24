@@ -116,6 +116,7 @@
 - **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
 - **[syncthing](../sandbox/apps/syncthing.md)**  - tag - `sandbox-syncthing`
 - **[tandoor](../sandbox/apps/tandoor.md)**  - tag - `sandbox-tandoor`
+- **[tauticord](../sandbox/apps/tauticord.md)**  - tag - `sandbox-tauticord`
 - **[tdarr](../sandbox/apps/tdarr.md)**  - tag - `sandbox-tdarr`
 - **[tdarr_node](../sandbox/apps/tdarr_node.md)**  - tag - `sandbox-tdarr_node`
 - **[teamspeak](../sandbox/apps/teamspeak.md)**  - tag - `sandbox-teamspeak`

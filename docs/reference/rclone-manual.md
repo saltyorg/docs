@@ -1,7 +1,7 @@
 # Rclone
 
 <script>
-   document.addEventListener("DOMContentLoaded", function(){
+   document$.subscribe(function() {
     var length           = 10;
     var result           = '';
     var characters       = 'abcdefghijklmnopqrstuvwxyz';

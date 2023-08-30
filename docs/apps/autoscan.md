@@ -96,7 +96,7 @@ anchors:
 
 To reflect your own configuration.
 
-YOU POSSIBLY NEED TO CREATE THIS FILE OR FILES YOURSELF.  The regular saltbox install does not do it for you.
+YOU PROBABLY NEED TO CREATE THIS FILE OR FILES YOURSELF.  The regular saltbox install does not do it for you.
 
 If you went through the OPTIONAL google-drive rclone setup process, these files *did* get created for you, and you'll need to enter something like:
 
@@ -116,6 +116,8 @@ If you didn't go through that process, use:
 rclone touch NAME_OF_CLOUD_REMOTE:mounted.bin
 ```
 To create one of these files on *each distinct element* of cloud storage.  If you're using Dropbox, there is just one.  If you have eleven OneDrive mounts, you need to create eleven of these.
+
+Do this on each rclone remote that you have *mounted*.  For example, if you're using box.com and have three remotes [`box_remote`, `box_crypt`, `chunker_remote`], run this command on the last one, `chunker_remote`, since that';s the remote that you are mounting.
 
 Once you've done that, verify that they show up in the union mount with:
 

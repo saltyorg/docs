@@ -98,7 +98,7 @@ sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', defa
 
 Note: `sonarr_docker_image_tag: "release"`. 
 
-By default, Saltbox will use `cr.hotio.dev/hotio/sonarr:release` as the Sonarr Docker image.
+By default, Saltbox will use `ghcr.io/hotio/sonarr:release` as the Sonarr Docker image.
 
 Should we choose to switch to "nightly" versions, we can add the following line to `localhost.yml`:
 
@@ -106,7 +106,7 @@ Should we choose to switch to "nightly" versions, we can add the following line 
 sonarr_docker_image_tag: "nightly"
 ```
 
-This will cause Saltbox to use the `cr.hotio.dev/hotio/sonarr:nightly` Docker image, overriding the default: [`release`]. When we update Saltbox, our tag change to `nightly` will remain in effect.
+This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, overriding the default: [`release`]. When we update Saltbox, our tag change to `nightly` will remain in effect.
 
 ### Addition
 

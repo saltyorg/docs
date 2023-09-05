@@ -24,6 +24,7 @@
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
 - **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
+- **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
 - **[dozzle](../sandbox/apps/dozzle.md)**  - tag - `sandbox-dozzle`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
@@ -66,6 +67,7 @@
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
+- **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`
 - **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`
 - **[minecraft-bedrock](../sandbox/apps/minecraft-bedrock.md)**  - tag - `sandbox-minecraft-bedrock`
 - **[miniflux](../sandbox/apps/miniflux.md)**  - tag - `sandbox-miniflux`
@@ -115,11 +117,13 @@
 - **[stash](../sandbox/apps/stash.md)**  - tag - `sandbox-stash`
 - **[syncthing](../sandbox/apps/syncthing.md)**  - tag - `sandbox-syncthing`
 - **[tandoor](../sandbox/apps/tandoor.md)**  - tag - `sandbox-tandoor`
+- **[tauticord](../sandbox/apps/tauticord.md)**  - tag - `sandbox-tauticord`
 - **[tdarr](../sandbox/apps/tdarr.md)**  - tag - `sandbox-tdarr`
 - **[tdarr_node](../sandbox/apps/tdarr_node.md)**  - tag - `sandbox-tdarr_node`
 - **[teamspeak](../sandbox/apps/teamspeak.md)**  - tag - `sandbox-teamspeak`
 - **[telegraf](../sandbox/apps/telegraf.md)**  - tag - `sandbox-telegraf`
 - **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
+- **[threadfin](../sandbox/apps/threadfin.md)**  - tag - `sandbox-threadfin`
 - **[tika](../sandbox/apps/tika.md)**  - tag - `sandbox-tika`
 - **[tqm](../sandbox/apps/tqm.md)**  - tag - `sandbox-tqm`
 - **[Trackarr](../sandbox/apps/trackarr.md)**  - tag - `sandbox-trackarr`

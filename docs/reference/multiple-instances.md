@@ -48,11 +48,24 @@ Define a list of all the instances of the container you want to create; if you d
 
 Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git/saltbox/inventories/host_vars/localhost.yml`, formatted as so:
 
-``` yaml
+```yaml
 sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
 
-The standard app tag [in this case `sb install sonarr`] will now set up all those instances.  If one or more of the instances already exist, their existing configurations will not be touched or overwritten.
+Run the standard app tag [in this case `sb install sonarr`] to set up all the instances you've defined.  If you attempt to run any of your new instance names as tags, the install will fail with an error.  Run ONLY the standard app tag.  If one or more of the instances already exist, their existing configurations *TYPICALLY* will not be touched or overwritten, though this is dependent on the specific role.  If the standard role overwrites or modifies the configuration, then so will this, since it's calling the standard role for each instance.
+
+!!! info
+    Note that the first entry in the list is `sonarr`, the standard instance of the app.  You probably want to follow this pattern, since other tags might iterate through this list of "sonarr"s to take some action and if an instance is not listed here it will be skipped in that case.
+
+    This list should include *all* instances of the app that you want to end up with, *including* the stock one if you are retaining it.
+
+    ```yaml
+    sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
+    ```
+    not
+    ```yaml
+    sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
+    ```
 
 Given the example above, `sb install sonarr` would install:
 

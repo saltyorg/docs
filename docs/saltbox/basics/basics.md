@@ -4,7 +4,7 @@
 
 - [Saltbox](https://github.com/saltyorg/Saltbox){: target=_blank rel="noopener noreferrer" } is an [Ansible](https://www.ansible.com/how-ansible-works) and [Docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server using LTS releases of Ubuntu Server 20.04 or 22.04, running on AMD64.  Non-LTS releases of Ubuntu are not supported.  Linux distros other than Ubuntu are not supported.  ARM processors, Raspberry Pi notably, are not supported.
 
-- Primary functions are: the automatic acquisition of media, storing that media on the cloud, and being able to  play it back from anywhere and from any device.
+- Primary functions are: the automatic acquisition of media, being able to  play it back from anywhere and from any device, and to a lesser extent storing that media on the cloud.
 
 - NOTE: Saltbox does not have a dashboard or GUI of its own. All Saltbox-specific setup and commands are done on the linux command-line.
 
@@ -26,9 +26,13 @@
 
 - Quickly install and uninstall apps.
 
+- Built-in config-driven method to deploy multiple instances of many apps [multiple radarr, sonarr, plex, etc]
+
 ### Cloud Storage
 
 - Store media on cloud storage to save on local drive space.
+
+- As cloud storage providers tighten up their offerings in terms of available space, this aspect is getting less important.
 
 ### Can Choose Your Preferred Media Server Application
 

@@ -4,6 +4,9 @@ If you're migrating from Cloudbox you probably want the [Cloudbox migration inst
 
 If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
 
+!!! warning
+    The Saltbox install is expecting a fresh new install of Ubunutu.  DO NOT try to install it on your existing Cloudbox, PTS< or other setup.
+
 Please read through these steps prior to executing any of them, just to get a grounding in what is going to happen through out the process.  It could be that things in later steps inform your decisions in earlier steps.
 
 Broadly, the base install consists of six steps:
@@ -220,6 +223,8 @@ If you already know how to set that up, do so with your usual methods.  If not, 
 Note that generally speaking these five options are mutually exclusive.
 
 === "Cloudbox User"
+    This option is aimed at you if you are migrating your cloudbox setup.
+    
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
     
     Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup.  If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
@@ -227,6 +232,8 @@ Note that generally speaking these five options are mutually exclusive.
     [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
 
 === "PlexGuide/PTS User"
+    This option is aimed at you if you are migrating your PG/PTS/MHA setup.
+    
     You already have the required setup complete.  You should use your existing Google setup at least to start with.
 
     The issues you will have to deal with will largely be around:
@@ -237,7 +244,9 @@ Note that generally speaking these five options are mutually exclusive.
 
     [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
 
-=== "Media on cloud storage"
+=== "I have media on cloud storage"
+    This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
+    
     You probably already have the required setup complete.  You should use your existing setup at least to start with.
 
     You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the [settings](../../reference/accounts.md).
@@ -247,17 +256,23 @@ Note that generally speaking these five options are mutually exclusive.
     [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
 
 === "I'm totally new to this"
+    This option is aimed at you if you are starting totally from scratch and want to be walked through the whole setup.
+    
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED GOOGLE SETUP YOU SHOULD NOT DO THIS.
 
     === "Google Drive"
 
         THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
 
+        IF YOU ARE STARTING FRESH LATER THAN JUNE 2023 YOU PROBABLY DON'T WANT TO GO THROUGH THIS.  Changes to Google's "unlimited" offering have made this mostly needless and obsolete.
+
         If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
 
         That's an eight-step process that is mostly copy-paste commands.  When you have completed it, come back here.
 
         That eight-step process will create seven shared drives, 300 service accounts, and will configure rclone for you.
+
+        IF THAT IS MORE THAN YOU HAD IN MIND, TAKE A LOOK AT THE "MINIMAL SETUP" TO THE RIGHT.
 
         This should be enough capacity for quite a while for most users.
 
@@ -273,11 +288,12 @@ Note that generally speaking these five options are mutually exclusive.
         The simplest possible case is:
 
         1. Set up a Google Project and OAuth Credential file if you don't already have one.
-        This process is described [here](../../reference/google-project-setup.md)  You will need the ID and Secret from that process in step 3 below.  That link takes you to one step in a multi-step process.  Don't continue to follow that.  Follow the steps on that page and then come back here.
-        2. Create a Shared Drive in the Google Web UI.
-        This process is described [here](../../reference/guides/google-shared-drive.md)  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
+        This process is described [here](../../reference/google-project-setup.md).  You will need the ID and Secret from that process in step 3 below.  That link takes you to one step in a multi-step process.  Don't continue to follow that.  Follow the steps on that page and then come back here.
+        2. Create a Shared Drive in the Google Web UI. [optional]
+        If you don't want to use a shared drive, skip this step, but know that some pieces of saltbox [notably drive monitoring in autoscan] won't work.
+        This process is described [here](../../reference/guides/google-shared-drive.md).  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
         3. Create an rclone remote with those credentials.
-        This process is described [here](../../reference/guides/rclone-remote.md)
+        This process is described [here](../../reference/guides/rclone-remote.md).
 
         Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
         
@@ -295,6 +311,9 @@ How do you know if your rclone remote[s] are configured?  `rclone lsd google:/` 
 ## Step 5: Saltbox
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+
+!!! warning
+    You must run at least `core` prior to any other Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags.
 
 === "Saltbox"
 
@@ -334,7 +353,7 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 
 === "Dealer's choice"
 
-    If you want to install a personal selection of app, install `core` and the app tags you want as listed [here](../../basics/install_types)
+    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../../basics/install_types)
     
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent

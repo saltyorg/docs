@@ -13,6 +13,39 @@ When I say "backing remote" here I am referring to the rclone remote that points
 
 ## Walkthrough
 
+First, create a directory on the backing remote at which to point the crypt remote.  This is especially important for Dropbox, where paths starting with a `/` have special meaning.
+
+1. Create the `encrypt` directory on the backing remote:
+
+    === "I want to use my personal folder"
+
+        ```shell
+        rclone mkdir dropbox:encrypt
+
+        ```
+
+    === "I want to use a team folder"
+
+        ```shell
+        rclone mkdir dropbox:/encrypt
+
+        ```
+
+    **MAKE NOTE OF THIS; YOU WILL NEED IT LATER**
+
+1. Verify that the directory is there, if you wish:
+
+    ```
+    rclone lsd dropbox:
+    ```
+
+    Display should look something like this:
+    ```
+          -1 2023-05-22 17:07:58        -1 encrypt
+    ```
+
+Now move on to creating the actual crypt remote.
+
 1. Run the following command:
 
     ```
@@ -52,18 +85,33 @@ When I say "backing remote" here I am referring to the rclone remote that points
 
 5. For "Option remote", type in the name of your backing remote plus `:encrypt` and press <kbd class="platform-all">Enter</kbd>.
 
-    ```
-    Option remote.
-    Remote to encrypt/decrypt.
-    Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
-    "myremote:bucket" or maybe "myremote:" (not recommended).
-    Enter a value.
-    remote> dropbox:encrypt
-    ```
+    === "I am using my personal folder"
+
+        ```shell
+        Option remote.
+        Remote to encrypt/decrypt.
+        Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
+        "myremote:bucket" or maybe "myremote:" (not recommended).
+        Enter a value.
+        remote> dropbox:encrypt
+        ```
+
+    === "I want to use a team folder"
+
+        ```shell
+        Option remote.
+        Remote to encrypt/decrypt.
+        Normally should contain a ':' and a path, e.g. "myremote:path/to/dir",
+        "myremote:bucket" or maybe "myremote:" (not recommended).
+        Enter a value.
+        remote> dropbox:/encrypt
+        ```
 
     This is the directory on the cloud storage that will contain the encrypted data.
 
-6. Press <kbd class="platform-all">Enter</kbd> to select the defaults for the next two settings:
+    **NOTE: THIS IS THE DIRECTORY ON THE BACKING REMOTE YOU CREATED A MOMENT AGO**
+
+7. Press <kbd class="platform-all">Enter</kbd> to select the defaults for the next two settings:
 
     ```
     Option filename_encryption.
@@ -92,7 +140,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     directory_name_encryption>
     ```
 
-7. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you.  Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
+8. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you.  Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
 
     ```
     Option password.
@@ -138,7 +186,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     ```
     *Make a note of those two passwords in a safe place*; this is the only time they wil be displayed.
 
-8. Answer `y` and press <kbd class="platform-all">Enter</kbd> to enter advanced config:
+9. Answer `y` and press <kbd class="platform-all">Enter</kbd> to enter advanced config:
 
     ```
     Edit advanced config?
@@ -147,7 +195,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     y/n> y
     ```
 
-9. Press <kbd class="platform-all">Enter</kbd> to accept the defaults on the first two options:
+10. Press <kbd class="platform-all">Enter</kbd> to accept the defaults on the first two options:
 
     ```
     Option server_side_across_configs.
@@ -173,7 +221,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     no_data_encryption>
     ```
 
-10. Answer `base32768` and press <kbd class="platform-all">Enter</kbd> when asked about filename encoding:
+11. Answer `base32768` and press <kbd class="platform-all">Enter</kbd> when asked about filename encoding:
 
     ```
     Option filename_encoding.
@@ -193,7 +241,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     filename_encoding> base32768
     ```
 
-11. answer `n` and press <kbd class="platform-all">Enter</kbd> *this* time when asked about advanced options:
+12. answer `n` and press <kbd class="platform-all">Enter</kbd> *this* time when asked about advanced options:
 
     ```
     Edit advanced config?
@@ -202,7 +250,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     y/n>
     ```
 
-12. Review the remote configuration then answer `y` and press <kbd class="platform-all">Enter</kbd> if it looks like you expect:
+13. Review the remote configuration then answer `y` and press <kbd class="platform-all">Enter</kbd> if it looks like you expect:
 
     ```
     Configuration complete.
@@ -219,7 +267,7 @@ When I say "backing remote" here I am referring to the rclone remote that points
     y/e/d> y
     ```
 
-13. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
+14. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
     ```
     Current remotes:
@@ -239,25 +287,8 @@ When I say "backing remote" here I am referring to the rclone remote that points
     e/n/d/r/c/s/q> q
     ```
 
-14. Create the `encrypt` directory on the backing remote:
 
-    ```
-    rclone mkdir dropbox:encrypt
-    ```
-    **NOTE THAT THIS NEEDS TO MATCH WHAT YOU ENTERED IN STEP FIVE**
-
-15. Verify that the directory is there, if you wish:
-
-    ```
-    rclone lsd dropbox:
-    ```
-
-    Display should look something like this:
-    ```
-          -1 2023-05-22 17:07:58        -1 encrypt
-    ```
-
-16. repeat steps 2-15 with any other remotes you wish to apply encryption to.  
+15. repeat steps 2-15 with any other remotes you wish to apply encryption to.  
 
     **IMPORTANT**: If you are creating multiple remotes to access the same files [like one for upload and one for mount], use the same passwords with all of them.
 

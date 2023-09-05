@@ -72,7 +72,7 @@ These files are the ones needed to run a successful restore.
 
 How does this work?
 
-1. User fills in a username and password for Restore Service in the [backup config](/saltbox/backup/settings.md).
+1. User fills in a username and password for Restore Service in the [`backup_config.yml`](/saltbox/backup/settings/).
 
 2. During backup, config files are **encrypted** on the client-side, using a **salt-hashed** version of the username and password (your raw username is never sent to the Restore Service), and then uploaded to the Restore Service.
 

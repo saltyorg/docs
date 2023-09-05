@@ -8,6 +8,10 @@ If you are not using Google Drive you should NOT go through this process.
 
 If you are reinstalling saltbox there is no reason to do this again provided you have run a Saltbox backup or followed the instructions the first time you did this and have backed up the important files.
 
+!!! warning
+    Changes to Google's "unlimited" offering have made this process largely needless.  New Google accounts no longer come with enough storage to have the sort of limits that this setup is intended to address.
+
+
 <details>
 <summary>Overview of what this process is going to do</summary>
 <br />

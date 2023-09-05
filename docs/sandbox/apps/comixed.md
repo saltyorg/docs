@@ -2,7 +2,10 @@
 
 ## What is it?
 
-[ComiXed](https://github.com/comixed/comixed){: target=_blank rel="noopener noreferrer" } is anapplication for managing digital comics.
+[ComiXed](https://github.com/comixed/comixed){: target=_blank rel="noopener noreferrer" } is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
+
+!!!note
+    By default, the role is protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -21,5 +24,13 @@ sb install sandbox-comixed
 - To access ComiXed, visit `https://comixed._yourdomain.com_`
 
 ### 3. Setup
+
+!!!info📢
+   ComiXed has 2 default users created when you run the role. It is a good idea to change the passwords for each account from the default asap.
+
+```bash
+Username: comixedadmin@localhost Password: comixedadmin
+Username: comixedreader@localhost Password: comixedreader
+```
 
 - [:octicons-link-16: Documentation](https://github.com/comixed/comixed/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

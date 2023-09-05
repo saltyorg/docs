@@ -239,6 +239,7 @@ nav:
             - Funkwhale: sandbox/apps/funkwhale.md
             - Navidrome: sandbox/apps/navidrome.md
           - TV:
+            - Threadfin: sandbox/apps/threadfin.md
             - Xteve: sandbox/apps/xteve.md
         - Media Servers and add-ons:
           - Embystat: sandbox/apps/embystat.md
@@ -247,15 +248,18 @@ nav:
             - Gaps: sandbox/apps/gaps.md
             - Goplaxt: sandbox/apps/goplaxt.md
             - Kitana: sandbox/apps/kitana.md
+            - Membarr: sandbox/apps/membarr.md
             - Plex Auto Languages: sandbox/apps/plex_auto_languages.md
             - Plex Autoscan: sandbox/apps/plex_autoscan.md
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
             - Plex Patrol: sandbox/apps/plex_patrol.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
             - Plex_Utills: sandbox/apps/plex_utills.md
+            - Tauticord: sandbox/apps/tauticord.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md
           - Requests:
+            - DiscoFlix: sandbox/apps/discoflix.md
             - Doplarr: sandbox/apps/doplarr.md
             - Ombi: sandbox/apps/ombi.md
             - Ombix: sandbox/apps/ombix.md
@@ -357,6 +361,8 @@ nav:
         - Grafana: apps/grafana.md
       - TODO - NEED UPDATING:
         - Organizr: apps/organizr.md
+      - Utility tags:
+        - Plex-DB: apps/utility_tags/plex-db.md
 
   - FAQ:
       - System: faq/System.md
@@ -388,7 +394,7 @@ nav:
           - Chazlarson Guides:
               - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
               - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
-              - How do I mount a teamdrive?: reference/guides/chazguides/teamdrive.md
+              - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
               - I can't see my media!: reference/guides/chazguides/no-media.md
               - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
               - Why is my disk full?: reference/guides/chazguides/disk-full.md
@@ -414,6 +420,7 @@ nav:
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md
           - Plexguide: reference/guides/plexguide.md
+          - Cloud A to Cloud B: reference/guides/cloudtocloud.md
         - Further Reading and Links:
           - Suggested Reading: reference/guides/suggested_reading.md
           - Links: reference/guides/links.md

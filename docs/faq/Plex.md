@@ -1,78 +1,89 @@
 # Plex
 
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
+DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COMMANDS DO.
 
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
+SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
 ## If you are unable to find your Plex server
 
-You may resolve this by either
+=== "Delete everything and start again"
+    
+    !!! warning
+        **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
 
-- Installing Saltbox again (do this for new Plex DBs/installs):
+    - Remove Plex Container (it may show "Error response from daemon: No such container" if not created yet):
 
-  - **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
+        ```shell
+        sudo docker rm -f plex
+        ```
 
-  - Remove Plex Container (it may show "Error response from daemon: No such container" if not created yet):
+    - Remove the Plex folder:
+ 
+        !!! warning
+            **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
+    
+        <details>
+        <summary>I understand the risk!  Show me!</summary>
+        <br />
 
-     ```shell
-     sudo docker rm -f plex
-     ```
+        ```shell
+        sudo rm -rf /opt/plex
+        ```
 
-  - Remove the Plex folder:
+        </details>
 
-     ```shell
-     sudo rm -rf /opt/plex
-     ```
+    - Reinstall the Plex container:
 
-  - Reinstall the Plex container:
+        ```shell
+        sb install plex
+        ```
 
-     ```shell
-     sb install plex
-     ```
+=== "Keep my data and rebuild Plex"
 
-- Installing Saltbox again (do this for existing Plex DBs/installs):
+    !!! info
+        THIS WILL LEAVE ANY EXISTING PLEX LIBRARIES AND METADATA INTACT
 
-  - **THIS WILL LEAVE ANY EXISTING PLEX LIBRARIES AND METADATA INTACT**
+    - Remove Plex Preferences file.
 
-  - Remove Plex Preferences file.
+       ```shell
+       sudo rm "/opt/plex/Library/Application Support/Plex Media Server/Preferences.xml"
+       ```
 
-     ```shell
-     sudo rm "/opt/plex/Library/Application Support/Plex Media Server/Preferences.xml"
-     ```
+    - Reinstall the Plex container by running the following command:
 
-  - Reinstall the Plex container by running the following command:
+       ```shell
+       sb install plex
+       ```
 
-     ```shell
-     sb install plex
-     ```
+=== "Use SSH to tunnel to my server and claim it"
 
-- Using SSH Tunneling to log into Plex and set your credentials:
+    - On your local machine (the one that you uise to ssh into your saltbox machine):
 
-  - On your host PC (replace `<user>` with your user name and `<yourserveripaddress>` with your serveripaddress - no arrows):
+       ```shell
+       ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N
+       ```
+       
+       Of course, replace `<user>` with your user name and `<yourserveripaddress>` with your serveripaddress - no arrows
+       
+       This will just hang there without any message. That is normal.
 
-     ```shell
-     ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N
-     ```
+    - In a browser **ON THAT MACHINE**, go to <http://localhost:32400/web>.
 
-     This will just hang there without any message. That is normal.
+    - Log in with your Plex account.
 
-  - In a browser, go to <http://localhost:32400/web>.
+    - On the "How Plex Works" page, click “GOT IT!”.
 
-  - Log in with your Plex account.
+    - Close the "Plex Pass" pop-up if you see it.
 
-  - On the "How Plex Works" page, click “GOT IT!”.
+    - Under "Server Setup", you will see "Great, we found a server!". Give your server a name and tick “Allow me to access my media outside my home”. Click "NEXT".
 
-  - Close the "Plex Pass" pop-up if you see it.
+    - On "Organize Your Media", hit "NEXT" (you will do this later). Then hit "DONE".
 
-  - Under "Server Setup", you will see "Great, we found a server!". Give your server a name and tick “Allow me to access my media outside my home”. Click "NEXT".
+    - At this point, you may `Ctrl + c` on the SSH Tunnel to close it.
 
-  - On "Organize Your Media", hit "NEXT" (you will do this later). Then hit "DONE".
+## If Plex shows you an incorrect title with the filename (eg RARBG releases)
 
-  - At this point, you may `Ctrl + c` on the SSH Tunnel to close it.
-
- If Plex shows you an incorrect title with the filename (eg RARBG releases)
-
-Reorder the Plex agents for TV/Movies so that local assets are at the bottom.
+Reorder the Plex agents for trhe library so that local assets are at the bottom.
 
 ## Fix permission issues with Plex logs
 

@@ -8,6 +8,8 @@ You will enter your new values in:
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
+Then run the relevant install tag; for example, if you make changes here that affect plex, you'll need to run `sb install plex` to make them take effect.
+
 This implementation avoids git merge conflicts when updating Saltbox.
 
 Any variables defined in role files are available to be overridden by the user.

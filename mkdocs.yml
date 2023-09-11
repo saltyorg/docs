@@ -149,6 +149,7 @@ nav:
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
+          - Firefox: sandbox/apps/firefox.md
           - Homebox: sandbox/apps/homebox.md
           - Joplin: sandbox/apps/joplin.md
           - Linkding: sandbox/apps/linkding.md

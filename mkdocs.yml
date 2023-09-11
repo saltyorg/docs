@@ -61,6 +61,12 @@ theme:
         name: Switch to system preference
 
 plugins:
+  - privacy:
+      assets: false
+      links_attr_map:
+        rel: noreferrer
+        target: _blank
+      links_noopener: true
   - search:
       lang: en
   - meta

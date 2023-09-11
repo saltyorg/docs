@@ -3,22 +3,28 @@
 }
 
 .md-typeset table:not([class]) {
-   display: table;
+  display: table;
+}
+
+.md-typeset .md-button--stretch {
+  width: 100%;
 }
 
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
     max-width: 80%;
   }
+
   .md-sidebar--primary {
     margin-left: 0;
     left: 0;
   }
+
   .md-sidebar--secondary {
     right: 0;
     margin-left: 0;
     -webkit-transform: none;
-    transform: none;   
+    transform: none;
   }
 }
 
@@ -30,6 +36,14 @@
     transform: scale(1.15);
   }
 }
+
 .heart {
   animation: heart 1000ms infinite;
+}
+
+.icon-indent-right::before {
+  content: "\2BA9";
+  color: var(--md-accent-fg-color);
+  padding-left: 1em;
+  padding-right: 0.25em;
 }

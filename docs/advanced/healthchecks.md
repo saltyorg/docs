@@ -1,6 +1,6 @@
 # Container Healthchecks
 
-Saltbox can set a custom healthcheck on a Docker container via the inventory system.
+Saltbox can set a custom healthcheck on a Docker container via the [inventory system](../saltbox/inventory/index.md).
 
 The syntax for this
 
@@ -88,6 +88,13 @@ duplicati_docker_healthcheck:
 
 elasticsearch_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:9200"]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 10s
+  
+firefox_docker_healthcheck:
+  test: ["CMD", "wget", "--spider", "http://localhost:{{ firefox_web_port }}"]
   interval: 10s
   timeout: 5s
   retries: 10

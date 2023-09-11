@@ -33,6 +33,7 @@
 - **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`
 - **[filebrowser](../sandbox/apps/filebrowser.md)**  - tag - `sandbox-filebrowser`
 - **[filezilla](../sandbox/apps/filezilla.md)**  - tag - `sandbox-filezilla`
+- **[firefox](../sandbox/apps/firefox.md)**  - tag - `sandbox-firefox`
 - **[flaresolverr](../sandbox/apps/flaresolverr.md)**  - tag - `sandbox-flaresolverr`
 - **[freshrss](../sandbox/apps/freshrss.md)**  - tag - `sandbox-freshrss`
 - **[funkwhale](../sandbox/apps/funkwhale.md)**  - tag - `sandbox-funkwhale`

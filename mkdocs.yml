@@ -62,6 +62,7 @@ theme:
 
 plugins:
   - privacy:
+      assets: false
       links_attr_map:
         rel: noreferrer
         target: _blank

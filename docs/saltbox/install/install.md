@@ -74,64 +74,66 @@ Content with explanations:
 
 ``` yaml title="accounts.yml"
 ---
-user:
-  name: seed # (1)!
-  pass: password123 # (2)!
-  domain: testsaltbox.ml # (3)!
-  email: your@email.com # (4)!
-  ssh_key: # (13)!
+apprise: # (1)!
 cloudflare:
-  email: # (5)!
-  api: # (6)!
-plex:
-  user: # (7)!
-  pass: # (8)!
-  tfa: no # (9)!
+  email: # (2)!
+  api: # (3)!
 dockerhub:
-  user: # (10)!
-  token: # (11)!
-apprise: # (12)!
+  user: # (4)!
+  token: # (5)!
+plex:
+  user: # (6)!
+  pass: # (7)!
+  tfa: no # (8)!
+user:
+  name: seed # (9)!
+  pass: password123 # (10)!
+  domain: testsaltbox.ml # (11)!
+  email: your@email.com # (12)!
+  ssh_key: # (13)!
 ```
 
-1. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
-
-    Do not use root.
-
-    Required.
-
-2. Password used for username account during the installation and apps that have automatic user configuration.
-
-    See the [password considerations.](../../reference/accounts.md#password-considerations)
-
-    Required.
-
-3. Domain that you want to use for the server.
-
-4. Email address used for Let's Encrypt SSL certificates.
-
-    Required.
-
-5. Email used for the Cloudflare account.
-
-6. Cloudflare Global API Key.
-
-7. Plex.tv username or email address on the account.
-
-8. Plex.tv password for the account.  It should be wrapped in quotes if it contains any non alphanumeric characters.
-
-9. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
-
-10. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
-
-11. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
-
-12. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
+1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
     ```yaml
 
     apprise: discord://webhook_id/webhook_token
 
     ```
+
+2. Email used for the Cloudflare account.
+
+3. Cloudflare Global API Key.
+
+4. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
+
+5. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
+
+6. Plex.tv username or email address on the account.
+
+7. Plex.tv password for the account.  It should be wrapped in quotes if it contains any non alphanumeric characters.
+
+8. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
+
+9. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
+
+    Do not use root.
+
+    Required.
+
+10. Password used for username account during the installation and apps that have automatic user configuration.
+
+    See the [password considerations.](../../reference/accounts.md#password-considerations)
+
+    Required.
+
+11. Domain that you want to use for the server.
+
+    Required.
+
+12. Email address used for Let's Encrypt SSL certificates.
+
+    Required.
 
 13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
@@ -145,38 +147,71 @@ Content with explanations:
 
 ``` yaml title="settings.yml"
 ---
-downloads: /mnt/unionfs/downloads # (1)!!
-transcodes: /mnt/local/transcodes # (2)!
-rclone:
-  version: latest # (3)!
-  remote: google # (4)!
-shell: bash # (5)!
 authelia:
-  master: yes # (6)!
-  subdomain: login # (7)!
+  master: yes # (1)!
+  subdomain: login # (2)!
+downloads: /mnt/unionfs/downloads # (3)!
+rclone:
+  enabled: true # (4)!
+  remotes: # (5)!
+    - remote: google # (6)!
+      template: google # (7)!
+      upload: true # (8)!
+      upload_from: /mnt/local/Media # (9)!
+      vfs_cache:
+        enabled: false # (10)!
+        max_age: 504h # (11)!
+        size: 50G # (12)!
+  version: latest # (13)!
+shell: bash # (14)!
+transcodes: /mnt/local/transcodes # (15)!
 ```
 
-1. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
+1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
-2. Folder used for temporary transcode files.
-
-3. Rclone version that Saltbox will install.
-
-    Valid options are **latest**, **beta** or a specific version (**1.55**).
-
-4. Name of the rclone remote that Saltbox will mount by default and use in any automated configuration.
-
-    Optional - Leave empty to avoid remote mount setup.
-
-5. Shell used by the system. Valid options are bash or zsh.
-
-6. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
-
-7. Subdomain used for Authelia.
+2. Subdomain used for Authelia.
 
     Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 
     On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
+
+3. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
+
+4. Toggle to enable/disable Rclone related deployments like mounts and cloudplow.
+
+5. This variable takes a list of dictonaries formatted like the example.
+
+    Add as many remotes as you want.
+
+6. The name of the Rclone remote you want to use.
+
+7. The name of the template you want to use for the mount.
+
+    Currently Saltbox supports 4 options:
+    Google, Dropbox, SFTP and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
+    I'd recommend having the template file in a folder in /opt so that it moves with your install after a restore.
+
+8. Toggles whether you intend to upload to this remote using Cloudplow.
+
+9. Defines the local path Cloudplow will use to upload from if the remote was upload enabled.
+
+10. Toggle for using Rclone VFS file cache.
+
+11. Defines the max age of files in the cache.
+
+12. Defines the max size of the cache.
+
+    The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+
+13. Rclone version that Saltbox will install.
+
+    Valid options are **latest**, **beta** or a specific version "**1.55**".
+
+    If specifying a version make sure to quote it as Ansible will convert the value into a float otherwise.
+
+14. Shell used by the system. Valid options are bash or zsh.
+
+15. Folder used for temporary transcode files.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.
@@ -212,7 +247,7 @@ If your server did not need to reboot you can run `su username` to switch user o
 !!! info
     THIS IS AN OPTIONAL STEP, required only if you plan to use cloud storage [Google Drive, for instance]
 
-    If you do not plan to use cloud storage, leave the `rclone -> remote:` setting blank in your `settings.yml`, and skip this step.
+    If you do not plan to use cloud storage, set the `rclone -> enabled: false` setting in your `settings.yml`, and skip this step.
 
 Saltbox defaults to an rclone remote pointed at your Google Drive named `google` [as shown in the settings.yml above].
 
@@ -373,7 +408,7 @@ If you would like to configure cloudplow to use service accounts to exceed Googl
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 
-1. [NZBGet](../../apps/nzbget.md)
+1. [SABnzbd](../../apps/sabnzbd.md)
 1. [qBittorrent](../../apps/qbittorrent.md)
 1. [NZBHydra2](../../apps/nzbhydra2.md)
 1. [Jackett](../../apps/jackett.md)

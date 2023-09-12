@@ -45,7 +45,7 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
     1. `-L localhost:5900:firefox:5900`: This part specifies local port forwarding. It tells SSH to listen on port 5900 on your local machine and forward any traffic to the firefox Docker container on port 5900 on the Saltbox host. In other words, it sets up a tunnel between your local port 5900 and the container's port 5900.  
         Complete the command with your usual SSH info: `USERNAME@SALTBOX_EXTERNAL_IP -p SSH_PORT`.
 
-While the tunnel is active, you can use a VNC client to access the GUI via the address `firefox:5900`.
+While the tunnel is active, you can use a VNC client to access the GUI via the address `localhost:5900`.
 
 ## Configuration
 

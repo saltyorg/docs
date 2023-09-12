@@ -22,7 +22,7 @@ _Optionally_, if you want to upload to Cloud B:
 1. point cloudplow at remote you created in step 1 above instead of the original.
    Cloudplow uplaods diretly to rcone remotes; it does nothing with the mounts you set up above.
 
-There are Cloudplow config examples [here](../cloudplow/md).
+There are Cloudplow config examples [here](../cloudplow.md).
 
 _Optionally_, if you want to abandon Cloud A:
 

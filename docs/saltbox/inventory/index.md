@@ -1,87 +1,39 @@
 # Inventory
 
-The inventory system offers a centralized approach to customizing roles, allowing manipulation of variables without directly editing the roles themselves. This ensures persistent configurations while avoiding conflicts during git merge operations.
+Advanced use cases that would normally require editing roles can now be handled through the inventory system instead.
 
-## Modifying Variables
-
-Enter your new values in:
+You will enter your new values in:
 
 ```shell
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
-Changes take effect after deploying the corresponding role(s) using the `sb install` command prefix. Examples:
+This implementation avoids git merge conflicts when updating Saltbox.
 
-<div class="grid" markdown>
+Any variables defined in role files are available to be overridden by the user.
 
-```shell
-sb install shell
+These roles files can be found on your saltbox machine as:
+```
+/srv/git/saltbox/roles/<role_name>/defaults/main.yml
+```
+or 
+```
+/opt/sandbox/roles/<role_name>/defaults/main.yml
 ```
 
-```shell
-sb install sonarr,sandbox-code_server
-```
+These files can also be reviewed in the github repo for [saltbox](https://github.com/saltyorg/Saltbox/tree/master/roles) and [sandbox](https://github.com/saltyorg/Saltbox/tree/master/roles).
 
-</div>
+Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
-## Finding Available Variables
+## 'Default' variables
 
-The variables that can be used for customization within the Inventory are listed in the following locations:
+!!! info
+    For the purpose of this guide, this refers to variables that are defined with actual data and are not empty (i.e., not followed by an empty string `""`, list `[]` or dictionary `{}`), as well as all variables suffixed with `_default` even if they are empty, in a given role's _defaults_ YAML file. Using the inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be omitted.
 
-=== "GitHub File View"
+A common use for these overrides will be specifying the version of the Docker image to be used, so let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 85:
 
-    Saltbox: &nbsp; &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
-
-    Sandbox: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
-
-=== "File Path on Saltbox Host"
-
-    !!! warning inline end "Never Edit These Files"
-    
-        Updates will overwrite your changes. Use the inventory system instead.
-
-    ```shell
-    /srv/git/saltbox/roles/<role_name>/defaults/main.yml
-    ```
-
-    ```shell
-    /opt/sandbox/roles/<role_name>/defaults/main.yml
-    ```
-
-=== "Docker Parameters Reference"
-
-    !!! example inline end "Example"
-    
-        To obtain a `shm_size` variable for Plex, simply prepend `plex_docker_` to the parameter name: 
-      
-        ```yaml
-        plex_docker_shm_size
-        ```
-
-    For use cases involving Docker parameters beyond those exposed in the role files, it is still possible to construct usable Saltbox variables. The following resources provide the required syntax elements:
-
-    <sub><https://github.com/saltyorg/Saltbox/blob/master/resources/tasks/docker/create_docker_container.yml></sub>
-
-    <sub><https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html></sub>
-
-=== "Something Missing?"
-
-    In some cases, usually resulting from incomplete role migration, certain settings may not be exposed for use in the Inventory system. 
-
-    Should you require additional functionality, feel free to create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we will consider accommodating it.
-
-## Demo
-
-Let's explore two example use cases for customizing roles using variables in the Saltbox Inventory.
-
-### Override
-
-??? tip inline end "\`default\` Variables"
-    Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
-
-A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 89:
-
-```yaml linenums="83" hl_lines="10" title="https://github.com/saltyorg/Saltbox/blob/master/roles/sonarr/defaults/main.yml#L89"
+``` yaml
+################################
 # Docker
 ################################
 
@@ -96,64 +48,56 @@ sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', defa
                          + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
 ```
 
-Note: `sonarr_docker_image_tag: "release"`. 
+Note: `sonarr_docker_image_tag: "release"`
 
-By default, Saltbox will use `ghcr.io/hotio/sonarr:release` as the Sonarr Docker image.
+For Sonarr, Saltbox will use the Docker image `ghcr.io/hotio/sonarr:release` by default.
 
-Should we choose to switch to "nightly" versions, we can add the following line to `localhost.yml`:
+If you wanted to change that to "nightly", you'd add this line to `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
-```yaml
+``` yaml
 sonarr_docker_image_tag: "nightly"
 ```
 
-This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, overriding the default: [`release`]. When we update Saltbox, our tag change to `nightly` will remain in effect.
+Which would override the default [`release`] and result in Saltbox using the `ghcr.io/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
 
-### Addition
+## 'Custom' variables
 
-??? tip inline end "\`custom\` Variables"
-    Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
+!!! info
+    Suffixed with `_custom`, these are available in case you wish to add values to a list or dictionary type setting, without dropping existing values.
 
-A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:
-
-```yaml linenums="87" hl_lines="7" title="https://github.com/saltyorg/Sandbox/blob/master/roles/code_server/defaults/main.yml#L87"
-# Volumes
-code_server_docker_volumes_default:
-  - "{{ code_server_paths_location }}/project:/home/coder/project"
-  - "{{ code_server_paths_location }}/.config:/home/coder/.config"
-  - "{{ code_server_paths_location }}/.local:/home/coder/.local"
-  - "{{ server_appdata_path }}:/host_opt"
-code_server_docker_volumes_custom: []
-```
-
-Note the list syntax. Since we want the container to preserve existing volumes, the `_docker_volumes_default` list should not be overridden. Instead, we use the `_docker_volumes_custom` list.
-
-To expose additional host locations (in this case, `/srv` and our home directory), we can add custom volumes to the list using the following syntax in the Inventory:
+Typical use would be to pass new Docker parameters:
 
 ```yaml
-code_server_docker_volumes_custom:
-  - "/srv:/host_srv"
-  - "/home:/host_home"
+#### Extra mounts for Sonarr containers ####
+sonarr_docker_volumes_custom:
+  - "/mnt/unionfs/Media/Anime:/anime"
+  - "/mnt/unionfs/Media/Kids:/kids"
 ```
-
-The container will then be created with the new volumes included, and the target locations will be accessible to code-server at `/host_srv` and `/host_home`.
 
 ## Additional Examples
 
-```yaml title="Various"
-##### Plex Ports for local access#####
+### Various
+
+```yaml
+
+##### Enabling different donloaders and indexers #####
+download_clients_enabled: ["deluge", "sabnzbd"]
+download_indexers_enabled: ["prowlarr"]
+
+##### Plex Ports for local access #####
 plex_open_main_ports: true
 plex_open_local_ports: true
 
 ##### Plex Container Variables ####
-plex_docker_image_pull: false # (1)!
-plex_docker_image_tag: beta # (2)!
+plex_docker_image_tag: beta
+plex_open_main_ports: true
 
 #### Examples of specified container images: ####
 radarr_docker_image_tag: nightly
 sonarr_docker_image_tag: nightly
 petio_docker_image_tag: nightly
 
-#### Bandwidth limiting ####
+#### BW Limiting speeds ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"
 
@@ -175,24 +119,17 @@ shell_zsh_zshrc_block_custom: |
   alias sbi='sb install'
 ```
 
-1. Can be used to version-pin the image to the current container's version (as long as the image is never pulled by other means)
-
-2. Will version-lock if the tag designates a specific version.
-
 ### Authelia App Bypass
 
-Some users may not want the additional layer of security that Authelia provides. The good news is that it can be disabled through a simple override.
+Some may not want the additional layer of security that Authelia supplies, good news is that it can be disabled with a simple override. To determine which apps by default are included in Authelia, one can run this command or similar:
 
-!!! tip ""
-    To determine which apps are included in Authelia by default, you can run this command or a similar one:
+```shell
+grep -Ril '_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"' /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
+```
 
-    ```shell
-    grep -Ril '_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"' /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
-    ```
+#### Override example
 
-!!! danger "Before proceeding, ensure that fallback measures are in place to prevent unauthorized access to any of your apps."
-
-```yaml title="Override Example"
+```yaml
 ### Authelia App Bypass ###
 sonarr_traefik_sso_middleware: ""
 tautulli_traefik_sso_middleware: ""
@@ -201,15 +138,15 @@ nzbget_traefik_sso_middleware: ""
 prowlarr_traefik_sso_middleware: ""`
 ```
 
-After making this change in the Inventory file, simply run the appropriate role command to disable Authelia on that specific app. Remember, you can run multiple tags at once.
+After making this change in the Inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
 
 ### Authorize with App Credentials
 
-__Inject an Authorization header - Traefik performs basic auth with the backend app__
+#### Inject an Authorization header - Traefik performs basic auth with the backend app
 
-This will allow you to keep basic auth enabled within apps while avoiding the hassle of entering the credentials manually. The authorization header is only inserted if the request is authorized through the SSO middleware (Authelia) and is not applied to the API endpoint(s).
+This allows you to keep basic auth enabled within apps but not have the hassle of entering the credentials manually. The authorization header is only inserted if the request is authorized through the SSO middleware (Authelia) and is not applied to the API endpoint(s).
 
-You can use [this tool](https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents based on your credentials.
+Use [this tool](https://www.blitter.se/utils/basic-authentication-header-generator/) to generate the header contents based on your credentials.
 
 ```yaml
 sonarr_docker_labels_custom:
@@ -219,29 +156,29 @@ sonarr_traefik_middleware_custom: "appAuth"
 
 ### Subdomain Customization
 
-=== "Overrides"
+#### Overrides
 
-    ```yaml
-    #### Make Organizr available only at the base domain ####
-    organizr_web_subdomain: ""
-    
-    #### Make Tautulli available only at `stats.domain.tld` ####
-    tautulli_web_subdomain: "stats"
-    ```
+```yaml
+#### Make Organizr available only at the base domain ####
+organizr_web_subdomain: ""
 
-=== "Additions"
+#### Make Tautulli available only at `stats.domain.tld` ####
+tautulli_web_subdomain: "stats"
+```
 
-    !!! warning ""
-        The following examples require adding DNS records manually.
-    
-    ```yaml
-    #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
-    organizr_docker_labels_custom:
-      traefik.http.routers.organizr-http.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
-      traefik.http.routers.organizr.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
-    
-    #### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
-    overseerr_docker_labels_custom:
-      traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
-      traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
-    ```
+#### Additions
+
+!!! warning
+    The following examples require adding DNS records manually.
+
+```yaml
+#### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
+organizr_docker_labels_custom:
+  traefik.http.routers.organizr-http.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
+  traefik.http.routers.organizr.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
+
+#### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
+overseerr_docker_labels_custom:
+  traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
+  traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
+```

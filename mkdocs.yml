@@ -61,6 +61,12 @@ theme:
         name: Switch to system preference
 
 plugins:
+  - privacy:
+      assets: false
+      links_attr_map:
+        rel: noreferrer
+        target: _blank
+      links_noopener: true
   - search:
       lang: en
   - meta
@@ -143,6 +149,7 @@ nav:
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
+          - Firefox: sandbox/apps/firefox.md
           - Homebox: sandbox/apps/homebox.md
           - Joplin: sandbox/apps/joplin.md
           - Linkding: sandbox/apps/linkding.md

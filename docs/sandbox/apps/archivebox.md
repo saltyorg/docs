@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/ArchiveBox/ArchiveBox){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/archivebox/archivebox){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/ArchiveBox/ArchiveBox){: .header-icons } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/ArchiveBox/ArchiveBox){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/archivebox/archivebox){: .header-icons }|
 
 ### 1. Installation
 
@@ -52,4 +52,4 @@ Initial setup guide thanks to `erisheaded` on CB discord.
 5. Enter username, email, and password
 6. Load URL and test login
 
-By default, your new installation has a publicly accessible web index, snapshots, and archive addition access. You may not want this for a host of security reasons, so it's recommended to review the [ArchiveBox Security Overview](https://docs.archivebox.io/en/latest/Security-Overview.html){: .header-icons target=_blank rel="noopener noreferrer" } and tailoring these settings to your preference when setting up.
+By default, your new installation has a publicly accessible web index, snapshots, and archive addition access. You may not want this for a host of security reasons, so it's recommended to review the [ArchiveBox Security Overview](https://docs.archivebox.io/en/latest/Security-Overview.html){: .header-icons } and tailoring these settings to your preference when setting up.

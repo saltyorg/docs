@@ -8,7 +8,7 @@ With watchtower you can update the running version of your containerized app sim
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://containrrr.dev/watchtower/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://containrrr.github.io/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/containrrr/watchtower){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://containrrr.dev/watchtower/){: .header-icons } | [:octicons-link-16: Docs](https://containrrr.github.io/watchtower){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/containrrr/watchtower){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/containrrr/watchtower){: .header-icons }|
 
 ### 1. Installation
 
@@ -20,4 +20,4 @@ sb install sandbox-watchtower
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://containrrr.github.io/watchtower){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://containrrr.github.io/watchtower){: .header-icons }

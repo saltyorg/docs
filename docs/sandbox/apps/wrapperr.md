@@ -7,7 +7,7 @@
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 
-- [:material-home: Wrapperr](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker:](https://hub.docker.com/r/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" } |
+- [:material-home: Wrapperr](https://github.com/aunefyren/wrapperr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/aunefyren/wrapperr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/aunefyren/wrapperr){: .header-icons } | [:material-docker: Docker:](https://hub.docker.com/r/aunefyren/wrapperr){: .header-icons } |
 
 ### 1. Installation
 
@@ -25,4 +25,4 @@ sb install sandbox-wrapperr
 
 - The very first thing you should do after installing Wrapperr is visit `https://wrapperr._yourdomain.com_` and configure an admin username/password. <br /> **Do this NOW.**
 
-- [:octicons-link-16: Documentation: Wrapperr Docs](https://github.com/aunefyren/wrapperr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Wrapperr Docs](https://github.com/aunefyren/wrapperr){: .header-icons }

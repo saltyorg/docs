@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://changedetection.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://changedetection.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/changedetection/changedetection){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/changedetection/changedetection){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://changedetection.url){: .header-icons } | [:octicons-link-16: Docs](https://changedetection.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/changedetection/changedetection){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/changedetection/changedetection){: .header-icons }|
 
 ### 1. Installation
 

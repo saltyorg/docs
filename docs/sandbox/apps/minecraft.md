@@ -6,8 +6,8 @@ Run one or multiple minecraft servers with custom domains. Utilises minecraft se
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" }
-| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons target=_blank rel="noopener noreferrer" }
+| [:material-home: Project home](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons }
+| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons }
 
 ### 1. Installation
 
@@ -48,4 +48,4 @@ For a single install, the inventory paths will look like this `minecraft_docker_
 
 When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`
 
-- [:octicons-link-16: Documentation](https://github.com/itzg/docker-minecraft-server){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/itzg/docker-minecraft-server){: .header-icons }

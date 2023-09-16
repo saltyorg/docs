@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://booksonic.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://booksonic.org/how){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/popeen/Booksonic-Air){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/booksonic-air){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://booksonic.org/){: .header-icons } | [:octicons-link-16: Docs](https://booksonic.org/how){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/popeen/Booksonic-Air){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/booksonic-air){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-booksonic
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://booksonic.org/how){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://booksonic.org/how){: .header-icons }

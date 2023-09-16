@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://heimdall.site/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/linuxserver/Heimdall-Apps){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/Heimdall){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/heimdall){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://heimdall.site/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/linuxserver/Heimdall-Apps){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/Heimdall){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/heimdall){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +24,4 @@ sb install sandbox-heimdall
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://github.com/linuxserver/Heimdall-Apps){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/linuxserver/Heimdall-Apps){: .header-icons }

@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://pyload.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://pyload.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/pyload/pyload){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/pyload/pyload){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://pyload.url){: .header-icons } | [:octicons-link-16: Docs](https://pyload.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pyload/pyload){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/pyload/pyload){: .header-icons }|
 
 ### 1. Installation
 

@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://plex_autoscan.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://plex_autoscan.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/plex_autoscan/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/plex_autoscan/plex_autoscan){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://plex_autoscan.url){: .header-icons } | [:octicons-link-16: Docs](https://plex_autoscan.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/plex_autoscan/plex_autoscan){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/plex_autoscan/plex_autoscan){: .header-icons }|
 
 ### 1. Installation
 

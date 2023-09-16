@@ -9,7 +9,7 @@
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home](https://hay-kot.github.io/homebox/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/hay-kot/homebox){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: Project home](https://hay-kot.github.io/homebox/){: .header-icons } | [:octicons-link-16: Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/hay-kot/homebox){: .header-icons } |
 
 ### 1. Installation
 
@@ -27,4 +27,4 @@ sb install sandbox-homebox
 
 - Create a user in the web ui, add your email and password, then log in.
 
-- [:octicons-link-16: Documentation: Homebox Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Homebox Docs](https://hay-kot.github.io/homebox/quick-start/){: .header-icons }

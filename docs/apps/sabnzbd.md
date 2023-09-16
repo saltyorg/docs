@@ -6,7 +6,7 @@ It's totally free, easy to use, and works practically everywhere. SABnzbd makes 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://sabnzbd.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://sabnzbd.org/){: .header-icons } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons }|
 
 ## 1. Installation
 

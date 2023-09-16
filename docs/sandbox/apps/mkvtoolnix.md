@@ -8,7 +8,7 @@ You can use MKVToolNix to create, split, edit, mux, demux, merge, extract or ins
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://mkvtoolnix.download){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://mkvtoolnix.download/docs.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-mkvtoolnix){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/mkvtoolnix){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://mkvtoolnix.download){: .header-icons } | [:octicons-link-16: Docs](https://mkvtoolnix.download/docs.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-mkvtoolnix){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/mkvtoolnix){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +24,4 @@ sb install sandbox-mkvtoolnix
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation: MKVToolNix Client Docs](https://mkvtoolnix.download/docs.html){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: MKVToolNix Client Docs](https://mkvtoolnix.download/docs.html){: .header-icons }

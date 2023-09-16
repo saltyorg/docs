@@ -22,7 +22,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/TandoorRecipes/recipes){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.tandoor.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/TandoorRecipes/recipes){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/vabene1111/recipes){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:octicons-link-16: Docs](https://docs.tandoor.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/vabene1111/recipes){: .header-icons }|
 
 ### 1. Installation
 
@@ -66,6 +66,6 @@ To reset a lost password if access to the container is lost you need to
 - run `python manage.py changepassword <username>` and follow the steps shown.
 
 
-- [:octicons-link-16: Documentation](https://docs.tandoor.dev/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.tandoor.dev/){: .header-icons }
 
 To use a custom domain, add a custom value for `tandoor_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](https://docs.saltbox.dev/saltbox/inventory/).

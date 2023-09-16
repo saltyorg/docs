@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/xanderstrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:octicons-link-16: Docs](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/xanderstrike/goplaxt){: .header-icons }|
 
 ### 1. Installation
 
@@ -44,4 +44,4 @@ sb install sandbox-goplaxt
     Enter your `Plex Username` then `Authorize`, and add the Webhook in `Plex Settings`. <br />
     Make sure under your server `Settings > Network` that Webhooks is `enabled`.
 
-- [:octicons-link-16: Documentation](https://github.com/XanderStrike/goplaxt){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/XanderStrike/goplaxt){: .header-icons }

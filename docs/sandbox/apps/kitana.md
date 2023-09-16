@@ -10,7 +10,7 @@ Kitana was built for Sub-Zero originally, but handles other plugins just as well
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/pannal/kitana){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/pannal/Kitana){: .header-icons } | [:octicons-link-16: Docs](https://github.com/pannal/Kitana){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pannal/Kitana){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/pannal/kitana){: .header-icons }|
 
 ### 1. Installation
 
@@ -34,4 +34,4 @@ sb install sandbox-kitana
 
 - profit
 
-- [:octicons-link-16: Documentation](https://github.com/pannal/Kitana){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/pannal/Kitana){: .header-icons }

@@ -6,7 +6,7 @@
 
 | Details     |
 |-------------|
-| [:octicons-mark-github-16: Github](https://github.com/Taxel/PlexTraktSync){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:octicons-mark-github-16: Github](https://github.com/Taxel/PlexTraktSync){: .header-icons } |
 
 Recommended install types: Mediabox, Saltbox
 

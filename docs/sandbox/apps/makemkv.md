@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://www.makemkv.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.makemkv.com/onlinehelp/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-makemkv){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/makemkv){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](http://www.makemkv.com/){: .header-icons } | [:octicons-link-16: Docs](https://www.makemkv.com/onlinehelp/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-makemkv){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/makemkv){: .header-icons }|
 
 ### 1. Installation
 
@@ -23,4 +23,4 @@ sb install sandbox-makemkv
 
 - To access makemkv, visit `https://makemkv._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: MakeMKV Docs](https://www.makemkv.com/onlinehelp/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: MakeMKV Docs](https://www.makemkv.com/onlinehelp/){: .header-icons }

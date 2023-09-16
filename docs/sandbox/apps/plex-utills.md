@@ -20,7 +20,7 @@ Much like the 4K poster script, this will go through your films and add a 3D ban
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://blog.themainframe.co.uk/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/jkirkcaldy/plex-utills/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/jkirkcaldy/plex-utills){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/jkirkcaldy/plex-utills){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://blog.themainframe.co.uk/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/jkirkcaldy/plex-utills/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jkirkcaldy/plex-utills){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jkirkcaldy/plex-utills){: .header-icons }|
 
 ### 1. Installation
 
@@ -32,4 +32,4 @@ sb install sandbox-plex_utills
 
 ### 2. Setup
 
-Visit `https://plex-utills._yourdomain.com_` and set up plex-utills according to the [:octicons-link-16: Documentation](https://github.com/jkirkcaldy/plex-utills/wiki/Config-Settings){: .header-icons target=_blank rel="noopener noreferrer" }
+Visit `https://plex-utills._yourdomain.com_` and set up plex-utills according to the [:octicons-link-16: Documentation](https://github.com/jkirkcaldy/plex-utills/wiki/Config-Settings){: .header-icons }

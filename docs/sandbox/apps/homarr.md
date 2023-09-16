@@ -16,7 +16,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://homarr.dev/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://homarr.dev/docs/introduction/manage-services){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/ajnart/homarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/ajnart/homarr/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://homarr.dev/){: .header-icons } | [:octicons-link-16: Docs](https://homarr.dev/docs/introduction/manage-services){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/ajnart/homarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/ajnart/homarr/){: .header-icons }|
 
 Recommended install types: Saltbox, Core
 
@@ -42,4 +42,4 @@ sb install sandbox-homarr
 
   ```
 
-- [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/integrations/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/integrations/){: .header-icons }

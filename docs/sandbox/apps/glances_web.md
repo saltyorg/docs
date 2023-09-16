@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://nicolargo.github.io/glances/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/nicolargo/glances/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](http://nicolargo.github.io/glances/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/nicolargo/glances){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](http://nicolargo.github.io/glances/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/nicolargo/glances/wiki){: .header-icons } | [:octicons-mark-github-16: Github](http://nicolargo.github.io/glances/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nicolargo/glances){: .header-icons }|
 
 ### 1. Installation
 
@@ -23,4 +23,4 @@ sb install sandbox-glances-web
 ### 3. Setup
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
-- [:octicons-link-16: Documentation](https://github.com/nicolargo/glances/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/nicolargo/glances/wiki){: .header-icons }

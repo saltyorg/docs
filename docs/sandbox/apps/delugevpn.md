@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons }|
 
 ### 1. Installation
 
@@ -142,4 +142,4 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 - [Deluge](../../apps/deluge.md) <br />
 - and the upstream documentation <br />
-   [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }
+   [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons }

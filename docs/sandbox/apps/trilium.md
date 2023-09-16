@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/zadam/trilium){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/zadam/trilium/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/zadam/trilium){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/zadam/trilium){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/zadam/trilium){: .header-icons } | [:octicons-link-16: Docs](https://github.com/zadam/trilium/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/zadam/trilium){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/zadam/trilium){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-trilium
 
 ### 3. Documentation
 
-- [:octicons-link-16: Documentation](https://github.com/zadam/trilium/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/zadam/trilium/wiki){: .header-icons }

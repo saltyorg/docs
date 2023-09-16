@@ -11,7 +11,7 @@ Paperless-NGX is forked from paperless-ng to continue the great work and distrib
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/paperless-ngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/paperlessngx/paperless-ngx){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx){: .header-icons } | [:octicons-link-16: Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/paperless-ngx/paperless-ngx){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/paperlessngx/paperless-ngx){: .header-icons }|
 
 ### 1. Installation
 
@@ -30,4 +30,4 @@ sb install sandbox-paperless-ngx
 !!!info
     Please refer to [this](https://github.com/saltyorg/docs/issues/116#issuecomment-1278733921) comment on the initial PR for questions about google storage!
 
-- [:octicons-link-16: Documentation: Paperless NGX Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Paperless NGX Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons }

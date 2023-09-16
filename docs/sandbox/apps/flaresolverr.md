@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons }|
 
 ### 1. Installation
 
@@ -28,4 +28,4 @@ sb install sandbox-flaresolverr
 - In the settings, add an Indexer Proxy and select FlareSolverr.
 - _Host_ should be `http://flaresolverr:8191`.
 
-- [:octicons-link-16: Documentation](https://github.com/FlareSolverr/FlareSolverr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/FlareSolverr/FlareSolverr){: .header-icons }

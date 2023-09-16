@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/beville/ComicStreamer){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/beville/ComicStreamer){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/beville/ComicStreamer){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/kalinon/comicstreamer){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/beville/ComicStreamer){: .header-icons } | [:octicons-link-16: Docs](https://github.com/beville/ComicStreamer){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/beville/ComicStreamer){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/kalinon/comicstreamer){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-comicstreamer
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/beville/ComicStreamer){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/beville/ComicStreamer){: .header-icons }

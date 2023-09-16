@@ -12,7 +12,7 @@ Netdata is free, open-source software.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/netdata/netdata/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://learn.netdata.cloud/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/netdata/netdata/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/netdata/netdata/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/netdata/netdata/){: .header-icons } | [:octicons-link-16: Docs](https://learn.netdata.cloud/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/netdata/netdata/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/netdata/netdata/){: .header-icons }|
 
 ### 1. Installation
 
@@ -26,4 +26,4 @@ sb install netdata
 
 - To access Netdata, visit `https://netdata._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Netdata Docs](https://learn.netdata.cloud/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Netdata Docs](https://learn.netdata.cloud/docs/){: .header-icons }

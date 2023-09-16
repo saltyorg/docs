@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.adminer.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/vrana/adminer/#readme){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/vrana/adminer){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/_/adminer/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.adminer.org/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/vrana/adminer/#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/vrana/adminer){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/adminer/){: .header-icons }|
 
 ### 1. Installation
 
@@ -43,4 +43,4 @@ sb install sandbox-adminer
   Password: password4321
   ```
 
-- [:octicons-link-16: Documentation: Adminer Docs](https://github.com/vrana/adminer/#readme){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Adminer Docs](https://github.com/vrana/adminer/#readme){: .header-icons }

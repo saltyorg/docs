@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/JasonHHouse/gaps){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/JasonHHouse/gaps){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/housewrecker/gaps){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/JasonHHouse/gaps){: .header-icons } | [:octicons-link-16: Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/JasonHHouse/gaps){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/housewrecker/gaps){: .header-icons }|
 
 ### 1. Installation
 
@@ -27,4 +27,4 @@ sb install sandbox-gaps
 
 - All you need to get started is a [Plex Auth Token](https://docs.saltbox.dev/reference/plex_auth_token/?h=plex+token#saltbox-role), and a TMDB api key.
 
-- [:octicons-link-16: Documentation: gaps Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: gaps Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons }

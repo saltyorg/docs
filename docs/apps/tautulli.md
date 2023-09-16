@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://tautulli.com){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Tautulli/Tautulli){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/tautulli){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](http://tautulli.com){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Tautulli/Tautulli){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/tautulli){: .header-icons }|
 
 ## 2. URL
 

@@ -8,7 +8,7 @@ It can detach the client from the actual IRC server, and also from selected chan
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-docker: Docker:](https://wiki.znc.in/ZNC){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.znc.in/ZNC){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-znc){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker:](https://hub.docker.com/r/linuxserver/znc){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-docker: Docker:](https://wiki.znc.in/ZNC){: .header-icons } | [:octicons-link-16: Docs](https://wiki.znc.in/ZNC){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-znc){: .header-icons } | [:material-docker: Docker:](https://hub.docker.com/r/linuxserver/znc){: .header-icons } |
 
 ### 1. Installation
 
@@ -28,4 +28,4 @@ Change that password ASAP.
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation: ZNC Docs](https://wiki.znc.in/ZNC){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: ZNC Docs](https://wiki.znc.in/ZNC){: .header-icons }

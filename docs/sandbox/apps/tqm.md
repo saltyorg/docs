@@ -11,7 +11,7 @@
 
 | Details     |
 |-------------|
-| [:octicons-mark-github-16: Github](https://github.com/l3uddz/tqm){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:octicons-mark-github-16: Github](https://github.com/l3uddz/tqm){: .header-icons }|
 
 Recommended install types: Feederbox, Saltbox, Core
 
@@ -103,7 +103,7 @@ filters:
 
 `remove:` Instructs **tqm** what files to delete based on what is defined in the **filter**.
 
-Note: There are many ways to do the same thing. Check the **language definitions** for an explanation [here](https://github.com/antonmedv/expr/blob/586b86b462d22497d442adbc924bfb701db3075d/docs/Language-Definition.md){: .header-icons target=_blank rel="noopener noreferrer" }
+Note: There are many ways to do the same thing. Check the **language definitions** for an explanation [here](https://github.com/antonmedv/expr/blob/586b86b462d22497d442adbc924bfb701db3075d/docs/Language-Definition.md){: .header-icons }
 
 ### Modify "Label" section
 
@@ -183,4 +183,4 @@ tail -f /opt/tqm/activity.log
 
 ```
 
-- [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/l3uddz/tqm#tqm){: .header-icons }

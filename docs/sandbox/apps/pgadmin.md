@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.pgadmin.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/pgadmin-org/pgadmin4){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/dpage/pgadmin4/){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.pgadmin.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pgadmin-org/pgadmin4){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/dpage/pgadmin4/){: .header-icons }|
 
 ### 1. Installation
 
@@ -32,4 +32,4 @@ sb install sandbox-pgadmin
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: pgadmin Docs](https://www.pgadmin.org/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: pgadmin Docs](https://www.pgadmin.org/docs/){: .header-icons }

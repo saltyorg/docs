@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://jellyfin.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.jellyfin.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/jellyfin/jellyfin){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jellyfin){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://jellyfin.org/){: .header-icons } | [:octicons-link-16: Docs](https://docs.jellyfin.org/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jellyfin/jellyfin){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jellyfin){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install jellyfin
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.jellyfin.org/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.jellyfin.org/){: .header-icons }

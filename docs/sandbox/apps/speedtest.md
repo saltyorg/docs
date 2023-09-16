@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/librespeed/speedtest){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/librespeed/speedtest){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/librespeed/speedtest){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/librespeed){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/librespeed/speedtest){: .header-icons } | [:octicons-link-16: Docs](https://github.com/librespeed/speedtest){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/librespeed/speedtest){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/librespeed){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,6 +22,6 @@ sb install sandbox-speedtest
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/librespeed/speedtest){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/librespeed/speedtest){: .header-icons }
 
 To use a custom domain, add a custom value for `speedtest_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](https://docs.saltbox.dev/saltbox/inventory/).

@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://freshrss.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://freshrss.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/freshrss/freshrss){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://freshrss.url){: .header-icons } | [:octicons-link-16: Docs](https://freshrss.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/freshrss/freshrss){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/freshrss/freshrss){: .header-icons }|
 
 ### 1. Installation
 

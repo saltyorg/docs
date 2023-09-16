@@ -6,7 +6,7 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://portainer.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.portainer.io//){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/portainer/portainer/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/portainer/portainer-ce){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://portainer.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.portainer.io//){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/portainer/portainer/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/portainer/portainer-ce){: .header-icons }|
 
 ## 2. URL
 

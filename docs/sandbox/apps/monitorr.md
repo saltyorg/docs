@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://www.github.com/Monitorr/Monitorr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/monitorr/monitorr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/Monitorr/Monitorr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://www.github.com/Monitorr/Monitorr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/monitorr/monitorr){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-monitorr
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/Monitorr/Monitorr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/Monitorr/Monitorr/wiki){: .header-icons }

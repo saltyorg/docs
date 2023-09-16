@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://syncthing.comnet/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.syncthing.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/syncthing/syncthing){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/syncthing){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://syncthing.comnet/){: .header-icons } | [:octicons-link-16: Docs](https://docs.syncthing.net/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/syncthing/syncthing){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/syncthing){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-syncthing
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.syncthing.net/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.syncthing.net/){: .header-icons }

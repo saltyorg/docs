@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.bookstackapp.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.bookstackapp.com/docs){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/BookStackApp/BookStack){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/bookstack){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.bookstackapp.com/){: .header-icons } | [:octicons-link-16: Docs](https://www.bookstackapp.com/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/BookStackApp/BookStack){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/bookstack){: .header-icons }|
 
 ### 1. Installation
 
@@ -30,4 +30,4 @@ sb install sandbox-bookstack
 /opt/bookstack/www/.env
 ```
 
-- [:octicons-link-16: Documentation](https://www.bookstackapp.com/docs){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://www.bookstackapp.com/docs){: .header-icons }

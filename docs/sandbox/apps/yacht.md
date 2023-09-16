@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://yacht.sh/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/SelfhostedPro/Yacht){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://yacht.sh/){: .header-icons } | [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/SelfhostedPro/Yacht){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons }|
 
 ### 1. Installation
 
@@ -26,4 +26,4 @@ sb install sandbox-yacht
 
 - Check out [the getting started guide](https://yacht.sh/docs/Installation/Getting_Started) if this is the first time you've used Yacht.
 
-- [:octicons-link-16: Documentation](https://yacht.sh/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://yacht.sh/docs/){: .header-icons }

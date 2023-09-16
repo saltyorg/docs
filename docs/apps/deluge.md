@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://git.deluge-torrent.org/deluge){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/deluge){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons } | [:octicons-mark-github-16: Github](https://git.deluge-torrent.org/deluge){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/deluge){: .header-icons }|
 
 ### 1. Installation
 
@@ -57,4 +57,4 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
   ![](../images/community/deluge_add_to_arr.png)
 
-- [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons }

@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://wiki.servarr.com/whisparr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/en/whisparr/quick-start-guide){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Whisparr/Whisparr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/whisparr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://wiki.servarr.com/whisparr){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/en/whisparr/quick-start-guide){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Whisparr/Whisparr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/whisparr){: .header-icons }|
 
 ### 1. Installation
 
@@ -27,4 +27,4 @@ sb install whisparr
 
 Whisparr works more or less the same as the other apps in the arr suite, since this is a fork of sonarr.
 
-- [:octicons-link-16: Documentation: Whisparr Docs](https://wiki.servarr.com/en/whisparr/quick-start-guide){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Whisparr Docs](https://wiki.servarr.com/en/whisparr/quick-start-guide){: .header-icons }

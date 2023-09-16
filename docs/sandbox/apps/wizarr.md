@@ -8,7 +8,7 @@ With Wizarr you can invite people to your plex server with a single invite URL. 
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://ghcr.io/wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:material-docker: Docker](https://ghcr.io/wizarrrr/wizarr){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-wizarr
 
 After installation, go to wizarr.yourdomain.tld, enter a name for your server, enter the plex server, plex token and choose the default librarys. As optional you can setup a request platform. Save, and you're ready to make your first invite URL!
 
-- [:octicons-link-16: Documentation](https://github.com/Wizarrrr/wizarr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/Wizarrrr/wizarr){: .header-icons }

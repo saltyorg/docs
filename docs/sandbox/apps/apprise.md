@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/caronc/apprise/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/caronc/apprise){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/caronc/apprise){: .header-icons } | [:octicons-link-16: Docs](https://github.com/caronc/apprise/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/caronc/apprise){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/caronc/apprise){: .header-icons }|
 
 ### 1. Installation
 
@@ -25,4 +25,4 @@ as well as via the reverse proxy at <br />
 
 The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation: Apprise Client Docs](https://github.com/caronc/apprise/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Apprise Client Docs](https://github.com/caronc/apprise/wiki){: .header-icons }

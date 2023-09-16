@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://nextcloud.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/nextcloud/docker){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/_/nextcloud){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://nextcloud.com/){: .header-icons } | [:octicons-link-16: Docs](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nextcloud/docker){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/nextcloud){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-nextcloud
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons }

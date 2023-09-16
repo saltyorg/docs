@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.navidrome.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.navidrome.org/docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/navidrome/navidrome/issues){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/deluan/navidrome){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.navidrome.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.navidrome.org/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/navidrome/navidrome/issues){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/deluan/navidrome){: .header-icons }|
 
 ### 1. Installation
 
@@ -34,4 +34,4 @@ sb install sandbox-navidrome
              It usually take a couple of minutes for your music to start appearing in Navidrome’s UI. <br />
              You can check the logs to see what is the scan progress. If you have a large library this may take some time.
 
-- [:octicons-link-16: Documentation](https://www.navidrome.org/docs/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://www.navidrome.org/docs/){: .header-icons }

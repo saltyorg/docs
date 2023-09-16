@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://grafana.com/grafana/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://grafana.com/docs/grafana/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/grafana/grafana){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/grafana/grafana){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://grafana.com/grafana/){: .header-icons } | [:octicons-link-16: Docs](https://grafana.com/docs/grafana/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/grafana/grafana){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/grafana/grafana){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +24,4 @@ sb install sandbox-grafana
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://grafana.com/docs/grafana/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://grafana.com/docs/grafana/){: .header-icons }

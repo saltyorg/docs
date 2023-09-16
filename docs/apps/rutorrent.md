@@ -8,7 +8,7 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 | Details     |             |             |             |             |
 |-------------|-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons target=_blank rel="noopener noreferrer" }|
+| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons } | [:octicons-mark-github-16: Github ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons } | [:octicons-mark-github-16: Github rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons }|
 
 ## 1. URL
 

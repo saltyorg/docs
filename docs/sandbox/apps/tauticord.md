@@ -8,7 +8,7 @@ statistics, and live playback control.
 
 | Details                                                                                                                         |                                                                                                                                   |  
 |---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [:material-home: Project home](https://github.com/nwithan8/tauticord){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/nwithan8/tauticord){: .header-icons target=_blank rel="noopener noreferrer" } |
+| [:material-home: Project home](https://github.com/nwithan8/tauticord){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nwithan8/tauticord){: .header-icons } |
 
 Recommended install types: Mediabox, Saltbox
 

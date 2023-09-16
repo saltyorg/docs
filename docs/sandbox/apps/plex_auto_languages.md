@@ -8,7 +8,7 @@ You
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/remirigal/plex-auto-languages){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:octicons-link-16: Docs](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/remirigal/plex-auto-languages){: .header-icons }|
 
 ### 1. Installation
 

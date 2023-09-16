@@ -6,11 +6,11 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://notifiarr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/golift/notifiarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://notifiarr.com/){: .header-icons } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/golift/notifiarr){: .header-icons }|
 
 ### 1. Setup
 
-You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/register.php){: .header-icons target=_blank rel="noopener noreferrer" }
+You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/register.php){: .header-icons }
 
 After logging in, you should be redirected to your profile screen.
 
@@ -102,4 +102,4 @@ You can configure the Notifiarr client to not require it's own username and pass
       sb install sandbox-notifiarr
       ```
 
-[:octicons-link-16: Documentation: Notifiarr Client Docs](https://notifiarr.wiki/){: .header-icons target=_blank rel="noopener noreferrer" }
+[:octicons-link-16: Documentation: Notifiarr Client Docs](https://notifiarr.wiki/){: .header-icons }

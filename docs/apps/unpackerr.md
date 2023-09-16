@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/davidnewhall/unpackerr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/davidnewhall/unpackerr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/davidnewhall/unpackerr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/unpackerr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/davidnewhall/unpackerr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/davidnewhall/unpackerr/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/davidnewhall/unpackerr/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/unpackerr){: .header-icons }|
 
 ### 1. Installation
 
@@ -18,7 +18,7 @@ sb install unpackerr
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons }
 
 The important part of the setup is the setup for the applications.  You'll need to change these three settings for each:
 

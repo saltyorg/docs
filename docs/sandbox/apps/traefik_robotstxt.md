@@ -8,7 +8,7 @@ __Robots.txt__ basically works like a “No Trespassing” sign. It actually, te
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/mstroecker/zig-robotstxt){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:octicons-link-16: Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/mstroecker/zig-robotstxt){: .header-icons }|
 
 ### 1. Installation
 

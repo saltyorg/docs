@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/comixed/comixed/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/comixed/comixed){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/comixed/comixed){: .header-icons } | [:octicons-link-16: Docs](https://github.com/comixed/comixed/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/comixed/comixed){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/comixed/comixed){: .header-icons }|
 
 ### 1. Installation
 
@@ -33,4 +33,4 @@ Username: comixedadmin@localhost Password: comixedadmin
 Username: comixedreader@localhost Password: comixedreader
 ```
 
-- [:octicons-link-16: Documentation](https://github.com/comixed/comixed/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/comixed/comixed/wiki){: .header-icons }

@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gitlab.com/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Gitlab](https://gitlab.com/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/trackarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://gitlab.com/cloudb0x/trackarr){: .header-icons } | [:octicons-link-16: Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons } | [:octicons-mark-github-16: Gitlab](https://gitlab.com/cloudb0x/trackarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/trackarr){: .header-icons }|
 
 ### 1. Installation
 
@@ -32,4 +32,4 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 - To access Trackarr, visit `https://trackarr._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Trackarr Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Trackarr Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons }

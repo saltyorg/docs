@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://stashapp.cc/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/stashapp/stash/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/stashapp/stash){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/stashapp/stash){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://stashapp.cc/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/stashapp/stash/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/stashapp/stash){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/stashapp/stash){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +24,4 @@ sb install sandbox-stash
 
 On a clean installation, Stash only creates its config file when the user has gone through the setup wizard. If you receive errors on future visits to Stash regarding public access, re-run `sb install sandbox-stash` to apply the appropriate config edits to disable these warnings.
 
-- [:octicons-link-16: Documentation](https://github.com/stashapp/stash/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/stashapp/stash/wiki){: .header-icons }

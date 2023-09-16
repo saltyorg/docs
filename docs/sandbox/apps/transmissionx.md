@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://transmissionbt.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/transmission/transmission/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/transmission/transmission){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/transmission){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://transmissionbt.com/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/transmission/transmission/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/transmission/transmission){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/transmission){: .header-icons }|
 
 ### 1. Installation
 
@@ -46,4 +46,4 @@ sb install sandbox-transmissionx
 - For app specific instructions refer to the parent role,
   - [transmission](../../sandbox/apps/transmission.md)<Br/>
   - and the transmission upstream documentation <BR/>
-       [:octicons-link-16: Documentation](https://github.com/transmission/transmission/blob/main/docs/README.md){: .header-icons target=_blank rel="noopener noreferrer" }
+       [:octicons-link-16: Documentation](https://github.com/transmission/transmission/blob/main/docs/README.md){: .header-icons }

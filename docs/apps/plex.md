@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://plex.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons target=_blank rel="noopener noreferrer" } | :octicons-mark-github-16: Github | [:material-docker: Docker](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://plex.tv/){: .header-icons } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons } | :octicons-mark-github-16: Github | [:material-docker: Docker](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons }|
 
 ## URL
 

@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/darkalfx/requestrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/darkalfx/requestrr/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/darkalfx/requestrr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/requestrr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/darkalfx/requestrr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/darkalfx/requestrr/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/darkalfx/requestrr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/requestrr){: .header-icons }|
 
 ### 1. Installation
 
@@ -44,4 +44,4 @@ sb install sandbox-requestrrx
 - For app specific instructions refer to the parent role,
   - [requestrr](../../sandbox/apps/requestrr.md)<Br/>
   - and the requestrr upstream documentation <BR/>
-       [:octicons-link-16: Documentation](https://github.com/darkalfx/requestrr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+       [:octicons-link-16: Documentation](https://github.com/darkalfx/requestrr/wiki){: .header-icons }

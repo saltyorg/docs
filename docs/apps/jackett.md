@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jackett){: .header-icons target=_blank rel="noopener noreferrer" }|
+| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jackett){: .header-icons }|
 
 _Note: If you don't use torrents, you may just skip this page._
 

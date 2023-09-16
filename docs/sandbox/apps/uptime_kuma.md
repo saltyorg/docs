@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/louislam/uptime-kuma){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/louislam/uptime-kuma){: .header-icons } | [:octicons-link-16: Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/louislam/uptime-kuma){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/louislam/uptime-kuma){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,6 +22,6 @@ sb install sandbox-uptime-kuma
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/louislam/uptime-kuma/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/louislam/uptime-kuma/wiki){: .header-icons }
 
 - Docker Monitoring: Use TCP/HTTP connection type with this address: http://uptime-docker-socket-proxy:2375

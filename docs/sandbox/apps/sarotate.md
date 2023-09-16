@@ -8,7 +8,7 @@ Parses the specified Service Account files and automatically identifies the proj
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/saltydk/SARotate){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/saltydk/SARotate#configuration){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/saltydk/SARotate){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/saltydk/SARotate){: .header-icons } | [:octicons-link-16: Docs](https://github.com/saltydk/SARotate#configuration){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/saltydk/SARotate){: .header-icons }|
 
 ### 1. Installation
 
@@ -57,4 +57,4 @@ tail -f /opt/sarotate/sarotate.log
 
 ```
 
-- [:octicons-link-16: Documentation: Sarotate Docs](https://github.com/saltydk/SARotate){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Sarotate Docs](https://github.com/saltydk/SARotate){: .header-icons }

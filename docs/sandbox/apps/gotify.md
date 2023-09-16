@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gotify.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/gotify/server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://gotify.net/){: .header-icons } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/gotify/server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gotify/server){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,7 +24,7 @@ sb install sandbox-gotify
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://gotify.github.io/api-docs/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://gotify.github.io/api-docs/){: .header-icons }
 
 !!! info
     Android App <br />

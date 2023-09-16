@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://python-plexlibrary.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://python-plexlibrary.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/python-plexlibrary/python-plexlibrary){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://python-plexlibrary.url){: .header-icons } | [:octicons-link-16: Docs](https://python-plexlibrary.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/python-plexlibrary/python-plexlibrary){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary){: .header-icons }|
 
 ### 1. Installation
 

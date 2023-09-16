@@ -8,7 +8,7 @@ Petio is an ongoing, forever free, always evolving project currently in alpha pr
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://petio.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.petio.tv/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/petio-team/petio){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/petio){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://petio.tv/){: .header-icons } | [:octicons-link-16: Docs](https://docs.petio.tv/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/petio-team/petio){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/petio){: .header-icons }|
 
 ### 1. Installation
 
@@ -36,4 +36,4 @@ sb install petio
 
 - See the Petio documentation for more information.
 
-- [:octicons-link-16: Documentation](https://docs.petio.tv/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://docs.petio.tv/){: .header-icons }

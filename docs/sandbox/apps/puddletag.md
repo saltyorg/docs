@@ -9,7 +9,7 @@
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home](https://docs.puddletag.net/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.puddletag.net/docs.html){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Xirg/docker-puddletag){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://docs.puddletag.net/){: .header-icons } | [:octicons-link-16: Docs](https://docs.puddletag.net/docs.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Xirg/docker-puddletag){: .header-icons }|
 
 ### 1. Installation
 
@@ -32,4 +32,4 @@ sb install sandbox-puddletag
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: Puddletag Docs](https://docs.puddletag.net/docs.html){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Puddletag Docs](https://docs.puddletag.net/docs.html){: .header-icons }

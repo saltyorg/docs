@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://authelia.com){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://www.authelia.com/configuration/prologue/introduction/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/authelia/authelia){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/authelia/authelia){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](http://authelia.com){: .header-icons } | [:octicons-link-16: Docs](https://www.authelia.com/configuration/prologue/introduction/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/authelia/authelia){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/authelia/authelia){: .header-icons }|
 
 ## 2. URL
 

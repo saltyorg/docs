@@ -10,7 +10,7 @@ autobrr monitors IRC announce channels and torznab RSS feeds to get releases as 
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home](https://autobrr.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://autobrr.com/configuration/indexers/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/autobrr/autobrr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://autobrr.com/){: .header-icons } | [:octicons-link-16: Docs](https://autobrr.com/configuration/indexers/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/autobrr/autobrr){: .header-icons }|
 
 ### 1. Installation
 
@@ -26,4 +26,4 @@ sb install autobrr
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons }

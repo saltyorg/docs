@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://manual.calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" } |  | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/calibre){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://calibre-ebook.com/){: .header-icons } | [:octicons-link-16: Docs](https://manual.calibre-ebook.com/){: .header-icons } |  | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/calibre){: .header-icons }|
 
 ### 1. Installation
 
@@ -49,4 +49,4 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 - Image version number: <br />
   `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre`
 
-- [:octicons-link-16: Documentation](https://manual.calibre-ebook.com/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://manual.calibre-ebook.com/){: .header-icons }

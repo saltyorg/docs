@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://photoprism.app/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://docs.photoprism.app/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/photoprism/photoprism){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/photoprism/photoprism){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://photoprism.app/){: .header-icons } | [:octicons-link-16: Docs](https://docs.photoprism.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/photoprism/photoprism){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/photoprism/photoprism){: .header-icons }|
 
 ### 1. Installation
 
@@ -32,4 +32,4 @@ sb install sandbox-photoprism
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: Photoprism Docs](https://docs.photoprism.app/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation: Photoprism Docs](https://docs.photoprism.app/){: .header-icons }

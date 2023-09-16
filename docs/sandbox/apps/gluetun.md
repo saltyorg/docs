@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/qdm12/gluetun){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/qdm12/gluetun){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/qdm12/gluetun){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/qmcgaw/gluetun){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/qdm12/gluetun){: .header-icons } | [:octicons-link-16: Docs](https://github.com/qdm12/gluetun){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/qdm12/gluetun){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/qmcgaw/gluetun){: .header-icons }|
 
 ### 1. Configuration
 
@@ -50,4 +50,4 @@ To route a Saltbox-configured container through Gluetun, you must set `<rolename
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
 
-- [:octicons-link-16: Documentation](https://github.com/qdm12/gluetun){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/qdm12/gluetun){: .header-icons }

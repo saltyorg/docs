@@ -8,7 +8,7 @@ Also comes with a [REST-API](https://tinyurl.com/discoflix).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/nickheyer/discoflix){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/nickheyer/discoflix/blob/main/README.md){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/nickheyer/discoflix){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/nickheyer/discoflix){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/nickheyer/discoflix){: .header-icons } | [:octicons-link-16: Docs](https://github.com/nickheyer/discoflix/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nickheyer/discoflix){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nickheyer/discoflix){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +24,4 @@ sb install sandbox-discoflix
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/nickheyer/discoflix/blob/main/README.md#general-instructions){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/nickheyer/discoflix/blob/main/README.md#general-instructions){: .header-icons }

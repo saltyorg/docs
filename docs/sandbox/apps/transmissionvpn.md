@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://transmissionvpn.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://transmissionvpn.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/transmissionvpn/transmissionvpn){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/transmissionvpn/transmissionvpn){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://transmissionvpn.url){: .header-icons } | [:octicons-link-16: Docs](https://transmissionvpn.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/transmissionvpn/transmissionvpn){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/transmissionvpn/transmissionvpn){: .header-icons }|
 
 ### 1. Installation
 

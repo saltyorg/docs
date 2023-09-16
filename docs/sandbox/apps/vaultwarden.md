@@ -9,7 +9,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/dani-garcia/vaultwarden){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/dani-garcia/vaultwarden){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/vaultwarden/server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/dani-garcia/vaultwarden){: .header-icons } | [:octicons-link-16: Docs](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/dani-garcia/vaultwarden){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/vaultwarden/server){: .header-icons }|
 
 ### 1. Installation
 
@@ -33,4 +33,4 @@ sb install sandbox-vaultwarden
 
   4. You will need to enter an authentication key which you can find in `/opt/vaultwarden/env`. Look for `ADMIN_TOKEN=`.
 
-- [:octicons-link-16: Documentation](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons }

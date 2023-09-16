@@ -8,7 +8,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gotenberg.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://gotenberg.docs.url){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/gotenberg/gotenberg){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/gotenberg/gotenberg){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://gotenberg.url){: .header-icons } | [:octicons-link-16: Docs](https://gotenberg.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/gotenberg/gotenberg){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gotenberg/gotenberg){: .header-icons }|
 
 ### 1. Installation
 

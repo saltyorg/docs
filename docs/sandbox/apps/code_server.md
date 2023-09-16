@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/coder/code-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://code.visualstudio.com/docs){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/coder/code-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://registry.hub.docker.com/r/codercom/code-server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/coder/code-server){: .header-icons } | [:octicons-link-16: Docs](https://code.visualstudio.com/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/coder/code-server){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/codercom/code-server){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,7 +22,7 @@ sb install sandbox-code_server
 
 ### 3. Setup
 
-- [:octicons-link-16: VS Code Documentation](https://code.visualstudio.com/docs){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: VS Code Documentation](https://code.visualstudio.com/docs){: .header-icons }
 
 ## Migration from the old `coder` role
 

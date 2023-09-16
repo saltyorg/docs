@@ -8,7 +8,7 @@ It aims to be a good alternative to all other bittorrent clients out there. qBit
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.qbittorrent.org/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/qbittorrent/qBittorrent){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/saltydk/qbittorrent){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://www.qbittorrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/qbittorrent/qBittorrent){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/saltydk/qbittorrent){: .header-icons }|
 
 ### 1. Installation
 
@@ -70,7 +70,7 @@ sb install qbittorrent
 !!! Note
       if you're using private trackers be sure to go to `Options` -> `BitTorrent` and uncheck everything in Privacy section.
 
-- [:octicons-link-16: Documentation](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons }
 
 ## 4. Next
 

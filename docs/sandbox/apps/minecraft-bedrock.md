@@ -9,7 +9,7 @@ This is a Minecraft Bedrock server for the multi-platform Minecraft version.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-bedrock-server){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-bedrock-server){: .header-icons }|
 
 ### 1. Installation
 

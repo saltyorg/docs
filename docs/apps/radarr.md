@@ -4,7 +4,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://radarr.video/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://wiki.servarr.com/radarr/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/Radarr/Radarr){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/hotio/radarr){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://radarr.video/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/radarr/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Radarr/Radarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/radarr){: .header-icons }|
 
 ## URL
 

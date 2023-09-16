@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://lazylibrarian.gitlab.io/){: .header-icons target=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/lazylibrarian){: .header-icons target=_blank rel="noopener noreferrer" }|
+| [:material-home: Project home](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons } | [:octicons-link-16: Docs](https://lazylibrarian.gitlab.io/){: .header-icons } | [:octicons-mark-github-16: Github](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/lazylibrarian){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +22,4 @@ sb install sandbox-lazylibrarian
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://lazylibrarian.gitlab.io/){: .header-icons target=_blank rel="noopener noreferrer" }
+- [:octicons-link-16: Documentation](https://lazylibrarian.gitlab.io/){: .header-icons }

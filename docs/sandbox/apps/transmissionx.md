@@ -2,9 +2,9 @@
 
 ## What is it?
 
-[Transmission**X**](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](arrx.md) for [Transmission](../../sandbox/apps/transmission.md).
+[Transmission**X**](https://transmissionbt.com/) is an [arr**X** role](arrx.md) for [Transmission](../../sandbox/apps/transmission.md).
 
-[Transmission](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is a fast, easy, and free BitTorrent client.
+[Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

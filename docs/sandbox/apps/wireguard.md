@@ -10,7 +10,7 @@ tags:
 
 ## What is it?
 
-[Wireguard](https://wireguard.com){: target=_blank rel="noopener noreferrer" } is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
+[Wireguard](https://wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 
 The Wireguard server is deployed using the [WG-Easy](https://github.com/WeeJeWel/wg-easy) image with a simple Web UI for management.
 

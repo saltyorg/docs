@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Tubearchivist](https://www.tubearchivist.com/){: target=_blank rel="noopener noreferrer" } is a self hosted Youtube media server.
+[Tubearchivist](https://www.tubearchivist.com/) is a self hosted Youtube media server.
 
 - Subscribe to your favorite YouTube channels
 - Download Videos using yt-dlp

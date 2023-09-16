@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Netdata](https://github.com/netdata/netdata/){: target=_blank rel="noopener noreferrer" } is distributed, real-time, performance and health monitoring for systems and applications.
+[Netdata](https://github.com/netdata/netdata/) is distributed, real-time, performance and health monitoring for systems and applications.
 
 Netdata provides insights, in real-time, of everything happening on the systems it runs (including web servers, databases, applications), using highly interactive web dashboards. It can run autonomously, without any third party components, or it can be integrated to existing monitoring toolchains (Prometheus, Graphite, OpenTSDB, Kafka, Grafana, etc).
 

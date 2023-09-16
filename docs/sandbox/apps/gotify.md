@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Gotify](https://gotify.net/){: target=_blank rel="noopener noreferrer" } a simple server for sending and receiving messages.
+[Gotify](https://gotify.net/) a simple server for sending and receiving messages.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

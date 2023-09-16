@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Photoprism®](https://photoprism.app/){: target=_blank rel="noopener noreferrer" } is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
+[Photoprism®](https://photoprism.app/) is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
 
 !!!info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself. Note: This is not a multi-user app.

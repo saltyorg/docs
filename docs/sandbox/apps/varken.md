@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Varken](https://github.com/Boerderij/Varken){: target=_blank rel="noopener noreferrer" } is Dutch for **PIG**. PIG is an Acronym for **P**lex/**I**nfluxDB/**G**rafana
+[Varken](https://github.com/Boerderij/Varken) is Dutch for **PIG**. PIG is an Acronym for **P**lex/**I**nfluxDB/**G**rafana
 
 Varken is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend
 

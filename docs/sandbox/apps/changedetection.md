@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[changedetection](https://changedetection.url){: target=_blank rel="noopener noreferrer" } is a...
+[changedetection](https://changedetection.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Beets](https://beets.io/){: target=_blank rel="noopener noreferrer" } catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.
+[Beets](https://beets.io/) catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.
 
 Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
 
@@ -35,7 +35,7 @@ sb install sandbox-beets
 
 - If you want to change the folder structure you should do so in the config file located at  <br />
   `/opt/beets/config.yaml` <br />
-  [This link details the allowed options](https://beets.readthedocs.io/en/v1.4.7/reference/config.html#path-format-configuration){: target=_blank rel="noopener noreferrer" }
+  [This link details the allowed options](https://beets.readthedocs.io/en/v1.4.7/reference/config.html#path-format-configuration)
 
     If you already have imported music you will need to run an import using the following command:
 

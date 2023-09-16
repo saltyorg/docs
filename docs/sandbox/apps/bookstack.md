@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[BookStack](https://www.bookstackapp.com/){: target=_blank rel="noopener noreferrer" } is a simple, self-hosted, easy-to-use platform for organising and storing information.
+[BookStack](https://www.bookstackapp.com/) is a simple, self-hosted, easy-to-use platform for organising and storing information.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

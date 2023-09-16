@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[ZNC](https://wiki.znc.in/ZNC){: target=_blank rel="noopener noreferrer" } is an an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
+[ZNC](https://wiki.znc.in/ZNC) is an an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
 
 It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.
 

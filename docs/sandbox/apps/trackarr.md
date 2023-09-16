@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Trackarr](https://gitlab.com/cloudb0x/trackarr){: target=_blank rel="noopener noreferrer" } monitors tracker announce IRC channel, parses the announcements, and forwards those announcements to ARR PVRs (eg Sonarr/Radarr).
+[Trackarr](https://gitlab.com/cloudb0x/trackarr) monitors tracker announce IRC channel, parses the announcements, and forwards those announcements to ARR PVRs (eg Sonarr/Radarr).
 
 !!!info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log into the app itself (basic auth).

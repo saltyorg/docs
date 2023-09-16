@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[alternatrr](https://www.github.com/TheUltimateC0der/alternatrr){: target=_blank rel="noopener noreferrer" } lets you add alternative titles to your sonarr instance by editing the sonarr.db file directly via a simple UI.
+[alternatrr](https://www.github.com/TheUltimateC0der/alternatrr) lets you add alternative titles to your sonarr instance by editing the sonarr.db file directly via a simple UI.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

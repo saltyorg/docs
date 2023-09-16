@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Speedtest](https://github.com/librespeed/speedtest){: target=_blank rel="noopener noreferrer" }  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
+[Speedtest](https://github.com/librespeed/speedtest)  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

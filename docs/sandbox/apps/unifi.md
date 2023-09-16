@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Unifi Controller](https://www.ui.com/download/unifi/){: target=_blank rel="noopener noreferrer" } software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+[Unifi Controller](https://www.ui.com/download/unifi/) software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

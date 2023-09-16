@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Paperless NGX](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx){: target=_blank rel="noopener noreferrer" } is a simple Django application running in two parts: a Consumer (the thing that does the indexing) and the Web server (the part that lets you search & download already-indexed documents).
+[Paperless NGX](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx) is a simple Django application running in two parts: a Consumer (the thing that does the indexing) and the Web server (the part that lets you search & download already-indexed documents).
 
 Paperless-NGX is forked from paperless-ng to continue the great work and distribute responsibility of supporting and advancing the project among a team of people.
 

@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[plex-utills](https://github.com/jkirkcaldy/plex-utills){: target=_blank rel="noopener noreferrer" } is a...
+[plex-utills](https://github.com/jkirkcaldy/plex-utills) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

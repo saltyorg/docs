@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[audiobookshelf](https://www.audiobookshelf.org/){: target=_blank rel="noopener noreferrer" } is a self-hosted audio book and podcast server.
+[audiobookshelf](https://www.audiobookshelf.org/) is a self-hosted audio book and podcast server.
 
 !!!info
     By default, the role is NOT protected behind your Authelia/SSO middleware.

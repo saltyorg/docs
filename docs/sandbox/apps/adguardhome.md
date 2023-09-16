@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[AdGuard Home](https://hub.docker.com/r/adguard/adguardhome){: target=_blank rel="noopener noreferrer" } is a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network. After you set it up, it'll cover ALL devices in your home Wi-Fi network, and you won't need any client-side software for that. At the same time, it provides a user-friendly web interface that allows you to easily manage the traffic, even from a mobile device.
+[AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) is a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network. After you set it up, it'll cover ALL devices in your home Wi-Fi network, and you won't need any client-side software for that. At the same time, it provides a user-friendly web interface that allows you to easily manage the traffic, even from a mobile device.
 
 There are some concerns with the security of running a DNS server remotely so just be aware of this if you choose to run it on a public network.
 
@@ -27,5 +27,5 @@ sb install sandbox-adguardhome
 
 ### 3. Usage
 
-- Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for Android](https://play.google.com/store/apps/details?id=app.intra){: target=_blank rel="noopener noreferrer" } or [DNSCloak for iOS](https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351){: target=_blank rel="noopener noreferrer" }
+- Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for Android](https://play.google.com/store/apps/details?id=app.intra) or [DNSCloak for iOS](https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351)
 - Connect to AdGuard Home with one of the above applications using `https://adguardhome._yourdomain.com/dns-query`

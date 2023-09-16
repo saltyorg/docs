@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Navidrome](https://www.navidrome.org/){: target=_blank rel="noopener noreferrer" } allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.
+[Navidrome](https://www.navidrome.org/) allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

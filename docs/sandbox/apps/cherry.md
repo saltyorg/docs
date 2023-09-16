@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Cherry](https://cherry.haishan.me/){: target=_blank rel="noopener noreferrer" } is a bookmark service that is open source.
+[Cherry](https://cherry.haishan.me/) is a bookmark service that is open source.
 
 - The code of Cherry service and the browser extension are all available on GitHub.
 

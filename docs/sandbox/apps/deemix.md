@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[deemix](https://deemix.app/){: target=_blank rel="noopener noreferrer" } is a barebone deezer downloader library built from the ashes of Deezloader Remix.
+[deemix](https://deemix.app/) is a barebone deezer downloader library built from the ashes of Deezloader Remix.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

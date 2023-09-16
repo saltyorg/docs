@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Transmission](https://transmissionbt.com/){: target=_blank rel="noopener noreferrer" } is a fast, easy, and free BitTorrent client.
+[Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -22,7 +22,7 @@ sb install sandbox-transmission
 
 ### 3. Setup
 
-- Suggested desktop client is [Transmission Remote GUI](https://github.com/transmission-remote-gui/transgui){: target=_blank rel="noopener noreferrer" }. It is to be set up with ssl enabled on port 443
+- Suggested desktop client is [Transmission Remote GUI](https://github.com/transmission-remote-gui/transgui). It is to be set up with ssl enabled on port 443
 
 - `/watch` is hard-coded in the software and not editable from the settings.json, see related issue. To get around this the folder is mounted to `/mnt/local/downloads/torrents/transmission{{ rolename }}/watch`
 

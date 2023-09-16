@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Recyclarr](https://github.com/recyclarr/recyclarr){: target=_blank rel="noopener noreferrer" } automatically synchronizes recommended settings from TRaSH guides to your Sonarr/Radarr instances.
+[Recyclarr](https://github.com/recyclarr/recyclarr) automatically synchronizes recommended settings from TRaSH guides to your Sonarr/Radarr instances.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Komga](https://komga.org/){: target=_blank rel="noopener noreferrer" } is a free and open source comics/mangas server.
+[Komga](https://komga.org/) is a free and open source comics/mangas server.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

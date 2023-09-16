@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[FileZilla](https://filezilla-project.org/){: target=_blank rel="noopener noreferrer" } is a cross-platform graphical FTP, SFTP, and FTPS file management tool with a vast list of features.
+[FileZilla](https://filezilla-project.org/) is a cross-platform graphical FTP, SFTP, and FTPS file management tool with a vast list of features.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/){: target=_blank rel="noopener noreferrer" } is a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
+[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) is a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

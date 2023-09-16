@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[transfer.sh](https://transfer.sh/){: target=_blank rel="noopener noreferrer" } is an easy and fast file sharing from the command-line or web gui app.
+[transfer.sh](https://transfer.sh/) is an easy and fast file sharing from the command-line or web gui app.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

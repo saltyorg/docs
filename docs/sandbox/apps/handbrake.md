@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[HandBrake](https://handbrake.fr/){: target=_blank rel="noopener noreferrer" } is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
+[HandBrake](https://handbrake.fr/) is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

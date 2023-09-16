@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Homebox](https://hay-kot.github.io/homebox/){: target=_blank rel="noopener noreferrer" } is the inventory and organization system built for the Home User! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs.
+[Homebox](https://hay-kot.github.io/homebox/) is the inventory and organization system built for the Home User! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs.
 
 !!!info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.

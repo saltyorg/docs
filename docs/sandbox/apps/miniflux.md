@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Miniflux](https://miniflux.app){: target=_blank rel="noopener noreferrer" } is a minimalist and opinionated feed reader.
+[Miniflux](https://miniflux.app) is a minimalist and opinionated feed reader.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

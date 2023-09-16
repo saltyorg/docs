@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Goplaxt](https://github.com/XanderStrike/goplaxt){: target=_blank rel="noopener noreferrer" } scrobbles Plex plays to Trakt with ease!
+[Goplaxt](https://github.com/XanderStrike/goplaxt) scrobbles Plex plays to Trakt with ease!
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

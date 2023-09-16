@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Gitea](https://gitea.io/en-us/){: target=_blank rel="noopener noreferrer" } is a community managed lightweight code hosting solution written in Go.
+[Gitea](https://gitea.io/en-us/) is a community managed lightweight code hosting solution written in Go.
 
 Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab. Gitea is a fork of Gogs.
 

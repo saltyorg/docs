@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[DelugeVPN](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
+[DelugeVPN](https://deluge-torrent.org/) is a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

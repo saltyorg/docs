@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Wikijs](https://js.wiki/){: target=_blank rel="noopener noreferrer" } is a modern, lightweight and powerful wiki app built on NodeJS.
+[Wikijs](https://js.wiki/) is a modern, lightweight and powerful wiki app built on NodeJS.
 
 - Manage all aspects of your wiki using the extensive and intuitive admin area.
 - Fully customize the appearance of your wiki, including a light and dark mode.

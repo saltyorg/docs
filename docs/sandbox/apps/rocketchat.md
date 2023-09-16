@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[rocketchat](https://rocketchat.url){: target=_blank rel="noopener noreferrer" } is a...
+[rocketchat](https://rocketchat.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

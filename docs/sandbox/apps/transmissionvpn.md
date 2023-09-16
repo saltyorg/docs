@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[transmissionvpn](https://transmissionvpn.url){: target=_blank rel="noopener noreferrer" } is a...
+[transmissionvpn](https://transmissionvpn.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

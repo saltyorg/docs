@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Airsonic](https://github.com/airsonic/airsonic){: target=_blank rel="noopener noreferrer" } is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
+[Airsonic](https://github.com/airsonic/airsonic) is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

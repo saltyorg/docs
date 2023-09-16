@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[rdtclient](https://rdtclient.url){: target=_blank rel="noopener noreferrer" } is a...
+[rdtclient](https://rdtclient.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -6,7 +6,7 @@ This is a quick guide to installing and configuring a Tautulli custom script. It
 
 Access your Saltbox server as your normal non-root user.
 
-We'll be installing the [Killstream.py script](https://github.com/blacktwin/JBOPS/tree/master/killstream){: target=_blank rel="noopener noreferrer" } from the [JBOPS](https://github.com/blacktwin/JBOPS){: target=_blank rel="noopener noreferrer" } script collection.
+We'll be installing the [Killstream.py script](https://github.com/blacktwin/JBOPS/tree/master/killstream) from the [JBOPS](https://github.com/blacktwin/JBOPS) script collection.
 
 ### Download the script using curl
 
@@ -72,4 +72,4 @@ There is a list of when a notification agent is triggered in the **Notification 
 
 ### Credit goes to blacktwin
 
-* [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS){: target=_blank rel="noopener noreferrer" }
+* [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS)

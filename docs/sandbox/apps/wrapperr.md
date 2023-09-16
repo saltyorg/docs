@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Wrapperr](https://github.com/aunefyren/wrapperr){: target=_blank rel="noopener noreferrer" } is a website-based platform and API for collecting user stats within a set timeframe using Tautulli. The data is displayed as a statistics-summary, sort of like Spotify Wrapped. Yes, you need Tautulli to have been running beforehand and currently for this to work.
+[Wrapperr](https://github.com/aunefyren/wrapperr) is a website-based platform and API for collecting user stats within a set timeframe using Tautulli. The data is displayed as a statistics-summary, sort of like Spotify Wrapped. Yes, you need Tautulli to have been running beforehand and currently for this to work.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

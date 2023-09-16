@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Medusa](https://pymedusa.com/){: target=_blank rel="noopener noreferrer" } is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
+[Medusa](https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

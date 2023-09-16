@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Grafana](https://grafana.com/grafana/){: target=_blank rel="noopener noreferrer" } allows you to query, visualize, alert on, and understand your data no matter where it’s stored. With Grafana you can create, explore and share all of your data through beautiful, flexible dashboards.
+[Grafana](https://grafana.com/grafana/) allows you to query, visualize, alert on, and understand your data no matter where it’s stored. With Grafana you can create, explore and share all of your data through beautiful, flexible dashboards.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

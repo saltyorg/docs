@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[tqm](https://github.com/l3uddz/tqm){: target=_blank rel="noopener noreferrer" } is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
+[tqm](https://github.com/l3uddz/tqm) is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
 
 - The tqm binary is downloaded and a service and timer file created when the config is identified.
 

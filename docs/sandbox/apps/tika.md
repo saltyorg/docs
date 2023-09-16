@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[tika](https://tika.url){: target=_blank rel="noopener noreferrer" } is a...
+[tika](https://tika.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

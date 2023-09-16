@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Bazarr](https://www.bazarr.media/){: target=_blank rel="noopener noreferrer" } is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+[Bazarr](https://www.bazarr.media/) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

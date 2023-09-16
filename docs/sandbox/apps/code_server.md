@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[code-server](https://github.com/coder/code-server){: target=_blank rel="noopener noreferrer" }. Run [VS Code](https://github.com/Microsoft/vscode){: target=_blank rel="noopener noreferrer" } on any machine anywhere and access it in the browser.
+[code-server](https://github.com/coder/code-server). Run [VS Code](https://github.com/Microsoft/vscode) on any machine anywhere and access it in the browser.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[MariaDB](https://mariadb.org/){: target=_blank rel="noopener noreferrer" } MariaDB Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source.
+[MariaDB](https://mariadb.org/) MariaDB Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[FlareSolverr](https://github.com/FlareSolverr/FlareSolverr){: target=_blank rel="noopener noreferrer" } is a proxy server to bypass Cloudflare protection.
+[FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) is a proxy server to bypass Cloudflare protection.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

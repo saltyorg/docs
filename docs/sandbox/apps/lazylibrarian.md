@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian){: target=_blank rel="noopener noreferrer" } is a program to follow authors and grab metadata for all your digital reading needs.
+[LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian) is a program to follow authors and grab metadata for all your digital reading needs.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

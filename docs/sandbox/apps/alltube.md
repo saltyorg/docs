@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[AllTube](http://alltubedownload.net/){: target=_blank rel="noopener noreferrer" } is an HTML GUI for youtube-dl supporting [a wide range of websites](https://alltubedownload.net/extractors){: target=_blank rel="noopener noreferrer" }.
+[AllTube](http://alltubedownload.net/) is an HTML GUI for youtube-dl supporting [a wide range of websites](https://alltubedownload.net/extractors).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Robotstxt](https://github.com/mstroecker/zig-robotstxt){: target=_blank rel="noopener noreferrer" } is a lightweight http-server, just serving a disallow-robots.txt file using the Zig programming language([https://ziglang.org/](https://ziglang.org/){: target=_blank rel="noopener noreferrer" }).
+[Robotstxt](https://github.com/mstroecker/zig-robotstxt) is a lightweight http-server, just serving a disallow-robots.txt file using the Zig programming language([https://ziglang.org/](https://ziglang.org/)).
 
 __Robots.txt__ basically works like a “No Trespassing” sign. It actually, tells robots whether we want them to crawl the website or not. With this role, we are disallowing all robots to crawl and avoid indexing in search engines.
 

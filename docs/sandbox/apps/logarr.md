@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Logarr ALPHA](https://www.github.com/Monitorr/logarr){: target=_blank rel="noopener noreferrer" } is a Self-hosted, single-page, log consolidation tool written in PHP.
+[Logarr ALPHA](https://www.github.com/Monitorr/logarr) is a Self-hosted, single-page, log consolidation tool written in PHP.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -22,6 +22,6 @@ sb install sandbox-logarr
 
 ### 3. Setup
 
-- See [documentation](https://github.com/Monitorr/logarr/wiki/04-Logarr-Settings#configuration){: target=_blank rel="noopener noreferrer" } for configuration and instructions for adding more logs to your instance.
+- See [documentation](https://github.com/Monitorr/logarr/wiki/04-Logarr-Settings#configuration) for configuration and instructions for adding more logs to your instance.
 
 - [:octicons-link-16: Documentation](https://github.com/Monitorr/logarr/wiki){: .header-icons target=_blank rel="noopener noreferrer" }

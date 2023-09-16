@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[rFloodX](https://github.com/jesec/flood){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](arrx.md) for [rFlood](../../sandbox/apps/rflood.md).
+[rFloodX](https://github.com/jesec/flood) is an [arr**X** role](arrx.md) for [rFlood](../../sandbox/apps/rflood.md).
 
 ## Project Information
 

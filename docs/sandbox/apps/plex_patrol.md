@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[plex_patrol](https://github.com/l3uddz/plex_patrol){: target=_blank rel="noopener noreferrer" } is a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
+[plex_patrol](https://github.com/l3uddz/plex_patrol) is a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

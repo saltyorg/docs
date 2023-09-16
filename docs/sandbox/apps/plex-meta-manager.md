@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Plex Meta Manager](https://github.com/meisnate12/Plex-Meta-Manager){: target=_blank rel="noopener noreferrer" } can update many metadata fields for movies, shows, collections, seasons, and episodes and can act as a backup if your plex DB goes down. It can even update metadata the plex UI can't like Season Names. If the time is put into the metadata configuration file you can have a way to recreate your library and all its metadata changes with the click of a button.
+[Plex Meta Manager](https://github.com/meisnate12/Plex-Meta-Manager) can update many metadata fields for movies, shows, collections, seasons, and episodes and can act as a backup if your plex DB goes down. It can even update metadata the plex UI can't like Season Names. If the time is put into the metadata configuration file you can have a way to recreate your library and all its metadata changes with the click of a button.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

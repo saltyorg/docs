@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[EPMS](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: target=_blank rel="noopener noreferrer" } is very useful for sports or things that do not have a DB to scrape against, creates episode numbers for date-based media and sorts correctly in Plex interface.
+[EPMS](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/) is very useful for sports or things that do not have a DB to scrape against, creates episode numbers for date-based media and sorts correctly in Plex interface.
 
 The Extended Personal Media Shows Agent is a Metadata Agent for personal media files. It works in conjunction with the Extended Personal Media Scanner to scan personal media shows. The meta data agent sets the summary details on the episode. The agent expects the files to follow the naming conventions for personal media that are outlined in the Plex documentation.
 

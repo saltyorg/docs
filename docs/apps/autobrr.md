@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Autobrr](https://autobrr.com/){: target=_blank rel="noopener noreferrer" } is a modern single binary replacement for the autodl-irssi+rutorrent plugin.
+[Autobrr](https://autobrr.com/) is a modern single binary replacement for the autodl-irssi+rutorrent plugin.
 autobrr monitors IRC announce channels and torznab RSS feeds to get releases as soon as they are available, with good filtering, and regex support. Go brr.
 
 !!! Note

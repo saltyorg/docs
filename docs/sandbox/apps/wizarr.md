@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Wizarr](https://github.com/Wizarrrr/wizarr){: target=_blank rel="noopener noreferrer" } is an invitation system for Plex.
+[Wizarr](https://github.com/Wizarrrr/wizarr) is an invitation system for Plex.
 
 With Wizarr you can invite people to your plex server with a single invite URL. Create an invitation on the dashboard (Authelia protected), share it, and the invitee can use the link. Steps to connect or create a plex account are displayed when the invitee uses the URL.
 

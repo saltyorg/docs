@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard){: target=_blank rel="noopener noreferrer" } is a user-friendly web dashboard for viewing the following:
+[vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:
 
 * Hourly Statistics Chart (using Google Charts)
 * Daily & Monthly Statistics Overview

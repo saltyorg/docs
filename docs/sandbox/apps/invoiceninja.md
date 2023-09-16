@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[InvoiceNinja](https://www.invoiceninja.com/){: target=_blank rel="noopener noreferrer" } is a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
+[InvoiceNinja](https://www.invoiceninja.com/) is a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

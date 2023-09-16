@@ -67,7 +67,7 @@ The names, within the constraints above, are completely arbitrary.  There is not
 
 You will need to configure these new containers just as you did the stock containers.  One change; if applicable, **be sure each one gets a unique download category**, so that each instance imports only those downloads meant for it.
 
-Also, you probably want to put some thought into the directory and library structure you want to use.  See ["Customizing Plex Libraries"](https://github.com/Cloudbox/Cloudbox/wiki/Customizing-Plex-Libraries){: target=_blank rel="noopener noreferrer" }.
+Also, you probably want to put some thought into the directory and library structure you want to use.  See ["Customizing Plex Libraries"](https://github.com/Cloudbox/Cloudbox/wiki/Customizing-Plex-Libraries).
 
 ## Overwriting the stock container
 

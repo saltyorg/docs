@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[PlexTraktSync](https://github.com/Taxel/PlexTraktSync){: target=_blank rel="noopener noreferrer" } adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
+[PlexTraktSync](https://github.com/Taxel/PlexTraktSync) adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
 
 | Details     |
 |-------------|

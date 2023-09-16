@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[OliveTin](https://olivetin.app/){: target=_blank rel="noopener noreferrer" } gives safe and simple access to predefined shell commands from a web interface.
+[OliveTin](https://olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -24,6 +24,6 @@ sb install sandbox-olivetin
 
 - A barebones configuration is imported by the role to `/opt/olivetin/config.yaml` provisioning a default "Hello world!" item
 
-- Check out [the configuration section of the documentation](https://docs.olivetin.app/config.html){: target=_blank rel="noopener noreferrer" } to start building your actions.
+- Check out [the configuration section of the documentation](https://docs.olivetin.app/config.html) to start building your actions.
 
 - [:octicons-link-16: Documentation](https://docs.olivetin.app/){: .header-icons target=_blank rel="noopener noreferrer" }

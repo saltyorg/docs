@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[ComiXed](https://github.com/comixed/comixed){: target=_blank rel="noopener noreferrer" } is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
+[ComiXed](https://github.com/comixed/comixed) is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
 
 !!!note
     By default, the role is protected behind your Authelia/SSO middleware.

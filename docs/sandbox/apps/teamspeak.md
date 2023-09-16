@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[teamspeak](https://teamspeak.url){: target=_blank rel="noopener noreferrer" } is a...
+[teamspeak](https://teamspeak.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

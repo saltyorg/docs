@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[xbackbone](https://xbackbone.url){: target=_blank rel="noopener noreferrer" } is a...
+[xbackbone](https://xbackbone.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

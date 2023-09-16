@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Guacamole](https://guacamole.apache.org/){: target=_blank rel="noopener noreferrer" } is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
+[Guacamole](https://guacamole.apache.org/) is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
 
 We call it clientless because no plugins or client software are required.
 

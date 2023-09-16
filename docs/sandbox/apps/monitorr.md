@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Monitorr](https://github.com/Monitorr/Monitorr){: target=_blank rel="noopener noreferrer" } is a self-hosted PHP web app that monitors the status of local and remote network services, websites, and applications.
+[Monitorr](https://github.com/Monitorr/Monitorr) is a self-hosted PHP web app that monitors the status of local and remote network services, websites, and applications.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

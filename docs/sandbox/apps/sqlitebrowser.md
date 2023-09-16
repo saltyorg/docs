@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[SQLite Browser](https://sqlitebrowser.org/){: target=_blank rel="noopener noreferrer" } is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
+[SQLite Browser](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

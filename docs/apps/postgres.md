@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Postgres](https://www.postgresql.org/){: target=_blank rel="noopener noreferrer" } PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+[Postgres](https://www.postgresql.org/) PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[python-plexlibrary](https://github.com/adamgot/python-plexlibrary){: target=_blank rel="noopener noreferrer" } is a...
+[python-plexlibrary](https://github.com/adamgot/python-plexlibrary) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

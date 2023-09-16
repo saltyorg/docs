@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Apprise](https://github.com/caronc/apprise){: target=_blank rel="noopener noreferrer" } allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
+[Apprise](https://github.com/caronc/apprise) allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

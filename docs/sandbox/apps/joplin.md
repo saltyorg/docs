@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Joplin](https://joplinapp.org/){: target=_blank rel="noopener noreferrer" } is an open source note-taking app. Capture your thoughts and securely access them from any device.
+[Joplin](https://joplinapp.org/) is an open source note-taking app. Capture your thoughts and securely access them from any device.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

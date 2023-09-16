@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[File Browser](https://filebrowser.org/){: target=_blank rel="noopener noreferrer" } is is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!
+[File Browser](https://filebrowser.org/) is is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

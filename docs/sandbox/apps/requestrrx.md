@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[RequestrrX](https://github.com/darkalfx/requestrr){: target=_blank rel="noopener noreferrer" } is an [arr**X** role](arrx.md) for [Requestrr](../../sandbox/apps/requestrr.md).
+[RequestrrX](https://github.com/darkalfx/requestrr) is an [arr**X** role](arrx.md) for [Requestrr](../../sandbox/apps/requestrr.md).
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

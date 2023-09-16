@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Doplarr](https://github.com/kiranshila/doplarr){: target=_blank rel="noopener noreferrer" } is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
+[Doplarr](https://github.com/kiranshila/doplarr) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

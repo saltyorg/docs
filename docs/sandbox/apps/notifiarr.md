@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Notifiarr Client](https://notifiarr.com/){: target=_blank rel="noopener noreferrer" } is the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/){: target=_blank rel="noopener noreferrer" }
+[Notifiarr Client](https://notifiarr.com/) is the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/)
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -41,9 +41,9 @@ sb install sandbox-notifiarr
 Now go to the Notifiarr website and configure your integrations and discord server.
 Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.
 
-The role will attempt to configure sonarr, radarr, plex, and tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example){: target=_blank rel="noopener noreferrer" }
+The role will attempt to configure sonarr, radarr, plex, and tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
 
-A quickstart guide can be found on the [Trash Guides website.](https://trash-guides.info/Notifiarr/Quick-Start/){: target=_blank rel="noopener noreferrer" }
+A quickstart guide can be found on the [Trash Guides website.](https://trash-guides.info/Notifiarr/Quick-Start/)
 
 ## Advanced
 

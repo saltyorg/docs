@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Kavita](http://www.kavitareader.com/){: target=_blank rel="noopener noreferrer" } is a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!
+[Kavita](http://www.kavitareader.com/) is a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

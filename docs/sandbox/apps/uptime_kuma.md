@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Uptime Kuma](https://github.com/louislam/uptime-kuma){: target=_blank rel="noopener noreferrer" } is a self-hosted monitoring tool like "Uptime Robot".
+[Uptime Kuma](https://github.com/louislam/uptime-kuma) is a self-hosted monitoring tool like "Uptime Robot".
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

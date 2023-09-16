@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Tandoor Recipes](https://github.com/TandoorRecipes/recipes){: target=_blank rel="noopener noreferrer" }  is an application for managing recipes, planning meals, building shopping lists and much much more!
+[Tandoor Recipes](https://github.com/TandoorRecipes/recipes)  is an application for managing recipes, planning meals, building shopping lists and much much more!
 
 #### Core Features
 

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Omegabrr](https://github.com/autobrr/omegabrr){: target=_blank rel="noopener noreferrer" } is a companion app to [autobrr](https://docs.saltbox.dev/sandbox/apps/autobrr/). It syncs monitored titles from Radarr and Sonarr to assigned filters in autobrr.
+[Omegabrr](https://github.com/autobrr/omegabrr) is a companion app to [autobrr](https://docs.saltbox.dev/sandbox/apps/autobrr/). It syncs monitored titles from Radarr and Sonarr to assigned filters in autobrr.
 
 | Details     |
 |-------------|

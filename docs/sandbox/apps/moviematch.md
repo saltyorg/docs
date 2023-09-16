@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[MovieMatch](https://github.com/LukeChannings/moviematch){: target=_blank rel="noopener noreferrer" } is an app that helps you and your friends pick a movie to watch from a Plex server.
+[MovieMatch](https://github.com/LukeChannings/moviematch) is an app that helps you and your friends pick a movie to watch from a Plex server.
 
 MovieMatch connects to your Plex server and gets a list of movies (from any libraries marked as a movie library).
 

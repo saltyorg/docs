@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Plex Utills](https://github.com/jkirkcaldy/plex-utills){: target=_blank rel="noopener noreferrer" } is a set of scripts that enhance your plex library:
+[Plex Utills](https://github.com/jkirkcaldy/plex-utills) is a set of scripts that enhance your plex library:
 
 ### 4K/HDR Posters
 

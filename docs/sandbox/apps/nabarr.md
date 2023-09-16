@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Nabarr](https://github.com/l3uddz/nabarr){: target=_blank rel="noopener noreferrer" } monitors Newznab/Torznab RSS feeds to find new media to add to Sonarr and or Radarr.
+[Nabarr](https://github.com/l3uddz/nabarr) monitors Newznab/Torznab RSS feeds to find new media to add to Sonarr and or Radarr.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

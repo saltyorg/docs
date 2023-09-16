@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Ouroboros](https://github.com/pyouroboros/ouroboros){: target=_blank rel="noopener noreferrer" } will automatically update your running Docker containers to the latest available image.
+[Ouroboros](https://github.com/pyouroboros/ouroboros) will automatically update your running Docker containers to the latest available image.
 
 A python-based alternative to watchtower
 

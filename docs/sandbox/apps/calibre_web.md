@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Calibre-Web](https://github.com/janeczku/calibre-web){: target=_blank rel="noopener noreferrer" } is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/){: target=_blank rel="noopener noreferrer" } database.
+[Calibre-Web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/) database.
 
 Calibre-Web allows you to add users, and each user can set up a Kindle email address to have ebooks automatically sent to their Kindle reader or Kindle app. Users can also simply download epub, pdf, or whatever files you have. Requires an existing Calibre library database.
 

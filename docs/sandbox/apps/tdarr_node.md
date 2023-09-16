@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Tdarr Node](https://tdarr.io/){: target=_blank rel="noopener noreferrer" } is a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
+[Tdarr Node](https://tdarr.io/) is a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
 
 - Node is described as: Processes running same/other devices which collect tasks from the Server.
 

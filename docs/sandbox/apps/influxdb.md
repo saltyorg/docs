@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[InfluxDB](https://www.influxdata.com/products/influxdb/){: target=_blank rel="noopener noreferrer" } is an open source time series database for recording metrics, events, and analytics.
+[InfluxDB](https://www.influxdata.com/products/influxdb/) is an open source time series database for recording metrics, events, and analytics.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

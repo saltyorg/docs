@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Deluge](https://deluge-torrent.org/){: target=_blank rel="noopener noreferrer" } is a torrent client that can be used as an alternative to qbittorrent.
+[Deluge](https://deluge-torrent.org/) is a torrent client that can be used as an alternative to qbittorrent.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

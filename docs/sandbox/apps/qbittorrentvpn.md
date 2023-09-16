@@ -4,7 +4,7 @@
 
 ## What is it?
 
-[qbittorrentvpn](https://qbittorrentvpn.url){: target=_blank rel="noopener noreferrer" } is a...
+[qbittorrentvpn](https://qbittorrentvpn.url) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

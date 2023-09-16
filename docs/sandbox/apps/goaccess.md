@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[GoAccess](https://goaccess.io/){: target=_blank rel="noopener noreferrer" } is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.
+[GoAccess](https://goaccess.io/) is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.
 
 It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly.
 

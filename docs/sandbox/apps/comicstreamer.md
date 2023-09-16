@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[ComicStreamer](https://github.com/beville/ComicStreamer){: target=_blank rel="noopener noreferrer" } is a media server app for sharing a library of comic files with client applications. It allows for searching for comics based on a rich set of metadata including fields like series name, title, publisher, story arcs, characters, and creator credits.
+[ComicStreamer](https://github.com/beville/ComicStreamer) is a media server app for sharing a library of comic files with client applications. It allows for searching for comics based on a rich set of metadata including fields like series name, title, publisher, story arcs, characters, and creator credits.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

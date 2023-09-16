@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[duplicati](https://duplicati.com/){: target=_blank rel="noopener noreferrer" } is a...
+[duplicati](https://duplicati.com/) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

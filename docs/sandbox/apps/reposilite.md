@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[reposilite](https://reposilite.com/){: target=_blank rel="noopener noreferrer" } is a...
+[reposilite](https://reposilite.com/) is a...
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

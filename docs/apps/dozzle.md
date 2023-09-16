@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Dozzle](https://dozzle.dev/){: target=_blank rel="noopener noreferrer" } is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only.
+[Dozzle](https://dozzle.dev/) is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

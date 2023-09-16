@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Funkwhale](https://funkwhale.audio/){: target=_blank rel="noopener noreferrer" } is a modern, self-hosted, free and open-source music server.
+[Funkwhale](https://funkwhale.audio/) is a modern, self-hosted, free and open-source music server.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[qBit Management](https://github.com/StuffAnThings/qbit_manage){: target=_blank rel="noopener noreferrer" } is a program used to manage your qBittorrent instance.
+[qBit Management](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

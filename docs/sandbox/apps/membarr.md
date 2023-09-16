@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Membarr](https://github.com/Yoruio/Membarr){: target=_blank rel="noopener noreferrer" } is a fork of Invitarr that invites discord users to Plex and Jellyfin. You can also automate this bot to invite discord users to a media server once a certain role is given to a user or the user can also be added manually.
+[Membarr](https://github.com/Yoruio/Membarr) is a fork of Invitarr that invites discord users to Plex and Jellyfin. You can also automate this bot to invite discord users to a media server once a certain role is given to a user or the user can also be added manually.
 
 ***Features*** are:
 

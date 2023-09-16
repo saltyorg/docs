@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Tauticord](https://github.com/nwithan8/tauticord){: target=_blank rel="noopener noreferrer" } is a Discord bot that
+[Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that
 will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library
 statistics, and live playback control.
 

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Mylar3](https://github.com/mylar3/mylar3){: target=_blank rel="noopener noreferrer" } is an automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents. Also provides an OPDS server distribution.
+[Mylar3](https://github.com/mylar3/mylar3) is an automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents. Also provides an OPDS server distribution.
 
 Mylar allows you to create a watchlist of series that it monitors for various things (new issues, updated information, etc). It will grab, sort, and rename downloaded issues. It will also allow you to monitor weekly pull-lists for items belonging to said watchlisted series to download, as well as being able to monitor and maintain story-arcs.
 
@@ -31,7 +31,7 @@ sb install sandbox-ROLENAME
 
 3. Make sure `Launch Browser on startup` is disabled.
 
-4. You'll need a [ComicVine API](https://comicvine.gamespot.com/api/){: target=_blank rel="noopener noreferrer" } Key for Mylar to be useful. [Create an account](https://comicvine.gamespot.com/login-signup/){: target=_blank rel="noopener noreferrer" }, and your key will be at [the top of this page](https://comicvine.gamespot.com/api/){: target=_blank rel="noopener noreferrer" }.
+4. You'll need a [ComicVine API](https://comicvine.gamespot.com/api/) Key for Mylar to be useful. [Create an account](https://comicvine.gamespot.com/login-signup/), and your key will be at [the top of this page](https://comicvine.gamespot.com/api/).
 
 5. Set the Comic Location path to `/comics`. It will already be mounted.
 

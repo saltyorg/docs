@@ -15,7 +15,13 @@ IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 
 
 IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT [CLOUDBOX, PTS, ETC.]  YOU CAN USE THOSE.  THERE IS NO REQUIREMENT TO CREATE MORE.
 
-SA-GEN has recently [May 2023] changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
+`sa-gen` has recently [May 2023] changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
+
+IMPORTANT: Google has made changes to the service account infrastructure on their side.  When running this script you may see a message like:
+```
+A quota has been reached for project number PROJECT_NUMBER: Service accounts created per minute per project.
+```
+This is due to a change on Google's side, and there's not a simnple way around it.  The simplest solution is to just ignore tha error, then after the script has run delete the empty files that got created.  The final step is going to try to use service account file `150.json`; if that one is empty either copy another one to that name or change the config in the final step to use a file that is present.
 
 1. Create /opt/sa and make sure it's writable by you.
 

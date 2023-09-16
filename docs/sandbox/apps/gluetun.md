@@ -43,7 +43,23 @@ Additionl Docker envs may be set via `gluetun_docker_envs_custom`.
 sb install sandbox-gluetun
 ```
 
-### 3. Route a container through Gluetun
+### 3. Route Plex through Gluetun
+
+To route Plex via your Gluetun container, you must set the following via the inventory system. These settings will also DNS block the metrics servers and use Gluetun's HTTP proxy when connecting with the Plex API for Saltbox tasks such as generating auth tokens:
+
+``` yaml
+gluetun_docker_hosts_default:
+  "metric.plex.tv": "{{ ip_address_localhost }}"
+  "metrics.plex.tv": "{{ ip_address_localhost }}"
+  "analytics.plex.tv": "{{ ip_address_localhost }}"
+
+plex_docker_network_mode: "container:gluetun"
+plex_auth_token_proxy: "http://gluetun:8888"
+```
+!!! caution
+    When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
+
+### 4. Route other containers through Gluetun
 
 To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode: "container:gluetun"` via the inventory system. For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode: "container:gluetun"`.
 

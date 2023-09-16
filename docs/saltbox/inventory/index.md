@@ -21,7 +21,7 @@ or
 /opt/sandbox/roles/<role_name>/defaults/main.yml
 ```
 
-These files can also be reviewed in the github repo for [saltbox](https://github.com/saltyorg/Saltbox/tree/master/roles) and [sandbox](https://github.com/saltyorg/Saltbox/tree/master/roles).
+These files can also be reviewed in the github repo for [Saltbox](https://github.com/saltyorg/Saltbox/tree/master/roles) and [Sandbox](https://github.com/saltyorg/Saltbox/tree/master/roles).
 
 Should you require additional functionality then by all means create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we'll look at accommodating it.
 
@@ -58,7 +58,9 @@ If you wanted to change that to "nightly", you'd add this line to `/srv/git/salt
 sonarr_docker_image_tag: "nightly"
 ```
 
-Which would override the default [`release`] and result in Saltbox using the `ghcr.io/hotio/sonarr:nightly` Docker image instead, without you modifying this file. If you update Saltbox and this file is replaced, your tag change to `nightly` remains in effect.
+Which would override the default `release` and result in Saltbox using the `ghcr.io/hotio/sonarr:nightly` Docker image instead, without you modifying this file.
+
+The reason the inventory file `/srv/git/saltbox/inventories/host_vars/localhost.yml` is used instead of modifying `/srv/git/saltbox/roles/sonarr/defaults/main.yml` directly is that the roles edit would get reset on the next `sb update` whereas the localhost inventory edit will be preserved and is included in Saltbox managed backups.
 
 ## 'Custom' variables
 
@@ -80,8 +82,9 @@ sonarr_docker_volumes_custom:
 
 ```yaml
 
-##### Enabling different donloaders and indexers #####
-download_clients_enabled: ["deluge", "sabnzbd"]
+##### Enabling different media servers, downloaders and indexers #####
+media_servers_enabled: ["emby"]
+download_clients_enabled: ["deluge", "nzbget"]
 download_indexers_enabled: ["prowlarr"]
 
 ##### Plex Ports for local access #####
@@ -139,6 +142,19 @@ prowlarr_traefik_sso_middleware: ""`
 ```
 
 After making this change in the Inventory file, simply run the appropriate role command in order to disable Authelia on that specific app. Reminder you can run multiple tags at once.
+
+Should you wish to enable Authelia on an application that did not previously use it you do something similar as above but use a different value to enable it:
+
+```yaml
+appname_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+```
+
+It should be noted that we take care of whitelisting any API endpoints when enabling Authelia for you so ask on the discord if you have trouble with enabling Authelia on an application that needs to have its API whitelisted and the below example isn't enough.
+
+```yaml
+appname_traefik_api_enabled: true
+appname_traefik_api_endpoint: "PathPrefix(`/api`) || PathPrefix(`/feed`) || PathPrefix(`/ping`)"
+```
 
 ### Authorize with App Credentials
 

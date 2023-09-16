@@ -5,7 +5,7 @@ If you're migrating from Cloudbox you probably want the [Cloudbox migration inst
 If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
 
 !!! warning
-    The Saltbox install is expecting a fresh new install of Ubunutu.  DO NOT try to install it on your existing Cloudbox, PTS< or other setup.
+    The Saltbox install is expecting a fresh new install of Ubuntu.  DO NOT try to install it on your existing Cloudbox, PTS or other system-wide setup.
 
 Please read through these steps prior to executing any of them, just to get a grounding in what is going to happen through out the process.  It could be that things in later steps inform your decisions in earlier steps.
 
@@ -19,7 +19,7 @@ Broadly, the base install consists of six steps:
 6. Configuring installed [applications](#step-6-app-setup)
 
 !!! warning
-    There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but things that are installed in the OS, for example rclone, are not tracked in a way that would allow uninstalling them.
+    There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
 
 ## Step 1: Dependencies
 

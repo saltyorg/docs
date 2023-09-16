@@ -31,7 +31,7 @@ Make changes in the following sections:
             - Set your preferred naming format; here are some examples:
 
                 <details>
-                <summary>TRaSH' naming guide [Recommended[</summary> <br />
+                <summary>TRaSH' naming guide [Recommended]</summary> <br />
 
                 Go [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
 

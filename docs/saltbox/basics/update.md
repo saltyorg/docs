@@ -10,11 +10,11 @@ sb update
 
 ```
 
-This will also upgrade Ansible as needed and migrate the configuration files as additional options are added over time.
+This will also upgrade Ansible as needed and migrate the configuration files as options are added, removed or changed over time.
 
-This updates the saltbox files *only*;  It *does not* update your containers.
+This updates the Saltbox files *only*;  It *does not* update your containers.
 
-For example, if a new feature is added to saltbox, `sb update` will get that new feature.  If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
+For example, if a new feature is added to Saltbox, `sb update` will get that new feature.  If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
 
 ## Updating apps
 
@@ -26,7 +26,7 @@ sb install radarr
 
 ```
 
-This will retrieve the current version of the radarr image and recreate the container, which will update the application version.
+This will retrieve the current version of the Radarr image and recreate the container, which will update the application version.
 
 The same thing happens if you run one of the top-level tags:
 

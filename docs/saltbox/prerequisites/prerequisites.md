@@ -14,8 +14,8 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 
 - [A Server](#server)
 - [A Domain Name](#domain)
-- [Cloud Storage](#cloud-storage)
-- [A Plex Account](#plex-account)
+- [Cloud Storage (optional)](#cloud-storage)
+- [A Plex Account (optional)](#plex-account)
 - [Usenet or Bittorrent sources](#usenet-or-bittorrent-sources)
 
 <!-- /TOC -->
@@ -63,9 +63,9 @@ See [here](../../reference/cloud.md) for more details about Cloud Storage requir
 
 ## Plex Account
 
-You'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already have one, for purposes of the install, *even if you're not planning to use Plex*.
+If you want to use Plex you'll need a [Plex account](https://www.plex.tv/sign-up/), if you don't already have one.
 
-This may change in the future, but for now it's a requirement for the simplest Happy Path install described here.
+Should you not wish to use Plex on a Mediabox install you should look into overriding the `media_servers_enabled` variable using the [inventory](../inventory/index.md).
 
 See [here](../../reference/plex.md) for more details about Plex account requirements.
 

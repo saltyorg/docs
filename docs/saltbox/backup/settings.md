@@ -5,24 +5,25 @@ The configuration file for backup/restore is called `backup_config.yml` and is l
 ``` { .yaml .annotate }
 ---
 backup:
+  cron:
+    cron_time: weekly # (8)!
+    enable: no # (9)!
   local:
     enable: true # (1)!
     destination: /mnt/local/Backups/Saltbox # (2)!
+  misc:
+    snapshot: true # (12)!
   rclone:
     enable: true # (3)!
     destination: google:/Backups/Saltbox # (4)!
+  restore_service:
+    user: # (10)!
+    pass: # (11)!
   rsync:
     enable: false # (5)!
     destination: rsync://somehost.com/Backups/Saltbox # (6)!
     port: 22 # (7)!
-  cron:
-    cron_time: weekly # (8)!
-    enable: no # (9)!
-  restore_service:
-    user: # (10)!
-    pass: # (11)!
-  misc:
-    snapshot: true # (12)!
+
 ```
 
 1. Toggle for keeping a local copy of the backup.

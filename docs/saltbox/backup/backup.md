@@ -68,14 +68,14 @@ This backup will take some time, likely hours, and all your containers may be do
 !!! info
     This step assumes you have completed the configuration of the `backup_config.yml` in the configuration [step](../../saltbox/backup/settings.md).
 
-    Specifically, you should make sure you have defined and enabled your desired destination(s) for the backup, **and** if you want this to **create** the cron task, set `enabled` to `yes`:
+    Specifically, you should make sure you have defined and enabled your desired destination(s) for the backup **and** defined a desired cron_time:
 
     ```yaml
     cron:
       cron_time: weekly 
-      enable: yes
     ```
 
+    Options are: `reboot`, `yearly`, `annually`, `monthly`, `weekly`, `daily`, `hourly`.
 
 === "Have Saltbox configure cron"
 
@@ -94,10 +94,9 @@ This backup will take some time, likely hours, and all your containers may be do
     Then add this line to the file.  This example will run the backup every day at 4AM.
 
     ```shell
-    0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/home/seed/logs/saltbox_backup.log' 2>&1
+    0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/srv/git/saltbox/saltbox_backup.log' 2>&1
     ```
     !!! note
-        Remember to edit the seed username if you changed the Saltbox user in the `accounts.yml`.
         Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
     Save and close the file and the schedule will be applied going forward.

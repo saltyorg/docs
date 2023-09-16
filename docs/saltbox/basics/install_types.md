@@ -21,7 +21,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 | [Portainer](https://portainer.io) ([Docker](https://hub.docker.com/r/portainer/portainer/))                          |               |  ![Yes][yes]  |               |  ![Yes][yes]  |
 | [Organizr](https://github.com/causefx/Organizr) ([Docker](https://github.com/linuxserver/docker-organizr))           |               |  ![Yes][yes]  |               |  ![Yes][yes]  |
 | [Cloudplow](https://github.com/l3uddz/cloudplow) (Media Uploader)                                                    |               |  ![Yes][yes]  |               |  ![Yes][yes]  |
-| [NZBGet](https://nzbget.net) ([Docker](https://github.com/hotio/docker-nzbget))                                      |               |  ![Yes][yes][^1]  |               |  ![Yes][yes]  |
+| [SABnzbd](https://sabnzbd.org/) ([Docker](https://github.com/hotio/docker-sabnzbd))                                  |               |  ![Yes][yes][^1]  |               |  ![Yes][yes]  |
 | [Qbittorrent](https://github.com/qbittorrent/qBittorrent) ([Docker](https://hub.docker.com/r/saltydk/qbittorrent))   |               |  ![Yes][yes][^1]  |               |  ![Yes][yes]  |
 | [Jackett](https://github.com/Jackett/Jackett) ([Docker](https://github.com/hotio/docker-jackett))                    |               |  ![Yes][yes][^1]  |               |  ![Yes][yes]  |
 | [NZBHydra 2](https://github.com/theotherp/nzbhydra2) ([Docker](https://github.com/hotio/docker-nzbhydra2))           |               |  ![Yes][yes][^1]  |               |  ![Yes][yes]  |
@@ -32,18 +32,18 @@ Saltbox consists of a "Core" with various extra components added onto that core.
   [yes]:../../images/check-mark.png
 
 [^1]:
-    Note that these default download clients and indexers can be overridden with other saltbox tags [NOT SANDBOX] in the [inventory](../inventory/index.md).  If the tags do not exist in saltbox the install will fail.
+    Note that these default download clients and indexers can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md).  If the tags do not exist in saltbox the install will fail.
     ```
-    download_clients_enabled: ["qbittorrent", "nzbget"]
+    download_clients_enabled: ["qbittorrent", "sabnzbd"]
     download_indexers_enabled: ["jackett", "nzbhydra2"]
     ```
 
 
 ## Feederbox/Mediabox Setup Considerations
 
-- If your servers will share a domain, it is preferred to run only one instance of Authelia. This can run either on the feederbox or mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [here](../install/install.md#__code_8_annotation_6).
+- If your servers will share a domain, it is preferred to run only one instance of Authelia. This can run either on the Feederbox or Mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [here](../install/install.md#__code_8_annotation_6).
 
-- On the server hosting Authelia, it is advised to set the `traefik_trusted_ips` variable in your [Inventories](../inventory/index.md) file following the format below. This is for a mediabox hosting Authelia. If the feederbox will be hosting, the mediabox IP would be substituted.
+- On the server hosting Authelia, it is advised to set the `traefik_trusted_ips` variable in your [Inventories](../inventory/index.md) file following the format below. This is for a Mediabox hosting Authelia. If the Feederbox will be hosting, the Mediabox IP would be substituted.
 
   ```yaml
   traefik_trusted_ips: "feederboxIPV4/32,feederboxIPV6/64"

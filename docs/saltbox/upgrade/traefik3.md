@@ -23,3 +23,5 @@ Saltbox has undergone some major breaking changes which land with the release an
 6. Changed default torrent client to qBittorrent
 7. Changed default usenet client to SABnzbd
 8. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed once).
+9. Changed the rutorrent image since the previously used one was no longer getting updates.
+    1. No longer includes autodl

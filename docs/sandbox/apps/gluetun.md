@@ -46,7 +46,7 @@ sb install sandbox-gluetun
 ### 3. Route Plex through Gluetun
 
 !!! caution
-    It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN.
+    It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN. Multiple instances of Plex will need their own unique instance of gluetun due to port conflicts.
 
 To route Plex via your Gluetun container, you must set the following via the inventory system. These settings will also DNS block the metrics servers and use Gluetun's HTTP proxy when connecting with the Plex API for Saltbox tasks such as generating auth tokens:
 

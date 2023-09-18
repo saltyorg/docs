@@ -46,7 +46,7 @@ Listed below are some common scenarios and their migration instructions.
 
 1. [Restore](restore.md) Saltbox to the new server.
 
-2. Add your new domain name into [Accounts](../install/install.md#configuration).
+2. Add your new domain name into [Accounts](../install/install.md#step-2-configuration).
 
 3. If you are using Cloudflare:
 

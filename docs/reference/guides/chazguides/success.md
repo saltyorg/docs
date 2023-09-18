@@ -8,7 +8,7 @@ Perhaps you skipped some of those 5 required steps.  If so, why?  Go back to the
 
 Perhaps you ignored some errors.  If so, why?  Go back to the beginning and start again.
 
-The install is complete when you get to the end of [this step](../../../saltbox/install/install.md#install-saltbox) with no errors.
+The install is complete when you get to the end of [this step](../../../saltbox/install/install.md#step-5-saltbox) with no errors.
 
 It’s not complete until then.
 

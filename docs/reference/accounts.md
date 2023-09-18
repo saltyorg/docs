@@ -1,7 +1,7 @@
 # Accounts and Settings
 
 !!! warning
-    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#configuration).
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#step-2-configuration).
     If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
 
 On this page, we break down the options available in the following files:

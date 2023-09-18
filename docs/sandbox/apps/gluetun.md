@@ -72,6 +72,8 @@ Depending on if the role in question supports instances or not there will be two
     
     For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode_default: "container:gluetun"`.
 
+    For example, to route `qbittorrent2` through Gluetun, the entry would be `qbittorrent2_docker_network_mode_default: "container:gluetun2"`.
+
     !!! important
         The caveat with instances is that each instance will need a unique Gluetun instance to avoid port collision.
 

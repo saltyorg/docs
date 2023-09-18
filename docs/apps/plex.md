@@ -141,6 +141,8 @@
 
             - You will see a scary warning.  You are sure, so click the red "Disable" button.
 
+            ![](../images/plex-media-server/plex-11a-remote.png)
+
 
 ## Add Media Libraries
 

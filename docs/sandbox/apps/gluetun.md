@@ -56,7 +56,7 @@ gluetun_docker_hosts_default:
   "metrics.plex.tv": "{{ ip_address_localhost }}"
   "analytics.plex.tv": "{{ ip_address_localhost }}"
 
-plex_docker_network_mode: "container:gluetun"
+plex_docker_network_mode_default: "container:gluetun"
 plex_auth_token_proxy: "http://gluetun:8888"
 ```
 !!! caution
@@ -64,7 +64,7 @@ plex_auth_token_proxy: "http://gluetun:8888"
 
 ### 4. Route other containers through Gluetun
 
-To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode: "container:gluetun"` via the inventory system. For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode: "container:gluetun"`.
+To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode_default: "container:gluetun"` via the inventory system. For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode_default: "container:gluetun"`. For roles that do not use instancing you will set `<rolename>_docker_network_mode: "container:gluetun"`
 
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.

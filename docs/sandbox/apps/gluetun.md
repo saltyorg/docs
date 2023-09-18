@@ -56,8 +56,9 @@ gluetun_docker_hosts_default:
   "metrics.plex.tv": "{{ ip_address_localhost }}"
   "analytics.plex.tv": "{{ ip_address_localhost }}"
 
-plex_docker_network_mode_default: "container:gluetun"
 plex_auth_token_proxy: "http://gluetun:8888"
+plex_docker_network_mode_default: "container:gluetun"
+plex2_docker_network_mode_default: "container:gluetun2" # If using multiple instances.
 ```
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.

@@ -24,8 +24,6 @@ See the end of this doc for some notes on how to tell if 1 and 2 are true.
 
 <span style="color: red;">MY FOLDERS AND FILES IN THESE SCREENSHOTS WILL NOT MATCH YOURS.  THAT’S FINE AND EXPECTED.</span>
 
-When I refer to a shell command throughout, you’re typing the part highlighted in blue and looking for the part highlighted in orange.
-
 In most cases, running the mounts tag will clear up any problems you may be having with the various auto-generated service files.
 
 ```shell
@@ -45,11 +43,25 @@ google:       1.0P  107T   1.0P   10%  /mnt/remote
 ➜  ~
 ```
 
-That shows a device called “google” [created by rclone config] mounted at `/mnt/remote` [done by rclone_vfs.service], and then two directories [local and remote, which are both inside the /mnt directory] combined into `/mnt/unionfs` [that’s done by mergerfs.service]
+That shows a device called “google” [created by rclone config] mounted at `/mnt/remote` [done by rclone_vfs.service], 
+```
+google:       1.0P  107T   1.0P   10%  /mnt/remote
+```
+and then two directories [local and remote, which are both inside the /mnt directory] combined into `/mnt/unionfs` [that’s done by mergerfs.service]
+```
+local:remote  6.1P  107T   224G  100%  /mnt/unionfs
+```
 
 If this looks good, your problem is most likely in the bind mounts within the containers.
 
-Now we’ll step through the various layers involved in this and check them one at a time.
+There are four layers between cloud storage and the apps:
+
+1. rclone remote
+2. rclone_vfs mount of that remote at `/mnt/remote`
+3. mergerfs of that remote to `/mnt/unionfs`
+4. mapping of volumes into the container
+
+We’ll step through the various layers involved in this and check them one at a time.
 
 ## rclone remote
 
@@ -78,11 +90,11 @@ You should be able to get a file listing from that remote:
 ➜  ~
 ```
 
-That file listing should match what’s displayed on the Google Drive website.  If you've used the Saltbox scripted setup, those directories witll be spread across the three shared drives that get created.
+That file listing should match what’s displayed on the Google Drive website.  If you've used the Saltbox scripted setup, those directories witll be spread across the multiple shared drives that get created.
 
 Yours will probably contain “Movies” and “TV”.
 
-If it doesn’t, step one is to fix that.  Recreate or edit that `google:` rclone remote until the file listings match.  If you've used the Saltbox scripted setup, examine the three shared drive remotes; the `google` remote is just a union of those.
+If it doesn’t match what’s displayed on the Google Drive website, step one is to fix that.  Recreate or edit that `google:` rclone remote until the file listings match.  If you've used the Saltbox scripted setup, examine the shared drive remotes; the `google` remote is just a union of those.
 
 Do not continue until those two file listings match.  They won’t match mine; they should both show the same files from YOUR gdrive.
 
@@ -129,6 +141,9 @@ Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal systemd[1]: Started Rclone VFS Mou
 ```
 
 In that log you can see an error from last night when my server ran out of disk space, the rclone_vfs service died, then a reboot [after clearing space]  and it came back up.
+```
+Nov 02 06:44:09 Ubuntu-1804-bionic-64-minimal rclone[9625]: Fatal error: failed to umount FUSE fs: exit status 1: fusermount: entry for /mnt/remote not found in /etc/mtab
+```
 
 If there are errors there, first try restarting the service:
 
@@ -151,7 +166,13 @@ ExecStop=/bin/fusermount -uz /mnt/remote
 ```
 
 You can see in that output that rclone_vfs is mounting your google: remote at /mnt/remote.
-
+```
+  google: /mnt/remote
+  ^       ^
+  mount   in this location
+  this
+  remote
+```
 That means that the content of your google drive should also appear at that location.  Let’s check that:
 
 ```text
@@ -163,7 +184,7 @@ drwxrwxr-x 1 seed seed 0 Dec  1  2018 TV
 ➜  ~
 ```
 
-Note that that matches the file listing from the Google Drive web UI above.
+Note that that should match the file listing from the Google Drive web UI above.
 
 If it doesn’t, there’s a problem running the rclone_vfs.service.  Perhaps try running the mounts tag.
 

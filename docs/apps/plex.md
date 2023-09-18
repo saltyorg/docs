@@ -133,6 +133,15 @@
 
             ![](../images/plex-media-server/plex-11-schedule.jpeg)
 
+    === "Remote Access"
+
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Remote Access" (left).
+
+        2. Click the grey button labelled "Disable Remote Access"
+
+            - You will see a scary warning.  You are sure, so click the red "Disable" button.
+
+
 ## Add Media Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV.

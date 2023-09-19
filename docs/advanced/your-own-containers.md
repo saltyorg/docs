@@ -98,7 +98,7 @@ If you want to create a role file that you can install like the built-in applica
 
         If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
 
-        Remember to enable httpresolver in adv_settings.yml if not using Cloudflare or enable it with `traefik_enable_http_validation: true` using the inventory if using Cloudflare.
+        Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
     18. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
     19. Defines which port Traefik routes the traffic to.
@@ -197,7 +197,7 @@ If you want to create a role file that you can install like the built-in applica
 
         If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
 
-        Remember to enable httpresolver in adv_settings.yml if not using Cloudflare or enable it with `traefik_enable_http_validation: true` using the inventory if using Cloudflare.
+        Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
     18. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
     19. Defines which port Traefik routes the traffic to.

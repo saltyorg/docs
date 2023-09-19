@@ -171,7 +171,7 @@ You can tell cloudplow to use a set of service accounts when uploading to Google
 }
 ```
 
-If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](../reference/cloudplow-config.md).
 
 ### Restart
 
@@ -183,7 +183,7 @@ sudo systemctl restart cloudplow
 
 ## Logs and status
 
-[Details here](https://docs.saltbox.dev/reference/logs/?h=logs#cloudplow)
+[Details here](../reference/logs.md#cloudplow)
 
 ## CLI
 

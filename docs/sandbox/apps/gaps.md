@@ -25,6 +25,6 @@ sb install sandbox-gaps
 
 ### 3. Setup
 
-- All you need to get started is a [Plex Auth Token](https://docs.saltbox.dev/reference/plex_auth_token/?h=plex+token#saltbox-role), and a TMDB api key.
+- All you need to get started is a [Plex Auth Token](../../reference/plex_auth_token.md#saltbox-role), and a TMDB api key.
 
 - [:octicons-link-16: Documentation: gaps Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons }

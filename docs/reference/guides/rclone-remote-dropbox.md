@@ -200,7 +200,7 @@ https://developers.dropbox.com/dbx-performance-guide
 
 ### rclone remote in settings:
 
-You will want to change the [rclone remote name in the settings](https://docs.saltbox.dev/reference/accounts/#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
+You will want to change the [rclone remote name in the settings](../accounts.md#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
 
 ```yaml
 rclone:

@@ -34,7 +34,7 @@
 
 - DailyQuota
 
-  - If you are using Google Drive and set up the 300 [service accounts in Rclone](https://docs.saltbox.dev/reference/rclone-manual/) you can ignore this.
+  - If you are using Google Drive and set up the 300 [service accounts in Rclone](../reference/rclone-manual.md) you can ignore this.
   - Otherwise, if you are using Google Drive, it's recommended you set this to `750000` (i.e. 750GB), to coincide with the Google Drive daily upload limit.
 
 ## 3. Extensions

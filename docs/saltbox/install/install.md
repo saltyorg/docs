@@ -1,8 +1,8 @@
 # Install
 
-If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
-If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
+If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](../../reference/guides/plexguide.md).  Expansions to those notes would be welcome.
 
 !!! warning
     The Saltbox install is expecting a fresh new install of Ubuntu.  DO NOT try to install it on your existing Cloudbox, PTS or other system-wide setup.
@@ -264,7 +264,7 @@ Note that generally speaking these five options are mutually exclusive.
     
     Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup.  If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
 
-    [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+    [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
 === "PlexGuide/PTS User"
     This option is aimed at you if you are migrating your PG/PTS/MHA setup.
@@ -277,7 +277,7 @@ Note that generally speaking these five options are mutually exclusive.
     2. File system differences
     3. Service account files [PlexGuide removed the `.json` extension from what it calls "BlitzKeys", Saltbox expects them to be there]
 
-    [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
+    [Plexguide migration notes](../../reference/guides/plexguide.md)
 
 === "I have media on cloud storage"
     This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
@@ -288,7 +288,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential.
 
-    [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
+    [Other migration notes](../../reference/guides/other.md)
 
 === "I'm totally new to this"
     This option is aimed at you if you are starting totally from scratch and want to be walked through the whole setup.
@@ -404,7 +404,7 @@ After rebooting, you're now ready to go through the basic setup for the apps!
 
 ## Step 6: App Setup
 
-If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](../../reference/cloudplow-config.md).
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

@@ -309,6 +309,7 @@ Each tab shows a "section" in the file.
     ```
 
     `cert.http_validation`: Use HTTP (HTTP-01) certificate validation method.
+    Required if not using Cloudflare.
 
     Default is `no`.
 

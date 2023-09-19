@@ -76,8 +76,8 @@ jobs:
   webhook:
     name: 'webhook'
     runs-on: self-hosted
-    needs: [build]
-    if: always() && github.event_name != 'pull_request'
+    needs: build
+    if: always() && github.event_name != 'pull_request' && github.event.repository.fork == false
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - name: Send Discord Notification

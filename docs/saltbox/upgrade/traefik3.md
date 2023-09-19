@@ -3,6 +3,8 @@
 Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0. Those changes include
 
 1. Upgrade Traefik to version 3.0
+    1. HTTP validation for certificates is no longer enabled by default.
+        1. Enable it in adv_settings.yml if not using Cloudflare or with `traefik_enable_http_validation: true` if wanting to use it without making it the default.
 2. Remote mount changes - **Breaking Changes**
     1. Add support for specifying multiple remote mounts using different predefined templates (Google, Dropbox, SFTP).
     2. Moved remote mounts from `/mnt/remote` to `/mnt/remote/<remote_name>`

@@ -18,6 +18,8 @@ If you want to set up a Google Teamdrive and upload to it, see the [“Tip #44�
 
 Here, I’m assuming you have access to a cloud drive, and you want to set it up so you can point Plex or Emby at it.  No more than that.
 
+IMPORTANT NOTE: SALTBOX NOW HAS A MODULAR APPROACH TO MOUNTING THAT LETS YOU DEFINE THESE THINGS IN YOUR SETTINGS RATHER THAN DOING THEM MANUALLY.  IT IS RECOMMENDED THAT YOU USE THAT METHOD RATHER THAN THIS.
+
 ## Overview
 
 There are three steps:
@@ -198,60 +200,16 @@ Let’s go!
 
     Last step; you’re going to add the teamdrive to the mergerfs configuration so that the files from it show up under /mnt/unionfs with the rest of your files.
 
-    === "Using inventory"
-        Add the following to the inventory file at `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
+    Add the following to the inventory file at `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
 
-        ```
-        mergerfs_mount_branches: "{{ local_mount_branch }}=RW:/mnt/remote=NC:/mnt/YOUR_NEW_MOUNT=NC"
-        ```
-        then run the `mounts_override` tag:
-        ```
-        sb install mounts_override
-        ```
+    ```
+    mergerfs_mount_branches: "{{ local_mount_branch }}=RW:/mnt/remote=NC:/mnt/YOUR_NEW_MOUNT=NC"
+    ```
+    then run the `mounts` tag:
+    ```
+    sb install mounts
+    ```
     
-    === "Editing service file directly"
-        Edit the mergerfs service file to include the new teamdrive in the mergerfs.
-
-        Edit this file:
-    
-        ```text
-        /etc/systemd/system/mergerfs.service
-        ```
-    
-        Edit this line to include your new teamdrive:
-    
-        ```text
-        /mnt/local=RW:/mnt/remote=NC /mnt/unionfs
-        ```
-    
-        For example:
-    
-        ```text
-        /mnt/local=RW:/mnt/remote=NC:/mnt/NAME_OF_THE_REMOTE_YOU_JUST_CREATED=NC /mnt/unionfs
-        ```
-    
-        Note: that MUST BE all one line, just as it is in the original unedited file.
-    
-        Just like the rclone_vfs service, reload and restart:
-    
-        Reload all the services
-    
-        ```shell
-        sudo systemctl daemon-reload
-        ```
-    
-        Start/restart the mergerfs
-    
-        ```shell
-        sudo systemctl restart mergerfs.service
-        ```
-    
-        Enable the mergerfs just for good measure
-    
-        ```shell
-        sudo systemctl enable mergerfs.service
-        ```
-
     Now, verify that the mergerfs is working correctly.
 
     Type `ls -haltr /mnt/unionfs`.  The files from your teamdrive should now be included in the listing.  Depending on how busy the root of your drive[s] are, this listing may be pretty long, but look through it to verify that the files you expect as shown in the previous two steps are there [I’ve edited my listing for space]:

@@ -188,10 +188,24 @@ Each tab shows a "section" in the file.
       version: latest
     ```
 
-    `enabled`: Use this to toggle the use of Rclone mounts.
+    `enabled`: Use this to toggle Rclone related deployments like mounts and cloudplow.
 
-    `remotes`: This variable takes a list of dictionaries formatted like the example.
+    `remotes`: This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish.
 
+        `remote`: The name of the rclone remote for this mount.
+
+        `template`: The name of the template you want to use for the mount.  Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.  You should put the template file in a folder in /opt so that it moves with your install after a restore.
+
+        `upload`: Toggles whether you intend to upload to this remote using Cloudplow.
+
+        `upload_from`: The local path Cloudplow will use to upload from if the remote was upload enabled.
+
+        `vfs_cache/enabled`: Toggle for using Rclone VFS file cache.
+
+        `vfs_cache/max_age`: Defines the max age of files in the cache.
+
+        `vfs_cache/size`: Defines the max size of the cache.  The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+        
     `version`: Rclone version that is installed by Saltbox.
     Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
     Default is `latest`.

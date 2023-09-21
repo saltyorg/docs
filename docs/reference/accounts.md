@@ -192,7 +192,7 @@ Each tab shows a "section" in the file.
 
     `remotes`: This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish.
 
-    `remotes/remote`: The name of the rclone remote for this mount.  Include a path if you are not working with the root [i.e. `google:/path/to/stuff`]
+    `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` quotes are important.
 
     `remotes/template`: The name of the template you want to use for the mount.  Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.  You should put the template file in a folder in /opt so that it moves with your install after a restore.
 

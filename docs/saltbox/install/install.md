@@ -185,10 +185,18 @@ transcodes: /mnt/local/transcodes # (15)!
 
 6. The name of the Rclone remote you want to use.
 
+    You can also specify a path to use for the remote.
+
+    ```yaml
+    remote: "google:Media"
+    ```
+
 7. The name of the template you want to use for the mount.
 
     Currently Saltbox supports 4 options:
+
     Google, Dropbox, SFTP and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
+    
     I'd recommend having the template file in a folder in /opt so that it moves with your install after a restore.
 
 8. Toggles whether you intend to upload to this remote using Cloudplow.

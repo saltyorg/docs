@@ -28,4 +28,6 @@ Saltbox has undergone some major breaking changes which land with the release an
 9. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl
 10. Docker volumes such as /data, /tv and /movies are no longer mounted by default.
-    1. Restore the old behaviour by setting `docker_legacy_volume: true` using the inventory.
+    1. Restore the old behavior by setting `docker_legacy_volume: true` using the inventory.
+
+As with any major update double check your inventory edits are in line with any changes made to the roles. Ask on the discord if in doubt.

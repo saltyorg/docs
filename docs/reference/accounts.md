@@ -190,7 +190,22 @@ Each tab shows a "section" in the file.
 
     `enabled`: Use this to toggle Rclone related deployments like mounts and cloudplow.
 
-    `remotes`: This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish.
+    `remotes`: This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish, like this:
+
+    ```yaml
+    rclone:
+      enabled: true
+      remotes:
+        - remote: google
+          template: google
+          ...
+        - remote: dropbox
+          template: dropbox
+          ...
+        - remote: minio
+          template: /opt/templates/myminio.j2
+          ...
+    ```
 
     `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` quotes are important.
 

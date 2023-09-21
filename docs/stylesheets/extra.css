@@ -47,3 +47,7 @@
   padding-left: 1em;
   padding-right: 0.25em;
 }
+
+[data-md-color-scheme=slate] {
+  --md-default-fg-color: hsla(var(--md-hue), 15%, 90%, 1);
+}

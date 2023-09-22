@@ -34,7 +34,7 @@ minecraft_instances: ["server1", "server2"]
 
 ```
 
-To the inventory files. [See instuctions on inventory here](https://docs.saltbox.dev/saltbox/inventory/)
+To the inventory files. [See instructions on inventory here](../../saltbox/inventory/index.md)
 
 These servers will be accesible at `instanceName.__yourdomain.com__`
 
@@ -42,7 +42,7 @@ So for the example above, `server1.youdomain.com` and `server2.yourdomain.com`
 
 ### 4. Setup
 
-For individual servers, you can change things such as memory using custom docker envs. [See instuctions on inventory here](https://docs.saltbox.dev/saltbox/inventory/)
+For individual servers, you can change things such as memory using custom docker envs. [See instructions on inventory here](../../saltbox/inventory/index.md)
 
 For a single install, the inventory paths will look like this `minecraft_docker_image_tag`
 

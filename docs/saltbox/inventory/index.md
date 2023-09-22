@@ -133,9 +133,8 @@ code_server_docker_volumes_default:
 code_server_docker_volumes_custom: []
 ```
 <div class="result" markdown>
-!!! tip "\`custom\` Variables"
+!!! info "\`custom\` Variables"
     Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
-
 </div>
 
 Note the list syntax. Since we want the container to preserve existing volumes, the `_docker_volumes_default` list should not be overridden. Instead, we use the `_docker_volumes_custom` list.

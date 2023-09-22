@@ -52,7 +52,7 @@ Let’s go!
 
 2. Enter details about that remote in `settings.yml`.
 
-    Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created and `MOUNT_TEMPLATE` to either a valid saltbox-provided tempalte [`google`, `dropbox`, `sftp`], a path to a Jinja template mount service [`/mnt/templates/box.j2`], or a path to a full rclone_vfs mount service file [`/mnt/templates/my_custom_ceph_mount.service`].  The two latter options are not provided by saltbox, theses are files you create.
+    Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created and `MOUNT_TEMPLATE` to either a valid saltbox-provided template [`google`, `dropbox`, or `sftp` at this writing], a path to a Jinja template mount service [`/mnt/templates/box.j2`], or a path to a full rclone_vfs mount service file [`/mnt/templates/my_custom_ceph_mount.service`].  The two latter options are not provided by saltbox, theses are files **you** create.
 
    Edit the other settings [`upload` and so forth] to suit your requirements.
    

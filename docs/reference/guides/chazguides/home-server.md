@@ -98,7 +98,7 @@ NOTE: Autoscan has replaced Plex-Autoscan in the default setup. Autoscan is rout
 
 Note this example assumes you have not modified either the SSH listening port or the plex-autoscan listening port on the Saltbox machine.  If you have done, then you should forward to the relevant ports instead of to 22 and 3468.
 
-Ports used by the stock saltbox apps can be found [here](https://docs.saltbox.dev/reference/ports/).
+Ports used by the stock saltbox apps can be found [here](../../ports.md).
 
 !!! warning
     If your ISP does not allow you to do this, STOP NOW.  You won’t be able to run saltbox at home.

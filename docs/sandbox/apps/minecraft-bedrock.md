@@ -25,4 +25,4 @@ sb install sandbox-minecraft-bedrock
 
 ### Change server version
 
-By default, the server will be using the latest version available. To choose a specific version add `minecraft_bedrock_version: "1.19.31"` to the [inventory system](https://docs.saltbox.dev/saltbox/inventory/).
+By default, the server will be using the latest version available. To choose a specific version add `minecraft_bedrock_version: "1.19.31"` to the [inventory system](../../saltbox/inventory/index.md).

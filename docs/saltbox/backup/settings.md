@@ -14,8 +14,9 @@ backup:
   misc:
     snapshot: true # (12)!
   rclone:
-    enable: true # (3)!
     destination: google:/Backups/Saltbox # (4)!
+    enable: true # (3)!
+    template: google # (13)!
   restore_service:
     user: # (10)!
     pass: # (11)!
@@ -75,6 +76,18 @@ backup:
     Options are: `true` or `false`
 
     Requires BTRFS on `/` or `/opt`
+
+13. Defines which Rclone flags template is used for the backup.
+
+    Options are: `google`, `dropbox` or `custom`
+
+    If you want to use custom you need to define any flags you want to use through the inventory.
+
+    ```yaml
+    backup_custom_template: '--some-flag --other-flag'
+    ```
+
+    Feel free to submit templates in a PR to Saltbox.
 
 !!! important
 

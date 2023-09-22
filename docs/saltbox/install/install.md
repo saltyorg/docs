@@ -184,7 +184,7 @@ To edit any of the following configuration files use the command written in the 
 
         `google`, `dropbox`, `sftp` and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
         
-        I'd recommend having the template file in a folder in /opt so that it moves with your install after a restore.
+        We recommend having the template file in a folder in /opt so that it moves with your install after a restore.
 
     8. Toggles whether you intend to upload to this remote using Cloudplow.
 

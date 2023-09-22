@@ -329,15 +329,3 @@ To go through this process, you will need the following:
 The name of this remote [`google` in this case] is what you should enter in the rclone settings as you proceed with the install.
 
 If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md)
-
-## Existing Rclone Setup
-
-The default remote specified in [[settings.yml|Install: settings.yml]] is `google` for Google Drive. If the Rclone remote in your config has the same name, then you are OK to skip this page and go on to the next.
-
-If you are using Google Drive and the Rclone remote in your config has a different name, then you will need to either:
-
-- Rename your current Rclone remote to the default one (i.e. `google`). Instructions for this are below.
-
-OR
-
-- Edit the Rclone remote entry in [settings.yml](../accounts.md) with yours.

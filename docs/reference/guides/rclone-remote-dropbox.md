@@ -2,8 +2,6 @@
 
 This article describes how to create an rclone remote for Dropbox
 
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
-
 ## Prerequisites
 
 To go through this process, you will need the following:
@@ -194,35 +192,9 @@ If you wish to encrypt this remote, proceed with [creating a crypt remote](rclon
 
 https://developers.dropbox.com/dbx-performance-guide
 
-## Install considerations:
-
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
-
 ### rclone remote in settings:
 
-You will want to change the [rclone remote name in the settings](https://docs.saltbox.dev/reference/accounts/#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
-
-```yaml
-rclone:
-  version: latest
-  remote: dropbox
-```
-OR
-```yaml
-rclone:
-  version: latest
-  remote: dropbox-crypt
-```
-
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
-
-### rclone vfs service
-
-Saltbox uses a modular approach to rclone mounts.
-
-Enter details about that remote in `settings.yml`.
-
-Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created.
+Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created.  THis will be the encrypted remote if you created one.
 
 If you are targeting a team folder or something with your dropbox remote, put that entire path here.
 
@@ -245,6 +217,8 @@ rclone:
 
 Save the file.
 
+### rclone vfs service
+
 Run the `mounts` tag [or another tag that also runs it, like `saltbox`]
 
 ```
@@ -263,7 +237,7 @@ If you have custom requirements for cloudplow you can of course configure it you
 
 
 
-LEX NOTES ABOUT ENCRYPTION AND PATHING TO INCORPORATE SOMEWHERE:
+### Some notes about encryption and pathing as they relate to rcolne remotes.
 
 ```
 HOW THE FREAKING FRACK DO TEAM FOLDERS VS PERSONAL FOLDERS ON DROPBOX WORK WITH RCLONE REMOTES?

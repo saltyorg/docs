@@ -10,19 +10,29 @@ Enter your new values in:
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
-Changes take effect after deploying the corresponding role(s) using the `sb install` command prefix. Examples:
+For convenient shell access, you can use the `sb inventory` command.
 
-<div class="grid" markdown>
+Changes take effect after running the affected tag(s) using the `sb install` command prefix.
 
-```shell
-sb install shell
-```
+!!! example "Examples for reference. Not necessarily what you will have to run for your changes to apply!"
 
-```shell
-sb install sonarr,sandbox-code_server
-```
+    <div class="grid" markdown>
 
-</div>
+    ```shell
+    sb install sonarr # (1)!
+    ```
+
+    1. The tag to run will usually match the variable prefix. In this case, `sonarr` for when you have added lines that start with `sonarr_`, such as the one shown in the [Override Demo](#override).
+
+    ```shell
+    sb install sonarr,sandbox-code_server,shell # (1)!
+    ```
+
+    2. - We recommend grouping tags for when you need to deploy multiple roles.
+        - For global variables, you may want to use a higher-level tag such as `core`, `feederbox`, `mediabox`, `saltbox`, or others as appropriate.
+        - The `shell` tag affects custom bash or zsh additions such as the ones shown [further down](#additional-examples).
+
+    </div>
 
 ## Finding Available Variables
 
@@ -76,7 +86,7 @@ Let's explore two example use cases for customizing roles using variables in the
 
 ### Override
 
-??? tip inline end "\`default\` Variables"
+??? info inline end "\`default\` Variables"
     Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
 
 A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 89:
@@ -110,7 +120,7 @@ This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, 
 
 ### Addition
 
-??? tip inline end "\`custom\` Variables"
+??? tip info end "\`custom\` Variables"
     Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
 
 A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:

@@ -85,6 +85,10 @@ Now move on to creating the actual crypt remote.
 
 5. For "Option remote", type in the name of your backing remote plus `:encrypt` and press <kbd class="platform-all">Enter</kbd>.
 
+    Remember a moment ago when you read: "MAKE NOTE OF THIS; YOU WILL NEED IT LATER"?
+
+    This is "LATER".  If you didn't follow the recommandation to use `dropbox:encrypt` then of course use whatever you entered above and made note of.
+   
     === "I am using my personal folder"
 
         ```shell

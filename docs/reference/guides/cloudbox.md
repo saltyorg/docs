@@ -150,6 +150,11 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
 
   Remember that if you use a service account file to authenticate an rclone remote, you need to manually put that file into place before running the restore.
 
+  If you still use the legacy /data, /tv or /movies docker volumes you will want to set this using the [inventory](../../saltbox/inventory/index.md)
+  ```yaml
+  docker_legacy_volume: true
+  ```
+
   Then you should be able to install tags as you want.
 
 - install top-level tag [as appropriate] <br />

@@ -1,8 +1,8 @@
 # Install
 
-If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
-If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](https://docs.saltbox.dev/reference/guides/plexguide/).  Expansions to those notes would be welcome.
+If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](../../reference/guides/plexguide.md).  Expansions to those notes would be welcome.
 
 !!! warning
     The Saltbox install is expecting a fresh new install of Ubuntu.  DO NOT try to install it on your existing Cloudbox, PTS or other system-wide setup.

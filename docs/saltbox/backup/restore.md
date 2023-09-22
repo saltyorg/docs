@@ -93,7 +93,16 @@ Next retrieve the configuration files from a backup by following the instruction
 
     !!! info
         Don't copy any other files; they will be dealt with in a couple minutes.
-    
+
+## Settings
+To insure that your configuration files are up to date run:
+```shell
+sb install settings
+```
+
+As this will migrate any changes that may have been made. Look over the files after this and adapt anything you want to change.
+
+
 ## Preinstall
 
 Next run `preinstall` which will setup the user account and a few other dependencies for the restore.

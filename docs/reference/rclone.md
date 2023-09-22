@@ -1,6 +1,6 @@
 This will take you through the configuration of Rclone from a standing start with nothing set up already.
 
-If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](guides/cloudbox.md)
 
 If you have an existing rclone setup from Cloudbox or PTS or something else you should NOT go through this process.  You should reuse that existing setup.  There is nothing saltbox specific about this setup aside from the various paths, and you do not need new projects or service accounts or shared drives to address that.
 

@@ -87,7 +87,7 @@ Let's explore two example use cases for customizing roles using variables in the
 ### Override
 
 ??? info inline end "\`default\` Variables"
-Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
+    Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
 
 A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 89:
 
@@ -106,7 +106,7 @@ sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', defa
                          + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
 ```
 
-Note: `sonarr_docker_image_tag: "release"`.
+Note: `sonarr_docker_image_tag: "release"`. 
 
 By default, Saltbox will use `ghcr.io/hotio/sonarr:release` as the Sonarr Docker image.
 
@@ -120,8 +120,8 @@ This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, 
 
 ### Addition
 
-??? info inline end "\`custom\` Variables"
-Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
+??? tip info end "\`custom\` Variables"
+    Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
 
 A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:
 
@@ -199,7 +199,7 @@ shell_zsh_zshrc_block_custom: |
 Some users may not want the additional layer of security that Authelia provides. The good news is that it can be disabled through a simple override.
 
 !!! tip ""
-To determine which apps are included in Authelia by default, you can run this command or a similar one:
+    To determine which apps are included in Authelia by default, you can run this command or a similar one:
 
     ```shell
     grep -Ril '_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"' /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u

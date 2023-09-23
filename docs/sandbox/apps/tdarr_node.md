@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install sandbox-tdarr_node
+sb install sandbox-tdarr-node
 
 ```
 

@@ -18,7 +18,7 @@
 - **[calibre_web](../sandbox/apps/calibre_web.md)**  - tag - `sandbox-calibre-web`
 - **[changedetection](../sandbox/apps/changedetection.md)**  - tag - `sandbox-changedetection`
 - **[cherry](../sandbox/apps/cherry.md)**  - tag - `sandbox-cherry`
-- **[code-server](../sandbox/apps/code_server.md)**  - tag - `sandbox-code-server`
+- **[code-server](../sandbox/apps/code_server.md)**  - tag - `sandbox-code_server`
 - **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
 - **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`

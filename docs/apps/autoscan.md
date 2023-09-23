@@ -205,7 +205,7 @@ a_train:
 Run the a-train tag to create the container:
 
 ```bash
-sb install sandbox-a_train
+sb install sandbox-a-train
 ```
 
 Copy one of your service account files from its current location to `/opt/a-train/account.json`.  Remember to rename your service account file to "`account.json`".
@@ -225,7 +225,7 @@ sb install autoscan
 Run the a-train tag to rebuild the container:
 
 ```bash
-sb install sandbox-a_train
+sb install sandbox-a-train
 ```
 
 ### Bernard

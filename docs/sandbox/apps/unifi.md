@@ -43,8 +43,9 @@ sb install sandbox-unifi
       📢 The default setup only publish the 8080 tcp port, which is the bare minimum to allow communication between your network equipment and Unifi Controller.
       Depending on your requirements, you may need additional ports according to the [:octicons-link-16: Documentation](https://github.com/linuxserver/docker-unifi-controller#parameters) .
 
-      The recommended way to customize these parameters is to use the [inventory](https://docs.saltbox.dev/saltbox/inventory/) :
-      You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section:
+      The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md).
+
+      Edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section:
 
       ```
       ### Open Specified Ports for the specified container ###

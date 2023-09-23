@@ -63,6 +63,8 @@ plex2_docker_network_mode_default: "container:gluetun2" # If using multiple inst
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
 
+    Additionally the Plex container will become unable to start if you redeploy gluetun (restart is fine) at any point so you must redeploy Plex in that case.
+
 ### 4. Route other containers through Gluetun
 
 Depending on if the role in question supports instances or not there will be two ways to set the network mode.

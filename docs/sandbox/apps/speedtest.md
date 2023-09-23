@@ -24,4 +24,4 @@ sb install sandbox-speedtest
 
 - [:octicons-link-16: Documentation](https://github.com/librespeed/speedtest){: .header-icons }
 
-To use a custom domain, add a custom value for `speedtest_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](https://docs.saltbox.dev/saltbox/inventory/).
+To use a custom domain, add a custom value for `speedtest_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).

@@ -2,6 +2,8 @@
 
 [in Plex, Emby, Radarr, Sonarr, etc]
 
+IMPORTANT NOTE: SERVICE NAMES IN SALTBOX HAVE CHANGED RECENTLY.  THE CONCEPTS HERE ARE STILL VALID BUT THE SPECIFIC COMMANDS MAY NOT BE AS THERE IS NO LONGER, FOR EXAMPLE, AN `rclone_vfs.service`.  THIS WILL BE ADDRESSED AS TIME ALLOWS.
+
 Usually this is a simple problem, but there are several places where it could be.
 
 There are several layers between your Google Drive and Plex [or other app].

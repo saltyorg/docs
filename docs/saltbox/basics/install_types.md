@@ -32,7 +32,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
   [yes]:../../images/check-mark.png
 
 [^1]:
-    Note that these default download clients and indexers can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md).  If the tags do not exist in saltbox the install will fail.
+    Note that these default download clients and indexers can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md).  If the roles do not exist in Saltbox the install will fail.
     ```
     download_clients_enabled: ["qbittorrent", "sabnzbd"]
     download_indexers_enabled: ["jackett", "nzbhydra2"]

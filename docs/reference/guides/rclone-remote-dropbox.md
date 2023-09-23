@@ -2,8 +2,6 @@
 
 This article describes how to create an rclone remote for Dropbox
 
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
-
 ## Prerequisites
 
 To go through this process, you will need the following:
@@ -194,142 +192,52 @@ If you wish to encrypt this remote, proceed with [creating a crypt remote](rclon
 
 https://developers.dropbox.com/dbx-performance-guide
 
-## Install considerations:
-
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
-
 ### rclone remote in settings:
 
-You will want to change the [rclone remote name in the settings](https://docs.saltbox.dev/reference/accounts/#__tabbed_2_3) to match the rclone remote you created here.  Use the encrypted remote if you created one:
+Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created.  THis will be the encrypted remote if you created one.
+
+If you are targeting a team folder or something with your dropbox remote, put that entire path here.
+
+Edit the other settings [`upload` and so forth] to suit your requirements.
 
 ```yaml
 rclone:
+  enabled: true
+  remotes:
+    - remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED
+      template: dropbox
+      upload: false # toggle as needed
+      upload_from: /mnt/local/Media
+      vfs_cache:
+        enabled: false
+        max_age: 504h
+        size: 50G
   version: latest
-  remote: dropbox
-```
-OR
-```yaml
-rclone:
-  version: latest
-  remote: dropbox-crypt
 ```
 
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
+Save the file.
 
 ### rclone vfs service
 
-The default `rclone_vfs.service` [found at `/etc/systemd/system/rclone_vfs.service`] is intended and tuned for Google Drive; after the install completes you may want to update it to match this sample.
-
-If you do a standard install with the settings as expected, this is not absolutely necessary, as the Google-specific stuff will just be ignored, but there may be some differences to adopt.
-
-Changes to make:
-
-1. Replace `YOUR_USER_NAME_GOES_HERE` with the user name you enterd in the settings [default is `seed`]
-2. Replace `YOUR_REMOTE_NAME_GOES_HERE` with the rclone remote you created here.  Use the encrypted remote if you created one.
-
-This example assumes your system is using ONLY DROPBOX.  If you are adding this mount to a system that already has Google Drive set up, change `/mnt/remote` to something else.
+Run the `mounts` tag [or another tag that also runs it, like `saltbox`]
 
 ```
-[Unit]
-Description=Rclone VFS Mount
-After=network-online.target
-
-[Service]
-User=YOUR_USER_NAME_GOES_HERE
-Group=YOUR_USER_NAME_GOES_HERE
-Type=notify
-ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/rclone mount \
-  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' \
-  --config=/home/YOUR_USER_NAME_GOES_HERE/.config/rclone/rclone.conf \
-  --allow-other \
-  --async-read=true \
-  --dir-cache-time=5000h \
-  --buffer-size=32M \
-  --poll-interval=15s \
-  --rc \
-  --rc-no-auth \
-  --rc-addr=localhost:5729 \
-  --use-mmap \
-  --vfs-read-ahead=128M \
-  --vfs-read-chunk-size=32M \
-  --vfs-read-chunk-size-limit=2G \
-  --vfs-cache-max-age=504h \
-  --vfs-cache-mode=full \
-  --vfs-cache-poll-interval=30s \
-  --vfs-cache-max-size=50G \
-  --disable-http2 \
-  --tpslimit 12 \
-  --tpslimit-burst 0 \
-  --umask=002 \
-  --syslog \
-  -v \
-  YOUR_REMOTE_NAME_GOES_HERE: /mnt/remote
-ExecStartPost=/usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:5729 _async=true
-ExecStop=/bin/fusermount -uz /mnt/remote
-Restart=on-abort
-RestartSec=5
-StartLimitInterval=60s
-StartLimitBurst=3
-
-[Install]
-WantedBy=default.target
+sb install mounts
 ```
-
-Note that you may want to edit this value:
-```
-  --vfs-cache-max-size=50G \
-```
-This cache will be placed in your home directory by default, so make sure it is set to a value that wil not fill your disk.
-
-## NOTE: THIS ARTICLE IS A WORK IN PROGRESS; IT MAY NOT BE COMPLETE AND IS NOT INTENDED AS A COMPREHENSIVE GUIDE
 
 ### cloudplow config
 
-The default cloudplow config [found at `/opt/cloudplow/config.json`] contains "rclone_extras" targeted at Google Drive.  After install you can remove the Google-specific flags if you wish.
+If you set `upload` to true in your new remote, run the `cloudplow-reset` tag to recreate your cloudplow config file.
 
-There's no compelling reason to remove them, since they will be ignored by rclone; they're listed here for completeness sake.
-
-These two lines can be **removed** from any `rclone_extras` on a dropbox-targeting `remote`:
 ```
-    "--drive-chunk-size": "128M",
-    "--drive-stop-on-upload-limit": null,
-```
-And this line **added**:
-```
-    "--dropbox-chunk-size": "150M",
+sb install cloudplow-reset
 ```
 
-The cloudplow config has a set of "rclone_sleeps", which are the triggers cloudplow watches for to decide when to switch service accounts or halt uploading.  One of these is meaningless for dropbox, so you can remove it if you wish.
-
-Before:
-```
-"rclone_sleeps": {
-    " 0/s,": {
-        "count": 16,
-        "sleep": 25,
-        "timeout": 62
-    },
-    "Failed to copy: googleapi: Error 403: User rate limit exceeded": {
-        "count": 10,
-        "sleep": 25,
-        "timeout": 7200
-    }
-},
-```
-After:
-```
-"rclone_sleeps": {
-    " 0/s,": {
-        "count": 16,
-        "sleep": 25,
-        "timeout": 62
-    }
-},
-```
+If you have custom requirements for cloudplow you can of course configure it yourself.
 
 
-LEX NOTES ABOUT ENCRYPTION AND PATHING TO INCORPORATE SOMEWHERE:
+
+### Some notes about encryption and pathing as they relate to rcolne remotes.
 
 ```
 HOW THE FREAKING FRACK DO TEAM FOLDERS VS PERSONAL FOLDERS ON DROPBOX WORK WITH RCLONE REMOTES?

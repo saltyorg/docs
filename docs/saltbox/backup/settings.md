@@ -6,78 +6,53 @@ The configuration file for backup/restore is called `backup_config.yml` and is l
 ---
 backup:
   cron:
-    cron_time: weekly # (8)!
-    enable: no # (9)!
+    cron_time: weekly # (1)!
   local:
-    enable: true # (1)!
     destination: /mnt/local/Backups/Saltbox # (2)!
-  misc:
-    snapshot: true # (12)!
-  rclone:
-    destination: google:/Backups/Saltbox # (4)!
     enable: true # (3)!
-    template: google # (13)!
+  misc:
+    snapshot: true # (4)!
+  rclone:
+    destination: google:/Backups/Saltbox # (5)!
+    enable: true # (6)!
+    template: google # (7)!
   restore_service:
-    user: # (10)!
-    pass: # (11)!
+    pass: # (8)!
+    user: # (9)!
   rsync:
-    enable: false # (5)!
-    destination: rsync://somehost.com/Backups/Saltbox # (6)!
-    port: 22 # (7)!
+    destination: rsync://somehost.com/Backups/Saltbox # (10)!
+    enable: false # (11)!
+    port: 22 # (12)!
 
 ```
 
-1. Toggle for keeping a local copy of the backup.
-
-    Options are: `true` or `false`
-
-2. Path used for the local backups.
-
-3. Toggle for using Rclone remote backup storage.
-
-    Options are: `true` or `false`
-
-4. Path used for the Rclone remote. Backups outside of the most recent one will be located in the `archived` folder.
-
-    Make sure that this path is unique if you run multiple instances of Saltbox.
-
-5. Toggle for using Rsync backups.
-
-    Options are: `true` or `false`
-
-6. Path used for the Rsync backups.
-
-7. Port used by rsync on the target server.
-
-8. Schedule for when the backup task will be executed.
+1. Schedule for when the backup task will be executed.
 
     Options are: `reboot`, `yearly`, `annually`, `monthly`, `weekly`, `daily`, `hourly`.
 
     Should you desire more granular control over the schedule you can edit the crontab for the Saltbox user once setup.
 
-9. Toggle for enabling automatic backups.
+2. Path used for the local backups.
 
-    Options are: `no` or `yes`
+3. Toggle for keeping a local copy of the backup.
 
-    Depending on the option set here the cron entry created by Saltbox will be added, removed or modified.
+    Options are: `true` or `false`
 
-10. Username used for the OPTIONAL restore service.
-
-    Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
-
-    Usernames are hashed before requests are sent to the restore service.
-
-11. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service.
-
-    Only used on the client side in scripts.
-
-12. Toggle for BTRFS snaphots.
+4. Toggle for BTRFS snaphots.
 
     Options are: `true` or `false`
 
     Requires BTRFS on `/` or `/opt`
 
-13. Defines which Rclone flags template is used for the backup.
+5. Path used for the Rclone remote. Backups outside of the most recent one will be located in the `archived` folder.
+
+    Make sure that this path is unique if you run multiple instances of Saltbox.
+
+6. Toggle for using Rclone remote backup storage.
+
+    Options are: `true` or `false`
+
+7. Defines which Rclone flags template is used for the backup.
 
     Options are: `google`, `dropbox` or `custom`
 
@@ -88,6 +63,24 @@ backup:
     ```
 
     Feel free to submit templates in a PR to Saltbox.
+
+8. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service.
+
+    Only used on the client side in scripts.
+
+9. Username used for the OPTIONAL restore service.
+
+    Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
+
+    Usernames are hashed before requests are sent to the restore service.
+
+10. Path used for the Rsync backups.
+
+11. Toggle for using Rsync backups.
+
+    Options are: `true` or `false`
+
+12. Port used by rsync on the target server.
 
 !!! important
 
@@ -107,19 +100,19 @@ Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
     ``` { .yaml .annotate }
       restore_service:
-        user: # (1)!
-        pass: # (2)!
+        pass: # (1)!
+        user: # (2)!
     ```
 
-    1. Username used for the OPTIONAL restore service.
+    1. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
+
+        Only used on the client side in scripts.
+
+    2. Username used for the OPTIONAL restore service.
 
         Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
 
         Usernames are hashed before requests are sent to the restore service.
-
-    2. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
-
-        Only used on the client side in scripts.
 
     SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
 

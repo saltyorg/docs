@@ -1,4 +1,8 @@
-## mounting a disk persistently on your saltbox server
+# Mounting a disk persistently on your saltbox server
+
+Perhaps you want to mount a disk partition persistently in the file system like a media drive at `/mnt/local/Media` or a fast SSD for usenet at `/mnt/local/downloads`.
+
+## Gathering details
 
 First find out the device reference:
 
@@ -60,13 +64,15 @@ TYPE="ext4"
 ...
 ```
 
+## Editing `fstab` file for persistent mount.
+
 Now you need to edit the `fstab` file, which controls what gets mounted at system startup.
 
 ```shell
 sudo nano /etc/fstab
 ```
 
-Now you want to add a line to the bottom of that file. Don't edit anything in the file already.
+You want to add a line to the bottom of that file. Don't edit anything in the file already.
 
 In my case I want to mount that 12.7T partition at `/mnt/hdd`.
 
@@ -79,7 +85,7 @@ The line you need to add should look something like this (details may differ):
                   └ UUID from blkid output
 ```
 
-In my case, fstab starts looking like this:
+In my case, `/etc/fstab` starts looking like this:
 
 ```
 /srv/git/saltbox$ cat /etc/fstab
@@ -99,7 +105,7 @@ In my case, fstab starts looking like this:
 /swap.img	none	swap	sw	0	0
 ```
 
-And I add one line so it looks like this:
+And I add one line at the end so it looks like this:
 ```
 /srv/git/saltbox$ cat /etc/fstab
 # /etc/fstab: static file system information.
@@ -156,3 +162,5 @@ tmpfs                         1.6G  4.0K  1.6G   1% /run/user/1000
 ```
 
 There it is at the end of the list.
+
+That partition will now be mounted there at system startup automatically.

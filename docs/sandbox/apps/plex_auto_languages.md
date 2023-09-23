@@ -14,7 +14,7 @@ You
 
 ``` shell
 
-sb install sandbox-plex_auto_languages
+sb install sandbox-plex-auto-languages
 
 ```
 

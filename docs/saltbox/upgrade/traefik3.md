@@ -1,6 +1,10 @@
 # Traefik 3.0 Upgrade
 
-Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0. Those changes include
+Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0.
+
+Due to the amount of changes related to Traefik we recommend that all containers are redeployed by running their respective tags.
+
+Those changes include:
 
 1. Upgrade Traefik to version 3.0
     1. HTTP validation for certificates is no longer enabled by default.

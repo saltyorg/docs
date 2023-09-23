@@ -54,8 +54,24 @@ Broadly, the base install consists of six steps:
 
     ```
 
+<details>
+<summary>What will I see in the terminal?</summary>
+<br />
+
+Something like this:
+
+```
+~$ curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+jammy is currently supported.
+x86_64 is currently supported.
+Installing Saltbox Dependencies.
+/srv/git/saltbox$
+```
+</details>
+
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.
+
 
 ## Step 2: Configuration
 
@@ -64,162 +80,259 @@ Make sure you fill out the following configuration files before proceeding. Each
 ???+ info
     The following steps assumes you are still logged in as root or using sudo with the following commands.
 
-Run the following command to edit the configuration file.
+To edit any of the following configuration files use the command written in the config title.
 
-``` shell
-nano /srv/git/saltbox/accounts.yml
-```
+=== "accounts.yml"
 
-Content with explanations:
-
-``` yaml title="accounts.yml"
----
-apprise: # (1)!
-cloudflare:
-  email: # (2)!
-  api: # (3)!
-dockerhub:
-  user: # (4)!
-  token: # (5)!
-plex:
-  user: # (6)!
-  pass: # (7)!
-  tfa: no # (8)!
-user:
-  name: seed # (9)!
-  pass: password123 # (10)!
-  domain: testsaltbox.ml # (11)!
-  email: your@email.com # (12)!
-  ssh_key: # (13)!
-```
-
-1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
-
-    ```yaml
-
-    apprise: discord://webhook_id/webhook_token
-
+    ``` yaml title="nano /srv/git/saltbox/accounts.yml"
+    ---
+    apprise: # (1)!
+    cloudflare:
+      email: # (2)!
+      api: # (3)!
+    dockerhub:
+      user: # (4)!
+      token: # (5)!
+    plex:
+      user: # (6)!
+      pass: # (7)!
+    user:
+      name: seed # (8)!
+      pass: password123 # (9)!
+      domain: testsaltbox.ml # (10)!
+      email: your@email.com # (11)!
+      ssh_key: # (12)!
     ```
 
-2. Email used for the Cloudflare account.
+    1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
-3. Cloudflare Global API Key.
+        ```yaml
 
-4. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
+        apprise: discord://webhook_id/webhook_token
 
-5. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
+        ```
 
-6. Plex.tv username or email address on the account.
+    2. Email used for the Cloudflare account.
 
-7. Plex.tv password for the account.  It should be wrapped in quotes if it contains any non alphanumeric characters.
+    3. Cloudflare Global API Key.
 
-8. Enable if you want to use the Two Factor Authentication [TFA] compatible Plex account login.
+    4. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
 
-9. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
+    5. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
 
-    Do not use root.
+    6. Plex.tv username or email address on the account.
 
-    Required.
+    7. Plex.tv password for the account.  It should be wrapped in quotes if it contains any non alphanumeric characters.
 
-10. Password used for username account during the installation and apps that have automatic user configuration.
+    8. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
 
-    See the [password considerations.](../../reference/accounts.md#password-considerations)
+        Do not use root.
 
-    Required.
+        Required.
 
-11. Domain that you want to use for the server.
+    9. Password used for username account during the installation and apps that have automatic user configuration.
 
-    Required.
+        See the [password considerations.](../../reference/accounts.md#password-considerations)
 
-12. Email address used for Let's Encrypt SSL certificates.
+        Required.
 
-    Required.
+    10. Domain that you want to use for the server.
 
-13. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+        Required.
 
-Run the following command to edit the configuration file.
+    11. Email address used for Let's Encrypt SSL certificates.
 
-``` shell
-nano /srv/git/saltbox/settings.yml
-```
+        Required.
 
-Content with explanations:
+    12. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
-``` yaml title="settings.yml"
----
-authelia:
-  master: yes # (1)!
-  subdomain: login # (2)!
-downloads: /mnt/unionfs/downloads # (3)!
-rclone:
-  enabled: true # (4)!
-  remotes: # (5)!
-    - remote: google # (6)!
-      template: google # (7)!
-      upload: true # (8)!
-      upload_from: /mnt/local/Media # (9)!
-      vfs_cache:
-        enabled: false # (10)!
-        max_age: 504h # (11)!
-        size: 50G # (12)!
-  version: latest # (13)!
-shell: bash # (14)!
-transcodes: /mnt/local/transcodes # (15)!
-```
+=== "settings.yml"
 
-1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
-
-2. Subdomain used for Authelia.
-
-    Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
-
-    On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
-
-3. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
-
-4. Toggle to enable/disable Rclone related deployments like mounts and cloudplow.
-
-5. This variable takes a list of dictonaries formatted like the example.
-
-    Add as many remotes as you want.
-
-6. The name of the Rclone remote you want to use.
-
-    You can also specify a path to use for the remote.
-
-    ```yaml
-    remote: "google:Media"
+    ``` yaml title="nano /srv/git/saltbox/settings.yml"
+    ---
+    authelia:
+        master: yes # (1)!
+        subdomain: login # (2)!
+    downloads: /mnt/unionfs/downloads # (3)!
+    rclone:
+      enabled: true # (4)!
+      remotes: # (5)!
+        - remote: google # (6)!
+          template: google # (7)!
+          upload: true # (8)!
+          upload_from: /mnt/local/Media # (9)!
+          vfs_cache:
+            enabled: false # (10)!
+            max_age: 504h # (11)!
+            size: 50G # (12)!
+      version: latest # (13)!
+    shell: bash # (14)!
+    transcodes: /mnt/local/transcodes # (15)!
     ```
 
-7. The name of the template you want to use for the mount.
+    1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
-    Currently Saltbox supports 4 options:
+    2. Subdomain used for Authelia.
 
-    Google, Dropbox, SFTP and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
-    
-    I'd recommend having the template file in a folder in /opt so that it moves with your install after a restore.
+        Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 
-8. Toggles whether you intend to upload to this remote using Cloudplow.
+        On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
-9. Defines the local path Cloudplow will use to upload from if the remote was upload enabled.
+    3. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
 
-10. Toggle for using Rclone VFS file cache.
+    4. Toggle to enable/disable Rclone related deployments like mounts and cloudplow.
 
-11. Defines the max age of files in the cache.
+    5. This variable takes a list of dictonaries formatted like the example.
 
-12. Defines the max size of the cache.
+        Add as many remotes as you want.
 
-    The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+    6. The name of the Rclone remote you want to use.
 
-13. Rclone version that Saltbox will install.
+        You can also specify a path to use for the remote.
 
-    Valid options are **latest**, **beta** or a specific version "**1.55**".
+        ```yaml
+        remote: "google:Media"
+        ```
 
-    If specifying a version make sure to quote it as Ansible will convert the value into a float otherwise.
+    7. The name of the template you want to use for the mount.
 
-14. Shell used by the system. Valid options are bash or zsh.
+        Currently Saltbox supports 4 options:
 
-15. Folder used for temporary transcode files.
+        `google`, `dropbox`, `sftp` and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
+        
+        We recommend having the template file in a folder in /opt so that it moves with your install after a restore.
+
+    8. Toggles whether you intend to upload to this remote using Cloudplow.
+
+    9. Defines the local path Cloudplow will use to upload from if the remote was upload enabled.
+
+    10. Toggle for using Rclone VFS file cache.
+
+    11. Defines the max age of files in the cache.
+
+    12. Defines the max size of the cache.
+
+        The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+
+    13. Rclone version that Saltbox will install.
+
+        Valid options are **latest**, **beta** or a specific version "**1.55**".
+
+        If specifying a version make sure to quote it as Ansible will convert the value into a float otherwise.
+
+    14. Shell used by the system. Valid options are bash or zsh.
+
+    15. Folder used for temporary transcode files.
+
+=== "adv_settings.yml"
+
+    ``` yaml title="nano /srv/git/saltbox/adv_settings.yml"
+    ---
+    dns:
+      ipv4: yes # (1)!
+      ipv6: no # (2)!
+      proxied: no # (3)!
+    docker:
+      json_driver: no # (4)!
+    gpu:
+      intel: yes # (5)!
+      nvidia: no # (6)!
+    mounts:
+      ipv4_only: no # (7)!
+    system:
+      timezone: auto # (8)!
+    traefik:
+      cert:
+        http_validation: no # (9)!
+        zerossl: no # (10)!
+      error_pages: no # (11)!
+      hsts: no # (12)!
+      metrics: no # (13)!
+      provider: cloudflare # (14)!
+      subdomains:
+        dash: dash # (15)!
+        jaeger: jaeger # (16)!
+        metrics: metrics # (17)!
+      tracing: no # (18)!
+    ```
+
+    1. Toggles Saltbox management of IPv4 A records with Cloudflare.
+
+        DNS management can be disabled on a per role basis with:
+
+        ```yaml
+        rolename_dns_enabled: false
+        ```
+
+        Options are true or false
+
+    2. Toggles Saltbox management of IPv6 AAAA records with Cloudflare.
+
+        Additionally this toggle will enable Docker IPv6 networking when enabled.
+
+        DNS management can be disabled on a per role basis with:
+
+        ```yaml
+        rolename_dns_enabled: false
+        ```
+
+        Options are true or false
+
+    3. Toggles the Cloudflare A or AAAA record proxy state (CDN) when records are changed.
+
+        This setting can be overridden on a per role basis using the inventory like this:
+        
+        ```yaml
+        rolename_dns_proxy: false
+        ```
+
+        Options are true or false
+
+    4. Changes the logging driver used by the Docker daemon from local to json-file.
+
+        More information can be found [here](https://docs.docker.com/config/containers/logging/configure/)
+
+    5. Toggles any tasks related to using Intel GPUs.
+
+    6. Toggles any tasks related to using Nvidia GPU.
+
+    7. Toggles whether Rclone should be limited to IPv4 in case routing over IPv6 is bad to the destination of your configured remotes.
+
+    8. Configures the timezone used for the server and containers.
+
+        Default is `auto` which will attempt to pick the timezone based on Geolocation of the server.
+
+        For entering a manual value you can find supported values by using:
+        ```shell
+        timedatectl list-timezones
+        ```
+        Alternatively you can find a table on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+    9. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
+
+        This toggle is only useful for those using any of the support DNS validation methods as this will be enabled by default otherwise.
+
+    10. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
+
+    11. Toggles custom Traefik error pages.
+
+        See [here](../../advanced/styled-error-pages.md) for configuration details.
+
+    12. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
+
+    13. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at `https://metrics.domain.tld/prometheus` assuming default settings.
+
+    14. Allows alternate DNS validation providers supported by Traefik.
+
+        Implemented ones are listed [here](https://github.com/saltyorg/Saltbox/blob/master/defaults/providers.yml.default).
+
+    15. Defines which subdomain the Traefik dashboard will be accessible at.
+
+    16. Defines which subdomain the Traefik Jaeger endpoint will be accessible at.
+
+    17. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
+
+    18. Toggles the use of Jaeger (tracing) with Traefik.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.
@@ -272,7 +385,7 @@ Note that generally speaking these five options are mutually exclusive.
     
     Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup.  If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
 
-    [Cloudbox migration instructions](https://docs.saltbox.dev/reference/guides/cloudbox/)
+    [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
 === "PlexGuide/PTS User"
     This option is aimed at you if you are migrating your PG/PTS/MHA setup.
@@ -285,7 +398,7 @@ Note that generally speaking these five options are mutually exclusive.
     2. File system differences
     3. Service account files [PlexGuide removed the `.json` extension from what it calls "BlitzKeys", Saltbox expects them to be there]
 
-    [Plexguide migration notes](https://docs.saltbox.dev/reference/guides/plexguide/)
+    [Plexguide migration notes](../../reference/guides/plexguide.md)
 
 === "I have media on cloud storage"
     This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
@@ -296,7 +409,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential.
 
-    [Other migration notes](https://docs.saltbox.dev/reference/guides/other/)
+    [Other migration notes](../../reference/guides/other.md)
 
 === "I'm totally new to this"
     This option is aimed at you if you are starting totally from scratch and want to be walked through the whole setup.
@@ -412,7 +525,7 @@ After rebooting, you're now ready to go through the basic setup for the apps!
 
 ## Step 6: App Setup
 
-If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](https://docs.saltbox.dev/reference/cloudplow-config/).
+If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](../../reference/cloudplow-config.md).
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 

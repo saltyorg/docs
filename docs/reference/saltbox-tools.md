@@ -70,7 +70,7 @@ frontail --ui-highlight --ui-highlight-preset /opt/scripts/frontail/frontail_cus
 
 Determine your default shell in `settings.yml`
 
-For your default shell, add `shell_<shell>_<shell>rc_block_custom:` to your [Inventory](https://docs.saltbox.dev/saltbox/inventory/) file:
+For your default shell, add `shell_<shell>_<shell>rc_block_custom:` to your [Inventory](../saltbox/inventory/index.md) file:
 Example for Bash (default):
 
 ```yaml

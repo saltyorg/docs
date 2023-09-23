@@ -86,9 +86,6 @@ Let's explore two example use cases for customizing roles using variables in the
 
 ### Override
 
-??? info inline end "\`default\` Variables"
-    Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
-
 A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 89:
 
 ```yaml linenums="83" hl_lines="10" title="https://github.com/saltyorg/Saltbox/blob/master/roles/sonarr/defaults/main.yml#L89"
@@ -105,6 +102,10 @@ sonarr_docker_image_tag: "release"
 sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', default=sonarr_docker_image_repo)
                          + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
 ```
+<div class="result" markdown>
+!!! info "\`default\` Variables"
+    Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
+</div>
 
 Note: `sonarr_docker_image_tag: "release"`. 
 
@@ -120,9 +121,6 @@ This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, 
 
 ### Addition
 
-??? tip info end "\`custom\` Variables"
-    Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
-
 A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:
 
 ```yaml linenums="87" hl_lines="7" title="https://github.com/saltyorg/Sandbox/blob/master/roles/code_server/defaults/main.yml#L87"
@@ -134,6 +132,10 @@ code_server_docker_volumes_default:
   - "{{ server_appdata_path }}:/host_opt"
 code_server_docker_volumes_custom: []
 ```
+<div class="result" markdown>
+!!! info "\`custom\` Variables"
+    Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
+</div>
 
 Note the list syntax. Since we want the container to preserve existing volumes, the `_docker_volumes_default` list should not be overridden. Instead, we use the `_docker_volumes_custom` list.
 

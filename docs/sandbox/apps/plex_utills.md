@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install sandbox-plex_utills
+sb install sandbox-plex-utills
 
 ```
 

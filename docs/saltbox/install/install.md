@@ -54,8 +54,24 @@ Broadly, the base install consists of six steps:
 
     ```
 
+<details>
+<summary>What will I see in the terminal?</summary>
+<br />
+
+Something like this:
+
+```
+~$ curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+jammy is currently supported.
+x86_64 is currently supported.
+Installing Saltbox Dependencies.
+/srv/git/saltbox$
+```
+</details>
+
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.
+
 
 ## Step 2: Configuration
 

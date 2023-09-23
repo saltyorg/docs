@@ -14,12 +14,6 @@ this will display something like:
 ```
 /srv/git/saltbox$ lsblk
 NAME                 MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-loop0                  7:0    0 55.4M  1 loop /snap/core18/2128
-loop1                  7:1    0 55.7M  1 loop /snap/core18/2790
-loop2                  7:2    0 63.5M  1 loop /snap/core20/2015
-loop3                  7:3    0 70.3M  1 loop /snap/lxd/21029
-loop4                  7:4    0 91.8M  1 loop /snap/lxd/24061
-loop5                  7:5    0 40.8M  1 loop /snap/snapd/20092
 sda                    8:0    0 12.7T  0 disk
 └─sda1                 8:1    0 12.7T  0 part
 sr0                   11:0    1 1024M  0 rom
@@ -46,12 +40,6 @@ That will display something like:
 /dev/nvme0n1p2: UUID="ecc24163-8465-4983-9676-7d85f9cdb31a" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="aff553a3-ad14-4d7c-8e08-7c6d87e59429"
 /dev/mapper/ubuntu--vg-lv--0: UUID="1956420b-8d19-4573-abdf-10126ede727c" BLOCK_SIZE="4096" TYPE="ext4"
 /dev/sda1: UUID="9d4c3257-8e05-4228-b970-15ddbc99e86f" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="cf6ca88f-498f-3f41-86bd-e891de24466c"
-/dev/loop1: TYPE="squashfs"
-/dev/loop4: TYPE="squashfs"
-/dev/loop2: TYPE="squashfs"
-/dev/loop0: TYPE="squashfs"
-/dev/loop5: TYPE="squashfs"
-/dev/loop3: TYPE="squashfs"
 ```
 
 We can see the UUID and filesystem of that device in the table:
@@ -127,7 +115,7 @@ And I add one line at the end so it looks like this:
 
 Then save the file.
 
-Now I go create the directory and set the ownership:
+Now go create the directory and set the ownership:
 
 ```shell
 /srv/git/saltbox$ sudo mkdir /mnt/hdd
@@ -140,7 +128,7 @@ Then mount the partition:
 /srv/git/saltbox$ sudo mount -a
 ```
 
-That command produces no output.
+That command produces no output if it succeeds.
 
 You can verify that the disk was mounted with `df`:
 
@@ -164,3 +152,20 @@ tmpfs                         1.6G  4.0K  1.6G   1% /run/user/1000
 There it is at the end of the list.
 
 That partition will now be mounted there at system startup automatically.
+
+If you compare the lsblk output *now* to waht it was:
+
+```shell
+/srv/git/saltbox$ lsblk
+NAME                 MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda                    8:0    0 12.7T  0 disk
+└─sda1                 8:1    0 12.7T  0 part /mnt/hdd
+sr0                   11:0    1 1024M  0 rom
+nvme0n1              259:0    0  1.8T  0 disk
+├─nvme0n1p1          259:1    0  512M  0 part /boot/efi
+├─nvme0n1p2          259:2    0    1G  0 part /boot
+└─nvme0n1p3          259:3    0  1.8T  0 part
+  └─ubuntu--vg-lv--0 253:0    0  1.8T  0 lvm  /
+```
+
+You can see that the `sda1` device now has a mountpoint listed in the last column.

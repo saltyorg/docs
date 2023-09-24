@@ -12,7 +12,7 @@
 
 ``` shell
 
-sb install sandbox-code_server
+sb install sandbox-code-server
 
 ```
 
@@ -31,7 +31,7 @@ In order to migrate to the new role, if you aren't using a custom folder for `co
 
 ``` shell
 
-sb install sandbox-code_server -e 'code_server_migrate_coder=true'
+sb install sandbox-code-server -e 'code_server_migrate_coder=true'
 
 ```
 

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-Run a [Factorio](https://www.factorio.com) headless server. 
+Run a [Factorio](https://www.factorio.com) headless server.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

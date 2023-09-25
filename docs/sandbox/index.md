@@ -28,6 +28,7 @@
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
 - **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
+- **[factorio](../sandbox/apps/factorio.md)**  - tag - `sandbox-factorio`
 - **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`
 - **[filebrowser](../sandbox/apps/filebrowser.md)**  - tag - `sandbox-filebrowser`
 - **[filezilla](../sandbox/apps/filezilla.md)**  - tag - `sandbox-filezilla`

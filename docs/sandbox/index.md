@@ -38,7 +38,6 @@
 - **[gaps](../sandbox/apps/gaps.md)**  - tag - `sandbox-gaps`
 - **[gitea](../sandbox/apps/gitea.md)**  - tag - `sandbox-gitea`
 - **[glances_web](../sandbox/apps/glances_web.md)**  - tag - `sandbox-glances-web`
-- **[gluetun](../sandbox/apps/gluetun.md)**  - tag - `sandbox-gluetun`
 - **[goaccess](../sandbox/apps/goaccess.md)**  - tag - `sandbox-goaccess`
 - **[goplaxt](../sandbox/apps/goplaxt.md)**  - tag - `sandbox-goplaxt`
 - **[gotenberg](../sandbox/apps/gotenberg.md)**  - tag - `sandbox-gotenberg`

@@ -290,7 +290,6 @@ nav:
             - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
-          - Gluetun: sandbox/apps/gluetun.md
           - Grafana: sandbox/apps/grafana.md
           - Guacamole: sandbox/apps/guacamole.md
           - Handbrake: sandbox/apps/handbrake.md
@@ -357,6 +356,7 @@ nav:
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Dozzle: apps/dozzle.md
+        - Gluetun: apps/gluetun.md
         - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md

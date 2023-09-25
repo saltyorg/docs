@@ -40,7 +40,7 @@ Additionl Docker envs may be set via `gluetun_docker_envs_custom`.
 ### 2. Installation
 
 ``` shell
-sb install sandbox-gluetun
+sb install gluetun
 ```
 
 ### 3. Route Plex through Gluetun

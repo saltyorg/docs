@@ -37,6 +37,7 @@ tags:
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
 - **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
+- **[factorio](../sandbox/apps/factorio.md)**  - tag - `sandbox-factorio`
 - **[fireflyiii](../sandbox/apps/fireflyiii.md)** - tag - `sandbox-firefly`
 - **[fireflyiii_importer](../sandbox/apps/fireflyiii_importer.md)** - tag - `sandbox-firefly_importer`
 - **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`

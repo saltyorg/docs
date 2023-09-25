@@ -148,6 +148,8 @@ To edit any of the following configuration files use the command written in the 
 
 === "settings.yml"
 
+    Note that you will likely not be able to fill in the rclone remote information until *after* you've completed the upcoming "Step 4: Rclone"  This is fine and expected.
+
     ``` yaml title="nano /srv/git/saltbox/settings.yml"
     ---
     authelia:
@@ -370,11 +372,7 @@ If your server did not need to reboot you can run `su username` to switch user o
 
     If you do not plan to use cloud storage, set the `rclone -> enabled: false` setting in your `settings.yml`, and skip this step.
 
-Saltbox defaults to an rclone remote pointed at your Google Drive named `google` [as shown in the settings.yml above].
-
-There is nothing special about Saltbox's implementation of this setup, aside from its opinions about the media paths.
-
-If you already know how to set that up, do so with your usual methods.  If not, here are five options.
+If you already know how to set up an rclone remote pointing at cloud storage, do so with your usual methods.  If not, here are five options.
 
 Note that generally speaking these five options are mutually exclusive.
 
@@ -459,12 +457,15 @@ Note that generally speaking these five options are mutually exclusive.
 
         Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
 
-!!! warning
-    Do not proceed until you have configured your rclone remote[s] or disabled cloud storage in the settings.
+Once you have set up your rclone remote[s], enter their details in `settings.yml` as discussed above in Step 2.
 
-How do you know if your rclone remote[s] are configured?  `rclone lsd google:/` should show you the root of your cloud storage.
+!!! warning
+    Do not proceed until you have fully configured your rclone remote[s] in `rclone config` or disabled cloud storage in the settings.
 
 ## Step 5: Saltbox
+
+!!! warning
+    Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 

@@ -46,7 +46,7 @@ Let’s go!
 
     It should show you the directories on the root level of the teamdrive you are adding.  Verify this with the storage system's web UI or other non-rclone tool if necessary.  If the drive is empty, create a folder and verify that rclone shows that folder.  Nothing after this will work if this connection is not set up correctly.
 
-    If it doesn’t show you what you’re expecting, go back over the rclone remote setup.  Take your time.  Something isn’t right.  Perhaps you chose the wrong teamdrive, or entere the wrong credentials.
+    If it doesn’t show you what you’re expecting, go back over the rclone remote setup.  Take your time.  Something isn’t right.  Perhaps you chose the wrong teamdrive, or entered the wrong credentials.
 
     DO NOT PROCEED UNTIL YOU HAVE VERIFIED THAT THIS RCLONE COMMAND SHOWS YOU THE EXPECTED THING.
 
@@ -54,7 +54,7 @@ Let’s go!
 
    Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created and `MOUNT_TEMPLATE` to either a valid saltbox-provided template [`google`, `dropbox`, `sftp`], a path to a Jinja template mount service [`/mnt/templates/box.j2`], or a path to a full rclone_vfs mount service file [`/mnt/templates/my_custom_ceph_mount.service`].  The two latter options are not provided by saltbox, theses are files you create.
 
-   If you are mounting a folder instead of the root of the cloud storage, specify that in the `remote` value: `remote: MY_CLOUD:/bing` or `remote: "MY_CLOUD:/Bang Boing"`.  Generally, we recommend avoiding spaces in the name of a directory you are planning to mount.
+   If you are mounting a folder instead of the root of the cloud storage, specify that in the `remote` value: `remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED:/bing` or `remote: "NAME_OF_THE_REMOTE_YOU_JUST_CREATED:/Bang Boing"`.  Generally, we recommend avoiding spaces in the name of a directory you are planning to mount.
 
    Edit the other settings [`upload` and so forth] to suit your requirements.
    

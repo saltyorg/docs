@@ -94,7 +94,7 @@ This backup will take some time, likely hours, and all your containers may be do
     Then add this line to the file.  This example will run the backup every day at 4AM.
 
     ```shell
-    0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' >> '/srv/git/saltbox/saltbox_backup.log' 2>&1
+    0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' '--tags' 'backup' >> '/srv/git/saltbox/saltbox_backup.log' 2>&1
     ```
     !!! note
         Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.

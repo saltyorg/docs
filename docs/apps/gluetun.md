@@ -10,7 +10,7 @@
 
 ### 1. Configuration
 
-The Gluetun role is configured via the [inventory system](../../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
+The Gluetun role is configured via the [inventory system](../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
 
 ```yaml
 gluetun_vpn_service_provider:

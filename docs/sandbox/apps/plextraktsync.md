@@ -1,22 +1,24 @@
 # PlexTraktSync
 
-## What is it?
+[PlexTraktSync](https://github.com/Taxel/PlexTraktSync) adds a two-way-sync between Trakt and Plex Media Server. It requires a Trakt account but no Plex Pass and no Trakt VIP membership, contrary to the Plex app provided by Trakt.
 
-[PlexTraktSync](https://github.com/Taxel/PlexTraktSync) adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
+<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
 
-| Details     |
-|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/Taxel/PlexTraktSync){: .header-icons } |
+[:material-bookshelf: Project Docs](https://github.com/Taxel/PlexTraktSync#setup){ .md-button .md-button--stretch }
 
-Recommended install types: Mediabox, Saltbox
+[:material-github: GitHub Repo](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:material-cube: GitHub Packages](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+
+</div>
+
+## Deployment
 
 ``` shell
 sb install sandbox-plextraktsync
 ```
 
-### 2. Setup
+## Configuration
 
 Set your general preferences in `/opt/plextraktsync/config.yml`.
 
@@ -32,9 +34,9 @@ By default, the target Plex server is set to your main Plex Saltbox instance, an
 docker exec -it plextraktsync plextraktsync plex-login
 ```
 
-### 3. Usage
+## Usage
 
-Unattended, the PlexTraktSync instance's only task is to listen to your configured user's Plex activity and scrobble it.
+Once configured, the daemon simply scrobbles the selected Plex user's streaming activity.
 
 The following will perform a one-time sync of the data you have specified in the configuration file.
 

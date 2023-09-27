@@ -25,7 +25,7 @@ Changes take effect after running the affected tag(s) using the `sb install` com
     1. The tag to run will usually match the variable prefix. In this case, `sonarr` for when you have added lines that start with `sonarr_`, such as the one shown in the [Override Demo](#override).
 
     ```shell
-    sb install sonarr,sandbox-code_server,shell # (1)!
+    sb install sonarr,sandbox-code-server,shell # (1)!
     ```
 
     2. - We recommend grouping tags for when you need to deploy multiple roles.

@@ -530,6 +530,9 @@ If you would like to configure cloudplow to use service accounts to exceed Googl
 
 Go through these one at a time in order; some of the setups depend on previous setups.
 
+!!! info
+    This list is what's installed if you've run the `saltbox` tag.  If you ran `core`, none of these are installed; if you ran `feederbox` or `mediabox` you have a subset of these.
+
 1. [SABnzbd](../../apps/sabnzbd.md)
 1. [qBittorrent](../../apps/qbittorrent.md)
 1. [NZBHydra2](../../apps/nzbhydra2.md)

@@ -1,7 +1,5 @@
 # Firefox
 
-## What is it?
-
 [Mozilla Firefox](https://www.mozilla.org/firefox/) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary, Mozilla Corporation.
 
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
@@ -16,20 +14,37 @@ The GUI of the application is accessed through a modern web browser (no installa
 
 </div>
 
+---
+
+## Configuration
+
+If needed, set environment variables[<sup>:octicons-link-external-16:</sup>][envs] by editing `/opt/firefox/.env` as appropriate, before deployment.
+
+???+ question "Security"
+
+    By default, web access is restricted by Authelia, and VNC access is secured through SSH authentication; hence, no VNC password is configured. If you wish to add this extra layer of security, the process is straightforward:
+
+    1. Run the following command:
+       ```shell
+       $EDITOR /opt/firefox/.vncpass_clear
+       ```
+    
+    2. Enter your desired password (up to 8 characters in length) and save the file.
+    
+    3. At a minimum, a container restart is required for changes to take effect.
+
 ## Deployment
 
 ``` shell
 sb install sandbox-firefox
 ```
 
-## Usage
-
 !!! info inline end "Downloads Save Location"
     ```
     /mnt/unionfs/downloads/firefox
     ```
 
-### <span class="icon-indent-right"></span> Web
+## Usage
 
 Visit `https://firefox._yourdomain.com_`.
 
@@ -47,24 +62,4 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
 
 While the tunnel is active, you can use a VNC client to access the GUI via the address `localhost:5900`.
 
-## Configuration
-
-### <span class="icon-indent-right"></span> Security
-
-By default, web access is restricted by Authelia, and VNC access is secured through SSH authentication; hence, no VNC password is configured. If you wish to add this extra layer of security, the process is straightforward:
-
-1. Run the following command:
-   ```shell
-   $EDITOR /opt/firefox/.vncpass_clear
-   ```
-
-2. Enter your desired password (up to 8 characters in length) and save the file.
-
-3. Restart the container.
-
-### <span class="icon-indent-right"></span> Misc
-
-Various properties [:octicons-link-16:][envs] can be customized in `/opt/firefox/.env`. To apply changes to this file, redeploy the container.
-
-  [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Go to the breakdown of environment variables available in the container"
-    
+  [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Head to the environment variables breakdown section of the project documentation"

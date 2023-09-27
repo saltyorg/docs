@@ -1,37 +1,64 @@
 # Omegabrr
 
-## What is it?
+[Omegabrr](https://autobrr.com/filters/omegabrr) is a companion app to [Autobrr](../../apps/autobrr.md). It transforms items monitored by 'arrs or imported from lists into autobrr filters.
 
-[Omegabrr](https://github.com/autobrr/omegabrr) is a companion app to [autobrr](../../apps/autobrr.md). It syncs monitored titles from Radarr and Sonarr to assigned filters in autobrr.
+<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
 
-| Details     |
-|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/autobrr/omegabrr){: .header-icons } |
+[:material-bookshelf: Project Docs](https://autobrr.com/filters/omegabrr#configuration){ .md-button .md-button--stretch }
 
-Recommended install types: Feederbox, Saltbox, Core
+[:material-github: GitHub Repo](https://github.com/autobrr/omegabrr){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:material-cube: GitHub Packages](https://github.com/autobrr/omegabrr/pkgs/container/omegabrr){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-omegabrr
 ```
 
-### 2. URL (API)
+## Configuration
 
-Local applications may query the Omegabrr server via `http://omegabrr:7441/api/webhook/trigger`. For external use, `https://omegabrr._yourdomain.com_/api/webhook/trigger` is available.
+Upon fresh deployment, `/opt/omegabrr/config.yaml` is generated and pre-filled with your new API token and your internal PVR connection info, but missing an Autobrr API key which you must provide.
 
-### 3. Setup
+Add your filter IDs—separated with a comma and space—inside the square brackets within their appropriate PVR block.
 
-The configuration file `/opt/omegabrr/config.yaml` will be pre-filled with your new API token and your Radarr and Sonarr details, but missing an autobrr API key which you must provide.
-
-Add your filter IDs (inside the brackets—comma + whitespace separated) to their corresponding Radarr or Sonarr instance:
-
-```yaml
-      filters: [9, 10, 99, 100]
-```
+!!! example ""
+    ```yaml hl_lines="5"
+        - name: radarr
+          type: radarr
+          host: http://radarr:7878
+          apikey: 8713a440703d9e23b689cfe47967694e
+          filters: [9, 10, 99, 100] 
+    ```
 
 Restart the Docker container for the changes to take effect.
 
-### 4. Usage
+## Usage
 
-If desired, use the URL with the provided API token to trigger filter refreshes via webhook: [Service](https://github.com/autobrr/omegabrr#service){: .header-icons }
+To get a list of available commands, run:
+
+```shell
+docker exec -it omegabrr omegabrr
+```
+
+### <span class="icon-indent-right"></span> Web
+
+Your webhook URL[<sup>:octicons-link-external-16:</sup>][service]:
+
+=== "FQDN"
+
+    ```
+    https://omegabrr._yourdomain.com_/api/webhook/trigger
+    ```
+
+=== "Internal"
+
+    ```
+    http://omegabrr:7441/api/webhook/trigger
+    ```
+
+[service]: https://autobrr.com/filters/omegabrr#service "Head to the webhook usage section of the project documentation"

@@ -327,8 +327,8 @@ nav:
           - Varken: sandbox/apps/varken.md
 
   - Apps:
-      - Core [set up in this order]:
-        - Nzbget: apps/nzbget.md
+      - Saltbox standard [set up in this order]:
+        - Sabnzbd: apps/sabnzbd.md
         - Qbittorrent: apps/qbittorrent.md
         - Nzbhydra2: apps/nzbhydra2.md
         - Jackett: apps/jackett.md
@@ -349,7 +349,7 @@ nav:
         - Prowlarr: apps/prowlarr.md
         - Rutorrent: apps/rutorrent.md
         - Deluge: apps/deluge.md
-        - Sabnzbd: apps/sabnzbd.md
+        - Nzbget: apps/nzbget.md
       - Others:
         - Authelia: apps/authelia.md
         - Autobrr: apps/autobrr.md

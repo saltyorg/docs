@@ -274,6 +274,7 @@ nav:
             - Requestrr: sandbox/apps/requestrr.md
             - Requestrrx: sandbox/apps/requestrrx.md
           - Stash: sandbox/apps/stash.md
+          - WatchState: sandbox/apps/watchstate.md
         - Nextcloud: sandbox/apps/nextcloud.md
         - Social:
           - Gotify: sandbox/apps/gotify.md

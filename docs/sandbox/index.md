@@ -137,6 +137,7 @@
 - **[varken](../sandbox/apps/varken.md)**  - tag - `sandbox-varken`
 - **[vaultwarden](../sandbox/apps/vaultwarden.md)**  - tag - `sandbox-vaultwarden`
 - **[vnstat](../sandbox/apps/vnstat.md)**  - tag - `sandbox-vnstat`
+- **[watchstate](../sandbox/apps/watchstate.md)**  - tag - `sandbox-watchstate`
 - **[watchtower](../sandbox/apps/watchtower.md)**  - tag - `sandbox-watchtower`
 - **[wikijs](../sandbox/apps/wikijs.md)**  - tag - `sandbox-wikijs`
 - **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`

@@ -1,14 +1,12 @@
 # changedetection
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
 ## What is it?
 
-[changedetection](https://changedetection.url) is a...
+[changedetection](https://github.com/dgtlmoon/changedetection.io) is a tool for tracking changes to websites.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://changedetection.url){: .header-icons } | [:octicons-link-16: Docs](https://changedetection.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/changedetection/changedetection){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/changedetection/changedetection){: .header-icons }|
+| [:material-home: Project home](https://changedetection.io){: .header-icons } | [:octicons-link-16: Docs](https://github.com/dgtlmoon/changedetection.io){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/dgtlmoon/changedetection.io){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/changedetection.io){: .header-icons }|
 
 ### 1. Installation
 
@@ -24,4 +22,4 @@ sb install sandbox-changedetection
 
 ### 3. Usage
 
-- Instructions for changedetection
+- See github repo for configuration details.

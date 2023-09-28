@@ -72,9 +72,11 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
 
 - Note: `max_size_gb` is rounded up, so it is advised to have it minimum `2GB` or else it would attempt upload at each interval. Explanation below.
 
-  - `1GB` is basically anything in there.
+    - Setting this to `1GB` will trigger on anything in the upload directory, since Cloudplow will round, say, 200MB usage up to 1G and trigger an upload.
 
-  - `2GB` is at least 1GB of data.
+    - Setting this to `2GB` will trigger on a little more than 1GB of data in the upload directory, since there needs to be more than 1G there for the value to get rounded up to 2G and trigger the upload.
+
+    - THIS IS ONLY A SIGNIFICANT ISSUE WITH THESE SMALL NUMBERS.  It's not a general "Cloudplow triggers at half the threshold".  This rounding means that the default 200G threshold will actually trigger at 199+G, since 199.2G would get rounded up to 200G.
 
 ### Plex Integration
 

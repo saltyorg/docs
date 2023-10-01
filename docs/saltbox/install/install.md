@@ -419,7 +419,7 @@ Note that generally speaking these five options are mutually exclusive.
     
     You probably already have the required setup complete.  You should use your existing setup at least to start with.
 
-    You will likely need to account for differences in the names of remotes.  Saltbox assumes that you have an rclone remote named `google` pointing to the root of your cloud storage, so you can either rename your existing remote or change the remote name in the [settings](../../reference/accounts.md).
+    You will need to enter details of your remote[s] into `settings.yml`.  If you have custom mount services, you can use them instead of one of the supplied templates.  If not, perhaps start with the `google` template to see if it's "good enough".
 
     If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right.  In step one, you can probably download the existing credential.
 
@@ -427,6 +427,8 @@ Note that generally speaking these five options are mutually exclusive.
 
 === "I'm totally new to this"
     This option is aimed at you if you are starting totally from scratch and want to be walked through the whole setup.
+
+    IMPORTANT: GOOGLE HAS MADE CHANGES THAT RENDER THIS PROCESS LARGELY POINTLESS.  IF YOU ARE A BRAND NEW GOOGLE USER, PROBABLY BEST TO PRETEND YOU NEVER SAW THIS.
     
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED GOOGLE SETUP YOU SHOULD NOT DO THIS.
 
@@ -464,6 +466,7 @@ Note that generally speaking these five options are mutually exclusive.
         This process is described [here](../../reference/guides/google-shared-drive.md).  If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
         3. Create an rclone remote with those credentials.
         This process is described [here](../../reference/guides/rclone-remote.md).
+        4. enter details about that remote in `settings.yml`
 
         Note: that mentions shared drives since that's our recommendation.  If you want to point that remote at My Drive you can of course do so.
         
@@ -471,7 +474,8 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Dropbox"
 
-        Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
+        1. Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
+        2. enter remote details in `settings.yml`
 
 Once you have set up your rclone remote[s], enter their details in `settings.yml` as discussed above in Step 2.
 

@@ -166,9 +166,9 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kaizensh>
-            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=Logan Honeycutt/>
+            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=kaizensh/>
             <br />
-            <sub style="font-size:14px"><b>Logan Honeycutt</b></sub>
+            <sub style="font-size:14px"><b>kaizensh</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

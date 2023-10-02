@@ -29,6 +29,7 @@ These changes include:
     If you have custom mount services:
     a. stop all containers
     b. stop and disable those mount services
+    c. remove any mergerfs- or mount-related changes you made to the inventory
     c. define your rclone remotes in `settings.yml` as described on the install page or the config file page.
     d. run `sb install mounts` to build the new service files and start the mounts.
     </details>

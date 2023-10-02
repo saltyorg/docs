@@ -4,7 +4,7 @@
 
 Usually this is a simple problem, but there are several places where it could be.
 
-NOTE: THIS IS WRITTEN IN TERMS OF GOOGLE DRIVE< , BUT THE CONCEPTS ARE APPLICABLE TO ANY RCLONE-BASED STORAGE.
+NOTE: THIS IS WRITTEN IN TERMS OF GOOGLE DRIVE, BUT THE CONCEPTS ARE APPLICABLE TO ANY RCLONE-BASED STORAGE.
 
 Service names and directories may differ depending on the specific configuration in use.  You may have multi-layer remotes in the case of encryption or chunking.  None of those things affect the concepts of: remote[s] -> mounts -> unionfs -> apps.
 

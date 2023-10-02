@@ -18,21 +18,19 @@ These changes include:
         1. The previous default was to not touch existing services. This was a necessary change to allow the addition and removal of extra mounts.
         2. As a result the old rclone_vfs.service will get removed so preserve a copy if you want to keep any tweaks you made to it.
 
-    <details>
-    <summary>What Does this mean for me?</summary>
-    <br />
+    ??? note "What Does this mean for me?"
     
-    If you have custom mount services and mergerfs changes to support your multiple remotes [maybe you have google and dropbox both configured, for example] saltbox will now manage that for you.
+        If you have custom mount services and mergerfs changes to support your multiple remotes [maybe you have google and dropbox both configured, for example] saltbox will now manage that for you.
 
-    You will define all your mounts in the settings.yml file, and saltbox will create and manage all the mount services and the mergerfs config.  The cloudplow role will look at the same information to build its config file.
+        You will define all your mounts in the settings.yml file, and Saltbox will create and manage all the mount services and the mergerfs config.  The cloudplow role will look at the same information to build its config file.
 
-    If you have custom mount services:
-    a. stop all containers
-    b. stop and disable those mount services
-    c. remove any mergerfs- or mount-related changes you made to the inventory
-    c. define your rclone remotes in `settings.yml` as described on the install page or the config file page.
-    d. run `sb install mounts` to build the new service files and start the mounts.
-    </details>
+        If you have custom mount services:
+
+        1. stop all containers
+        2. stop and disable those mount services
+        3. remove any mergerfs- or mount-related changes you made to the inventory
+        4. define your rclone remotes in `settings.yml` as described on the install page or the config file page.
+        5. run `sb install mounts` to build the new service files and start the mounts.
 
 4. Database role changes - **Breaking Changes**
     1. Added multi-instance support to database roles.

@@ -4,6 +4,10 @@
 
 Usually this is a simple problem, but there are several places where it could be.
 
+NOTE: THIS IS WRITTEN IN TERMS OF GOOGLE DRIVE< , BUT THE CONCEPTS ARE APPLICABLE TO ANY RCLONE-BASED STORAGE.
+
+Service names and directories may differ depending on the specific configuration in use.  You may have multi-layer remotes in the case of encryption or chunking.  None of those things affect the concepts of: remote[s] -> mounts -> unionfs -> apps.
+
 There are several layers between your Google Drive and Plex [or other app].
 
 - rclone remote, which provides the link to your Google Drive.  This is where you sign into your Google account.

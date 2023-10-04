@@ -12,11 +12,20 @@ Chances are, if your disk is full, the cause is one of two things:
 1. Sonarr/Radarr are not importing downloaded media
 1. Cloudplow isn't uploading things to the cloud.
 
-If you are using rclone’s --vfs-cache=full, then there’s a third likely cause:
+If you are using rclone’s `vfs-cache`, then there’s a third likely cause:
 
 1. Your rclone vfs cache is filling your disk
 
-This is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered.  You can use these tools to find out if that's the issue, though.
+I am of course leaving out thigns like:
+1. Some log is out of control and filling the disk
+2. You're using some script or the like to download a website's archive and you didn't realize how big said archive is
+3. Your backup is filling the disk
+4. You gave your brother-in-law nextcloud access and he's uploading all his pickleball videos
+5. etc.
+
+The first step below should help you identify the issue, but the assumption is that if you ware doing something outside the norm like that on the server you are aware of it.
+
+Also, this is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered.  Again, that's a "the user chose to do this thing" situation.  You can use these tools to find out if that's the issue, though.
 
 ## Where is the space going?
 
@@ -60,7 +69,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
     3.7 GiB [          ] /transcodes
 ```
 
-Here, I have 473 GB of unimported downloads and 44 GB waiting to be uploaded by Cloudplow.
+Here, I have 473 GB of unimported downloads [`/downloads`] and 44 GB waiting to be uploaded by Cloudplow [`/Media`].
 
 Rclone vfs cache is more install-dependent.  I’m going to assume that if you’re reading this you didn’t change things from the defaults, and chances are you’ll see something like this:
 
@@ -158,7 +167,7 @@ If you do, cloudplow is working as expected.  If you want cloudplow to start upl
 }
 ```
 
-That’s going to check every 30 minutes, and start uploading when the folder reaches 200GB.  Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
+That’s going to check every 30 minutes [`"check_interval": 30,`], and start uploading when the folder reaches 200GB [`"max_size_gb": 200,`].  Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
 
 In the default setup, you can upload 750GB per day.
 
@@ -180,7 +189,7 @@ cloudplow upload --loglevel=DEBUG
 
 You'll get a great deal of information about what cloudplow is doing and why.
 
-If you find yourself hitting that 750GB cap regularly, you may want to set up [service-account uploading](tip44.md).
+If you find yourself hitting that 750GB cap regularly, ~~you may want to set up [service-account uploading](tip44.md).~~ you need to buy more seats on your google account, or just slow down.
 
 ## Rclone cache is out of control
 

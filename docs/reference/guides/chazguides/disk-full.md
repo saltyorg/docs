@@ -2,11 +2,13 @@
 
 First, a quick refresher on how the system works:
 
-Your downloader puts files in `/mnt/local/downloads`.
-Sonarr/Radarr move [usenet] or copy [default torrent] these files to `/mnt/local/Media`.
-[They’re actually moving files to `/mnt/unionfs/Media`, but the mergerfs config routes them in `/mnt/local/Media`]
-Once `/mnt/local/Media` hits 200GB, cloudplow uploads the contents to your cloud drive.
-Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt/unionfs/Media`.
+1. Your downloader puts files in `/mnt/local/downloads`.
+2. Sonarr/Radarr move [usenet] or copy [default torrent] these files to `/mnt/local/Media`.
+   
+   [They’re actually moving files to `/mnt/unionfs/Media`, but the mergerfs config routes them to `/mnt/local/Media`]
+4. Once `/mnt/local/Media` hits 200GB, cloudplow uploads the contents to your cloud drive.
+5. Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt/unionfs/Media`.
+
 Chances are, if your disk is full, the cause is one of two things:
 
 1. Sonarr/Radarr are not importing downloaded media
@@ -16,14 +18,14 @@ If you are using rclone’s `vfs-cache`, then there’s a third likely cause:
 
 1. Your rclone vfs cache is filling your disk
 
-I am of course leaving out thigns like:
+I am of course leaving out things like:
 1. Some log is out of control and filling the disk
 2. You're using some script or the like to download a website's archive and you didn't realize how big said archive is
 3. Your backup is filling the disk
 4. You gave your brother-in-law nextcloud access and he's uploading all his pickleball videos
 5. etc.
 
-The first step below should help you identify the issue, but the assumption is that if you ware doing something outside the norm like that on the server you are aware of it.
+The first step below should help you identify the issue, but the assumption is that if you are doing something outside the norm like that on *your* server you are aware of it.
 
 Also, this is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered.  Again, that's a "the user chose to do this thing" situation.  You can use these tools to find out if that's the issue, though.
 

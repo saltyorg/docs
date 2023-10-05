@@ -48,12 +48,20 @@ These changes include:
 
 8. Changed default usenet client to SABnzbd
 
-9. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed once).
+    ??? note "What if I want to keep using nzbget and/or rutorrent?"
+    
+        You can override this with a setting in the inventory:
 
-10. Changed the rutorrent image since the previously used one was no longer getting updates.
+        ```
+        download_clients_enabled: ["qbittorrent", "sabnzbd"]
+        ```
+
+10. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed once).
+
+11. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl
 
-11. Docker volumes such as /data, /tv and /movies are no longer mounted by default.
+12. Docker volumes such as /data, /tv and /movies are no longer mounted by default.
     1. Restore the old behavior by setting `docker_legacy_volume: true` using the inventory.
 
 As with any major update double check your inventory edits are in line with any changes made to the roles. Ask on our discord server if in doubt.

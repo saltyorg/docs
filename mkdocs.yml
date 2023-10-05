@@ -236,7 +236,7 @@ nav:
             - Alternatrrx: sandbox/apps/alternatrrx.md
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
             - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
-            - Plex-utills: sandbox/apps/plex-utills.md
+            - Plex-Utills: sandbox/apps/plex-utills.md
             - Python-plexlibrary: sandbox/apps/python-plexlibrary.md
             - Unmanic: sandbox/apps/unmanic.md
           # - Movies:
@@ -262,7 +262,7 @@ nav:
             - plex_dupefinder: sandbox/apps/plex_dupefinder.md
             - Plex Patrol: sandbox/apps/plex_patrol.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
-            - Plex_Utills: sandbox/apps/plex_utills.md
+            - Plex_Utills: sandbox/apps/plex-utills.md
             - Tauticord: sandbox/apps/tauticord.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md

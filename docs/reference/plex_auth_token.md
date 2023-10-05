@@ -29,7 +29,7 @@ You will need your Plex credentials filled in `~/saltbox/accounts.yml`. If you a
 5. Run the following command:
 
     ```shell
-    sb install plex_auth_token
+    sb install plex-auth-token
     ```
 
 6. You will be shown your Plex Access Token in the log:

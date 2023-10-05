@@ -51,7 +51,7 @@ You will have to have completed `sb install saltbox` before using this script.
 
     ```shell
     sb update
-    sb install plex_autoscan
+    sb install plex-autoscan
     ```
 
 1. Visit the link shown to get the authorization code and paste that in and hit `enter`.

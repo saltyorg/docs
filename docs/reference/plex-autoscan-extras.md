@@ -102,7 +102,7 @@ To set this up:
 
     ```shell
     sb update
-    sb install plex_autoscan
+    sb install plex-autoscan
     ```
 
 7. Visit the link shown to get the authorization code and paste that in and hit `enter`.

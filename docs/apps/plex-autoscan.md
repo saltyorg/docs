@@ -14,7 +14,7 @@ Plex Autoscan comes configured out of the box (as related to Saltbox). However, 
 
 ``` shell
 
-sb install plex_autoscan
+sb install plex-autoscan
 
 ```
 

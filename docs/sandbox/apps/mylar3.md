@@ -14,13 +14,13 @@ Mylar allows you to create a watchlist of series that it monitors for various th
 
 ``` shell
 
-sb install sandbox-ROLENAME
+sb install sandbox-mylar3
 
 ```
 
 ### 2. URL
 
-- To access Mylar3, visit `https://ROLENAME._yourdomain.com_`
+- To access Mylar3, visit `https://mylar3._yourdomain.com_`
 
 ### 3. Setup
 

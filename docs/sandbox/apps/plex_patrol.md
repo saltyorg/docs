@@ -11,7 +11,7 @@
 ### 1. Installation
 
 ``` shell
-sb install sandbox-plex_patrol
+sb install sandbox-plex-patrol
 ```
 
 ### 2. URL

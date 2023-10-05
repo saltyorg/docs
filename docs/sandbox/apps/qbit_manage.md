@@ -37,7 +37,7 @@ Before installing qBit Management, you should have a **[qBittorrent](../../apps/
 
 ``` shell
 
-sb install sandbox-qbit_manage
+sb install sandbox-qbit-manage
 
 ```
 
@@ -77,7 +77,7 @@ Apply the changes to the sandbox settings file with:
 
 ``` shell
 
-sb install sandbox-qbit_manage
+sb install sandbox-qbit-manage
 
 ```
 

@@ -17,7 +17,7 @@
 
 ``` shell
 
-sb install sandbox-plex_dupefinder
+sb install sandbox-plex-dupefinder
 
 ```
 

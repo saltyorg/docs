@@ -121,7 +121,7 @@ This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, 
 
 ### Addition
 
-A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:
+A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code-server.md) container access to more locations on the host:
 
 ```yaml linenums="87" hl_lines="7" title="https://github.com/saltyorg/Sandbox/blob/master/roles/code_server/defaults/main.yml#L87"
 # Volumes

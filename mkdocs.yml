@@ -168,7 +168,7 @@ nav:
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
           - Changedetection: sandbox/apps/changedetection.md
-          - Code-server: sandbox/apps/code_server.md
+          - Code-server: sandbox/apps/code-server.md
           - Gitea: sandbox/apps/gitea.md
           - Gotenberg: sandbox/apps/gotenberg.md
           - Docker:
@@ -190,7 +190,7 @@ nav:
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - Omegabrr: sandbox/apps/omegabrr.md
-            - QBit Management: sandbox/apps/qbit_manage.md
+            - QBit Management: sandbox/apps/qbit-manage.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md
@@ -222,7 +222,7 @@ nav:
             - Booksonic: sandbox/apps/booksonic.md
             - Bookstack: sandbox/apps/bookstack.md
             - Calibre: sandbox/apps/calibre.md
-            - Calibre_web: sandbox/apps/calibre_web.md
+            - Calibre-web: sandbox/apps/calibre-web.md
             - Comicstreamer: sandbox/apps/comicstreamer.md
             - Comixed: sandbox/apps/comixed.md
             - Kavita: sandbox/apps/kavita.md
@@ -257,12 +257,12 @@ nav:
             - Goplaxt: sandbox/apps/goplaxt.md
             - Kitana: sandbox/apps/kitana.md
             - Membarr: sandbox/apps/membarr.md
-            - Plex Auto Languages: sandbox/apps/plex_auto_languages.md
-            - Plex Autoscan: sandbox/apps/plex_autoscan.md
-            - plex_dupefinder: sandbox/apps/plex_dupefinder.md
-            - Plex Patrol: sandbox/apps/plex_patrol.md
+            - Plex Auto Languages: sandbox/apps/plex-auto-languages.md
+            - Plex Autoscan: sandbox/apps/plex-autoscan.md
+            - Plex Dupefinder: sandbox/apps/plex-dupefinder.md
+            - Plex Patrol: sandbox/apps/plex-patrol.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
-            - Plex_Utills: sandbox/apps/plex-utills.md
+            - Plex-Utills: sandbox/apps/plex-utills.md
             - Tauticord: sandbox/apps/tauticord.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md
@@ -282,7 +282,7 @@ nav:
           - RocketChat: sandbox/apps/rocketchat.md
           - Teamspeak: sandbox/apps/teamspeak.md
         - Utilities:
-          - A-Train: sandbox/apps/a_train.md
+          - A-Train: sandbox/apps/a-train.md
           - Database Management:
             - Adminer: sandbox/apps/adminer.md
             - PGAdmin: sandbox/apps/pgadmin.md
@@ -301,8 +301,8 @@ nav:
             - Logarr: sandbox/apps/logarr.md
             - Monitorr: sandbox/apps/monitorr.md
           - Networking:
-            - Kcptun_client: sandbox/apps/kcptun_client.md
-            - Kcptun_server: sandbox/apps/kcptun_server.md
+            - Kcptun-client: sandbox/apps/kcptun-client.md
+            - Kcptun-server: sandbox/apps/kcptun-server.md
             - Unifi: sandbox/apps/unifi.md
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
@@ -313,16 +313,16 @@ nav:
           - Sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - Sshwifty: sandbox/apps/sshwifty.md
           - Tdarr: sandbox/apps/tdarr.md
-          - Tdarr Node: sandbox/apps/tdarr_node.md
+          - Tdarr Node: sandbox/apps/tdarr-node.md
           - System:
             - Apprise: sandbox/apps/apprise.md
-            - Glances_web: sandbox/apps/glances_web.md
+            - Glances-web: sandbox/apps/glances_web.md
             - Healthchecks: sandbox/apps/healthchecks.md
             - Duplicati: sandbox/apps/duplicati.md
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
-          - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md
-          - Uptime Kuma: sandbox/apps/uptime_kuma.md
+          - Traefik-Robotstxt: sandbox/apps/traefik-robotstxt.md
+          - Uptime Kuma: sandbox/apps/uptime-kuma.md
           - Vaultwarden: sandbox/apps/vaultwarden.md
           - Varken: sandbox/apps/varken.md
 
@@ -478,6 +478,6 @@ nav:
           - Saltbox Tools: reference/saltbox-tools.md
           - Adding a Subdomain: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
-          - Mounting disks: reference/mount.md
+          - Mounting disks: reference/guides/mount.md
           - HW transcoding on OVH: reference/OVH.md
 

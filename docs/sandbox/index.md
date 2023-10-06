@@ -91,7 +91,7 @@
 - **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
 - **[plex_patrol](../sandbox/apps/plex_patrol.md)**  - tag - `sandbox-plex-patrol`
 - **[plextraktsync](../sandbox/apps/plextraktsync.md)**  - tag - `sandbox-plextraktsync`
-- **[plex_utills](../sandbox/apps/plex-utills.md)**  - tag - `sandbox-plex-utills`
+- **[plex_utills](../sandbox/apps/plex_utills.md)**  - tag - `sandbox-plex_utills`
 - **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
 - **[Puddletag](../sandbox/apps/puddletag.md)**  - tag - `sandbox-puddletag`
 - **[pyload](../sandbox/apps/pyload.md)**  - tag - `pyload`

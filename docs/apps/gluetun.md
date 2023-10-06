@@ -35,7 +35,18 @@ gluetun_firewall_input_ports:
 gluetun_firewall_outbound_subnets:
 ```
 
-Additionl Docker envs may be set via `gluetun_docker_envs_custom`.
+!!! warning
+    The role uses the built-in Docker DNS resolver by default instead of using the DoH/DoT functionality Gluetun normally provides.
+
+    If DNS leaks are a problem for your use case you will want to override this behavior with:
+    ```yaml
+    gluetun_docker_resolver: false
+    ```
+
+    Just be aware that this toggle will make any network linked containers unable to resolve docker hostnames.
+  
+
+Additional Docker envs may be set via `gluetun_docker_envs_custom`.
 
 ### 2. Installation
 
@@ -70,6 +81,8 @@ plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
+
+    The above note is only the case if you do not add each linked container alias to gluetun like in the config example above.
 
     Additionally the Plex container will become unable to start if you redeploy gluetun (restart is fine) at any point so you must redeploy Plex in that case.
 

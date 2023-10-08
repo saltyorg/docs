@@ -8,6 +8,8 @@ You will need a dedicated server, from a server provider (e.g. Hetzner, kimsufi,
 
 The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error.
 
+In other words, you should not upgrade your Ubuntu 18.04 machine running Cloudbox or PlexGuide to Ubuntu 20.04 and then install Saltbox on top of it.  YOu should wipe the machine, install 20.04 or 22.04 fresh and start there.
+
 Typically this server is remote to you; you can install on a home server, keeping in mind some [home server considerations](#home-server-considerations)
 
 Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like or a virtualized setup like proxmox.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.

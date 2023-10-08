@@ -35,7 +35,7 @@ For best results, the assumed server environment for Saltbox is:
 
 - a dedicated remote server [not a VPS or a virtualized setup like proxmox],
 - with a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
-- running the server version of Ubuntu 20.04 or 22.04,
+- running a brand new fresh install of the server version of Ubuntu 20.04 or 22.04,
 - from a server provider like Hetzner, OVH, kimsufi, etc.,
 - nothing else [docker, for example] preinstalled,
 - with at least 500GB of disk space, and

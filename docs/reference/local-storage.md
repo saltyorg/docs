@@ -15,12 +15,13 @@ If this disk is faster than your boot disk, maybe you want to mount it at `/mnt/
 
 If you are downloading from Usenet and this disk is not solid state, you don't want to do that.  If your boot disk is a small HD and you're adding a giant NVME, then you probably _DO_ want to do that.
 
-Then leave the rclone remote entry in the settings blank:
+Then disable rclone in `settings.yml`:
 
 ```ini
 rclone:
-  version: latest 
-  remote: 
+  enabled: false
+  remotes:
+...
 ```
 
 Saltbox will not do any of the remote mount setup when you run the install.
@@ -33,17 +34,23 @@ As you will recall from the earlier "How does Saltbox Work" lesson, this means e
 
 In this case, it's best to use the same rclone + cloudplow model that the standard cloud storage setup uses.
 
-First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc.  Call it whatever you like.  `google` would be fine if you don't want to change any other settings.
+First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc.  Call it whatever you like.  
 
-If you give it a name other than `google`, change the rclone remote entry in the settings to match:
-
+Then fill out the remote details in `settings.yml`
 ```ini
 rclone:
-  version: latest 
-  remote: THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED
+  enabled: true
+  remotes:
+    - remote: THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED
+      template: sftp # whatever template or service file is appropriate
+      upload: true
+      upload_from: /mnt/local/Media
+      vfs_cache:
+        enabled: false
+        max_age: 504h
+        size: 50G
+  version: latest
 ```
 It should go without saying that you need to change `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to whatevcer you called the rclone remote you created pointing at the NAS.
 
-Then run the regular saltbox install.  Your NAS [or whatever] will be mounted at `/mnt/remote`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.
-
-You may want to examine the rclone_vfs service file at `/etc/systemd/system/rclone_vfs.service` to adjust the rclone flags to suit your connection scheme, since the defaults are intended for Google Drive.
+Then run the regular saltbox install.  Your NAS [or whatever] will be mounted at `/mnt/remote/THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.

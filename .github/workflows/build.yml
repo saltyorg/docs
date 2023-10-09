@@ -65,7 +65,7 @@ jobs:
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
         id: cloudflare
-        uses: cloudflare/pages-action@v1.4.1
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: 86b9f680e99b6d172395cc7309a9d8a8

@@ -274,6 +274,8 @@ Each tab shows a "section" in the file.
 
     Default is `no`.
 
+    This is a global flag; if you want to override this for individual apps you can do so in the inventory.
+
 === "docker"
     ```yaml
     docker:

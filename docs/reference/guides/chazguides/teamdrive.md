@@ -58,7 +58,7 @@ Let’s go!
 
    Edit the other settings [`upload` and so forth] to suit your requirements.
 
-   Details on the meanings of these fields can be found [here](../../accounts/#options-in-settingsyml)
+   Details on the meanings of these fields can be found [here](../../accounts.md#options-in-settingsyml)
    
     ```yaml
     rclone:

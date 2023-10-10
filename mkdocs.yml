@@ -80,6 +80,7 @@ plugins:
       optimize_jpg: false
       optimize_jpg_quality: 75
       optimize_jpg_progressive: true
+  - git-revision-date-localized
 
 extra:
   generator: false

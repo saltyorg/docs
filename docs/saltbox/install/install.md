@@ -167,22 +167,22 @@ To edit any of the following configuration files use the command written in the 
             enabled: false # (10)!
             max_age: 504h # (11)!
             size: 50G # (12)!
-        - remote: dropbox # (6)!
-          template: dropbox # (7)!
-          upload: false # (8)!
-          upload_from: /mnt/local/Media # (9)!
+        - remote: dropbox
+          template: dropbox
+          upload: false
+          upload_from: /mnt/local/Media
           vfs_cache:
-            enabled: false # (10)!
-            max_age: 504h # (11)!
-            size: 50G # (12)!
-        - remote: feeder # (6)!
-          template: sfp # (7)!
-          upload: false # (8)!
-          upload_from: /mnt/local/Media # (9)!
+            enabled: false
+            max_age: 504h
+            size: 50G
+        - remote: feeder
+          template: sftp
+          upload: false
+          upload_from: /mnt/local/Media
           vfs_cache:
-            enabled: false # (10)!
-            max_age: 504h # (11)!
-            size: 50G # (12)!
+            enabled: false
+            max_age: 504h
+            size: 50G
       version: latest # (13)!
     shell: bash # (14)!
     transcodes: /mnt/local/transcodes # (15)!

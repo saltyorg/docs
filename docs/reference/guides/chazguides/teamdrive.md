@@ -64,7 +64,7 @@ Let’s go!
       remotes:
         - remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED
           template: MOUNT_TEMPLATE
-          upload: false # true to configure cloudplow uplaod for this remote
+          upload: false # true to configure cloudplow upload for this remote
           upload_from: /mnt/local/Media
           vfs_cache:
             enabled: false

@@ -57,6 +57,8 @@ Let’s go!
    If you are mounting a folder instead of the root of the cloud storage, specify that in the `remote` value: `remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED:/bing` or `remote: "NAME_OF_THE_REMOTE_YOU_JUST_CREATED:/Bang Boing"`.  Generally, we recommend avoiding spaces in the name of a directory you are planning to mount.
 
    Edit the other settings [`upload` and so forth] to suit your requirements.
+
+   Details on the meanings of these fields can be found [here](../../accounts/#options-in-settingsyml)
    
     ```yaml
     rclone:

@@ -56,7 +56,7 @@ These changes include:
         download_clients_enabled: ["qbittorrent", "sabnzbd"]
         ```
 
-10. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed once).
+10. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed ones).
 
 11. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl

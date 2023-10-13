@@ -54,7 +54,7 @@ There are 3 phases to the setup. They are broken down below.
 
     ``` { .shell }
 
-    sb install hetzner_nfs_server
+    sb install hetzner-nfs-server
 
     ```
 
@@ -82,7 +82,7 @@ There are 3 phases to the setup. They are broken down below.
 
     ``` { .shell }
 
-    sb install hetzner_nfs_client_mount
+    sb install hetzner-nfs-client-mount
 
     ```
 
@@ -93,11 +93,11 @@ Simply run the following commands on their respective servers:
 ### Uninstall NFS Server (Feederbox)
 
 ```shell
-sb install hetzner_nfs_server_uninstall
+sb install hetzner-nfs-server-uninstall
 ```
 
 ### Uninstall NFS Client (Mediabox)
 
 ```shell
-sb install hetzner_nfs_client_unmount
+sb install hetzner-nfs-client-unmount
 ```

@@ -216,7 +216,7 @@ To edit any of the following configuration files use the command written in the 
 
         Currently Saltbox supports 4 options:
 
-        `google`, `dropbox`, `sftp` and alternatively a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
+        `google`, `dropbox`, `sftp` and alternatively a path to a file ("/opt/mount-templates/custom/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
         
         We recommend having the template file in a folder in /opt so that it moves with your install after a restore.
 

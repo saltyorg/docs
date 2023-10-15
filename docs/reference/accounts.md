@@ -203,13 +203,13 @@ Each tab shows a "section" in the file.
           template: dropbox
           ...
         - remote: minio
-          template: /opt/templates/myminio.j2
+          template: /opt/mount-templates/custom/myminio.j2
           ...
     ```
 
     `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` quotes are important.
 
-    `remotes/template`: The name of the template you want to use for the mount.  Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mycustomfolder/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.  You should put the template file in a folder in /opt so that it moves with your install after a restore.
+    `remotes/template`: The name of the template you want to use for the mount.  Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mount-templates/remote.j2") containing either jinja2 template or an actual copy of a systemd service file. A [community repo](https://github.com/saltyorg/mount-templates) is maintained of user submitted mount options which can be referenced via path (i.e. `/opt/mount-templates/generic.j2`.) We recommend saving your own custom templates/services in `/opt/mount-templates/custom` to ensure they are backed up and not subject to being overwritten by the repo.
 
     `remotes/upload`: Toggles whether you intend to upload to this remote using Cloudplow.
 

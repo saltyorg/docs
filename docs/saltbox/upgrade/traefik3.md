@@ -22,13 +22,15 @@ These changes include:
     
         If you have custom mount services and mergerfs changes to support your multiple remotes [maybe you have google and dropbox both configured, for example] saltbox will now manage that for you.
 
+        IF you set up Dropbox or Box or some other non-Google cloud storage using guides from this wiki or the Discord, you have custom mount services.
+
         You will define all your mounts in the settings.yml file, and Saltbox will create and manage all the mount services and the mergerfs config.  The cloudplow role will look at the same information to build its config file.
 
         If you have custom mount services:
 
         1. stop all containers
-        2. stop and disable those mount services
-        3. remove any mergerfs- or mount-related changes you made to the inventory
+        2. stop and disable those mount services; MAKE COPIES IF YOU WANT TO SAVE THEM
+        3. remove any mergerfs- or mount-related changes you made to the [inventory](../inventory.md)
         4. define your rclone remotes in `settings.yml` as described on the install page or the config file page.
         5. run `sb install mounts` to build the new service files and start the mounts.
 
@@ -38,11 +40,11 @@ These changes include:
         1. This is still being worked on and most of this was moved to a separate branch for now.
 
 5. Authelia changes
-    1. Added greater configurability to Authelia using the inventory.
+    1. Added greater configurability to Authelia using the [inventory](../inventory.md).
     2. Added LDAP backend to Authelia as an option.
 
 6. Add support to restoring the appdata of a single app from backup
-    1. `sb install restore -e restore_tar=plex.tar` but it assumes are past any steps restore would require.
+    1. `sb install restore -e restore_tar=plex.tar` but it assumes you are past any steps restore would require.
 
 7. Changed default torrent client to qBittorrent
 
@@ -50,7 +52,7 @@ These changes include:
 
     ??? note "What if I want to keep using nzbget and/or rutorrent?"
     
-        You can override this with a setting in the inventory:
+        You can override this with a setting in the [inventory](../inventory.md):
 
         ```
         download_clients_enabled: ["qbittorrent", "sabnzbd"]
@@ -61,7 +63,7 @@ These changes include:
 11. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl
 
-12. Docker volumes such as /data, /tv and /movies are no longer mounted by default.
-    1. Restore the old behavior by setting `docker_legacy_volume: true` using the inventory.
+12. Docker volumes such as /data, /tv and /movies are no longer mounted into relevant containers by default.
+    1. Restore the old behavior by setting `docker_legacy_volume: true` using the [inventory](../inventory.md), then running the relevant tags [**typically** `plex, radarr, sonarr` but your setup may differ].
 
-As with any major update double check your inventory edits are in line with any changes made to the roles. Ask on our discord server if in doubt.
+As with any major update double check your [inventory](../inventory.md) edits are in line with any changes made to the roles. Ask on our discord server if in doubt.

@@ -42,9 +42,15 @@ You will need to configure “dynamic DNS” to make sure that domain keeps poin
 
 When you set up a server in a data center, typically that server has a fixed unchanging IP address, so you set up DNS one time.  Most residential internet connections do not get a fixed address; your home IP will change periodically.  "Dynamic DNS" updates your DNS setup whenever your IP address changes, ensuring that "myhomeaddress.com" always points at the correct IP address.
 
-Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  If you use Cloudflare for DNS, the ddns client configuration will be automatically done for you when you run the role.
+Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  
 
-The saltbox role is `ddclient`, and you run it like any other saltbox role:
+If you use Cloudflare for DNS, use the `ddns` saltbox role and it will be configured for you.
+
+```shell
+sb install ddns
+```
+
+If you are using another DNS service, install `ddclient`, and configure it manually.  You will find the config file in `/opt/ddclient`:
 
 ```shell
 sb install ddclient

@@ -349,11 +349,23 @@ Make changes in the following sections:
 
                 On Rename: `Yes`
 
+                On Movie Added: `No`
+
                 On Movie Delete: `Yes`
 
                 On Movie File Delete: `Yes`
 
                 On Movie File Delete For Upgrade: `Yes`
+
+                On Health Issue: `No`
+
+                On Health Restored: `No`
+
+                Include Health Warnings: `No`
+
+                On Application Update: `No`
+
+                On Manual Intervention Required: `No`
 
                 Tags: _Leave Blank_
 
@@ -364,6 +376,8 @@ Make changes in the following sections:
                 Username: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
 
                 Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Password]
+
+                THERE MAY BE OTHER CHECKBOXES AVAILABLE: UNCHECK THEM ALL LEAVING ONLY THE ONES SPECIFICALLY LISTED ABOVE ENABLED.
 
             4. The settings will look like this:
 

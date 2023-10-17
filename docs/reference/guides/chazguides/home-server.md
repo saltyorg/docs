@@ -44,7 +44,7 @@ When you set up a server in a data center, typically that server has a fixed unc
 
 Probably your router has this available.  If not, there’s a Dynamic DNS Client role available in saltbox you can install.  
 
-If you use Cloudflare for DNS, use the `ddns` saltbox role and it will be configured for you.
+If you use Cloudflare for DNS, use the `ddns` saltbox role and it will be configured for you.  if the `ddclient` role has been installed, remove it first.
 
 ```shell
 sb install ddns

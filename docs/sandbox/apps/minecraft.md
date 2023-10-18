@@ -2,7 +2,7 @@
 
 ## What is it?
 
-Run one or multiple minecraft servers with custom domains. Utilises minecraft server and mc-router to allow each server to have its own subdomain with the default port.
+Run one or multiple minecraft servers with custom subdomains. Utilizes minecraft server and mc-router to allow each server to have its own subdomain with the default port.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

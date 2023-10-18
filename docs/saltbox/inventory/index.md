@@ -275,3 +275,13 @@ sonarr_traefik_middleware_custom: "appAuth"
       traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
       traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
     ```
+
+### Domain Customization
+
+```yaml
+#### Make Organizr available at a different base domain ####
+organizr_web_domain: "example.com"
+```
+
+`organizr_web_subdomain` would then apply to the new base domain.
+

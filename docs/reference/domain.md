@@ -54,7 +54,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     - For Cloudflare users.
    
-        Note: if you provide a Cloudflare email and API Key in your settings, the Saltbox installer will set this up for you automatically.  See the tab to the right for details about this optional automation.
+        Note: if you provide a Cloudflare email and Global API Key in your settings, the Saltbox installer will set this up for you automatically.  See the tab to the right for details about this optional automation.
    
     === "Saltbox Install Type"
         You will need to create A Records for all Saltbox subdomains.
@@ -99,7 +99,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
 === "Automatic Cloudflare DNS"
 
-    if you provide a Cloudflare email and API Key in Saltbox settings, the Saltbox installer will set this stuff up for you automatically.
+    if you provide a Cloudflare email and Global API Key in Saltbox settings, the Saltbox installer will set this stuff up for you automatically.
     
     **Notes:**
    
@@ -112,8 +112,8 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     If you want Saltbox to work with Cloudflare and automate setting up DNS, you need to:
 
     1. Set up Cloudflare as your DNS provider
-    2. Get a [free] Cloudflare API Key
-    3. Enter that API key into the Saltbox settings
+    2. Get a [free] Cloudflare Global API Key
+    3. Enter that Global API key into the Saltbox settings
     4. run the saltbox install, during which all the required subdomains will be created at Cloudflare for you
     5. do some optional post-install adjustments.
 
@@ -121,7 +121,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     [Cloudflare](https://www.cloudflare.com) a service that, among other things, protects and accelerates a wide network of websites. By being the "man in the middle", it can act like a free DNS provider.
    
-    Saltbox makes adding subdomains to Cloudflare's DNS settings a breeze via automation. All you need is the API key.
+    Saltbox makes adding subdomains to Cloudflare's DNS settings a breeze via automation. All you need is the Global API key.
    
     Note that there are some top-level domains [TLDs] that will not work with this automation. Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ).
    

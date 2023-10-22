@@ -131,13 +131,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     1. DNS changes propagate almost instantly (a lot faster than a domain provider's DNS service).
    
-    1. Hide your server's IP behind Cloudflare's.
+    2. Hide your server's IP behind Cloudflare's.
    
-    1. Makes setting up Mediabox / Feederbox a lot quicker.
+    3. Makes setting up Mediabox / Feederbox a lot quicker.
    
-    1. Allows for automated setup of subdomains for Saltbox add-on apps.
+    4. Allows for automated setup of subdomains for Saltbox add-on apps.
    
-    2. It's free.
+    5. It's free.
    
     _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [below](#post-setup)._
    
@@ -163,13 +163,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     1. Go to [Cloudflare.com](https://www.cloudflare.com/).
    
-    1. Here you will see that your domain will have an "Active" status. Click on your domain to continue.
+    2. Here you will see that your domain will have an "Active" status. Click on your domain to continue.
    
        ![](../images/cloudflare/cloudflare-active.png)
    
-    1. Click the **SSL/TLS** tab.
+    3. Click the **SSL/TLS** tab.
    
-    1. Set **SSL** to `Full (strict)`.
+    4. Set **SSL** to `Full (strict)`.
    
        ![](../images/cloudflare/cloudflare-full-strict.png)
    
@@ -177,23 +177,23 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     1. Go to [Cloudflare.com](https://www.cloudflare.com/).
    
-    1. Click the **Overview** tab.
+    2. Click the **Overview** tab.
    
-    1. Click **Get your API token**.
+    3. Click **Get your API token**.
    
-       ![](../images/cloudflare/cloudflare-api-token.png){ width=60% }
+        ![](../images/cloudflare/cloudflare-api-token.png){ width=60% }
    
-    1. Under **API Keys** and then **Global API Key** click **View**.
+    4. Under **API Keys** and then **Global API Key** click **View**.
    
-       ![](../images/cloudflare/cloudflare-global-api.png){ width=60% }
+        ![](../images/cloudflare/cloudflare-global-api.png){ width=60% }
    
-    1. On the login popup, type in your **password** and click **View**.
+    5. On the login popup, type in your **password** and click **View**.
    
-       ![](../images/cloudflare/cloudflare-api-password.png){ width=50% }
+        ![](../images/cloudflare/cloudflare-api-password.png){ width=50% }
    
-    1. Save your API key.
+    6. Save your API key.
    
-       ![](../images/cloudflare/cloudflare-api-show.png){ width=50% }
+        ![](../images/cloudflare/cloudflare-api-show.png){ width=50% }
 
     #### Add the Cloudflare API Key to the saltbox settings:
    

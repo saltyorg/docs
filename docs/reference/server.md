@@ -4,7 +4,11 @@
 
 About the requirements:
 
-You will need a dedicated server, from a server provider (e.g. Hetzner, kimsufi, OVH, etc), installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+You will need a dedicated server, from a server provider, installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+
+Some examples of "server provider" woudl be places like [OVH](https://us.ovhcloud.com/), [LeaseWeb](https://www.leaseweb.com/dedicated-servers). [Hetzner](https://www.hetzner.com/), and the like.  Saltbox does not recommend any server p[rovider specifically; these are just examples.  Historically, Hetzner has been popular, but recent changes by Plex have made it less attractive.
+
+Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters.  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
 The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error.
 
@@ -15,8 +19,6 @@ Typically this server is remote to you; you can install on a home server, keepin
 Best results are seen with an actual dedicated server, not a VPS like those available from Linode, Vultr, or the like or a virtualized setup like proxmox.  Linodes, Vultr "Cloud Compute", Hetzner "Cloud Servers", and probably others like them, in particular, are known to _not_ work in at least one significant way; NZBGet reports 0 available disk space while Sonarr, Radarr, and tools like `df` and `du` report disk space as expected.
 
 A commonly-asked question is ["can I run saltbox on this server?"](guides/chazguides/server.md)
-
-IMPORTANT NOTE ABOUT HETZNER: Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters.  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
 You will need root access to install Saltbox.
 

@@ -16,7 +16,7 @@ Best results are seen with an actual dedicated server, not a VPS like those avai
 
 A commonly-asked question is ["can I run saltbox on this server?"](guides/chazguides/server.md)
 
-IMPORTANT NOTE ABOUT HETZNER: Plex Inc has recently [mid-October 2023] instituted roadblocks that cause problems connecting to Plex servers running on Hetzner servers.  This can be worked aropund by putting Plex behind a VPN using Gluetun, but this is of course as added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
+IMPORTANT NOTE ABOUT HETZNER: Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters.  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
 You will need root access to install Saltbox.
 

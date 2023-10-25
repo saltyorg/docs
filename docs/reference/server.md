@@ -6,9 +6,9 @@ About the requirements:
 
 You will need a dedicated server, from a server provider, installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
 
-Some examples of "server provider" woudl be places like [OVH](https://us.ovhcloud.com/), [LeaseWeb](https://www.leaseweb.com/dedicated-servers). [Hetzner](https://www.hetzner.com/), and the like.  Saltbox does not recommend any server p[rovider specifically; these are just examples.  Historically, Hetzner has been popular, but recent changes by Plex have made it less attractive.
+Some examples of "server provider" would be places like [OVH](https://us.ovhcloud.com/), [LeaseWeb](https://www.leaseweb.com/dedicated-servers). [Hetzner](https://www.hetzner.com/), and the like.  Saltbox does not recommend any server provider specifically; these are just examples.  Historically, Hetzner has been popular, but recent changes by Plex have made it less attractive.
 
-Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters.  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
+Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters [at least European data centers].  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
 The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error.
 

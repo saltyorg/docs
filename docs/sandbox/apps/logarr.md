@@ -19,6 +19,7 @@ sb install sandbox-logarr
 ### 2. URL
 
 - To access Logarr ALPHA, visit `https://logarr._yourdomain.com_`
+- Be aware that this page is NOT behind Authelia.
 
 ### 3. Setup
 

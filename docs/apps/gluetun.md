@@ -110,4 +110,73 @@ Depending on if the role in question supports instances or not there will be two
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
 
+### 5. Example Gluetun Configs
+
+Below are some example inventory entries for some common VPN providers. These are intended as templates only and should not be expected to copy and paste without any edits. For a Wireguard implementation, you will typically generate a config file (wg0.conf) with the provider and grab some of the values from that config to configure Gluetun.
+
+=== "Custom Wireguard provider"
+
+    ```yaml
+    gluetun_vpn_service_provider: "custom"
+    gluetun_vpn_type: "wireguard"
+    gluetun_wireguard_private_key: "your_wireguard_private_key"
+    gluetun_wireguard_addresses: "your_wireguard_address_with_cidr"
+    gluetun_wireguard_public_key: "server_wireguard_public_key"
+    gluetun_vpn_endpoint_ip: "wireguard_server_ip"
+    gluetun_vpn_endpoint_port: "wireguard_server_port"
+    ```
+
+=== "Proton VPN Free"
+
+    ```yaml
+    gluetun_vpn_service_provider: "protonvpn"
+    gluetun_openvpn_user: "your_openvpn_user"
+    gluetun_openvpn_password: "your_openvpn_password"
+    gluetun_docker_envs_custom:
+      FREE_ONLY: "on"
+    ```
+
+=== "Mullvad"
+
+    ```yaml
+    gluetun_vpn_service_provider: "mullvad"
+    gluetun_vpn_type: "wireguard"
+    gluetun_wireguard_public_key: "your_wireguard_public_key"
+    gluetun_wireguard_private_key: "your_wireguard_private_key"
+    gluetun_wireguard_addresses: "your_wireguard_address"
+    # Include the below line to only connect to Amsterdam servers - replace with a different city if desired
+    gluetun_server_cities: "amsterdam"
+    ```
+
+=== "Surfshark"
+
+    ```yaml
+    gluetun_vpn_service_provider: "surfshark"
+    gluetun_vpn_type: "wireguard"
+    gluetun_wireguard_private_key: "your_wireguard_private_key"
+    gluetun_wireguard_addresses: "your_wireguard_address"
+    # Include the below line to only connect to Netherlands servers - replace with a different city if desired
+    gluetun_server_countries: "Netherlands"
+    ```
+
+=== "AirVPN"
+
+    ```yaml
+    gluetun_vpn_service_provider: "airvpn"
+    gluetun_vpn_type: "wireguard"
+    gluetun_wireguard_public_key: "your_wireguard_public_key"
+    gluetun_wireguard_private_key: "your_wireguard_private_key"
+    gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
+    gluetun_wireguard_addresses: "your_wireguard_address"
+    ```
+
+=== "Custom .ovpn file"
+
+    ```yaml
+    # Configure via a ovpn file located on the host at `/opt/gluetun/custom.ovpn`.
+    gluetun_vpn_service_provider: "custom"
+    gluetun_vpn_type: "openvpn"
+    gluetun_openvpn_custom_config: "/gluetun/custom.ovpn"
+    ```
+
 - [:octicons-link-16: Documentation](https://github.com/qdm12/gluetun-wiki){: .header-icons }

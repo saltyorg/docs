@@ -23,9 +23,9 @@ You can read more about what Saltbox is [here](saltbox/basics/basics.md).
 
 Installation instructions are located [here](saltbox/prerequisites/prerequisites.md).
 
-### Can I migrate from Cloudbox or PlexGuide?
+### Can I migrate from Cloudbox?
 
-There are notes on migration from [Cloudbox](reference/guides/cloudbox.md) and [Plexguide](reference/guides/plexguide.md).
+There are notes on migration from [Cloudbox](reference/guides/cloudbox.md).
 
 ### How does Saltbox differ from Cloudbox?
 

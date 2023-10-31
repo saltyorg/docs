@@ -51,7 +51,7 @@ It also assumes you are using a [Google Workspace](https://workspace.google.com/
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
-If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or PlexGuide or the like, you DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It will overwrite aspects of an existing rclone setup with no undo.
+If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or the like, you DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It will overwrite aspects of an existing rclone setup with no undo.
 
 That said, let's proceed.
 

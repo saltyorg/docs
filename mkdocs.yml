@@ -432,7 +432,6 @@ nav:
           - Creating a Crypt remote: reference/guides/rclone-remote-encrypted.md
         - Migration:
           - Cloudbox: reference/guides/cloudbox.md
-          - Plexguide: reference/guides/plexguide.md
           - Cloud A to Cloud B: reference/guides/cloudtocloud.md
         - Further Reading and Links:
           - Suggested Reading: reference/guides/suggested_reading.md

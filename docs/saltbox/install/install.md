@@ -2,8 +2,6 @@
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
-If you're migrating from PlexGuide there are some rudimentary notes provided by a user [here](../../reference/guides/plexguide.md).  Expansions to those notes would be welcome.
-
 !!! warning
     The Saltbox install is expecting a fresh new install of Ubuntu.  DO NOT try to install it on your existing Cloudbox, PTS or other system-wide setup.
 
@@ -400,19 +398,6 @@ Note that generally speaking these five options are mutually exclusive.
     Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup.  If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
 
     [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
-
-=== "PlexGuide/PTS User"
-    This option is aimed at you if you are migrating your PG/PTS/MHA setup.
-    
-    You already have the required setup complete.  You should use your existing Google setup at least to start with.
-
-    The issues you will have to deal with will largely be around:
-
-    1. Encrypted drives
-    2. File system differences
-    3. Service account files [PlexGuide removed the `.json` extension from what it calls "BlitzKeys", Saltbox expects them to be there]
-
-    [Plexguide migration notes](../../reference/guides/plexguide.md)
 
 === "I have media on cloud storage"
     This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.

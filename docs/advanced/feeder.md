@@ -16,21 +16,21 @@ The following steps will be done on the Mediabox.
 
 1. Edit the `rclone/remotes` section of `settings.yml`:
 
-      ```yaml
-      rclone:
-        enabled: true
-        remotes:
-          # LEAVE OTHER REMOTES IN PLACE IF ANY
-          - remote: feeder
-            template: sftp
-            upload: false
-            upload_from: /mnt/local/Media
-            vfs_cache:
-              enabled: false
-              max_age: 504h
-              size: 50G
-        version: latest
-        ```
+    ```yaml
+    rclone:
+      enabled: true
+      remotes:
+        # LEAVE OTHER REMOTES IN PLACE IF ANY
+        - remote: feeder
+          template: sftp
+          upload: false
+          upload_from: /mnt/local/Media
+          vfs_cache:
+            enabled: false
+            max_age: 504h
+            size: 50G
+      version: latest
+      ```
 
 1. Run the following command:
 

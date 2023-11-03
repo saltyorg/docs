@@ -20,6 +20,7 @@ The following steps will be done on the Mediabox.
       rclone:
         enabled: true
         remotes:
+          # LEAVE OTHER REMOTES IN PLACE IF ANY
           - remote: feeder
             template: sftp
             upload: false

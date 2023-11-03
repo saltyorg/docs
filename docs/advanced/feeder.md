@@ -30,7 +30,7 @@ The following steps will be done on the Mediabox.
             max_age: 504h
             size: 50G
       version: latest
-      ```
+    ```
 
 1. Run the following command:
 

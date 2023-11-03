@@ -22,7 +22,7 @@ sb install sandbox-handbrake
 
 ### 3. Setup
 
-1. Edit the HandBrake section in [saltbox `settings.yml`:](../settings.md) and enter your desired password. Please note that it MUST be less than eight characters.
+1. Edit the HandBrake section in [sandbox `settings.yml`:](../settings.md) and enter your desired password. Please note that it MUST be less than eight characters.
 
     ``` { .yaml }
     handbrake:

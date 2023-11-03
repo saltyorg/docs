@@ -14,13 +14,22 @@ The following steps will be done on the Mediabox.
 
       _Note: If you don't already have one, add the `feederbox` [subdomain](../reference/subdomain.md) and point it to your Feederbox's IP address. If you are using Cloudflare, make sure CDN/Proxy is not enabled for this subdomain._
 
-1. Edit the `mounts` section of `adv_settings.yml` and set `feeder` to "yes":
+1. Edit the `rclone/remotes` section of `settings.yml`:
 
       ```yaml
-      mounts:
-        remote: rclone_vfs
-        feeder: yes
-      ```
+      rclone:
+        enabled: true
+        remotes:
+          - remote: feeder
+            template: sftp
+            upload: false
+            upload_from: /mnt/local/Media
+            vfs_cache:
+              enabled: false
+              max_age: 504h
+              size: 50G
+        version: latest
+        ```
 
 1. Run the following command:
 

@@ -7,6 +7,8 @@ When you add a container manually as outlined on this page, neither of those thi
 
 If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
 
+IMPORTANT: `APPNAME` is a placeholder.  *You need to change that* **everywhere it appears** to match the application you are installing.
+
 ## Docker Compose
 
 === "Using Traefik (Authelia)"

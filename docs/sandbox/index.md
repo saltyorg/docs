@@ -49,6 +49,7 @@
 - **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
 - **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
+- **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
 - **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`

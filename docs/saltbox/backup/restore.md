@@ -94,14 +94,19 @@ Next retrieve the configuration files from a backup by following the instruction
     !!! info
         Don't copy any other files; they will be dealt with in a couple minutes.
 
+## Base Ansible config
+To ensure that future ansible commands work correctly, copy the default config into place:
+```
+cp /srv/git/saltbox/defaults/ansible.cfg.default /srv/git/saltbox/ansible.cfg
+```
+
 ## Settings
 To insure that your configuration files are up to date run:
 ```shell
 sb install settings
 ```
 
-As this will migrate any changes that may have been made. Look over the files after this and adapt anything you want to change.
-
+This will migrate any changes that may have been made to the current settings format if needed. Look over the files after this and adapt anything you want to change.
 
 ## Preinstall
 
@@ -112,6 +117,10 @@ sb install preinstall
 ```
 
 Now log out of the `root` account and log in as the user defined in `accounts.yml`
+
+This is important and should not be ignored:
+
+**Now log out of the `root` account and log in as the user defined in `accounts.yml`**
 
 ## Backup files
 
@@ -200,7 +209,7 @@ backup:
 ## Restore
 
 ???+ info
-    From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`; this means you shoudl log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
+    From this point you'll want to **make sure** you run commands as the user specified in the `accounts.yml`; this means you should log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
 
 Start the restore process.
 

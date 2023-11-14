@@ -14,37 +14,50 @@ Apps that used to be supported by the "ArrX" system which allowed the user to de
 
 The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
-As of 01-24-2023 the roles supported are:
+**As of 11-14-2023** the roles supported are:
 
 ```yaml
+alternatrr
 autoscan
 bazarr
+calibre
 deluge
 emby
+gluetun
 jellyfin
 jellyseerr
 lidarr
+mariadb
 mcrouter
 minecraft
+mongodb
 nginx
 node_red
+ombi
 overseerr
 plex
+postgres
 qbittorrent
 qbittorrentvpn
 radarr
 readarr
+redis
+requestrr
+rflood
 sonarr
 tautulli
-mariadb
-postgres
-mongodb
-redis
 traktarr
+transmission
+watchstate
+watchtower
 whisparr
 ```
 
+IMPORTANT: if you ware reading this after the date mentioned above, this list may not be complete.
+
 There is a command at the end of this page you can use to get an updated list of roles that support this method.
+
+Again, that list shows what roles supported this system as of the date shown above; if you are reading this after that date, there is a non-zero chance that additional roles have been added.
 
 ## Overview
 

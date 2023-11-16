@@ -1,24 +1,24 @@
-# Using code-server for editing
+# Using code-server for Editing
 
-code-server is a version of VS Code that runs on your server.  It's friendlier than something like `nano`, and you can use it anywhere you can get at your domain.
+code-server is a version of VS Code that runs on your server. Compared to text editors like `nano`, code-server provides a more user-friendly interface. Furthermore, its accessibility is not limited to your local machine, but extends to any location where your domain can be reached.
 
-## install code-server
+## Install code-server
 
 ```shell
-sb install sandbox-code_server
+sb install sandbox-code-server
 ```
 
-## initial setup
+## Initial Setup
 
-By default, code-server will be available at [https://code-server.yourdomain.tld].
+By default, code-server will be available at [https://code-server.domain.tld].
 
    ![](../../images/code-server-setup/01-login.png)
 
-The password is the one you set in `accounts.yml`
+The password is the one you set in `accounts.yml`.
 
    ![](../../images/code-server-setup/02-screen.png)
 
-VSCode will present with a checklist of "getting started" items.
+code-server will present a checklist of "getting started" items.
 
 If you've never used VSCode before, take a few minutes to go through the fundamentals tutorial.
 
@@ -26,62 +26,66 @@ You can change the default theme if you wish.  I'm going to choose the dark them
 
    ![](../../images/code-server-setup/03-dark-mode-home-dir.png)
 
-## point it at the host `/opt` dir
+## Set your workspace to host `/opt` dir
 
-Probably, you want to edit config files for the apps, which are in `/opt`.
+You'll likely need to modify configuration files for your applications, which are generally located in the `/opt` directory.
 
-The host `/opt` dir is mounted into the container as `/host_opt/`.
+In the container environment, the host's `/opt` directory is mounted as `/host_opt/` by default in saltbox.
 
-Choose `File -> Open Folder...` from the hamburger menu on the upper left:
+To access this, click on the hamburger menu icon in the top left and select `File -> Open Folder...`
 
    ![](../../images/code-server-setup/04-file-open-folder.png)
 
-Navigate to `/host_opt/`, click the arrow:
+Next, navigate to the `/host_opt/` directory and click the arrow icon to expand it:
 
    ![](../../images/code-server-setup/05-host-opt.png)
 
-and you should be presented with your `/opt` directory.  Most of the things you will want to edit are here.
+You should now see the contents of your /opt directory. Most of the configuration files you'll need to modify are located here.
 
    ![](../../images/code-server-setup/06-host-opt.png)
 
-This should stick the next time you load the app.
+These settings should persist and be present the next time you launch the code-server web page.
 
-## install some extensions
+## Enhancing code-server with Extensions
 
-I suggest you install a few extensions:
+We recommend that you install some extensions to enhance your code-server setup. These extensions will provide functionalities such as syntax highlighting and indentation coloring for different file formats.
 
-Click on the Extensions icon on the left, then type the name of the extension into the search box, and click the "install" button.
+To install an extension, click on the Extensions icon on the left, type the name of the extension into the search box, and click the "install" button.
 
    ![](../../images/code-server-setup/07-extensions.png)
 
-Python:
+### Recommended Extensions
+
+#### Python:
 
    ![](../../images/code-server-setup/08-python.png)
 
-Rainbow-indent:
+#### Rainbow-indent:
 
    ![](../../images/code-server-setup/09-rainbow.png)
 
-Redhat YAML:
+#### Redhat YAML:
 
    ![](../../images/code-server-setup/10-yaml.png)
 
-Better TOML:
+#### Even Better TOML:
 
    ![](../../images/code-server-setup/11-toml.png)
 
-Those are just suggestions; install others if you prefer.
+These are just suggestions; feel free to install other extensions that suit your needs.
 
-Now, with these extensions installed, you should have syntax highlighting and indentation coloring for:
+With these extensions installed, you should have syntax highlighting and indentation coloring for:
 
-TOML
+### Extension Examples
+
+#### TOML
 
    ![](../../images/code-server-setup/12-toml-sample.png)
 
-YAML
+#### YAML
 
    ![](../../images/code-server-setup/13-yaml-sample.png)
 
-JSON
+#### JSON
 
    ![](../../images/code-server-setup/14-json-sample.png)

@@ -62,16 +62,19 @@ Let’s go!
    
     ```yaml
     rclone:
-      enabled: true
+      enabled: yes
       remotes:
         - remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED
-          template: MOUNT_TEMPLATE
-          upload: false # true to configure cloudplow upload for this remote
-          upload_from: /mnt/local/Media
-          vfs_cache:
-            enabled: false
-            max_age: 504h
-            size: 50G
+          settings:
+            mount: yes
+            template: MOUNT_TEMPLATE
+            union: yes
+            upload: no # true to configure cloudplow upload for this remote
+            upload_from: /mnt/local/Media
+            vfs_cache:
+              enabled: no
+              max_age: 504h
+              size: 50G
       version: latest
     ```
 

@@ -18,17 +18,20 @@ The following steps will be done on the Mediabox.
 
     ```yaml
     rclone:
-      enabled: true
+      enabled: yes
       remotes:
         # LEAVE OTHER REMOTES IN PLACE IF ANY
         - remote: feeder
-          template: sftp
-          upload: false
-          upload_from: /mnt/local/Media
-          vfs_cache:
-            enabled: false
-            max_age: 504h
-            size: 50G
+          settings:
+            mount: yes
+            template: sftp
+            union: yes
+            upload: no
+            upload_from: /mnt/local/Media
+            vfs_cache:
+              enabled: no
+              max_age: 504h
+              size: 50G
       version: latest
     ```
 

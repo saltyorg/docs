@@ -19,7 +19,7 @@ Then disable rclone in `settings.yml`:
 
 ```ini
 rclone:
-  enabled: false
+  enabled: no
   remotes:
 ...
 ```
@@ -39,18 +39,22 @@ First, create an rclone remote pointing to your NAS using whatever connection sc
 Then fill out the remote details in `settings.yml`
 ```ini
 rclone:
-  enabled: true
+  enabled: yes
   remotes:
     - remote: THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED
-      template: sftp # whatever template or service file is appropriate
-      upload: true
-      upload_from: /mnt/local/Media
-      vfs_cache:
-        enabled: false
-        max_age: 504h
-        size: 50G
+        settings:
+          mount: yes
+          template: sftp # whatever template or service file is appropriate
+          union: yes
+          upload: yes
+          upload_from: /mnt/local/Media
+          vfs_cache:
+            enabled: no
+            max_age: 504h
+            size: 50G
   version: latest
 ```
-It should go without saying that you need to change `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to whatevcer you called the rclone remote you created pointing at the NAS.
+
+It should go without saying that you need to change `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to whatever you called the rclone remote you created pointing at the NAS.
 
 Then run the regular saltbox install.  Your NAS [or whatever] will be mounted at `/mnt/remote/THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.

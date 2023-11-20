@@ -158,13 +158,16 @@ To edit any of the following configuration files use the command written in the 
       enabled: true # (4)!
       remotes: # (5)!
         - remote: google # (6)!
-          template: google # (7)!
-          upload: true # (8)!
-          upload_from: /mnt/local/Media # (9)!
-          vfs_cache:
-            enabled: false # (10)!
-            max_age: 504h # (11)!
-            size: 50G # (12)!
+          settings:
+            mount: yes # (7)!
+            template: google # (8)!
+            union: yes # (9)!
+            upload: true # (10)!
+            upload_from: /mnt/local/Media # (11)!
+            vfs_cache:
+                enabled: false # (12)!
+                max_age: 504h # (13)!
+                size: 50G # (14)!
         - remote: dropbox
           template: dropbox
           upload: false
@@ -181,9 +184,9 @@ To edit any of the following configuration files use the command written in the 
             enabled: false
             max_age: 504h
             size: 50G
-      version: latest # (13)!
-    shell: bash # (14)!
-    transcodes: /mnt/local/transcodes # (15)!
+      version: latest # (15)!
+    shell: bash # (16)!
+    transcodes: /mnt/local/transcodes # (17)!
     ```
 
     1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
@@ -210,7 +213,9 @@ To edit any of the following configuration files use the command written in the 
         remote: "google:Media"
         ```
 
-    7. The name of the template you want to use for the mount.
+    7. Toggles whether you wqant this remote mounted into the file system.
+
+    8. The name of the template you want to use for the mount.
 
         Currently Saltbox supports 4 options:
 
@@ -218,27 +223,29 @@ To edit any of the following configuration files use the command written in the 
         
         We recommend having the template file in a folder in /opt so that it moves with your install after a restore.
 
-    8. Toggles whether you intend to upload to this remote using Cloudplow.
+    9. Toggles whether you want this remote mount included in the union at `/mnt/unionfs`.  This requires that `mount` be enabled.
 
-    9. Defines the local path Cloudplow will use to upload from if the remote was upload enabled.
+    10. Toggles whether you intend to upload to this remote using Cloudplow.
 
-    10. Toggle for using Rclone VFS file cache.
+    11. Defines the local path Cloudplow will use to upload from if the remote was upload enabled.
 
-    11. Defines the max age of files in the cache.
+    12. Toggle for using Rclone VFS file cache.
 
-    12. Defines the max size of the cache.
+    13. Defines the max age of files in the cache.
+
+    14. Defines the max size of the cache.
 
         The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
 
-    13. Rclone version that Saltbox will install.
+    15. Rclone version that Saltbox will install.
 
         Valid options are **latest**, **beta** or a specific version "**1.55**".
 
         If specifying a version make sure to quote it as Ansible will convert the value into a float otherwise.
 
-    14. Shell used by the system. Valid options are bash or zsh.
+    16. Shell used by the system. Valid options are bash or zsh.
 
-    15. Folder used for temporary transcode files.
+    17. Folder used for temporary transcode files.
 
 === "adv_settings.yml"
 

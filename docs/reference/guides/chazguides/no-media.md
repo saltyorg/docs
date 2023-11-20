@@ -107,14 +107,18 @@ Verify the contents of `settings.yml`: saltbox uses this to create the mount ser
 ```yaml
    remotes:
     - remote: google   # this is the name of the rclone remote
-      template: google # this is the saltbox template
-      upload: true
-      upload_from: /mnt/local/Media
-      vfs_cache:
-        enabled: false
-        max_age: 504h
-        size: 50G
+        settings:
+          mount: yes
+          template: google # this is the saltbox template
+          union: yes
+          upload: yes
+          upload_from: /mnt/local/Media
+          vfs_cache:
+            enabled: no
+            max_age: 504h
+            size: 50G
 ```
+
 If you have to change those settings, rerun the `mounts` tag and go through this section again.
 
 Do not continue until those two file listings match.  They won’t match mine; they should both show the same files from YOUR gdrive.

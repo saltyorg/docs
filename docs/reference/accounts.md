@@ -175,7 +175,7 @@ Each tab shows a "section" in the file.
 === "rclone"
     ```yaml
     rclone:
-      enabled: true
+      enabled: yes
       remotes:
         - remote: google
           settings:
@@ -197,21 +197,21 @@ Each tab shows a "section" in the file.
 
     ```yaml
     rclone:
-      enabled: true
+      enabled: yes
       remotes:
         - remote: google
           settings:
-            mount: true
+            mount: yes
             template: google
           ...
         - remote: dropbox
           settings:
-            mount: false
+            mount: no
             template: dropbox
           ...
         - remote: minio
           settings:
-            mount: true
+            mount: yes
             template: /opt/mount-templates/custom/myminio.j2
           ...
     ```

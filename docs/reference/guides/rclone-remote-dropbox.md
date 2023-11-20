@@ -202,16 +202,19 @@ Edit the other settings [`upload` and so forth] to suit your requirements.
 
 ```yaml
 rclone:
-  enabled: true
+  enabled: yes
   remotes:
     - remote: NAME_OF_THE_REMOTE_YOU_JUST_CREATED
-      template: dropbox
-      upload: false # toggle as needed
-      upload_from: /mnt/local/Media
-      vfs_cache:
-        enabled: false
-        max_age: 504h
-        size: 50G
+      settings:
+        mount: yes
+        template: dropbox
+        union: yes
+        upload: no # toggle as needed
+        upload_from: /mnt/local/Media
+        vfs_cache:
+          enabled: no
+          max_age: 504h
+          size: 50G
   version: latest
 ```
 

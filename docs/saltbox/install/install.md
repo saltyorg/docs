@@ -155,35 +155,41 @@ To edit any of the following configuration files use the command written in the 
         subdomain: login # (2)!
     downloads: /mnt/unionfs/downloads # (3)!
     rclone:
-      enabled: true # (4)!
+      enabled: yes # (4)!
       remotes: # (5)!
         - remote: google # (6)!
           settings:
             mount: yes # (7)!
             template: google # (8)!
             union: yes # (9)!
-            upload: true # (10)!
+            upload: yes # (10)!
             upload_from: /mnt/local/Media # (11)!
             vfs_cache:
-                enabled: false # (12)!
+                enabled: no # (12)!
                 max_age: 504h # (13)!
                 size: 50G # (14)!
         - remote: dropbox
-          template: dropbox
-          upload: false
-          upload_from: /mnt/local/Media
-          vfs_cache:
-            enabled: false
-            max_age: 504h
-            size: 50G
+          settings:
+            mount: yes
+            template: dropbox
+            union: yes
+            upload: no
+            upload_from: /mnt/local/Media
+            vfs_cache:
+              enabled: no
+              max_age: 504h
+              size: 50G
         - remote: feeder
-          template: sftp
-          upload: false
-          upload_from: /mnt/local/Media
-          vfs_cache:
-            enabled: false
-            max_age: 504h
-            size: 50G
+          settings:
+            mount: yes
+            template: sftp
+            union: yes
+            upload: no
+            upload_from: /mnt/local/Media
+            vfs_cache:
+              enabled: no
+              max_age: 504h
+              size: 50G
       version: latest # (15)!
     shell: bash # (16)!
     transcodes: /mnt/local/transcodes # (17)!

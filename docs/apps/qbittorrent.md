@@ -26,12 +26,9 @@ sb install qbittorrent
 
 - Access qbittorrent at `https://qbittorrent._yourdomain.com_`
 
-``` { .yaml }
-      username: `admin`
-      password: `adminadmin`.
-```
+- Log in using the username/password you specified in `accounts.yml`
 
-- **First** go to `Options` -> `Web UI` and set a new username and a strong password.
+- **OPTIONALLY** go to `Options` -> `Web UI` and set a new username and a strong password.
 
     ![Authentication Section Screenshot](../images/community/qbit_auth.png)
 

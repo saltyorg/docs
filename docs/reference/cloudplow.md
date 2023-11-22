@@ -330,7 +330,8 @@ This is the default config with Pushover notifications configured.
 {
     "core": {
         "dry_run": false,
- "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
+        "rclone_binary_path": "/usr/bin/rclone",
+        "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
     "hidden": {},
     "notifications": {

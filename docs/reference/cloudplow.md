@@ -11,7 +11,8 @@ This is the default config; it contains a single remote/uploader pair.  This set
 {
     "core": {
         "dry_run": false,
- "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
+        "rclone_binary_path": "/usr/bin/rclone",
+        "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
     "hidden": {},
     "notifications": {

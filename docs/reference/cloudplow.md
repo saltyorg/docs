@@ -209,10 +209,10 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
     },
     "hidden": {},
     "notifications": {
-    "apprise": {
-      "service": "apprise",
-      "url": "discord://Webhook_ID/Webhook_Token",
-      "title": "Cloudplow-Upload"
+        "apprise": {
+            "service": "apprise",
+            "url": "discord://Webhook_ID/Webhook_Token",
+            "title": "Cloudplow-Upload"
     }
   },
     "nzbget": {

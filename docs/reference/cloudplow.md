@@ -209,13 +209,12 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
     },
     "hidden": {},
     "notifications": {
-        "Pushover": {
-            "app_token": "xxxxx",
-            "priority": 0,
-            "service": "pushover",
-            "user_token": "xxxxx"
-        }
-    },
+    "apprise": {
+      "service": "apprise",
+      "url": "discord://Webhook_ID/Webhook_Token",
+      "title": "Cloudplow-Upload"
+    }
+  },
     "nzbget": {
         "enabled": false,
         "url": "https://user:password@nzbget.domain.com"

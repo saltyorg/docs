@@ -213,8 +213,8 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
             "service": "apprise",
             "url": "discord://Webhook_ID/Webhook_Token",
             "title": "Cloudplow-Upload"
-    }
-  },
+        }
+    },
     "nzbget": {
         "enabled": false,
         "url": "https://user:password@nzbget.domain.com"

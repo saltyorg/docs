@@ -38,6 +38,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     download_indexers_enabled: ["jackett", "nzbhydra2"]
     ```
 
+As with any Ansible tags provided by saltbox, it is safe to run these instagg tag[s] at will.  Existing configurations are not overwritten [except for some "reset" tags and the "mounts" tag].
 
 ## Feederbox/Mediabox Setup Considerations
 

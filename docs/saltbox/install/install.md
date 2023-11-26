@@ -19,6 +19,8 @@ Broadly, the base install consists of six steps:
 !!! warning
     There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
 
+However, it is safe to run any saltbox tag[s] [including the install tags] at will.  Existing configurations are not overwritten [except for some "reset" tags and the "mounts" tag].
+
 ## Step 1: Dependencies
 
 !!! info

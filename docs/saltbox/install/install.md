@@ -220,6 +220,10 @@ To edit any of the following configuration files use the command written in the 
         ```yaml
         remote: "google:Media"
         ```
+        or
+        ```yaml
+        remote: "my-sftp:/path/to/my/files"
+        ```
 
     7. Toggles whether you wqant this remote mounted into the file system.
 

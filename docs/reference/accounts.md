@@ -216,7 +216,7 @@ Each tab shows a "section" in the file.
           ...
     ```
 
-    `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` quotes are important.
+    `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` or `remote: "my-sftp:/path/to/my/files"`  Quotes are important.
 
     `remotes/settings/mount`: Toggles whether you want this remote mounted in the file system.
 

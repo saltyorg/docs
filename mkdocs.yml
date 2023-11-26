@@ -305,7 +305,7 @@ nav:
           - Networking:
             - Kcptun-client: sandbox/apps/kcptun-client.md
             - Kcptun-server: sandbox/apps/kcptun-server.md
-            - Unifi: sandbox/apps/unifi.md
+            - Unifi Network Application: sandbox/apps/unifi-network-application.md
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
           - Puddletag: sandbox/apps/puddletag.md

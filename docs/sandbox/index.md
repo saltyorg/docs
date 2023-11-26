@@ -132,7 +132,7 @@
 - **[transmissionx](../sandbox/apps/transmissionx.md)**  - tag - `sandbox-transmissionx`
 - **[trilium](../sandbox/apps/trilium.md)**  - tag - `sandbox-trilium`
 - **[tubearchivist](../sandbox/apps/tubearchivist.md)**  - tag - `sandbox-tubearchivist`
-- **[unifi](../sandbox/apps/unifi.md)**  - tag - `sandbox-unifi`
+- **[unifi-network-application](../sandbox/apps/unifi-network-application.md)**  - tag - `sandbox-unifi-network-application`
 - **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
 - **[uptime-kuma](../sandbox/apps/uptime-kuma.md)**  - tag - `sandbox-uptime-kuma`
 - **[varken](../sandbox/apps/varken.md)**  - tag - `sandbox-varken`

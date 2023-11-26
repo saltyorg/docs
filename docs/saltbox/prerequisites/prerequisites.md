@@ -53,9 +53,9 @@ If you use Cloudflare for DNS [which is free and doesn't require that you regist
 
 ## Cloud Storage
 
-The default assumption in Saltbox is that you are storing your media on cloud storage.  Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) has historically been the preferred choice among users, but with recent changes to the Google offering [Dropbox](https://www.dropbox.com/) has now become a primary choice.  Some of the components are designed expressly for Google Drive, like the A-Train Google Drive monitoring in autoscan and the service-account rotation in cloudplow.
+The default assumption in Saltbox is that you are storing your media on cloud storage.  Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) has historically been the preferred choice among users, but with recent changes to the Google offering [Dropbox](https://www.dropbox.com/) was a primary choice for a while, but they have followed Google's lead in tightening restrictions.  Both work well as long as you stay within their restrictions, but the days of storing thousands of media files on cloud storage for pennies are past.
 
-This documentation has not yet been fully updated to cover Dropbox specifics or idiosyncrasies.
+Some of the components are designed expressly for Google Drive, like the A-Train Google Drive monitoring in autoscan and the service-account rotation in cloudplow.  Recent Google changes have also rendered service accounts of little value with regard to increasing data transfer volume.
 
 THAT SAID, cloud storage is not a requirement; you can run saltbox without it, storing your media locally in a variety of ways.
 

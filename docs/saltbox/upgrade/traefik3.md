@@ -63,7 +63,9 @@ These changes include:
 11. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl
 
-12. Docker volumes such as /data, /tv and /movies are no longer mounted into relevant containers by default.
+12. Docker volumes such as `/data`, `/tv` and `/movies` are no longer mounted into relevant containers by default.
     1. Restore the old behavior by setting `docker_legacy_volume: true` using the [inventory](../inventory/index.md), then running the relevant tags [**typically** `plex, radarr, sonarr` but your setup may differ].
+
+13. The `backup` role now explicitly requires a tag when run even if referencing the `backup.yml` playbook file. You may need to re-run `sb install set-backup` to re-provision your backup cron or edit your cron to include the `--tag backup` argument if using the backup role (or `backup2` if using that role).
 
 As with any major update double check your [inventory](../inventory/index.md) edits are in line with any changes made to the roles. Ask on our discord server if in doubt.

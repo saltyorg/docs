@@ -10,6 +10,8 @@ On this page, we break down the options available in the following files:
 - `/srv/git/saltbox/settings.yml`
 - `/srv/git/saltbox/adv_settings.yml`
 
+IMPORTANT: If you make changes to values in these files, you will have to run the relevant role[s] to make them take effect.  For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect.  The only thing that looks at these settings files is the Ansible script.
+
 ## Options in accounts.yml
 
 **Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`

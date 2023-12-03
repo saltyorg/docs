@@ -238,6 +238,38 @@ Make changes in the following sections:
 
             5. Click "Save" to add NZBGet.
 
+        === "SABNzbd"
+
+            1. Click Add (`+`)
+
+            2. Add a new "SABNzbd" download client.
+
+            3. Add the following:
+
+                Name: SABNzbd
+
+                Enable: `Yes`
+
+                Host: `sabnzbd`
+
+                Port: `8080`
+
+                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+
+                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+
+                Category: `radarr`
+
+                Use SSL: `No`
+
+                Add Paused: `No`
+
+            4. Your settings will look like this:
+
+                ![Sonarr Sabnzbd Downloader](../images/sonarr/sonarr-sabnzbd.png)
+
+            5. Click "Save" to add SABNzbd.
+
         === "ruTorrent"
 
             1. Click Add (`+`)

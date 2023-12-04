@@ -254,9 +254,9 @@ Make changes in the following sections:
 
                 Port: `8080`
 
-                API Key: Make note of the API Key in the "General" section of the settings
+                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
 
-                Note: When creating the connection in the arrs, use API Key rather than user/pass.
+                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
 
                 Category: `sonarr`
 

@@ -254,17 +254,27 @@ Make changes in the following sections:
 
                 Port: `8080`
 
-                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+                For authentication, you can use either an API key or a username/password.
 
-                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+                === "API Key"
 
-                Category: `radarr`
+                    API Key:  [Your SABNzbd API Key](../apps/sabnzbd.md)
+
+                === "Username/password"
+
+                    Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+
+                    Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+
+                Category: `sonarr`
 
                 Use SSL: `No`
 
                 Add Paused: `No`
 
             4. Your settings will look like this:
+
+                Either API Key **OR** Username/Password shoudl be filled in, **not both**
 
                 ![Sonarr Sabnzbd Downloader](../images/sonarr/sonarr-sabnzbd.png)
 

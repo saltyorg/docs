@@ -252,9 +252,17 @@ Make changes in the following sections:
 
                 Port: `8080`
 
-                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+                For authentication, you can use either an API key or a username/password.
 
-                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+                === "API Key"
+
+                    API Key:  [Your SABNzbd API Key](../apps/sabnzbd.md)
+
+                === "Username/password"
+
+                    Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+
+                    Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
 
                 Category: `radarr`
 
@@ -263,6 +271,8 @@ Make changes in the following sections:
                 Add Paused: `No`
 
             4. Your settings will look like this:
+
+                Either API Key **OR** Username/Password should be filled in, **not both**
 
                 ![Radarr Sabnzbd Downloader](../images/radarr/radarr-sabnzbd.png)
 

@@ -252,9 +252,9 @@ Make changes in the following sections:
 
                 Port: `8080`
 
-                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+                API Key: Make note of the API Key in the "General" section of the settings
 
-                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+                Note: When creating the connection in the arrs, use API Key rather than user/pass.
 
                 Category: `radarr`
 
@@ -270,11 +270,11 @@ Make changes in the following sections:
 
         === "ruTorrent"
 
-            1. Click Add (`+`)
+            6. Click Add (`+`)
 
-            2. Add a new "rTorrent" download client.
+            7. Add a new "rTorrent" download client.
 
-            3. Add the following:
+            8. Add the following:
 
                 Name: ruTorrent
 
@@ -296,19 +296,19 @@ Make changes in the following sections:
 
                 Directory: _Leave Blank_
 
-            4.  Your settings will now look like this:
+            9.  Your settings will now look like this:
 
                 ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
-            5. Click "Save" to add ruTorrent.
+            10. Click "Save" to add ruTorrent.
 
         === "qBittorrent"
 
-            1. Click Add ('+')
+            11. Click Add ('+')
 
-            2. Add a new "qBittorrent" download client.
+            12. Add a new "qBittorrent" download client.
 
-            3. Add the following:
+            13. Add the following:
 
                 Name: qBittorrent
 
@@ -324,11 +324,11 @@ Make changes in the following sections:
 
                 Category: 'radarr'
 
-            4.  Your settings will now look like this:
+            14. Your settings will now look like this:
 
                 ![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
 
-            5.  Click "Save" to add qBittorrent
+            15. Click "Save" to add qBittorrent
 
     === "Connect"
 
@@ -338,11 +338,11 @@ Make changes in the following sections:
 
             Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
 
-            1. Click "Settings" -> "Connect".
+            16. Click "Settings" -> "Connect".
 
-            2. Add a new "Custom Script".
+            17. Add a new "Custom Script".
 
-            3. Add the following:
+            18. Add the following:
 
                 Name: Torrent Cleanup
 
@@ -356,11 +356,11 @@ Make changes in the following sections:
 
                 Path: `/scripts/torrents/TorrentCleanup.py`
 
-            4. The settings will look like this:
+            19. The settings will look like this:
 
                 ![Radarr Torrent Cleanup Script CloudBox](../images/radarr/radarr-torrentcleanup.png)
 
-            5. Click "Save" to add the Torrent Cleanup script.
+            20. Click "Save" to add the Torrent Cleanup script.
 
 
         === "Autoscan"

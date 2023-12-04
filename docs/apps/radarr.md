@@ -252,9 +252,9 @@ Make changes in the following sections:
 
                 Port: `8080`
 
-                API Key: Make note of the API Key in the "General" section of the settings
+                Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
 
-                Note: When creating the connection in the arrs, use API Key rather than user/pass.
+                Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
 
                 Category: `radarr`
 
@@ -324,11 +324,11 @@ Make changes in the following sections:
 
                 Category: 'radarr'
 
-            4. Your settings will now look like this:
+            4.  Your settings will now look like this:
 
                 ![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
 
-            5. Click "Save" to add qBittorrent
+            5.  Click "Save" to add qBittorrent
 
     === "Connect"
 

@@ -270,11 +270,11 @@ Make changes in the following sections:
 
         === "ruTorrent"
 
-            6. Click Add (`+`)
+            1. Click Add (`+`)
 
-            7. Add a new "rTorrent" download client.
+            2. Add a new "rTorrent" download client.
 
-            8. Add the following:
+            3. Add the following:
 
                 Name: ruTorrent
 
@@ -296,19 +296,19 @@ Make changes in the following sections:
 
                 Directory: _Leave Blank_
 
-            9.  Your settings will now look like this:
+            4.  Your settings will now look like this:
 
                 ![Radarr ruTorrent Downloader](../images/radarr/radarr-rtorrent.png)
 
-            10. Click "Save" to add ruTorrent.
+            5. Click "Save" to add ruTorrent.
 
         === "qBittorrent"
 
-            11. Click Add ('+')
+            1. Click Add ('+')
 
-            12. Add a new "qBittorrent" download client.
+            2. Add a new "qBittorrent" download client.
 
-            13. Add the following:
+            3. Add the following:
 
                 Name: qBittorrent
 
@@ -324,11 +324,11 @@ Make changes in the following sections:
 
                 Category: 'radarr'
 
-            14. Your settings will now look like this:
+            4. Your settings will now look like this:
 
                 ![Radarr qBittorent Downloader](../images/radarr/radarr-qbittorrent.png)
 
-            15. Click "Save" to add qBittorrent
+            5. Click "Save" to add qBittorrent
 
     === "Connect"
 
@@ -338,11 +338,11 @@ Make changes in the following sections:
 
             Torrent Cleanup Script is a custom script that will cleanup torrents from ruTorrent that were auto-extracted, but still being seeded. So if the script detects that `.rar` files are in the folder that Radarr just imported from, it will delete the imported video file(s), leaving just the `.rar` files for seeding.
 
-            16. Click "Settings" -> "Connect".
+            1. Click "Settings" -> "Connect".
 
-            17. Add a new "Custom Script".
+            2. Add a new "Custom Script".
 
-            18. Add the following:
+            3. Add the following:
 
                 Name: Torrent Cleanup
 
@@ -356,11 +356,11 @@ Make changes in the following sections:
 
                 Path: `/scripts/torrents/TorrentCleanup.py`
 
-            19. The settings will look like this:
+            4. The settings will look like this:
 
                 ![Radarr Torrent Cleanup Script CloudBox](../images/radarr/radarr-torrentcleanup.png)
 
-            20. Click "Save" to add the Torrent Cleanup script.
+            5. Click "Save" to add the Torrent Cleanup script.
 
 
         === "Autoscan"

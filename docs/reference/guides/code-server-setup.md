@@ -5,7 +5,7 @@ code-server is a version of VS Code that runs on your server.  It's friendlier t
 ## install code-server
 
 ```shell
-sb install sandbox-code_server
+sb install sandbox-code-server
 ```
 
 ## initial setup

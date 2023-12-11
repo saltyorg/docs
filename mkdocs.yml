@@ -140,6 +140,7 @@ nav:
         - Backup: saltbox/backup/backup.md
         - Restore: saltbox/backup/restore.md
         - Migrate: saltbox/backup/migrate.md
+      - Uninstall: saltbox/install/uninstall.md
 
   - Sandbox:
       - Basics: sandbox/basics.md

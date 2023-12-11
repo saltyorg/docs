@@ -3,15 +3,17 @@
 First, a quick refresher on how the system works:
 
 1. Your downloader puts files in `/mnt/local/downloads`.
-2. Sonarr/Radarr move [usenet] or copy [default torrent] these files to `/mnt/local/Media`.
+    
+2. Sonarr/Radarr move (usenet) or copy (torrents) these files to `/mnt/local/Media`. [They’re actually moving files to `/mnt/unionfs/Media`, but the mergerfs config routes them to `/mnt/local/Media`]
    
-   [They’re actually moving files to `/mnt/unionfs/Media`, but the mergerfs config routes them to `/mnt/local/Media`]
-4. Once `/mnt/local/Media` hits 200GB, cloudplow uploads the contents to your cloud drive.
-5. Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt/unionfs/Media`.
+3. Once `/mnt/local/Media` hits 200GB, cloudplow uploads the contents to your cloud drive.
+  
+4. Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt/unionfs/Media`.
 
 Chances are, if your disk is full, the cause is one of two things:
 
 1. Sonarr/Radarr are not importing downloaded media
+
 1. Cloudplow isn't uploading things to the cloud.
 
 If you are using rclone’s `vfs-cache`, then there’s a third likely cause:

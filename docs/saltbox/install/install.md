@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - remove
+  - install
+  - installer
+---
+
 # Install
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)

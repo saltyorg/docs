@@ -215,7 +215,7 @@ sonarr_traefik_sso_middleware: ""
 tautulli_traefik_sso_middleware: ""
 radarr_traefik_sso_middleware: ""
 nzbget_traefik_sso_middleware: ""
-prowlarr_traefik_sso_middleware: ""`
+prowlarr_traefik_sso_middleware: ""
 ```
 
 After making this change in the Inventory file, simply run the appropriate role command to disable Authelia on that specific app. Remember, you can run multiple tags at once.

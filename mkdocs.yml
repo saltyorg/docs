@@ -293,7 +293,6 @@ nav:
             - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
-          - Grafana: sandbox/apps/grafana.md
           - Guacamole: sandbox/apps/guacamole.md
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md

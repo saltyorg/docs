@@ -505,6 +505,8 @@ If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [
 !!! warning
     You must run at least `core` prior to any other Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags.
 
+You can get a list of available install tags with `sb list`.
+
 === "Saltbox"
 
     `saltbox` is an all-in-one media server for downloading and playback.  It installs `core` and a set of application as described [here](../basics/install_types.md)

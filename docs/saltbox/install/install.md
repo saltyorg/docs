@@ -25,6 +25,8 @@ Broadly, the base install consists of six steps:
 5. Running the [install script](#step-5-saltbox)
 6. Configuring installed [applications](#step-6-app-setup)
 
+ALL STEPS ARE REQUIRED
+
 !!! warning
     There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
 
@@ -497,13 +499,13 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
 
 ## Step 5: Saltbox
 
+!!! info
+    You must run at least `core` prior to *any other* Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags/apps.
+
 !!! warning
     Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
-
-!!! warning
-    You must run at least `core` prior to any other Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags.
 
 You can get a list of available install tags with `sb list`.
 

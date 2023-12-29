@@ -1,3 +1,5 @@
+NOTE: THIS ARTICLE STARTED AS A CLOUDBOX GUIDE AND SOME OUTPUT STILL REFLECTS THAT.  CONCEPTS ARE THE SAME, HOWEVER.
+
 # Did my Saltbox install succeed?
 
 If you started with the first install [step](../../../saltbox/install/install.md)
@@ -24,7 +26,6 @@ A lot of logging information will scroll by.
 
 Eventually, it will stop, and if successful, will display something like this:
 
-TODO: REPLACE WITH SALTBOX VERSION
 
 ```text
 PLAY RECAP ************************************************************************************
@@ -53,29 +54,26 @@ sanity_check : Get all available TAGS ------------------------------------------
 sonarr : Create and start container -----------------------------------------------...- 4.96s
 lidarr : Create and start container -----------------------------------------------...- 4.88s
 chaz@oberon:~/saltbox$
-
+```
 Note this part: it’s even color-coded:
+```
 PLAY RECAP ************************************************************************************
 localhost               : ok=713  changed=180  unreachable=0 failed=0
-
-No red there.
-
-Emphasizing what you want to see:
-ok=713   changed=180   unreachable=0   failed=0
-
-Zero failures.
+```
+There should be no red there.
 
 If you are not left at a prompt like this after running the saltbox install, chances are an error occurred during the install, and typically that error is shown at the end here.
 
 If you come to the discord asking for help, this log will be the first thing we ask you for.
 
 Once more for emphasis:
-If you come to the discord asking for help, this log will be the first thing we ask you for.
-What does an error look like?
+**If you come to the discord asking for help, this log will be the first thing we ask you for.**
 
+What does an error look like?
 
 For example, if I enter a bad domain in my accounts.yml:
 
+```yaml
 ---
 user:
   name: REDACTED
@@ -83,9 +81,11 @@ user:
   domain: bing.bang.boing
   email: REDACTED
 ...
+```
 
 It runs for a bit and stops here:
 
+```
 TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'bing.bang.boing'] *********************************************************************************
 Tuesday 14 April 2020  11:53:29 -0500 (0:00:00.142)    0:00:52.680 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "No zone found with name bing.bang.boing"}
@@ -102,18 +102,22 @@ TRIMMED FOR SPACE
 ...
 settings : Copy | Check if 'ansible.cfg' exists ---------------------------------------------------------------------------------...- 0.35s
 chaz@oberon:~/saltbox$
+```
 
 Lots of red there, showing exactly what went wrong.
 
 Or, If I set the cloudflare email in the config to a bad value:
 
+```yaml
 ...
 cloudflare:
   email: bing@bang.boing
   api: REDACTED
 ...
+```
+We get:
 
-
+```
 TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
 Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)    0:00:52.892 *********
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=DOMAIN.TLD; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
@@ -131,6 +135,7 @@ TRIMMED FOR SPACE
 
 settings : Start | Check to see if yyq is installed ---------------------------------------------------------------------------------...- 0.35s
 chaz@oberon:~/saltbox$
+```
 
 Again, lots of red there, showing exactly what went wrong.
 
@@ -143,9 +148,12 @@ Whatever it is will be displayed in that install log, and no one can say anythin
 If you come to the discord asking for help, this log will be the first thing we ask you for.
 
 Once more for emphasis:
-If you come to the discord asking for help, this log will be the first thing we ask you for.
+**If you come to the discord asking for help, this log will be the first thing we ask you for.**
+
 What now?
+
 Is DNS configured?
+
 If you entered your cloudflare credentials into the settings, the install should have created subdomains at cloudflare for you.
 
 You can verify this with the ping utility:
@@ -154,25 +162,32 @@ You can verify this with the ping utility:
 
 You should see something like:
 
+```
 chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
 PING ombi.YOURDOMAIN.TLD (111.222.333.444): 56 data bytes
 64 bytes from 111.222.333.444: icmp_seq=0 ttl=48 time=114.425 ms
+```
 
 That IP address should be the IP address of the server.  If this is a home server, it should be your external IP.
 
 If instead you should see something like:
 
+```
 chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
 ping: cannot resolve ombi.YOURDOMAIN.TLD: Unknown host
+```
 
 ...then you need to fix your DNS setup.  Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
+
 Are the containers running?
+
 The install should leave you with all the docker containers  set up and running.
 
-Verify this with docker ps
+Verify this with `docker ps`
 
 (The display here has been edited for readability and space)
 
+```
 chaz@oberon:~/saltbox$ docker ps
 CONTAINER ID   IMAGE                                   CREATED          STATUS
 99c552628534   hotio/lidarr                            27 minutes ago   Up 27 minutes
@@ -193,6 +208,7 @@ bed4af6dc439   cloudb0x/plex:latest                    31 minutes ago   Up 30 mi
 That’s the list of containers installed by the default setup at the time of writing.
 
 There should be no way for the install to complete without errors, but leave no containers running.
+
 Is the proxy running?
 
 You can verify the proxy with curl:

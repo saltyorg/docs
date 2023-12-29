@@ -409,12 +409,12 @@ nav:
               - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
               - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
               - I can't see my media!: reference/guides/chazguides/no-media.md
-              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
               - Why is my disk full?: reference/guides/chazguides/disk-full.md
               - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
               - Obsolete and deprecated:
                 - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
                 - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
+                - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
         - Linux:
           - Aliases: reference/guides/aliases.md
           - code-server for easier file editing: reference/guides/code-server-setup.md

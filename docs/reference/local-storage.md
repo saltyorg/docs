@@ -34,7 +34,7 @@ As you will recall from the earlier "How does Saltbox Work" lesson, this means e
 
 In this case, it's simplest to use the same rclone + cloudplow model that the standard cloud storage setup uses.
 
-First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc, provided rclone supports it.  Call it whatever you like.  
+First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc, provided rclone supports it.  Call it whatever you like.  This article will be referring to it as `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`. 
 
 Then fill out the remote details in `settings.yml`
 ```ini

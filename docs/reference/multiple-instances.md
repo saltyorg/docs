@@ -102,9 +102,6 @@ You can edit the following set of variables on a per instance basis in `localhos
 !!! note
     Replacing "instance" with the actual **instance name**, of course, i.e. `sonarrbing_web_subdomain`, etc.
 
-!!! note
-    For instances that contain a dash (`-`) in the name, the variables will replace the instance name's dash with an underscore (`_`). i.e. instead of `sonarr-bong_web_subdomain` the variable would be `sonarr_bong_web_subdomain`.
-
 ```text
 instance_web_subdomain
 instance_web_domain

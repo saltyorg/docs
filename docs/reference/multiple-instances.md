@@ -14,7 +14,7 @@ Apps that used to be supported by the "ArrX" system which allowed the user to de
 
 The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
-**As of 11-14-2023** the roles supported are:
+**As of 01-23-2024** the roles supported are:
 
 ```yaml
 alternatrr
@@ -26,6 +26,7 @@ emby
 gluetun
 jellyfin
 jellyseerr
+lgsm
 lidarr
 mariadb
 mcrouter

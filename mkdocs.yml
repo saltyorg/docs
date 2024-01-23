@@ -216,6 +216,7 @@ nav:
           - Homarr: sandbox/apps/homarr.md
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
+          - LinuxGSM: sandbox/apps/lgsm.md
           - Minecraft: sandbox/apps/minecraft.md
           - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
         - Media Management:

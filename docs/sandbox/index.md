@@ -61,6 +61,7 @@
 - **[kitana](../sandbox/apps/kitana.md)**  - tag - `sandbox-kitana`
 - **[komga](../sandbox/apps/komga.md)**  - tag - `sandbox-komga`
 - **[lazylibrarian](../sandbox/apps/lazylibrarian.md)**  - tag - `sandbox-lazylibrarian`
+- **[lgsm](../sandbox/apps/lgsm.md)**  - tag - `sandbox-lgsm`
 - **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
 - **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`

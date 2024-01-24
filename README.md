@@ -334,6 +334,13 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/heihachi>
+            <img src=https://avatars.githubusercontent.com/u/1756242?v=4 width="100;"  alt=Scarabyte/>
+            <br />
+            <sub style="font-size:14px"><b>Scarabyte</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/tzockt>
             <img src=https://avatars.githubusercontent.com/u/67980380?v=4 width="100;"  alt=Tim/>
             <br />
@@ -361,6 +368,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>mrfret</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/phob>
             <img src=https://avatars.githubusercontent.com/u/2318031?v=4 width="100;"  alt=phob/>
@@ -368,8 +377,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>phob</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/powerdude>
             <img src=https://avatars.githubusercontent.com/u/780882?v=4 width="100;"  alt=powerdude/>

@@ -90,11 +90,3 @@ sudo reboot
    ```shell
    docker start $(docker ps -a -q)
    ```
-
- /mnt folder
-
-1. Run the `mounts` tag
-
-   ```shell
-   sb install mounts
-   ```

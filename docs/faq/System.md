@@ -70,3 +70,5 @@ sb install fix-permissions
 ```
 
 This will set permissions on `/mnt/local`, `/opt` and `/home/<user>` (where `<user>` is replaced with your username) to match saltbox' requirements and expectations.
+
+If you have installed software that requires unusual permissions within any of these locations, you will need to restore those permissions yourself, as required.

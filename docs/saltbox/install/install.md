@@ -356,7 +356,7 @@ To edit any of the following configuration files use the command written in the 
 
     9. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
 
-        This toggle is only useful for those using any of the support DNS validation methods as this will be enabled by default otherwise.
+        This toggle is only useful for those using any of the supported DNS validation methods as this will be enabled by default otherwise.
 
     10. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
 

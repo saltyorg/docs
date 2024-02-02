@@ -10,7 +10,7 @@
 
 ### 1. Setup
 
-You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/register.php){: .header-icons }
+You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/guest/register){: .header-icons }
 
 After logging in, you should be redirected to your profile screen.
 

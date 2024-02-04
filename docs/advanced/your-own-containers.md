@@ -426,7 +426,7 @@ If the file is named `docker-compose.yml` and is located in the current working 
 docker compose up -d
 ```
 
-If the file has some other name or is located elsewhere in the file-system:
+If the file has some other name or is located elsewhere in the file system:
 ```
 docker compose up -d -d /path/to/something.yml
 ```

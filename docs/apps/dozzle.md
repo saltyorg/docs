@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Dozzle](https://dozzle.dev/) is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only. Dozzle can only access logs written to sysout or syserr which is the same functionality as the `docker logs` command. See below for more info on that.
+[Dozzle](https://dozzle.dev/) is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only. Dozzle can only access logs written to stdout or stderr which is the same functionality as the `docker logs` command. See below for more info on that.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -22,7 +22,7 @@ sb install dozzle
 
 ### 3. Setup
 
-To view log files that are NOT written to sysout or syserr, use the following to setup a basic alpine container via compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to dozzle. Adjust as needed for your circumstances.
+To view log files that are NOT written to stdout or stderr, use the following to setup a basic alpine container via compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to dozzle. Adjust as needed for your circumstances.
 
 ``` yaml
 ---

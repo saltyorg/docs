@@ -300,6 +300,8 @@ nav:
           - Invoice Ninja: sandbox/apps/invoiceninja.md
           - Home Automation:
             - Home Assistant: sandbox/apps/homeassistant.md
+            - MQTT: sandbox/apps/mqtt.md
+            - Node-Red: sandbox/apps/node-red.md
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
             - Logarr: sandbox/apps/logarr.md

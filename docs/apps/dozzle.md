@@ -22,65 +22,30 @@ sb install dozzle
 
 ### 3. Setup
 
-To view log files that are NOT written to stdout or stderr, use the following to setup a basic alpine container via compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to dozzle. Adjust as needed for your circumstances.
+To view log files that are NOT written to stdout or stderr, use the following to setup a basic Alpine Linux container via Docker Compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to Dozzle. Adjust as needed for your circumstances.
 
 ``` yaml
----
-  tail-cloudplow:
-    container_name: tail-cloudplow
+  tail-cloudplow: # (1)!
+    container_name: tail-cloudplow # (2)!
     image: alpine
     volumes:
-      - /opt/cloudplow/cloudplow.log:/opt/cloudplow/cloudplow.log:ro
+      - /opt/cloudplow/cloudplow.log:/opt/cloudplow/cloudplow.log:ro # (3)!
     command:
       - tail
       - -F
-      - /opt/cloudplow/cloudplow.log     
+      - /opt/cloudplow/cloudplow.log # (4)!
     network_mode: none
     restart: unless-stopped
-    user: 1000:1001
+    user: 1000:1000 # (5)!
 ```
 
-In the above example, the name of the container is arbitrary. However, for sanity's sake, change it to match the file you're following with Dozzle. (In this case, cloudplow)
+1. You can pick any name for the container, but it is recommended to pick a memorable name that you will recognize in the Dozzle menu.
+2. You can pick any name for the container, but it is recommended to pick a memorable name that you will recognize in the Dozzle menu.
+3. The volume mount for the log file. This takes the format of `/host/path/to.log:/container/path/to.log:ro`. The `:ro` suffix is optional but recommended to give this container only read-only access to the log file.
+4. The path inside of the container where the log file is accessible. This must be the same in the `volumes` section above and this `command` section. Matching the annotation example, this would be `/container/path/to.log`.
+5. Provide your `uid:gid` if they are different. You can check these values by running the `id` command.
 
-The `volumes:` section is where you mount the log file you want to follow, so if you wanted to follow your Plex container/console logs, you'd change it to:
-
-``` yaml
-...
-    volumes:
-      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:/opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:ro
-...
-```
-
-You would also need to adapt the `command:` section to match your Plex volume. For example:
-
-``` yaml
-...
-    command:
-      - tail
-      - -F
-      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log 
-...
-```
-
-The end result of your customized (additional) dozzle container would look like this:
-
-```yaml
----
-  tail-plex:
-    container_name: tail-plex
-    image: alpine
-    volumes:
-      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:/opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:ro
-    command:
-      - tail
-      - -F
-      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log  
-    network_mode: none
-    restart: unless-stopped
-    user: 1000:1001
-```
-
-???note
+???+ note
     To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#creating-and-running-the-container).
 
 - [:octicons-link-16: Documentation](https://dozzle.dev/guide/what-is-dozzle){: .header-icons }

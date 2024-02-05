@@ -47,6 +47,7 @@
 - **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
 - **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
 - **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
+- **[Homeassistant](../sandbox/apps/homeassistant.md)** - tag - `sandbox-homeassistant`
 - **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
 - **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`

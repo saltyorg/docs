@@ -27,6 +27,6 @@ sb install sandbox-homeassistant
 
 ### Setup
 
-f
+Home Assistant is pretty versatile, and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](../apps/mqtt.md) and [Node Red](../apps/node-red.md).
 
 - [:octicons-link-16: Documentation: homeassistant Docs](https://www.home-assistant.io/docs/){: .header-icons }

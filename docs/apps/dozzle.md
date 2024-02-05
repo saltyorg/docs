@@ -40,4 +40,47 @@ To view log files that are NOT written to stdout or stderr, use the following to
     user: 1000:1001
 ```
 
+In the above example, the name of the container is arbitrary. However, for sanity's sake, change it to match the file you're following with Dozzle. (In this case, cloudplow)
+
+The `volumes:` section is where you mount the log file you want to follow, so if you wanted to follow your Plex container/console logs, you'd change it to:
+
+``` yaml
+...
+    volumes:
+      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:/opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:ro
+...
+```
+
+You would also need to adapt the `command:` section to match your Plex volume. For example:
+
+``` yaml
+...
+    command:
+      - tail
+      - -F
+      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log 
+...
+```
+
+The end result of your customized (additional) dozzle container would look like this:
+
+```yaml
+---
+  tail-plex:
+    container_name: tail-plex
+    image: alpine
+    volumes:
+      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:/opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log:ro
+    command:
+      - tail
+      - -F
+      - /opt/plex/Library/Application\ Support/Plex\ Media\ Server/Logs/Plex\ Media\ Server.log  
+    network_mode: none
+    restart: unless-stopped
+    user: 1000:1001
+```
+
+???note
+    To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#creating-and-running-the-container).
+
 - [:octicons-link-16: Documentation](https://dozzle.dev/guide/what-is-dozzle){: .header-icons }

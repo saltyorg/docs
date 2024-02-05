@@ -6,7 +6,7 @@
 
 Note that while it will work on a remote server, it takes some doing to get it to interface with a local server or local devices. It is not recommended or supported.
 
-!!!info
+!!! Warning
     By default, the role is NOT protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |             |
@@ -29,4 +29,4 @@ sb install sandbox-homeassistant
 
 f
 
-- [:octicons-link-16: Documentation: homeassistant Docs](https://www.homeassistant.org/docs){: .header-icons }
+- [:octicons-link-16: Documentation: homeassistant Docs](https://www.home-assistant.io/docs/){: .header-icons }

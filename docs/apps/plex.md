@@ -238,7 +238,19 @@ To do so:
 
 ## Webtools
 
-Webtools for Plex comes preinstalled. If you wish to setup Webtools and install 3rd party add-ons, you can go to `https://plex-webtools._yourdomain.com_` and log in with your Plex account.
+If you want to install Webtools for Plex, set:
+
+```
+plex_plugin_webtools: true
+```
+
+in the inventory and run [or rerun] the `plex` tag:
+
+```
+sb install plex
+```
+
+To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._yourdomain.com_` and log in with your Plex account.
 
 ## Next
 

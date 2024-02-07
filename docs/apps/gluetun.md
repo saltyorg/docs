@@ -56,7 +56,7 @@ sb install gluetun
 
 ### 3. Route Plex through Gluetun
 
-!!! warning "Every deployment of Gluetun must be followed by a deployment of the Plex role, else Plex will not start!"
+!!! warning "Every (re)deployment of Gluetun must be followed by a (re)deployment of Plex, else any routed Plex container will fail to start!"
 
 !!! caution
     It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN. Multiple instances of Plex will need their own unique instance of gluetun due to port conflicts.

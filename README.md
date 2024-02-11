@@ -107,6 +107,13 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/Zairhn>
+            <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
+            <br />
+            <sub style="font-size:14px"><b>Sapphire</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/TurboCheetah>
             <img src=https://avatars.githubusercontent.com/u/19479111?v=4 width="100;"  alt=Turbo/>
             <br />
@@ -141,6 +148,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Elbulus</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/jolbol1>
             <img src=https://avatars.githubusercontent.com/u/5064896?v=4 width="100;"  alt=James Shopland/>
@@ -148,8 +157,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>James Shopland</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/JohnClementine>
             <img src=https://avatars.githubusercontent.com/u/52635735?v=4 width="100;"  alt=JohnClementine/>
@@ -162,13 +169,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <img src=https://avatars.githubusercontent.com/u/16555169?v=4 width="100;"  alt=kris/>
             <br />
             <sub style="font-size:14px"><b>kris</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Zairhn>
-            <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
-            <br />
-            <sub style="font-size:14px"><b>Sapphire</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

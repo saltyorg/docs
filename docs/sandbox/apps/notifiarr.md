@@ -47,6 +47,8 @@ A quickstart guide can be found on the [Trash Guides website.](https://trash-gui
 
 ## Advanced
 
+### Traefik Plugin
+
 You can configure the Notifiarr client to not require it's own username and password with the use of a [Traefik plugin](https://github.com/tommoulard/htransformation).
 
 !!! note
@@ -97,6 +99,20 @@ You can configure the Notifiarr client to not require it's own username and pass
       ```
 
 1. Run the Notifiarr role:
+
+      ```shell
+      sb install sandbox-notifiarr
+      ```
+
+### Snapshot Feature Support
+
+1. Add the following to your Inventory file to enable Privileged mode to Notifiarr and allow it access to system information
+
+     ```yaml
+     notifiarr_privileged: true
+     ```
+
+2. Run the Notifiarr role:
 
       ```shell
       sb install sandbox-notifiarr

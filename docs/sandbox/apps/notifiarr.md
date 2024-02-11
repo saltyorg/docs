@@ -49,7 +49,7 @@ A quickstart guide can be found on the [Trash Guides website.](https://trash-gui
 
 ### Snapshot Feature Support
 
-1. Add the following to your Inventory file to enable Privileged mode to Notifiarr and allow it access to system information
+1. Add the following to your Inventory file to enable Privileged mode for Notifiarr and allow it access to system information
 
      ```yaml
      notifiarr_privileged: true

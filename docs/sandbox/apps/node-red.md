@@ -2,10 +2,10 @@
 
 ## What is it?
 
-[Node Red](https://www.node-red.org/) is a self-hosted audio book and podcast server.
+[Node Red](https://www.node-red.org/) is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things.
 
-!!!info
-    By default, the role is NOT protected behind your Authelia/SSO middleware.
+!!! warning
+    By default, the role is protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -19,11 +19,13 @@ sb install sandbox-node-red
 
 ```
 
-### Setup
+### 2. Setup
+
+Addons and/or plugins can be installed to Node Red to add functionality. They are called palettes. To install a palette, go to the menu in the upper right corner (the hamburger, 3 little horizontal lines), select `Manage palette`, then `Install`.
 
 Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistant-websocket) to connect to [home assistant](../apps/homeassistant.md).
 
-### 2. URL
+### 3. URL
 
 - To access node-red, visit `https://node-red._yourdomain.com_`
 

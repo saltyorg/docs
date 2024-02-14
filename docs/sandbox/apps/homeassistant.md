@@ -7,7 +7,7 @@
 Note that while it will work on a remote server, it takes some doing to get it to interface with a local server or local devices. It is not recommended or supported.
 
 !!! Warning
-    By default, the role is NOT protected behind your Authelia/SSO middleware.
+    By default, the role is NOT protected behind your Authelia/SSO middleware. Home Assistant has its own authentication system, and it is recommended to use that.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -25,8 +25,12 @@ sb install sandbox-homeassistant
 
 - To access Homeassistant, visit `https://homeassistant._yourdomain.com_`
 
-### Setup
+### 3. Setup
 
-Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](../apps/mqtt.md) for using Mosquitto to communicate with local and remote devices.We also have [Node Red](../apps/node-red.md), which is a platform for multiple types of automations.
+Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](../apps/mqtt.md) for using Mosquitto to communicate with local and remote devices. We also have [Node Red](../apps/node-red.md), which is a platform for multiple types of automations.
+
+### 4. Addons
+
+You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) to add more functionality to Home Assistant. For instance, adding the Node Red Companion, a "custom" integration for node-red-contrib-home-assistant-websocket. It allows you to integrate Node-RED with Home Assistant. For more information, see the [Node Red](../apps/node-red.md) page.
 
 - [:octicons-link-16: Documentation: homeassistant Docs](https://www.home-assistant.io/docs/){: .header-icons }

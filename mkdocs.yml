@@ -402,6 +402,7 @@ nav:
       - Adding Your Own Containers: advanced/your-own-containers.md
       - Container Healthchecks: advanced/healthchecks.md
       - Styled Error Pages: advanced/styled-error-pages.md
+      - Tailscale: advanced/tailscale.md
       - Themepark Styles for apps: advanced/themepark.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md

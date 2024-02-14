@@ -19,6 +19,10 @@ sb install sandbox-node-red
 
 ```
 
+### Setup
+
+Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistant-websocket) to connect to [home assistant](../apps/homeassistant.md).
+
 ### 2. URL
 
 - To access node-red, visit `https://node-red._yourdomain.com_`

@@ -11,5 +11,6 @@ To install the MQTT App, follow these steps:
 1. Open your terminal or command prompt.
 2. Run the following command to install the MQTT App:
 
-    ```bash
-    sb install sandbox-mqtt
+```bash
+sb install sandbox-mqtt
+```

@@ -107,7 +107,7 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Zairhn>
+        <a href=https://github.com/Nypheena>
             <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
             <br />
             <sub style="font-size:14px"><b>Sapphire</b></sub>

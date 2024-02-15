@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex
+  - pms
+---
+
 # What is it?
 
 [Plex](https://plex.tv/) is a media server.

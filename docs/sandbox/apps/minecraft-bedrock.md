@@ -1,3 +1,8 @@
+---
+tags:
+  - Minecraft
+---
+
 # Minecraft Bedrock
 
 ## What is it?

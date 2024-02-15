@@ -1,3 +1,8 @@
+---
+tags:
+  - Minecraft
+---
+
 # Minecraft
 
 ## What is it?
@@ -7,7 +12,7 @@ Run one or multiple minecraft servers with custom subdomains. Utilizes minecraft
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons }
-| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons }
+| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons }|
 
 ### 1. Installation
 
@@ -42,7 +47,7 @@ So for the example above, `server1.youdomain.com` and `server2.yourdomain.com`
 
 ### 4. Setup
 
-For individual servers, you can change things such as memory using custom docker envs. [See instructions on inventory here](../../saltbox/inventory/index.md)
+For individual servers, you can change things such as memory using custom docker envs. See instructions on inventory [here](../../saltbox/inventory/index.md)
 
 For a single install, the inventory paths will look like this `minecraft_docker_image_tag`
 

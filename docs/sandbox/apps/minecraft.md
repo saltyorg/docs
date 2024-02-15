@@ -35,17 +35,17 @@ This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If 
 
 To add multiple instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 
-```yaml
+``` yaml
 
-minecraft_instances: ["server1", "server2"] # (1)!
+minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
 
 ```
 
 1. This will install two servers, server1 and server2.
 
-These servers will be accesible at `instanceName.__yourdomain.com__`
+These servers will be accesible at `instanceName._yourdomain.com_`
 
-So for the example above, `server1.youdomain.com` and `server2.yourdomain.com`
+So for the example above, `mcserver1._yourdomain.com_` and `mcserver2._yourdomain.com_`
 
 ### 4. Setup
 
@@ -54,5 +54,17 @@ For individual servers, you can change things such as memory using custom docker
 For a single install, the inventory paths will look like this `minecraft_docker_image_tag`
 
 When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`
+
+``` yaml title="Inventory"
+
+minecraft_instances: ["server1", "server2"] # (1)!
+mcserver1_docker_image_tag: "itzg/minecraft-server:latest" # (2)!
+mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
+
+```
+
+1. This will install two servers, mcserver1 and mcserver2.
+2. This will install the latest version of the minecraft server on mcserver1.
+3. This will install version 1.17.1 of the minecraft server on mcserver2.
 
 - [:octicons-link-16: Documentation](https://github.com/itzg/docker-minecraft-server){: .header-icons }

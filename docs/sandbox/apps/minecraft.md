@@ -51,9 +51,9 @@ So for the example above, `mcserver1._yourdomain.com_` and `mcserver2._yourdomai
 
 For individual servers, you can change things such as memory using custom docker envs. See instructions on inventory [here](../../saltbox/inventory/index.md)
 
-For a single install, the inventory paths will look like this `minecraft_docker_image_tag`
+For a single install, the inventory vars will look like this `minecraft_docker_image_tag`.
 
-When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`
+When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`.
 
 ``` yaml title="Inventory"
 

@@ -24,5 +24,5 @@ traefik_tailscale_bind_ip: "" # (1)!
 traefik_tailscale_bind_ipv6: "" # (2)!
 ```
 
-  1. Set to override the IPv4 WAN IP port binding when server is not connected directly to the Internet.
-  2. Set to override the IPv6 WAN IP port binding when server is not connected directly to the Internet.
+  1. Set to override the IPv4 LAN IP port binding when server is not connected directly to the Internet or the WAN IP if it doesn't lookup the correct one.
+  2. Set to override the IPv6 LAN IP port binding when server is not connected directly to the Internet or the WAN IP if it doesn't lookup the correct one.

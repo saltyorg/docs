@@ -1,10 +1,10 @@
 # Mounting a disk persistently on your saltbox server
 
-Perhaps you want to mount a disk partition persistently in the file system like a media drive at `/mnt/local/Media` or a fast SSD for usenet at `/mnt/local/downloads`.
+Perhaps you want to mount a disk partition persistently in the file system like a media drive at `/mnt/local/Media` or a fast SSD for Usenet at `/mnt/local/downloads`.
 
 ## Gathering details
 
-First find out the device reference:
+First, find out the device reference:
 
 ```shell
 lsblk
@@ -62,7 +62,7 @@ sudo nano /etc/fstab
 
 You want to add a line to the bottom of that file. Don't edit anything in the file already.
 
-In my case I want to mount that 12.7T partition at `/mnt/hdd`.
+In my case, I want to mount that 12.7T partition at `/mnt/hdd`.
 
 The line you need to add should look something like this (details may differ):
 
@@ -153,7 +153,7 @@ There it is at the end of the list.
 
 That partition will now be mounted there at system startup automatically.
 
-If you compare the lsblk output *now* to waht it was:
+If you compare the lsblk output *now* to what it was:
 
 ```shell
 /srv/git/saltbox$ lsblk

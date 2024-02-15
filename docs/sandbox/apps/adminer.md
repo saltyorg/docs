@@ -25,22 +25,25 @@ sb install sandbox-adminer
 
 ### 3. Setup
 
-- Default login for [mariadb](../../apps/mariadb.md)
+- Default login for [MariaDB](../../apps/mariadb.md)
 
-```yaml
+``` yaml title="Adminer Mariadb Login"
   System: Mysql
   Server: mariadb:3306
   Username: root
   Password: password321
-  ```
+```
 
-- Default login for [postgres](../../apps/postgres.md)
-  
-``` { .yaml}
+- Default login for [Postgres](../../apps/postgres.md)
+
+``` yaml title="Adminer Postgres Login"
   System: PostgreSQL
   Server: postgres:5432
   Username: your_saltbox_user
   Password: password4321
-  ```
+```
+
+??? tip "Adminer Plugins"
+    Adminer has a number of plugins available to extend its functionality. You can find them [here](https://www.adminer.org/en/plugins/).
 
 - [:octicons-link-16: Documentation: Adminer Docs](https://github.com/vrana/adminer/#readme){: .header-icons }

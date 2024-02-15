@@ -7,12 +7,11 @@ tags:
 
 ## What is it?
 
-Run one or multiple minecraft servers with custom subdomains. Utilizes minecraft server and mc-router to allow each server to have its own subdomain with the default port.
+Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft server and [MC-Router](../apps/mcrouter.md) to allow each server to have its own subdomain with the default port.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/minecraft-server){: .header-icons }
-| [:material-home: Project home](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-link-16: Docs](https://github.com/itzg/mc-router){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/mc-router){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/itzg/mc-router){: .header-icons }|
+| Details     |             |             |
+|-------------|-------------|-------------|
+| [:material-home: Project home](https://docker-minecraft-server.readthedocs.io/en/latest/){: .header-icons } | [:octicons-link-16: Docs](https://docker-minecraft-server.readthedocs.io/en/latest/commands/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,24 +21,27 @@ sb install sandbox-minecraft
 
 ```
 
-This will install mc-router and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
+This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
 
 ### 2. Join Server
+
+!!! Warning "Cloudflare CDN"
+    If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
 
 - By default, a single server will be accesible at  `minecraft._yourdomain.com_`
 - If you have set up multiple instances, these will be accesible by default at `instanceName._yourdomain.com_` (See multi server instructions below)
 
 ### 3. Multi Server Set Up
 
-To add multiple instances, add:
+To add multiple instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 
 ```yaml
 
-minecraft_instances: ["server1", "server2"]
+minecraft_instances: ["server1", "server2"] # (1)!
 
 ```
 
-To the inventory files. [See instructions on inventory here](../../saltbox/inventory/index.md)
+1. This will install two servers, server1 and server2.
 
 These servers will be accesible at `instanceName.__yourdomain.com__`
 

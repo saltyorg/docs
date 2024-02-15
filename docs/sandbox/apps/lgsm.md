@@ -23,7 +23,7 @@ lgsm_rust_docker_ports_defaults: ["28015:28015/udp","28017:28017/udp","28082:280
 
 1. Example setting image tag to correct shortcode from <https://github.com/GameServerManagers/LinuxGSM/blob/master/lgsm/data/serverlist.csv> using lgsm_shortcode will automatically pull the correct image tag
 2. This is the valheim server shortcode
-3. ports for valheim need to be exposed. Notice that rust is the image tag for the rustserver. This means we dont have to specify it here.
+3. ports for valheim need to be exposed. Notice that rust is the image tag for the rust server. This means we don't have to specify it here.
 4. The ports for the rust server need to be exposed as well.
 
 Then run:

@@ -217,6 +217,7 @@ nav:
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
           - LinuxGSM: sandbox/apps/lgsm.md
+          - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
           - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
         - Media Management:

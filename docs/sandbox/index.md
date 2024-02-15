@@ -47,6 +47,7 @@
 - **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
 - **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
 - **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
+- **[homeassistant](../sandbox/apps/homeassistant.md)** - tag - `sandbox-homeassistant`
 - **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
 - **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`
@@ -74,10 +75,12 @@
 - **[mkvtoolnix](../sandbox/apps/mkvtoolnix.md)**  - tag - `sandbox-mkvtoolnix`
 - **[monitorr](../sandbox/apps/monitorr.md)**  - tag - `sandbox-monitorr`
 - **[moviematch](../sandbox/apps/moviematch.md)**  - tag - `sandbox-moviematch`
+- **[MQTT](../sandbox/apps/mqtt.md)**  - tag - `sandbox-mqtt`
 - **[mylar3](../sandbox/apps/mylar3.md)**  - tag - `sandbox-mylar3`
 - **[nabarr](../sandbox/apps/nabarr.md)**  - tag - `sandbox-nabarr`
 - **[navidrome](../sandbox/apps/navidrome.md)**  - tag - `sandbox-navidrome`
 - **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
+- **[node-red](../sandbox/apps/node-red.md)**  - tag - `sandbox-node-red`
 - **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
 - **[olivetin](../sandbox/apps/olivetin.md)**  - tag - `sandbox-olivetin`
 - **[ombi](../sandbox/apps/ombi.md)**  - tag - `sandbox-ombi`

@@ -1,8 +1,13 @@
+---
+tags:
+  - Minecraft
+---
+
 # Minecraft Bedrock
 
 ## What is it?
 
-This is a Minecraft Bedrock server for the multi-platform Minecraft version.
+[Minecraft Bedrock](https://github.com/itzg/docker-minecraft-bedrock-server) is a server for the multi-platform version of Minecraft.
 
 !!! Note
     📢 This server will expose the port UDP 19132
@@ -21,8 +26,13 @@ sb install sandbox-minecraft-bedrock
 
 ### 2. Join Server
 
-- The server will be accesible at `minecraft-bedrock._yourdomain.com_` or `_yourserverip_:19132`
+- The server will be accessible at `minecraft-bedrock._yourdomain.com_` or `_yourserverip_:19132`
+
+!!! Warning "Cloudflare CDN"
+    If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft-bedrock_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
 
 ### Change server version
 
 By default, the server will be using the latest version available. To choose a specific version add `minecraft_bedrock_version: "1.19.31"` to the [inventory system](../../saltbox/inventory/index.md).
+
+- [:octicons-link-16: Documentation: MC Bedrock Docs](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons }

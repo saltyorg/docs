@@ -2,11 +2,11 @@
 
 ## What is it?
 
-[Doplarr](https://github.com/kiranshila/doplarr) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
+[Doplarr](https://kiranshila.github.io/Doplarr/#/) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/kiranshila/doplarr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/kiranshila/doplarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons } | [:material-docker: Docker](https://ghcr.io/kiranshila/doplarr){: .header-icons }|
+| [:material-home: Project home](https://kiranshila.github.io/Doplarr/#/){: .header-icons } | [:octicons-link-16: Docs](https://kiranshila.github.io/Doplarr/#/configuration){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/doplarr){: .header-icons }|
 
 ## Setup Doplarr
 
@@ -33,16 +33,22 @@ sb install sandbox-doplarr
 ```
 
 !!! Note
-      📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr. Additional informations here [:octicons-link-16: Documentation](https://github.com/kiranshila/Doplarr/blob/main/README.md#sonarrradarr) .
-      The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md :
-      You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section:
+      📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr.
+      The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md). You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section.
 
-  ```yaml
-      ### Custom settings for Doplarr ###
-      doplarr_docker_envs_defaults:
-        SONARR__URL: "http://sonarr:8989"
-        RADARR__URL: "http://radarr:7878"
-        SONARR__API: sonarr_api
-        RADARR__API: radarr_api
-        DISCORD__TOKEN: your_discord_bot_token
-      ```
+``` yaml title="Inventory"
+doplarr_docker_envs_defaults:
+  SONARR_URL: # (1)!
+  RADARR_URL: # (2)!
+  SONARR_API: # (3)!
+  RADARR_API: # (4)!
+  DISCORD_TOKEN: # (5)!
+```
+
+1. This line will set the Sonarr URL. Saltbox defaults to `"http://sonarr:8989"`.
+2. This line will set the Radarr URL. Saltbox defaults to `"http://radarr:7878"`.
+3. This line will set the Sonarr API key. Place your API key here. Wrap it in quotes.
+4. This line will set the Radarr API key. Place your API key here. Wrap it in quotes.
+5. This line will set the Discord token. Place your token here. Wrap it in quotes.
+
+- [:octicons-link-16: Documentation: Doplarr Docs](https://kiranshila.github.io/Doplarr/#/configuration){: .header-icons }

@@ -14,15 +14,44 @@
 
 1. Create a new [Application](https://discord.com/developers/applications) in Discord
 2. Go to the Bot tab and add a new bot
-3. Copy out the token and paste it in `/opt/sandbox/settings.yaml` in the `doplarr.discord_token` field.
+3. Copy the token and paste it in `/opt/sandbox/settings.yml` in the `doplarr.discord_token` field:
+
+    ```yaml hl_lines="3" title="/opt/sandbox/settings.yml"
+    ...
+    doplarr:
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ...
+    ```
+
 4. Go to OAuth2 and under "OAuth2 URL Generator", enable `applications.commands` and `bot`
 5. Copy the resulting URL and open it in your browser in order to invite your bot to your discord channel.
 
 ### 2. Set up overseer parameters
 
-1. In `/opt/sandbox/settings.yaml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct.
-2. In `/opt/sandbox/settings.yaml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
-You can get your api keys in your main setting page in overseer: `https://overseerr._yourdomain.com_/settings`
+1. In `/opt/sandbox/settings.yml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct:
+
+    ```yaml hl_lines="4" title="/opt/sandbox/settings.yml"
+    ...
+    doplarr:
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ...
+    ```
+
+2. In `/opt/sandbox/settings.yml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
+You can get your api keys in your main setting page in overseer: `https://overseerr._yourdomain.com_/settings`:
+
+    ```yaml hl_lines="5" title="/opt/sandbox/settings.yml"
+    ...
+    doplarr:
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ...
+    ```
 
 ### 3. Installation
 

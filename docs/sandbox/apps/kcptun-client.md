@@ -18,4 +18,4 @@ sb install sandbox-kcptun-client
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/xtaci/kcptun){: .header-icons }
+- [:octicons-link-16: Documentation: kcptun client Docs](https://github.com/xtaci/kcptun){: .header-icons }

@@ -22,6 +22,6 @@ sb install sandbox-uptime-kuma
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/louislam/uptime-kuma/wiki){: .header-icons }
+Docker Monitoring: Use TCP/HTTP connection type with this address: http://uptime-docker-socket-proxy:2375
 
-- Docker Monitoring: Use TCP/HTTP connection type with this address: http://uptime-docker-socket-proxy:2375
+- [:octicons-link-16: Documentation: Uptime Kuma Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons }

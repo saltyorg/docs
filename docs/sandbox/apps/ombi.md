@@ -24,4 +24,4 @@ sb install sandbox-ombi
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.ombi.app/guides/installation/){: .header-icons }
+- [:octicons-link-16: Documentation: Ombi Docs](https://docs.ombi.app/guides/installation/){: .header-icons }

@@ -24,4 +24,4 @@ sb install sandbox-mkvtoolnix
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation: MKVToolNix Client Docs](https://mkvtoolnix.download/docs.html){: .header-icons }
+- [:octicons-link-16: Documentation: MKVToolNix Docs](https://mkvtoolnix.download/docs.html){: .header-icons }

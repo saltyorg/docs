@@ -20,4 +20,4 @@ sb install sandbox-watchtower
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://containrrr.github.io/watchtower){: .header-icons }
+- [:octicons-link-16: Documentation: Watchtower Docs](https://containrrr.github.io/watchtower){: .header-icons }

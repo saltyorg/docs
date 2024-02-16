@@ -2,7 +2,7 @@
 
 ## What is it?
 
-LinuxGSM is a command-line tool for quick and simple deployment and management of Linux dedicated game servers. It aims to make the process of managing game servers hassle-free. With LinuxGSM, we can avoid spending hours trying to configure and manage game servers. It provides a streamlined and efficient solution for setting up and maintaining dedicated game servers on Linux.
+[LinuxGSM](https://linuxgsm.com) is a command-line tool for quick and simple deployment and management of Linux dedicated game servers. It aims to make the process of managing game servers hassle-free. With LinuxGSM, we can avoid spending hours trying to configure and manage game servers. It provides a streamlined and efficient solution for setting up and maintaining dedicated game servers on Linux.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -51,4 +51,4 @@ Any actual game server configs will be in the `/opt/CONTAINERNAME/serverfiles/` 
 
 In your game, connect to your ip and default ports for the server. Make sure you set the UDP and TCP for the ports correctly. If everything was setup correctly the game should connect to the server.
 
-- [:octicons-link-16: Documentation](https://docs.linuxgsm.com/configuration/game-server-config){: .header-icons }
+- [:octicons-link-16: Documentation: LGSM Docs](https://docs.linuxgsm.com/configuration/game-server-config){: .header-icons }

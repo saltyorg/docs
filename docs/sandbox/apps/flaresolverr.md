@@ -28,4 +28,4 @@ sb install sandbox-flaresolverr
 - In the settings, add an Indexer Proxy and select FlareSolverr.
 - _Host_ should be `http://flaresolverr:8191`.
 
-- [:octicons-link-16: Documentation](https://github.com/FlareSolverr/FlareSolverr){: .header-icons }
+- [:octicons-link-16: Documentation: FlareSolverr Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons }

@@ -22,4 +22,4 @@ sb install sandbox-deemix
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://gitlab.com/Bockiii/deemix-docker){: .header-icons }
+- [:octicons-link-16: Documentation: Deemix Docs](https://gitlab.com/Bockiii/deemix-docker){: .header-icons }

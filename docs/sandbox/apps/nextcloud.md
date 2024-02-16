@@ -22,4 +22,4 @@ sb install sandbox-nextcloud
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons }
+- [:octicons-link-16: Documentation: Nextcloud Docs](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons }

@@ -24,4 +24,4 @@ sb install sandbox-heimdall
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://github.com/linuxserver/Heimdall-Apps){: .header-icons }
+- [:octicons-link-16: Documentation: Heimdall Docs](https://github.com/linuxserver/Heimdall-Apps){: .header-icons }

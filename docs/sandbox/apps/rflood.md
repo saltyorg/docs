@@ -26,4 +26,4 @@ sb install sandbox-rflood
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/jesec/flood/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: rFlood Docs](https://github.com/jesec/flood/wiki){: .header-icons }

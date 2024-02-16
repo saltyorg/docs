@@ -22,4 +22,4 @@ sb install sandbox-monitorr
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/Monitorr/Monitorr/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Monitorr Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons }

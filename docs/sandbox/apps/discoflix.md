@@ -24,4 +24,4 @@ sb install sandbox-discoflix
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/nickheyer/discoflix/blob/main/README.md#general-instructions){: .header-icons }
+- [:octicons-link-16: Documentation: Discoflix Docs](https://github.com/nickheyer/discoflix/blob/main/README.md#general-instructions){: .header-icons }

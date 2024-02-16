@@ -124,4 +124,4 @@ These settings are up to the user
 
 ### See the Mylar Wiki for more information
 
-- [:octicons-link-16: Documentation](https://github.com/mylar3/mylar3/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Mylar3 Docs](https://github.com/mylar3/mylar3/wiki){: .header-icons }

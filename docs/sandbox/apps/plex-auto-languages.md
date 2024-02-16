@@ -24,4 +24,4 @@ PLex-auto-languages has no UI; it is driven by a config file
 
 ### 3. Usage
 
-[Documentation](https://github.com/RemiRigal/Plex-Auto-Languages)
+- [:octicons-link-16: Documentation: Plex Auto Lang Docs](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons }

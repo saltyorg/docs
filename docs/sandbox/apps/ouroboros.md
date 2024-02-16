@@ -20,4 +20,4 @@ sb install sandbox-ouroboros
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/pyouroboros/ouroboros/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Ouroboros Docs](https://github.com/pyouroboros/ouroboros/wiki){: .header-icons }

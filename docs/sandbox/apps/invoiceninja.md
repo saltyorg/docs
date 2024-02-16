@@ -33,4 +33,4 @@ sb install sandbox-invoiceninja
 
 Enter email, and password from accounts.yml setting.
 
-- [:octicons-link-16: Documentation](https://invoiceninja.github.io/){: .header-icons }
+- [:octicons-link-16: Documentation: Invoice Ninja Docs](https://invoiceninja.github.io/){: .header-icons }

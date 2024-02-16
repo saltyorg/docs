@@ -18,4 +18,4 @@ sb install sandbox-telegraf
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://docs.influxdata.com/telegraf/v1.20/){: .header-icons }
+- [:octicons-link-16: Documentation: Telegraf Docs](https://docs.influxdata.com/telegraf/v1.20/){: .header-icons }

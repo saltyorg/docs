@@ -23,5 +23,5 @@ sb install sandbox-privatebin
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/PrivateBin/PrivateBin/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Private Bin Docs](https://github.com/PrivateBin/PrivateBin/wiki){: .header-icons }
 - Edit `/opt/privatebin/conf.php` to customize your instance.

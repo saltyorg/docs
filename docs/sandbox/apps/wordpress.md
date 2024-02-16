@@ -26,4 +26,4 @@ sb install sandbox-wordpress
 
 - No default user is configured until you run through the setup screen, so you should ideally run through setup as soon as wordpress is deployed to secure the site.
 
-- [:octicons-link-16: Documentation](https://wordpress.org/support/){: .header-icons }
+- [:octicons-link-16: Documentation: Wordpress Docs](https://wordpress.org/support/){: .header-icons }

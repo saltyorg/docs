@@ -22,4 +22,4 @@ sb install sandbox-medusa
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/pymedusa/Medusa/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Medusa Docs](https://github.com/pymedusa/Medusa/wiki){: .header-icons }

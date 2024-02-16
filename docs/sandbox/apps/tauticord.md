@@ -6,7 +6,7 @@
 will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library
 statistics, and live playback control.
 
-| Details                                                                                                                         |                                                                                                                                   |  
+| Details                                                                                                                         |                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | [:material-home: Project home](https://github.com/nwithan8/tauticord){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nwithan8/tauticord){: .header-icons } |
 
@@ -29,3 +29,5 @@ See the [Tauticord documentation](https://github.com/nwithan8/tauticord#installa
 Once started, Tauticord will connect to your Tautulli and Discord servers and begin mirroring data.
 
 By default, library statistics are updated once every hour, and stream data is updated once every 15 seconds.
+
+- [:octicons-link-16: Documentation: Tauticord Docs](https://github.com/nwithan8/tauticord){: .header-icons }

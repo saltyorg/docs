@@ -24,4 +24,4 @@ sb install sandbox-stash
 
 On a clean installation, Stash only creates its config file when the user has gone through the setup wizard. If you receive errors on future visits to Stash regarding public access, re-run `sb install sandbox-stash` to apply the appropriate config edits to disable these warnings.
 
-- [:octicons-link-16: Documentation](https://github.com/stashapp/stash/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Stash Docs](https://github.com/stashapp/stash/wiki){: .header-icons }

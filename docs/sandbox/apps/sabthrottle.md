@@ -28,4 +28,4 @@ sb install sandbox-sabthrottle
         docker logs -f sabthrottle
         ```
 
-- [:octicons-link-16: Documentation](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons }
+- [:octicons-link-16: Documentation: SAB Throttle Docs](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons }

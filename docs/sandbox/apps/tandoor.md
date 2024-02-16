@@ -27,7 +27,7 @@
 ### 1. Installation
 
 !!!info
-    Before you run the role, you must create a **secret key**. If you don't, it will fail. 
+    Before you run the role, you must create a **secret key**. If you don't, it will fail.
 
 To do so, run `base64 /dev/urandom | head -c50`. Copy and paste the results into `/opt/sandbox/settings.yml` under `tandoor secret_key`.
 
@@ -65,7 +65,6 @@ To reset a lost password if access to the container is lost you need to
 
 - run `python manage.py changepassword <username>` and follow the steps shown.
 
-
-- [:octicons-link-16: Documentation](https://docs.tandoor.dev/){: .header-icons }
-
 To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
+
+- [:octicons-link-16: Documentation: Tandoor Docs](https://docs.tandoor.dev/){: .header-icons }

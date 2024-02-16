@@ -1,8 +1,8 @@
-# freshrss
+# Freshrss
 
 ## What is it?
 
-[freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator.
+[Freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -18,8 +18,8 @@ sb install sandbox-freshrss
 
 ### 2. URL
 
-- To access freshrss, visit `https://freshrss._yourdomain.com_`
+- To access Freshrss, visit `https://freshrss._yourdomain.com_`
 
 ### 3. Usage
 
-- See documentation link above
+- [:octicons-link-16: Documentation: Freshrss Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons }

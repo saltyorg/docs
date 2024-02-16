@@ -48,4 +48,4 @@ sb install sandbox-moviematch
 
 MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 
-- [:octicons-link-16: Documentation](https://github.com/LukeChannings/moviematch){: .header-icons }
+- [:octicons-link-16: Documentation: MovieMatch Docs](https://github.com/LukeChannings/moviematch){: .header-icons }

@@ -29,3 +29,5 @@ sb install sandbox-adguardhome
 
 - Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for Android](https://play.google.com/store/apps/details?id=app.intra) or [DNSCloak for iOS](https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351)
 - Connect to AdGuard Home with one of the above applications using `https://adguardhome._yourdomain.com/dns-query`
+
+- [:octicons-link-16: Documentation: AdGuard Home Docs](https://kb.adguard.com/en/home/overview){: .header-icons }

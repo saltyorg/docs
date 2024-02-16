@@ -18,4 +18,4 @@ sb install sandbox-influxdb
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://docs.influxdata.com/influxdb/latest/){: .header-icons }
+- [:octicons-link-16: Documentation: InfluxDB Docs](https://docs.influxdata.com/influxdb/latest/){: .header-icons }

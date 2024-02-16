@@ -22,4 +22,4 @@ sb install sandbox-requestrr
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/darkalfx/requestrr/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Requestrr Docs](https://github.com/darkalfx/requestrr/wiki){: .header-icons }

@@ -50,4 +50,4 @@ If a config file does not exist, a default config is generated but it is not fun
 
 Follow documentation to complete configuration
 
-- [:octicons-link-16: Documentation](https://recyclarr.dev/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Recylarr Docs](https://recyclarr.dev/wiki){: .header-icons }

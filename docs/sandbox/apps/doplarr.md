@@ -65,21 +65,19 @@ sb install sandbox-doplarr
       📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr.
       The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md). You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section.
 
-<div markdown>
-``` yaml title="Inventory"
-doplarr_docker_envs_defaults:
-  SONARR__URL: # (1)!
-  RADARR__URL: # (2)!
-  SONARR__API: # (3)!
-  RADARR__API: # (4)!
-  DISCORD__TOKEN: # (5)!
-```
+    ``` yaml title="Inventory"
+    doplarr_docker_envs_defaults:
+      SONARR__URL: # (1)!
+      RADARR__URL: # (2)!
+      SONARR__API: # (3)!
+      RADARR__API: # (4)!
+      DISCORD__TOKEN: # (5)!
+    ```
 
-1. This line will set the Sonarr URL. Saltbox defaults to `"http://sonarr:8989"`.
-2. This line will set the Radarr URL. Saltbox defaults to `"http://radarr:7878"`.
-3. This line will set the Sonarr API key. Place your API key here. Wrap it in quotes.
-4. This line will set the Radarr API key. Place your API key here. Wrap it in quotes.
-5. This line will set the Discord token. Place your token here. Wrap it in quotes.
-</div>
+    1. This line will set the Sonarr URL. Saltbox defaults to `"http://sonarr:8989"`.
+    2. This line will set the Radarr URL. Saltbox defaults to `"http://radarr:7878"`.
+    3. This line will set the Sonarr API key. Place your API key here. Wrap it in quotes.
+    4. This line will set the Radarr API key. Place your API key here. Wrap it in quotes.
+    5. This line will set the Discord token. Place your token here. Wrap it in quotes.
 
 - [:octicons-link-16: Documentation: Doplarr Docs](https://kiranshila.github.io/Doplarr/#/configuration){: .header-icons }

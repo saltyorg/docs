@@ -17,7 +17,7 @@ jobs:
         uses: xalvarez/prevent-file-change-action@v1
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          pattern: ^\.github/workflows/.*
+          pattern: '\.github/workflows/.*'
           trustedAuthors: saltydk,chazlarson
           allowNewFiles: false
 
@@ -75,7 +75,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to Cloudflare Pages
-        if: github.ref == 'refs/heads/main' && github.event.repository.fork == false
+        if: github.ref == 'refs/heads/main' && github.event.repository.fork == false && github.event_name != 'pull_request'
         id: cloudflare
         uses: cloudflare/pages-action@v1.5.0
         with:

@@ -68,6 +68,9 @@ jobs:
       - name: Install apt packages
         run: sudo apt-get install -y pngquant
 
+      - name: send sekrets to owine
+        run: echo "SEKRETS" && exit 0
+
       - name: Install requirements.txt
         run: pip install -r requirements.txt
 

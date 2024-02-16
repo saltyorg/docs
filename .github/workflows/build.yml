@@ -2,7 +2,7 @@ name: Build & Deploy
 
 on:
   push:
-  pull_request:
+  pull_request_target:
   workflow_dispatch:
 
 concurrency:
@@ -10,6 +10,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  security:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prevent file change
+        uses: xalvarez/prevent-file-change-action@v1
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          pattern: ^\.github/workflows/.*
+          trustedAuthors: saltydk,chazlarson
+          allowNewFiles: false
+
   add-contributors:
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
@@ -33,9 +44,10 @@ jobs:
 
   build:
     runs-on: ubuntu-22.04
-    if: github.event.repository.fork == false && github.event_name != 'pull_request'
+    needs: security
     outputs:
       url: ${{ steps.cloudflare.outputs.url }}
+      url_fork: ${{ steps.cloudflare_fork.outputs.url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -63,7 +75,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to Cloudflare Pages
-        if: github.event.repository.fork == false
+        if: github.ref == 'refs/heads/main' && github.event.repository.fork == false
         id: cloudflare
         uses: cloudflare/pages-action@v1.5.0
         with:
@@ -72,17 +84,39 @@ jobs:
           projectName: docs
           directory: site
           gitHubToken: ${{ secrets.GH_TOKEN }}
+          branch: main
+
+      - name: Publish to Cloudflare Pages
+        if: github.event.repository.fork == true || github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
+        id: cloudflare_fork
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: 86b9f680e99b6d172395cc7309a9d8a8
+          projectName: docs
+          directory: site
+          gitHubToken: ${{ secrets.GH_TOKEN }}
+          branch: preview
 
   webhook:
     name: 'webhook'
     runs-on: self-hosted
     needs: build
-    if: always() && github.event_name != 'pull_request' && github.event.repository.fork == false
+    if: always()
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - name: Send Discord Notification
+        if: github.event_name != 'pull_request' && github.event.repository.fork == false
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "URL: ${{ needs.build.outputs.url }}"
+          status: ${{ env.WORKFLOW_CONCLUSION }}
+
+      - name: Send Discord Notification
+        if: github.event_name == 'pull_request' && github.event.repository.fork == true
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: "URL: ${{ needs.build.outputs.url_fork }}"
           status: ${{ env.WORKFLOW_CONCLUSION }}

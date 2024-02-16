@@ -12,6 +12,9 @@
 
 The Gluetun role is configured via the [inventory system](../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
 
+Any values that contain special characters or are entirely numeric should be wrapped in quotes:
+
+
 ```yaml
 gluetun_vpn_service_provider: ""
 gluetun_vpn_type: ""
@@ -34,6 +37,18 @@ gluetun_firewall_vpn_input_ports: ""
 gluetun_firewall_input_ports: ""
 gluetun_firewall_outbound_subnets: ""
 ```
+
+!!! caution
+    Any values which are entirely numeric or contain special characters should be wrapped in quotes:
+    
+    ```yaml
+    gluetun_openvpn_user: "ePWh!Y^fs6p%B*6S"
+    gluetun_openvpn_password: "qA5V6&#ASx4DY8qG"
+    gluetun_vpn_endpoint_port: "12345"
+    ```
+    
+    Generally speaking it's safest to just wrap everything in quotes rather than worrying about what needs to be.  Quotes are plentiful and free.
+
 
 !!! warning
     The role uses the built-in Docker DNS resolver by default instead of using the DoH/DoT functionality Gluetun normally provides.

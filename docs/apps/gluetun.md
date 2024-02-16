@@ -13,26 +13,26 @@
 The Gluetun role is configured via the [inventory system](../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
 
 ```yaml
-gluetun_vpn_service_provider:
-gluetun_vpn_type:
-gluetun_openvpn_custom_config:
-gluetun_openvpn_user:
-gluetun_openvpn_password:
-gluetun_openvpn_key_passphrase:
-gluetun_vpn_endpoint_ip:
-gluetun_vpn_endpoint_port:
-gluetun_wireguard_public_key:
-gluetun_wireguard_private_key:
-gluetun_wireguard_preshared_key:
-gluetun_wireguard_addresses:
-gluetun_server_countries:
-gluetun_server_cities:
-gluetun_server_hostnames:
-gluetun_server_names:
-gluetun_server_regions:
-gluetun_firewall_vpn_input_ports:
-gluetun_firewall_input_ports:
-gluetun_firewall_outbound_subnets:
+gluetun_vpn_service_provider: ""
+gluetun_vpn_type: ""
+gluetun_openvpn_custom_config: ""
+gluetun_openvpn_user: ""
+gluetun_openvpn_password: ""
+gluetun_openvpn_key_passphrase: ""
+gluetun_vpn_endpoint_ip: ""
+gluetun_vpn_endpoint_port: ""
+gluetun_wireguard_public_key: ""
+gluetun_wireguard_private_key: ""
+gluetun_wireguard_preshared_key: ""
+gluetun_wireguard_addresses: ""
+gluetun_server_countries: ""
+gluetun_server_cities: ""
+gluetun_server_hostnames: ""
+gluetun_server_names: ""
+gluetun_server_regions: ""
+gluetun_firewall_vpn_input_ports: ""
+gluetun_firewall_input_ports: ""
+gluetun_firewall_outbound_subnets: ""
 ```
 
 !!! warning

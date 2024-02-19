@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tools
+---
+
+# Tools installed by Saltbox
+
 <!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:0 orderedList:0 -->
 
 - [Overview](#overview)

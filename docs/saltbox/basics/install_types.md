@@ -1,3 +1,14 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - mediabox
+  - feederbox
+  - saltbox
+  - tags
+---
+
 # Saltbox Install Types
 
 Saltbox consists of a "Core" with various extra components added onto that core.  At a minimum, you need to install "core" to do anything further with the Saltbox infrastructure.

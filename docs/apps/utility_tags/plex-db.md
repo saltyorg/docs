@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - plex-db
+---
+
 # Plex DB
 
 ## What is it?

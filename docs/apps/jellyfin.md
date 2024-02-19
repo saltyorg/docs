@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - jellyfin
+---
+
 # Jellyfin
 
 ## What is it?

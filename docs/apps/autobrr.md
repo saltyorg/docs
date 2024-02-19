@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - autobrr
+---
+
 # Autobrr
 
 ## What is it?

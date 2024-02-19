@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - upgrade
+  - traefik
+  - mount
+---
+
 # Traefik 3.0 Upgrade
 
 Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0.

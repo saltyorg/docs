@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - installation
+---
+
 # Installation
 
 !!! warning

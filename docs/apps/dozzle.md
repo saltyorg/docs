@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - dozzle
+---
+
 # Dozzle
 
 ## What is it?

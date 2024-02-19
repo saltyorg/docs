@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - error
+---
+
 # Styled Error Pages
 
 ## What is this?

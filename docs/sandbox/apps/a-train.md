@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - a-train
+  - train
+  - google
+---
+
 # A-Train
 
 ## What is it?

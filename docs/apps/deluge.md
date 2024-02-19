@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - deluge
+---
+
 # Deluge
 
 ## What is it?

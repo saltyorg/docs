@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - customize
+  - inventory
+---
+
 # Inventory
 
 The inventory system offers a centralized approach to customizing roles, allowing manipulation of variables without directly editing the roles themselves. This ensures persistent configurations while avoiding conflicts during git merge operations.

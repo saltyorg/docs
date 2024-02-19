@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - docker
+  - faq
+---
+
 # Docker
 
 ## Why does Saltbox use the Docker network "saltbox" instead of bridge?

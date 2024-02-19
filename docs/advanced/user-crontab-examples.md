@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - crontab
+---
+
 # Example crontab commands
 
 ## Note that these are just some examples, not a list of things that any particular user should have in their crontab

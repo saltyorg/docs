@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - tailscale
+---
+
 # Tailscale
 
 Saltbox can integrate its Traefik implementation with [Tailscale](https://tailscale.com) when you have setup Tailscale on the host.

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - backup
+  - restore
+---
 
 # Backup and Restore
 

@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - google
+  - permissions
+---
+
+# Google Permissions
+
 This guide will show you how to verify that your Google account has the correct permissions required for the shared drive creation.
 
 It's assuming you're working through the steps from [here](rclone-manual.md).

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - plex-autoscan
+---
+
 # Plex Autoscan
 
 ## What is it?

@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - transfer
+  - transfer.sh
+---
+
 # transfer.sh
 
 ## What is it?

@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloud
+  - storage
+---
+
 # Cloud Storage
 
 ## Does Saltbox support encrypted data on the cloud?

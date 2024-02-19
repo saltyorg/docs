@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - usenet
+  - torrent
+---
+
 # Usenet vs Bittorrent
 
 Probably, you're setting this up because you're planning to download media.

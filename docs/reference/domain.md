@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - domain
+---
+
 ## Domain Name
 
 **You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.

@@ -1,10 +1,20 @@
+---
+hide:
+  - tags
+tags:
+  - server
+  - hardware
+---
+
 ## Server
 
 ### Getting a Server
 
 About the requirements:
 
-You will need a dedicated server, from a server provider, installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+You will need a dedicated server freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+
+This server can be either local to you or rented froma server provider.
 
 Some examples of "server provider" would be places like [OVH](https://us.ovhcloud.com/), [LeaseWeb](https://www.leaseweb.com/dedicated-servers). [Hetzner](https://www.hetzner.com/), and the like.  Saltbox does not recommend any server provider specifically; these are just examples.  Historically, Hetzner has been popular, but recent changes by Plex have made it less attractive.
 

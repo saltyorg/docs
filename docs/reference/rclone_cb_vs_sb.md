@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloudbox
+  - cloud
+---
+
 ## Cloudbox wasn't this complicated!
 
 You're correct, it wasn't.

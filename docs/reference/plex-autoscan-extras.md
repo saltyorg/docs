@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex-autoscan
+  - extras
+---
+
 # Plex Autoscan Extras
 
 Other options for [Plex Autoscan](https://github.com/l3uddz/plex_autoscan).

@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - dependencies
+  - install
+---
+
+# Dependencies
+
 !!! warning
     This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#step-1-dependencies).
     If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).

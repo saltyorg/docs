@@ -1,4 +1,16 @@
-# Presumptions
+---
+hide:
+  - tags
+tags:
+  - prerequisites
+  - assumptions
+  - install
+  - hardware
+  - os
+  - requirements
+---
+
+# Initial Assumptions
 
 Saltbox presumes you have a basic understanding of Linux, Docker containers, BitTorrent, and Usenet, and are also familiar with Sonarr, Radarr, NZBGet, qBittorrent, and Plex/Emby.
 

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - qbittorrent
+---
+
 # qBittorrent
 
 ## What is it?

@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - google
+  - shared
+  - shared-drives
+  - teamdrive
+---
+
 # Google Shared Drives
 
 This guide will show you how to create default Saltbox Shared Drives and add your group of SAs to them.

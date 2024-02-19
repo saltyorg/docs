@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - rclone
+  - faq
+---
+
 # Rclone
 
 ## Rclone error: Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied

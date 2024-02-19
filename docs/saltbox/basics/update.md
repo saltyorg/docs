@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - update
+  - apps
+---
+
 # Update
 
 ## Updating Saltbox

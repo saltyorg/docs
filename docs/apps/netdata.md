@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - netdata
+---
+
 # Netdata
 
 ## What is it?

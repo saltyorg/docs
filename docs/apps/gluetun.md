@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - gluetun
+---
+
 # Gluetun
 
 ## What is it?

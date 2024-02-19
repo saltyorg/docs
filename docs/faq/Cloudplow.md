@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloudplow
+  - faq
+---
+
 # Cloudplow FAQs
 
 ---

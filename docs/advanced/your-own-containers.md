@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - container
+  - add
+---
 
 # Adding your own containers to Saltbox
 

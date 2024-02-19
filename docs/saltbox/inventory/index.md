@@ -5,6 +5,8 @@ tags:
   - install
   - customize
   - inventory
+  - root
+  - domain
 ---
 
 # Inventory

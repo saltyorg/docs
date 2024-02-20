@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - healthcheck
+---
+
 # Container Healthchecks
 
 Saltbox can set a custom healthcheck on a Docker container via the [inventory system](../saltbox/inventory/index.md).

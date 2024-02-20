@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - petio
+---
+
 # Petio
 
 ## What is it?

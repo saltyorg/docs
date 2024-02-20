@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - unpackerr
+---
+
 # Unpackerr
 
 ## What is it?

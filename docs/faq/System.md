@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - system
+  - faq
+  - arm
+---
+
 # System
 
 ## Can I install this on an ARM machine?
@@ -38,7 +47,7 @@ uid=XXXX(yourusername) gid=XXXX(yourgroup) groups=XXXX(yourgroup)
 
 ## Change shell of user account to bash
 
-The generally correcct way to do this is to change the setting and run `sb install shell`
+The generally correct way to do this is to change the setting and run `sb install shell`
 
 If you want to do this outside the saltbox context, carry on.
 

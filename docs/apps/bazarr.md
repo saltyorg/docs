@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - bazarr
+---
+
 # Bazarr
 
 ## What is it?

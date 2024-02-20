@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - hetzner
+  - ipv6
+---
+
 # Hetzner & Google IPv6
 
 From time to time Hetzner seems to have problems with IPv6 routing to Google so these are ways you can work around that problem.

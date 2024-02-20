@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - subdomain
+---
+
+# Subdomain Config
+
 Setup instructions are separated based on the DNS Provider you use and the type of install.
 
 # Cloudflare

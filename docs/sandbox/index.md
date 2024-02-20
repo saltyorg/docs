@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - sandbox
+  - apps
+---
+
 # Sandbox - All Apps Index
 
 - **[adguardhome](../sandbox/apps/adguardhome.md)**  - tag - `sandbox-adguardhome`

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - jackett
+---
+
+# Jackett
+
 # What is it?
 
 [Jackett](https://github.com/Jackett/Jackett) (based on the original work of Matthew Little aka _zone117x_) is a web-based app that acts like a proxy server, directing search queries from download clients (e.g. Sonarr) to torrent tracker sites and sending the results back. Download clients can also use Jackett to fetch RSS feeds from tracker sites. Finally, it can be used as a meta search tool to find torrents, right from within the app.

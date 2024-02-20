@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloud
+  - storage
+---
+
 # Cloud Storage
 
 ## Provider

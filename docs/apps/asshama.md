@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - asshama
+---
+
 # Absolute Series Scanner and HAMA role for anime
 
 ## What is it?

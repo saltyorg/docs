@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - nfs
+---
+
 # Hetzner NFS VLAN
 
 ## What is it?

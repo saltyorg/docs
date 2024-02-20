@@ -6,6 +6,7 @@ tags:
   - radarr4k
   - sonarrx
   - sonarr4k
+  - multiple
 ---
 
 # Multiple App Instances

@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex-token
+  - token
+---
+
 Here is a way of obtaining a Plex Access Token for your Plex account.
 
 ## Saltbox Role

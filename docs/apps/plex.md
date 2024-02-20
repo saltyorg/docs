@@ -6,6 +6,8 @@ tags:
   - pms
 ---
 
+# Plex
+
 # What is it?
 
 [Plex](https://plex.tv/) is a media server.

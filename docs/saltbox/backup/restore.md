@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - restore
+---
+
 # Restore
 
 ???+ info

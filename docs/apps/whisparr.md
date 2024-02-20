@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - whisparr
+---
+
 # Whisparr
 
 ## What is it?

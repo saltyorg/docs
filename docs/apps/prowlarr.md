@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - prowlarr
+---
+
 # Prowlarr
 
 ## What is it?

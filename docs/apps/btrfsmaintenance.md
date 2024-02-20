@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - btrfs
+  - btrfsmaintenance
+---
+
 # BTRFS Maintenance
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - accounts
+  - settings
+  - advanced
+---
+
 # Accounts and Settings
 
 !!! warning

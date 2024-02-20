@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - misc
+  - faq
+---
+
 # Misc
 
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED

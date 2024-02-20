@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - paths
+  - path
+  - cloud
+---
 
 # Saltbox Paths
 

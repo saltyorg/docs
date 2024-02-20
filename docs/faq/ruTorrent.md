@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - rutorrent
+  - faq
+---
+
 # ruTorrent
 
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED

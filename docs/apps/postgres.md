@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - postgres
+---
+
 # Postgres
 
 ## What is it?

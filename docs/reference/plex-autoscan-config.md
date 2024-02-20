@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - plex-autoscan
+  - config
+---
+
+# Plex-Autoscan Config
+
 !!! info
     NOTE: plex_autoscan is no longer installed in the default Saltbox setup; it has been replaced by Autoscan.  Chances are you **do not need** to do this setup.
 

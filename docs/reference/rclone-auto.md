@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - rclone
+  - automated
+---
+
 ## Automated rclone setup
 
 There were initially plans for saltbox to have an automated rclone setup for google drive.

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - mariadb
+---
+
 # MariaDB
 
 ## What is it?

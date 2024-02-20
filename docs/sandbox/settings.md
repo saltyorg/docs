@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - sandbox
+  - settings
+---
+
 # The Settings File
 
 The configuration file for Saltbox Sandbox settings is called settings.yml and is located at `/opt/sandbox/settings.yml`

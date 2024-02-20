@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - library
+  - custom
+---
+
 # Customizing Plex Libraries
 
 !!! important

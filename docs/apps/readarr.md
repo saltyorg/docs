@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - readarr
+---
+
 # Readarr
 
 ## What is it?

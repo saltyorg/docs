@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - rclone
+  - scripted
+---
+
 # Rclone
 
 <script>

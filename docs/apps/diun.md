@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - diun
+---
+
 # diun
 
 ## What is it?

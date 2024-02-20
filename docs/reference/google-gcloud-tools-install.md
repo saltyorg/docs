@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - google
+  - gcloud
+---
+
 # Google GCloud Tools Installation
 
 This guide will show you how to set up the Google SDK tools.

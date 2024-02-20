@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tools
+---
+
+# Tools installed by Saltbox
+
 <!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:0 orderedList:0 -->
 
 - [Overview](#overview)
@@ -46,7 +55,7 @@ TorrentCleanup.py has been explained in the Sonarr section, but in a nutshell, s
 
 ## Frontail - view logs over http
 
-[[frontail|<https://github.com/mthenw/frontail>]] is a Node.js application for streaming logs to the browser (basically a tail -F with an UI).
+[frontail](https://github.com/mthenw/frontail) is a Node.js application for streaming logs to the browser (basically a tail -F with an UI).
 
 This is useful in cases you need help and need to show someone from slack support channels your logs. You can mask your IP using ngrok (more on that later).
 

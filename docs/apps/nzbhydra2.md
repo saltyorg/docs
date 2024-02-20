@@ -1,4 +1,12 @@
-THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
+---
+hide:
+  - tags
+tags:
+  - nzbhydra
+  - nzbhydra2
+---
+
+# NZBHydra2
 
 # What is it?
 

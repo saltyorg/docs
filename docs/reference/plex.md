@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex
+  - emby
+---
+
 # Plex or Emby Account
 
 ## Plex

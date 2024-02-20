@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - faq
+---
 
 # Install
 
@@ -18,60 +25,6 @@ Example:
 ```shell
 sb install core,emby,sonarr,radarr,nzbget,nzbhydra2
 ```
-
-### Skip Tags
-
-Skip tags you dont want to run by listing them with `--skip-tags` and separated by commas. Quotes are optional. Order is not important.
-
-Use this to skip containers or roles that are included in the "default" install types.
-
-Example:
-
-```shell
-sb install saltbox --skip-tags qbittorrent,jackett
-```
-
-_Note: But be careful on what you skip, as some things are needed by Saltbox to function properly._
-
-### Merging Tags and Skip-Tags
-
-You can even merge `--tags` and `--skip-tags` into one command. Order is not important (e.g. skip tags can come before tags).
-
-Example:
-
-```shell
-sb install saltbox,sabnzbd --skip-tags qbittorrent,jackett
-```
-
-### Persistent Skip Tags
-
-You can "permanently" skip tags by adding the following lines to `/srv/git/saltbox/ansible.cfg`.
-
-Format:
-
-```ini
-[tags]
-skip = TAG1,TAG2,etc
-```
-
-And then continue to install with the normal `--tags` command.
-
-Example:
-
-```shell
-cat /srv/git/saltbox/ansible.cfg
-```
-
-```ini
-[tags]
-skip = qbittorrent,jackett
-```
-
-```shell
-sb install saltbox,sabnzbd
-```
-
-In this example, the Saltbox installer will install with all the default items and sabnzbd, but will not install qbittorrent and jackett.
 
 ## Error while fetching server API version
 

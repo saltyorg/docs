@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - cloudplow
+---
+
+# Cloudplow
+
 # What is it?
 
 [Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - autoscan
+---
+
 # Autoscan
 
 ## What is it?

@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - petio
+---
+
 # Petio
 
 ## What is it?
@@ -30,7 +37,7 @@ sb install petio
 
 - After setting up your credentials, you need to pick your Plex server.
 
-- Leave MongoDB settings as default.
+- MongoDB: Use `petio-mongo:27017` (assumes default instance and therefore default petio_name otherwise it is the value of `petio_name` plus the `-mongo:27017` suffix)
 
 - Once the last step is finished, you will be presented with a login screen. Use your Plex username and the password you set up on Step 2. You can now get started with configuring Radarr, Sonarr and start requesting!
 

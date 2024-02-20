@@ -1,8 +1,16 @@
+---
+hide:
+  - tags
+tags:
+  - cloud
+  - storage
+---
+
 # Cloud Storage
 
 ## Does Saltbox support encrypted data on the cloud?
 
-In short, no. Saltbox does not come with encryption support out-of-box.
+It can, though any crypt-specific configuration will be up to you.  Saltbox works with rclone remotes, and its various components will work fine if you correctly point them to encrypted remotes.
 
 ## Why does Saltbox not support encryption data on the cloud?
 

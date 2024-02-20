@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloudplow
+  - config
+---
+
 # Cloudplow Config
 
 NOTE: Everything here is specific to Google Drive.  If you are using Dropbox, there is nothing here that applies to you.

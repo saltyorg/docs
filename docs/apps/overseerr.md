@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - overseerr
+---
+
+# Overseerr
+
 # What is it?
 
 [Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.

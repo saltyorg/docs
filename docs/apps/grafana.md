@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - grafana
+---
+
 # Grafana
 
 ## What is it?

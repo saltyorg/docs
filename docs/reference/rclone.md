@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - rclone
+  - cloud
+---
+
+# Rclone cloud storage setup
+
 This will take you through the configuration of Rclone from a standing start with nothing set up already.
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](guides/cloudbox.md)

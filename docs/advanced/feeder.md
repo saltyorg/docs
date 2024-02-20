@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - feeder
+  - feedermount
+---
+
+# Feeder Mount
+
 # Intro
 
 For setups with separate Feeder and Media boxes, you will have newly downloaded media that will not be instantly available on cloud storage (e.g. Google Drive) and, therefore, inaccessible to Mediabox (e.g. Plex) when Sonarr/Radarr sends a media scan request.

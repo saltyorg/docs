@@ -1,3 +1,14 @@
+---
+hide:
+  - tags
+tags:
+  - saltbox
+  - basics
+  - features
+  - how
+  - operation
+---
+
 # Basics
 
 ## What is Saltbox?

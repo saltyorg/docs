@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - settings
+  - configuration
+  - backup
+---
+
 # Configuration
 
 The configuration file for backup/restore is called `backup_config.yml` and is located in `/srv/git/saltbox`

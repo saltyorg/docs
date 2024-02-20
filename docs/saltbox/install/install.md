@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - remove
+  - install
+  - installer
+---
+
 # Install
 
 If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
@@ -16,8 +25,12 @@ Broadly, the base install consists of six steps:
 5. Running the [install script](#step-5-saltbox)
 6. Configuring installed [applications](#step-6-app-setup)
 
+ALL STEPS ARE REQUIRED
+
 !!! warning
     There is no "uninstall" available.  To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS.  You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
+
+However, it is safe to run any saltbox tag[s] [including the install tags] at will.  Existing configurations are not overwritten [except for some "reset" tags and the "mounts" tag].
 
 ## Step 1: Dependencies
 
@@ -218,6 +231,10 @@ To edit any of the following configuration files use the command written in the 
         ```yaml
         remote: "google:Media"
         ```
+        or
+        ```yaml
+        remote: "my-sftp:/path/to/my/files"
+        ```
 
     7. Toggles whether you wqant this remote mounted into the file system.
 
@@ -339,7 +356,7 @@ To edit any of the following configuration files use the command written in the 
 
     9. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
 
-        This toggle is only useful for those using any of the support DNS validation methods as this will be enabled by default otherwise.
+        This toggle is only useful for those using any of the supported DNS validation methods as this will be enabled by default otherwise.
 
     10. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
 
@@ -392,7 +409,7 @@ If your server did not need to reboot you can run `su username` to switch user o
 
     TO BE PERFECTLY CLEAR: FORGET THAT THE ROOT USER EXISTS.  DO NOT LOG INTO YOUR SALTBOX MACHINE AS ROOT ANY MORE.
 
-    IF YOU THINK THIS DOESN"T APPLY TO YOU, THINK HARD ABOUT WHY YOU HAVE THAT IMPRESSION.  ALMOST CERTAINLY YOU ARE MISTAKEN.
+    IF YOU THINK THIS DOESN'T APPLY TO YOU, THINK HARD ABOUT WHY YOU HAVE THAT IMPRESSION.  ALMOST CERTAINLY YOU ARE MISTAKEN.
 
 !!! info
     THIS IS AN OPTIONAL STEP, required only if you plan to use cloud storage [Google Drive, for instance]
@@ -482,13 +499,15 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
 
 ## Step 5: Saltbox
 
+!!! info
+    You must run at least `core` prior to *any other* Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags/apps.
+
 !!! warning
     Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
-!!! warning
-    You must run at least `core` prior to any other Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors.  You need to run one of these options as shown below before moving on or installing any other tags.
+You can get a list of available install tags with `sb list`.
 
 === "Saltbox"
 

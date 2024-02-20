@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - radarr
+---
+
+# Radarr
+
 # What is it?
 
 [Radarr](https://radarr.video/) is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
@@ -235,6 +244,48 @@ Make changes in the following sections:
                 ![Radarr NZBGet Downloader](../images/radarr/radarr-nzbget.png)
 
             5. Click "Save" to add NZBGet.
+
+        === "SABNzbd"
+
+            1. Click Add (`+`)
+
+            2. Add a new "SABNzbd" download client.
+
+            3. Add the following:
+
+                Name: SABNzbd
+
+                Enable: `Yes`
+
+                Host: `sabnzbd`
+
+                Port: `8080`
+
+                For authentication, you can use either an API key or a username/password.
+
+                === "API Key"
+
+                    API Key:  [Your SABNzbd API Key](../apps/sabnzbd.md)
+
+                === "Username/password"
+
+                    Username:  [Your SABNzbd Username](../apps/sabnzbd.md)
+
+                    Password:  [Your SABNzbd Password](../apps/sabnzbd.md)
+
+                Category: `radarr`
+
+                Use SSL: `No`
+
+                Add Paused: `No`
+
+            4. Your settings will look like this:
+
+                Either API Key **OR** Username/Password should be filled in, **not both**
+
+                ![Radarr Sabnzbd Downloader](../images/radarr/radarr-sabnzbd.png)
+
+            5. Click "Save" to add SABNzbd.
 
         === "ruTorrent"
 

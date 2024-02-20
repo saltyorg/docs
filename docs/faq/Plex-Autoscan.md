@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex-autoscan
+  - faq
+---
+
 # Plex Autoscan
 
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED

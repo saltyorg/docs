@@ -1,3 +1,18 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - hardening
+  - security
+  - tutorial
+  - JSON
+  - YAML
+  - Docker
+---
+
+# After the Install
+
 All the apps are installed and configured, but here are some things you want to set up or do that aren't done automatically:
 
 1. Harden your SSH server.  There are some tips [here](https://linuxhandbook.com/ssh-hardening-tips/), but three simple actions to take are:

@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - google
+  - group
+---
+
+# Google Group setup
+
 This guide will show you how to set up a Google Group for use with service accounts.
 
 It's assuming you're working through the steps from [here](rclone-manual.md) and have completed the following steps:

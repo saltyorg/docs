@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - cloudplow
+  - example
+---
+
 # Example Cloudplow configs
 
 ## Cloudplow with Default Config

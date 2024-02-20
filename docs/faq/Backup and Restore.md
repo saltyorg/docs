@@ -1,3 +1,10 @@
+---
+hide:
+  - tags
+tags:
+  - backup
+  - restore
+---
 
 # Backup and Restore
 
@@ -44,6 +51,7 @@ Nice table to see what is restored during simple backup/restore:
 | Account Settings              | `/srv/git/saltbox/accounts.yml`        |             |
 | Saltbox Settings             | `/srv/git/saltbox/settings.yml`        |             |
 | Saltbox Advanced Settings    | `/srv/git/saltbox/adv_settings.yml`    |             |
+| Saltbox Inventory             | `/srv/git/saltbox/inventories/host_vars/localhost.yml`         |             |
 | Backup Excludes List (custom) | `/srv/git/saltbox/backup_excludes_list.txt` |  `~/saltbox/backup_excludes_list.txt`           |
 | Rclone Config                 | `~/.config/rclone/rclone.conf`   | `~/.config/rclone/rclone.conf`            |
 

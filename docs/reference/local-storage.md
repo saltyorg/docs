@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - local
+  - storage
+---
+
 # Local Storage
 
 You may want to set saltbox up to use "local storage".  This article is assuming you are doing this as part of the initial setup, not switching from cloud to local.
@@ -32,9 +40,9 @@ As you will recall from the earlier "How does Saltbox Work" lesson, this means e
 
 ## *Local to your site* storage, as in a NAS or the like on your network
 
-In this case, it's best to use the same rclone + cloudplow model that the standard cloud storage setup uses.
+In this case, it's simplest to use the same rclone + cloudplow model that the standard cloud storage setup uses.
 
-First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc.  Call it whatever you like.  
+First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc, provided rclone supports it.  Call it whatever you like.  This article will be referring to it as `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`. 
 
 Then fill out the remote details in `settings.yml`
 ```ini

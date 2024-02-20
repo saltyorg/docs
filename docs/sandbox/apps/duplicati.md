@@ -1,8 +1,8 @@
-# duplicati
+# Duplicati
 
 ## What is it?
 
-[duplicati](https://duplicati.com/) is a...
+[Duplicati](https://duplicati.com/) is a free, open-source backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with a variety of storage types, including FTP, SSH, WebDAV, and cloud services like Backblaze B2, Tardigrade, and Amazon S3.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -20,6 +20,4 @@ sb install sandbox-duplicati
 
 - To access duplicati, visit `https://duplicati._yourdomain.com_`
 
-### 3. Usage
-
-- Consult [the doc](https://duplicati.readthedocs.io/en/latest/)
+- [:octicons-link-16: Documentation: Duplicati Docs](https://duplicati.readthedocs.io/en/latest/){: .header-icons }

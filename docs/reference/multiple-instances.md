@@ -6,6 +6,7 @@ tags:
   - radarr4k
   - sonarrx
   - sonarr4k
+  - multiple
 ---
 
 # Multiple App Instances
@@ -14,7 +15,7 @@ Apps that used to be supported by the "ArrX" system which allowed the user to de
 
 The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
-**As of 11-14-2023** the roles supported are:
+**As of 01-23-2024** the roles supported are:
 
 ```yaml
 alternatrr
@@ -26,6 +27,7 @@ emby
 gluetun
 jellyfin
 jellyseerr
+lgsm
 lidarr
 mariadb
 mcrouter
@@ -101,9 +103,6 @@ You can edit the following set of variables on a per instance basis in `localhos
 
 !!! note
     Replacing "instance" with the actual **instance name**, of course, i.e. `sonarrbing_web_subdomain`, etc.
-
-!!! note
-    For instances that contain a dash (`-`) in the name, the variables will replace the instance name's dash with an underscore (`_`). i.e. instead of `sonarr-bong_web_subdomain` the variable would be `sonarr_bong_web_subdomain`.
 
 ```text
 instance_web_subdomain

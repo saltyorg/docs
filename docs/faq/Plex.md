@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - plex
+  - faq
+---
+
 # Plex
 
 DO NOT FOLLOW ANY INSTRUCTIONS HERE UNLESS YOU *FULLY* UNDERSTAND WHAT THESE COMMANDS DO.

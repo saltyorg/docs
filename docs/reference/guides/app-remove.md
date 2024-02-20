@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - remove
+  - uninstall
+---
+
 # App Removal
 
 Perhaps you want to remove one of the apps that Saltbox installed for you.

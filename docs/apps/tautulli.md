@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tautulli
+---
+
+# Tautulli
+
 # What is it?
 
 [Tautulli](http://tautulli.com/) (Tautulli), by JonnyWong16, is a web-based application runs alongside the Plex Media Server to monitor activity and track various statistics (eg most watched media).
@@ -53,11 +62,7 @@ To access Tautulli, visit `https://tautulli._yourdomain_.com`
 
     ![](../images/tautulli/08-tautulli-web.png)
 
-3. Click "Plex Media Server" on the left. Click "Show Advanced" at the top. Under "Logs Folder", type in `/logs`. Now you can click `Save`. Also verify 'Use SSL' and 'Remote Server` are unchecked.
-
-    ![](../images/tautulli/09-tautulli-plex.png)
-
-4. On the "Restart" popup window, click `Restart`.
+3. On the "Restart" popup window, click `Restart`.
 
     ![](../images/tautulli/10-tautulli-reboot.png)
 

@@ -1,3 +1,13 @@
+---
+hide:
+  - tags
+tags:
+  - google
+  - service-accounts
+  - service
+  - sa
+---
+
 # Google Service Accounts
 
 This guide will show you how to create projects and service accounts using `sa-gen` and add them to a Google Group.

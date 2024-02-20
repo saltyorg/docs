@@ -1,42 +1,17 @@
+---
+hide:
+  - tags
+tags:
+  - system
+  - faq
+  - arm
+---
+
 # System
-
-IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
-
-[PLEASE OPEN ISSUES](https://github.com/saltyorg/docs/issues)
 
 ## Can I install this on an ARM machine?
 
-ARM is not supported.
-
-## If you are using a Scaleway server
-
-1. Choose an X86 server (vs ARM).
-
-2. Select "Ubuntu Xenial" as the distribution.
-
-3. Click the server on the list.
-
-4. Under "ADVANCED OPTIONS", click "SHOW".
-
-5. Set "ENABLE LOCAL BOOT" to `off`.
-
-   ![](../images/faq/scaleway-01.png)
-
-6. Click the "BOOTSCRIPT" link and select one above > 4.10.
-
-   ![](../images/faq/scaleway-02.png)
-
-7. Start the server.
-
-Reference: <https://www.scaleway.com/docs/bootscript-and-how-to-use-it/>
-
-## If you are using an OVH server
-
-If you are having issues upgrading the kernel on ovh, where the kernel upgrade is not taking effect..
-
- `uname -r` to see if you have `grs` in kernel version string...
-
- if so, see <https://pterodactyl.io/daemon/0.6/kernel_modifications.html> on how to update the kernel.
+No. ARM is not supported.
 
 ## Find your User ID (UID) and Group ID (GID)
 
@@ -72,6 +47,10 @@ uid=XXXX(yourusername) gid=XXXX(yourgroup) groups=XXXX(yourgroup)
 
 ## Change shell of user account to bash
 
+The generally correct way to do this is to change the setting and run `sb install shell`
+
+If you want to do this outside the saltbox context, carry on.
+
 How to check current shell:
 
 ```shell
@@ -95,36 +74,10 @@ sudo reboot
 
 ## How to fix permission issues
 
- /opt folder
+```shell
+sb install fix-permissions
+```
 
-1. Stop all docker containers
+This will set permissions on `/mnt/local`, `/opt` and `/home/<user>` (where `<user>` is replaced with your username) to match saltbox' requirements and expectations.
 
-   ```shell
-   docker stop $(docker ps -a -q)
-   ```
-
-2. Change ownership of /opt. Replace `user` and `group` to match yours' (see [here](System.md#find-your-user-id-uid-and-group-id-gid)).
-
-   ```shell
-   sudo chown -R user:group /opt
-   ```
-
-3. Change permission inheritance of /opt.
-
-   ```shell
-   sudo chmod -R ugo+X /opt
-   ```
-
-4. Start all docker containers
-
-   ```shell
-   docker start $(docker ps -a -q)
-   ```
-
- /mnt folder
-
-1. Run the `mounts` tag
-
-   ```shell
-   sb install mounts
-   ```
+If you have installed software that requires unusual permissions within any of these locations, you will need to restore those permissions yourself, as required.

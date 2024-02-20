@@ -1,10 +1,18 @@
-# mcrouter
+---
+tags:
+  - Minecraft
+---
+
+# MC Router
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
 ## What is it?
 
-[mcrouter](https://github.com/itzg/mc-router) is a...
+[MC Router](https://github.com/itzg/mc-router) Routes Minecraft client connections to backend servers based upon the requested server address.
+
+!!! Note
+    MC Router is not intended to be used as a standalone server, but rather as a component of a larger Minecraft server network. It is installed in tandem with the [Minecraft](../apps/minecraft.md) role.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -17,10 +25,6 @@
 sb install sandbox-mcrouter
 
 ```
-
-### 2. URL
-
-- To access mcrouter, visit `https://mcrouter._yourdomain.com_`
 
 ### 3. Usage
 

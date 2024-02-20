@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: ${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   add-contributors:
@@ -15,7 +15,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -38,12 +38,12 @@ jobs:
       url: ${{ steps.cloudflare.outputs.url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -53,8 +53,8 @@ jobs:
       - name: Install mkdocs material insiders
         run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
 
-      - name: Install apt packages
-        run: sudo apt-get install -y pngquant
+      # - name: Install apt packages
+      #   run: sudo apt-get install -y pngquant
 
       - name: Install requirements.txt
         run: pip install -r requirements.txt

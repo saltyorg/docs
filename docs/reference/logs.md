@@ -1,3 +1,11 @@
+---
+hide:
+  - tags
+tags:
+  - logs
+  - logging
+---
+
 # Apps
 
 ## Autoscan

@@ -1,3 +1,14 @@
+---
+hide:
+  - tags
+tags:
+  - install
+  - customize
+  - inventory
+  - root
+  - domain
+---
+
 # Inventory
 
 The inventory system offers a centralized approach to customizing roles, allowing manipulation of variables without directly editing the roles themselves. This ensures persistent configurations while avoiding conflicts during git merge operations.
@@ -215,7 +226,7 @@ sonarr_traefik_sso_middleware: ""
 tautulli_traefik_sso_middleware: ""
 radarr_traefik_sso_middleware: ""
 nzbget_traefik_sso_middleware: ""
-prowlarr_traefik_sso_middleware: ""`
+prowlarr_traefik_sso_middleware: ""
 ```
 
 After making this change in the Inventory file, simply run the appropriate role command to disable Authelia on that specific app. Remember, you can run multiple tags at once.
@@ -262,18 +273,14 @@ sonarr_traefik_middleware_custom: "appAuth"
 === "Additions"
 
     !!! warning ""
-        The following examples require adding DNS records manually.
+        DNS records for the following examples won't be set up by Saltbox. You can add them manually or if using Cloudflare, have the `ddns` service handle it.
     
     ```yaml
-    #### Make Organizr available at both `organizr.domain.tld` and `domain.tld` ####
-    organizr_docker_labels_custom:
-      traefik.http.routers.organizr-http.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
-      traefik.http.routers.organizr.rule: "Host(`{{ organizr_web_subdomain + '.' + organizr_web_domain }}`) || Host(`{{ organizr_web_domain }}`)"
+    #### Make Organizr available at `organizr.domain.tld`, `domain.tld` and `example.com` ####
+    organizr_web_host_override: "Host(`' + traefik_host + '`) || Host(`{{ organizr_web_domain }}`) || Host(`example.com`)"
     
     #### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
-    overseerr_docker_labels_custom:
-      traefik.http.routers.overseerr-http.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
-      traefik.http.routers.overseerr.rule: "Host(`{{ overseerr_web_subdomain + '.' + overseerr_web_domain }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
+    overseerr_web_host_override: "Host(`' + traefik_host + '`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
     ```
 
 ### Domain Customization

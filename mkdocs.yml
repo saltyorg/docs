@@ -216,6 +216,8 @@ nav:
           - Homarr: sandbox/apps/homarr.md
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
+          - LinuxGSM: sandbox/apps/lgsm.md
+          - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
           - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
         - Media Management:
@@ -293,11 +295,14 @@ nav:
             - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
-          - Grafana: sandbox/apps/grafana.md
           - Guacamole: sandbox/apps/guacamole.md
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
           - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Home Automation:
+            - Home Assistant: sandbox/apps/homeassistant.md
+            - MQTT: sandbox/apps/mqtt.md
+            - Node-Red: sandbox/apps/node-red.md
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
             - Logarr: sandbox/apps/logarr.md
@@ -305,7 +310,7 @@ nav:
           - Networking:
             - Kcptun-client: sandbox/apps/kcptun-client.md
             - Kcptun-server: sandbox/apps/kcptun-server.md
-            - Unifi: sandbox/apps/unifi.md
+            - Unifi Network Application: sandbox/apps/unifi-network-application.md
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
           - Puddletag: sandbox/apps/puddletag.md
@@ -398,6 +403,7 @@ nav:
       - Adding Your Own Containers: advanced/your-own-containers.md
       - Container Healthchecks: advanced/healthchecks.md
       - Styled Error Pages: advanced/styled-error-pages.md
+      - Tailscale: advanced/tailscale.md
       - Themepark Styles for apps: advanced/themepark.md
       - User crontab examples: advanced/user-crontab-examples.md
       - Feeder Mount: advanced/feeder.md
@@ -410,7 +416,6 @@ nav:
               - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
               - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
               - I can't see my media!: reference/guides/chazguides/no-media.md
-              - I want some app to load at my base domain: reference/guides/chazguides/base-domain.md
               - Why is my disk full?: reference/guides/chazguides/disk-full.md
               - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
               - Obsolete and deprecated:

@@ -24,13 +24,14 @@ The role will fill in the Plex URL and token; aside from that the various settin
 
 The settings file is found at:
 
-```
+```shell
 /opt/plexpatrol/settings.ini
 ```
 
 After editing the file, restart the container with `docker restart plex_patrol`.
 
 default contents:
+
 ```ini
 [settings]
 # Show debug messages.
@@ -73,7 +74,7 @@ WHITELISTED_USERS =
 
 PLEX_PATROL's log is found at `/opt/plex_patrol/status.log`:
 
-```
+```shell
 2023-03-29 20:07:06,432 - INFO       - plex_patrol                              -  <module>                 -
        _                         _             _
  _ __ | | _____  __  _ __   __ _| |_ _ __ ___ | |

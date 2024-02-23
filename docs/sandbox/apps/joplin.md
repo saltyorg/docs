@@ -31,4 +31,4 @@ Change this asap.
 
 - Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encryption. (Very simple)
 
-- [:octicons-link-16: Documentation](https://joplinapp.org/desktop/){: .header-icons }
+- [:octicons-link-16: Documentation: Joplin Docs](https://joplinapp.org/desktop/){: .header-icons }

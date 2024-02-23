@@ -22,4 +22,4 @@ sb install sandbox-trilium
 
 ### 3. Documentation
 
-- [:octicons-link-16: Documentation](https://github.com/zadam/trilium/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Trillium Docs](https://github.com/zadam/trilium/wiki){: .header-icons }

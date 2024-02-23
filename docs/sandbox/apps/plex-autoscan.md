@@ -24,4 +24,4 @@ sb install sandbox-plex-autoscan
 
 ### 3. Usage
 
-- Instructions for plex_autoscan
+- [:octicons-link-16: Documentation: Plex Autoscan Docs](https://github.com/l3uddz/plex_autoscan){: .header-icons }

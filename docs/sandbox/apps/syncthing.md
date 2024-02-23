@@ -22,4 +22,4 @@ sb install sandbox-syncthing
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.syncthing.net/){: .header-icons }
+- [:octicons-link-16: Documentation: Syncthing Docs](https://docs.syncthing.net/){: .header-icons }

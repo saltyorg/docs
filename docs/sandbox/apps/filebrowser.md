@@ -32,4 +32,4 @@ sb install sandbox-filebrowser
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://filebrowser.org/features){: .header-icons }
+- [:octicons-link-16: Documentation: File Browser Docs](https://filebrowser.org/features){: .header-icons }

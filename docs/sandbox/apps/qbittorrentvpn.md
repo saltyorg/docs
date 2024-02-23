@@ -1,4 +1,4 @@
-# qbittorrentvpn
+# qBittorrentvpn
 
 ## What is it?
 
@@ -31,3 +31,7 @@ sb install sandbox-qbittorrentvpn
 ### 2. URL
 
 - To access qbittorrentvpn, visit `https://qbittorrentvpn._yourdomain.com_`
+
+### 3. Setup
+
+- [:octicons-link-16: Documentation: qBittorrentvpn Docs](https://github.com/binhex/arch-qbittorrentvpn){: .header-icons }

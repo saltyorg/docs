@@ -22,4 +22,4 @@ sb install sandbox-kavita
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://wiki.kavitareader.com/){: .header-icons }
+- [:octicons-link-16: Documentation: Kavita Docs](https://wiki.kavitareader.com/){: .header-icons }

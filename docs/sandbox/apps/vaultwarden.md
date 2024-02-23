@@ -33,4 +33,4 @@ sb install sandbox-vaultwarden
 
   4. You will need to enter an authentication key which you can find in `/opt/vaultwarden/env`. Look for `ADMIN_TOKEN=`.
 
-- [:octicons-link-16: Documentation](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Vaultwarden Docs](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons }

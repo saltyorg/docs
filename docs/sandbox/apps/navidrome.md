@@ -34,4 +34,4 @@ sb install sandbox-navidrome
              It usually take a couple of minutes for your music to start appearing in Navidrome’s UI. <br />
              You can check the logs to see what is the scan progress. If you have a large library this may take some time.
 
-- [:octicons-link-16: Documentation](https://www.navidrome.org/docs/){: .header-icons }
+- [:octicons-link-16: Documentation: Navidrome Docs](https://www.navidrome.org/docs/){: .header-icons }

@@ -22,4 +22,4 @@ sb install sandbox-lazylibrarian
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://lazylibrarian.gitlab.io/){: .header-icons }
+- [:octicons-link-16: Documentation: Lazy Librarian Docs](https://lazylibrarian.gitlab.io/){: .header-icons }

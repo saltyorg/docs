@@ -1,4 +1,4 @@
-# changedetection
+# Change Detection
 
 ## What is it?
 
@@ -22,4 +22,4 @@ sb install sandbox-changedetection
 
 ### 3. Usage
 
-- See github repo for configuration details.
+- [:octicons-link-16: Documentation: Change Detection Docs](https://changedetection.io/#features){: .header-icons }

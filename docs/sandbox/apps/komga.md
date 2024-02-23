@@ -29,4 +29,4 @@ sb install sandbox-komga
 
 - `/mnt` is accessible to the container as well.
 
-- [:octicons-link-16: Documentation](https://komga.org/installation/docker.html){: .header-icons }
+- [:octicons-link-16: Documentation: Komga Docs](https://komga.org/installation/docker.html){: .header-icons }

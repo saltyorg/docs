@@ -24,4 +24,4 @@ sb install sandbox-plex-meta-manager
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://github.com/meisnate12/Plex-Meta-Manager/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Plex Meta Manager Docs](https://github.com/meisnate12/Plex-Meta-Manager/wiki){: .header-icons }

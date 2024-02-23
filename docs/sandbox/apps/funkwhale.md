@@ -78,4 +78,4 @@ If everything goes as planned you'll get prompted like this:
 
 **Additional Information:**
 
-- [:octicons-link-16: Documentation](https://docs.funkwhale.audio/){: .header-icons }
+- [:octicons-link-16: Documentation: Funkwhale Docs](https://docs.funkwhale.audio/){: .header-icons }

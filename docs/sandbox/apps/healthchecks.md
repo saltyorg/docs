@@ -24,4 +24,4 @@ sb install sandbox-healthchecks
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://healthchecks.io/docs/){: .header-icons }
+- [:octicons-link-16: Documentation: Healthchecks Docs](https://healthchecks.io/docs/){: .header-icons }

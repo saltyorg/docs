@@ -44,4 +44,4 @@ sb install sandbox-goplaxt
     Enter your `Plex Username` then `Authorize`, and add the Webhook in `Plex Settings`. <br />
     Make sure under your server `Settings > Network` that Webhooks is `enabled`.
 
-- [:octicons-link-16: Documentation](https://github.com/XanderStrike/goplaxt){: .header-icons }
+- [:octicons-link-16: Documentation: Goplaxt Docs](https://github.com/XanderStrike/goplaxt){: .header-icons }

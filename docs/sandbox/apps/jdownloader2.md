@@ -30,4 +30,4 @@ sb install sandbox-jdownloader2
 
 4. See <https://my.jdownloader.org/> for browser extensions and phone apps as desired.
 
-- [:octicons-link-16: Documentation](https://beta.jdownloader.org/support){: .header-icons }
+- [:octicons-link-16: Documentation: JDownloader Docs](https://beta.jdownloader.org/support){: .header-icons }

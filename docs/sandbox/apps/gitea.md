@@ -24,4 +24,4 @@ sb install sandbox-gitea
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://docs.gitea.io/en-us/){: .header-icons }
+- [:octicons-link-16: Documentation: Gitea Docs](https://docs.gitea.io/en-us/){: .header-icons }

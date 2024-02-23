@@ -22,4 +22,4 @@ sb install sandbox-miniflux
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://miniflux.app){: .header-icons }
+- [:octicons-link-16: Documentation: Miniflux Docs](https://miniflux.app){: .header-icons }

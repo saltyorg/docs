@@ -40,7 +40,7 @@ sb install sandbox-unifi-network-application
 
   When using a Security Gateway (router) it could be that network connected devices are unable to obtain an ip address. This can be fixed by setting "DHCP Gateway IP", under Settings > Networks > network_name, to a correct (and accessible) ip address.
 
-- [:octicons-link-16: Documentation](https://github.com/linuxserver/docker-unifi-network-application/blob/master/README.md){: .header-icons }
+- [:octicons-link-16: Documentation: Unifi Net App Docs](https://github.com/linuxserver/docker-unifi-network-application/blob/master/README.md){: .header-icons }
 
 !!! Note
       📢 The default setup only publish the 8080 tcp port, which is the bare minimum to allow communication between your network equipment and Unifi Network Application.

@@ -26,4 +26,4 @@ sb install sandbox-yacht
 
 - Check out [the getting started guide](https://yacht.sh/docs/Installation/Getting_Started) if this is the first time you've used Yacht.
 
-- [:octicons-link-16: Documentation](https://yacht.sh/docs/){: .header-icons }
+- [:octicons-link-16: Documentation: Yacht Docs](https://yacht.sh/docs/){: .header-icons }

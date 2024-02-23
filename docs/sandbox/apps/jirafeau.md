@@ -24,4 +24,4 @@ sb install sandbox-jirafeau
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://gitlab.com/mojo42/Jirafeau){: .header-icons }
+- [:octicons-link-16: Documentation: Jirafeau Docs](https://gitlab.com/mojo42/Jirafeau){: .header-icons }

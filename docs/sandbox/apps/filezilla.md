@@ -22,4 +22,4 @@ sb install sandbox-filezilla
 
 ### 3. Setup
 
-- [:octicons-link-16: Documentation](https://wiki.filezilla-project.org/Main_Page){: .header-icons }
+- [:octicons-link-16: Documentation: FileZilla Docs](https://wiki.filezilla-project.org/Main_Page){: .header-icons }

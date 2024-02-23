@@ -4,8 +4,8 @@
 
 [Resilio Sync](https://www.resilio.com/) uses peer-to-peer technology to provide fast, private file sharing for teams and individuals. By skipping the cloud, transfers can be significantly faster because files take the shortest path between devices. Sync does not store your information on servers in the cloud, avoiding cloud privacy concerns.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
+| Details     |             |             |
+|-------------|-------------|-------------|
 | [:material-home: Project home](https://www.resilio.com/){: .header-icons } | [:octicons-link-16: Docs](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/resilio/sync){: .header-icons }|
 
 ### 1. Installation

@@ -32,4 +32,4 @@ sb install sandbox-linkding
   Password: password from accounts.yml
   ```
 
-- [:octicons-link-16: Documentation](https://github.com/sissbruecker/linkding#documentation){: .header-icons }
+- [:octicons-link-16: Documentation: Linkding Docs](https://github.com/sissbruecker/linkding#documentation){: .header-icons }

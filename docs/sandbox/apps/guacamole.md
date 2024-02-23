@@ -28,4 +28,4 @@ sb install sandbox-guacamole
 
 - Log in with user and password `guacadmin`. Change the default user and password immediately.
 
-- [:octicons-link-16: Documentation](https://guacamole.apache.org/doc/gug/){: .header-icons }
+- [:octicons-link-16: Documentation: Guacamole Docs](https://guacamole.apache.org/doc/gug/){: .header-icons }

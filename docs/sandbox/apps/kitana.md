@@ -34,4 +34,4 @@ sb install sandbox-kitana
 
 - profit
 
-- [:octicons-link-16: Documentation](https://github.com/pannal/Kitana){: .header-icons }
+- [:octicons-link-16: Documentation: Kitana Docs](https://github.com/pannal/Kitana){: .header-icons }

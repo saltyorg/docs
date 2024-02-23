@@ -48,4 +48,4 @@ sb install sandbox-xteve
 
     * EPG (all) `http://xteve:34400/xmltv/xteve.xml`
 
-- [:octicons-link-16: Documentation](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){: .header-icons }
+- [:octicons-link-16: Documentation: xTeVe Docs](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){: .header-icons }

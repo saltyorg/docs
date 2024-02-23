@@ -36,4 +36,4 @@ sb install sandbox-threadfin
 
   - EPG (all) `http://threadfin:34400/xmltv/threadfin.xml`
 
-- [:octicons-link-16: Documentation](https://github.com/Threadfin/Threadfin){: .header-icons }
+- [:octicons-link-16: Documentation: Threadfin Docs](https://github.com/Threadfin/Threadfin){: .header-icons }

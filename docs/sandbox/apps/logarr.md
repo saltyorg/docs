@@ -24,4 +24,4 @@ sb install sandbox-logarr
 
 - See [documentation](https://github.com/Monitorr/logarr/wiki/04-Logarr-Settings#configuration) for configuration and instructions for adding more logs to your instance.
 
-- [:octicons-link-16: Documentation](https://github.com/Monitorr/logarr/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Logarr Docs](https://github.com/Monitorr/logarr/wiki){: .header-icons }

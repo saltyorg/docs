@@ -22,4 +22,4 @@ sb install sandbox-wizarr
 
 After installation, go to wizarr.yourdomain.tld, enter a name for your server, enter the plex server, plex token and choose the default librarys. As optional you can setup a request platform. Save, and you're ready to make your first invite URL!
 
-- [:octicons-link-16: Documentation](https://github.com/Wizarrrr/wizarr){: .header-icons }
+- [:octicons-link-16: Documentation: Wizarr Docs](https://github.com/Wizarrrr/wizarr){: .header-icons }

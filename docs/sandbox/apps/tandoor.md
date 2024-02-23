@@ -4,7 +4,7 @@
 
 [Tandoor Recipes](https://github.com/TandoorRecipes/recipes)  is an application for managing recipes, planning meals, building shopping lists and much much more!
 
-#### Core Features
+### Core Features
 
 - 🥗 Manage your recipes with a fast and intuitive editor
 
@@ -15,7 +15,6 @@
 - 📚 Cookbooks collect recipes into books
 
 - 👪 Share and collaborate on recipes with friends and family
-
 
 !!!info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.

@@ -70,17 +70,17 @@ sb install sandbox-mylar3
 
    1. Port: `6789`
 
-   2. Username:  `Your NZBGet Username`
+   1. Username:  `Your NZBGet Username`
 
-   3. Password:  `Your NZBGet Password`
+   1. Password:  `Your NZBGet Password`
 
-   4. Category: `mylar`
+   1. Category: `mylar`
 
-   5. Use SSL: `No`
+   1. Use SSL: `No`
 
-   6. NZBGet Download Directory: Leave Blank
+   1. NZBGet Download Directory: Leave Blank
 
-   7. Enable Completed Download Handling: `X`
+   1. Enable Completed Download Handling: `X`
 
 ### Search Providers
 

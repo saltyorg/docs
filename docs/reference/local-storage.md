@@ -42,7 +42,21 @@ As you will recall from the earlier "How does Saltbox Work" lesson, this means e
 
 In this case, it's simplest to use the same rclone + cloudplow model that the standard cloud storage setup uses.
 
+<details>
+<summary>What sort of NAS should I use?</summary>
+<br />
+
+In a nutshell, saltbox doesn't care.
+
+You can use an appliance like a Synology or QNAP, something like UNRAID or TrueNAS, or any other sort of "present some disks on the network" setup.
+
+There's nothing in the saltbox setup that cares about or depends on this.  The saltbox machine just needs to read and write to the storage.
+</details>
+
 First, create an rclone remote pointing to your NAS using whatever connection scheme you wish; SMB, SFTP, etc, provided rclone supports it.  Call it whatever you like.  This article will be referring to it as `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`. 
+
+!!! info
+    If your connection to this NAS is speedy enough, you could mount it at `/mnt/local/Media` as described in the "truly local storage" option above instead of using cloudplow.
 
 Then fill out the remote details in `settings.yml`
 ```ini

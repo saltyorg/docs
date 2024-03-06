@@ -9,7 +9,7 @@ on:
         type: string
 
 concurrency:
-  group: ${{ github.ref }}
+  group: pr-${{ github.event.inputs.pr_number }}
   cancel-in-progress: false
 
 jobs:
@@ -59,25 +59,40 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Get PR last commit SHA
+        id: pr_last_commit
+        run: |
+          PR_DATA=$(curl -H "Authorization: token $GITHUB_TOKEN" \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
+          LAST_COMMIT_SHA=$(echo "$PR_DATA" | jq -r .head.sha)
+
+          echo "::set-output name=sha::$LAST_COMMIT_SHA"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+          REPO: ${{ github.repository }}
+
+
       - name: Comment PR
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_STATUS: ${{ needs.build.result }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+          PREVIEW_URL: ${{ needs.build.outputs.url }}
         run: |
-          PR_NUMBER=${{ github.event.inputs.pr_number }}
           COMMIT_SHA=$(git rev-parse HEAD)
-          BUILD_STATUS=${{ needs.build.result }}
-          PREVIEW_URL=${{ needs.build.outputs.url }}
           BRANCH_PREVIEW_URL="https://pr-$PR_NUMBER.docs-acq.pages.dev"
-          
+
           if [ "$BUILD_STATUS" == "success" ]; then
             STATUS_MESSAGE="✅ Deploy successful!"
           else
             STATUS_MESSAGE="❌ Build failed!"
           fi
 
-          COMMENT_BODY="Latest commit: $COMMIT_SHA\nStatus: $STATUS_MESSAGE\nPreview URL: $PREVIEW_URL\nBranch Preview URL: $BRANCH_PREVIEW_URL"
+          COMMENT_BODY="|---|---|\n| Latest commit: | \`$COMMIT_SHA\` |\n| Status: | $STATUS_MESSAGE |\n| Preview URL: | [$PREVIEW_URL]($PREVIEW_URL) |\n| Branch Preview URL: | [$BRANCH_PREVIEW_URL]($BRANCH_PREVIEW_URL) |"
           COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/comments"
-          
+
           curl -H "Authorization: token $GITHUB_TOKEN" \
                -H "Accept: application/vnd.github+json" \
                -X POST \

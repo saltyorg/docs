@@ -60,25 +60,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get PR last commit SHA
-        id: pr_last_commit
         run: |
-          PR_DATA=$(curl -H "Authorization: token $GITHUB_TOKEN" \
+          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
                   -H "Accept: application/vnd.github.v3+json" \
-                  "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
+                  "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.inputs.pr_number }}")
           LAST_COMMIT_SHA=$(echo "$PR_DATA" | jq -r .head.sha)
-          echo "::set-output name=sha::$LAST_COMMIT_SHA"
+          echo "LAST_COMMIT_SHA=$LAST_COMMIT_SHA" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          PR_NUMBER: ${{ github.event.inputs.pr_number }}
-          REPO: ${{ github.repository }}
 
       - name: Comment PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR_NUMBER=${{ github.event.inputs.pr_number }}
           PREVIEW_URL=${{ needs.build.outputs.url }}
-          BRANCH_PREVIEW_URL="https://pr-$PR_NUMBER.docs-acq.pages.dev"
+          BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number }}.docs-acq.pages.dev"
           BUILD_STATUS=${{ needs.build.result }}
 
           if [ "$BUILD_STATUS" == "success" ]; then
@@ -89,19 +83,16 @@ jobs:
             STATUS_MESSAGE="Build failed!"
           fi
 
-          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
+          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>$LAST_COMMIT_SHA</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
 
-          # Convert COMMENT_BODY to JSON string and escape double quotes
           ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
+          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.inputs.pr_number }}/comments"
 
-          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/comments"
-
-          curl -H "Authorization: token $GITHUB_TOKEN" \
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github+json" \
               -X POST \
               -d "{\"body\": $ESCAPED_BODY }" \
               $COMMENTS_URL
-
 
   webhook:
     name: 'webhook'

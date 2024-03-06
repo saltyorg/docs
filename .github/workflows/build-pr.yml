@@ -1,0 +1,60 @@
+name: Build PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ github.event.inputs.pr_number }}/merge
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install wheel
+        run: pip install wheel
+
+      - name: Install mkdocs material insiders
+        run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+
+      - name: Install requirements.txt
+        run: pip install -r requirements.txt
+
+      - name: Build mkdocs
+        run: mkdocs build
+
+      - name: Publish to Cloudflare Pages
+        if: github.event.repository.fork == false
+        id: cloudflare
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: 86b9f680e99b6d172395cc7309a9d8a8
+          projectName: docs
+          directory: site
+          gitHubToken: ${{ secrets.GH_TOKEN }}
+          branch: pr-${{ github.event.inputs.pr_number }}
+
+  webhook:
+    name: 'webhook'
+    runs-on: self-hosted
+    needs: build
+    if: always()
+    steps:
+      - uses: technote-space/workflow-conclusion-action@v3
+      - name: Send Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: "URL: ${{ needs.build.outputs.url }}"
+          status: ${{ env.WORKFLOW_CONCLUSION }}

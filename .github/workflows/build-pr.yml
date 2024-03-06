@@ -73,6 +73,8 @@ jobs:
           REPO: ${{ github.repository }}
 
       - name: Comment PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PR_NUMBER=${{ github.event.inputs.pr_number }}
           PREVIEW_URL=${{ needs.build.outputs.url }}
@@ -87,24 +89,19 @@ jobs:
             STATUS_MESSAGE="Build failed!"
           fi
 
-          COMMENT_BODY="<p>Deploying with &nbsp;<a href='https://pages.dev'><img alt='Cloudflare Pages' src='https://user-images.githubusercontent.com/23264/106598434-9e719e00-654f-11eb-9e59-6167043cfa01.png' width='16'></a> &nbsp;Cloudflare Pages</p>
-          <table><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr>
-          <tr><td><strong>Preview URL:</strong></td><td>
-          <a href='$PREVIEW_URL'>$PREVIEW_URL</a>
-          </td></tr>
-          <tr><td><strong>Branch Preview URL:</strong></td><td>
-          <a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a>
-          </td></tr>
-          </table>"
+          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
+
+          # Convert COMMENT_BODY to JSON string and escape double quotes
+          ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
 
           COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/comments"
+
           curl -H "Authorization: token $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github+json" \
               -X POST \
-              -d "{\"body\": \"$COMMENT_BODY\"}" \
+              -d "{\"body\": $ESCAPED_BODY }" \
               $COMMENTS_URL
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
 
   webhook:
     name: 'webhook'

@@ -429,13 +429,15 @@ IMPORTANT: `APPNAME` is a placeholder.  *You need to change that* **everywhere i
 Once you have a docker-compose file as described above, you will use standard docker commands to create and run the container.
 
 If the file is named `docker-compose.yml` and is located in the current working directory:
-```
-docker compose up -d
-```
+
+    ```shell
+    docker compose up -d
+    ```
 
 If the file has some other name or is located elsewhere in the file system:
-```
-docker compose up -d -d /path/to/something.yml
-```
+
+    ```shell
+    docker compose up -d -d /path/to/something.yml
+    ```
 
 Remember to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree prior to running that command.

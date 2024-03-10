@@ -64,16 +64,16 @@ rclone:
   enabled: yes
   remotes:
     - remote: THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED
-        settings:
-          mount: yes
-          template: sftp # whatever template or service file is appropriate
-          union: yes
-          upload: yes
-          upload_from: /mnt/local/Media
-          vfs_cache:
-            enabled: no
-            max_age: 504h
-            size: 50G
+      settings:
+        mount: yes
+        template: sftp # whatever template or service file is appropriate
+        union: yes
+        upload: yes
+        upload_from: /mnt/local/Media
+        vfs_cache:
+          enabled: no
+          max_age: 504h
+          size: 50G
   version: latest
 ```
 

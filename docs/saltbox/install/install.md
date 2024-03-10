@@ -178,9 +178,9 @@ To edit any of the following configuration files use the command written in the 
             upload: yes # (10)!
             upload_from: /mnt/local/Media # (11)!
             vfs_cache:
-                enabled: no # (12)!
-                max_age: 504h # (13)!
-                size: 50G # (14)!
+              enabled: no # (12)!
+              max_age: 504h # (13)!
+              size: 50G # (14)!
         - remote: dropbox
           settings:
             mount: yes

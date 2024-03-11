@@ -81,7 +81,9 @@ plugins:
       optimize_jpg_quality: 75
       optimize_jpg_progressive: true
   - git-revision-date-localized
-  - git-authors
+  - git-authors:
+      show_email_address: false
+      sort_authors_by: contribution
 
 extra:
   generator: false

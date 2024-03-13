@@ -12,6 +12,9 @@ concurrency:
   group: pr-${{ github.event.inputs.pr_number }}
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest

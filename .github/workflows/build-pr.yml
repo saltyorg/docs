@@ -31,13 +31,12 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Setup Cache
-        uses: actions/cache@v4
+      - name: Restore cache
+        id: cache-docs-restore
+        uses: actions/cache/restore@v4
         with:
           key: docs-${{ hashfiles('.cache/**') }}
           path: .cache
-          restore-keys: |
-            docs-
 
       - name: Install dependencies
         run: sudo apt-get install pngquant
@@ -68,10 +67,11 @@ jobs:
           gitHubToken: ${{ secrets.GH_TOKEN }}
 
       - name: Save build cache
+        id: cache-docs-save
         uses: actions/cache/save@v4
         with:
-          key: docs-${{ hashfiles('.cache/**') }}
           path: .cache
+          key: ${{ steps.cache-docs-restore.outputs.cache-primary-key }}
 
   comment:
     needs: build

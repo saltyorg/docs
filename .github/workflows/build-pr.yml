@@ -48,7 +48,6 @@ jobs:
       - name: Install mkdocs material insiders
         run: |
           pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
-          pip install .[recommended,git,imaging]
 
       - name: Install requirements.txt
         run: pip install -r requirements.txt

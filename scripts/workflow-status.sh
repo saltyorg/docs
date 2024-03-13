@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Pass GitHub token, repository, and run ID as arguments
 GITHUB_TOKEN=$1
 GITHUB_REPOSITORY=$2

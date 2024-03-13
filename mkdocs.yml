@@ -82,6 +82,10 @@ plugins:
       optimize_jpg_quality: 75
       optimize_jpg_progressive: true
   - git-revision-date-localized
+  - minify:
+      minify_html: true
+  - git-committers:
+      repository: saltyorg/docs
 
 extra:
   generator: false

@@ -1,5 +1,2 @@
 lightgallery
-pillow
-cairosvg
 mkdocs-git-revision-date-localized-plugin
-pngquant-cli

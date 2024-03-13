@@ -46,33 +46,37 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate Cache ID
-        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-
-      - name: Setup Cache
-        uses: actions/cache@v4
-        with:
-          key: docs-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            docs-
-
       - name: Setup Python 3
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
+      - name: Setup Cache
+        uses: actions/cache@v4
+        with:
+          key: docs-${{ hashfiles('.cache/**') }}
+          path: .cache
+          restore-keys: |
+            docs-
+
+      - name: Install dependencies
+        run: sudo apt-get install pngquant
+
       - name: Install wheel
         run: pip install wheel
 
       - name: Install mkdocs material insiders
-        run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+        run: |
+          pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+          pip install .[recommended,git,imaging]
 
       - name: Install requirements.txt
         run: pip install -r requirements.txt
 
       - name: Build mkdocs
-        run: mkdocs build
+        run: |
+          mkdocs build --clean
+          mkdocs --version
 
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
@@ -84,6 +88,12 @@ jobs:
           projectName: docs
           directory: site
           gitHubToken: ${{ secrets.GH_TOKEN }}
+
+      - name: Save build cache
+        uses: actions/cache/save@v4
+        with:
+          key: docs-${{ hashfiles('.cache/**') }}
+          path: .cache
 
   webhook:
     name: 'webhook'

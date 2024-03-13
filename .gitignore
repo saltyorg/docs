@@ -7,3 +7,4 @@ go.sh
 # direnv
 .direnv/**
 /venv
+.cache

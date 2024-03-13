@@ -62,9 +62,10 @@ theme:
 
 plugins:
   - privacy:
-      assets: false
+      cache: true
+      assets: true
+      assets_fetch: true
       links_attr_map:
-        rel: noreferrer
         target: _blank
       links_noopener: true
   - search:
@@ -73,7 +74,7 @@ plugins:
   - optimize:
       cache: true
       cache_dir: .cache/plugins/optimize
-      enabled: !ENV [CI, false]
+      enabled: true
       optimize_png: true
       optimize_png_speed: 1
       optimize_png_strip: true

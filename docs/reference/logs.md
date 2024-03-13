@@ -85,28 +85,16 @@ Pick one of these.
 
 ### Check Status
 
+The services that saltbox creates are named with this pattern: `saltbox_managed_rclone_nameofremote.service`; and in these examples are referred to as SERVICE_FILE.service
+
 ```shell
-sudo systemctl status rclone_vfs.service
+sudo systemctl status SERVICE_FILE.service
 ```
 
 ### See a live log
 
 ```shell
-sudo journalctl -o cat -fu rclone_vfs.service
-```
-
-## Rclone Cache
-
-### Check Status
-
-```shell
-sudo systemctl status rclone_cache.service
-```
-
-### See a live log
-
-```shell
-sudo journalctl -o cat -fu rclone_cache.service
+sudo journalctl -o cat -fu SERVICE_FILE.service
 ```
 
 ## Union Mount

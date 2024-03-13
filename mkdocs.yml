@@ -86,6 +86,7 @@ plugins:
       minify_html: true
   - git-committers:
       repository: saltyorg/docs
+      branch: main
 
 extra:
   generator: false

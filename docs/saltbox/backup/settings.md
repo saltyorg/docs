@@ -17,7 +17,7 @@ backup:
   cron:
     cron_time: weekly # (1)!
   local:
-    destination: /mnt/local/Backups/Saltbox # (2)!
+    destination: /home/{{ user.name }}/Backups/Saltbox # (2)!
     enable: true # (3)!
   misc:
     snapshot: true # (4)!

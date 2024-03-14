@@ -41,7 +41,7 @@ backup:
 
     Should you desire more granular control over the schedule you can edit the crontab for the Saltbox user once setup.
 
-2. Path used for the local backups.
+2. Path used for the local backups. `{{ user.name }}` will be replaced with the user name you enter in the settings.
 
 3. Toggle for keeping a local copy of the backup.
 

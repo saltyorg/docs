@@ -14,7 +14,7 @@ When you add a container manually as outlined on this page, neither of those thi
 
 If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
 
-IMPORTANT: IN the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_.  *You need to change those* **everywhere they appear** to match the application you are installing.
+IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_.  *You need to change those* **everywhere they appear** to match the application you are installing.
 
 ## Docker Compose
 

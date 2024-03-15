@@ -2,13 +2,12 @@
 
 ## What is it?
 
-[Wizarr](https://github.com/Wizarrrr/wizarr) is an invitation system for Plex.
+[Wizarr](https://github.com/Wizarrrr/wizarr)  is a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!
 
-With Wizarr you can invite people to your plex server with a single invite URL. Create an invitation on the dashboard (Authelia protected), share it, and the invitee can use the link. Steps to connect or create a plex account are displayed when the invitee uses the URL.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:material-docker: Docker](https://ghcr.io/wizarrrr/wizarr){: .header-icons }|
+| [:material-home: Project home](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:octicons-link-16: Docs](https://docs.wizarr.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Wizarrrr/wizarr){: .header-icons } | [:material-docker: Docker](https://ghcr.io/wizarrrr/wizarr){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,4 +21,4 @@ sb install sandbox-wizarr
 
 After installation, go to wizarr.yourdomain.tld, enter a name for your server, enter the plex server, plex token and choose the default librarys. As optional you can setup a request platform. Save, and you're ready to make your first invite URL!
 
-- [:octicons-link-16: Documentation: Wizarr Docs](https://github.com/Wizarrrr/wizarr){: .header-icons }
+- [:octicons-link-16: Documentation: Wizarr Docs](https://docs.wizarr.dev/){: .header-icons }

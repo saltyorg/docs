@@ -95,7 +95,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .cache
-          key: ${{ steps.cache-docs-restore.outputs.cache-primary-key }}${{ github.run_id }}
+          key: docs-${{ github.run_id }}
 
   webhook:
     name: 'webhook'

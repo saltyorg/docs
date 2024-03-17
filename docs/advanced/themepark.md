@@ -82,3 +82,9 @@ maroon
 ```
 
 Note: If you are utilizing Theme.Park on any roles, you must run `sb install traefik` after changing any themes via inventory variables.
+
+List of roles that support Theme.Park on the Saltbox side can be found by running:
+
+```shell
+(grep -Ril "_themepark_enabled: false" /srv/git/saltbox/roles | cut -d/ -f6; grep -Ril "_themepark_enabled: false" /opt/sandbox/roles | cut -d/ -f5) | sort -u
+```

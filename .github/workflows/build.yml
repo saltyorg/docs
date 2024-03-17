@@ -55,7 +55,7 @@ jobs:
         id: cache-docs-restore
         uses: actions/cache/restore@v4
         with:
-          key: docs-${{ hashfiles('.cache/**') }}
+          key: docs-
           path: .cache
           restore-keys: |
             docs-

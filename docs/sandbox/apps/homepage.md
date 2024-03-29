@@ -20,7 +20,7 @@
 
 | Details     |             |             |
 |-------------|-------------|-------------|
-| [:material-home: Project home](https://gethomepage.dev/){: .header-icons } | [:octicons-link-16: Docs](https://gethomepage.dev/en/configs/services/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/benphelps/homepage){: .header-icons }|
+| [:material-home: Project home](https://gethomepage.dev/){: .header-icons } | [:octicons-link-16: Docs](https://gethomepage.dev/latest/configs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/benphelps/homepage){: .header-icons }|
 
 Recommended install types: Saltbox, Core, Mediabox
 
@@ -40,4 +40,4 @@ sb install sandbox-homepage
 
 This role will add both the homepage container, and the homepage-docker-socket-proxy container. To add services and bookmarks etc. you edit your config files found at `/opt/homepage/config/`. There are several example services and widgets included in the role, just uncomment and fill them in appropriately. The webui will reload and it will be visible shortly after. No need to restart the container.
 
-- [:octicons-link-16: Documentation: Homepage Docs](https://gethomepage.dev/en/configs/services/){: .header-icons }
+- [:octicons-link-16: Documentation: Homepage Docs](https://gethomepage.dev/latest/configs/){: .header-icons }

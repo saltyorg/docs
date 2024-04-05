@@ -395,9 +395,12 @@ sb install preinstall
 ```
 
 !!! warning
-    From this point you'll want to make sure you run commands as the user specified in the accounts.yml
+    From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`
 
-If your server did not need to reboot you can run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in accounts.yml
+If your server did not need to reboot, **and the user in accounts.yml is different from the user as whom you are currently connected to the server** you can run `su username` to switch user or reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in `accounts.yml`
+
+!!! info
+    If you are installing on a machine where you created a user as part of the ubuntu install, you are currently logged in as that user, and you entered that same user into `accounts.yml`, you **do not** have to run `su username` or reconnect to SSH as that user.  You are already logged in as the "saltbox user", and you can just move on to the next step.  The `su username` or reconnect are typically required only on remote systems where you may be currently connected as `root`.
 
 !!! info
     See [here](../../reference/preinstall.md) for more information about the preinstall.

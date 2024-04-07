@@ -43,8 +43,6 @@ Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more informa
 
 The role will attempt to configure sonarr, radarr, plex, and tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
 
-A quickstart guide can be found on the [Trash Guides website.](https://trash-guides.info/Notifiarr/Quick-Start/)
-
 ## Advanced
 
 ### Snapshot Feature Support

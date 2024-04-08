@@ -209,6 +209,8 @@ shell_zsh_zshrc_block_custom: |
 
 ### Authelia App Bypass
 
+!!! danger "While we generally allow users to override pretty much anything this is not a supported configuration so keep that in mind when going this road."
+
 Some users may not want the additional layer of security that Authelia provides. The good news is that it can be disabled through a simple override.
 
 !!! tip ""

@@ -121,4 +121,4 @@ To go through this process, you will need the following:
 
 If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md).  That page is written with dropbox in mind, but the concepts apply to any cloud storage provider.
 
-If you are doing this as part of the initial install, you will need the name of this remote [`cloudstorage`] to enter into the settings file.
+If you are doing this as part of the initial install, you will need the name of the remote you created [`cloudstorage` in this example] to enter into the settings file.

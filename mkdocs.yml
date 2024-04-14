@@ -443,6 +443,7 @@ nav:
         - Dropbox:
           - General Dropbox Topics: reference/guides/dropbox-general.md
         - Rclone:
+          - Creating an Rclone remote: reference/guides/rclone-remote-generic.md
           - Creating a Dropbox remote: reference/guides/rclone-remote-dropbox.md
           - Creating a Google remote: reference/guides/rclone-remote.md
           - Creating a Crypt remote: reference/guides/rclone-remote-encrypted.md

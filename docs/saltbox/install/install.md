@@ -494,10 +494,19 @@ Note that generally speaking these five options are mutually exclusive.
         1. Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
         2. enter remote details in `settings.yml`
 
+    === "Other Cloud Storage"
+
+        Rclone supports a variety of [cloud storage providers](https://rclone.org/overview/).  This does not imply that any or all cloud storage providers are suitable for the saltbox use case.
+
+        You will need to perform two steps:
+        
+        1. Create an rclone remote pointing at your cloud storage as described [here](../../reference/guides/rclone-remote-generic.md)
+        2. enter those remote details in `settings.yml`
+
 Once you have set up your rclone remote[s], enter their details in `settings.yml` as discussed above in Step 2.
 
 !!! warning
-    Do not proceed until you have fully configured your rclone remote[s] in `rclone config` or disabled cloud storage in the settings.
+    Do not proceed until you have fully configured your rclone remote[s] as described above or disabled cloud storage in the settings.
 
 ## Step 5: Saltbox
 

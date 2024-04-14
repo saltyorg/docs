@@ -76,13 +76,13 @@ To go through this process, you will need the following:
     y) Yes
     n) No (default)
     y/n> n
-
-    type `n` and press <kbd class="platform-all">Enter</kbd>.
     ```
 
-    Depending on your cloud provider, you may be asked to complete a signin process.  **Read what's on the screen and follow the prompts**
+    type `n` and press <kbd class="platform-all">Enter</kbd>.
+    
+    Depending on your cloud provider, you may be asked to complete a signin process at this point.  **Read what's on the screen and follow the prompts**
 
-6. Confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
+6. Eventually, `rclone` will tell you the process is complete, and show you the configuration:
 
     ```shell
     Configuration complete.
@@ -99,6 +99,8 @@ To go through this process, you will need the following:
     d) Delete this remote
     y/e/d>
     ```
+
+    Confirm that the remote details look OK, type `y` and press <kbd class="platform-all">Enter</kbd>.
 
 16. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 

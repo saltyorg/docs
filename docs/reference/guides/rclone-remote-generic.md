@@ -69,8 +69,6 @@ To go through this process, you will need the following:
 
     Each storage type will then produce a different set of questions as you go through the setup process.  **Read what's on the screen and follow the prompts**
 
-    The questions asked by S3, and my answers, are shown below.  If you are using some other cloud storage provider, you will be asked different questions.  **Read what's on the screen and follow the prompts**
-
     Eventually, you will get to the advanced config:
     
     ```shell

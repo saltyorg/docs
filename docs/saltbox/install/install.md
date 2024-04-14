@@ -282,24 +282,23 @@ To edit any of the following configuration files use the command written in the 
       json_driver: no # (4)!
     gpu:
       intel: yes # (5)!
-      nvidia: no # (6)!
     mounts:
-      ipv4_only: no # (7)!
+      ipv4_only: no # (6)!
     system:
-      timezone: auto # (8)!
+      timezone: auto # (7)!
     traefik:
       cert:
-        http_validation: no # (9)!
-        zerossl: no # (10)!
-      error_pages: no # (11)!
-      hsts: no # (12)!
-      metrics: no # (13)!
-      provider: cloudflare # (14)!
+        http_validation: no # (8)!
+        zerossl: no # (9)!
+      error_pages: no # (10)!
+      hsts: no # (11)!
+      metrics: no # (12)!
+      provider: cloudflare # (13)!
       subdomains:
-        dash: dash # (15)!
-        jaeger: jaeger # (16)!
-        metrics: metrics # (17)!
-      tracing: no # (18)!
+        dash: dash # (14)!
+        jaeger: jaeger # (15)!
+        metrics: metrics # (16)!
+      tracing: no # (17)!
     ```
 
     1. Toggles Saltbox management of IPv4 A records with Cloudflare.
@@ -340,11 +339,9 @@ To edit any of the following configuration files use the command written in the 
 
     5. Toggles any tasks related to using Intel GPUs.
 
-    6. Toggles any tasks related to using Nvidia GPU.
+    6. Toggles whether Rclone should be limited to IPv4 in case routing over IPv6 is bad to the destination of your configured remotes.
 
-    7. Toggles whether Rclone should be limited to IPv4 in case routing over IPv6 is bad to the destination of your configured remotes.
-
-    8. Configures the timezone used for the server and containers.
+    7. Configures the timezone used for the server and containers.
 
         Default is `auto` which will attempt to pick the timezone based on Geolocation of the server.
 
@@ -354,31 +351,31 @@ To edit any of the following configuration files use the command written in the 
         ```
         Alternatively you can find a table on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
-    9. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
+    8. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
 
         This toggle is only useful for those using any of the supported DNS validation methods as this will be enabled by default otherwise.
 
-    10. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
+    9. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
 
-    11. Toggles custom Traefik error pages.
+    10. Toggles custom Traefik error pages.
 
         See [here](../../advanced/styled-error-pages.md) for configuration details.
 
-    12. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
+    11. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
 
-    13. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at `https://metrics.domain.tld/prometheus` assuming default settings.
+    12. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at `https://metrics.domain.tld/prometheus` assuming default settings.
 
-    14. Allows alternate DNS validation providers supported by Traefik.
+    13. Allows alternate DNS validation providers supported by Traefik.
 
         Implemented ones are listed [here](https://github.com/saltyorg/Saltbox/blob/master/defaults/providers.yml.default).
 
-    15. Defines which subdomain the Traefik dashboard will be accessible at.
+    14. Defines which subdomain the Traefik dashboard will be accessible at.
 
-    16. Defines which subdomain the Traefik Jaeger endpoint will be accessible at.
+    15. Defines which subdomain the Traefik Jaeger endpoint will be accessible at.
 
-    17. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
+    16. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
-    18. Toggles the use of Jaeger (tracing) with Traefik.
+    17. Toggles the use of Jaeger (tracing) with Traefik.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.

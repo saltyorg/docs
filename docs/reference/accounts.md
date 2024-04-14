@@ -312,16 +312,11 @@ Each tab shows a "section" in the file.
     ```yaml
     gpu:
       intel: yes
-      nvidia: no
     ```
 
     `intel`: Should system be set up for Intel GPU?
 
     Default is `yes`.
-
-    `nvidia`: Should system be set up for NVidia GPU?
-
-    Default is `no`.
 
 === "mounts"
     ```yaml

@@ -79,6 +79,8 @@ jobs:
         run: |
           mkdocs build --clean
           mkdocs --version
+        env:
+          CI: true
 
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
@@ -90,6 +92,9 @@ jobs:
           projectName: docs
           directory: site
           gitHubToken: ${{ secrets.GH_TOKEN }}
+
+      - name: Cleanup old optimize cache folder
+        run: rm -rf .cache/plugins
 
       - name: Save build cache
         id: cache-docs-save

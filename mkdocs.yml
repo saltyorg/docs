@@ -62,7 +62,9 @@ theme:
 
 plugins:
   - privacy:
+      enabled: !ENV [CI, false]
       cache: true
+      cache_dir: .cache/plugin/privacy
       assets: true
       assets_fetch: true
       links_attr_map:
@@ -73,8 +75,8 @@ plugins:
   - meta
   - optimize:
       cache: true
-      cache_dir: .cache/plugins/optimize
-      enabled: true
+      cache_dir: .cache/plugin/optimize
+      enabled: !ENV [CI, false]
       optimize_png: true
       optimize_png_speed: 1
       optimize_png_strip: true
@@ -85,6 +87,8 @@ plugins:
   - minify:
       minify_html: true
   - git-committers:
+      enabled: !ENV [CI, false]
+      cache_dir: .cache/plugin/git-committers/
       repository: saltyorg/docs
       branch: main
 

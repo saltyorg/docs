@@ -93,9 +93,6 @@ jobs:
           directory: site
           gitHubToken: ${{ secrets.GH_TOKEN }}
 
-      - name: Cleanup old optimize cache folder
-        run: rm -rf .cache/plugins
-
       - name: Save build cache
         id: cache-docs-save
         uses: actions/cache/save@v4

@@ -442,34 +442,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     [Other migration notes](../../reference/guides/other.md)
 
-=== "I'm totally new to this"
-    This option is aimed at you if you are starting totally from scratch and want to be walked through the whole setup.
-
-    IMPORTANT: GOOGLE HAS MADE CHANGES THAT RENDER THIS PROCESS LARGELY POINTLESS. IF YOU ARE A BRAND NEW GOOGLE USER, PROBABLY BEST TO PRETEND YOU NEVER SAW THIS.
-    
-    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED GOOGLE SETUP YOU SHOULD NOT DO THIS.
-
-    === "Google Drive"
-
-        THIS IS ASSUMING YOU HAVE NO EXISTING MEDIA ON GOOGLE DRIVE OR ANYTHING ELSE.
-
-        IF YOU ARE STARTING FRESH LATER THAN JUNE 2023 YOU PROBABLY DON'T WANT TO GO THROUGH THIS. Changes to Google's "unlimited" offering have made this mostly needless and obsolete.
-
-        If you have a brand new Google Drive account and want to be walked through all the steps you need to perform, start [here](../../reference/rclone.md)
-
-        That's an eight-step process that is mostly copy-paste commands. When you have completed it, come back here.
-
-        That eight-step process will create seven shared drives, 300 service accounts, and will configure rclone for you.
-
-        IF THAT IS MORE THAN YOU HAD IN MIND, TAKE A LOOK AT THE "MINIMAL SETUP" TO THE RIGHT.
-
-        This should be enough capacity for quite a while for most users.
-
-    === "Dropbox"
-
-        Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
-
-=== "Minimal setup, please"
+=== "Basic setup, please"
     IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP THIS IS PROBABLY NOT WHAT YOU WANT.
 
     === "Google Drive"

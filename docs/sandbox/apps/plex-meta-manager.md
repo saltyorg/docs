@@ -45,5 +45,3 @@ docker run --rm -it --network=saltbox -v "/opt/plex-meta-manager/:/config:rw" me
 ### 2. Setup
 
 - [:octicons-link-16: Documentation: Plex Meta Manager Docs](https://metamanager.wiki/en/latest/){: .header-icons }
-
-

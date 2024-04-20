@@ -6,7 +6,7 @@
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/meisnate12/Plex-Meta-Manager){: .header-icons } | [:octicons-link-16: Docs](https://github.com/meisnate12/Plex-Meta-Manager/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/meisnate12/Plex-Meta-Manager){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/meisnate12/plex-meta-manager){: .header-icons }|
+| [:material-home: Project home](https://github.com/meisnate12/Plex-Meta-Manager){: .header-icons } | [:octicons-link-16: Docs](https://metamanager.wiki/en/latest/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/meisnate12/Plex-Meta-Manager){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/meisnate12/plex-meta-manager){: .header-icons }|
 
 ### 1. Installation
 
@@ -22,6 +22,28 @@ sb install sandbox-plex-meta-manager
 
 ```
 
+The [default Template](https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template
+) is automatically downloaded to `/opt/plex-meta-manager/config.yml.template` when running the tag.
+
+By default Plex Meta Manager runs every day at 03:00 am.
+You can change this in the sandbox `settings.yml`:
+
+ ``` yaml title="nano /opt/sandbox/settings.yml"
+    ---
+    plex_meta_manager:
+      time: "03:00"
+    ```
+
+For testing you also can run the container once using this command:
+
+``` shell
+
+docker run --rm -it --network=saltbox -v "/opt/plex-meta-manager/:/config:rw" meisnate12/plex-meta-manager --run
+
+```
+
 ### 2. Setup
 
-- [:octicons-link-16: Documentation: Plex Meta Manager Docs](https://github.com/meisnate12/Plex-Meta-Manager/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: Plex Meta Manager Docs](https://metamanager.wiki/en/latest/){: .header-icons }
+
+

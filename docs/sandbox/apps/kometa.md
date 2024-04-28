@@ -29,11 +29,11 @@ You will need to create a config file prior to running the tag:
 There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wiki/en/latest/kometa/install/docker/) that you can use to learn how to create this file.  Once you've created it, move the file into `/opt/kometa/` and then run the tag.
 
 ``` shell
-
 sb install sandbox-kometa
-
 ```
 
 ### 2. Setup
+
+To configure the time that Kometa should run, you may override the `kometa_time` variable via the [inventory system](../../saltbox/inventory/index.md). The default is `"03:00"` or 3:00 AM in the server's time zone.
 
 - [:octicons-link-16: Documentation: Kometa Docs](https://kometa.wiki){: .header-icons }

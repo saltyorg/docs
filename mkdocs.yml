@@ -248,8 +248,8 @@ nav:
           - Metadata Management:
             - Alternatrr: sandbox/apps/alternatrr.md
             - Alternatrrx: sandbox/apps/alternatrrx.md
+            - Kometa: sandbox/apps/kometa.md
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
-            - Plex Meta Manager: sandbox/apps/plex-meta-manager.md
             - Plex-Utills: sandbox/apps/plex-utills.md
             - Python-plexlibrary: sandbox/apps/python-plexlibrary.md
             - Unmanic: sandbox/apps/unmanic.md

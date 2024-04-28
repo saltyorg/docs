@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - kometa
+  - pmm
+  - plex meta manager
+---
+
 # Kometa
 
 ## What is it?

@@ -60,8 +60,6 @@ notifiarr:
   ui_password: "username:password" # Password needs to be at least 16 characters long.
 ombix:
   roles: ["4k"]
-plex_meta_manager:
-  time: "03:00"
 qbit_manage:
   qbt_run: "false" # Default is "false"
   qbt_schedule: "30" # Default is "30"

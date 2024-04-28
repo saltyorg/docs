@@ -68,6 +68,7 @@ tags:
 - **[kcptun_client](../sandbox/apps/kcptun-client.md)**  - tag - `sandbox-kcptun-client`
 - **[kcptun_server](../sandbox/apps/kcptun-server.md)**  - tag - `sandbox-kcptun-server`
 - **[kitana](../sandbox/apps/kitana.md)**  - tag - `sandbox-kitana`
+- **[kometa](../sandbox/apps/kometa.md)** - tag - `sandbox-kometa`
 - **[komga](../sandbox/apps/komga.md)**  - tag - `sandbox-komga`
 - **[lazylibrarian](../sandbox/apps/lazylibrarian.md)**  - tag - `sandbox-lazylibrarian`
 - **[lgsm](../sandbox/apps/lgsm.md)**  - tag - `sandbox-lgsm`
@@ -101,7 +102,6 @@ tags:
 - **[plex_auto_languages](../sandbox/apps/plex-auto-languages.md)**  - tag - `sandbox-plex-auto-languages`
 - **[plex_autoscan](../sandbox/apps/plex-autoscan.md)**  - tag - `sandbox-plex-autoscan`
 - **[plex_dupefinder](../sandbox/apps/plex-dupefinder.md)**  - tag - `sandbox-plex-dupefinder`
-- **[plex-meta-manager](../sandbox/apps/plex-meta-manager.md)**  - tag - `sandbox-plex-meta-manager`
 - **[plex_patrol](../sandbox/apps/plex-patrol.md)**  - tag - `sandbox-plex-patrol`
 - **[plextraktsync](../sandbox/apps/plextraktsync.md)**  - tag - `sandbox-plextraktsync`
 - **[plex_utills](../sandbox/apps/plex-utills.md)**  - tag - `sandbox-plex-utills`

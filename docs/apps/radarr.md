@@ -61,7 +61,7 @@ Make changes in the following sections:
             Reference: https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
             </details>
 
-            The TRaSH naming guide is recommended since some other tools, notably Plex Meta Manager, expect it in their default setup.
+            The TRaSH naming guide is recommended since some other tools, notably Kometa, expect it in their default setup.
 
             <details>
             <summary>Plex's Naming Preference</summary> <br />

@@ -63,7 +63,7 @@ Make changes in the following sections:
                 for more examples and discussion see the reference: https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/
                 </details>
 
-                The TRaSH naming guide is recommended since some other tools, notably Plex Meta Manager, expect it in their default setup.
+                The TRaSH naming guide is recommended since some other tools, notably Kometa, expect it in their default setup.
 
 
                 <details>

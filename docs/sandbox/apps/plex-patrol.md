@@ -25,7 +25,7 @@ The role will fill in the Plex URL and token; aside from that the various settin
 The settings file is found at:
 
 ```shell
-/opt/plexpatrol/settings.ini
+/opt/plex_patrol/settings.ini
 ```
 
 After editing the file, restart the container with `docker restart plex_patrol`.

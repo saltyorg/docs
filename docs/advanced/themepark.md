@@ -7,7 +7,7 @@ tags:
 
 # Themepark Styles
 
-Saltbox can apply themes from [ThemePark](https://docs.theme-park.dev/theme-options/) to supported applications through the inventory. Applications that can support `cont-init.d` scripts will utilize scripts that modify the CSS within the source files. Support is also available for additional apps via the [Traefik Plugin](https://github.com/packruler/traefik-themepark) which performs CSS replacement at the reverse proxy (rather than application) level.
+Saltbox can apply themes from [ThemePark](https://docs.theme-park.dev/theme-options/) to supported applications through the inventory. Themes are applied via the [Traefik Plugin](https://github.com/packruler/traefik-themepark) which performs CSS replacement at the reverse proxy (rather than application) level.
 
 Plugin note: You must run `sb install traefik` once after setting `global_themepark_plugin_enabled: true` in order to provision the theme middlewares.
 

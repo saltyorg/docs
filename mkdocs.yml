@@ -308,6 +308,7 @@ nav:
           - Guacamole: sandbox/apps/guacamole.md
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
+          - Influxdb2: sandbox/apps/influxdb2.md
           - Invoice Ninja: sandbox/apps/invoiceninja.md
           - Home Automation:
             - Home Assistant: sandbox/apps/homeassistant.md

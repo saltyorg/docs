@@ -37,11 +37,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           traefik.enable: true # (8)!
           traefik.http.routers.APPNAME-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,cloudflarewarp@docker,authelia@docker # (10)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (10)!
           traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (11)!
           traefik.http.routers.APPNAME-http.service: APPNAME # (12)!
           traefik.http.routers.APPNAME.entrypoints: websecure # (13)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,cloudflarewarp@docker,authelia@docker # (14)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (14)!
           traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (15)!
           traefik.http.routers.APPNAME.service: APPNAME # (16)!
           traefik.http.routers.APPNAME.tls.certresolver: cfdns # (17)!
@@ -136,23 +136,23 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           traefik.enable: true # (8)!
           traefik.http.routers.APPNAME-api-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,cloudflarewarp@docker # (10)!
+          traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (10)!
           traefik.http.routers.APPNAME-api-http.priority: 99 # (11)!
           traefik.http.routers.APPNAME-api-http.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (12)!
           traefik.http.routers.APPNAME-api-http.service: APPNAME # (13)!
           traefik.http.routers.APPNAME-api.entrypoints: websecure # (14)!
-          traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,cloudflarewarp@docker # (15)!
+          traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (15)!
           traefik.http.routers.APPNAME-api.priority: 99 # (16)!
           traefik.http.routers.APPNAME-api.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (17)!
           traefik.http.routers.APPNAME-api.service: APPNAME # (18)!
           traefik.http.routers.APPNAME-api.tls.certresolver: cfdns # (19)!
           traefik.http.routers.APPNAME-api.tls.options: securetls@file # (20)!
           traefik.http.routers.APPNAME-http.entrypoints: web # (21)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,cloudflarewarp@docker,authelia@docker # (22)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (22)!
           traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (23)!
           traefik.http.routers.APPNAME-http.service: APPNAME # (24)!
           traefik.http.routers.APPNAME.entrypoints: websecure # (25)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,cloudflarewarp@docker,authelia@docker # (26)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (26)!
           traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (27)!
           traefik.http.routers.APPNAME.service: APPNAME # (28)!
           traefik.http.routers.APPNAME.tls.certresolver: cfdns # (29)!
@@ -296,11 +296,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           traefik.enable: true # (8)!
           traefik.http.routers.APPNAME-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,cloudflarewarp@docker # (10)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (10)!
           traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (11)!
           traefik.http.routers.APPNAME-http.service: APPNAME # (12)!
           traefik.http.routers.APPNAME.entrypoints: websecure # (13)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,cloudflarewarp@docker # (14)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (14)!
           traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (15)!
           traefik.http.routers.APPNAME.service: APPNAME # (16)!
           traefik.http.routers.APPNAME.tls.certresolver: cfdns # (17)!

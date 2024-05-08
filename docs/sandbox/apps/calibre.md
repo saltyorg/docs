@@ -22,7 +22,9 @@ sb install sandbox-calibre
 
 ### 3. Setup
 
-- The username is `abc` . The configured password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
+- The username and password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
+
+- The second books url serves the Calibre Content server and has a default user of abc and password abc, so make sure to remove/edit that user and enable 'Require username and password to access the Content server' otherwise it will be completely open.
 
 - Calibre is ready for use. If you added your pre-existing Calibre library to /mnt/local/Media/Books then you should see your library is ready to go. If not, then you have a blank library ready for you to fill.
 

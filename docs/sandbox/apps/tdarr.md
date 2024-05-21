@@ -25,4 +25,13 @@ sb install sandbox-tdarr
 
 ### 3. Setup
 
+Tdarr is configured with the following defaults which can be modified via the inventory system.
+
+``` yaml
+tdarr_server_port: "8266"
+tdarr_server_external: false
+```
+
+By switching `tdarr_server_external` to `true` the Tdarr server will be accessible externally via the specified `tdarr_server_port` on any hostname or IP address pointing directly to the server.
+
 - [:octicons-link-16: Documentation: Tdarr Docs](https://docs.tdarr.io/docs/welcome/what/){: .header-icons }

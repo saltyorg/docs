@@ -26,12 +26,13 @@ The Tdarr Node is configured with the following defaults which can be modified v
 tdarr_node_server_ip: "tdarr"
 tdarr_node_server_port: "8266"
 tdarr_node_node_id: "MainNode"
-tdarr_node_node_ip: "0.0.0.0"
 tdarr_node_node_port: "8267"
 tdarr_node_external: false
 ```
 
-By switching `tdarr_node_external` to `true` the node will be accessible externally via the specified `tdarr_node_node_port` on any hostname or IP address pointing to the server.
+By switching `tdarr_node_external` to `true` the node will be accessible externally via the specified `tdarr_node_node_port` on any hostname or IP address pointing directly to the server.
+
+To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tdarr_node_server_port` to the IP/hostname and port of the exposed Tdarr server.
 
 ### 3. Setup
 

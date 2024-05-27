@@ -17,6 +17,13 @@ If this flag is set in the `adv_settings.yml`:
 
 Common error pages can be displayed with some consistent styling, based on [this system](https://github.com/tarampampam/error-pages).
 
+You will need to reinstall traefik after changing this setting:
+
+```text
+sb install traefik
+```
+
+
 ## What themes are available?
 
 There are initially seven "themes" available, which are stored in `/opt/error_pages`:

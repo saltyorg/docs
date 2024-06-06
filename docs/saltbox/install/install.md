@@ -296,9 +296,7 @@ To edit any of the following configuration files use the command written in the 
       provider: cloudflare # (13)!
       subdomains:
         dash: dash # (14)!
-        jaeger: jaeger # (15)!
-        metrics: metrics # (16)!
-      tracing: no # (17)!
+        metrics: metrics # (15)!
     ```
 
     1. Toggles Saltbox management of IPv4 A records with Cloudflare.
@@ -371,11 +369,7 @@ To edit any of the following configuration files use the command written in the 
 
     14. Defines which subdomain the Traefik dashboard will be accessible at.
 
-    15. Defines which subdomain the Traefik Jaeger endpoint will be accessible at.
-
-    16. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
-
-    17. Toggles the use of Jaeger (tracing) with Traefik.
+    15. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
 !!! info
     See [here](../../reference/accounts.md) for more information about these settings.

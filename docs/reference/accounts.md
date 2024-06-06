@@ -353,7 +353,6 @@ Each tab shows a "section" in the file.
       provider: cloudflare
       subdomains:
         dash: dash
-        jaeger: jaeger
         metrics: metrics
       tracing: no
     ```
@@ -387,10 +386,6 @@ Each tab shows a "section" in the file.
     `subdomain.dash`: traefik dashboard subdomain.
 
     Default is `dash`.
-
-    `subdomain.jaeger`: traefik jaeger subdomain.
-
-    Default is `jaeger`.
 
     `subdomain.metrics`: traefik metrics subdomain.
 

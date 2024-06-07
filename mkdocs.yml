@@ -301,6 +301,7 @@ nav:
             - Adminer: sandbox/apps/adminer.md
             - PGAdmin: sandbox/apps/pgadmin.md
           - Docker:
+            - Dockwatch: sandbox/apps/dockwatch.md
             - Ouroboros: sandbox/apps/ouroboros.md
             - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
@@ -499,4 +500,3 @@ nav:
           - Using Local Storage: reference/local-storage.md
           - Mounting disks: reference/guides/mount.md
           - HW transcoding on OVH: reference/OVH.md
-

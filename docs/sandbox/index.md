@@ -32,6 +32,7 @@ tags:
 - **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
 - **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
+- **[dockwatch](../sandbox/apps/dockwatch.md)**  - tag - `sandbox-dockwatch`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`

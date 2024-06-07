@@ -5,16 +5,13 @@
 [Dockwatch](https://github.com/Notifiarr/dockwatch) is a simple UI driven way to manage updates & notifications for Docker containers.
 
 - Link and control multiple servers
-- Automatically locate and match container icons for non Unraid usage # (1)!
+- Automatically locate and match container icons for non Unraid usage
 - Update schedules for container image tags by a container basis
 - Notifications by a container basis
 - Automatically try to restart unhealthy containers
 - Mass prune orphan images, volumes & networks
-- Mass actions for containers [(re-)start/stop, pull, update] # (2)!
+- Mass actions for containers [(re-)start/stop, pull, update]
 - Group containers in a table view for easier management
-
-1. If icon is available at [Notifiarr/images](https://github.com/Notifiarr/images).
-2. Also includes generating a `docker run` command, `docker-compose.yml` and comparing mounts.
 
 !!! warning
     By default, the role is protected behind your Authelia/SSO middleware.

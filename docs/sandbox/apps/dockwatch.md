@@ -16,16 +16,7 @@
 !!! warning
     By default, the role is protected behind your Authelia/SSO middleware.
 
-    By default, Dockwatch is likely unable to take action on containers do the security posture of the Docker socket proxy. You can override this behavior to allow Dockwatch to take actions by adding `POST: "1"` to the socket proxy envs via the below [inventory](../../saltbox/inventory/index.md) entry:
-        ```yaml
-        dockwatch_docker_socket_proxy_envs:
-          CONTAINERS: "1"
-          IMAGES: "1"
-          NETWORKS: "1"
-          PORTS: "1"
-          POST: "1"
-          VOLUMES: "1"
-        ```
+    By default, Dockwatch is likely unable to take action on containers do the security posture of the Docker socket proxy. You can override this behavior to allow Dockwatch to take actions by adding `dockwatch_post_enable: true` to your [inventory](../../saltbox/inventory/index.md) entries:
 
 | Details     |             |             |
 |-------------|-------------|-------------|

@@ -10,7 +10,7 @@
 
 ### 1. Setup
 
-You will need a notifiar account api key to use notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/guest/register){: .header-icons }
+You will need a Notifiarr account api key to use Notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/guest/register){: .header-icons }
 
 After logging in, you should be redirected to your profile screen.
 
@@ -18,7 +18,6 @@ After logging in, you should be redirected to your profile screen.
 - Select your Country
 - Select your Timezone
 - Change your Time Format to your liking
-- Select your Site Theme
 - Select your Notification Language
 - **Don't forget to Save your changes**
 
@@ -41,9 +40,9 @@ sb install sandbox-notifiarr
 Now go to the Notifiarr website and configure your integrations and discord server.
 Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.
 
-The role will attempt to configure sonarr, radarr, plex, and tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
+The role will attempt to configure Sonarr, Radarr, Plex, and Tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
 
-A quickstart guide can be found on the [Trash Guides website.](https://trash-guides.info/Notifiarr/Quick-Start/)
+A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on the [TRaSH Guides website](https://trash-guides.info/Guide-Sync/).
 
 ## Advanced
 

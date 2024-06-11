@@ -126,3 +126,23 @@ Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
     SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
 
     These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
+
+By default, Saltbox will keep all previous backups that have been pushed to an rclone target.
+
+If you wish to change that you can use these variables in your inventory:
+
+``` { .yaml .annotate }
+backup_cleanup_number: 99 # (13)!
+backup_cleanup_enabled: false # (14)!
+backup_cleanup_custom_rclone_flags: "" # (15)!
+```
+
+13. How many previous backups to retain [excluding the most recent]
+
+14. Enable or disable this backup pruning [if this is false, the previous value is ignored]
+
+    Options are: `true` or `false`
+
+14. Add these flags to the rclone run that performs the cleanup.
+
+    A use case might be to add `--drive-use-trash=false` here to delete immediately on Google Drive.

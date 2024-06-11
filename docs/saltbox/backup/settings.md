@@ -63,7 +63,7 @@ backup:
 
 7. Defines which Rclone flags template is used for the backup.
 
-    Options are: `google`, `dropbox` or `custom`
+    Options are: `google`, `dropbox`, `sftp` or `custom`
 
     If you want to use custom you need to define any flags you want to use through the inventory.
 

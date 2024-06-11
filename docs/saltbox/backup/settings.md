@@ -135,6 +135,11 @@ If you wish to change that you can use these variables in your inventory:
 backup_cleanup_number: 99 # (13)!
 backup_cleanup_enabled: false # (14)!
 backup_cleanup_custom_rclone_flags: "" # (15)!
+
+# if you are using backup2
+backup2_cleanup_number: 99 # (13)!
+backup2_cleanup_enabled: false # (14)!
+backup2_cleanup_custom_rclone_flags: "" # (15)!
 ```
 
 13. How many previous backups to retain [excluding the most recent]

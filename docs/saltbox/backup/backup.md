@@ -107,3 +107,14 @@ This backup will take some time, likely hours, and all your containers may be do
         Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
     Save and close the file and the schedule will be applied going forward.
+
+## What's this `backup2` role?
+
+The standard backup role will tar up all the directories in `/opt`, then once that operation is complete, transfer all those tar archives to an rclone/rsync destination.
+
+Perhaps you are on a system that is space-constrained and does not allow this.
+
+`backup2` supports only rclone targets, adn will do the tar operation straight to the rclone destination, directory by directory, without requiring the intermediate step of writing the archive to the local disk.
+
+It will be far less performant than writing the tar archives to a local disk, but exists for use in the event that doing so is not possible.
+

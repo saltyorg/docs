@@ -91,6 +91,16 @@ backup:
 
 12. Port used by rsync on the target server.
 
+13. How many previous backups to retain [excluding the most recent]
+
+14. Enable or disable this backup pruning [if this is false, the previous value is ignored]
+
+    Options are: `true` or `false`
+
+15. Add these flags to the rclone run that performs the cleanup.
+
+    A use case might be to add `--drive-use-trash=false` here to delete immediately on Google Drive.
+
 !!! important
 
     Nothing that is stored on the rclone or rsync destinations is encrypted by this backup process, so take care not to set those destinations to systems you do not control.
@@ -131,23 +141,13 @@ By default, Saltbox will keep all previous backups that have been pushed to an r
 
 If you wish to change that you can use these variables in your inventory:
 
-``` { .yaml .annotate }
-backup_cleanup_number: 99 # (1)!
-backup_cleanup_enabled: false # (2)!
-backup_cleanup_custom_rclone_flags: "" # (3)!
+``` { .annotate }
+backup_cleanup_number: 99 # (13)!
+backup_cleanup_enabled: false # (14)!
+backup_cleanup_custom_rclone_flags: "" # (15)!
 
 # if you are using backup2
-backup2_cleanup_number: 99 # (1)!
-backup2_cleanup_enabled: false # (2)!
-backup2_cleanup_custom_rclone_flags: "" # (3)!
+backup2_cleanup_number: 99 # (13)!
+backup2_cleanup_enabled: false # (14)!
+backup2_cleanup_custom_rclone_flags: "" # (15)!
 ```
-
-1. How many previous backups to retain [excluding the most recent]
-
-2. Enable or disable this backup pruning [if this is false, the previous value is ignored]
-
-    Options are: `true` or `false`
-
-3. Add these flags to the rclone run that performs the cleanup.
-
-    A use case might be to add `--drive-use-trash=false` here to delete immediately on Google Drive.

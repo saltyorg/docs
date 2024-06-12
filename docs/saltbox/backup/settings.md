@@ -145,16 +145,19 @@ backup2_cleanup_custom_rclone_flags: ""
 ```
 
 ```
-backup_cleanup_number: 99` (1)
+backup_cleanup_number: 99 (1)
 ```
 { .annotate }
+
+1.  How many previous backups to retain [excluding the most recent]
+
 `backup_cleanup_enabled: false` (2)
 { .annotate }
+
+2.  Enable or disable this backup pruning [if this is false, the previous value is ignored]
 
 `backup_cleanup_custom_rclone_flags: ""` (3)
 { .annotate }
 
-1.  How many previous backups to retain [excluding the most recent]
-2.  Enable or disable this backup pruning [if this is false, the previous value is ignored]
 3.  Add these flags to the rclone run that performs the cleanup. A use case might be to add `--drive-use-trash=false` to delete immediately from Google Drive.
 

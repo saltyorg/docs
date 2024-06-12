@@ -147,7 +147,9 @@ backup2_cleanup_custom_rclone_flags: ""
 ```
 backup_cleanup_number: 99` (1)
 ```
+{ .annotate }
 `backup_cleanup_enabled: false` (2)
+{ .annotate }
 
 `backup_cleanup_custom_rclone_flags: ""` (3)
 { .annotate }

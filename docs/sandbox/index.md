@@ -63,7 +63,6 @@ tags:
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
 - **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
-- **[jirafeau](../sandbox/apps/jirafeau.md)**  - tag - `sandbox-jirafeau`
 - **[joplin](../sandbox/apps/joplin.md)**  - tag - `sandbox-joplin`
 - **[kavita](../sandbox/apps/kavita.md)**  - tag - `sandbox-kavita`
 - **[kcptun_client](../sandbox/apps/kcptun-client.md)**  - tag - `sandbox-kcptun-client`

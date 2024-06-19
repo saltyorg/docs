@@ -131,15 +131,21 @@ By default, Saltbox will keep all previous backups that have been pushed to an r
 
 If you wish to change that you can use these variables in your inventory:
 
-```
-backup_cleanup_number: 99              # How many previous backups to retain [excluding the most recent]
-backup_cleanup_enabled: false          # Enable or disable this backup pruning [if this is false, the previous value is ignored]
-backup_cleanup_custom_rclone_flags: "" # Add these flags to the rclone run that performs the cleanup.
-                                       # A use case might be to add `--drive-use-trash=false`
-                                       # to delete immediately from Google Drive.
+``` { .yaml .annotate }
+backup_cleanup_number: 99 # (1)!
+backup_cleanup_enabled: false # (2)!
+backup_cleanup_custom_rclone_flags: "" # (3)!
 
-# if you are using backup2
+# When using backup2
 backup2_cleanup_number: 99
 backup2_cleanup_enabled: false
 backup2_cleanup_custom_rclone_flags: ""
 ```
+
+1. How many previous backups to retain [excluding the most recent]
+
+2. Enable or disable this backup pruning [if this is false, the previous value is ignored]
+
+3. Add these flags to the rclone run that performs the cleanup.
+
+    A use case might be to add `--drive-use-trash=false` to delete immediately from Google Drive.

@@ -12,7 +12,7 @@ tags:
 
 About the requirements:
 
-You will need a dedicated server freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/) or [22.04](https://releases.ubuntu.com/22.04/).
+You will need a dedicated server freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/), [22.04](https://releases.ubuntu.com/22.04/), or [24.04](https://releases.ubuntu.com/24.04/).
 
 This server can be either local to you or rented froma server provider.
 

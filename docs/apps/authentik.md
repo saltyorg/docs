@@ -59,4 +59,21 @@ Below you will see the updated User Login Stage info.
 
 ![Altered](../images/authentik-user-auth-updated-screenshot.png)
 
+### 4. Additional Settings
+
+To enable email notifications, set these inventory entries to the necessary values:
+
+``` yaml title=""
+
+authentik_email_host: "localhost" # (1)!
+authentik_email_port: "25" # (2)!
+authentik_email_username: "" # (3)!
+authentik_email_password: "" # (4)!
+authentik_email_tls: "false" # (5)!
+authentik_email_ssl: "false" # (6)!
+authentik_email_timeout: "10" # (7)!
+authentik_email_from: "authentik@localhost" # (8)!
+
+```
+
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }

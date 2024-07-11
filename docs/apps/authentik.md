@@ -41,29 +41,20 @@ sb install authentik
 
 ### 3. Setup
 
-- Change login password.
+To set up Authentik similarly to how we have [Authelia](../apps/authelia.md) set up, follow these steps:
 
-- Click Preferences in the top bar and on the Downloads section enter the following paths: <br />
-  - Download to: <br />
-    `/mnt/unionfs/downloads/torrents/Authentik/incoming`
-  - Move completed to: <br />
-    `/mnt/unionfs/downloads/torrents/Authentik/completed`
-  - Autoadd `.torrent files` from: <br />
-    `/mnt/unionfs/downloads/torrents/Authentik/watched`
+After logging in, you will be greeted with the dashboard. Click on the `Admin Interface` button in the top right corner.
 
-- Select Network section, uncheck `Use Random Ports` under Incoming Ports and set both input fields to `58112`.
+Click on the `Flows and Stages` drop down and select `Stages`.
 
-- Click the `Plugins` section
-  - enable the `labels` plugin.
-  - enable and the `Extractor` plugin. <br />
-      In order for Sonarr or Radarr to import media packaged within .rar files, they will have to be extracted.
-  - After clicking `"Apply"`, select the `Extractor`  plugin on the left. <br />
-      Make sure the directory points to the `completed` folder within your Authentik data directory.  <br />
-      `/mnt/unionfs/downloads/torrents/Authentik/completed` <br />
-      Also, make sure that the Create torrent name sub-folder setting is checked.
+Locate the `default-authentication-login` stage and click the `Edit` button. (Far right)
 
-### 4. Adding to Sonarr/Radarr
+Below you will see the default User Login Stage info.
 
+![Defaults](../images/authentik-user-auth-default-screenshot.png)
 
+You can change these values to anything you want, but for this example, we will change the `Session Duration` to `minutes=30` and the `Stay Signed in Offset` to `weeks=2`.
+
+![Altered](../images/authentik-user-auth-updated-screenshot.png)
 
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }

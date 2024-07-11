@@ -55,6 +55,8 @@ Below you will see the default User Login Stage info.
 
 You can change these values to anything you want, but for this example, we will change the `Session Duration` to `minutes=30` and the `Stay Signed in Offset` to `weeks=2`.
 
+Below you will see the updated User Login Stage info.
+
 ![Altered](../images/authentik-user-auth-updated-screenshot.png)
 
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }

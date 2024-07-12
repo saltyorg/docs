@@ -63,7 +63,7 @@ Below you will see the updated User Login Stage info.
 
 To enable email notifications, set these inventory entries to the necessary values:
 
-``` yaml title=""
+``` yaml title="Inventory Entries"
 
 authentik_email_host: "localhost" # (1)!
 authentik_email_port: "25" # (2)!

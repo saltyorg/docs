@@ -27,6 +27,8 @@ sb install authentik
 
 - To access Authentik, visit `https://auth._yourdomain.com_`
 
+### 3. Setup
+
 !!! info
 
     ``` yaml title="Default Login"
@@ -39,7 +41,23 @@ sb install authentik
     1. Replace `saltbox_user` with the username you set when installing Saltbox.
     2. Replace `saltbox_password` with the password you set when installing Saltbox.
 
-### 3. Setup
+To enable Authentik with a single container, or on a per role basis, set the following [inventory](../saltbox/inventory/index.md) entry:
+
+``` yaml title="Authentik Single Container Toggle"
+
+radarr_traefik_sso_middleware: "authentik@docker"
+
+```
+
+To enable Authentik globally, set the following [inventory](../saltbox/inventory/index.md) entry:
+
+``` yaml title="Authentik Global Toggle"
+
+traefik_default_sso_middleware: "authentik@docker"
+
+```
+
+You would use one or the other, the global toggle will install Authentik together with Traefik when it is being installed, the role toggle requires manually installing Authentik. Traefik needs to be reinstalled at least once after updating to deploy the Authentik middleware to enable use of it. If you are using the global toggle, you will need to reinstall all of the other roles you use to enable Authentik.
 
 To set up Authentik similarly to how we have [Authelia](../apps/authelia.md) set up, follow these steps:
 

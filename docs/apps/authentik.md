@@ -25,7 +25,7 @@ sb install authentik
 
 ### 2. URL
 
-- To access Authentik, visit `https://authentik._yourdomain.com_`
+- To access Authentik, visit `https://auth._yourdomain.com_`
 
 !!! info
 

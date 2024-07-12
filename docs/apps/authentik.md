@@ -49,21 +49,21 @@ Click on the `Flows and Stages` drop down and select `Stages`.
 
 Locate the `default-authentication-login` stage and click the `Edit` button. (Far right)
 
-Below you will see the default User Login Stage info.
+- Below you will see the default User Login Stage info.
 
-![Defaults](../images/authentik-user-auth-default-screenshot.png)
+    ![Defaults](../images/authentik-user-auth-default-screenshot.png)
 
 You can change these values to anything you want, but for this example, we will change the `Session Duration` to `minutes=30` and the `Stay Signed in Offset` to `weeks=2`.
 
-Below you will see the updated User Login Stage info.
+- Below you will see the updated User Login Stage info.
 
-![Altered](../images/authentik-user-auth-updated-screenshot.png)
+    ![Altered](../images/authentik-user-auth-updated-screenshot.png)
 
 ### 4. Additional Settings
 
-To enable email notifications, set these inventory entries to the necessary values:
+To enable email notifications, set these [inventory](../saltbox/inventory/index.md) entries to your desired values:
 
-``` yaml title="Inventory Entries"
+``` yaml title="Authentik Email Settings"
 
 authentik_email_host: "localhost" # (1)!
 authentik_email_port: "25" # (2)!

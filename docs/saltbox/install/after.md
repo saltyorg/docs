@@ -17,15 +17,23 @@ All the apps are installed and configured, but here are some things you want to 
 
 1. Harden your SSH server.  There are some tips [here](https://linuxhandbook.com/ssh-hardening-tips/), but three simple actions to take are:
 
-    1. [Change the default SSH port](https://linuxhandbook.com/change-ssh-port/) from 22 to something else.
+   Any links offered here are intended as examples to point you in the right direction.  This is outside Saltbox scope and these links are offered without warranty.  They may be incomplete or out of date.
+   
+   Change the default SSH port from 22 to something else.
 
-    1. [Disable password login](https://linuxhandbook.com/ssh-disable-password-authentication/) and use only SSH keys to authenticate.
+   The specific method of doing this will vary with the version of Ubuntu you are using.
 
-    1. Disable root login.
+   [Changing the default ssh port in Ubuntu 20 or 22.04](https://linuxhandbook.com/change-ssh-port/)
 
-2. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
+   [Changing the default ssh port in Ubuntu 22.10 or later](https://askubuntu.com/a/1439482)
 
-3. Take some time to verify disk space usage for the apps.
+   [Disable password login](https://linuxhandbook.com/ssh-disable-password-authentication/) and use only SSH keys to authenticate.
+
+   Disable root login.
+
+3. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
+
+4. Take some time to verify disk space usage for the apps.
 
     You need local disk space for stuff between download completion and cloudplow moving things into the cloud.  If you don't, for example, set cloudplow's upload thresholds and Nzbget's "stop downloading" disk space threshold to meaningful values for your situation, you can get into a situation where cloudplow's not uploading because that threshold hasn't been met and nzbget has stopped because its threshold has been met and everything grinds to a halt.  Alternatively, nzbget just keeps going and runs your disk out of space.
 
@@ -33,11 +41,11 @@ All the apps are installed and configured, but here are some things you want to 
 
     Another common "hidden" disk space consumer is unfinished or unimported downloads.  If NZBGet downloads something and Radarr can't tell what movie it is, it will just sit consuming disk space.  There is a script you can set up to keep this stuff cleaned up in the [user crontab examples](../../advanced/user-crontab-examples.md).
 
-4. Spend some time working with the system before you start customizing.  A **lot** of problems are seen when new users rush ahead to install All The Things and customize the system without understanding how things work.  Slow down.  Learn how the thing works, and then make changes in a controlled manner.
+5. Spend some time working with the system before you start customizing.  A **lot** of problems are seen when new users rush ahead to install All The Things and customize the system without understanding how things work.  Slow down.  Learn how the thing works, and then make changes in a controlled manner.
 
     None of these apps or scripts are sentient, so if they are not doing what you expect, it's almost certainly a configuration problem.
 
-5. Take time to go through some Youtube or other tutorials about:
+6. Take time to go through some Youtube or other tutorials about:
 
     1. JSON
 

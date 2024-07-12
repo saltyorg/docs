@@ -69,11 +69,20 @@ authentik_email_host: "localhost" # (1)!
 authentik_email_port: "25" # (2)!
 authentik_email_username: "" # (3)!
 authentik_email_password: "" # (4)!
-authentik_email_tls: "false" # (5)!
-authentik_email_ssl: "false" # (6)!
-authentik_email_timeout: "10" # (7)!
-authentik_email_from: "authentik@localhost" # (8)!
+authentik_email_tls: "false"
+authentik_email_ssl: "false"
+authentik_email_timeout: "10" # (5)!
+authentik_email_from: "authentik@localhost" # (6)!
 
 ```
+
+1. Replace `localhost` with your email host. IE: `smtp-relay.gmail.com`
+2. Replace `25` with your email port. IE: `587`
+3. Replace `""` with your email username if necessary.
+4. Replace `""` with your email password if necessary.
+5. Replace `10` with your email timeout in seconds.
+6. Replace `authentik@localhost` with your email from email address. IE: `Authentik <noreply@your_domain.com>`
+
+Redeploy the Authentik role to apply these changes.
 
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }

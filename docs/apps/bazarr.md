@@ -32,3 +32,7 @@ sb install bazarr
 - [:octicons-link-16: Documentation](https://wiki.bazarr.media/){: .header-icons }
 
 - [:octicons-link-16: TraSH Guides](https://trash-guides.info/Bazarr/)
+
+There are some settings that - depending on your specific setup - should be adapted to reduce API calls down to a managable level.
+
+Please refer to the official documentation for an explanation of the settings. Some - potentially out of date(!) - settings are documented in the [FAQs](../faq/Bazarr.md).

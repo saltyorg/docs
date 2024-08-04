@@ -369,6 +369,7 @@ nav:
         - Nzbget: apps/nzbget.md
       - Others:
         - Authelia: apps/authelia.md
+        - Authentik: apps/authentik.md
         - Autobrr: apps/autobrr.md
         - Cloudplow: apps/cloudplow.md
         - Bazarr: apps/bazarr.md

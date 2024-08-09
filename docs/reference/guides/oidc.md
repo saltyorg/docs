@@ -9,6 +9,10 @@ tags:
 
 # IDP/OIDC Configuration
 
+## Basic Configuration
+
+We will be using [Immich](../../sandbox/apps/immich.md) as an example application to configure Authentik as an IDP (Identity Provider) or OIDC (OpenID Connect) provider.
+
 To configure Authentik as an IDP (Identity Provider) or OIDC (OpenID Connect) provider, follow these steps:
 
 Click on the `Admin Interface` button in the top right corner.

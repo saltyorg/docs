@@ -55,6 +55,10 @@ For best results, the assumed server environment for Saltbox is:
 
 See [here](../../reference/server.md) for more details about server requirements.
 
+#### Networking
+
+The server will need to be accessible from the internet via ports 22 [or whatever port you are using for SSH], 80, and 443; if this is a home server most likely you will need to configure port-forwarding in your router to send these ports to this device.
+
 ## Domain
 
 **You will need a domain name** as Saltbox apps are only accessed via <https://appname>.*yourdomain.com* (see [Accessing Apps](../basics/accessing_apps.md)).

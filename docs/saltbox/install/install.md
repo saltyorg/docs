@@ -104,15 +104,12 @@ To edit any of the following configuration files use the command written in the 
     dockerhub:
       user: # (4)!
       token: # (5)!
-    plex:
-      user: # (6)!
-      pass: # (7)!
     user:
-      name: seed # (8)!
-      pass: password123 # (9)!
-      domain: testsaltbox.ml # (10)!
-      email: your@email.com # (11)!
-      ssh_key: # (12)!
+      name: seed # (6)!
+      pass: password123 # (7)!
+      domain: testsaltbox.ml # (8)!
+      email: your@email.com # (9)!
+      ssh_key: # (10)!
     ```
 
     1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
@@ -131,31 +128,27 @@ To edit any of the following configuration files use the command written in the 
 
     5. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
 
-    6. Plex.tv username or email address on the account.
-
-    7. Plex.tv password for the account. It should be wrapped in quotes if it contains any non alphanumeric characters.
-
-    8. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
+    6. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
 
         Do not use root.
 
         Required.
 
-    9. Password used for username account during the installation and apps that have automatic user configuration.
+    7. Password used for username account during the installation and apps that have automatic user configuration.
 
         See the [password considerations.](../../reference/accounts.md#password-considerations)
 
         Required.
 
-    10. Domain that you want to use for the server.
+    8. Domain that you want to use for the server.
 
         Required.
 
-    11. Email address used for Let's Encrypt SSL certificates.
+    9. Email address used for Let's Encrypt SSL certificates.
 
         Required.
 
-    12. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+    10. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
 === "settings.yml"
 

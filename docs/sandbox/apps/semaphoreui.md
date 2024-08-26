@@ -40,6 +40,7 @@ SEMAPHORE_EMAIL_USERNAME: ""  # (5)!
 SEMAPHORE_EMAIL_PASSWORD: ""  # (6)!
 SEMAPHORE_EMAIL_SECURE: ""  # (7)!
 ```
+
 1. Flag which enables email alerts. Can be `true` or '`false`.
 2. The email address you want to send to. Replace `""` with the email address you want to send to
 3. Replace `localhost` with your email host. IE: `smtp-relay.gmail.com`

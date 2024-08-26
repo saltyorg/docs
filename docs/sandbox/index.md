@@ -120,6 +120,7 @@ tags:
 - **[rfloodx](../sandbox/apps/rfloodx.md)**  - tag - `rfloodx`
 - **[rocketchat](../sandbox/apps/rocketchat.md)**  - tag - `rocketchat`
 - **[sabthrottle](../sandbox/apps/sabthrottle.md)**  - tag - `sandbox-sabthrottle`
+- **[semaphoreui](../sandbox/apps/semaphoreui.md)**  - tag - `sandbox-semaphoreui`
 - **[sarotate](../sandbox/apps/sarotate.md)**  - tag - `sandbox-sarotate`
 - **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
 - **[sqlitebrowser](../sandbox/apps/sqlitebrowser.md)**  - tag - `sandbox-sqlitebrowser`

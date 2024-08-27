@@ -188,7 +188,7 @@ nav:
           - Mcrouter: sandbox/apps/mcrouter.md
           - OliveTin: sandbox/apps/olivetin.md
           - Reposilite: sandbox/apps/reposilite.md
-          - SepahoreUI: sandbox/apps/semaphoreui.md
+          - SemaphoreUI: sandbox/apps/semaphoreui.md
           - Tika: sandbox/apps/tika.md
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md

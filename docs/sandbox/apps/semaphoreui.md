@@ -28,7 +28,7 @@ sb install sandbox-semaphoreui
 
 The default installation utilises a seperate postgres database. There is an option for this package to utilise mariadb / mysql but this isnt what this guide will be based on.
 
-To enable email notifications, set these [inventory](../saltbox/inventory/index.md) entries to your desired values:
+To enable email notifications, set these [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
 ``` yaml title="Semaphoreui Email Settings"
 

@@ -55,6 +55,8 @@ For best results, the assumed server environment for Saltbox is:
 
 See [here](../../reference/server.md) for more details about server requirements.
 
+When you install Ubuntu on the server, do not preinstall anything other than OpenSSH.  Notably, do not install Docker along with the OS.
+
 #### Networking
 
 The server will need to be accessible from the internet via ports 22 [or whatever port you are using for SSH], 80, and 443; if this is a home server most likely you will need to configure port-forwarding in your router to send these ports to this device.

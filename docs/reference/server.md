@@ -20,7 +20,9 @@ Some examples of "server provider" would be places like [OVH](https://us.ovhclou
 
 Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters [at least European data centers].  This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication.  If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
-The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error.
+When you install Ubuntu on the server, do not preinstall anything other than OpenSSH.
+
+The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error, or other problems will show up later.
 
 In other words, you should not upgrade your Ubuntu 18.04 machine running Cloudbox to Ubuntu 20.04 and then install Saltbox on top of it.  You should wipe the machine, install 20.04 or 22.04 fresh and start there.
 

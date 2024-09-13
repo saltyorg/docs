@@ -37,6 +37,8 @@ tags:
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
 - **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
+- **[fireflyiii](../sandbox/apps/fireflyiii.md)** - tag - `sandbox-firefly`
+- **[fireflyiii_importer](../sandbox/apps/fireflyiii_importer.md)** - tag - `sandbox-firefly_importer`
 - **[filebot](../sandbox/apps/filebot.md)**  - tag - `sandbox-filebot`
 - **[filebrowser](../sandbox/apps/filebrowser.md)**  - tag - `sandbox-filebrowser`
 - **[filezilla](../sandbox/apps/filezilla.md)**  - tag - `sandbox-filezilla`

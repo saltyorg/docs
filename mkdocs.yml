@@ -222,7 +222,7 @@ nav:
           - XBackBone: sandbox/apps/xbackbone.md
         - Finance:
           - Firefly III: sandbox/apps/fireflyiii.md
-          - Firefly III Importer: sandbox/apps/firefly_importer.md
+          - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
         - Landing Pages:
           - VNStat: sandbox/apps/vnstat.md
           - Heimdall: sandbox/apps/heimdall.md

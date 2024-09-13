@@ -34,7 +34,6 @@ sb install sandbox-fireflyiii
 - This will install the fireflyiii core container and install the mariadb database
   - > **Note: It can be installed using postgresql and mysql**
 - It will by default enable webhooks
-- It will by default install the fireflyiii_importer [Github](https://github.com/firefly-iii/data-importer) | [Saltbox Docs]()
 
 > **Note: For all available settings please refer to the Firefly III [example env](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example)**
 
@@ -50,7 +49,6 @@ MAIL_FROM: "fireflyiii@domain.com"  # (4)!
 MAIL_USERNAME: ""  # (5)!
 MAIL_PASSWORD: ""  # (6)!
 MAIN_ENCRYPTION: ""  # (7)!
-MAIL_SECURE: ""  # (8)!
 ```
 
 1. The MAIL_MAILER-setting indicates the system that is used for mailing. Firefly III supports the following mail systems: smtp, sendmail, mailgun, mandrill, sparkpost and log. [Here](https://docs.firefly-iii.org/how-to/firefly-iii/advanced/notifications/#email) is an explanation about each MAIL_MAILER option

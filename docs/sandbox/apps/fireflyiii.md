@@ -43,7 +43,6 @@ sb install sandbox-fireflyiii
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
 ``` yaml title="Firefly III Email Settings"
-
 MAIL_MAILER: "log"  # (1)!
 MAIL_HOST: "localhost"  # (2)!
 MAIL_PORT: "25"  # (3)!
@@ -72,7 +71,6 @@ This can be changed to do 1 of the following:
 #### 4.2.1 Remove Authelia Authentication (Not Recommended)
 
 ``` yaml title="Firefly III Remove Authelia"
-
 fireflyiii_traefik_sso_middleware: ""
 ```
 

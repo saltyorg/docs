@@ -1,5 +1,7 @@
 # Firefly III
 
+[TOC]
+
 ## What is it?
 
 [Firefly III](https://www.firefly-iii.org) is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
@@ -14,7 +16,7 @@ If your project has grown and deploying from the terminal is no longer for you t
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://www.firefly-iii.org){: .header-icons } | [:octicons-link-16: Docs](https://docs.firefly-iii.org/?mtm_campaign=firefly-iii-org&mtm_kwd=top-link){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/firefly-iii/firefly-iii/){: .header-icons } | [:material-docker: Docker](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/){: .header-icons }|
 
-### 1. Installation
+## 1. Installation
 
 ``` shell
 
@@ -22,13 +24,13 @@ sb install sandbox-fireflyiii
 
 ```
 
-### 2. URL
+## 2. URL
 
 - To access the Firefly III, visit `https://fireflyiii._yourdomain.com_`
 
-### 3. Setup
+## 3. Setup
 
-### 4. Additional Settings
+## 4. Additional Settings
 
 - The default installation utilises a seperate postgres database.
 - This will install the fireflyiii core container and install the mariadb database
@@ -59,14 +61,15 @@ MAIN_ENCRYPTION: ""  # (7)!
 6. Replace `""` with your email password if necessary.
 7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
 
-#### 4.2 Firefly III Authentication
+### 4.2 Firefly III Authentication
 By default this utilises the authelia authentication and utilises its own authentication mechanism
 
 This can be changed to do 1 of the following:
-- Remove Authelia authentication (Not Recommended)
+
+- [Remove Authelia authentication (Not Recommended)](#421-remove-authelia-authentication-not-recommended)
 - ~~Remove Firefly III built-in authentication~~ ***Not Understood***
 
-##### 4.2.1 Remove Authelia Authentication (Not Recommended)
+#### 4.2.1 Remove Authelia Authentication (Not Recommended)
 
 ``` yaml title="Firefly III Remove Authelia"
 

@@ -7,11 +7,11 @@ tags:
 
 # Enabling Nvidia Support in Saltbox
 
-Saltbox provides support for Nvidia GPUs, allowing you to leverage hardware acceleration for various tasks. This guide will walk you through the process of enabling Nvidia support by modifying specific variables in your inventory.
+Saltbox provides support for Nvidia GPUs, allowing you to leverage hardware acceleration for various tasks. This guide will walk you through the process of enabling Nvidia support by modifying specific variables in your [inventory](../saltbox/inventory/index.md).
 
 ## Configuration Variables
 
-To enable Nvidia support, you need to modify the following variables in your inventory file:
+To enable Nvidia support, you need to modify at least one of the following variables in your [inventory](../saltbox/inventory/index.md) file:
 
 ```yaml
 # Set to true to enable Nvidia

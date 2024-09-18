@@ -19,7 +19,8 @@ This is the default config; it contains a single remote/uploader pair.  This set
 {
     "core": {
         "dry_run": false,
- "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
+        "rclone_binary_path": "/usr/bin/rclone",
+        "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
     "hidden": {},
     "notifications": {
@@ -216,11 +217,10 @@ This config uploads everything from `/mnt/local/Media` to `google:/Media` [trigg
     },
     "hidden": {},
     "notifications": {
-        "Pushover": {
-            "app_token": "xxxxx",
-            "priority": 0,
-            "service": "pushover",
-            "user_token": "xxxxx"
+        "apprise": {
+            "service": "apprise",
+            "url": "discord://Webhook_ID/Webhook_Token",
+            "title": "Cloudplow-Upload"
         }
     },
     "nzbget": {
@@ -338,7 +338,8 @@ This is the default config with Pushover notifications configured.
 {
     "core": {
         "dry_run": false,
- "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
+        "rclone_binary_path": "/usr/bin/rclone",
+        "rclone_config_path": "/home/seed/.config/rclone/rclone.conf"
     },
     "hidden": {},
     "notifications": {

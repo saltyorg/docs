@@ -14,7 +14,7 @@
 
 ``` shell
 
-sb install sandbox-plex-autoscan
+sb install sandbox-plex_autoscan
 
 ```
 

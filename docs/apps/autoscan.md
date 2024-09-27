@@ -90,7 +90,7 @@ triggers:
 
 targets:
   plex:
-    - url: https://plex.DOMAIN.TLD # plex
+    - url: http://plex:32400 plex
       token: YOUR_PLEX_TOKEN
 ```
 

@@ -28,6 +28,10 @@ This backup will take some time, likely hours, and all your containers may be do
 
     This applies regardless of whether you are running the backup manually or on a schedule.
 
+??? note "My rclone destination has too many saved backups!  What can I do about this?"
+
+    You can control the number of backups stored on the rclone destination using the inventory.  The inventory variables you would use to do this are described on the [backup config](../../saltbox/backup/settings.md) page.
+
 ## Manual Backup
 
 !!! info

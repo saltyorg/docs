@@ -7,9 +7,10 @@ on:
         description: 'Pull Request Number'
         required: true
         type: string
+  pull_request:
 
 concurrency:
-  group: pr-${{ github.event.inputs.pr_number }}
+  group: pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
   cancel-in-progress: false
 
 permissions:
@@ -20,12 +21,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      url: ${{ steps.cloudflare.outputs.deployment-url  }}
+      url: ${{ steps.cloudflare.outputs.deployment-url }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/${{ github.event.inputs.pr_number }}/merge
+          ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/pull/{0}/merge', github.event.inputs.pr_number) || github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Setup Python 3
@@ -37,10 +38,10 @@ jobs:
         id: cache-docs-restore
         uses: actions/cache/restore@v4
         with:
-          key: docs-${{ github.event.inputs.pr_number }}
+          key: docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
           path: .cache
           restore-keys: |
-            docs-${{ github.event.inputs.pr_number }}
+            docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
 
       - name: Install dependencies
         run: sudo apt-get install pngquant
@@ -72,23 +73,15 @@ jobs:
           command: >
             pages deploy site
             --project-name=docs
-            --branch=${{
-              github.event.pull_request.head.repo.full_name == github.repository
-              && (github.event.pull_request.head.ref || github.ref_name)
-              || format('{0}/{1}',
-                        github.event.pull_request.head.repo.full_name,
-                        github.event.pull_request.head.ref)
-            }}
-            --commit-hash=${{
-              github.event.pull_request.head.sha || github.sha
-            }}
+            --branch=pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+            --commit-hash=${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Save build cache
         id: cache-docs-save
         uses: actions/cache/save@v4
         with:
           path: .cache
-          key: docs-${{ github.event.inputs.pr_number }}-${{ github.run_id }}
+          key: docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}-${{ github.run_id }}
 
   comment:
     needs: build
@@ -102,7 +95,7 @@ jobs:
         run: |
           PR_DATA=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
                   -H "Accept: application/vnd.github.v3+json" \
-                  "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.inputs.pr_number }}")
+                  "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.inputs.pr_number || github.event.pull_request.number }}")
           LAST_COMMIT_SHA=$(echo "$PR_DATA" | jq -r .head.sha)
           echo "LAST_COMMIT_SHA=$LAST_COMMIT_SHA" >> $GITHUB_ENV
         env:
@@ -111,7 +104,7 @@ jobs:
       - name: Comment PR
         run: |
           PREVIEW_URL=${{ needs.build.outputs.url }}
-          BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number }}.docs-acq.pages.dev"
+          BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}.docs-acq.pages.dev"
           BUILD_STATUS=${{ needs.build.result }}
 
           if [ "$BUILD_STATUS" == "success" ]; then

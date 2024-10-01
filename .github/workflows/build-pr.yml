@@ -20,6 +20,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
     outputs:
       url: ${{ steps.cloudflare.outputs.deployment-url }}
     steps:
@@ -86,7 +87,7 @@ jobs:
   comment:
     needs: build
     runs-on: ubuntu-latest
-    if: always()
+    if: always() && github.event.repository.fork == false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -130,7 +131,7 @@ jobs:
     name: 'webhook'
     runs-on: ubuntu-latest
     needs: build
-    if: always()
+    if: always() && github.event.repository.fork == false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-22.04
     if: github.event.repository.fork == false && github.event_name != 'pull_request'
     outputs:
-      url: ${{ steps.cloudflare.outputs.url }}
+      url: ${{ steps.cloudflare.outputs.deployment-url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -85,13 +85,15 @@ jobs:
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
         id: cloudflare
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: 86b9f680e99b6d172395cc7309a9d8a8
-          projectName: docs
-          directory: site
-          gitHubToken: ${{ secrets.GH_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: >
+            pages deploy site
+            --project-name=docs
+            --branch=main
+            --commit-hash=${{ github.sha }}
 
       - name: Save build cache
         id: cache-docs-save

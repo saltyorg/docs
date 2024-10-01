@@ -65,13 +65,23 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         id: cloudflare
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: 86b9f680e99b6d172395cc7309a9d8a8
-          projectName: docs
-          directory: site
-          gitHubToken: ${{ secrets.GH_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: >
+            pages deploy site
+            --project-name=docs
+            --branch=${{
+              github.event.pull_request.head.repo.full_name == github.repository
+              && (github.event.pull_request.head.ref || github.ref_name)
+              || format('{0}/{1}',
+                        github.event.pull_request.head.repo.full_name,
+                        github.event.pull_request.head.ref)
+            }}
+            --commit-hash=${{
+              github.event.pull_request.head.sha || github.sha
+            }}
 
       - name: Save build cache
         id: cache-docs-save
@@ -100,7 +110,7 @@ jobs:
 
       - name: Comment PR
         run: |
-          PREVIEW_URL=${{ needs.build.outputs.url }}
+          PREVIEW_URL=${{ needs.build.outputs.deployment-url }}
           BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number }}.docs-acq.pages.dev"
           BUILD_STATUS=${{ needs.build.result }}
 
@@ -139,5 +149,5 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          description: "URL: ${{ needs.build.outputs.url }}"
+          description: "URL: ${{ needs.build.outputs.deployment-url }}"
           status: ${{ env.WORKFLOW_CONCLUSION }}

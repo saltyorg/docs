@@ -6,6 +6,10 @@ on:
     types:
       - completed
 
+concurrency:
+  group: pull-request-builds
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pull-requests: write

@@ -21,7 +21,7 @@ You can read more about what Saltbox is [here](saltbox/basics/basics.md).
 
 ### Why is it?
 
-Cloudbox went unmaintained, then there was some Internet Drama®, then there was Saltbox.
+Cloudbox went out of date, then there was some Internet Drama®, then there was Saltbox.
 
 ### How do I install it?
 

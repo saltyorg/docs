@@ -30,6 +30,10 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
           name: pr_info
+          path: ${{ github.workspace }}/pr_info.zip
+
+      - name: Display structure of downloaded files
+        run: tree ${{ github.workspace }}
 
       - name: unzip pr_info.zip
         run: unzip pr_info.zip

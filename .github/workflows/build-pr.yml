@@ -87,7 +87,7 @@ jobs:
   comment:
     needs: build
     runs-on: ubuntu-latest
-    if: always() && github.event.repository.fork == false
+    if: github.event.repository.fork == false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

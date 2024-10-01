@@ -6,6 +6,7 @@
 1. Make your changes and/or additions.
 1. Open a pull request.
 1. Wait for approval and merge
+1. Enjoy a tasty beverage
 1. Bask in the warm glow of helping.
 
 ## Previewing docs locally

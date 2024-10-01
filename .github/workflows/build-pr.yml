@@ -1,4 +1,4 @@
-name: 
+name: Build PR & Deploy
 
 # read-write repo token
 # access to secrets

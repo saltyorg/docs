@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      url: ${{ steps.cloudflare.outputs.url }}
+      url: ${{ steps.cloudflare.outputs.deployment-url  }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -110,7 +110,7 @@ jobs:
 
       - name: Comment PR
         run: |
-          PREVIEW_URL=${{ needs.build.outputs.deployment-url }}
+          PREVIEW_URL=${{ needs.build.outputs.url }}
           BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number }}.docs-acq.pages.dev"
           BUILD_STATUS=${{ needs.build.result }}
 
@@ -149,5 +149,5 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          description: "URL: ${{ needs.build.outputs.deployment-url }}"
+          description: "URL: ${{ needs.build.outputs.url }}"
           status: ${{ env.WORKFLOW_CONCLUSION }}

@@ -95,18 +95,18 @@ plugins:
 extra:
   generator: false
   social:
-  - icon: fontawesome/solid/heart
-    class: md-social__link heart
-    link: 'https://github.com/sponsors/saltydk'
-    name: Donate
-  - icon: fontawesome/brands/discord
-    class: md-social__link
-    link: 'https://discord.gg/ugfKXpFND8'
-    name: Discord
-  - icon: fontawesome/brands/github
-    class: md-social__link
-    link: 'https://github.com/saltyorg/Saltbox'
-    name: GitHub
+    - icon: fontawesome/solid/heart
+      class: md-social__link heart
+      link: "https://github.com/sponsors/saltydk"
+      name: Donate
+    - icon: fontawesome/brands/discord
+      class: md-social__link
+      link: "https://discord.gg/ugfKXpFND8"
+      name: Discord
+    - icon: fontawesome/brands/github
+      class: md-social__link
+      link: "https://github.com/saltyorg/Saltbox"
+      name: GitHub
 
 markdown_extensions:
   - abbr
@@ -144,12 +144,12 @@ nav:
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
       - Major Upgrade Guide:
-        - Traefik 3.0 Upgrade: saltbox/upgrade/traefik3.md
+          - Traefik 3.0 Upgrade: saltbox/upgrade/traefik3.md
       - Backup/Restore:
-        - Settings: saltbox/backup/settings.md
-        - Backup: saltbox/backup/backup.md
-        - Restore: saltbox/backup/restore.md
-        - Migrate: saltbox/backup/migrate.md
+          - Settings: saltbox/backup/settings.md
+          - Backup: saltbox/backup/backup.md
+          - Restore: saltbox/backup/restore.md
+          - Migrate: saltbox/backup/migrate.md
 
   - Sandbox:
       - Basics: sandbox/basics.md
@@ -229,6 +229,7 @@ nav:
           - Homarr: sandbox/apps/homarr.md
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
+          - Factorio: sandbox/apps/factorio.md
           - LinuxGSM: sandbox/apps/lgsm.md
           - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
@@ -362,8 +363,8 @@ nav:
         - Overseerr: apps/overseerr.md
         - Portainer: apps/portainer.md
       - Other Media Servers:
-        - Emby: apps/emby.md
-        - Jellyfin: apps/jellyfin.md
+          - Emby: apps/emby.md
+          - Jellyfin: apps/jellyfin.md
       - Alternatives to Core Apps:
         - Petio: apps/petio.md
         - Plex Autoscan: apps/plex-autoscan.md
@@ -388,15 +389,15 @@ nav:
         - Unpackerr: apps/unpackerr.md
         - Whisparr: apps/whisparr.md
       - Support Apps:
-        - diun: apps/diun.md
-        - MariaDB: apps/mariadb.md
-        - PostgreSQL: apps/postgres.md
+          - diun: apps/diun.md
+          - MariaDB: apps/mariadb.md
+          - PostgreSQL: apps/postgres.md
       - Visualization:
-        - Grafana: apps/grafana.md
+          - Grafana: apps/grafana.md
       - TODO - NEED UPDATING:
-        - Organizr: apps/organizr.md
+          - Organizr: apps/organizr.md
       - Utility tags:
-        - Plex-DB: apps/utility_tags/plex-db.md
+          - Plex-DB: apps/utility_tags/plex-db.md
 
   - FAQ:
       - System: faq/System.md

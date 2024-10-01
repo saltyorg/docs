@@ -46,3 +46,5 @@ Please report any mistakes or suggestions for improving the documentation on our
 - Docs: [Issues](https://github.com/saltyorg/docs/issues){target=_blank}
 - Saltbox: [Issues](https://github.com/saltyorg/Saltbox/issues){target=_blank}
 - Sandbox: [Issues](https://github.com/saltyorg/Sandbox/issues){target=_blank}
+
+---

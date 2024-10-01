@@ -30,19 +30,16 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
           name: pr_info
-          path: ${{ github.workspace }}/pr_info.zip
+          path: ${{ github.workspace }}/pr_info
 
       - name: Display structure of downloaded files
         run: tree ${{ github.workspace }}
 
-      - name: unzip pr_info.zip
-        run: unzip pr_info.zip
-
       - name: Read PR info
         id: pr_info
         run: |
-          echo "pr_number=$(cat PR_NUMBER)" >> $GITHUB_OUTPUT
-          echo "pr_sha=$(cat PR_SHA)" >> $GITHUB_OUTPUT
+          echo "pr_number=$(cat ${{ github.workspace }}/pr_info/PR_NUMBER)" >> $GITHUB_OUTPUT
+          echo "pr_sha=$(cat ${{ github.workspace }}/pr_info/PR_SHA)" >> $GITHUB_OUTPUT
 
       - name: Checkout repo
         uses: actions/checkout@v4

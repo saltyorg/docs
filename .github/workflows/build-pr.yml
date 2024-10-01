@@ -21,26 +21,14 @@ jobs:
       pr_sha: ${{ steps.pr_info.outputs.pr_sha }}
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v3.1.0
+        uses: actions/download-artifact@v4
         with:
-          script: |
-            var artifacts = await github.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: ${{ github.event.workflow_run.id }},
-            });
-            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "pr_info"
-            })[0];
-            var download = await github.actions.downloadArtifact({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               artifact_id: matchArtifact.id,
-               archive_format: 'zip',
-            });
-            var fs = require('fs');
-            fs.writeFileSync('${{ github.workspace }}/pr.zip', Buffer.from(download.data));
-      - run: unzip pr.zip
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+          name: pr_info
+
+      - name: unzip pr_info.zip
+        run: unzip pr_info.zip
 
       - name: Read PR info
         id: pr_info

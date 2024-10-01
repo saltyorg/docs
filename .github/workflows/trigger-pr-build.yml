@@ -1,16 +1,10 @@
 name: Trigger PR Build
 
 on:
-  workflow_dispatch:
-    inputs:
-      pr_number:
-        description: 'Pull Request Number'
-        required: true
-        type: string
   pull_request:
 
 concurrency:
-  group: pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+  group: pr-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
 permissions:
@@ -22,5 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
     steps:
-      - name: Do the thing
-        run: echo "Hello World"
+      - name: Save PR info
+        run: |
+          mkdir -p ./pr_info
+          echo ${{ github.event.pull_request.number }} > ./pr_info/PR_NUMBER
+          echo ${{ github.event.pull_request.head.sha }} > ./pr_info/PR_SHA
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pr_info
+          path: pr_info/

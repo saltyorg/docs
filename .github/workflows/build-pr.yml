@@ -6,10 +6,6 @@ on:
     types:
       - completed
 
-concurrency:
-  group: pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
-  cancel-in-progress: false
-
 permissions:
   contents: write
   pull-requests: write
@@ -18,132 +14,157 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
-    # outputs:
-    #   url: ${{ steps.cloudflare.outputs.deployment-url }}
+    outputs:
+      url: ${{ steps.cloudflare.outputs.deployment-url }}
+      pr_number: ${{ steps.pr_info.outputs.pr_number }}
+      pr_sha: ${{ steps.pr_info.outputs.pr_sha }}
     steps:
-      - name: Dump GitHub context
+      - name: 'Download artifact'
+        uses: actions/github-script@v3.1.0
+        with:
+          script: |
+            var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{ github.event.workflow_run.id }},
+            });
+            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "pr"
+            })[0];
+            var download = await github.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: matchArtifact.id,
+               archive_format: 'zip',
+            });
+            var fs = require('fs');
+            fs.writeFileSync('${{ github.workspace }}/pr.zip', Buffer.from(download.data));
+      - run: unzip pr.zip
+
+      - name: Read PR info
+        id: pr_info
+        run: |
+          echo "pr_number=$(cat PR_NUMBER)" >> $GITHUB_OUTPUT
+          echo "pr_sha=$(cat PR_SHA)" >> $GITHUB_OUTPUT
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.pr_info.outputs.pr_sha }}
+          fetch-depth: 0
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Restore cache
+        id: cache-docs-restore
+        uses: actions/cache/restore@v4
+        with:
+          key: docs-${{ steps.pr_info.outputs.pr_number }}
+          path: .cache
+          restore-keys: |
+            docs-${{ steps.pr_info.outputs.pr_number }}
+
+      - name: Install dependencies
+        run: sudo apt-get install pngquant
+
+      - name: Install wheel
+        run: pip install wheel
+
+      - name: Install mkdocs material insiders
+        run: |
+          pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
+          pip install mkdocs-material[recommended,git,imaging]
+
+      - name: Install requirements.txt
+        run: pip install -r requirements.txt
+
+      - name: Build mkdocs
+        run: |
+          mkdocs build --clean
+          mkdocs --version
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          CI: true
 
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v4
-  #       with:
-  #         ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/pull/{0}/merge', github.event.inputs.pr_number) || github.event.pull_request.head.sha }}
-  #         fetch-depth: 0
+      - name: Publish to Cloudflare Pages
+        id: cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: >
+            pages deploy site
+            --project-name=docs
+            --branch=pr-${{ steps.pr_info.outputs.pr_number }}
+            --commit-hash=${{ steps.pr_info.outputs.pr_sha }}
 
-  #     - name: Setup Python 3
-  #       uses: actions/setup-python@v5
-  #       with:
-  #         python-version: '3.x'
+      - name: Save build cache
+        id: cache-docs-save
+        uses: actions/cache/save@v4
+        with:
+          path: .cache
+          key: docs-${{ steps.pr_info.outputs.pr_number }}-${{ github.run_id }}
 
-  #     - name: Restore cache
-  #       id: cache-docs-restore
-  #       uses: actions/cache/restore@v4
-  #       with:
-  #         key: docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
-  #         path: .cache
-  #         restore-keys: |
-  #           docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+  comment:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-  #     - name: Install dependencies
-  #       run: sudo apt-get install pngquant
+      - name: Get PR last commit SHA
+        run: |
+          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  "https://api.github.com/repos/${{ github.repository }}/pulls/${{ needs.build.outputs.pr_number }}")
+          LAST_COMMIT_SHA=$(echo "$PR_DATA" | jq -r .head.sha)
+          echo "LAST_COMMIT_SHA=$LAST_COMMIT_SHA" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
-  #     - name: Install wheel
-  #       run: pip install wheel
+      - name: Comment PR
+        run: |
+          PREVIEW_URL=${{ needs.build.outputs.url }}
+          BRANCH_PREVIEW_URL="https://pr-${{ needs.build.outputs.pr_number }}.docs-acq.pages.dev"
+          BUILD_STATUS=${{ needs.build.result }}
 
-  #     - name: Install mkdocs material insiders
-  #       run: |
-  #         pip install git+https://${{ secrets.GH_TOKEN }}@github.com/chazlarson/automaticSpoon.git
-  #         pip install mkdocs-material[recommended,git,imaging]
+          if [ "$BUILD_STATUS" == "success" ]; then
+            STATUS_EMOJI="✅"
+            STATUS_MESSAGE="Deploy successful!"
+          else
+            STATUS_EMOJI="❌"
+            STATUS_MESSAGE="Build failed!"
+          fi
 
-  #     - name: Install requirements.txt
-  #       run: pip install -r requirements.txt
+          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>$LAST_COMMIT_SHA</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
 
-  #     - name: Build mkdocs
-  #       run: |
-  #         mkdocs build --clean
-  #         mkdocs --version
-  #       env:
-  #         CI: true
+          ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
+          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ needs.build.outputs.pr_number }}/comments"
 
-  #     - name: Publish to Cloudflare Pages
-  #       id: cloudflare
-  #       uses: cloudflare/wrangler-action@v3
-  #       with:
-  #         apiToken: ${{ secrets.CF_API_TOKEN }}
-  #         accountId: ${{ secrets.CF_ACCOUNT_ID }}
-  #         command: >
-  #           pages deploy site
-  #           --project-name=docs
-  #           --branch=pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
-  #           --commit-hash=${{ github.event.pull_request.head.sha || github.sha }}
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              -X POST \
+              -d "{\"body\": $ESCAPED_BODY }" \
+              $COMMENTS_URL
 
-  #     - name: Save build cache
-  #       id: cache-docs-save
-  #       uses: actions/cache/save@v4
-  #       with:
-  #         path: .cache
-  #         key: docs-${{ github.event.inputs.pr_number || github.event.pull_request.number }}-${{ github.run_id }}
+  webhook:
+    name: 'webhook'
+    runs-on: ubuntu-latest
+    needs: build
+    if: always() && github.event.repository.fork == false
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-  # comment:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   if: github.event.repository.fork == false
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v4
+      - name: Determine Workflow Conclusion
+        run: ./scripts/workflow-status.sh ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} ${{ github.run_id }}
 
-  #     - name: Get PR last commit SHA
-  #       run: |
-  #         PR_DATA=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
-  #                 -H "Accept: application/vnd.github.v3+json" \
-  #                 "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.inputs.pr_number || github.event.pull_request.number }}")
-  #         LAST_COMMIT_SHA=$(echo "$PR_DATA" | jq -r .head.sha)
-  #         echo "LAST_COMMIT_SHA=$LAST_COMMIT_SHA" >> $GITHUB_ENV
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-  #     - name: Comment PR
-  #       run: |
-  #         PREVIEW_URL=${{ needs.build.outputs.url }}
-  #         BRANCH_PREVIEW_URL="https://pr-${{ github.event.inputs.pr_number || github.event.pull_request.number }}.docs-acq.pages.dev"
-  #         BUILD_STATUS=${{ needs.build.result }}
-
-  #         if [ "$BUILD_STATUS" == "success" ]; then
-  #           STATUS_EMOJI="✅"
-  #           STATUS_MESSAGE="Deploy successful!"
-  #         else
-  #           STATUS_EMOJI="❌"
-  #           STATUS_MESSAGE="Build failed!"
-  #         fi
-
-  #         COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>$LAST_COMMIT_SHA</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
-
-  #         ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
-  #         COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.inputs.pr_number }}/comments"
-
-  #         curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-  #             -H "Accept: application/vnd.github+json" \
-  #             -X POST \
-  #             -d "{\"body\": $ESCAPED_BODY }" \
-  #             $COMMENTS_URL
-
-  # webhook:
-  #   name: 'webhook'
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: always() && github.event.repository.fork == false
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v4
-
-  #     - name: Determine Workflow Conclusion
-  #       run: ./scripts/workflow-status.sh ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} ${{ github.run_id }}
-
-  #     - name: Send Discord Notification
-  #       uses: sarisia/actions-status-discord@v1
-  #       with:
-  #         webhook: ${{ secrets.DISCORD_WEBHOOK }}
-  #         description: "URL: ${{ needs.build.outputs.url }}"
-  #         status: ${{ env.WORKFLOW_CONCLUSION }}
+      - name: Send Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: "URL: ${{ needs.build.outputs.url }}"
+          status: ${{ env.WORKFLOW_CONCLUSION }}

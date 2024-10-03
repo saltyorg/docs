@@ -9,6 +9,7 @@ tags:
   - domain
   - pin version
   - version tag
+  - specify version
 ---
 
 # Inventory

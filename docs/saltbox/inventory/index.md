@@ -7,6 +7,8 @@ tags:
   - inventory
   - root
   - domain
+  - pin version
+  - version tag
 ---
 
 # Inventory

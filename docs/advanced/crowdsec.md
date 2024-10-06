@@ -116,3 +116,22 @@ This will install CrowdSec with your specified configuration.
 To have Traefik use the bouncer on any given application you will need to reinstall Traefik and all other applications in order to apply the new middleware to each container.
 
 Remember to review the [official CrowdSec documentation](https://docs.crowdsec.net/) for more detailed information on collections, scenarios, and other configuration options.
+
+## Authentik Collection
+
+1. Add to `sb inventory`
+```yaml
+crowdsec_collections_install:
+  - "firix/authentik"
+```
+2. Create a new file in `/etc/crowdsec/acquis.d` called `authentik.yaml`
+3. Add the below to `authentik.yaml`
+```yaml
+---
+source: docker
+container_name:
+ - authentik
+labels:
+  type: authentik
+```
+4. Run `sb install crowdsec` to apply the collection

@@ -49,30 +49,45 @@ Make sure to replace "your-enrollment-key-here" with the actual key you obtained
 You can specify which CrowdSec collections to install or remove:
 
 ```yaml
-crowdsec_collections_install:
-  - "crowdsecurity/linux"
-  - "crowdsecurity/iptables"
-  - "crowdsecurity/sshd"
-  - "crowdsecurity/whitelist-good-actors"
-  - "crowdsecurity/traefik"
+crowdsec_collections_install_custom:
+  - "crowdsecurity/somecollection"
 
-crowdsec_collections_remove:
-  - "crowdsecurity/nginx"
+crowdsec_collections_remove_custom:
+  - "crowdsecurity/somecollection"
 ```
 
 Add or remove collections from these lists as needed.
+
+##### Authentik Collection
+
+1. Add to `sb inventory`
+```yaml
+crowdsec_collections_install_custom:
+  - "firix/authentik"
+```
+2. Create a new file in `/etc/crowdsec/acquis.d` called `authentik.yaml`
+3. Add the below to `authentik.yaml`
+```yaml
+---
+source: docker
+container_name:
+ - authentik
+labels:
+  type: authentik
+```
+4. Run `sb install crowdsec` to apply the collection
 
 #### Scenarios, Parsers, and Postoverflows
 
 Similarly, you can specify scenarios, parsers, and postoverflows to install or remove:
 
 ```yaml
-crowdsec_scenarios_install: []
-crowdsec_scenarios_remove: []
-crowdsec_parsers_install: []
-crowdsec_parsers_remove: []
-crowdsec_postoverflows_install: []
-crowdsec_postoverflows_remove: []
+crowdsec_scenarios_install_custom: []
+crowdsec_scenarios_remove_custom: []
+crowdsec_parsers_install_custom: []
+crowdsec_parsers_remove_custom: []
+crowdsec_postoverflows_install_custom: []
+crowdsec_postoverflows_remove_custom: []
 ```
 
 Add items to these lists as needed.
@@ -116,22 +131,3 @@ This will install CrowdSec with your specified configuration.
 To have Traefik use the bouncer on any given application you will need to reinstall Traefik and all other applications in order to apply the new middleware to each container.
 
 Remember to review the [official CrowdSec documentation](https://docs.crowdsec.net/) for more detailed information on collections, scenarios, and other configuration options.
-
-## Authentik Collection
-
-1. Add to `sb inventory`
-```yaml
-crowdsec_collections_install:
-  - "firix/authentik"
-```
-2. Create a new file in `/etc/crowdsec/acquis.d` called `authentik.yaml`
-3. Add the below to `authentik.yaml`
-```yaml
----
-source: docker
-container_name:
- - authentik
-labels:
-  type: authentik
-```
-4. Run `sb install crowdsec` to apply the collection

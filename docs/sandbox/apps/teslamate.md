@@ -28,12 +28,11 @@ To use a custom subdomain, add a custom value for `teslamate_web_subdomain` in t
 
 ### 4. Grafana Setup
 
-Once installation is finished, you will need to add the teslamate data source in grafana under connections. 
+Once installation is finished, you will need to add the teslamate data source in grafana under connections.
 
 Host URL: postgres:5432 (or whatever port your postgres is running)
 Table: teslamate
 
-Authentication for Postgres: 'https://docs.saltbox.dev/apps/postgres/?h=postgres'
+Authentication for Postgres: '<https://docs.saltbox.dev/apps/postgres/?h=postgres>'
 
 Save and Test
-

@@ -343,6 +343,7 @@ nav:
             - Duplicati: sandbox/apps/duplicati.md
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
+          - Teslamate: sandbox/apps/teslamate.md
           - Traefik-Robotstxt: sandbox/apps/traefik-robotstxt.md
           - Uptime Kuma: sandbox/apps/uptime-kuma.md
           - Vaultwarden: sandbox/apps/vaultwarden.md

@@ -119,6 +119,7 @@ So any changes to these will be lost next time the role runs.
 1. Edit your Saltbox [inventory](../saltbox/inventory/index.md) file.
 2. Configure the CrowdSec options as described above, ensuring you've added your CrowdSec Console enrollment key.
 3. Run the Saltbox install command to apply the changes.
+4. Navigate back to your CrowdSec console where you found your enrollment key and accept the the new security engine. 
 
 Example:
 

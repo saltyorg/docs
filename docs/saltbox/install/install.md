@@ -165,6 +165,7 @@ To edit any of the following configuration files use the command written in the 
       remotes: # (5)!
         - remote: google # (6)!
           settings:
+            enable_refresh: yes # (18)!
             mount: yes # (7)!
             template: google # (8)!
             union: yes # (9)!
@@ -176,6 +177,7 @@ To edit any of the following configuration files use the command written in the 
               size: 50G # (14)!
         - remote: dropbox
           settings:
+            enable_refresh: yes
             mount: yes
             template: dropbox
             union: yes
@@ -187,6 +189,7 @@ To edit any of the following configuration files use the command written in the 
               size: 50G
         - remote: feeder
           settings:
+            enable_refresh: yes
             mount: yes
             template: sftp
             union: yes
@@ -262,6 +265,8 @@ To edit any of the following configuration files use the command written in the 
     16. Shell used by the system. Valid options are bash or zsh.
 
     17. Folder used for temporary transcode files.
+
+    18. Does this remote type require a refresh service to find new files?  For example, `sftp`
 
 === "adv_settings.yml"
 

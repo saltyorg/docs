@@ -171,6 +171,7 @@ Each tab shows a "section" in the file.
       remotes:
         - remote: google
           settings:
+            enable_refresh: no
             mount: yes
             template: google
             union: yes
@@ -209,6 +210,8 @@ Each tab shows a "section" in the file.
     ```
 
     `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` or `remote: "my-sftp:/path/to/my/files"`  Quotes are important.
+
+    `remotes/settings/enable_refresh`: Toggles whether this remote required a refresh service to look for new files [for example, an `sftp` remote].
 
     `remotes/settings/mount`: Toggles whether you want this remote mounted in the file system.
 

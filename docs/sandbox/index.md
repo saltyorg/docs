@@ -136,6 +136,7 @@ tags:
 - **[tdarr_node](../sandbox/apps/tdarr-node.md)**  - tag - `sandbox-tdarr-node`
 - **[teamspeak](../sandbox/apps/teamspeak.md)**  - tag - `sandbox-teamspeak`
 - **[telegraf](../sandbox/apps/telegraf.md)**  - tag - `sandbox-telegraf`
+- **[teslamate](../sandbox/apps/teslamate.md)**  - tag - `sandbox-teslamate`
 - **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`
 - **[threadfin](../sandbox/apps/threadfin.md)**  - tag - `sandbox-threadfin`
 - **[tika](../sandbox/apps/tika.md)**  - tag - `sandbox-tika`

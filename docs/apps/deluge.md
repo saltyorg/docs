@@ -47,7 +47,7 @@ sb install deluge
   - Autoadd `.torrent files` from: <br />
     `/mnt/unionfs/downloads/torrents/deluge/watched`
 
-- Select Network section, uncheck `Use Random Ports` under Incoming Ports and set both input fields to `58112`.
+- Select Network section, under Incoming Ports set input field to `58112`.
 
 - Click the `Plugins` section
   - enable the `labels` plugin.

@@ -47,8 +47,6 @@ sb install deluge
   - Autoadd `.torrent files` from: <br />
     `/mnt/unionfs/downloads/torrents/deluge/watched`
 
-- Select Network section, under Incoming Port set input field to `58112`.
-
 - Click the `Plugins` section
   - enable the `labels` plugin.
   - enable and the `Extractor` plugin. <br />

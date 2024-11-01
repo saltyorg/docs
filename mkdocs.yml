@@ -328,6 +328,7 @@ nav:
             - Unifi Network Application: sandbox/apps/unifi-network-application.md
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
+          - Maintainerr: sandbox/apps/maintainerr.md
           - Puddletag: sandbox/apps/puddletag.md
           - Sabthrottle: sandbox/apps/sabthrottle.md
           - Sarotate: sandbox/apps/sarotate.md

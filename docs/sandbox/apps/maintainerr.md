@@ -2,7 +2,7 @@
 
 # What is it?
 
-[maintainerr](https://docs.maintainerr.info/Introduction/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
+[Maintainerr](https://docs.maintainerr.info/Introduction/) makes managing your media easy. No longer do you have to worry about your precious hard drive space being taken up by Movies and TVShows, that aren't even being watched.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

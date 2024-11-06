@@ -25,11 +25,6 @@
 
 ### 1. Installation
 
-!!!info
-    Before you run the role, you must create a **secret key**. If you don't, it will fail.
-
-To do so, run `base64 /dev/urandom | head -c50`. Copy and paste the results into `/opt/sandbox/settings.yml` under `tandoor secret_key`.
-
 ``` shell
 
 sb install sandbox-tandoor

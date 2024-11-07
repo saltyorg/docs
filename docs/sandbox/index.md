@@ -78,6 +78,7 @@ tags:
 - **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
 - **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
+- **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
 - **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`

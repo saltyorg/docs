@@ -33,6 +33,13 @@ Once installation is finished, you will need to add the teslamate data source in
 Host URL: This is based upon the `{{ teslamate_name }}-postgres` variable. Default is `teslamate-postgres:5432`
 Table: `teslamate`
 
-Authentication for Postgres: [Postgres Docs](../../apps/postgres.md)
+Authentication for Postgres: Run the command below to have saltbox out
+
+``` shell
+
+sb install sandbox-teslamate-grafana
+
+```
+
 
 Save and Test

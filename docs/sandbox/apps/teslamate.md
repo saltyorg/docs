@@ -33,7 +33,7 @@ Once installation is finished, you will need to add the teslamate data source in
 Host URL: This is based upon the `{{ teslamate_name }}-postgres` variable. Default is `teslamate-postgres:5432`
 Table: `teslamate`
 
-Authentication for Postgres: Run the command below to have saltbox out
+Authentication for Postgres: Run the command below to have saltbox output the DB password.
 
 ``` shell
 

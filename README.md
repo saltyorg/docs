@@ -268,9 +268,9 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/bosskie>
-            <img src=https://avatars.githubusercontent.com/u/80441763?v=4 width="100;"  alt=bosskie/>
+            <img src=https://avatars.githubusercontent.com/u/80441763?v=4 width="100;"  alt=Harish Selvaraj/>
             <br />
-            <sub style="font-size:14px"><b>bosskie</b></sub>
+            <sub style="font-size:14px"><b>Harish Selvaraj</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

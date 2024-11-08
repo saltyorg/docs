@@ -98,19 +98,19 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/kwissss>
-            <img src=https://avatars.githubusercontent.com/u/16555169?v=4 width="100;"  alt=kris/>
+        <a href=https://github.com/maindust>
+            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
             <br />
-            <sub style="font-size:14px"><b>kris</b></sub>
+            <sub style="font-size:14px"><b>maindust</b></sub>
         </a>
     </td>
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/maindust>
-            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
+        <a href=https://github.com/kwissss>
+            <img src=https://avatars.githubusercontent.com/u/16555169?v=4 width="100;"  alt=kris/>
             <br />
-            <sub style="font-size:14px"><b>maindust</b></sub>
+            <sub style="font-size:14px"><b>kris</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

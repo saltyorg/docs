@@ -37,9 +37,8 @@ Authentication for Postgres: Run the command below to have saltbox output the DB
 
 ``` shell
 
-sb install sandbox-teslamate-grafana
+sb install sandbox-teslamate-postgres-password
 
 ```
-
 
 Save and Test

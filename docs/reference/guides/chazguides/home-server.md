@@ -21,12 +21,12 @@ Prerequisites:
 
 - [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
    Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
-   Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing. [You can configure intertnal DNS in various ways to get around this, but this article is assumign the simplest path.]
+   Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing. [You can configure internal DNS in various ways to get around this, but this article is assuming the simplest path.]
 
 - [Router supports port forwarding on ports 80 and 443](#router).
 
 
-NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.
+NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.  THere is no setting in saltbox that will allow you to overcome your ISP not allowing servers on 80 and 443, or your router co-opting ports 80 and 443 for its own UI.
 
 ## Domain
 

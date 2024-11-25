@@ -62,7 +62,7 @@ When you install Ubuntu on the server, do not preinstall anything other than Ope
 
     Plex has blocked access to their servers from Hetzner-hosted boxes. so you will need to configure gluetun to route this traffic to Plex.
 
-    Details on configuring this can be found [here](../../apps/gluetun/]
+    Put "gluetun" in the search box above for details on how to set this up.
 
 #### Networking
 

@@ -45,7 +45,7 @@ At this time, we only support LTS releases of Ubuntu Server [20.04](https://rele
 
 For best results, the assumed server environment for Saltbox is:
 
-- a dedicated remote server [not a VPS or a virtualized setup like proxmox],
+- a dedicated remote server [not a VPS or a virtualized setup like proxmox] [see below for important information about Hetzner],
 - with a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
 - running a brand new fresh install of the server version of Ubuntu 20.04, 22.04, or 24.04,
 - from a server provider like Hetzner, OVH, kimsufi, etc.,
@@ -56,6 +56,13 @@ For best results, the assumed server environment for Saltbox is:
 See [here](../../reference/server.md) for more details about server requirements.
 
 When you install Ubuntu on the server, do not preinstall anything other than OpenSSH.  Notably, do not install Docker along with the OS.
+
+!!! warning
+    IF YOUR SERVER IS HOSTED BY HETZNER, AND YOU WANT TO USE PLEX:
+
+    Plex has blocked access to their servers from Hetzner-hosted boxes. so you will need to configure gluetun to route this traffic to Plex.
+
+    Details on configuring this can be found [here](../../apps/gluetun/]
 
 #### Networking
 

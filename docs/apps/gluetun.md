@@ -102,7 +102,7 @@ plex2_docker_network_mode_default: "container:gluetun2"
 plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
 
-Once you have made these changes to the inventory, run the relevant plex tags to apply the changes [i.e. `sb install plex` or `sb install plex1 plex2 plex3`].
+Once you have made these changes to the inventory, run the relevant plex tags to apply the changes [i.e. `sb install plex`].
 
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.

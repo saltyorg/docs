@@ -101,6 +101,9 @@ gluetun2_docker_networks_alias_custom:
 plex2_docker_network_mode_default: "container:gluetun2"
 plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
+
+Once you have made these changes to the inventory, run the relevant plex tags to apply the changes [i.e. `sb install plex` or `sb install plex1 plex2 plex3`].
+
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
 
@@ -128,6 +131,8 @@ Depending on if the role in question supports instances or not there will be two
     To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode: "container:gluetun"` via the inventory system.
     
     For example, to route `jackett` through Gluetun, the entry would be `jackett_docker_network_mode: "container:gluetun"`.
+
+Once you have made these changes to the inventory, run the relevant tags to apply the changes [i.e. `sb install qbittorrent` or `sb install jackett sonarr radarr`].
 
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.

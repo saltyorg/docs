@@ -41,10 +41,10 @@ sb install sandbox-qbit-manage
 
 ```
 
-After installation has finished, stop the qbit_manage docker container and edit the config file that will have been created at `/opt/qbit_manage/config.yml`
+After installation has finished, stop the qbit-manage docker container and edit the config file that will have been created at `/opt/qbit-manage/config.yml`
 
 ```shell
-docker stop qbit_manage
+docker stop qbit-manage
 ```
 
 Minimally you will need to change the following items in order to connect with your qBittorrent instance:-
@@ -68,10 +68,10 @@ The config file is full of examples that more than likely will not work for you,
 After making adjustments to the config file, you can start the docker container again.
 
 ```shell
-docker start qbit_manage
+docker start qbit-manage
 ```
 
-Either tail the log ( `tail -f "/opt/qbit_manage/activity.log"` ) or open the log file after a few minutes to check for any errors or behaviour that may have been unexpected. The container has been deliberately set to **DRY RUN MODE** initially so you can see what the script will do without actually moving deleting, tagging, or categorising anything.. Once you are happy your life's work will not be destroyed and any errors have been resolved you can edit the qbit_manage variables in the sandbox settings.yml file and then run the role again. Set `qbt_dry_run: false` to run in live mode. This will delete and move files according to your settings.
+Either tail the log ( `tail -f "/opt/qbit-manage/activity.log"` ) or open the log file after a few minutes to check for any errors or behaviour that may have been unexpected. The container has been deliberately set to **DRY RUN MODE** initially so you can see what the script will do without actually moving deleting, tagging, or categorising anything.. Once you are happy your life's work will not be destroyed and any errors have been resolved you can edit the qbit_manage variables in the sandbox settings.yml file and then run the role again. Set `qbt_dry_run: false` to run in live mode. This will delete and move files according to your settings.
 
 Apply the changes to the sandbox settings file with:
 

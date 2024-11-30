@@ -8,7 +8,7 @@
 |-------------|-------------|-------------|-------------|
 | [:material-home: qBit Manage](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker:](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
 
-**Functions include:-** <br />
+**Functions include:** <br />
 
 - Tag torrents based on tracker and then set seed goals/limit upload speed by tag.
 

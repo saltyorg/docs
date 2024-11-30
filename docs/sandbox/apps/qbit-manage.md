@@ -1,12 +1,12 @@
-# qBit Management
+# qBit Manage
 
 ## What is it?
 
-[qBit Management](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
+[qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: qBit Management](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker:](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
+| [:material-home: qBit Manage](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker:](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
 
 **Functions include:-** <br />
 
@@ -33,7 +33,7 @@
 
 ### 1. Installation
 
-Before installing qBit Management, you should have a **[qBittorrent](../../apps/qbittorrent.md)** instance running on your local machine.
+Before installing qBit Manage, you should have a **[qBittorrent](../../apps/qbittorrent.md)** instance running on your local machine.
 
 ``` shell
 
@@ -105,4 +105,4 @@ qbit_manage:
   qbt_width: "100" # Default is "100"
 ```
 
-- [:octicons-link-16: Documentation: qBit Management Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons }
+- [:octicons-link-16: Documentation: qBit Manage Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons }

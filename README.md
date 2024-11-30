@@ -84,10 +84,10 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/GiorgioBrux>
-            <img src=https://avatars.githubusercontent.com/u/18328525?v=4 width="100;"  alt=GiorgioBrux/>
+        <a href=https://github.com/maindust>
+            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
             <br />
-            <sub style="font-size:14px"><b>GiorgioBrux</b></sub>
+            <sub style="font-size:14px"><b>maindust</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -98,33 +98,19 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/maindust>
-            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
+        <a href=https://github.com/GiorgioBrux>
+            <img src=https://avatars.githubusercontent.com/u/18328525?v=4 width="100;"  alt=GiorgioBrux/>
             <br />
-            <sub style="font-size:14px"><b>maindust</b></sub>
+            <sub style="font-size:14px"><b>GiorgioBrux</b></sub>
         </a>
     </td>
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/kwissss>
-            <img src=https://avatars.githubusercontent.com/u/16555169?v=4 width="100;"  alt=kris/>
+        <a href=https://github.com/Barrow1990>
+            <img src=https://avatars.githubusercontent.com/u/42769333?v=4 width="100;"  alt=Barrow1990/>
             <br />
-            <sub style="font-size:14px"><b>kris</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/TurboCheetah>
-            <img src=https://avatars.githubusercontent.com/u/19479111?v=4 width="100;"  alt=Turbo/>
-            <br />
-            <sub style="font-size:14px"><b>Turbo</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Nypheena>
-            <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
-            <br />
-            <sub style="font-size:14px"><b>Sapphire</b></sub>
+            <sub style="font-size:14px"><b>Barrow1990</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -135,10 +121,24 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Barrow1990>
-            <img src=https://avatars.githubusercontent.com/u/42769333?v=4 width="100;"  alt=Barrow1990/>
+        <a href=https://github.com/Nypheena>
+            <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
             <br />
-            <sub style="font-size:14px"><b>Barrow1990</b></sub>
+            <sub style="font-size:14px"><b>Sapphire</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/TurboCheetah>
+            <img src=https://avatars.githubusercontent.com/u/19479111?v=4 width="100;"  alt=Turbo/>
+            <br />
+            <sub style="font-size:14px"><b>Turbo</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/kwissss>
+            <img src=https://avatars.githubusercontent.com/u/16555169?v=4 width="100;"  alt=kris/>
+            <br />
+            <sub style="font-size:14px"><b>kris</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -172,6 +172,13 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/rsimplicio>
+            <img src=https://avatars.githubusercontent.com/u/12079?v=4 width="100;"  alt=Robert Simplicio/>
+            <br />
+            <sub style="font-size:14px"><b>Robert Simplicio</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/JohnClementine>
             <img src=https://avatars.githubusercontent.com/u/52635735?v=4 width="100;"  alt=JohnClementine/>
             <br />
@@ -185,6 +192,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>James Shopland</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Elbulus>
             <img src=https://avatars.githubusercontent.com/u/125992280?v=4 width="100;"  alt=Elbulus/>
@@ -192,8 +201,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Elbulus</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/DiscDuck>
             <img src=https://avatars.githubusercontent.com/u/77843475?v=4 width="100;"  alt=DiscDuck/>
@@ -229,6 +236,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>RHDev</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/RelevantWorm>
             <img src=https://avatars.githubusercontent.com/u/32888380?v=4 width="100;"  alt=RelevantWorm/>
@@ -236,8 +245,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>RelevantWorm</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/spider1163>
             <img src=https://avatars.githubusercontent.com/u/5990270?v=4 width="100;"  alt=Remy/>
@@ -273,6 +280,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Harish Selvaraj</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/crazy-daddy>
             <img src=https://avatars.githubusercontent.com/u/67276479?v=4 width="100;"  alt=crazy-daddy/>
@@ -280,8 +289,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>crazy-daddy</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/cyr1l0u>
             <img src=https://avatars.githubusercontent.com/u/164659715?v=4 width="100;"  alt=cyr1l0u/>
@@ -317,6 +324,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>phob</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/plinders>
             <img src=https://avatars.githubusercontent.com/u/10002620?v=4 width="100;"  alt=plinders/>
@@ -324,8 +333,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>plinders</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/powerdude>
             <img src=https://avatars.githubusercontent.com/u/780882?v=4 width="100;"  alt=powerdude/>
@@ -361,6 +368,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Alex</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kbgvirus>
             <img src=https://avatars.githubusercontent.com/u/20810766?v=4 width="100;"  alt=Alon Nitzan/>
@@ -368,8 +377,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Alon Nitzan</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/ben-burns>
             <img src=https://avatars.githubusercontent.com/u/3254870?v=4 width="100;"  alt=Ben Burns/>
@@ -405,6 +412,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>EvilHidden</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/hosquiat>
             <img src=https://avatars.githubusercontent.com/u/13425905?v=4 width="100;"  alt=Hos Gee/>
@@ -412,8 +421,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Hos Gee</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/JHSPerc>
             <img src=https://avatars.githubusercontent.com/u/87101253?v=4 width="100;"  alt=JHSPerc/>
@@ -449,6 +456,8 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Kyle Mohr</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/PawlakMarek>
             <img src=https://avatars.githubusercontent.com/u/26022173?v=4 width="100;"  alt=Marek Pawlak/>
@@ -456,8 +465,6 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
             <sub style="font-size:14px"><b>Marek Pawlak</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/nwithan8>
             <img src=https://avatars.githubusercontent.com/u/17054780?v=4 width="100;"  alt=Nate Harris/>

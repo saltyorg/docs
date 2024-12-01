@@ -24,7 +24,7 @@ sb install sandbox-threadfin
 
 ### 3. Setup
 
-- Access xTeVe web GUI, visit `https://threadfin._yourdomain.com_/web`
+- Access Threadfin web GUI at `https://threadfin._yourdomain.com_/web`
 
 - Run through the Configuration Wizard.
 

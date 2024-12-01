@@ -34,7 +34,7 @@ The Required variables that should be defined in [inventory](../../saltbox/inven
 To authenticate the Data Importer to Firefly III you require to use either:
 
 - [Access Token](#311-access-token)
-- [~~Client ID~~](#312-client-id) ***Not Had Luck Getting This Working***
+- [Client ID](#312-client-id) 
 
 #### 3.1.1 Access Token
 
@@ -55,11 +55,23 @@ fireflyiii_importer_docker_envs_custom:
 1. Your client id from your instance of Firefly III | Options | Profile | OAuth | OAuth Clients | Create New Client.
 > Note: Your require to leave Confidential unticked
 
-## 4. Additional Settings
+## 4. Import data
+
+For the following methods, your data need to be formatted in CSV.
+
+### 4.1 Web import
+
+You can refer to the following documentation to execute import from the server: [web import](https://docs.firefly-iii.org/how-to/data-importer/import/csv/)
+
+### 4.2 Server import
+
+You can refer to the following documentation to execute import from the server: [CLI import](https://docs.firefly-iii.org/how-to/data-importer/advanced/cli/)
+
+## 5. Additional Settings
 
 > **Note: For all available settings please refer to the Firefly III Data Importer [example env](https://raw.githubusercontent.com/firefly-iii/docker/main/docker-compose-importer.yml)**
 
-### 4.1 Email Notifications
+### 5.1 Email Notifications
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
 ``` yaml title="Firefly III Data Importer Email Settings"

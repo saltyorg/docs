@@ -417,6 +417,7 @@ nav:
       - ruTorrent: faq/ruTorrent.md
       - Misc: faq/Misc.md
       - sb: faq/sb.md
+      - Bazarr: faq/Bazarr.md
 
   - Advanced:
       - Index: advanced/index.md

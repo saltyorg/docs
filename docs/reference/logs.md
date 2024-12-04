@@ -39,7 +39,7 @@ tail -F /opt/autoscan/activity.log
 ### Check Status
 
 ```shell
-sudo systemctl status cloudplow.service
+sudo systemctl status saltbox_managed_cloudplow.service
 ```
 
 ### Previous Activity
@@ -59,12 +59,12 @@ tail -F /opt/cloudplow/cloudplow.log
 or
 
 ```shell
-sudo journalctl -o cat -fu cloudplow.service
+sudo journalctl -o cat -fu saltbox_managed_cloudplow.service
 ```
 
 Sometimes, debug-level logging can be useful.  To enable this, make this change in the service file and restart the service.
 
-In this file: `/etc/systemd/system/cloudplow.service`, change the log level to "DEBUG":
+In this file: `/etc/systemd/system/saltbox_managed_cloudplow.service`, change the log level to "DEBUG":
 
 ```text
 ...

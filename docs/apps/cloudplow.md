@@ -46,7 +46,7 @@ See [Example Cloudplow configs](../reference/cloudplow.md).
 /opt/cloudplow/config.json
 ```
 
-Note: Config changes require a restart: `sudo systemctl restart cloudplow`.
+Note: Config changes require a restart: `sudo systemctl restart saltbox_managed_cloudplow.service`.
 
 ### Editing
 
@@ -189,7 +189,7 @@ If you used the saltbox scripted rclone setup, there is a script that will make 
 Restart Cloudplow to apply the changes to the config.
 
 ```bash
-sudo systemctl restart cloudplow
+sudo systemctl restart saltbox_managed_cloudplow.service
 ```
 
 ## Logs and status

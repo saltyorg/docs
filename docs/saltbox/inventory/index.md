@@ -302,10 +302,13 @@ organizr_web_domain: "example.com"
 ```yaml
 #### Customize the saltbox tag (sb install saltbox)
 saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
+
 #### Customize the mediabox tag (sb install mediabox)
 mediabox_roles: ["media_server", "autoscan", "iperf3", "nethogs", "glances", "btop"]
+
 #### Customize the feeerbox tag (sb install feederbox)
 feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "nethogs", "glances", "btop"]
+
 #### Customize the sandbox-roles tag (sb install sandbox-sandbox-roles)
 sandbox_roles: ["jellyseerr", "jellystat"]
 ```

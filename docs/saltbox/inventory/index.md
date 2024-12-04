@@ -308,3 +308,4 @@ mediabox_roles: ["media_server", "autoscan", "iperf3", "nethogs", "glances", "bt
 feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "nethogs", "glances", "btop"]
 #### Customize the sandbox-roles tag (sb install sandbox-sandbox-roles)
 sandbox_roles: ["jellyseerr", "jellystat"]
+```

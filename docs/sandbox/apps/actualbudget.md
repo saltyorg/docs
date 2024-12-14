@@ -6,7 +6,7 @@ You own your data and can do whatever you want with it. Featuring multi-device s
 
 ### Details
 
-[Project home](https://actualbudget.org/)	[Docs](https://actualbudget.org/docs/)	[Github](https://github.com/actualbudget/actual)	[Docker](https://hub.docker.com/r/actualbudget/actual-server)
+[Project home](https://actualbudget.org/)	  [Docs](https://actualbudget.org/docs/)	  [Github](https://github.com/actualbudget/actual)	  [Docker](https://hub.docker.com/r/actualbudget/actual-server)
 
 ## **1. Installation**
 

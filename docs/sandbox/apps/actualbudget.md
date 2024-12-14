@@ -6,11 +6,14 @@ You own your data and can do whatever you want with it. Featuring multi-device s
 Details			
 :material-home: Project home{: .header-icons }	:octicons-link-16: Docs{: .header-icons }	:octicons-mark-github-16: Github{: .header-icons }	:material-docker: Docker{: .header-icons }
 
-##1. Installation
+##**1. Installation**
+
 ``sb install sandbox-actualbudget``
 
-##2. URL
+##**2. URL**
+
 To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
-##3. Setup
+##**3. Setup**
+
 :octicons-link-16: Documentation{: .header-icons }

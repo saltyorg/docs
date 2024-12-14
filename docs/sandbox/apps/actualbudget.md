@@ -18,4 +18,4 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
 ## **3. Usage**
 
-`#AAFF00` [Documentation: Actual Budget Docs](https://actualbudget.org/docs/)
+<span style="color:#AAFF00;"[Documentation: Actual Budget Docs](https://actualbudget.org/docs/)</span>

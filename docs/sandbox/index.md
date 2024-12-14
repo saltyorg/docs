@@ -8,6 +8,7 @@ tags:
 
 # Sandbox - All Apps Index
 
+- **[actualbudget](../sandbox/apps/actualbudget.md)**  - tag - `sandbox-actualbudget`
 - **[adguardhome](../sandbox/apps/adguardhome.md)**  - tag - `sandbox-adguardhome`
 - **[adminer](../sandbox/apps/adminer.md)**  - tag - `sandbox-adminer`
 - **[airdcpp](../sandbox/apps/airdcpp.md)**  - tag - `sandbox-airdcpp`

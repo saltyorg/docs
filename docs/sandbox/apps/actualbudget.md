@@ -10,7 +10,7 @@ Details
 "sb install sandbox-actualbudget"
 
 ##2. URL
-To access Actual Budget, visit "https://actualbudget._yourdomain.com_"
+To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
 ##3. Setup
 :octicons-link-16: Documentation{: .header-icons }

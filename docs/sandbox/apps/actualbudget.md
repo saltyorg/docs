@@ -7,7 +7,7 @@ Details
 :material-home: Project home{: .header-icons }	:octicons-link-16: Docs{: .header-icons }	:octicons-mark-github-16: Github{: .header-icons }	:material-docker: Docker{: .header-icons }
 
 ##1. Installation
-"sb install sandbox-actualbudget"
+``sb install sandbox-actualbudget``
 
 ##2. URL
 To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``

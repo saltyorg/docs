@@ -8,6 +8,14 @@ repo_url: https://github.com/saltyorg/docs
 
 edit_uri: edit/main/docs/
 
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+strict: true
+
 theme:
   name: material
   icon:

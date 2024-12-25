@@ -285,7 +285,6 @@ nav:
             - Kitana: sandbox/apps/kitana.md
             - Membarr: sandbox/apps/membarr.md
             - Plex Auto Languages: sandbox/apps/plex-auto-languages.md
-            - Plex Autoscan: sandbox/apps/plex-autoscan.md
             - Plex Dupefinder: sandbox/apps/plex-dupefinder.md
             - Plex Patrol: sandbox/apps/plex-patrol.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
@@ -378,7 +377,6 @@ nav:
           - Jellyfin: apps/jellyfin.md
       - Alternatives to Core Apps:
         - Petio: apps/petio.md
-        - Plex Autoscan: apps/plex-autoscan.md
         - Prowlarr: apps/prowlarr.md
         - Rutorrent: apps/rutorrent.md
         - Deluge: apps/deluge.md
@@ -421,7 +419,6 @@ nav:
       - Backup and Restore: faq/Backup and Restore.md
       - Rclone: faq/Rclone.md
       - Plex: faq/Plex.md
-      - Plex Autoscan: faq/Plex-Autoscan.md
       - ruTorrent: faq/ruTorrent.md
       - Misc: faq/Misc.md
       - sb: faq/sb.md
@@ -474,6 +471,7 @@ nav:
         - Further Reading and Links:
           - Suggested Reading: reference/guides/suggested_reading.md
           - Links: reference/guides/links.md
+          - Other: reference/guides/other.md
 
       - Topics:
         - Prerequisite References:
@@ -509,9 +507,7 @@ nav:
           - Viewing Logs: reference/logs.md
           - Multiple App Instances: reference/multiple-instances.md
           - Shared-Drive Cloudplow Setup: reference/cloudplow-config.md
-          - Shared-Drive Plex Autoscan Setup: reference/plex-autoscan-config.md
           - Plex Auth Token: reference/plex_auth_token.md
-          - Plex Autoscan Extras: reference/plex-autoscan-extras.md
           - Ports: reference/ports.md
           - Saltbox Tools: reference/saltbox-tools.md
           - Adding a Subdomain: reference/subdomain.md

@@ -31,7 +31,7 @@ IMPORTANT: Google has made changes to the service account infrastructure on thei
 ```
 A quota has been reached for project number PROJECT_NUMBER: Service accounts created per minute per project.
 ```
-This is due to a change on Google's side, and there's not a simnple way around it.  The simplest solution is to just ignore tha error, then after the script has run delete the empty files that got created.  The final step is going to try to use service account file `150.json`; if that one is empty either copy another one to that name or change the config in the final step to use a file that is present.
+This is due to a change on Google's side, and there's not a simple way around it.  The simplest solution is to just ignore tha error, then after the script has run delete the empty files that got created.  The final step is going to try to use service account file `150.json`; if that one is empty either copy another one to that name or change the config in the final step to use a file that is present.
 
 1. Create /opt/sa and make sure it's writable by you.
 
@@ -191,4 +191,4 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 !!! warning
     If you see errors that leave some of the service account JSON files empty, the simplest thing to do is to jsut delete those empty files and carry on.  300 was overkill even when this was a useful setup, so 240 or so will be more than sufficient now.
 
-If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-7-create-some-shared-drives-and-related-infrastructure)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-7-create-shared-drives-and-related-infrastructure)

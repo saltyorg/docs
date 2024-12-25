@@ -43,7 +43,7 @@ Under "Configured Indexers":
 
 1. Click "Add Indexer" to add your favorite indexers (i.e. [torrent trackers](../reference/usenet-torrent.md)).
 
-2. When adding indexers into [Sonarr](../apps/sonarr.md#jackett)/[Radarr](../apps/radarr.md#jackett), you will need:
+2. When adding indexers into [Sonarr](../apps/sonarr.md#__tabbed_3_2)/[Radarr](../apps/radarr.md#__tabbed_3_2), you will need:
 
     1. Indexer's Torznab Feed
 

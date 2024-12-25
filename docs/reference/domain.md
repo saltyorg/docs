@@ -146,7 +146,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     5. It's free.
    
-    _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [below](#post-setup)._
+    _Note: Saltbox does not enable CDN / Proxy by default, but you may do so yourself after installing Saltbox (see section [below](#after-saltbox-is-installed)._
    
     #### Set up Cloudflare as your DNS provider
    

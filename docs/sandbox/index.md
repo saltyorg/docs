@@ -103,7 +103,6 @@ tags:
 - **[pgadmin](../sandbox/apps/pgadmin.md)**  - tag - `sandbox-pgadmin`
 - **[photoprism](../sandbox/apps/photoprism.md)**  - tag - `sandbox-photoprism`
 - **[plex_auto_languages](../sandbox/apps/plex-auto-languages.md)**  - tag - `sandbox-plex-auto-languages`
-- **[plex_autoscan](../sandbox/apps/plex-autoscan.md)**  - tag - `sandbox-plex-autoscan`
 - **[plex_dupefinder](../sandbox/apps/plex-dupefinder.md)**  - tag - `sandbox-plex-dupefinder`
 - **[plex_patrol](../sandbox/apps/plex-patrol.md)**  - tag - `sandbox-plex-patrol`
 - **[plextraktsync](../sandbox/apps/plextraktsync.md)**  - tag - `sandbox-plextraktsync`

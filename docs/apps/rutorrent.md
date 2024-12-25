@@ -27,7 +27,7 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 ### Setup
 
-The setup for [Sonarr](sonarr.md#rutorrent), [Radarr](radarr.md#rutorrent), and [Lidarr](lidarr.md#rutorrent) are done on their respective wiki pages.
+The setup for [Sonarr](sonarr.md#__tabbed_4_5), [Radarr](radarr.md#__tabbed_4_5), and [Lidarr](lidarr.md#__tabbed_4_4) are done on their respective wiki pages.
 
 ## 3. Enable AutoUnpack
 

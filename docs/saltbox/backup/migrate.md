@@ -34,8 +34,6 @@ Listed below are some common scenarios and their migration instructions.
 
 4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
 
-5. IF YOU ARE USING PLEX-AUTOSCAN, which you may not be depending on how recent your install is [autoscan has replaced it as the default], check to see if your [Plex Autoscan URL](../../apps/plex-autoscan.md#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly.
-
 ## Move Saltbox to Another Server and Change the Domain Name
 
 ### Current Server
@@ -46,7 +44,7 @@ Listed below are some common scenarios and their migration instructions.
 
 1. [Restore](restore.md) Saltbox to the new server.
 
-2. Add your new domain name into [Accounts](../install/install.md#configuration).
+2. Add your new domain name into [Accounts](../install/install.md#step-2-configuration).
 
 3. If you are using Cloudflare:
 
@@ -75,8 +73,6 @@ Listed below are some common scenarios and their migration instructions.
 7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
 8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
-
-9. IF YOU ARE USING PLEX-AUTOSCAN, which you may not be depending on how recent your install is [autoscan has replaced it as the default], check to see if your [Plex Autoscan URL](../../apps/plex-autoscan.md#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly.
 
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
@@ -111,5 +107,3 @@ Listed below are some common scenarios and their migration instructions.
 7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
 8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
-
-9. IF YOU ARE USING PLEX-AUTOSCAN, which you may not be depending on how recent your install is [autoscan has replaced it as the default], check to see if your [Plex Autoscan URL](../../apps/plex-autoscan.md#obtaining-the-plex-autoscan-url) has changed and update [Sonarr](../../apps/sonarr.md), [Radarr](../../apps/radarr.md), and [Lidarr](../../apps/lidarr.md) accordingly.

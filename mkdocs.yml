@@ -99,7 +99,7 @@ plugins:
       cache_dir: .cache/plugin/git-committers/
       repository: saltyorg/docs
       branch: main
-      token: !ENV ["GH_TOKEN"]
+      token: !ENV ["MKDOCS_GITHUB_TOKEN"]
 
 extra:
   generator: false

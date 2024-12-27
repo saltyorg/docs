@@ -166,6 +166,7 @@ nav:
       - Apps:
         - Multiple Instances (legacy): sandbox/apps/arrx.md
         - General:
+          - Actual Budget: sandbox/apps/actualbudget.md
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
           - Firefox: sandbox/apps/firefox.md

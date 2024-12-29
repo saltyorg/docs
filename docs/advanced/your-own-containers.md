@@ -430,6 +430,6 @@ If the file is named `docker-compose.yml` and is located in the current working 
 
 If the file has some other name or is located elsewhere in the file system:
 
-    docker compose up -d /path/to/something.yml
+    docker compose -f /path/to/something.yml up -d
 
 Remember to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree prior to running that command.

@@ -20,7 +20,6 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
 === "Using Traefik (Authelia)"
     ```yaml
-    version: "3"
     services:
       APPNAME:
         restart: unless-stopped # (1)!
@@ -119,7 +118,6 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
 === "Using Traefik (Authelia + API Router)"
     ```yaml
-    version: "3"
     services:
       APPNAME:
         restart: unless-stopped # (1)!
@@ -279,7 +277,6 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
 === "Using Traefik"
     ```yaml
-    version: "3"
     services:
       APPNAME:
         restart: unless-stopped # (1)!
@@ -378,7 +375,6 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
 === "Without Traefik"
     ```yaml
-    version: "3"
     services:
       APPNAME:
         restart: unless-stopped # (1)!

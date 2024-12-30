@@ -46,17 +46,21 @@ sb install sandbox-calibre-web
 
 Useful docker commands
 
-- Shell access whilst the container is running:
-  `docker exec -it calibre-web /bin/bash`
+  ``` shell title="Shell access whilst the container is running:"
+  docker exec -it calibre-web /bin/bash
+  ```
 
-- To monitor the logs of the container in realtime:
-  `docker logs -f calibre-web`
+  ``` shall title="To monitor the logs of the container in realtime:"
+  docker logs -f calibre-web
+  ```
 
-- Container version number:
-  `docker inspect -f '{{ index .Config.Labels "build_version" }}' calibre-web`
+  ``` shell title="Container version number:"
+  docker inspect -f '{{ index .Config.Labels "build_version" }}' calibre-web
+  ```
 
-- Image version number:
-  `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web`
+  ``` shell title="Image version number:"
+  docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web
+  ```
 
 ### 4. SK's Calibre-Web Usage Tips
 

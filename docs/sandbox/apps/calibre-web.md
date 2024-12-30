@@ -64,7 +64,7 @@ Useful docker commands
 
 A useful function of Calibre-Web is sending ebooks by email.  Therefore, you need to set up SMTP e-mail server settings.
 
-I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles.
+I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles. These settings can be found `Apps > Google Workspace > Settings for Gmail > Routing` and the setting you need to add or change is `SMTP relay service`. or just search `SMTP` in the search bar at the top of the Google admin console, and find `SMTP relay service` from there.
 
 ```text
 Hostname: smtp-relay.gmail.com, Port:  25,  SSL: No

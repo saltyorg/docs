@@ -46,16 +46,16 @@ sb install sandbox-calibre-web
 
 Useful docker commands
 
-- Shell access whilst the container is running: <br />
+- Shell access whilst the container is running:
   `docker exec -it calibre-web /bin/bash`
 
-- To monitor the logs of the container in realtime: <br />
+- To monitor the logs of the container in realtime:
   `docker logs -f calibre-web`
 
-- Container version number: <br />
+- Container version number:
   `docker inspect -f '{{ index .Config.Labels "build_version" }}' calibre-web`
 
-- Image version number: <br />
+- Image version number:
   `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web`
 
 ### 4. SK's Calibre-Web Usage Tips
@@ -64,7 +64,7 @@ Useful docker commands
 
 A useful function of Calibre-Web is sending ebooks by email.  Therefore, you need to set up SMTP e-mail server settings.
 
-I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles. These settings can be found `Apps > Google Workspace > Settings for Gmail > Routing` and the setting you need to add or change is `SMTP relay service`. or just search `SMTP` in the search bar at the top of the Google admin console, and find `SMTP relay service` from there.
+I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles. These settings can be found under `Apps > Google Workspace > Settings for Gmail > Routing` and the setting you need to add or change is `SMTP relay service`. or just search `SMTP` in the search bar at the top of the Google admin console, and find `SMTP relay service` from there.
 
 ```text
 Hostname: smtp-relay.gmail.com, Port:  25,  SSL: No
@@ -77,19 +77,19 @@ There is a nice benefit to using a Kindle.  When you send a “personal document
 If you (or your users) want to have books sent directly to a Kindle from Calibre-Web email, then there are additional one-time setup steps for each user.
 
 - **Tell Amazon to accept books sent from your website**
-  - Go to www.amazon.com
+  - Go to <www.amazon.com>
   - On the top navigation bar, go to `Account & Lists`.  In the dropdown, click on `Your Content and Devices`.
   - Towards the top of the white section, in the middle, click on `Preferences`
   - Scroll down to Personal Document Settings. Click the title to open up that section of the page.
   - Under `Approved Personal Document E-mail List`, click the link for `"Add a new approved e-mail address"`
   - In the popup, add `@yourdomain.com` and save.  Done!
 
-    Before closing the website, you might want to grab your device email address for the next step.  Under the Send-to-Kindle E-Mail Settings, copy the email address where you want the books sent by default. <br />
+    Before closing the website, you might want to grab your device email address for the next step.  Under the Send-to-Kindle E-Mail Settings, copy the email address where you want the books sent by default.
 
 - **Add your Kindle email address to your profile on books.yourdomain.com**
   - Once logged in, on the top ride side, click your name to open your profile
   - Add your kindle email address and save
-  - Your Kindle email address will be something like name_79@kindle.com.  Every Kindle device and mobile app has its own unique address, however, you can send to any of your devices and it will still be available on all of them.  You can find this email address either in the Settings of the device/app, or copy it from the Devices page
+  - Your Kindle email address will be something like <name_79@kindle.com>.  Every Kindle device and mobile app has its own unique address, however, you can send to any of your devices and it will still be available on all of them.  You can find this email address either in the Settings of the device/app, or copy it from the Devices page
 
 !!! info
     Kindle has started sending verification emails on every document sent if your Kindle's email is the one they generated for you.  While you are on your settings page, go ahead and make up a new Kindle email address.

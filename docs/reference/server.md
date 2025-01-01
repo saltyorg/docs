@@ -12,7 +12,7 @@ tags:
 
 About the requirements:
 
-You will need a dedicated server freshly installed with Ubuntu Server [20.04](https://releases.ubuntu.com/20.04/), [22.04](https://releases.ubuntu.com/22.04/), or [24.04](https://releases.ubuntu.com/24.04/).
+You will need a dedicated server freshly installed with Ubuntu Server [22.04](https://releases.ubuntu.com/22.04/), or [24.04](https://releases.ubuntu.com/24.04/).
 
 This server can be either local to you or rented froma server provider.
 
@@ -24,7 +24,7 @@ When you install Ubuntu on the server, do not preinstall anything other than Ope
 
 The install assumes that this is a fresh setup without anything else installed.  If your server has things like Docker preinstalled, chances are the installer will fail with a non-obvious error, or other problems will show up later.
 
-In other words, you should not upgrade your Ubuntu 18.04 machine running Cloudbox to Ubuntu 20.04 and then install Saltbox on top of it.  You should wipe the machine, install 20.04 or 22.04 fresh and start there.
+In other words, you should not upgrade your Ubuntu 18.04 machine running Cloudbox to Ubuntu 22.04 and then install Saltbox on top of it.  You should wipe the machine, install 22.04 or 24.04 fresh and start there.
 
 Typically this server is remote to you; you can install on a home server, keeping in mind some [home server considerations](#home-server-considerations)
 

@@ -163,7 +163,7 @@ From this point on there is nothing special about the install process on this ho
 
 This is just an example of the install.  You should refer to the actual [install docs](../../../saltbox/install/install.md).
 
-I installed Ubuntu server 20.04 on the machine, accepting all defaults except:
+I installed Ubuntu server 24.04 on the machine, accepting all defaults except:
 
 - I enabled OpenSSH and imported my SSH keys from github
 

@@ -2,7 +2,7 @@
 
 Saltbox is a continuation of the Cloudbox project and is mostly compatible out of the box. Very little has to be done to bring your old Cloudbox data into Saltbox. Any customisations you have made or special roles are going to require extra work as Saltbox uses Traefik instead of nginx.
 
-IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04 or higher and try to run this migration.  It won't work.
+IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 22.04 or higher and try to run this migration.  It won't work.
 
 ## Before Migration
 
@@ -96,9 +96,9 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
 ## Migration
 
-IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04 and try to run this migration.  It won't work.
+IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04+ and try to run this migration.  It won't work.
 
-Do not proceed unless the machine you're using is a fresh install of Ubuntu 20.04 or 22.04.
+Do not proceed unless the machine you're using is a fresh install of Ubuntu 22.04 or 24.04.
 
 - Install the saltbox dependencies
 

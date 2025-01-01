@@ -62,11 +62,13 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 ### Tips
 
-#### Ubuntu 20.04
+#### Ubuntu 22 or better
 
-- If you get an option like below, select choose `ubuntu-2004-focal-64-minimal`.
+- If you get an option like below, select choose Ubuntu 22 or better, which may be named something like `ubuntu-2204-jammy-64-minimal` or `ubuntu-2404-noble-64-minimal`.
 
   ![](../images/ubuntu-selection.png)
+
+  Note that the image is well out of date, but the concept is the important thing.
 
 - Install OpenSSH server if asked.
 
@@ -121,9 +123,11 @@ Examples:
          PART lvm    vg0       all
          LV vg0   swap   swap      swap         8G
          LV vg0   root    /     ext4      all
-         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
+         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2204-jammy-64-minimal.tar.gz
          ```
 
+         BE SURE to verify the image; DO NOT blindly copy-paste this to your system
+    
      - Hetzner installimage (with a separate 250G partition for `/opt` utilizing BTRFS for snapshot backups)
 
          ``` bash
@@ -148,5 +152,7 @@ Examples:
          LV vg0   swap   swap      swap         8G
          LV vg0   opt   /opt     btrfs         250G
          LV vg0   root    /     ext4      all
-         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2004-focal-64-minimal.tar.gz
+         IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-2204-jammy-64-minimal.tar.gz
          ```
+
+         BE SURE to verify the image; DO NOT blindly copy-paste this to your system

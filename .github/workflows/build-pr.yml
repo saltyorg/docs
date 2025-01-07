@@ -81,6 +81,7 @@ jobs:
           mkdocs --version
         env:
           CI: true
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GH_TOKEN }}
 
       - name: Publish to Cloudflare Pages
         id: cloudflare

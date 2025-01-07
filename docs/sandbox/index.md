@@ -20,6 +20,7 @@ tags:
 - **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
 - **[a-train](../sandbox/apps/a-train.md)**  - tag - `sandbox-a-train`
 - **[audiobookshelf](../sandbox/apps/audiobookshelf.md)**  - tag - `sandbox-audiobookshelf`
+- **[autobrr](../sandbox/apps/omegabrr.md)**  - tag - `sandbox-autobrr`
 - **[beets](../sandbox/apps/beets.md)**  - tag - `sandbox-beets`
 - **[booksonic](../sandbox/apps/booksonic.md)**  - tag - `sandbox-booksonic`
 - **[bookstack](../sandbox/apps/bookstack.md)**  - tag - `sandbox-bookstack`
@@ -99,7 +100,6 @@ tags:
 - **[olivetin](../sandbox/apps/olivetin.md)**  - tag - `sandbox-olivetin`
 - **[ombi](../sandbox/apps/ombi.md)**  - tag - `sandbox-ombi`
 - **[ombix](../sandbox/apps/ombix.md)**  - tag - `sandbox-ombix`
-- **[omegabrr](../sandbox/apps/omegabrr.md)**  - tag - `sandbox-omegabrr`
 - **[paperless-ngx](../sandbox/apps/paperless-ngx.md)**  - tag - `sandbox-paperless-ngx`
 - **[pgadmin](../sandbox/apps/pgadmin.md)**  - tag - `sandbox-pgadmin`
 - **[photoprism](../sandbox/apps/photoprism.md)**  - tag - `sandbox-photoprism`

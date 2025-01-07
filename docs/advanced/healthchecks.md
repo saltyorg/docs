@@ -142,13 +142,6 @@ lunasea_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-omegabrr_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ omegabrr_web_port }}/api/webhook/trigger"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
 phpmyadmin_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:{{ phpmyadmin_web_port }}"]
   interval: 10s

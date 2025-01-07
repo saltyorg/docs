@@ -210,7 +210,6 @@ nav:
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Tubearchivist: sandbox/apps/tubearchivist.md
           - Torrents:
-            - Autobrr: sandbox/apps/autobrr.md
             - Delugevpn: sandbox/apps/delugevpn.md
             - QBit Management: sandbox/apps/qbit-manage.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md

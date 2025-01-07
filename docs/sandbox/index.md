@@ -20,7 +20,6 @@ tags:
 - **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
 - **[a-train](../sandbox/apps/a-train.md)**  - tag - `sandbox-a-train`
 - **[audiobookshelf](../sandbox/apps/audiobookshelf.md)**  - tag - `sandbox-audiobookshelf`
-- **[autobrr](../sandbox/apps/autobrr.md)**  - tag - `sandbox-autobrr`
 - **[beets](../sandbox/apps/beets.md)**  - tag - `sandbox-beets`
 - **[booksonic](../sandbox/apps/booksonic.md)**  - tag - `sandbox-booksonic`
 - **[bookstack](../sandbox/apps/bookstack.md)**  - tag - `sandbox-bookstack`

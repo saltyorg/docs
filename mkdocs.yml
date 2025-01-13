@@ -169,6 +169,7 @@ nav:
           - Actual Budget: sandbox/apps/actualbudget.md
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
+          - Chrome: sandbox/apps/chrome.md
           - Firefox: sandbox/apps/firefox.md
           - Homebox: sandbox/apps/homebox.md
           - Immich: sandbox/apps/immich.md
@@ -203,6 +204,7 @@ nav:
           - AirDC++: sandbox/apps/airdcpp.md
           - Alltube: sandbox/apps/alltube.md
           - Archivebox: sandbox/apps/archivebox.md
+          - Hoarder: sandbox/apps/hoarder.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Medusa: sandbox/apps/medusa.md
           - PyLoad: sandbox/apps/pyload.md
@@ -336,6 +338,7 @@ nav:
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
           - Maintainerr: sandbox/apps/maintainerr.md
+          - Meilisearch: sandbox/apps/meilisearch.md
           - Puddletag: sandbox/apps/puddletag.md
           - Sabthrottle: sandbox/apps/sabthrottle.md
           - Sarotate: sandbox/apps/sarotate.md

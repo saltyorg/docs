@@ -27,6 +27,7 @@ tags:
 - **[calibre-web](../sandbox/apps/calibre-web.md)**  - tag - `sandbox-calibre-web`
 - **[changedetection](../sandbox/apps/changedetection.md)**  - tag - `sandbox-changedetection`
 - **[cherry](../sandbox/apps/cherry.md)**  - tag - `sandbox-cherry`
+- **[chrome](../sandbox/apps/chrome.md)**  - tag - `sandbox-chrome`
 - **[code-server](../sandbox/apps/code-server.md)**  - tag - `sandbox-code-server`
 - **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
@@ -59,6 +60,7 @@ tags:
 - **[handbrake](../sandbox/apps/handbrake.md)**  - tag - `sandbox-handbrake`
 - **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
 - **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
+- **[hoarder](../sandbox/apps/hoarder.md)**  - tag - `sandbox-hoarder`
 - **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
 - **[homeassistant](../sandbox/apps/homeassistant.md)** - tag - `sandbox-homeassistant`
 - **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
@@ -83,6 +85,7 @@ tags:
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
 - **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`
+- **[meilisearch](../sandbox/apps/meilisearch.md)**  - tag - `sandbox-meilisearch`
 - **[minecraft](../sandbox/apps/minecraft.md)**  - tag - `sandbox-minecraft`
 - **[minecraft-bedrock](../sandbox/apps/minecraft-bedrock.md)**  - tag - `sandbox-minecraft-bedrock`
 - **[miniflux](../sandbox/apps/miniflux.md)**  - tag - `sandbox-miniflux`

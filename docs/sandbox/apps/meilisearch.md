@@ -18,17 +18,6 @@ Use the ```sb inventory``` system to set any environment variables that are desi
 
 See [Meilisearch Environment Variables](https://www.meilisearch.com/docs/learn/self_hosted/configure_meilisearch_at_launch#environment) for supported variables
 
-If not following the Hoarder role instructions:
-
-One key needs to be generated and stored in your ```/opt/sandbox/settings.yaml``` generate with ```openssl rand -base64 36```
-
-Store in the following
-
-```yml
-meilisearch:
-  meili_master_key: $$$
-```
-
 ## Deployment
 
 ``` shell

@@ -18,17 +18,6 @@ Use the ```sb inventory``` system to set any environment variables that are desi
 
 See [Hoarder Configuration](https://docs.hoarder.app/configuration) for supported variables
 
-Two keys need to be generated and stored in your ```/opt/sandbox/settings.yaml``` generate both with ```openssl rand -base64 36```
-
-Store them in the following
-
-```yml
-hoarder:
-  nextauth_secret: $$$
-meilisearch:
-  meili_master_key: $$$
-```
-
 ## Deployment
 
 ``` shell

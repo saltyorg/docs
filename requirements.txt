@@ -1,2 +1,2 @@
 lightgallery==0.5
-mkdocs-git-committers-plugin-2==2.4.1
+mkdocs-git-committers-plugin-2==2.5.0

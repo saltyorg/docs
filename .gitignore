@@ -8,3 +8,4 @@ go.sh
 .direnv/**
 /venv
 .cache
+.ansible

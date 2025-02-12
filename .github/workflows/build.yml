@@ -16,7 +16,7 @@ permissions:
 jobs:
   add-contributors:
     runs-on: ubuntu-22.04
-    if: github.ref == 'refs/heads/main'
+    if: github.event.repository.fork == false && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -107,7 +107,7 @@ jobs:
     name: 'webhook'
     runs-on: ubuntu-latest
     needs: build
-    if: always() && github.event_name != 'pull_request' && github.event.repository.fork == false
+    if: always() && github.event.repository.fork == false && github.event_name != 'pull_request'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

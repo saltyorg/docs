@@ -22,4 +22,4 @@ sb install sandbox-freshrss
 
 ### 3. Usage
 
-- [:octicons-link-16: Documentation: Freshrss Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons }
+- [:octicons-link-16: Documentation: Freshrss Docs](https://freshrss.github.io/FreshRSS/){: .header-icons }

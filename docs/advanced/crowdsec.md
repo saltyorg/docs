@@ -99,7 +99,7 @@ CrowdSec can be integrated with Prometheus for monitoring. Configure it using th
 ```yaml
 crowdsec_prometheus_enabled: false
 crowdsec_prometheus_level: "full"
-crowdsec_prometheus_listen_addr: "127.0.0.1"
+crowdsec_prometheus_listen_addr: "172.19.0.1"
 crowdsec_prometheus_listen_port: "6060"
 ```
 

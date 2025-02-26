@@ -184,6 +184,12 @@ radarr_docker_image_tag: nightly
 sonarr_docker_image_tag: nightly
 petio_docker_image_tag: nightly
 
+#### Configure Sonarr 4k/Radarr 4k Instance Name (assumed instances defined as `sonarr4k` and `radarr4k`)
+sonarr4k_docker_envs_custom:
+  SONARR__APP__INSTANCENAME: "Sonarr4k" # Must start or end with the word Sonarr
+radarr4k_docker_envs_custom:
+  RADARR__APP__INSTANCENAME: "Radarr4k" # Must start or end with the word Radarr
+
 #### Bandwidth limiting ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"

@@ -49,3 +49,15 @@ Handy guide to Saltbox Command line aliases.
         sb install sandbox-dozzle
 
     ```
+
+## sb --help
+
+- List sb commands
+
+- Usage:
+
+    ``` { .shell }
+
+        sb --help
+
+    ```

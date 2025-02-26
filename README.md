@@ -152,9 +152,9 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/markschrik>
-            <img src=https://avatars.githubusercontent.com/u/56775030?v=4 width="100;"  alt=markschrik/>
+            <img src=https://avatars.githubusercontent.com/u/56775030?v=4 width="100;"  alt=Mark de Ruiter/>
             <br />
-            <sub style="font-size:14px"><b>markschrik</b></sub>
+            <sub style="font-size:14px"><b>Mark de Ruiter</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

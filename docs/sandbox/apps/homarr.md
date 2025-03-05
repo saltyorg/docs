@@ -18,6 +18,9 @@
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://homarr.dev/){: .header-icons } | [:octicons-link-16: Docs](https://homarr.dev/docs/getting-started/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/homarr-labs/homarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/homarr/homarr){: .header-icons }|
 
+!!! info
+If you have been previously using Homarr prior to the 1.0 release, please follow the instructions [here](https://homarr.dev/blog/2025/01/19/migration-guide-1.0/) to export your data for migration.
+
 Recommended install types: Saltbox, Core
 
 ### 1. Installation

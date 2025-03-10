@@ -38,14 +38,4 @@ sb install sandbox-jellyseerr
 
 - To access Jellyseerr, visit `https://jellyseerr._yourdomain.com_`
 
-### 3. Setup
-
-- Default login:
-
-  ``` { .yaml}
-
-  Password: your_normal_password
-
-  ```
-
 - [:octicons-link-16: Documentation: Jellyseerr Docs](https://docs.jellyseerr.dev/){: .header-icons }

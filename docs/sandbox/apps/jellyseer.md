@@ -2,7 +2,7 @@
 
 ## What is it?
 
-[Jellyseer](https://docs.jellyseerr.dev/) is a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
+[Jellyseerr](https://docs.jellyseerr.dev/) is a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
 
 - Full Jellyfin/Emby/Plex integration including authentication with user import & management.
 - Support for PostgreSQL and SQLite databases.

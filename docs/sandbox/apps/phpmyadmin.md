@@ -21,7 +21,7 @@
 - Transforming stored data into any format using a set of predefined functions, like displaying BLOB-data as image or download-link
 
 !!!info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+    By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

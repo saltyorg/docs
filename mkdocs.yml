@@ -170,12 +170,14 @@ nav:
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
           - Chrome: sandbox/apps/chrome.md
+          - Elasticsearch: sandbox/apps/elasticsearch.md
           - Firefox: sandbox/apps/firefox.md
           - Homebox: sandbox/apps/homebox.md
           - Immich: sandbox/apps/immich.md
           - Joplin: sandbox/apps/joplin.md
           - Linkding: sandbox/apps/linkding.md
           - Miniflux: sandbox/apps/miniflux.md
+          - n8n: sandbox/apps/n8n.md
           - Nabarr: sandbox/apps/nabarr.md
           - Notifiarr: sandbox/apps/notifiarr.md
           - Photoprism: sandbox/apps/photoprism.md
@@ -184,6 +186,7 @@ nav:
           - The Lounge: sandbox/apps/thelounge.md
           - Trilium Notes: sandbox/apps/trilium.md
           - Wrapperr: sandbox/apps/wrapperr.md
+          - Yourspotify: sandbox/apps/yourspotify.md
           - ZNC: sandbox/apps/znc.md
         - Content Management:
           - Tandoor Recipes: sandbox/apps/tandoor.md
@@ -191,6 +194,7 @@ nav:
         - Development:
           - Changedetection: sandbox/apps/changedetection.md
           - Code-server: sandbox/apps/code-server.md
+          - Forgejo: sandbox/apps/forgejo.md
           - Gitea: sandbox/apps/gitea.md
           - Gotenberg: sandbox/apps/gotenberg.md
           - Docker:
@@ -211,8 +215,10 @@ nav:
           - Rdt-client: sandbox/apps/rdtclient.md
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Tubearchivist: sandbox/apps/tubearchivist.md
+          - Tvheadend: sandbox/apps/tvheadend.md
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
+            - LunaSea: sandbox/apps/lunasea.md
             - QBit Management: sandbox/apps/qbit-manage.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md
             - Rflood: sandbox/apps/rflood.md
@@ -234,12 +240,14 @@ nav:
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
         - Landing Pages:
+          - Dashy: sandbox/apps/dashy.md
           - VNStat: sandbox/apps/vnstat.md
           - Heimdall: sandbox/apps/heimdall.md
           - Homarr: sandbox/apps/homarr.md
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
           - Factorio: sandbox/apps/factorio.md
+          - Foundry: sandbox/apps/foundry.md
           - LinuxGSM: sandbox/apps/lgsm.md
           - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
@@ -251,6 +259,7 @@ nav:
             - Bookstack: sandbox/apps/bookstack.md
             - Calibre: sandbox/apps/calibre.md
             - Calibre-web: sandbox/apps/calibre-web.md
+            - Codex: sandbox/apps/codex.md
             - Comicstreamer: sandbox/apps/comicstreamer.md
             - Comixed: sandbox/apps/comixed.md
             - Kavita: sandbox/apps/kavita.md
@@ -296,6 +305,7 @@ nav:
           - Requests:
             - DiscoFlix: sandbox/apps/discoflix.md
             - Doplarr: sandbox/apps/doplarr.md
+            - Jellyseerr: sandbox/apps/jellyseerr.md
             - Ombi: sandbox/apps/ombi.md
             - Ombix: sandbox/apps/ombix.md
             - Requestrr: sandbox/apps/requestrr.md
@@ -313,6 +323,7 @@ nav:
           - Database Management:
             - Adminer: sandbox/apps/adminer.md
             - PGAdmin: sandbox/apps/pgadmin.md
+            - phpmyadmin: sandbox/apps/phpmyadmin.md
           - Docker:
             - Dockwatch: sandbox/apps/dockwatch.md
             - Watchtower: sandbox/apps/watchtower.md

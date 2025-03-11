@@ -29,14 +29,17 @@ tags:
 - **[cherry](../sandbox/apps/cherry.md)**  - tag - `sandbox-cherry`
 - **[chrome](../sandbox/apps/chrome.md)**  - tag - `sandbox-chrome`
 - **[code-server](../sandbox/apps/code-server.md)**  - tag - `sandbox-code-server`
+- **[codex](../sandbox/apps/codex.md)**  - tag - `sandbox-codex`
 - **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
+- **[dashy](../sandbox/apps/dashy.md)**  - tag - `sandbox-dashy`
 - **[deemix](../sandbox/apps/deemix.md)**  - tag - `sandbox-deemix`
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
 - **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
 - **[dockwatch](../sandbox/apps/dockwatch.md)**  - tag - `sandbox-dockwatch`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
+- **[elasticsearch](../sandbox/apps/elasticsearch.md)**  - tag - `sandbox-elasticsearch`
 - **[embystat](../sandbox/apps/embystat.md)**  - tag - `sandbox-embystat`
 - **[epms](../sandbox/apps/epms.md)**  - tag - `sandbox-epms`
 - **[factorio](../sandbox/apps/factorio.md)**  - tag - `sandbox-factorio`
@@ -47,6 +50,8 @@ tags:
 - **[filezilla](../sandbox/apps/filezilla.md)**  - tag - `sandbox-filezilla`
 - **[firefox](../sandbox/apps/firefox.md)**  - tag - `sandbox-firefox`
 - **[flaresolverr](../sandbox/apps/flaresolverr.md)**  - tag - `sandbox-flaresolverr`
+- **[forgejo](../sandbox/apps/forgejo.md)**  - tag - `sandbox-forgejo`
+- **[foundry](../sandbox/apps/foundry.md)**  - tag - `sandbox-foundry`
 - **[freshrss](../sandbox/apps/freshrss.md)**  - tag - `sandbox-freshrss`
 - **[funkwhale](../sandbox/apps/funkwhale.md)**  - tag - `sandbox-funkwhale`
 - **[gaps](../sandbox/apps/gaps.md)**  - tag - `sandbox-gaps`
@@ -69,6 +74,7 @@ tags:
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
 - **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
+- **[jellyseerr](../sandbox/apps/jellyseerr.md)**  - tag - `sandbox-jellyseerr`
 - **[joplin](../sandbox/apps/joplin.md)**  - tag - `sandbox-joplin`
 - **[kavita](../sandbox/apps/kavita.md)**  - tag - `sandbox-kavita`
 - **[kcptun_client](../sandbox/apps/kcptun-client.md)**  - tag - `sandbox-kcptun-client`
@@ -80,6 +86,7 @@ tags:
 - **[lgsm](../sandbox/apps/lgsm.md)**  - tag - `sandbox-lgsm`
 - **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
 - **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
+- **[lunasea](../sandbox/apps/lunasea.md)**  - tag - `sandbox-lunasea`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
@@ -94,6 +101,7 @@ tags:
 - **[moviematch](../sandbox/apps/moviematch.md)**  - tag - `sandbox-moviematch`
 - **[MQTT](../sandbox/apps/mqtt.md)**  - tag - `sandbox-mqtt`
 - **[mylar3](../sandbox/apps/mylar3.md)**  - tag - `sandbox-mylar3`
+- **[n8n](../sandbox/apps/n8n.md)**  - tag - `sandbox-n8n`
 - **[nabarr](../sandbox/apps/nabarr.md)**  - tag - `sandbox-nabarr`
 - **[navidrome](../sandbox/apps/navidrome.md)**  - tag - `sandbox-navidrome`
 - **[nextcloud](../sandbox/apps/nextcloud.md)**  - tag - `sandbox-nextcloud`
@@ -104,6 +112,7 @@ tags:
 - **[ombix](../sandbox/apps/ombix.md)**  - tag - `sandbox-ombix`
 - **[paperless-ngx](../sandbox/apps/paperless-ngx.md)**  - tag - `sandbox-paperless-ngx`
 - **[pgadmin](../sandbox/apps/pgadmin.md)**  - tag - `sandbox-pgadmin`
+- **[phpmyadmin](../sandbox/apps/phpmyadmin.md)**  - tag - `sandbox-phpmyadmin`
 - **[photoprism](../sandbox/apps/photoprism.md)**  - tag - `sandbox-photoprism`
 - **[plex_auto_languages](../sandbox/apps/plex-auto-languages.md)**  - tag - `sandbox-plex-auto-languages`
 - **[plex_dupefinder](../sandbox/apps/plex-dupefinder.md)**  - tag - `sandbox-plex-dupefinder`
@@ -151,6 +160,7 @@ tags:
 - **[transmissionx](../sandbox/apps/transmissionx.md)**  - tag - `sandbox-transmissionx`
 - **[trilium](../sandbox/apps/trilium.md)**  - tag - `sandbox-trilium`
 - **[tubearchivist](../sandbox/apps/tubearchivist.md)**  - tag - `sandbox-tubearchivist`
+- **[tvheadend](../sandbox/apps/tvheadend.md)**  - tag - `sandbox-tvheadend`
 - **[unifi-network-application](../sandbox/apps/unifi-network-application.md)**  - tag - `sandbox-unifi-network-application`
 - **[unmanic](../sandbox/apps/unmanic.md)**  - tag - `sandbox-unmanic`
 - **[uptime-kuma](../sandbox/apps/uptime-kuma.md)**  - tag - `sandbox-uptime-kuma`
@@ -167,4 +177,5 @@ tags:
 - **[xbackbone](../sandbox/apps/xbackbone.md)**  - tag - `sandbox-xbackbone`
 - **[xteve](../sandbox/apps/xteve.md)**  - tag - `sandbox-xteve`
 - **[yacht](../sandbox/apps/yacht.md)**  - tag - `sandbox-yacht`
+- **[yourspotify](../sandbox/apps/yourspotify.md)**  - tag - `sandbox-yourspotify`
 - **[znc](../sandbox/apps/znc.md)**  - tag - `sandbox-znc`

@@ -12,9 +12,9 @@
 !!!info
     By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
-| Details     |             |             |             |
+| Details     |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.lunasea.app/){: .header-icons } | [:octicons-link-16: Docs](https://docs.lunasea.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/JagandeepBrar/lunasea){: .header-icons } | [:material-docker: Docker](ghcr.io/jagandeepbrar/lunasea:stable){: .header-icons }|
+| [:material-home: Project home](https://www.lunasea.app/){: .header-icons } | [:octicons-link-16: Docs](https://docs.lunasea.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/JagandeepBrar/lunasea){: .header-icons }|
 
 Recommended install types: Saltbox, Core
 

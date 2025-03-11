@@ -2,16 +2,16 @@
 
 ## What is it?
 
-[tqm](https://github.com/l3uddz/tqm) is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
+[tqm](https://github.com/autobrr/tqm) is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
 
 - The tqm binary is downloaded and a service and timer file created when the config is identified.
 
 !!! Note
-      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/l3uddz/tqm#example-configuration) is an example config you can grab and fill in with your own details.
+      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/autobrr/tqm#example-configuration) is an example config you can grab and fill in with your own details.
 
 | Details     |
 |-------------|
-| [:octicons-mark-github-16: Github](https://github.com/l3uddz/tqm){: .header-icons }|
+| [:octicons-mark-github-16: Github](https://github.com/autobrr/tqm){: .header-icons }|
 
 Recommended install types: Feederbox, Saltbox, Core
 
@@ -183,4 +183,4 @@ tail -f /opt/tqm/activity.log
 
 ```
 
-- [:octicons-link-16: Documentation: TQM Docs](https://github.com/l3uddz/tqm#tqm){: .header-icons }
+- [:octicons-link-16: Documentation: TQM Docs](https://github.com/autobrr/tqm){: .header-icons }

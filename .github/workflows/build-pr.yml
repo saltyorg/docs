@@ -116,6 +116,7 @@ jobs:
           PREVIEW_URL=${{ needs.build.outputs.url }}
           BRANCH_PREVIEW_URL=${{ needs.build.outputs.branch_url }}
           BUILD_STATUS=${{ needs.build.result }}
+          BUILD_LOGS_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           if [ "$BUILD_STATUS" == "success" ]; then
             STATUS_EMOJI="✅"
@@ -125,7 +126,7 @@ jobs:
             STATUS_MESSAGE="Build failed!"
           fi
 
-          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>${{ needs.build.outputs.pr_sha }}</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr></table>"
+          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>${{ needs.build.outputs.pr_sha }}</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr><tr><td><strong>Build logs:</strong></td><td><a href='$BUILD_LOGS_URL'>View build logs</a></td></tr></table>"
 
           ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
           COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ needs.build.outputs.pr_number }}/comments"

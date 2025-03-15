@@ -89,6 +89,7 @@ tags:
 - **[lunasea](../sandbox/apps/lunasea.md)**  - tag - `sandbox-lunasea`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
+- **[maybe-finance](../sandbox/apps/maybe-finance.md)**  - tag - `sandbox-maybe-finance`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
 - **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`

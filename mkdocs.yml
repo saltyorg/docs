@@ -239,6 +239,7 @@ nav:
         - Finance:
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
+          - Maybe Finance: sandbox/apps/maybe-finance.md
         - Landing Pages:
           - Dashy: sandbox/apps/dashy.md
           - VNStat: sandbox/apps/vnstat.md

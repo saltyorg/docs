@@ -166,7 +166,6 @@ nav:
       - Apps:
         - Multiple Instances (legacy): sandbox/apps/arrx.md
         - General:
-          - Actual Budget: sandbox/apps/actualbudget.md
           - AdGuard Home: sandbox/apps/adguardhome.md
           - Cherry: sandbox/apps/cherry.md
           - Chrome: sandbox/apps/chrome.md
@@ -237,6 +236,7 @@ nav:
           - PrivateBin: sandbox/apps/privatebin.md
           - XBackBone: sandbox/apps/xbackbone.md
         - Finance:
+          - Actual Budget: sandbox/apps/actualbudget.md
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
           - Maybe Finance: sandbox/apps/maybe-finance.md

@@ -303,7 +303,10 @@ organizr_web_domain: "example.com"  # set all organizr instances to NAME.example
 organizr02_web_domain: "bing.com"  # override this one organizr instance to NAME.bing.com
 ```
 
-`organizr_web_subdomain` would then apply to the new base domain.
+`organizr_web_subdomain` would apply the new base domain to any instances of organizr.
+
+`organizr02_web_subdomain` would apply the new base domain to just that one instance.
+
 
 ### Tag Customization
 

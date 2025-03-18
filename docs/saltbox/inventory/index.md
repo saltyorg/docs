@@ -298,7 +298,9 @@ sonarr_traefik_middleware_custom: "appAuth"
 
 ```yaml
 #### Make Organizr available at a different base domain ####
-organizr_web_domain: "example.com"
+organizr_web_domain: "example.com"  # set all organizr instances to NAME.example.com
+
+organizr02_web_domain: "bing.com"  # override this one organizr instance to NAME.bing.com
 ```
 
 `organizr_web_subdomain` would then apply to the new base domain.

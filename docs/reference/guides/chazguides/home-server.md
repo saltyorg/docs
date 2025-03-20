@@ -185,7 +185,7 @@ user:
   name: chaz
   pass: REDACTED
   domain: domain.tld
-  email: chaz@chazlarson.com
+  email: chaz@whatever.com
 plex:
   user: REDACTED
   pass: REDACTED

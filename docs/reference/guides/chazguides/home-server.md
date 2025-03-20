@@ -13,17 +13,17 @@ This article discusses details to consider when running Saltbox on a home server
 
 Prerequisites:
 
-- [Domain](#domain)
+- You have a [Domain](#domain)
 
-- [Static IP OR Dynamic DNS configured](#dynamic-dns)
+- You have a [Static IP OR Dynamic DNS configured](#dynamic-dns)
 
-- ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
+- Your ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
 
-- [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
+- Your [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
    Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
    Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing. [You can configure internal DNS in various ways to get around this, but this article is assuming the simplest path.]
 
-- [Router supports port forwarding on ports 80 and 443](#router).
+- Your [Router supports port forwarding specifically on ports 80 and 443](#router).  Some ISP hardware apparently supports port forwarding *generally*, but not for these specific ports.
 
 
 NOTE: None of this initial setup is Saltbox-specific. If you want to run a server on a machine behind your router and connect to it using a domain name, whether Saltbox sets it up or something else, you’ll need to do these very same things.  THere is no setting in saltbox that will allow you to overcome your ISP not allowing servers on 80 and 443, or your router co-opting ports 80 and 443 for its own UI.
@@ -42,7 +42,7 @@ You can find your home external IP address using something like: [https://whatis
 
 ### Dynamic DNS
 
-You will need to configure “dynamic DNS” to make sure that domain keeps pointing to your home IP, which is subject to change, most likely.
+You will need to configure “dynamic DNS” to make sure that domain keeps pointing to your home IP, which is subject to change, most likely.  If your home IP is static, you do not need to worry about this.
 
 When you set up a server in a data center, typically that server has a fixed unchanging IP address, so you set up DNS one time.  Most residential internet connections do not get a fixed address; your home IP will change periodically.  "Dynamic DNS" updates your DNS setup whenever your IP address changes, ensuring that "myhomeaddress.com" always points at the correct IP address.
 
@@ -137,7 +137,7 @@ Verify this part is working by installing apache on your server:
 sudo apt install apache2
 ```
 
-Then open a web browser and go to your domain [http://yourdomain.tld] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.
+Then open a web browser and go to your domain [http://yourdomain.tld] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.  Requests coming from inside the house are not only bad in horror movies, they are bad for verifying port forwards as well.
 
 If you see the default apache page, you’re set to go.
 
@@ -155,7 +155,7 @@ sudo apt remove apache2
 With that done, we can move on to the install.
 
 !!! warning
-    IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
+    IF THAT DOESN’T WORK, DON’T CONTINUE UNTIL IT DOES.  Saltbox **will not work** if that simple test didn't work.  Verify your port forwarding setup and try again.  Verify that your ISP allows this.
 
 ## Narrated example install
 
@@ -171,7 +171,7 @@ That’s all.
 
 Since I installed Ubuntu on my own hardware, the first user I created is a member of the sudoers group.  I’ll be running the install as **that user** from the start rather than starting as `root` like you would on a remote server.
 
-First, I set up the post forwards and the like as detailed above.
+First, I set up the port forwards and so on as detailed above.
 
 I ran the first dependency script on [this page](../../../saltbox/install/install.md).
 
@@ -182,8 +182,8 @@ In my `accounts.yml`, I’m entering an existing account on the ubuntu machine [
 ```yaml
 -
 user:
-  name: chaz
-  pass: REDACTED
+  name: chaz           # Existing account name
+  pass: REDACTED       # Existing account password
   domain: domain.tld
   email: chaz@whatever.com
 plex:

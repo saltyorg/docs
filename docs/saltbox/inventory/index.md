@@ -288,10 +288,16 @@ sonarr_traefik_middleware_custom: "appAuth"
     
     ```yaml
     #### Make Organizr available at `organizr.domain.tld`, `domain.tld` and `example.com` ####
-    organizr_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ organizr_web_domain }}`) || Host(`example.com`)"
-    
+    organizr_web_fqdn_override:
+      - "{{ traefik_host }}"
+      - "{{ organizr_web_domain }}"
+      - "example.com"
+
     #### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
-    overseerr_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'requests.' + overseerr_web_domain }}`)"
+    overseerr_web_fqdn_override:
+      - "{{ traefik_host }}"
+      - "requests.{{ overseerr_web_domain }}"
+  
     ```
 
 ### Domain Customization

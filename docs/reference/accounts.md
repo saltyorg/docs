@@ -88,7 +88,7 @@ Each tab shows a "section" in the file.
     ---
     user:
       name: seed
-      pass: password123
+      pass: password1234
       domain: testsaltbox.ml
       email: your@email.com
       ssh_key:
@@ -103,11 +103,11 @@ Each tab shows a "section" in the file.
 
     `pass`: Password for the user account and for misc apps.
 
-    This parameter is **required**.
+    This parameter is **required**. Minimum 12 characters.
     Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
     Also used to create first-time logins for NZBGet, qbittorrent, NZBHydra2, and potentially other apps.
     Don't leave it blank, even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
-    Don't leave it as `password123`.
+    Don't leave it as `password1234`.
     See the [password considerations](#password-considerations) below.
     [Relevant XKCD](https://xkcd.com/936/)
 
@@ -383,12 +383,14 @@ Each tab shows a "section" in the file.
 
 ## Password considerations
 
+Your chosen password must have a minimum of 12 characters.
+
 These are a YAML files, and values you enter here are subject to YAML file format rules.  If you use special characters in your password, wrap the password in quotes [or escape the characters correctly, if you are familiar with that concept].  It would be easiest to avoid using quote characters themselves within your password.
 
 For example:
 
 - `pass: MyP4s5w0rd1s4w350m3`
-- `pass: "!@#$%^&*"`
+- `pass: "!@#$%^&*"(){`
 - `pass: multiple words work fine unquoted`
 - `pass: "or quote them to be safe"`
 

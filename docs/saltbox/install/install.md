@@ -106,7 +106,7 @@ To edit any of the following configuration files use the command written in the 
       token: # (5)!
     user:
       name: seed # (6)!
-      pass: password123 # (7)!
+      pass: password1234 # (7)!
       domain: testsaltbox.ml # (8)!
       email: your@email.com # (9)!
       ssh_key: # (10)!

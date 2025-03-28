@@ -132,7 +132,7 @@ Depending on if the role in question supports instances or not there will be two
     
     For example, to route `jackett` through Gluetun, the entry would be `jackett_docker_network_mode: "container:gluetun"`.
 
-Once you have made these changes to the inventory, run the relevant tags to apply the changes [i.e. `sb install qbittorrent` or `sb install jackett sonarr radarr`].
+Once you have made these changes to the inventory, run the relevant tags to apply the changes [i.e. `sb install qbittorrent` or `sb install jackett,sonarr,radarr`].
 
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
@@ -151,6 +151,8 @@ Below are some example inventory entries for some common VPN providers. These ar
     gluetun_wireguard_public_key: "server_wireguard_public_key"
     gluetun_wireguard_endpoint_ip: "wireguard_server_ip"
     gluetun_wireguard_endpoint_port: "wireguard_server_port"
+    # Not always required (only if server is configured to use a pre-shared key)
+    gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
     ```
 
 === "Proton VPN Free"

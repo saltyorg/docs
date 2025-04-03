@@ -91,6 +91,7 @@ tags:
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
 - **[maybe-finance](../sandbox/apps/maybe-finance.md)**  - tag - `sandbox-maybe-finance`
 - **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
+- **[mealie](../sandbox/apps/mealie.md)**  - tag - `sandbox-mealie`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
 - **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`
 - **[meilisearch](../sandbox/apps/meilisearch.md)**  - tag - `sandbox-meilisearch`

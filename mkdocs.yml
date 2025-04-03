@@ -188,6 +188,7 @@ nav:
           - Yourspotify: sandbox/apps/yourspotify.md
           - ZNC: sandbox/apps/znc.md
         - Content Management:
+          - Mealie: sandbox/apps/mealie.md
           - Tandoor Recipes: sandbox/apps/tandoor.md
           - Wordpress: sandbox/apps/wordpress.md
         - Development:

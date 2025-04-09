@@ -127,7 +127,13 @@ Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
     
     These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
     
-    We'd recommend you use some random text, like perhaps a randomly-generated password from BitWarden or some other password generator.  This should avoid collisions like someone else choosing the username "saltboxbackup".
+    We'd recommend you use some random text for **both** the username and password, like perhaps a randomly-generated password from BitWarden or some other password generator.  This should avoid collisions like someone else choosing the username "saltboxbackup".  This sort of thing:
+
+    ``` { .yaml }
+      restore_service:
+        pass: T5CIqmRRx5Da6U0s
+        user: p1i4IMkEyfiJ9iyG
+    ```
 
 By default, Saltbox will keep all previous backups that have been pushed to an rclone target.
 

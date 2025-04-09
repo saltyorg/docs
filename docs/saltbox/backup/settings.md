@@ -9,26 +9,6 @@ tags:
 
 # Configuration
 
-<script>
-   document$.subscribe(function() {
-    var length           = 16;
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-      username += characters.charAt(Math.floor(Math.random() * charactersLength));
-      password += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   var paragraph1 = document.getElementById("username");
-   var paragraph2 = document.getElementById("password");
-
-   paragraph1.textContent = username;
-   paragraph2.textContent = password;
-
-});
-
-</script>
-
 The configuration file for backup/restore is called `backup_config.yml` and is located in `/srv/git/saltbox`
 
 ``` { .yaml .annotate }
@@ -123,51 +103,32 @@ Use of the restore service is optional.  Using it means that [client-side] encry
 
 Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
-These values:
+!!! important
 
-``` { .yaml .annotate }
-  restore_service:
-    pass: # (1)!
-    user: # (2)!
-```
-
-1. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
-
-    Only used on the client side in scripts.
-
-2. Username used for the OPTIONAL restore service.
-
-    Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
-
-    Usernames are hashed before requests are sent to the restore service.
-
-SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
-
-These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
-
-We'd recommend you use some random text, like perhaps a randomly-generated password from BitWarden or some other password generator.  This should avoid collisions like someone else choosing the username "saltboxbackup".
-
-Here are some randomly-generated value you can use:
-
-username: <p id="username">16 RANDOM CHARACTERS SHOULD APPEAR HERE</p>
-password: <p id="username">16 RANDOM CHARACTERS SHOULD APPEAR HERE</p>
-
-<details>
-<summary>Those say '16 RANDOM CHARACTERS SHOULD APPEAR HERE'</summary>
-<br />
-Apparently the Javascript didn't work or you have Javascript disabled.
-
-Try reloading the page.  If that doesn't work, generate it manually:
-
-[Type this at a command prompt on your server]
-
-```shell
-username=$(head /dev/urandom | tr -dc a-z | head -c16 ;) && echo $username
-password=$(head /dev/urandom | tr -dc a-z | head -c16 ;) && echo $password
-```
-
-</details>
+    These values:
     
+    ``` { .yaml .annotate }
+      restore_service:
+        pass: # (1)!
+        user: # (2)!
+    ```
+    
+    1. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
+    
+        Only used on the client side in scripts.
+    
+    2. Username used for the OPTIONAL restore service.
+    
+        Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
+    
+        Usernames are hashed before requests are sent to the restore service.
+    
+    SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
+    
+    These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
+    
+    We'd recommend you use some random text, like perhaps a randomly-generated password from BitWarden or some other password generator.  This should avoid collisions like someone else choosing the username "saltboxbackup".
+
 By default, Saltbox will keep all previous backups that have been pushed to an rclone target.
 
 If you wish to change that you can use these variables in your inventory:

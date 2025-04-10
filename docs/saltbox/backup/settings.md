@@ -99,9 +99,13 @@ backup:
 
     Securing the rsync destination is outside the scoope of this document.
 
-Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
-
 Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
+
+## Security concerns
+
+Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  
+
+These copies are encrypted on your machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable].  The saltbox servers do not know your password and cannot decrypt these files.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 !!! important
 
@@ -134,6 +138,9 @@ Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
         pass: T5CIqmRRx5Da6U0s
         user: p1i4IMkEyfiJ9iyG
     ```
+    Of course, don't use *those* values.
+
+## Retained backups ['rclone' specific]
 
 By default, Saltbox will keep all previous backups that have been pushed to an rclone target.
 

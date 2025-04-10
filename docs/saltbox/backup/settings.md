@@ -41,27 +41,29 @@ backup:
 
     Should you desire more granular control over the schedule you can edit the crontab for the Saltbox user once setup.
 
-2. Path used for the local backups. `{{ user.name }}` will be replaced with the user name you enter in the settings.
+    Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 
-3. Toggle for keeping a local copy of the backup.
+3. Path used for the local backups. `{{ user.name }}` will be replaced with the user name you enter in the settings.
+
+4. Toggle for keeping a local copy of the backup.
 
     Options are: `true` or `false`
 
-4. Toggle for BTRFS snaphots.
+5. Toggle for BTRFS snaphots.
 
     Options are: `true` or `false`
 
     Requires BTRFS on `/` or `/opt`
 
-5. Path used for the Rclone remote. Backups outside of the most recent one will be located in the `archived` folder.
+6. Path used for the Rclone remote. Backups outside of the most recent one will be located in the `archived` folder.
 
     Make sure that this path is unique if you run multiple instances of Saltbox.
 
-6. Toggle for using Rclone remote backup storage.
+7. Toggle for using Rclone remote backup storage.
 
     Options are: `true` or `false`
 
-7. Defines which Rclone flags template is used for the backup.
+8. Defines which Rclone flags template is used for the backup.
 
     Options are: `google`, `dropbox`, `sftp` or `custom`
 
@@ -73,23 +75,25 @@ backup:
 
     Feel free to submit templates in a PR to Saltbox.
 
-8. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service.
+9. Password used to encrypt/decrypt the configuration files in the OPTIONAL restore service.
 
     Only used on the client side in scripts.
 
-9. Username used for the OPTIONAL restore service.
+10. Username used for the OPTIONAL restore service.
 
     Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
 
     Usernames are hashed before requests are sent to the restore service.
 
-10. Path used for the Rsync backups.
+11. Path used for the Rsync backups.
 
-11. Toggle for using Rsync backups.
+12. Toggle for using Rsync backups.
 
     Options are: `true` or `false`
 
-12. Port used by rsync on the target server.
+13. Port used by rsync on the target server.
+
+## Security concerns
 
 !!! important
 
@@ -99,13 +103,9 @@ backup:
 
     Securing the rsync destination is outside the scoope of this document.
 
-Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
-
-## Security concerns
-
 Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  
 
-These copies are encrypted on your machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable].  The saltbox servers do not know your password and cannot decrypt these files.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
+These copies are encrypted on your local saltbox machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable].  The password is not sent to saltbox servers; they do not know your password and cannot decrypt these files.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 !!! important
 

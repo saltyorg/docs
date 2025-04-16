@@ -63,3 +63,14 @@
   --md-code-bg-color: hsla(var(--md-hue), 15%, 15%, 1);
   --md-typeset-mark-color: hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
 }
+
+.sb-buttons {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
+}
+
+.sb-buttons .md-button {
+  text-align: center;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}

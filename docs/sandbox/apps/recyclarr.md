@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - recyclarr
+  - sonarr
+  - radarr
+---
+
 # Recyclarr
 
 ## What is it?

@@ -122,6 +122,7 @@ tags:
 - **[plextraktsync](../sandbox/apps/plextraktsync.md)**  - tag - `sandbox-plextraktsync`
 - **[plex_utills](../sandbox/apps/plex-utills.md)**  - tag - `sandbox-plex-utills`
 - **[privatebin](../sandbox/apps/privatebin.md)**  - tag - `sandbox-privatebin`
+- **[profilarr](../sandbox/apps/profilarr.md)**  - tag - `sandbox-profilarr`
 - **[Puddletag](../sandbox/apps/puddletag.md)**  - tag - `sandbox-puddletag`
 - **[pyload](../sandbox/apps/pyload.md)**  - tag - `pyload`
 - **[python-plexlibrary](../sandbox/apps/python-plexlibrary.md)**  - tag - `python-plexlibrary`

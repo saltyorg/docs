@@ -65,7 +65,6 @@ tags:
 - **[handbrake](../sandbox/apps/handbrake.md)**  - tag - `sandbox-handbrake`
 - **[healthchecks](../sandbox/apps/healthchecks.md)**  - tag - `sandbox-healthchecks`
 - **[heimdall](../sandbox/apps/heimdall.md)**  - tag - `sandbox-heimdall`
-- **[hoarder](../sandbox/apps/hoarder.md)**  - tag - `sandbox-hoarder`
 - **[Homarr](../sandbox/apps/homarr.md)**  - tag - `sandbox-homarr`
 - **[homeassistant](../sandbox/apps/homeassistant.md)** - tag - `sandbox-homeassistant`
 - **[homebox](../sandbox/apps/homebox.md)**  - tag - `sandbox-homebox`
@@ -76,6 +75,7 @@ tags:
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
 - **[jellyseerr](../sandbox/apps/jellyseerr.md)**  - tag - `sandbox-jellyseerr`
 - **[joplin](../sandbox/apps/joplin.md)**  - tag - `sandbox-joplin`
+- **[karakeep](../sandbox/apps/karakeep.md)**  - tag - `sandbox-karakeep`
 - **[kavita](../sandbox/apps/kavita.md)**  - tag - `sandbox-kavita`
 - **[kcptun_client](../sandbox/apps/kcptun-client.md)**  - tag - `sandbox-kcptun-client`
 - **[kcptun_server](../sandbox/apps/kcptun-server.md)**  - tag - `sandbox-kcptun-server`

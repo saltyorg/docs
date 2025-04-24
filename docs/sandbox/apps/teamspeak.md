@@ -1,27 +1,40 @@
-# teamspeak
+---
+hide:
+  - tags
+tags:
+  - teamspeak
+  - voicechat
+---
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
+Software for quality voice communication via the Internet.
 
-## What is it?
+<div class="grid sb-buttons" markdown data-search-exclude>
 
-[teamspeak](https://teamspeak.url) is a...
+[:material-home: Homepage&nbsp;&nbsp;](https://teamspeak.com){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://teamspeak.url){: .header-icons } | [:octicons-link-16: Docs](https://teamspeak.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/teamspeak/teamspeak){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/teamspeak/teamspeak){: .header-icons }|
+[:material-bookshelf: Manual&nbsp;&nbsp;](https://github.com/docker-library/docs/blob/master/teamspeak/README.md){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker: Releases&nbsp;&nbsp;](https://hub.docker.com/_/teamspeak/tags){ .md-button .md-button--stretch }
 
-``` shell
+[:fontawesome-brands-teamspeak: Community&nbsp;&nbsp;](https://community.teamspeak.com){ .md-button .md-button--stretch }
 
+</div>
+
+---
+
+## Configuration
+
+Settings are available as Docker environment variables[<sup>:octicons-link-external-16:</sup>][envs] which you may customize using the Saltbox Inventory[<sup>:octicons-link-24:</sup>][inventory].
+
+## Deployment
+
+```shell
 sb install sandbox-teamspeak
-
 ```
 
-### 2. URL
+## Usage
 
-- To access teamspeak, visit `https://teamspeak._yourdomain.com_`
+Connect to the server using a TeamSpeak client at `teamspeak._yourdomain.com_` using the default port 9987.
 
-### 3. Usage
-
-- Instructions for teamspeak
+[envs]: https://github.com/docker-library/docs/blob/master/teamspeak/README.md#environment-variables "Access project Docker environment variables reference"
+[inventory]: ../../saltbox/inventory/index.md "Access Inventory user guide"

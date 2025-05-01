@@ -190,9 +190,11 @@ sonarr4k_docker_envs_custom:
 radarr4k_docker_envs_custom:
   RADARR__APP__INSTANCENAME: "Radarr4k" # Must start or end with the word Radarr
 
-#### Bandwidth limiting ####
+#### Bandwidth and rate limiting  ####
+#### along with multiple env vars ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"
+  RATE_LIMIT: "60"
 
 #### Specify Overseerr DNS server - can fix name resolution issue with TMDb ####
 overseerr_docker_dns_servers:

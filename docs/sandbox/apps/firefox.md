@@ -1,16 +1,22 @@
-# Firefox
+---
+hide:
+  - tags
+tags:
+  - firefox
+  - browser
+---
 
-[Mozilla Firefox](https://www.mozilla.org/firefox/) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary, Mozilla Corporation.
+Implements a Docker container for Firefox. The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
 
-The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+<div class="grid sb-buttons" markdown data-search-exclude>
 
-<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
+[:material-home: Homepage&nbsp;&nbsp;](https://jlesage.github.io/docker-apps){ .md-button .md-button--stretch }
 
-[:material-bookshelf: Project Docs](https://github.com/jlesage/docker-firefox#readme){ .md-button .md-button--stretch }
+[:material-bookshelf: Manual&nbsp;&nbsp;](https://github.com/jlesage/docker-firefox/blob/master/README.md#usage){ .md-button .md-button--stretch }
 
-[:material-git: GitHub Repo](https://github.com/jlesage/docker-firefox){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker: Releases&nbsp;&nbsp;](https://hub.docker.com/r/jlesage/firefox/tags){ .md-button .md-button--stretch }
 
-[:material-docker: Docker Hub](https://hub.docker.com/r/jlesage/firefox){ .md-button .md-button--stretch }
+[:fontawesome-brands-github: Community&nbsp;&nbsp;](https://github.com/jlesage/docker-firefox/discussions){ .md-button .md-button--stretch }
 
 </div>
 
@@ -18,11 +24,11 @@ The GUI of the application is accessed through a modern web browser (no installa
 
 ## Configuration
 
-If needed, set environment variables[<sup>:octicons-link-external-16:</sup>][envs] by editing `/opt/firefox/.env` as appropriate, before deployment.
+Settings are available as environment variables[<sup>:octicons-link-external-16:</sup>][envs] in `/opt/firefox/.env`.
 
 ???+ question "Security"
 
-    By default, web access is restricted by Authelia, and VNC access is secured through SSH authentication; hence, no VNC password is configured. If you wish to add this extra layer of security, the process is straightforward:
+    By default, web access is restricted by Authelia, and VNC access is secured through SSH authentication; hence, no VNC password is configured. To add this extra layer of security, the process is straightforward:
 
     1. Run the following command:
        ```shell
@@ -46,6 +52,8 @@ sb install sandbox-firefox
 
 ## Usage
 
+### <span class="icon-indent-right"></span> Web
+
 Visit `https://firefox._yourdomain.com_`.
 
 ### <span class="icon-indent-right"></span> VNC
@@ -63,4 +71,4 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
 
 While the tunnel is active, you can use a VNC client to access the GUI via the address `localhost:5900`.
 
-  [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Head to the environment variables breakdown section of the project documentation"
+  [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Access project Docker environment variables breakdown"

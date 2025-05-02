@@ -1,16 +1,26 @@
-# PlexTraktSync
+---
+hide:
+  - tags
+tags:
+  - plextraktsync
+  - trakt.tv
+---
 
-[PlexTraktSync](https://github.com/Taxel/PlexTraktSync) adds a two-way-sync between Trakt and Plex Media Server. It requires a Trakt account but no Plex Pass and no Trakt VIP membership, contrary to the Plex app provided by Trakt.
+Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
 
-<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
+<div class="grid sb-buttons" markdown data-search-exclude>
 
-[:material-bookshelf: Project Docs](https://github.com/Taxel/PlexTraktSync#setup){ .md-button .md-button--stretch }
+[:material-home: Homepage&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 
-[:material-github: GitHub Repo](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
+[:material-bookshelf: Manual&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
-[:material-cube: GitHub Packages](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+[:octicons-container-16: Releases&nbsp;&nbsp;](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github: Community&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
 
 </div>
+
+---
 
 ## Deployment
 
@@ -20,7 +30,7 @@ sb install sandbox-plextraktsync
 
 ## Configuration
 
-Set your general preferences in `/opt/plextraktsync/config.yml`.
+Sync preferences are available to customize in `/opt/plextraktsync/config.yml`.
 
 The following command will launch an interactive script prompting you for missing credentials (use this to set up Trakt.tv):
 
@@ -28,24 +38,28 @@ The following command will launch an interactive script prompting you for missin
 docker exec -it plextraktsync plextraktsync login
 ```
 
-By default, the target Plex server is set to your main Plex Saltbox instance, and the sync user is set to that server's owner account. If you wish to reset this, run:
-
-```shell
-docker exec -it plextraktsync plextraktsync plex-login
-```
+???+ info "Plex"
+    The target Plex server is initially set to your main Plex Saltbox instance using the owner account. To reset these credentials:
+    ```shell
+    docker exec -it plextraktsync plextraktsync plex-login
+    ```
 
 ## Usage
 
-Once configured, the daemon simply scrobbles the selected Plex user's streaming activity.
+### <span class="icon-indent-right"></span> Daemon
 
-The following will perform a one-time sync of the data you have specified in the configuration file.
+Once configured, the selected Plex user's streaming activity is automatically scrobbled.
+
+### <span class="icon-indent-right"></span> CLI
+
+To perform a one-time sync of the data you have specified in the configuration file:
 
 ```shell
-docker exec -it plextraktsync plextraktsync sync
+docker exec plextraktsync plextraktsync sync
 ```
 
-To get a list of commands, run:
+To get a list of available commands:
 
 ```shell
-docker exec -it plextraktsync plextraktsync --help
+docker exec plextraktsync plextraktsync --help
 ```

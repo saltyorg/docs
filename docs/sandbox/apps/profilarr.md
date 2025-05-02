@@ -10,7 +10,7 @@ tags:
 
 Configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
 
-<div class="grid sb-buttons" markdown>
+<div class="grid sb-buttons" markdown data-search-exclude>
 
 [:material-home: Homepage&nbsp;&nbsp;](https://dictionarry.dev/#home-content-profilarr){ .md-button .md-button--stretch }
 

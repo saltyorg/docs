@@ -323,7 +323,7 @@ nav:
           - Gotify: sandbox/apps/gotify.md
           - Moviematch: sandbox/apps/moviematch.md
           - RocketChat: sandbox/apps/rocketchat.md
-          - Teamspeak: sandbox/apps/teamspeak.md
+          - TeamSpeak: sandbox/apps/teamspeak.md
         - Utilities:
           - A-Train: sandbox/apps/a-train.md
           - Database Management:

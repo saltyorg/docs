@@ -4,6 +4,7 @@ hide:
 tags:
   - migrate
   - migration
+  - change domain
 ---
 
 # Migration

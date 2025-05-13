@@ -77,31 +77,31 @@ Once the downloads are complete, Sonarr & Radarr will move [or copy/link in the 
 
 The original seeding torrents will remain in the download directory [they never leave the local machine] until they are deleted by you or some form of automation.
 
-[AutoScan](https://github.com/cloudbox/autoscan/) will, in turn, tell Plex to scan for the newly downloaded show or movie, by only scanning the specific season or movie folder. This will
+[AutoScan](https://github.com/cloudbox/autoscan/) will, in turn, tell your media server to scan for the newly downloaded show or movie, by only scanning the specific season or movie folder. This will
 
-- Make the media appear in Plex sooner than what a full library scan would have been able to do, and
+- Make the media appear in the media server sooner than what a full library scan would have been able to do, and
 - Reduce the chances of Cloud Storage API bans for excessive activity.
 
 In the default config, this scan occurs **ten minutes**[^4] after Radarr/Sonarr sent the notification.
 
 [Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually[^5] move everything[^6] from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage, thereby reducing the storage used on the (local) server.
 
-During this migration, the media files will continue to be accessible to Media Servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
+During this migration, the media files will continue to be accessible to media servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
 
 ![](../../images/basics-flowchart.png)
 
 ***
 
-[^1]: Some of the applications above can be replaced with similar apps. </sup>
+[^1]: Some of the applications above can be replaced with similar apps. Plex/Emby/Jellyfin, for example.</sup>
 
-[^2]: If you want to use Torrents, it is recommended to be a member of a private tracker as opposed to using public ones. If you want to to use Usenet, you will need to purchase Usenet provider service (or multiple services) and also be a member of one or more Usenet indexers. </sup>
+[^2]: If you want to use torrents, it is recommended to be a member of a private tracker as opposed to using public ones. If you want to to use Usenet, you will need to purchase Usenet provider service (or multiple services) and also be a member of one or more Usenet indexers. </sup>
 
-[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however,  `/mnt/local` is the only _writeable_ part of the Mergerfs [for the purpose of  creating new files], so the newly-written files will be placed in `/mnt/local`. </sup>
+[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however,  `/mnt/local` is the only _writeable_ part of the Mergerfs [for the purpose of creating new files], so the newly-written files will be placed in `/mnt/local`. </sup>
 
-[^4]: This ten-minute delay can be changed in the Autoscan config file.  It's here for two reasons; it ensures that the file is completely copied into the media directory before Plex scans it, and it allows a season of TV to be collected and send to Plex as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to Plex ten minutes after the last episode completed downloading.</sup>
+[^4]: This ten-minute delay can be changed in the Autoscan config file.  It's here for two reasons; it ensures that the file is completely copied into the media directory before the media server scans it, and it allows a season of TV to be collected and sent to the media server as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to the media server ten minutes after the last episode completed downloading.</sup>
 
 [^5]: By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive.  This threshold can be adjusted as needed in the Cloudplow config. </sup>
 
-[^6]: There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads [750 GB/day/service account]. </sup>
+[^6]: DUE TO CHANGES IN GOOGLE DRIVE THIS DOESN'T REALLY APPLY ANY MORE.  LIMITS ARE MUCH TIGHTER AND THE MULTIPLE SHARED DRIVES SETUP IS NO LONGER USEFUL OR RECOMMENDED. ~~There is presently a 750GB/day upload limitation on Google accounts.  The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads [750 GB/day/service account].~~ </sup>
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

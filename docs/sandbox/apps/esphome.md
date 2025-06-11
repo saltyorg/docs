@@ -8,7 +8,9 @@ ESPHome is typically installed as a Homeassistant add-on, but when using Homeass
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://esphome.io/){: .header-icons } | [:octicons-link-16: Docs](https://esphome.io/components/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/esphome/esphome){: .header-icons } | [:material-docker: Docker](https://ghcr.io/esphome/esphome){: .header-icons }|
+| [:material-home: Project home](https://esphome.io/){: .header-icons } | [:octicons-link-16: Docs](https://esphome.io/components/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/imagegenius/docker-esphome/){: .header-icons } | [:material-docker: Docker](https://ghcr.io/esphome/esphome){: .header-icons }|
+
+Using a docker image from ImageGenius since adds user permission mapping (as of 6/10/2025)
 
 ### 1. Installation
 

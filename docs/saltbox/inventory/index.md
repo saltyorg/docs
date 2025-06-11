@@ -319,13 +319,13 @@ organizr02_web_domain: "bing.com"  # override this one organizr instance to NAME
 ### Tag Customization
 
 ```yaml
-#### Customize the saltbox tag (sb install saltbox)
+#### Customize the saltbox tag (sb install saltbox) - No sandbox roles
 saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
 
-#### Customize the mediabox tag (sb install mediabox)
+#### Customize the mediabox tag (sb install mediabox) - No sandbox roles
 mediabox_roles: ["media_server", "autoscan", "iperf3", "glances", "btop"]
 
-#### Customize the feeerbox tag (sb install feederbox)
+#### Customize the feeerbox tag (sb install feederbox) - No sandbox roles
 feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "glances", "btop"]
 
 #### Customize the sandbox-roles tag (sb install sandbox-sandbox-roles)

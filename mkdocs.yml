@@ -341,6 +341,7 @@ nav:
           - Influxdb2: sandbox/apps/influxdb2.md
           - Invoice Ninja: sandbox/apps/invoiceninja.md
           - Home Automation:
+            - ESPHome: sandbox/apps/esphome.md
             - Home Assistant: sandbox/apps/homeassistant.md
             - MQTT: sandbox/apps/mqtt.md
             - Node-Red: sandbox/apps/node-red.md

@@ -21,7 +21,7 @@ sb install sandbox-esphome
 
 ### 2. URL
 
-- To access Homeassistant, visit `https://esphome._yourdomain.com_`
+- To access ESPHome, visit `https://esphome._yourdomain.com_`
 
 ### 3. Usage
 

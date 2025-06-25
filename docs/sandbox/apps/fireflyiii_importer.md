@@ -24,7 +24,7 @@ sb install sandbox-fireflyiii_importer
 
 ## 2. URL
 
-- To access the Firefly III Data Importer, visit `https://fireflyiii_importer._yourdomain.com_`
+- To access the Firefly III Data Importer, visit `https://fireflyiii-importer._yourdomain.com_`
 
 ## 3. Setup
 

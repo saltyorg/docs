@@ -12,6 +12,7 @@ Saltbox provides support for Nvidia GPUs, allowing you to leverage hardware acce
 ## Overview
 
 This process has a couple steps:
+
 1. get the Nvidia driver installed
 2. enabled Nvidia support in Saltbox
 3. recreate containers to enable that Nvidia support once the driver is installed

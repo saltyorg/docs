@@ -11,11 +11,13 @@ Saltbox provides support for Nvidia GPUs, allowing you to leverage hardware acce
 
 ## Overview
 
-This process has a couple steps:
+This process has, broadly, three steps:
 
 1. get the Nvidia driver installed
-2. enabled Nvidia support in Saltbox
+2. enable Nvidia support in Saltbox
 3. recreate containers to enable that Nvidia support once the driver is installed
+
+These three steps may require separate actions or they may all happen in one action, depending on the specifics of your setup.
 
 ## Configuration Variables
 
@@ -75,7 +77,7 @@ This tag will:
 2. Upgrade or downgrade the driver if a different version is already installed.
 3. Install and configure the Nvidia Docker toolkit.
 
-**If you run this tag to install the driver**, you also need to run a tag to reinstall any containers you want to use the nvidia card with, like `saltbox`, or `plex`, or the like.  Merely installing the driver does not configure Plex (for example) to use it.
+**If you run this tag to install the driver**, you also need to run a tag to reinstall any containers in which you want to use the Nvidia card, like `saltbox`, or `plex`, or the like.  Merely installing the driver does not configure Plex (for example) to use the card.
 
 ## Important Notes
 

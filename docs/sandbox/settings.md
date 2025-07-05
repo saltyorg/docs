@@ -18,6 +18,8 @@ alternatrrx:
   roles: ["1080webdl", "1080remux"]
 a_train:
   remotes: [""]
+cloudflared:
+  token:
 delugevpn:
   vpn_endpoint: netherlands.ovpn
   vpn_pass: your_vpn_password

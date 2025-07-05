@@ -28,6 +28,7 @@ tags:
 - **[changedetection](../sandbox/apps/changedetection.md)**  - tag - `sandbox-changedetection`
 - **[cherry](../sandbox/apps/cherry.md)**  - tag - `sandbox-cherry`
 - **[chrome](../sandbox/apps/chrome.md)**  - tag - `sandbox-chrome`
+- **[cloudflared](../sandbox/apps/cloudflared.md)**  - tag - `sandbox-cloudflared`
 - **[code-server](../sandbox/apps/code-server.md)**  - tag - `sandbox-code-server`
 - **[codex](../sandbox/apps/codex.md)**  - tag - `sandbox-codex`
 - **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`

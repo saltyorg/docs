@@ -22,7 +22,7 @@ sb install sandbox-cloudflared
 
 Cloudflared requires a Cloudflare account, The only configuration that is required for the Cloudflared role to create the tunnel is to provide it with a token in the settings file, Follow steps below to get this token
 
-Sgn into your Cloudflare account, Select Zero Trust
+Sign into your Cloudflare account, Select Zero Trust
 
 Select Network > Tunnels > Create a tunnel
 

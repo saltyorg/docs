@@ -40,6 +40,9 @@ container_name_themepark_enabled: true
 # different theme for an app:
 container_name_themepark_theme: hotline
 container_name_themepark_enabled: true
+
+# addons for compatible apps
+container_name_themepark_addons: ["addon1", "addon2"]
 ```
 
 for example, in `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
@@ -56,6 +59,9 @@ nzbget_themepark_enabled: true
 # different theme for an app:
 sonarr_themepark_theme: "hotline"
 sonarr_themepark_enabled: true
+
+# sonarr 4k logo for `sonarr4k` instance
+sonarr4k_themepark_addons: ["sonarr-4k-logo"]
 
 # enable Traefik plugin
 global_themepark_plugin_enabled: true

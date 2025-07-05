@@ -20,9 +20,9 @@ sb install sandbox-cloudflared
 
 ### 2. Setup
 
-Cloudflared requires a Cloudflated account, The only configuration that is required for Cloudflared role to create the tunnel is to provide it with a token in the settings file, Follow steps below to get this token
+Cloudflared requires a Cloudflare account, The only configuration that is required for the Cloudflared role to create the tunnel is to provide it with a token in the settings file, Follow steps below to get this token
 
-Sgn into your cloudflare account, Select Zero Trust
+Sgn into your Cloudflare account, Select Zero Trust
 
 Select Network > Tunnels > Create a tunnel
 
@@ -36,4 +36,4 @@ After you have run the sandbox installation command you can check the status of 
 
 From here you can create public hostnames to pass external requests to the internal containers via the tunnel
 
-- [:octicons-link-16: Documentation: MQTT Docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide){: .header-icons }
+- [:octicons-link-16: Docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide){: .header-icons }

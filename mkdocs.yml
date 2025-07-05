@@ -350,6 +350,7 @@ nav:
             - Logarr: sandbox/apps/logarr.md
             - Monitorr: sandbox/apps/monitorr.md
           - Networking:
+            - Cloudflared: sandbox/apps/cloudflared.md
             - Kcptun-client: sandbox/apps/kcptun-client.md
             - Kcptun-server: sandbox/apps/kcptun-server.md
             - Unifi Network Application: sandbox/apps/unifi-network-application.md

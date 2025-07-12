@@ -52,11 +52,11 @@ sb install sandbox-firefox
 
 ## Usage
 
-### <span class="icon-indent-right"></span> Web
+### :material-web: Web
 
 Visit `https://firefox._yourdomain.com_`.
 
-### <span class="icon-indent-right"></span> VNC
+### :material-remote-desktop: VNC
 
 The role supports VNC access over an SSH tunnel (local port forwarding) to Saltbox.
 

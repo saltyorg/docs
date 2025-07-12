@@ -54,11 +54,26 @@ The variables that can be used for customization within the Inventory are listed
 
 === "GitHub File View"
 
-    Saltbox: &nbsp; &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
-
-    Sandbox: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
-
-    Global: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml)
+    <table>
+      <tr>
+        <td>Saltbox</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Sandbox</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Global</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml)
+        </td>
+      </tr>
+    </table>
 
 === "File Path on Saltbox Host"
 
@@ -196,11 +211,9 @@ sonarr4k_docker_envs_custom:
 radarr4k_docker_envs_custom:
   RADARR__APP__INSTANCENAME: "Radarr4k" # Must start or end with the word Radarr
 
-#### Bandwidth and rate limiting  ####
-#### along with multiple env vars ####
+#### Bandwidth limiting ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"
-  RATE_LIMIT: "60"
 
 #### Specify Overseerr DNS server - can fix name resolution issue with TMDb ####
 overseerr_docker_dns_servers:
@@ -325,14 +338,14 @@ organizr02_web_domain: "bing.com"  # override this one organizr instance to NAME
 ### Tag Customization
 
 ```yaml
-#### Customize the saltbox tag (sb install saltbox) - No sandbox roles
-saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
+#### Customize the saltbox tag (sb install saltbox)
+saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
 
-#### Customize the mediabox tag (sb install mediabox) - No sandbox roles
-mediabox_roles: ["media_server", "autoscan", "iperf3", "glances", "btop"]
+#### Customize the mediabox tag (sb install mediabox)
+mediabox_roles: ["media_server", "autoscan", "iperf3", "nethogs", "glances", "btop"]
 
-#### Customize the feeerbox tag (sb install feederbox) - No sandbox roles
-feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "glances", "btop"]
+#### Customize the feeerbox tag (sb install feederbox)
+feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "nethogs", "glances", "btop"]
 
 #### Customize the sandbox-roles tag (sb install sandbox-sandbox-roles)
 sandbox_roles: ["jellyseerr", "jellystat"]

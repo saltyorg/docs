@@ -4,7 +4,7 @@ Headless container running Google Chrome. Useful for testing, filling out forms,
 
 This was created for use with Hoarder which calls for a specific version (123)
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-buttons" style="grid-template-columns: repeat(2, 1fr);" markdown data-search-exclude>
 
 [:material-bookshelf: Github Repo](https://github.com/jlandure/alpine-chrome/blob/master/Dockerfile){ .md-button .md-button--stretch }
 

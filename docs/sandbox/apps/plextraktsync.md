@@ -8,7 +8,7 @@ tags:
 
 Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-buttons" style="grid-template-columns: repeat(2, 1fr);" markdown data-search-exclude>
 
 [:material-home: Homepage](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 

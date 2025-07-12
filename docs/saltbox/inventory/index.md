@@ -211,9 +211,11 @@ sonarr4k_docker_envs_custom:
 radarr4k_docker_envs_custom:
   RADARR__APP__INSTANCENAME: "Radarr4k" # Must start or end with the word Radarr
 
-#### Bandwidth limiting ####
+#### Bandwidth and rate limiting  ####
+#### along with multiple env vars ####
 transfer_docker_envs_custom:
   MAX_UPLOAD_SIZE: "104857546"
+  RATE_LIMIT: "60"
 
 #### Specify Overseerr DNS server - can fix name resolution issue with TMDb ####
 overseerr_docker_dns_servers:
@@ -338,14 +340,14 @@ organizr02_web_domain: "bing.com"  # override this one organizr instance to NAME
 ### Tag Customization
 
 ```yaml
-#### Customize the saltbox tag (sb install saltbox)
-saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
+#### Customize the saltbox tag (sb install saltbox) - No sandbox roles
+saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
 
-#### Customize the mediabox tag (sb install mediabox)
-mediabox_roles: ["media_server", "autoscan", "iperf3", "nethogs", "glances", "btop"]
+#### Customize the mediabox tag (sb install mediabox) - No sandbox roles
+mediabox_roles: ["media_server", "autoscan", "iperf3", "glances", "btop"]
 
-#### Customize the feeerbox tag (sb install feederbox)
-feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "nethogs", "glances", "btop"]
+#### Customize the feeerbox tag (sb install feederbox) - No sandbox roles
+feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "iperf3", "glances", "btop"]
 
 #### Customize the sandbox-roles tag (sb install sandbox-sandbox-roles)
 sandbox_roles: ["jellyseerr", "jellystat"]

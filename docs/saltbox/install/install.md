@@ -65,9 +65,7 @@ However, it is safe to run any saltbox tag[s] [including the install tags] at wi
 
     ```
 
-<details>
-<summary>What will I see in the terminal?</summary>
-<br />
+??? info "What will I see in the terminal?"
 
 Something like this:
 
@@ -78,7 +76,6 @@ x86_64 is currently supported.
 Installing Saltbox Dependencies.
 /srv/git/saltbox$
 ```
-</details>
 
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.

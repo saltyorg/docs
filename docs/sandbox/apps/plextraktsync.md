@@ -8,17 +8,13 @@ tags:
 
 Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+[:material-home: Homepage](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 
-[:material-home: Homepage&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
+[:material-bookshelf: Manual](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
-[:material-bookshelf: Manual&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
+[:octicons-container-16: Releases](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
 
-[:octicons-container-16: Releases&nbsp;&nbsp;](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-github: Community&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
-
-</div>
+[:fontawesome-brands-github: Community](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
 
 ---
 
@@ -46,11 +42,11 @@ docker exec -it plextraktsync plextraktsync login
 
 ## Usage
 
-### <span class="icon-indent-right"></span> Daemon
+### Daemon
 
 Once configured, the selected Plex user's streaming activity is automatically scrobbled.
 
-### <span class="icon-indent-right"></span> CLI
+### CLI
 
 To perform a one-time sync of the data you have specified in the configuration file:
 

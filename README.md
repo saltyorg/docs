@@ -547,7 +547,7 @@ The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/nicolas-crauc>
+        <a href=https://github.com/Nic0xyde>
             <img src=https://avatars.githubusercontent.com/u/37441833?v=4 width="100;"  alt=Nico/>
             <br />
             <sub style="font-size:14px"><b>Nico</b></sub>

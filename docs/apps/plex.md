@@ -178,7 +178,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
         4. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
 
-            ![ ](../images/plex-media-server/plex-15-movies-choose-folder.png)
+            ![Plex movie folder selection](../images/plex-media-server/plex-15-movies-choose-folder.png)
 
         5. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
 
@@ -214,7 +214,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
         4. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
 
-            ![ ](../images/plex-media-server/plex-21-tv-choose-folder.png)
+            ![Plex TV folder selection](../images/plex-media-server/plex-21-tv-choose-folder.png)
 
         5. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
 

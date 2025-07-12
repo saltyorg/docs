@@ -13,7 +13,7 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 [ruTorrent](https://github.com/Novik/ruTorrent) (by Novik) is a front-end for the popular, lightweight, and extensible BitTorrent client [rtorrent](https://github.com/rakshasa/rtorrent) (by Jari Sundell aka rakshasa).
 
-_Note: public trackers are disabled by default in the standard install.  Refer to the FAQ for [instructions on re-enabling them](../faq/ruTorrent.md?h=public#enable-access-to-public-torrent-trackers)._
+_Note: public trackers are disabled by default in the standard install.  Refer to the FAQ for [instructions on re-enabling them](../faq/rutorrent.md?h=public#enable-access-to-public-torrent-trackers)._
 
 | Details     |             |             |             |             |
 |-------------|-------------|-------------|-------------|-------------|

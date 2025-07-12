@@ -54,9 +54,26 @@ The variables that can be used for customization within the Inventory are listed
 
 === "GitHub File View"
 
-    Saltbox: &nbsp; &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
-
-    Sandbox: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+    <table>
+      <tr>
+        <td>Saltbox</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Sandbox</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Global</td>
+        <td>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml)
+        </td>
+      </tr>
+    </table>
 
 === "File Path on Saltbox Host"
 
@@ -70,6 +87,10 @@ The variables that can be used for customization within the Inventory are listed
 
     ```shell
     /opt/sandbox/roles/<role_name>/defaults/main.yml
+    ```
+
+    ```shell
+    /srv/git/saltbox/inventories/group_vars/all.yml
     ```
 
 === "Docker Parameters Reference"

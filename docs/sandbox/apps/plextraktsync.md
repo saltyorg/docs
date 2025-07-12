@@ -46,11 +46,11 @@ docker exec -it plextraktsync plextraktsync login
 
 ## Usage
 
-### <span class="icon-indent-right"></span> Daemon
+### Daemon
 
 Once configured, the selected Plex user's streaming activity is automatically scrobbled.
 
-### <span class="icon-indent-right"></span> CLI
+### CLI
 
 To perform a one-time sync of the data you have specified in the configuration file:
 

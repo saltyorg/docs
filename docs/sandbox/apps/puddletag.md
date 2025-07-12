@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - puddletag
+  - media
+  - tagging
+---
+
 # Puddletag
 
 ## What is it?

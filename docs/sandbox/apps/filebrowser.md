@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - filebrowser
+  - file-management
+  - admin
+---
+
 # File Browser
 
 ## What is it?

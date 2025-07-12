@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - mylar3
+  - media
+  - comics
+---
+
 # Mylar3
 
 ## What is it?

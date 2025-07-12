@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - vnstat
+  - monitoring
+  - network
+---
+
 # vnStat
 
 ## What is it?

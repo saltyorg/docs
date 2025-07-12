@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - rdtclient
+  - download
+  - client
+---
+
 # rdtclient
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

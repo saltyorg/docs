@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - pyload
+  - download
+  - tools
+---
+
 # pyload
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

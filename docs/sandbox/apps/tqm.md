@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tqm
+  - torrent
+  - automation
+---
+
 # tqm
 
 ## What is it?

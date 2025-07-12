@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - python-plexlibrary
+  - plex
+  - library
+---
+
 # python-plexlibrary
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

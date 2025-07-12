@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - funkwhale
+  - media
+  - music
+---
+
 # Funkwhale
 
 ## What is it?

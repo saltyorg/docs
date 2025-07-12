@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - medusa
+  - media
+  - tv
+---
+
 # Medusa
 
 ## What is it?

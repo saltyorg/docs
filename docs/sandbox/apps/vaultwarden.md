@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - vaultwarden
+  - passwords
+  - security
+---
+
 # vaultwarden
 
 ## What is it?

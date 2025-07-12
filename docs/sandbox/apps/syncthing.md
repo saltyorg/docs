@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - syncthing
+  - backup
+  - sync
+---
+
 # Syncthing
 
 ## What is it?

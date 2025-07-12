@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - delugevpn
+  - download
+  - vpn
+---
+
 # DelugeVPN
 
 ## What is it?
@@ -47,7 +56,7 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
 - Leave `vpn_endpoint` as `netherlands.ovpn`
 - Follow step 2 below then immediately follow step 3
 
-### **Run the DelugeVPN Role**
+### Run the DelugeVPN Role
 
 ``` { .shell }
 

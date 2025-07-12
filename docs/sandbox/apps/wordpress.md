@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - wordpress
+  - cms
+  - web
+---
+
 # WordPress
 
 ## What is it?

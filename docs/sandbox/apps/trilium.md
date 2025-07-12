@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - trilium
+  - productivity
+  - notes
+---
+
 # Trilium Notes
 
 ## What is it?

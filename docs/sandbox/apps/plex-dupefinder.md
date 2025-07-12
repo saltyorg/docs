@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - plex-dupefinder
+  - plex
+  - cleanup
+---
+
 # Plex_Dupefinder
 
 ## What is it?

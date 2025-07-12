@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - privatebin
+  - pastebin
+  - privacy
+---
+
 # PrivateBin
 
 ## What is it?

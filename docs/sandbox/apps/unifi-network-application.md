@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - unifi
+  - networking
+  - wireless
+---
+
 # Unifi Network Application
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - goaccess
+  - monitoring
+  - analytics
+---
+
 # GoAccess
 
 ## What is it?

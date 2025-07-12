@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - trackarr
+  - automation
+  - tracker
+---
+
 # Trackarr
 
 ## What is it?

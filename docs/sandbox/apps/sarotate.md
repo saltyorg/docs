@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - sarotate
+  - automation
+  - google
+---
+
 # Sarotate
 
 ## What is it?

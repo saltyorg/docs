@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - discoflix
+  - requests
+  - discord
+---
+
 # DiscoFlix
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - forgejo
+  - development
+  - git
+---
+
 # Forgejo
 
 ## What is it?

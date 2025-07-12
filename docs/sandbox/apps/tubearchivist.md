@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tubearchivist
+  - media
+  - youtube
+---
+
 # Tubearchivist
 
 ## What is it?

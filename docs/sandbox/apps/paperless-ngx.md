@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - paperless-ngx
+  - productivity
+  - documents
+---
+
 # Paperless NGX
 
 ## What is it?

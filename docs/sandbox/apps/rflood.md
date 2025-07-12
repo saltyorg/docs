@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - rflood
+  - torrent
+  - frontend
+---
+
 # rFlood
 
 ## What is it?

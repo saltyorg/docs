@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - yourspotify
+  - spotify
+  - analytics
+---
+
 # Yourspotify
 
 ## What is it?
@@ -6,7 +15,7 @@
 
 Note that while the documentation linked here is for the original project, the Docker image linked below is a fork of the original project. Particularly the [linuxserver/your_spotify](https://github.com/linuxserver/docker-your_spotify) image.
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You have to log into the role itself.
 
 | Details     |             |             |             |

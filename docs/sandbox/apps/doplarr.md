@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - doplarr
+  - media
+  - discord
+---
+
 # Doplarr
 
 ## What is it?

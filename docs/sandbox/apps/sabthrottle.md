@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - sabthrottle
+  - automation
+  - bandwidth
+---
+
 # SABThrottle
 
 ## What is it?

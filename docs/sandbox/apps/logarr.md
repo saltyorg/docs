@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - logarr
+  - monitoring
+  - logs
+---
+
 # Logarr ALPHA
 
 ## What is it?

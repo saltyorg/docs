@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - kitana
+  - plex
+  - frontend
+---
+
 # Kitana
 
 ## What is it?

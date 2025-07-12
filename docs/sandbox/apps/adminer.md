@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - adminer
+  - database
+  - mysql
+---
+
 # Adminer
 
 ## What is it?

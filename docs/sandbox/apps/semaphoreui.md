@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - semaphoreui
+  - ansible
+  - automation
+---
+
 # SemaphoreUI
 
 ## What is it?

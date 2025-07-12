@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - gaps
+  - media
+  - plex
+---
+
 # Gaps
 
 ## What is it?

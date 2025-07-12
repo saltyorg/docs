@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - mealie
+  - recipes
+  - cooking
+---
+
 # Mealie
 
 ## What is it?

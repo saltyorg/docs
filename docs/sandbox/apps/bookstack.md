@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - bookstack
+  - wiki
+  - documentation
+---
+
 # BookStack
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - xbackbone
+  - file-sharing
+  - upload
+---
+
 # xbackbone
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

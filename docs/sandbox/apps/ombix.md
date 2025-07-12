@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - ombix
+  - requests
+  - automation
+---
+
 # Ombi**X**
 
 ## What is it?

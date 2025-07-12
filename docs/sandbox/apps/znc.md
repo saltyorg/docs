@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - znc
+  - irc
+  - bouncer
+---
+
 # ZNC
 
 ## What is it?

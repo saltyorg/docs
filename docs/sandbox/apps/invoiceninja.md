@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - invoiceninja
+  - finance
+  - invoicing
+---
+
 # Invoice Ninja v5
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - code-server
+  - vscode
+  - development
+---
+
 # code-server
 
 ## What is it?

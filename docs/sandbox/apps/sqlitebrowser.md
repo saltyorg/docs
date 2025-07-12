@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - sqlitebrowser
+  - database
+  - utility
+---
+
 # SQLite Browser
 
 ## What is it?

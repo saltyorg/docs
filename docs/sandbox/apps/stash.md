@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - stash
+  - media
+  - organizer
+---
+
 # Stash
 
 ## What is it?

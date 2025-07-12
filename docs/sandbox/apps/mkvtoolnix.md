@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - mkvtoolnix
+  - media
+  - tools
+---
+
 # MKVToolNix
 
 ## What is it?

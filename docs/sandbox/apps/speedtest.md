@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - speedtest
+  - monitoring
+  - network
+---
+
 # Speedtest
 
 ## What is it?

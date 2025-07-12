@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - miniflux
+  - media
+  - rss
+---
+
 # miniflux
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - moviematch
+  - plex
+  - recommendations
+---
+
 # MovieMatch
 
 ## What is it?

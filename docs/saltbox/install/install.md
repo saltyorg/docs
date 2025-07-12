@@ -201,13 +201,13 @@ To edit any of the following configuration files use the command written in the 
     transcodes: /mnt/local/transcodes # (17)!
     ```
 
-    1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
+    1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install-types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
     2. Subdomain used for Authelia.
 
         Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 
-        On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
+        On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install-types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
     3. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
 
@@ -478,13 +478,13 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
 !!! warning
     Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
 
-If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+If you are installing a [Feederbox/Mediabox setup](../basics/install-types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
 You can get a list of available install tags with `sb list`.
 
 === "Saltbox"
 
-    `saltbox` is an all-in-one media server for downloading and playback. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `saltbox` is an all-in-one media server for downloading and playback. It installs `core` and a set of application as described [here](../basics/install-types.md)
     
     ```shell
     sb install saltbox
@@ -493,7 +493,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Mediabox [playback]"
 
-    `mediabox` is just the parts required for playback. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `mediabox` is just the parts required for playback. It installs `core` and a set of application as described [here](../basics/install-types.md)
     
     ```shell
     sb install mediabox
@@ -502,7 +502,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Feederbox [downloading]"
 
-    `feederbox` is just the parts required for downloading. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `feederbox` is just the parts required for downloading. It installs `core` and a set of application as described [here](../basics/install-types.md)
     
     ```shell
     sb install feederbox
@@ -511,7 +511,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Core [minimal]"
 
-    `core` is the bare minimum required for saltbox. It installs the basics as described [here](../basics/install_types.md)
+    `core` is the bare minimum required for saltbox. It installs the basics as described [here](../basics/install-types.md)
     
     ```shell
     sb install core
@@ -520,7 +520,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Dealer's choice"
 
-    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install_types.md)
+    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install-types.md)
     
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent

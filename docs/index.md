@@ -6,10 +6,14 @@ hide:
 
 ## Created with the help of
 
+<div style="max-width: 800px" class="grid cards" markdown>
+
 - :simple-ansible: [**Ansible**](https://www.ansible.com/){target=_blank}
 - :simple-docker: [**Docker**](https://www.docker.com/){target=_blank}
 - :material-bash: [**Bash**](https://www.gnu.org/software/bash/){target=_blank}
 - :simple-python: [**Python**](https://www.python.org/){target=_blank}
+
+</div>
 
 ### What is it?
 

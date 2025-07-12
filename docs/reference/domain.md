@@ -7,7 +7,7 @@ tags:
 
 ## Domain Name
 
-**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
+**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing-apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
@@ -33,7 +33,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     - For DNS providers that allow wildcards.
    
-    - For [Saltbox install type](../saltbox/basics/install_types.md).
+    - For [Saltbox install type](../saltbox/basics/install-types.md).
    
     **Steps:**
    
@@ -57,7 +57,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     - For DNS providers that do not allow wildcards (e.g. Freenom).
    
-    - For [Mediabox / Feederbox  install types](../saltbox/basics/install_types.md).
+    - For [Mediabox / Feederbox  install types](../saltbox/basics/install-types.md).
    
     - For Cloudflare users.
    

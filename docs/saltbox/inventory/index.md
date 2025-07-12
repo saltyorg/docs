@@ -58,6 +58,8 @@ The variables that can be used for customization within the Inventory are listed
 
     Sandbox: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
 
+    Global: &nbsp; [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml)
+
 === "File Path on Saltbox Host"
 
     !!! warning inline end "Never Edit These Files"
@@ -70,6 +72,10 @@ The variables that can be used for customization within the Inventory are listed
 
     ```shell
     /opt/sandbox/roles/<role_name>/defaults/main.yml
+    ```
+
+    ```shell
+     /srv/git/saltbox/inventories/group_vars/all.yml
     ```
 
 === "Docker Parameters Reference"

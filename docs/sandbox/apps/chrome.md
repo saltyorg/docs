@@ -4,9 +4,13 @@ Headless container running Google Chrome. Useful for testing, filling out forms,
 
 This was created for use with Hoarder which calls for a specific version (123)
 
+<div class="grid sb-buttons" markdown data-search-exclude>
+
 [:material-bookshelf: Github Repo](https://github.com/jlandure/alpine-chrome/blob/master/Dockerfile){ .md-button .md-button--stretch }
 
 [:material-git: Google Artifact](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome/sha256:e38563d4475a3d791e986500a2e4125c9afd13798067138881cf770b1f6f3980){ .md-button .md-button--stretch }
+
+</div>
 
 This role is not exposed by default.
 

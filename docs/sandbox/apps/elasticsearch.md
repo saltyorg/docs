@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - elasticsearch
+  - search
+  - analytics
+---
+
 # Elasticsearch
 
 ## What is it?

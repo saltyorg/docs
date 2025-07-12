@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tandoor
+  - recipes
+  - planning
+---
+
 # Tandoor Recipes
 
 ## What is it?

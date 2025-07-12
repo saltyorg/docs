@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - joplin
+  - productivity
+  - notes
+---
+
 # Joplin
 
 ## What is it?

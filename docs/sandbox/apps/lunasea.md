@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - lunasea
+  - automation
+  - controller
+---
+
 # Lunasea
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - duplicati
+  - backup
+  - sync
+---
+
 # Duplicati
 
 ## What is it?

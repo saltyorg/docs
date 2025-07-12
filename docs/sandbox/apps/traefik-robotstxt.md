@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - traefik-robotstxt
+  - networking
+  - seo
+---
+
 # Robotstxt
 
 ## What is it?

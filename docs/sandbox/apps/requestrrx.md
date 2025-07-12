@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - requestrrx
+  - discord
+  - automation
+---
+
 # Requestrr**X**
 
 ## What is it?

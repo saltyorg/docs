@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - qbit-manage
+  - torrent
+  - automation
+---
+
 # qBit Manage
 
 ## What is it?

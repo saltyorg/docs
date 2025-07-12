@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - homebox
+  - productivity
+  - inventory
+---
+
 # Homebox
 
 ## What is it?

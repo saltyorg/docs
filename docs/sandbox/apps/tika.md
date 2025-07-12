@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tika
+  - extraction
+  - utility
+---
+
 # tika
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

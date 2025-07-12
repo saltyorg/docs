@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - handbrake
+  - media
+  - encoding
+---
+
 # HandBrake
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - phpmyadmin
+  - database
+  - admin
+---
+
 # phpmyadmin
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - jellyseerr
+  - media
+  - requests
+---
+
 # Jellyseerr
 
 ## What is it?

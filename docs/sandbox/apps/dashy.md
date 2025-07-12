@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - dashy
+  - dashboard
+  - homepage
+---
+
 # Dashy
 
 ## What is it?

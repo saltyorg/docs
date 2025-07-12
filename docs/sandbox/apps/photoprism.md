@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - photoprism
+  - photos
+  - ai
+---
+
 # Photoprism
 
 ## What is it?

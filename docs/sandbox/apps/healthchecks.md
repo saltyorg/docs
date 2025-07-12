@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - healthchecks
+  - monitoring
+  - cron
+---
+
 # Healthchecks
 
 ## What is it?

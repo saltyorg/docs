@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - maintainerr
+  - maintenance
+  - automation
+---
+
 # Maintainerr
 
 # What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - thelounge
+  - irc
+  - chat
+---
+
 # The Lounge
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - unmanic
+  - media
+  - encoding
+---
+
 # Unmanic
 
 ## What is it?

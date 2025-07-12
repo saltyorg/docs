@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - arrx
+  - multiple
+  - instances
+---
+
 # Multiple container instances (Cloudbox legacy style)
 
 Read through this entire page, even if you are only installing one of the apps.
@@ -92,7 +101,7 @@ You probably want to overwrite your existing role with this one; that will ensur
 
 2. Run the role as described below.
 
-```bash
+```shell
   sb install cm-bazarrx
 ```
 
@@ -175,7 +184,7 @@ Again, the same thing holds for every `arrX` variant discussed here.
 
 1. Run the bazarrx role as a normal Saltbox Sandbox role.
 
-   ```bash
+   ```shell
    sb install cm-bazarrx
    ```
 

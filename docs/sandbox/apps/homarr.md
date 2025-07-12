@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - homarr
+  - dashboard
+  - homepage
+---
+
 # Homarr
 
 ## What is it?

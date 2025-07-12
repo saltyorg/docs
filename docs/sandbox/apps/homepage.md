@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - homepage
+  - dashboard
+  - static
+---
+
 # Homepage
 
 ## What is it?

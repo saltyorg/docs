@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tauticord
+  - discord
+  - monitoring
+---
+
 # Tauticord
 
 ## What is it?

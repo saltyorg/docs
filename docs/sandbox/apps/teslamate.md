@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - teslamate
+  - tesla
+  - monitoring
+---
+
 # Teslamate
 
 ## What is it?

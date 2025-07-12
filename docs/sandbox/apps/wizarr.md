@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - wizarr
+  - automation
+  - invitations
+---
+
 # Wizarr
 
 ## What is it?

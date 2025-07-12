@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - watchtower
+  - monitoring
+  - docker
+---
+
 # Watchtower
 
 ## What is it?

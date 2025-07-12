@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tvheadend
+  - tv
+  - streaming
+---
+
 # Tvheadend
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - alternatrrx
+  - media
+  - download
+---
+
 # alternatrr**X**
 
 ## What is it?

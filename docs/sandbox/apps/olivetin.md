@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - olivetin
+  - automation
+  - admin
+---
+
 # OliveTin
 
 ## What is it?

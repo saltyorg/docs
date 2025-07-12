@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - yacht
+  - docker
+  - management
+---
+
 # Yacht
 
 ## What is it?

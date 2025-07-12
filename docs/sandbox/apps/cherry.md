@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - cherry
+  - bookmarks
+  - organization
+---
+
 # Cherry
 
 ## What is it?

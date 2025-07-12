@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - gotenberg
+  - tools
+  - pdf
+---
+
 # gotenberg
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - makemkv
+  - media
+  - ripping
+---
+
 # MakeMKV
 
 ## What is it?

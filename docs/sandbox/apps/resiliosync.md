@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - resiliosync
+  - backup
+  - sync
+---
+
 # Resilio Sync
 
 ## What is it?

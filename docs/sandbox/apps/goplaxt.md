@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - goplaxt
+  - media
+  - trakt
+---
+
 # Goplaxt
 
 ## What is it?

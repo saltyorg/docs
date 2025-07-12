@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - telegraf
+  - monitoring
+  - metrics
+---
+
 # Telegraf
 
 ## What is it?

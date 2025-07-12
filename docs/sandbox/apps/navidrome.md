@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - navidrome
+  - media
+  - music
+---
+
 # Navidrome
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - gotify
+  - notifications
+  - messaging
+---
+
 # Gotify
 
 ## What is it?

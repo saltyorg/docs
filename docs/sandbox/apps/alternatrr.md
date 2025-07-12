@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - alternatrr
+  - sonarr
+  - metadata
+---
+
 # alternatrr
 
 ## What is it?

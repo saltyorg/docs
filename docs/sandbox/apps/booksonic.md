@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - booksonic
+  - audiobooks
+  - streaming
+---
+
 # Booksonic Air
 
 !!! warning

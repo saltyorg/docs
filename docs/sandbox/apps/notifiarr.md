@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - notifiarr
+  - discord
+  - notifications
+---
+
 # Notifiarr Client
 
 ## What is it?

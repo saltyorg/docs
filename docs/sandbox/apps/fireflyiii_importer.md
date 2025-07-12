@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - fireflyiii-importer
+  - finance
+  - tools
+---
+
 # Firefly III Data Importer
 
 [TOC]

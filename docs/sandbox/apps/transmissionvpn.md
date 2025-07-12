@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - transmissionvpn
+  - download
+  - vpn
+---
+
 # transmissionvpn
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

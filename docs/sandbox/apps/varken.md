@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - varken
+  - monitoring
+  - analytics
+---
+
 # Varken
 
 ## What is it?

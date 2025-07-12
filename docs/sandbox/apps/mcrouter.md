@@ -11,7 +11,7 @@ tags:
 
 [MC Router](https://github.com/itzg/mc-router) Routes Minecraft client connections to backend servers based upon the requested server address.
 
-!!! Note
+!!! note
     MC Router is not intended to be used as a standalone server, but rather as a component of a larger Minecraft server network. It is installed in tandem with the [Minecraft](../apps/minecraft.md) role.
 
 | Details     |             |             |             |

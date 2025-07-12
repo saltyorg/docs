@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - homeassistant
+  - automation
+  - iot
+---
+
 # Homeassistant
 
 ## What is it?

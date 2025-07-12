@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - audiobookshelf
+  - audiobooks
+  - podcasts
+---
+
 # Audiobookshelf
 
 ## What is it?

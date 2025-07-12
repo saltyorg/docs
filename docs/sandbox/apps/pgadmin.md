@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - pgadmin
+  - database
+  - admin
+---
+
 # pgadmin
 
 ## What is it?

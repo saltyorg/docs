@@ -67,15 +67,15 @@ However, it is safe to run any saltbox tag[s] [including the install tags] at wi
 
 ??? info "What will I see in the terminal?"
 
-Something like this:
+    Something like this:
 
-```
-~$ curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-jammy is currently supported.
-x86_64 is currently supported.
-Installing Saltbox Dependencies.
-/srv/git/saltbox$
-```
+    ```
+    ~$ curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+    jammy is currently supported.
+    x86_64 is currently supported.
+    Installing Saltbox Dependencies.
+    /srv/git/saltbox$
+    ```
 
 !!! info
     See [here](../../reference/dependencies.md) for more information about the dependencies.

@@ -75,7 +75,7 @@ The variables that can be used for customization within the Inventory are listed
     ```
 
     ```shell
-     /srv/git/saltbox/inventories/group_vars/all.yml
+    /srv/git/saltbox/inventories/group_vars/all.yml
     ```
 
 === "Docker Parameters Reference"

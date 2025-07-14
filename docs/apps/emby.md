@@ -17,7 +17,7 @@ tags:
 
 ## 1. Introduction
 
-![](../images/emby/emby-splash.jpg)
+![Emby media server splash screen and logo](../images/emby/emby-splash.jpg)
 
 ## 2. URL
 

@@ -91,7 +91,7 @@ tags:
 
          1. Click "SAVE CHANGES".
 
-            ![](../images/plex-media-server/plex-08-network.jpeg)
+            ![Plex Network settings page showing custom server access URLs configuration](../images/plex-media-server/plex-08-network.jpeg)
 
 
     === "Transcoder"
@@ -141,7 +141,7 @@ tags:
 
         3. Click "SAVE CHANGES".
 
-            ![](../images/plex-media-server/plex-11-schedule.jpeg)
+            ![Plex Scheduled Tasks settings showing extensive media analysis disabled](../images/plex-media-server/plex-11-schedule.jpeg)
 
     === "Remote Access"
 

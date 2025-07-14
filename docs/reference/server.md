@@ -66,7 +66,7 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 - If you get an option like below, select choose Ubuntu 22 or better, which may be named something like `ubuntu-2204-jammy-64-minimal` or `ubuntu-2404-noble-64-minimal`.
 
-  ![](../images/ubuntu-selection.png)
+  ![Server installation interface showing Ubuntu version selection options](../images/ubuntu-selection.png)
 
   Note that the image is well out of date, but the concept is the important thing.
 
@@ -89,12 +89,12 @@ Examples:
 **IMPORTANT**: Note that these examples are just that, _examples_, and may not reflect currently-available OS versions or the current state of the UI.  They were accurate at the time of capture, but things change that are outside saltbox' control.  You will need to review for accuracy and possibly adapt them to your specific situation.  You're partitioning the disk of your remote server; you generally shouldn't trust that to copy-pasting some text from a web page.
 
 === "Online.net"
-    ![](../images/online-net-partitioning.png)
+    ![Online.net server partitioning configuration interface](../images/online-net-partitioning.png)
 
 === "OVH"
-    ![](../images/ovh-partitioning.png)
+    ![OVH server partitioning setup interface showing disk configuration](../images/ovh-partitioning.png)
 
-    ![](../images/ovh-partitioning2.png)
+    ![OVH server partitioning continuation page with additional disk options](../images/ovh-partitioning2.png)
 
 === "Hetzner"
 

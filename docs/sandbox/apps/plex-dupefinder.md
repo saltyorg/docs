@@ -16,7 +16,7 @@ tags:
 - Duplicates can be either in bulk (automatic) or one-by-one (interactively).
 
 !!! note
-      📢 You will need to have `allow media deletion: enabled` ticked. [here](https://github.com/l3uddz/plex_dupefinder#plex)
+      📢 You will need to have `allow media deletion: enabled` ticked. See the [Plex configuration instructions](https://github.com/l3uddz/plex_dupefinder#plex)
 
 | Details     |             |             |
 |-------------|-------------|-------------|

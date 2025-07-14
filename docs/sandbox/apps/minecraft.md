@@ -33,7 +33,7 @@ This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If 
 
 ### 3. Multi Server Set Up
 
-To add multiple instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
+To add multiple instances, add the following to the inventory. See the [inventory configuration instructions](../../saltbox/inventory/index.md).
 
 ``` yaml
 
@@ -49,7 +49,7 @@ So for the example above, `mcserver1._yourdomain.com_` and `mcserver2._yourdomai
 
 ### 4. Setup
 
-For individual servers, you can change things such as memory using custom docker envs. See instructions on inventory [here](../../saltbox/inventory/index.md)
+For individual servers, you can change things such as memory using custom docker envs. See the [inventory configuration instructions](../../saltbox/inventory/index.md)
 
 For a single install, the inventory vars will look like this `minecraft_docker_image_tag`.
 

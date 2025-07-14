@@ -32,7 +32,7 @@ There are initially seven "themes" available, which are stored in `/opt/error_pa
 cats  ghost  hacker-terminal  l7-dark  l7-light  noise  shuffle
 ```
 
-Samples of the themed pages can be viewed [here](https://tarampampam.github.io/error-pages/)
+Samples of the themed pages can be viewed in the [error pages gallery](https://tarampampam.github.io/error-pages/)
 
 ## How do I change the theme?
 

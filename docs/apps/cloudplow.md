@@ -163,7 +163,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 ### Service account uploading
 
-You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available in the [cloudplow uploader documentation](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
 ```json
 "uploader": {
@@ -182,7 +182,7 @@ You can tell cloudplow to use a set of service accounts when uploading to Google
 }
 ```
 
-If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](../reference/cloudplow-config.md).
+If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described in the [cloudplow configuration guide](../reference/cloudplow-config.md).
 
 ### Restart
 

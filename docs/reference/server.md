@@ -42,7 +42,7 @@ Get a server with at least 100GB+ of hard disk space. Even though media is uploa
 
 Practically, you should have more like 500GB of space available _at a minimum_.
 
-Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. If you want to lower that, you can find details [here](../apps/cloudplow.md){target=_blank}
+Cloudplow's default folder size threshold, to upload media to the cloud, is set at 200GB. If you want to lower that, you can find details in the [Cloudplow configuration documentation](../apps/cloudplow.md){target=_blank}
 
 If you are planning to use Usenet, SSD should be considered required, and NVME highly recommended.  Usenet is extremely disk I/O intensive.
 

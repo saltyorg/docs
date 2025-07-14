@@ -21,7 +21,7 @@ Easy to install and low maintenance, it just does the job.
 - **Guaranteed 100% Free Software**: Forgejo will always be Free and Open Source Software. Furthermore we exclusively use Free Software for our own project development.
 - **Beyond coding, we forge ahead**: An exciting future awaits. We will innovate the Software Forge and enable collaborative software development facilitated by decentralized platforms.
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You have to log into the app itself.
 
 | Details     |             |             |             |

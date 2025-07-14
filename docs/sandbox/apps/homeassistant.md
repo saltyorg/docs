@@ -15,7 +15,7 @@ tags:
 
 Note that while it will work on a remote server, it takes some doing to get it to interface with a local server or local devices. It is not recommended or supported.
 
-!!! Warning
+!!! warning
     By default, the role is NOT protected behind your Authelia/SSO middleware. Home Assistant has its own authentication system (with 2FA), and it is recommended to use that.
 
 | Details     |             |             |             |

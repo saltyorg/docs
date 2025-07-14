@@ -19,7 +19,7 @@ tags:
 
 - It has a simple UI. But you got all the features you want for a bookmark service. Tags, groups, full text search and browser extensions.
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |

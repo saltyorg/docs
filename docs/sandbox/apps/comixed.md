@@ -41,7 +41,7 @@ sb install sandbox-comixed
 
 ### 3. Setup
 
-!!!info
+!!! info
     📢 ComiXed has 2 default users created when you run the role. It is a good idea to change the passwords for each account from the default asap.
 
 ``` shell

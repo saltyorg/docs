@@ -26,7 +26,7 @@ tags:
 - Mobile-friendly design, for when you need to approve requests on the go!
 - Support for watchlisting & blacklisting media.
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log in with Plex, Jellyfin, etc. Make the appropriate changes via inventory to add SSO.
 
 | Details     |             |             |             |

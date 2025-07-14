@@ -13,7 +13,7 @@ tags:
 
 [Gaps](https://github.com/JasonHHouse/gaps) searches through your Plex Server for all movies, then queries for known movies in the same collection. If those movies don't exist in your library, Gaps will recommend getting those movies, legally of course.
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware. You will NOT have to log into the app itself, as basic Auth is disabled by default.
 
 | Details     |             |             |             |

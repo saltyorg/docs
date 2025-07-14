@@ -15,7 +15,7 @@ tags:
 
 - The tqm binary is downloaded and a service and timer file created when the config is identified.
 
-!!! Note
+!!! note
       📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/autobrr/tqm#example-configuration) is an example config you can grab and fill in with your own details.
 
 | Details     |
@@ -36,7 +36,7 @@ nano /opt/tqm/config.yaml
 
 ### Modify "Client" section
 
-!!! Note
+!!! note
       📢 As setup for Saltbox, tqm uses this path to find your downloaded files:  `/mnt/unionfs/downloads/...` (see [Paths](../../saltbox/basics/paths.md#media))
 
 Client Example:
@@ -139,7 +139,7 @@ Label Example:
 
 ```
 
-!!! Note
+!!! note
       📢 tqm will not create a category for you, so be sure to create the category first. If you
       want the file moved as well, you will need to set **Default Torrent Management Mode: Automatic**.
 

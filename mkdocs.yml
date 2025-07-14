@@ -428,20 +428,20 @@ nav:
           - Plex-DB: apps/utility_tags/plex-db.md
 
   - FAQ:
-      - System: faq/System.md
+      - System: faq/system.md
       - Cloud Storage: faq/cloud-storage.md
-      - CloudFlare: faq/Cloudflare.md
-      - Cloudplow: faq/Cloudplow.md
-      - Docker: faq/Docker.md
-      - Hetzner & Google IPv6: faq/Hetzner.md
-      - Install: faq/Install.md
+      - CloudFlare: faq/cloudflare.md
+      - Cloudplow: faq/cloudplow.md
+      - Docker: faq/docker.md
+      - Hetzner & Google IPv6: faq/hetzner.md
+      - Install: faq/install.md
       - Backup and Restore: faq/backup-and-restore.md
-      - Rclone: faq/Rclone.md
-      - Plex: faq/Plex.md
+      - Rclone: faq/rclone.md
+      - Plex: faq/plex.md
       - ruTorrent: faq/rutorrent.md
-      - Misc: faq/Misc.md
+      - Misc: faq/misc.md
       - sb: faq/sb.md
-      - Bazarr: faq/Bazarr.md
+      - Bazarr: faq/bazarr.md
 
   - Advanced:
       - Index: advanced/index.md
@@ -532,4 +532,4 @@ nav:
           - Adding a Subdomain: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
           - Mounting disks: reference/guides/mount.md
-          - HW transcoding on OVH: reference/OVH.md
+          - HW transcoding on OVH: reference/ovh.md

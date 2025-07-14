@@ -247,7 +247,7 @@ To rename the Google Drive remote to `google`:
    cp -n $(rclone config file | tail -n 1) ~/.config/rclone/rclone.conf
    ```
 
-1. Give it the proper ownership and permissions. Replace `user` and `group` to match yours (see [here](../faq/System.md#find-your-user-id-uid-and-group-id-gid)):
+1. Give it the proper ownership and permissions. Replace `user` and `group` to match yours (see [here](../faq/system.md#find-your-user-id-uid-and-group-id-gid)):
 
    ```shell
    sudo chown user:group ~/.config/rclone/rclone.conf

@@ -42,7 +42,7 @@ tags:
 
     ![](../images/plex-media-server/plex-05-server-setup-3.png)
 
-!!! Settings
+!!! info "Settings"
 
     === "Library"
 
@@ -160,7 +160,7 @@ In this section, we will add two libraries: one for Movies and one for TV.
 
 _Note: If you would like to have custom Plex libraries (more than just a Movies and TV one), see [Customizing Plex Libraries](../reference/customizing-plex-libs.md)._
 
-!!! Libraries
+!!! info "Libraries"
 
     === "Add the Movie Library"
 

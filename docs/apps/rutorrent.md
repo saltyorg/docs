@@ -69,6 +69,6 @@ You can have custom plugins and themes imported during Docker container rebuild.
 
 And then restart the Docker container:
 
-```bash
+```shell
 docker restart rutorrent
 ```

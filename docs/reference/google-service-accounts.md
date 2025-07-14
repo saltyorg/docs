@@ -120,7 +120,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     For these edits, you will need: the "Organization ID" from gcloud SDK step, the full email address of the group you created a couple steps ago, and the prefix you generated earlier.
 
-    ```bash
+    ```shell
     #!/bin/bash
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script

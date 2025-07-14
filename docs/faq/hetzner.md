@@ -12,7 +12,7 @@ From time to time Hetzner seems to have problems with IPv6 routing to Google so 
 
 ## Disable IPv6 Temporarily
 
-```bash
+```shell
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
@@ -91,7 +91,7 @@ Setup this [script](https://github.com/Nebarik/mediscripts-shared/blob/main/goog
 
 [Markschrik](https://github.com/markschrik) has created a version of the script that will do the required setup for you if you are using the default Saltbox setup; it can be found [here](https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh).  Download it, mark it executable, and run it.
 
-```bash
+```shell
 wget https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh
 chmod +x bandwithtest.sh
 ./bandwithtest.sh

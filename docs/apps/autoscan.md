@@ -211,7 +211,7 @@ a_train:
 
 Run the a-train tag to create the container:
 
-```bash
+```shell
 sb install sandbox-a-train
 ```
 
@@ -219,19 +219,19 @@ Copy one of your service account files from its current location to `/opt/a-trai
 
 Example:
 
-```bash
+```shell
 cp /opt/sa/all/160.json /opt/a-train/account.json
 ```
 
 Run the autoscan tag to rebuild the container:
 
-```bash
+```shell
 sb install autoscan
 ```
 
 Run the a-train tag to rebuild the container:
 
-```bash
+```shell
 sb install sandbox-a-train
 ```
 

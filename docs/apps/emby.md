@@ -35,7 +35,7 @@ tags:
 
 - Run the following command:
 
-    ```bash
+    ```shell
     sb install emby
     ```
 

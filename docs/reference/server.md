@@ -6,7 +6,7 @@ tags:
   - hardware
 ---
 
-## Server
+# Server Requirements
 
 ### Getting a Server
 

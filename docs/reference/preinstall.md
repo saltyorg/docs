@@ -5,11 +5,11 @@ tags:
   - pre-install
 ---
 
+# Preinstall
+
 !!! warning
     This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#step-3-preinstall).
     If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
-
-## Preinstall
 
 !!! warning
     Make sure that you have setup the configuration correctly before proceeding.

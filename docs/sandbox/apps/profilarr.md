@@ -8,6 +8,8 @@ tags:
   - recyclarr
 ---
 
+# Profilarr
+
 Configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
 
 <div class="grid sb-buttons" markdown data-search-exclude>

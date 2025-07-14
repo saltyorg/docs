@@ -19,7 +19,7 @@ tags:
 - Play videos
 - Keep track of viewed and unviewed videos
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

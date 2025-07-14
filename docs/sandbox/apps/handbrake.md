@@ -51,5 +51,5 @@ sb install sandbox-handbrake
 4. See the HandBrake documentation for usage:
       - [:octicons-link-16: Documentation](https://handbrake.fr/docs){: .header-icons }
 
-!!! Tip
+!!! tip
       This container has an automatic video converter built in, see the [container documentation here](https://github.com/jlesage/docker-handbrake#automatic-video-conversion){: .header-icons }.

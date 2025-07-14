@@ -70,7 +70,7 @@ sb install sandbox-doplarr
 
 ```
 
-!!! Note
+!!! note
       📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr.
       The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md). You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section.
 

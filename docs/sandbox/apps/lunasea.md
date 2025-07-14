@@ -18,7 +18,7 @@ tags:
 - Manage your queue in usenet binary newsreaders, including SABnzbd and NZBGet.
 - Search newsgroup indexers and send NZBs directly to your binary newsreaders.
 
-!!!info
+!!! info
     By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |

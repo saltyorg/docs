@@ -20,7 +20,7 @@ tags:
 - Automatically finds icons while you type the name of a service.
 - Widgets that can display all types of information.
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

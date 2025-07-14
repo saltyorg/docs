@@ -14,7 +14,7 @@ tags:
 Note that only one type of a given book is supported. <br />
 **If you want both an audiobook and ebook of a given book you will need multiple instances.**
 
-!!! NOTE
+!!! note
       Readarr is currently in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion.
 
 | Details     |             |             |             |

@@ -49,7 +49,7 @@ Listed below are some common scenarios and their migration instructions.
 
 3. If you are using Cloudflare:
 
-    1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
+    1. Register your domain with [Cloudflare](../../faq/cloudflare.md).
 
     2. Add the Cloudflare API into [Accounts](../install/install.md#step-2-configuration).
 
@@ -83,7 +83,7 @@ Listed below are some common scenarios and their migration instructions.
 
 3. If you are using Cloudflare:
 
-    1. Register your domain with [Cloudflare](../../faq/Cloudflare.md).
+    1. Register your domain with [Cloudflare](../../faq/cloudflare.md).
 
     2. Add the Cloudflare API into [Accounts](../install/install.md#step-2-configuration).
 

@@ -24,7 +24,7 @@ tags:
 - Service integration
   - Sonarr, Radarr, Readarr, Prowlarr, Bazarr, Lidarr, Emby, Jellyfin, Tautulli, Plex and more
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |

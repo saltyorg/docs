@@ -13,7 +13,7 @@ tags:
 
 [Adminer](https://www.adminer.org/) Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Adminer is available for MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and others via plugin.
 
-!!!info "Protected Role"
+!!! info "Protected Role"
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

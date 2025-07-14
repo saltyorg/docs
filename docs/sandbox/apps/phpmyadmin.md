@@ -29,7 +29,7 @@ tags:
 - Searching globally in a database or a subset of it
 - Transforming stored data into any format using a set of predefined functions, like displaying BLOB-data as image or download-link
 
-!!!info
+!!! info
     By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

@@ -27,7 +27,7 @@ tags:
 - Add custom covers to Folders, Publishers, Imprints, Series, and Story Arcs.
 - Runs in 1GB of RAM, faster with more.
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log into the app itself.
 
 | Details     |             |             |             |

@@ -15,7 +15,7 @@ tags:
 
 Paperless-NGX is forked from paperless-ng to continue the great work and distribute responsibility of supporting and advancing the project among a team of people.
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |             |
@@ -36,7 +36,7 @@ sb install sandbox-paperless-ngx
 
 ### 3. Setup
 
-!!!info
+!!! info
     Please refer to [this](https://github.com/saltyorg/docs/issues/116#issuecomment-1278733921) comment on the initial PR for questions about google storage!
 
 - [:octicons-link-16: Documentation: Paperless NGX Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons }

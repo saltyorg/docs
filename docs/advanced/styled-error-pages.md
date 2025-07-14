@@ -62,13 +62,13 @@ These error pages do not work with every app; do your own a/b testing to verify 
 
 You can find the Saltbox roles that are known to NOT work with:
 
-```bash
+```shell
 grep -Ril "_traefik_error_pages_enabled: false" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u
 ```
 
 You can find the Sandbox roles that are known to NOT work with:
 
-```bash
+```shell
 grep -Ril "_traefik_error_pages_enabled: false" /opt/sandbox/roles | cut -d/ -f5 | sort -u
 ```
 

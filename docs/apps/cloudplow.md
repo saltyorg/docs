@@ -52,7 +52,7 @@ Note: Config changes require a restart: `sudo systemctl restart saltbox_managed_
 
 Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
 
-```bash
+```shell
 nano /opt/cloudplow/config.json
 ```
 
@@ -188,7 +188,7 @@ If you used the saltbox scripted rclone setup, there is a script that will make 
 
 Restart Cloudplow to apply the changes to the config.
 
-```bash
+```shell
 sudo systemctl restart saltbox_managed_cloudplow.service
 ```
 
@@ -204,6 +204,6 @@ You can run a manual Cloudplow task from anywhere by just using the `cloudplow` 
 
 To start uploading right away, regardless of what the folder size is:
 
-```bash
+```shell
 cloudplow upload
 ```

@@ -20,7 +20,7 @@ It's totally free, easy to use, and works practically everywhere. SABnzbd makes 
 
 ## 1. Installation
 
-```bash
+```shell
 sb install sabnzbd
 ```
 

@@ -123,7 +123,7 @@ So any changes to these will be lost next time the role runs.
 
 Example:
 
-```bash
+```shell
 sb install crowdsec
 ```
 

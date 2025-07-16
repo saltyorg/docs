@@ -29,3 +29,14 @@ sb install sandbox-guacamole
 - Log in with user and password `guacadmin`. Change the default user and password immediately.
 
 - [:octicons-link-16: Documentation: Guacamole Docs](https://guacamole.apache.org/doc/gug/){: .header-icons }
+
+### 4. Enable 2FA (Optional, but recommended)
+
+- Update your [Inventory](https://docs.saltbox.dev/saltbox/inventory/) and add the following (change `guacamole` to the name of your instance):
+
+```yml 
+guacamole_docker_envs_custom:
+  OPT_TOTP: "Y"
+```
+
+Run `sb install sandbox-guacamole` again to apply changes.

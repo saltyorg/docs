@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - monitorr
+  - monitoring
+  - uptime
+---
+
 # Monitorr
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - nextcloud
+  - productivity
+  - cloud
+---
+
 # Nextcloud
 
 ## What is it?

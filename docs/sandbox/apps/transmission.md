@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - transmission
+  - download
+  - torrent
+---
+
 # Transmission
 
 ## What is it?

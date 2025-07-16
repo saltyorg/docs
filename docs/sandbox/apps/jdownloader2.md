@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - jdownloader2
+  - download
+  - tools
+---
+
 # JDownloader
 
 ## What is it?

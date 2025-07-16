@@ -25,7 +25,7 @@ sb install mariadb
 
 ### 2. Setup
 
-!!!info
+!!! info
     The default password for this container is `password321`
     To easily manage the db, consider [adminer](../sandbox/apps/adminer.md)
 

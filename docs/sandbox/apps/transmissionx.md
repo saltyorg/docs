@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - transmissionx
+  - torrent
+  - download
+---
+
 # Transmission**X**
 
 ## What is it?

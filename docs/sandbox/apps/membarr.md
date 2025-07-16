@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - membarr
+  - discord
+  - automation
+---
+
 # Membarr
 
 ## What is it?

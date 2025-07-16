@@ -46,4 +46,4 @@ sb install saltbox
 
 This will do as above for *all* the containers installed by the `saltbox` tag.
 
-Next, let's discuss how you will [access the applications](accessing_apps.md).
+Next, let's discuss how you will [access the applications](accessing-apps.md).

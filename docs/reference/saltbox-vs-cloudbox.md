@@ -5,7 +5,7 @@ tags:
   - cloudbox
 ---
 
-## Saltbox vs. Cloudbox
+# Saltbox vs Cloudbox
 
 Saltbox started out as a branch in Cloudbox while salty was maintaining Cloudbox for about a year and a half so there is a massive carryover from the develop branch of Cloudbox.
 

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - dockwatch
+  - monitoring
+  - docker
+---
+
 # Dockwatch
 
 ## What is it?

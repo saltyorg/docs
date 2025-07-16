@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - krusader
+  - file-management
+  - admin
+---
+
 # Krusader
 
 ## What is it?

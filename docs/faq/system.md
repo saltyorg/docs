@@ -37,7 +37,7 @@ uid=XXXX(yourusername) gid=XXXX(yourgroup) groups=XXXX(yourgroup)
 
 - Run the following commands line by line:
 
-   ```bash
+   ```shell
    sudo useradd -m <username>
    sudo usermod -aG sudo <username>
    sudo passwd <username>

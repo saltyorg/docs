@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - threadfin
+  - iptv
+  - streaming
+---
+
 # Threadfin
 
 ## What is it?

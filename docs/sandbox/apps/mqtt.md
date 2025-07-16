@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - mqtt
+  - automation
+  - messaging
+---
+
 # MQTT
 
 ## What is it?

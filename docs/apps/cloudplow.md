@@ -52,7 +52,7 @@ Note: Config changes require a restart: `sudo systemctl restart saltbox_managed_
 
 Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
 
-```bash
+```shell
 nano /opt/cloudplow/config.json
 ```
 
@@ -163,7 +163,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 ### Service account uploading
 
-You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available in the [cloudplow uploader documentation](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
 ```json
 "uploader": {
@@ -182,13 +182,13 @@ You can tell cloudplow to use a set of service accounts when uploading to Google
 }
 ```
 
-If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](../reference/cloudplow-config.md).
+If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described in the [cloudplow configuration guide](../reference/cloudplow-config.md).
 
 ### Restart
 
 Restart Cloudplow to apply the changes to the config.
 
-```bash
+```shell
 sudo systemctl restart saltbox_managed_cloudplow.service
 ```
 
@@ -204,6 +204,6 @@ You can run a manual Cloudplow task from anywhere by just using the `cloudplow` 
 
 To start uploading right away, regardless of what the folder size is:
 
-```bash
+```shell
 cloudplow upload
 ```

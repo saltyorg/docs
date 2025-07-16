@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - dashy
+  - dashboard
+  - homepage
+---
+
 # Dashy
 
 ## What is it?
@@ -21,7 +30,7 @@
 - **Customizable Layouts**
   - Structure your dashboard to fit your use case. From the UI, you can choose between different layouts, item sizes, show/ hide components, switch themes plus more. You can customize pretty much every area of your dashboard. There are config options for custom header, footer, nav bar links, title etc. You can also choose to hide any elements you don't need.
 
-!!!info
+!!! info
     By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

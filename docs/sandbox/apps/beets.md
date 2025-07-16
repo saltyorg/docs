@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - beets
+  - music
+  - metadata
+---
+
 # Beets
 
 ## What is it?

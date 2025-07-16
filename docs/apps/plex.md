@@ -42,7 +42,7 @@ tags:
 
     ![](../images/plex-media-server/plex-05-server-setup-3.png)
 
-!!! Settings
+!!! info "Settings"
 
     === "Library"
 
@@ -91,7 +91,7 @@ tags:
 
          1. Click "SAVE CHANGES".
 
-            ![](../images/plex-media-server/plex-08-network.jpeg)
+            ![Plex Network settings page showing custom server access URLs configuration](../images/plex-media-server/plex-08-network.jpeg)
 
 
     === "Transcoder"
@@ -141,7 +141,7 @@ tags:
 
         3. Click "SAVE CHANGES".
 
-            ![](../images/plex-media-server/plex-11-schedule.jpeg)
+            ![Plex Scheduled Tasks settings showing extensive media analysis disabled](../images/plex-media-server/plex-11-schedule.jpeg)
 
     === "Remote Access"
 
@@ -160,7 +160,7 @@ In this section, we will add two libraries: one for Movies and one for TV.
 
 _Note: If you would like to have custom Plex libraries (more than just a Movies and TV one), see [Customizing Plex Libraries](../reference/customizing-plex-libs.md)._
 
-!!! Libraries
+!!! info "Libraries"
 
     === "Add the Movie Library"
 
@@ -178,7 +178,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
         4. Navigate to `/mnt/unionfs/Media/Movies`, and then click the "ADD" button.
 
-            ![ ](../images/plex-media-server/plex-15-movies-choose-folder.png)
+            ![Plex movie folder selection](../images/plex-media-server/plex-15-movies-choose-folder.png)
 
         5. You will now see `/mnt/unionfs/Media/Movies` in the text box (don't click "ADD LIBRARY" yet).
 
@@ -214,7 +214,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
         4. Navigate to `/mnt/unionfs/Media/TV`, and then click the "ADD" button.
 
-            ![ ](../images/plex-media-server/plex-21-tv-choose-folder.png)
+            ![Plex TV folder selection](../images/plex-media-server/plex-21-tv-choose-folder.png)
 
         5. You will now see `/mnt/unionfs/Media/TV` in the text box (don't click "ADD LIBRARY" yet).
 

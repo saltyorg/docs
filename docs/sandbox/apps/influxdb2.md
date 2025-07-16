@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - influxdb2
+  - database
+  - timeseries
+---
+
 # InfluxDB2
 
 ## What is it?

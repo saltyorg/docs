@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - qbittorrentvpn
+  - download
+  - vpn
+---
+
 # qBittorrentvpn
 
 ## What is it?

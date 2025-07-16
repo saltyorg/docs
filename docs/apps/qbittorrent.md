@@ -59,7 +59,7 @@ sb install qbittorrent
 
     ![Hard Disk Section Screenshot](../images/community/qbit_hdd.png)
 <!-- markdownlint-disable MD046 -->
-!!! Warning
+!!! warning
       Make sure to choose a strong username/password combination because by default qBittorrent's Web API is completely exposed to the internet!  
       If someone guesses your qBit's credentials, they can, among other things, steal your tracker passkeys and delete torrents (data included).  
       If you don't need the API endpoints exposed, you can disable them using the [inventory system](../saltbox/inventory/index.md) with
@@ -71,7 +71,7 @@ sb install qbittorrent
       and by rerunning the `qbittorrent` tag.
 <!-- markdownlint-enable MD046 -->
 
-!!! Note
+!!! note
       if you're using private trackers be sure to go to `Options` -> `BitTorrent` and uncheck everything in Privacy section.
 
 - [:octicons-link-16: Documentation](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons }

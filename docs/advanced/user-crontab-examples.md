@@ -19,7 +19,7 @@ If you are unfamiliar with the syntax shown below, [crontab generator](https://c
 
 To edit your crontab, enter `crontab -e`
 
-```bash
+```shell
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 @daily cd /opt/plex-meta-manager && python plex-meta-manager.py -r
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
@@ -50,12 +50,12 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 This script deletes
 
-* everything under a size of 100M
-* every unwanted file immediately
-* everything but the wanted files after 10 hours
-* every empty folder
+- everything under a size of 100M
+- every unwanted file immediately
+- everything but the wanted files after 10 hours
+- every empty folder
 
-```bash
+```shell
 #!/bin/bash
 #####################################################
 # script by pho
@@ -135,7 +135,7 @@ eval "${command}"
 
 Note that this script is specific to its author's setup when it was written.  It probably won't work for you as-is.  You'll need to edit the paths to match your situation.
 
-```Bash
+```shell
 #!/bin/bash
 find /mnt/local/downloads/nzbget/completed/sonarr/* -type d -mmin +60 -ls -exec rm -rf {} + 2>/dev/null
 find /mnt/local/downloads/nzbget/completed/radarr/* -type d -mmin +60 -ls -exec rm -rf {} + 2>/dev/null
@@ -149,7 +149,7 @@ find /mnt/local/downloads/nzbget/completed/anime/* -type d -mmin +60 -ls -exec r
 
 ### RXWatcher's optimize.sh
 
-```bash
+```shell
 #!/bin/sh
 # Get the contents of the Preferences file, keep only what we need,  push to a temp, then use it in the curl command
 

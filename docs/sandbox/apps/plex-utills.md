@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - plex-utills
+  - plex
+  - enhancement
+---
+
 # Plex Utills
 
 ## What is it?

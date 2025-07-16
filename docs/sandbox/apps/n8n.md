@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - n8n
+  - automation
+  - workflow
+---
+
 # n8n
 
 ## What is it?
@@ -10,7 +19,7 @@
 - **Enterprise-Ready**: Advanced permissions, SSO, and air-gapped deployments
 - **Active Community**: 400+ integrations and 900+ ready-to-use [templates](https://n8n.io/workflows)
 
-!!!info
+!!! info
     By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

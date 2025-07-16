@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - freshrss
+  - media
+  - rss
+---
+
 # Freshrss
 
 ## What is it?

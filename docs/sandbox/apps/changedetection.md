@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - changedetection
+  - monitoring
+  - websites
+---
+
 # Change Detection
 
 ## What is it?

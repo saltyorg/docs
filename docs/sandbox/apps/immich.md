@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - immich
+  - photos
+  - backup
+---
+
 # Immich
 
 ## What is it?
@@ -17,7 +26,7 @@
 - Smart Search
 - XMP Sidecars
 
-!!!info
+!!! info
     By default, Immich is NOT protected behind your Authelia/SSO middleware. You have to create a user with an email and password for Immich upon start up. Its recommended that you use the email and password you set up upon instalation for consistencies sake.
 
 | Details     |             |             |
@@ -38,7 +47,7 @@ sb install sandbox-immich
 
 ### 3. Setup
 
-!!!info
+!!! info
     📢 Again, no default user is configured until you run through the setup screen, so you would ideally run through setup as soon as immich is deployed to secure the site. It is not behind authelia by default.
 
 ???tip

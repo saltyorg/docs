@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - uptime-kuma
+  - monitoring
+  - uptime
+---
+
 # Uptime Kuma
 
 ## What is it?

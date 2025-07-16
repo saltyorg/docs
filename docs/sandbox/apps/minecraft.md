@@ -25,7 +25,7 @@ This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If 
 
 ### 2. Join Server
 
-!!! Warning "Cloudflare CDN"
+!!! warning "Cloudflare CDN"
     If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
 
 - By default, a single server will be accesible at  `minecraft._yourdomain.com_`
@@ -33,7 +33,7 @@ This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If 
 
 ### 3. Multi Server Set Up
 
-To add multiple instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
+To add multiple instances, add the following to the inventory. See the [inventory configuration instructions](../../saltbox/inventory/index.md).
 
 ``` yaml
 
@@ -49,7 +49,7 @@ So for the example above, `mcserver1._yourdomain.com_` and `mcserver2._yourdomai
 
 ### 4. Setup
 
-For individual servers, you can change things such as memory using custom docker envs. See instructions on inventory [here](../../saltbox/inventory/index.md)
+For individual servers, you can change things such as memory using custom docker envs. See the [inventory configuration instructions](../../saltbox/inventory/index.md)
 
 For a single install, the inventory vars will look like this `minecraft_docker_image_tag`.
 

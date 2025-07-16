@@ -72,4 +72,4 @@ There is a list of when a notification agent is triggered in the **Notification 
 
 ### Credit goes to blacktwin
 
-* [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS)
+- [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS)

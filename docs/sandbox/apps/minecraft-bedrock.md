@@ -9,7 +9,7 @@ tags:
 
 [Minecraft Bedrock](https://github.com/itzg/docker-minecraft-bedrock-server) is a server for the multi-platform version of Minecraft.
 
-!!! Note
+!!! note
     📢 This server will expose the port UDP 19132
 
 | Details     |             |             |             |
@@ -28,7 +28,7 @@ sb install sandbox-minecraft-bedrock
 
 - The server will be accessible at `minecraft-bedrock._yourdomain.com_` or `_yourserverip_:19132`
 
-!!! Warning "Cloudflare CDN"
+!!! warning "Cloudflare CDN"
     If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft-bedrock_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
 
 ### Change server version

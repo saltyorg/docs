@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - komga
+  - media
+  - comics
+---
+
 # Komga
 
 ## What is it?

@@ -78,7 +78,7 @@ However, it is safe to run any saltbox tag[s] [including the install tags] at wi
     ```
 
 !!! info
-    See [here](../../reference/dependencies.md) for more information about the dependencies.
+    See [dependencies documentation](../../reference/dependencies.md) for more information about the dependencies.
 
 
 ## Step 2: Configuration
@@ -201,13 +201,13 @@ To edit any of the following configuration files use the command written in the 
     transcodes: /mnt/local/transcodes # (17)!
     ```
 
-    1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
+    1. If the current server should have Authelia installed or use one installed elsewhere. For a multi-server setup, review the [considerations](../basics/install-types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
     2. Subdomain used for Authelia.
 
         Use different values here when using a Mediabox + Feederbox setup if deploying multiple Authelia instances.
 
-        On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install_types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
+        On a Feederbox where you want to use Authelia on the Mediabox just put in the same subdomain the Mediabox uses for Authelia (master having been set to no on the Feederbox). Review the [considerations](../basics/install-types.md#feederboxmediabox-setup-considerations) listed for your Authelia setup.
 
     3. Folder used for docker /downloads volume. Does not affect mergerfs (/mnt/unionfs).
 
@@ -328,7 +328,7 @@ To edit any of the following configuration files use the command written in the 
 
     4. Changes the logging driver used by the Docker daemon from local to json-file.
 
-        More information can be found [here](https://docs.docker.com/config/containers/logging/configure/)
+        More information can be found in the [Docker logging documentation](https://docs.docker.com/config/containers/logging/configure/)
 
     5. Toggles any tasks related to using Intel GPUs.
 
@@ -352,7 +352,7 @@ To edit any of the following configuration files use the command written in the 
 
     10. Toggles custom Traefik error pages.
 
-        See [here](../../advanced/styled-error-pages.md) for configuration details.
+        See [styled error pages configuration](../../advanced/styled-error-pages.md) for configuration details.
 
     11. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
 
@@ -360,14 +360,14 @@ To edit any of the following configuration files use the command written in the 
 
     13. Allows alternate DNS validation providers supported by Traefik.
 
-        Implemented ones are listed [here](https://github.com/saltyorg/Saltbox/blob/master/defaults/providers.yml.default).
+        Implemented ones are listed in [providers.yml.default](https://github.com/saltyorg/Saltbox/blob/master/defaults/providers.yml.default).
 
     14. Defines which subdomain the Traefik dashboard will be accessible at.
 
     15. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
 !!! info
-    See [here](../../reference/accounts.md) for more information about these settings.
+    See [accounts configuration](../../reference/accounts.md) for more information about these settings.
 
 ## Step 3: Preinstall
 
@@ -391,7 +391,7 @@ If your server did not need to reboot, **and the user in `accounts.yml` is diffe
     If you are installing on a machine where you created a user as part of the ubuntu install, you are currently logged in as that user, and you entered that same user into `accounts.yml`, you **do not** have to run `su username` or reconnect to SSH as that user, and probably should not. You are already logged in as the "saltbox user", and you can just move on to the next step. The `su username` or reconnect are typically required only on remote systems where you may be currently connected as `root`.
 
 !!! info
-    See [here](../../reference/preinstall.md) for more information about the preinstall.
+    See [preinstall documentation](../../reference/preinstall.md) for more information about the preinstall.
 
 ## Step 4: Rclone
 
@@ -439,12 +439,12 @@ Note that generally speaking these five options are mutually exclusive.
         The simplest possible case is:
 
         1. Set up a Google Project and OAuth Credential file if you don't already have one.
-        This process is described [here](../../reference/google-project-setup.md). You will need the ID and Secret from that process in step 3 below. That link takes you to one step in a multi-step process. Don't continue to follow that. Follow the steps on that page and then come back here.
+        This process is described in [Google project setup](../../reference/google-project-setup.md). You will need the ID and Secret from that process in step 3 below. That link takes you to one step in a multi-step process. Don't continue to follow that. Follow the steps on that page and then come back here.
         2. Create a Shared Drive in the Google Web UI. [optional]
         If you don't want to use a shared drive, skip this step, but know that some pieces of saltbox [notably drive monitoring in autoscan] won't work.
-        This process is described [here](../../reference/guides/google-shared-drive.md). If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
+        This process is described in the [Google shared drive guide](../../reference/guides/google-shared-drive.md). If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
         3. Create an rclone remote with those credentials.
-        This process is described [here](../../reference/guides/rclone-remote.md).
+        This process is described in the [rclone remote guide](../../reference/guides/rclone-remote.md).
         4. enter details about that remote in `settings.yml`
 
         Note: that mentions shared drives since that's our recommendation. If you want to point that remote at My Drive you can of course do so.
@@ -453,7 +453,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Dropbox"
 
-        1. Create rclone remote[s] pointing at Dropbox as described [here](../../reference/guides/rclone-remote-dropbox.md)
+        1. Create rclone remote[s] pointing at Dropbox as described in the [Dropbox rclone guide](../../reference/guides/rclone-remote-dropbox.md)
         2. enter remote details in `settings.yml`
 
     === "Other Cloud Storage"
@@ -462,7 +462,7 @@ Note that generally speaking these five options are mutually exclusive.
 
         You will need to perform two steps:
         
-        1. Create an rclone remote pointing at your cloud storage as described [here](../../reference/guides/rclone-remote-generic.md)
+        1. Create an rclone remote pointing at your cloud storage as described in the [generic rclone guide](../../reference/guides/rclone-remote-generic.md)
         2. enter those remote details in `settings.yml`
 
 Once you have set up your rclone remote[s], enter their details in `settings.yml` as discussed above in Step 2.
@@ -478,13 +478,13 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
 !!! warning
     Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
 
-If you are installing a [Feederbox/Mediabox setup](../basics/install_types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+If you are installing a [Feederbox/Mediabox setup](../basics/install-types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
 You can get a list of available install tags with `sb list`.
 
 === "Saltbox"
 
-    `saltbox` is an all-in-one media server for downloading and playback. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `saltbox` is an all-in-one media server for downloading and playback. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
     
     ```shell
     sb install saltbox
@@ -493,7 +493,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Mediabox [playback]"
 
-    `mediabox` is just the parts required for playback. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `mediabox` is just the parts required for playback. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
     
     ```shell
     sb install mediabox
@@ -502,7 +502,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Feederbox [downloading]"
 
-    `feederbox` is just the parts required for downloading. It installs `core` and a set of application as described [here](../basics/install_types.md)
+    `feederbox` is just the parts required for downloading. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
     
     ```shell
     sb install feederbox
@@ -511,7 +511,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Core [minimal]"
 
-    `core` is the bare minimum required for saltbox. It installs the basics as described [here](../basics/install_types.md)
+    `core` is the bare minimum required for saltbox. It installs the basics as described in [install types](../basics/install-types.md)
     
     ```shell
     sb install core
@@ -520,7 +520,7 @@ You can get a list of available install tags with `sb list`.
 
 === "Dealer's choice"
 
-    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install_types.md)
+    If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install-types.md)
     
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent

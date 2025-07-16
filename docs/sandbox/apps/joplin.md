@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - joplin
+  - productivity
+  - notes
+---
+
 # Joplin
 
 ## What is it?
@@ -22,7 +31,7 @@ sb install sandbox-joplin
 
 ### 3. Setup
 
-!!!info
+!!! info
     Default login for joplin is
     `email: admin@localhost`
     `password: admin`

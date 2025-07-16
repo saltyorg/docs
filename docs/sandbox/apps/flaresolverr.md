@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - flaresolverr
+  - networking
+  - proxy
+---
+
 # FlareSolverr
 
 ## What is it?

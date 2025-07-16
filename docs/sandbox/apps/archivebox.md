@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - archivebox
+  - archiving
+  - web
+---
+
 # ArchiveBox
 
 ## What is it?

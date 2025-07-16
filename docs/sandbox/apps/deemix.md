@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - deemix
+  - media
+  - music
+---
+
 # deemix
 
 ## What is it?

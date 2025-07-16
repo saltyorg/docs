@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - reposilite
+  - development
+  - repository
+---
+
 # reposilite
 
 ## What is it?

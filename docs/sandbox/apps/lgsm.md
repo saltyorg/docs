@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - lgsm
+  - gaming
+  - server
+---
+
 # LinuxGSM
 
 ## What is it?

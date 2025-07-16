@@ -12,7 +12,7 @@ When you install existing roles in saltbox, some things get handled behind the s
 
 When you add a container manually as outlined on this page, neither of those things will be done for you (unless you have installed our ddns container), so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
 
-If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
+If you want to create a role file that you can install like the built-in applications, see [contributing to sandbox apps](../sandbox/basics.md#contributing-to-sandbox-apps).
 
 IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_.  *You need to change those* **everywhere they appear** to match the application you are installing.
 

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - mylar3
+  - media
+  - comics
+---
+
 # Mylar3
 
 ## What is it?
@@ -41,7 +50,7 @@ sb install sandbox-mylar3
 
 8. Save and then restart the app
 
-!!! Note
+!!! note
       If you enable to OPDS server, DO NOT ENABLE `OPDS Fetch MetaInfo`. It queries the file system.
 
 ### Download settings

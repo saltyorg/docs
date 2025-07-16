@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - sshwifty
+  - networking
+  - ssh
+---
+
 # Sshwifty
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - airdcpp
+  - p2p
+  - downloading
+---
+
 # AirDC++
 
 ## What is it?

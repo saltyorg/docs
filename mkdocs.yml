@@ -147,11 +147,11 @@ nav:
   - Saltbox:
       - Basics: saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md
-      - Install Types: saltbox/basics/install_types.md
+      - Install Types: saltbox/basics/install-types.md
       - Install: saltbox/install/install.md
       - After-Install: saltbox/install/after.md
       - Update: saltbox/basics/update.md
-      - Accessing Apps: saltbox/basics/accessing_apps.md
+      - Accessing Apps: saltbox/basics/accessing-apps.md
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
       - Major Upgrade Guide:
@@ -409,7 +409,7 @@ nav:
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Dozzle: apps/dozzle.md
         - Gluetun: apps/gluetun.md
-        - Hetzner NFS: apps/hetzner_nfs.md
+        - Hetzner NFS: apps/hetzner-nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md
@@ -428,20 +428,20 @@ nav:
           - Plex-DB: apps/utility_tags/plex-db.md
 
   - FAQ:
-      - System: faq/System.md
-      - Cloud Storage: faq/Cloud Storage.md
-      - CloudFlare: faq/Cloudflare.md
-      - Cloudplow: faq/Cloudplow.md
-      - Docker: faq/Docker.md
-      - Hetzner & Google IPv6: faq/Hetzner.md
-      - Install: faq/Install.md
-      - Backup and Restore: faq/Backup and Restore.md
-      - Rclone: faq/Rclone.md
-      - Plex: faq/Plex.md
-      - ruTorrent: faq/ruTorrent.md
-      - Misc: faq/Misc.md
+      - System: faq/system.md
+      - Cloud Storage: faq/cloud-storage.md
+      - CloudFlare: faq/cloudflare.md
+      - Cloudplow: faq/cloudplow.md
+      - Docker: faq/docker.md
+      - Hetzner & Google IPv6: faq/hetzner.md
+      - Install: faq/install.md
+      - Backup and Restore: faq/backup-and-restore.md
+      - Rclone: faq/rclone.md
+      - Plex: faq/plex.md
+      - ruTorrent: faq/rutorrent.md
+      - Misc: faq/misc.md
       - sb: faq/sb.md
-      - Bazarr: faq/Bazarr.md
+      - Bazarr: faq/bazarr.md
 
   - Advanced:
       - Index: advanced/index.md
@@ -532,4 +532,4 @@ nav:
           - Adding a Subdomain: reference/subdomain.md
           - Using Local Storage: reference/local-storage.md
           - Mounting disks: reference/guides/mount.md
-          - HW transcoding on OVH: reference/OVH.md
+          - HW transcoding on OVH: reference/ovh.md

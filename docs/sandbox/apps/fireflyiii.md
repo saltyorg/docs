@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - fireflyiii
+  - finance
+  - budgeting
+---
+
 # Firefly III
 
 [TOC]

@@ -8,6 +8,8 @@ tags:
   - plex
 ---
 
+# WatchState
+
 This tool's primary goal is to sync your backends' play states without relying on third party services. Out of the box, it supports Jellyfin, Plex and Emby media servers.
 
 <div class="grid sb-buttons" markdown data-search-exclude>

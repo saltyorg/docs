@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - filebot
+  - media
+  - tools
+---
+
 # FileBot
 
 ## What is it?

@@ -15,15 +15,15 @@ For example:
 
 NZBGet default appearance:
 
-![](images/nzbget-before.png)
+![NZBGet interface showing default appearance before theme application](images/nzbget-before.png)
 
 NZBGet with the "nord" theme:
 
-![](images/nzbget-nord.png)
+![NZBGet interface with nord theme applied showing dark color scheme](images/nzbget-nord.png)
 
 Sonarr with the "hotline" theme:
 
-![](images/sonarr-hotline.png)
+![Sonarr interface with hotline theme showing bright pink and dark styling](images/sonarr-hotline.png)
 
 Choose the theme and apply it to containers in in inventory:
 
@@ -71,7 +71,7 @@ plex_themepark_enabled: true
 nzbhydra2_themepark_enabled: true
 ```
 
-Available themes can be found [here](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
+Available themes can be found in the [Theme Park documentation](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
 
 ```text
 organizr

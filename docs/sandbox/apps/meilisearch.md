@@ -1,4 +1,13 @@
-# Hoarder
+---
+hide:
+  - tags
+tags:
+  - meilisearch
+  - search
+  - database
+---
+
+# Meilisearch
 
 [Meilisearch](https://www.meilisearch.com/) Meilisearch is an AI powered search tool.
 

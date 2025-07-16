@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - comicstreamer
+  - media
+  - comics
+---
+
 # ComicStreamer
 
 ## What is it?

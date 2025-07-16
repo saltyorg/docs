@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - airsonic
+  - music
+  - streaming
+---
+
 # Airsonic
 
 ## What is it?

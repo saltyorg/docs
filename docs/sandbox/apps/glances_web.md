@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - glances
+  - monitoring
+  - system
+---
+
 # Glances
 
 ## What is it?

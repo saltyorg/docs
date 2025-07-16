@@ -95,6 +95,7 @@ jobs:
             --project-name=docs
             --branch=main
             --commit-hash=${{ github.sha }}
+            --commit-dirty=true
 
       - name: Save build cache
         id: cache-docs-save

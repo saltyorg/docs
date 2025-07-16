@@ -95,6 +95,7 @@ jobs:
             --project-name=docs
             --branch=pr-${{ steps.pr_info.outputs.pr_number }}
             --commit-hash=${{ steps.pr_info.outputs.pr_sha }}
+            --commit-dirty=true
 
       - name: Save build cache
         id: cache-docs-save

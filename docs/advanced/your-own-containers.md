@@ -14,6 +14,24 @@ When you add a container manually as outlined on this page, neither of those thi
 
 If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
 
+## Utilizing Generate Traefik Template
+
+Create your application folder
+
+    mkdir /opt/APPNAME
+
+Run the Generate Traefik Template
+
+    sb install generate-traefik-template
+
+Once you've answered the required fields, Saltbox will create a file in `/tmp/docker-compose.yml`
+
+Move the newly created `/tmp/docker-compose.yml` to the `/opt/APPNAME`
+
+    mv /tmp/docker-compose.yml /opt/APPNAME
+
+Once moved, modify `/opt/APPNAME/docker-compose.yml` to the requirements of your container. See IMPORTANT below.
+
 IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_.  *You need to change those* **everywhere they appear** to match the application you are installing.
 
 ## Docker Compose

@@ -61,7 +61,7 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
 === "Use SSH to tunnel to my server and claim it"
 
-    - On your local machine (the one that you uise to ssh into your saltbox machine):
+    - On your local machine (the one that you use to ssh into your Saltbox machine):
 
        ```shell
        ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N

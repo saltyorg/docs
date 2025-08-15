@@ -6,13 +6,13 @@ Conceptually, this is simple.
 
 1. Set up your local storage
 
-   Maybe this is a NAS, or a bunch of disks in the saltbox machine, or something else.  Step one is going to be setting this up.
+   Maybe this is a NAS, or a bunch of disks in the Saltbox machine, or something else.  Step one is going to be setting this up.
 
 2. Copy your media from the cloud to that local storage
 
    This is probably going to be an rclone copy and will mostly be waiting.
 
-3. Point your saltbox server at that local storage.
+3. Point your Saltbox server at that local storage.
 
    This would include things like:
   
@@ -33,7 +33,7 @@ One thing's for sure; you're buying a lot of disks.
 
 ### Copy your media from the cloud to that local storage
 
-First, halt all downloading on your saltbox machine; you don't need anything getting changed or added while you go through this exercise.
+First, halt all downloading on your Saltbox machine; you don't need anything getting changed or added while you go through this exercise.
 
 Depoending on you personal situation, you may or may not want to copy everything down from your cloud storage.  If you do, though, this is going to be some variation on:
 
@@ -43,17 +43,17 @@ rclone copy CLOUD_STORAGE_REMOTE:/PATH LOCATION_OF_LOCAL_STORAGE:/PATH
 
 Probably with some rclone flags to improve performance for your specific cloud storage provider.
 
-For example, if you have a standard saltbox setup, and you have mounted your local storage at `/mnt/nas`, maybe something like:
+For example, if you have a standard Saltbox setup, and you have mounted your local storage at `/mnt/nas`, maybe something like:
 
 ```
 rclone copy google:/Media /mnt/nas/Media --drive-chunk-size 128M --transfers 8 --checkers 8 --tpslimit 8 --fast-list --checksum --progress
 ```
 
-### Point your saltbox server at that local storage.
+### Point your Saltbox server at that local storage.
 
 Since in this case you just copied everything down, `/mnt/nas/Media` is now a mirror of `/mnt/remote/Media`
 
-The simplest thing here is to use the same rclone + cloudbox setup as saltbox does normally.
+The simplest thing here is to use the same rclone + cloudbox setup as Saltbox does normally.
 
 Stop all your docker containers.
 

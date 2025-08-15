@@ -49,7 +49,7 @@ uid=XXXX(yourusername) gid=XXXX(yourgroup) groups=XXXX(yourgroup)
 
 The generally correct way to do this is to change the setting and run `sb install shell`
 
-If you want to do this outside the saltbox context, carry on.
+If you want to do this outside the Saltbox context, carry on.
 
 How to check current shell:
 

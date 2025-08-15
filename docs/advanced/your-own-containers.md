@@ -18,7 +18,7 @@ When you add a container manually as outlined on this page, neither of those thi
 
 !!! info "Two approaches available"
     - **Recommended:** Use the [Generate Traefik Template](#utilizing-generate-traefik-template-recommended) for the easiest setup
-    - **Advanced:** Manually create docker-compose files using the [templates below](#docker-compose)
+    - **Advanced:** Manually create docker-compose files using the [templates below](#docker-compose-manual-setup)
 
 If you want to create a role file that you can install like the built-in applications, see [contributing to sandbox apps](../sandbox/basics.md#contributing-to-sandbox-apps).
 

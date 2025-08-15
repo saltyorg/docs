@@ -38,3 +38,81 @@ sb install sandbox-guacamole
 - Log in with user and password `guacadmin`. Change the default user and password immediately.
 
 - [:octicons-link-16: Documentation: Guacamole Docs](https://guacamole.apache.org/doc/gug/){: .header-icons }
+
+### 4. Enable Extensions (Optional)
+
+Guacamole supports various authentication extensions that can be enabled through your [Inventory](https://docs.saltbox.dev/saltbox/inventory/). Add any of the following options to enable specific extensions:
+
+=== "TOTP (Two-Factor Authentication)"
+
+    Enable time-based one-time passwords for enhanced security:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_TOTP: "Y"
+    ```
+
+=== "LDAP"
+
+    Enable LDAP authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_LDAP: "Y"
+    ```
+
+=== "RADIUS"
+
+    Enable RADIUS authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_RADIUS: "Y"
+    ```
+
+=== "Duo Security"
+
+    Enable Duo two-factor authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_DUO: "Y"
+    ```
+
+=== "CAS"
+
+    Enable Central Authentication Service:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_CAS: "Y"
+    ```
+
+=== "OpenID Connect"
+
+    Enable OpenID Connect authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_OPENID: "Y"
+    ```
+
+=== "SAML"
+
+    Enable SAML authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_SAML: "Y"
+    ```
+
+=== "Header Authentication"
+
+    Enable HTTP header-based authentication:
+
+    ```yml
+    guacamole_docker_envs_custom:
+      OPT_HEADER: "Y"
+    ```
+
+After adding any extension options, run `sb install sandbox-guacamole` to apply changes.

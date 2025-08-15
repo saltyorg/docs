@@ -4,37 +4,67 @@ hide:
 tags:
   - container
   - add
+  - docker-compose
+  - docker-run
+  - docker
+  - compose
 ---
 
 # Adding your own containers to Saltbox
 
-When you install existing roles in saltbox, some things get handled behind the scenes for you.  Notably, this includes creating the subdomain[s] at cloudflare and creating the `/opt/APPNAME` directory tree.
+When you install existing roles in Saltbox, some things get handled behind the scenes for you. Notably, this includes creating the subdomain[s] at Cloudflare and creating the `/opt/APPNAME` directory tree.
 
-When you add a container manually as outlined on this page, neither of those things will be done for you (unless you have installed our ddns container), so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
+When you add a container manually as outlined on this page, neither of those things will be done for you (unless you have installed our ddns container), so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
 
-If you want to create a role file that you can install like the built-in applications, see [here](../sandbox/basics.md#contributing-to-sandbox-apps).
+!!! info "Two approaches available"
+    - **Recommended:** Use the [Generate Traefik Template](#utilizing-generate-traefik-template-recommended) for the easiest setup
+    - **Advanced:** Manually create docker-compose files using the [templates below](#docker-compose-manual-setup)
 
-## Utilizing Generate Traefik Template
+If you want to create a role file that you can install like the built-in applications, see [contributing to sandbox apps](../sandbox/basics.md#contributing-to-sandbox-apps).
 
-Create your application folder
+## Utilizing Generate Traefik Template (Recommended)
 
+!!! tip "Easiest Method"
+    Using the Generate Traefik Template is the **easiest and preferred way** to get started with adding your own containers to Saltbox. This tool will automatically generate a properly configured docker-compose file for you.
+
+1. Create your application folder:
+
+    ```shell
     mkdir /opt/APPNAME
+    ```
 
-Run the Generate Traefik Template
+2. Run the Generate Traefik Template:
 
+    ```shell
     sb install generate-traefik-template
+    ```
 
-Once you've answered the required fields, Saltbox will create a file in `/tmp/docker-compose.yml`
+3. Answer the prompts for your container configuration. Saltbox will create a file at `/tmp/docker-compose.yml`
 
-Move the newly created `/tmp/docker-compose.yml` to the `/opt/APPNAME`
+4. Move the generated file to your application directory:
 
-    mv /tmp/docker-compose.yml /opt/APPNAME
+    ```shell
+    mv /tmp/docker-compose.yml /opt/APPNAME/
+    ```
 
-Once moved, modify `/opt/APPNAME/docker-compose.yml` to the requirements of your container. See IMPORTANT below.
+5. Edit `/opt/APPNAME/docker-compose.yml` to customize it for your specific container requirements.
 
-IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_.  *You need to change those* **everywhere they appear** to match the application you are installing.
+6. Start your container:
 
-## Docker Compose
+    ```shell
+    cd /opt/APPNAME
+    docker compose up -d
+    ```
+
+!!! note
+    The generated template includes all the necessary Traefik labels and Saltbox-specific configurations. You'll only need to modify the image name, ports, volumes, and environment variables specific to your application.
+
+## Docker Compose (Manual Setup)
+
+!!! warning "Advanced Users Only"
+    The templates below are for users who prefer to manually create their docker-compose files. For most users, the [Generate Traefik Template](#utilizing-generate-traefik-template-recommended) method above is much easier and less error-prone.
+
+IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_. _You need to change those_ **everywhere they appear** to match the application you are installing.
 
 === "Using Traefik (Authelia)"
     ```yaml
@@ -73,7 +103,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         external: true
     ```
 
-    1.  Defines the containers restart policy.
+    1.  Defines the container's restart policy.
 
         [Reference](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 
@@ -82,7 +112,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
     4.  Defines the hostname used on the Docker network.
     5.  Defines the environment variables which are often used to change configuration of the underlying application inside of the container.
 
-        While the TZ (Timezone) variable is used in pretty much all containers you will have to figure out the rest as it can differ quite a bit between different containers.
+        While the TZ (Timezone) variable is used in pretty much all containers, you will have to figure out the rest as it can differ quite a bit between different containers.
 
     6.  Defines which Docker networks the container will join upon creation.
 
@@ -98,7 +128,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS make sure to include the redirect-to-https middleware.
+        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
     11. This value defines which locations Traefik routes to the application.
 
@@ -122,17 +152,17 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
-        If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
+        If you don't use Cloudflare with the URL used, or for another reason it cannot use DNS validation, use `httpresolver`.
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    18. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
+    18. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
     19. Defines which port Traefik routes the traffic to.
     20. Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    21. This section tells docker compose that the network is managed outside of this compose file.
+    21. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Using Traefik (Authelia + API Router)"
     ```yaml
@@ -183,7 +213,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         external: true
     ```
 
-    1.  Defines the containers restart policy.
+    1.  Defines the container's restart policy.
 
         [Reference](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 
@@ -192,7 +222,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
     4.  Defines the hostname used on the Docker network.
     5.  Defines the environment variables which are often used to change configuration of the underlying application inside of the container.
 
-        While the TZ (Timezone) variable is used in pretty much all containers you will have to figure out the rest as it can differ quite a bit between different containers.
+        While the TZ (Timezone) variable is used in pretty much all containers, you will have to figure out the rest as it can differ quite a bit between different containers.
 
     6.  Defines which Docker networks the container will join upon creation.
 
@@ -208,15 +238,15 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS make sure to include the redirect-to-https middleware.
+        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
     11. Defines router priority.
 
-        If multiple router paths match a given address the one with the highest priority is used.
+        If multiple router paths match a given address, the one with the highest priority is used.
 
     12. This value defines which locations Traefik routes to the application.
 
-        With the API Router we only add paths to the router that should go around Authelia.
+        With the API Router, we only add paths to the router that should bypass Authelia.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
@@ -231,11 +261,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
     16. Defines router priority.
 
-        If multiple router paths match a given address the one with the highest priority is used.
+        If multiple router paths match a given address, the one with the highest priority is used.
 
     17. This value defines which locations Traefik routes to the application.
 
-        With the API Router we only add paths to the router that should go around Authelia.
+        With the API Router, we only add paths to the router that should bypass Authelia.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
@@ -244,7 +274,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
-        If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
+        If you don't use Cloudflare with the URL used, or for another reason it cannot use DNS validation, use `httpresolver`.
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
@@ -257,7 +287,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS make sure to include the redirect-to-https middleware.
+        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
     23. This value defines which locations Traefik routes to the application.
 
@@ -281,7 +311,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
-        If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
+        If you don't use Cloudflare with the URL used, or for another reason it cannot use DNS validation, use `httpresolver`.
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
@@ -291,7 +321,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         /host_path:/container_path
 
-    33. This section tells docker compose that the network is managed outside of this compose file.
+    33. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Using Traefik"
     ```yaml
@@ -330,7 +360,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         external: true
     ```
 
-    1.  Defines the containers restart policy.
+    1.  Defines the container's restart policy.
 
         [Reference](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 
@@ -339,7 +369,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
     4.  Defines the hostname used on the Docker network.
     5.  Defines the environment variables which are often used to change configuration of the underlying application inside of the container.
 
-        While the TZ (Timezone) variable is used in pretty much all containers you will have to figure out the rest as it can differ quite a bit between different containers.
+        While the TZ (Timezone) variable is used in pretty much all containers, you will have to figure out the rest as it can differ quite a bit between different containers.
 
     6.  Defines which Docker networks the container will join upon creation.
 
@@ -355,7 +385,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS make sure to include the redirect-to-https middleware.
+        Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
     11. This value defines which locations Traefik routes to the application.
 
@@ -379,17 +409,17 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
-        If you don't use Cloudflare with the URL used or another reason why it cannot use DNS validation use `httpresolver`.
+        If you don't use Cloudflare with the URL used, or for another reason it cannot use DNS validation, use `httpresolver`.
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    18. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
+    18. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
     19. Defines which port Traefik routes the traffic to.
     20. Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    21. This section tells docker compose that the network is managed outside of this compose file.
+    21. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Without Traefik"
     ```yaml
@@ -416,7 +446,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         external: true
     ```
 
-    1.  Defines the containers restart policy.
+    1.  Defines the container's restart policy.
 
         [Reference](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 
@@ -425,7 +455,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
     4.  Defines the hostname used on the Docker network.
     5.  Defines the environment variables which are often used to change configuration of the underlying application inside of the container.
 
-        While the TZ (Timezone) variable is used in pretty much all containers you will have to figure out the rest as it can differ quite a bit between different containers.
+        While the TZ (Timezone) variable is used in pretty much all containers, you will have to figure out the rest as it can differ quite a bit between different containers.
 
     6.  Defines which Docker networks the container will join upon creation.
 
@@ -436,18 +466,22 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         /host_path:/container_path
 
-    9.  This section tells docker compose that the network is managed outside of this compose file.
+    9.  This section tells Docker Compose that the network is managed outside of this compose file.
 
 ## Creating and running the container
 
-Once you have a docker-compose file as described above, you will use standard docker commands to create and run the container.
+Once you have a docker-compose file as described above, you will use standard Docker commands to create and run the container.
 
 If the file is named `docker-compose.yml` and is located in the current working directory:
 
-    docker compose up -d
+```shell
+docker compose up -d
+```
 
 If the file has some other name or is located elsewhere in the file system:
 
-    docker compose -f /path/to/something.yml up -d
+```shell
+docker compose -f /path/to/something.yml up -d
+```
 
-Remember to create the `APPNAME.domain.tld` subdomain at cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree prior to running that command.
+Remember to create the `APPNAME.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree prior to running that command.

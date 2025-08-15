@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - guacamole
+  - networking
+  - remote-access
+---
+
 # Guacamole
 
 ## What is it?

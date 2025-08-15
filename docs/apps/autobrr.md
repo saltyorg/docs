@@ -12,7 +12,7 @@ tags:
 [Autobrr](https://autobrr.com/) is a modern single binary replacement for the autodl-irssi+rutorrent plugin.
 autobrr monitors IRC announce channels and torznab RSS feeds to get releases as soon as they are available, with good filtering, and regex support. Go brr.
 
-!!! Note
+!!! note
       📢 Work in progress. Expect bugs and breaking changes. Features may be broken or incomplete.
 
 | Details     |             |             |

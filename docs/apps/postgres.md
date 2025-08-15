@@ -25,7 +25,7 @@ sb install postgres
 
 ### 2. Setup
 
-!!!info
+!!! info
     The default password for this container is `password4321`
     To easily manage the db, consider [adminer](../sandbox/apps/adminer.md)
 

@@ -16,7 +16,7 @@ Foundry VTT provides the full set of digital tools necessary to emulate and (and
 
 While other VTTs can provide some of these basic elements, the Foundry team prides ourselves on continually pushing the boundaries of the possible, providing rich dynamic lighting/fog of war, immersive audio, interactive map regions, powerful modding capabilities, and much more. Foundry VTT gives you everything you need (and then some) to forge thrilling and memorable moments with your gaming group!
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log into the app itself.
 
 | Details     |             |             |             |

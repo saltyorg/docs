@@ -6,6 +6,8 @@ tags:
   - token
 ---
 
+# Plex Auth Token
+
 Here is a way of obtaining a Plex Access Token for your Plex account.
 
 ## Saltbox Role
@@ -14,13 +16,13 @@ You will need your Plex credentials filled in `~/saltbox/accounts.yml`. If you a
 
 1. Go to the Saltbox folder:
 
-    ```bash
+    ```shell
     cd ~/saltbox/
     ```
 
 2. Open the file for editing:
 
-    ```bash
+    ```shell
     nano accounts.yml
     ```
 

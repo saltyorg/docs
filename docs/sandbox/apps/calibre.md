@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - calibre
+  - ebooks
+  - management
+---
+
 # Calibre
 
 ## What is it?

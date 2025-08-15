@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - wrapperr
+  - statistics
+  - analytics
+---
+
 # Wrapperr
 
 ## What is it?

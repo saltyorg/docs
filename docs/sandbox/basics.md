@@ -65,12 +65,12 @@ sb list
 
 ```
 
-!!! Tip
+!!! tip
     Where possible the configured username/password are taken from your Saltbox [`accounts.yml`](../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml` and used to create a default user an password for logging in.
 
 ### Requesting Sandbox Apps
 
-If you have an idea for a container that you think fits into the Saltbox system but you don't feel you have the required skills to create a role, open an issue in the sandbox repo [here](https://github.com/saltyorg/Sandbox/issues).  Take a look at some other app requests and follow the same pattern.  If your suggestion catches a developer's interest, perhaps they will pick it up.
+If you have an idea for a container that you think fits into the Saltbox system but you don't feel you have the required skills to create a role, open an issue in the [Sandbox repository](https://github.com/saltyorg/Sandbox/issues).  Take a look at some other app requests and follow the same pattern.  If your suggestion catches a developer's interest, perhaps they will pick it up.
 
 !!! note
     Requests are just that, *requests*.  Nobody is being paid for their work on this.  Requests may not be implemented in a timely manner or at all.
@@ -163,7 +163,7 @@ roles/my-cool-role/tasks/main.yml
 
 This file drives the install of your role. The stuff in there should be self-explanatory or understandable with comparisons to existing roles; if it's not, then again, with all respect you probably shouldn't be creating a role right now.
 
-There is a wiki article on adding new containers [here](../advanced/your-own-containers.md); this may be of some use.
+There is a [wiki article on adding new containers](../advanced/your-own-containers.md); this may be of some use.
 
 Don't forget the header in both these files:
 

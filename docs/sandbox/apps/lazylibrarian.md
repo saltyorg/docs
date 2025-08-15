@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - lazylibrarian
+  - media
+  - books
+---
+
 # LazyLibrarian
 
 ## What is it?

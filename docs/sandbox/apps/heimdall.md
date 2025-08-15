@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - heimdall
+  - dashboard
+  - homepage
+---
+
 # Heimdall
 
 ## What is it?

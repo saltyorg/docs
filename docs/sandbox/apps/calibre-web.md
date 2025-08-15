@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - calibre
+  - ebooks
+  - reading
+---
+
 # Calibre-Web
 
 ## What is it?

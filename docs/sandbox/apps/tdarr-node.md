@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tdarr-node
+  - media
+  - encoding
+---
+
 # Tdarr Node
 
 ## What is it?

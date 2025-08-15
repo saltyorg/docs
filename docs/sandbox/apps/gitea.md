@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - gitea
+  - development
+  - git
+---
+
 # Gitea
 
 ## What is it?

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - esphome
+  - automation
+  - iot
+---
+
 # ESPHome
 
 ## What is it?

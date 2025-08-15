@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - embystat
+  - statistics
+  - monitoring
+---
+
 # EmbyStat
 
 ## What is it?

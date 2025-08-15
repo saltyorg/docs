@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - xteve
+  - iptv
+  - streaming
+---
+
 # xTeVe
 
 ## What is it?

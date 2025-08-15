@@ -1,10 +1,19 @@
+---
+hide:
+  - tags
+tags:
+  - audiobookshelf
+  - audiobooks
+  - podcasts
+---
+
 # Audiobookshelf
 
 ## What is it?
 
 [audiobookshelf](https://www.audiobookshelf.org/) is a self-hosted audio book and podcast server.
 
-!!!info
+!!! info
     By default, the role is NOT protected behind your Authelia/SSO middleware.
 
 | Details     |             |             |             |

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - kavita
+  - media
+  - books
+---
+
 # Kavita
 
 ## What is it?

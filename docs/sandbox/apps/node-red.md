@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - node-red
+  - automation
+  - iot
+---
+
 # Node Red
 
 ## What is it?

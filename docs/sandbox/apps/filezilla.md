@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - filezilla
+  - file-management
+  - ftp
+---
+
 # FileZilla
 
 ## What is it?

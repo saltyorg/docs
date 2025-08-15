@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - epms
+  - plex
+  - metadata
+---
+
 # Extended Personal Media Shows Agent and Scanner
 
 ## What is it?

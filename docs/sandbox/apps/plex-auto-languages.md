@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - plex-auto-languages
+  - plex
+  - automation
+---
+
 # plex_auto_languages
 
 ## What is it?

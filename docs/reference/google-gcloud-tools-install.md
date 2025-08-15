@@ -58,7 +58,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 2. Log into your Google account and approve the access request:
 
-    ![](../images/gcloud-sdk/02-sdk-approve.png)
+    ![Google OAuth consent screen showing gcloud CLI access request approval dialog](../images/gcloud-sdk/02-sdk-approve.png)
 
     Copy the verification code.
 

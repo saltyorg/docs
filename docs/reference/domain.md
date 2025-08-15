@@ -7,7 +7,7 @@ tags:
 
 ## Domain Name
 
-**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing_apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
+**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing-apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
@@ -33,7 +33,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     - For DNS providers that allow wildcards.
    
-    - For [Saltbox install type](../saltbox/basics/install_types.md).
+    - For [Saltbox install type](../saltbox/basics/install-types.md).
    
     **Steps:**
    
@@ -47,7 +47,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     Namecheap > Domain List > Manage > Advanced DNS > Add New Record > A Record > `*` for Host > Server IP for Value.
    
-    ![](../images/cloudflare/cloudflare-a-record.png)
+    ![Cloudflare DNS settings showing A record configuration with wildcard host and server IP](../images/cloudflare/cloudflare-a-record.png)
    
     </details>
 
@@ -57,7 +57,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     - For DNS providers that do not allow wildcards (e.g. Freenom).
    
-    - For [Mediabox / Feederbox  install types](../saltbox/basics/install_types.md).
+    - For [Mediabox / Feederbox  install types](../saltbox/basics/install-types.md).
    
     - For Cloudflare users.
    
@@ -158,13 +158,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
         "Dashboard" -> _your domain.tld_ -> "Manage" -> "Name Servers" -> "Custom DNS" -> add the nameservers in.
    
-        ![](../images/namecheap-dns.png)
+        ![Namecheap domain management showing Custom DNS nameserver configuration](../images/namecheap-dns.png)
    
     === "Namesilo.com"
    
         "Manage My Domains" -> _your domain.tld_ -> "NameServers" -> "Change" ->  add the nameservers in.
    
-        ![](../images/namesilo-dns.png)
+        ![Namesilo domain management interface showing nameserver change options](../images/namesilo-dns.png)
    
     #### Setup
    
@@ -172,13 +172,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     2. Here you will see that your domain will have an "Active" status. Click on your domain to continue.
    
-       ![](../images/cloudflare/cloudflare-active.png)
+       ![Cloudflare dashboard showing domain with Active status](../images/cloudflare/cloudflare-active.png)
    
     3. Click the **SSL/TLS** tab.
    
     4. Set **SSL** to `Full (strict)`.
    
-       ![](../images/cloudflare/cloudflare-full-strict.png)
+       ![Cloudflare SSL/TLS settings page with Full (strict) encryption mode selected](../images/cloudflare/cloudflare-full-strict.png)
    
     #### Get a [free] Cloudflare API Key
    
@@ -188,19 +188,19 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     3. Click **Get your API token**.
    
-        ![](../images/cloudflare/cloudflare-api-token.png){ width=60% }
+        ![Cloudflare Overview tab showing 'Get your API token' button](../images/cloudflare/cloudflare-api-token.png){ width=60% }
    
     4. Under **API Keys** and then **Global API Key** click **View**.
    
-        ![](../images/cloudflare/cloudflare-global-api.png){ width=60% }
+        ![Cloudflare API Keys section highlighting Global API Key View button](../images/cloudflare/cloudflare-global-api.png){ width=60% }
    
     5. On the login popup, type in your **password** and click **View**.
    
-        ![](../images/cloudflare/cloudflare-api-password.png){ width=50% }
+        ![Cloudflare password confirmation dialog for viewing API key](../images/cloudflare/cloudflare-api-password.png){ width=50% }
    
     6. Save your API key.
    
-        ![](../images/cloudflare/cloudflare-api-show.png){ width=50% }
+        ![Cloudflare interface displaying the Global API Key for copying](../images/cloudflare/cloudflare-api-show.png){ width=50% }
 
     #### Add the Cloudflare API Key to the saltbox settings:
    
@@ -228,7 +228,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     4. Under "Status", click the switch next to the gray cloud icon (i.e. `DNS Only`) to switch to an orange one (i.e. `DNS and HTTP proxy (CDN)`).
    
-       ![](../images/cloudflare/cloudflare-proxy-off.png){ width=60% }
+       ![Cloudflare DNS tab showing subdomain with proxy status toggle (DNS Only mode)](../images/cloudflare/cloudflare-proxy-off.png){ width=60% }
 
 <!-- Temporarily removed from setup [last steps] - may not be needed..
    
@@ -236,6 +236,6 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     1. Set **HTTP Strict Transport Security (HSTS)** to `disabled`.
    
-       ![](../images/cloudflare/cloudflare-always-redirect.png)
+       ![Cloudflare SSL/TLS settings showing Always Use HTTPS and HSTS configuration options](../images/cloudflare/cloudflare-always-redirect.png)
    
 -->

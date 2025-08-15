@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - apprise
+  - notifications
+  - alerts
+---
+
 # Apprise
 
 ## What is it?

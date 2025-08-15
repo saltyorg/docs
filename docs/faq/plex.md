@@ -61,7 +61,7 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 
 === "Use SSH to tunnel to my server and claim it"
 
-    - On your local machine (the one that you uise to ssh into your saltbox machine):
+    - On your local machine (the one that you use to ssh into your Saltbox machine):
 
        ```shell
        ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N
@@ -91,7 +91,7 @@ Reorder the Plex agents for trhe library so that local assets are at the bottom.
 
 ## Fix permission issues with Plex logs
 
-Replace `user` and `group` to match yours' (see [here](System.md#find-your-user-id-uid-and-group-id-gid)).
+Replace `user` and `group` to match yours' (see [here](system.md#find-your-user-id-uid-and-group-id-gid)).
 
 ```shell
 sudo chown -R user:group /opt/plex/Library/Logs

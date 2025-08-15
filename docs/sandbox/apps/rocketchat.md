@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - rocketchat
+  - communication
+  - chat
+---
+
 # rocketchat
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED

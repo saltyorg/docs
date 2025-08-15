@@ -32,7 +32,7 @@ There are initially seven "themes" available, which are stored in `/opt/error_pa
 cats  ghost  hacker-terminal  l7-dark  l7-light  noise  shuffle
 ```
 
-Samples of the themed pages can be viewed [here](https://tarampampam.github.io/error-pages/)
+Samples of the themed pages can be viewed in the [error pages gallery](https://tarampampam.github.io/error-pages/)
 
 ## How do I change the theme?
 
@@ -62,13 +62,13 @@ These error pages do not work with every app; do your own a/b testing to verify 
 
 You can find the Saltbox roles that are known to NOT work with:
 
-```bash
+```shell
 grep -Ril "_traefik_error_pages_enabled: false" /srv/git/saltbox/roles | cut -d/ -f6 | sort -u
 ```
 
 You can find the Sandbox roles that are known to NOT work with:
 
-```bash
+```shell
 grep -Ril "_traefik_error_pages_enabled: false" /opt/sandbox/roles | cut -d/ -f5 | sort -u
 ```
 

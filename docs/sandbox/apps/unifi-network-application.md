@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - unifi
+  - networking
+  - wireless
+---
+
 # Unifi Network Application
 
 ## What is it?
@@ -8,7 +17,7 @@
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://www.ui.com/download/unifi/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-unifi-network-application){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/unifi-network-application){: .header-icons }|
 
-!!! Warning
+!!! warning
     This role is a replacement for the previous Unifi Controller role. This is not an in-place replacement. In order to migrate, you must perform a full backup from the Unifi web interface, and restore from that backup when running the setup wizard in a fresh instance of the Unifi Network Application. You must rename/remove the previous appdata from `/opt/unifi` before deploying the Unifi Network Application role.
 
 ### 1. Installation
@@ -42,7 +51,7 @@ sb install sandbox-unifi-network-application
 
 - [:octicons-link-16: Documentation: Unifi Net App Docs](https://github.com/linuxserver/docker-unifi-network-application/blob/master/README.md){: .header-icons }
 
-!!! Note
+!!! note
       📢 The default setup only publish the 8080 tcp port, which is the bare minimum to allow communication between your network equipment and Unifi Network Application.
       Depending on your requirements, you may need additional ports according to the [:octicons-link-16: Documentation](https://github.com/linuxserver/docker-unifi-network-application#parameters) .
 

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - kcptun-client
+  - tunnel
+  - networking
+---
+
 # kcptun client
 
 ## What is it?

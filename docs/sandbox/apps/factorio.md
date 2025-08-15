@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - factorio
+  - gaming
+  - server
+---
+
 # Factorio
 
 ## What is it?

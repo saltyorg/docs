@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - plex-patrol
+  - plex
+  - monitoring
+---
+
 # plex_patrol
 
 ## What is it?

@@ -25,7 +25,7 @@ Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Set
 
 Make changes in the following sections:
 
-!!! Settings
+!!! info "Settings"
 
     === "Media Management"
 
@@ -42,7 +42,7 @@ Make changes in the following sections:
                 <details>
                 <summary>TRaSH' naming guide [Recommended]</summary> <br />
 
-                Go [here](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
+                Go to the [TRaSH Guides Sonarr naming scheme](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
 
                 Example:  <br />
                 ```

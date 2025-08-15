@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - chrome
+  - browser
+  - headless
+---
+
 # Chrome
 
 Headless container running Google Chrome. Useful for testing, filling out forms, web crawling, getting webpage screenshots, etc.
@@ -24,7 +33,7 @@ sb install sandbox-chrome
 
 The docker commands are set to the following by default. Port 9222 is open to the container by default.
 
-```yml
+```yaml
   - --no-sandbox
   - --disable-gpu
   - --disable-dev-shm-usage

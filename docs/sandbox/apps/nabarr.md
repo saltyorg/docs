@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - nabarr
+  - automation
+  - rss
+---
+
 # Nabarr
 
 ## What is it?

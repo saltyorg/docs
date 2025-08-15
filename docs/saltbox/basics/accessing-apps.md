@@ -9,7 +9,7 @@ tags:
 
 # Accessing Saltbox Apps
 
-_Note 1: If pages don't load at all, make sure you've set up your [domain](../../reference/domain.md) properly and also checkout the [FAQ](../../faq/System.md)._
+_Note 1: If pages don't load at all, make sure you've set up your [domain](../../reference/domain.md) properly and also checkout the [FAQ](../../faq/system.md)._
 
 ## Default Apps
 

@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - adguard
+  - dns
+  - adblock
+---
+
 # AdGuard Home
 
 ## What is it?

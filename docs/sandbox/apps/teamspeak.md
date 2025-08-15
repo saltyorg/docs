@@ -6,6 +6,8 @@ tags:
   - voicechat
 ---
 
+# TeamSpeak
+
 Software for quality voice communication via the Internet.
 
 <div class="grid sb-buttons" markdown data-search-exclude>

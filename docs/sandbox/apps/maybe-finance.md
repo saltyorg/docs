@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - maybe-finance
+  - finance
+  - budgeting
+---
+
 # Maybe Finance
 
 ## What is it?

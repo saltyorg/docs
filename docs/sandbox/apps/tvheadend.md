@@ -1,3 +1,12 @@
+---
+hide:
+  - tags
+tags:
+  - tvheadend
+  - tv
+  - streaming
+---
+
 # Tvheadend
 
 ## What is it?
@@ -22,7 +31,7 @@ HTTP
 HTSP (own protocol)
 SAT>IP
 
-!!!info
+!!! info
     By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
 
 | Details     |             |             |             |

@@ -1,10 +1,19 @@
+---
+hide:
+  - tags
+tags:
+  - mealie
+  - recipes
+  - cooking
+---
+
 # Mealie
 
 ## What is it?
 
 [Mealie](https://mealie.io/) is aan intuitive and easy to use recipe management app. It's designed to make your life easier by being the best recipes management experience on the web and providing you with an easy to use interface to manage your growing collection of recipes.
 
-!!!info
+!!! info
     By default, the role is **NOT** protected behind your Authelia/SSO middleware. You have to log into the role itself.
 
 | Details     |             |             |             |

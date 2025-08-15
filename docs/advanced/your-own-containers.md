@@ -4,6 +4,10 @@ hide:
 tags:
   - container
   - add
+  - docker-compose
+  - docker-run
+  - docker
+  - compose
 ---
 
 # Adding your own containers to Saltbox

@@ -1,7 +1,6 @@
 ---
 hide:
   - tags
-  - navigation
 tags:
   - upgrade
   - traefik

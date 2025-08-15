@@ -534,3 +534,5 @@ nav:
           - Using Local Storage: reference/local-storage.md
           - Mounting disks: reference/guides/mount.md
           - HW transcoding on OVH: reference/ovh.md
+        - Deprecated Guides:
+          - Traefik 3.0 Upgrade: reference/guides/deprecated/traefik3.md

@@ -1,2 +1,3 @@
 lightgallery==0.5
 mkdocs-git-committers-plugin-2==2.5.0
+mkdocs-redirects==1.2.1

@@ -1,13 +1,21 @@
 ---
 hide:
   - tags
+  - navigation
 tags:
   - upgrade
   - traefik
   - mount
+  - deprecated
 ---
 
-# Traefik 3.0 Upgrade
+# Traefik 3.0 Upgrade (Deprecated)
+
+!!! warning "Deprecated Guide"
+    This guide is outdated and preserved for historical reference only. The information contained here may no longer be accurate or relevant for current Saltbox installations.
+
+!!! note "Current Information"
+    For current upgrade information, please refer to the [Saltbox update documentation](../../saltbox/basics/update.md) or ask on the [Discord server](https://discord.gg/ugfKXpFND8).
 
 Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0.
 
@@ -28,7 +36,7 @@ These changes include:
         2. As a result the old rclone_vfs.service will get removed so preserve a copy if you want to keep any tweaks you made to it.
 
     ??? note "What Does this mean for me?"
-    
+
         If you have custom mount services and mergerfs changes to support your multiple remotes [maybe you have google and dropbox both configured, for example] saltbox will now manage that for you.
 
         IF you set up Dropbox or Box or some other non-Google cloud storage using guides from this wiki or the Discord, you have custom mount services.
@@ -43,38 +51,38 @@ These changes include:
         4. define your rclone remotes in `settings.yml` as described on the install page or the config file page.
         5. run `sb install mounts` to build the new service files and start the mounts.
 
-4. Database role changes - **Breaking Changes**
+3. Database role changes - **Breaking Changes**
     1. Added multi-instance support to database roles.
     2. Moved roles requiring databases to provision a unique database instance for each app instance.
         1. This is still being worked on and most of this was moved to a separate branch for now.
 
-5. Authelia changes
+4. Authelia changes
     1. Added greater configurability to Authelia using the [inventory](../inventory/index.md).
     2. Added LDAP backend to Authelia as an option.
 
-6. Add support to restoring the appdata of a single app from backup
+5. Add support to restoring the appdata of a single app from backup
     1. `sb install restore -e restore_tar=plex.tar` but it assumes you are past any steps restore would require.
 
-7. Changed default torrent client to qBittorrent
+6. Changed default torrent client to qBittorrent
 
-8. Changed default usenet client to SABnzbd
+7. Changed default usenet client to SABnzbd
 
     ??? note "What if I want to keep using nzbget and/or rutorrent?"
-    
+
         You can override this with a setting in the [inventory](../inventory/index.md):
 
         ```
         download_clients_enabled: ["qbittorrent", "sabnzbd"]
         ```
 
-10. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed ones).
+8. Add new custom container (ddns role) for keeping a dynamic IP on Cloudflare in sync with all containers using Traefik (not just Saltbox installed ones).
 
-11. Changed the rutorrent image since the previously used one was no longer getting updates.
+9. Changed the rutorrent image since the previously used one was no longer getting updates.
     1. No longer includes autodl
 
-12. Docker volumes such as `/data`, `/tv` and `/movies` are no longer mounted into relevant containers by default.
+10. Docker volumes such as `/data`, `/tv` and `/movies` are no longer mounted into relevant containers by default.
     1. Restore the old behavior by setting `docker_legacy_volume: true` using the [inventory](../inventory/index.md), then running the relevant tags [**typically** `plex, radarr, sonarr` but your setup may differ].
 
-13. The `backup` role now explicitly requires a tag when run even if referencing the `backup.yml` playbook file. You may need to re-run `sb install set-backup` to re-provision your backup cron or edit your cron to include the `--tag backup` argument if using the backup role (or `backup2` if using that role).
+11. The `backup` role now explicitly requires a tag when run even if referencing the `backup.yml` playbook file. You may need to re-run `sb install set-backup` to re-provision your backup cron or edit your cron to include the `--tag backup` argument if using the backup role (or `backup2` if using that role).
 
 As with any major update double check your [inventory](../inventory/index.md) edits are in line with any changes made to the roles. Ask on our discord server if in doubt.

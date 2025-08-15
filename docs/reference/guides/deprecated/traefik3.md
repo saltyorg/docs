@@ -15,7 +15,7 @@ tags:
     This guide is outdated and preserved for historical reference only. The information contained here may no longer be accurate or relevant for current Saltbox installations.
 
 !!! note "Current Information"
-    For current upgrade information, please refer to the [Saltbox update documentation](../../saltbox/basics/update.md) or ask on the [Discord server](https://discord.gg/ugfKXpFND8).
+    For current upgrade information, please refer to the [Saltbox update documentation](../../../saltbox/basics/update.md) or ask on the [Discord server](https://discord.gg/ugfKXpFND8).
 
 Saltbox has undergone some major breaking changes which land with the release and integration of Traefik 3.0.
 

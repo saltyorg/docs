@@ -1,0 +1,99 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":semanticCommits",
+        ":separateMajorReleases",
+        ":ignoreUnstable"
+    ],
+    "prConcurrentLimit": 0,
+    "prHourlyLimit": 0,
+    "ansible": {
+        "enabled": false
+    },
+    "labels": [
+        "dependencies"
+    ],
+    "packageRules": [
+        {
+            "description": "Major pip requirements updates",
+            "matchManagers": [
+                "pip_requirements"
+            ],
+            "matchFileNames": [
+                "requirements.txt"
+            ],
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "labels": [
+                "dependencies",
+                "pip",
+                "major"
+            ]
+        },
+        {
+            "description": "pip requirements",
+            "matchManagers": [
+                "pip_requirements"
+            ],
+            "matchFileNames": [
+                "requirements.txt"
+            ],
+            "groupName": "requirements-saltbox-docs",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "labels": [
+                "dependencies",
+                "pip",
+                "saltbox"
+            ]
+        },
+        {
+            "description": "Major GitHub Actions updates",
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "labels": [
+                "dependencies",
+                "github-actions",
+                "major"
+            ]
+        },
+        {
+            "description": "GitHub Actions updates",
+            "matchManagers": [
+                "github-actions"
+            ],
+            "groupName": "github-actions",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "labels": [
+                "dependencies",
+                "github-actions"
+            ]
+        }
+    ],
+    "rebaseWhen": "conflicted",
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "addLabels": [
+            "security",
+            "vulnerability"
+        ]
+    },
+    "commitMessageAction": "Update",
+    "commitMessageTopic": "{{depName}}",
+    "commitMessageExtra": "to {{newVersion}}",
+    "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
+    "lockFileMaintenance": {
+        "enabled": true
+    }
+}

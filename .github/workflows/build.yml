@@ -19,7 +19,7 @@ jobs:
     if: github.event.repository.fork == false && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -42,7 +42,7 @@ jobs:
       url: ${{ steps.cloudflare.outputs.deployment-url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -111,7 +111,7 @@ jobs:
     if: always() && github.event.repository.fork == false && github.event_name != 'pull_request'
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Determine Workflow Conclusion
         run: ./scripts/workflow-status.sh ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} ${{ github.run_id }}

@@ -16,14 +16,13 @@
     ],
     "packageRules": [
         {
-            "description": "Group all major pip requirements updates",
+            "description": "Major pip requirements updates",
             "matchManagers": [
                 "pip_requirements"
             ],
             "matchFileNames": [
                 "requirements.txt"
             ],
-            "groupName": "requirements (major)",
             "matchUpdateTypes": [
                 "major"
             ],
@@ -34,7 +33,7 @@
             ]
         },
         {
-            "description": "Saltbox Docs requirements",
+            "description": "pip requirements",
             "matchManagers": [
                 "pip_requirements"
             ],
@@ -57,7 +56,6 @@
             "matchManagers": [
                 "github-actions"
             ],
-            "groupName": "github-actions (major)",
             "matchUpdateTypes": [
                 "major"
             ],
@@ -68,7 +66,7 @@
             ]
         },
         {
-            "description": "Minor/patch GitHub Actions updates",
+            "description": "GitHub Actions updates",
             "matchManagers": [
                 "github-actions"
             ],

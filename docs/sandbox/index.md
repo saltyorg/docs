@@ -13,8 +13,6 @@ tags:
 - **[adminer](../sandbox/apps/adminer.md)**  - tag - `sandbox-adminer`
 - **[airdcpp](../sandbox/apps/airdcpp.md)**  - tag - `sandbox-airdcpp`
 - **[airsonic](../sandbox/apps/airsonic.md)**  - tag - `sandbox-airsonic`
-- **[alternatrr](../sandbox/apps/alternatrr.md)**  - tag - `sandbox-alternatrr`
-- **[alternatrrx](../sandbox/apps/alternatrrx.md)**  - tag - `sandbox-alternatrrx`
 - **[apprise](../sandbox/apps/apprise.md)**  - tag - `sandbox-apprise`
 - **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
 - **[a-train](../sandbox/apps/a-train.md)**  - tag - `sandbox-a-train`

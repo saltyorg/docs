@@ -14,8 +14,6 @@ settings.yml
 
 ``` yaml
 ---
-alternatrrx:
-  roles: ["1080webdl", "1080remux"]
 a_train:
   remotes: [""]
 delugevpn:

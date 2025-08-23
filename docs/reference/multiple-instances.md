@@ -18,7 +18,6 @@ The general idea is to move all the configuration into the `/srv/git/saltbox/inv
 **As of 01-23-2024** the roles supported are:
 
 ```yaml
-alternatrr
 autoscan
 bazarr
 calibre

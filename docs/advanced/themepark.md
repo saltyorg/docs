@@ -71,7 +71,7 @@ plex_themepark_enabled: true
 nzbhydra2_themepark_enabled: true
 ```
 
-Available themes can be found in the [Theme Park documentation](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
+Available themes can be found in the [Theme Park documentation](https://docs.theme-park.dev/theme-options/) and [Community](https://docs.theme-park.dev/community-themes/).  Refer to them in the inventory file by name:
 
 ```text
 organizr

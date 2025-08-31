@@ -14,13 +14,13 @@ Configuration management and auto-import tool for Radarr/Sonarr custom formats a
 
 <div class="grid sb-buttons" markdown data-search-exclude>
 
-[:material-home: Homepage&nbsp;&nbsp;](https://dictionarry.dev/#home-content-profilarr){ .md-button .md-button--stretch }
+[:material-home: Homepage&nbsp;&nbsp;](https://dictionarry.dev){ .md-button .md-button--stretch }
 
-[:material-bookshelf: Manual&nbsp;&nbsp;](https://dictionarry.dev/wiki/profilarr-setup){ .md-button .md-button--stretch }
+[:material-bookshelf: Manual&nbsp;&nbsp;](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker: Releases&nbsp;&nbsp;](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord: Community&nbsp;&nbsp;](https://discord.gg/ZeN6ggCHBN){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord: Community&nbsp;&nbsp;](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 
 </div>
 

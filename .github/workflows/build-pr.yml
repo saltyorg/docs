@@ -78,7 +78,7 @@ jobs:
 
       - name: Build mkdocs
         run: |
-          mkdocs build --clean
+          mkdocs build --clean --config-file mkdocs.preview.yml
           mkdocs --version
         env:
           CI: true

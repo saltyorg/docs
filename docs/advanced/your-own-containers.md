@@ -82,23 +82,24 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           - saltbox
         labels:
           com.github.saltbox.saltbox_managed: true # (7)!
-          traefik.enable: true # (8)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (10)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (11)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (12)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (13)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (14)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (15)!
-          traefik.http.routers.APPNAME.service: APPNAME # (16)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (17)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (18)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (19)!
-        volumes: # (20)!
+          diun.enable: true # (8)!
+          traefik.enable: true # (9)!
+          traefik.http.routers.APPNAME-http.entrypoints: web # (10)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (11)!
+          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (12)!
+          traefik.http.routers.APPNAME-http.service: APPNAME # (13)!
+          traefik.http.routers.APPNAME.entrypoints: websecure # (14)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (15)!
+          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (16)!
+          traefik.http.routers.APPNAME.service: APPNAME # (17)!
+          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (18)!
+          traefik.http.routers.APPNAME.tls.options: securetls@file # (19)!
+          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (20)!
+        volumes: # (21)!
           - /opt/APPNAME:/CONFIG
           - /etc/localtime:/etc/localtime:ro
 
-    networks: # (21)!
+    networks: # (22)!
       saltbox:
         external: true
     ```
@@ -119,36 +120,37 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         We generally recommend using the saltbox network unless you know what you are doing.
 
     7.  This label will tell Saltbox to manage the container during backups (stopping and starting it).
-    8.  This label enables router creation in Traefik.
-    9.  Defines the entrypoint used for the HTTP Traefik router.
+    8.  (Optional) If [diun](https://docs.saltbox.dev/apps/diun/) is installed, this label will allow the container to be monitored for updates
+    9.  This label enables router creation in Traefik.
+    10.  Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    10. Defines which middleware is used on the router.
+    11. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
         Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
-    11. This value defines which locations Traefik routes to the application.
+    12. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    12. Defines which service the router should route traffic to.
-    13. Defines the entrypoint used for the HTTP Traefik router.
+    13. Defines which service the router should route traffic to.
+    14. Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    14. Defines which middleware is used on the router.
+    15. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-    15. This value defines which locations Traefik routes to the application.
+    16. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    16. Defines which service the router should route traffic to.
-    17. Defines the certificate resolver to use in order to generate a certificate.
+    17. Defines which service the router should route traffic to.
+    18. Defines the certificate resolver to use in order to generate a certificate.
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
@@ -156,13 +158,13 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    18. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
-    19. Defines which port Traefik routes the traffic to.
-    20. Add any volume mounts the container needs.
+    19. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
+    20. Defines which port Traefik routes the traffic to.
+    21. Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    21. This section tells Docker Compose that the network is managed outside of this compose file.
+    22. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Using Traefik (Authelia + API Router)"
     ```yaml
@@ -180,35 +182,36 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           - saltbox
         labels:
           com.github.saltbox.saltbox_managed: true # (7)!
-          traefik.enable: true # (8)!
-          traefik.http.routers.APPNAME-api-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (10)!
-          traefik.http.routers.APPNAME-api-http.priority: 99 # (11)!
-          traefik.http.routers.APPNAME-api-http.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (12)!
-          traefik.http.routers.APPNAME-api-http.service: APPNAME # (13)!
-          traefik.http.routers.APPNAME-api.entrypoints: websecure # (14)!
-          traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (15)!
-          traefik.http.routers.APPNAME-api.priority: 99 # (16)!
-          traefik.http.routers.APPNAME-api.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (17)!
-          traefik.http.routers.APPNAME-api.service: APPNAME # (18)!
-          traefik.http.routers.APPNAME-api.tls.certresolver: cfdns # (19)!
-          traefik.http.routers.APPNAME-api.tls.options: securetls@file # (20)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (21)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (22)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (23)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (24)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (25)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (26)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (27)!
-          traefik.http.routers.APPNAME.service: APPNAME # (28)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (29)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (30)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (31)!
-        volumes: # (32)!
+          diun.enable: true # (8)!
+          traefik.enable: true # (9)!
+          traefik.http.routers.APPNAME-api-http.entrypoints: web # (10)!
+          traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
+          traefik.http.routers.APPNAME-api-http.priority: 99 # (12)!
+          traefik.http.routers.APPNAME-api-http.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (13)!
+          traefik.http.routers.APPNAME-api-http.service: APPNAME # (14)!
+          traefik.http.routers.APPNAME-api.entrypoints: websecure # (15)!
+          traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (16)!
+          traefik.http.routers.APPNAME-api.priority: 99 # (17)!
+          traefik.http.routers.APPNAME-api.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (18)!
+          traefik.http.routers.APPNAME-api.service: APPNAME # (19)!
+          traefik.http.routers.APPNAME-api.tls.certresolver: cfdns # (20)!
+          traefik.http.routers.APPNAME-api.tls.options: securetls@file # (21)!
+          traefik.http.routers.APPNAME-http.entrypoints: web # (22)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (23)!
+          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (24)!
+          traefik.http.routers.APPNAME-http.service: APPNAME # (25)!
+          traefik.http.routers.APPNAME.entrypoints: websecure # (26)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (27)!
+          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (28)!
+          traefik.http.routers.APPNAME.service: APPNAME # (29)!
+          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (30)!
+          traefik.http.routers.APPNAME.tls.options: securetls@file # (31)!
+          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (32)!
+        volumes: # (33)!
           - /opt/APPNAME:/CONFIG
           - /etc/localtime:/etc/localtime:ro
 
-    networks: # (33)!
+    networks: # (34)!
       saltbox:
         external: true
     ```
@@ -229,48 +232,49 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         We generally recommend using the saltbox network unless you know what you are doing.
 
     7.  This label will tell Saltbox to manage the container during backups (stopping and starting it).
-    8.  This label enables router creation in Traefik.
-    9.  Defines the entrypoint used for the HTTP Traefik router.
+    8.  (Optional) If [diun](https://docs.saltbox.dev/apps/diun/) is installed, this label will allow the container to be monitored for updates
+    9.  This label enables router creation in Traefik.
+    10.  Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    10. Defines which middleware is used on the router.
+    11. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
         Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
-    11. Defines router priority.
+    12. Defines router priority.
 
         If multiple router paths match a given address, the one with the highest priority is used.
 
-    12. This value defines which locations Traefik routes to the application.
+    13. This value defines which locations Traefik routes to the application.
 
         With the API Router, we only add paths to the router that should bypass Authelia.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    13. Defines which service the router should route traffic to.
-    14. Defines the entrypoint used for the HTTP Traefik router.
+    14. Defines which service the router should route traffic to.
+    15. Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    15. Defines which middleware is used on the router.
+    16. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-    16. Defines router priority.
+    17. Defines router priority.
 
         If multiple router paths match a given address, the one with the highest priority is used.
 
-    17. This value defines which locations Traefik routes to the application.
+    18. This value defines which locations Traefik routes to the application.
 
         With the API Router, we only add paths to the router that should bypass Authelia.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    18. Defines which service the router should route traffic to.
-    19. Defines the certificate resolver to use in order to generate a certificate.
+    19. Defines which service the router should route traffic to.
+    20. Defines the certificate resolver to use in order to generate a certificate.
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
@@ -278,36 +282,36 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    20. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
-    21. Defines the entrypoint used for the HTTP Traefik router.
+    21. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
+    22. Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    22. Defines which middleware is used on the router.
+    23. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
         Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
-    23. This value defines which locations Traefik routes to the application.
+    24. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    24. Defines which service the router should route traffic to.
-    25. Defines the entrypoint used for the HTTP Traefik router.
+    25. Defines which service the router should route traffic to.
+    26. Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    26. Defines which middleware is used on the router.
+    27. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-    27. This value defines which locations Traefik routes to the application.
+    28. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    28. Defines which service the router should route traffic to.
-    29. Defines the certificate resolver to use in order to generate a certificate.
+    29. Defines which service the router should route traffic to.
+    30. Defines the certificate resolver to use in order to generate a certificate.
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
@@ -315,13 +319,13 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    30. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
-    31. Defines which port Traefik routes the traffic to.
-    32. Add any volume mounts the container needs.
+    31. Defines the configuration used for SSL, leave this alone unless you know what you are doing.
+    32. Defines which port Traefik routes the traffic to.
+    33. Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    33. This section tells Docker Compose that the network is managed outside of this compose file.
+    34. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Using Traefik"
     ```yaml
@@ -339,23 +343,24 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           - saltbox
         labels:
           com.github.saltbox.saltbox_managed: true # (7)!
-          traefik.enable: true # (8)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (9)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (10)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (11)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (12)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (13)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (14)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (15)!
-          traefik.http.routers.APPNAME.service: APPNAME # (16)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (17)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (18)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (19)!
-        volumes: # (20)!
+          diun.enable: true # (8)!
+          traefik.enable: true # (9)!
+          traefik.http.routers.APPNAME-http.entrypoints: web # (10)!
+          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
+          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (12)!
+          traefik.http.routers.APPNAME-http.service: APPNAME # (13)!
+          traefik.http.routers.APPNAME.entrypoints: websecure # (14)!
+          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (15)!
+          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (16)!
+          traefik.http.routers.APPNAME.service: APPNAME # (17)!
+          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (18)!
+          traefik.http.routers.APPNAME.tls.options: securetls@file # (19)!
+          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (20)!
+        volumes: # (21)!
           - /opt/APPNAME:/CONFIG
           - /etc/localtime:/etc/localtime:ro
 
-    networks: # (21)!
+    networks: # (22)!
       saltbox:
         external: true
     ```
@@ -376,36 +381,37 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         We generally recommend using the saltbox network unless you know what you are doing.
 
     7.  This label will tell Saltbox to manage the container during backups (stopping and starting it).
-    8.  This label enables router creation in Traefik.
-    9.  Defines the entrypoint used for the HTTP Traefik router.
+    8.  (Optional) If [diun](https://docs.saltbox.dev/apps/diun/) is installed, this label will allow the container to be monitored for updates
+    9.  This label enables router creation in Traefik.
+    10.  Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    10. Defines which middleware is used on the router.
+    11. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
         Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
-    11. This value defines which locations Traefik routes to the application.
+    12. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    12. Defines which service the router should route traffic to.
-    13. Defines the entrypoint used for the HTTP Traefik router.
+    13. Defines which service the router should route traffic to.
+    14. Defines the entrypoint used for the HTTP Traefik router.
     
         Leave as is unless you know what you are doing.
 
-    14. Defines which middleware is used on the router.
+    15. Defines which middleware is used on the router.
 
         A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
 
-    15. This value defines which locations Traefik routes to the application.
+    16. This value defines which locations Traefik routes to the application.
 
         Docs: https://doc.traefik.io/traefik/routing/routers/#rule
 
-    16. Defines which service the router should route traffic to.
-    17. Defines the certificate resolver to use in order to generate a certificate.
+    17. Defines which service the router should route traffic to.
+    18. Defines the certificate resolver to use in order to generate a certificate.
 
         If the url is using Cloudflare, with the same account as Saltbox uses, the value should be `cfdns`.
 
@@ -413,13 +419,13 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 
         Remember to enable http_validation in the adv_settings.yml config to enable the httpresolver when using Cloudflare.
 
-    18. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
-    19. Defines which port Traefik routes the traffic to.
-    20. Add any volume mounts the container needs.
+    19. Defines the configuration used for SSL; leave this alone unless you know what you are doing.
+    20. Defines which port Traefik routes the traffic to.
+    21. Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    21. This section tells Docker Compose that the network is managed outside of this compose file.
+    22. This section tells Docker Compose that the network is managed outside of this compose file.
 
 === "Without Traefik"
     ```yaml
@@ -437,11 +443,12 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           - saltbox
         labels:
           com.github.saltbox.saltbox_managed: true # (7)!
-        volumes: # (8)!
+          diun.enable: true # (8)!
+        volumes: # (9)!
           - /opt/APPNAME:/CONFIG
           - /etc/localtime:/etc/localtime:ro
 
-    networks: # (9)!
+    networks: # (10)!
       saltbox:
         external: true
     ```
@@ -462,11 +469,12 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
         We generally recommend using the saltbox network unless you know what you are doing.
 
     7.  This label will tell Saltbox to manage the container during backups (stopping and starting it).
-    8.  Add any volume mounts the container needs.
+    8.  (Optional) If [diun](https://docs.saltbox.dev/apps/diun/) is installed, this label will allow the container to be monitored for updates
+    9.  Add any volume mounts the container needs.
 
         /host_path:/container_path
 
-    9.  This section tells Docker Compose that the network is managed outside of this compose file.
+    10.  This section tells Docker Compose that the network is managed outside of this compose file.
 
 ## Creating and running the container
 

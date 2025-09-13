@@ -171,7 +171,12 @@ nav:
         - Multiple Instances (legacy): sandbox/apps/arrx.md
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
+          - Alternatrr: sandbox/apps/alternatrr.md
+          - BarcodeBuddy: sandbox/apps/barcodebuddy.md
           - Cherry: sandbox/apps/cherry.md
+          - Cockpit: sandbox/apps/cockpit.md
+          - Dashdot: sandbox/apps/dashdot.md
+          - Grocy: sandbox/apps/grocy.md
           - Chrome: sandbox/apps/chrome.md
           - Elasticsearch: sandbox/apps/elasticsearch.md
           - Firefox: sandbox/apps/firefox.md
@@ -199,6 +204,7 @@ nav:
         - Development:
           - Changedetection: sandbox/apps/changedetection.md
           - Code-server: sandbox/apps/code-server.md
+          - IT Tools: sandbox/apps/it_tools.md
           - Forgejo: sandbox/apps/forgejo.md
           - Gitea: sandbox/apps/gitea.md
           - Gotenberg: sandbox/apps/gotenberg.md
@@ -212,6 +218,7 @@ nav:
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Archivebox: sandbox/apps/archivebox.md
+          - Aria2 NG: sandbox/apps/aria2_ng.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Karakeep: sandbox/apps/karakeep.md
           - Medusa: sandbox/apps/medusa.md
@@ -220,6 +227,7 @@ nav:
           - Resilio Sync: sandbox/apps/resiliosync.md
           - Tubearchivist: sandbox/apps/tubearchivist.md
           - Tvheadend: sandbox/apps/tvheadend.md
+          - YTDL-Sub: sandbox/apps/ytdl_sub.md
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - LunaSea: sandbox/apps/lunasea.md
@@ -233,10 +241,13 @@ nav:
             - Transmission VPN: sandbox/apps/transmissionvpn.md
             - Transmissionx: sandbox/apps/transmissionx.md
         - File Management:
+          - Docspell: sandbox/apps/docspell.md
           - Filebot: sandbox/apps/filebot.md
           - Filebrowser: sandbox/apps/filebrowser.md
+          - LinkWarden: sandbox/apps/linkwarden.md
           - Filezilla: sandbox/apps/filezilla.md
           - Krusader: sandbox/apps/krusader.md
+          - Paperless AI: sandbox/apps/paperless_ai.md
           - Paperless-NGX: sandbox/apps/paperless-ngx.md
           - PrivateBin: sandbox/apps/privatebin.md
           - XBackBone: sandbox/apps/xbackbone.md
@@ -244,7 +255,8 @@ nav:
           - Actual Budget: sandbox/apps/actualbudget.md
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
-          - Maybe Finance: sandbox/apps/maybe-finance.md
+          - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Maybe Finance: sandbox/apps/maybe_finance.md
         - Landing Pages:
           - Dashy: sandbox/apps/dashy.md
           - VNStat: sandbox/apps/vnstat.md
@@ -252,8 +264,10 @@ nav:
           - Homarr: sandbox/apps/homarr.md
           - Homepage: sandbox/apps/homepage.md
         - Game Servers:
+          - Crafty: sandbox/apps/crafty.md
           - Factorio: sandbox/apps/factorio.md
           - Foundry: sandbox/apps/foundry.md
+          - PufferPanel: sandbox/apps/pufferpanel.md
           - LinuxGSM: sandbox/apps/lgsm.md
           - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
@@ -284,6 +298,7 @@ nav:
           - Music:
             - Airsonic: sandbox/apps/airsonic.md
             - Beets: sandbox/apps/beets.md
+            - Koel: sandbox/apps/koel.md
             - Deemix: sandbox/apps/deemix.md
             - Funkwhale: sandbox/apps/funkwhale.md
             - Navidrome: sandbox/apps/navidrome.md
@@ -301,6 +316,7 @@ nav:
             - Plex Auto Languages: sandbox/apps/plex-auto-languages.md
             - Plex Dupefinder: sandbox/apps/plex-dupefinder.md
             - Plex Patrol: sandbox/apps/plex-patrol.md
+            - PlexShare: sandbox/apps/plexshare.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
             - Plex-Utills: sandbox/apps/plex-utills.md
             - Tauticord: sandbox/apps/tauticord.md
@@ -309,6 +325,7 @@ nav:
           - Requests:
             - DiscoFlix: sandbox/apps/discoflix.md
             - Doplarr: sandbox/apps/doplarr.md
+            - Jellystat: sandbox/apps/jellystat.md
             - Jellyseerr: sandbox/apps/jellyseerr.md
             - Ombi: sandbox/apps/ombi.md
             - Ombix: sandbox/apps/ombix.md
@@ -337,7 +354,7 @@ nav:
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
           - Influxdb2: sandbox/apps/influxdb2.md
-          - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Invoice Ninja v5: sandbox/apps/invoiceninja.md
           - Home Automation:
             - ESPHome: sandbox/apps/esphome.md
             - Home Assistant: sandbox/apps/homeassistant.md
@@ -346,6 +363,8 @@ nav:
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
             - Logarr: sandbox/apps/logarr.md
+            - OpenObserve: sandbox/apps/openobserve.md
+            - Solr: sandbox/apps/solr.md
             - Monitorr: sandbox/apps/monitorr.md
           - Networking:
             - Kcptun-client: sandbox/apps/kcptun-client.md

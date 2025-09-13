@@ -354,7 +354,7 @@ nav:
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
           - Influxdb2: sandbox/apps/influxdb2.md
-          - Invoice Ninja v5: sandbox/apps/invoiceninjav5.md
+          - Invoice Ninja v5: sandbox/apps/invoiceninja.md
           - Home Automation:
             - ESPHome: sandbox/apps/esphome.md
             - Home Assistant: sandbox/apps/homeassistant.md

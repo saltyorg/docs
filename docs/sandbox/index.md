@@ -77,7 +77,7 @@ tags:
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
 - **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
-- **[invoiceninjav5](../sandbox/apps/invoiceninjav5.md)**  - tag - `sandbox-invoiceninja`
+- **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
 - **[it_tools](../sandbox/apps/it_tools.md)**  - tag - `sandbox-it-tools`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
 - **[jellyseerr](../sandbox/apps/jellyseerr.md)**  - tag - `sandbox-jellyseerr`

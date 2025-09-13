@@ -255,7 +255,9 @@ nav:
           - Actual Budget: sandbox/apps/actualbudget.md
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
-          - Maybe Finance: sandbox/apps/maybe_finance.md
+          - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Invoice Ninja v5: sandbox/apps/invoiceninjav5.md
+          - Maybe Finance: sandbox/apps/maybe-finance.md
         - Landing Pages:
           - Dashy: sandbox/apps/dashy.md
           - VNStat: sandbox/apps/vnstat.md

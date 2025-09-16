@@ -231,8 +231,8 @@ nav:
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
             - LunaSea: sandbox/apps/lunasea.md
-            - QBit Management: sandbox/apps/qbit-manage.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md
+            - qBit Manage: sandbox/apps/qbit-manage.md
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md
             - Tqm: sandbox/apps/tqm.md

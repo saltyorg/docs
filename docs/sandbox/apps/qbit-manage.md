@@ -13,32 +13,23 @@ tags:
 
 [qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 
+### Features
+
+- Tag torrents based on tracker and then set seed goals/limit upload speed by tag
+- Update categories based on save directory
+- Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent)
+- Automatically add cross-seed torrents in paused state (*Note: cross-seed now allows for torrent injections directly to qBit, making this feature obsolete*)
+- Recheck paused torrents sorted by lowest size and resume if completed
+- Remove orphaned files from your root directory that are not referenced by qBittorrent
+- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded
+- RecycleBin function to move files into a RecycleBin folder instead of deleting the data directly when deleting a torrent
+- Built-in scheduler to run the script every x minutes (Can use --run command to run without the scheduler)
+- Webhook notifications with Notifiarr and Apprise API integration
+- Web interface for monitoring and management
+
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: qBit Manage](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker:](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
-
-**Functions include:** <br />
-
-- Tag torrents based on tracker and then set seed goals/limit upload speed by tag.
-
-- Update categories based on save directory.
-
-- Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent).
-
-- Automatically add cross-seed torrents in paused state. <br />
-    *Note: cross-seed now allows for torrent injections directly to qBit, making this feature obsolete.*
-
-- Recheck paused torrents sorted by lowest size and resume if completed.
-
-- Remove orphaned files from your root directory that are not referenced by qBittorrent.
-
-- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded.
-
-- RecycleBin function to move files into a RecycleBin folder instead of deleting the data directly when deleting a torrent.
-
-- Built-in scheduler to run the script every x minutes. (Can use --run command to run without the scheduler).
-
-- Webhook notifications with Notifiarr and Apprise API integration.
+| [:material-home: Project home](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
 
 ### 1. Installation
 
@@ -49,6 +40,12 @@ Before installing qBit Manage, you should have a **[qBittorrent](../../apps/qbit
 sb install sandbox-qbit-manage
 
 ```
+
+### 2. URL
+
+- To access qBit Manage, visit `https://qbit-manage._yourdomain.com_`
+
+### 3. Setup
 
 After installation has finished, stop the qbit-manage docker container and edit the config file that will have been created at `/opt/qbit-manage/config.yml`
 
@@ -90,7 +87,7 @@ sb install sandbox-qbit-manage
 
 ```
 
-### 3. Setup
+### 4. Configuration
 
 The following variables are available to set in the sandbox settings.yml file. An explanation of [these settings can be found here](https://github.com/StuffAnThings/qbit_manage/wiki/Docker-Installation).
 

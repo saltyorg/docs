@@ -95,7 +95,6 @@ tags:
 - **[lgsm](../sandbox/apps/lgsm.md)**  - tag - `sandbox-lgsm`
 - **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
 - **[linkwarden](../sandbox/apps/linkwarden.md)**  - tag - `sandbox-linkwarden`
-- **[logarr](../sandbox/apps/logarr.md)**  - tag - `sandbox-logarr`
 - **[lunasea](../sandbox/apps/lunasea.md)**  - tag - `sandbox-lunasea`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
@@ -153,7 +152,6 @@ tags:
 - **[rocketchat](../sandbox/apps/rocketchat.md)**  - tag - `rocketchat`
 - **[sabthrottle](../sandbox/apps/sabthrottle.md)**  - tag - `sandbox-sabthrottle`
 - **[semaphoreui](../sandbox/apps/semaphoreui.md)**  - tag - `sandbox-semaphoreui`
-- **[sarotate](../sandbox/apps/sarotate.md)**  - tag - `sandbox-sarotate`
 - **[solr](../sandbox/apps/solr.md)**  - tag - `sandbox-solr`
 - **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
 - **[sqlitebrowser](../sandbox/apps/sqlitebrowser.md)**  - tag - `sandbox-sqlitebrowser`

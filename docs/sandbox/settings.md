@@ -83,14 +83,6 @@ requestrrx:
   roles: ["1080p", "4k"]
 rfloodx:
   roles: [""]
-sarotate:
-  remotes: [""]
-  sa_path: "your_sa_folder_path"
-  sleeptime:  #optional: Delay between service account rotation (Default is 300)
-  rc_port:    #optional: The port used by rc (Default is saltbox default of 5572)
-  rc_user:    #optional: The user used by rc if authentication is enabled (Default is no authentication)
-  rc_pass:    #optional: The password used by rc if autentication is enabled (Default is no authentication)
-  apprise:    #optional: apprise notifications (Default is blank)
 tandoor:
   secret_key: #Required: You can generate one with 'base64 /dev/urandom | head -c50'
 transmissionvpn:

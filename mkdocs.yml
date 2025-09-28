@@ -363,7 +363,6 @@ nav:
             - Node-Red: sandbox/apps/node-red.md
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
-            - Logarr: sandbox/apps/logarr.md
             - OpenObserve: sandbox/apps/openobserve.md
             - Solr: sandbox/apps/solr.md
             - Monitorr: sandbox/apps/monitorr.md
@@ -377,7 +376,6 @@ nav:
           - Meilisearch: sandbox/apps/meilisearch.md
           - Puddletag: sandbox/apps/puddletag.md
           - Sabthrottle: sandbox/apps/sabthrottle.md
-          - Sarotate: sandbox/apps/sarotate.md
           - Speedtest: sandbox/apps/speedtest.md
           - Sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - Sshwifty: sandbox/apps/sshwifty.md

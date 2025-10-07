@@ -443,10 +443,33 @@ nav:
         - asshama: apps/asshama.md
         - Unpackerr: apps/unpackerr.md
         - Whisparr: apps/whisparr.md
+      - Maintenance:
+          - Arr DB: apps/arr_db.md
+          - NZBThrottle: apps/nzbthrottle.md
+      - Monitoring:
+          - Autoheal: apps/autoheal.md
+          - btop: apps/btop.md
+          - cAdvisor: apps/cadvisor.md
+          - ctop: apps/ctop.md
+          - Jaeger: apps/jaeger.md
+          - Node Exporter: apps/node_exporter.md
+          - Prometheus: apps/prometheus.md
+          - Scrutiny: apps/scrutiny.md
+      - Networking:
+          - DDNS: apps/ddns.md
+          - Nginx: apps/nginx.md
       - Support Apps:
+          - Custom: apps/custom.md
+          - Diag: apps/diag.md
+          - Error Pages: apps/error_pages.md
           - diun: apps/diun.md
+          - iperf3: apps/iperf3.md
+          - LLDAP: apps/lldap.md
           - MariaDB: apps/mariadb.md
+          - MongoDB: apps/mongodb.md
           - PostgreSQL: apps/postgres.md
+          - PostgreSQL (Host Install): apps/postgres_host.md
+          - Redis: apps/redis.md
       - Visualization:
           - Grafana: apps/grafana.md
       - TODO - NEED UPDATING:

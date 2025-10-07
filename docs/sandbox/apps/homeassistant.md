@@ -36,13 +36,13 @@ sb install sandbox-homeassistant
 
 ### 3. Setup
 
-Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](../apps/mqtt.md) for using Mosquitto to communicate with local and remote devices. We also have [Node Red](../apps/node-red.md), which is a platform for multiple types of automations.
+Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](mqtt.md) for using Mosquitto to communicate with local and remote devices. We also have [Node Red](node_red.md), which is a platform for multiple types of automations.
 
 ??? Note "Nabu Casa"
     You don't NEED to use Nabu Casa to access Home Assistant remotely. You can use a reverse proxy to access it remotely. However, if you want to use Nabu Casa, you can use the [Nabu Casa](https://www.nabucasa.com/) integration to connect to Home Assistant. It is a paid service, but it is a good way to support the Home Assistant project. That said, the Home Assistant role is set up to work with a reverse proxy, so you can use that instead.
 
 ### 4. Addons
 
-You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) to add more functionality to Home Assistant. For instance, adding the Node Red Companion, a "custom" integration for node-red-contrib-home-assistant-websocket. It allows you to integrate Node-RED with Home Assistant. For more information, see the [Node Red](../apps/node-red.md) page.
+You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) to add more functionality to Home Assistant. For instance, adding the Node Red Companion, a "custom" integration for node-red-contrib-home-assistant-websocket. It allows you to integrate Node-RED with Home Assistant. For more information, see the [Node Red](node_red.md) page.
 
 - [:octicons-link-16: Documentation: Home Assistant Docs](https://www.home-assistant.io/docs/){: .header-icons }

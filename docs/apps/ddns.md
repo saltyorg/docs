@@ -40,7 +40,7 @@ The DDNS container automatically monitors Traefik's API endpoint for active rout
 
 #### Custom URLs
 
-You can manage additional custom URLs by setting the `ddns_custom_urls` variable in your [Saltbox inventory](../../saltbox/inventory/index.md):
+You can manage additional custom URLs by setting the `ddns_custom_urls` variable in your [Saltbox inventory](../saltbox/inventory/index.md):
 
 ```yaml
 ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"

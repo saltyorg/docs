@@ -28,7 +28,7 @@ sb install redis
 
 ### 2. Setup
 
-Redis is deployed using the official Alpine image with data persisting to `/opt/redis/`. Connect from other containers using `redis://redis:6379`. Multiple instances are supported via the `redis_instances` variable in your [Saltbox inventory](../../saltbox/inventory/index.md).
+Redis is deployed using the official Alpine image with data persisting to `/opt/redis/`. Connect from other containers using `redis://redis:6379`. Multiple instances are supported via the `redis_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md).
 
 For custom configuration, create `redis.conf` in `/opt/redis/` and configure custom volumes in your inventory. Note: No authentication is configured by default.
 

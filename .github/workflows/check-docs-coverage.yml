@@ -72,11 +72,11 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const action = `${{ steps.coverage.outputs.action }}`;
+            const action = ${{ toJSON(steps.coverage.outputs.action) }};
 
             if (action === 'create_or_update_issue') {
-              const title = `${{ steps.coverage.outputs.issue_title }}`;
-              const body = `${{ steps.coverage.outputs.issue_body }}`;
+              const title = ${{ toJSON(steps.coverage.outputs.issue_title) }};
+              const body = ${{ toJSON(steps.coverage.outputs.issue_body) }};
 
               // Check if an issue already exists
               const issues = await github.rest.issues.listForRepo({
@@ -112,7 +112,7 @@ jobs:
                 console.log(`Created issue #${newIssue.data.number}`);
               }
             } else if (action === 'close_issue') {
-              const closeMessage = `${{ steps.coverage.outputs.close_message }}`;
+              const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
 
               // Find and close any open documentation coverage issues
               const issues = await github.rest.issues.listForRepo({

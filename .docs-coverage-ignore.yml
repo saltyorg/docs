@@ -61,3 +61,7 @@ sandbox:
   - "code_server"  # docs page is code-server
   - "calibre_web"  # docs page is calibre-web
   - "a_train"  # docs page is a-train
+  # Deprecated roles
+  - "unifi"  # deprecated
+  - "hoarder"  # deprecated
+  - "plex_meta_manager"  # deprecated

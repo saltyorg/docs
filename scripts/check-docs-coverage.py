@@ -47,9 +47,9 @@ def get_roles_from_repo(repo_path: Path) -> Set[str]:
     return roles
 
 
-def get_documented_apps(docs_path: Path) -> Set[str]:
-    """Get all documented apps from docs/apps folder."""
-    apps_path = docs_path / "apps"
+def get_documented_apps(docs_path: Path, folder: str = "apps") -> Set[str]:
+    """Get all documented apps from docs/{folder} folder."""
+    apps_path = docs_path / folder
 
     if not apps_path.exists():
         return set()
@@ -114,8 +114,20 @@ def main():
     saltbox_roles = get_roles_from_repo(saltbox_path)
     sandbox_roles = get_roles_from_repo(sandbox_path)
 
-    # Get documented apps
-    documented_apps = get_documented_apps(docs_root / "docs")
+    # Get documented apps - Saltbox apps are in docs/apps, Sandbox apps are in docs/sandbox/apps
+    saltbox_documented_apps = get_documented_apps(docs_root / "docs", "apps")
+    sandbox_documented_apps = get_documented_apps(docs_root / "docs", "sandbox/apps")
+
+    # Sanity check: ensure we found roles in both repositories
+    if len(saltbox_roles) == 0:
+        print(f"❌ ERROR: No roles found in Saltbox repository at {saltbox_path}")
+        print(f"   Please check that the repository was checked out correctly.")
+        sys.exit(1)
+
+    if len(sandbox_roles) == 0:
+        print(f"❌ ERROR: No roles found in Sandbox repository at {sandbox_path}")
+        print(f"   Please check that the repository was checked out correctly.")
+        sys.exit(1)
 
     # Track counts before filtering
     total_ignored = len(saltbox_ignored) + len(sandbox_ignored)
@@ -124,9 +136,9 @@ def main():
     saltbox_roles = {role for role in saltbox_roles if role not in saltbox_ignored}
     sandbox_roles = {role for role in sandbox_roles if role not in sandbox_ignored}
 
-    # Find missing documentation
-    saltbox_missing = sorted(list(saltbox_roles - documented_apps))
-    sandbox_missing = sorted(list(sandbox_roles - documented_apps))
+    # Find missing documentation - check each repo against its own docs folder
+    saltbox_missing = sorted(list(saltbox_roles - saltbox_documented_apps))
+    sandbox_missing = sorted(list(sandbox_roles - sandbox_documented_apps))
     total_missing = len(saltbox_missing) + len(sandbox_missing)
 
     # Get workflow URL from environment if available
@@ -203,7 +215,8 @@ def main():
     print("Summary:")
     print(f"  Saltbox roles: {len(saltbox_roles)}")
     print(f"  Sandbox roles: {len(sandbox_roles)}")
-    print(f"  Documented apps: {len(documented_apps)}")
+    print(f"  Saltbox documented apps: {len(saltbox_documented_apps)}")
+    print(f"  Sandbox documented apps: {len(sandbox_documented_apps)}")
     print(f"  Saltbox ignored: {len(saltbox_ignored)}")
     print(f"  Sandbox ignored: {len(sandbox_ignored)}")
     print("="*60)

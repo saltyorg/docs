@@ -9,18 +9,21 @@ repo_url: https://github.com/saltyorg/docs
 edit_uri: edit/main/docs/
 
 validation:
-  omitted_files: warn
   absolute_links: warn
-  unrecognized_links: warn
   anchors: warn
+  omitted_files: warn
+  unrecognized_links: warn
 
 strict: true
 
 theme:
   name: material
   icon:
-    logo: material/sofa
-    repo: fontawesome/brands/github-alt
+    logo: material/server-outline
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
   custom_dir: overrides
   features:
     - content.action.edit
@@ -31,6 +34,8 @@ theme:
     - header.autohide
     - navigation.footer
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
@@ -44,8 +49,8 @@ theme:
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: teal
-      accent: teal
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
@@ -53,8 +58,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -62,46 +67,51 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
 
 plugins:
-  - privacy:
+  - git-authors
+  - git-committers:
+      branch: main
+      cache_dir: .cache/plugin/git-committers/
       enabled: !ENV [CI, false]
-      cache: true
-      cache_dir: .cache/plugin/privacy
-      assets: true
-      assets_fetch: true
-      links_attr_map:
-        target: _blank
-      links_noopener: true
-  - search:
-      lang: en
+      repository: saltyorg/docs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enabled: !ENV [CI, false]
+      fallback_to_build_date: true
+      type: date
   - meta
+  - minify:
+      minify_html: true
   - optimize:
       cache: true
       cache_dir: .cache/plugin/optimize
       enabled: !ENV [CI, false]
+      optimize_jpg: false
+      optimize_jpg_progressive: true
+      optimize_jpg_quality: 75
       optimize_png: true
       optimize_png_speed: 1
       optimize_png_strip: true
-      optimize_jpg: false
-      optimize_jpg_quality: 75
-      optimize_jpg_progressive: true
-  - git-revision-date-localized
-  - minify:
-      minify_html: true
-  - git-committers:
+  - privacy:
+      assets: true
+      assets_fetch: true
+      cache: true
+      cache_dir: .cache/plugin/privacy
       enabled: !ENV [CI, false]
-      cache_dir: .cache/plugin/git-committers/
-      repository: saltyorg/docs
-      branch: main
+      links_attr_map:
+        target: _blank
+      links_noopener: true
   - redirects:
       redirect_maps:
         'saltbox/upgrade/traefik3.md': 'reference/guides/deprecated/traefik3.md'
+  - search:
+      lang: en
 
 extra:
   generator: false
@@ -121,29 +131,29 @@ extra:
 
 markdown_extensions:
   - abbr
-  - meta
-  - pymdownx.highlight
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
   - admonition
   - attr_list
   - footnotes
   - md_in_html
-  - pymdownx.tilde
-  - pymdownx.snippets
-  - toc:
-      permalink: true
+  - meta
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
 
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - https://code.jquery.com/jquery-3.5.1.min.js
+  - https://code.jquery.com/jquery-3.7.1.min.js
 
 nav:
   - Home: index.md

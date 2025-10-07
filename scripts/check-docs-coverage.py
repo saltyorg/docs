@@ -39,10 +39,8 @@ def get_roles_from_repo(repo_path: Path) -> Set[str]:
     roles = set()
     for role_dir in roles_path.iterdir():
         if role_dir.is_dir():
-            # Check if it has a defaults/main.yml file to confirm it's a valid role
-            defaults_file = role_dir / "defaults" / "main.yml"
-            if defaults_file.exists():
-                roles.add(role_dir.name)
+            # Assume all directories in roles/ are roles
+            roles.add(role_dir.name)
 
     return roles
 

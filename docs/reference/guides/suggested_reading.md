@@ -8,7 +8,7 @@
 
 ## Servarr
 
-The servarr wiki is home to information on Lidarr, Prowlarr, Radarr, Readarr, and Sonarr.
+The servarr wiki is home to information on Lidarr, Prowlarr, Radarr, and Sonarr.
 
 - [:material-home: Servarr](https://wiki.servarr.com/){: .header-icons }
 
@@ -25,10 +25,6 @@ The servarr wiki is home to information on Lidarr, Prowlarr, Radarr, Readarr, an
 - Radarr
   - [:fontawesome-brands-discord: Official Radarr Discord](https://radarr.video/discord){: .header-icons }
   - [:fontawesome-brands-reddit: Official Radarr Reddit](https://reddit.com/r/radarr){: .header-icons }
-
-- Readarr
-  - [:fontawesome-brands-discord: Official Readarr Discord](https://readarr.com/discord){: .header-icons }
-  - [:fontawesome-brands-reddit: Official Readarr Reddit](https://reddit.com/r/readarr){: .header-icons }
 
 - Sonarr
   - [:fontawesome-brands-discord: Official Sonarr Discord](https://discord.gg/M6BvZn5){: .header-icons }

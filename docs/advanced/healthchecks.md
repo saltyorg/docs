@@ -51,13 +51,6 @@ lidarr_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-readarr_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ readarr_web_port }}/login"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
 whisparr_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:{{ whisparr_web_port }}/login"]
   interval: 10s

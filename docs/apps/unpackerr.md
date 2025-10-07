@@ -9,7 +9,7 @@ tags:
 
 ## What is it?
 
-[Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Readarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
+[Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -39,4 +39,4 @@ The important part of the setup is the setup for the applications.  You'll need 
 
 The `path` will depend on the torrent client you are using and its configuration.
 
-Same setup is required for radarr, lidarr, and readarr if you are using them.
+Same setup is required for radarr and lidarr if you are using them.

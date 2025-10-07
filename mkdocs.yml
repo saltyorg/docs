@@ -205,7 +205,7 @@ nav:
           - The Lounge: sandbox/apps/thelounge.md
           - Trilium Notes: sandbox/apps/trilium.md
           - Wrapperr: sandbox/apps/wrapperr.md
-          - Yourspotify: sandbox/apps/yourspotify.md
+          - Yourspotify: sandbox/apps/your_spotify.md
           - ZNC: sandbox/apps/znc.md
         - Content Management:
           - Mealie: sandbox/apps/mealie.md
@@ -266,7 +266,7 @@ nav:
           - Actual Budget: sandbox/apps/actualbudget.md
           - Firefly III: sandbox/apps/fireflyiii.md
           - Firefly III Importer: sandbox/apps/fireflyiii_importer.md
-          - Invoice Ninja: sandbox/apps/invoiceninja.md
+          - Invoice Ninja: sandbox/apps/invoiceninjav5.md
           - Maybe Finance: sandbox/apps/maybe_finance.md
         - Landing Pages:
           - Dashy: sandbox/apps/dashy.md
@@ -365,7 +365,7 @@ nav:
           - Handbrake: sandbox/apps/handbrake.md
           - Influxdb: sandbox/apps/influxdb.md
           - Influxdb2: sandbox/apps/influxdb2.md
-          - Invoice Ninja v5: sandbox/apps/invoiceninja.md
+          - Invoice Ninja v5: sandbox/apps/invoiceninjav5.md
           - Home Automation:
             - ESPHome: sandbox/apps/esphome.md
             - Home Assistant: sandbox/apps/homeassistant.md

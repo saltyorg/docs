@@ -77,7 +77,7 @@ tags:
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
 - **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
-- **[invoiceninja](../sandbox/apps/invoiceninja.md)**  - tag - `sandbox-invoiceninja`
+- **[invoiceninja](../sandbox/apps/invoiceninjav5.md)**  - tag - `sandbox-invoiceninja`
 - **[it_tools](../sandbox/apps/it_tools.md)**  - tag - `sandbox-it-tools`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
 - **[jellyseerr](../sandbox/apps/jellyseerr.md)**  - tag - `sandbox-jellyseerr`
@@ -193,6 +193,6 @@ tags:
 - **[xbackbone](../sandbox/apps/xbackbone.md)**  - tag - `sandbox-xbackbone`
 - **[xteve](../sandbox/apps/xteve.md)**  - tag - `sandbox-xteve`
 - **[yacht](../sandbox/apps/yacht.md)**  - tag - `sandbox-yacht`
-- **[yourspotify](../sandbox/apps/yourspotify.md)**  - tag - `sandbox-yourspotify`
+- **[yourspotify](../sandbox/apps/your_spotify.md)**  - tag - `sandbox-yourspotify`
 - **[ytdl_sub](../sandbox/apps/ytdl_sub.md)**  - tag - `sandbox-ytdl-sub`
 - **[znc](../sandbox/apps/znc.md)**  - tag - `sandbox-znc`

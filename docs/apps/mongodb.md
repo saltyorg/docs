@@ -27,7 +27,7 @@ sb install mongodb
 
 ### 2. Setup
 
-MongoDB 6 is deployed in a Docker container with data persisting to `/opt/mongo/`. Connect from other containers using `mongodb://mongo:27017/`. Multiple instances are supported via the `mongodb_instances` variable in your [Saltbox inventory](../../saltbox/inventory/index.md).
+MongoDB 6 is deployed in a Docker container with data persisting to `/opt/mongo/`. Connect from other containers using `mongodb://mongo:27017/`. Multiple instances are supported via the `mongodb_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md).
 
 Note: No authentication is configured by default.
 

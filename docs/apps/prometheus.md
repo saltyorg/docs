@@ -32,7 +32,7 @@ sb install prometheus
 
 ### 3. Setup
 
-Prometheus provides monitoring and alerting with automatic installation of Node Exporter and cAdvisor for system and container metrics. Configuration is at `/opt/prometheus/prometheus.yml`. Data retention defaults to 15 days but can be configured in your [Saltbox inventory](../../saltbox/inventory/index.md) using `prometheus_role_retention` and `prometheus_role_size`.
+Prometheus provides monitoring and alerting with automatic installation of Node Exporter and cAdvisor for system and container metrics. Configuration is at `/opt/prometheus/prometheus.yml`. Data retention defaults to 15 days but can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `prometheus_role_retention` and `prometheus_role_size`.
 
 Add custom scrape targets to the config file and restart with `docker restart prometheus`. Works excellently with Grafana using data source `http://prometheus:9090`.
 

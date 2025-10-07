@@ -33,6 +33,8 @@ saltbox:
   - "sub_zero"
   - "system"
   - "traefik"
+  - "traefik_file_template"
+  - "traefik_template"
   - "unionfs"
   - "user"
   - "webtools"

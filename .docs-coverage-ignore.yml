@@ -5,9 +5,44 @@
 
 # Saltbox roles to ignore
 saltbox:
-  # Example:
-  # - internal_role
-  # - deprecated_role
+  - "authentik_worker"
+  - "backup"
+  - "backup2"
+  - "common"
+  - "docker"
+  - "docker_socket_proxy"
+  - "download_clients"
+  - "download_indexers"
+  - "kernel"
+  - "main_tags"
+  - "media_server"
+  - "motd"
+  - "notify"
+  - "nvidia"
+  - "plex_auth_token"
+  - "plex_extra_tasks"
+  - "plex_fix_futures"
+  - "python"
+  - "rclone"
+  - "reboot"
+  - "remote"
+  - "restore"
+  - "saltbox_mod"
+  - "sanity_check"
+  - "shell"
+  - "sub_zero"
+  - "system"
+  - "traefik"
+  - "unionfs"
+  - "user"
+  - "webtools"
+  - "yyq"
+
+
+
+# Temporary until Hetzner NFS is reworked
+  - "hetzner_nfs"
+  - "hetzner_vlan"
 
 # Sandbox roles to ignore
 sandbox:

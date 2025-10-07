@@ -213,7 +213,7 @@ nav:
           - Wordpress: sandbox/apps/wordpress.md
         - Development:
           - Changedetection: sandbox/apps/changedetection.md
-          - Code-server: sandbox/apps/code-server.md
+          - Code-server: sandbox/apps/code_server.md
           - IT Tools: sandbox/apps/it_tools.md
           - Forgejo: sandbox/apps/forgejo.md
           - Gitea: sandbox/apps/gitea.md
@@ -242,7 +242,7 @@ nav:
             - Delugevpn: sandbox/apps/delugevpn.md
             - LunaSea: sandbox/apps/lunasea.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md
-            - qBit Manage: sandbox/apps/qbit-manage.md
+            - qBit Manage: sandbox/apps/qbit_manage.md
             - Qui: sandbox/apps/qui.md
             - Rflood: sandbox/apps/rflood.md
             - Rfloodx: sandbox/apps/rfloodx.md
@@ -259,7 +259,7 @@ nav:
           - Filezilla: sandbox/apps/filezilla.md
           - Krusader: sandbox/apps/krusader.md
           - Paperless AI: sandbox/apps/paperless_ai.md
-          - Paperless-NGX: sandbox/apps/paperless-ngx.md
+          - Paperless-NGX: sandbox/apps/paperless_ngx.md
           - PrivateBin: sandbox/apps/privatebin.md
           - XBackBone: sandbox/apps/xbackbone.md
         - Finance:
@@ -282,14 +282,14 @@ nav:
           - LinuxGSM: sandbox/apps/lgsm.md
           - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
-          - Minecraft Bedrock: sandbox/apps/minecraft-bedrock.md
+          - Minecraft Bedrock: sandbox/apps/minecraft_bedrock.md
         - Media Management:
           - Books:
             - Audiobookshelf: sandbox/apps/audiobookshelf.md
             - Booksonic: sandbox/apps/booksonic.md
             - Bookstack: sandbox/apps/bookstack.md
             - Calibre: sandbox/apps/calibre.md
-            - Calibre-web: sandbox/apps/calibre-web.md
+            - Calibre-web: sandbox/apps/calibre_web.md
             - Codex: sandbox/apps/codex.md
             - Comicstreamer: sandbox/apps/comicstreamer.md
             - Comixed: sandbox/apps/comixed.md
@@ -302,8 +302,8 @@ nav:
           - Metadata Management:
             - Kometa: sandbox/apps/kometa.md
             - MKVToolNix: sandbox/apps/mkvtoolnix.md
-            - Plex-Utills: sandbox/apps/plex-utills.md
-            - Python-plexlibrary: sandbox/apps/python-plexlibrary.md
+            - Plex-Utills: sandbox/apps/plex_utills.md
+            - Python-plexlibrary: sandbox/apps/python_plexlibrary.md
             - Unmanic: sandbox/apps/unmanic.md
           # - Movies:
           - Music:
@@ -324,12 +324,12 @@ nav:
             - Goplaxt: sandbox/apps/goplaxt.md
             - Kitana: sandbox/apps/kitana.md
             - Membarr: sandbox/apps/membarr.md
-            - Plex Auto Languages: sandbox/apps/plex-auto-languages.md
-            - Plex Dupefinder: sandbox/apps/plex-dupefinder.md
-            - Plex Patrol: sandbox/apps/plex-patrol.md
+            - Plex Auto Languages: sandbox/apps/plex_auto_languages.md
+            - Plex Dupefinder: sandbox/apps/plex_dupefinder.md
+            - Plex Patrol: sandbox/apps/plex_patrol.md
             - PlexShare: sandbox/apps/plexshare.md
             - PlexTraktSync: sandbox/apps/plextraktsync.md
-            - Plex-Utills: sandbox/apps/plex-utills.md
+            - Plex-Utills: sandbox/apps/plex_utills.md
             - Tauticord: sandbox/apps/tauticord.md
             - Wrapperr: sandbox/apps/wrapperr.md
             - Wizarr: sandbox/apps/wizarr.md
@@ -351,7 +351,7 @@ nav:
           - RocketChat: sandbox/apps/rocketchat.md
           - TeamSpeak: sandbox/apps/teamspeak.md
         - Utilities:
-          - A-Train: sandbox/apps/a-train.md
+          - A-Train: sandbox/apps/a_train.md
           - Database Management:
             - Adminer: sandbox/apps/adminer.md
             - PGAdmin: sandbox/apps/pgadmin.md
@@ -370,16 +370,16 @@ nav:
             - ESPHome: sandbox/apps/esphome.md
             - Home Assistant: sandbox/apps/homeassistant.md
             - MQTT: sandbox/apps/mqtt.md
-            - Node-Red: sandbox/apps/node-red.md
+            - Node-Red: sandbox/apps/node_red.md
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
             - OpenObserve: sandbox/apps/openobserve.md
             - Solr: sandbox/apps/solr.md
             - Monitorr: sandbox/apps/monitorr.md
           - Networking:
-            - Kcptun-client: sandbox/apps/kcptun-client.md
-            - Kcptun-server: sandbox/apps/kcptun-server.md
-            - Unifi Network Application: sandbox/apps/unifi-network-application.md
+            - Kcptun-client: sandbox/apps/kcptun_client.md
+            - Kcptun-server: sandbox/apps/kcptun_server.md
+            - Unifi Network Application: sandbox/apps/unifi_network_application.md
             - Wireguard: sandbox/apps/wireguard.md
           - MakeMKV: sandbox/apps/makemkv.md
           - Maintainerr: sandbox/apps/maintainerr.md
@@ -390,7 +390,7 @@ nav:
           - Sqlitebrowser: sandbox/apps/sqlitebrowser.md
           - Sshwifty: sandbox/apps/sshwifty.md
           - Tdarr: sandbox/apps/tdarr.md
-          - Tdarr Node: sandbox/apps/tdarr-node.md
+          - Tdarr Node: sandbox/apps/tdarr_node.md
           - System:
             - Apprise: sandbox/apps/apprise.md
             - Glances-web: sandbox/apps/glances_web.md
@@ -399,8 +399,8 @@ nav:
           - SyncThing: sandbox/apps/syncthing.md
           - Telegraf: sandbox/apps/telegraf.md
           - Teslamate: sandbox/apps/teslamate.md
-          - Traefik-Robotstxt: sandbox/apps/traefik-robotstxt.md
-          - Uptime Kuma: sandbox/apps/uptime-kuma.md
+          - Traefik-Robotstxt: sandbox/apps/traefik_robotstxt.md
+          - Uptime Kuma: sandbox/apps/uptime_kuma.md
           - Vaultwarden: sandbox/apps/vaultwarden.md
           - Varken: sandbox/apps/varken.md
 
@@ -436,7 +436,7 @@ nav:
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Dozzle: apps/dozzle.md
         - Gluetun: apps/gluetun.md
-        - Hetzner NFS: apps/hetzner-nfs.md
+        - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
         - Readarr: apps/readarr.md

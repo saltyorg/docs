@@ -29,7 +29,7 @@ sb install sandbox-mqtt
 
 ### 2. Setup
 
-You can connect MQTT to [Home Assistant](../apps/homeassistant.md) and [Node Red](../apps/node-red.md) via docker hostname. Add the MQTT integration in Home Assistant and use `mqtt` as the hostname/Broker, and 1883 as the port. In Node Red, you can use the `mqtt` node to connect to the MQTT server.
+You can connect MQTT to [Home Assistant](homeassistant.md) and [Node Red](node_red.md) via docker hostname. Add the MQTT integration in Home Assistant and use `mqtt` as the hostname/Broker, and 1883 as the port. In Node Red, you can use the `mqtt` node to connect to the MQTT server.
 
 While MQTT can be set up to use a username and password, it is not recommended to expose it to the internet. So by default, MQTT is not exposed to the internet, nor does it have a username and password.
 

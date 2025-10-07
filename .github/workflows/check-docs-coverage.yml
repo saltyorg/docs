@@ -67,83 +67,82 @@ jobs:
         env:
           GITHUB_WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-      # Commented out for testing - uncomment when ready to use
-      # - name: Handle GitHub issue
-      #   if: always()
-      #   uses: actions/github-script@v7
-      #   with:
-      #     script: |
-      #       const action = `${{ steps.coverage.outputs.action }}`;
-      #
-      #       if (action === 'create_or_update_issue') {
-      #         const title = `${{ steps.coverage.outputs.issue_title }}`;
-      #         const body = `${{ steps.coverage.outputs.issue_body }}`;
-      #
-      #         // Check if an issue already exists
-      #         const issues = await github.rest.issues.listForRepo({
-      #           owner: context.repo.owner,
-      #           repo: context.repo.repo,
-      #           state: 'open',
-      #           labels: 'github-actions-docs'
-      #         });
-      #
-      #         const existingIssue = issues.data.find(issue =>
-      #           issue.title.startsWith('📝 Missing documentation for')
-      #         );
-      #
-      #         if (existingIssue) {
-      #           // Update existing issue
-      #           await github.rest.issues.update({
-      #             owner: context.repo.owner,
-      #             repo: context.repo.repo,
-      #             issue_number: existingIssue.number,
-      #             title: title,
-      #             body: body
-      #           });
-      #           console.log(`Updated issue #${existingIssue.number}`);
-      #         } else {
-      #           // Create new issue
-      #           const newIssue = await github.rest.issues.create({
-      #             owner: context.repo.owner,
-      #             repo: context.repo.repo,
-      #             title: title,
-      #             body: body,
-      #             labels: ['github-actions-docs']
-      #           });
-      #           console.log(`Created issue #${newIssue.data.number}`);
-      #         }
-      #       } else if (action === 'close_issue') {
-      #         const closeMessage = `${{ steps.coverage.outputs.close_message }}`;
-      #
-      #         // Find and close any open documentation coverage issues
-      #         const issues = await github.rest.issues.listForRepo({
-      #           owner: context.repo.owner,
-      #           repo: context.repo.repo,
-      #           state: 'open',
-      #           labels: 'github-actions-docs'
-      #         });
-      #
-      #         const docIssue = issues.data.find(issue =>
-      #           issue.title.startsWith('📝 Missing documentation for')
-      #         );
-      #
-      #         if (docIssue) {
-      #           await github.rest.issues.update({
-      #             owner: context.repo.owner,
-      #             repo: context.repo.repo,
-      #             issue_number: docIssue.number,
-      #             state: 'closed'
-      #           });
-      #
-      #           await github.rest.issues.createComment({
-      #             owner: context.repo.owner,
-      #             repo: context.repo.repo,
-      #             issue_number: docIssue.number,
-      #             body: closeMessage
-      #           });
-      #
-      #           console.log(`Closed issue #${docIssue.number}`);
-      #         }
-      #       } else {
-      #         console.log('No action needed');
-      #       }
+      - name: Handle GitHub issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const action = `${{ steps.coverage.outputs.action }}`;
+
+            if (action === 'create_or_update_issue') {
+              const title = `${{ steps.coverage.outputs.issue_title }}`;
+              const body = `${{ steps.coverage.outputs.issue_body }}`;
+
+              // Check if an issue already exists
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'github-actions-docs'
+              });
+
+              const existingIssue = issues.data.find(issue =>
+                issue.title.startsWith('📝 Missing documentation for')
+              );
+
+              if (existingIssue) {
+                // Update existing issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existingIssue.number,
+                  title: title,
+                  body: body
+                });
+                console.log(`Updated issue #${existingIssue.number}`);
+              } else {
+                // Create new issue
+                const newIssue = await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: title,
+                  body: body,
+                  labels: ['github-actions-docs']
+                });
+                console.log(`Created issue #${newIssue.data.number}`);
+              }
+            } else if (action === 'close_issue') {
+              const closeMessage = `${{ steps.coverage.outputs.close_message }}`;
+
+              // Find and close any open documentation coverage issues
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'github-actions-docs'
+              });
+
+              const docIssue = issues.data.find(issue =>
+                issue.title.startsWith('📝 Missing documentation for')
+              );
+
+              if (docIssue) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: docIssue.number,
+                  state: 'closed'
+                });
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: docIssue.number,
+                  body: closeMessage
+                });
+
+                console.log(`Closed issue #${docIssue.number}`);
+              }
+            } else {
+              console.log('No action needed');
+            }

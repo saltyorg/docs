@@ -41,7 +41,6 @@ postgres
 qbittorrent
 qbittorrentvpn
 radarr
-readarr
 redis
 requestrr
 rflood

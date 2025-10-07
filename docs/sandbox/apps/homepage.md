@@ -22,7 +22,7 @@ tags:
   - Container status (Running / Stopped) & statistics (CPU, Memory, Network)
   - Automatic service discovery (via labels)
 - Service integration
-  - Sonarr, Radarr, Readarr, Prowlarr, Bazarr, Lidarr, Emby, Jellyfin, Tautulli, Plex and more
+  - Sonarr, Radarr, Prowlarr, Bazarr, Lidarr, Emby, Jellyfin, Tautulli, Plex and more
 
 !!! info
     By default, the role is protected behind your Authelia/SSO middleware.

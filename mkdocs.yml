@@ -439,7 +439,6 @@ nav:
         - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
-        - Readarr: apps/readarr.md
         - asshama: apps/asshama.md
         - Unpackerr: apps/unpackerr.md
         - Whisparr: apps/whisparr.md

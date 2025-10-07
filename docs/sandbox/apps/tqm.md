@@ -102,7 +102,7 @@ filters:
       - IsUnregistered()
       - Label contains "-imported" && TrackerName contains "avistaz.to" && (Ratio > 2.0 || SeedingDays >= 21.0)
       - Label contains "-imported" && TrackerName contains "nebulance.io" && SeedingDays >= 6.0
-      - Label in ["readarr-imported", "lidarr-imported"] && (Ratio > 5.0 || SeedingDays >= 25.0)
+      - Label in ["lidarr-imported"] && (Ratio > 5.0 || SeedingDays >= 25.0)
       - Label in ["autoremove-btn"] && (Ratio > 3.0 || SeedingDays >= 15.0)
 ...
 

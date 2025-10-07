@@ -103,6 +103,10 @@ def main():
     # Load ignore configuration
     ignore_config = load_ignore_config(config_path)
 
+    # Ensure ignore config lists are not None
+    saltbox_ignored = ignore_config.get("saltbox") or []
+    sandbox_ignored = ignore_config.get("sandbox") or []
+
     # Get roles from repositories
     saltbox_roles = get_roles_from_repo(saltbox_path)
     sandbox_roles = get_roles_from_repo(sandbox_path)
@@ -111,11 +115,11 @@ def main():
     documented_apps = get_documented_apps(docs_root / "docs")
 
     # Track counts before filtering
-    total_ignored = len(ignore_config["saltbox"]) + len(ignore_config["sandbox"])
+    total_ignored = len(saltbox_ignored) + len(sandbox_ignored)
 
     # Filter out ignored roles
-    saltbox_roles = {role for role in saltbox_roles if role not in ignore_config["saltbox"]}
-    sandbox_roles = {role for role in sandbox_roles if role not in ignore_config["sandbox"]}
+    saltbox_roles = {role for role in saltbox_roles if role not in saltbox_ignored}
+    sandbox_roles = {role for role in sandbox_roles if role not in sandbox_ignored}
 
     # Find missing documentation
     saltbox_missing = sorted(list(saltbox_roles - documented_apps))
@@ -197,8 +201,8 @@ def main():
     print(f"  Saltbox roles: {len(saltbox_roles)}")
     print(f"  Sandbox roles: {len(sandbox_roles)}")
     print(f"  Documented apps: {len(documented_apps)}")
-    print(f"  Saltbox ignored: {len(ignore_config['saltbox'])}")
-    print(f"  Sandbox ignored: {len(ignore_config['sandbox'])}")
+    print(f"  Saltbox ignored: {len(saltbox_ignored)}")
+    print(f"  Sandbox ignored: {len(sandbox_ignored)}")
     print("="*60)
 
     sys.exit(exit_code)

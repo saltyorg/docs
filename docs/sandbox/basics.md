@@ -8,7 +8,7 @@ tags:
 
 # Basics
 
-The [Saltbox Sandbox](https://github.com/saltyorg/Sandbox) repository is installed with [Saltbox](https://github.com/saltyorg/Saltbox) as part of a standard install. The Saltbox Sandbox application installers are provided and maintained by the community but are subject to approval. The applications are not part of a standard Saltbox install, but they should all be compatible with the Saltbox ecosystem. Sandbox is not a free-for-all no-rules repository but what will be accepted is a much broader range of applications which may not necessarily have anything to do with running a media server. Applications that are newly submitted or need testing will primarily land in the Sandbox repo and if relevant, stable, and maintained may end up in the Saltbox repo.
+The [Sandbox](https://github.com/saltyorg/Sandbox) repository is installed with [Saltbox](https://github.com/saltyorg/Saltbox) as part of a standard install. The Sandbox application installers are provided and maintained by the community but are subject to approval. The applications are not part of a standard Saltbox install, but they should all be compatible with the Saltbox ecosystem. Sandbox is not a free-for-all no-rules repository but what will be accepted is a much broader range of applications which may not necessarily have anything to do with running a media server. Applications that are newly submitted or need testing will primarily land in the Sandbox repo and if relevant, stable, and maintained may end up in the Saltbox repo.
 
 Saltbox documentation is written by community members to help others make the most of their systems.
 
@@ -26,7 +26,7 @@ sb install sandbox
 
 ## Update
 
-To update Saltbox Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
+To update Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
 
 ``` shell
 

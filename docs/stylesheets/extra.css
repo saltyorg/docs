@@ -48,22 +48,6 @@
   padding-right: 0.25em;
 }
 
-[data-md-color-scheme=slate] {
-  --md-hue: 232;
-  --md-default-fg-color: hsla(var(--md-hue), 15%, 90%, 1);
-  --md-default-fg-color--light: hsla(var(--md-hue), 75%, 90%, 0.62);
-  --md-default-fg-color--lighter: hsla(var(--md-hue), 75%, 90%, 0.32);
-  --md-default-fg-color--lightest: hsla(var(--md-hue), 75%, 90%, 0.12);
-  --md-default-bg-color: hsla(var(--md-hue), 15%, 21%, 1);
-  --md-default-bg-color: hsla(var(--md-hue), 15%, 21%, 1);
-  --md-default-bg-color--light: hsla(var(--md-hue), 15%, 21%, 0.54);
-  --md-default-bg-color--lighter: hsla(var(--md-hue), 15%, 21%, 0.26);
-  --md-default-bg-color--lightest: hsla(var(--md-hue), 15%, 21%, 0.07);
-  --md-code-fg-color: hsla(var(--md-hue), 18%, 86%, 1);
-  --md-code-bg-color: hsla(var(--md-hue), 15%, 15%, 1);
-  --md-typeset-mark-color: hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
-}
-
 .sb-buttons {
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
 }

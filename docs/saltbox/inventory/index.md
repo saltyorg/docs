@@ -58,13 +58,13 @@ The variables that can be used for customization within the Inventory are listed
       <tr>
         <td>Saltbox</td>
         <td>
-          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;**</span>[**/defaults/main.yml**](https://github.com/saltyorg/Saltbox/tree/master/roles)
         </td>
       </tr>
       <tr>
         <td>Sandbox</td>
         <td>
-          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;</span><span style="color: #e6695b;">/defaults/main.yml**</span>
+          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;**</span>[**/defaults/main.yml**](https://github.com/saltyorg/Sandbox/tree/master/roles)
         </td>
       </tr>
       <tr>

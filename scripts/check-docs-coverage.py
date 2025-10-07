@@ -96,8 +96,11 @@ def main():
     # Paths
     script_dir = Path(__file__).parent
     docs_root = script_dir.parent
-    saltbox_path = Path("saltbox")
-    sandbox_path = Path("sandbox")
+    # When running in GitHub Actions, repos are in parent directory of docs
+    # When running locally, they should be in the same directory as docs
+    parent_dir = docs_root.parent
+    saltbox_path = parent_dir / "saltbox"
+    sandbox_path = parent_dir / "sandbox"
     config_path = docs_root / ".docs-coverage-ignore.yml"
 
     # Load ignore configuration

@@ -451,8 +451,7 @@ nav:
           - Grafana: apps/grafana.md
       - TODO - NEED UPDATING:
           - Organizr: apps/organizr.md
-      - Utility tags:
-          - Plex-DB: apps/utility_tags/plex-db.md
+          - Plex-DB: apps/plex-db.md
 
   - FAQ:
       - System: faq/system.md

@@ -37,15 +37,13 @@ saltbox:
   - "user"
   - "webtools"
   - "yyq"
-
-
-
-# Temporary until Hetzner NFS is reworked
+  # Temporary until Hetzner NFS is reworked
   - "hetzner_nfs"
   - "hetzner_vlan"
 
 # Sandbox roles to ignore
 sandbox:
-  # Example:
-  # - test_role
-  # - experimental_role
+  - "main_tag"
+  - "maybe_finance_worker"
+  - "sanity_check"
+  - "tdarr_node"

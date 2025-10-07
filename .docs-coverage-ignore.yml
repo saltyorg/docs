@@ -1,0 +1,16 @@
+# Documentation Coverage Ignore List
+#
+# This file contains roles that should be excluded from documentation coverage checks.
+# Add role names that don't need documentation (e.g., internal roles, deprecated roles, etc.)
+
+# Saltbox roles to ignore
+saltbox:
+  # Example:
+  # - internal_role
+  # - deprecated_role
+
+# Sandbox roles to ignore
+sandbox:
+  # Example:
+  # - test_role
+  # - experimental_role

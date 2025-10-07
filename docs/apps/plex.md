@@ -8,7 +8,7 @@ tags:
 
 # Plex
 
-# What is it?
+## What is it?
 
 [Plex](https://plex.tv/) is a media server.
 
@@ -261,6 +261,833 @@ sb install plex
 ```
 
 To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._yourdomain.com_` and log in with your Plex account.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+!!! info
+    Variables can be overridden in `inventories/host_vars/localhost.yml`.
+
+
+    This role supports multiple instances via `plex_instances`.
+
+    === "Role-level Override"
+
+        Applies to all instances of plex:
+
+        ```yaml
+        plex_role_web_subdomain: "custom"
+        ```
+
+    === "Instance-level Override"
+
+        Applies to a specific instance (e.g., `plex2`):
+
+        ```yaml
+        plex2_web_subdomain: "custom2"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `{role}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+??? example "Basics"
+
+    === "Default"
+
+        ```yaml
+        # Type: list
+        plex_instances: ["plex"]
+
+        ```
+
+    === "Example"
+
+        ```yaml
+        # Type: list
+        plex_instances: ["plex", "plex2"]
+
+        ```
+
+??? example "Settings"
+
+    === "Role-level"
+
+        ```yaml
+        # Do not enable globally if deploying multiple instances
+        # Type: bool (true/false)
+        plex_role_open_main_ports: false
+
+        # Do not enable globally if deploying multiple instances
+        # Type: bool (true/false)
+        plex_role_open_local_ports: false
+
+        # Type: bool (true/false)
+        plex_role_plugin_webtools: false
+
+        # Type: bool (true/false)
+        plex_role_plugin_sub_zero: false
+
+        # Disables Traefik's HTTP to HTTPS redirect for Plex
+        # Allows older clients with certificate issues to connect insecurely
+        # Type: bool (true/false)
+        plex_role_insecure: false
+
+        # Adds the IP specified here to the advertised urls Plex broadcasts to clients
+        # Useful to avoid traffic going through your WAN when hairpin NAT is not available
+        # Type: string
+        plex_role_lan_ip: ""
+
+        # For instances this works the same as usual plex2_auth_token_proxy for an instance named plex2.
+        # Type: string
+        plex_role_auth_token_proxy: ""
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Do not enable globally if deploying multiple instances
+        # Type: bool (true/false)
+        plex2_open_main_ports: false
+
+        # Do not enable globally if deploying multiple instances
+        # Type: bool (true/false)
+        plex2_open_local_ports: false
+
+        # Type: bool (true/false)
+        plex2_plugin_webtools: false
+
+        # Type: bool (true/false)
+        plex2_plugin_sub_zero: false
+
+        # Disables Traefik's HTTP to HTTPS redirect for Plex
+        # Allows older clients with certificate issues to connect insecurely
+        # Type: bool (true/false)
+        plex2_insecure: false
+
+        # Adds the IP specified here to the advertised urls Plex broadcasts to clients
+        # Useful to avoid traffic going through your WAN when hairpin NAT is not available
+        # Type: string
+        plex2_lan_ip: ""
+
+        # For instances this works the same as usual plex2_auth_token_proxy for an instance named plex2.
+        # Type: string
+        plex2_auth_token_proxy: ""
+
+        ```
+
+??? example "Paths"
+
+    === "Role-level"
+
+        ```yaml
+        # Type: string
+        plex_role_paths_folder: "{{ plex_name }}"
+
+        # Type: string
+        plex_role_paths_location: "{{ server_appdata_path }}/{{ plex_role_paths_folder }}"
+
+        # Type: string
+        plex_role_paths_transcodes_location: "{{ transcodes_path }}/{{ plex_role_paths_folder }}"
+
+        # Type: string
+        plex_role_paths_application_support_location: "{{ plex_role_paths_location }}/Library/Application Support/Plex Media Server"
+
+        # Type: string
+        plex_role_paths_config_location: "{{ plex_role_paths_application_support_location }}/Preferences.xml"
+
+        # Type: string
+        plex_role_paths_log_location: "{{ plex_role_paths_application_support_location }}/Logs"
+
+        # Type: string
+        plex_role_paths_plugins_location: "{{ plex_role_paths_application_support_location }}/Plug-ins"
+
+        # Type: string
+        plex_role_paths_plugin_support_location: "{{ plex_role_paths_application_support_location }}/Plug-in Support"
+
+        # Type: string
+        plex_role_paths_db_location: "{{ plex_role_paths_plugin_support_location }}/Databases/com.plexapp.plugins.library.db"
+
+        # Type: string
+        plex_role_paths_db_blobs_location: "{{ plex_role_paths_plugin_support_location }}/Databases/com.plexapp.plugins.library.blobs.db"
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Type: string
+        plex2_paths_folder: "{{ plex_name }}"
+
+        # Type: string
+        plex2_paths_location: "{{ server_appdata_path }}/{{ plex_role_paths_folder }}"
+
+        # Type: string
+        plex2_paths_transcodes_location: "{{ transcodes_path }}/{{ plex_role_paths_folder }}"
+
+        # Type: string
+        plex2_paths_application_support_location: "{{ plex_role_paths_location }}/Library/Application Support/Plex Media Server"
+
+        # Type: string
+        plex2_paths_config_location: "{{ plex_role_paths_application_support_location }}/Preferences.xml"
+
+        # Type: string
+        plex2_paths_log_location: "{{ plex_role_paths_application_support_location }}/Logs"
+
+        # Type: string
+        plex2_paths_plugins_location: "{{ plex_role_paths_application_support_location }}/Plug-ins"
+
+        # Type: string
+        plex2_paths_plugin_support_location: "{{ plex_role_paths_application_support_location }}/Plug-in Support"
+
+        # Type: string
+        plex2_paths_db_location: "{{ plex_role_paths_plugin_support_location }}/Databases/com.plexapp.plugins.library.db"
+
+        # Type: string
+        plex2_paths_db_blobs_location: "{{ plex_role_paths_plugin_support_location }}/Databases/com.plexapp.plugins.library.blobs.db"
+
+        ```
+
+??? example "Web"
+
+    === "Role-level"
+
+        ```yaml
+        # Type: string
+        plex_role_web_subdomain: "{{ plex_name }}"
+
+        # Type: string
+        plex_role_web_domain: "{{ user.domain }}"
+
+        # Type: string
+        plex_role_web_port: "32400"
+
+        # Type: string
+        plex_role_web_http_port: "32400"
+
+        # Type: string
+        plex_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                            if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                            else lookup('role_var', '_web_domain', role='plex')) }}"
+
+        # Type: string
+        plex_role_webtools_web_subdomain: "{{ plex_name }}-webtools"
+
+        # Type: string
+        plex_role_webtools_web_domain: "{{ lookup('role_var', '_web_domain', role='plex') }}"
+
+        # Type: string
+        plex_role_webtools_web_port: "33400"
+
+        # Type: string
+        plex_role_webtools_host: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') + '.' + lookup('role_var', '_webtools_web_domain', role='plex') }}"
+
+        # Type: string
+        plex_role_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                                     if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='plex')) }}"
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Type: string
+        plex2_web_subdomain: "{{ plex_name }}"
+
+        # Type: string
+        plex2_web_domain: "{{ user.domain }}"
+
+        # Type: string
+        plex2_web_port: "32400"
+
+        # Type: string
+        plex2_web_http_port: "32400"
+
+        # Type: string
+        plex2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                        if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                        else lookup('role_var', '_web_domain', role='plex')) }}"
+
+        # Type: string
+        plex2_webtools_web_subdomain: "{{ plex_name }}-webtools"
+
+        # Type: string
+        plex2_webtools_web_domain: "{{ lookup('role_var', '_web_domain', role='plex') }}"
+
+        # Type: string
+        plex2_webtools_web_port: "33400"
+
+        # Type: string
+        plex2_webtools_host: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') + '.' + lookup('role_var', '_webtools_web_domain', role='plex') }}"
+
+        # Type: string
+        plex2_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                                 if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='plex')) }}"
+
+        ```
+
+??? example "DNS"
+
+    === "Role-level"
+
+        ```yaml
+        # Type: string
+        plex_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='plex') }}"
+
+        # Type: string
+        plex_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='plex') }}"
+
+        # Type: bool (true/false)
+        plex_role_dns_proxy: "{{ dns_proxied }}"
+
+        # Type: string
+        plex_role_webtools_dns_record: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
+
+        # Type: string
+        plex_role_webtools_dns_zone: "{{ lookup('role_var', '_webtools_web_domain', role='plex') }}"
+
+        # Type: bool (true/false)
+        plex_role_webtools_dns_proxy: "{{ dns_proxied }}"
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Type: string
+        plex2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='plex') }}"
+
+        # Type: string
+        plex2_dns_zone: "{{ lookup('role_var', '_web_domain', role='plex') }}"
+
+        # Type: bool (true/false)
+        plex2_dns_proxy: "{{ dns_proxied }}"
+
+        # Type: string
+        plex2_webtools_dns_record: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
+
+        # Type: string
+        plex2_webtools_dns_zone: "{{ lookup('role_var', '_webtools_web_domain', role='plex') }}"
+
+        # Type: bool (true/false)
+        plex2_webtools_dns_proxy: "{{ dns_proxied }}"
+
+        ```
+
+??? example "Traefik"
+
+    === "Role-level"
+
+        ```yaml
+        # Type: string
+        plex_role_traefik_sso_middleware: ""
+
+        # Type: string
+        plex_role_traefik_middleware_default: "{{ traefik_default_middleware
+                                                  + (',themepark-' + plex_name
+                                                    if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
+                                                    else '') }}"
+
+        # Type: string
+        plex_role_traefik_middleware_custom: ""
+
+        # Type: string
+        plex_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+
+        # Type: bool (true/false)
+        plex_role_traefik_enabled: true
+
+        # Type: bool (true/false)
+        plex_role_traefik_api_enabled: false
+
+        # Type: string
+        plex_role_traefik_api_endpoint: ""
+
+        # Type: bool (true/false)
+        plex_role_traefik_error_pages_enabled: false
+
+        # Type: bool (true/false)
+        plex_role_traefik_gzip_enabled: false
+
+        # Type: string
+        plex_role_traefik_middleware_http: "{{ 'globalHeaders@file'
+                                            if lookup('role_var', '_insecure', role='plex')
+                                            else traefik_default_middleware_default_http }}"
+
+        # Type: string
+        plex_role_web_serverstransport: "skipverify@file"
+
+        # Type: string
+        plex_role_webtools_traefik_sso_middleware: ""
+
+        # Type: string
+        plex_role_webtools_traefik_middleware_default: "{{ traefik_default_middleware
+                                                           + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
+                                                             if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
+                                                             else '') }}"
+
+        # Type: string
+        plex_role_webtools_traefik_middleware_custom: ""
+
+        # Type: string
+        plex_role_webtools_traefik_certresolver: "{{ traefik_default_certresolver }}"
+
+        # Type: string
+        plex_role_webtools_traefik_router: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Type: string
+        plex2_traefik_sso_middleware: ""
+
+        # Type: string
+        plex2_traefik_middleware_default: "{{ traefik_default_middleware
+                                              + (',themepark-' + plex_name
+                                                if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
+                                                else '') }}"
+
+        # Type: string
+        plex2_traefik_middleware_custom: ""
+
+        # Type: string
+        plex2_traefik_certresolver: "{{ traefik_default_certresolver }}"
+
+        # Type: bool (true/false)
+        plex2_traefik_enabled: true
+
+        # Type: bool (true/false)
+        plex2_traefik_api_enabled: false
+
+        # Type: string
+        plex2_traefik_api_endpoint: ""
+
+        # Type: bool (true/false)
+        plex2_traefik_error_pages_enabled: false
+
+        # Type: bool (true/false)
+        plex2_traefik_gzip_enabled: false
+
+        # Type: string
+        plex2_traefik_middleware_http: "{{ 'globalHeaders@file'
+                                        if lookup('role_var', '_insecure', role='plex')
+                                        else traefik_default_middleware_default_http }}"
+
+        # Type: string
+        plex2_web_serverstransport: "skipverify@file"
+
+        # Type: string
+        plex2_webtools_traefik_sso_middleware: ""
+
+        # Type: string
+        plex2_webtools_traefik_middleware_default: "{{ traefik_default_middleware
+                                                       + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
+                                                         if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
+                                                         else '') }}"
+
+        # Type: string
+        plex2_webtools_traefik_middleware_custom: ""
+
+        # Type: string
+        plex2_webtools_traefik_certresolver: "{{ traefik_default_certresolver }}"
+
+        # Type: string
+        plex2_webtools_traefik_router: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
+
+        ```
+
+??? example "Theme"
+
+    === "Role-level"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_role_themepark_enabled: false
+
+        # Options can be found at https://docs.theme-park.dev/themes/plex/
+        # Type: string
+        plex_role_themepark_theme: "{{ global_themepark_theme }}"
+
+        # Allows you to override the url where CSS files can be found
+        # Type: string
+        plex_role_themepark_domain: "{{ global_themepark_domain }}"
+
+        # Options can be found at https://docs.theme-park.dev/themes/addons/
+        # Type: list
+        plex_role_themepark_addons: []
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex2_themepark_enabled: false
+
+        # Options can be found at https://docs.theme-park.dev/themes/plex/
+        # Type: string
+        plex2_themepark_theme: "{{ global_themepark_theme }}"
+
+        # Allows you to override the url where CSS files can be found
+        # Type: string
+        plex2_themepark_domain: "{{ global_themepark_domain }}"
+
+        # Options can be found at https://docs.theme-park.dev/themes/addons/
+        # Type: list
+        plex2_themepark_addons: []
+
+        ```
+
+??? example "Docker"
+
+    === "Role-level"
+
+        ```yaml
+        # Container
+        # Type: string
+        plex_role_docker_container: "{{ plex_name }}"
+
+        # Image
+        # Type: bool (true/false)
+        plex_role_docker_image_pull: true
+
+        # Type: string
+        plex_role_docker_image_repo: "plexinc/pms-docker"
+
+        # Type: string
+        plex_role_docker_image_tag: "latest"
+
+        # Type: string
+        plex_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='plex') }}:{{ lookup('role_var', '_docker_image_tag', role='plex') }}"
+
+        # Ports
+        # Type: string
+        plex_role_docker_ports_32400: "{{ port_lookup_32400.meta.port
+                                       if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
+                                       else '32400' }}"
+
+        # Type: list
+        plex_role_docker_ports_defaults: []
+
+        # Type: list
+        plex_role_docker_ports_custom: []
+
+        # Envs
+        # Type: string
+        plex_role_docker_envs_advertise_ip_url: "{{ lookup('role_var', '_web_url', role='plex') + ':443,' + lookup('role_var', '_web_insecure_url', role='plex') + ':80'
+                                                 if lookup('role_var', '_insecure', role='plex')
+                                                 else lookup('role_var', '_web_url', role='plex') + ':443' }}"
+
+        # Type: string
+        plex_role_docker_envs_advertise_ip: "{{ 'http://' + lookup('role_var', '_lan_ip', role='plex') + ':32400,' + lookup('role_var', '_docker_envs_advertise_ip_url', role='plex')
+                                             if (lookup('role_var', '_lan_ip', role='plex') | length > 0) and lookup('role_var', '_open_main_ports', role='plex')
+                                             else lookup('role_var', '_docker_envs_advertise_ip_url', role='plex') }}"
+
+        # Type: dict
+        plex_role_docker_envs_default: 
+          PLEX_UID: "{{ uid }}"
+          PLEX_GID: "{{ gid }}"
+          PLEX_CLAIM: "{{ (plex_claim_code) | default(omit) }}"
+          CHANGE_CONFIG_DIR_OWNERSHIP: "false"
+          TZ: "{{ tz }}"
+          ADVERTISE_IP: "{{ lookup('role_var', '_docker_envs_advertise_ip', role='plex') }}"
+
+        # Type: dict
+        plex_role_docker_envs_custom: {}
+
+        # Volumes
+        # Type: list
+        plex_role_docker_volumes_default: 
+          - "{{ plex_role_paths_location }}:/config"
+          - "{{ server_appdata_path }}/scripts:/scripts"
+          - "/dev/shm:/dev/shm"
+          - "{{ plex_role_paths_transcodes_location }}:/transcode"
+
+        # Type: list
+        plex_role_docker_volumes_legacy: 
+          - "/mnt/unionfs/Media:/data"
+
+        # Type: list
+        plex_role_docker_volumes_custom: []
+
+        # Mounts
+        # Type: list
+        plex_role_docker_mounts_default: 
+          - target: /tmp
+            type: tmpfs
+
+        # Type: list
+        plex_role_docker_mounts_custom: []
+
+        # Hosts
+        # Type: dict
+        plex_role_docker_hosts_default: 
+          metric.plex.tv: "{{ ip_address_localhost }}"
+          metrics.plex.tv: "{{ ip_address_localhost }}"
+          analytics.plex.tv: "{{ ip_address_localhost }}"
+
+        # Type: dict
+        plex_role_docker_hosts_custom: {}
+
+        # Labels
+        # Type: list
+        plex_role_docker_labels_default: 
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
+          - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
+
+        # Type: dict
+        plex_role_docker_labels_custom: {}
+
+        # Hostname
+        # Type: string
+        plex_role_docker_hostname: "{{ plex_name }}"
+
+        # Networks
+        # Type: string
+        plex_role_docker_networks_alias: "{{ plex_name }}"
+
+        # Type: list
+        plex_role_docker_networks_default: []
+
+        # Type: list
+        plex_role_docker_networks_custom: []
+
+        # Restart Policy
+        # Type: string
+        plex_role_docker_restart_policy: unless-stopped
+
+        # State
+        # Type: string
+        plex_role_docker_state: started
+
+        ```
+
+    === "Instance-level"
+
+        ```yaml
+        # Container
+        # Type: string
+        plex2_docker_container: "{{ plex_name }}"
+
+        # Image
+        # Type: bool (true/false)
+        plex2_docker_image_pull: true
+
+        # Type: string
+        plex2_docker_image_repo: "plexinc/pms-docker"
+
+        # Type: string
+        plex2_docker_image_tag: "latest"
+
+        # Type: string
+        plex2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='plex') }}:{{ lookup('role_var', '_docker_image_tag', role='plex') }}"
+
+        # Ports
+        # Type: string
+        plex2_docker_ports_32400: "{{ port_lookup_32400.meta.port
+                                   if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
+                                   else '32400' }}"
+
+        # Type: list
+        plex2_docker_ports_defaults: []
+
+        # Type: list
+        plex2_docker_ports_custom: []
+
+        # Envs
+        # Type: string
+        plex2_docker_envs_advertise_ip_url: "{{ lookup('role_var', '_web_url', role='plex') + ':443,' + lookup('role_var', '_web_insecure_url', role='plex') + ':80'
+                                             if lookup('role_var', '_insecure', role='plex')
+                                             else lookup('role_var', '_web_url', role='plex') + ':443' }}"
+
+        # Type: string
+        plex2_docker_envs_advertise_ip: "{{ 'http://' + lookup('role_var', '_lan_ip', role='plex') + ':32400,' + lookup('role_var', '_docker_envs_advertise_ip_url', role='plex')
+                                         if (lookup('role_var', '_lan_ip', role='plex') | length > 0) and lookup('role_var', '_open_main_ports', role='plex')
+                                         else lookup('role_var', '_docker_envs_advertise_ip_url', role='plex') }}"
+
+        # Type: dict
+        plex2_docker_envs_default: 
+          PLEX_UID: "{{ uid }}"
+          PLEX_GID: "{{ gid }}"
+          PLEX_CLAIM: "{{ (plex_claim_code) | default(omit) }}"
+          CHANGE_CONFIG_DIR_OWNERSHIP: "false"
+          TZ: "{{ tz }}"
+          ADVERTISE_IP: "{{ lookup('role_var', '_docker_envs_advertise_ip', role='plex') }}"
+
+        # Type: dict
+        plex2_docker_envs_custom: {}
+
+        # Volumes
+        # Type: list
+        plex2_docker_volumes_default: 
+          - "{{ plex_role_paths_location }}:/config"
+          - "{{ server_appdata_path }}/scripts:/scripts"
+          - "/dev/shm:/dev/shm"
+          - "{{ plex_role_paths_transcodes_location }}:/transcode"
+
+        # Type: list
+        plex2_docker_volumes_legacy: 
+          - "/mnt/unionfs/Media:/data"
+
+        # Type: list
+        plex2_docker_volumes_custom: []
+
+        # Mounts
+        # Type: list
+        plex2_docker_mounts_default: 
+          - target: /tmp
+            type: tmpfs
+
+        # Type: list
+        plex2_docker_mounts_custom: []
+
+        # Hosts
+        # Type: dict
+        plex2_docker_hosts_default: 
+          metric.plex.tv: "{{ ip_address_localhost }}"
+          metrics.plex.tv: "{{ ip_address_localhost }}"
+          analytics.plex.tv: "{{ ip_address_localhost }}"
+
+        # Type: dict
+        plex2_docker_hosts_custom: {}
+
+        # Labels
+        # Type: list
+        plex2_docker_labels_default: 
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
+          - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
+          - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
+
+        # Type: dict
+        plex2_docker_labels_custom: {}
+
+        # Hostname
+        # Type: string
+        plex2_docker_hostname: "{{ plex_name }}"
+
+        # Networks
+        # Type: string
+        plex2_docker_networks_alias: "{{ plex_name }}"
+
+        # Type: list
+        plex2_docker_networks_default: []
+
+        # Type: list
+        plex2_docker_networks_custom: []
+
+        # Restart Policy
+        # Type: string
+        plex2_docker_restart_policy: unless-stopped
+
+        # State
+        # Type: string
+        plex2_docker_state: started
+
+        ```
+
+??? example "Global Override Options"
+
+    ```yaml
+    # Enable or disable Autoheal monitoring for containers created when deploying
+    # Type: bool (true/false)
+    plex_role_autoheal_enabled: true
+
+    # List of container dependencies that must be running before containers start
+    # Type: string
+    plex_role_depends_on: ""
+
+    # Delay in seconds before starting containers after dependencies are ready
+    # Type: string (quoted number)
+    plex_role_depends_on_delay: "0"
+
+    # Enable healthcheck waiting for container dependencies
+    # Type: string ("true"/"false")
+    plex_role_depends_on_healthchecks:
+
+    # Enable or disable Diun update notifications for containers created when deploying
+    # Type: bool (true/false)
+    plex_role_diun_enabled: true
+
+    # Enable or disable automatic DNS record creation for containers
+    # Type: bool (true/false)
+    plex_role_dns_enabled: true
+
+    # Enable or disable Saltbox Docker Controller management for containers
+    # Type: bool (true/false)
+    plex_role_docker_controller: true
+
+    # Enable Traefik autodetect middleware for containers
+    # Type: bool (true/false)
+    plex_role_traefik_autodetect_enabled: false
+
+    # Enable CrowdSec middleware for containers
+    # Type: bool (true/false)
+    plex_role_traefik_crowdsec_enabled: false
+
+    # Enable custom error pages middleware for containers
+    # Type: bool (true/false)
+    plex_role_traefik_error_pages_enabled: false
+
+    # Enable gzip compression middleware for containers
+    # Type: bool (true/false)
+    plex_role_traefik_gzip_enabled: false
+
+    # Enable robots.txt middleware for containers
+    # Type: bool (true/false)
+    plex_role_traefik_robot_enabled: true
+
+    # Enable Tailscale-specific Traefik configuration for containers
+    # Type: bool (true/false)
+    plex_role_traefik_tailscale_enabled: false
+
+    # Enable wildcard certificate for containers
+    # Type: bool (true/false)
+    plex_role_traefik_wildcard_enabled: true
+
+    # Override the Traefik fully qualified domain name (FQDN) for containers
+    # Type: string
+    plex_role_web_fqdn_override:
+
+    # Override the Traefik web host configuration for containers
+    # Type: string
+    plex_role_web_host_override:
+
+    # URL scheme to use for web access to containers
+    # Type: string ("http"/"https")
+    plex_role_web_scheme:
+
+    ```
+
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
 
 ## Next
 

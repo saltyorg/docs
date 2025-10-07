@@ -42,7 +42,7 @@ custom_deb:
   - https://example.com/package.deb
 ```
 
-**pip modules (Python 2, Ubuntu 22.04 and earlier only):**
+**pip modules (Ubuntu 22.04 and earlier only):**
 
 ```yaml
 custom_pip:
@@ -53,4 +53,4 @@ custom_pip:
     The custom role is useful for installing system utilities, development tools, or dependencies required by other applications in your setup.
 
 !!! warning
-    pip installation via this role is only available on Ubuntu 22.04 and earlier due to Python 2 deprecation.
+    pip installation via this role is only available on Ubuntu 22.04 and earlier.

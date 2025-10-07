@@ -72,3 +72,395 @@ And then restart the Docker container:
 ```shell
 docker restart rutorrent
 ```
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+!!! info
+    Variables can be overridden in `inventories/host_vars/localhost.yml`.
+
+
+    === "Example"
+
+        ```yaml
+        rutorrent_name: "custom_value"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `{role}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+??? example "Basics"
+
+    ```yaml
+    # Type: string
+    rutorrent_name: rutorrent
+
+    ```
+
+??? example "Paths"
+
+    ```yaml
+    # Type: string
+    rutorrent_role_paths_folder: "{{ rutorrent_name }}"
+
+    # Type: string
+    rutorrent_role_paths_location: "{{ server_appdata_path }}/{{ rutorrent_role_paths_folder }}"
+
+    # Type: string
+    rutorrent_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ rutorrent_role_paths_folder }}"
+
+    # Type: string
+    rutorrent_role_paths_config_php_location: "{{ rutorrent_role_paths_location }}/rutorrent/settings/config.php"
+
+    # Type: string
+    rutorrent_role_paths_rtorrent_rc_location: "{{ rutorrent_role_paths_location }}/rtorrent/rtorrent.rc"
+
+    # Type: string
+    rutorrent_role_paths_php_local_ini_location: "{{ rutorrent_role_paths_location }}/php/php-local.ini"
+
+    # Type: string
+    rutorrent_role_paths_plugins_ini_location: "{{ rutorrent_role_paths_location }}/rutorrent/settings/plugins.ini"
+
+    ```
+
+??? example "Web"
+
+    ```yaml
+    # Type: string
+    rutorrent_role_web_subdomain: "{{ rutorrent_name }}"
+
+    # Type: string
+    rutorrent_role_web_domain: "{{ user.domain }}"
+
+    # Type: string
+    rutorrent_role_web_port: "80"
+
+    # Type: string
+    rutorrent_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rutorrent') + '.' + lookup('role_var', '_web_domain', role='rutorrent')
+                             if (lookup('role_var', '_web_subdomain', role='rutorrent') | length > 0)
+                             else lookup('role_var', '_web_domain', role='rutorrent')) }}"
+
+    ```
+
+??? example "DNS"
+
+    ```yaml
+    # Type: string
+    rutorrent_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='rutorrent') }}"
+
+    # Type: string
+    rutorrent_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='rutorrent') }}"
+
+    # Type: bool (true/false)
+    rutorrent_role_dns_proxy: dns_proxied
+
+    ```
+
+??? example "Traefik"
+
+    ```yaml
+    # Type: string
+    rutorrent_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+
+    # Type: string
+    rutorrent_role_traefik_middleware_default: "{{ traefik_default_middleware
+                                              + (',themepark-' + rutorrent_name
+                                                if (lookup('role_var', '_themepark_enabled', role='rutorrent') and global_themepark_plugin_enabled)
+                                                else '') }}"
+
+    # Type: string
+    rutorrent_role_traefik_middleware_custom: ""
+
+    # Type: string
+    rutorrent_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+
+    # Type: bool (true/false)
+    rutorrent_role_traefik_enabled: true
+
+    # Type: bool (true/false)
+    rutorrent_role_traefik_api_enabled: true
+
+    # Type: string
+    rutorrent_role_traefik_api_middleware: "rutorrent-auth,{{ traefik_default_middleware_api }}"
+
+    # Type: string
+    rutorrent_role_traefik_api_endpoint: "PathPrefix(`/RPC2`)"
+
+    ```
+
+??? example "Config"
+
+    ```yaml
+    # Toggles if public tracker functionality is enabled
+    # Type: bool (true/false)
+    rutorrent_role_config_public_trackers: false
+
+    # Path used by the diskspace plugin to check usage
+    # Type: string
+    rutorrent_role_config_diskspace_path: "/mnt"
+
+    # Type: list
+    rutorrent_role_config_new_installs_rutorrent_rc_settings_default: 
+      # Minimum number of peers to connect to per torrent
+      - { option: "throttle.min_peers.normal.set", value: "1" }
+      # Maximum number of simultaneous upload slots per torrent
+      - { option: "throttle.max_uploads.set", value: "1024" }
+      # Maximum number of simultaneous download slots, globally
+      - { option: "throttle.max_downloads.global.set", value: "1024" }
+      # Maximum number of simultaneous upload slots, globally
+      - { option: "throttle.max_uploads.global.set", value: "1024" }
+      # Maximum download rate, globally (KiB); 0 = unlimited
+      - { option: "throttle.global_down.max_rate.set_kb", value: "0" }
+      # Maximum upload rate, globally (KiB); 0 = unlimited
+      - { option: "throttle.global_up.max_rate.set_kb", value: "0" }
+      # Maximum number of open files
+      - { option: "network.max_open_files.set", value: "1024" }
+      # Maximum XMLRPC payloads
+      - { option: "network.xmlrpc.size_limit.set", value: "20M" }
+      # Encryption Parameters
+      - { option: "protocol.encryption.set", value: "allow_incoming,try_outgoing,enable_retry,prefer_plaintext" }
+      # Hash check on completion - disabled
+      - { option: "pieces.hash.on_completion.set", value: "no" }
+      # Disk space allocation - disabled
+      - { option: "system.file.allocate.set", value: "0" }
+      # Download Directory
+      - { option: "directory.default.set", value: "/mnt/unionfs/downloads/torrents/rutorrent/completed" }
+      # Watched Directory
+      - { option: "schedule", value: 'watch_directory,5,5,"load.start=/mnt/unionfs/downloads/torrents/rutorrent/watched/*.torrent,d.delete_tied="' }
+
+    # Type: list
+    rutorrent_role_config_new_installs_rutorrent_rc_settings_custom: []
+
+    # Type: string
+    rutorrent_role_config_new_installs_rutorrent_rc_settings_list: "{{ lookup('role_var', '_config_new_installs_rutorrent_rc_settings_default', role='rutorrent')
+                                                                       + lookup('role_var', '_config_new_installs_rutorrent_rc_settings_custom', role='rutorrent') }}"
+
+    # Type: list
+    rutorrent_role_config_new_installs_php_local_ini_settings_default: 
+      # Maximum Upload File Size via Web Browser (eg Uploading Torrent Files)
+      - { option: "upload_max_filesize", value: "20M" }
+
+    # Type: list
+    rutorrent_role_config_new_installs_php_local_ini_settings_custom: []
+
+    # Type: string
+    rutorrent_role_config_new_installs_php_local_ini_settings_list: "{{ lookup('role_var', '_config_new_installs_php_local_ini_settings_default', role='rutorrent')
+                                                                        + lookup('role_var', '_config_new_installs_php_local_ini_settings_custom', role='rutorrent') }}"
+
+    # Type: list
+    rutorrent_role_config_existing_installs_rutorrent_rc_settings_default: 
+      # Execute - Initiate Plugins
+      - { option: "execute", value: "{sh,-c,/usr/bin/php /app/rutorrent/php/initplugins.php abc &}" }
+      # IP address that is reported to the tracker
+      - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
+      # Ports
+      - { option: "network.port_range.set", value: "{{ rutorrent_role_docker_ports_51413 }}-{{ rutorrent_role_docker_ports_51413 }}" }
+      - { option: "dht.port.set", value: "{{ rutorrent_role_docker_ports_6881 }}" }
+      # Enable / Disable Public Trackers
+      - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rutorrent') | ternary('on', 'disable') }}" }
+      - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rutorrent') | ternary('yes', 'no') }}" }
+      - { option: "protocol.pex.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rutorrent') | ternary('yes', 'no') }}" }
+
+    # Type: list
+    rutorrent_role_config_existing_installs_rutorrent_rc_settings_custom: []
+
+    # Type: string
+    rutorrent_role_config_existing_installs_rutorrent_rc_settings_list: "{{ lookup('role_var', '_config_existing_installs_rutorrent_rc_settings_default', role='rutorrent')
+                                                                            + lookup('role_var', '_config_existing_installs_rutorrent_rc_settings_custom', role='rutorrent') }}"
+
+    ```
+
+??? example "Theme"
+
+    ```yaml
+    # Options can be found at https://github.com/themepark-dev/theme.park
+    # Type: bool (true/false)
+    rutorrent_role_themepark_enabled: false
+
+    # Type: string
+    rutorrent_role_themepark_app: "rutorrent"
+
+    # Type: string
+    rutorrent_role_themepark_theme: "{{ global_themepark_theme }}"
+
+    # Type: string
+    rutorrent_role_themepark_domain: "{{ global_themepark_domain }}"
+
+    # Type: list
+    rutorrent_role_themepark_addons: []
+
+    ```
+
+??? example "Docker"
+
+    ```yaml
+    # Container
+    # Type: string
+    rutorrent_role_docker_container: "{{ rutorrent_name }}"
+
+    # Image
+    # Type: bool (true/false)
+    rutorrent_role_docker_image_pull: true
+
+    # Type: string
+    rutorrent_role_docker_image_tag: "latest"
+
+    # Type: string
+    rutorrent_role_docker_image_repo: "kudeta/ru-rtorrent"
+
+    # Type: string
+    rutorrent_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='rutorrent') }}:{{ lookup('role_var', '_docker_image_tag', role='rutorrent') }}"
+
+    # Ports
+    # Type: string
+    rutorrent_role_docker_ports_51413: "{{ port_lookup_51413.meta.port
+                                        if (port_lookup_51413.meta.port is defined) and (port_lookup_51413.meta.port | trim | length > 0)
+                                        else '51413' }}"
+
+    # Type: string
+    rutorrent_role_docker_ports_6881: "{{ port_lookup_6881.meta.port
+                                       if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
+                                       else '6881' }}"
+
+    # Type: list
+    rutorrent_role_docker_ports_defaults: 
+      - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}"
+      - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}/udp"
+      - "{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}/udp"
+
+    # Type: list
+    rutorrent_role_docker_ports_custom: []
+
+    # Envs
+    # Type: dict
+    rutorrent_role_docker_envs_default: 
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ tz }}"
+
+    # Type: dict
+    rutorrent_role_docker_envs_custom: {}
+
+    # Volumes
+    # Type: list
+    rutorrent_role_docker_volumes_default: 
+      - "{{ rutorrent_role_paths_location }}:/config"
+      - "{{ server_appdata_path }}/scripts:/scripts"
+
+    # Type: list
+    rutorrent_role_docker_volumes_custom: []
+
+    # Labels
+    # Type: dict
+    rutorrent_role_docker_labels_default: 
+      traefik.http.middlewares.rutorrent-auth.basicauth.usersfile: "/etc/traefik/auth"
+
+    # Type: dict
+    rutorrent_role_docker_labels_custom: {}
+
+    # Hostname
+    # Type: string
+    rutorrent_role_docker_hostname: "{{ rutorrent_name }}"
+
+    # Networks
+    # Type: string
+    rutorrent_role_docker_networks_alias: "{{ rutorrent_name }}"
+
+    # Type: list
+    rutorrent_role_docker_networks_default: []
+
+    # Type: list
+    rutorrent_role_docker_networks_custom: []
+
+    # Restart Policy
+    # Type: string
+    rutorrent_role_docker_restart_policy: unless-stopped
+
+    # Stop Timeout
+    # Type: int
+    rutorrent_role_docker_stop_timeout: 900
+
+    # State
+    # Type: string
+    rutorrent_role_docker_state: started
+
+    ```
+
+??? example "Global Override Options"
+
+    ```yaml
+    # Enable or disable Autoheal monitoring for the container created when deploying
+    # Type: bool (true/false)
+    rutorrent_role_autoheal_enabled: true
+
+    # List of container dependencies that must be running before the container start
+    # Type: string
+    rutorrent_role_depends_on: ""
+
+    # Delay in seconds before starting the container after dependencies are ready
+    # Type: string (quoted number)
+    rutorrent_role_depends_on_delay: "0"
+
+    # Enable healthcheck waiting for container dependencies
+    # Type: string ("true"/"false")
+    rutorrent_role_depends_on_healthchecks:
+
+    # Enable or disable Diun update notifications for the container created when deploying
+    # Type: bool (true/false)
+    rutorrent_role_diun_enabled: true
+
+    # Enable or disable automatic DNS record creation for the container
+    # Type: bool (true/false)
+    rutorrent_role_dns_enabled: true
+
+    # Enable or disable Saltbox Docker Controller management for the container
+    # Type: bool (true/false)
+    rutorrent_role_docker_controller: true
+
+    # Enable Traefik autodetect middleware for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_autodetect_enabled: false
+
+    # Enable CrowdSec middleware for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_crowdsec_enabled: false
+
+    # Enable custom error pages middleware for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_error_pages_enabled: false
+
+    # Enable gzip compression middleware for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_gzip_enabled: false
+
+    # Enable robots.txt middleware for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_robot_enabled: true
+
+    # Enable Tailscale-specific Traefik configuration for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_tailscale_enabled: false
+
+    # Enable wildcard certificate for the container
+    # Type: bool (true/false)
+    rutorrent_role_traefik_wildcard_enabled: true
+
+    # Override the Traefik fully qualified domain name (FQDN) for the container
+    # Type: string
+    rutorrent_role_web_fqdn_override:
+
+    # Override the Traefik web host configuration for the container
+    # Type: string
+    rutorrent_role_web_host_override:
+
+    # URL scheme to use for web access to the container
+    # Type: string ("http"/"https")
+    rutorrent_role_web_scheme:
+
+    ```
+
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

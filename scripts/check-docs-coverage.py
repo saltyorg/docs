@@ -111,20 +111,20 @@ def main():
     sandbox_ignored = ignore_config.get("sandbox") or []
 
     # Get roles from repositories
-    saltbox_roles = get_roles_from_repo(saltbox_path)
-    sandbox_roles = get_roles_from_repo(sandbox_path)
+    saltbox_roles_all = get_roles_from_repo(saltbox_path)
+    sandbox_roles_all = get_roles_from_repo(sandbox_path)
 
     # Get documented apps - Saltbox apps are in docs/apps, Sandbox apps are in docs/sandbox/apps
     saltbox_documented_apps = get_documented_apps(docs_root / "docs", "apps")
     sandbox_documented_apps = get_documented_apps(docs_root / "docs", "sandbox/apps")
 
     # Sanity check: ensure we found roles in both repositories
-    if len(saltbox_roles) == 0:
+    if len(saltbox_roles_all) == 0:
         print(f"❌ ERROR: No roles found in Saltbox repository at {saltbox_path}")
         print(f"   Please check that the repository was checked out correctly.")
         sys.exit(1)
 
-    if len(sandbox_roles) == 0:
+    if len(sandbox_roles_all) == 0:
         print(f"❌ ERROR: No roles found in Sandbox repository at {sandbox_path}")
         print(f"   Please check that the repository was checked out correctly.")
         sys.exit(1)
@@ -132,14 +132,19 @@ def main():
     # Track counts before filtering
     total_ignored = len(saltbox_ignored) + len(sandbox_ignored)
 
-    # Filter out ignored roles
-    saltbox_roles = {role for role in saltbox_roles if role not in saltbox_ignored}
-    sandbox_roles = {role for role in sandbox_roles if role not in sandbox_ignored}
+    # Filter out ignored roles for missing docs check
+    saltbox_roles = {role for role in saltbox_roles_all if role not in saltbox_ignored}
+    sandbox_roles = {role for role in sandbox_roles_all if role not in sandbox_ignored}
 
     # Find missing documentation - check each repo against its own docs folder
     saltbox_missing = sorted(list(saltbox_roles - saltbox_documented_apps))
     sandbox_missing = sorted(list(sandbox_roles - sandbox_documented_apps))
     total_missing = len(saltbox_missing) + len(sandbox_missing)
+
+    # Find orphaned docs (docs without corresponding roles - check against ALL roles including ignored)
+    saltbox_orphaned = sorted(list(saltbox_documented_apps - saltbox_roles_all))
+    sandbox_orphaned = sorted(list(sandbox_documented_apps - sandbox_roles_all))
+    total_orphaned = len(saltbox_orphaned) + len(sandbox_orphaned)
 
     # Get workflow URL from environment if available
     workflow_url = os.getenv('GITHUB_WORKFLOW_URL', '')
@@ -210,6 +215,25 @@ def main():
             f.write(f"close_message={github_output['close_message']}\n")
             f.write(f"total_missing={total_missing}\n")
 
+    # Print orphaned documentation (if any)
+    if saltbox_orphaned or sandbox_orphaned:
+        print("\n" + "="*60)
+        print("⚠️  ORPHANED DOCUMENTATION (docs without roles):")
+        print("="*60)
+
+        if saltbox_orphaned:
+            print("\nSaltbox docs without corresponding roles:")
+            for doc in saltbox_orphaned:
+                print(f"  - {doc}")
+
+        if sandbox_orphaned:
+            print("\nSandbox docs without corresponding roles:")
+            for doc in sandbox_orphaned:
+                print(f"  - {doc}")
+
+        print(f"\nTotal orphaned: {total_orphaned}")
+        print("These may be deprecated roles or docs that need to be removed/updated.")
+
     # Print summary statistics
     print("\n" + "="*60)
     print("Summary:")
@@ -219,6 +243,7 @@ def main():
     print(f"  Sandbox documented apps: {len(sandbox_documented_apps)}")
     print(f"  Saltbox ignored: {len(saltbox_ignored)}")
     print(f"  Sandbox ignored: {len(sandbox_ignored)}")
+    print(f"  Orphaned docs: {total_orphaned}")
     print("="*60)
 
     sys.exit(exit_code)

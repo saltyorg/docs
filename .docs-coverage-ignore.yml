@@ -9,6 +9,7 @@ saltbox:
   - "backup"
   - "backup2"
   - "common"
+  - "crowdsec"
   - "docker"
   - "docker_socket_proxy"
   - "download_clients"

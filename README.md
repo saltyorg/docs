@@ -14,6 +14,14 @@ Local previewing is currently not available, as the docs use plugins that are on
 
 The docs are built with the Insiders' edition of `squidfunk/mkdocs-material`, so to preview them you will need to be added to a private repo and do some local setup to enable the previewing. Contact the devs through the Saltbox discord if you're interested in that.
 
+## Upgrading glightbox
+
+```
+pip install mkdocs-glightbox
+```
+
+Copy the js and css files from where pip installed the files (use a throwaway venv) and copy them into the repository.
+
 ### Contributors
 
 <table>

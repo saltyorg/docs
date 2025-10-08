@@ -85,9 +85,23 @@ plugins:
       enabled: !ENV [CI, false]
       fallback_to_build_date: true
       type: date
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes: [] 
+      auto_themed: true
+      auto_caption: false
+      caption_position: bottom
+      background: none
+      shadow: true
+      manual: false
   - meta
-  - minify:
-      minify_html: true
   - optimize:
       cache: true
       cache_dir: .cache/plugin/optimize
@@ -112,6 +126,13 @@ plugins:
         'saltbox/upgrade/traefik3.md': 'reference/guides/deprecated/traefik3.md'
   - search:
       lang: en
+  - termynal:
+      title: "shell"
+      buttons: "macos"
+      prompt_literal_start:
+        - "$"
+        - ">"
+        - ">>>"
 
 extra:
   generator: false
@@ -142,7 +163,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tilde
@@ -167,6 +192,7 @@ nav:
       - Accessing Apps: saltbox/basics/accessing-apps.md
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
+      - CLI: saltbox/basics/sb.md
       - Backup/Restore:
           - Settings: saltbox/backup/settings.md
           - Backup: saltbox/backup/backup.md

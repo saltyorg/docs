@@ -172,17 +172,14 @@ jobs:
               }
 
               // Check if issue is already pinned
-              const repoData = await github.rest.repos.get({
-                owner: context.repo.owner,
-                repo: context.repo.repo
-              });
-
               const pinnedIssues = await github.graphql(`
                 query($owner: String!, $repo: String!) {
                   repository(owner: $owner, name: $repo) {
                     pinnedIssues(first: 3) {
                       nodes {
-                        number
+                        issue {
+                          number
+                        }
                       }
                     }
                   }
@@ -193,7 +190,7 @@ jobs:
               });
 
               const isPinned = pinnedIssues.repository.pinnedIssues.nodes.some(
-                issue => issue.number === issueToPin.number
+                pinnedIssue => pinnedIssue.issue.number === issueToPin.number
               );
 
               // Only pin if not already pinned

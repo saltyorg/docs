@@ -1,4 +1,4 @@
-lightgallery==0.5
 mkdocs-git-committers-plugin-2==2.5.0
 mkdocs-redirects==1.2.2
 mkdocs-git-authors-plugin==0.10.0
+termynal==0.13.1

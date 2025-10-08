@@ -77,7 +77,7 @@ docker restart rutorrent
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
 !!! info
-    Variables can be overridden in `inventories/host_vars/localhost.yml`.
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
 
     === "Example"
@@ -156,7 +156,7 @@ docker restart rutorrent
     rutorrent_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='rutorrent') }}"
 
     # Type: bool (true/false)
-    rutorrent_role_dns_proxy: dns_proxied
+    rutorrent_role_dns_proxy: "{{ dns_proxied }}"
 
     ```
 
@@ -387,6 +387,245 @@ docker restart rutorrent
     # State
     # Type: string
     rutorrent_role_docker_state: started
+
+
+    # ---- Additional Docker Options ----
+    # The following advanced options are available via create_docker_container
+    # but are not defined in the role. See:
+    # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+    # Resource Limits
+    # Type: int
+    rutorrent_role_docker_blkio_weight:
+
+    # Type: int
+    rutorrent_role_docker_cpu_period:
+
+    # Type: int
+    rutorrent_role_docker_cpu_quota:
+
+    # Type: int
+    rutorrent_role_docker_cpu_shares:
+
+    # Type: string
+    rutorrent_role_docker_cpus:
+
+    # Type: string
+    rutorrent_role_docker_cpuset_cpus:
+
+    # Type: string
+    rutorrent_role_docker_cpuset_mems:
+
+    # Type: string
+    rutorrent_role_docker_kernel_memory:
+
+    # Type: string
+    rutorrent_role_docker_memory:
+
+    # Type: string
+    rutorrent_role_docker_memory_reservation:
+
+    # Type: string
+    rutorrent_role_docker_memory_swap:
+
+    # Type: int
+    rutorrent_role_docker_memory_swappiness:
+
+
+    # Security & Devices
+    # Type: list
+    rutorrent_role_docker_cap_drop:
+
+    # Type: list
+    rutorrent_role_docker_device_cgroup_rules:
+
+    # Type: list
+    rutorrent_role_docker_device_read_bps:
+
+    # Type: list
+    rutorrent_role_docker_device_read_iops:
+
+    # Type: list
+    rutorrent_role_docker_device_requests:
+
+    # Type: list
+    rutorrent_role_docker_device_write_bps:
+
+    # Type: list
+    rutorrent_role_docker_device_write_iops:
+
+    # Type: list
+    rutorrent_role_docker_devices:
+
+    # Type: string
+    rutorrent_role_docker_devices_default:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_privileged:
+
+    # Type: list
+    rutorrent_role_docker_security_opts:
+
+
+    # Networking
+    # Type: list
+    rutorrent_role_docker_dns_opts:
+
+    # Type: list
+    rutorrent_role_docker_dns_search_domains:
+
+    # Type: list
+    rutorrent_role_docker_dns_servers:
+
+    # Type: dict
+    rutorrent_role_docker_hosts:
+
+    # Type: string
+    rutorrent_role_docker_hosts_use_common:
+
+    # Type: string
+    rutorrent_role_docker_network_mode:
+
+
+    # Storage
+    # Type: bool (true/false)
+    rutorrent_role_docker_keep_volumes:
+
+    # Type: list
+    rutorrent_role_docker_mounts:
+
+    # Type: string
+    rutorrent_role_docker_volume_driver:
+
+    # Type: list
+    rutorrent_role_docker_volumes_from:
+
+    # Type: string
+    rutorrent_role_docker_volumes_global:
+
+    # Type: string
+    rutorrent_role_docker_working_dir:
+
+
+    # Monitoring & Lifecycle
+    # Type: dict
+    rutorrent_role_docker_healthcheck:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_init:
+
+    # Type: string
+    rutorrent_role_docker_log_driver:
+
+    # Type: dict
+    rutorrent_role_docker_log_options:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_output_logs:
+
+
+    # Other Options
+    # Type: bool (true/false)
+    rutorrent_role_docker_auto_remove:
+
+    # Type: list
+    rutorrent_role_docker_capabilities:
+
+    # Type: string
+    rutorrent_role_docker_cgroup_parent:
+
+    # Type: string
+    rutorrent_role_docker_cgroupns_mode:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_cleanup:
+
+    # Type: list
+    rutorrent_role_docker_commands:
+
+    # Type: string
+    rutorrent_role_docker_create_timeout:
+
+    # Type: string
+    rutorrent_role_docker_domainname:
+
+    # Type: string
+    rutorrent_role_docker_entrypoint:
+
+    # Type: string
+    rutorrent_role_docker_env_file:
+
+    # Type: list
+    rutorrent_role_docker_exposed_ports:
+
+    # Type: string
+    rutorrent_role_docker_force_kill:
+
+    # Type: list
+    rutorrent_role_docker_groups:
+
+    # Type: int
+    rutorrent_role_docker_healthy_wait_timeout:
+
+    # Type: string
+    rutorrent_role_docker_ipc_mode:
+
+    # Type: string
+    rutorrent_role_docker_kill_signal:
+
+    # Type: string
+    rutorrent_role_docker_labels_use_common:
+
+    # Type: list
+    rutorrent_role_docker_links:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_oom_killer:
+
+    # Type: int
+    rutorrent_role_docker_oom_score_adj:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_paused:
+
+    # Type: string
+    rutorrent_role_docker_pid_mode:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_read_only:
+
+    # Type: bool (true/false)
+    rutorrent_role_docker_recreate:
+
+    # Type: int
+    rutorrent_role_docker_restart_retries:
+
+    # Type: string
+    rutorrent_role_docker_runtime:
+
+    # Type: string
+    rutorrent_role_docker_shm_size:
+
+    # Type: dict
+    rutorrent_role_docker_storage_opts:
+
+    # Type: list
+    rutorrent_role_docker_sysctls:
+
+    # Type: list
+    rutorrent_role_docker_tmpfs:
+
+    # Type: list
+    rutorrent_role_docker_ulimits:
+
+    # Type: string
+    rutorrent_role_docker_user:
+
+    # Type: string
+    rutorrent_role_docker_userns_mode:
+
+    # Type: string
+    rutorrent_role_docker_uts:
 
     ```
 

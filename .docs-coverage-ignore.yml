@@ -16,6 +16,7 @@ saltbox:
   - "docker_socket_proxy"
   - "download_clients"
   - "download_indexers"
+  - "glances"
   - "hetzner"
   - "kernel"
   - "main_tags"

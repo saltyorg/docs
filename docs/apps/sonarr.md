@@ -496,3 +496,7 @@ This is used during the setup of [Overseer](overseerr.md) and [Organizr](organiz
 ## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

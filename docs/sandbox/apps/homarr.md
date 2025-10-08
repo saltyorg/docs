@@ -63,7 +63,7 @@ sb install sandbox-homarr
     === "Example"
 
         ```yaml
-        homarr_role_docker_socket_proxy_envs: "custom_value"
+        homarr_name: "custom_value"
         ```
 
 !!! warning
@@ -73,6 +73,14 @@ sb install sandbox-homarr
 
     Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
+??? example "Basics"
+
+    ```yaml
+    # Type: string
+    homarr_name: homarr
+
+    ```
+
 ??? example "Docker Socket Proxy"
 
     ```yaml
@@ -80,14 +88,6 @@ sb install sandbox-homarr
     homarr_role_docker_socket_proxy_envs: 
       CONTAINERS: "1"
       POST: "0"
-
-    ```
-
-??? example "Basics"
-
-    ```yaml
-    # Type: string
-    homarr_name: homarr
 
     ```
 

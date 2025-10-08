@@ -36,3 +36,7 @@ sb install bazarr
 There are some settings that - depending on your specific setup - should be adapted to reduce API calls down to a managable level.
 
 Please refer to the official documentation for an explanation of the settings. Some - potentially out of date(!) - settings are documented in the [FAQs](../faq/bazarr.md).
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

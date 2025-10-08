@@ -122,28 +122,16 @@ jobs:
               }
 
               // Pin the issue (works for both new and existing)
-              const repoQuery = await github.graphql(`
-                query($owner: String!, $repo: String!) {
-                  repository(owner: $owner, name: $repo) {
-                    id
-                  }
-                }
-              `, {
-                owner: context.repo.owner,
-                repo: context.repo.repo
-              });
-
               await github.graphql(`
-                mutation($issueId: ID!, $repositoryId: ID!) {
-                  pinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                mutation($issueId: ID!) {
+                  pinIssue(input: {issueId: $issueId}) {
                     issue {
                       number
                     }
                   }
                 }
               `, {
-                issueId: issueToPin.node_id,
-                repositoryId: repoQuery.repository.id
+                issueId: issueToPin.node_id
               });
               console.log(`Pinned issue #${issueToPin.number}`)
             } else if (action === 'close_issue') {
@@ -164,28 +152,16 @@ jobs:
 
               if (docIssue) {
                 // Unpin the issue before closing
-                const repoQuery = await github.graphql(`
-                  query($owner: String!, $repo: String!) {
-                    repository(owner: $owner, name: $repo) {
-                      id
-                    }
-                  }
-                `, {
-                  owner: context.repo.owner,
-                  repo: context.repo.repo
-                });
-
                 await github.graphql(`
-                  mutation($issueId: ID!, $repositoryId: ID!) {
-                    unpinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                  mutation($issueId: ID!) {
+                    unpinIssue(input: {issueId: $issueId}) {
                       issue {
                         number
                       }
                     }
                   }
                 `, {
-                  issueId: docIssue.node_id,
-                  repositoryId: repoQuery.repository.id
+                  issueId: docIssue.node_id
                 });
                 console.log(`Unpinned issue #${docIssue.number}`);
 

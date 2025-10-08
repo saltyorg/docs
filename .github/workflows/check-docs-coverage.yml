@@ -21,6 +21,9 @@ on:
       - '.docs-coverage-ignore.yml'
       - 'scripts/check-docs-coverage.py'
 
+  schedule:
+    - cron: '0 0 * * *'
+
 jobs:
   check-docs-coverage:
     runs-on: ubuntu-24.04

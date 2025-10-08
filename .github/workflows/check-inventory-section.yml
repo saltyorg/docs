@@ -1,0 +1,126 @@
+name: Check Inventory Section Coverage
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - role-refactor
+    paths:
+      - 'docs/apps/**'
+      - 'docs/sandbox/apps/**'
+      - '.inventory-coverage-ignore.yml'
+      - 'scripts/check-inventory-section.py'
+
+  schedule:
+    # Run weekly on Mondays at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+
+jobs:
+  check-inventory-section:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout docs repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Check inventory section coverage
+        id: coverage
+        continue-on-error: true
+        run: |
+          chmod +x scripts/check-inventory-section.py
+          python3 scripts/check-inventory-section.py
+        env:
+          GITHUB_WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Handle GitHub issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const action = ${{ toJSON(steps.coverage.outputs.action) }};
+
+            if (action === 'create_or_update_issue') {
+              const title = ${{ toJSON(steps.coverage.outputs.issue_title) }};
+              const body = ${{ toJSON(steps.coverage.outputs.issue_body) }};
+
+              // Check if an issue already exists
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'github-actions-inventory'
+              });
+
+              const existingIssue = issues.data.find(issue =>
+                issue.title.startsWith('📝 Missing inventory sections in')
+              );
+
+              if (existingIssue) {
+                // Update existing issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existingIssue.number,
+                  title: title,
+                  body: body
+                });
+                console.log(`Updated issue #${existingIssue.number}`);
+              } else {
+                // Create new issue
+                const newIssue = await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: title,
+                  body: body,
+                  labels: ['github-actions-inventory']
+                });
+                console.log(`Created issue #${newIssue.data.number}`);
+              }
+            } else if (action === 'close_issue') {
+              const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
+
+              // Find and close any open inventory section coverage issues
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'github-actions-inventory'
+              });
+
+              const docIssue = issues.data.find(issue =>
+                issue.title.startsWith('📝 Missing inventory sections in')
+              );
+
+              if (docIssue) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: docIssue.number,
+                  state: 'closed'
+                });
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: docIssue.number,
+                  body: closeMessage
+                });
+
+                console.log(`Closed issue #${docIssue.number}`);
+              }
+            } else {
+              console.log('No action needed');
+            }

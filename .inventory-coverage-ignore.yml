@@ -1,0 +1,6 @@
+# Apps to ignore when checking for inventory section coverage
+# Add apps here that don't need inventory sections (e.g., meta pages, deprecated apps)
+
+saltbox: []
+
+sandbox: []

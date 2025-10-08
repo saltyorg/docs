@@ -266,7 +266,7 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
 !!! info
-    Variables can be overridden in `inventories/host_vars/localhost.yml`.
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
 
     This role supports multiple instances via `plex_instances`.
@@ -879,6 +879,237 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         # Type: string
         plex_role_docker_state: started
 
+
+        # ---- Additional Docker Options ----
+        # The following advanced options are available via create_docker_container
+        # but are not defined in the role. See:
+        # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+        # Resource Limits
+        # Type: int
+        plex_role_docker_blkio_weight:
+
+        # Type: int
+        plex_role_docker_cpu_period:
+
+        # Type: int
+        plex_role_docker_cpu_quota:
+
+        # Type: int
+        plex_role_docker_cpu_shares:
+
+        # Type: string
+        plex_role_docker_cpus:
+
+        # Type: string
+        plex_role_docker_cpuset_cpus:
+
+        # Type: string
+        plex_role_docker_cpuset_mems:
+
+        # Type: string
+        plex_role_docker_kernel_memory:
+
+        # Type: string
+        plex_role_docker_memory:
+
+        # Type: string
+        plex_role_docker_memory_reservation:
+
+        # Type: string
+        plex_role_docker_memory_swap:
+
+        # Type: int
+        plex_role_docker_memory_swappiness:
+
+        # Security & Devices
+        # Type: list
+        plex_role_docker_cap_drop:
+
+        # Type: list
+        plex_role_docker_device_cgroup_rules:
+
+        # Type: list
+        plex_role_docker_device_read_bps:
+
+        # Type: list
+        plex_role_docker_device_read_iops:
+
+        # Type: list
+        plex_role_docker_device_requests:
+
+        # Type: list
+        plex_role_docker_device_write_bps:
+
+        # Type: list
+        plex_role_docker_device_write_iops:
+
+        # Type: list
+        plex_role_docker_devices:
+
+        # Type: string
+        plex_role_docker_devices_default:
+
+        # Type: bool (true/false)
+        plex_role_docker_privileged:
+
+        # Type: list
+        plex_role_docker_security_opts:
+
+        # Networking
+        # Type: list
+        plex_role_docker_dns_opts:
+
+        # Type: list
+        plex_role_docker_dns_search_domains:
+
+        # Type: list
+        plex_role_docker_dns_servers:
+
+        # Type: string
+        plex_role_docker_hosts_use_common:
+
+        # Type: string
+        plex_role_docker_network_mode:
+
+        # Storage
+        # Type: bool (true/false)
+        plex_role_docker_keep_volumes:
+
+        # Type: string
+        plex_role_docker_volume_driver:
+
+        # Type: list
+        plex_role_docker_volumes_from:
+
+        # Type: string
+        plex_role_docker_volumes_global:
+
+        # Type: string
+        plex_role_docker_working_dir:
+
+        # Monitoring & Lifecycle
+        # Type: dict
+        plex_role_docker_healthcheck:
+
+        # Type: bool (true/false)
+        plex_role_docker_init:
+
+        # Type: string
+        plex_role_docker_log_driver:
+
+        # Type: dict
+        plex_role_docker_log_options:
+
+        # Type: bool (true/false)
+        plex_role_docker_output_logs:
+
+        # Other Options
+        # Type: bool (true/false)
+        plex_role_docker_auto_remove:
+
+        # Type: list
+        plex_role_docker_capabilities:
+
+        # Type: string
+        plex_role_docker_cgroup_parent:
+
+        # Type: string
+        plex_role_docker_cgroupns_mode:
+
+        # Type: bool (true/false)
+        plex_role_docker_cleanup:
+
+        # Type: list
+        plex_role_docker_commands:
+
+        # Type: string
+        plex_role_docker_create_timeout:
+
+        # Type: string
+        plex_role_docker_domainname:
+
+        # Type: string
+        plex_role_docker_entrypoint:
+
+        # Type: string
+        plex_role_docker_env_file:
+
+        # Type: list
+        plex_role_docker_exposed_ports:
+
+        # Type: string
+        plex_role_docker_force_kill:
+
+        # Type: list
+        plex_role_docker_groups:
+
+        # Type: int
+        plex_role_docker_healthy_wait_timeout:
+
+        # Type: string
+        plex_role_docker_ipc_mode:
+
+        # Type: string
+        plex_role_docker_kill_signal:
+
+        # Type: string
+        plex_role_docker_labels_use_common:
+
+        # Type: list
+        plex_role_docker_links:
+
+        # Type: bool (true/false)
+        plex_role_docker_oom_killer:
+
+        # Type: int
+        plex_role_docker_oom_score_adj:
+
+        # Type: bool (true/false)
+        plex_role_docker_paused:
+
+        # Type: string
+        plex_role_docker_pid_mode:
+
+        # Type: bool (true/false)
+        plex_role_docker_read_only:
+
+        # Type: bool (true/false)
+        plex_role_docker_recreate:
+
+        # Type: int
+        plex_role_docker_restart_retries:
+
+        # Type: string
+        plex_role_docker_runtime:
+
+        # Type: string
+        plex_role_docker_shm_size:
+
+        # Type: int
+        plex_role_docker_stop_timeout:
+
+        # Type: dict
+        plex_role_docker_storage_opts:
+
+        # Type: list
+        plex_role_docker_sysctls:
+
+        # Type: list
+        plex_role_docker_tmpfs:
+
+        # Type: list
+        plex_role_docker_ulimits:
+
+        # Type: string
+        plex_role_docker_user:
+
+        # Type: string
+        plex_role_docker_userns_mode:
+
+        # Type: string
+        plex_role_docker_uts:
+
         ```
 
     === "Instance-level"
@@ -1012,80 +1243,323 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         # Type: string
         plex2_docker_state: started
 
+
+        # ---- Additional Docker Options ----
+        # The following advanced options are available via lookup('docker_var', ...)
+        # but are not defined in the role. See:
+        # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+        # Resource Limits
+        # Type: int
+        plex2_docker_blkio_weight:
+        # Type: int
+        plex2_docker_cpu_period:
+        # Type: int
+        plex2_docker_cpu_quota:
+        # Type: int
+        plex2_docker_cpu_shares:
+        # Type: string
+        plex2_docker_cpus:
+        # Type: string
+        plex2_docker_cpuset_cpus:
+        # Type: string
+        plex2_docker_cpuset_mems:
+        # Type: string
+        plex2_docker_kernel_memory:
+        # Type: string
+        plex2_docker_memory:
+        # Type: string
+        plex2_docker_memory_reservation:
+        # Type: string
+        plex2_docker_memory_swap:
+        # Type: int
+        plex2_docker_memory_swappiness:
+
+        # Security & Devices
+        # Type: list
+        plex2_docker_cap_drop:
+        # Type: list
+        plex2_docker_device_cgroup_rules:
+        # Type: list
+        plex2_docker_device_read_bps:
+        # Type: list
+        plex2_docker_device_read_iops:
+        # Type: list
+        plex2_docker_device_requests:
+        # Type: list
+        plex2_docker_device_write_bps:
+        # Type: list
+        plex2_docker_device_write_iops:
+        # Type: list
+        plex2_docker_devices:
+        # Type: string
+        plex2_docker_devices_default:
+        # Type: bool (true/false)
+        plex2_docker_privileged:
+        # Type: list
+        plex2_docker_security_opts:
+
+        # Networking
+        # Type: list
+        plex2_docker_dns_opts:
+        # Type: list
+        plex2_docker_dns_search_domains:
+        # Type: list
+        plex2_docker_dns_servers:
+        # Type: string
+        plex2_docker_hosts_use_common:
+        # Type: string
+        plex2_docker_network_mode:
+
+        # Storage
+        # Type: bool (true/false)
+        plex2_docker_keep_volumes:
+        # Type: string
+        plex2_docker_volume_driver:
+        # Type: list
+        plex2_docker_volumes_from:
+        # Type: string
+        plex2_docker_volumes_global:
+        # Type: string
+        plex2_docker_working_dir:
+
+        # Monitoring & Lifecycle
+        # Type: dict
+        plex2_docker_healthcheck:
+        # Type: bool (true/false)
+        plex2_docker_init:
+        # Type: string
+        plex2_docker_log_driver:
+        # Type: dict
+        plex2_docker_log_options:
+        # Type: bool (true/false)
+        plex2_docker_output_logs:
+
+        # Other Options
+        # Type: bool (true/false)
+        plex2_docker_auto_remove:
+        # Type: list
+        plex2_docker_capabilities:
+        # Type: string
+        plex2_docker_cgroup_parent:
+        # Type: string
+        plex2_docker_cgroupns_mode:
+        # Type: bool (true/false)
+        plex2_docker_cleanup:
+        # Type: list
+        plex2_docker_commands:
+        # Type: string
+        plex2_docker_create_timeout:
+        # Type: string
+        plex2_docker_domainname:
+        # Type: string
+        plex2_docker_entrypoint:
+        # Type: string
+        plex2_docker_env_file:
+        # Type: list
+        plex2_docker_exposed_ports:
+        # Type: string
+        plex2_docker_force_kill:
+        # Type: list
+        plex2_docker_groups:
+        # Type: int
+        plex2_docker_healthy_wait_timeout:
+        # Type: string
+        plex2_docker_ipc_mode:
+        # Type: string
+        plex2_docker_kill_signal:
+        # Type: string
+        plex2_docker_labels_use_common:
+        # Type: list
+        plex2_docker_links:
+        # Type: bool (true/false)
+        plex2_docker_oom_killer:
+        # Type: int
+        plex2_docker_oom_score_adj:
+        # Type: bool (true/false)
+        plex2_docker_paused:
+        # Type: string
+        plex2_docker_pid_mode:
+        # Type: bool (true/false)
+        plex2_docker_read_only:
+        # Type: bool (true/false)
+        plex2_docker_recreate:
+        # Type: int
+        plex2_docker_restart_retries:
+        # Type: string
+        plex2_docker_runtime:
+        # Type: string
+        plex2_docker_shm_size:
+        # Type: int
+        plex2_docker_stop_timeout:
+        # Type: dict
+        plex2_docker_storage_opts:
+        # Type: list
+        plex2_docker_sysctls:
+        # Type: list
+        plex2_docker_tmpfs:
+        # Type: list
+        plex2_docker_ulimits:
+        # Type: string
+        plex2_docker_user:
+        # Type: string
+        plex2_docker_userns_mode:
+        # Type: string
+        plex2_docker_uts:
+
         ```
 
 ??? example "Global Override Options"
 
-    ```yaml
-    # Enable or disable Autoheal monitoring for containers created when deploying
-    # Type: bool (true/false)
-    plex_role_autoheal_enabled: true
+    === "Role-level"
 
-    # List of container dependencies that must be running before containers start
-    # Type: string
-    plex_role_depends_on: ""
+        Override for all instances:
 
-    # Delay in seconds before starting containers after dependencies are ready
-    # Type: string (quoted number)
-    plex_role_depends_on_delay: "0"
+        ```yaml
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        plex_role_autoheal_enabled: true
 
-    # Enable healthcheck waiting for container dependencies
-    # Type: string ("true"/"false")
-    plex_role_depends_on_healthchecks:
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        plex_role_depends_on: ""
 
-    # Enable or disable Diun update notifications for containers created when deploying
-    # Type: bool (true/false)
-    plex_role_diun_enabled: true
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        plex_role_depends_on_delay: "0"
 
-    # Enable or disable automatic DNS record creation for containers
-    # Type: bool (true/false)
-    plex_role_dns_enabled: true
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        plex_role_depends_on_healthchecks:
 
-    # Enable or disable Saltbox Docker Controller management for containers
-    # Type: bool (true/false)
-    plex_role_docker_controller: true
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        plex_role_diun_enabled: true
 
-    # Enable Traefik autodetect middleware for containers
-    # Type: bool (true/false)
-    plex_role_traefik_autodetect_enabled: false
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        plex_role_dns_enabled: true
 
-    # Enable CrowdSec middleware for containers
-    # Type: bool (true/false)
-    plex_role_traefik_crowdsec_enabled: false
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        plex_role_docker_controller: true
 
-    # Enable custom error pages middleware for containers
-    # Type: bool (true/false)
-    plex_role_traefik_error_pages_enabled: false
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        plex_role_traefik_autodetect_enabled: false
 
-    # Enable gzip compression middleware for containers
-    # Type: bool (true/false)
-    plex_role_traefik_gzip_enabled: false
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        plex_role_traefik_crowdsec_enabled: false
 
-    # Enable robots.txt middleware for containers
-    # Type: bool (true/false)
-    plex_role_traefik_robot_enabled: true
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        plex_role_traefik_error_pages_enabled: false
 
-    # Enable Tailscale-specific Traefik configuration for containers
-    # Type: bool (true/false)
-    plex_role_traefik_tailscale_enabled: false
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        plex_role_traefik_gzip_enabled: false
 
-    # Enable wildcard certificate for containers
-    # Type: bool (true/false)
-    plex_role_traefik_wildcard_enabled: true
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        plex_role_traefik_robot_enabled: true
 
-    # Override the Traefik fully qualified domain name (FQDN) for containers
-    # Type: string
-    plex_role_web_fqdn_override:
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        plex_role_traefik_tailscale_enabled: false
 
-    # Override the Traefik web host configuration for containers
-    # Type: string
-    plex_role_web_host_override:
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        plex_role_traefik_wildcard_enabled: true
 
-    # URL scheme to use for web access to containers
-    # Type: string ("http"/"https")
-    plex_role_web_scheme:
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: string
+        plex_role_web_fqdn_override:
 
-    ```
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        plex_role_web_host_override:
+
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        plex_role_web_scheme:
+
+        ```
+
+    === "Instance-level"
+
+        Override for a specific instance (e.g., `plex2`):
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        plex2_autoheal_enabled: true
+
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        plex2_depends_on: ""
+
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        plex2_depends_on_delay: "0"
+
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        plex2_depends_on_healthchecks:
+
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        plex2_diun_enabled: true
+
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        plex2_dns_enabled: true
+
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        plex2_docker_controller: true
+
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        plex2_traefik_autodetect_enabled: false
+
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        plex2_traefik_crowdsec_enabled: false
+
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        plex2_traefik_error_pages_enabled: false
+
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        plex2_traefik_gzip_enabled: false
+
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        plex2_traefik_robot_enabled: true
+
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        plex2_traefik_tailscale_enabled: false
+
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        plex2_traefik_wildcard_enabled: true
+
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: string
+        plex2_web_fqdn_override:
+
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        plex2_web_host_override:
+
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        plex2_web_scheme:
+
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->
 

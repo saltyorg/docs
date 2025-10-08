@@ -112,6 +112,32 @@ jobs:
                   labels: ['github-actions-docs']
                 });
                 console.log(`Created issue #${newIssue.data.number}`);
+
+                // Pin the newly created issue
+                const repoQuery = await github.graphql(`
+                  query($owner: String!, $repo: String!) {
+                    repository(owner: $owner, name: $repo) {
+                      id
+                    }
+                  }
+                `, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo
+                });
+
+                await github.graphql(`
+                  mutation($issueId: ID!, $repositoryId: ID!) {
+                    pinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                      issue {
+                        number
+                      }
+                    }
+                  }
+                `, {
+                  issueId: newIssue.data.node_id,
+                  repositoryId: repoQuery.repository.id
+                });
+                console.log(`Pinned issue #${newIssue.data.number}`);
               }
             } else if (action === 'close_issue') {
               const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
@@ -130,6 +156,32 @@ jobs:
               );
 
               if (docIssue) {
+                // Unpin the issue before closing
+                const repoQuery = await github.graphql(`
+                  query($owner: String!, $repo: String!) {
+                    repository(owner: $owner, name: $repo) {
+                      id
+                    }
+                  }
+                `, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo
+                });
+
+                await github.graphql(`
+                  mutation($issueId: ID!, $repositoryId: ID!) {
+                    unpinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                      issue {
+                        number
+                      }
+                    }
+                  }
+                `, {
+                  issueId: docIssue.node_id,
+                  repositoryId: repoQuery.repository.id
+                });
+                console.log(`Unpinned issue #${docIssue.number}`);
+
                 await github.rest.issues.update({
                   owner: context.repo.owner,
                   repo: context.repo.repo,

@@ -145,6 +145,8 @@ jobs:
                 issue.title.startsWith('📝 Missing inventory sections in')
               );
 
+              let issueToPin;
+
               if (existingIssue) {
                 // Update existing issue
                 await github.rest.issues.update({
@@ -155,6 +157,7 @@ jobs:
                   body: body
                 });
                 console.log(`Updated issue #${existingIssue.number}`);
+                issueToPin = existingIssue;
               } else {
                 // Create new issue
                 const newIssue = await github.rest.issues.create({
@@ -165,33 +168,34 @@ jobs:
                   labels: ['github-actions-inventory']
                 });
                 console.log(`Created issue #${newIssue.data.number}`);
-
-                // Pin the newly created issue
-                const repoQuery = await github.graphql(`
-                  query($owner: String!, $repo: String!) {
-                    repository(owner: $owner, name: $repo) {
-                      id
-                    }
-                  }
-                `, {
-                  owner: context.repo.owner,
-                  repo: context.repo.repo
-                });
-
-                await github.graphql(`
-                  mutation($issueId: ID!, $repositoryId: ID!) {
-                    pinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
-                      issue {
-                        number
-                      }
-                    }
-                  }
-                `, {
-                  issueId: newIssue.data.node_id,
-                  repositoryId: repoQuery.repository.id
-                });
-                console.log(`Pinned issue #${newIssue.data.number}`);
+                issueToPin = newIssue.data;
               }
+
+              // Pin the issue (works for both new and existing)
+              const repoQuery = await github.graphql(`
+                query($owner: String!, $repo: String!) {
+                  repository(owner: $owner, name: $repo) {
+                    id
+                  }
+                }
+              `, {
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+
+              await github.graphql(`
+                mutation($issueId: ID!, $repositoryId: ID!) {
+                  pinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                    issue {
+                      number
+                    }
+                  }
+                }
+              `, {
+                issueId: issueToPin.node_id,
+                repositoryId: repoQuery.repository.id
+              });
+              console.log(`Pinned issue #${issueToPin.number}`)
             } else if (action === 'close_issue') {
               const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
 

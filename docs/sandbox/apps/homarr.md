@@ -52,3 +52,7 @@ sb install sandbox-homarr
   ```
 
 - [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/getting-started/){: .header-icons }
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

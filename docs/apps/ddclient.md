@@ -33,3 +33,7 @@ DDClient is automatically configured for Cloudflare with common Saltbox subdomai
 Requires Cloudflare to be enabled in your Saltbox configuration with valid API credentials in `accounts.yml`.
 
 - [:octicons-link-16: Documentation: DDClient Wiki](https://github.com/ddclient/ddclient/wiki){: .header-icons }
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

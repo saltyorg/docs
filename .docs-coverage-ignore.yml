@@ -12,7 +12,6 @@ saltbox:
   - "cloudplow_disable"
   - "common"
   - "crowdsec"
-  - "ddclient"  # deprecated in favor of ddns
   - "docker"
   - "docker_socket_proxy"
   - "download_clients"

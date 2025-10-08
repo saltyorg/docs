@@ -446,7 +446,6 @@ nav:
           - Scrutiny: apps/scrutiny.md
       - Networking:
           - DDNS: apps/ddns.md
-          - DDClient: apps/ddclient.md
           - Nginx: apps/nginx.md
       - Support Apps:
           - Custom: apps/custom.md

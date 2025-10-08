@@ -53,7 +53,7 @@ sb install sandbox-homarr
 
 - [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/getting-started/){: .header-icons }
 
-### Inventory
+## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
 !!! info

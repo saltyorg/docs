@@ -88,7 +88,8 @@ jobs:
               });
 
               const existingIssue = issues.data.find(issue =>
-                issue.title.startsWith('📝 Missing documentation for')
+                issue.title.startsWith('📝 Missing documentation for') ||
+                issue.title.startsWith('📝 Documentation cleanup needed')
               );
 
               if (existingIssue) {
@@ -124,7 +125,8 @@ jobs:
               });
 
               const docIssue = issues.data.find(issue =>
-                issue.title.startsWith('📝 Missing documentation for')
+                issue.title.startsWith('📝 Missing documentation for') ||
+                issue.title.startsWith('📝 Documentation cleanup needed')
               );
 
               if (docIssue) {

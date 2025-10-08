@@ -61,22 +61,48 @@ def get_documented_apps(docs_path: Path, folder: str = "apps") -> Set[str]:
     return documented
 
 
-def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], total_missing: int, workflow_url: str) -> str:
+def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], total_missing: int,
+                        saltbox_orphaned: List[str], sandbox_orphaned: List[str], total_orphaned: int,
+                        workflow_url: str) -> str:
     """Generate the GitHub issue body."""
-    body = "## Missing Documentation for Roles\n\n"
-    body += f"**Total missing:** {total_missing}\n\n"
+    body = ""
 
-    if saltbox_missing:
-        body += f"### Saltbox Roles ({len(saltbox_missing)})\n\n"
-        for role in saltbox_missing:
-            body += f"- [ ] `{role}`\n"
-        body += "\n"
+    # Only show missing docs section if there are any
+    if total_missing > 0:
+        body += "## Missing Documentation for Roles\n\n"
+        body += f"**Total missing:** {total_missing}\n\n"
 
-    if sandbox_missing:
-        body += f"### Sandbox Roles ({len(sandbox_missing)})\n\n"
-        for role in sandbox_missing:
-            body += f"- [ ] `{role}`\n"
-        body += "\n"
+        if saltbox_missing:
+            body += f"### Saltbox Roles ({len(saltbox_missing)})\n\n"
+            for role in saltbox_missing:
+                body += f"- [ ] `{role}`\n"
+            body += "\n"
+
+        if sandbox_missing:
+            body += f"### Sandbox Roles ({len(sandbox_missing)})\n\n"
+            for role in sandbox_missing:
+                body += f"- [ ] `{role}`\n"
+            body += "\n"
+
+    if total_orphaned > 0:
+        if total_missing > 0:
+            body += "---\n\n"
+        body += "## ⚠️ Orphaned Documentation (docs without roles)\n\n"
+        body += f"**Total orphaned:** {total_orphaned}\n\n"
+        body += "These are documentation files that no longer have corresponding roles. "
+        body += "They may be deprecated and should be reviewed for removal or updating.\n\n"
+
+        if saltbox_orphaned:
+            body += f"### Saltbox Orphaned Docs ({len(saltbox_orphaned)})\n\n"
+            for doc in saltbox_orphaned:
+                body += f"- [ ] `{doc}`\n"
+            body += "\n"
+
+        if sandbox_orphaned:
+            body += f"### Sandbox Orphaned Docs ({len(sandbox_orphaned)})\n\n"
+            for doc in sandbox_orphaned:
+                body += f"- [ ] `{doc}`\n"
+            body += "\n"
 
     body += "---\n\n"
     if workflow_url:
@@ -183,19 +209,31 @@ def main():
         # Prepare issue creation/update data
         github_output["action"] = "create_or_update_issue"
         github_output["issue_title"] = f"📝 Missing documentation for {total_missing} role{'s' if total_missing > 1 else ''}"
-        github_output["issue_body"] = generate_issue_body(saltbox_missing, sandbox_missing, total_missing, workflow_url)
+        github_output["issue_body"] = generate_issue_body(saltbox_missing, sandbox_missing, total_missing,
+                                                          saltbox_orphaned, sandbox_orphaned, total_orphaned,
+                                                          workflow_url)
 
         exit_code = 1
     else:
         print("✅ All roles have documentation!")
 
-        # Determine close message based on whether roles were ignored
-        if total_ignored > 0:
-            github_output["close_message"] = "✅ All missing roles have been documented or added to the ignore list! Closing this issue."
+        # Check if we have orphaned docs but no missing docs
+        if total_orphaned > 0:
+            print(f"\n⚠️  However, there are {total_orphaned} orphaned documentation file(s).")
+            # Create/update issue for orphaned docs only
+            github_output["action"] = "create_or_update_issue"
+            github_output["issue_title"] = f"📝 Documentation cleanup needed - {total_orphaned} orphaned doc{'s' if total_orphaned > 1 else ''}"
+            github_output["issue_body"] = generate_issue_body([], [], 0,
+                                                              saltbox_orphaned, sandbox_orphaned, total_orphaned,
+                                                              workflow_url)
         else:
-            github_output["close_message"] = "✅ All roles now have documentation! Closing this issue."
+            # Determine close message based on whether roles were ignored
+            if total_ignored > 0:
+                github_output["close_message"] = "✅ All missing roles have been documented or added to the ignore list! Closing this issue."
+            else:
+                github_output["close_message"] = "✅ All roles now have documentation! Closing this issue."
 
-        github_output["action"] = "close_issue"
+            github_output["action"] = "close_issue"
 
     # Output JSON for GitHub Actions
     print("\n::group::GitHub Actions Output")

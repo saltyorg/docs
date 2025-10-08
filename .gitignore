@@ -9,3 +9,5 @@ go.sh
 /venv
 .cache
 .ansible
+# Python
+/scripts/__pycache__/

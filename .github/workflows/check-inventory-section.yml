@@ -2,6 +2,15 @@ name: Check Inventory Section Coverage
 
 on:
   workflow_dispatch:
+    inputs:
+      saltbox_branch:
+        description: 'Saltbox branch to check'
+        required: false
+        default: 'role-refactor'
+      sandbox_branch:
+        description: 'Sandbox branch to check'
+        required: false
+        default: 'role-refactor'
 
   push:
     branches:
@@ -20,12 +29,29 @@ jobs:
   check-inventory-section:
     runs-on: ubuntu-24.04
     permissions:
-      contents: read
+      contents: write
       issues: write
     steps:
       - name: Checkout docs repository
         uses: actions/checkout@v5
         with:
+          path: docs
+          fetch-depth: 0
+
+      - name: Checkout Saltbox repository
+        uses: actions/checkout@v5
+        with:
+          repository: saltyorg/Saltbox
+          ref: ${{ github.event.inputs.saltbox_branch || 'role-refactor' }}
+          path: saltbox
+          fetch-depth: 0
+
+      - name: Checkout Sandbox repository
+        uses: actions/checkout@v5
+        with:
+          repository: saltyorg/Sandbox
+          ref: ${{ github.event.inputs.sandbox_branch || 'role-refactor' }}
+          path: sandbox
           fetch-depth: 0
 
       - name: Setup Python 3
@@ -33,13 +59,64 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install PyYAML
-        run: pip install pyyaml
+      - name: Install dependencies
+        run: pip install pyyaml jinja2
+
+      - name: Update inventory sections with Jinja script
+        run: |
+          # Update Saltbox apps
+          for doc_file in docs/docs/apps/*.md; do
+            app_name=$(basename "$doc_file" .md)
+
+            # Check if doc has the managed section markers
+            if grep -q "<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->" "$doc_file"; then
+              echo "Updating $app_name..."
+              python3 docs/scripts/inventory-generator-jinja.py \
+                "$app_name" \
+                --write-docs "$doc_file" \
+                --saltbox-repo saltbox \
+                --sandbox-repo sandbox \
+                --inventory-path saltbox/inventories/group_vars/all.yml || true
+            fi
+          done
+
+          # Update Sandbox apps
+          for doc_file in docs/docs/sandbox/apps/*.md; do
+            app_name=$(basename "$doc_file" .md)
+
+            # Check if doc has the managed section markers
+            if grep -q "<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->" "$doc_file"; then
+              echo "Updating sandbox-$app_name..."
+              python3 docs/scripts/inventory-generator-jinja.py \
+                "sandbox-$app_name" \
+                --write-docs "$doc_file" \
+                --saltbox-repo saltbox \
+                --sandbox-repo sandbox \
+                --inventory-path saltbox/inventories/group_vars/all.yml || true
+            fi
+          done
+        continue-on-error: true
+
+      - name: Commit and push changes
+        run: |
+          cd docs
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add docs/apps/*.md docs/sandbox/apps/*.md
+            git commit -m "Update inventory sections in documentation" -m "🤖 Generated with inventory-generator-jinja.py"
+            git push
+          fi
+        continue-on-error: true
 
       - name: Check inventory section coverage
         id: coverage
         continue-on-error: true
         run: |
+          cd docs
           chmod +x scripts/check-inventory-section.py
           python3 scripts/check-inventory-section.py
         env:
@@ -88,6 +165,32 @@ jobs:
                   labels: ['github-actions-inventory']
                 });
                 console.log(`Created issue #${newIssue.data.number}`);
+
+                // Pin the newly created issue
+                const repoQuery = await github.graphql(`
+                  query($owner: String!, $repo: String!) {
+                    repository(owner: $owner, name: $repo) {
+                      id
+                    }
+                  }
+                `, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo
+                });
+
+                await github.graphql(`
+                  mutation($issueId: ID!, $repositoryId: ID!) {
+                    pinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                      issue {
+                        number
+                      }
+                    }
+                  }
+                `, {
+                  issueId: newIssue.data.node_id,
+                  repositoryId: repoQuery.repository.id
+                });
+                console.log(`Pinned issue #${newIssue.data.number}`);
               }
             } else if (action === 'close_issue') {
               const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
@@ -105,6 +208,32 @@ jobs:
               );
 
               if (docIssue) {
+                // Unpin the issue before closing
+                const repoQuery = await github.graphql(`
+                  query($owner: String!, $repo: String!) {
+                    repository(owner: $owner, name: $repo) {
+                      id
+                    }
+                  }
+                `, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo
+                });
+
+                await github.graphql(`
+                  mutation($issueId: ID!, $repositoryId: ID!) {
+                    unpinIssue(input: {issueId: $issueId, repositoryId: $repositoryId}) {
+                      issue {
+                        number
+                      }
+                    }
+                  }
+                `, {
+                  issueId: docIssue.node_id,
+                  repositoryId: repoQuery.repository.id
+                });
+                console.log(`Unpinned issue #${docIssue.number}`);
+
                 await github.rest.issues.update({
                   owner: context.repo.owner,
                   repo: context.repo.repo,

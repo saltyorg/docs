@@ -61,7 +61,7 @@ def check_inventory_section(doc_file: Path) -> bool:
 
 
 def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], total_missing: int,
-                        workflow_url: str) -> str:
+                        workflow_url: str, branch: str) -> str:
     """Generate the GitHub issue body."""
     body = "## Missing Inventory Sections in Documentation\n\n"
     body += f"**Total missing:** {total_missing}\n\n"
@@ -71,13 +71,13 @@ def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], 
     if saltbox_missing:
         body += f"### Saltbox Apps ({len(saltbox_missing)})\n\n"
         for app in saltbox_missing:
-            body += f"- [ ] [{app}](docs/apps/{app}.md)\n"
+            body += f"- [ ] [{app}](https://github.com/saltyorg/docs/blob/{branch}/docs/apps/{app}.md)\n"
         body += "\n"
 
     if sandbox_missing:
         body += f"### Sandbox Apps ({len(sandbox_missing)})\n\n"
         for app in sandbox_missing:
-            body += f"- [ ] [{app}](docs/sandbox/apps/{app}.md)\n"
+            body += f"- [ ] [{app}](https://github.com/saltyorg/docs/blob/{branch}/docs/sandbox/apps/{app}.md)\n"
         body += "\n"
 
     body += "---\n\n"
@@ -143,8 +143,9 @@ def main():
     sandbox_missing = sorted(sandbox_missing)
     total_missing = len(saltbox_missing) + len(sandbox_missing)
 
-    # Get workflow URL from environment if available
+    # Get workflow URL and branch from environment if available
     workflow_url = os.getenv('GITHUB_WORKFLOW_URL', '')
+    branch = os.getenv('GITHUB_REF_NAME', 'main')
 
     # Prepare GitHub Actions output
     github_output = {
@@ -183,7 +184,7 @@ def main():
         github_output["action"] = "create_or_update_issue"
         github_output["issue_title"] = f"📝 Missing inventory sections in {total_missing} app doc{'s' if total_missing > 1 else ''}"
         github_output["issue_body"] = generate_issue_body(saltbox_missing, sandbox_missing, total_missing,
-                                                          workflow_url)
+                                                          workflow_url, branch)
 
         exit_code = 1
     else:

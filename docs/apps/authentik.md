@@ -143,3 +143,7 @@ In the screenshot below, you can see how the [Immich](../sandbox/apps/immich.md)
 The only other field you need to concern yourself with is the `Mobile Redirect URI`, which is `https://immich.your_domain.com/api/oauth/mobile-redirect`.
 
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

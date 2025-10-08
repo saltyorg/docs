@@ -34,3 +34,7 @@ sb install autobrr
 ### 3. Setup
 
 - [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons }
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

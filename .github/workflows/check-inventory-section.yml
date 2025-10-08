@@ -22,8 +22,7 @@ on:
       - 'scripts/check-inventory-section.py'
 
   schedule:
-    # Run weekly on Mondays at 9:00 AM UTC
-    - cron: '0 9 * * 1'
+    - cron: '0 0 * * *'
 
 jobs:
   check-inventory-section:

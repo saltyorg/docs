@@ -171,19 +171,48 @@ jobs:
                 issueToPin = newIssue.data;
               }
 
-              // Pin the issue (works for both new and existing)
-              await github.graphql(`
-                mutation($issueId: ID!) {
-                  pinIssue(input: {issueId: $issueId}) {
-                    issue {
-                      number
+              // Check if issue is already pinned
+              const repoData = await github.rest.repos.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+
+              const pinnedIssues = await github.graphql(`
+                query($owner: String!, $repo: String!) {
+                  repository(owner: $owner, name: $repo) {
+                    pinnedIssues(first: 3) {
+                      nodes {
+                        number
+                      }
                     }
                   }
                 }
               `, {
-                issueId: issueToPin.node_id
+                owner: context.repo.owner,
+                repo: context.repo.repo
               });
-              console.log(`Pinned issue #${issueToPin.number}`)
+
+              const isPinned = pinnedIssues.repository.pinnedIssues.nodes.some(
+                issue => issue.number === issueToPin.number
+              );
+
+              // Only pin if not already pinned
+              if (!isPinned) {
+                await github.graphql(`
+                  mutation($issueId: ID!) {
+                    pinIssue(input: {issueId: $issueId}) {
+                      issue {
+                        number
+                      }
+                    }
+                  }
+                `, {
+                  issueId: issueToPin.node_id
+                });
+                console.log(`Pinned issue #${issueToPin.number}`);
+              } else {
+                console.log(`Issue #${issueToPin.number} is already pinned`);
+              }
             } else if (action === 'close_issue') {
               const closeMessage = ${{ toJSON(steps.coverage.outputs.close_message) }};
 

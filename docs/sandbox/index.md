@@ -12,11 +12,9 @@ tags:
 - **[adguardhome](../sandbox/apps/adguardhome.md)**  - tag - `sandbox-adguardhome`
 - **[adminer](../sandbox/apps/adminer.md)**  - tag - `sandbox-adminer`
 - **[airdcpp](../sandbox/apps/airdcpp.md)**  - tag - `sandbox-airdcpp`
-- **[alternatrr](../sandbox/apps/alternatrr.md)**  - tag - `sandbox-alternatrr`
 - **[airsonic](../sandbox/apps/airsonic.md)**  - tag - `sandbox-airsonic`
 - **[apprise](../sandbox/apps/apprise.md)**  - tag - `sandbox-apprise`
 - **[archivebox](../sandbox/apps/archivebox.md)**  - tag - `sandbox-archivebox`
-- **[aria2_ng](../sandbox/apps/aria2_ng.md)**  - tag - `sandbox-aria2-ng`
 - **[a-train](../sandbox/apps/a_train.md)**  - tag - `sandbox-a-train`
 - **[audiobookshelf](../sandbox/apps/audiobookshelf.md)**  - tag - `sandbox-audiobookshelf`
 - **[barcodebuddy](../sandbox/apps/barcodebuddy.md)**  - tag - `sandbox-barcodebuddy`
@@ -31,7 +29,6 @@ tags:
 - **[cockpit](../sandbox/apps/cockpit.md)**  - tag - `sandbox-cockpit`
 - **[code-server](../sandbox/apps/code_server.md)**  - tag - `sandbox-code-server`
 - **[codex](../sandbox/apps/codex.md)**  - tag - `sandbox-codex`
-- **[comicstreamer](../sandbox/apps/comicstreamer.md)**  - tag - `sandbox-comicstreamer`
 - **[comixed](../sandbox/apps/comixed.md)**  - tag - `sandbox-comixed`
 - **[crafty](../sandbox/apps/crafty.md)**  - tag - `sandbox-crafty`
 - **[dashdot](../sandbox/apps/dashdot.md)**  - tag - `sandbox-dashdot`
@@ -40,7 +37,6 @@ tags:
 - **[delugevpn](../sandbox/apps/delugevpn.md)**  - tag - `sandbox-delugevpn`
 - **[discoflix](../sandbox/apps/discoflix.md)**  - tag - `sandbox-discoflix`
 - **[dockwatch](../sandbox/apps/dockwatch.md)**  - tag - `sandbox-dockwatch`
-- **[docspell](../sandbox/apps/docspell.md)**  - tag - `sandbox-docspell`
 - **[doplarr](../sandbox/apps/doplarr.md)**  - tag - `sandbox-doplarr`
 - **[duplicati](../sandbox/apps/duplicati.md)**  - tag - `sandbox-duplicati`
 - **[elasticsearch](../sandbox/apps/elasticsearch.md)**  - tag - `sandbox-elasticsearch`
@@ -99,7 +95,6 @@ tags:
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
 - **[maybe_finance](../sandbox/apps/maybe_finance.md)**  - tag - `sandbox-maybe-finance`
-- **[mcrouter](../sandbox/apps/mcrouter.md)**  - tag - `sandbox-mcrouter`
 - **[mealie](../sandbox/apps/mealie.md)**  - tag - `sandbox-mealie`
 - **[medusa](../sandbox/apps/medusa.md)**  - tag - `sandbox-medusa`
 - **[membarr](../sandbox/apps/membarr.md)**  - tag - `sandbox-membarr`
@@ -120,7 +115,6 @@ tags:
 - **[notifiarr](../sandbox/apps/notifiarr.md)**  - tag - `sandbox-notifiarr`
 - **[olivetin](../sandbox/apps/olivetin.md)**  - tag - `sandbox-olivetin`
 - **[ombi](../sandbox/apps/ombi.md)**  - tag - `sandbox-ombi`
-- **[ombix](../sandbox/apps/ombix.md)**  - tag - `sandbox-ombix`
 - **[openobserve](../sandbox/apps/openobserve.md)**  - tag - `sandbox-openobserve`
 - **[paperless_ai](../sandbox/apps/paperless_ai.md)**  - tag - `sandbox-paperless-ai`
 - **[paperless-ngx](../sandbox/apps/paperless_ngx.md)**  - tag - `sandbox-paperless-ngx`
@@ -145,14 +139,11 @@ tags:
 - **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
 - **[reposilite](../sandbox/apps/reposilite.md)**  - tag - `sandbox-reposilite`
 - **[requestrr](../sandbox/apps/requestrr.md)**  - tag - `sandbox-requestrr`
-- **[requestrrx](../sandbox/apps/requestrrx.md)**  - tag - `sandbox-requestrrx`
 - **[resiliosync](../sandbox/apps/resiliosync.md)**  - tag - `sandbox-resiliosync`
 - **[rflood](../sandbox/apps/rflood.md)**  - tag - `rflood`
-- **[rfloodx](../sandbox/apps/rfloodx.md)**  - tag - `rfloodx`
 - **[rocketchat](../sandbox/apps/rocketchat.md)**  - tag - `rocketchat`
 - **[sabthrottle](../sandbox/apps/sabthrottle.md)**  - tag - `sandbox-sabthrottle`
 - **[semaphoreui](../sandbox/apps/semaphoreui.md)**  - tag - `sandbox-semaphoreui`
-- **[solr](../sandbox/apps/solr.md)**  - tag - `sandbox-solr`
 - **[speedtest](../sandbox/apps/speedtest.md)**  - tag - `sandbox-speedtest`
 - **[sqlitebrowser](../sandbox/apps/sqlitebrowser.md)**  - tag - `sandbox-sqlitebrowser`
 - **[sshwifty](../sandbox/apps/sshwifty.md)**  - tag - `sandbox-sshwifty`
@@ -173,7 +164,6 @@ tags:
 - **[traefik_robotstxt](../sandbox/apps/traefik_robotstxt.md)**  - tag - `sandbox-traefik-robotstxt`
 - **[transmission](../sandbox/apps/transmission.md)**  - tag - `sandbox-transmission`
 - **[transmissionvpn](../sandbox/apps/transmissionvpn.md)**  - tag - `sandbox-transmissionvpn`
-- **[transmissionx](../sandbox/apps/transmissionx.md)**  - tag - `sandbox-transmissionx`
 - **[trilium](../sandbox/apps/trilium.md)**  - tag - `sandbox-trilium`
 - **[tubearchivist](../sandbox/apps/tubearchivist.md)**  - tag - `sandbox-tubearchivist`
 - **[tvheadend](../sandbox/apps/tvheadend.md)**  - tag - `sandbox-tvheadend`

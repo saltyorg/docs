@@ -7,7 +7,7 @@ tags:
 
 ## What is it?
 
-Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft server and [MC-Router](../apps/mcrouter.md) to allow each server to have its own subdomain with the default port.
+Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft server and MC-Router to allow each server to have its own subdomain with the default port.
 
 | Details     |             |             |
 |-------------|-------------|-------------|
@@ -21,7 +21,7 @@ sb install sandbox-minecraft
 
 ```
 
-This will install [mc-router](../apps/mcrouter.md) and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
+This will install mc-router and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
 
 ### 2. Join Server
 

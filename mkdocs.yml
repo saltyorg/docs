@@ -273,7 +273,6 @@ nav:
           - Foundry: sandbox/apps/foundry.md
           - PufferPanel: sandbox/apps/pufferpanel.md
           - LinuxGSM: sandbox/apps/lgsm.md
-          - MC-Router: sandbox/apps/mcrouter.md
           - Minecraft: sandbox/apps/minecraft.md
           - Minecraft Bedrock: sandbox/apps/minecraft_bedrock.md
         - Media Management:

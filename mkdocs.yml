@@ -423,6 +423,8 @@ nav:
         - Bazarr: apps/bazarr.md
         - BTRFS Maintenance: apps/btrfsmaintenance.md
         - Dozzle: apps/dozzle.md
+        - Mainline: apps/mainline.md
+        - Subliminal: apps/subliminal.md
         - Gluetun: apps/gluetun.md
         - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
@@ -444,6 +446,7 @@ nav:
           - Scrutiny: apps/scrutiny.md
       - Networking:
           - DDNS: apps/ddns.md
+          - DDClient: apps/ddclient.md
           - Nginx: apps/nginx.md
       - Support Apps:
           - Custom: apps/custom.md

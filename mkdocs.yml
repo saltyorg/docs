@@ -178,10 +178,8 @@ nav:
       - Settings: sandbox/settings.md
       - Index: sandbox/index.md
       - Apps:
-        - Multiple Instances (legacy): sandbox/apps/arrx.md
         - General:
           - AdGuard Home: sandbox/apps/adguardhome.md
-          - Alternatrr: sandbox/apps/alternatrr.md
           - BarcodeBuddy: sandbox/apps/barcodebuddy.md
           - Cherry: sandbox/apps/cherry.md
           - Cockpit: sandbox/apps/cockpit.md
@@ -220,7 +218,6 @@ nav:
           - Gotenberg: sandbox/apps/gotenberg.md
           - Docker:
             - Yacht: sandbox/apps/yacht.md
-          - Mcrouter: sandbox/apps/mcrouter.md
           - OliveTin: sandbox/apps/olivetin.md
           - Reposilite: sandbox/apps/reposilite.md
           - SemaphoreUI: sandbox/apps/semaphoreui.md
@@ -228,7 +225,6 @@ nav:
         - Downloading:
           - AirDC++: sandbox/apps/airdcpp.md
           - Archivebox: sandbox/apps/archivebox.md
-          - Aria2 NG: sandbox/apps/aria2_ng.md
           - Jdownloader2: sandbox/apps/jdownloader2.md
           - Karakeep: sandbox/apps/karakeep.md
           - Medusa: sandbox/apps/medusa.md
@@ -245,14 +241,11 @@ nav:
             - qBit Manage: sandbox/apps/qbit_manage.md
             - Qui: sandbox/apps/qui.md
             - Rflood: sandbox/apps/rflood.md
-            - Rfloodx: sandbox/apps/rfloodx.md
             - Tqm: sandbox/apps/tqm.md
             - Trackarr: sandbox/apps/trackarr.md
             - Transmission: sandbox/apps/transmission.md
             - Transmission VPN: sandbox/apps/transmissionvpn.md
-            - Transmissionx: sandbox/apps/transmissionx.md
         - File Management:
-          - Docspell: sandbox/apps/docspell.md
           - Filebot: sandbox/apps/filebot.md
           - Filebrowser: sandbox/apps/filebrowser.md
           - LinkWarden: sandbox/apps/linkwarden.md
@@ -291,7 +284,6 @@ nav:
             - Calibre: sandbox/apps/calibre.md
             - Calibre-web: sandbox/apps/calibre_web.md
             - Codex: sandbox/apps/codex.md
-            - Comicstreamer: sandbox/apps/comicstreamer.md
             - Comixed: sandbox/apps/comixed.md
             - Kavita: sandbox/apps/kavita.md
             - Komga: sandbox/apps/komga.md
@@ -339,9 +331,7 @@ nav:
             - Jellystat: sandbox/apps/jellystat.md
             - Jellyseerr: sandbox/apps/jellyseerr.md
             - Ombi: sandbox/apps/ombi.md
-            - Ombix: sandbox/apps/ombix.md
             - Requestrr: sandbox/apps/requestrr.md
-            - Requestrrx: sandbox/apps/requestrrx.md
           - Stash: sandbox/apps/stash.md
           - WatchState: sandbox/apps/watchstate.md
         - Nextcloud: sandbox/apps/nextcloud.md
@@ -374,7 +364,6 @@ nav:
           - Log Management:
             - GoAccess: sandbox/apps/goaccess.md
             - OpenObserve: sandbox/apps/openobserve.md
-            - Solr: sandbox/apps/solr.md
             - Monitorr: sandbox/apps/monitorr.md
           - Networking:
             - Kcptun-client: sandbox/apps/kcptun_client.md

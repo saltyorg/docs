@@ -269,6 +269,10 @@ Further documentation:
 
 - [:octicons-link-16: Documentation](https://github.com/Cloudbox/autoscan){: .header-icons }
 
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
 ## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).

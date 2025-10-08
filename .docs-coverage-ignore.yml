@@ -18,6 +18,7 @@ saltbox:
   - "download_indexers"
   - "glances"
   - "hetzner"
+  - "hetzner_vlan"  # covered by hetzner_nfs documentation
   - "kernel"
   - "main_tags"
   - "media_server"

@@ -1473,18 +1473,39 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         plex_role_traefik_wildcard_enabled: true
 
         # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: string
-        plex_role_web_fqdn_override:
+        # Type: list
+        plex_role_web_fqdn_override: # (1)!
 
         # Override the Traefik web host configuration for containers
         # Type: string
-        plex_role_web_host_override:
+        plex_role_web_host_override: # (2)!
 
         # URL scheme to use for web access to containers
         # Type: string ("http"/"https")
         plex_role_web_scheme:
 
         ```
+
+        1.  Example:
+
+            ```yaml
+            plex_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "plex_role_web_fqdn_override2.{{ user.domain }}"
+              - "plex_role_web_fqdn_override.new-domain.tld"
+            ```
+            
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+            
+
+        2.  Example:
+
+            ```yaml
+            plex_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex_role_web_host_override2.' + user.domain }}`)"
+            ```
+            
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+            
 
     === "Instance-level"
 
@@ -1548,18 +1569,39 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         plex2_traefik_wildcard_enabled: true
 
         # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: string
-        plex2_web_fqdn_override:
+        # Type: list
+        plex2_web_fqdn_override: # (1)!
 
         # Override the Traefik web host configuration for the container
         # Type: string
-        plex2_web_host_override:
+        plex2_web_host_override: # (2)!
 
         # URL scheme to use for web access to the container
         # Type: string ("http"/"https")
         plex2_web_scheme:
 
         ```
+
+        1.  Example:
+
+            ```yaml
+            plex2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "plex2_web_fqdn_override2.{{ user.domain }}"
+              - "plex2_web_fqdn_override.new-domain.tld"
+            ```
+            
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+            
+
+        2.  Example:
+
+            ```yaml
+            plex2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2_web_host_override2.' + user.domain }}`)"
+            ```
+            
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->
 

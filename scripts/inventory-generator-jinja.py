@@ -62,68 +62,35 @@ TYPE_INFERENCE_RULES = [
     (lambda suffix, line: "default=[]" in line, "list"),
 ]
 
-# Suffixes to ignore - these are internal/framework variables not meant for user override
-IGNORE_ROLE_VAR_SUFFIXES = {
-    '_dns_proxy',
-    '_docker_network_mode',
-    '_docker_networks_alias',
-    '_docker_networks_alias_custom',
-    '_docker_stop_timeout',
-    '_traefik_api_enabled',
-    '_traefik_enabled',
-    '_traefik_entrypoint_web',
-    '_traefik_entrypoint_websecure',
-    '_traefik_middleware_custom',
-    '_traefik_middleware_default',
-    '_traefik_sso_middleware',
-    '_web_domain',
-    '_web_subdomain',
-    '_web_port',
-}
+# Load role_var configuration from YAML file
+def load_role_var_config():
+    """Load role_var descriptions, examples, defaults, and ignore list from YAML config file"""
+    config_file = Path(__file__).parent / 'global_override_options.yml'
+    try:
+        with open(config_file) as f:
+            config = yaml.safe_load(f) or {}
 
-# Descriptions for role_var global override options
-# These descriptions will appear in the documentation for variables found in all.yml
-ROLE_VAR_DESCRIPTIONS = {
-    '_autoheal_enabled': 'Enable or disable Autoheal monitoring for containers created when deploying',
-    '_depends_on': 'List of container dependencies that must be running before containers start',
-    '_depends_on_delay': 'Delay in seconds before starting containers after dependencies are ready',
-    '_depends_on_healthchecks': 'Enable healthcheck waiting for container dependencies',
-    '_diun_enabled': 'Enable or disable Diun update notifications for containers created when deploying',
-    '_dns_enabled': 'Enable or disable automatic DNS record creation for containers',
-    '_docker_controller': 'Enable or disable Saltbox Docker Controller management for containers',
-    '_traefik_autodetect_enabled': 'Enable Traefik autodetect middleware for containers',
-    '_traefik_crowdsec_enabled': 'Enable CrowdSec middleware for containers',
-    '_traefik_error_pages_enabled': 'Enable custom error pages middleware for containers',
-    '_traefik_gzip_enabled': 'Enable gzip compression middleware for containers',
-    '_traefik_robot_enabled': 'Enable robots.txt middleware for containers',
-    '_traefik_tailscale_enabled': 'Enable Tailscale-specific Traefik configuration for containers',
-    '_traefik_wildcard_enabled': 'Enable wildcard certificate for containers',
-    '_web_fqdn_override': 'Override the Traefik fully qualified domain name (FQDN) for containers',
-    '_web_host_override': 'Override the Traefik web host configuration for containers',
-    '_web_scheme': 'URL scheme to use for web access to containers',
-}
+        descriptions = {}
+        defaults = {}
+        ignore_suffixes = set(config.get('ignore_suffixes', []))
 
-# Default values for role_var global override options
-# Set to None to show no default value in docs (variable name only with colon)
-ROLE_VAR_DEFAULTS = {
-    '_autoheal_enabled': 'true',
-    '_depends_on': '',
-    '_depends_on_delay': '0',
-    '_depends_on_healthchecks': None,
-    '_diun_enabled': 'true',
-    '_dns_enabled': 'true',
-    '_docker_controller': 'true',
-    '_traefik_autodetect_enabled': 'false',
-    '_traefik_crowdsec_enabled': 'false',
-    '_traefik_error_pages_enabled': 'false',
-    '_traefik_gzip_enabled': 'false',
-    '_traefik_robot_enabled': 'true',
-    '_traefik_tailscale_enabled': 'false',
-    '_traefik_wildcard_enabled': 'true',
-    '_web_fqdn_override': None,
-    '_web_host_override': None,
-    '_web_scheme': None,
-}
+        for suffix, data in config.items():
+            if suffix == 'ignore_suffixes':
+                continue
+            if isinstance(data, dict):
+                descriptions[suffix] = data
+                defaults[suffix] = data.get('default')
+
+        return descriptions, defaults, ignore_suffixes
+    except FileNotFoundError:
+        print(f"Warning: Config file not found: {config_file}", file=sys.stderr)
+        return {}, {}, set()
+    except yaml.YAMLError as e:
+        print(f"Warning: Invalid YAML in config file: {e}", file=sys.stderr)
+        return {}, {}, set()
+
+# Load configuration at module level
+ROLE_VAR_DESCRIPTIONS, ROLE_VAR_DEFAULTS, IGNORE_ROLE_VAR_SUFFIXES = load_role_var_config()
 
 class RoleVariableParser:
     def __init__(self, repo_path: Path):

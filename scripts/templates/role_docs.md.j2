@@ -262,58 +262,124 @@
         Override for all instances:
 
         ```yaml
+{% set annotation_num = namespace(value=0) %}
 {% for suffix in role_var_lookups|sort %}
 {% set var_type = role_var_lookups[suffix] %}
 {% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% if suffix in role_var_descriptions %}
-        # {{ role_var_descriptions[suffix] }}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+{% endif %}
+{% if var_config.description %}
+        # {{ var_config.description }}
 {% endif %}
         {{ format_type_comment(var_type) }}
 {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-        {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}
-{% else %}
-        {{ role_var_name }}:
-{% endif %}
+        {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
 
+
+{% else %}
+        {{ role_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+
+
+{% endif %}
 {% endfor %}
         ```
+{% set annotation_num = namespace(value=0) %}
+{% for suffix in role_var_lookups|sort %}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% set role_var_name = role_name ~ '_role' ~ suffix %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+
+        {{ annotation_num.value }}.  Example:
+
+{% for line in var_config.example.split('\n') %}
+            {{ line.replace('{role}', role_var_name) }}
+{% endfor %}
+{% endif %}
+{% endfor %}
 
     === "Instance-level"
 
         Override for a specific instance (e.g., `{{ role_name }}2`):
 
         ```yaml
+{% set annotation_num = namespace(value=0) %}
 {% for suffix in role_var_lookups|sort %}
 {% set var_type = role_var_lookups[suffix] %}
 {% set instance_var_name = role_name ~ '2' ~ suffix %}
-{% if suffix in role_var_descriptions %}
-        # {{ role_var_descriptions[suffix]|replace('containers', 'the container') }}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+{% endif %}
+{% if var_config.description %}
+        # {{ var_config.description|replace('containers', 'the container') }}
 {% endif %}
         {{ format_type_comment(var_type) }}
 {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-        {{ instance_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}
-{% else %}
-        {{ instance_var_name }}:
-{% endif %}
+        {{ instance_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
 
+
+{% else %}
+        {{ instance_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+
+
+{% endif %}
 {% endfor %}
         ```
+{% set annotation_num = namespace(value=0) %}
+{% for suffix in role_var_lookups|sort %}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% set instance_var_name = role_name ~ '2' ~ suffix %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+
+        {{ annotation_num.value }}.  Example:
+
+{% for line in var_config.example.split('\n') %}
+            {{ line.replace('{role}', instance_var_name) }}
+{% endfor %}
+{% endif %}
+{% endfor %}
 {% else %}
     ```yaml
+{% set annotation_num = namespace(value=0) %}
 {% for suffix in role_var_lookups|sort %}
 {% set var_type = role_var_lookups[suffix] %}
 {% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% if suffix in role_var_descriptions %}
-    # {{ role_var_descriptions[suffix]|replace('containers', 'the container') }}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+{% endif %}
+{% if var_config.description %}
+    # {{ var_config.description|replace('containers', 'the container') }}
 {% endif %}
     {{ format_type_comment(var_type) }}
 {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-    {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}
-{% else %}
-    {{ role_var_name }}:
-{% endif %}
+    {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
 
+
+{% else %}
+    {{ role_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+
+
+{% endif %}
 {% endfor %}
     ```
+{% set annotation_num = namespace(value=0) %}
+{% for suffix in role_var_lookups|sort %}
+{% set var_config = role_var_descriptions.get(suffix, {}) %}
+{% set role_var_name = role_name ~ '_role' ~ suffix %}
+{% if var_config.example %}
+{% set annotation_num.value = annotation_num.value + 1 %}
+
+    {{ annotation_num.value }}.  Example:
+
+{% for line in var_config.example.split('\n') %}
+        {{ line.replace('{role}', role_var_name) }}
+{% endfor %}
+{% endif %}
+{% endfor %}
 {% endif %}
 {% endif %}

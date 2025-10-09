@@ -689,17 +689,38 @@ docker restart rutorrent
     rutorrent_role_traefik_wildcard_enabled: true
 
     # Override the Traefik fully qualified domain name (FQDN) for the container
-    # Type: string
-    rutorrent_role_web_fqdn_override:
+    # Type: list
+    rutorrent_role_web_fqdn_override: # (1)!
 
     # Override the Traefik web host configuration for the container
     # Type: string
-    rutorrent_role_web_host_override:
+    rutorrent_role_web_host_override: # (2)!
 
     # URL scheme to use for web access to the container
     # Type: string ("http"/"https")
     rutorrent_role_web_scheme:
 
     ```
+
+    1.  Example:
+
+        ```yaml
+        rutorrent_role_web_fqdn_override:
+          - "{{ traefik_host }}"
+          - "rutorrent_role_web_fqdn_override2.{{ user.domain }}"
+          - "rutorrent_role_web_fqdn_override.new-domain.tld"
+        ```
+        
+        Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+        
+
+    2.  Example:
+
+        ```yaml
+        rutorrent_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'rutorrent_role_web_host_override2.' + user.domain }}`)"
+        ```
+        
+        Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

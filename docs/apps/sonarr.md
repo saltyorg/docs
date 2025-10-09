@@ -1413,8 +1413,8 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
             ```yaml
             sonarr_role_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "sonarr_role_web_fqdn_override2.{{ user.domain }}"
-              - "sonarr_role_web_fqdn_override.new-domain.tld"
+              - "sonarr2.{{ user.domain }}"
+              - "sonarr.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1423,7 +1423,7 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
         2.  Example:
 
             ```yaml
-            sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr_role_web_host_override2.' + user.domain }}`)"
+            sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
@@ -1509,8 +1509,8 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
             ```yaml
             sonarr2_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "sonarr2_web_fqdn_override2.{{ user.domain }}"
-              - "sonarr2_web_fqdn_override.new-domain.tld"
+              - "sonarr2.{{ user.domain }}"
+              - "sonarr.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1519,7 +1519,7 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
         2.  Example:
 
             ```yaml
-            sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2_web_host_override2.' + user.domain }}`)"
+            sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

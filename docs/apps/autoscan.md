@@ -1129,8 +1129,8 @@ Further documentation:
             ```yaml
             autoscan_role_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "autoscan_role_web_fqdn_override2.{{ user.domain }}"
-              - "autoscan_role_web_fqdn_override.new-domain.tld"
+              - "autoscan2.{{ user.domain }}"
+              - "autoscan.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1139,7 +1139,7 @@ Further documentation:
         2.  Example:
 
             ```yaml
-            autoscan_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autoscan_role_web_host_override2.' + user.domain }}`)"
+            autoscan_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autoscan2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
@@ -1225,8 +1225,8 @@ Further documentation:
             ```yaml
             autoscan2_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "autoscan2_web_fqdn_override2.{{ user.domain }}"
-              - "autoscan2_web_fqdn_override.new-domain.tld"
+              - "autoscan2.{{ user.domain }}"
+              - "autoscan.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1235,7 +1235,7 @@ Further documentation:
         2.  Example:
 
             ```yaml
-            autoscan2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autoscan2_web_host_override2.' + user.domain }}`)"
+            autoscan2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autoscan2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

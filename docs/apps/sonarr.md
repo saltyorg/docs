@@ -1395,18 +1395,39 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
         sonarr_role_traefik_wildcard_enabled: true
 
         # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: string
-        sonarr_role_web_fqdn_override:
+        # Type: list
+        sonarr_role_web_fqdn_override: # (1)!
 
         # Override the Traefik web host configuration for containers
         # Type: string
-        sonarr_role_web_host_override:
+        sonarr_role_web_host_override: # (2)!
 
         # URL scheme to use for web access to containers
         # Type: string ("http"/"https")
         sonarr_role_web_scheme:
 
         ```
+
+        1.  Example:
+
+            ```yaml
+            sonarr_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "sonarr_role_web_fqdn_override2.{{ user.domain }}"
+              - "sonarr_role_web_fqdn_override.new-domain.tld"
+            ```
+            
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+            
+
+        2.  Example:
+
+            ```yaml
+            sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr_role_web_host_override2.' + user.domain }}`)"
+            ```
+            
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+            
 
     === "Instance-level"
 
@@ -1470,17 +1491,38 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
         sonarr2_traefik_wildcard_enabled: true
 
         # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: string
-        sonarr2_web_fqdn_override:
+        # Type: list
+        sonarr2_web_fqdn_override: # (1)!
 
         # Override the Traefik web host configuration for the container
         # Type: string
-        sonarr2_web_host_override:
+        sonarr2_web_host_override: # (2)!
 
         # URL scheme to use for web access to the container
         # Type: string ("http"/"https")
         sonarr2_web_scheme:
 
         ```
+
+        1.  Example:
+
+            ```yaml
+            sonarr2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "sonarr2_web_fqdn_override2.{{ user.domain }}"
+              - "sonarr2_web_fqdn_override.new-domain.tld"
+            ```
+            
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+            
+
+        2.  Example:
+
+            ```yaml
+            sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2_web_host_override2.' + user.domain }}`)"
+            ```
+            
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -776,17 +776,38 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
     authentik_role_traefik_wildcard_enabled: true
 
     # Override the Traefik fully qualified domain name (FQDN) for the container
-    # Type: string
-    authentik_role_web_fqdn_override:
+    # Type: list
+    authentik_role_web_fqdn_override: # (1)!
 
     # Override the Traefik web host configuration for the container
     # Type: string
-    authentik_role_web_host_override:
+    authentik_role_web_host_override: # (2)!
 
     # URL scheme to use for web access to the container
     # Type: string ("http"/"https")
     authentik_role_web_scheme:
 
     ```
+
+    1.  Example:
+
+        ```yaml
+        authentik_role_web_fqdn_override:
+          - "{{ traefik_host }}"
+          - "authentik_role_web_fqdn_override2.{{ user.domain }}"
+          - "authentik_role_web_fqdn_override.new-domain.tld"
+        ```
+        
+        Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+        
+
+    2.  Example:
+
+        ```yaml
+        authentik_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'authentik_role_web_host_override2.' + user.domain }}`)"
+        ```
+        
+        Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

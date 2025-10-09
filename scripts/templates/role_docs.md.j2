@@ -295,7 +295,7 @@
         {{ annotation_num.value }}.  Example:
 
 {% for line in var_config.example.split('\n') %}
-            {{ line.replace('{role}', role_var_name) }}
+            {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
 {% endfor %}
 {% endif %}
 {% endfor %}
@@ -338,7 +338,7 @@
         {{ annotation_num.value }}.  Example:
 
 {% for line in var_config.example.split('\n') %}
-            {{ line.replace('{role}', instance_var_name) }}
+            {{ line.replace('{variable}', instance_var_name).replace('{role}', role_name) }}
 {% endfor %}
 {% endif %}
 {% endfor %}
@@ -377,7 +377,7 @@
     {{ annotation_num.value }}.  Example:
 
 {% for line in var_config.example.split('\n') %}
-        {{ line.replace('{role}', role_var_name) }}
+        {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
 {% endfor %}
 {% endif %}
 {% endfor %}

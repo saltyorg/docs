@@ -81,10 +81,10 @@ _web_fqdn_override:
   default: null
   example: |
     ```yaml
-    {role}:
+    {variable}:
       - "{{ traefik_host }}"
       - "{role}2.{{ user.domain }}"
-      - "{role}.new-domain.tld"
+      - "{role}.otherdomain.tld"
     ```
 
     Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -94,7 +94,7 @@ _web_host_override:
   default: null
   example: |
     ```yaml
-    {role}: "Host(`{{ traefik_host }}`) || Host(`{{ '{role}2.' + user.domain }}`)"
+    {variable}: "Host(`{{ traefik_host }}`) || Host(`{{ '{role}2.' + user.domain }}`)"
     ```
 
     Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

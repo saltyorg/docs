@@ -1491,8 +1491,8 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
             ```yaml
             plex_role_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "plex_role_web_fqdn_override2.{{ user.domain }}"
-              - "plex_role_web_fqdn_override.new-domain.tld"
+              - "plex2.{{ user.domain }}"
+              - "plex.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1501,7 +1501,7 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         2.  Example:
 
             ```yaml
-            plex_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex_role_web_host_override2.' + user.domain }}`)"
+            plex_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
@@ -1587,8 +1587,8 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
             ```yaml
             plex2_web_fqdn_override:
               - "{{ traefik_host }}"
-              - "plex2_web_fqdn_override2.{{ user.domain }}"
-              - "plex2_web_fqdn_override.new-domain.tld"
+              - "plex2.{{ user.domain }}"
+              - "plex.otherdomain.tld"
             ```
             
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -1597,7 +1597,7 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
         2.  Example:
 
             ```yaml
-            plex2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2_web_host_override2.' + user.domain }}`)"
+            plex2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2.' + user.domain }}`)"
             ```
             
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

@@ -314,8 +314,8 @@ sb install sandbox-homarr
         ```yaml
         homarr_role_web_fqdn_override:
           - "{{ traefik_host }}"
-          - "homarr_role_web_fqdn_override2.{{ user.domain }}"
-          - "homarr_role_web_fqdn_override.new-domain.tld"
+          - "homarr2.{{ user.domain }}"
+          - "homarr.otherdomain.tld"
         ```
         
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -324,7 +324,7 @@ sb install sandbox-homarr
     2.  Example:
 
         ```yaml
-        homarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'homarr_role_web_host_override2.' + user.domain }}`)"
+        homarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'homarr2.' + user.domain }}`)"
         ```
         
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

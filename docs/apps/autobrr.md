@@ -525,8 +525,8 @@ sb install autobrr
         ```yaml
         autobrr_role_web_fqdn_override:
           - "{{ traefik_host }}"
-          - "autobrr_role_web_fqdn_override2.{{ user.domain }}"
-          - "autobrr_role_web_fqdn_override.new-domain.tld"
+          - "autobrr2.{{ user.domain }}"
+          - "autobrr.otherdomain.tld"
         ```
         
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -535,7 +535,7 @@ sb install autobrr
     2.  Example:
 
         ```yaml
-        autobrr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autobrr_role_web_host_override2.' + user.domain }}`)"
+        autobrr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'autobrr2.' + user.domain }}`)"
         ```
         
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

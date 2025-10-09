@@ -707,8 +707,8 @@ docker restart rutorrent
         ```yaml
         rutorrent_role_web_fqdn_override:
           - "{{ traefik_host }}"
-          - "rutorrent_role_web_fqdn_override2.{{ user.domain }}"
-          - "rutorrent_role_web_fqdn_override.new-domain.tld"
+          - "rutorrent2.{{ user.domain }}"
+          - "rutorrent.otherdomain.tld"
         ```
         
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
@@ -717,7 +717,7 @@ docker restart rutorrent
     2.  Example:
 
         ```yaml
-        rutorrent_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'rutorrent_role_web_host_override2.' + user.domain }}`)"
+        rutorrent_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'rutorrent2.' + user.domain }}`)"
         ```
         
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule

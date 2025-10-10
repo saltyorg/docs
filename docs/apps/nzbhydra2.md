@@ -56,6 +56,10 @@ Enter setup by clicking on "Config" at the top.
 
 To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used later in [Sonarr](sonarr.md) and [Radarr](radarr.md).
 
-## 5. Next
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Jackett](jackett.md).

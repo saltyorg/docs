@@ -33,4 +33,6 @@ sb install netdata
 
 - To access Netdata, visit `https://netdata._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Netdata Docs](https://learn.netdata.cloud/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -27,4 +27,6 @@ sb install diun
 
 - The config file for diun is located at `/opt/diun/diun.yml`
 
-- [:octicons-link-16: Documentation: diun Docs](https://crazymax.dev/diun/notif/discord){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

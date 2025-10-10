@@ -67,3 +67,7 @@ Static error pages are generated and stored in `/opt/error-pages/` on the host s
 If you want to customize the error pages further, you can:
 1. Modify the files in `/opt/error-pages/`
 2. Or rebuild the pages by reinstalling the role
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

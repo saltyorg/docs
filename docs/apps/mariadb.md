@@ -40,5 +40,6 @@ Saltbox recently swapped Docker images used for MariaDB. The migration path that
 
 The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration in the event manual intervention is required and the appdata for the legacy image remains on disk at `/opt/mariadb_legacy`.
 
-- [:octicons-link-16: Documentation: MariaDB Docs](https://mariadb.org/documentation/#getting-started){: .header-icons }
-- [:octicons-link-16: Documentation: Docker Image Docs](https://github.com/docker-library/docs/blob/master/mariadb/README.md){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -36,4 +36,6 @@ Scrutiny monitors hard drive health using S.M.A.R.T. metrics. The omnibus contai
 
 The container runs in privileged mode to access hardware S.M.A.R.T. data. Configuration is largely zero-config with settings available through the web interface.
 
-- [:octicons-link-16: Documentation: Scrutiny Documentation](https://github.com/AnalogJ/scrutiny/blob/master/README.md){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

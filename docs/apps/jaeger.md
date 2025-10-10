@@ -36,4 +36,6 @@ Jaeger provides distributed tracing for monitoring microservices. The all-in-one
 
 Note: Data is stored in-memory by default and will be lost when the container restarts.
 
-- [:octicons-link-16: Documentation: Jaeger Documentation](https://www.jaegertracing.io/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

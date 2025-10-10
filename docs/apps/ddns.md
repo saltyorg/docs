@@ -51,3 +51,7 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 - This service only works with Cloudflare DNS
 - The container requires access to Traefik's API to discover routes
 - DNS records are automatically managed based on active Traefik routes
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

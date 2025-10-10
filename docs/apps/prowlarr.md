@@ -27,6 +27,6 @@ sb install prowlarr
 
 - To access Prowlarr, visit `https://prowlarr._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://wiki.servarr.com/prowlarr){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

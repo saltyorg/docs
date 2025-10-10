@@ -32,4 +32,6 @@ NZBThrottle automatically throttles Usenet download speeds based on custom sched
 
 Note: Configuration is file-based with no web interface.
 
-- [:octicons-link-16: Documentation: NZBThrottle Documentation](https://github.com/daghaian/nzbthrottle#readme){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

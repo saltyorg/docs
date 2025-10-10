@@ -38,3 +38,7 @@ Further information:
 - [:octicons-link-16: Sqlite REINDEX](https://www.sqlite.org/lang_reindex.html)
 
 - [:octicons-link-16: A more comprehensive utility with similar purpose](https://github.com/ChuckPa/PlexDBRepair)
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

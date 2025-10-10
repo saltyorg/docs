@@ -412,6 +412,10 @@ This is used during the setup of [Organizr](organizr.md).
 
 - Go to "Settings" -> "General" -> "Security" -> "API Key".
 
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
 ## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.md).

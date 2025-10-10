@@ -186,3 +186,7 @@ Instructions below will guide you through creating an API Key for a specific app
 5. You have now have created an **Api Key** for your app.
 
    ![](../images/emby/emby-new-api-show.png)
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

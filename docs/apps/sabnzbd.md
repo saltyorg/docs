@@ -66,7 +66,11 @@ sb install sabnzbd
 
    Note that the category matches between Radarr and SABnzbd.  The specific category doesn't matter; just that they match.
 
-## 3. Next
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Qbittorrent](qbittorrent.md).
 

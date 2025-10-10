@@ -62,4 +62,6 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
   ![](../images/community/deluge_add_to_arr.png)
 
-- [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

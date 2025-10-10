@@ -34,4 +34,6 @@ sb install whisparr
 
 Whisparr works more or less the same as the other apps in the arr suite, since this is a fork of sonarr.
 
-- [:octicons-link-16: Documentation: Whisparr Docs](https://wiki.servarr.com/en/whisparr/quick-start-guide){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

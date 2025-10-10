@@ -54,3 +54,7 @@ The arr_db role performs the following operations for each enabled application:
 
 !!! warning
     Only run this role when you have enabled at least one application. The databases must already exist for the role to work.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

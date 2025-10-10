@@ -36,4 +36,6 @@ LLDAP provides a lightweight LDAP server with a user-friendly web interface for 
 
 Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI). To reset LLDAP, run `sb install lldap-reset`.
 
-- [:octicons-link-16: Documentation: LLDAP Documentation](https://github.com/lldap/lldap/blob/main/README.md){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

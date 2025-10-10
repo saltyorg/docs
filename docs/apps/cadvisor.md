@@ -35,4 +35,6 @@ cAdvisor automatically monitors all Docker containers on your system. No additio
 
 cAdvisor is often used with Prometheus and Grafana for advanced metrics collection and visualization.
 
-- [:octicons-link-16: Documentation: cAdvisor Docs](https://github.com/google/cadvisor/tree/master/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -208,4 +208,6 @@ Below are some example inventory entries for some common VPN providers. These ar
     gluetun_openvpn_custom_config: "/gluetun/custom.ovpn"
     ```
 
-- [:octicons-link-16: Documentation](https://github.com/qdm12/gluetun-wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -27,6 +27,6 @@ sb install jellyfin
 
 - To access Jellyfin, visit `https://jellyfin._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://docs.jellyfin.org/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

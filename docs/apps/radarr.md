@@ -502,6 +502,10 @@ This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organi
 
 [TraSH Guides](https://trash-guides.info/Radarr/)
 
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
 ## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Lidarr](lidarr.md).

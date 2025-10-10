@@ -26,7 +26,7 @@
     === "Example"
 
         ```yaml
-        {{ example_var }}: "custom_value"
+        {{ example_var }}: {{ get_example_value(example_var_type) }}
         ```
 {% endif %}
 

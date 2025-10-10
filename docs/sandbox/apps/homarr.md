@@ -317,17 +317,15 @@ sb install sandbox-homarr
           - "homarr2.{{ user.domain }}"
           - "homarr.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         homarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'homarr2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

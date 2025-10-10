@@ -1185,18 +1185,16 @@ Instructions below will guide you through creating an API Key for a specific app
               - "emby2.{{ user.domain }}"
               - "emby.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             emby_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'emby2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1281,17 +1279,15 @@ Instructions below will guide you through creating an API Key for a specific app
               - "emby2.{{ user.domain }}"
               - "emby.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             emby2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'emby2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

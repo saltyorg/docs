@@ -563,17 +563,15 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
           - "lldap2.{{ user.domain }}"
           - "lldap.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         lldap_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'lldap2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

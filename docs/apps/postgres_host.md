@@ -45,7 +45,7 @@ Configure per-version users, databases, and access control using `postgres_host_
     === "Example"
 
         ```yaml
-        postgres_host_role_versions: ["item1", "item2"]
+        postgres_host_role_versions: ["17", "18"]
         ```
 
 !!! warning
@@ -204,17 +204,15 @@ Configure per-version users, databases, and access control using `postgres_host_
           - "postgres_host2.{{ user.domain }}"
           - "postgres_host.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         postgres_host_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres_host2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

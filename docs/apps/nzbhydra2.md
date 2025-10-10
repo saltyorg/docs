@@ -616,18 +616,16 @@ To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used late
           - "nzbhydra22.{{ user.domain }}"
           - "nzbhydra2.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         nzbhydra2_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'nzbhydra22.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->
 

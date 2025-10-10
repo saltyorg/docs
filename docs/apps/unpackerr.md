@@ -475,17 +475,15 @@ Same setup is required for radarr and lidarr if you are using them.
           - "unpackerr2.{{ user.domain }}"
           - "unpackerr.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         unpackerr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'unpackerr2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

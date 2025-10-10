@@ -1416,18 +1416,16 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
               - "sonarr2.{{ user.domain }}"
               - "sonarr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1512,17 +1510,15 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
               - "sonarr2.{{ user.domain }}"
               - "sonarr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

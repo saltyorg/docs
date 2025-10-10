@@ -520,17 +520,15 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
           - "scrutiny2.{{ user.domain }}"
           - "scrutiny.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         scrutiny_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'scrutiny2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

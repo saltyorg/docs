@@ -771,18 +771,16 @@ sb install postgres
               - "postgres2.{{ user.domain }}"
               - "postgres.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             postgres_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -867,17 +865,15 @@ sb install postgres
               - "postgres2.{{ user.domain }}"
               - "postgres.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             postgres2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

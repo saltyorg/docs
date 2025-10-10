@@ -1494,18 +1494,16 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
               - "plex2.{{ user.domain }}"
               - "plex.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             plex_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1590,18 +1588,16 @@ To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._
               - "plex2.{{ user.domain }}"
               - "plex.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             plex2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->
 

@@ -35,4 +35,6 @@ You can view Autoheal's activity in the container logs:
 docker logs autoheal
 ```
 
-- [:octicons-link-16: Documentation: Autoheal Docs](https://github.com/willfarrell/docker-autoheal#readme){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

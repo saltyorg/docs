@@ -39,6 +39,10 @@ To access Portainer, visit  `https://portainer._yourdomain.com_`
 
 4. Portainer is now set up.
 
-## 4. Next
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Organizr](organizr.md).

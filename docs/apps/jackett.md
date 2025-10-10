@@ -57,6 +57,10 @@ Under "Configured Indexers":
 
     2. Jacket API Key
 
-## 4. Next
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Plex Media Server](plex.md).

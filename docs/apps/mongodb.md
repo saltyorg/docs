@@ -31,4 +31,6 @@ MongoDB 6 is deployed in a Docker container with data persisting to `/opt/mongo/
 
 Note: No authentication is configured by default.
 
-- [:octicons-link-16: Documentation: MongoDB Documentation](https://www.mongodb.com/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -83,6 +83,10 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ![](../images/overseerr/12-overseerr.png)
 
-## 3. Next
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Portainer](portainer.md).

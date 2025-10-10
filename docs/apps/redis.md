@@ -32,4 +32,6 @@ Redis is deployed using the official Alpine image with data persisting to `/opt/
 
 For custom configuration, create `redis.conf` in `/opt/redis/` and configure custom volumes in your inventory. Note: No authentication is configured by default.
 
-- [:octicons-link-16: Documentation: Redis Documentation](https://redis.io/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

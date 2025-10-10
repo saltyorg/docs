@@ -63,4 +63,6 @@ You can add additional hosts to Dozzle using the `dozzle_additional_hosts` inven
 dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2375|thirdserver"
 ```
 
-- [:octicons-link-16: Documentation](https://dozzle.dev/guide/what-is-dozzle){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -51,3 +51,7 @@ tags:
 - Location on server: `/opt/scripts/nzbget`.
 
 - Location within NZBGet: `/scripts/nzbget`.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

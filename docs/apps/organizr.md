@@ -160,6 +160,10 @@ Note: it is suggested to enter your `plex username and password`
 
 Any additional question please reach out to the [Organizr](https://organizr.app/) team, either via their [Discord Server](https://organizr.app/discord) or their [subreddit](https://www.reddit.com/r/organizr/)
 
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
 ## Next
 
 Are you setting Saltbox up for the first time?  You're ready to explore Saltbox! You can start checking out community apps in [Sandbox](../sandbox/basics.md) if you wish.

@@ -36,4 +36,6 @@ Prometheus provides monitoring and alerting with automatic installation of Node 
 
 Add custom scrape targets to the config file and restart with `docker restart prometheus`. Works excellently with Grafana using data source `http://prometheus:9090`.
 
-- [:octicons-link-16: Documentation: Prometheus Documentation](https://prometheus.io/docs/introduction/overview/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

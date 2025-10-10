@@ -66,6 +66,6 @@ To access Tautulli, visit `https://tautulli._yourdomain_.com`
 
     ![](../images/tautulli/10-tautulli-reboot.png)
 
-## 5. Next
+## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseerr.md).

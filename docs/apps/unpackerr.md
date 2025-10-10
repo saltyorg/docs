@@ -40,3 +40,7 @@ The important part of the setup is the setup for the applications.  You'll need 
 The `path` will depend on the torrent client you are using and its configuration.
 
 Same setup is required for radarr and lidarr if you are using them.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

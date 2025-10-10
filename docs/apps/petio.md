@@ -43,4 +43,6 @@ sb install petio
 
 - See the Petio documentation for more information.
 
-- [:octicons-link-16: Documentation](https://docs.petio.tv/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

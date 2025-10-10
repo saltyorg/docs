@@ -49,7 +49,7 @@ Further information:
     === "Example"
 
         ```yaml
-        plex_db_files: "custom_value"
+        plex_db_files: ["item1", "item2"]
         ```
 
 !!! warning

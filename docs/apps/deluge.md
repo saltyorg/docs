@@ -987,18 +987,16 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
               - "deluge2.{{ user.domain }}"
               - "deluge.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             deluge_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'deluge2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1083,17 +1081,15 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
               - "deluge2.{{ user.domain }}"
               - "deluge.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             deluge2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'deluge2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -463,17 +463,15 @@ Note: Configuration is file-based with no web interface.
           - "nzbthrottle2.{{ user.domain }}"
           - "nzbthrottle.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         nzbthrottle_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'nzbthrottle2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -945,18 +945,16 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
               - "whisparr2.{{ user.domain }}"
               - "whisparr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             whisparr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'whisparr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1041,17 +1039,15 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
               - "whisparr2.{{ user.domain }}"
               - "whisparr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             whisparr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'whisparr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

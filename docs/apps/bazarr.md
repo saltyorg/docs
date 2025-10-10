@@ -934,18 +934,16 @@ Please refer to the official documentation for an explanation of the settings. S
               - "bazarr2.{{ user.domain }}"
               - "bazarr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             bazarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'bazarr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1030,17 +1028,15 @@ Please refer to the official documentation for an explanation of the settings. S
               - "bazarr2.{{ user.domain }}"
               - "bazarr.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             bazarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'bazarr2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

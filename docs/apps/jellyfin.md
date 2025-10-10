@@ -986,18 +986,16 @@ sb install jellyfin
               - "jellyfin2.{{ user.domain }}"
               - "jellyfin.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             jellyfin_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyfin2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -1082,17 +1080,15 @@ sb install jellyfin
               - "jellyfin2.{{ user.domain }}"
               - "jellyfin.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             jellyfin2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyfin2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

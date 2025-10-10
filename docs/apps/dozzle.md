@@ -621,17 +621,15 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
           - "dozzle2.{{ user.domain }}"
           - "dozzle.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         dozzle_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'dozzle2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

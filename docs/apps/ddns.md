@@ -502,17 +502,15 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
           - "ddns2.{{ user.domain }}"
           - "ddns.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         ddns_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'ddns2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

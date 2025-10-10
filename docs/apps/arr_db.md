@@ -210,17 +210,15 @@ The arr_db role performs the following operations for each enabled application:
           - "arr_db2.{{ user.domain }}"
           - "arr_db.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         arr_db_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'arr_db2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

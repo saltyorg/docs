@@ -857,18 +857,16 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
               - "nginx2.{{ user.domain }}"
               - "nginx.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             nginx_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'nginx2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
     === "Instance-level"
 
@@ -953,17 +951,15 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
               - "nginx2.{{ user.domain }}"
               - "nginx.otherdomain.tld"
             ```
-            
+
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-            
 
         2.  Example:
 
             ```yaml
             nginx2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'nginx2.' + user.domain }}`)"
             ```
-            
+
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-            
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

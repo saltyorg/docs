@@ -11,62 +11,59 @@ tags:
 
 ## What is it?
 
-A customizable error page service that integrates with Traefik to display beautiful, themed error pages for HTTP errors (400-599). Instead of showing default browser error pages, this service provides professionally designed error pages that match your chosen template.
+Custom error pages that display when services return HTTP errors (400-599). Deployed automatically with Traefik.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/tarampampam/error-pages){: .header-icons } | [:octicons-link-16: Docs](https://github.com/tarampampam/error-pages){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/tarampampam/error-pages){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/tarampampam/error-pages){: .header-icons }|
 
-### 1. Installation
+## Installation
 
-``` shell
-
-sb install error_pages
-
-```
-
-### 2. Setup
-
-#### Configuration
-
-The error pages are automatically integrated with Traefik and will handle all HTTP errors (status codes 400-599) across your Saltbox services.
-
-#### Template Selection
-
-The default template is `l7`, but you can choose from various templates available in the [error-pages project](https://github.com/tarampampam/error-pages). To change the template, set the following in your inventory:
+Enable in `adv_settings.yml`:
 
 ```yaml
-error_pages_role_template: "ghost"  # or any other available template
+traefik:
+  error_pages: yes
 ```
 
-Available templates include:
-- `l7` (default)
-- `ghost`
-- `noise`
-- `hacker-terminal`
-- `shuffle`
-- `lost-in-space`
-- `app-down`
-- `connection`
-- And more (check the project repository for all options)
+Then install/update Traefik:
 
-#### How It Works
+```shell
+sb install traefik
+```
 
-When any service behind Traefik returns an HTTP error (4xx or 5xx):
-1. Traefik intercepts the error response
-2. The request is forwarded to the error-pages service
-3. The error-pages service returns a styled HTML page matching the error code
-4. The user sees a professional error page instead of a blank browser error
+## Configuration
 
-#### Error Pages Location
+### Change Template
 
-Static error pages are generated and stored in `/opt/error-pages/` on the host system.
+Change the template in your [inventory](../saltbox/inventory/index.md):
 
-#### Customization
+```yaml
+error_pages_role_template: "ghost"
+```
 
-If you want to customize the error pages further, you can:
-1. Modify the files in `/opt/error-pages/`
-2. Or rebuild the pages by reinstalling the role
+Available templates: `l7` (default), `ghost`, `noise`, `hacker-terminal`, `shuffle`, `lost-in-space`, `app-down`, `connection`, and [more](https://github.com/tarampampam/error-pages).
+
+Rebuild after changing:
+
+```shell
+sb install traefik
+```
+
+### Disable for Specific Apps
+
+Disable error pages for specific apps in your [inventory](../saltbox/inventory/index.md):
+
+```yaml
+plex_role_traefik_error_pages_enabled: false
+```
+
+## Notes
+
+- Error pages stored in `/opt/error-pages/`
+- Pre-generated at install time from selected template
+- Applied globally via Traefik middleware
+- Manual edits overwritten on rebuild
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
@@ -127,7 +124,7 @@ If you want to customize the error pages further, you can:
 
     # Envs
     # Type: dict
-    error_pages_role_docker_envs_default: 
+    error_pages_role_docker_envs_default:
       TEMPLATE_NAME: "{{ lookup('role_var', '_template', role='error_pages') }}"
 
     # Type: dict
@@ -135,7 +132,7 @@ If you want to customize the error pages further, you can:
 
     # Volumes
     # Type: list
-    error_pages_role_docker_volumes_default: 
+    error_pages_role_docker_volumes_default:
       - "/opt/error-pages:/opt/html"
 
     # Type: list
@@ -143,7 +140,7 @@ If you want to customize the error pages further, you can:
 
     # Labels
     # Type: dict
-    error_pages_role_docker_labels_default: 
+    error_pages_role_docker_labels_default:
       traefik.enable: "true"
       traefik.http.routers.error-pages-router.rule: "PathPrefix(`/`)"
       traefik.http.routers.error-pages-router.priority: "5"
@@ -507,17 +504,17 @@ If you want to customize the error pages further, you can:
           - "error_pages2.{{ user.domain }}"
           - "error_pages.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
+
 
     2.  Example:
 
         ```yaml
         error_pages_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'error_pages2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
+
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

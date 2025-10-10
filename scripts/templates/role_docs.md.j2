@@ -294,8 +294,12 @@
 
         {{ annotation_num.value }}.  Example:
 
-{% for line in var_config.example.split('\n') %}
+{% for line in var_config.example.rstrip().split('\n') %}
+{% if line.strip() %}
             {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
+{% else %}
+
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}
@@ -337,8 +341,12 @@
 
         {{ annotation_num.value }}.  Example:
 
-{% for line in var_config.example.split('\n') %}
+{% for line in var_config.example.rstrip().split('\n') %}
+{% if line.strip() %}
             {{ line.replace('{variable}', instance_var_name).replace('{role}', role_name) }}
+{% else %}
+
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}
@@ -376,8 +384,12 @@
 
     {{ annotation_num.value }}.  Example:
 
-{% for line in var_config.example.split('\n') %}
+{% for line in var_config.example.rstrip().split('\n') %}
+{% if line.strip() %}
         {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
+{% else %}
+
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}

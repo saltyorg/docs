@@ -2,6 +2,18 @@
 # Add apps here that don't need inventory sections (e.g., meta pages, deprecated apps)
 
 saltbox:
+  - asshama
+  - btop
+  - btrfsmaintenance
+  - cloudplow
+  - ctop
+  - custom
   - ddclient
+  - diag
+  - hetzner_nfs
+  - iperf3
+  - mainline
+  - node_exporter
+  - subliminal
 
 sandbox: []

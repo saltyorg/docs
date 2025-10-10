@@ -66,6 +66,10 @@ To access Tautulli, visit `https://tautulli._yourdomain_.com`
 
     ![](../images/tautulli/10-tautulli-reboot.png)
 
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
 ## Next
 
 Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseerr.md).

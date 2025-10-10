@@ -25,7 +25,7 @@ A host-based PostgreSQL installation role that deploys PostgreSQL directly on yo
 
 ``` shell
 
-sb install postgres_host
+sb install postgres-host
 
 ```
 
@@ -35,4 +35,6 @@ PostgreSQL is installed directly on the host with data stored in `/opt/postgresq
 
 Configure per-version users, databases, and access control using `postgres_host_role_config` in your inventory. Default root superuser is `root`/`password4321` (change this!). Connect from Docker using `host.docker.internal:5432`.
 
-- [:octicons-link-16: Documentation: PostgreSQL Documentation](https://www.postgresql.org/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

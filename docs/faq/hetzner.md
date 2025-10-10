@@ -56,7 +56,7 @@ mounts:
 Then run
 
 ```shell
-sb install mounts_override
+sb install mounts
 ```
 
 For Cloudplow you could add something like:

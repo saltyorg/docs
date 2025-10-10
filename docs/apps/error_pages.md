@@ -504,17 +504,15 @@ plex_role_traefik_error_pages_enabled: false
           - "error_pages2.{{ user.domain }}"
           - "error_pages.otherdomain.tld"
         ```
-        
+
         Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-        
 
     2.  Example:
 
         ```yaml
         error_pages_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'error_pages2.' + user.domain }}`)"
         ```
-        
+
         Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-        
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

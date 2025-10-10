@@ -89,8 +89,23 @@ def load_role_var_config():
         print(f"Warning: Invalid YAML in config file: {e}", file=sys.stderr)
         return {}, {}, set()
 
+def load_role_var_examples():
+    """Load role-specific variable example overrides from YAML config file"""
+    config_file = Path(__file__).parent / 'role_var_examples.yml'
+    try:
+        with open(config_file) as f:
+            config = yaml.safe_load(f) or {}
+        return config
+    except FileNotFoundError:
+        # File is optional, return empty dict
+        return {}
+    except yaml.YAMLError as e:
+        print(f"Warning: Invalid YAML in role var examples file: {e}", file=sys.stderr)
+        return {}
+
 # Load configuration at module level
 ROLE_VAR_DESCRIPTIONS, ROLE_VAR_DEFAULTS, IGNORE_ROLE_VAR_SUFFIXES = load_role_var_config()
+ROLE_VAR_EXAMPLE_OVERRIDES = load_role_var_examples()
 
 class RoleVariableParser:
     def __init__(self, repo_path: Path):
@@ -778,16 +793,28 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
     # Find example variable
     example_var = None
     example_var_type = "string"
-    for var_name in list(role_vars.keys())[:5]:
-        if '_docker_image_tag' in var_name:
+    example_var_value = None
+
+    # Check if there's an override for any variable in this role
+    for var_name in role_vars.keys():
+        if var_name in ROLE_VAR_EXAMPLE_OVERRIDES:
             example_var = var_name
             example_var_type = role_vars[var_name].var_type
+            example_var_value = ROLE_VAR_EXAMPLE_OVERRIDES[var_name]
             break
+
+    # If no override found, use default logic
     if not example_var:
-        first_var_name = list(role_vars.keys())[0] if role_vars else f"{role_name}_example_var"
-        example_var = first_var_name
-        if first_var_name in role_vars:
-            example_var_type = role_vars[first_var_name].var_type
+        for var_name in list(role_vars.keys())[:5]:
+            if '_docker_image_tag' in var_name:
+                example_var = var_name
+                example_var_type = role_vars[var_name].var_type
+                break
+        if not example_var:
+            first_var_name = list(role_vars.keys())[0] if role_vars else f"{role_name}_example_var"
+            example_var = first_var_name
+            if first_var_name in role_vars:
+                example_var_type = role_vars[first_var_name].var_type
 
     # Find docker vars if needed
     docker_info = None
@@ -840,6 +867,7 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
         'role_var_defaults': ROLE_VAR_DEFAULTS,
         'example_var': example_var,
         'example_var_type': example_var_type,
+        'example_var_value': example_var_value,
         'docker_info': docker_info,
         'parser': parser,
     }

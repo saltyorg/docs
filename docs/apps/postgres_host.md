@@ -45,7 +45,7 @@ Configure per-version users, databases, and access control using `postgres_host_
     === "Example"
 
         ```yaml
-        postgres_host_role_versions: "custom_value"
+        postgres_host_role_versions: ["item1", "item2"]
         ```
 
 !!! warning

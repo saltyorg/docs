@@ -65,7 +65,7 @@ The arr_db role performs the following operations for each enabled application:
     === "Example"
 
         ```yaml
-        arr_db_sonarr_enabled: "custom_value"
+        arr_db_sonarr_enabled: true
         ```
 
 !!! warning

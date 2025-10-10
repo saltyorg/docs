@@ -18,3 +18,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 - Does not support My Drive
 - Does not support encrypted files
 - Does not support alternative authentication methods
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

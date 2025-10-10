@@ -702,6 +702,29 @@ def format_default_value_filter(value, var_type):
                 return f'"{value}"'
     return value
 
+def get_example_value_for_type(var_type):
+    """Generate an appropriate example value based on variable type"""
+    if var_type == "bool":
+        return "true"
+    elif var_type == "int":
+        return "42"
+    elif var_type == "string":
+        return '"custom_value"'
+    elif var_type == "list":
+        return '["item1", "item2"]'
+    elif var_type == "dict":
+        return '{"key": "value"}'
+    elif var_type == "string (true/false)":
+        return '"true"'
+    elif var_type == "string (number)":
+        return '"30"'
+    elif var_type == "string (http/https)":
+        return '"https"'
+    elif var_type == "string/int":
+        return "8080"
+    else:
+        return '"custom_value"'
+
 def prepare_template_context(role_name, role_vars, parsed, instances_var, role_var_lookups, parser):
     """Prepare context dictionary for Jinja2 template"""
 
@@ -754,12 +777,17 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
 
     # Find example variable
     example_var = None
+    example_var_type = "string"
     for var_name in list(role_vars.keys())[:5]:
         if '_docker_image_tag' in var_name:
             example_var = var_name
+            example_var_type = role_vars[var_name].var_type
             break
     if not example_var:
-        example_var = list(role_vars.keys())[0] if role_vars else f"{role_name}_example_var"
+        first_var_name = list(role_vars.keys())[0] if role_vars else f"{role_name}_example_var"
+        example_var = first_var_name
+        if first_var_name in role_vars:
+            example_var_type = role_vars[first_var_name].var_type
 
     # Find docker vars if needed
     docker_info = None
@@ -811,6 +839,7 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
         'role_var_descriptions': ROLE_VAR_DESCRIPTIONS,
         'role_var_defaults': ROLE_VAR_DEFAULTS,
         'example_var': example_var,
+        'example_var_type': example_var_type,
         'docker_info': docker_info,
         'parser': parser,
     }
@@ -852,6 +881,7 @@ def generate_docs_section(role_name: str, repo_path: Path, is_sandbox: bool = Fa
     env.globals['get_docker_var_type_comment'] = lambda var_suffix: parser.get_docker_var_type_comment(var_suffix, "")
     env.globals['adjust_multiline_indentation'] = lambda value_lines, orig_name, new_name, indent: parser.adjust_multiline_indentation(value_lines, orig_name, new_name, indent)
     env.globals['format_default_value'] = format_default_value_filter
+    env.globals['get_example_value'] = get_example_value_for_type
 
     template = env.get_template('role_docs.md.j2')
     return template.render(**context)

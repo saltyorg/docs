@@ -36,4 +36,6 @@ sb install sandbox-your_spotify
 
 - To access Yourspotify, visit `https://your_spotify._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Yourspotify Docs](https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

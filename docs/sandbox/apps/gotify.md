@@ -33,9 +33,11 @@ sb install sandbox-gotify
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-- [:octicons-link-16: Documentation](https://gotify.github.io/api-docs/){: .header-icons }
-
 !!! info
     Android App <br />
     <https://github.com/gotify/android>
     <https://f-droid.org/de/packages/com.github.gotify/>
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

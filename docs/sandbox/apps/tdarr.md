@@ -43,4 +43,6 @@ tdarr_server_external: false
 
 By switching `tdarr_server_external` to `true` the Tdarr server will be accessible externally via the specified `tdarr_server_port` on any hostname or IP address pointing directly to the server.
 
-- [:octicons-link-16: Documentation: Tdarr Docs](https://docs.tdarr.io/docs/welcome/what/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

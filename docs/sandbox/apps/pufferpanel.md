@@ -29,3 +29,7 @@ sb install sandbox-pufferpanel
 ### 2. URL
 
 - To access PufferPanel, visit `https://pufferpanel._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

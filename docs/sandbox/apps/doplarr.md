@@ -89,4 +89,6 @@ sb install sandbox-doplarr
     4. This line will set the Radarr API key. Place your API key here. Wrap it in quotes.
     5. This line will set the Discord token. Place your token here. Wrap it in quotes.
 
-- [:octicons-link-16: Documentation: Doplarr Docs](https://kiranshila.github.io/Doplarr/#/configuration){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

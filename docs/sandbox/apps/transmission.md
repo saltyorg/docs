@@ -37,4 +37,6 @@ sb install sandbox-transmission
 
 - Do not change the published ports if you want to be connectable.
 
-- [:octicons-link-16: Documentation: Transmission Docs](https://github.com/transmission/transmission/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

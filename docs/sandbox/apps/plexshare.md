@@ -29,3 +29,7 @@ sb install sandbox-plexshare
 ### 2. URL
 
 - To access PlexShare, visit `https://plexshare._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

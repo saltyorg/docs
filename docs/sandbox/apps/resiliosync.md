@@ -39,3 +39,7 @@ sb install sandbox-resiliosync
  ``` yaml
 resiliosync_data_port: "#####"
 ```
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

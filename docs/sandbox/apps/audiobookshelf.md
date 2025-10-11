@@ -32,4 +32,6 @@ sb install sandbox-audiobookshelf
 
 - To access Audiobookshelf, visit `https://audiobookshelf._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Audiobookshelf Docs](https://www.audiobookshelf.org/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

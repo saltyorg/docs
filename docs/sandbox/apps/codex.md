@@ -48,4 +48,6 @@ sb install sandbox-codex
 
 - To access Codex, visit `https://codex._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Codex Docs](https://github.com/ajslater/codex#%EF%B8%8F-configuration){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

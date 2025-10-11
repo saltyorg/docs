@@ -29,6 +29,6 @@ sb install sandbox-miniflux
 
 - To access miniflux, visit `https://miniflux._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Miniflux Docs](https://miniflux.app){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

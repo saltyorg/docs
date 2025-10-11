@@ -45,4 +45,6 @@ sb install sandbox-threadfin
 
   - EPG (all) `http://threadfin:34400/xmltv/threadfin.xml`
 
-- [:octicons-link-16: Documentation: Threadfin Docs](https://github.com/Threadfin/Threadfin){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

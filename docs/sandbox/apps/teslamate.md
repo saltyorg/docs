@@ -51,3 +51,8 @@ sb install sandbox-teslamate-postgres-password
 ```
 
 Save and Test
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+

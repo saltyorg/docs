@@ -38,3 +38,7 @@ sb install sandbox-meilisearch
 Port 7700 is open to the container by default. Also analytics are disabled by default.
 
 Visit `https://www.meilisearch.com/docs`.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

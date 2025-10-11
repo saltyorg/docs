@@ -32,6 +32,6 @@ sb install sandbox-filebrowser
 !!! info
     The initial `admin` user has a randomly generated password. You may retrieve this password in the container logs via `docker logs filebrowser`. We recommend changing the credentials promptly upon deployment.
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: File Browser Docs](https://filebrowser.org/features){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

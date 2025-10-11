@@ -38,3 +38,7 @@ sb install sandbox-profilarr
 ## Usage
 
 Visit `https://profilarr._yourdomain.com_`.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

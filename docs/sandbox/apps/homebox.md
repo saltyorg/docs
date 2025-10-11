@@ -36,4 +36,6 @@ sb install sandbox-homebox
 
 - Create a user in the web ui, add your email and password, then log in.
 
-- [:octicons-link-16: Documentation: Homebox Docs](https://homebox.software/en/quick-start.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

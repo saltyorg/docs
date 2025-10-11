@@ -111,4 +111,6 @@ qbit_manage:
   qbt_width: "100" # Default is "100"
 ```
 
-- [:octicons-link-16: Documentation: qBit Manage Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -31,6 +31,6 @@ sb install sandbox-discoflix
 
 - To access DiscoFlix, visit `https://discoflix._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Discoflix Docs](https://github.com/nickheyer/discoflix/blob/main/README.md#general-instructions){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

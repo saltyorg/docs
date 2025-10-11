@@ -29,6 +29,6 @@ sb install sandbox-airsonic
 
 - To access Airsonic, visit `https://airsonic._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://airsonic.github.io/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

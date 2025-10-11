@@ -42,4 +42,6 @@ sb install sandbox-invoiceninja
 
 Enter email, and password from accounts.yml setting.
 
-- [:octicons-link-16: Documentation: Invoice Ninja Docs](https://invoiceninja.github.io/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -29,3 +29,7 @@ sb install sandbox-paperless-ai
 ### 2. URL
 
 - To access Paperless AI, visit `https://paperless-ai._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

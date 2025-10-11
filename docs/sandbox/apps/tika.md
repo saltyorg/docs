@@ -31,6 +31,6 @@ sb install sandbox-tika
 
 - To access tika, visit `https://tika._yourdomain.com_`
 
-### 3. Usage
-
-- Instructions for tika
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

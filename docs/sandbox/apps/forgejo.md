@@ -42,4 +42,6 @@ sb install sandbox-forgejo
 
 - To access Forgejo, visit `https://forgejo._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Forgejo Docs](https://Forgejo.dev/docs/category/integrations){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

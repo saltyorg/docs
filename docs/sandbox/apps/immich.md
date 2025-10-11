@@ -62,4 +62,6 @@ immich_docker_envs_custom:
 
 ```
 
-- [:octicons-link-16: Documentation: Immich Docs](https://immich.app/docs/overview/introduction){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

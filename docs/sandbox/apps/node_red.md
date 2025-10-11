@@ -38,4 +38,6 @@ Addons and/or plugins can be installed to Node Red to add functionality. In Node
 
 Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistant-websocket) to connect to [Home Assistant](../apps/homeassistant.md). (Requires Home Assistant to be installed and running, and HACS to be installed in Home Assistant.) For more information, see the Home Assistant page.
 
-- [:octicons-link-16: Documentation: Node Red Docs](https://www.nodered.org/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

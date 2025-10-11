@@ -41,4 +41,6 @@ sb install sandbox-wikijs
 !!! info
     📢 No default user is configured until you run through the setup screen, so you should ideally run through setup as soon as the container is deployed to secure the site. It is not behind authelia by default.
 
-- [:octicons-link-16: Documentation: Wikijs Docs](https://docs.requarks.io/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

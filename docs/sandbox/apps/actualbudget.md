@@ -25,6 +25,6 @@ You own your data and can do whatever you want with it. Featuring multi-device s
 
 To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
-## 3. Usage
-
-**[Documentation: Actual Budget Docs](https://actualbudget.org/docs/)**
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

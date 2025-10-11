@@ -65,3 +65,7 @@ To get a list of available commands:
 ```shell
 docker exec plextraktsync plextraktsync --help
 ```
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

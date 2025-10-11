@@ -60,4 +60,6 @@ Any actual game server configs will be in the `/opt/CONTAINERNAME/serverfiles/` 
 
 In your game, connect to your ip and default ports for the server. Make sure you set the UDP and TCP for the ports correctly. If everything was setup correctly the game should connect to the server.
 
-- [:octicons-link-16: Documentation: LGSM Docs](https://docs.linuxgsm.com/configuration/game-server-config){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

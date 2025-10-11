@@ -29,3 +29,7 @@ sb install sandbox-dashdot
 ### 2. URL
 
 - To access Dashdot, visit `https://dashdot._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -30,4 +30,6 @@ sb install sandbox-elasticsearch
 
 ```
 
-- [:octicons-link-16: Documentation: Elasticsearch Docs](https://www.elastic.co/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

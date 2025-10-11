@@ -32,6 +32,7 @@ sb install sandbox-qui
 ### 3. Setup
 
 - Configure your qBittorrent instance connections through the web interface.
-- See [documentation](https://github.com/autobrr/qui?tab=readme-ov-file#configuration) for configuration details.
 
-- [:octicons-link-16: Documentation: Qui Documentation](https://github.com/autobrr/qui?tab=readme-ov-file#configuration){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

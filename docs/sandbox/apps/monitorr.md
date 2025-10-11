@@ -29,6 +29,6 @@ sb install sandbox-monitorr
 
 - To access Monitorr, visit `https://monitorr._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Monitorr Docs](https://github.com/Monitorr/Monitorr/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

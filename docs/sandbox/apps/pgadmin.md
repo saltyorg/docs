@@ -41,4 +41,6 @@ sb install sandbox-pgadmin
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: pgadmin Docs](https://www.pgadmin.org/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

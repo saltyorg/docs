@@ -32,6 +32,6 @@ sb install sandbox-booksonic
 
 - To access Booksonic Air, visit `https://booksonic._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://booksonic.org/how){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

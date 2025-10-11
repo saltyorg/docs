@@ -39,4 +39,6 @@ sb install sandbox-lunasea
 
 - To access Lunasea, visit `https://lunasea._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Lunasea Docs](https://docs.lunasea.app/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

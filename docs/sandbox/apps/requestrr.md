@@ -29,6 +29,6 @@ sb install sandbox-requestrr
 
 - To access Requestrr, visit `https://requestrr._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Requestrr Docs](https://github.com/thomst08/requestrr/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -38,3 +38,7 @@ The role supports two image types configurable via inventory:
 - **Headless Mode** (`ytdl_sub_image_type: "headless"`): Command-line focused, lightweight deployment (default)
 
 Configure your subscriptions using YAML files in the config directory.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

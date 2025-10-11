@@ -39,4 +39,6 @@ sb install sandbox-jdownloader2
 
 4. See <https://my.jdownloader.org/> for browser extensions and phone apps as desired.
 
-- [:octicons-link-16: Documentation: JDownloader Docs](https://beta.jdownloader.org/support){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

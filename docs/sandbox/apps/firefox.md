@@ -74,3 +74,7 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
 While the tunnel is active, you can use a VNC client to access the GUI via the address `localhost:5900`.
 
   [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Access project Docker environment variables breakdown"
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

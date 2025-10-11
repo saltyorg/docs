@@ -29,4 +29,6 @@ sb install sandbox-duplicati
 
 - To access duplicati, visit `https://duplicati._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Duplicati Docs](https://duplicati.readthedocs.io/en/latest/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

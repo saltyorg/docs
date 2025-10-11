@@ -52,4 +52,6 @@ sb install sandbox-tvheadend
 
 - To access Tvheadend, visit `https://tvheadend._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Tvheadend Docs](https://docs.tvheadend.org/documentation){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

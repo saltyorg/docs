@@ -29,6 +29,6 @@ sb install sandbox-kavita
 
 - To access Kavita, visit `https://kavita._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Kavita Docs](https://wiki.kavitareader.com/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

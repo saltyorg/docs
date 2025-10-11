@@ -31,6 +31,6 @@ sb install sandbox-xbackbone
 
 - To access xbackbone, visit `https://xbackbone._yourdomain.com_`
 
-### 3. Usage
-
-- Instructions for xbackbone
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

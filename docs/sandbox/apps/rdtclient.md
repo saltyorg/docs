@@ -31,6 +31,6 @@ sb install sandbox-rdtclient
 
 - To access rdtclient, visit `https://rdtclient._yourdomain.com_`
 
-### 3. Usage
-
-- Instructions for rdtclient
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

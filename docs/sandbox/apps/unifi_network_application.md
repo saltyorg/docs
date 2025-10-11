@@ -69,3 +69,7 @@ sb install sandbox-unifi-network-application
         - "6789:6789/tcp" #For mobile throughput test
         - "5514:5514/udp" #Remote syslog port
       ```
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

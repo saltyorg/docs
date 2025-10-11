@@ -36,4 +36,6 @@ The password provisioned is your Saltbox password.
 
 - Use the Web UI to configure your clients.
 
-- [:octicons-link-16: Documentation: Wireguard Docs](https://github.com/wg-easy/wg-easy){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

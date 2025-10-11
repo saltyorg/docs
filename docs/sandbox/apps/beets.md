@@ -52,4 +52,6 @@ sb install sandbox-beets
     docker exec -it beets /bin/bash -c 'beet import /music'
     ```
 
-- [:octicons-link-16: Documentation](http://beets.readthedocs.org/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

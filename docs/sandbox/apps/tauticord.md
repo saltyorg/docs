@@ -39,4 +39,6 @@ Once started, Tauticord will connect to your Tautulli and Discord servers and be
 
 By default, library statistics are updated once every hour, and stream data is updated once every 15 seconds.
 
-- [:octicons-link-16: Documentation: Tauticord Docs](https://github.com/nwithan8/tauticord){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -33,4 +33,6 @@ sb install sandbox-influxdb2
 
 - To setup the initial admin user, token and bucket, visit the UI at the URL above.
 
-- [:octicons-link-16: Documentation: InfluxDB Docs](https://docs.influxdata.com/influxdb/latest/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

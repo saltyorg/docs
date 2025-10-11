@@ -35,4 +35,6 @@ sb install sandbox-minecraft-bedrock
 
 By default, the server will be using the latest version available. To choose a specific version add `minecraft_bedrock_version: "1.19.31"` to the [inventory system](../../saltbox/inventory/index.md).
 
-- [:octicons-link-16: Documentation: MC Bedrock Docs](https://github.com/itzg/docker-minecraft-bedrock-server){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

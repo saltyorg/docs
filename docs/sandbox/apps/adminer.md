@@ -55,4 +55,6 @@ sb install sandbox-adminer
 ??? tip "Adminer Plugins"
     Adminer has a number of plugins available to extend its functionality. You can find them [here](https://www.adminer.org/en/plugins/).
 
-- [:octicons-link-16: Documentation: Adminer Docs](https://github.com/vrana/adminer/#readme){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

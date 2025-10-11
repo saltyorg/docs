@@ -37,4 +37,6 @@ sb install sandbox-foundry
 
 - To access foundry, visit `https://foundry._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Foundry Docs](https://foundryvtt.com/kb/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

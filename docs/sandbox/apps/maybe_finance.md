@@ -29,3 +29,7 @@ sb install sandbox-maybe-finance
 ### 2. URL
 
 - To access Maybe Finance, visit `https://maybe-finance._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

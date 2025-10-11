@@ -29,6 +29,6 @@ sb install sandbox-filezilla
 
 - To access FileZilla, visit `https://filezilla._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: FileZilla Docs](https://wiki.filezilla-project.org/Main_Page){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

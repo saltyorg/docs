@@ -29,6 +29,6 @@ sb install sandbox-freshrss
 
 - To access Freshrss, visit `https://freshrss._yourdomain.com_`
 
-### 3. Usage
-
-- [:octicons-link-16: Documentation: Freshrss Docs](https://freshrss.github.io/FreshRSS/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

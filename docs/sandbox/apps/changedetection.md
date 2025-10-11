@@ -29,6 +29,6 @@ sb install sandbox-changedetection
 
 - To access changedetection, visit `https://changedetection._yourdomain.com_`
 
-### 3. Usage
-
-- [:octicons-link-16: Documentation: Change Detection Docs](https://changedetection.io/#features){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

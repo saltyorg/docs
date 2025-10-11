@@ -76,3 +76,7 @@ You will need your API Keys from both Radarr and Sonarr.
 24. Save and test changes
 
 25. Once Overseerr, Plex, Sonarr, Radarr configurations are in place, you can use the app to you preferences.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

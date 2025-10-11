@@ -28,6 +28,6 @@ sb install sandbox-influxdb
 
 ```
 
-### 2. Setup
-
-- [:octicons-link-16: Documentation: InfluxDB Docs](https://docs.influxdata.com/influxdb/v1/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -33,3 +33,7 @@ sb install sandbox-crafty
 ### 3. Setup
 
 Default credentials are generated on first run and stored in `default-creds.txt` in your app data folder.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

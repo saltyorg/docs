@@ -27,5 +27,8 @@ sb install sandbox-factorio
 
 ### 2. Setup
 
-- [:octicons-link-16: Documentation](https://wiki.factorio.com/Multiplayer){: .header-icons }
 - Set to install the latest Factorio experimental (1.1.x) build. Fix to a certain version using the [inventory system](../../saltbox/inventory/index.md).
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -37,4 +37,6 @@ sb install sandbox-sabthrottle
         docker logs -f sabthrottle
         ```
 
-- [:octicons-link-16: Documentation: SAB Throttle Docs](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

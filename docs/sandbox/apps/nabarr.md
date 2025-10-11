@@ -25,6 +25,6 @@ sb install sandbox-nabarr
 
 ```
 
-### 2. Setup
-
-- [:octicons-link-16: Documentation: Nabarr Docs](https://github.com/l3uddz/nabarr){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -69,4 +69,6 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
       sb install sandbox-notifiarr
       ```
 
-[:octicons-link-16: Documentation: Notifiarr Client Docs](https://notifiarr.wiki/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -29,7 +29,3 @@ tags:
 sb install sandbox-plex-dupefinder
 
 ```
-
-### 2. Setup
-
-- [:octicons-link-16: Documentation: Plex Dupefinder Docs](https://github.com/l3uddz/plex_dupefinder#configuration/){: .header-icons }

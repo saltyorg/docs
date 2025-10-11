@@ -32,4 +32,6 @@ sb install sandbox-makemkv
 
 - To access makemkv, visit `https://makemkv._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: MakeMKV Docs](https://www.makemkv.com/onlinehelp/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

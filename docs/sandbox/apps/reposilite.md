@@ -32,3 +32,7 @@ sb install sandbox-reposilite
 ### 3. Usage
 
 - Consult [the doc](https://reposilite.com/guide/docker)
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

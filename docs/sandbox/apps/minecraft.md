@@ -57,7 +57,7 @@ When you have set up multiple servers, they will all use the `minecraft_docker_i
 
 ``` yaml title="Inventory"
 
-minecraft_instances: ["server1", "server2"] # (1)!
+minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
 mcserver1_docker_image_tag: "itzg/minecraft-server:latest" # (2)!
 mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
@@ -67,4 +67,6 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 2. This will install the latest version of the minecraft server on mcserver1.
 3. This will install version 1.17.1 of the minecraft server on mcserver2.
 
-- [:octicons-link-16: Documentation](https://github.com/itzg/docker-minecraft-server){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

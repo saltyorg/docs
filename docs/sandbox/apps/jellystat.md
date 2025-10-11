@@ -29,3 +29,7 @@ sb install sandbox-jellystat
 ### 2. URL
 
 - To access Jellystat, visit `https://jellystat._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

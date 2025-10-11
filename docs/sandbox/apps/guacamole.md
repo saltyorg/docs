@@ -116,3 +116,7 @@ Guacamole supports various authentication extensions that can be enabled through
     ```
 
 After adding any extension options, run `sb install sandbox-guacamole` to apply changes.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

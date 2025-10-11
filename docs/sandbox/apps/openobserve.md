@@ -33,3 +33,7 @@ sb install sandbox-openobserve
 ### 3. Setup
 
 Default credentials are configured using your user email and password. Root user setup is required for initial access.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -29,3 +29,7 @@ sb install sandbox-cockpit
 ### 2. URL
 
 - To access Cockpit, visit `https://cockpit._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

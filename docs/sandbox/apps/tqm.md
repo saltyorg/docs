@@ -192,4 +192,6 @@ tail -f /opt/tqm/activity.log
 
 ```
 
-- [:octicons-link-16: Documentation: TQM Docs](https://github.com/autobrr/tqm){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

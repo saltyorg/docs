@@ -29,3 +29,7 @@ sb install sandbox-linkwarden
 ### 2. URL
 
 - To access LinkWarden, visit `https://linkwarden._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

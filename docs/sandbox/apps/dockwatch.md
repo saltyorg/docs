@@ -49,4 +49,6 @@ Set up the update options first, if you want to set them all at the same time us
 
 Add your notifiarr API key in the notification tab in order to set up notifications.
 
-- [:octicons-link-16: Documentation: Dockwatch Docs](https://github.com/Notifiarr/dockwatch#environment-variables){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

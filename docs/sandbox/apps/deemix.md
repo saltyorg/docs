@@ -29,6 +29,6 @@ sb install sandbox-deemix
 
 - To access deemix, visit `https://deemix._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Deemix Docs](https://gitlab.com/Bockiii/deemix-docker){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

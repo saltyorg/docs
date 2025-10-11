@@ -31,6 +31,6 @@ sb install sandbox-gitea
 
 - To access Gitea, visit `https://gitea._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Gitea Docs](https://docs.gitea.io/en-us/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

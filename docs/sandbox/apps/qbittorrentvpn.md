@@ -81,6 +81,6 @@ tags:
 
 - To access qbittorrentvpn, visit `https://qbittorrentvpn._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: qBittorrentvpn Docs](https://github.com/binhex/arch-qbittorrentvpn){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

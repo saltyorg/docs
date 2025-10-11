@@ -43,6 +43,6 @@ By switching `tdarr_node_external` to `true` the node will be accessible externa
 
 To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tdarr_node_server_port` to the IP/hostname and port of the exposed Tdarr server.
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Tdarr Node Docs](https://docs.tdarr.io/docs/installation/getting-started){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

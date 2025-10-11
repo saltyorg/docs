@@ -84,3 +84,7 @@ fireflyiii_traefik_sso_middleware: ""
 ```
 
 Redeploy the Firefly III role to apply the above changes.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

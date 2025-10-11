@@ -41,3 +41,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
   - --remote-debugging-port=9222
   - --hide-scrollbars
 ```
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

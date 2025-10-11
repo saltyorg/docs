@@ -54,4 +54,6 @@ sb install sandbox-tubearchivist
 !!!note
    Tubearchivist adds the downloaded media to `/mnt/unionfs/downloads/tubearchivist/YT_CHANNEL_NAME`
 
-- [:octicons-link-16: Documentation: Tubearchivist Docs](https://github.com/tubearchivist/tubearchivist/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

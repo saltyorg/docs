@@ -29,3 +29,7 @@ sb install sandbox-koel
 ### 2. URL
 
 - To access Koel, visit `https://koel._yourdomain.com_`
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

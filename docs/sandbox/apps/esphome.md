@@ -39,3 +39,7 @@ sb install sandbox-esphome
 See the [ESPHome docs](https://esphome.io/components/) and [ESPHome forums](https://community.home-assistant.io/c/esphome/) for .yaml file creation assistance.
 
 If adding ESPHome into your Homeassistant, it should auto-detect any newly created devices.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

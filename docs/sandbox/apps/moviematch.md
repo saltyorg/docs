@@ -57,4 +57,6 @@ sb install sandbox-moviematch
 
 MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 
-- [:octicons-link-16: Documentation: MovieMatch Docs](https://github.com/LukeChannings/moviematch){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

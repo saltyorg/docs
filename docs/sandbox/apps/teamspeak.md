@@ -40,3 +40,7 @@ Connect to the server using a TeamSpeak client at `teamspeak._yourdomain.com_` u
 
 [envs]: https://github.com/docker-library/docs/blob/master/teamspeak/README.md#environment-variables "Access project Docker environment variables reference"
 [inventory]: ../../saltbox/inventory/index.md "Access Inventory user guide"
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

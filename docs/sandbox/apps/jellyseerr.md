@@ -47,4 +47,6 @@ sb install sandbox-jellyseerr
 
 - To access Jellyseerr, visit `https://jellyseerr._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Jellyseerr Docs](https://docs.jellyseerr.dev/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

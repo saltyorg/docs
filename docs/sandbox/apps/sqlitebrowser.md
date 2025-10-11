@@ -31,6 +31,6 @@ sb install sandbox-sqlitebrowser
 
 - By default, the role is protected behind your Authelia/SSO middleware.
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: SQLite Browser Docs](https://github.com/sqlitebrowser/sqlitebrowser/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

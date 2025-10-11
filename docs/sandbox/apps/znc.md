@@ -35,6 +35,6 @@ Default user/password: admin/admin
 
 Change that password ASAP.
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: ZNC Docs](https://wiki.znc.in/ZNC){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

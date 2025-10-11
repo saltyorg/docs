@@ -60,4 +60,6 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 - Image version number: <br />
   `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre`
 
-- [:octicons-link-16: Documentation](https://manual.calibre-ebook.com/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

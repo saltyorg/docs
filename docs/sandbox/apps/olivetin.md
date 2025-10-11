@@ -35,4 +35,6 @@ sb install sandbox-olivetin
 
 - Check out [the configuration section of the documentation](https://docs.olivetin.app/config.html) to start building your actions.
 
-- [:octicons-link-16: Documentation: OliveTin Docs](https://docs.olivetin.app/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

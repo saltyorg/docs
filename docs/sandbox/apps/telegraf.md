@@ -25,6 +25,6 @@ sb install sandbox-telegraf
 
 ```
 
-### 2. Setup
-
-- [:octicons-link-16: Documentation: Telegraf Docs](https://docs.influxdata.com/telegraf/v1.20/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

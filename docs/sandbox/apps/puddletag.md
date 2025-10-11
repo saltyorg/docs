@@ -41,4 +41,6 @@ sb install sandbox-puddletag
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: Puddletag Docs](https://docs.puddletag.net/docs.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

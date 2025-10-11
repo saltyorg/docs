@@ -41,4 +41,6 @@ sb install sandbox-linkding
   Password: password from accounts.yml
   ```
 
-- [:octicons-link-16: Documentation: Linkding Docs](https://github.com/sissbruecker/linkding#documentation){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

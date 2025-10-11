@@ -85,6 +85,6 @@ If everything goes as planned you'll get prompted like this:
     `https://funkwhale.domain.com/settings`
     (subsonic protocol requires storing password in cleartext, so to avoid compromising your Funkwhale account, we use a different password).
 
-**Additional Information:**
-
-- [:octicons-link-16: Documentation: Funkwhale Docs](https://docs.funkwhale.audio/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

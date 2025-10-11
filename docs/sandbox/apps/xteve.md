@@ -57,4 +57,6 @@ sb install sandbox-xteve
 
     * EPG (all) `http://xteve:34400/xmltv/xteve.xml`
 
-- [:octicons-link-16: Documentation: xTeVe Docs](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

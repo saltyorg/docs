@@ -33,3 +33,7 @@ sb install sandbox-barcodebuddy
 ### 3. Setup
 
 Configure the connection to your Grocy instance through the application settings and set up user authentication.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

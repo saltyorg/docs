@@ -31,6 +31,6 @@ sb install sandbox-mkvtoolnix
 
 - To access MKVToolNix, visit `https://mkvtoolnix._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: MKVToolNix Docs](https://mkvtoolnix.download/docs.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

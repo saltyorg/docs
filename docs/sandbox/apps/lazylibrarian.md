@@ -29,6 +29,6 @@ sb install sandbox-lazylibrarian
 
 - To access LazyLibrarian, visit `https://lazylibrarian._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Lazy Librarian Docs](https://lazylibrarian.gitlab.io/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

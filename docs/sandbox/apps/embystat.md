@@ -29,6 +29,6 @@ sb install sandbox-embystat
 
 - To access EmbyStat, visit `https://embystat._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://github.com/mregni/EmbyStat/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

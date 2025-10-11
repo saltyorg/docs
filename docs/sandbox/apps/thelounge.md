@@ -67,4 +67,6 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
 ![The Lounge network Screenshot](../../sandbox/images/lounge_network.png)
 
-- [:octicons-link-16: Documentation: The Lounge Docs](https://thelounge.chat/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

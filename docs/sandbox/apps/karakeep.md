@@ -36,3 +36,7 @@ sb install sandbox-karakeep
 ## Usage
 
 Visit `https://karakeep.app/`.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

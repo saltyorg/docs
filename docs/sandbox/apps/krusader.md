@@ -39,4 +39,6 @@ sb install sandbox-krusader
 - The configured password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 - /mnt is already mounted to /mnt
 
-- [:octicons-link-16: Documentation: Krusader Docs](https://github.com/binhex/arch-krusader){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

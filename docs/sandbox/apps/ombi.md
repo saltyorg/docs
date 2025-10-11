@@ -31,6 +31,6 @@ sb install sandbox-ombi
 
 - To access Ombi, visit `https://ombi._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Ombi Docs](https://docs.ombi.app/guides/installation/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

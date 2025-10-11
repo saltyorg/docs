@@ -29,6 +29,6 @@ sb install sandbox-epms
 
 ```
 
-### 2. Setup
-
-- [:octicons-link-16: Documentation](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

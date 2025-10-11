@@ -34,4 +34,6 @@ sb install sandbox-mealie
 
 - To access Mealie, visit `https://mealie._yourdomain.tld_`
 
-- [:octicons-link-16: Documentation: Mealie Docs](https://docs.mealie.io/documentation/getting-started/introduction/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

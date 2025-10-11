@@ -29,6 +29,6 @@ sb install sandbox-trilium
 
 - To access Trilium Notes, visit `https://trilium._yourdomain.com_`
 
-### 3. Documentation
-
-- [:octicons-link-16: Documentation: Trillium Docs](https://github.com/zadam/trilium/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

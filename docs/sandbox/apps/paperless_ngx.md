@@ -39,4 +39,6 @@ sb install sandbox-paperless-ngx
 !!! info
     Please refer to [this](https://github.com/saltyorg/docs/issues/116#issuecomment-1278733921) comment on the initial PR for questions about google storage!
 
-- [:octicons-link-16: Documentation: Paperless NGX Docs](https://paperless-ngx.readthedocs.io/en/latest/index.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

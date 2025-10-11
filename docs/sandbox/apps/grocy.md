@@ -33,3 +33,7 @@ sb install sandbox-grocy
 ### 3. Setup
 
 Default login is admin/admin. Configure authentication and users through the application settings.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

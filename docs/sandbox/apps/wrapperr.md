@@ -33,4 +33,6 @@ sb install sandbox-wrapperr
 
 - The very first thing you should do after installing Wrapperr is visit `https://wrapperr._yourdomain.com_` and configure an admin username/password. <br /> **Do this NOW.**
 
-- [:octicons-link-16: Documentation: Wrapperr Docs](https://github.com/aunefyren/wrapperr){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

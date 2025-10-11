@@ -16,4 +16,10 @@ saltbox:
   - node_exporter
   - subliminal
 
-sandbox: []
+sandbox:
+  - kcptun_client
+  - kcptun_server
+  - plex_dupefinder
+  - plex_patrol
+  - python_plexlibrary
+  - varken

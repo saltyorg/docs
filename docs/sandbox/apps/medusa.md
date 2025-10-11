@@ -29,6 +29,6 @@ sb install sandbox-medusa
 
 - To access Medusa, visit `https://medusa._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Medusa Docs](https://github.com/pymedusa/Medusa/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

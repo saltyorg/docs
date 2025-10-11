@@ -149,6 +149,9 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 ### For app specific instructions refer to the parent role
 
-- [Deluge](../../apps/deluge.md) <br />
-- and the upstream documentation <br />
-   [:octicons-link-16: Documentation](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons }
+- [Deluge](../../apps/deluge.md)
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->
+

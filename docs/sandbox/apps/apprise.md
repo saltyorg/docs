@@ -46,4 +46,6 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
 
 ```
 
-- [:octicons-link-16: Documentation: Apprise Client Docs](https://github.com/caronc/apprise/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

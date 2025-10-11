@@ -37,4 +37,6 @@ Disallow: /
 
 When you want to reach `*.yourdomain.tld/robots.txt`
 
-- [:octicons-link-16: Documentation: Robotstxt Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

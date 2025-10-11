@@ -41,4 +41,6 @@ sb install sandbox-photoprism
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: Photoprism Docs](https://docs.photoprism.app/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

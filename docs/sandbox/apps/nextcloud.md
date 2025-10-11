@@ -29,6 +29,6 @@ sb install sandbox-nextcloud
 
 - To access Nextcloud, visit `https://nextcloud._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: Nextcloud Docs](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

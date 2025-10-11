@@ -114,3 +114,7 @@ Enjoy!
 Since only the `metadata.db` file has to be local, you can keep the metadata.db file in `/mnt/local/Media/Books` as **RW** and the actual book files in `teamdrive:Books` as **RO** and mergerfs them together. Use the latest rclone `--vfs-cache-mode=full` and related cloud-seeding settings for your teamdrive mount so that it does not get laggy. Have a script that copies the metadata.db file regularly to the local disk, and leave the books in the cloud.
 
 If this paragraph does not make sense to you, then please do not try it.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

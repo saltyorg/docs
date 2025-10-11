@@ -54,4 +54,6 @@ Username: comixedreader@localhost
 Password: comixedreader
 ```
 
-- [:octicons-link-16: Documentation: Comixed Docs](https://github.com/comixed/comixed/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

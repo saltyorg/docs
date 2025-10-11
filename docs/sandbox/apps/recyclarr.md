@@ -59,4 +59,6 @@ If a config file does not exist, a default config is generated but it is not fun
 
 Follow documentation to complete configuration
 
-- [:octicons-link-16: Documentation: Recylarr Docs](https://recyclarr.dev/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

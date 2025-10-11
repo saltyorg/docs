@@ -45,4 +45,6 @@ password <password> # (3)!
 2. This line will add a username to the MQTT server. Replace `<username>` with your desired username.
 3. This line will add a password to the MQTT server. Replace `<password>` with your desired password.
 
-- [:octicons-link-16: Documentation: MQTT Docs](https://mosquitto.org/man/mosquitto-conf-5.html){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

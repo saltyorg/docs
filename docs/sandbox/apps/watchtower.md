@@ -27,6 +27,6 @@ sb install sandbox-watchtower
 
 ```
 
-### 2. Setup
-
-- [:octicons-link-16: Documentation: Watchtower Docs](https://containrrr.github.io/watchtower){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

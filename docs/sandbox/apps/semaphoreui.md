@@ -79,3 +79,7 @@ SEMAPHORE_SLACK_URL: ""  # (2)!
 2. Your slack URL
 
 Redeploy the Semaphoreui role to apply any of the above changes.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

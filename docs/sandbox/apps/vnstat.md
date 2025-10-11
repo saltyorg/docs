@@ -34,6 +34,6 @@ sb install sandbox-vnstat
 
 - To access vnStat, visit `https://vnstat._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: vnStat Docs](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -39,4 +39,6 @@ sb install sandbox-bookstack
 /opt/bookstack/www/.env
 ```
 
-- [:octicons-link-16: Documentation](https://www.bookstackapp.com/docs){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

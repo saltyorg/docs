@@ -40,4 +40,6 @@ sb install sandbox-n8n
 
 - To access n8n, visit `https://n8n._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: n8n Docs](https://docs.n8n.io/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

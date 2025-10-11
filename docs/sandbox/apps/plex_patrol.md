@@ -106,5 +106,3 @@ PLEX_PATROL's log is found at `/opt/plex_patrol/status.log`:
 2023-03-29 20:07:06,450 - INFO       - plex_patrol                              -  <module>                 - Server token was validated, proceeding to uphold the law!
 ...
 ```
-
-- [:octicons-link-16: Documentation: Plex Patrol Docs](https://github.com/l3uddz/plex_patrol){: .header-icons }

@@ -43,4 +43,6 @@ sb install sandbox-plex_utills
 !!! tip
     Configure the application through the web interface after your first login.
 
-- [:octicons-link-16: Documentation: Plex Utills Docs](https://github.com/jkirkcaldy/plex-utills#readme){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

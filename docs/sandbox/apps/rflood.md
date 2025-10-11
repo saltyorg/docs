@@ -33,6 +33,6 @@ sb install sandbox-rflood
 
 - To access rFlood, visit `https://rflood._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: Documentation: rFlood Docs](https://github.com/jesec/flood/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

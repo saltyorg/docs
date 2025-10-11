@@ -131,6 +131,6 @@ These settings are up to the user
 
 1. File Format: `$Series $Annual $Issue ($Year)` _(My recommendation)_
 
-### See the Mylar Wiki for more information
-
-- [:octicons-link-16: Documentation: Mylar3 Docs](https://github.com/mylar3/mylar3/wiki){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -43,4 +43,6 @@ sb install sandbox-kitana
 
 - profit
 
-- [:octicons-link-16: Documentation: Kitana Docs](https://github.com/pannal/Kitana){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -50,4 +50,6 @@ sb install sandbox-phpmyadmin
 
 - To access phpmyadmin, visit `https://phpmyadmin._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: phpmyadmin Docs](https://www.phpmyadmin.net/docs/){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

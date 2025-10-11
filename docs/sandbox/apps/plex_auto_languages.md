@@ -31,6 +31,6 @@ sb install sandbox-plex-auto-languages
 
 PLex-auto-languages has no UI; it is driven by a config file
 
-### 3. Usage
-
-- [:octicons-link-16: Documentation: Plex Auto Lang Docs](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

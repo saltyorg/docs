@@ -41,4 +41,6 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 - To access Trackarr, visit `https://trackarr._yourdomain.com_`
 
-- [:octicons-link-16: Documentation: Trackarr Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

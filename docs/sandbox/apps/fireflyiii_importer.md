@@ -102,3 +102,7 @@ MAIN_ENCRYPTION: ""  # (7)!
 7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
 
 Redeploy the Firefly III Importer Role role to apply the above changes.
+
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

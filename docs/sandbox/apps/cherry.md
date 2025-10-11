@@ -50,4 +50,6 @@ sb install sandbox-cherry
 !!!note
     To create an additional user, use Cherry cli: `docker exec cherry cherry create-user <email> <password>`
 
-- [:octicons-link-16: Documentation: Cherry Docs](https://cherry.haishan.me/docs/intro){: .header-icons }
+## Inventory
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

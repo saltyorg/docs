@@ -25,7 +25,3 @@ Each of the tasks can be turned on/off and configured independently. The default
 sb install btrfsmaintenance
 
 ```
-
-### 2. Setup
-
-- [:octicons-link-16: Documentation](https://github.com/kdave/btrfsmaintenance){: .header-icons }

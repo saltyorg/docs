@@ -29,10 +29,6 @@ sb install sandbox-code-server
 
 - To access code-server, visit `https://code-server._yourdomain.com_`
 
-### 3. Setup
-
-- [:octicons-link-16: VS Code Documentation](https://code.visualstudio.com/docs){: .header-icons }
-
 ## Migration from the old `coder` role
 
 The old `coder` role was renamed to `code-server` on Dec 19th 2022.

@@ -40,7 +40,3 @@ HAMA is a plex agent specifically for anime and its various challenges. It is re
 sb install asshama
 
 ```
-
-### 3. Setup
-
-- [:octicons-link-16: Documentation](https://github.com/ZeroQI/Hama.bundle){: .header-icons }

@@ -21,6 +21,7 @@ on:
       - '.inventory-coverage-ignore.yml'
       - 'scripts/check-inventory-section.py'
       - 'scripts/inventory-generator-jinja.py'
+      - 'scripts/templates/role_docs.md.j2'
 
   schedule:
     - cron: '0 0 * * *'

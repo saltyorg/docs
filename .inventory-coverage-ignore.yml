@@ -17,6 +17,7 @@ saltbox:
   - subliminal
 
 sandbox:
+  - epms
   - kcptun_client
   - kcptun_server
   - plex_dupefinder

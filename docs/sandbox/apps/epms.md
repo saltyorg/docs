@@ -28,7 +28,3 @@ This scanner is not meant to be full replacement of the Plex Media Scanner. Requ
 sb install sandbox-epms
 
 ```
-
-## Inventory
-<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- END SALTBOX MANAGED VARIABLES SECTION -->

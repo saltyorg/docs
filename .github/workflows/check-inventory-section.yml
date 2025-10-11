@@ -20,6 +20,7 @@ on:
       - 'docs/sandbox/apps/**'
       - '.inventory-coverage-ignore.yml'
       - 'scripts/check-inventory-section.py'
+      - 'scripts/inventory-generator-jinja.py'
 
   schedule:
     - cron: '0 0 * * *'

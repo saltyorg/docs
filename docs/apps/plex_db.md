@@ -49,7 +49,7 @@ Further information:
     === "Example"
 
         ```yaml
-        plex_db_files: ["item1", "item2"]
+        plex_db_integrity_check_only: true
         ```
 
 !!! warning
@@ -62,11 +62,6 @@ Further information:
 ??? example "GNU General Public License v3.0                      #"
 
     ```yaml
-    # Type: list
-    plex_db_files: 
-      - "com.plexapp.plugins.library.db"
-      - "com.plexapp.plugins.library.blobs.db"
-
     # Type: bool (true/false)
     plex_db_integrity_check_only: false
 
@@ -75,6 +70,12 @@ Further information:
 
     # Type: bool (true/false)
     plex_db_failed_optimization: false
+
+    # Do not enable globally if deploying multiple instances
+    # Type: list
+    plex_db_files: 
+      - "com.plexapp.plugins.library.db"
+      - "com.plexapp.plugins.library.blobs.db"
 
     ```
 

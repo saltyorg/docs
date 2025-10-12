@@ -37,9 +37,7 @@ sb install sandbox-fireflyiii
 
 - To access the Firefly III, visit `https://fireflyiii._yourdomain.com_`
 
-## 3. Setup
-
-## 4. Additional Settings
+## 3. Additional Settings
 
 - The default installation utilises a seperate postgres database.
 - This will install the fireflyiii core container and install the mariadb database
@@ -48,7 +46,7 @@ sb install sandbox-fireflyiii
 
 > **Note: For all available settings please refer to the Firefly III [example env](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example)**
 
-#### 4.1 Email Notifications
+#### 3.1 Email Notifications
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
 ``` yaml title="Firefly III Email Settings"
@@ -69,7 +67,7 @@ MAIN_ENCRYPTION: ""  # (7)!
 6. Replace `""` with your email password if necessary.
 7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
 
-### 4.2 Firefly III Authentication
+### 3.2 Firefly III Authentication
 By default this utilises the authelia authentication and utilises its own authentication mechanism
 
 This can be changed to do 1 of the following:
@@ -77,7 +75,7 @@ This can be changed to do 1 of the following:
 - [Remove Authelia authentication (Not Recommended)](#421-remove-authelia-authentication-not-recommended)
 - ~~Remove Firefly III built-in authentication~~ ***Not Understood***
 
-#### 4.2.1 Remove Authelia Authentication (Not Recommended)
+#### 3.2.1 Remove Authelia Authentication (Not Recommended)
 
 ``` yaml title="Firefly III Remove Authelia"
 fireflyiii_traefik_sso_middleware: ""

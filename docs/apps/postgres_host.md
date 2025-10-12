@@ -48,13 +48,6 @@ Configure per-version users, databases, and access control using `postgres_host_
         postgres_host_role_versions: ["17", "18"]
         ```
 
-!!! warning
-    **Avoid overriding variables ending in `_default`**
-
-    When overriding variables that end in `_default` (like `postgres_host_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
-
-    Instead, use the corresponding `_custom` variable (like `postgres_host_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
-
 ??? example "GNU General Public License v3.0                      #"
 
     ```yaml

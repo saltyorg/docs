@@ -68,13 +68,6 @@ The arr_db role performs the following operations for each enabled application:
         arr_db_sonarr_enabled: true
         ```
 
-!!! warning
-    **Avoid overriding variables ending in `_default`**
-
-    When overriding variables that end in `_default` (like `arr_db_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
-
-    Instead, use the corresponding `_custom` variable (like `arr_db_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
-
 ??? example "Settings"
 
     ```yaml

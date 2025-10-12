@@ -72,7 +72,7 @@ By default this utilises the authelia authentication and utilises its own authen
 
 This can be changed to do 1 of the following:
 
-- [Remove Authelia authentication (Not Recommended)](#421-remove-authelia-authentication-not-recommended)
+- [Remove Authelia authentication (Not Recommended)](#321-remove-authelia-authentication-not-recommended)
 - ~~Remove Firefly III built-in authentication~~ ***Not Understood***
 
 #### 3.2.1 Remove Authelia Authentication (Not Recommended)

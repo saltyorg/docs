@@ -29,6 +29,7 @@
         {{ example_var }}: {{ example_var_value if example_var_value else get_example_value(example_var_type) }}
         ```
 {% endif %}
+{% if has_default_vars %}
 
 !!! warning
     **Avoid overriding variables ending in `_default`**
@@ -36,6 +37,7 @@
     When overriding variables that end in `_default` (like `{{ role_name }}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
     Instead, use the corresponding `_custom` variable (like `{{ role_name }}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+{% endif %}
 
 {% for section_name, section_vars in sections.items() %}
 ??? example "{{ section_name }}"

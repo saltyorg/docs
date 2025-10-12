@@ -72,9 +72,9 @@ To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used late
 !!! warning
     **Avoid overriding variables ending in `_default`**
 
-    When overriding variables that end in `_default` (like `{role}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    When overriding variables that end in `_default` (like `nzbhydra2_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
-    Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+    Instead, use the corresponding `_custom` variable (like `nzbhydra2_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 ??? example "Basics"
 

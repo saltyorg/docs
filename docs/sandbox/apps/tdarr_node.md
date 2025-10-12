@@ -59,9 +59,9 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 !!! warning
     **Avoid overriding variables ending in `_default`**
 
-    When overriding variables that end in `_default` (like `{role}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    When overriding variables that end in `_default` (like `tdarr_node_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
-    Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+    Instead, use the corresponding `_custom` variable (like `tdarr_node_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 ??? example "Basics"
 

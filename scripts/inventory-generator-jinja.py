@@ -858,6 +858,9 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
                 'category_order': ['Resource Limits', 'Security & Devices', 'Networking', 'Storage', 'Monitoring & Lifecycle', 'Other Options']
             }
 
+    # Check if role has any _default variables
+    has_default_vars = any(var_name.endswith('_default') for var_name in role_vars.keys())
+
     return {
         'role_name': role_name,
         'instances_var': instances_var,
@@ -870,6 +873,7 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
         'example_var_value': example_var_value,
         'docker_info': docker_info,
         'parser': parser,
+        'has_default_vars': has_default_vars,
     }
 
 def generate_docs_section(role_name: str, repo_path: Path, is_sandbox: bool = False) -> str:

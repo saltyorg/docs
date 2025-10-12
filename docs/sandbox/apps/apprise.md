@@ -62,9 +62,9 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
 !!! warning
     **Avoid overriding variables ending in `_default`**
 
-    When overriding variables that end in `_default` (like `{role}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    When overriding variables that end in `_default` (like `apprise_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
-    Instead, use the corresponding `_custom` variable (like `{role}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+    Instead, use the corresponding `_custom` variable (like `apprise_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 ??? example "Basics"
 

@@ -262,15 +262,11 @@ sb install plex
 
 To set up Webtools and install 3rd party add-ons, go to `https://plex-webtools._yourdomain.com_` and log in with your Plex account.
 
-## Next
-
-Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.md).
+## Inventory Variables
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
 ??? tip "Advanced"
-
-    ## Inventory Variables
 
     !!! info "Full instructions available in the [Inventory user guide](../saltbox/inventory/index.md)"
         
@@ -1516,3 +1512,7 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
     
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->
+
+## Next
+
+Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.md).

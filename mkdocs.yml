@@ -424,9 +424,7 @@ nav:
         - Qbittorrent: apps/qbittorrent.md
         - Nzbhydra2: apps/nzbhydra2.md
         - Jackett: apps/jackett.md
-        - Plex:
-          - Getting Started: apps/plex.md
-          - Inventory Variables: apps/inventory/plex.md
+        - Plex: apps/plex.md
         - Autoscan: apps/autoscan.md
         - Sonarr: apps/sonarr.md
         - Radarr: apps/radarr.md

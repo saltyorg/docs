@@ -268,7 +268,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
-??? tip "Inventory Variables"
+??? tip "Advanced"
+
+    ## Inventory Variables
 
     !!! info "Full instructions available in the [Inventory user guide](../saltbox/inventory/index.md)"
         

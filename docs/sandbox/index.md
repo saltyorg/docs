@@ -73,6 +73,7 @@ tags:
 - **[homepage](../sandbox/apps/homepage.md)**  - tag - `sandbox-homepage`
 - **[immich](../sandbox/apps/immich.md)**  - tag - `sandbox-immich`
 - **[influxdb](../sandbox/apps/influxdb.md)**  - tag - `sandbox-influxdb`
+- **[influxdb2](../sandbox/apps/influxdb2.md)**  - tag - `sandbox-influxdb2`
 - **[invoiceninja](../sandbox/apps/invoiceninjav5.md)**  - tag - `sandbox-invoiceninja`
 - **[it_tools](../sandbox/apps/it_tools.md)**  - tag - `sandbox-it-tools`
 - **[jdownloader2](../sandbox/apps/jdownloader2.md)**  - tag - `sandbox-jdownloader2`
@@ -135,6 +136,7 @@ tags:
 - **[python-plexlibrary](../sandbox/apps/python_plexlibrary.md)**  - tag - `python-plexlibrary`
 - **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit-manage`
 - **[qbittorrentvpn](../sandbox/apps/qbittorrentvpn.md)**  - tag - `sandbox-qbittorrentvpn`
+- **[qui](../sandbox/apps/qui.md)**  - tag - `sandbox-qui`
 - **[rdtclient](../sandbox/apps/rdtclient.md)**  - tag - `sandbox-rdtclient`
 - **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
 - **[reposilite](../sandbox/apps/reposilite.md)**  - tag - `sandbox-reposilite`

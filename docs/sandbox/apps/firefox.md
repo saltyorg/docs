@@ -47,7 +47,7 @@ Settings are available as environment variables[<sup>:octicons-link-external-16:
 sb install sandbox-firefox
 ```
 
-!!! info inline end "Downloads Save Location"
+!!! info inline end sb-wide "Downloads Save Location"
     ```
     /mnt/unionfs/downloads/firefox
     ```

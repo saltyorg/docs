@@ -49,12 +49,12 @@
 }
 
 .sb-buttons {
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
-}
+  grid-template-columns: repeat(auto-fit, minmax(8.8rem, 1fr)) !important;
 
-.sb-buttons .md-button {
-  text-align: center;
-  white-space: nowrap;
-  overflow: clip;
-  text-overflow: ellipsis;
+  .md-button {
+    text-align: center;
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+  }
 }

@@ -87,6 +87,14 @@ Follow documentation to complete configuration
 
     ```
 
+??? example "Settings"
+
+    ```yaml
+    # Type: string
+    recyclarr_role_cron_schedule: "@daily"
+
+    ```
+
 ??? example "Paths"
 
     ```yaml
@@ -122,7 +130,7 @@ Follow documentation to complete configuration
     # Type: dict
     recyclarr_role_docker_envs_default: 
       TZ: "{{ tz }}"
-      CRON_SCHEDULE: "{{ recyclarr.cron_schedule }}"
+      CRON_SCHEDULE: "{{ lookup('role_var', '_cron_schedule', role='recyclarr') }}"
       RECYCLARR_CREATE_CONFIG: "true"
 
     # Type: dict

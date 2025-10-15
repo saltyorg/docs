@@ -94,8 +94,8 @@ The variables that can be used for customization within the Inventory are listed
 
     For use cases involving Docker parameters beyond those exposed in the role files, it is still possible to construct usable Saltbox variables. The following resources provide the required syntax elements:
 
-    - <https://github.com/saltyorg/Saltbox/blob/master/resources/tasks/docker/create_docker_container.yml>
-    - <https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html>
+    [:material-github: Saltbox Source Code](https://github.com/saltyorg/Saltbox/blob/master/resources/tasks/docker/create_docker_container.yml){ target="_blank" }  
+    [:material-ansible: Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html#parameters){ target="_blank" }
 
 === "Something Missing?"
 

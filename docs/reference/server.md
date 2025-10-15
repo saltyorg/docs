@@ -84,6 +84,12 @@ If you are setting this up on a home server, verify, **before installing Saltbox
 
 - You can use a single partition formatted as BTRFS, but if you do so *make sure* you install the `btrfsmaintenance` tag after setup.
 
+!!! warning "BTRFS Root Partition and Swap Files"
+    If you use BTRFS as your root filesystem (`/`), you **cannot** create a swap file on that BTRFS partition. BTRFS does not support swap files in the traditional sense. If you need swap space with a BTRFS root partition, you must either:
+
+    - Use a separate swap partition (as shown in the examples below)
+    - Use a swap file on a non-BTRFS partition
+
 Examples:
 
 **IMPORTANT**: Note that these examples are just that, _examples_, and may not reflect currently-available OS versions or the current state of the UI.  They were accurate at the time of capture, but things change that are outside saltbox' control.  You will need to review for accuracy and possibly adapt them to your specific situation.  You're partitioning the disk of your remote server; you generally shouldn't trust that to copy-pasting some text from a web page.

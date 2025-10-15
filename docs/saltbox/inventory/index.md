@@ -54,26 +54,15 @@ The variables that can be used for customization within the Inventory are listed
 
 === "GitHub File View"
 
-    <table>
-      <tr>
-        <td>Saltbox</td>
-        <td>
-          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;**</span>[**/defaults/main.yml**](https://github.com/saltyorg/Saltbox/tree/master/roles)
-        </td>
-      </tr>
-      <tr>
-        <td>Sandbox</td>
-        <td>
-          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<span style="color: #9397b1;">**&lt;role_name&gt;**</span>[**/defaults/main.yml**](https://github.com/saltyorg/Sandbox/tree/master/roles)
-        </td>
-      </tr>
-      <tr>
-        <td>Global</td>
-        <td>
-          [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml)
-        </td>
-      </tr>
-    </table>
+    <div class="sb-no-thead">
+
+    | Scope   | Location |
+    |---------|----------|
+    | Saltbox | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<role_name\>[**/defaults/main.yml**](https://github.com/saltyorg/Saltbox/tree/master/roles) |
+    | Sandbox | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<role_name\>[**/defaults/main.yml**](https://github.com/saltyorg/Sandbox/tree/master/roles) |
+    | Global  | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml) |
+    
+    </div>
 
 === "File Path on Saltbox Host"
 

@@ -64,3 +64,7 @@
     width: 13.5rem !important;
   }
 }
+
+.sb-no-thead thead {
+  display: none;
+}

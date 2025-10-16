@@ -68,3 +68,27 @@
 .sb-no-thead thead {
   display: none;
 }
+
+.sb-table-heat-map {
+  tbody {
+    tr:nth-child(1) {
+      background: #00c8531a;
+    }
+
+    tr:nth-child(2) {
+      background: #64dd171a;
+    }
+
+    tr:nth-child(3) {
+      background: #ff91001a;
+    }
+
+    tr:nth-child(4) {
+      background: #ff52521a;;
+    }
+
+    tr:nth-child(5) {
+      background: #f500571a;
+    }
+  }
+}

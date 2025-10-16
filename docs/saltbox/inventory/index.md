@@ -103,6 +103,73 @@ The variables that can be used for customization within the Inventory are listed
 
     Should you require additional functionality, feel free to create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we will consider accommodating it.
 
+## Data Types
+
+Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). You will encounter four data types in the variable files:
+
+| Data Type       | Token             | Syntax Template                                                                  | Saltbox Example                                                                                                                    |
+|-----------------|-------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| string          | `""`              | <pre><code>str_key: "value"</code></pre>                                         | <pre><code>global_themepark_theme: "overseerr"</code></pre>                                                                        |
+| boolean         | `true` or `false` | <pre><code>bool_key: true</code></pre>                                           | <pre><code>use_cloudplow: false</code></pre>                                                                                       |
+| <br/>list       | <br/>`[]`         | <pre><code>list_key:<br/>  - item0<br/>  - "item1"</code></pre>                  | <pre><code>gluetun_docker_networks_alias_custom:<br/>  - "plex"<br/>  - "plex2"</code></pre>                                       |
+| <br/>dictionary | <br/>`{}`         | <pre><code>dict_key:<br/>  STR_KEY: "value"<br/>  BOOL_KEY: "false"</code></pre> | <pre><code>kometa-sw_docker_envs_custom:<br/>  KOMETA_RUN_COLLECTIONS: "Star Wars"<br/>  KOMETA_DELETE_LABELS: "true"</code></pre> |
+
+## Default and Custom Patterns
+
+Saltbox variable files are a combination of static and dynamic configuration. Many variable assignments are integral to how the component is deployed, and if modified, can break functionality or cause conflicts during updates. Some keywords and contents can help identify which variables may be customized:
+
+<div class="sb-table-heat-map" markdown>
+
+| Pattern                      | Purpose                                                               |
+|------------------------------|-----------------------------------------------------------------------|
+| Ends in `_custom`            | Extend configuration by adding items without removing existing ones   |
+| Empty or blank string        | Optional setting that is reasonably safe to configure                 |
+| Non-empty string or boolean  | Sane default that should only be changed if you understand the impact |
+| Ends in `_default`           | Internal configuration required by the component—do not override      |
+| Contains dynamic expressions | Internal configuration required by the component—do not override      |
+
+</div>
+
+## Role and Instance Patterns
+
+If the role supports multiple instances, you can choose to apply a configuration across all instances (role-level) or to a specified instance only (instance-level). This is done by shaping the variable name as follows:
+
+<div class="grid" markdown>
+
+<div class="annotate" markdown>
+
+```yaml title="Role-level (1)"
+rolename_role_setting_enabled: false
+```
+
+<div class="result" markdown>
+
+Applies to all instances of the role
+
+</div>
+
+</div>
+
+1. Variable name unchanged
+
+<div class="annotate" markdown>
+
+```yaml title="Instance-level (1)"
+instancename_setting_enabled: true
+```
+<div class="result" markdown>
+
+Applies to the specified instance
+
+</div>
+
+</div>
+
+1. - `_role` segment removed
+    - name of role replaced with name of instance
+
+</div>
+
 ## Demo
 
 Let's explore two example use cases for customizing roles using variables in the Saltbox Inventory.
@@ -125,8 +192,6 @@ sonarr_docker_image_tag: "release"
 sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', default=sonarr_docker_image_repo)
                          + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
 ```
-!!! info "`default` Variables"
-    Variables suffixed with `_default` and variables predefined with non-empty values (specifically, not followed by a blank, an empty string `""`, list `[]` or dictionary `{}`) fall under this category. Using the Inventory to define one of these variables is therefore considered an override, as it will cause the value(s) originally stored in it to be discarded.
 
 Note: `sonarr_docker_image_tag: "release"`. 
 
@@ -153,8 +218,6 @@ code_server_docker_volumes_default:
   - "{{ server_appdata_path }}:/host_opt"
 code_server_docker_volumes_custom: []
 ```
-!!! info "`custom` Variables"
-    Variables suffixed with `_custom` and variables defined with an empty string fall under this category. Respectively, this is used to add custom values to a list or a dictionary without discarding existing values, and to assign a value to an exposed role-specific setting.
 
 Note the list syntax. Since we want the container to preserve existing volumes, the `_docker_volumes_default` list should not be overridden. Instead, we use the `_docker_volumes_custom` list.
 

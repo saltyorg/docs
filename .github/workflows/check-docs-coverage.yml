@@ -1,17 +1,6 @@
 name: Check Documentation Coverage
 
 on:
-  workflow_dispatch:
-    inputs:
-      saltbox_branch:
-        description: 'Saltbox branch to check'
-        required: false
-        default: 'role-refactor'
-      sandbox_branch:
-        description: 'Sandbox branch to check'
-        required: false
-        default: 'role-refactor'
-
   push:
     branches:
       - role-refactor

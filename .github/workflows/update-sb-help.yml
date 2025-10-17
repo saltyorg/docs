@@ -8,9 +8,6 @@ on:
   schedule:
     - cron: '0 3 * * *'
 
-  repository_dispatch:
-    types: [sb-go-release]
-
 jobs:
   update-sb-help:
     runs-on: ubuntu-24.04

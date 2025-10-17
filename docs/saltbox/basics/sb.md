@@ -4,6 +4,10 @@ hide:
 ---
 
 # Saltbox CLI
+
+<!-- BEGIN SALTBOX MANAGED CLI SECTION -->
+<!-- This section is managed by scripts/update-sb-help.py - DO NOT EDIT MANUALLY -->
+
 <!-- termynal -->
 
 ```console
@@ -42,3 +46,5 @@ Flags:
 Use "sb [command] --help" for more information about a command.
 
 ```
+
+<!-- END SALTBOX MANAGED CLI SECTION -->

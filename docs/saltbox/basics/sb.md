@@ -7,7 +7,6 @@ hide:
 
 <!-- BEGIN SALTBOX MANAGED CLI SECTION -->
 <!-- This section is managed by scripts/update-sb-help.py - DO NOT EDIT MANUALLY -->
-
 <!-- termynal -->
 
 ```console
@@ -32,19 +31,17 @@ Available Commands:
   logs             Display logs of managed systemd services
   motd             Display system information
   reinstall-facts  Reinstall the Rust saltbox.fact file
-  reinstall-python Reinstall the deadsnakes Python version used by Saltbox and related Ansible virtual environment
+  reinstall-python Reinstall the Python version used by Saltbox and related Ansible virtual environment using uv
   reinstall-venv   Reinstall the Ansible virtual environment
   self-update      Update Saltbox CLI
   update           Update Saltbox & Sandbox
   validate-config  Validate Saltbox configuration files
-  validate-config2 Validate Saltbox configuration files using YAML schemas
   version          Print Saltbox CLI version
 
 Flags:
   -h, --help   help for sb
 
 Use "sb [command] --help" for more information about a command.
-
 ```
 
 <!-- END SALTBOX MANAGED CLI SECTION -->

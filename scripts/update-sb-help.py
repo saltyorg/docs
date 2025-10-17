@@ -9,7 +9,6 @@ This script:
 """
 
 import sys
-import os
 import re
 import tempfile
 import subprocess

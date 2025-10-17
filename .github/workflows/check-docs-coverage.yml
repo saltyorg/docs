@@ -22,11 +22,12 @@ on:
       - 'scripts/check-docs-coverage.py'
 
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 5 * * *'
 
 jobs:
   check-docs-coverage:
     runs-on: ubuntu-24.04
+    if: github.event.repository.fork == false
     permissions:
       contents: read
       issues: write

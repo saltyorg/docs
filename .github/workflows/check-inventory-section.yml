@@ -29,6 +29,7 @@ on:
 jobs:
   check-inventory-section:
     runs-on: ubuntu-24.04
+    if: github.event.repository.fork == false
     permissions:
       contents: write
       issues: write
@@ -38,7 +39,7 @@ jobs:
         with:
           path: docs
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN || github.token }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Checkout Saltbox repository
         uses: actions/checkout@v5

@@ -155,7 +155,6 @@ tags:
 - **[tauticord](../sandbox/apps/tauticord.md)**  - tag - `sandbox-tauticord`
 - **[tdarr](../sandbox/apps/tdarr.md)**  - tag - `sandbox-tdarr`
 - **[tdarr_node](../sandbox/apps/tdarr_node.md)**  - tag - `sandbox-tdarr-node`
-- **[teamspeak](../sandbox/apps/teamspeak.md)**  - tag - `sandbox-teamspeak`
 - **[telegraf](../sandbox/apps/telegraf.md)**  - tag - `sandbox-telegraf`
 - **[teslamate](../sandbox/apps/teslamate.md)**  - tag - `sandbox-teslamate`
 - **[thelounge](../sandbox/apps/thelounge.md)**  - tag - `sandbox-thelounge`

@@ -290,6 +290,7 @@ class RoleVariableParser:
         variables = OrderedDict()
         current_section = None
         pending_comments = []
+        yaml_started = False  # Track if we've encountered the --- separator
 
         # Store raw lines for later reference
         self._raw_lines = {}
@@ -309,6 +310,15 @@ class RoleVariableParser:
 
         for i, line in enumerate(lines):
             stripped = line.strip()
+
+            # Track when YAML document starts (after --- separator)
+            if stripped == '---':
+                yaml_started = True
+                continue
+
+            # Only process section headers and comments after YAML has started
+            if not yaml_started:
+                continue
 
             # Check if this is a section header block (#### lines)
             if SECTION_PATTERN.match(stripped):

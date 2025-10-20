@@ -79,6 +79,9 @@ sb install sandbox-forgejo
     # Type: string
     forgejo_role_paths_location: "{{ server_appdata_path }}/{{ forgejo_role_paths_folder }}"
 
+    # Type: bool (true/false)
+    forgejo_role_paths_recursive: true
+
     ```
 
 ??? example "Web"

@@ -48,18 +48,17 @@ Configure per-version users, databases, and access control using `postgres_host_
         postgres_host_role_versions: ["17", "18"]
         ```
 
-??? example "GNU General Public License v3.0                      #"
+??? example "Basics"
 
     ```yaml
+    # Supports any versions from https://wiki.postgresql.org/wiki/Apt
+    # Each version is unique and you cannot specify the same version twice
     # Type: list
     postgres_host_role_versions: ["17"]
 
-    # Type: string
-    postgres_host_role_primary_version: "{{ postgres_host_role_versions[0] }}"
-
     ```
 
-??? example "Data Directory"
+??? example "Paths"
 
     ```yaml
     # Type: string
@@ -67,7 +66,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
     ```
 
-??? example "Root Superuser"
+??? example "Superuser"
 
     ```yaml
     # Type: bool (true/false)
@@ -84,6 +83,16 @@ Configure per-version users, databases, and access control using `postgres_host_
 ??? example "Per-Version Configuration"
 
     ```yaml
+    # allowed_hosts:
+    # - "172.19.0.0/16"
+    # auth_method: "scram-sha-256"
+    # users:
+    # - name: "app_user3"
+    # password: "password3"
+    # databases:
+    # - name: "new_app_database"
+    # users:
+    # - "app_user3"
     # Type: dict
     postgres_host_role_config: {}
 
@@ -101,7 +110,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
     ```
 
-??? example "Global Fallback Configuration"
+??? example "User & Database Configuration"
 
     ```yaml
     # Type: list

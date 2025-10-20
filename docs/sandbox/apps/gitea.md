@@ -68,6 +68,9 @@ sb install sandbox-gitea
     # Type: string
     gitea_role_paths_location: "{{ server_appdata_path }}/{{ gitea_role_paths_folder }}"
 
+    # Type: bool (true/false)
+    gitea_role_paths_recursive: true
+
     ```
 
 ??? example "Web"

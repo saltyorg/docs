@@ -72,7 +72,7 @@ Save and Test
 
     Instead, use the corresponding `_custom` variable (like `teslamate_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
-??? example "GNU General Public License v3.0                     #"
+??? example "General"
 
     ```yaml
     # defaults/main.yml

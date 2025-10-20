@@ -52,7 +52,7 @@ Further information:
         plex_db_integrity_check_only: true
         ```
 
-??? example "GNU General Public License v3.0                      #"
+??? example "General"
 
     ```yaml
     # Type: bool (true/false)

@@ -198,6 +198,35 @@ class RoleVariableParser:
         else:
             return f"{indent}# Type: {var_type}"
 
+    def get_docker_var_type(self, var_suffix: str) -> str:
+        """Get type for docker variable based on suffix
+
+        Args:
+            var_suffix: The docker variable suffix (e.g., 'auto_remove', 'cpu_shares')
+
+        Returns:
+            Type name string (e.g., 'bool', 'int', 'list', 'dict', 'string')
+
+        Reference: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+        """
+        if var_suffix in ['auto_remove', 'cleanup', 'detach', 'init', 'keep_volumes', 'oom_killer',
+                          'output_logs', 'paused', 'privileged', 'read_only', 'recreate']:
+            return "bool"
+        elif var_suffix in ['blkio_weight', 'cpu_period', 'cpu_quota', 'cpu_shares', 'healthy_wait_timeout',
+                            'memory_swappiness', 'oom_score_adj', 'restart_retries', 'stop_timeout']:
+            return "int"
+        elif var_suffix in ['capabilities', 'cap_drop', 'commands', 'device_cgroup_rules', 'device_read_bps',
+                            'device_read_iops', 'device_requests', 'device_write_bps', 'device_write_iops',
+                            'devices', 'dns_opts', 'dns_search_domains', 'dns_servers', 'exposed_ports',
+                            'groups', 'links', 'mounts', 'networks', 'ports', 'security_opts', 'sysctls',
+                            'tmpfs', 'ulimits', 'volumes', 'volumes_from']:
+            return "list"
+        elif var_suffix in ['envs', 'healthcheck', 'hosts', 'labels', 'log_options', 'storage_opts']:
+            return "dict"
+        else:
+            # Everything else is string: cpus, cpuset_cpus, cpuset_mems, domainname, entrypoint, etc.
+            return "string"
+
     def get_docker_var_type_comment(self, var_suffix: str, indent: str = "    ") -> str:
         """Get type comment for docker variable based on suffix
 
@@ -210,19 +239,15 @@ class RoleVariableParser:
 
         Reference: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
         """
-        if var_suffix in ['auto_remove', 'cleanup', 'detach', 'init', 'keep_volumes', 'oom_killer',
-                          'output_logs', 'paused', 'privileged', 'read_only', 'recreate']:
+        var_type = self.get_docker_var_type(var_suffix)
+
+        if var_type == "bool":
             return f"{indent}# Type: bool (true/false)"
-        elif var_suffix in ['blkio_weight', 'cpu_period', 'cpu_quota', 'cpu_shares', 'healthy_wait_timeout',
-                            'memory_swappiness', 'oom_score_adj', 'restart_retries', 'stop_timeout']:
+        elif var_type == "int":
             return f"{indent}# Type: int"
-        elif var_suffix in ['capabilities', 'cap_drop', 'commands', 'device_cgroup_rules', 'device_read_bps',
-                            'device_read_iops', 'device_requests', 'device_write_bps', 'device_write_iops',
-                            'devices', 'dns_opts', 'dns_search_domains', 'dns_servers', 'exposed_ports',
-                            'groups', 'links', 'mounts', 'networks', 'ports', 'security_opts', 'sysctls',
-                            'tmpfs', 'ulimits', 'volumes', 'volumes_from']:
+        elif var_type == "list":
             return f"{indent}# Type: list"
-        elif var_suffix in ['envs', 'healthcheck', 'hosts', 'labels', 'log_options', 'storage_opts']:
+        elif var_type == "dict":
             return f"{indent}# Type: dict"
         else:
             # Everything else is string: cpus, cpuset_cpus, cpuset_mems, domainname, entrypoint, etc.
@@ -920,6 +945,7 @@ def generate_docs_section(role_name: str, repo_path: Path, is_sandbox: bool = Fa
     # Add custom global functions (callable in templates)
     # These return comment text without indentation - the template handles spacing
     env.globals['format_type_comment'] = lambda var_type: parser.format_type_comment(var_type, "")
+    env.globals['get_docker_var_type'] = lambda var_suffix: parser.get_docker_var_type(var_suffix)
     env.globals['get_docker_var_type_comment'] = lambda var_suffix: parser.get_docker_var_type_comment(var_suffix, "")
     env.globals['adjust_multiline_indentation'] = lambda value_lines, orig_name, new_name, indent: parser.adjust_multiline_indentation(value_lines, orig_name, new_name, indent)
     env.globals['format_default_value'] = format_default_value_filter

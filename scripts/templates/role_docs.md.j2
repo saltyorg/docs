@@ -1,9 +1,9 @@
+## Role Defaults
 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
 {% if instances_var %}
-
     This role supports multiple instances via `{{ instances_var }}`.
 
     === "Role-level Override"
@@ -22,378 +22,382 @@
         {{ role_name }}2_web_subdomain: "custom2"
         ```
 {% else %}
-
     === "Example"
 
         ```yaml
         {{ example_var }}: {{ example_var_value if example_var_value else get_example_value(example_var_type) }}
         ```
 {% endif %}
-{% if has_default_vars %}
 
+{% if has_default_vars %}
 !!! warning
     **Avoid overriding variables ending in `_default`**
 
     When overriding variables that end in `_default` (like `{{ role_name }}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
     Instead, use the corresponding `_custom` variable (like `{{ role_name }}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
-{% endif %}
 
+{% endif %}
 {% for section_name, section_vars in sections.items() %}
-??? example "{{ section_name }}"
+=== "{{ section_name }}"
 
-{% if instances_var and section_name == "Basics" %}
-    === "Default"
-
-        ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
-        # {{ comment_line }}
-{% endfor %}
-{% endif %}
-        {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
-{% for line in var.value_lines[1:] %}
-        {{ line }}
-{% endfor %}
-{% else %}
-        {{ var.name }}: {{ var.raw_value }}
-{% endif %}
-
-{% endfor %}
-        ```
-
-    === "Example"
+  {% if instances_var and section_name == "Basics" %}
+    {% for var in section_vars %}
+    ??? variable {{ var.var_type }} "`{{ var.name }}`"
 
         ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
         # {{ comment_line }}
-{% endfor %}
-{% endif %}
+        {% endfor %}
+      {% endif %}
         {{ format_type_comment(var.var_type) }}
-{% if var.name == instances_var %}
-        {{ var.name }}: ["{{ role_name }}", "{{ role_name }}2"]
-{% elif var.is_multiline %}
+      {% if var.is_multiline %}
         {{ var.name }}: {{ var.value_lines[0] }}
-{% for line in var.value_lines[1:] %}
+        {% for line in var.value_lines[1:] %}
         {{ line }}
-{% endfor %}
-{% else %}
+        {% endfor %}
+      {% else %}
         {{ var.name }}: {{ var.raw_value }}
-{% endif %}
-
-{% endfor %}
+      {% endif %}
         ```
-{% elif instances_var and section_name != "Docker" %}
+
+        !!! example
+
+            ```yaml
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+        {% endfor %}
+      {% endif %}
+            {{ format_type_comment(var.var_type) }}
+      {% if var.name == instances_var %}
+            {{ var.name }}: ["{{ role_name }}", "{{ role_name }}2"]
+      {% elif var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+        {% for line in var.value_lines[1:] %}
+            {{ line }}
+        {% endfor %}
+      {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+      {% endif %}
+            ```
+
+    {% endfor %}
+  {% elif instances_var and section_name != "Docker" %}
     === "Role-level"
 
-        ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
-        # {{ comment_line }}
-{% endfor %}
-{% endif %}
-        {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
-{% for line in var.value_lines[1:] %}
-        {{ line }}
-{% endfor %}
-{% else %}
-        {{ var.name }}: {{ var.raw_value }}
-{% endif %}
+    {% for var in section_vars %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`"
 
-{% endfor %}
-        ```
+            ```yaml
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+        {% endfor %}
+      {% endif %}
+            {{ format_type_comment(var.var_type) }}
+      {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+        {% for line in var.value_lines[1:] %}
+            {{ line }}
+        {% endfor %}
+      {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+      {% endif %}
+            ```
 
+    {% endfor %}
     === "Instance-level"
 
-        ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
-        # {{ comment_line }}
-{% endfor %}
-{% endif %}
-        {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
-{% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
-{% for line in adjusted %}
-{{ line }}
-{% endfor %}
-{% else %}
-        {{ var.instance_name }}: {{ var.raw_value }}
-{% endif %}
+    {% for var in section_vars %}
+        ??? variable {{ var.var_type }} "`{{ var.instance_name }}`"
 
-{% endfor %}
-        ```
-{% elif section_name == "Docker" and instances_var %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+
+        {% endfor %}
+      {% endif %}
+            ```yaml
+            {{ format_type_comment(var.var_type) }}
+      {% if var.is_multiline %}
+        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
+        {% for line in adjusted %}
+            {{ line }}
+        {% endfor %}
+      {% else %}
+            {{ var.instance_name }}: {{ var.raw_value }}
+      {% endif %}
+            ```
+
+    {% endfor %}
+  {% elif section_name == "Docker" and instances_var %}
     === "Role-level"
 
+    {% for var in section_vars %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+        ##### {{ comment_line }}
+
+        {% endfor %}
+      {% endif %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`"
+
+            ```yaml
+            {{ format_type_comment(var.var_type) }}
+      {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+        {% for line in var.value_lines[1:] %}
+            {{ line }}
+        {% endfor %}
+      {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+      {% endif %}
+            ```
+
+    {% endfor %}
+    === "Instance-level"
+
+    {% for var in section_vars %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+        ##### {{ comment_line }}
+
+        {% endfor %}
+      {% endif %}
+        ??? variable {{ var.var_type }} "`{{ var.instance_name }}`"
+
+            ```yaml
+            {{ format_type_comment(var.var_type) }}
+      {% if var.is_multiline %}
+        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
+        {% for line in adjusted %}
+            {{ line }}
+        {% endfor %}
+      {% else %}
+            {{ var.instance_name }}: {{ var.raw_value }}
+      {% endif %}
+            ```
+
+    {% endfor %}
+    {% if docker_info %}
+=== "Docker+"
+
+    #### Additional Docker Options
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+    === "Role-level"
+
+      {% for category in docker_info.category_order %}
+        {% if category in docker_info.categories %}
+        ##### {{ category }}
+
+          {% for var_suffix in docker_info.categories[category]|sort %}
+        ??? variable {{ get_docker_var_type(var_suffix) }} "`{{ role_name }}_role_docker_{{ var_suffix }}`"
+
+            ```yaml
+            {{ get_docker_var_type_comment(var_suffix) }}
+            {{ role_name }}_role_docker_{{ var_suffix }}:
+            ```
+
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    === "Instance-level"
+
+      {% for category in docker_info.category_order %}
+        {% if category in docker_info.categories %}
+        ##### {{ category }}
+
+          {% for var_suffix in docker_info.categories[category]|sort %}
+        ??? variable {{ get_docker_var_type(var_suffix) }} "`{{ role_name }}2_docker_{{ var_suffix }}`"
+
+            ```yaml
+            {{ get_docker_var_type_comment(var_suffix) }}
+            {{ role_name }}2_docker_{{ var_suffix }}:
+            ```
+
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% elif section_name != "Docker" %}
+    {% for var in section_vars %}
+    ??? variable {{ var.var_type }} "`{{ var.name }}`"
+
         ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
         # {{ comment_line }}
-{% endfor %}
-{% endif %}
+        {% endfor %}
+      {% endif %}
         {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
+      {% if var.is_multiline %}
         {{ var.name }}: {{ var.value_lines[0] }}
-{% for line in var.value_lines[1:] %}
+        {% for line in var.value_lines[1:] %}
         {{ line }}
-{% endfor %}
-{% else %}
+        {% endfor %}
+      {% else %}
         {{ var.name }}: {{ var.raw_value }}
-{% endif %}
+      {% endif %}
+        ```
 
-{% endfor %}
-{% if docker_info %}
+    {% endfor %}
+  {% else %}
+    {% for var in section_vars %}
+      {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+        {% for comment_line in var.comment_lines %}
+    ##### {{ comment_line }}
 
-        # ---- Additional Docker Options ----
-        # The following advanced options are available via create_docker_container
-        # but are not defined in the role. See:
-        # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
-{% for category in docker_info.category_order %}
-{% if category in docker_info.categories %}
-{% if loop.first %}
+        {% endfor %}
+      {% endif %}
+    ??? variable {{ var.var_type }} "`{{ var.name }}`"
 
-{% endif %}
-        # {{ category }}
-{% for var_suffix in docker_info.categories[category]|sort %}
+        ```yaml
+        {{ format_type_comment(var.var_type) }}
+      {% if var.is_multiline %}
+        {{ var.name }}: {{ var.value_lines[0] }}
+        {% for line in var.value_lines[1:] %}
+        {{ line }}
+        {% endfor %}
+      {% else %}
+        {{ var.name }}: {{ var.raw_value }}
+      {% endif %}
+        ```
+
+    {% endfor %}
+    {% if docker_info %}
+=== "Docker+"
+
+    #### Additional Docker Options
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+      {% for category in docker_info.category_order %}
+        {% if category in docker_info.categories %}
+    ##### {{ category }}
+
+          {% for var_suffix in docker_info.categories[category]|sort %}
+    ??? variable {{ get_docker_var_type(var_suffix) }} "`{{ role_name }}_role_docker_{{ var_suffix }}`"
+
+        ```yaml
         {{ get_docker_var_type_comment(var_suffix) }}
         {{ role_name }}_role_docker_{{ var_suffix }}:
-
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% endif %}
         ```
 
-    === "Instance-level"
-
-        ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
-        # {{ comment_line }}
-{% endfor %}
-{% endif %}
-        {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
-{% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
-{% for line in adjusted %}
-{{ line }}
-{% endfor %}
-{% else %}
-        {{ var.instance_name }}: {{ var.raw_value }}
-{% endif %}
-
-{% endfor %}
-{% if docker_info %}
-
-        # ---- Additional Docker Options ----
-        # The following advanced options are available via lookup('docker_var', ...)
-        # but are not defined in the role. See:
-        # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
-{% for category in docker_info.category_order %}
-{% if category in docker_info.categories %}
-
-        # {{ category }}
-{% for var_suffix in docker_info.categories[category]|sort %}
-        {{ get_docker_var_type_comment(var_suffix) }}
-        {{ role_name }}2_docker_{{ var_suffix }}:
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% endif %}
-
-        ```
-{% else %}
-    ```yaml
-{% for var in section_vars %}
-{% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
-{% for comment_line in var.comment_lines %}
-    # {{ comment_line }}
-{% endfor %}
-{% endif %}
-    {{ format_type_comment(var.var_type) }}
-{% if var.is_multiline %}
-    {{ var.name }}: {{ var.value_lines[0] }}
-{% for line in var.value_lines[1:] %}
-    {{ line }}
-{% endfor %}
-{% else %}
-    {{ var.name }}: {{ var.raw_value }}
-{% endif %}
-
-{% endfor %}
-{% if section_name == "Docker" and docker_info %}
-
-    # ---- Additional Docker Options ----
-    # The following advanced options are available via create_docker_container
-    # but are not defined in the role. See:
-    # https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
-{% for category in docker_info.category_order %}
-{% if category in docker_info.categories %}
-
-    # {{ category }}
-{% for var_suffix in docker_info.categories[category]|sort %}
-    {{ get_docker_var_type_comment(var_suffix) }}
-    {{ role_name }}_role_docker_{{ var_suffix }}:
-
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% endif %}
-    ```
-{% endif %}
-
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 {% if role_var_lookups %}
-??? example "Global Override Options"
+=== "Global Override Options"
 
-{% if instances_var %}
+  {% if instances_var %}
     === "Role-level"
 
         Override for all instances:
 
-        ```yaml
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_type = role_var_lookups[suffix] %}
-{% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
-{% endif %}
-{% if var_config.description %}
-        # {{ var_config.description }}
-{% endif %}
-        {{ format_type_comment(var_type) }}
-{% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-        {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+    {% for suffix in role_var_lookups|sort %}
+      {% set var_type = role_var_lookups[suffix] %}
+      {% set role_var_name = role_name ~ '_role' ~ suffix %}
+      {% set var_config = role_var_descriptions.get(suffix, {}) %}
+        ??? variable {{ var_type.split(' ').0 }} "`{{ role_var_name }}`"
 
+            ```yaml
+      {% if var_config.description %}
+            # {{ var_config.description }}
+      {% endif %}
+            {{ format_type_comment(var_type) }}
+      {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
+            {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # (1)!{% endif %}
+      {% else %}
+            {{ role_var_name }}:{% if var_config.example %} # (1)!{% endif %}
+      {% endif +%}
+            ```
 
-{% else %}
-        {{ role_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+      {% if var_config.example %}
+            1.  Example:
 
+        {% for line in var_config.example.rstrip().split('\n') %}
+          {% if line.strip() %}
+                {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
+          {% else %}
 
-{% endif %}
-{% endfor %}
-        ```
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
+          {% endif %}
+        {% endfor %}
 
-        {{ annotation_num.value }}.  Example:
-
-{% for line in var_config.example.rstrip().split('\n') %}
-{% if line.strip() %}
-            {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
-{% else %}
-
-{% endif %}
-{% endfor %}
-{% endif %}
-{% endfor %}
-
+      {% endif %}
+    {% endfor %}
     === "Instance-level"
 
         Override for a specific instance (e.g., `{{ role_name }}2`):
 
+    {% for suffix in role_var_lookups|sort %}
+      {% set var_type = role_var_lookups[suffix] %}
+      {% set instance_var_name = role_name ~ '2' ~ suffix %}
+      {% set var_config = role_var_descriptions.get(suffix, {}) %}
+        ??? variable {{ var_type.split(' ').0 }} "`{{ instance_var_name }}`"
+
+            ```yaml
+      {% if var_config.description %}
+            # {{ var_config.description }}
+      {% endif %}
+            {{ format_type_comment(var_type) }}
+      {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
+            {{ instance_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # (1)!{% endif %}
+      {% else %}
+            {{ instance_var_name }}:{% if var_config.example %} # (1)!{% endif %}
+      {% endif +%}
+            ```
+
+      {% if var_config.example %}
+            1.  Example:
+
+        {% for line in var_config.example.rstrip().split('\n') %}
+          {% if line.strip() %}
+                {{ line.replace('{variable}', instance_var_name).replace('{role}', role_name) }}
+          {% else %}
+
+          {% endif %}
+        {% endfor %}
+
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for suffix in role_var_lookups|sort %}
+      {% set var_type = role_var_lookups[suffix] %}
+      {% set role_var_name = role_name ~ '_role' ~ suffix %}
+      {% set var_config = role_var_descriptions.get(suffix, {}) %}
+    ??? variable {{ var_type.split(' ').0 }} "`{{ role_var_name }}`"
+
         ```yaml
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_type = role_var_lookups[suffix] %}
-{% set instance_var_name = role_name ~ '2' ~ suffix %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
-{% endif %}
-{% if var_config.description %}
+      {% if var_config.description %}
         # {{ var_config.description|replace('containers', 'the container') }}
-{% endif %}
+      {% endif %}
         {{ format_type_comment(var_type) }}
-{% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-        {{ instance_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
-
-
-{% else %}
-        {{ instance_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
-
-
-{% endif %}
-{% endfor %}
+      {% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
+        {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # (1)!{% endif %}
+      {% else %}
+        {{ role_var_name }}:{% if var_config.example %} # (1)!{% endif %}
+      {% endif +%}
         ```
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% set instance_var_name = role_name ~ '2' ~ suffix %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
 
-        {{ annotation_num.value }}.  Example:
+      {% if var_config.example %}
+        1.  Example:
 
-{% for line in var_config.example.rstrip().split('\n') %}
-{% if line.strip() %}
-            {{ line.replace('{variable}', instance_var_name).replace('{role}', role_name) }}
-{% else %}
+        {% for line in var_config.example.rstrip().split('\n') %}
+          {% if line.strip() %}
+            {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
+          {% else %}
 
-{% endif %}
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% else %}
-    ```yaml
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_type = role_var_lookups[suffix] %}
-{% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
-{% endif %}
-{% if var_config.description %}
-    # {{ var_config.description|replace('containers', 'the container') }}
-{% endif %}
-    {{ format_type_comment(var_type) }}
-{% if suffix in role_var_defaults and role_var_defaults[suffix] is not none %}
-    {{ role_var_name }}: {{ format_default_value(role_var_defaults[suffix], var_type) }}{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
+          {% endif %}
+        {% endfor %}
 
-
-{% else %}
-    {{ role_var_name }}:{% if var_config.example %} # ({{ annotation_num.value }})!{% endif %}
-
-
-{% endif %}
-{% endfor %}
-    ```
-{% set annotation_num = namespace(value=0) %}
-{% for suffix in role_var_lookups|sort %}
-{% set var_config = role_var_descriptions.get(suffix, {}) %}
-{% set role_var_name = role_name ~ '_role' ~ suffix %}
-{% if var_config.example %}
-{% set annotation_num.value = annotation_num.value + 1 %}
-
-    {{ annotation_num.value }}.  Example:
-
-{% for line in var_config.example.rstrip().split('\n') %}
-{% if line.strip() %}
-        {{ line.replace('{variable}', role_var_name).replace('{role}', role_name) }}
-{% else %}
-
-{% endif %}
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endif %}

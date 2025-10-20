@@ -88,7 +88,7 @@ sb install sandbox-cockpit
     cockpit_role_paths_config_location: "/etc/cockpit/cockpit.conf"
 
     # Type: string
-    cockpit_role_paths_traefik_location: "/opt/traefik/cockpit.yml"
+    cockpit_role_paths_traefik_location: "{{ server_appdata_path }}/traefik/cockpit.yml"
 
     # Type: string
     cockpit_role_paths_service_location: "/lib/systemd/system/cockpit.service"

@@ -335,7 +335,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
     delugevpn_role_docker_volumes_default: 
       - "{{ lookup('role_var', '_paths_location', role='delugevpn') }}:/config"
       - "/etc/localtime:/etc/localtime:ro"
-      - "/opt/scripts:/scripts"
+      - "{{ server_appdata_path }}/scripts:/scripts"
 
     # Type: list
     delugevpn_role_docker_volumes_custom: []

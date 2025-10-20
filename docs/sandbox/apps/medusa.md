@@ -162,7 +162,7 @@ sb install sandbox-medusa
     # Type: list
     medusa_role_docker_volumes_default: 
       - "{{ lookup('role_var', '_paths_location', role='medusa') }}:/config"
-      - "/opt/scripts:/scripts"
+      - "{{ server_appdata_path }}/scripts:/scripts"
       - "/mnt/unionfs/Media/TV:/tv"
 
     # Type: list

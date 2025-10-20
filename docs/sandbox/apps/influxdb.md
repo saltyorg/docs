@@ -65,6 +65,9 @@ sb install sandbox-influxdb
     # Type: string
     influxdb_role_paths_location: "{{ server_appdata_path }}/{{ influxdb_role_paths_folder }}"
 
+    # Type: bool (true/false)
+    influxdb_role_paths_recursive: true
+
     ```
 
 ??? example "Docker"
@@ -82,7 +85,7 @@ sb install sandbox-influxdb
     influxdb_role_docker_image_repo: "influxdb"
 
     # Type: string
-    influxdb_role_docker_image_tag: "1.8.4"
+    influxdb_role_docker_image_tag: "1.12"
 
     # Type: string
     influxdb_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='influxdb') }}:{{ lookup('role_var', '_docker_image_tag', role='influxdb') }}"

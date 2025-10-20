@@ -63,7 +63,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
     ```yaml
     # Type: string
-    postgres_host_role_data_directory: "/opt/postgresql"
+    postgres_host_role_data_directory: "{{ server_appdata_path }}/postgresql"
 
     ```
 

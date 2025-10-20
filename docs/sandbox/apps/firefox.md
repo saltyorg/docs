@@ -143,7 +143,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
     ```yaml
     # Type: string
-    firefox_vnc_port: "5900"
+    firefox_role_vnc_port: "5900"
 
     ```
 

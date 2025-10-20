@@ -160,7 +160,6 @@ sb install sandbox-gitea
       GITEA__database__PASSWD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
       GITEA__database__NAME: "gitea"
       DISABLE_SSH: "true"
-      RUN_MODE: "prod"
       ROOT_URL: "{{ lookup('role_var', '_web_url', role='gitea') }}/"
 
     # Type: dict

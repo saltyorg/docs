@@ -249,7 +249,7 @@ sb install sandbox-telegraf
         # Volumes
         # Type: list
         telegraf_role_docker_volumes_default: 
-          - "/opt/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
+          - "{{ server_appdata_path }}/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
           - "/var/run/docker.sock:/var/run/docker.sock:ro"
           - "/var/run/utmp:/var/run/utmp"
           - "/:/host:ro"
@@ -318,7 +318,7 @@ sb install sandbox-telegraf
         # Volumes
         # Type: list
         telegraf2_docker_volumes_default: 
-          - "/opt/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
+          - "{{ server_appdata_path }}/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
           - "/var/run/docker.sock:/var/run/docker.sock:ro"
           - "/var/run/utmp:/var/run/utmp"
           - "/:/host:ro"

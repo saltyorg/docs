@@ -133,7 +133,7 @@ plex_role_traefik_error_pages_enabled: false
     # Volumes
     # Type: list
     error_pages_role_docker_volumes_default: 
-      - "/opt/error-pages:/opt/html"
+      - "{{ server_appdata_path }}/error-pages:/opt/html"
 
     # Type: list
     error_pages_role_docker_volumes_custom: []

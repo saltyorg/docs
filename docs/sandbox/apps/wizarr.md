@@ -198,7 +198,7 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
         wizarr_role_traefik_api_enabled: true
 
         # Type: string
-        wizarr_role_traefik_api_endpoint: "PathPrefix(`/join`) || PathPrefix(`/j`) || PathPrefix(`/static`) || PathPrefix(`/setup`)"
+        wizarr_role_traefik_api_endpoint: "PathPrefix(`/join`) || PathPrefix(`/j`) || PathPrefix(`/static`) || PathPrefix(`/setup`) || PathPrefix(`/wizard`) || PathPrefix(`/image-proxy`) || PathPrefix(`/cinema-posters`) || PathPrefix(`/invitation`)"
 
         ```
 
@@ -224,7 +224,7 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
         wizarr2_traefik_api_enabled: true
 
         # Type: string
-        wizarr2_traefik_api_endpoint: "PathPrefix(`/join`) || PathPrefix(`/j`) || PathPrefix(`/static`) || PathPrefix(`/setup`)"
+        wizarr2_traefik_api_endpoint: "PathPrefix(`/join`) || PathPrefix(`/j`) || PathPrefix(`/static`) || PathPrefix(`/setup`) || PathPrefix(`/wizard`) || PathPrefix(`/image-proxy`) || PathPrefix(`/cinema-posters`) || PathPrefix(`/invitation`)"
 
         ```
 

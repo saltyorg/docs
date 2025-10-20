@@ -322,7 +322,7 @@ Please refer to the official documentation for an explanation of the settings. S
         # Type: list
         bazarr_role_docker_volumes_default: 
           - "{{ bazarr_role_paths_location }}:/config"
-          - "/opt/scripts:/scripts"
+          - "{{ server_appdata_path }}/scripts:/scripts"
 
         # Type: list
         bazarr_role_docker_volumes_legacy: 
@@ -638,7 +638,7 @@ Please refer to the official documentation for an explanation of the settings. S
         # Type: list
         bazarr2_docker_volumes_default: 
           - "{{ bazarr_role_paths_location }}:/config"
-          - "/opt/scripts:/scripts"
+          - "{{ server_appdata_path }}/scripts:/scripts"
 
         # Type: list
         bazarr2_docker_volumes_legacy: 

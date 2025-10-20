@@ -155,7 +155,7 @@ sb install sandbox-forgejo
     forgejo_role_docker_image_repo: "codeberg.org/forgejo/forgejo"
 
     # Type: string
-    forgejo_role_docker_image_tag: "1.20" # the Codeberg container registry does not provide a "latest" tag
+    forgejo_role_docker_image_tag: "13" # the Codeberg container registry does not provide a "latest" tag
 
     # Type: string
     forgejo_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='forgejo') }}:{{ lookup('role_var', '_docker_image_tag', role='forgejo') }}"
@@ -171,7 +171,6 @@ sb install sandbox-forgejo
       DB_PASS: "password321"
       DB_DATABASE: "forgejo"
       DISABLE_SSH: "true"
-      RUN_MODE: "prod"
       ROOT_URL: "{{ lookup('role_var', '_web_url', role='forgejo') }}/"
 
     # Type: dict

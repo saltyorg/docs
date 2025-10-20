@@ -161,7 +161,7 @@ sb install sandbox-duplicati
     # Type: list
     duplicati_role_docker_volumes_default: 
       - "{{ lookup('role_var', '_paths_location', role='duplicati') }}:/config"
-      - "/opt:/saltbox/opt"
+      - "{{ server_appdata_path }}:/saltbox/opt"
       - "/srv/git/saltbox:/saltbox/saltbox"
 
     # Type: list

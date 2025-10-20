@@ -60,12 +60,11 @@ Any actual game server configs will be in the `/opt/CONTAINERNAME/serverfiles/` 
 
 In your game, connect to your ip and default ports for the server. Make sure you set the UDP and TCP for the ports correctly. If everything was setup correctly the game should connect to the server.
 
-## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->## Role Defaults
+
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
-
 
     This role supports multiple instances via `lgsm_instances`.
 
@@ -92,397 +91,673 @@ In your game, connect to your ip and default ports for the server. Make sure you
 
     Instead, use the corresponding `_custom` variable (like `lgsm_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
-??? example "Basics"
+=== "Basics"
 
-    === "Default"
+    ??? variable list "`lgsm_instances`"
 
         ```yaml
         # Type: list
         lgsm_instances: []
-
         ```
-
-    === "Example"
 
         ```yaml
         # Type: list
         lgsm_instances: ["lgsm", "lgsm2"]
-
         ```
 
-??? example "Paths"
+=== "Paths"
 
     === "Role-level"
 
-        ```yaml
-        # Type: string
-        lgsm_role_paths_folder: "{{ lgsm_name }}"
+        ??? variable string "`lgsm_role_paths_folder`"
 
-        # Type: string
-        lgsm_role_paths_location: "{{ server_appdata_path }}/{{ lgsm_role_paths_folder }}"
+            ```yaml
+            # Type: string
+            lgsm_role_paths_folder: "{{ lgsm_name }}"
+            ```
 
-        ```
+        ??? variable string "`lgsm_role_paths_location`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_paths_location: "{{ server_appdata_path }}/{{ lgsm_role_paths_folder }}"
+            ```
 
     === "Instance-level"
 
-        ```yaml
-        # Type: string
-        lgsm2_paths_folder: "{{ lgsm_name }}"
+        ??? variable string "`lgsm2_paths_folder`"
 
-        # Type: string
-        lgsm2_paths_location: "{{ server_appdata_path }}/{{ lgsm_role_paths_folder }}"
+            ```yaml
+            # Type: string
+            lgsm2_paths_folder: "{{ lgsm_name }}"
+            ```
 
-        ```
+        ??? variable string "`lgsm2_paths_location`"
 
-??? example "Web"
+            ```yaml
+            # Type: string
+            lgsm2_paths_location: "{{ server_appdata_path }}/{{ lgsm_role_paths_folder }}"
+            ```
+
+=== "Web"
 
     === "Role-level"
 
-        ```yaml
-        # Type: string
-        lgsm_role_web_subdomain: "{{ lgsm_name }}"
+        ??? variable string "`lgsm_role_web_subdomain`"
 
-        # Type: string
-        lgsm_role_web_domain: "{{ user.domain }}"
+            ```yaml
+            # Type: string
+            lgsm_role_web_subdomain: "{{ lgsm_name }}"
+            ```
 
-        ```
+        ??? variable string "`lgsm_role_web_domain`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_web_domain: "{{ user.domain }}"
+            ```
 
     === "Instance-level"
 
-        ```yaml
-        # Type: string
-        lgsm2_web_subdomain: "{{ lgsm_name }}"
+        ??? variable string "`lgsm2_web_subdomain`"
 
-        # Type: string
-        lgsm2_web_domain: "{{ user.domain }}"
+            ```yaml
+            # Type: string
+            lgsm2_web_subdomain: "{{ lgsm_name }}"
+            ```
 
-        ```
+        ??? variable string "`lgsm2_web_domain`"
 
-??? example "DNS"
+            ```yaml
+            # Type: string
+            lgsm2_web_domain: "{{ user.domain }}"
+            ```
+
+=== "DNS"
 
     === "Role-level"
 
-        ```yaml
-        # Type: string
-        lgsm_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='lgsm') }}"
+        ??? variable string "`lgsm_role_dns_record`"
 
-        # Type: string
-        lgsm_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='lgsm') }}"
+            ```yaml
+            # Type: string
+            lgsm_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='lgsm') }}"
+            ```
 
-        # Type: bool (true/false)
-        lgsm_role_dns_proxy: false
+        ??? variable string "`lgsm_role_dns_zone`"
 
-        ```
+            ```yaml
+            # Type: string
+            lgsm_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='lgsm') }}"
+            ```
+
+        ??? variable bool "`lgsm_role_dns_proxy`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm_role_dns_proxy: false
+            ```
 
     === "Instance-level"
 
-        ```yaml
-        # Type: string
-        lgsm2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='lgsm') }}"
+        ??? variable string "`lgsm2_dns_record`"
 
-        # Type: string
-        lgsm2_dns_zone: "{{ lookup('role_var', '_web_domain', role='lgsm') }}"
+            ```yaml
+            # Type: string
+            lgsm2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='lgsm') }}"
+            ```
 
-        # Type: bool (true/false)
-        lgsm2_dns_proxy: false
+        ??? variable string "`lgsm2_dns_zone`"
 
-        ```
+            ```yaml
+            # Type: string
+            lgsm2_dns_zone: "{{ lookup('role_var', '_web_domain', role='lgsm') }}"
+            ```
 
-??? example "Docker"
+        ??? variable bool "`lgsm2_dns_proxy`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm2_dns_proxy: false
+            ```
+
+=== "Docker"
 
     === "Role-level"
 
-        ```yaml
-        # Container
-        # Type: string
-        lgsm_role_docker_container: "{{ lgsm_name }}"
+        ##### Container
 
-        # Image
-        # Type: bool (true/false)
-        lgsm_role_docker_image_pull: true
+        ??? variable string "`lgsm_role_docker_container`"
 
-        # Type: string
-        lgsm_role_docker_image_repo: "gameservermanagers/gameserver"
+            ```yaml
+            # Type: string
+            lgsm_role_docker_container: "{{ lgsm_name }}"
+            ```
 
-        # Type: string
-        lgsm_role_docker_image_tag: "{{ lgsm_name | replace('lgsm_', '') }}"
+        ##### Image
 
-        # Type: string
-        lgsm_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='lgsm') }}:{{ lookup('role_var', '_docker_image_tag', role='lgsm') }}"
+        ??? variable bool "`lgsm_role_docker_image_pull`"
 
-        # Volumes
-        # Type: list
-        lgsm_role_docker_volumes_default: 
-          - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
+            ```yaml
+            # Type: bool (true/false)
+            lgsm_role_docker_image_pull: true
+            ```
 
-        # Type: list
-        lgsm_role_docker_volumes_custom: []
+        ??? variable string "`lgsm_role_docker_image_repo`"
 
-        # Hostname
-        # Type: string
-        lgsm_role_docker_hostname: "{{ lgsm_name }}"
+            ```yaml
+            # Type: string
+            lgsm_role_docker_image_repo: "gameservermanagers/gameserver"
+            ```
 
-        # Networks
-        # Type: string
-        lgsm_role_docker_networks_alias: "{{ lgsm_name }}"
+        ??? variable string "`lgsm_role_docker_image_tag`"
 
-        # Type: list
-        lgsm_role_docker_networks_default: []
+            ```yaml
+            # Type: string
+            lgsm_role_docker_image_tag: "{{ lgsm_name | replace('lgsm_', '') }}"
+            ```
 
-        # Type: list
-        lgsm_role_docker_networks_custom: []
+        ??? variable string "`lgsm_role_docker_image`"
 
-        # Restart Policy
-        # Type: string
-        lgsm_role_docker_restart_policy: unless-stopped
+            ```yaml
+            # Type: string
+            lgsm_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='lgsm') }}:{{ lookup('role_var', '_docker_image_tag', role='lgsm') }}"
+            ```
 
-        # State
-        # Type: string
-        lgsm_role_docker_state: started
+        ##### Volumes
 
-        ```
+        ??? variable list "`lgsm_role_docker_volumes_default`"
+
+            ```yaml
+            # Type: list
+            lgsm_role_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
+            ```
+
+        ??? variable list "`lgsm_role_docker_volumes_custom`"
+
+            ```yaml
+            # Type: list
+            lgsm_role_docker_volumes_custom: []
+            ```
+
+        ##### Hostname
+
+        ??? variable string "`lgsm_role_docker_hostname`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_docker_hostname: "{{ lgsm_name }}"
+            ```
+
+        ##### Networks
+
+        ??? variable string "`lgsm_role_docker_networks_alias`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_docker_networks_alias: "{{ lgsm_name }}"
+            ```
+
+        ??? variable list "`lgsm_role_docker_networks_default`"
+
+            ```yaml
+            # Type: list
+            lgsm_role_docker_networks_default: []
+            ```
+
+        ??? variable list "`lgsm_role_docker_networks_custom`"
+
+            ```yaml
+            # Type: list
+            lgsm_role_docker_networks_custom: []
+            ```
+
+        ##### Restart Policy
+
+        ??? variable string "`lgsm_role_docker_restart_policy`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_docker_restart_policy: unless-stopped
+            ```
+
+        ##### State
+
+        ??? variable string "`lgsm_role_docker_state`"
+
+            ```yaml
+            # Type: string
+            lgsm_role_docker_state: started
+            ```
 
     === "Instance-level"
 
-        ```yaml
-        # Container
-        # Type: string
-        lgsm2_docker_container: "{{ lgsm_name }}"
+        ##### Container
 
-        # Image
-        # Type: bool (true/false)
-        lgsm2_docker_image_pull: true
+        ??? variable string "`lgsm2_docker_container`"
 
-        # Type: string
-        lgsm2_docker_image_repo: "gameservermanagers/gameserver"
+            ```yaml
+            # Type: string
+            lgsm2_docker_container: "{{ lgsm_name }}"
+            ```
 
-        # Type: string
-        lgsm2_docker_image_tag: "{{ lgsm_name | replace('lgsm_', '') }}"
+        ##### Image
 
-        # Type: string
-        lgsm2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='lgsm') }}:{{ lookup('role_var', '_docker_image_tag', role='lgsm') }}"
+        ??? variable bool "`lgsm2_docker_image_pull`"
 
-        # Volumes
-        # Type: list
-        lgsm2_docker_volumes_default: 
-          - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
+            ```yaml
+            # Type: bool (true/false)
+            lgsm2_docker_image_pull: true
+            ```
 
-        # Type: list
-        lgsm2_docker_volumes_custom: []
+        ??? variable string "`lgsm2_docker_image_repo`"
 
-        # Hostname
-        # Type: string
-        lgsm2_docker_hostname: "{{ lgsm_name }}"
+            ```yaml
+            # Type: string
+            lgsm2_docker_image_repo: "gameservermanagers/gameserver"
+            ```
 
-        # Networks
-        # Type: string
-        lgsm2_docker_networks_alias: "{{ lgsm_name }}"
+        ??? variable string "`lgsm2_docker_image_tag`"
 
-        # Type: list
-        lgsm2_docker_networks_default: []
+            ```yaml
+            # Type: string
+            lgsm2_docker_image_tag: "{{ lgsm_name | replace('lgsm_', '') }}"
+            ```
 
-        # Type: list
-        lgsm2_docker_networks_custom: []
+        ??? variable string "`lgsm2_docker_image`"
 
-        # Restart Policy
-        # Type: string
-        lgsm2_docker_restart_policy: unless-stopped
+            ```yaml
+            # Type: string
+            lgsm2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='lgsm') }}:{{ lookup('role_var', '_docker_image_tag', role='lgsm') }}"
+            ```
 
-        # State
-        # Type: string
-        lgsm2_docker_state: started
+        ##### Volumes
 
+        ??? variable list "`lgsm2_docker_volumes_default`"
 
-        ```
+            ```yaml
+            # Type: list
+                    lgsm2_docker_volumes_default: 
+                      - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
+            ```
 
-??? example "Global Override Options"
+        ??? variable list "`lgsm2_docker_volumes_custom`"
+
+            ```yaml
+            # Type: list
+            lgsm2_docker_volumes_custom: []
+            ```
+
+        ##### Hostname
+
+        ??? variable string "`lgsm2_docker_hostname`"
+
+            ```yaml
+            # Type: string
+            lgsm2_docker_hostname: "{{ lgsm_name }}"
+            ```
+
+        ##### Networks
+
+        ??? variable string "`lgsm2_docker_networks_alias`"
+
+            ```yaml
+            # Type: string
+            lgsm2_docker_networks_alias: "{{ lgsm_name }}"
+            ```
+
+        ??? variable list "`lgsm2_docker_networks_default`"
+
+            ```yaml
+            # Type: list
+            lgsm2_docker_networks_default: []
+            ```
+
+        ??? variable list "`lgsm2_docker_networks_custom`"
+
+            ```yaml
+            # Type: list
+            lgsm2_docker_networks_custom: []
+            ```
+
+        ##### Restart Policy
+
+        ??? variable string "`lgsm2_docker_restart_policy`"
+
+            ```yaml
+            # Type: string
+            lgsm2_docker_restart_policy: unless-stopped
+            ```
+
+        ##### State
+
+        ??? variable string "`lgsm2_docker_state`"
+
+            ```yaml
+            # Type: string
+            lgsm2_docker_state: started
+            ```
+
+=== "Global Override Options"
 
     === "Role-level"
 
         Override for all instances:
 
-        ```yaml
-        # Enable or disable Autoheal monitoring for containers created when deploying
-        # Type: bool (true/false)
-        lgsm_role_autoheal_enabled: true
-
-        # List of container dependencies that must be running before containers start
-        # Type: string
-        lgsm_role_depends_on: ""
-
-        # Delay in seconds before starting containers after dependencies are ready
-        # Type: string (quoted number)
-        lgsm_role_depends_on_delay: "0"
-
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        lgsm_role_depends_on_healthchecks:
-
-        # Enable or disable Diun update notifications for containers created when deploying
-        # Type: bool (true/false)
-        lgsm_role_diun_enabled: true
-
-        # Enable or disable automatic DNS record creation for containers
-        # Type: bool (true/false)
-        lgsm_role_dns_enabled: true
-
-        # Enable or disable Saltbox Docker Controller management for containers
-        # Type: bool (true/false)
-        lgsm_role_docker_controller: true
-
-        # Enable Traefik autodetect middleware for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_autodetect_enabled: false
-
-        # Enable CrowdSec middleware for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_crowdsec_enabled: false
-
-        # Enable custom error pages middleware for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_error_pages_enabled: false
-
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_gzip_enabled: false
-
-        # Enable robots.txt middleware for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_robot_enabled: true
-
-        # Enable Tailscale-specific Traefik configuration for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_tailscale_enabled: false
-
-        # Enable wildcard certificate for containers
-        # Type: bool (true/false)
-        lgsm_role_traefik_wildcard_enabled: true
-
-        # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: list
-        lgsm_role_web_fqdn_override: # (1)!
-
-        # Override the Traefik web host configuration for containers
-        # Type: string
-        lgsm_role_web_host_override: # (2)!
-
-        # URL scheme to use for web access to containers
-        # Type: string ("http"/"https")
-        lgsm_role_web_scheme:
-
-        ```
-
-        1.  Example:
+        ??? variable bool "`lgsm_role_autoheal_enabled`"
 
             ```yaml
-            lgsm_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "lgsm2.{{ user.domain }}"
-              - "lgsm.otherdomain.tld"
+            # Enable or disable Autoheal monitoring for containers created when deploying
+            # Type: bool (true/false)
+            lgsm_role_autoheal_enabled: true
             ```
 
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        2.  Example:
+        ??? variable string "`lgsm_role_depends_on`"
 
             ```yaml
-            lgsm_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'lgsm2.' + user.domain }}`)"
+            # List of container dependencies that must be running before containers start
+            # Type: string
+            lgsm_role_depends_on: ""
             ```
 
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+        ??? variable string "`lgsm_role_depends_on_delay`"
+
+            ```yaml
+            # Delay in seconds before starting containers after dependencies are ready
+            # Type: string (quoted number)
+            lgsm_role_depends_on_delay: "0"
+            ```
+
+        ??? variable string "`lgsm_role_depends_on_healthchecks`"
+
+            ```yaml
+            # Enable healthcheck waiting for container dependencies
+            # Type: string ("true"/"false")
+            lgsm_role_depends_on_healthchecks:
+            ```
+
+        ??? variable bool "`lgsm_role_diun_enabled`"
+
+            ```yaml
+            # Enable or disable Diun update notifications for containers created when deploying
+            # Type: bool (true/false)
+            lgsm_role_diun_enabled: true
+            ```
+
+        ??? variable bool "`lgsm_role_dns_enabled`"
+
+            ```yaml
+            # Enable or disable automatic DNS record creation for containers
+            # Type: bool (true/false)
+            lgsm_role_dns_enabled: true
+            ```
+
+        ??? variable bool "`lgsm_role_docker_controller`"
+
+            ```yaml
+            # Enable or disable Saltbox Docker Controller management for containers
+            # Type: bool (true/false)
+            lgsm_role_docker_controller: true
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_autodetect_enabled`"
+
+            ```yaml
+            # Enable Traefik autodetect middleware for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_autodetect_enabled: false
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_crowdsec_enabled`"
+
+            ```yaml
+            # Enable CrowdSec middleware for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_crowdsec_enabled: false
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_error_pages_enabled`"
+
+            ```yaml
+            # Enable custom error pages middleware for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_error_pages_enabled: false
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_gzip_enabled`"
+
+            ```yaml
+            # Enable gzip compression middleware for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_robot_enabled`"
+
+            ```yaml
+            # Enable robots.txt middleware for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_robot_enabled: true
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_tailscale_enabled`"
+
+            ```yaml
+            # Enable Tailscale-specific Traefik configuration for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_tailscale_enabled: false
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_wildcard_enabled`"
+
+            ```yaml
+            # Enable wildcard certificate for containers
+            # Type: bool (true/false)
+            lgsm_role_traefik_wildcard_enabled: true
+            ```
+
+        ??? variable list "`lgsm_role_web_fqdn_override`"
+
+            ```yaml
+            # Override the Traefik fully qualified domain name (FQDN) for containers
+            # Type: list
+            lgsm_role_web_fqdn_override: # (1)!
+            ```
+
+            1.  Example:
+
+                ```yaml
+                lgsm_role_web_fqdn_override:
+                  - "{{ traefik_host }}"
+                  - "lgsm2.{{ user.domain }}"
+                  - "lgsm.otherdomain.tld"
+                ```
+
+                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        ??? variable string "`lgsm_role_web_host_override`"
+
+            ```yaml
+            # Override the Traefik web host configuration for containers
+            # Type: string
+            lgsm_role_web_host_override: # (1)!
+            ```
+
+            1.  Example:
+
+                ```yaml
+                lgsm_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'lgsm2.' + user.domain }}`)"
+                ```
+
+                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        ??? variable string "`lgsm_role_web_scheme`"
+
+            ```yaml
+            # URL scheme to use for web access to containers
+            # Type: string ("http"/"https")
+            lgsm_role_web_scheme:
+            ```
 
     === "Instance-level"
 
         Override for a specific instance (e.g., `lgsm2`):
 
-        ```yaml
-        # Enable or disable Autoheal monitoring for the container created when deploying
-        # Type: bool (true/false)
-        lgsm2_autoheal_enabled: true
-
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        lgsm2_depends_on: ""
-
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        lgsm2_depends_on_delay: "0"
-
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        lgsm2_depends_on_healthchecks:
-
-        # Enable or disable Diun update notifications for the container created when deploying
-        # Type: bool (true/false)
-        lgsm2_diun_enabled: true
-
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        lgsm2_dns_enabled: true
-
-        # Enable or disable Saltbox Docker Controller management for the container
-        # Type: bool (true/false)
-        lgsm2_docker_controller: true
-
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_autodetect_enabled: false
-
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_crowdsec_enabled: false
-
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_error_pages_enabled: false
-
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_gzip_enabled: false
-
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_robot_enabled: true
-
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_tailscale_enabled: false
-
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        lgsm2_traefik_wildcard_enabled: true
-
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        lgsm2_web_fqdn_override: # (1)!
-
-        # Override the Traefik web host configuration for the container
-        # Type: string
-        lgsm2_web_host_override: # (2)!
-
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        lgsm2_web_scheme:
-
-        ```
-
-        1.  Example:
+        ??? variable bool "`lgsm2_autoheal_enabled`"
 
             ```yaml
-            lgsm2_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "lgsm2.{{ user.domain }}"
-              - "lgsm.otherdomain.tld"
+            # Enable or disable Autoheal monitoring for containers created when deploying
+            # Type: bool (true/false)
+            lgsm2_autoheal_enabled: true
             ```
 
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        2.  Example:
+        ??? variable string "`lgsm2_depends_on`"
 
             ```yaml
-            lgsm2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'lgsm2.' + user.domain }}`)"
+            # List of container dependencies that must be running before containers start
+            # Type: string
+            lgsm2_depends_on: ""
             ```
 
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+        ??? variable string "`lgsm2_depends_on_delay`"
+
+            ```yaml
+            # Delay in seconds before starting containers after dependencies are ready
+            # Type: string (quoted number)
+            lgsm2_depends_on_delay: "0"
+            ```
+
+        ??? variable string "`lgsm2_depends_on_healthchecks`"
+
+            ```yaml
+            # Enable healthcheck waiting for container dependencies
+            # Type: string ("true"/"false")
+            lgsm2_depends_on_healthchecks:
+            ```
+
+        ??? variable bool "`lgsm2_diun_enabled`"
+
+            ```yaml
+            # Enable or disable Diun update notifications for containers created when deploying
+            # Type: bool (true/false)
+            lgsm2_diun_enabled: true
+            ```
+
+        ??? variable bool "`lgsm2_dns_enabled`"
+
+            ```yaml
+            # Enable or disable automatic DNS record creation for containers
+            # Type: bool (true/false)
+            lgsm2_dns_enabled: true
+            ```
+
+        ??? variable bool "`lgsm2_docker_controller`"
+
+            ```yaml
+            # Enable or disable Saltbox Docker Controller management for containers
+            # Type: bool (true/false)
+            lgsm2_docker_controller: true
+            ```
+
+        ??? variable bool "`lgsm2_traefik_autodetect_enabled`"
+
+            ```yaml
+            # Enable Traefik autodetect middleware for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_autodetect_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_crowdsec_enabled`"
+
+            ```yaml
+            # Enable CrowdSec middleware for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_crowdsec_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_error_pages_enabled`"
+
+            ```yaml
+            # Enable custom error pages middleware for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_error_pages_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_gzip_enabled`"
+
+            ```yaml
+            # Enable gzip compression middleware for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_robot_enabled`"
+
+            ```yaml
+            # Enable robots.txt middleware for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_robot_enabled: true
+            ```
+
+        ??? variable bool "`lgsm2_traefik_tailscale_enabled`"
+
+            ```yaml
+            # Enable Tailscale-specific Traefik configuration for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_tailscale_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_wildcard_enabled`"
+
+            ```yaml
+            # Enable wildcard certificate for containers
+            # Type: bool (true/false)
+            lgsm2_traefik_wildcard_enabled: true
+            ```
+
+        ??? variable list "`lgsm2_web_fqdn_override`"
+
+            ```yaml
+            # Override the Traefik fully qualified domain name (FQDN) for containers
+            # Type: list
+            lgsm2_web_fqdn_override: # (1)!
+            ```
+
+            1.  Example:
+
+                ```yaml
+                lgsm2_web_fqdn_override:
+                  - "{{ traefik_host }}"
+                  - "lgsm2.{{ user.domain }}"
+                  - "lgsm.otherdomain.tld"
+                ```
+
+                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        ??? variable string "`lgsm2_web_host_override`"
+
+            ```yaml
+            # Override the Traefik web host configuration for containers
+            # Type: string
+            lgsm2_web_host_override: # (1)!
+            ```
+
+            1.  Example:
+
+                ```yaml
+                lgsm2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'lgsm2.' + user.domain }}`)"
+                ```
+
+                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        ??? variable string "`lgsm2_web_scheme`"
+
+            ```yaml
+            # URL scheme to use for web access to containers
+            # Type: string ("http"/"https")
+            lgsm2_web_scheme:
+            ```
+
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

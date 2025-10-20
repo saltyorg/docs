@@ -105,14 +105,15 @@ The variables that can be used for customization within the Inventory are listed
 
 ## Data Types
 
-Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). You will encounter four data types in the variable files:
+Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). You will encounter five data types in the variable files:
 
-| Data Type       | Token             | Syntax Template                                                                  | Saltbox Example                                                                                                                   |
-|-----------------|-------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| string          | `""`              | <pre><code>str_key: "value"</code></pre>                                         | <pre><code>global_themepark_theme: "overseerr"</code></pre>                                                                       |
-| boolean         | `true` or `false` | <pre><code>bool_key: true</code></pre>                                           | <pre><code>use_cloudplow: false</code></pre>                                                                                      |
-| <br/>list       | <br/>`[]`         | <pre><code>list_key:<br/>  - item0<br/>  - "item1"</code></pre>                  | <pre><code>gluetun_docker_networks_alias_custom:<br/>  - "plex"<br/>  - "plex2"</code></pre>                                      |
-| <br/>dictionary | <br/>`{}`         | <pre><code>dict_key:<br/>  STR_KEY: "value"<br/>  BOOL_KEY: "false"</code></pre> | <pre><code>kometasw_docker_envs_custom:<br/>  KOMETA_RUN_COLLECTIONS: "Star Wars"<br/>  KOMETA_DELETE_LABELS: "true"</code></pre> |
+| Data Type       | Token          | Syntax Template                                                                  | Saltbox Example                                                                                                                   |
+|-----------------|----------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| boolean         | `true`/`false` | <pre><code>bool_key: true</code></pre>                                           | <pre><code>use_cloudplow: false</code></pre>                                                                                      |
+| integer         |                | <pre><code>int_key: 123</code></pre>                                             | <pre><code>emby_role_config_cache_size: 2048</code></pre>                                                                         |
+| string          | `""`           | <pre><code>str_key: "value"</code></pre>                                         | <pre><code>global_themepark_theme: "overseerr"</code></pre>                                                                       |
+| <br/>list       | <br/>`[]`      | <pre><code>list_key:<br/>  - item0<br/>  - "item1"</code></pre>                  | <pre><code>gluetun_docker_networks_alias_custom:<br/>  - "plex"<br/>  - "plex2"</code></pre>                                      |
+| <br/>dictionary | <br/>`{}`      | <pre><code>dict_key:<br/>  STR_KEY: "value"<br/>  BOOL_KEY: "false"</code></pre> | <pre><code>kometasw_docker_envs_custom:<br/>  KOMETA_RUN_COLLECTIONS: "Star Wars"<br/>  KOMETA_DELETE_LABELS: "true"</code></pre> |
 
 ## Default and Custom Patterns
 

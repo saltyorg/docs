@@ -1078,7 +1078,7 @@ Examples:
         pattern = r'<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->.*?<!-- END SALTBOX MANAGED VARIABLES SECTION -->'
         # Build replacement using a function to avoid re.sub interpreting backslashes in new_section
         def build_replacement(match):
-            return f'<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->\n<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->{new_section}\n<!-- END SALTBOX MANAGED VARIABLES SECTION -->'
+            return f'<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->\n<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->\n{new_section}<!-- END SALTBOX MANAGED VARIABLES SECTION -->'
         new_content = re.sub(pattern, build_replacement, original_content, flags=re.DOTALL)
 
         # Generate diff

@@ -593,9 +593,9 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
 
             ```yaml
             # Type: string
-                    lidarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='lidarr') + '.' + lookup('role_var', '_web_domain', role='lidarr')
-                                      if (lookup('role_var', '_web_subdomain', role='lidarr') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='lidarr')) }}"
+            lidarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='lidarr') + '.' + lookup('role_var', '_web_domain', role='lidarr')
+                              if (lookup('role_var', '_web_subdomain', role='lidarr') | length > 0)
+                              else lookup('role_var', '_web_domain', role='lidarr')) }}"
             ```
 
 === "DNS"
@@ -715,10 +715,10 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
 
             ```yaml
             # Type: string
-                    lidarr2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                            + (',themepark-' + lidarr_name
-                                                              if (lookup('role_var', '_themepark_enabled', role='lidarr') and global_themepark_plugin_enabled)
-                                                              else '') }}"
+            lidarr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                    + (',themepark-' + lidarr_name
+                                                      if (lookup('role_var', '_themepark_enabled', role='lidarr') and global_themepark_plugin_enabled)
+                                                      else '') }}"
             ```
 
         ??? variable string "`lidarr2_traefik_middleware_custom`"
@@ -800,9 +800,8 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
 
         ??? variable bool "`lidarr2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             lidarr2_themepark_enabled: false
             ```
@@ -1037,11 +1036,11 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
 
             ```yaml
             # Type: dict
-                    lidarr2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            lidarr2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`lidarr2_docker_envs_custom`"
@@ -1057,17 +1056,17 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
 
             ```yaml
             # Type: list
-                    lidarr2_docker_volumes_default: 
-                      - "{{ lidarr_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            lidarr2_docker_volumes_default: 
+              - "{{ lidarr_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`lidarr2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    lidarr2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media/Music:/music"
+            lidarr2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media/Music:/music"
             ```
 
         ??? variable list "`lidarr2_docker_volumes_custom`"

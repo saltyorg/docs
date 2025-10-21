@@ -176,9 +176,9 @@ sb install sandbox-qui
 
             ```yaml
             # Type: string
-                    qui2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
-                                   if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='qui')) }}"
+            qui2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
+                           if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
+                           else lookup('role_var', '_web_domain', role='qui')) }}"
             ```
 
 === "DNS"
@@ -532,8 +532,8 @@ sb install sandbox-qui
 
             ```yaml
             # Type: dict
-                    qui2_docker_envs_default: 
-                      TZ: "{{ tz }}"
+            qui2_docker_envs_default: 
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`qui2_docker_envs_custom`"
@@ -549,8 +549,8 @@ sb install sandbox-qui
 
             ```yaml
             # Type: list
-                    qui2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='qui') }}:/config"
+            qui2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='qui') }}:/config"
             ```
 
         ??? variable list "`qui2_docker_volumes_custom`"

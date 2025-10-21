@@ -198,9 +198,8 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
         ??? variable string "`qbittorrent2_torrent_content_remove_option`"
 
-            # Options are: Delete or MoveToTrash
-
             ```yaml
+            # Options are: Delete or MoveToTrash
             # Type: string
             qbittorrent2_torrent_content_remove_option: "Delete"
             ```
@@ -317,51 +316,47 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
         ??? variable string "`qbittorrent2_host_branch`"
 
-            # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
-
             ```yaml
+            # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
             # Type: string
             qbittorrent2_host_branch: libtorrent1
             ```
 
         ??? variable string "`qbittorrent2_host_specific_version`"
 
-            # Example being "release-4.4.5_v1.2.18"
-
-            # If this is set then the above branch logic is ignored
-
             ```yaml
+            # Example being "release-4.4.5_v1.2.18"
+            # If this is set then the above branch logic is ignored
             # Type: string
             qbittorrent2_host_specific_version: ""
             ```
 
         ??? variable string "`qbittorrent2_host_download_endpoint`"
 
-            # Lookup variables
-
             ```yaml
+            # Lookup variables
             # Type: string
-                    qbittorrent2_host_download_endpoint: "{{ 'https://github.com/userdocs/qbittorrent-nox-static/releases/download/'
-                                                          if lookup('role_var', '_host_branch', role='qbittorrent') != 'legacy'
-                                                          else 'https://github.com/userdocs/qbittorrent-nox-static-legacy/releases/download/' }}"
+            qbittorrent2_host_download_endpoint: "{{ 'https://github.com/userdocs/qbittorrent-nox-static/releases/download/'
+                                                  if lookup('role_var', '_host_branch', role='qbittorrent') != 'legacy'
+                                                  else 'https://github.com/userdocs/qbittorrent-nox-static-legacy/releases/download/' }}"
             ```
 
         ??? variable string "`qbittorrent2_host_download_url`"
 
             ```yaml
             # Type: string
-                    qbittorrent2_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_specific_version', role='qbittorrent')
-                                                                                                                            if (lookup('role_var', '_host_specific_version', role='qbittorrent') | length > 0)
-                                                                                                                            else qbittorrent_release_version.stdout }}/x86_64-qbittorrent-nox"
+            qbittorrent2_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_specific_version', role='qbittorrent')
+                                                                                                                    if (lookup('role_var', '_host_specific_version', role='qbittorrent') | length > 0)
+                                                                                                                    else qbittorrent_release_version.stdout }}/x86_64-qbittorrent-nox"
             ```
 
         ??? variable string "`qbittorrent2_host_release_url`"
 
             ```yaml
             # Type: string
-                    qbittorrent2_host_release_url: "{{ 'https://github.com/userdocs/qbittorrent-nox-static/releases/latest/download/dependency-version.json'
-                                                    if lookup('role_var', '_host_branch', role='qbittorrent') != 'legacy'
-                                                    else 'https://github.com/userdocs/qbittorrent-nox-static-legacy/releases/latest/download/dependency-version.json' }}"
+            qbittorrent2_host_release_url: "{{ 'https://github.com/userdocs/qbittorrent-nox-static/releases/latest/download/dependency-version.json'
+                                            if lookup('role_var', '_host_branch', role='qbittorrent') != 'legacy'
+                                            else 'https://github.com/userdocs/qbittorrent-nox-static-legacy/releases/latest/download/dependency-version.json' }}"
             ```
 
         ??? variable string "`qbittorrent2_host_lookup_libtorrent1`"
@@ -382,17 +377,17 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: string
-                    qbittorrent2_host_release_lookup: "{{ qbittorrent_role_host_lookup_libtorrent2
-                                                       if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
-                                                       else qbittorrent_role_host_lookup_libtorrent1 }}"
+            qbittorrent2_host_release_lookup: "{{ qbittorrent_role_host_lookup_libtorrent2
+                                               if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
+                                               else qbittorrent_role_host_lookup_libtorrent1 }}"
             ```
 
         ??? variable string "`qbittorrent2_host_version`"
 
             ```yaml
             # Type: string
-                    qbittorrent2_host_version: |
-                      curl -sL {{ lookup('role_var', '_host_release_url', role='qbittorrent') }} | jq -r '. | "{{ lookup('role_var', '_host_release_lookup', role='qbittorrent') }}"'
+            qbittorrent2_host_version: |
+              curl -sL {{ lookup('role_var', '_host_release_url', role='qbittorrent') }} | jq -r '. | "{{ lookup('role_var', '_host_release_lookup', role='qbittorrent') }}"'
             ```
 
         ??? variable string "`qbittorrent2_service_name`"
@@ -546,9 +541,9 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: string
-                    qbittorrent2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
-                                           if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
-                                           else lookup('role_var', '_web_domain', role='qbittorrent')) }}"
+            qbittorrent2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
+                                   if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
+                                   else lookup('role_var', '_web_domain', role='qbittorrent')) }}"
             ```
 
 === "DNS"
@@ -668,10 +663,10 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: string
-                    qbittorrent2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                                 + (',themepark-' + qbittorrent_name
-                                                                   if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
-                                                                   else '') }}"
+            qbittorrent2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                         + (',themepark-' + qbittorrent_name
+                                                           if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
+                                                           else '') }}"
             ```
 
         ??? variable string "`qbittorrent2_traefik_middleware_custom`"
@@ -760,9 +755,8 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
         ??? variable bool "`qbittorrent2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             qbittorrent2_themepark_enabled: false
             ```
@@ -1049,18 +1043,18 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: string
-                    qbittorrent2_docker_ports_56881: "{{ port_lookup_56881.meta.port
-                                                      if (port_lookup_56881.meta.port is defined) and (port_lookup_56881.meta.port | trim | length > 0)
-                                                      else '56881' }}"
+            qbittorrent2_docker_ports_56881: "{{ port_lookup_56881.meta.port
+                                              if (port_lookup_56881.meta.port is defined) and (port_lookup_56881.meta.port | trim | length > 0)
+                                              else '56881' }}"
             ```
 
         ??? variable string "`qbittorrent2_docker_ports_8080`"
 
             ```yaml
             # Type: string
-                    qbittorrent2_docker_ports_8080: "{{ port_lookup_8080.meta.port
-                                                     if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
-                                                     else '8090' }}"
+            qbittorrent2_docker_ports_8080: "{{ port_lookup_8080.meta.port
+                                             if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
+                                             else '8090' }}"
             ```
 
         ??? variable string "`qbittorrent2_web_port_lookup`"
@@ -1074,9 +1068,9 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: list
-                    qbittorrent2_docker_ports_defaults: 
-                      - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
-                      - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
+            qbittorrent2_docker_ports_defaults: 
+              - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
+              - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
             ```
 
         ??? variable list "`qbittorrent2_docker_ports_custom`"
@@ -1092,12 +1086,12 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: dict
-                    qbittorrent2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      UMASK_SET: "002"
-                      S6_SERVICES_GRACETIME: "{{ (lookup('role_var', '_docker_stop_timeout', role='qbittorrent') | int * 1000) | string }}"
+            qbittorrent2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              UMASK_SET: "002"
+              S6_SERVICES_GRACETIME: "{{ (lookup('role_var', '_docker_stop_timeout', role='qbittorrent') | int * 1000) | string }}"
             ```
 
         ??? variable dict "`qbittorrent2_docker_envs_custom`"
@@ -1113,9 +1107,9 @@ Are you setting Saltbox up for the first time?  Continue to [NZBHydra2](nzbhydra
 
             ```yaml
             # Type: list
-                    qbittorrent2_docker_volumes_default: 
-                      - "{{ qbittorrent_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            qbittorrent2_docker_volumes_default: 
+              - "{{ qbittorrent_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`qbittorrent2_docker_volumes_custom`"

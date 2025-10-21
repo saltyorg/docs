@@ -233,9 +233,9 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: string
-                    calibre2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
-                                       if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
-                                       else lookup('role_var', '_web_domain', role='calibre')) }}"
+            calibre2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
+                               if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
+                               else lookup('role_var', '_web_domain', role='calibre')) }}"
             ```
 
         ??? variable string "`calibre2_web2_subdomain`"
@@ -263,9 +263,9 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: string
-                    calibre2_web2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
-                                                 if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
-                                                 else lookup('role_var', '_web2_domain', role='calibre')) }}"
+            calibre2_web2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
+                                         if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
+                                         else lookup('role_var', '_web2_domain', role='calibre')) }}"
             ```
 
 === "DNS"
@@ -469,10 +469,10 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: string
-                    calibre2_books_traefik_middleware_default: "{{ traefik_default_middleware
-                                                                   + (',' + lookup('role_var', '_books_traefik_sso_middleware', role='calibre')
-                                                                     if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
-                                                                     else '') }}"
+            calibre2_books_traefik_middleware_default: "{{ traefik_default_middleware
+                                                           + (',' + lookup('role_var', '_books_traefik_sso_middleware', role='calibre')
+                                                             if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
+                                                             else '') }}"
             ```
 
         ??? variable string "`calibre2_books_traefik_middleware_custom`"
@@ -708,13 +708,13 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: dict
-                    calibre2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      CUSTOM_USER: "{{ user.name }}"
-                      PASSWORD: "{{ user.pass }}"
-                      LIBRARYINTERNALPATH: "/library"
+            calibre2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              CUSTOM_USER: "{{ user.name }}"
+              PASSWORD: "{{ user.pass }}"
+              LIBRARYINTERNALPATH: "/library"
             ```
 
         ??? variable dict "`calibre2_docker_envs_custom`"
@@ -730,9 +730,9 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: list
-                    calibre2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='calibre') }}:/config"
-                      - "/mnt/unionfs/Media/Books:/library"
+            calibre2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='calibre') }}:/config"
+              - "/mnt/unionfs/Media/Books:/library"
             ```
 
         ??? variable list "`calibre2_docker_volumes_custom`"
@@ -748,20 +748,20 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: list
-                    calibre2_docker_labels_default: 
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.entrypoints": "web" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.service": "{{ lookup("role_var", "_web2_subdomain", role="calibre") }}" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.rule": "Host(`{{ lookup("role_var", "_web2_subdomain", role="calibre") + "." + lookup("role_var", "_web2_domain", role="calibre") }}`)" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.priority": "20" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.entrypoints": "websecure" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.service": "{{ lookup("role_var", "_web2_subdomain", role="calibre") }}" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.rule": "Host(`{{ lookup("role_var", "_web2_subdomain", role="calibre") + "." + lookup("role_var", "_web2_domain", role="calibre") }}`)" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.middlewares": "{{ lookup("role_var", "_books_traefik_middleware", role="calibre") }}" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.options": "securetls@file" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="calibre") }}" }'
-                      - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.priority": "20" }'
-                      - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
+            calibre2_docker_labels_default: 
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.entrypoints": "web" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.service": "{{ lookup("role_var", "_web2_subdomain", role="calibre") }}" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.rule": "Host(`{{ lookup("role_var", "_web2_subdomain", role="calibre") + "." + lookup("role_var", "_web2_domain", role="calibre") }}`)" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.priority": "20" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.entrypoints": "websecure" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.service": "{{ lookup("role_var", "_web2_subdomain", role="calibre") }}" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.rule": "Host(`{{ lookup("role_var", "_web2_subdomain", role="calibre") + "." + lookup("role_var", "_web2_domain", role="calibre") }}`)" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.middlewares": "{{ lookup("role_var", "_books_traefik_middleware", role="calibre") }}" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.options": "securetls@file" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="calibre") }}" }'
+              - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.priority": "20" }'
+              - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
             ```
 
         ??? variable dict "`calibre2_docker_labels_custom`"
@@ -809,8 +809,8 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
             ```yaml
             # Type: list
-                    calibre2_docker_security_opts_default: 
-                      - seccomp=unconfined
+            calibre2_docker_security_opts_default: 
+              - seccomp=unconfined
             ```
 
         ??? variable list "`calibre2_docker_security_opts_custom`"

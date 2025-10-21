@@ -227,9 +227,9 @@ Visit `https://watchstate._yourdomain.com_`.
 
             ```yaml
             # Type: string
-                    watchstate2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
-                                          if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
-                                          else lookup('role_var', '_web_domain', role='watchstate')) }}"
+            watchstate2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
+                                  if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='watchstate')) }}"
             ```
 
 === "DNS"
@@ -576,17 +576,17 @@ Visit `https://watchstate._yourdomain.com_`.
 
             ```yaml
             # Type: dict
-                    watchstate2_docker_envs_default: 
-                      WS_TZ: "{{ tz }}"
-                      WS_API_AUTO: "{{ 'true'
-                                    if lookup('role_var', '_api_auto', role='watchstate')
-                                    else omit }}"
-                      WS_TRUST_PROXY: "{{ 'true'
-                                       if lookup('role_var', '_trust_proxy', role='watchstate')
-                                       else omit }}"
-                      WS_SECURE_API_ENDPOINTS: "{{ 'true'
-                                                if lookup('role_var', '_secure_api_endpoints', role='watchstate')
-                                                else omit }}"
+            watchstate2_docker_envs_default: 
+              WS_TZ: "{{ tz }}"
+              WS_API_AUTO: "{{ 'true'
+                            if lookup('role_var', '_api_auto', role='watchstate')
+                            else omit }}"
+              WS_TRUST_PROXY: "{{ 'true'
+                               if lookup('role_var', '_trust_proxy', role='watchstate')
+                               else omit }}"
+              WS_SECURE_API_ENDPOINTS: "{{ 'true'
+                                        if lookup('role_var', '_secure_api_endpoints', role='watchstate')
+                                        else omit }}"
             ```
 
         ??? variable dict "`watchstate2_docker_envs_custom`"
@@ -602,8 +602,8 @@ Visit `https://watchstate._yourdomain.com_`.
 
             ```yaml
             # Type: list
-                    watchstate2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
+            watchstate2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
             ```
 
         ??? variable list "`watchstate2_docker_volumes_custom`"

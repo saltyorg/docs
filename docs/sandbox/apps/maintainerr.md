@@ -220,9 +220,9 @@ You will need your API Keys from both Radarr and Sonarr.
 
             ```yaml
             # Type: string
-                    maintainerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
-                                           if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
-                                           else lookup('role_var', '_web_domain', role='maintainerr')) }}"
+            maintainerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
+                                   if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
+                                   else lookup('role_var', '_web_domain', role='maintainerr')) }}"
             ```
 
 === "DNS"
@@ -560,8 +560,8 @@ You will need your API Keys from both Radarr and Sonarr.
 
             ```yaml
             # Type: dict
-                    maintainerr2_docker_envs_default: 
-                      TZ: "{{ tz }}"
+            maintainerr2_docker_envs_default: 
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`maintainerr2_docker_envs_custom`"
@@ -577,8 +577,8 @@ You will need your API Keys from both Radarr and Sonarr.
 
             ```yaml
             # Type: list
-                    maintainerr2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='maintainerr') }}:/opt/data"
+            maintainerr2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='maintainerr') }}:/opt/data"
             ```
 
         ??? variable list "`maintainerr2_docker_volumes_custom`"

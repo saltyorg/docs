@@ -233,9 +233,9 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
             ```yaml
             # Type: string
-                    deluge2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
-                                      if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='deluge')) }}"
+            deluge2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
+                              if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
+                              else lookup('role_var', '_web_domain', role='deluge')) }}"
             ```
 
 === "DNS"
@@ -355,10 +355,10 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
             ```yaml
             # Type: string
-                    deluge2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                            + (',themepark-' + deluge_name
-                                                              if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
-                                                              else '') }}"
+            deluge2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                    + (',themepark-' + deluge_name
+                                                      if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
+                                                      else '') }}"
             ```
 
         ??? variable string "`deluge2_traefik_middleware_custom`"
@@ -440,9 +440,8 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
         ??? variable bool "`deluge2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             deluge2_themepark_enabled: false
             ```
@@ -705,18 +704,18 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
             ```yaml
             # Type: string
-                    deluge2_docker_ports_58112: "{{ port_lookup_58112.meta.port
-                                                 if (port_lookup_58112.meta.port is defined) and (port_lookup_58112.meta.port | trim | length > 0)
-                                                 else '58112' }}"
+            deluge2_docker_ports_58112: "{{ port_lookup_58112.meta.port
+                                         if (port_lookup_58112.meta.port is defined) and (port_lookup_58112.meta.port | trim | length > 0)
+                                         else '58112' }}"
             ```
 
         ??? variable list "`deluge2_docker_ports_default`"
 
             ```yaml
             # Type: list
-                    deluge2_docker_ports_default: 
-                      - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}"
-                      - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}/udp"
+            deluge2_docker_ports_default: 
+              - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}"
+              - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}/udp"
             ```
 
         ??? variable list "`deluge2_docker_ports_custom`"
@@ -732,11 +731,11 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
             ```yaml
             # Type: dict
-                    deluge2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      UMASK: "002"
+            deluge2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              UMASK: "002"
             ```
 
         ??? variable dict "`deluge2_docker_envs_custom`"
@@ -752,9 +751,9 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
             ```yaml
             # Type: list
-                    deluge2_docker_volumes_default: 
-                      - "{{ deluge_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            deluge2_docker_volumes_default: 
+              - "{{ deluge_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`deluge2_docker_volumes_custom`"

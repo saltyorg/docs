@@ -173,9 +173,9 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
 
             ```yaml
             # Type: string
-                    wizarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wizarr') + '.' + lookup('role_var', '_web_domain', role='wizarr')
-                                      if (lookup('role_var', '_web_subdomain', role='wizarr') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='wizarr')) }}"
+            wizarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wizarr') + '.' + lookup('role_var', '_web_domain', role='wizarr')
+                              if (lookup('role_var', '_web_subdomain', role='wizarr') | length > 0)
+                              else lookup('role_var', '_web_domain', role='wizarr')) }}"
             ```
 
 === "DNS"
@@ -508,11 +508,11 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
 
             ```yaml
             # Type: dict
-                    wizarr2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      DISABLE_BUILTIN_AUTH: "{{ 'true' if (lookup('role_var', '_traefik_sso_middleware', role='wizarr') | length > 0) else 'false' }}"
+            wizarr2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              DISABLE_BUILTIN_AUTH: "{{ 'true' if (lookup('role_var', '_traefik_sso_middleware', role='wizarr') | length > 0) else 'false' }}"
             ```
 
         ??? variable dict "`wizarr2_docker_envs_custom`"
@@ -528,9 +528,9 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
 
             ```yaml
             # Type: list
-                    wizarr2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/database:/data/database"
-                      - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/wizard:/data/wizard"
+            wizarr2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/database:/data/database"
+              - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/wizard:/data/wizard"
             ```
 
         ??? variable list "`wizarr2_docker_volumes_custom`"

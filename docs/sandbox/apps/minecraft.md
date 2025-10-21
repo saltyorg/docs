@@ -227,9 +227,8 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
         ??? variable string "`minecraft2_web_port`"
 
-            # Dynmap
-
             ```yaml
+            # Dynmap
             # Type: string
             minecraft2_web_port: "8123"
             ```
@@ -377,9 +376,9 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
             ```yaml
             # Type: string
-                    minecraft2_docker_ports_25565: "{{ port_lookup_minecraft_tcp.meta.port
-                                                    if (port_lookup_minecraft_tcp.meta.port is defined) and (port_lookup_minecraft_tcp.meta.port | trim | length > 0)
-                                                    else '25565' }}"
+            minecraft2_docker_ports_25565: "{{ port_lookup_minecraft_tcp.meta.port
+                                            if (port_lookup_minecraft_tcp.meta.port is defined) and (port_lookup_minecraft_tcp.meta.port | trim | length > 0)
+                                            else '25565' }}"
             ```
 
 === "Docker"
@@ -585,8 +584,8 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
             ```yaml
             # Type: list
-                    minecraft2_docker_ports_defaults: 
-                      - "{{ lookup('role_var', '_docker_ports_25565', role='minecraft') }}:25565/tcp"
+            minecraft2_docker_ports_defaults: 
+              - "{{ lookup('role_var', '_docker_ports_25565', role='minecraft') }}:25565/tcp"
             ```
 
         ??? variable list "`minecraft2_docker_ports_custom`"
@@ -602,11 +601,11 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
             ```yaml
             # Type: dict
-                    minecraft2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      EULA: "TRUE"
-                      UID: "{{ uid }}"
-                      GID: "{{ gid }}"
+            minecraft2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              EULA: "TRUE"
+              UID: "{{ uid }}"
+              GID: "{{ gid }}"
             ```
 
         ??? variable dict "`minecraft2_docker_envs_custom`"
@@ -622,8 +621,8 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
             ```yaml
             # Type: list
-                    minecraft2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='minecraft') }}/{{ minecraft_name }}/data:/data"
+            minecraft2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='minecraft') }}/{{ minecraft_name }}/data:/data"
             ```
 
         ??? variable list "`minecraft2_docker_volumes_custom`"

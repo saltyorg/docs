@@ -337,10 +337,10 @@ To configure the time that Kometa should run, you may override the `kometa_time`
 
             ```yaml
             # Type: dict
-                    kometa2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      LOG_LEVEL: "DEBUG"
-                      KOMETA_TIMES: "{{ lookup('role_var', '_time', role='kometa') }}"
+            kometa2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              LOG_LEVEL: "DEBUG"
+              KOMETA_TIMES: "{{ lookup('role_var', '_time', role='kometa') }}"
             ```
 
         ??? variable dict "`kometa2_docker_envs_custom`"
@@ -356,8 +356,8 @@ To configure the time that Kometa should run, you may override the `kometa_time`
 
             ```yaml
             # Type: list
-                    kometa2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='kometa') }}:/config"
+            kometa2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='kometa') }}:/config"
             ```
 
         ??? variable list "`kometa2_docker_volumes_custom`"

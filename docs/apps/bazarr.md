@@ -180,9 +180,9 @@ Please refer to the official documentation for an explanation of the settings. S
 
             ```yaml
             # Type: string
-                    bazarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='bazarr') + '.' + lookup('role_var', '_web_domain', role='bazarr')
-                                      if (lookup('role_var', '_web_subdomain', role='bazarr') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='bazarr')) }}"
+            bazarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='bazarr') + '.' + lookup('role_var', '_web_domain', role='bazarr')
+                              if (lookup('role_var', '_web_subdomain', role='bazarr') | length > 0)
+                              else lookup('role_var', '_web_domain', role='bazarr')) }}"
             ```
 
 === "DNS"
@@ -302,10 +302,10 @@ Please refer to the official documentation for an explanation of the settings. S
 
             ```yaml
             # Type: string
-                    bazarr2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                            + (',themepark-' + bazarr_name
-                                                              if (lookup('role_var', '_themepark_enabled', role='bazarr') and global_themepark_plugin_enabled)
-                                                              else '') }}"
+            bazarr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                    + (',themepark-' + bazarr_name
+                                                      if (lookup('role_var', '_themepark_enabled', role='bazarr') and global_themepark_plugin_enabled)
+                                                      else '') }}"
             ```
 
         ??? variable string "`bazarr2_traefik_middleware_custom`"
@@ -387,9 +387,8 @@ Please refer to the official documentation for an explanation of the settings. S
 
         ??? variable bool "`bazarr2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             bazarr2_themepark_enabled: false
             ```
@@ -625,11 +624,11 @@ Please refer to the official documentation for an explanation of the settings. S
 
             ```yaml
             # Type: dict
-                    bazarr2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            bazarr2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`bazarr2_docker_envs_custom`"
@@ -645,18 +644,18 @@ Please refer to the official documentation for an explanation of the settings. S
 
             ```yaml
             # Type: list
-                    bazarr2_docker_volumes_default: 
-                      - "{{ bazarr_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            bazarr2_docker_volumes_default: 
+              - "{{ bazarr_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`bazarr2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    bazarr2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media/Movies:/movies"
-                      - "/mnt/unionfs/Media/TV:/tv"
+            bazarr2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media/Movies:/movies"
+              - "/mnt/unionfs/Media/TV:/tv"
             ```
 
         ??? variable list "`bazarr2_docker_volumes_custom`"

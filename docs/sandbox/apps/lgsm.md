@@ -381,8 +381,8 @@ In your game, connect to your ip and default ports for the server. Make sure you
 
             ```yaml
             # Type: list
-                    lgsm2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
+            lgsm2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
             ```
 
         ??? variable list "`lgsm2_docker_volumes_custom`"

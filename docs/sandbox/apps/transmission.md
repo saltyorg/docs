@@ -208,9 +208,9 @@ sb install sandbox-transmission
 
             ```yaml
             # Type: string
-                    transmission2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
-                                            if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
-                                            else lookup('role_var', '_web_domain', role='transmission')) }}"
+            transmission2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
+                                    if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='transmission')) }}"
             ```
 
 === "DNS"
@@ -590,18 +590,18 @@ sb install sandbox-transmission
 
             ```yaml
             # Type: string
-                    transmission2_docker_ports_51413: "{{ port_lookup_51413.meta.port
-                                                       if (port_lookup_51413.meta.port is defined) and (port_lookup_51413.meta.port | trim | length > 0)
-                                                       else '51413' }}"
+            transmission2_docker_ports_51413: "{{ port_lookup_51413.meta.port
+                                               if (port_lookup_51413.meta.port is defined) and (port_lookup_51413.meta.port | trim | length > 0)
+                                               else '51413' }}"
             ```
 
         ??? variable list "`transmission2_docker_ports_defaults`"
 
             ```yaml
             # Type: list
-                    transmission2_docker_ports_defaults: 
-                      - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}"
-                      - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}/udp"
+            transmission2_docker_ports_defaults: 
+              - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}"
+              - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}/udp"
             ```
 
         ??? variable list "`transmission2_docker_ports_custom`"
@@ -617,13 +617,13 @@ sb install sandbox-transmission
 
             ```yaml
             # Type: dict
-                    transmission2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      UMASK: "002"
-                      USER: "{{ user.name }}"
-                      PASS: "{{ user.pass }}"
+            transmission2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              UMASK: "002"
+              USER: "{{ user.name }}"
+              PASS: "{{ user.pass }}"
             ```
 
         ??? variable dict "`transmission2_docker_envs_custom`"
@@ -639,10 +639,10 @@ sb install sandbox-transmission
 
             ```yaml
             # Type: list
-                    transmission2_docker_volumes_default: 
-                      - "{{ transmission_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
-                      - "{{ transmission_role_paths_downloads_location }}/watched:/watch"
+            transmission2_docker_volumes_default: 
+              - "{{ transmission_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
+              - "{{ transmission_role_paths_downloads_location }}/watched:/watch"
             ```
 
         ??? variable list "`transmission2_docker_volumes_custom`"

@@ -299,10 +299,10 @@ Note: No authentication is configured by default.
 
             ```yaml
             # Type: dict
-                    mongodb2_docker_envs_default: 
-                      MONGO_DATA_DIR: "/data/db"
-                      MONGO_LOG_DIR: "/dev/null"
-                      MONGO_URL: "mongodb://{{ mongodb_name }}:27017/"
+            mongodb2_docker_envs_default: 
+              MONGO_DATA_DIR: "/data/db"
+              MONGO_LOG_DIR: "/dev/null"
+              MONGO_URL: "mongodb://{{ mongodb_name }}:27017/"
             ```
 
         ??? variable dict "`mongodb2_docker_envs_custom`"
@@ -318,9 +318,9 @@ Note: No authentication is configured by default.
 
             ```yaml
             # Type: list
-                    mongodb2_docker_volumes_default: 
-                      - "{{ mongodb_role_paths_location }}:/data/db:rw"
-                      - "{{ mongodb_role_paths_location }}/config:/data/configdb"
+            mongodb2_docker_volumes_default: 
+              - "{{ mongodb_role_paths_location }}:/data/db:rw"
+              - "{{ mongodb_role_paths_location }}/config:/data/configdb"
             ```
 
         ??? variable list "`mongodb2_docker_volumes_custom`"

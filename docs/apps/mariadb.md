@@ -216,8 +216,8 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
             ```yaml
             # Type: list
-                    mariadb2_docker_volumes_migration: 
-                      - "{{ mariadb_role_paths_location }}:/config"
+            mariadb2_docker_volumes_migration: 
+              - "{{ mariadb_role_paths_location }}:/config"
             ```
 
 === "Docker"
@@ -408,13 +408,13 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
             ```yaml
             # Type: dict
-                    mariadb2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-                      MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
-                      MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-                      MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
-                      MARIADB_AUTO_UPGRADE: "1"
+            mariadb2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+              MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
+              MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+              MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
+              MARIADB_AUTO_UPGRADE: "1"
             ```
 
         ??? variable dict "`mariadb2_docker_envs_custom`"
@@ -430,8 +430,8 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
             ```yaml
             # Type: list
-                    mariadb2_docker_volumes_default: 
-                      - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
+            mariadb2_docker_volumes_default: 
+              - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
             ```
 
         ??? variable list "`mariadb2_docker_volumes_custom`"

@@ -113,13 +113,12 @@
     {% for var in section_vars %}
         ??? variable {{ var.var_type }} "`{{ var.instance_name }}`"
 
+            ```yaml
       {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
         {% for comment_line in var.comment_lines %}
             # {{ comment_line }}
-
         {% endfor %}
       {% endif %}
-            ```yaml
             {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
         {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}

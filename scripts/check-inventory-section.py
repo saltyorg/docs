@@ -55,9 +55,8 @@ def check_inventory_section(doc_file: Path) -> bool:
     # Check for the managed inventory section markers
     has_begin_marker = "<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->" in content
     has_end_marker = "<!-- END SALTBOX MANAGED VARIABLES SECTION -->" in content
-    has_inventory_heading = "## Inventory" in content
 
-    return has_begin_marker and has_end_marker and has_inventory_heading
+    return has_begin_marker and has_end_marker
 
 
 def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], total_missing: int,

@@ -448,11 +448,9 @@ Below are some example inventory entries for some common VPN providers. These ar
 
         ??? variable string "`gluetun2_vpn_service_provider`"
 
-            # These variables map to the appropriate Docker ENVs
-
-            # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
-
             ```yaml
+            # These variables map to the appropriate Docker ENVs
+            # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
             # Type: string
             gluetun2_vpn_service_provider: ""
             ```
@@ -911,38 +909,38 @@ Below are some example inventory entries for some common VPN providers. These ar
 
             ```yaml
             # Type: dict
-                    gluetun2_docker_envs_default: 
-                      DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
-                      FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
-                      FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
-                      FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
-                      HTTPPROXY: "on"
-                      HTTPPROXY_STEALTH: "on"
-                      OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
-                      OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-                      OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-                      OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
-                      OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
-                      OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
-                      PGID: "{{ gid }}"
-                      PUID: "{{ uid }}"
-                      SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
-                      SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
-                      SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
-                      SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
-                      SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
-                      TZ: "{{ tz }}"
-                      VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-                      VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-                      VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
-                      VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
-                      WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
+            gluetun2_docker_envs_default: 
+              DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
+              FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
+              FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
+              FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
+              HTTPPROXY: "on"
+              HTTPPROXY_STEALTH: "on"
+              OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
+              OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+              OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+              OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
+              OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
+              OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
+              PGID: "{{ gid }}"
+              PUID: "{{ uid }}"
+              SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
+              SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
+              SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
+              SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
+              SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
+              TZ: "{{ tz }}"
+              VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+              VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+              VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
+              VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
+              WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
             ```
 
         ??? variable dict "`gluetun2_docker_envs_custom`"
@@ -965,8 +963,8 @@ Below are some example inventory entries for some common VPN providers. These ar
 
             ```yaml
             # Type: list
-                    gluetun2_docker_volumes_default: 
-                      - "{{ gluetun_role_paths_location }}:/gluetun"
+            gluetun2_docker_volumes_default: 
+              - "{{ gluetun_role_paths_location }}:/gluetun"
             ```
 
         ??? variable list "`gluetun2_docker_volumes_custom`"
@@ -982,8 +980,8 @@ Below are some example inventory entries for some common VPN providers. These ar
 
             ```yaml
             # Type: dict
-                    gluetun2_docker_labels_default: 
-                      com.centurylinklabs.watchtower.enable: "false"
+            gluetun2_docker_labels_default: 
+              com.centurylinklabs.watchtower.enable: "false"
             ```
 
         ??? variable dict "`gluetun2_docker_labels_custom`"
@@ -1031,8 +1029,8 @@ Below are some example inventory entries for some common VPN providers. These ar
 
             ```yaml
             # Type: list
-                    gluetun2_docker_capabilities_default: 
-                      - NET_ADMIN
+            gluetun2_docker_capabilities_default: 
+              - NET_ADMIN
             ```
 
         ??? variable list "`gluetun2_docker_capabilities_custom`"

@@ -430,9 +430,9 @@ Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).
 
             ```yaml
             # Type: string
-                    autoscan2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
-                                        if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='autoscan')) }}"
+            autoscan2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
+                                if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
+                                else lookup('role_var', '_web_domain', role='autoscan')) }}"
             ```
 
 === "DNS"
@@ -802,10 +802,10 @@ Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).
 
             ```yaml
             # Type: dict
-                    autoscan2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
+            autoscan2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`autoscan2_docker_envs_custom`"
@@ -821,8 +821,8 @@ Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).
 
             ```yaml
             # Type: list
-                    autoscan2_docker_volumes_default: 
-                      - "{{ autoscan_role_paths_location }}:/config"
+            autoscan2_docker_volumes_default: 
+              - "{{ autoscan_role_paths_location }}:/config"
             ```
 
         ??? variable list "`autoscan2_docker_volumes_custom`"
@@ -838,16 +838,16 @@ Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).
 
             ```yaml
             # Type: list
-                    autoscan2_docker_labels_default: 
-                      - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.regex": "^/$" }'
-                      - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.replacement": "/triggers/manual" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.entrypoints": "{{ traefik_entrypoint_websecure }}" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.service": "{{ traefik_router }}" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.rule": "Host(`{{ traefik_host }}`) && PathPrefix(`/triggers`)" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.priority": "{{ lookup("role_var", "_traefik_priority", role="autoscan", default="40") }}" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="autoscan", default=traefik_default_certresolver) }}" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.tls.options": "securetls@file" }'
-                      - '{ "traefik.http.routers.{{ traefik_router }}-triggers.middlewares": "{{ traefik_middleware | regex_replace(autoscan_role_traefik_regex_middleware_string) }}" }'
+            autoscan2_docker_labels_default: 
+              - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.regex": "^/$" }'
+              - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.replacement": "/triggers/manual" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.entrypoints": "{{ traefik_entrypoint_websecure }}" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.service": "{{ traefik_router }}" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.rule": "Host(`{{ traefik_host }}`) && PathPrefix(`/triggers`)" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.priority": "{{ lookup("role_var", "_traefik_priority", role="autoscan", default="40") }}" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="autoscan", default=traefik_default_certresolver) }}" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.tls.options": "securetls@file" }'
+              - '{ "traefik.http.routers.{{ traefik_router }}-triggers.middlewares": "{{ traefik_middleware | regex_replace(autoscan_role_traefik_regex_middleware_string) }}" }'
             ```
 
         ??? variable dict "`autoscan2_docker_labels_custom`"

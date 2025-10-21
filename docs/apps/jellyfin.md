@@ -240,9 +240,9 @@ sb install jellyfin
 
             ```yaml
             # Type: string
-                    jellyfin2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
-                                        if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='jellyfin')) }}"
+            jellyfin2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
+                                if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
+                                else lookup('role_var', '_web_domain', role='jellyfin')) }}"
             ```
 
 === "DNS"
@@ -472,17 +472,16 @@ sb install jellyfin
 
         ??? variable list "`jellyfin2_system_settings_default`"
 
-            # System
-
             ```yaml
+            # System
             # Type: list
-                    jellyfin2_system_settings_default: 
-                      - { xpath: 'PublicPort', value: '80' }
-                      - { xpath: 'PublicHttpsPort', value: '443' }
-                      - { xpath: 'EnableFolderView', value: 'true' }
-                      - { xpath: 'QuickConnectAvailable', value: 'true' }
-                      - { xpath: 'EnableRemoteAccess', value: 'true' }
-                      - { xpath: 'ServerName', value: 'saltbox' }
+            jellyfin2_system_settings_default: 
+              - { xpath: 'PublicPort', value: '80' }
+              - { xpath: 'PublicHttpsPort', value: '443' }
+              - { xpath: 'EnableFolderView', value: 'true' }
+              - { xpath: 'QuickConnectAvailable', value: 'true' }
+              - { xpath: 'EnableRemoteAccess', value: 'true' }
+              - { xpath: 'ServerName', value: 'saltbox' }
             ```
 
         ??? variable list "`jellyfin2_system_settings_custom`"
@@ -501,14 +500,13 @@ sb install jellyfin
 
         ??? variable list "`jellyfin2_network_settings_default`"
 
-            # Network
-
             ```yaml
+            # Network
             # Type: list
-                    jellyfin2_network_settings_default: 
-                      - { xpath: 'PublicPort', value: '80' }
-                      - { xpath: 'PublicHttpsPort', value: '443' }
-                      - { xpath: 'PublishedServerUriBySubnet/string', value: 'external={{ lookup("role_var", "_web_url", role="jellyfin") }}:443' }
+            jellyfin2_network_settings_default: 
+              - { xpath: 'PublicPort', value: '80' }
+              - { xpath: 'PublicHttpsPort', value: '443' }
+              - { xpath: 'PublishedServerUriBySubnet/string', value: 'external={{ lookup("role_var", "_web_url", role="jellyfin") }}:443' }
             ```
 
         ??? variable list "`jellyfin2_network_settings_custom`"
@@ -731,11 +729,11 @@ sb install jellyfin
 
             ```yaml
             # Type: dict
-                    jellyfin2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+            jellyfin2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              DOTNET_USE_POLLING_FILE_WATCHER: "1"
             ```
 
         ??? variable dict "`jellyfin2_docker_envs_custom`"
@@ -751,19 +749,19 @@ sb install jellyfin
 
             ```yaml
             # Type: list
-                    jellyfin2_docker_volumes_default: 
-                      - "{{ jellyfin_role_paths_location }}:/config:rw"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
-                      - "/dev/shm:/dev/shm"
-                      - "{{ jellyfin_role_paths_transcodes_location }}:/transcode"
+            jellyfin2_docker_volumes_default: 
+              - "{{ jellyfin_role_paths_location }}:/config:rw"
+              - "{{ server_appdata_path }}/scripts:/scripts"
+              - "/dev/shm:/dev/shm"
+              - "{{ jellyfin_role_paths_transcodes_location }}:/transcode"
             ```
 
         ??? variable list "`jellyfin2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    jellyfin2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media:/data"
+            jellyfin2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media:/data"
             ```
 
         ??? variable list "`jellyfin2_docker_volumes_custom`"
@@ -779,9 +777,9 @@ sb install jellyfin
 
             ```yaml
             # Type: list
-                    jellyfin2_docker_mounts_default: 
-                      - target: /tmp
-                        type: tmpfs
+            jellyfin2_docker_mounts_default: 
+              - target: /tmp
+                type: tmpfs
             ```
 
         ??? variable list "`jellyfin2_docker_mounts_custom`"

@@ -210,9 +210,9 @@ sb install sandbox-jellyseerr
 
             ```yaml
             # Type: string
-                    jellyseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
-                                          if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
-                                          else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
+            jellyseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
+                                  if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
             ```
 
 === "DNS"
@@ -552,10 +552,10 @@ sb install sandbox-jellyseerr
 
             ```yaml
             # Type: dict
-                    jellyseerr2_docker_envs_default: 
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
-                      LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
+            jellyseerr2_docker_envs_default: 
+              UMASK: "002"
+              TZ: "{{ tz }}"
+              LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
             ```
 
         ??? variable dict "`jellyseerr2_docker_envs_custom`"
@@ -571,8 +571,8 @@ sb install sandbox-jellyseerr
 
             ```yaml
             # Type: list
-                    jellyseerr2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
+            jellyseerr2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
             ```
 
         ??? variable list "`jellyseerr2_docker_volumes_custom`"

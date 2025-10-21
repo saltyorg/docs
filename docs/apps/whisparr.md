@@ -211,9 +211,9 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             ```yaml
             # Type: string
-                    whisparr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
-                                        if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='whisparr')) }}"
+            whisparr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
+                                if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
+                                else lookup('role_var', '_web_domain', role='whisparr')) }}"
             ```
 
 === "DNS"
@@ -333,10 +333,10 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             ```yaml
             # Type: string
-                    whisparr2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                              + (',themepark-' + whisparr_name
-                                                                if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
-                                                                else '') }}"
+            whisparr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                      + (',themepark-' + whisparr_name
+                                                        if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
+                                                        else '') }}"
             ```
 
         ??? variable string "`whisparr2_traefik_middleware_custom`"
@@ -418,9 +418,8 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ??? variable bool "`whisparr2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             whisparr2_themepark_enabled: false
             ```
@@ -647,11 +646,11 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             ```yaml
             # Type: dict
-                    whisparr2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            whisparr2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`whisparr2_docker_envs_custom`"
@@ -667,9 +666,9 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             ```yaml
             # Type: list
-                    whisparr2_docker_volumes_default: 
-                      - "{{ whisparr_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            whisparr2_docker_volumes_default: 
+              - "{{ whisparr_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`whisparr2_docker_volumes_custom`"

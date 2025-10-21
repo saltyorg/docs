@@ -278,9 +278,9 @@ Are you setting Saltbox up for the first time?  Continue to [Portainer](portaine
 
             ```yaml
             # Type: string
-                    overseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
-                                         if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='overseerr')) }}"
+            overseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
+                                 if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='overseerr')) }}"
             ```
 
 === "DNS"
@@ -400,10 +400,10 @@ Are you setting Saltbox up for the first time?  Continue to [Portainer](portaine
 
             ```yaml
             # Type: string
-                    overseerr2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                               + (',themepark-' + overseerr_name
-                                                                 if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
-                                                                 else '') }}"
+            overseerr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                       + (',themepark-' + overseerr_name
+                                                         if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
+                                                         else '') }}"
             ```
 
         ??? variable string "`overseerr2_traefik_middleware_custom`"
@@ -485,9 +485,8 @@ Are you setting Saltbox up for the first time?  Continue to [Portainer](portaine
 
         ??? variable bool "`overseerr2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             overseerr2_themepark_enabled: false
             ```
@@ -721,10 +720,10 @@ Are you setting Saltbox up for the first time?  Continue to [Portainer](portaine
 
             ```yaml
             # Type: dict
-                    overseerr2_docker_envs_default: 
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
-                      LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='overseerr') }}"
+            overseerr2_docker_envs_default: 
+              UMASK: "002"
+              TZ: "{{ tz }}"
+              LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='overseerr') }}"
             ```
 
         ??? variable dict "`overseerr2_docker_envs_custom`"
@@ -740,8 +739,8 @@ Are you setting Saltbox up for the first time?  Continue to [Portainer](portaine
 
             ```yaml
             # Type: list
-                    overseerr2_docker_volumes_default: 
-                      - "{{ overseerr_role_paths_location }}:/app/config"
+            overseerr2_docker_volumes_default: 
+              - "{{ overseerr_role_paths_location }}:/app/config"
             ```
 
         ??? variable list "`overseerr2_docker_volumes_custom`"

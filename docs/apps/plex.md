@@ -378,18 +378,16 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
         ??? variable bool "`plex2_open_main_ports`"
 
-            # Do not enable globally if deploying multiple instances
-
             ```yaml
+            # Do not enable globally if deploying multiple instances
             # Type: bool (true/false)
             plex2_open_main_ports: false
             ```
 
         ??? variable bool "`plex2_open_local_ports`"
 
-            # Do not enable globally if deploying multiple instances
-
             ```yaml
+            # Do not enable globally if deploying multiple instances
             # Type: bool (true/false)
             plex2_open_local_ports: false
             ```
@@ -410,31 +408,26 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
         ??? variable bool "`plex2_insecure`"
 
-            # Disables Traefik's HTTP to HTTPS redirect for Plex
-
-            # Allows older clients with certificate issues to connect insecurely
-
             ```yaml
+            # Disables Traefik's HTTP to HTTPS redirect for Plex
+            # Allows older clients with certificate issues to connect insecurely
             # Type: bool (true/false)
             plex2_insecure: false
             ```
 
         ??? variable string "`plex2_lan_ip`"
 
-            # Adds the IP specified here to the advertised urls Plex broadcasts to clients
-
-            # Useful to avoid traffic going through your WAN when hairpin NAT is not available
-
             ```yaml
+            # Adds the IP specified here to the advertised urls Plex broadcasts to clients
+            # Useful to avoid traffic going through your WAN when hairpin NAT is not available
             # Type: string
             plex2_lan_ip: ""
             ```
 
         ??? variable string "`plex2_auth_token_proxy`"
 
-            # For instances this works the same as usual plex2_auth_token_proxy for an instance named plex2.
-
             ```yaml
+            # For instances this works the same as usual plex2_auth_token_proxy for an instance named plex2.
             # Type: string
             plex2_auth_token_proxy: ""
             ```
@@ -697,9 +690,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                    if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='plex')) }}"
+            plex2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                            if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                            else lookup('role_var', '_web_domain', role='plex')) }}"
             ```
 
         ??? variable string "`plex2_webtools_web_subdomain`"
@@ -734,9 +727,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                             if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                             else lookup('role_var', '_web_domain', role='plex')) }}"
+            plex2_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                                     if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='plex')) }}"
             ```
 
 === "DNS"
@@ -966,10 +959,10 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                          + (',themepark-' + plex_name
-                                                            if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
-                                                            else '') }}"
+            plex2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                  + (',themepark-' + plex_name
+                                                    if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
+                                                    else '') }}"
             ```
 
         ??? variable string "`plex2_traefik_middleware_custom`"
@@ -1025,9 +1018,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_traefik_middleware_http: "{{ 'globalHeaders@file'
-                                                    if lookup('role_var', '_insecure', role='plex')
-                                                    else traefik_default_middleware_default_http }}"
+            plex2_traefik_middleware_http: "{{ 'globalHeaders@file'
+                                            if lookup('role_var', '_insecure', role='plex')
+                                            else traefik_default_middleware_default_http }}"
             ```
 
         ??? variable string "`plex2_web_serverstransport`"
@@ -1048,10 +1041,10 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_webtools_traefik_middleware_default: "{{ traefik_default_middleware
-                                                                   + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
-                                                                     if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
-                                                                     else '') }}"
+            plex2_webtools_traefik_middleware_default: "{{ traefik_default_middleware
+                                                           + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
+                                                             if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
+                                                             else '') }}"
             ```
 
         ??? variable string "`plex2_webtools_traefik_middleware_custom`"
@@ -1121,27 +1114,24 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
         ??? variable string "`plex2_themepark_theme`"
 
-            # Options can be found at https://docs.theme-park.dev/themes/plex/
-
             ```yaml
+            # Options can be found at https://docs.theme-park.dev/themes/plex/
             # Type: string
             plex2_themepark_theme: "{{ global_themepark_theme }}"
             ```
 
         ??? variable string "`plex2_themepark_domain`"
 
-            # Allows you to override the url where CSS files can be found
-
             ```yaml
+            # Allows you to override the url where CSS files can be found
             # Type: string
             plex2_themepark_domain: "{{ global_themepark_domain }}"
             ```
 
         ??? variable list "`plex2_themepark_addons`"
 
-            # Options can be found at https://docs.theme-park.dev/themes/addons/
-
             ```yaml
+            # Options can be found at https://docs.theme-park.dev/themes/addons/
             # Type: list
             plex2_themepark_addons: []
             ```
@@ -1445,9 +1435,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_docker_ports_32400: "{{ port_lookup_32400.meta.port
-                                               if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
-                                               else '32400' }}"
+            plex2_docker_ports_32400: "{{ port_lookup_32400.meta.port
+                                       if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
+                                       else '32400' }}"
             ```
 
         ??? variable list "`plex2_docker_ports_defaults`"
@@ -1470,31 +1460,31 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: string
-                    plex2_docker_envs_advertise_ip_url: "{{ lookup('role_var', '_web_url', role='plex') + ':443,' + lookup('role_var', '_web_insecure_url', role='plex') + ':80'
-                                                         if lookup('role_var', '_insecure', role='plex')
-                                                         else lookup('role_var', '_web_url', role='plex') + ':443' }}"
+            plex2_docker_envs_advertise_ip_url: "{{ lookup('role_var', '_web_url', role='plex') + ':443,' + lookup('role_var', '_web_insecure_url', role='plex') + ':80'
+                                                 if lookup('role_var', '_insecure', role='plex')
+                                                 else lookup('role_var', '_web_url', role='plex') + ':443' }}"
             ```
 
         ??? variable string "`plex2_docker_envs_advertise_ip`"
 
             ```yaml
             # Type: string
-                    plex2_docker_envs_advertise_ip: "{{ 'http://' + lookup('role_var', '_lan_ip', role='plex') + ':32400,' + lookup('role_var', '_docker_envs_advertise_ip_url', role='plex')
-                                                     if (lookup('role_var', '_lan_ip', role='plex') | length > 0) and lookup('role_var', '_open_main_ports', role='plex')
-                                                     else lookup('role_var', '_docker_envs_advertise_ip_url', role='plex') }}"
+            plex2_docker_envs_advertise_ip: "{{ 'http://' + lookup('role_var', '_lan_ip', role='plex') + ':32400,' + lookup('role_var', '_docker_envs_advertise_ip_url', role='plex')
+                                             if (lookup('role_var', '_lan_ip', role='plex') | length > 0) and lookup('role_var', '_open_main_ports', role='plex')
+                                             else lookup('role_var', '_docker_envs_advertise_ip_url', role='plex') }}"
             ```
 
         ??? variable dict "`plex2_docker_envs_default`"
 
             ```yaml
             # Type: dict
-                    plex2_docker_envs_default: 
-                      PLEX_UID: "{{ uid }}"
-                      PLEX_GID: "{{ gid }}"
-                      PLEX_CLAIM: "{{ (plex_claim_code) | default(omit) }}"
-                      CHANGE_CONFIG_DIR_OWNERSHIP: "false"
-                      TZ: "{{ tz }}"
-                      ADVERTISE_IP: "{{ lookup('role_var', '_docker_envs_advertise_ip', role='plex') }}"
+            plex2_docker_envs_default: 
+              PLEX_UID: "{{ uid }}"
+              PLEX_GID: "{{ gid }}"
+              PLEX_CLAIM: "{{ (plex_claim_code) | default(omit) }}"
+              CHANGE_CONFIG_DIR_OWNERSHIP: "false"
+              TZ: "{{ tz }}"
+              ADVERTISE_IP: "{{ lookup('role_var', '_docker_envs_advertise_ip', role='plex') }}"
             ```
 
         ??? variable dict "`plex2_docker_envs_custom`"
@@ -1510,19 +1500,19 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: list
-                    plex2_docker_volumes_default: 
-                      - "{{ plex_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
-                      - "/dev/shm:/dev/shm"
-                      - "{{ plex_role_paths_transcodes_location }}:/transcode"
+            plex2_docker_volumes_default: 
+              - "{{ plex_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
+              - "/dev/shm:/dev/shm"
+              - "{{ plex_role_paths_transcodes_location }}:/transcode"
             ```
 
         ??? variable list "`plex2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    plex2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media:/data"
+            plex2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media:/data"
             ```
 
         ??? variable list "`plex2_docker_volumes_custom`"
@@ -1538,9 +1528,9 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: list
-                    plex2_docker_mounts_default: 
-                      - target: /tmp
-                        type: tmpfs
+            plex2_docker_mounts_default: 
+              - target: /tmp
+                type: tmpfs
             ```
 
         ??? variable list "`plex2_docker_mounts_custom`"
@@ -1556,10 +1546,10 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: dict
-                    plex2_docker_hosts_default: 
-                      metric.plex.tv: "{{ ip_address_localhost }}"
-                      metrics.plex.tv: "{{ ip_address_localhost }}"
-                      analytics.plex.tv: "{{ ip_address_localhost }}"
+            plex2_docker_hosts_default: 
+              metric.plex.tv: "{{ ip_address_localhost }}"
+              metrics.plex.tv: "{{ ip_address_localhost }}"
+              analytics.plex.tv: "{{ ip_address_localhost }}"
             ```
 
         ??? variable dict "`plex2_docker_hosts_custom`"
@@ -1575,20 +1565,20 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
             ```yaml
             # Type: list
-                    plex2_docker_labels_default: 
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
-                      - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
-                      - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
+            plex2_docker_labels_default: 
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
+              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
+              - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
             ```
 
         ??? variable dict "`plex2_docker_labels_custom`"

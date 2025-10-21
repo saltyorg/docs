@@ -181,9 +181,9 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
             ```yaml
             # Type: string
-                    node_red2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
-                                        if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='node_red')) }}"
+            node_red2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
+                                if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
+                                else lookup('role_var', '_web_domain', role='node_red')) }}"
             ```
 
 === "DNS"
@@ -521,8 +521,8 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
             ```yaml
             # Type: dict
-                    node_red2_docker_envs_default: 
-                      TZ: "{{ tz }}"
+            node_red2_docker_envs_default: 
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`node_red2_docker_envs_custom`"
@@ -538,8 +538,8 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
             ```yaml
             # Type: list
-                    node_red2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='node_red') }}:/data"
+            node_red2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='node_red') }}:/data"
             ```
 
         ??? variable list "`node_red2_docker_volumes_custom`"

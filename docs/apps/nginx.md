@@ -176,9 +176,9 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
 
             ```yaml
             # Type: string
-                    nginx2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
-                                     if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='nginx')) }}"
+            nginx2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
+                             if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
+                             else lookup('role_var', '_web_domain', role='nginx')) }}"
             ```
 
 === "DNS"
@@ -509,10 +509,10 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
 
             ```yaml
             # Type: dict
-                    nginx2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
+            nginx2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`nginx2_docker_envs_custom`"
@@ -528,8 +528,8 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
 
             ```yaml
             # Type: list
-                    nginx2_docker_volumes_default: 
-                      - "{{ nginx_role_paths_location }}:/config"
+            nginx2_docker_volumes_default: 
+              - "{{ nginx_role_paths_location }}:/config"
             ```
 
         ??? variable list "`nginx2_docker_volumes_custom`"

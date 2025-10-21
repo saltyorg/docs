@@ -176,9 +176,9 @@ sb install sandbox-influxdb2
 
             ```yaml
             # Type: string
-                    influxdb22_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
-                                         if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='influxdb2')) }}"
+            influxdb22_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
+                                 if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='influxdb2')) }}"
             ```
 
 === "DNS"
@@ -491,9 +491,9 @@ sb install sandbox-influxdb2
 
             ```yaml
             # Type: list
-                    influxdb22_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
-                      - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
+            influxdb22_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
+              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
             ```
 
         ??? variable list "`influxdb22_docker_volumes_custom`"

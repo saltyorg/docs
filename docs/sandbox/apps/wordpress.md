@@ -192,9 +192,9 @@ sb install sandbox-wordpress
 
             ```yaml
             # Type: string
-                    wordpress2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
-                                         if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='wordpress')) }}"
+            wordpress2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
+                                 if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='wordpress')) }}"
             ```
 
 === "DNS"
@@ -559,12 +559,12 @@ sb install sandbox-wordpress
 
             ```yaml
             # Type: dict
-                    wordpress2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      WORDPRESS_DB_HOST: "mariadb:3306"
-                      WORDPRESS_DB_USER: "root"
-                      WORDPRESS_DB_PASSWORD: "password321"
-                      WORDPRESS_DB_NAME: "{{ wordpress_name }}"
+            wordpress2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              WORDPRESS_DB_HOST: "mariadb:3306"
+              WORDPRESS_DB_USER: "root"
+              WORDPRESS_DB_PASSWORD: "password321"
+              WORDPRESS_DB_NAME: "{{ wordpress_name }}"
             ```
 
         ??? variable dict "`wordpress2_docker_envs_custom`"
@@ -580,8 +580,8 @@ sb install sandbox-wordpress
 
             ```yaml
             # Type: list
-                    wordpress2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
+            wordpress2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
             ```
 
         ??? variable list "`wordpress2_docker_volumes_custom`"

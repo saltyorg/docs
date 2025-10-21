@@ -172,9 +172,9 @@ sb install sandbox-requestrr
 
             ```yaml
             # Type: string
-                    requestrr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
-                                         if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='requestrr')) }}"
+            requestrr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
+                                 if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='requestrr')) }}"
             ```
 
 === "DNS"
@@ -506,11 +506,11 @@ sb install sandbox-requestrr
 
             ```yaml
             # Type: dict
-                    requestrr2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
+            requestrr2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
             ```
 
         ??? variable dict "`requestrr2_docker_envs_custom`"
@@ -526,8 +526,8 @@ sb install sandbox-requestrr
 
             ```yaml
             # Type: list
-                    requestrr2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='requestrr') }}:/root/config"
+            requestrr2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='requestrr') }}:/root/config"
             ```
 
         ??? variable list "`requestrr2_docker_volumes_custom`"

@@ -314,9 +314,9 @@ tags:
 
             ```yaml
             # Type: string
-                    qbittorrentvpn2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrentvpn') + '.' + lookup('role_var', '_web_domain', role='qbittorrentvpn')
-                                              if (lookup('role_var', '_web_subdomain', role='qbittorrentvpn') | length > 0)
-                                              else lookup('role_var', '_web_domain', role='qbittorrentvpn')) }}"
+            qbittorrentvpn2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrentvpn') + '.' + lookup('role_var', '_web_domain', role='qbittorrentvpn')
+                                      if (lookup('role_var', '_web_subdomain', role='qbittorrentvpn') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='qbittorrentvpn')) }}"
             ```
 
 === "DNS"
@@ -703,20 +703,20 @@ tags:
 
             ```yaml
             # Type: dict
-                    qbittorrentvpn2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      UMASK_SET: "002"
-                      VPN_ENABLED: "yes"
-                      VPN_USER: "{{ qbittorrentvpn.vpn_user | default('username', true) }}"
-                      VPN_PASS: "{{ qbittorrentvpn.vpn_pass | default('password', true) }}"
-                      VPN_PROV: "{{ qbittorrentvpn.vpn_prov | default('pia', true) }}"
-                      VPN_CLIENT: "{{ qbittorrentvpn.vpn_client | default('wireguard', true) }}"
-                      STRICT_PORT_FORWARD: "yes"
-                      ENABLE_PRIVOXY: "no"
-                      LAN_NETWORK: "{{ qbittorrentvpn_lan_network }}"
-                      NAME_SERVERS: "{{ qbittorrentvpn_name_servers }}"
+            qbittorrentvpn2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              UMASK_SET: "002"
+              VPN_ENABLED: "yes"
+              VPN_USER: "{{ qbittorrentvpn.vpn_user | default('username', true) }}"
+              VPN_PASS: "{{ qbittorrentvpn.vpn_pass | default('password', true) }}"
+              VPN_PROV: "{{ qbittorrentvpn.vpn_prov | default('pia', true) }}"
+              VPN_CLIENT: "{{ qbittorrentvpn.vpn_client | default('wireguard', true) }}"
+              STRICT_PORT_FORWARD: "yes"
+              ENABLE_PRIVOXY: "no"
+              LAN_NETWORK: "{{ qbittorrentvpn_lan_network }}"
+              NAME_SERVERS: "{{ qbittorrentvpn_name_servers }}"
             ```
 
         ??? variable dict "`qbittorrentvpn2_docker_envs_custom`"
@@ -732,9 +732,9 @@ tags:
 
             ```yaml
             # Type: list
-                    qbittorrentvpn2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='qbittorrentvpn') }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            qbittorrentvpn2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='qbittorrentvpn') }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`qbittorrentvpn2_docker_volumes_custom`"
@@ -782,8 +782,8 @@ tags:
 
             ```yaml
             # Type: list
-                    qbittorrentvpn2_docker_capabilities_default: 
-                      - NET_ADMIN
+            qbittorrentvpn2_docker_capabilities_default: 
+              - NET_ADMIN
             ```
 
         ??? variable list "`qbittorrentvpn2_docker_capabilities_custom`"
@@ -799,8 +799,8 @@ tags:
 
             ```yaml
             # Type: dict
-                    qbittorrentvpn2_docker_sysctls: 
-                      net.ipv4.conf.all.src_valid_mark: "1"
+            qbittorrentvpn2_docker_sysctls: 
+              net.ipv4.conf.all.src_valid_mark: "1"
             ```
 
         ##### Restart Policy

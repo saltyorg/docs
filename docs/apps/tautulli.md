@@ -227,9 +227,9 @@ Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseer
 
             ```yaml
             # Type: string
-                    tautulli2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
-                                        if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='tautulli')) }}"
+            tautulli2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
+                                if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
+                                else lookup('role_var', '_web_domain', role='tautulli')) }}"
             ```
 
 === "DNS"
@@ -356,10 +356,10 @@ Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseer
 
             ```yaml
             # Type: string
-                    tautulli2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                              + (',themepark-' + tautulli_name
-                                                                if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
-                                                                else '') }}"
+            tautulli2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                      + (',themepark-' + tautulli_name
+                                                        if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
+                                                        else '') }}"
             ```
 
         ??? variable string "`tautulli2_traefik_middleware_custom`"
@@ -448,9 +448,8 @@ Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseer
 
         ??? variable bool "`tautulli2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             tautulli2_themepark_enabled: false
             ```
@@ -677,11 +676,11 @@ Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseer
 
             ```yaml
             # Type: dict
-                    tautulli2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            tautulli2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`tautulli2_docker_envs_custom`"
@@ -697,9 +696,9 @@ Are you setting Saltbox up for the first time?  Continue to [Overseerr](overseer
 
             ```yaml
             # Type: list
-                    tautulli2_docker_volumes_default: 
-                      - "{{ tautulli_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            tautulli2_docker_volumes_default: 
+              - "{{ tautulli_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`tautulli2_docker_volumes_custom`"

@@ -490,11 +490,11 @@ sb install sandbox-telegraf
 
             ```yaml
             # Type: dict
-                    telegraf2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      EULA: "TRUE"
-                      UID: "{{ uid }}"
-                      GID: "{{ gid }}"
+            telegraf2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              EULA: "TRUE"
+              UID: "{{ uid }}"
+              GID: "{{ gid }}"
             ```
 
         ??? variable dict "`telegraf2_docker_envs_custom`"
@@ -510,14 +510,14 @@ sb install sandbox-telegraf
 
             ```yaml
             # Type: list
-                    telegraf2_docker_volumes_default: 
-                      - "{{ server_appdata_path }}/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
-                      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-                      - "/var/run/utmp:/var/run/utmp"
-                      - "/:/host:ro"
-                      - "/sys:/host/sys:ro"
-                      - "/proc:/host/proc:ro"
-                      - "/etc:/host/etc:ro"
+            telegraf2_docker_volumes_default: 
+              - "{{ server_appdata_path }}/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
+              - "/var/run/docker.sock:/var/run/docker.sock:ro"
+              - "/var/run/utmp:/var/run/utmp"
+              - "/:/host:ro"
+              - "/sys:/host/sys:ro"
+              - "/proc:/host/proc:ro"
+              - "/etc:/host/etc:ro"
             ```
 
         ??? variable list "`telegraf2_docker_volumes_custom`"

@@ -356,12 +356,12 @@ sb install postgres
 
             ```yaml
             # Type: dict
-                    postgres2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      PGDATA: "/data"
-                      POSTGRES_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='postgres') }}"
-                      POSTGRES_USER: "{{ lookup('role_var', '_docker_env_user', role='postgres') }}"
-                      POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
+            postgres2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              PGDATA: "/data"
+              POSTGRES_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='postgres') }}"
+              POSTGRES_USER: "{{ lookup('role_var', '_docker_env_user', role='postgres') }}"
+              POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
             ```
 
         ??? variable dict "`postgres2_docker_envs_custom`"
@@ -377,9 +377,9 @@ sb install postgres
 
             ```yaml
             # Type: list
-                    postgres2_docker_volumes_default: 
-                      - "{{ postgres_role_paths_location }}:/data"
-                      - "/etc/passwd:/etc/passwd:ro"
+            postgres2_docker_volumes_default: 
+              - "{{ postgres_role_paths_location }}:/data"
+              - "/etc/passwd:/etc/passwd:ro"
             ```
 
         ??? variable list "`postgres2_docker_volumes_custom`"

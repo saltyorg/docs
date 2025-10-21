@@ -174,9 +174,9 @@ sb install sandbox-ombi
 
             ```yaml
             # Type: string
-                    ombi2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
-                                    if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='ombi')) }}"
+            ombi2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
+                            if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
+                            else lookup('role_var', '_web_domain', role='ombi')) }}"
             ```
 
 === "DNS"
@@ -508,11 +508,11 @@ sb install sandbox-ombi
 
             ```yaml
             # Type: dict
-                    ombi2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            ombi2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`ombi2_docker_envs_custom`"
@@ -528,8 +528,8 @@ sb install sandbox-ombi
 
             ```yaml
             # Type: list
-                    ombi2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='ombi') }}:/config"
+            ombi2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='ombi') }}:/config"
             ```
 
         ??? variable list "`ombi2_docker_volumes_custom`"

@@ -139,9 +139,8 @@ sb install sandbox-rflood
 
         ??? variable string "`rflood2_paths_rtorrent_rc_location`"
 
-            # Config files
-
             ```yaml
+            # Config files
             # Type: string
             rflood2_paths_rtorrent_rc_location: "{{ rflood_role_paths_location }}/rtorrent.rc"
             ```
@@ -207,9 +206,9 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: string
-                    rflood2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
-                                      if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='rflood')) }}"
+            rflood2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
+                              if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
+                              else lookup('role_var', '_web_domain', role='rflood')) }}"
             ```
 
 === "DNS"
@@ -353,9 +352,8 @@ sb install sandbox-rflood
 
         ??? variable bool "`rflood2_traefik_api_enabled`"
 
-            # Disabled for security reasons, no authentication on API /!\
-
             ```yaml
+            # Disabled for security reasons, no authentication on API /!\
             # Type: bool (true/false)
             rflood2_traefik_api_enabled: false
             ```
@@ -424,18 +422,18 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: list
-                    rflood2_config_rflood_rc_settings_default: 
-                      # IP address that is reported to the tracker
-                      - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
-                      # Ports
-                      - { option: "network.port_range.set", value: "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}-{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}" }
-                      - { option: "dht.port.set", value: "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}" }
-                      # Enable / Disable Public Trackers
-                      - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('on', 'disable') }}" }
-                      - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
-                      - { option: "protocol.pex.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
-                      # Maximum XMLRPC payloads
-                      - { option: "network.xmlrpc.size_limit.set", value: "20M" }
+            rflood2_config_rflood_rc_settings_default: 
+              # IP address that is reported to the tracker
+              - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
+              # Ports
+              - { option: "network.port_range.set", value: "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}-{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}" }
+              - { option: "dht.port.set", value: "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}" }
+              # Enable / Disable Public Trackers
+              - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('on', 'disable') }}" }
+              - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
+              - { option: "protocol.pex.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
+              # Maximum XMLRPC payloads
+              - { option: "network.xmlrpc.size_limit.set", value: "20M" }
             ```
 
         ??? variable list "`rflood2_config_rflood_rc_settings_custom`"
@@ -449,8 +447,8 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: string
-                    rflood2_config_rflood_rc_settings_list: "{{ lookup('role_var', '_config_rflood_rc_settings_default', role='rflood')
-                                                                + lookup('role_var', '_config_rflood_rc_settings_custom', role='rflood') }}"
+            rflood2_config_rflood_rc_settings_list: "{{ lookup('role_var', '_config_rflood_rc_settings_default', role='rflood')
+                                                        + lookup('role_var', '_config_rflood_rc_settings_custom', role='rflood') }}"
             ```
 
 === "Docker"
@@ -685,27 +683,27 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: string
-                    rflood2_docker_ports_50000: "{{ port_lookup_50000.meta.port
-                                                 if (port_lookup_50000.meta.port is defined) and (port_lookup_50000.meta.port | trim | length > 0)
-                                                 else '50000' }}"
+            rflood2_docker_ports_50000: "{{ port_lookup_50000.meta.port
+                                         if (port_lookup_50000.meta.port is defined) and (port_lookup_50000.meta.port | trim | length > 0)
+                                         else '50000' }}"
             ```
 
         ??? variable string "`rflood2_docker_ports_6881`"
 
             ```yaml
             # Type: string
-                    rflood2_docker_ports_6881: "{{ port_lookup_6881.meta.port
-                                                if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
-                                                else '6881' }}"
+            rflood2_docker_ports_6881: "{{ port_lookup_6881.meta.port
+                                        if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
+                                        else '6881' }}"
             ```
 
         ??? variable list "`rflood2_docker_ports_defaults`"
 
             ```yaml
             # Type: list
-                    rflood2_docker_ports_defaults: 
-                      - "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}:{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}"
-                      - "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}:{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}/udp"
+            rflood2_docker_ports_defaults: 
+              - "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}:{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}"
+              - "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}:{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}/udp"
             ```
 
         ??? variable list "`rflood2_docker_ports_custom`"
@@ -721,12 +719,12 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: dict
-                    rflood2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
-                      UMASK: "002"
-                      FLOOD_AUTH: "false"
+            rflood2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
+              UMASK: "002"
+              FLOOD_AUTH: "false"
             ```
 
         ??? variable dict "`rflood2_docker_envs_custom`"
@@ -742,9 +740,9 @@ sb install sandbox-rflood
 
             ```yaml
             # Type: list
-                    rflood2_docker_volumes_default: 
-                      - "{{ lookup('role_var', '_paths_location', role='rflood') }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            rflood2_docker_volumes_default: 
+              - "{{ lookup('role_var', '_paths_location', role='rflood') }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`rflood2_docker_volumes_custom`"

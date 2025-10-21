@@ -297,8 +297,8 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
             ```yaml
             # Type: dict
-                    redis2_docker_envs_default: 
-                      TZ: "{{ tz }}"
+            redis2_docker_envs_default: 
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`redis2_docker_envs_custom`"
@@ -314,8 +314,8 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
             ```yaml
             # Type: list
-                    redis2_docker_volumes_default: 
-                      - "{{ redis_role_paths_location }}:/data"
+            redis2_docker_volumes_default: 
+              - "{{ redis_role_paths_location }}:/data"
             ```
 
         ??? variable list "`redis2_docker_volumes_custom`"

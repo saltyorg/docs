@@ -356,9 +356,9 @@ sb install sandbox-watchtower
 
             ```yaml
             # Type: string
-                    watchtower2_traefik_enabled: "{{ true
-                                                  if (lookup('role_var', '_metrics_enable', role='watchtower') and lookup('role_var', '_metrics_external', role='watchtower'))
-                                                  else false }}"
+            watchtower2_traefik_enabled: "{{ true
+                                          if (lookup('role_var', '_metrics_enable', role='watchtower') and lookup('role_var', '_metrics_external', role='watchtower'))
+                                          else false }}"
             ```
 
         ??? variable bool "`watchtower2_traefik_api_enabled`"
@@ -561,13 +561,13 @@ sb install sandbox-watchtower
 
             ```yaml
             # Type: dict
-                    watchtower2_docker_envs_default: 
-                      TZ: "{{ tz }}"
-                      WATCHTOWER_CLEANUP: "true"
-                      WATCHTOWER_POLL_INTERVAL: "{{ lookup('role_var', '_poll_interval', role='watchtower') }}"
-                      WATCHTOWER_HTTP_API_METRICS: "{{ 'true'
-                                                    if lookup('role_var', '_metrics_enable', role='watchtower')
-                                                    else omit }}"
+            watchtower2_docker_envs_default: 
+              TZ: "{{ tz }}"
+              WATCHTOWER_CLEANUP: "true"
+              WATCHTOWER_POLL_INTERVAL: "{{ lookup('role_var', '_poll_interval', role='watchtower') }}"
+              WATCHTOWER_HTTP_API_METRICS: "{{ 'true'
+                                            if lookup('role_var', '_metrics_enable', role='watchtower')
+                                            else omit }}"
             ```
 
         ??? variable dict "`watchtower2_docker_envs_custom`"
@@ -590,8 +590,8 @@ sb install sandbox-watchtower
 
             ```yaml
             # Type: list
-                    watchtower2_docker_volumes_default: 
-                      - "/var/run/docker.sock:/var/run/docker.sock"
+            watchtower2_docker_volumes_default: 
+              - "/var/run/docker.sock:/var/run/docker.sock"
             ```
 
         ??? variable list "`watchtower2_docker_volumes_custom`"

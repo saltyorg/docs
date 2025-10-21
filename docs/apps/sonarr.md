@@ -674,9 +674,9 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
             ```yaml
             # Type: string
-                    sonarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
-                                      if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='sonarr')) }}"
+            sonarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
+                              if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
+                              else lookup('role_var', '_web_domain', role='sonarr')) }}"
             ```
 
 === "DNS"
@@ -796,10 +796,10 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
             ```yaml
             # Type: string
-                    sonarr2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                            + (',themepark-' + sonarr_name
-                                                              if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
-                                                              else '') }}"
+            sonarr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                    + (',themepark-' + sonarr_name
+                                                      if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
+                                                      else '') }}"
             ```
 
         ??? variable string "`sonarr2_traefik_middleware_custom`"
@@ -881,9 +881,8 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
         ??? variable bool "`sonarr2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             sonarr2_themepark_enabled: false
             ```
@@ -1118,11 +1117,11 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
             ```yaml
             # Type: dict
-                    sonarr2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      UMASK: "002"
-                      TZ: "{{ tz }}"
+            sonarr2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              UMASK: "002"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`sonarr2_docker_envs_custom`"
@@ -1138,17 +1137,17 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
             ```yaml
             # Type: list
-                    sonarr2_docker_volumes_default: 
-                      - "{{ sonarr_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
+            sonarr2_docker_volumes_default: 
+              - "{{ sonarr_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
             ```
 
         ??? variable list "`sonarr2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    sonarr2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media/TV:/tv"
+            sonarr2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media/TV:/tv"
             ```
 
         ??? variable list "`sonarr2_docker_volumes_custom`"

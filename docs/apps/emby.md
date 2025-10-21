@@ -392,9 +392,9 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: string
-                    emby2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
-                                    if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='emby')) }}"
+            emby2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
+                            if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
+                            else lookup('role_var', '_web_domain', role='emby')) }}"
             ```
 
 === "DNS"
@@ -521,10 +521,10 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: string
-                    emby2_traefik_middleware_default: "{{ traefik_default_middleware
-                                                          + (',themepark-' + emby_name
-                                                            if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
-                                                            else '') }}"
+            emby2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                  + (',themepark-' + emby_name
+                                                    if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
+                                                    else '') }}"
             ```
 
         ??? variable string "`emby2_traefik_middleware_custom`"
@@ -613,9 +613,8 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ??? variable bool "`emby2_themepark_enabled`"
 
-            # Options can be found at https://github.com/themepark-dev/theme.park
-
             ```yaml
+            # Options can be found at https://github.com/themepark-dev/theme.park
             # Type: bool (true/false)
             emby2_themepark_enabled: false
             ```
@@ -687,15 +686,15 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: list
-                    emby2_config_settings_default: 
-                      - { xpath: 'IsBehindProxy', value: 'true' }
-                      - { xpath: 'WanDdns', value: '{{ lookup("role_var", "_web_subdomain", role="emby") }}.{{ lookup("role_var", "_web_domain", role="emby") }}' }
-                      - { xpath: 'PublicPort', value: '80' }
-                      - { xpath: 'PublicHttpsPort', value: '443' }
-                      - { xpath: 'EnableHttps', value: 'true' }
-                      - { xpath: 'RequireHttps', value: 'false' }
-                      - { xpath: 'EnableUPnP', value: 'false' }
-                      - { xpath: 'DatabaseCacheSizeMB', value: '{{ lookup("role_var", "_config_cache_size", role="emby") | string }}' }
+            emby2_config_settings_default: 
+              - { xpath: 'IsBehindProxy', value: 'true' }
+              - { xpath: 'WanDdns', value: '{{ lookup("role_var", "_web_subdomain", role="emby") }}.{{ lookup("role_var", "_web_domain", role="emby") }}' }
+              - { xpath: 'PublicPort', value: '80' }
+              - { xpath: 'PublicHttpsPort', value: '443' }
+              - { xpath: 'EnableHttps', value: 'true' }
+              - { xpath: 'RequireHttps', value: 'false' }
+              - { xpath: 'EnableUPnP', value: 'false' }
+              - { xpath: 'DatabaseCacheSizeMB', value: '{{ lookup("role_var", "_config_cache_size", role="emby") | string }}' }
             ```
 
         ??? variable list "`emby2_config_settings_custom`"
@@ -933,10 +932,10 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: dict
-                    emby2_docker_envs_default: 
-                      PUID: "{{ uid }}"
-                      PGID: "{{ gid }}"
-                      TZ: "{{ tz }}"
+            emby2_docker_envs_default: 
+              PUID: "{{ uid }}"
+              PGID: "{{ gid }}"
+              TZ: "{{ tz }}"
             ```
 
         ??? variable dict "`emby2_docker_envs_custom`"
@@ -952,19 +951,19 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: list
-                    emby2_docker_volumes_default: 
-                      - "{{ emby_role_paths_location }}:/config"
-                      - "{{ server_appdata_path }}/scripts:/scripts"
-                      - "/dev/shm:/dev/shm"
-                      - "{{ emby_role_paths_transcodes_location }}:/transcode"
+            emby2_docker_volumes_default: 
+              - "{{ emby_role_paths_location }}:/config"
+              - "{{ server_appdata_path }}/scripts:/scripts"
+              - "/dev/shm:/dev/shm"
+              - "{{ emby_role_paths_transcodes_location }}:/transcode"
             ```
 
         ??? variable list "`emby2_docker_volumes_legacy`"
 
             ```yaml
             # Type: list
-                    emby2_docker_volumes_legacy: 
-                      - "/mnt/unionfs/Media:/data"
+            emby2_docker_volumes_legacy: 
+              - "/mnt/unionfs/Media:/data"
             ```
 
         ??? variable list "`emby2_docker_volumes_custom`"
@@ -980,9 +979,9 @@ Instructions below will guide you through creating an API Key for a specific app
 
             ```yaml
             # Type: list
-                    emby2_docker_mounts_default: 
-                      - target: /tmp
-                        type: tmpfs
+            emby2_docker_mounts_default: 
+              - target: /tmp
+                type: tmpfs
             ```
 
         ??? variable list "`emby2_docker_mounts_custom`"

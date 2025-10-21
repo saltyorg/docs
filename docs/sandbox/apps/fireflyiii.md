@@ -85,4 +85,522 @@ Redeploy the Firefly III role to apply the above changes.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+!!! info
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+
+    === "Example"
+
+        ```yaml
+        fireflyiii_role_mariadb_docker_image_tag: "custom_value"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `fireflyiii_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `fireflyiii_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`fireflyiii_name`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_name: fireflyiii
+        ```
+
+=== "Settings"
+
+    ??? variable string "`fireflyiii_role_mariadb_name`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_name: "{{ fireflyiii_name }}-mariadb"
+        ```
+
+    ??? variable string "`fireflyiii_role_mariadb_paths_folder`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_paths_folder: "{{ fireflyiii_name }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_mariadb_paths_location`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_paths_location: "{{ server_appdata_path }}/{{ lookup('role_var', '_paths_folder', role='mariadb') }}/mariadb"
+        ```
+
+    ??? variable string "`fireflyiii_role_mariadb_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_docker_image_tag: "lts"
+        ```
+
+    ??? variable string "`fireflyiii_role_mariadb_docker_env_password`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_docker_env_password: "{{ fireflyiii_db_password_saltbox_facts.facts.secret_key }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_mariadb_docker_env_db`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_mariadb_docker_env_db: "{{ fireflyiii_name }}-mariadb"
+        ```
+
+=== "Paths"
+
+    ??? variable string "`fireflyiii_role_paths_folder`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_paths_folder: "{{ fireflyiii_name }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_paths_location: "{{ server_appdata_path }}/{{ fireflyiii_role_paths_folder }}"
+        ```
+
+=== "Web"
+
+    ??? variable string "`fireflyiii_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_web_subdomain: "{{ fireflyiii_name }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_web_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_web_port`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_web_port: "8080"
+        ```
+
+    ??? variable string "`fireflyiii_role_web_url`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='fireflyiii') + '.' + lookup('role_var', '_web_domain', role='fireflyiii')
+                                  if (lookup('role_var', '_web_subdomain', role='fireflyiii') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='fireflyiii')) }}"
+        ```
+
+=== "DNS"
+
+    ??? variable string "`fireflyiii_role_dns_record`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='fireflyiii') }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_dns_zone`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='fireflyiii') }}"
+        ```
+
+    ??? variable bool "`fireflyiii_role_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+=== "Traefik"
+
+    ??? variable string "`fireflyiii_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`fireflyiii_role_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`fireflyiii_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_api_enabled: true
+        ```
+
+    ??? variable string "`fireflyiii_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_traefik_api_endpoint: "PathPrefix(`/api`)"
+        ```
+
+=== "Docker"
+
+    ##### Container
+
+    ??? variable string "`fireflyiii_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_container: "{{ fireflyiii_name }}"
+        ```
+
+    ##### Image
+
+    ??? variable bool "`fireflyiii_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`fireflyiii_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_image_repo: "fireflyiii/core"
+        ```
+
+    ??? variable string "`fireflyiii_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`fireflyiii_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='fireflyiii') }}:{{ lookup('role_var', '_docker_image_tag', role='fireflyiii') }}"
+        ```
+
+    ##### Envs
+
+    ??? variable dict "`fireflyiii_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        fireflyiii_role_docker_envs_default: 
+          APP_ENV: "production"
+          SITE_OWNER: "{{ user.email }}"
+          APP_KEY: "{{ fireflyiii_appkey_saltbox_facts.facts.secret_key }}"
+          DEFAULT_LANGUAGE: "en_US"
+          DEFAULT_LOCALE: "equal"
+          TZ: "{{ tz }}"
+          TRUSTED_PROXIES: "**"
+          LOG_CHANNEL: "stack"
+          APP_LOG_LEVEL: "notice"
+          AUDIT_LOG_LEVEL: "emergency"
+          DB_CONNECTION: "mysql"
+          DB_HOST: "{{ fireflyiii_name }}-mariadb"
+          DB_PORT: "3306"
+          DB_DATABASE: fireflyiii
+          DB_USERNAME: "root"
+          DB_PASSWORD: "{{ fireflyiii_db_password_saltbox_facts.facts.secret_key }}"
+          AUTHENTICATION_GUARD: "web"
+          APP_URL: "{{ lookup('role_var', '_web_url', role='fireflyiii') }}"
+          ALLOW_WEBHOOKS: "True"
+        ```
+
+    ??? variable dict "`fireflyiii_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        fireflyiii_role_docker_envs_custom: {}
+        ```
+
+    ##### Volumes
+
+    ??? variable list "`fireflyiii_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        fireflyiii_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='fireflyiii') }}/upload:/var/www/html/storage/upload"
+          - /etc/timezone:/etc/timezone:ro
+          - /etc/localtime:/etc/localtime:ro
+        ```
+
+    ??? variable list "`fireflyiii_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        fireflyiii_role_docker_volumes_custom: []
+        ```
+
+    ##### Hostname
+
+    ??? variable string "`fireflyiii_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_hostname: "{{ fireflyiii_name }}"
+        ```
+
+    ##### Networks
+
+    ??? variable string "`fireflyiii_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_networks_alias: "{{ fireflyiii_name }}"
+        ```
+
+    ??? variable list "`fireflyiii_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        fireflyiii_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`fireflyiii_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        fireflyiii_role_docker_networks_custom: []
+        ```
+
+    ##### Restart Policy
+
+    ??? variable string "`fireflyiii_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_restart_policy: unless-stopped
+        ```
+
+    ##### State
+
+    ??? variable string "`fireflyiii_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_docker_state: started
+        ```
+
+    ##### Dependencies
+
+    ??? variable string "`fireflyiii_role_depends_on`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_depends_on: "{{ fireflyiii_name }}-mariadb"
+        ```
+
+    ??? variable string "`fireflyiii_role_depends_on_delay`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`fireflyiii_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_role_depends_on_healthchecks: "false"
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`fireflyiii_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        fireflyiii_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`fireflyiii_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        fireflyiii_role_depends_on: ""
+        ```
+
+    ??? variable string "`fireflyiii_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        fireflyiii_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`fireflyiii_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        fireflyiii_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`fireflyiii_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        fireflyiii_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`fireflyiii_role_dns_enabled`"
+
+        ```yaml
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        fireflyiii_role_dns_enabled: true
+        ```
+
+    ??? variable bool "`fireflyiii_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        fireflyiii_role_docker_controller: true
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`fireflyiii_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        fireflyiii_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`fireflyiii_role_web_fqdn_override`"
+
+        ```yaml
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: list
+        fireflyiii_role_web_fqdn_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            fireflyiii_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "fireflyiii2.{{ user.domain }}"
+              - "fireflyiii.otherdomain.tld"
+            ```
+
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`fireflyiii_role_web_host_override`"
+
+        ```yaml
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        fireflyiii_role_web_host_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            fireflyiii_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'fireflyiii2.' + user.domain }}`)"
+            ```
+
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`fireflyiii_role_web_scheme`"
+
+        ```yaml
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        fireflyiii_role_web_scheme:
+        ```
+
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

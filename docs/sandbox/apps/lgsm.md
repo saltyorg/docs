@@ -61,7 +61,8 @@ Any actual game server configs will be in the `/opt/CONTAINERNAME/serverfiles/` 
 In your game, connect to your ip and default ports for the server. Make sure you set the UDP and TCP for the ports correctly. If everything was setup correctly the game should connect to the server.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->## Role Defaults
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
@@ -100,10 +101,12 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm_instances: []
         ```
 
-        ```yaml
-        # Type: list
-        lgsm_instances: ["lgsm", "lgsm2"]
-        ```
+        !!! example
+
+            ```yaml
+            # Type: list
+            lgsm_instances: ["lgsm", "lgsm2"]
+            ```
 
 === "Paths"
 
@@ -758,6 +761,5 @@ In your game, connect to your ip and default ports for the server. Make sure you
             # Type: string ("http"/"https")
             lgsm2_web_scheme:
             ```
-
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

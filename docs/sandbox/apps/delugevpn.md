@@ -153,4 +153,547 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+!!! info
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+
+    === "Example"
+
+        ```yaml
+        delugevpn_name: "custom_value"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `delugevpn_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `delugevpn_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`delugevpn_name`"
+
+        ```yaml
+        # Type: string
+        delugevpn_name: delugevpn
+        ```
+
+=== "Settings"
+
+    ??? variable string "`delugevpn_role_log_level_daemon`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_log_level_daemon: info
+        ```
+
+    ??? variable string "`delugevpn_role_log_level_web`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_log_level_web: info
+        ```
+
+    ??? variable string "`delugevpn_role_name_servers`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_name_servers: "84.200.69.80,1.1.1.1,84.200.70.40,1.0.0.1"
+        ```
+
+    ??? variable string "`delugevpn_role_lan_network`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_lan_network: "172.19.0.0/16"
+        ```
+
+    ??? variable string "`delugevpn_role_vpn_user`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_vpn_user: ""
+        ```
+
+    ??? variable string "`delugevpn_role_vpn_pass`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_vpn_pass: ""
+        ```
+
+    ??? variable string "`delugevpn_role_vpn_prov`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_vpn_prov: "pia"
+        ```
+
+    ??? variable string "`delugevpn_role_vpn_client`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_vpn_client: "wireguard"
+        ```
+
+=== "Paths"
+
+    ??? variable string "`delugevpn_role_paths_folder`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_paths_folder: "{{ delugevpn_name }}"
+        ```
+
+    ??? variable string "`delugevpn_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_paths_location: "{{ server_appdata_path }}/{{ delugevpn_role_paths_folder }}"
+        ```
+
+=== "Web"
+
+    ??? variable string "`delugevpn_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_web_subdomain: "{{ delugevpn_name }}"
+        ```
+
+    ??? variable string "`delugevpn_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_web_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`delugevpn_role_web_port`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_web_port: "8112"
+        ```
+
+    ??? variable string "`delugevpn_role_web_url`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='delugevpn') + '.' + lookup('role_var', '_web_domain', role='delugevpn')
+                                 if (lookup('role_var', '_web_subdomain', role='delugevpn') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='delugevpn')) }}"
+        ```
+
+=== "DNS"
+
+    ??? variable string "`delugevpn_role_dns_record`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='delugevpn') }}"
+        ```
+
+    ??? variable string "`delugevpn_role_dns_zone`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='delugevpn') }}"
+        ```
+
+    ??? variable bool "`delugevpn_role_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+=== "Traefik"
+
+    ??? variable string "`delugevpn_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_traefik_sso_middleware: ""
+        ```
+
+    ??? variable string "`delugevpn_role_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`delugevpn_role_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`delugevpn_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`delugevpn_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_traefik_api_endpoint: ""
+        ```
+
+=== "Docker"
+
+    ##### Container
+
+    ??? variable string "`delugevpn_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_container: "{{ delugevpn_name }}"
+        ```
+
+    ##### Image
+
+    ??? variable bool "`delugevpn_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`delugevpn_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_image_repo: "binhex/arch-delugevpn"
+        ```
+
+    ??? variable string "`delugevpn_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`delugevpn_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='delugevpn') }}:{{ lookup('role_var', '_docker_image_tag', role='delugevpn') }}"
+        ```
+
+    ##### Ports
+
+    ??? variable list "`delugevpn_role_docker_ports_defaults`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_ports_defaults: 
+          - "58112:58112"
+          - "58846:58846"
+        ```
+
+    ??? variable list "`delugevpn_role_docker_ports_custom`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_ports_custom: []
+        ```
+
+    ##### Envs
+
+    ??? variable dict "`delugevpn_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        delugevpn_role_docker_envs_default: 
+          DEBUG: "false"
+          DELUGE_DAEMON_LOG_LEVEL: "{{ lookup('role_var', '_log_level_daemon', role='delugevpn') }}"
+          DELUGE_WEB_LOG_LEVEL: "{{ lookup('role_var', '_log_level_web', role='delugevpn') }}"
+          ENABLE_PRIVOXY: "no"
+          LAN_NETWORK: "{{ lookup('role_var', '_lan_network', role='delugevpn') }}"
+          NAME_SERVERS: "{{ lookup('role_var', '_name_servers', role='delugevpn') }}"
+          PGID: "{{ gid }}"
+          PUID: "{{ uid }}"
+          STRICT_PORT_FORWARD: "yes"
+          TZ: "{{ tz }}"
+          UMASK: "022"
+          VPN_CLIENT: "{{ lookup('role_var', '_vpn_client', role='delugevpn') }}"
+          VPN_ENABLED: "yes"
+          VPN_PASS: "{{ lookup('role_var', '_vpn_pass', role='delugevpn') }}"
+          VPN_PROV: "{{ lookup('role_var', '_vpn_prov', role='delugevpn') }}"
+          VPN_USER: "{{ lookup('role_var', '_vpn_user', role='delugevpn') }}"
+        ```
+
+    ??? variable dict "`delugevpn_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        delugevpn_role_docker_envs_custom: {}
+        ```
+
+    ##### Volumes
+
+    ??? variable list "`delugevpn_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='delugevpn') }}:/config"
+          - "/etc/localtime:/etc/localtime:ro"
+          - "{{ server_appdata_path }}/scripts:/scripts"
+        ```
+
+    ??? variable list "`delugevpn_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_volumes_custom: []
+        ```
+
+    ##### Hostname
+
+    ??? variable string "`delugevpn_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_hostname: "{{ delugevpn_name }}"
+        ```
+
+    ##### Networks
+
+    ??? variable string "`delugevpn_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_networks_alias: "{{ delugevpn_name }}"
+        ```
+
+    ??? variable list "`delugevpn_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`delugevpn_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        delugevpn_role_docker_networks_custom: []
+        ```
+
+    ##### Restart Policy
+
+    ??? variable string "`delugevpn_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_restart_policy: unless-stopped
+        ```
+
+    ##### State
+
+    ??? variable string "`delugevpn_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_state: started
+        ```
+
+    ##### Sysctls
+
+    ??? variable dict "`delugevpn_role_docker_sysctls`"
+
+        ```yaml
+        # Type: dict
+        delugevpn_role_docker_sysctls: 
+          net.ipv4.conf.all.src_valid_mark: "1"
+        ```
+
+    ##### Privileged
+
+    ??? variable bool "`delugevpn_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_docker_privileged: true
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`delugevpn_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        delugevpn_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`delugevpn_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        delugevpn_role_depends_on: ""
+        ```
+
+    ??? variable string "`delugevpn_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        delugevpn_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`delugevpn_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        delugevpn_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`delugevpn_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        delugevpn_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`delugevpn_role_dns_enabled`"
+
+        ```yaml
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        delugevpn_role_dns_enabled: true
+        ```
+
+    ??? variable bool "`delugevpn_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        delugevpn_role_docker_controller: true
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        delugevpn_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`delugevpn_role_web_fqdn_override`"
+
+        ```yaml
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: list
+        delugevpn_role_web_fqdn_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            delugevpn_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "delugevpn2.{{ user.domain }}"
+              - "delugevpn.otherdomain.tld"
+            ```
+
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`delugevpn_role_web_host_override`"
+
+        ```yaml
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        delugevpn_role_web_host_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            delugevpn_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'delugevpn2.' + user.domain }}`)"
+            ```
+
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`delugevpn_role_web_scheme`"
+
+        ```yaml
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        delugevpn_role_web_scheme:
+        ```
+
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

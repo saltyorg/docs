@@ -42,7 +42,8 @@ sb install sandbox-linkding
   ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->## Role Defaults
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
@@ -495,6 +496,5 @@ sb install sandbox-linkding
         # Type: string ("http"/"https")
         linkding_role_web_scheme:
         ```
-
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

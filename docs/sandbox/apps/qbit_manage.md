@@ -113,4 +113,480 @@ qbit_manage:
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+!!! info
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+
+    === "Example"
+
+        ```yaml
+        qbit_manage_name: "custom_value"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `qbit_manage_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `qbit_manage_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`qbit_manage_name`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_name: qbit-manage
+        ```
+
+=== "Paths"
+
+    ??? variable string "`qbit_manage_role_paths_folder`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_paths_folder: "{{ qbit_manage_name }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_paths_location: "{{ server_appdata_path }}/{{ qbit_manage_role_paths_folder }}"
+        ```
+
+=== "Web"
+
+    ??? variable string "`qbit_manage_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_web_subdomain: "{{ qbit_manage_name }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_web_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_web_port`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_web_port: "8080"
+        ```
+
+    ??? variable string "`qbit_manage_role_web_url`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbit_manage') + '.' + lookup('role_var', '_web_domain', role='qbit_manage')
+                                   if (lookup('role_var', '_web_subdomain', role='qbit_manage') | length > 0)
+                                   else lookup('role_var', '_web_domain', role='qbit_manage')) }}"
+        ```
+
+=== "DNS"
+
+    ??? variable string "`qbit_manage_role_dns_record`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='qbit_manage') }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_dns_zone`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='qbit_manage') }}"
+        ```
+
+    ??? variable bool "`qbit_manage_role_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+=== "Traefik"
+
+    ??? variable string "`qbit_manage_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`qbit_manage_role_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`qbit_manage_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_api_enabled: true
+        ```
+
+    ??? variable string "`qbit_manage_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_traefik_api_endpoint: "PathPrefix(`/api`)"
+        ```
+
+=== "Docker"
+
+    ##### Container
+
+    ??? variable string "`qbit_manage_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_container: "{{ qbit_manage_name }}"
+        ```
+
+    ##### Image
+
+    ??? variable bool "`qbit_manage_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`qbit_manage_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_image_repo: "ghcr.io/hotio/qbitmanage"
+        ```
+
+    ??? variable string "`qbit_manage_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_image_tag: "release"
+        ```
+
+    ??? variable string "`qbit_manage_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='qbit_manage') }}:{{ lookup('role_var', '_docker_image_tag', role='qbit_manage') }}"
+        ```
+
+    ##### Ports
+
+    ??? variable list "`qbit_manage_role_docker_ports_defaults`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_ports_defaults: []
+        ```
+
+    ??? variable list "`qbit_manage_role_docker_ports_custom`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_ports_custom: []
+        ```
+
+    ##### Envs
+
+    ??? variable dict "`qbit_manage_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        qbit_manage_role_docker_envs_default: 
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
+          UMASK: "002"
+          TZ: "{{ tz }}"
+          QBT_WEB_SERVER: "true"
+          QBT_RUN: "{{ qbit_manage.qbt_run }}"
+          QBT_SCHEDULE: "{{ qbit_manage.qbt_schedule }}"
+          QBT_CONFIG: "{{ qbit_manage.qbt_config }}"
+          QBT_LOGFILE: "{{ qbit_manage.qbt_logfile }}"
+          QBT_CROSS_SEED: "{{ qbit_manage.qbt_cross_seed }}"
+          QBT_RECHECK: "{{ qbit_manage.qbt_recheck }}"
+          QBT_CAT_UPDATE: "{{ qbit_manage.qbt_cat_update }}"
+          QBT_TAG_UPDATE: "{{ qbit_manage.qbt_tag_update }}"
+          QBT_REM_UNREGISTERED: "{{ qbit_manage.qbt_rem_unregistered }}"
+          QBT_REM_ORPHANED: "{{ qbit_manage.qbt_rem_orphaned }}"
+          QBT_TAG_NOHARDLINKS: "{{ qbit_manage.qbt_tag_nohardlinks }}"
+          QBT_SKIP_RECYCLE: "{{ qbit_manage.qbt_skip_recycle }}"
+          QBT_DRY_RUN: "{{ qbit_manage.qbt_dry_run }}"
+          QBT_LOG_LEVEL: "{{ qbit_manage.qbt_log_level }}"
+          QBT_DIVIDER: "{{ qbit_manage.qbt_divider }}"
+          QBT_WIDTH: "{{ qbit_manage.qbt_width }}"
+          QBT_DEBUG: "{{ qbit_manage.qbt_debug }}"
+          QBT_TRACE: "{{ qbit_manage.qbt_trace }}"
+        ```
+
+    ??? variable dict "`qbit_manage_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        qbit_manage_role_docker_envs_custom: {}
+        ```
+
+    ##### Volumes
+
+    ??? variable list "`qbit_manage_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='qbit_manage') }}:/config"
+        ```
+
+    ??? variable list "`qbit_manage_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_volumes_custom: []
+        ```
+
+    ##### Hostname
+
+    ??? variable string "`qbit_manage_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_hostname: "{{ qbit_manage_name }}"
+        ```
+
+    ##### Networks
+
+    ??? variable string "`qbit_manage_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_networks_alias: "{{ qbit_manage_name }}"
+        ```
+
+    ??? variable list "`qbit_manage_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`qbit_manage_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_networks_custom: []
+        ```
+
+    ##### Restart Policy
+
+    ??? variable string "`qbit_manage_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_restart_policy: on-failure
+        ```
+
+    ??? variable int "`qbit_manage_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        qbit_manage_role_docker_restart_retries: 3
+        ```
+
+    ##### State
+
+    ??? variable string "`qbit_manage_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_state: started
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`qbit_manage_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        qbit_manage_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`qbit_manage_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        qbit_manage_role_depends_on: ""
+        ```
+
+    ??? variable string "`qbit_manage_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        qbit_manage_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`qbit_manage_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        qbit_manage_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`qbit_manage_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        qbit_manage_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`qbit_manage_role_dns_enabled`"
+
+        ```yaml
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        qbit_manage_role_dns_enabled: true
+        ```
+
+    ??? variable bool "`qbit_manage_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        qbit_manage_role_docker_controller: true
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`qbit_manage_role_web_fqdn_override`"
+
+        ```yaml
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: list
+        qbit_manage_role_web_fqdn_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            qbit_manage_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "qbit_manage2.{{ user.domain }}"
+              - "qbit_manage.otherdomain.tld"
+            ```
+
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`qbit_manage_role_web_host_override`"
+
+        ```yaml
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        qbit_manage_role_web_host_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            qbit_manage_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'qbit_manage2.' + user.domain }}`)"
+            ```
+
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`qbit_manage_role_web_scheme`"
+
+        ```yaml
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        qbit_manage_role_web_scheme:
+        ```
+
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

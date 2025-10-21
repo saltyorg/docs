@@ -77,4 +77,467 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+!!! info
+    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+
+    === "Example"
+
+        ```yaml
+        firefox_name: "custom_value"
+        ```
+
+!!! warning
+    **Avoid overriding variables ending in `_default`**
+
+    When overriding variables that end in `_default` (like `firefox_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+    Instead, use the corresponding `_custom` variable (like `firefox_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`firefox_name`"
+
+        ```yaml
+        # Type: string
+        firefox_name: firefox
+        ```
+
+=== "Paths"
+
+    ??? variable string "`firefox_role_paths_folder`"
+
+        ```yaml
+        # Type: string
+        firefox_role_paths_folder: "{{ firefox_name }}"
+        ```
+
+    ??? variable string "`firefox_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        firefox_role_paths_location: "{{ server_appdata_path }}/{{ firefox_role_paths_folder }}"
+        ```
+
+    ??? variable string "`firefox_role_paths_downloads_location`"
+
+        ```yaml
+        # Type: string
+        firefox_role_paths_downloads_location: "{{ downloads_root_path }}/{{ firefox_role_paths_folder }}"
+        ```
+
+    ??? variable string "`firefox_role_paths_env_file_location`"
+
+        ```yaml
+        # Type: string
+        firefox_role_paths_env_file_location: "{{ firefox_role_paths_location }}/.env"
+        ```
+
+=== "Web"
+
+    ??? variable string "`firefox_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        firefox_role_web_subdomain: "{{ firefox_name }}"
+        ```
+
+    ??? variable string "`firefox_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        firefox_role_web_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`firefox_role_web_port`"
+
+        ```yaml
+        # Type: string
+        firefox_role_web_port: "5800"
+        ```
+
+    ??? variable string "`firefox_role_web_url`"
+
+        ```yaml
+        # Type: string
+        firefox_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='firefox') + '.' + lookup('role_var', '_web_domain', role='firefox')
+                               if (lookup('role_var', '_web_subdomain', role='firefox') | length > 0)
+                               else lookup('role_var', '_web_domain', role='firefox')) }}"
+        ```
+
+=== "VNC"
+
+    ??? variable string "`firefox_role_vnc_port`"
+
+        ```yaml
+        # Type: string
+        firefox_role_vnc_port: "5900"
+        ```
+
+=== "DNS"
+
+    ??? variable string "`firefox_role_dns_record`"
+
+        ```yaml
+        # Type: string
+        firefox_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='firefox') }}"
+        ```
+
+    ??? variable string "`firefox_role_dns_zone`"
+
+        ```yaml
+        # Type: string
+        firefox_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='firefox') }}"
+        ```
+
+    ??? variable bool "`firefox_role_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+=== "Traefik"
+
+    ??? variable string "`firefox_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        firefox_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
+
+    ??? variable string "`firefox_role_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        firefox_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`firefox_role_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        firefox_role_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`firefox_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        firefox_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`firefox_role_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`firefox_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`firefox_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        firefox_role_traefik_api_endpoint: ""
+        ```
+
+=== "Docker"
+
+    ##### Container
+
+    ??? variable string "`firefox_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_container: "{{ firefox_name }}"
+        ```
+
+    ##### Image
+
+    ??? variable bool "`firefox_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`firefox_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_image_repo: "jlesage/firefox"
+        ```
+
+    ??? variable string "`firefox_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`firefox_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='firefox') }}:{{ lookup('role_var', '_docker_image_tag', role='firefox') }}"
+        ```
+
+    ##### Envs
+
+    ??? variable string "`firefox_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_env_file: "{{ lookup('role_var', '_paths_env_file_location', role='firefox') }}"
+        ```
+
+    ##### Volumes
+
+    ??? variable list "`firefox_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='firefox') }}:/config"
+        ```
+
+    ??? variable list "`firefox_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_volumes_custom: []
+        ```
+
+    ##### Hostname
+
+    ??? variable string "`firefox_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_hostname: "{{ firefox_name }}"
+        ```
+
+    ##### Networks
+
+    ??? variable string "`firefox_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_networks_alias: "{{ firefox_name }}"
+        ```
+
+    ??? variable list "`firefox_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`firefox_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_networks_custom: []
+        ```
+
+    ##### Capabilities
+
+    ??? variable list "`firefox_role_docker_capabilities_default`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_capabilities_default: 
+          - "SYS_NICE"
+        ```
+
+    ??? variable list "`firefox_role_docker_capabilities_custom`"
+
+        ```yaml
+        # Type: list
+        firefox_role_docker_capabilities_custom: []
+        ```
+
+    ##### Restart Policy
+
+    ??? variable string "`firefox_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_restart_policy: unless-stopped
+        ```
+
+    ##### State
+
+    ??? variable string "`firefox_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_state: started
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`firefox_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        firefox_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`firefox_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        firefox_role_depends_on: ""
+        ```
+
+    ??? variable string "`firefox_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        firefox_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`firefox_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        firefox_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`firefox_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        firefox_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`firefox_role_dns_enabled`"
+
+        ```yaml
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        firefox_role_dns_enabled: true
+        ```
+
+    ??? variable bool "`firefox_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        firefox_role_docker_controller: true
+        ```
+
+    ??? variable bool "`firefox_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`firefox_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        firefox_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`firefox_role_web_fqdn_override`"
+
+        ```yaml
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: list
+        firefox_role_web_fqdn_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            firefox_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "firefox2.{{ user.domain }}"
+              - "firefox.otherdomain.tld"
+            ```
+
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`firefox_role_web_host_override`"
+
+        ```yaml
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        firefox_role_web_host_override: # (1)!
+        ```
+
+        1.  Example:
+
+            ```yaml
+            firefox_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'firefox2.' + user.domain }}`)"
+            ```
+
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`firefox_role_web_scheme`"
+
+        ```yaml
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        firefox_role_web_scheme:
+        ```
+
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

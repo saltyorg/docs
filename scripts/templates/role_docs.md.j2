@@ -121,7 +121,7 @@
       {% endif %}
             {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
+        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "") %}
         {% for line in adjusted %}
             {{ line }}
         {% endfor %}
@@ -170,7 +170,7 @@
             ```yaml
             {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "        ") %}
+        {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "") %}
         {% for line in adjusted %}
             {{ line }}
         {% endfor %}

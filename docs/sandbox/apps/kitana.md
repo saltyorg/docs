@@ -31,11 +31,11 @@ sb install sandbox-kitana
 
 ### 2. URL
 
-- To access Kitana, visit `https://kitana._yourdomain.com_`
+- To access Kitana, visit `https://kitana.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
-- pen your browser and visit your Kitana instance `https://kitana._yourdomain.com_`
+- pen your browser and visit your Kitana instance `https://kitana.xDOMAIN_NAMEx`
 
 - authenticate against Plex.TV
 

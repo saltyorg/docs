@@ -28,7 +28,7 @@ sb install sandbox-openobserve
 
 ### 2. URL
 
-- To access OpenObserve, visit `https://openobserve._yourdomain.com_`
+- To access OpenObserve, visit `https://openobserve.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

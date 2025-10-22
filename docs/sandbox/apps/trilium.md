@@ -27,7 +27,7 @@ sb install sandbox-trilium
 
 ### 2. URL
 
-- To access Trilium Notes, visit `https://trilium._yourdomain.com_`
+- To access Trilium Notes, visit `https://trilium.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

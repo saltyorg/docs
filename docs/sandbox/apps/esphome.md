@@ -30,11 +30,11 @@ sb install sandbox-esphome
 
 ### 2. URL
 
-- To access ESPHome, visit `https://esphome._yourdomain.com_`
+- To access ESPHome, visit `https://esphome.xDOMAIN_NAMEx`
 
 ### 3. Usage
 
-`https://esphome._yourdomain.com_` is where you can go to manage/add devices, create/store .yaml files, and manage secrets. The .yaml files will be stored in `/opt/esphome/`
+`https://esphome.xDOMAIN_NAMEx` is where you can go to manage/add devices, create/store .yaml files, and manage secrets. The .yaml files will be stored in `/opt/esphome/`
 
 See the [ESPHome docs](https://esphome.io/components/) and [ESPHome forums](https://community.home-assistant.io/c/esphome/) for .yaml file creation assistance.
 

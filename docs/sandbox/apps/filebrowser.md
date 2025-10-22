@@ -27,7 +27,7 @@ sb install sandbox-filebrowser
 
 ### 2. URL
 
-- To access File Browser, visit `https://filebrowser._yourdomain.com_`
+- To access File Browser, visit `https://filebrowser.xDOMAIN_NAMEx`
 
 !!! info
     The initial `admin` user has a randomly generated password. You may retrieve this password in the container logs via `docker logs filebrowser`. We recommend changing the credentials promptly upon deployment.

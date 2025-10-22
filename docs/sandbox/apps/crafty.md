@@ -28,7 +28,7 @@ sb install sandbox-crafty
 
 ### 2. URL
 
-- To access Crafty Controller, visit `https://crafty._yourdomain.com_`
+- To access Crafty Controller, visit `https://crafty.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

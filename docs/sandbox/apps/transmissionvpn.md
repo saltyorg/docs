@@ -29,7 +29,7 @@ sb install sandbox-transmissionvpn
 
 ### 2. URL
 
-- To access transmissionvpn, visit `https://transmissionvpn._yourdomain.com_`
+- To access transmissionvpn, visit `https://transmissionvpn.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

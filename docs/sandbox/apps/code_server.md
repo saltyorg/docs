@@ -27,7 +27,7 @@ sb install sandbox-code-server
 
 ### 2. URL
 
-- To access code-server, visit `https://code-server._yourdomain.com_`
+- To access code-server, visit `https://code-server.xDOMAIN_NAMEx`
 
 ## Migration from the old `coder` role
 

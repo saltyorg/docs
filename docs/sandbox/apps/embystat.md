@@ -27,7 +27,7 @@ sb install sandbox-embystat
 
 ### 2. URL
 
-- To access EmbyStat, visit `https://embystat._yourdomain.com_`
+- To access EmbyStat, visit `https://embystat.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

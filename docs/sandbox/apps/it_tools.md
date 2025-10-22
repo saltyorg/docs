@@ -28,7 +28,7 @@ sb install sandbox-it-tools
 
 ### 2. URL
 
-- To access IT Tools, visit `https://it-tools._yourdomain.com_`
+- To access IT Tools, visit `https://it-tools.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

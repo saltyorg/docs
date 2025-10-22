@@ -34,7 +34,7 @@ sb install sandbox-watchstate
 
 ## Usage
 
-Visit `https://watchstate._yourdomain.com_`.
+Visit `https://watchstate.xDOMAIN_NAMEx`.
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

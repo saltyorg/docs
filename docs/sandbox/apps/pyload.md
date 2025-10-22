@@ -29,7 +29,7 @@ sb install sandbox-pyload
 
 ### 2. URL
 
-- To access pyload, visit `https://pyload._yourdomain.com_`
+- To access pyload, visit `https://pyload.xDOMAIN_NAMEx`
 - Default credentials are - username: pyload - password: pyload
 
 ## Inventory

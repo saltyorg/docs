@@ -25,7 +25,7 @@ sb install dozzle
 
 ### 2. URL
 
-- To access Dozzle, visit `https://dozzle._yourdomain.com_`
+- To access Dozzle, visit `https://dozzle.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

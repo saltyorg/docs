@@ -41,7 +41,7 @@ sb install sandbox-dockwatch
 
 ### 2. URL
 
-- To access dockwatch, visit `https://dockwatch._yourdomain.com_`
+- To access dockwatch, visit `https://dockwatch.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

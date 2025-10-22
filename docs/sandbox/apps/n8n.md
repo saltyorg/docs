@@ -38,7 +38,7 @@ sb install sandbox-n8n
 
 ### 2. URL
 
-- To access n8n, visit `https://n8n._yourdomain.com_`
+- To access n8n, visit `https://n8n.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

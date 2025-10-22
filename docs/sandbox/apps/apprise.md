@@ -30,7 +30,7 @@ sb install sandbox-apprise
 
 ### 2. URL
 
-- To access apprise, visit `https://apprise._yourdomain.com_`
+- To access apprise, visit `https://apprise.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
@@ -42,7 +42,7 @@ A typical apprise URL would look like this:
 
 ``` shell
 
-https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
+https://apprise.xDOMAIN_NAMEx/notify?service=discord&title=Hello&body=World
 
 ```
 

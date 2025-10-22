@@ -29,7 +29,7 @@ sb install sandbox-beets
 
 ### 2. URL
 
-- To access Beets, visit `https://beets._yourdomain.com_`
+- To access Beets, visit `https://beets.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

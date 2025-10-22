@@ -29,7 +29,7 @@ sb install sandbox-goaccess
 
 ### 2. URL
 
-- To access GoAccess, visit `https://goaccess._yourdomain.com_`
+- To access GoAccess, visit `https://goaccess.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

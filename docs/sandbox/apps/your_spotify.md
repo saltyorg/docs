@@ -34,7 +34,7 @@ sb install sandbox-your_spotify
 
 ### 2. URL
 
-- To access Yourspotify, visit `https://your_spotify._yourdomain.com_`
+- To access Yourspotify, visit `https://your_spotify.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

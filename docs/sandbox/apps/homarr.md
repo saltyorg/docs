@@ -39,7 +39,7 @@ sb install sandbox-homarr
 
 ### 2. URL
 
-- To access homarr, visit `https://homarr._yourdomain.com_`
+- To access homarr, visit `https://homarr.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

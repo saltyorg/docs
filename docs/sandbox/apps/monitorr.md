@@ -27,7 +27,7 @@ sb install sandbox-monitorr
 
 ### 2. URL
 
-- To access Monitorr, visit `https://monitorr._yourdomain.com_`
+- To access Monitorr, visit `https://monitorr.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

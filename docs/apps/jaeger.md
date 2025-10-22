@@ -28,7 +28,7 @@ sb install jaeger
 
 ### 2. URL
 
-- To access Jaeger, visit `https://jaeger._yourdomain.com_`
+- To access Jaeger, visit `https://jaeger.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

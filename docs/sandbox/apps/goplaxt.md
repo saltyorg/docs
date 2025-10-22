@@ -27,7 +27,7 @@ sb install sandbox-goplaxt
 
 ### 2. URL
 
-- To access Goplaxt, visit `https://goplaxt._yourdomain.com_`
+- To access Goplaxt, visit `https://goplaxt.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

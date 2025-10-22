@@ -35,7 +35,7 @@ sb install sandbox-fireflyiii
 
 ## 2. URL
 
-- To access the Firefly III, visit `https://fireflyiii._yourdomain.com_`
+- To access the Firefly III, visit `https://fireflyiii.xDOMAIN_NAMEx`
 
 ## 3. Additional Settings
 

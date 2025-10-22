@@ -30,7 +30,7 @@ sb install sandbox-linkding
 
 ### 2. URL
 
-- To access linkding, visit `https://linkding._yourdomain.com_`
+- To access linkding, visit `https://linkding.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

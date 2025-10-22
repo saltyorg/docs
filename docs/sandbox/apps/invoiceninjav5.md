@@ -36,7 +36,7 @@ sb install sandbox-invoiceninja
 
 ### 2. URL
 
-- To access Invoice Ninja, visit `https://invoiceninja._yourdomain.com_`
+- To access Invoice Ninja, visit `https://invoiceninja.xDOMAIN_NAMEx`
 
 ### 3. Log in
 

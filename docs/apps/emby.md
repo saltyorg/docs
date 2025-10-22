@@ -21,7 +21,7 @@ tags:
 
 ## 2. URL
 
-- To access Emby, visit `https://emby._yourdomain.com_`
+- To access Emby, visit `https://emby.xDOMAIN_NAMEx`
 
 ## 3. Initial Setup
 
@@ -41,7 +41,7 @@ tags:
 
 ## 4. Setup Wizard
 
-1. Visit `https://emby._yourdomain.com_`.
+1. Visit `https://emby.xDOMAIN_NAMEx`.
 
 1. Select your **preferred display language**. Click **Next**.
 

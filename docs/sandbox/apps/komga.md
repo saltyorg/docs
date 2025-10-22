@@ -27,7 +27,7 @@ sb install sandbox-komga
 
 ### 2. URL
 
-- To access Komga, visit `https://komga._yourdomain.com_`
+- To access Komga, visit `https://komga.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

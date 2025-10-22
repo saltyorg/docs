@@ -32,7 +32,7 @@ sb install sandbox-vnstat
 
 ### 2. URL
 
-- To access vnStat, visit `https://vnstat._yourdomain.com_`
+- To access vnStat, visit `https://vnstat.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

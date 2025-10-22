@@ -27,7 +27,7 @@ sb install sandbox-filezilla
 
 ### 2. URL
 
-- To access FileZilla, visit `https://filezilla._yourdomain.com_`
+- To access FileZilla, visit `https://filezilla.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

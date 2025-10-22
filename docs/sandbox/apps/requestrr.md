@@ -27,7 +27,7 @@ sb install sandbox-requestrr
 
 ### 2. URL
 
-- To access Requestrr, visit `https://requestrr._yourdomain.com_`
+- To access Requestrr, visit `https://requestrr.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

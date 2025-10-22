@@ -21,7 +21,7 @@ _Note: public trackers are disabled by default in the standard install.  Refer t
 
 ## 1. URL
 
-- To access ruTorrent, visit `https://rutorrent._yourdomain.com_`
+- To access ruTorrent, visit `https://rutorrent.xDOMAIN_NAMEx`
 
 ## 2. Basics
 

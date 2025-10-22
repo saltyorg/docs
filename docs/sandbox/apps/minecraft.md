@@ -28,8 +28,8 @@ This will install mc-router and the minecraft server. If you have listed multipl
 !!! warning "Cloudflare CDN"
     If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
 
-- By default, a single server will be accesible at  `minecraft._yourdomain.com_`
-- If you have set up multiple instances, these will be accesible by default at `instanceName._yourdomain.com_` (See multi server instructions below)
+- By default, a single server will be accesible at  `minecraft.xDOMAIN_NAMEx`
+- If you have set up multiple instances, these will be accesible by default at `instanceName.xDOMAIN_NAMEx` (See multi server instructions below)
 
 ### 3. Multi Server Set Up
 
@@ -43,9 +43,9 @@ minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
 
 1. This will install two servers, server1 and server2.
 
-These servers will be accesible at `instanceName._yourdomain.com_`
+These servers will be accesible at `instanceName.xDOMAIN_NAMEx`
 
-So for the example above, `mcserver1._yourdomain.com_` and `mcserver2._yourdomain.com_`
+So for the example above, `mcserver1.xDOMAIN_NAMEx` and `mcserver2.xDOMAIN_NAMEx`
 
 ### 4. Setup
 

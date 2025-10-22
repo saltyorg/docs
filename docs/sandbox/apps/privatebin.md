@@ -28,7 +28,7 @@ sb install sandbox-privatebin
 
 ### 2. URL
 
-- To access PrivateBin, visit `https://privatebin._yourdomain.com_`
+- To access PrivateBin, visit `https://privatebin.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

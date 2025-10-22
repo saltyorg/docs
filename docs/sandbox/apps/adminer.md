@@ -30,7 +30,7 @@ sb install sandbox-adminer
 
 ### 2. URL
 
-- To access Adminer, visit `https://adminer._yourdomain.com_`
+- To access Adminer, visit `https://adminer.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

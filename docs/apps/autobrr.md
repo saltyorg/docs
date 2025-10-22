@@ -29,7 +29,7 @@ sb install autobrr
 
 ### 2. URL
 
-- To access the Autobrr dashboard, visit `https://autobrr._yourdomain.com_`
+- To access the Autobrr dashboard, visit `https://autobrr.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

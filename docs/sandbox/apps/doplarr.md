@@ -51,7 +51,7 @@ tags:
     ```
 
 2. In `/opt/sandbox/settings.yml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
-You can get your api keys in your main setting page in overseer: `https://overseerr._yourdomain.com_/settings`:
+You can get your api keys in your main setting page in overseer: `https://overseerr.xDOMAIN_NAMEx/settings`:
 
     ```yaml hl_lines="5" title="/opt/sandbox/settings.yml"
     ...

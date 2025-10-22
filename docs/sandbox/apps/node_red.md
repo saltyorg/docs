@@ -30,7 +30,7 @@ sb install sandbox-node-red
 
 ### 2. URL
 
-- To access node-red, visit `https://node-red._yourdomain.com_`
+- To access node-red, visit `https://node-red.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

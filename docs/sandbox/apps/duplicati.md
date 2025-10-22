@@ -27,7 +27,7 @@ sb install sandbox-duplicati
 
 ### 2. URL
 
-- To access duplicati, visit `https://duplicati._yourdomain.com_`
+- To access duplicati, visit `https://duplicati.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

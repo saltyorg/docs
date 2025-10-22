@@ -29,7 +29,7 @@ sb install sandbox-discoflix
 
 ### 2. URL
 
-- To access DiscoFlix, visit `https://discoflix._yourdomain.com_`
+- To access DiscoFlix, visit `https://discoflix.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

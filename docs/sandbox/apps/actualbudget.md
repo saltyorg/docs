@@ -23,7 +23,7 @@ You own your data and can do whatever you want with it. Featuring multi-device s
 
 ## 2. URL
 
-To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
+To access Actual Budget, visit ``https://actualbudget.xDOMAIN_NAMEx``
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

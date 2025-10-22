@@ -27,7 +27,7 @@ sb install sandbox-lazylibrarian
 
 ### 2. URL
 
-- To access LazyLibrarian, visit `https://lazylibrarian._yourdomain.com_`
+- To access LazyLibrarian, visit `https://lazylibrarian.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

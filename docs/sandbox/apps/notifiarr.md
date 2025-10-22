@@ -44,7 +44,7 @@ sb install sandbox-notifiarr
 
 ### 3. URL
 
-- The Notifiarr url will only display the app status `https://notifiarr._yourdomain.com_`
+- The Notifiarr url will only display the app status `https://notifiarr.xDOMAIN_NAMEx`
 
 Now go to the Notifiarr website and configure your integrations and discord server.
 Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.

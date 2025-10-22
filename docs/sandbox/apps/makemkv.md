@@ -30,7 +30,7 @@ sb install sandbox-makemkv
 
 ### 2. URL
 
-- To access makemkv, visit `https://makemkv._yourdomain.com_`
+- To access makemkv, visit `https://makemkv.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

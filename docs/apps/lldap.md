@@ -28,7 +28,7 @@ sb install lldap
 
 ### 2. URL
 
-- To access LLDAP, visit `https://lldap._yourdomain.com_`
+- To access LLDAP, visit `https://lldap.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

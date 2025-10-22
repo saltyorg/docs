@@ -27,11 +27,11 @@ sb install sandbox-navidrome
 
 ### 2. URL
 
-- To access Navidrome, visit `https://navidrome._yourdomain.com_`
+- To access Navidrome, visit `https://navidrome.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
-- After installing Navidrome in your platform, you need to create your first user. This will be your admin user, a super user that can manage all aspects of Navidrome, including the ability to manage other users. Just browse to Navidrome’s homepage at`https://navidrome._yourdomain.com_` and you will be greeted with a screen like this: <br />
+- After installing Navidrome in your platform, you need to create your first user. This will be your admin user, a super user that can manage all aspects of Navidrome, including the ability to manage other users. Just browse to Navidrome’s homepage at`https://navidrome.xDOMAIN_NAMEx` and you will be greeted with a screen like this: <br />
 
      ![](../../images/community/navidrome_first_user.png)
 

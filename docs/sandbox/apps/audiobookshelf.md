@@ -30,7 +30,7 @@ sb install sandbox-audiobookshelf
 
 ### 2. URL
 
-- To access Audiobookshelf, visit `https://audiobookshelf._yourdomain.com_`
+- To access Audiobookshelf, visit `https://audiobookshelf.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

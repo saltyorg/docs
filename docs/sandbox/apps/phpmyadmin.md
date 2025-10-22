@@ -48,7 +48,7 @@ sb install sandbox-phpmyadmin
 
 ### 2. URL
 
-- To access phpmyadmin, visit `https://phpmyadmin._yourdomain.com_`
+- To access phpmyadmin, visit `https://phpmyadmin.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

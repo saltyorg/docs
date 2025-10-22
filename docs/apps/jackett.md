@@ -19,7 +19,7 @@ _Note: If you don't use torrents, you may just skip this page._
 
 ## 1. URL
 
-- To access Jackett, visit `http://jackett._yourdomain.com_`
+- To access Jackett, visit `http://jackett.xDOMAIN_NAMEx`
 
 ## 2. Settings
 

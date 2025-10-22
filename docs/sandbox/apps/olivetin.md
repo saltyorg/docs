@@ -27,7 +27,7 @@ sb install sandbox-olivetin
 
 ### 2. URL
 
-- To access OliveTin, visit `https://olivetin._yourdomain.com_`
+- To access OliveTin, visit `https://olivetin.xDOMAIN_NAMEx`
 
 ### 3. Configuration
 

@@ -29,7 +29,7 @@ sb install sandbox-gitea
 
 ### 2. URL
 
-- To access Gitea, visit `https://gitea._yourdomain.com_`
+- To access Gitea, visit `https://gitea.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

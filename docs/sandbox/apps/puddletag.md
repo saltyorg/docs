@@ -30,7 +30,7 @@ sb install sandbox-puddletag
 
 ### 2. URL
 
-- To access Puddletag, visit `https://puddletag._yourdomain.com_`
+- To access Puddletag, visit `https://puddletag.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

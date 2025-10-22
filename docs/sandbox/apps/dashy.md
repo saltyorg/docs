@@ -49,7 +49,7 @@ sb install sandbox-dashy
 
 ### 2. URL
 
-- To access dashy, visit `https://dashy._yourdomain.com_`
+- To access dashy, visit `https://dashy.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

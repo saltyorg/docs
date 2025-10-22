@@ -30,11 +30,11 @@ sb install sandbox-unifi-network-application
 
 ### 2. URL
 
-- To access Unifi Network Application, visit `https://unifi._yourdomain.com_`
+- To access Unifi Network Application, visit `https://unifi.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
-  1. Visit the Unifi Network Application site at `https://unifi._yourdomain.com_`
+  1. Visit the Unifi Network Application site at `https://unifi.xDOMAIN_NAMEx`
 
   2. For Unifi to adopt other devices, e.g. an Access Point, it is required to change the inform IP address. Because Unifi runs inside Docker by default it uses an IP address not accessible by other devices. To change this go to Settings > System Settings > Controller Configuration and set the Controller Hostname/IP to a hostname or IP address accessible by your devices. Additionally the checkbox "Override inform host with controller hostname/IP" has to be checked, so that devices can connect to the controller during adoption (devices use the inform-endpoint during adoption).
 

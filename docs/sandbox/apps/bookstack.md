@@ -27,7 +27,7 @@ sb install sandbox-bookstack
 
 ### 2. URL
 
-- To access BookStack, visit `https://bookstack._yourdomain.com_`
+- To access BookStack, visit `https://bookstack.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

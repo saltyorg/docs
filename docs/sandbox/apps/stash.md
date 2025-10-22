@@ -27,7 +27,7 @@ sb install sandbox-stash
 
 ### 2. URL
 
-- To access Stash, visit `https://stash._yourdomain.com_`
+- To access Stash, visit `https://stash.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

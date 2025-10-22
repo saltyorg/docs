@@ -38,7 +38,7 @@ sb install sandbox-tubearchivist
 
 ### 2. URL
 
-- To access tubearchivist, visit `https://tubearchivist._yourdomain.com_`
+- To access tubearchivist, visit `https://tubearchivist.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

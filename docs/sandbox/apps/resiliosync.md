@@ -27,7 +27,7 @@ sb install sandbox-resiliosync
 
 ### 2. URL
 
-- To access Resilio Sync, visit `https://resiliosync._yourdomain.com_`
+- To access Resilio Sync, visit `https://resiliosync.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

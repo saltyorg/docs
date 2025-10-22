@@ -27,7 +27,7 @@ sb install sandbox-miniflux
 
 ### 2. URL
 
-- To access miniflux, visit `https://miniflux._yourdomain.com_`
+- To access miniflux, visit `https://miniflux.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

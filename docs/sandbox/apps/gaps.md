@@ -30,7 +30,7 @@ sb install sandbox-gaps
 
 ### 2. URL
 
-- To access gaps, visit `https://gaps._yourdomain.com_`
+- To access gaps, visit `https://gaps.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

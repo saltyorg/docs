@@ -45,7 +45,7 @@ sb install sandbox-jellyseerr
 
 ### 2. URL
 
-- To access Jellyseerr, visit `https://jellyseerr._yourdomain.com_`
+- To access Jellyseerr, visit `https://jellyseerr.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

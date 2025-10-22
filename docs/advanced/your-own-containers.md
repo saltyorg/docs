@@ -12,9 +12,9 @@ tags:
 
 # Adding your own containers to Saltbox
 
-When you install existing roles in Saltbox, some things get handled behind the scenes for you. Notably, this includes creating the subdomain[s] at Cloudflare and creating the `/opt/APPNAME` directory tree.
+When you install existing roles in Saltbox, some things get handled behind the scenes for you. Notably, this includes creating the subdomain[s] at Cloudflare and creating the `/opt/xAPP_NAMEx` directory tree.
 
-When you add a container manually as outlined on this page, neither of those things will be done for you (unless you have installed our ddns container), so prior to running the docker commands described below you will have to create the `APPNAME.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree.
+When you add a container manually as outlined on this page, neither of those things will be done for you (unless you have installed our ddns container), so prior to running the docker commands described below you will have to create the `xAPP_NAMEx.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/xAPP_NAMEx` directory tree.
 
 !!! info "Two approaches available"
     - **Recommended:** Use the [Generate Traefik Template](#utilizing-generate-traefik-template-recommended) for the easiest setup
@@ -30,7 +30,7 @@ If you want to create a role file that you can install like the built-in applica
 1. Create your application folder:
 
     ```shell
-    mkdir /opt/APPNAME
+    mkdir /opt/xAPP_NAMEx
     ```
 
 2. Run the Generate Traefik Template:
@@ -44,15 +44,15 @@ If you want to create a role file that you can install like the built-in applica
 4. Move the generated file to your application directory:
 
     ```shell
-    mv /tmp/docker-compose.yml /opt/APPNAME/
+    mv /tmp/docker-compose.yml /opt/xAPP_NAMEx/
     ```
 
-5. Edit `/opt/APPNAME/docker-compose.yml` to customize it for your specific container requirements.
+5. Edit `/opt/xAPP_NAMEx/docker-compose.yml` to customize it for your specific container requirements.
 
 6. Start your container:
 
     ```shell
-    cd /opt/APPNAME
+    cd /opt/xAPP_NAMEx
     docker compose up -d
     ```
 
@@ -61,19 +61,30 @@ If you want to create a role file that you can install like the built-in applica
 
 ## Docker Compose (Manual Setup)
 
-!!! warning "Advanced Users Only"
-    The templates below are for users who prefer to manually create their docker-compose files. For most users, the [Generate Traefik Template](#utilizing-generate-traefik-template-recommended) method above is much easier and less error-prone.
+<label>Enter domain name: <input data-input-for="DOMAIN_NAME"></label>
 
-IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and `DOCKER/IMAGE:TAG` are _placeholders_. _You need to change those_ **everywhere they appear** to match the application you are installing.
+<label>Enter application name: <input data-input-for="APP_NAME"></label>
+
+<label>Enter application Docker image repo: <input data-input-for="DOCKER_IMAGE_REPO"></label>
+
+<label>Enter application Docker image tag: <input data-input-for="DOCKER_IMAGE_TAG"></label>
+
+<label>Enter web port: <input data-input-for="APP_WEB_PORT"></label>
+
+<label>Enter in-container appdata path: <input data-input-for="INTERNAL_APPDATA_PATH"></label>
+
+<label for="www"><input type="checkbox" id="www" data-input-for="APP_URL_TOGGLE"> Reveal your dAPP_NAMEd URL</label>: 
+
+[dAPP_URL_TOGGLEd](https://iFQDNi)
 
 === "Using Traefik (Authelia)"
     ```yaml
     services:
-      APPNAME:
+      xAPP_NAMEx:
         restart: unless-stopped # (1)!
-        container_name: APPNAME # (2)!
-        image: DOCKER/IMAGE:TAG # (3)!
-        hostname: APPNAME # (4)!
+        container_name: xAPP_NAMEx # (2)!
+        image: xDOCKER_IMAGE_REPOx:xDOCKER_IMAGE_TAGx # (3)!
+        hostname: xAPP_NAMEx # (4)!
         environment: # (5)!
           - PUID=1000
           - PGID=1000
@@ -84,19 +95,19 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           diun.enable: true # (8)!
           traefik.enable: true # (9)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (10)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (11)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (12)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (13)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (14)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (15)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (16)!
-          traefik.http.routers.APPNAME.service: APPNAME # (17)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (18)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (19)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (20)!
+          traefik.http.routers.xAPP_NAMEx-http.entrypoints: web # (10)!
+          traefik.http.routers.xAPP_NAMEx-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (11)!
+          traefik.http.routers.xAPP_NAMEx-http.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (12)!
+          traefik.http.routers.xAPP_NAMEx-http.service: xAPP_NAMEx # (13)!
+          traefik.http.routers.xAPP_NAMEx.entrypoints: websecure # (14)!
+          traefik.http.routers.xAPP_NAMEx.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (15)!
+          traefik.http.routers.xAPP_NAMEx.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (16)!
+          traefik.http.routers.xAPP_NAMEx.service: xAPP_NAMEx # (17)!
+          traefik.http.routers.xAPP_NAMEx.tls.certresolver: cfdns # (18)!
+          traefik.http.routers.xAPP_NAMEx.tls.options: securetls@file # (19)!
+          traefik.http.services.xAPP_NAMEx.loadbalancer.server.port: xAPP_WEB_PORTx # (20)!
         volumes: # (21)!
-          - /opt/APPNAME:/CONFIG
+          - /opt/xAPP_NAMEx:xINTERNAL_APPDATA_PATHx
           - /etc/localtime:/etc/localtime:ro
 
     networks: # (22)!
@@ -169,11 +180,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 === "Using Traefik (Authelia + API Router)"
     ```yaml
     services:
-      APPNAME:
+      xAPP_NAMEx:
         restart: unless-stopped # (1)!
-        container_name: APPNAME # (2)!
-        image: DOCKER/IMAGE:TAG # (3)!
-        hostname: APPNAME # (4)!
+        container_name: xAPP_NAMEx # (2)!
+        image: xDOCKER_IMAGE_REPOx:xDOCKER_IMAGE_TAGx # (3)!
+        hostname: xAPP_NAMEx # (4)!
         environment: # (5)!
           - PUID=1000
           - PGID=1000
@@ -184,31 +195,31 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           diun.enable: true # (8)!
           traefik.enable: true # (9)!
-          traefik.http.routers.APPNAME-api-http.entrypoints: web # (10)!
-          traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
-          traefik.http.routers.APPNAME-api-http.priority: 99 # (12)!
-          traefik.http.routers.APPNAME-api-http.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (13)!
-          traefik.http.routers.APPNAME-api-http.service: APPNAME # (14)!
-          traefik.http.routers.APPNAME-api.entrypoints: websecure # (15)!
-          traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (16)!
-          traefik.http.routers.APPNAME-api.priority: 99 # (17)!
-          traefik.http.routers.APPNAME-api.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (18)!
-          traefik.http.routers.APPNAME-api.service: APPNAME # (19)!
-          traefik.http.routers.APPNAME-api.tls.certresolver: cfdns # (20)!
-          traefik.http.routers.APPNAME-api.tls.options: securetls@file # (21)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (22)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (23)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (24)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (25)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (26)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (27)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (28)!
-          traefik.http.routers.APPNAME.service: APPNAME # (29)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (30)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (31)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (32)!
+          traefik.http.routers.xAPP_NAMEx-api-http.entrypoints: web # (10)!
+          traefik.http.routers.xAPP_NAMEx-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
+          traefik.http.routers.xAPP_NAMEx-api-http.priority: 99 # (12)!
+          traefik.http.routers.xAPP_NAMEx-api-http.rule: Host(`xAPP_NAMEx.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (13)!
+          traefik.http.routers.xAPP_NAMEx-api-http.service: xAPP_NAMEx # (14)!
+          traefik.http.routers.xAPP_NAMEx-api.entrypoints: websecure # (15)!
+          traefik.http.routers.xAPP_NAMEx-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (16)!
+          traefik.http.routers.xAPP_NAMEx-api.priority: 99 # (17)!
+          traefik.http.routers.xAPP_NAMEx-api.rule: Host(`xAPP_NAMEx.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (18)!
+          traefik.http.routers.xAPP_NAMEx-api.service: xAPP_NAMEx # (19)!
+          traefik.http.routers.xAPP_NAMEx-api.tls.certresolver: cfdns # (20)!
+          traefik.http.routers.xAPP_NAMEx-api.tls.options: securetls@file # (21)!
+          traefik.http.routers.xAPP_NAMEx-http.entrypoints: web # (22)!
+          traefik.http.routers.xAPP_NAMEx-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (23)!
+          traefik.http.routers.xAPP_NAMEx-http.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (24)!
+          traefik.http.routers.xAPP_NAMEx-http.service: xAPP_NAMEx # (25)!
+          traefik.http.routers.xAPP_NAMEx.entrypoints: websecure # (26)!
+          traefik.http.routers.xAPP_NAMEx.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (27)!
+          traefik.http.routers.xAPP_NAMEx.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (28)!
+          traefik.http.routers.xAPP_NAMEx.service: xAPP_NAMEx # (29)!
+          traefik.http.routers.xAPP_NAMEx.tls.certresolver: cfdns # (30)!
+          traefik.http.routers.xAPP_NAMEx.tls.options: securetls@file # (31)!
+          traefik.http.services.xAPP_NAMEx.loadbalancer.server.port: xAPP_WEB_PORTx # (32)!
         volumes: # (33)!
-          - /opt/APPNAME:/CONFIG
+          - /opt/xAPP_NAMEx:xINTERNAL_APPDATA_PATHx
           - /etc/localtime:/etc/localtime:ro
 
     networks: # (34)!
@@ -330,11 +341,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 === "Using Traefik"
     ```yaml
     services:
-      APPNAME:
+      xAPP_NAMEx:
         restart: unless-stopped # (1)!
-        container_name: APPNAME # (2)!
-        image: DOCKER/IMAGE:TAG # (3)!
-        hostname: APPNAME # (4)!
+        container_name: xAPP_NAMEx # (2)!
+        image: xDOCKER_IMAGE_REPOx:xDOCKER_IMAGE_TAGx # (3)!
+        hostname: xAPP_NAMEx # (4)!
         environment: # (5)!
           - PUID=1000
           - PGID=1000
@@ -345,19 +356,19 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           diun.enable: true # (8)!
           traefik.enable: true # (9)!
-          traefik.http.routers.APPNAME-http.entrypoints: web # (10)!
-          traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
-          traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (12)!
-          traefik.http.routers.APPNAME-http.service: APPNAME # (13)!
-          traefik.http.routers.APPNAME.entrypoints: websecure # (14)!
-          traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (15)!
-          traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (16)!
-          traefik.http.routers.APPNAME.service: APPNAME # (17)!
-          traefik.http.routers.APPNAME.tls.certresolver: cfdns # (18)!
-          traefik.http.routers.APPNAME.tls.options: securetls@file # (19)!
-          traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (20)!
+          traefik.http.routers.xAPP_NAMEx-http.entrypoints: web # (10)!
+          traefik.http.routers.xAPP_NAMEx-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
+          traefik.http.routers.xAPP_NAMEx-http.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (12)!
+          traefik.http.routers.xAPP_NAMEx-http.service: xAPP_NAMEx # (13)!
+          traefik.http.routers.xAPP_NAMEx.entrypoints: websecure # (14)!
+          traefik.http.routers.xAPP_NAMEx.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (15)!
+          traefik.http.routers.xAPP_NAMEx.rule: Host(`xAPP_NAMEx.xDOMAIN_NAMEx`) # (16)!
+          traefik.http.routers.xAPP_NAMEx.service: xAPP_NAMEx # (17)!
+          traefik.http.routers.xAPP_NAMEx.tls.certresolver: cfdns # (18)!
+          traefik.http.routers.xAPP_NAMEx.tls.options: securetls@file # (19)!
+          traefik.http.services.xAPP_NAMEx.loadbalancer.server.port: xAPP_WEB_PORTx # (20)!
         volumes: # (21)!
-          - /opt/APPNAME:/CONFIG
+          - /opt/xAPP_NAMEx:xINTERNAL_APPDATA_PATHx
           - /etc/localtime:/etc/localtime:ro
 
     networks: # (22)!
@@ -430,11 +441,11 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
 === "Without Traefik"
     ```yaml
     services:
-      APPNAME:
+      xAPP_NAMEx:
         restart: unless-stopped # (1)!
-        container_name: APPNAME # (2)!
-        image: DOCKER/IMAGE:TAG # (3)!
-        hostname: APPNAME # (4)!
+        container_name: xAPP_NAMEx # (2)!
+        image: xDOCKER_IMAGE_REPOx:xDOCKER_IMAGE_TAGx # (3)!
+        hostname: xAPP_NAMEx # (4)!
         environment: # (5)!
           - PUID=1000
           - PGID=1000
@@ -445,7 +456,7 @@ IMPORTANT: In the examples below, `APPNAME`, `APPLICATION_PORT`, `/CONFIG`, and 
           com.github.saltbox.saltbox_managed: true # (7)!
           diun.enable: true # (8)!
         volumes: # (9)!
-          - /opt/APPNAME:/CONFIG
+          - /opt/xAPP_NAMEx:xINTERNAL_APPDATA_PATHx
           - /etc/localtime:/etc/localtime:ro
 
     networks: # (10)!
@@ -492,4 +503,4 @@ If the file has some other name or is located elsewhere in the file system:
 docker compose -f /path/to/something.yml up -d
 ```
 
-Remember to create the `APPNAME.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/APPNAME` directory tree prior to running that command.
+Remember to create the `xAPP_NAMEx.domain.tld` subdomain at Cloudflare [or wherever your DNS is] and create the required `/opt/xAPP_NAMEx` directory tree prior to running that command.

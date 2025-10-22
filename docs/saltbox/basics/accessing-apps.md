@@ -13,24 +13,24 @@ _Note 1: If pages don't load at all, make sure you've set up your [domain](../..
 
 ## Default Apps
 
-Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
+Saltbox apps will be accessed via appname.xDOMAIN_NAMEx (see table below).
 
-| **App  Name**          | **with domain**                           |
-|:---------------------- |:----------------------------------------- |
-| Jackett                | <https://jackett._yourdomain.com_>        |
-| Lidarr                 | <https://lidarr._yourdomain.com_>         |
-| SABnzbd                | <https://sabnzbd._yourdomain.com_>        |
-| NZBHydra2              | <https://nzbhydra2._yourdomain.com_>      |
-| Organizr               | <https://organizr._yourdomain.com_>       |
-| Overseerr              | <https://overseerr._yourdomain.com_>      |
-| Plex                   | <https://plex._yourdomain.com_>           |
-| WebTools for Plex      | <https://plex-webtools._yourdomain.com_>  |
-| Portainer              | <https://portainer._yourdomain.com_>      |
-| Radarr                 | <https://radarr._yourdomain.com_>         |
-| qbittorrent            | <https://qbittorrent._yourdomain.com_>    |
-| Sonarr                 | <https://sonarr._yourdomain.com_>         |
-| Tautulli               | <https://tautulli._yourdomain.com_>       |
-| Traefik Dashboard      | <https://dash._yourdomain.com_>           |
+| **App  Name**     | **with domain**                       |
+|:------------------|:--------------------------------------|
+| Jackett           | <https://jackett.xDOMAIN_NAMEx>       |
+| Lidarr            | <https://lidarr.xDOMAIN_NAMEx>        |
+| SABnzbd           | <https://sabnzbd.xDOMAIN_NAMEx>       |
+| NZBHydra2         | <https://nzbhydra2.xDOMAIN_NAMEx>     |
+| Organizr          | <https://organizr.xDOMAIN_NAMEx>      |
+| Overseerr         | <https://overseerr.xDOMAIN_NAMEx>     |
+| Plex              | <https://plex.xDOMAIN_NAMEx>          |
+| WebTools for Plex | <https://plex-webtools.xDOMAIN_NAMEx> |
+| Portainer         | <https://portainer.xDOMAIN_NAMEx>     |
+| Radarr            | <https://radarr.xDOMAIN_NAMEx>        |
+| qbittorrent       | <https://qbittorrent.xDOMAIN_NAMEx>   |
+| Sonarr            | <https://sonarr.xDOMAIN_NAMEx>        |
+| Tautulli          | <https://tautulli.xDOMAIN_NAMEx>      |
+| Traefik Dashboard | <https://dash.xDOMAIN_NAMEx>          |
 
 ## Additional Apps
 

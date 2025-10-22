@@ -29,7 +29,7 @@ sb install sandbox-rocketchat
 
 ### 2. URL
 
-- To access rocketchat, visit `https://rocketchat._yourdomain.com_`
+- To access rocketchat, visit `https://rocketchat.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

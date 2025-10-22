@@ -46,7 +46,7 @@ sb install sandbox-codex
 
 ### 2. URL
 
-- To access Codex, visit `https://codex._yourdomain.com_`
+- To access Codex, visit `https://codex.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

@@ -27,7 +27,7 @@ sb install nginx
 
 ### 2. URL
 
-- To access Nginx, visit `https://nginx._yourdomain.com_`
+- To access Nginx, visit `https://nginx.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

@@ -27,7 +27,7 @@ sb install sandbox-joplin
 
 ### 2. URL
 
-- To access Joplin, visit `https://joplin._yourdomain.com_`
+- To access Joplin, visit `https://joplin.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

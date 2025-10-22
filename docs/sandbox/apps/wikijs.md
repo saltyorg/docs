@@ -34,7 +34,7 @@ sb install sandbox-wikijs
 
 ### 2. URL
 
-- To access wikijs, visit `https://wikijs._yourdomain.com_`
+- To access wikijs, visit `https://wikijs.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

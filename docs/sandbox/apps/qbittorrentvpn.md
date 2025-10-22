@@ -79,7 +79,7 @@ tags:
 
 ### 2. URL
 
-- To access qbittorrentvpn, visit `https://qbittorrentvpn._yourdomain.com_`
+- To access qbittorrentvpn, visit `https://qbittorrentvpn.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

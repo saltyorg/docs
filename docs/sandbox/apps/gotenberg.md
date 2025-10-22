@@ -29,7 +29,7 @@ sb install sandbox-gotenberg
 
 ### 2. URL
 
-- To access gotenberg, visit `https://gotenberg._yourdomain.com_`
+- To access gotenberg, visit `https://gotenberg.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

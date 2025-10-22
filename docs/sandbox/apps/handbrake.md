@@ -27,7 +27,7 @@ sb install sandbox-handbrake
 
 ### 2. URL
 
-- To access HandBrake, visit `https://handbrake._yourdomain.com_`
+- To access HandBrake, visit `https://handbrake.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
@@ -46,7 +46,7 @@ sb install sandbox-handbrake
 
     ```
 
-3. Access HandBrake `https://handbrake._yourdomain.com_`
+3. Access HandBrake `https://handbrake.xDOMAIN_NAMEx`
 
 4. See the HandBrake documentation for usage:
       - [:octicons-link-16: Documentation](https://handbrake.fr/docs){: .header-icons }

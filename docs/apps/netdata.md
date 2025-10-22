@@ -31,7 +31,7 @@ sb install netdata
 
 ### 2. URL
 
-- To access Netdata, visit `https://netdata._yourdomain.com_`
+- To access Netdata, visit `https://netdata.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

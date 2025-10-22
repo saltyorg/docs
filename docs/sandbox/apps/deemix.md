@@ -27,7 +27,7 @@ sb install sandbox-deemix
 
 ### 2. URL
 
-- To access deemix, visit `https://deemix._yourdomain.com_`
+- To access deemix, visit `https://deemix.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

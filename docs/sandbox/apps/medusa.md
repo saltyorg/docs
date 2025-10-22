@@ -27,7 +27,7 @@ sb install sandbox-medusa
 
 ### 2. URL
 
-- To access Medusa, visit `https://medusa._yourdomain.com_`
+- To access Medusa, visit `https://medusa.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

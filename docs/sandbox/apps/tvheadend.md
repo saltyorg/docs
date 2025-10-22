@@ -50,7 +50,7 @@ sb install sandbox-tvheadend
 
 ### 2. URL
 
-- To access Tvheadend, visit `https://tvheadend._yourdomain.com_`
+- To access Tvheadend, visit `https://tvheadend.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

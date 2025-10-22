@@ -25,7 +25,7 @@ sb install jellyfin
 
 ### 2. URL
 
-- To access Jellyfin, visit `https://jellyfin._yourdomain.com_`
+- To access Jellyfin, visit `https://jellyfin.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

@@ -29,7 +29,7 @@ sb install sandbox-python-plexlibrary
 
 ### 2. URL
 
-- To access python-plexlibrary, visit `https://python-plexlibrary._yourdomain.com_`
+- To access python-plexlibrary, visit `https://python-plexlibrary.xDOMAIN_NAMEx`
 
 ### 3. Usage
 

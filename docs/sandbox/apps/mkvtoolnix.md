@@ -29,7 +29,7 @@ sb install sandbox-mkvtoolnix
 
 ### 2. URL
 
-- To access MKVToolNix, visit `https://mkvtoolnix._yourdomain.com_`
+- To access MKVToolNix, visit `https://mkvtoolnix.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

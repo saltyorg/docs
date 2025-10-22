@@ -27,7 +27,7 @@ sb install sandbox-heimdall
 
 ### 2. URL
 
-- To access Heimdall, visit `https://heimdall._yourdomain.com_`
+- To access Heimdall, visit `https://heimdall.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

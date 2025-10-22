@@ -43,7 +43,7 @@ sb install sandbox-homepage
 
 ### 2. URL
 
-- To access Homepage, visit `https://homepage._yourdomain.com_`
+- To access Homepage, visit `https://homepage.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

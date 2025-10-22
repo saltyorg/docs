@@ -27,7 +27,7 @@ sb install sandbox-healthchecks
 
 ### 2. URL
 
-- To access Healthchecks, visit `https://healthchecks._yourdomain.com_`
+- To access Healthchecks, visit `https://healthchecks.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

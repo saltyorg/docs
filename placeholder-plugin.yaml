@@ -1,0 +1,27 @@
+#settings:
+#  auto_placeholder_tables: false
+
+placeholders:
+  DOMAIN_NAME:
+    default: yourdomain.com
+  APP_NAME:
+    default: webtop
+  FQDN:
+    read_only: true
+    allow_nested: true
+    replace_everywhere: true
+    default: iAPP_NAMEi.iDOMAIN_NAMEi
+  DOCKER_IMAGE_REPO:
+    default: linuxserver/webtop
+  DOCKER_IMAGE_TAG:
+    default: latest
+  APP_WEB_PORT:
+    default: 3000
+  INTERNAL_APPDATA_PATH:
+    default: /config
+  APP_URL_TOGGLE:
+    default: unchecked
+    replace_everywhere: true
+    values:
+      checked: https://iAPP_NAMEi.iDOMAIN_NAMEi
+      unchecked: ""

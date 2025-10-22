@@ -25,7 +25,7 @@ sb install prowlarr
 
 ### 2. URL
 
-- To access Prowlarr, visit `https://prowlarr._yourdomain.com_`
+- To access Prowlarr, visit `https://prowlarr.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

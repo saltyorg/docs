@@ -28,7 +28,7 @@ sb install prometheus
 
 ### 2. URL
 
-- To access Prometheus, visit `https://prometheus._yourdomain.com_`
+- To access Prometheus, visit `https://prometheus.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

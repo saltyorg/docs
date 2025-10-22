@@ -29,7 +29,7 @@ sb install sandbox-tika
 
 ### 2. URL
 
-- To access tika, visit `https://tika._yourdomain.com_`
+- To access tika, visit `https://tika.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

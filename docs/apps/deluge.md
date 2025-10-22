@@ -25,7 +25,7 @@ sb install deluge
 
 ### 2. URL
 
-- To access Deluge, visit `https://deluge._yourdomain.com_`
+- To access Deluge, visit `https://deluge.xDOMAIN_NAMEx`
 
 !!! info
     **default login**

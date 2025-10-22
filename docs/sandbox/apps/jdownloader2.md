@@ -27,7 +27,7 @@ sb install sandbox-jdownloader2
 
 ### 2. URL
 
-- To access JDownloader, visit `https://jdownloader2._yourdomain.com_`
+- To access JDownloader, visit `https://jdownloader2.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

@@ -27,7 +27,7 @@ sb install sandbox-sqlitebrowser
 
 ### 2. URL
 
-- To access SQLite Browser, visit `https://sqlitebrowser._yourdomain.com_`
+- To access SQLite Browser, visit `https://sqlitebrowser.xDOMAIN_NAMEx`
 
 - By default, the role is protected behind your Authelia/SSO middleware.
 

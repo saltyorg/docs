@@ -30,7 +30,7 @@ sb install sandbox-booksonic
 
 ### 2. URL
 
-- To access Booksonic Air, visit `https://booksonic._yourdomain.com_`
+- To access Booksonic Air, visit `https://booksonic.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

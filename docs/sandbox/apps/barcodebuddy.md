@@ -28,7 +28,7 @@ sb install sandbox-barcodebuddy
 
 ### 2. URL
 
-- To access BarcodeBuddy, visit `https://barcodebuddy._yourdomain.com_`
+- To access BarcodeBuddy, visit `https://barcodebuddy.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

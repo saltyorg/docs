@@ -31,7 +31,7 @@ sb install sandbox-rflood
 
 ### 2. URL
 
-- To access rFlood, visit `https://rflood._yourdomain.com_`
+- To access rFlood, visit `https://rflood.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

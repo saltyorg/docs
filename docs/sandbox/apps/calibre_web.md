@@ -32,7 +32,7 @@ sb install sandbox-calibre-web
 
 ### 2. URL
 
-- To access Calibre-Web, visit `https://calibre-web._yourdomain.com_`
+- To access Calibre-Web, visit `https://calibre-web.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

@@ -32,7 +32,7 @@ sb install sandbox-adguardhome
 
 ### 2. URL
 
-- To access AdGuard Home dashboard, visit `https://adguardhome._yourdomain.com_`
+- To access AdGuard Home dashboard, visit `https://adguardhome.xDOMAIN_NAMEx`
 
 ### 3. Usage
 

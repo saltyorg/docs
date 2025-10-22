@@ -37,7 +37,7 @@ sb install sandbox-lunasea
 
 ### 2. URL
 
-- To access Lunasea, visit `https://lunasea._yourdomain.com_`
+- To access Lunasea, visit `https://lunasea.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

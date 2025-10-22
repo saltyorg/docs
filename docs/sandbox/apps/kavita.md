@@ -27,7 +27,7 @@ sb install sandbox-kavita
 
 ### 2. URL
 
-- To access Kavita, visit `https://kavita._yourdomain.com_`
+- To access Kavita, visit `https://kavita.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

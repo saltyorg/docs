@@ -27,11 +27,11 @@ sb install qbittorrent
 
 ### 2. URL
 
-- To access qBittorrent, visit `https://qbittorrent._yourdomain.com_`
+- To access qBittorrent, visit `https://qbittorrent.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
-- Access qbittorrent at `https://qbittorrent._yourdomain.com_`
+- Access qbittorrent at `https://qbittorrent.xDOMAIN_NAMEx`
 
 - Log in using the username/password you specified in `accounts.yml`
 

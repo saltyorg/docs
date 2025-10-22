@@ -27,7 +27,7 @@ sb install sandbox-transmission
 
 ### 2. URL
 
-- To access Transmission, visit `https://transmission._yourdomain.com_`
+- To access Transmission, visit `https://transmission.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

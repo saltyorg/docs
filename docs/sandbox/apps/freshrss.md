@@ -27,7 +27,7 @@ sb install sandbox-freshrss
 
 ### 2. URL
 
-- To access Freshrss, visit `https://freshrss._yourdomain.com_`
+- To access Freshrss, visit `https://freshrss.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

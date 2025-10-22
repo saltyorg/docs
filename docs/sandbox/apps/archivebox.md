@@ -27,7 +27,7 @@ sb install sandbox-archivebox
 
 ### 2. URL
 
-- To access ArchiveBox, visit `https://archivebox._yourdomain.com_`
+- To access ArchiveBox, visit `https://archivebox.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

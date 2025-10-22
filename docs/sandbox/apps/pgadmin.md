@@ -30,7 +30,7 @@ sb install sandbox-pgadmin
 
 ### 2. URL
 
-- To access pgadmin, visit `https://pgadmin._yourdomain.com_`
+- To access pgadmin, visit `https://pgadmin.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

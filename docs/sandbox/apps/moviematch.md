@@ -33,7 +33,7 @@ sb install sandbox-moviematch
 
 ### 2. URL
 
-- To access MovieMatch, visit `https://moviematch._yourdomain.com_`
+- To access MovieMatch, visit `https://moviematch.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

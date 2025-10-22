@@ -27,7 +27,7 @@ sb install sandbox-influxdb2
 
 ### 2. URL
 
-- To access InfluxDB2, visit `https://influxdb2._yourdomain.com_`
+- To access InfluxDB2, visit `https://influxdb2.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

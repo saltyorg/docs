@@ -36,7 +36,7 @@ sb install sandbox-cherry
 
 ### 2. URL
 
-- To access Cherry, visit `https://cherry._yourdomain.com_`
+- To access Cherry, visit `https://cherry.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

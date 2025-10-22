@@ -27,7 +27,7 @@ sb install sandbox-nextcloud
 
 ### 2. URL
 
-- To access Nextcloud, visit `https://nextcloud._yourdomain.com_`
+- To access Nextcloud, visit `https://nextcloud.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

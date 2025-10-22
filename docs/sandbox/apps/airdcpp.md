@@ -27,7 +27,7 @@ sb install sandbox-airdcpp
 
 ### 2. URL
 
-- To access AirDC++, visit `https://airdcpp._yourdomain.com_`
+- To access AirDC++, visit `https://airdcpp.xDOMAIN_NAMEx`
 - Username / password for the default admin account is: admin / password
 
 ## Inventory

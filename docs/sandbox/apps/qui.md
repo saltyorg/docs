@@ -27,7 +27,7 @@ sb install sandbox-qui
 
 ### 2. URL
 
-- To access Qui, visit `https://qui._yourdomain.com_`
+- To access Qui, visit `https://qui.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

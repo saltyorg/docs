@@ -43,7 +43,7 @@ sb install sandbox-immich
 
 ### 2. URL
 
-- To access Immich, visit `https://immich._yourdomain.com_`
+- To access Immich, visit `https://immich.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

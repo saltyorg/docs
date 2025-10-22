@@ -26,7 +26,7 @@ sb install sandbox-minecraft-bedrock
 
 ### 2. Join Server
 
-- The server will be accessible at `minecraft-bedrock._yourdomain.com_` or `_yourserverip_:19132`
+- The server will be accessible at `minecraft-bedrock.xDOMAIN_NAMEx` or `_yourserverip_:19132`
 
 !!! warning "Cloudflare CDN"
     If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft-bedrock_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.

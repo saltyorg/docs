@@ -29,7 +29,7 @@ sb install sandbox-mylar3
 
 ### 2. URL
 
-- To access Mylar3, visit `https://mylar3._yourdomain.com_`
+- To access Mylar3, visit `https://mylar3.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

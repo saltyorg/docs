@@ -27,7 +27,7 @@ sb install sandbox-uptime-kuma
 
 ### 2. URL
 
-- To access Uptime Kuma, visit `https://uptime._yourdomain.com_`
+- To access Uptime Kuma, visit `https://uptime.xDOMAIN_NAMEx`
 
 ### 3. Setup
 

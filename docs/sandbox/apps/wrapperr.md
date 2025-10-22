@@ -27,11 +27,11 @@ sb install sandbox-wrapperr
 
 ### 2. URL
 
-- To access Wrapperr, visit `https://wrapperr._yourdomain.com_`
+- To access Wrapperr, visit `https://wrapperr.xDOMAIN_NAMEx`
 
 ### 3. Setup
 
-- The very first thing you should do after installing Wrapperr is visit `https://wrapperr._yourdomain.com_` and configure an admin username/password. <br /> **Do this NOW.**
+- The very first thing you should do after installing Wrapperr is visit `https://wrapperr.xDOMAIN_NAMEx` and configure an admin username/password. <br /> **Do this NOW.**
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

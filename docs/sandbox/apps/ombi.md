@@ -29,7 +29,7 @@ sb install sandbox-ombi
 
 ### 2. URL
 
-- To access Ombi, visit `https://ombi._yourdomain.com_`
+- To access Ombi, visit `https://ombi.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

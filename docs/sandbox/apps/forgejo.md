@@ -40,7 +40,7 @@ sb install sandbox-forgejo
 
 ### 2. URL
 
-- To access Forgejo, visit `https://forgejo._yourdomain.com_`
+- To access Forgejo, visit `https://forgejo.xDOMAIN_NAMEx`
 
 ## Inventory
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

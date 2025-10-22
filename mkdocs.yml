@@ -121,6 +121,7 @@ plugins:
       links_attr_map:
         target: _blank
       links_noopener: true
+  - placeholder
   - redirects:
       redirect_maps:
         'saltbox/upgrade/traefik3.md': 'reference/guides/deprecated/traefik3.md'

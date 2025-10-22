@@ -1,5 +1,6 @@
 mkdocs-git-authors-plugin==0.10.0
 mkdocs-git-committers-plugin-2==2.5.0
 mkdocs-glightbox==0.5.1
+mkdocs-placeholder-plugin==0.5.1
 mkdocs-redirects==1.2.2
 termynal==0.13.1

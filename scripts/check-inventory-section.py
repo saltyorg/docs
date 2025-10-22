@@ -83,7 +83,6 @@ def generate_issue_body(saltbox_missing: List[str], sandbox_missing: List[str], 
     body += "### How to Add the Inventory Section\n\n"
     body += "Add the following section to the app documentation page:\n\n"
     body += "```markdown\n"
-    body += "## Inventory\n"
     body += "<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->\n"
     body += "<!-- END SALTBOX MANAGED VARIABLES SECTION -->\n"
     body += "```\n\n"

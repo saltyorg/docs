@@ -24,7 +24,6 @@ Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
 | Organizr               | <https://organizr._yourdomain.com_>       |
 | Overseerr              | <https://overseerr._yourdomain.com_>      |
 | Plex                   | <https://plex._yourdomain.com_>           |
-| WebTools for Plex      | <https://plex-webtools._yourdomain.com_>  |
 | Portainer              | <https://portainer._yourdomain.com_>      |
 | Radarr                 | <https://radarr._yourdomain.com_>         |
 | qbittorrent            | <https://qbittorrent._yourdomain.com_>    |

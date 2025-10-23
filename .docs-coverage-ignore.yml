@@ -41,7 +41,6 @@ saltbox:
   - "sanity_check"
   - "scripts"
   - "shell"
-  - "sub_zero"
   - "system"
   - "traefik"
   - "traefik_file_template"
@@ -49,7 +48,6 @@ saltbox:
   - "unionfs"
   - "user"
   - "user_check"
-  - "webtools"
   - "yyq"
 
 # Sandbox roles to ignore

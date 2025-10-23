@@ -442,6 +442,20 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`uptime_kuma_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        uptime_kuma_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`uptime_kuma_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        uptime_kuma_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`uptime_kuma_role_traefik_robot_enabled`"
 
         ```yaml

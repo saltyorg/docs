@@ -1581,6 +1581,20 @@ Note: No authentication is configured by default.
             mongodb_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`mongodb_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mongodb_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`mongodb_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mongodb_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`mongodb_role_traefik_robot_enabled`"
 
             ```yaml
@@ -1738,6 +1752,20 @@ Note: No authentication is configured by default.
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             mongodb2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`mongodb2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mongodb2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`mongodb2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mongodb2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`mongodb2_traefik_robot_enabled`"

@@ -536,6 +536,20 @@ In your game, connect to your ip and default ports for the server. Make sure you
             lgsm_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`lgsm_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`lgsm_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`lgsm_role_traefik_robot_enabled`"
 
             ```yaml
@@ -693,6 +707,20 @@ In your game, connect to your ip and default ports for the server. Make sure you
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             lgsm2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`lgsm2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`lgsm2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lgsm2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`lgsm2_traefik_robot_enabled`"

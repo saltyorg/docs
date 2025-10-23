@@ -1795,6 +1795,20 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
             nginx_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`nginx_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            nginx_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`nginx_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            nginx_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`nginx_role_traefik_robot_enabled`"
 
             ```yaml
@@ -1952,6 +1966,20 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             nginx2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`nginx2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            nginx2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`nginx2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            nginx2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`nginx2_traefik_robot_enabled`"

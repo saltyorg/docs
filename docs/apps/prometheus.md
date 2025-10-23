@@ -1008,6 +1008,20 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`prometheus_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        prometheus_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`prometheus_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        prometheus_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`prometheus_role_traefik_robot_enabled`"
 
         ```yaml

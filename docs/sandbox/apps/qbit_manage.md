@@ -522,6 +522,20 @@ qbit_manage:
         qbit_manage_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`qbit_manage_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`qbit_manage_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        qbit_manage_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`qbit_manage_role_traefik_robot_enabled`"
 
         ```yaml

@@ -2235,6 +2235,20 @@ Instructions below will guide you through creating an API Key for a specific app
             emby_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`emby_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            emby_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`emby_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            emby_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`emby_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2392,6 +2406,20 @@ Instructions below will guide you through creating an API Key for a specific app
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             emby2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`emby2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            emby2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`emby2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            emby2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`emby2_traefik_robot_enabled`"

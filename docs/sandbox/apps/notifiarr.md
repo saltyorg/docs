@@ -523,6 +523,20 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`notifiarr_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        notifiarr_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`notifiarr_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        notifiarr_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`notifiarr_role_traefik_robot_enabled`"
 
         ```yaml

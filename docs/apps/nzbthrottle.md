@@ -856,6 +856,20 @@ Note: Configuration is file-based with no web interface.
         nzbthrottle_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`nzbthrottle_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbthrottle_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`nzbthrottle_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbthrottle_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`nzbthrottle_role_traefik_robot_enabled`"
 
         ```yaml

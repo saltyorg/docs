@@ -506,6 +506,20 @@ Change this asap.
         joplin_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`joplin_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        joplin_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`joplin_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        joplin_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`joplin_role_traefik_robot_enabled`"
 
         ```yaml

@@ -2002,6 +2002,20 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
             deluge_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`deluge_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            deluge_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`deluge_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            deluge_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`deluge_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2159,6 +2173,20 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             deluge2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`deluge2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            deluge2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`deluge2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            deluge2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`deluge2_traefik_robot_enabled`"

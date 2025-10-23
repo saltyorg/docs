@@ -417,6 +417,20 @@ sb install sandbox-vaultwarden
         vaultwarden_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`vaultwarden_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        vaultwarden_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`vaultwarden_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        vaultwarden_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`vaultwarden_role_traefik_robot_enabled`"
 
         ```yaml

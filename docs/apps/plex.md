@@ -318,20 +318,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             plex_role_open_local_ports: false
             ```
 
-        ??? variable bool "`plex_role_plugin_webtools`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex_role_plugin_webtools: false
-            ```
-
-        ??? variable bool "`plex_role_plugin_sub_zero`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex_role_plugin_sub_zero: false
-            ```
-
         ??? variable bool "`plex_role_insecure`"
 
             ```yaml
@@ -374,20 +360,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             # Do not enable globally if deploying multiple instances
             # Type: bool (true/false)
             plex2_open_local_ports: false
-            ```
-
-        ??? variable bool "`plex2_plugin_webtools`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex2_plugin_webtools: false
-            ```
-
-        ??? variable bool "`plex2_plugin_sub_zero`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex2_plugin_sub_zero: false
             ```
 
         ??? variable bool "`plex2_insecure`"
@@ -603,34 +575,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
                                 else lookup('role_var', '_web_domain', role='plex')) }}"
             ```
 
-        ??? variable string "`plex_role_webtools_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_web_subdomain: "{{ plex_name }}-webtools"
-            ```
-
-        ??? variable string "`plex_role_webtools_web_domain`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_web_domain: "{{ lookup('role_var', '_web_domain', role='plex') }}"
-            ```
-
-        ??? variable string "`plex_role_webtools_web_port`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_web_port: "33400"
-            ```
-
-        ??? variable string "`plex_role_webtools_host`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_host: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') + '.' + lookup('role_var', '_webtools_web_domain', role='plex') }}"
-            ```
-
         ??? variable string "`plex_role_web_insecure_url`"
 
             ```yaml
@@ -679,34 +623,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
                             else lookup('role_var', '_web_domain', role='plex')) }}"
             ```
 
-        ??? variable string "`plex2_webtools_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_web_subdomain: "{{ plex_name }}-webtools"
-            ```
-
-        ??? variable string "`plex2_webtools_web_domain`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_web_domain: "{{ lookup('role_var', '_web_domain', role='plex') }}"
-            ```
-
-        ??? variable string "`plex2_webtools_web_port`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_web_port: "33400"
-            ```
-
-        ??? variable string "`plex2_webtools_host`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_host: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') + '.' + lookup('role_var', '_webtools_web_domain', role='plex') }}"
-            ```
-
         ??? variable string "`plex2_web_insecure_url`"
 
             ```yaml
@@ -741,27 +657,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             plex_role_dns_proxy: "{{ dns_proxied }}"
             ```
 
-        ??? variable string "`plex_role_webtools_dns_record`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_dns_record: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
-            ```
-
-        ??? variable string "`plex_role_webtools_dns_zone`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_dns_zone: "{{ lookup('role_var', '_webtools_web_domain', role='plex') }}"
-            ```
-
-        ??? variable bool "`plex_role_webtools_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex_role_webtools_dns_proxy: "{{ dns_proxied }}"
-            ```
-
     === "Instance-level"
 
         ??? variable string "`plex2_dns_record`"
@@ -783,27 +678,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             ```yaml
             # Type: bool (true/false)
             plex2_dns_proxy: "{{ dns_proxied }}"
-            ```
-
-        ??? variable string "`plex2_webtools_dns_record`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_dns_record: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
-            ```
-
-        ??? variable string "`plex2_webtools_dns_zone`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_dns_zone: "{{ lookup('role_var', '_webtools_web_domain', role='plex') }}"
-            ```
-
-        ??? variable bool "`plex2_webtools_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            plex2_webtools_dns_proxy: "{{ dns_proxied }}"
             ```
 
 === "Traefik"
@@ -876,13 +750,11 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             plex_role_traefik_gzip_enabled: false
             ```
 
-        ??? variable string "`plex_role_traefik_middleware_http`"
+        ??? variable string "`plex_role_traefik_middleware_http_insecure`"
 
             ```yaml
             # Type: string
-            plex_role_traefik_middleware_http: "{{ 'globalHeaders@file'
-                                                if lookup('role_var', '_insecure', role='plex')
-                                                else traefik_default_middleware_default_http }}"
+            plex_role_traefik_middleware_http_insecure: "{{ lookup('role_var', '_insecure', role='plex') | bool }}"
             ```
 
         ??? variable string "`plex_role_web_serverstransport`"
@@ -890,44 +762,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             ```yaml
             # Type: string
             plex_role_web_serverstransport: "skipverify@file"
-            ```
-
-        ??? variable string "`plex_role_webtools_traefik_sso_middleware`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_traefik_sso_middleware: ""
-            ```
-
-        ??? variable string "`plex_role_webtools_traefik_middleware_default`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_traefik_middleware_default: "{{ traefik_default_middleware
-                                                               + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
-                                                                 if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
-                                                                 else '') }}"
-            ```
-
-        ??? variable string "`plex_role_webtools_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`plex_role_webtools_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable string "`plex_role_webtools_traefik_router`"
-
-            ```yaml
-            # Type: string
-            plex_role_webtools_traefik_router: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
             ```
 
     === "Instance-level"
@@ -998,13 +832,11 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             plex2_traefik_gzip_enabled: false
             ```
 
-        ??? variable string "`plex2_traefik_middleware_http`"
+        ??? variable string "`plex2_traefik_middleware_http_insecure`"
 
             ```yaml
             # Type: string
-            plex2_traefik_middleware_http: "{{ 'globalHeaders@file'
-                                            if lookup('role_var', '_insecure', role='plex')
-                                            else traefik_default_middleware_default_http }}"
+            plex2_traefik_middleware_http_insecure: "{{ lookup('role_var', '_insecure', role='plex') | bool }}"
             ```
 
         ??? variable string "`plex2_web_serverstransport`"
@@ -1012,44 +844,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             ```yaml
             # Type: string
             plex2_web_serverstransport: "skipverify@file"
-            ```
-
-        ??? variable string "`plex2_webtools_traefik_sso_middleware`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_traefik_sso_middleware: ""
-            ```
-
-        ??? variable string "`plex2_webtools_traefik_middleware_default`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_traefik_middleware_default: "{{ traefik_default_middleware
-                                                           + (',' + lookup('role_var', '_webtools_traefik_sso_middleware', role='plex')
-                                                             if (lookup('role_var', '_webtools_traefik_sso_middleware', role='plex') | length > 0)
-                                                             else '') }}"
-            ```
-
-        ??? variable string "`plex2_webtools_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`plex2_webtools_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable string "`plex2_webtools_traefik_router`"
-
-            ```yaml
-            # Type: string
-            plex2_webtools_traefik_router: "{{ lookup('role_var', '_webtools_web_subdomain', role='plex') }}"
             ```
 
 === "Theme"
@@ -1295,26 +1089,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
 
         ##### Labels
 
-        ??? variable list "`plex_role_docker_labels_default`"
-
-            ```yaml
-            # Type: list
-            plex_role_docker_labels_default: 
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
-              - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
-            ```
-
         ??? variable dict "`plex_role_docker_labels_custom`"
 
             ```yaml
@@ -1544,26 +1318,6 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             ```
 
         ##### Labels
-
-        ??? variable list "`plex2_docker_labels_default`"
-
-            ```yaml
-            # Type: list
-            plex2_docker_labels_default: 
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.entrypoints": "web" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.middlewares": "{{ traefik_default_middleware_http }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}-http.priority": "20" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.entrypoints": "websecure" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.service": "{{ lookup("role_var", "_webtools_web_subdomain", role="plex") }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.rule": "Host(`{{ lookup("role_var", "_webtools_host", role="plex") }}`)" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.options": "securetls@file" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.tls.certresolver": "{{ plex_role_webtools_traefik_certresolver }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.middlewares": "{{ plex_role_webtools_traefik_middleware }}" }'
-              - '{ "traefik.http.routers.{{ plex_role_webtools_traefik_router }}.priority": "20" }'
-              - '{ "traefik.http.services.{{ plex_role_webtools_traefik_router }}.loadbalancer.server.port": "{{ lookup("role_var", "_web_port", role="plex") }}" }'
-            ```
 
         ??? variable dict "`plex2_docker_labels_custom`"
 
@@ -2772,6 +2526,20 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             plex_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`plex_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            plex_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`plex_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            plex_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`plex_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2929,6 +2697,20 @@ Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             plex2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`plex2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            plex2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`plex2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            plex2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`plex2_traefik_robot_enabled`"

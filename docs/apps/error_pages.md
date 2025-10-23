@@ -894,6 +894,20 @@ plex_role_traefik_error_pages_enabled: false
         error_pages_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`error_pages_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        error_pages_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`error_pages_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        error_pages_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`error_pages_role_traefik_robot_enabled`"
 
         ```yaml

@@ -448,6 +448,20 @@ sb install sandbox-glances-web
         glances_web_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`glances_web_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        glances_web_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`glances_web_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        glances_web_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`glances_web_role_traefik_robot_enabled`"
 
         ```yaml

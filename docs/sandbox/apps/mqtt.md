@@ -324,6 +324,20 @@ password <password> # (3)!
         mqtt_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`mqtt_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        mqtt_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`mqtt_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        mqtt_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`mqtt_role_traefik_robot_enabled`"
 
         ```yaml

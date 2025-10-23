@@ -355,6 +355,20 @@ sb install sandbox-factorio
         factorio_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`factorio_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        factorio_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`factorio_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        factorio_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`factorio_role_traefik_robot_enabled`"
 
         ```yaml

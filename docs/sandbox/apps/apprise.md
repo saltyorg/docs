@@ -400,6 +400,20 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`apprise_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        apprise_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`apprise_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        apprise_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`apprise_role_traefik_robot_enabled`"
 
         ```yaml

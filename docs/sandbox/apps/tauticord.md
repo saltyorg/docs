@@ -303,6 +303,20 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`tauticord_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`tauticord_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`tauticord_role_traefik_robot_enabled`"
 
         ```yaml

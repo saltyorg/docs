@@ -258,6 +258,20 @@ sb install sandbox-gotenberg
         gotenberg_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`gotenberg_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gotenberg_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`gotenberg_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gotenberg_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`gotenberg_role_traefik_robot_enabled`"
 
         ```yaml

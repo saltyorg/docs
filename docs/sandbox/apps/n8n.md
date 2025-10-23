@@ -159,7 +159,7 @@ sb install sandbox-n8n
 
         ```yaml
         # Type: string
-        n8n_role_paths_location: "{{ server_appdata_path }}/{{ n8n_role_paths_folder }}/app"
+        n8n_role_paths_location: "{{ server_appdata_path }}/{{ n8n_role_paths_folder }}"
         ```
 
 === "Web"
@@ -331,6 +331,8 @@ sb install sandbox-n8n
           N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
           WEBHOOK_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}/"
           N8N_PROXY_HOPS: "1"
+          N8N_RUNNERS_ENABLED: "true"
+          N8N_USER_FOLDER: "/data"
         ```
 
     ??? variable dict "`n8n_role_docker_envs_custom`"
@@ -347,7 +349,7 @@ sb install sandbox-n8n
         ```yaml
         # Type: list
         n8n_role_docker_volumes_default: 
-          - "{{ lookup('role_var', '_paths_location', role='n8n') }}:/home/node/.n8n"
+          - "{{ lookup('role_var', '_paths_location', role='n8n') }}/data:/data"
         ```
 
     ??? variable list "`n8n_role_docker_volumes_custom`"
@@ -527,6 +529,20 @@ sb install sandbox-n8n
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         n8n_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`n8n_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        n8n_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`n8n_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        n8n_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`n8n_role_traefik_robot_enabled`"

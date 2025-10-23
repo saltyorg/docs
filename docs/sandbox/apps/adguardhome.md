@@ -415,6 +415,20 @@ sb install sandbox-adguardhome
         adguardhome_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`adguardhome_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        adguardhome_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`adguardhome_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        adguardhome_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`adguardhome_role_traefik_robot_enabled`"
 
         ```yaml

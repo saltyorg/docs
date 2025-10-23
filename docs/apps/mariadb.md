@@ -1692,6 +1692,20 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
             mariadb_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`mariadb_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mariadb_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`mariadb_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mariadb_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`mariadb_role_traefik_robot_enabled`"
 
             ```yaml
@@ -1849,6 +1863,20 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             mariadb2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`mariadb2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mariadb2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`mariadb2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            mariadb2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`mariadb2_traefik_robot_enabled`"

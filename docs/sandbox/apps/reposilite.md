@@ -402,6 +402,20 @@ sb install sandbox-reposilite
         reposilite_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`reposilite_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        reposilite_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`reposilite_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        reposilite_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`reposilite_role_traefik_robot_enabled`"
 
         ```yaml

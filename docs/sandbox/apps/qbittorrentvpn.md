@@ -933,6 +933,20 @@ tags:
             qbittorrentvpn_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`qbittorrentvpn_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qbittorrentvpn_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`qbittorrentvpn_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qbittorrentvpn_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`qbittorrentvpn_role_traefik_robot_enabled`"
 
             ```yaml
@@ -1090,6 +1104,20 @@ tags:
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             qbittorrentvpn2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`qbittorrentvpn2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qbittorrentvpn2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`qbittorrentvpn2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qbittorrentvpn2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`qbittorrentvpn2_traefik_robot_enabled`"

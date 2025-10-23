@@ -647,6 +647,20 @@ sb install sandbox-influxdb2
             influxdb2_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`influxdb2_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            influxdb2_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`influxdb2_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            influxdb2_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`influxdb2_role_traefik_robot_enabled`"
 
             ```yaml
@@ -804,6 +818,20 @@ sb install sandbox-influxdb2
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             influxdb22_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`influxdb22_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            influxdb22_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`influxdb22_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            influxdb22_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`influxdb22_traefik_robot_enabled`"

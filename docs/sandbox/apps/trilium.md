@@ -398,6 +398,20 @@ sb install sandbox-trilium
         trilium_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`trilium_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        trilium_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`trilium_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        trilium_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`trilium_role_traefik_robot_enabled`"
 
         ```yaml

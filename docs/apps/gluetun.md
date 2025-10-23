@@ -2222,6 +2222,20 @@ Below are some example inventory entries for some common VPN providers. These ar
             gluetun_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`gluetun_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            gluetun_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`gluetun_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            gluetun_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`gluetun_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2379,6 +2393,20 @@ Below are some example inventory entries for some common VPN providers. These ar
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             gluetun2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`gluetun2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            gluetun2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`gluetun2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            gluetun2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`gluetun2_traefik_robot_enabled`"

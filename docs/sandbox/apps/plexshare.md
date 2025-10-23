@@ -412,6 +412,20 @@ sb install sandbox-plexshare
         plexshare_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`plexshare_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plexshare_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`plexshare_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plexshare_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`plexshare_role_traefik_robot_enabled`"
 
         ```yaml

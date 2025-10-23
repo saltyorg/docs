@@ -309,6 +309,20 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`chrome_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        chrome_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`chrome_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        chrome_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`chrome_role_traefik_robot_enabled`"
 
         ```yaml

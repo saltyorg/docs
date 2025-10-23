@@ -539,6 +539,20 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`paperless_ngx_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        paperless_ngx_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`paperless_ngx_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        paperless_ngx_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`paperless_ngx_role_traefik_robot_enabled`"
 
         ```yaml

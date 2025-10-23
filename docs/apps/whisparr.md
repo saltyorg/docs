@@ -1936,6 +1936,20 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
             whisparr_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`whisparr_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            whisparr_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`whisparr_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            whisparr_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`whisparr_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2093,6 +2107,20 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             whisparr2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`whisparr2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            whisparr2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`whisparr2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            whisparr2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`whisparr2_traefik_robot_enabled`"

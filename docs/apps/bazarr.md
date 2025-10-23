@@ -1923,6 +1923,20 @@ Please refer to the official documentation for an explanation of the settings. S
             bazarr_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`bazarr_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            bazarr_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`bazarr_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            bazarr_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`bazarr_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2080,6 +2094,20 @@ Please refer to the official documentation for an explanation of the settings. S
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             bazarr2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`bazarr2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            bazarr2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`bazarr2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            bazarr2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`bazarr2_traefik_robot_enabled`"

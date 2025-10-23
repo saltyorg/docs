@@ -278,6 +278,20 @@ sb install sandbox-influxdb
         influxdb_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`influxdb_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        influxdb_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`influxdb_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        influxdb_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`influxdb_role_traefik_robot_enabled`"
 
         ```yaml

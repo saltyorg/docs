@@ -900,6 +900,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_access_control_whitelist_host: false
         ```
 
+    ??? variable bool "`authelia_role_access_control_whitelist_docker`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_access_control_whitelist_docker: false
+        ```
+
     ??? variable string "`authelia_role_access_control_default_policy`"
 
         ```yaml
@@ -922,26 +929,65 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
         ```yaml
         # Type: string
-        authelia_role_access_control_whitelist_rules_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules', role='authelia') if lookup('role_var', '_access_control_whitelist_host', role='authelia') and (dns_ipv4_enabled or dns_ipv6_enabled) else [] }}"
+        authelia_role_access_control_whitelist_rules_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_docker_lookup', role='authelia')
+                                                                 + lookup('role_var', '_access_control_whitelist_rules_host_lookup', role='authelia') }}"
         ```
 
-    ??? variable list "`authelia_role_access_control_whitelist_rules`"
+    ??? variable string "`authelia_role_access_control_whitelist_rules_docker_lookup`"
+
+        ```yaml
+        # Type: string
+        authelia_role_access_control_whitelist_rules_docker_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_docker', role='authelia')
+                                                                     if lookup('role_var', '_access_control_whitelist_docker', role='authelia')
+                                                                     else [] }}"
+        ```
+
+    ??? variable string "`authelia_role_access_control_whitelist_rules_host_lookup`"
+
+        ```yaml
+        # Type: string
+        authelia_role_access_control_whitelist_rules_host_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_host', role='authelia')
+                                                                   if lookup('role_var', '_access_control_whitelist_host', role='authelia') and (dns_ipv4_enabled or dns_ipv6_enabled)
+                                                                   else [] }}"
+        ```
+
+    ??? variable list "`authelia_role_access_control_whitelist_rules_host`"
 
         ```yaml
         # Type: list
-        authelia_role_access_control_whitelist_rules: 
+        authelia_role_access_control_whitelist_rules_host: 
           - domain:
               - "{{ '*.' + user.domain }}"
               - "{{ user.domain }}"
             policy: bypass
-            networks: "{{ lookup('role_var', '_access_control_whitelist_networks', role='authelia') | unique | reject('equalto', omit) | list }}"
+            networks: "{{ lookup('role_var', '_access_control_whitelist_networks_host', role='authelia') | unique | reject('equalto', omit) | list }}"
         ```
 
-    ??? variable list "`authelia_role_access_control_whitelist_networks`"
+    ??? variable list "`authelia_role_access_control_whitelist_rules_docker`"
 
         ```yaml
         # Type: list
-        authelia_role_access_control_whitelist_networks: 
+        authelia_role_access_control_whitelist_rules_docker: 
+          - domain:
+              - "{{ '*.' + user.domain }}"
+              - "{{ user.domain }}"
+            policy: bypass
+            networks: "{{ lookup('role_var', '_access_control_whitelist_networks_docker', role='authelia') | unique | reject('equalto', omit) | list }}"
+        ```
+
+    ??? variable list "`authelia_role_access_control_whitelist_networks_docker`"
+
+        ```yaml
+        # Type: list
+        authelia_role_access_control_whitelist_networks_docker: 
+          - "172.19.0.0/16"
+        ```
+
+    ??? variable list "`authelia_role_access_control_whitelist_networks_host`"
+
+        ```yaml
+        # Type: list
+        authelia_role_access_control_whitelist_networks_host: 
           - "{{ (ip_address_public + '/32') if dns_ipv4_enabled else omit }}"
           - "{{ (ipv6_address_public + '/128') if dns_ipv6_enabled else omit }}"
         ```
@@ -1874,6 +1920,20 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         authelia_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`authelia_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`authelia_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`authelia_role_traefik_robot_enabled`"

@@ -399,6 +399,20 @@ sb install sandbox-deemix
         deemix_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`deemix_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        deemix_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`deemix_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        deemix_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`deemix_role_traefik_robot_enabled`"
 
         ```yaml

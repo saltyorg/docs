@@ -388,6 +388,20 @@ sb install sandbox-lunasea
         lunasea_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`lunasea_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lunasea_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`lunasea_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lunasea_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`lunasea_role_traefik_robot_enabled`"
 
         ```yaml

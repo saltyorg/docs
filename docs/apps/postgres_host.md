@@ -237,6 +237,20 @@ Configure per-version users, databases, and access control using `postgres_host_
         postgres_host_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`postgres_host_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        postgres_host_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`postgres_host_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        postgres_host_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`postgres_host_role_traefik_robot_enabled`"
 
         ```yaml

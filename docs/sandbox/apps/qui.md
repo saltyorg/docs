@@ -729,6 +729,20 @@ sb install sandbox-qui
             qui_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`qui_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qui_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`qui_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qui_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`qui_role_traefik_robot_enabled`"
 
             ```yaml
@@ -886,6 +900,20 @@ sb install sandbox-qui
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             qui2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`qui2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qui2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`qui2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            qui2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`qui2_traefik_robot_enabled`"

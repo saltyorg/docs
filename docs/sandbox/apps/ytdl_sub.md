@@ -444,6 +444,20 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`ytdl_sub_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ytdl_sub_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`ytdl_sub_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ytdl_sub_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`ytdl_sub_role_traefik_robot_enabled`"
 
         ```yaml

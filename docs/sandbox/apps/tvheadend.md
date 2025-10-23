@@ -428,6 +428,20 @@ sb install sandbox-tvheadend
         tvheadend_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`tvheadend_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tvheadend_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`tvheadend_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tvheadend_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`tvheadend_role_traefik_robot_enabled`"
 
         ```yaml

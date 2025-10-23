@@ -972,6 +972,20 @@ sb install grafana
         grafana_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`grafana_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`grafana_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`grafana_role_traefik_robot_enabled`"
 
         ```yaml

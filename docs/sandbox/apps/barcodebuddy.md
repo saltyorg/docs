@@ -388,6 +388,20 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`barcodebuddy_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        barcodebuddy_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`barcodebuddy_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        barcodebuddy_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`barcodebuddy_role_traefik_robot_enabled`"
 
         ```yaml

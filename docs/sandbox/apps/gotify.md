@@ -408,6 +408,20 @@ sb install sandbox-gotify
         gotify_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`gotify_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gotify_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`gotify_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gotify_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`gotify_role_traefik_robot_enabled`"
 
         ```yaml

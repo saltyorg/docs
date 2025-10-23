@@ -785,6 +785,20 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
             minecraft_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`minecraft_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            minecraft_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`minecraft_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            minecraft_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`minecraft_role_traefik_robot_enabled`"
 
             ```yaml
@@ -942,6 +956,20 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             minecraft2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`minecraft2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            minecraft2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`minecraft2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            minecraft2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`minecraft2_traefik_robot_enabled`"

@@ -1340,6 +1340,20 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`authentik_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`authentik_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`authentik_role_traefik_robot_enabled`"
 
         ```yaml

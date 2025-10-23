@@ -520,6 +520,20 @@ To configure the time that Kometa should run, you may override the `kometa_time`
             kometa_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`kometa_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            kometa_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`kometa_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            kometa_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`kometa_role_traefik_robot_enabled`"
 
             ```yaml
@@ -677,6 +691,20 @@ To configure the time that Kometa should run, you may override the `kometa_time`
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             kometa2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`kometa2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            kometa2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`kometa2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            kometa2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`kometa2_traefik_robot_enabled`"

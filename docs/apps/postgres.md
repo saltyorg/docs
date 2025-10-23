@@ -1635,6 +1635,20 @@ sb install postgres
             postgres_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`postgres_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            postgres_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`postgres_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            postgres_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`postgres_role_traefik_robot_enabled`"
 
             ```yaml
@@ -1792,6 +1806,20 @@ sb install postgres
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             postgres2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`postgres2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            postgres2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`postgres2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            postgres2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`postgres2_traefik_robot_enabled`"

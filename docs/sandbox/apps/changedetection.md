@@ -398,6 +398,20 @@ sb install sandbox-changedetection
         changedetection_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`changedetection_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        changedetection_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`changedetection_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        changedetection_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`changedetection_role_traefik_robot_enabled`"
 
         ```yaml

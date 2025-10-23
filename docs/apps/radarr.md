@@ -2424,6 +2424,20 @@ Are you setting Saltbox up for the first time?  Continue to [Lidarr](lidarr.md).
             radarr_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`radarr_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            radarr_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`radarr_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            radarr_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`radarr_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2581,6 +2595,20 @@ Are you setting Saltbox up for the first time?  Continue to [Lidarr](lidarr.md).
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             radarr2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`radarr2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            radarr2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`radarr2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            radarr2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`radarr2_traefik_robot_enabled`"

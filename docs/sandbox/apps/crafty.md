@@ -524,6 +524,20 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`crafty_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        crafty_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`crafty_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        crafty_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`crafty_role_traefik_robot_enabled`"
 
         ```yaml

@@ -374,6 +374,20 @@ sb install sandbox-adminer
         adminer_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`adminer_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        adminer_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`adminer_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        adminer_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`adminer_role_traefik_robot_enabled`"
 
         ```yaml

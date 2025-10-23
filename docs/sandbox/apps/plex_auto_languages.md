@@ -316,6 +316,20 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`plex_auto_languages_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_auto_languages_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`plex_auto_languages_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_auto_languages_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`plex_auto_languages_role_traefik_robot_enabled`"
 
         ```yaml

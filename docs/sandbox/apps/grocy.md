@@ -402,6 +402,20 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`grocy_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grocy_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`grocy_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grocy_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`grocy_role_traefik_robot_enabled`"
 
         ```yaml

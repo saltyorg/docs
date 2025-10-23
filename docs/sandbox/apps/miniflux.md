@@ -527,6 +527,20 @@ sb install sandbox-miniflux
         miniflux_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`miniflux_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        miniflux_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`miniflux_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        miniflux_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`miniflux_role_traefik_robot_enabled`"
 
         ```yaml

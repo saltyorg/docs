@@ -416,6 +416,20 @@ sb install sandbox-syncthing
         syncthing_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`syncthing_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        syncthing_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`syncthing_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        syncthing_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`syncthing_role_traefik_robot_enabled`"
 
         ```yaml

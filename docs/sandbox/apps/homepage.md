@@ -463,6 +463,20 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`homepage_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homepage_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`homepage_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homepage_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`homepage_role_traefik_robot_enabled`"
 
         ```yaml

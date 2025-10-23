@@ -629,6 +629,20 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`delugevpn_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`delugevpn_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`delugevpn_role_traefik_robot_enabled`"
 
         ```yaml

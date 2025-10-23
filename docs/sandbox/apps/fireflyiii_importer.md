@@ -498,6 +498,20 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`fireflyiii_importer_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_importer_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`fireflyiii_importer_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_importer_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`fireflyiii_importer_role_traefik_robot_enabled`"
 
         ```yaml

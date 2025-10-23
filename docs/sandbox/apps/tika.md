@@ -258,6 +258,20 @@ sb install sandbox-tika
         tika_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`tika_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tika_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`tika_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tika_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`tika_role_traefik_robot_enabled`"
 
         ```yaml

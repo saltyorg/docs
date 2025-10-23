@@ -2334,6 +2334,20 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
             lidarr_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`lidarr_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lidarr_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`lidarr_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lidarr_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`lidarr_role_traefik_robot_enabled`"
 
             ```yaml
@@ -2491,6 +2505,20 @@ Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             lidarr2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`lidarr2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lidarr2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`lidarr2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            lidarr2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`lidarr2_traefik_robot_enabled`"

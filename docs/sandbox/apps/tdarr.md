@@ -484,6 +484,20 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`tdarr_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tdarr_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`tdarr_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tdarr_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`tdarr_role_traefik_robot_enabled`"
 
         ```yaml

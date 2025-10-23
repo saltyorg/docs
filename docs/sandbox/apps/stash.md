@@ -405,6 +405,20 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`stash_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        stash_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`stash_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        stash_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`stash_role_traefik_robot_enabled`"
 
         ```yaml

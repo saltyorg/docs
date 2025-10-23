@@ -425,6 +425,20 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`dashy_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dashy_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`dashy_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dashy_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`dashy_role_traefik_robot_enabled`"
 
         ```yaml

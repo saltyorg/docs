@@ -684,6 +684,20 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
             wizarr_role_traefik_gzip_enabled: false
             ```
 
+        ??? variable bool "`wizarr_role_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            wizarr_role_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`wizarr_role_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            wizarr_role_traefik_middleware_http_insecure:
+            ```
+
         ??? variable bool "`wizarr_role_traefik_robot_enabled`"
 
             ```yaml
@@ -841,6 +855,20 @@ After installation, go to wizarr.yourdomain.tld, enter a name for your server, e
             # Enable gzip compression middleware for containers
             # Type: bool (true/false)
             wizarr2_traefik_gzip_enabled: false
+            ```
+
+        ??? variable bool "`wizarr2_traefik_middleware_http_api_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            wizarr2_traefik_middleware_http_api_insecure:
+            ```
+
+        ??? variable bool "`wizarr2_traefik_middleware_http_insecure`"
+
+            ```yaml
+            # Type: bool (true/false)
+            wizarr2_traefik_middleware_http_insecure:
             ```
 
         ??? variable bool "`wizarr2_traefik_robot_enabled`"

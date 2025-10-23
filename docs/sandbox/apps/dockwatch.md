@@ -470,6 +470,20 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`dockwatch_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`dockwatch_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`dockwatch_role_traefik_robot_enabled`"
 
         ```yaml

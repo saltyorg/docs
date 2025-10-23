@@ -456,6 +456,20 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`funkwhale_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        funkwhale_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`funkwhale_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        funkwhale_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`funkwhale_role_traefik_robot_enabled`"
 
         ```yaml

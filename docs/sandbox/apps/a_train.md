@@ -318,6 +318,20 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable bool "`a_train_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        a_train_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`a_train_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        a_train_role_traefik_middleware_http_insecure:
+        ```
+
     ??? variable bool "`a_train_role_traefik_robot_enabled`"
 
         ```yaml

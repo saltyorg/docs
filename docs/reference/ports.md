@@ -31,4 +31,3 @@ tags:
 | Sonarr              |                                              |                                                                                                                                            |
 | Cloudplow           |                                              |                                                                                                                                            |
 | Watchtower          |                                              |                                                                                                                                            |
-| WebTools for Plex | 33400, 33443                                 |                                                                                                                                            |

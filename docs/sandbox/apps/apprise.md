@@ -53,14 +53,11 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    apprise_name: "custom_value"
+    ```
 
-        ```yaml
-        apprise_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `apprise_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -185,7 +182,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`apprise_role_docker_container`"
 
@@ -194,7 +192,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_container: "{{ apprise_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`apprise_role_docker_image_pull`"
 
@@ -224,7 +223,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='apprise') }}:{{ lookup('role_var', '_docker_image_tag', role='apprise') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`apprise_role_docker_envs_default`"
 
@@ -243,7 +243,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`apprise_role_docker_volumes_default`"
 
@@ -260,7 +261,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`apprise_role_docker_hostname`"
 
@@ -269,7 +271,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_hostname: "{{ apprise_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`apprise_role_docker_networks_alias`"
 
@@ -292,7 +295,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`apprise_role_docker_restart_policy`"
 
@@ -301,7 +305,8 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`apprise_role_docker_state`"
 
@@ -443,10 +448,10 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        apprise_role_web_fqdn_override: # (1)!
+        apprise_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             apprise_role_web_fqdn_override:
@@ -462,10 +467,10 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        apprise_role_web_host_override: # (1)!
+        apprise_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             apprise_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'apprise2.' + user.domain }}`)"

@@ -78,14 +78,11 @@ Now restart the Membarr container `docker restart membarr`.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    membarr_name: "custom_value"
+    ```
 
-        ```yaml
-        membarr_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `membarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -132,7 +129,8 @@ Now restart the Membarr container `docker restart membarr`.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_container`"
 
@@ -141,7 +139,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_container: "{{ membarr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`membarr_role_docker_image_pull`"
 
@@ -171,7 +170,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='membarr') }}:{{ lookup('role_var', '_docker_image_tag', role='membarr') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`membarr_role_docker_envs_default`"
 
@@ -189,7 +189,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`membarr_role_docker_volumes_default`"
 
@@ -206,7 +207,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_hostname`"
 
@@ -215,7 +217,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_hostname: "{{ membarr_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_networks_alias`"
 
@@ -238,7 +241,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_restart_policy`"
 
@@ -247,7 +251,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_state`"
 
@@ -256,7 +261,8 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`membarr_role_docker_user`"
 
@@ -398,10 +404,10 @@ Now restart the Membarr container `docker restart membarr`.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        membarr_role_web_fqdn_override: # (1)!
+        membarr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             membarr_role_web_fqdn_override:
@@ -417,10 +423,10 @@ Now restart the Membarr container `docker restart membarr`.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        membarr_role_web_host_override: # (1)!
+        membarr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             membarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'membarr2.' + user.domain }}`)"

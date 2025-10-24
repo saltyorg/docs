@@ -32,14 +32,11 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    actualbudget_name: "custom_value"
+    ```
 
-        ```yaml
-        actualbudget_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `actualbudget_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -178,7 +175,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_container`"
 
@@ -187,7 +185,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_container: "{{ actualbudget_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`actualbudget_role_docker_image_pull`"
 
@@ -217,7 +216,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='actualbudget') }}:{{ lookup('role_var', '_docker_image_tag', role='actualbudget') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`actualbudget_role_docker_envs_default`"
 
@@ -234,7 +234,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`actualbudget_role_docker_volumes_default`"
 
@@ -252,7 +253,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_hostname`"
 
@@ -261,7 +263,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_hostname: "{{ actualbudget_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_networks_alias`"
 
@@ -284,7 +287,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_restart_policy`"
 
@@ -293,7 +297,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_state`"
 
@@ -302,7 +307,8 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`actualbudget_role_docker_user`"
 
@@ -444,10 +450,10 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        actualbudget_role_web_fqdn_override: # (1)!
+        actualbudget_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             actualbudget_role_web_fqdn_override:
@@ -463,10 +469,10 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        actualbudget_role_web_host_override: # (1)!
+        actualbudget_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             actualbudget_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'actualbudget2.' + user.domain }}`)"

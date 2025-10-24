@@ -69,14 +69,11 @@ immich_docker_envs_custom:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    immich_name: "custom_value"
+    ```
 
-        ```yaml
-        immich_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `immich_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -314,7 +311,8 @@ immich_docker_envs_custom:
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`immich_role_docker_container`"
 
@@ -323,7 +321,8 @@ immich_docker_envs_custom:
         immich_role_docker_container: "{{ immich_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`immich_role_docker_image_pull`"
 
@@ -353,7 +352,8 @@ immich_docker_envs_custom:
         immich_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='immich') }}:{{ lookup('role_var', '_docker_image_tag', role='immich') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`immich_role_docker_envs_default`"
 
@@ -380,7 +380,8 @@ immich_docker_envs_custom:
         immich_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`immich_role_docker_volumes_default`"
 
@@ -398,7 +399,8 @@ immich_docker_envs_custom:
         immich_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`immich_role_docker_hostname`"
 
@@ -407,7 +409,8 @@ immich_docker_envs_custom:
         immich_role_docker_hostname: "{{ immich_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`immich_role_docker_networks_alias`"
 
@@ -430,7 +433,8 @@ immich_docker_envs_custom:
         immich_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`immich_role_docker_restart_policy`"
 
@@ -439,7 +443,8 @@ immich_docker_envs_custom:
         immich_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`immich_role_docker_state`"
 
@@ -448,7 +453,8 @@ immich_docker_envs_custom:
         immich_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`immich_role_depends_on`"
 
@@ -604,10 +610,10 @@ immich_docker_envs_custom:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        immich_role_web_fqdn_override: # (1)!
+        immich_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             immich_role_web_fqdn_override:
@@ -623,10 +629,10 @@ immich_docker_envs_custom:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        immich_role_web_host_override: # (1)!
+        immich_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             immich_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'immich2.' + user.domain }}`)"

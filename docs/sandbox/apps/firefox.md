@@ -82,14 +82,11 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    firefox_name: "custom_value"
+    ```
 
-        ```yaml
-        firefox_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `firefox_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -251,7 +248,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_container`"
 
@@ -260,7 +258,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_container: "{{ firefox_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`firefox_role_docker_image_pull`"
 
@@ -290,7 +289,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='firefox') }}:{{ lookup('role_var', '_docker_image_tag', role='firefox') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_env_file`"
 
@@ -299,7 +299,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_env_file: "{{ lookup('role_var', '_paths_env_file_location', role='firefox') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`firefox_role_docker_volumes_default`"
 
@@ -316,7 +317,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_hostname`"
 
@@ -325,7 +327,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_hostname: "{{ firefox_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_networks_alias`"
 
@@ -348,7 +351,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_networks_custom: []
         ```
 
-    ##### Capabilities
+    Capabilities
+    { .sb-h5 }
 
     ??? variable list "`firefox_role_docker_capabilities_default`"
 
@@ -365,7 +369,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_capabilities_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_restart_policy`"
 
@@ -374,7 +379,8 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`firefox_role_docker_state`"
 
@@ -516,10 +522,10 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        firefox_role_web_fqdn_override: # (1)!
+        firefox_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             firefox_role_web_fqdn_override:
@@ -535,10 +541,10 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        firefox_role_web_host_override: # (1)!
+        firefox_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             firefox_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'firefox2.' + user.domain }}`)"

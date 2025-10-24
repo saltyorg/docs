@@ -46,14 +46,11 @@ sb install sandbox-bookstack
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    bookstack_name: "custom_value"
+    ```
 
-        ```yaml
-        bookstack_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `bookstack_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -178,7 +175,8 @@ sb install sandbox-bookstack
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_docker_container`"
 
@@ -187,7 +185,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_container: "{{ bookstack_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`bookstack_role_docker_image_pull`"
 
@@ -217,7 +216,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='bookstack') }}:{{ lookup('role_var', '_docker_image_tag', role='bookstack') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`bookstack_role_docker_envs_default`"
 
@@ -243,7 +243,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`bookstack_role_docker_volumes_default`"
 
@@ -260,7 +261,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_docker_hostname`"
 
@@ -269,7 +271,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_hostname: "{{ bookstack_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_docker_networks_alias`"
 
@@ -292,7 +295,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_docker_restart_policy`"
 
@@ -301,7 +305,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_docker_state`"
 
@@ -310,7 +315,8 @@ sb install sandbox-bookstack
         bookstack_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`bookstack_role_depends_on`"
 
@@ -466,10 +472,10 @@ sb install sandbox-bookstack
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        bookstack_role_web_fqdn_override: # (1)!
+        bookstack_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             bookstack_role_web_fqdn_override:
@@ -485,10 +491,10 @@ sb install sandbox-bookstack
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        bookstack_role_web_host_override: # (1)!
+        bookstack_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             bookstack_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'bookstack2.' + user.domain }}`)"

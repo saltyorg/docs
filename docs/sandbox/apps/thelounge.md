@@ -74,14 +74,11 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    thelounge_name: "custom_value"
+    ```
 
-        ```yaml
-        thelounge_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `thelounge_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -220,7 +217,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`thelounge_role_docker_container`"
 
@@ -229,7 +227,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_container: "{{ thelounge_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`thelounge_role_docker_image_pull`"
 
@@ -259,7 +258,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='thelounge') }}:{{ lookup('role_var', '_docker_image_tag', role='thelounge') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`thelounge_role_docker_envs_default`"
 
@@ -278,7 +278,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`thelounge_role_docker_volumes_default`"
 
@@ -295,7 +296,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`thelounge_role_docker_hostname`"
 
@@ -304,7 +306,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_hostname: "{{ thelounge_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`thelounge_role_docker_networks_alias`"
 
@@ -327,7 +330,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`thelounge_role_docker_restart_policy`"
 
@@ -336,7 +340,8 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`thelounge_role_docker_state`"
 
@@ -478,10 +483,10 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        thelounge_role_web_fqdn_override: # (1)!
+        thelounge_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             thelounge_role_web_fqdn_override:
@@ -497,10 +502,10 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        thelounge_role_web_host_override: # (1)!
+        thelounge_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             thelounge_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'thelounge2.' + user.domain }}`)"

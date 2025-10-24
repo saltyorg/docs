@@ -38,14 +38,11 @@ sb install sandbox-gotenberg
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    gotenberg_role_docker_image_tag: "custom_value"
+    ```
 
-        ```yaml
-        gotenberg_role_docker_image_tag: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `gotenberg_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -62,7 +59,8 @@ sb install sandbox-gotenberg
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`gotenberg_role_docker_container`"
 
@@ -71,7 +69,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_container: "{{ gotenberg_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`gotenberg_role_docker_image_pull`"
 
@@ -101,7 +100,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gotenberg') }}:{{ lookup('role_var', '_docker_image_tag', role='gotenberg') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`gotenberg_role_docker_envs_default`"
 
@@ -118,7 +118,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`gotenberg_role_docker_hostname`"
 
@@ -127,7 +128,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_hostname: "{{ gotenberg_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`gotenberg_role_docker_networks_alias`"
 
@@ -150,7 +152,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`gotenberg_role_docker_restart_policy`"
 
@@ -159,7 +162,8 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`gotenberg_role_docker_state`"
 
@@ -301,10 +305,10 @@ sb install sandbox-gotenberg
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        gotenberg_role_web_fqdn_override: # (1)!
+        gotenberg_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             gotenberg_role_web_fqdn_override:
@@ -320,10 +324,10 @@ sb install sandbox-gotenberg
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        gotenberg_role_web_host_override: # (1)!
+        gotenberg_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             gotenberg_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gotenberg2.' + user.domain }}`)"

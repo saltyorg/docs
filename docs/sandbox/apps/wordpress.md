@@ -44,24 +44,19 @@ sb install sandbox-wordpress
 
     This role supports multiple instances via `wordpress_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of wordpress:" }
+    wordpress_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of wordpress:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `wordpress2`):" }
+    wordpress2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        wordpress_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `wordpress2`):
-
-        ```yaml
-        wordpress2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `wordpress_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -76,7 +71,7 @@ sb install sandbox-wordpress
         wordpress_instances: ["wordpress"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -85,940 +80,792 @@ sb install sandbox-wordpress
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`wordpress_role_paths_folder`{ .sb-show-on-unchecked }`wordpress2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_paths_folder: "{{ wordpress_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_paths_folder: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_paths_folder: "{{ wordpress_name }}"
+        ```
 
-        ??? variable string "`wordpress_role_paths_location`"
+    ??? variable string "`wordpress_role_paths_location`{ .sb-show-on-unchecked }`wordpress2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
+        ```
 
-        ??? variable bool "`wordpress_role_paths_recursive`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_paths_recursive: true
-            ```
+    ??? variable bool "`wordpress_role_paths_recursive`{ .sb-show-on-unchecked }`wordpress2_paths_recursive`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_paths_recursive: true
+        ```
 
-        ??? variable string "`wordpress2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            wordpress2_paths_folder: "{{ wordpress_name }}"
-            ```
-
-        ??? variable string "`wordpress2_paths_location`"
-
-            ```yaml
-            # Type: string
-            wordpress2_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
-            ```
-
-        ??? variable bool "`wordpress2_paths_recursive`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_paths_recursive: true
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_paths_recursive: true
+        ```
 
 === "Web"
 
-    === "Role-level"
+    ??? variable string "`wordpress_role_web_subdomain`{ .sb-show-on-unchecked }`wordpress2_web_subdomain`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_web_subdomain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_web_subdomain: "{{ wordpress_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_web_subdomain: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_web_subdomain: "{{ wordpress_name }}"
+        ```
 
-        ??? variable string "`wordpress_role_web_domain`"
+    ??? variable string "`wordpress_role_web_domain`{ .sb-show-on-unchecked }`wordpress2_web_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_web_domain: "{{ user.domain }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_web_domain: "{{ user.domain }}"
+        ```
 
-        ??? variable string "`wordpress_role_web_port`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_web_domain: "{{ user.domain }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_web_port: "80"
-            ```
+    ??? variable string "`wordpress_role_web_port`{ .sb-show-on-unchecked }`wordpress2_web_port`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_web_url`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_web_port: "80"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
-                                     if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='wordpress')) }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_web_port: "80"
+        ```
 
-    === "Instance-level"
+    ??? variable string "`wordpress_role_web_url`{ .sb-show-on-unchecked }`wordpress2_web_url`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress2_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            wordpress2_web_subdomain: "{{ wordpress_name }}"
-            ```
-
-        ??? variable string "`wordpress2_web_domain`"
-
-            ```yaml
-            # Type: string
-            wordpress2_web_domain: "{{ user.domain }}"
-            ```
-
-        ??? variable string "`wordpress2_web_port`"
-
-            ```yaml
-            # Type: string
-            wordpress2_web_port: "80"
-            ```
-
-        ??? variable string "`wordpress2_web_url`"
-
-            ```yaml
-            # Type: string
-            wordpress2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
                                  if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
                                  else lookup('role_var', '_web_domain', role='wordpress')) }}"
-            ```
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
+                             if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
+                             else lookup('role_var', '_web_domain', role='wordpress')) }}"
+        ```
 
 === "DNS"
 
-    === "Role-level"
+    ??? variable string "`wordpress_role_dns_record`{ .sb-show-on-unchecked }`wordpress2_dns_record`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_dns_record`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='wordpress') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='wordpress') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='wordpress') }}"
+        ```
 
-        ??? variable string "`wordpress_role_dns_zone`"
+    ??? variable string "`wordpress_role_dns_zone`{ .sb-show-on-unchecked }`wordpress2_dns_zone`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='wordpress') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='wordpress') }}"
+        ```
 
-        ??? variable bool "`wordpress_role_dns_proxy`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_dns_zone: "{{ lookup('role_var', '_web_domain', role='wordpress') }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_dns_proxy: "{{ dns_proxied }}"
-            ```
+    ??? variable bool "`wordpress_role_dns_proxy`{ .sb-show-on-unchecked }`wordpress2_dns_proxy`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_dns_proxy: "{{ dns_proxied }}"
+        ```
 
-        ??? variable string "`wordpress2_dns_record`"
-
-            ```yaml
-            # Type: string
-            wordpress2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='wordpress') }}"
-            ```
-
-        ??? variable string "`wordpress2_dns_zone`"
-
-            ```yaml
-            # Type: string
-            wordpress2_dns_zone: "{{ lookup('role_var', '_web_domain', role='wordpress') }}"
-            ```
-
-        ??? variable bool "`wordpress2_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_dns_proxy: "{{ dns_proxied }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_dns_proxy: "{{ dns_proxied }}"
+        ```
 
 === "Traefik"
 
-    === "Role-level"
+    ??? variable string "`wordpress_role_traefik_sso_middleware`{ .sb-show-on-unchecked }`wordpress2_traefik_sso_middleware`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_traefik_sso_middleware: ""
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_traefik_sso_middleware: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_traefik_sso_middleware: ""
+        ```
 
-        ??? variable string "`wordpress_role_traefik_middleware_default`"
+    ??? variable string "`wordpress_role_traefik_middleware_default`{ .sb-show-on-unchecked }`wordpress2_traefik_middleware_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-        ??? variable string "`wordpress_role_traefik_middleware_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_traefik_middleware_custom: ""
-            ```
+    ??? variable string "`wordpress_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`wordpress2_traefik_middleware_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_traefik_certresolver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_traefik_middleware_custom: ""
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_traefik_middleware_custom: ""
+        ```
 
-        ??? variable bool "`wordpress_role_traefik_enabled`"
+    ??? variable string "`wordpress_role_traefik_certresolver`{ .sb-show-on-unchecked }`wordpress2_traefik_certresolver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_traefik_enabled: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-        ??? variable bool "`wordpress_role_traefik_api_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_traefik_api_enabled: false
-            ```
+    ??? variable bool "`wordpress_role_traefik_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_traefik_api_endpoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_traefik_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_traefik_enabled: true
+        ```
 
-    === "Instance-level"
+    ??? variable bool "`wordpress_role_traefik_api_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_api_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress2_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_traefik_api_enabled: false
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress2_traefik_sso_middleware: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_traefik_api_enabled: false
+        ```
 
-        ??? variable string "`wordpress2_traefik_middleware_default`"
+    ??? variable string "`wordpress_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`wordpress2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress2_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_traefik_api_endpoint: ""
+        ```
 
-        ??? variable string "`wordpress2_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            wordpress2_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`wordpress2_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            wordpress2_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable bool "`wordpress2_traefik_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_traefik_enabled: true
-            ```
-
-        ??? variable bool "`wordpress2_traefik_api_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_traefik_api_enabled: false
-            ```
-
-        ??? variable string "`wordpress2_traefik_api_endpoint`"
-
-            ```yaml
-            # Type: string
-            wordpress2_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_traefik_api_endpoint: ""
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`wordpress_role_docker_container`{ .sb-show-on-unchecked }`wordpress2_docker_container`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_container: "{{ wordpress_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_container: "{{ wordpress_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`wordpress_role_docker_image_pull`{ .sb-show-on-unchecked }`wordpress2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_docker_image_pull: true
+        ```
+
+    ??? variable string "`wordpress_role_docker_image_repo`{ .sb-show-on-unchecked }`wordpress2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_image_repo: "wordpress"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_image_repo: "wordpress"
+        ```
+
+    ??? variable string "`wordpress_role_docker_image_tag`{ .sb-show-on-unchecked }`wordpress2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_image_tag: "latest"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`wordpress_role_docker_image`{ .sb-show-on-unchecked }`wordpress2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wordpress') }}:{{ lookup('role_var', '_docker_image_tag', role='wordpress') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wordpress') }}:{{ lookup('role_var', '_docker_image_tag', role='wordpress') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`wordpress_role_docker_envs_default`{ .sb-show-on-unchecked }`wordpress2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        wordpress_role_docker_envs_default: 
+          TZ: "{{ tz }}"
+          WORDPRESS_DB_HOST: "mariadb:3306"
+          WORDPRESS_DB_USER: "root"
+          WORDPRESS_DB_PASSWORD: "password321"
+          WORDPRESS_DB_NAME: "{{ wordpress_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        wordpress2_docker_envs_default: 
+          TZ: "{{ tz }}"
+          WORDPRESS_DB_HOST: "mariadb:3306"
+          WORDPRESS_DB_USER: "root"
+          WORDPRESS_DB_PASSWORD: "password321"
+          WORDPRESS_DB_NAME: "{{ wordpress_name }}"
+        ```
+
+    ??? variable dict "`wordpress_role_docker_envs_custom`{ .sb-show-on-unchecked }`wordpress2_docker_envs_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        wordpress_role_docker_envs_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        wordpress2_docker_envs_custom: {}
+        ```
 
-        ##### Container
+    Volumes
+    { .sb-h5 }
 
-        ??? variable string "`wordpress_role_docker_container`"
+    ??? variable list "`wordpress_role_docker_volumes_default`{ .sb-show-on-unchecked }`wordpress2_docker_volumes_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_container: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        wordpress_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
+        ```
 
-        ##### Image
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        wordpress2_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
+        ```
 
-        ??? variable bool "`wordpress_role_docker_image_pull`"
+    ??? variable list "`wordpress_role_docker_volumes_custom`{ .sb-show-on-unchecked }`wordpress2_docker_volumes_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_docker_image_pull: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        wordpress_role_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`wordpress_role_docker_image_repo`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        wordpress2_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_image_repo: "wordpress"
-            ```
+    Hostname
+    { .sb-h5 }
 
-        ??? variable string "`wordpress_role_docker_image_tag`"
+    ??? variable string "`wordpress_role_docker_hostname`{ .sb-show-on-unchecked }`wordpress2_docker_hostname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_image_tag: "latest"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_hostname: "{{ wordpress_name }}"
+        ```
 
-        ??? variable string "`wordpress_role_docker_image`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_hostname: "{{ wordpress_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wordpress') }}:{{ lookup('role_var', '_docker_image_tag', role='wordpress') }}"
-            ```
+    Networks
+    { .sb-h5 }
 
-        ##### Envs
+    ??? variable string "`wordpress_role_docker_networks_alias`{ .sb-show-on-unchecked }`wordpress2_docker_networks_alias`{ .sb-show-on-checked }"
 
-        ??? variable dict "`wordpress_role_docker_envs_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_networks_alias: "{{ wordpress_name }}"
+        ```
 
-            ```yaml
-            # Type: dict
-            wordpress_role_docker_envs_default: 
-              TZ: "{{ tz }}"
-              WORDPRESS_DB_HOST: "mariadb:3306"
-              WORDPRESS_DB_USER: "root"
-              WORDPRESS_DB_PASSWORD: "password321"
-              WORDPRESS_DB_NAME: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_networks_alias: "{{ wordpress_name }}"
+        ```
 
-        ??? variable dict "`wordpress_role_docker_envs_custom`"
+    ??? variable list "`wordpress_role_docker_networks_default`{ .sb-show-on-unchecked }`wordpress2_docker_networks_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            wordpress_role_docker_envs_custom: {}
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        wordpress_role_docker_networks_default: []
+        ```
 
-        ##### Volumes
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        wordpress2_docker_networks_default: []
+        ```
 
-        ??? variable list "`wordpress_role_docker_volumes_default`"
+    ??? variable list "`wordpress_role_docker_networks_custom`{ .sb-show-on-unchecked }`wordpress2_docker_networks_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            wordpress_role_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        wordpress_role_docker_networks_custom: []
+        ```
 
-        ??? variable list "`wordpress_role_docker_volumes_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        wordpress2_docker_networks_custom: []
+        ```
 
-            ```yaml
-            # Type: list
-            wordpress_role_docker_volumes_custom: []
-            ```
+    Restart Policy
+    { .sb-h5 }
 
-        ##### Hostname
+    ??? variable string "`wordpress_role_docker_restart_policy`{ .sb-show-on-unchecked }`wordpress2_docker_restart_policy`{ .sb-show-on-checked }"
 
-        ??? variable string "`wordpress_role_docker_hostname`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_restart_policy: unless-stopped
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_hostname: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_restart_policy: unless-stopped
+        ```
 
-        ##### Networks
+    State
+    { .sb-h5 }
 
-        ??? variable string "`wordpress_role_docker_networks_alias`"
+    ??? variable string "`wordpress_role_docker_state`{ .sb-show-on-unchecked }`wordpress2_docker_state`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_networks_alias: "{{ wordpress_name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_state: started
+        ```
 
-        ??? variable list "`wordpress_role_docker_networks_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_state: started
+        ```
 
-            ```yaml
-            # Type: list
-            wordpress_role_docker_networks_default: []
-            ```
+    User
+    { .sb-h5 }
 
-        ??? variable list "`wordpress_role_docker_networks_custom`"
+    ??? variable string "`wordpress_role_docker_user`{ .sb-show-on-unchecked }`wordpress2_docker_user`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            wordpress_role_docker_networks_custom: []
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
-        ##### Restart Policy
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
-        ??? variable string "`wordpress_role_docker_restart_policy`"
+    Dependencies
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_restart_policy: unless-stopped
-            ```
+    ??? variable string "`wordpress_role_depends_on`{ .sb-show-on-unchecked }`wordpress2_depends_on`{ .sb-show-on-checked }"
 
-        ##### State
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_depends_on: "mariadb"
+        ```
 
-        ??? variable string "`wordpress_role_docker_state`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_depends_on: "mariadb"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_state: started
-            ```
+    ??? variable string "`wordpress_role_depends_on_delay`{ .sb-show-on-unchecked }`wordpress2_depends_on_delay`{ .sb-show-on-checked }"
 
-        ##### User
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_depends_on_delay: "0"
+        ```
 
-        ??? variable string "`wordpress_role_docker_user`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_depends_on_delay: "0"
+        ```
 
-            ```yaml
-            # Type: string
-            wordpress_role_docker_user: "{{ uid }}:{{ gid }}"
-            ```
+    ??? variable string "`wordpress_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`wordpress2_depends_on_healthchecks`{ .sb-show-on-checked }"
 
-        ##### Dependencies
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        wordpress_role_depends_on_healthchecks: "false"
+        ```
 
-        ??? variable string "`wordpress_role_depends_on`"
-
-            ```yaml
-            # Type: string
-            wordpress_role_depends_on: "mariadb"
-            ```
-
-        ??? variable string "`wordpress_role_depends_on_delay`"
-
-            ```yaml
-            # Type: string
-            wordpress_role_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`wordpress_role_depends_on_healthchecks`"
-
-            ```yaml
-            # Type: string
-            wordpress_role_depends_on_healthchecks: "false"
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`wordpress2_docker_container`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_container: "{{ wordpress_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`wordpress2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_docker_image_pull: true
-            ```
-
-        ??? variable string "`wordpress2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_image_repo: "wordpress"
-            ```
-
-        ??? variable string "`wordpress2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_image_tag: "latest"
-            ```
-
-        ??? variable string "`wordpress2_docker_image`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wordpress') }}:{{ lookup('role_var', '_docker_image_tag', role='wordpress') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`wordpress2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            wordpress2_docker_envs_default: 
-              TZ: "{{ tz }}"
-              WORDPRESS_DB_HOST: "mariadb:3306"
-              WORDPRESS_DB_USER: "root"
-              WORDPRESS_DB_PASSWORD: "password321"
-              WORDPRESS_DB_NAME: "{{ wordpress_name }}"
-            ```
-
-        ??? variable dict "`wordpress2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            wordpress2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`wordpress2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            wordpress2_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
-            ```
-
-        ??? variable list "`wordpress2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            wordpress2_docker_volumes_custom: []
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`wordpress2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_hostname: "{{ wordpress_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`wordpress2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_networks_alias: "{{ wordpress_name }}"
-            ```
-
-        ??? variable list "`wordpress2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            wordpress2_docker_networks_default: []
-            ```
-
-        ??? variable list "`wordpress2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            wordpress2_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`wordpress2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`wordpress2_docker_state`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`wordpress2_docker_user`"
-
-            ```yaml
-            # Type: string
-            wordpress2_docker_user: "{{ uid }}:{{ gid }}"
-            ```
-
-        ##### Dependencies
-
-        ??? variable string "`wordpress2_depends_on`"
-
-            ```yaml
-            # Type: string
-            wordpress2_depends_on: "mariadb"
-            ```
-
-        ??? variable string "`wordpress2_depends_on_delay`"
-
-            ```yaml
-            # Type: string
-            wordpress2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`wordpress2_depends_on_healthchecks`"
-
-            ```yaml
-            # Type: string
-            wordpress2_depends_on_healthchecks: "false"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        wordpress2_depends_on_healthchecks: "false"
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`wordpress_role_autoheal_enabled`{ .sb-show-on-unchecked }`wordpress2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        wordpress_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`wordpress_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        wordpress2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`wordpress_role_depends_on`{ .sb-show-on-unchecked }`wordpress2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        wordpress_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        wordpress2_depends_on: ""
+        ```
+
+    ??? variable string "`wordpress_role_depends_on_delay`{ .sb-show-on-unchecked }`wordpress2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        wordpress_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        wordpress2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`wordpress_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`wordpress2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        wordpress_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        wordpress2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`wordpress_role_diun_enabled`{ .sb-show-on-unchecked }`wordpress2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        wordpress_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        wordpress2_diun_enabled: true
+        ```
+
+    ??? variable bool "`wordpress_role_dns_enabled`{ .sb-show-on-unchecked }`wordpress2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        wordpress_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        wordpress2_dns_enabled: true
+        ```
+
+    ??? variable bool "`wordpress_role_docker_controller`{ .sb-show-on-unchecked }`wordpress2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        wordpress_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        wordpress2_docker_controller: true
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`wordpress2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`wordpress2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`wordpress_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        wordpress_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        wordpress2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`wordpress_role_web_fqdn_override`{ .sb-show-on-unchecked }`wordpress2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        wordpress_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        wordpress2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            wordpress_role_autoheal_enabled: true
+            wordpress_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "wordpress2.{{ user.domain }}"
+              - "wordpress.otherdomain.tld"
             ```
 
-        ??? variable string "`wordpress_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            wordpress_role_depends_on: ""
+            wordpress2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "wordpress2.{{ user.domain }}"
+              - "wordpress.otherdomain.tld"
             ```
 
-        ??? variable string "`wordpress_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`wordpress_role_web_host_override`{ .sb-show-on-unchecked }`wordpress2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        wordpress_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        wordpress2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            wordpress_role_depends_on_delay: "0"
+            wordpress_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wordpress2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`wordpress_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            wordpress_role_depends_on_healthchecks:
+            wordpress2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wordpress2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`wordpress_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            wordpress_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`wordpress_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            wordpress_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`wordpress_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            wordpress_role_docker_controller: true
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`wordpress_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            wordpress_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`wordpress_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            wordpress_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                wordpress_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "wordpress2.{{ user.domain }}"
-                  - "wordpress.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`wordpress_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            wordpress_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                wordpress_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wordpress2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`wordpress_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            wordpress_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `wordpress2`):
-
-        ??? variable bool "`wordpress2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            wordpress2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`wordpress2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            wordpress2_depends_on: ""
-            ```
-
-        ??? variable string "`wordpress2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            wordpress2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`wordpress2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            wordpress2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`wordpress2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            wordpress2_diun_enabled: true
-            ```
-
-        ??? variable bool "`wordpress2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            wordpress2_dns_enabled: true
-            ```
-
-        ??? variable bool "`wordpress2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            wordpress2_docker_controller: true
-            ```
-
-        ??? variable bool "`wordpress2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`wordpress2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`wordpress2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`wordpress2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`wordpress2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`wordpress2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            wordpress2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`wordpress2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`wordpress2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`wordpress2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            wordpress2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`wordpress2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            wordpress2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                wordpress2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "wordpress2.{{ user.domain }}"
-                  - "wordpress.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`wordpress2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            wordpress2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                wordpress2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wordpress2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`wordpress2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            wordpress2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`wordpress_role_web_scheme`{ .sb-show-on-unchecked }`wordpress2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        wordpress_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        wordpress2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

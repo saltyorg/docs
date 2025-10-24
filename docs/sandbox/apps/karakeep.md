@@ -44,14 +44,11 @@ Visit `https://karakeep.app/`.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    karakeep_name: "custom_value"
+    ```
 
-        ```yaml
-        karakeep_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `karakeep_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -220,7 +217,8 @@ Visit `https://karakeep.app/`.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`karakeep_role_docker_container`"
 
@@ -229,7 +227,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_container: "{{ karakeep_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`karakeep_role_docker_image_pull`"
 
@@ -259,7 +258,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='karakeep') }}:{{ lookup('role_var', '_docker_image_tag', role='karakeep') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`karakeep_role_docker_envs_default`"
 
@@ -285,7 +285,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`karakeep_role_docker_volumes_default`"
 
@@ -302,7 +303,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`karakeep_role_docker_hostname`"
 
@@ -311,7 +313,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_hostname: "{{ karakeep_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`karakeep_role_docker_networks_alias`"
 
@@ -334,7 +337,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`karakeep_role_docker_restart_policy`"
 
@@ -343,7 +347,8 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`karakeep_role_docker_state`"
 
@@ -485,10 +490,10 @@ Visit `https://karakeep.app/`.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        karakeep_role_web_fqdn_override: # (1)!
+        karakeep_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             karakeep_role_web_fqdn_override:
@@ -504,10 +509,10 @@ Visit `https://karakeep.app/`.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        karakeep_role_web_host_override: # (1)!
+        karakeep_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             karakeep_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'karakeep2.' + user.domain }}`)"

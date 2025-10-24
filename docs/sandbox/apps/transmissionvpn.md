@@ -38,14 +38,11 @@ sb install sandbox-transmissionvpn
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    transmissionvpn_name: "custom_value"
+    ```
 
-        ```yaml
-        transmissionvpn_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `transmissionvpn_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -214,7 +211,8 @@ sb install sandbox-transmissionvpn
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`transmissionvpn_role_docker_container`"
 
@@ -223,7 +221,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_container: "{{ transmissionvpn_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`transmissionvpn_role_docker_image_pull`"
 
@@ -253,7 +252,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='transmissionvpn') }}:{{ lookup('role_var', '_docker_image_tag', role='transmissionvpn') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`transmissionvpn_role_docker_envs_default`"
 
@@ -278,7 +278,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`transmissionvpn_role_docker_volumes_default`"
 
@@ -299,7 +300,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`transmissionvpn_role_docker_hostname`"
 
@@ -308,7 +310,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_hostname: "{{ transmissionvpn_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`transmissionvpn_role_docker_networks_alias`"
 
@@ -331,7 +334,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_networks_custom: []
         ```
 
-    ##### Capabilities
+    Capabilities
+    { .sb-h5 }
 
     ??? variable list "`transmissionvpn_role_docker_capabilities_default`"
 
@@ -348,7 +352,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_capabilities_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`transmissionvpn_role_docker_restart_policy`"
 
@@ -357,7 +362,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`transmissionvpn_role_docker_state`"
 
@@ -366,7 +372,8 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_state: started
         ```
 
-    ##### Sysctls
+    Sysctls
+    { .sb-h5 }
 
     ??? variable dict "`transmissionvpn_role_docker_sysctls`"
 
@@ -376,7 +383,8 @@ sb install sandbox-transmissionvpn
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 
-    ##### Privileged
+    Privileged
+    { .sb-h5 }
 
     ??? variable bool "`transmissionvpn_role_docker_privileged`"
 
@@ -518,10 +526,10 @@ sb install sandbox-transmissionvpn
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        transmissionvpn_role_web_fqdn_override: # (1)!
+        transmissionvpn_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             transmissionvpn_role_web_fqdn_override:
@@ -537,10 +545,10 @@ sb install sandbox-transmissionvpn
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        transmissionvpn_role_web_host_override: # (1)!
+        transmissionvpn_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             transmissionvpn_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'transmissionvpn2.' + user.domain }}`)"

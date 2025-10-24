@@ -36,14 +36,11 @@ sb install sandbox-syncthing
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    syncthing_name: "custom_value"
+    ```
 
-        ```yaml
-        syncthing_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `syncthing_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -182,7 +179,8 @@ sb install sandbox-syncthing
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`syncthing_role_docker_container`"
 
@@ -191,7 +189,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_container: "{{ syncthing_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`syncthing_role_docker_image_pull`"
 
@@ -221,7 +220,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='syncthing') }}:{{ lookup('role_var', '_docker_image_tag', role='syncthing') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`syncthing_role_docker_ports_defaults`"
 
@@ -240,7 +240,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`syncthing_role_docker_envs_default`"
 
@@ -259,7 +260,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`syncthing_role_docker_volumes_default`"
 
@@ -276,7 +278,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`syncthing_role_docker_hostname`"
 
@@ -285,7 +288,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_hostname: "{{ syncthing_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`syncthing_role_docker_networks_alias`"
 
@@ -308,7 +312,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`syncthing_role_docker_restart_policy`"
 
@@ -317,7 +322,8 @@ sb install sandbox-syncthing
         syncthing_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`syncthing_role_docker_state`"
 
@@ -459,10 +465,10 @@ sb install sandbox-syncthing
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        syncthing_role_web_fqdn_override: # (1)!
+        syncthing_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             syncthing_role_web_fqdn_override:
@@ -478,10 +484,10 @@ sb install sandbox-syncthing
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        syncthing_role_web_host_override: # (1)!
+        syncthing_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             syncthing_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'syncthing2.' + user.domain }}`)"

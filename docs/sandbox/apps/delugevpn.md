@@ -158,14 +158,11 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    delugevpn_name: "custom_value"
+    ```
 
-        ```yaml
-        delugevpn_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `delugevpn_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -362,7 +359,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`delugevpn_role_docker_container`"
 
@@ -371,7 +369,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_container: "{{ delugevpn_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`delugevpn_role_docker_image_pull`"
 
@@ -401,7 +400,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='delugevpn') }}:{{ lookup('role_var', '_docker_image_tag', role='delugevpn') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`delugevpn_role_docker_ports_defaults`"
 
@@ -419,7 +419,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`delugevpn_role_docker_envs_default`"
 
@@ -451,7 +452,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`delugevpn_role_docker_volumes_default`"
 
@@ -470,7 +472,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`delugevpn_role_docker_hostname`"
 
@@ -479,7 +482,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_hostname: "{{ delugevpn_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`delugevpn_role_docker_networks_alias`"
 
@@ -502,7 +506,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`delugevpn_role_docker_restart_policy`"
 
@@ -511,7 +516,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`delugevpn_role_docker_state`"
 
@@ -520,7 +526,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_state: started
         ```
 
-    ##### Sysctls
+    Sysctls
+    { .sb-h5 }
 
     ??? variable dict "`delugevpn_role_docker_sysctls`"
 
@@ -530,7 +537,8 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 
-    ##### Privileged
+    Privileged
+    { .sb-h5 }
 
     ??? variable bool "`delugevpn_role_docker_privileged`"
 
@@ -672,10 +680,10 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        delugevpn_role_web_fqdn_override: # (1)!
+        delugevpn_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             delugevpn_role_web_fqdn_override:
@@ -691,10 +699,10 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        delugevpn_role_web_host_override: # (1)!
+        delugevpn_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             delugevpn_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'delugevpn2.' + user.domain }}`)"

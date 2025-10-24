@@ -62,14 +62,11 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    dashy_name: "custom_value"
+    ```
 
-        ```yaml
-        dashy_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `dashy_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -215,7 +212,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`dashy_role_docker_container`"
 
@@ -224,7 +222,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_container: "{{ dashy_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`dashy_role_docker_image_pull`"
 
@@ -254,7 +253,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='dashy') }}:{{ lookup('role_var', '_docker_image_tag', role='dashy') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`dashy_role_docker_volumes_default`"
 
@@ -271,7 +271,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`dashy_role_docker_hostname`"
 
@@ -280,7 +281,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_hostname: "{{ dashy_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`dashy_role_docker_networks_alias`"
 
@@ -303,7 +305,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`dashy_role_docker_restart_policy`"
 
@@ -312,7 +315,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`dashy_role_docker_state`"
 
@@ -321,7 +325,8 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_state: started
         ```
 
-    ##### Healthcheck
+    Healthcheck
+    { .sb-h5 }
 
     ??? variable dict "`dashy_role_docker_healthcheck`"
 
@@ -468,10 +473,10 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        dashy_role_web_fqdn_override: # (1)!
+        dashy_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dashy_role_web_fqdn_override:
@@ -487,10 +492,10 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        dashy_role_web_host_override: # (1)!
+        dashy_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dashy_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'dashy2.' + user.domain }}`)"

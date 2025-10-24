@@ -62,14 +62,11 @@ sb install sandbox-adminer
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    adminer_name: "custom_value"
+    ```
 
-        ```yaml
-        adminer_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `adminer_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -178,7 +175,8 @@ sb install sandbox-adminer
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`adminer_role_docker_container`"
 
@@ -187,7 +185,8 @@ sb install sandbox-adminer
         adminer_role_docker_container: "{{ adminer_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`adminer_role_docker_image_pull`"
 
@@ -217,7 +216,8 @@ sb install sandbox-adminer
         adminer_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='adminer') }}:{{ lookup('role_var', '_docker_image_tag', role='adminer') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`adminer_role_docker_envs_default`"
 
@@ -234,7 +234,8 @@ sb install sandbox-adminer
         adminer_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`adminer_role_docker_hostname`"
 
@@ -243,7 +244,8 @@ sb install sandbox-adminer
         adminer_role_docker_hostname: "{{ adminer_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`adminer_role_docker_networks_alias`"
 
@@ -266,7 +268,8 @@ sb install sandbox-adminer
         adminer_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`adminer_role_docker_restart_policy`"
 
@@ -275,7 +278,8 @@ sb install sandbox-adminer
         adminer_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`adminer_role_docker_state`"
 
@@ -417,10 +421,10 @@ sb install sandbox-adminer
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        adminer_role_web_fqdn_override: # (1)!
+        adminer_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             adminer_role_web_fqdn_override:
@@ -436,10 +440,10 @@ sb install sandbox-adminer
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        adminer_role_web_host_override: # (1)!
+        adminer_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             adminer_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'adminer2.' + user.domain }}`)"

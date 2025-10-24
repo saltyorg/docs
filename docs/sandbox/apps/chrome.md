@@ -49,14 +49,11 @@ The docker commands are set to the following by default. Port 9222 is open to th
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    chrome_name: "custom_value"
+    ```
 
-        ```yaml
-        chrome_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `chrome_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -89,7 +86,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`chrome_role_docker_container`"
 
@@ -98,7 +96,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_container: "{{ chrome_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`chrome_role_docker_image_pull`"
 
@@ -128,7 +127,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='chrome') }}:{{ lookup('role_var', '_docker_image_tag', role='chrome') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`chrome_role_docker_envs_default`"
 
@@ -147,7 +147,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_envs_custom: {}
         ```
 
-    ##### Commands
+    Commands
+    { .sb-h5 }
 
     ??? variable list "`chrome_role_docker_commands_default`"
 
@@ -169,7 +170,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_commands_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`chrome_role_docker_hostname`"
 
@@ -178,7 +180,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_hostname: "{{ chrome_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`chrome_role_docker_networks_alias`"
 
@@ -201,7 +204,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`chrome_role_docker_restart_policy`"
 
@@ -210,7 +214,8 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`chrome_role_docker_state`"
 
@@ -352,10 +357,10 @@ The docker commands are set to the following by default. Port 9222 is open to th
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        chrome_role_web_fqdn_override: # (1)!
+        chrome_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             chrome_role_web_fqdn_override:
@@ -371,10 +376,10 @@ The docker commands are set to the following by default. Port 9222 is open to th
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        chrome_role_web_host_override: # (1)!
+        chrome_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             chrome_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'chrome2.' + user.domain }}`)"

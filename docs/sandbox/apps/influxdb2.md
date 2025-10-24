@@ -42,24 +42,19 @@ sb install sandbox-influxdb2
 
     This role supports multiple instances via `influxdb2_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of influxdb2:" }
+    influxdb2_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of influxdb2:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `influxdb22`):" }
+    influxdb22_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        influxdb2_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `influxdb22`):
-
-        ```yaml
-        influxdb22_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `influxdb2_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -74,7 +69,7 @@ sb install sandbox-influxdb2
         influxdb2_instances: ["influxdb2"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -83,822 +78,691 @@ sb install sandbox-influxdb2
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`influxdb2_role_paths_folder`{ .sb-show-on-unchecked }`influxdb22_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_paths_folder: "{{ influxdb2_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_paths_folder: "{{ influxdb2_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_paths_folder: "{{ influxdb2_name }}"
+        ```
 
-        ??? variable string "`influxdb2_role_paths_location`"
+    ??? variable string "`influxdb2_role_paths_location`{ .sb-show-on-unchecked }`influxdb22_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
+        ```
 
-    === "Instance-level"
-
-        ??? variable string "`influxdb22_paths_folder`"
-
-            ```yaml
-            # Type: string
-            influxdb22_paths_folder: "{{ influxdb2_name }}"
-            ```
-
-        ??? variable string "`influxdb22_paths_location`"
-
-            ```yaml
-            # Type: string
-            influxdb22_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
+        ```
 
 === "Web"
 
-    === "Role-level"
+    ??? variable string "`influxdb2_role_web_subdomain`{ .sb-show-on-unchecked }`influxdb22_web_subdomain`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_web_subdomain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_web_subdomain: "{{ influxdb2_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_web_subdomain: "{{ influxdb2_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_web_subdomain: "{{ influxdb2_name }}"
+        ```
 
-        ??? variable string "`influxdb2_role_web_domain`"
+    ??? variable string "`influxdb2_role_web_domain`{ .sb-show-on-unchecked }`influxdb22_web_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_web_domain: "{{ user.domain }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_web_domain: "{{ user.domain }}"
+        ```
 
-        ??? variable string "`influxdb2_role_web_port`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_web_domain: "{{ user.domain }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_web_port: "8086"
-            ```
+    ??? variable string "`influxdb2_role_web_port`{ .sb-show-on-unchecked }`influxdb22_web_port`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_web_url`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_web_port: "8086"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
-                                     if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='influxdb2')) }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_web_port: "8086"
+        ```
 
-    === "Instance-level"
+    ??? variable string "`influxdb2_role_web_url`{ .sb-show-on-unchecked }`influxdb22_web_url`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb22_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            influxdb22_web_subdomain: "{{ influxdb2_name }}"
-            ```
-
-        ??? variable string "`influxdb22_web_domain`"
-
-            ```yaml
-            # Type: string
-            influxdb22_web_domain: "{{ user.domain }}"
-            ```
-
-        ??? variable string "`influxdb22_web_port`"
-
-            ```yaml
-            # Type: string
-            influxdb22_web_port: "8086"
-            ```
-
-        ??? variable string "`influxdb22_web_url`"
-
-            ```yaml
-            # Type: string
-            influxdb22_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
                                  if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
                                  else lookup('role_var', '_web_domain', role='influxdb2')) }}"
-            ```
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
+                             if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
+                             else lookup('role_var', '_web_domain', role='influxdb2')) }}"
+        ```
 
 === "DNS"
 
-    === "Role-level"
+    ??? variable string "`influxdb2_role_dns_record`{ .sb-show-on-unchecked }`influxdb22_dns_record`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_dns_record`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='influxdb2') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='influxdb2') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_dns_record: "{{ lookup('role_var', '_web_subdomain', role='influxdb2') }}"
+        ```
 
-        ??? variable string "`influxdb2_role_dns_zone`"
+    ??? variable string "`influxdb2_role_dns_zone`{ .sb-show-on-unchecked }`influxdb22_dns_zone`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='influxdb2') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='influxdb2') }}"
+        ```
 
-        ??? variable bool "`influxdb2_role_dns_proxy`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_dns_zone: "{{ lookup('role_var', '_web_domain', role='influxdb2') }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_dns_proxy: "{{ dns_proxied }}"
-            ```
+    ??? variable bool "`influxdb2_role_dns_proxy`{ .sb-show-on-unchecked }`influxdb22_dns_proxy`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_dns_proxy: "{{ dns_proxied }}"
+        ```
 
-        ??? variable string "`influxdb22_dns_record`"
-
-            ```yaml
-            # Type: string
-            influxdb22_dns_record: "{{ lookup('role_var', '_web_subdomain', role='influxdb2') }}"
-            ```
-
-        ??? variable string "`influxdb22_dns_zone`"
-
-            ```yaml
-            # Type: string
-            influxdb22_dns_zone: "{{ lookup('role_var', '_web_domain', role='influxdb2') }}"
-            ```
-
-        ??? variable bool "`influxdb22_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_dns_proxy: "{{ dns_proxied }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_dns_proxy: "{{ dns_proxied }}"
+        ```
 
 === "Traefik"
 
-    === "Role-level"
+    ??? variable string "`influxdb2_role_traefik_sso_middleware`{ .sb-show-on-unchecked }`influxdb22_traefik_sso_middleware`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-        ??? variable string "`influxdb2_role_traefik_middleware_default`"
+    ??? variable string "`influxdb2_role_traefik_middleware_default`{ .sb-show-on-unchecked }`influxdb22_traefik_middleware_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-        ??? variable string "`influxdb2_role_traefik_middleware_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_traefik_middleware_custom: ""
-            ```
+    ??? variable string "`influxdb2_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`influxdb22_traefik_middleware_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_traefik_certresolver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_traefik_middleware_custom: ""
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_traefik_middleware_custom: ""
+        ```
 
-        ??? variable bool "`influxdb2_role_traefik_enabled`"
+    ??? variable string "`influxdb2_role_traefik_certresolver`{ .sb-show-on-unchecked }`influxdb22_traefik_certresolver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_traefik_enabled: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-        ??? variable bool "`influxdb2_role_traefik_api_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_traefik_api_enabled: false
-            ```
+    ??? variable bool "`influxdb2_role_traefik_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_traefik_api_endpoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_traefik_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_traefik_enabled: true
+        ```
 
-    === "Instance-level"
+    ??? variable bool "`influxdb2_role_traefik_api_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_api_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb22_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_traefik_api_enabled: false
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb22_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_traefik_api_enabled: false
+        ```
 
-        ??? variable string "`influxdb22_traefik_middleware_default`"
+    ??? variable string "`influxdb2_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`influxdb22_traefik_api_endpoint`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb22_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_traefik_api_endpoint: ""
+        ```
 
-        ??? variable string "`influxdb22_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            influxdb22_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`influxdb22_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            influxdb22_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable bool "`influxdb22_traefik_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_traefik_enabled: true
-            ```
-
-        ??? variable bool "`influxdb22_traefik_api_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_traefik_api_enabled: false
-            ```
-
-        ??? variable string "`influxdb22_traefik_api_endpoint`"
-
-            ```yaml
-            # Type: string
-            influxdb22_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_traefik_api_endpoint: ""
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
 
-        ##### Container
+    ??? variable string "`influxdb2_role_docker_container`{ .sb-show-on-unchecked }`influxdb22_docker_container`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_docker_container`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_container: "{{ influxdb2_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_container: "{{ influxdb2_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_container: "{{ influxdb2_name }}"
-            ```
+    ??? variable bool "`influxdb2_role_docker_image_pull`{ .sb-show-on-unchecked }`influxdb22_docker_image_pull`{ .sb-show-on-checked }"
 
-        ##### Image
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_docker_image_pull: true
+        ```
 
-        ??? variable bool "`influxdb2_role_docker_image_pull`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_docker_image_pull: true
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_docker_image_pull: true
-            ```
+    ??? variable string "`influxdb2_role_docker_image_tag`{ .sb-show-on-unchecked }`influxdb22_docker_image_tag`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_docker_image_tag`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_image_tag: "2-alpine"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_image_tag: "2-alpine"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_image_tag: "2-alpine"
+        ```
 
-        ??? variable string "`influxdb2_role_docker_image_repo`"
+    ??? variable string "`influxdb2_role_docker_image_repo`{ .sb-show-on-unchecked }`influxdb22_docker_image_repo`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_image_repo: "influxdb"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_image_repo: "influxdb"
+        ```
 
-        ??? variable string "`influxdb2_role_docker_image`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_image_repo: "influxdb"
+        ```
+
+    ??? variable string "`influxdb2_role_docker_image`{ .sb-show-on-unchecked }`influxdb22_docker_image`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='influxdb2') }}:{{ lookup('role_var', '_docker_image_tag', role='influxdb2') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='influxdb2') }}:{{ lookup('role_var', '_docker_image_tag', role='influxdb2') }}"
+        ```
 
-        ##### Volumes
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='influxdb2') }}:{{ lookup('role_var', '_docker_image_tag', role='influxdb2') }}"
+        ```
+
+    Volumes
+    { .sb-h5 }
 
-        ??? variable list "`influxdb2_role_docker_volumes_default`"
+    ??? variable list "`influxdb2_role_docker_volumes_default`{ .sb-show-on-unchecked }`influxdb22_docker_volumes_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            influxdb2_role_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
-              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        influxdb2_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
+        ```
 
-        ??? variable list "`influxdb2_role_docker_volumes_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        influxdb22_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
+        ```
 
-            ```yaml
-            # Type: list
-            influxdb2_role_docker_volumes_custom: []
-            ```
+    ??? variable list "`influxdb2_role_docker_volumes_custom`{ .sb-show-on-unchecked }`influxdb22_docker_volumes_custom`{ .sb-show-on-checked }"
 
-        ##### Hostname
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        influxdb2_role_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`influxdb2_role_docker_hostname`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        influxdb22_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_hostname: "{{ influxdb2_name }}"
-            ```
+    Hostname
+    { .sb-h5 }
 
-        ##### Networks
+    ??? variable string "`influxdb2_role_docker_hostname`{ .sb-show-on-unchecked }`influxdb22_docker_hostname`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_docker_networks_alias`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_hostname: "{{ influxdb2_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_networks_alias: "{{ influxdb2_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_hostname: "{{ influxdb2_name }}"
+        ```
 
-        ??? variable list "`influxdb2_role_docker_networks_default`"
+    Networks
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            influxdb2_role_docker_networks_default: []
-            ```
+    ??? variable string "`influxdb2_role_docker_networks_alias`{ .sb-show-on-unchecked }`influxdb22_docker_networks_alias`{ .sb-show-on-checked }"
 
-        ??? variable list "`influxdb2_role_docker_networks_custom`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_networks_alias: "{{ influxdb2_name }}"
+        ```
 
-            ```yaml
-            # Type: list
-            influxdb2_role_docker_networks_custom: []
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_networks_alias: "{{ influxdb2_name }}"
+        ```
 
-        ##### Restart Policy
+    ??? variable list "`influxdb2_role_docker_networks_default`{ .sb-show-on-unchecked }`influxdb22_docker_networks_default`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_docker_restart_policy`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        influxdb2_role_docker_networks_default: []
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_restart_policy: unless-stopped
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        influxdb22_docker_networks_default: []
+        ```
 
-        ##### State
+    ??? variable list "`influxdb2_role_docker_networks_custom`{ .sb-show-on-unchecked }`influxdb22_docker_networks_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb2_role_docker_state`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        influxdb2_role_docker_networks_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb2_role_docker_state: started
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        influxdb22_docker_networks_custom: []
+        ```
 
-    === "Instance-level"
+    Restart Policy
+    { .sb-h5 }
 
-        ##### Container
+    ??? variable string "`influxdb2_role_docker_restart_policy`{ .sb-show-on-unchecked }`influxdb22_docker_restart_policy`{ .sb-show-on-checked }"
 
-        ??? variable string "`influxdb22_docker_container`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_restart_policy: unless-stopped
+        ```
 
-            ```yaml
-            # Type: string
-            influxdb22_docker_container: "{{ influxdb2_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_restart_policy: unless-stopped
+        ```
 
-        ##### Image
+    State
+    { .sb-h5 }
 
-        ??? variable bool "`influxdb22_docker_image_pull`"
+    ??? variable string "`influxdb2_role_docker_state`{ .sb-show-on-unchecked }`influxdb22_docker_state`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_docker_image_pull: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_state: started
+        ```
 
-        ??? variable string "`influxdb22_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_image_tag: "2-alpine"
-            ```
-
-        ??? variable string "`influxdb22_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_image_repo: "influxdb"
-            ```
-
-        ??? variable string "`influxdb22_docker_image`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='influxdb2') }}:{{ lookup('role_var', '_docker_image_tag', role='influxdb2') }}"
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`influxdb22_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            influxdb22_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
-              - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
-            ```
-
-        ??? variable list "`influxdb22_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            influxdb22_docker_volumes_custom: []
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`influxdb22_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_hostname: "{{ influxdb2_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`influxdb22_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_networks_alias: "{{ influxdb2_name }}"
-            ```
-
-        ??? variable list "`influxdb22_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            influxdb22_docker_networks_default: []
-            ```
-
-        ??? variable list "`influxdb22_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            influxdb22_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`influxdb22_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`influxdb22_docker_state`"
-
-            ```yaml
-            # Type: string
-            influxdb22_docker_state: started
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_state: started
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`influxdb2_role_autoheal_enabled`{ .sb-show-on-unchecked }`influxdb22_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        influxdb2_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`influxdb2_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        influxdb22_autoheal_enabled: true
+        ```
+
+    ??? variable string "`influxdb2_role_depends_on`{ .sb-show-on-unchecked }`influxdb22_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        influxdb2_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        influxdb22_depends_on: ""
+        ```
+
+    ??? variable string "`influxdb2_role_depends_on_delay`{ .sb-show-on-unchecked }`influxdb22_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        influxdb2_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        influxdb22_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`influxdb2_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`influxdb22_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        influxdb2_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        influxdb22_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`influxdb2_role_diun_enabled`{ .sb-show-on-unchecked }`influxdb22_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        influxdb2_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        influxdb22_diun_enabled: true
+        ```
+
+    ??? variable bool "`influxdb2_role_dns_enabled`{ .sb-show-on-unchecked }`influxdb22_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        influxdb2_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        influxdb22_dns_enabled: true
+        ```
+
+    ??? variable bool "`influxdb2_role_docker_controller`{ .sb-show-on-unchecked }`influxdb22_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        influxdb2_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        influxdb22_docker_controller: true
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`influxdb22_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`influxdb22_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        influxdb2_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        influxdb22_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`influxdb2_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`influxdb22_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        influxdb2_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        influxdb22_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`influxdb2_role_web_fqdn_override`{ .sb-show-on-unchecked }`influxdb22_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        influxdb2_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        influxdb22_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            influxdb2_role_autoheal_enabled: true
+            influxdb2_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "influxdb22.{{ user.domain }}"
+              - "influxdb2.otherdomain.tld"
             ```
 
-        ??? variable string "`influxdb2_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            influxdb2_role_depends_on: ""
+            influxdb22_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "influxdb22.{{ user.domain }}"
+              - "influxdb2.otherdomain.tld"
             ```
 
-        ??? variable string "`influxdb2_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`influxdb2_role_web_host_override`{ .sb-show-on-unchecked }`influxdb22_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        influxdb2_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        influxdb22_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            influxdb2_role_depends_on_delay: "0"
+            influxdb2_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'influxdb22.' + user.domain }}`)"
             ```
 
-        ??? variable string "`influxdb2_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            influxdb2_role_depends_on_healthchecks:
+            influxdb22_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'influxdb22.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`influxdb2_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            influxdb2_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`influxdb2_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            influxdb2_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`influxdb2_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            influxdb2_role_docker_controller: true
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb2_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`influxdb2_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            influxdb2_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`influxdb2_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            influxdb2_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                influxdb2_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "influxdb22.{{ user.domain }}"
-                  - "influxdb2.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`influxdb2_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            influxdb2_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                influxdb2_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'influxdb22.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`influxdb2_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            influxdb2_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `influxdb22`):
-
-        ??? variable bool "`influxdb22_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            influxdb22_autoheal_enabled: true
-            ```
-
-        ??? variable string "`influxdb22_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            influxdb22_depends_on: ""
-            ```
-
-        ??? variable string "`influxdb22_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            influxdb22_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`influxdb22_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            influxdb22_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`influxdb22_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            influxdb22_diun_enabled: true
-            ```
-
-        ??? variable bool "`influxdb22_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            influxdb22_dns_enabled: true
-            ```
-
-        ??? variable bool "`influxdb22_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            influxdb22_docker_controller: true
-            ```
-
-        ??? variable bool "`influxdb22_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`influxdb22_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`influxdb22_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`influxdb22_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`influxdb22_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`influxdb22_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            influxdb22_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`influxdb22_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`influxdb22_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`influxdb22_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            influxdb22_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`influxdb22_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            influxdb22_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                influxdb22_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "influxdb22.{{ user.domain }}"
-                  - "influxdb2.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`influxdb22_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            influxdb22_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                influxdb22_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'influxdb22.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`influxdb22_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            influxdb22_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`influxdb2_role_web_scheme`{ .sb-show-on-unchecked }`influxdb22_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        influxdb2_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        influxdb22_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

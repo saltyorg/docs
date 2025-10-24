@@ -49,14 +49,11 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    code_server_name: "custom_value"
+    ```
 
-        ```yaml
-        code_server_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `code_server_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -181,7 +178,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_container`"
 
@@ -190,7 +188,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_container: "{{ code_server_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`code_server_role_docker_image_pull`"
 
@@ -220,7 +219,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='code_server') }}:{{ lookup('role_var', '_docker_image_tag', role='code_server') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`code_server_role_docker_envs_default`"
 
@@ -240,7 +240,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`code_server_role_docker_volumes_default`"
 
@@ -260,7 +261,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_hostname`"
 
@@ -269,7 +271,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_hostname: "{{ code_server_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_networks_alias`"
 
@@ -292,7 +295,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_restart_policy`"
 
@@ -301,7 +305,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_state`"
 
@@ -310,7 +315,8 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`code_server_role_docker_user`"
 
@@ -452,10 +458,10 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        code_server_role_web_fqdn_override: # (1)!
+        code_server_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             code_server_role_web_fqdn_override:
@@ -471,10 +477,10 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        code_server_role_web_host_override: # (1)!
+        code_server_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             code_server_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'code_server2.' + user.domain }}`)"

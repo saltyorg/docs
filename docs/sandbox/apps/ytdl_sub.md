@@ -46,14 +46,11 @@ Configure your subscriptions using YAML files in the config directory.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    ytdl_sub_name: "custom_value"
+    ```
 
-        ```yaml
-        ytdl_sub_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `ytdl_sub_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -222,7 +219,8 @@ Configure your subscriptions using YAML files in the config directory.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`ytdl_sub_role_docker_container`"
 
@@ -231,7 +229,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_container: "{{ ytdl_sub_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`ytdl_sub_role_docker_image_pull`"
 
@@ -261,7 +260,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='ytdl_sub') }}:{{ lookup('role_var', '_docker_image_tag', role='ytdl_sub') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`ytdl_sub_role_docker_envs_default`"
 
@@ -282,7 +282,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`ytdl_sub_role_docker_volumes_default`"
 
@@ -304,7 +305,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`ytdl_sub_role_docker_hostname`"
 
@@ -313,7 +315,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_hostname: "{{ ytdl_sub_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`ytdl_sub_role_docker_networks_alias`"
 
@@ -336,7 +339,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`ytdl_sub_role_docker_restart_policy`"
 
@@ -345,7 +349,8 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`ytdl_sub_role_docker_state`"
 
@@ -487,10 +492,10 @@ Configure your subscriptions using YAML files in the config directory.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        ytdl_sub_role_web_fqdn_override: # (1)!
+        ytdl_sub_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             ytdl_sub_role_web_fqdn_override:
@@ -506,10 +511,10 @@ Configure your subscriptions using YAML files in the config directory.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        ytdl_sub_role_web_host_override: # (1)!
+        ytdl_sub_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             ytdl_sub_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'ytdl_sub2.' + user.domain }}`)"

@@ -36,14 +36,11 @@ sb install sandbox-miniflux
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    miniflux_name: "custom_value"
+    ```
 
-        ```yaml
-        miniflux_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `miniflux_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -287,7 +284,8 @@ sb install sandbox-miniflux
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`miniflux_role_docker_container`"
 
@@ -296,7 +294,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_container: "{{ miniflux_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`miniflux_role_docker_image_pull`"
 
@@ -326,7 +325,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='miniflux') }}:{{ lookup('role_var', '_docker_image_tag', role='miniflux') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`miniflux_role_docker_envs_default`"
 
@@ -347,7 +347,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`miniflux_role_docker_volumes_default`"
 
@@ -364,7 +365,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`miniflux_role_docker_hostname`"
 
@@ -373,7 +375,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_hostname: "{{ miniflux_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`miniflux_role_docker_networks_alias`"
 
@@ -396,7 +399,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`miniflux_role_docker_restart_policy`"
 
@@ -405,7 +409,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`miniflux_role_docker_state`"
 
@@ -414,7 +419,8 @@ sb install sandbox-miniflux
         miniflux_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`minuflux_role_depends_on`"
 
@@ -570,10 +576,10 @@ sb install sandbox-miniflux
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        miniflux_role_web_fqdn_override: # (1)!
+        miniflux_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             miniflux_role_web_fqdn_override:
@@ -589,10 +595,10 @@ sb install sandbox-miniflux
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        miniflux_role_web_host_override: # (1)!
+        miniflux_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             miniflux_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'miniflux2.' + user.domain }}`)"

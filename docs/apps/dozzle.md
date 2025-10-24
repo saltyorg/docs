@@ -70,14 +70,11 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    dozzle_name: "custom_value"
+    ```
 
-        ```yaml
-        dozzle_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `dozzle_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -291,7 +288,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_container`"
 
@@ -300,7 +298,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_container: "{{ dozzle_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`dozzle_role_docker_image_pull`"
 
@@ -330,7 +329,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='dozzle') }}:{{ lookup('role_var', '_docker_image_tag', role='dozzle') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`dozzle_role_docker_envs_default`"
 
@@ -354,7 +354,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_envs_custom: {}
         ```
 
-    ##### Commands
+    Commands
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_commands_agent`"
 
@@ -377,7 +378,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_commands_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`dozzle_role_docker_labels_default`"
 
@@ -393,7 +395,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_hostname`"
 
@@ -402,7 +405,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_hostname: "{{ dozzle_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_networks_alias`"
 
@@ -425,7 +429,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_restart_policy`"
 
@@ -434,7 +439,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_docker_state`"
 
@@ -443,7 +449,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`dozzle_role_depends_on`"
 
@@ -468,11 +475,10 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`dozzle_role_docker_blkio_weight`"
 
@@ -558,7 +564,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`dozzle_role_docker_cap_drop`"
 
@@ -637,7 +644,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`dozzle_role_docker_dns_opts`"
 
@@ -681,7 +689,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`dozzle_role_docker_keep_volumes`"
 
@@ -732,7 +741,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`dozzle_role_docker_healthcheck`"
 
@@ -769,7 +779,8 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`dozzle_role_docker_auto_remove`"
 
@@ -1149,10 +1160,10 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        dozzle_role_web_fqdn_override: # (1)!
+        dozzle_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dozzle_role_web_fqdn_override:
@@ -1168,10 +1179,10 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        dozzle_role_web_host_override: # (1)!
+        dozzle_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dozzle_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'dozzle2.' + user.domain }}`)"

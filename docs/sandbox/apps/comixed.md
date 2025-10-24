@@ -61,14 +61,11 @@ Password: comixedreader
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    comixed_name: "custom_value"
+    ```
 
-        ```yaml
-        comixed_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `comixed_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -193,7 +190,8 @@ Password: comixedreader
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`comixed_role_docker_container`"
 
@@ -202,7 +200,8 @@ Password: comixedreader
         comixed_role_docker_container: "{{ comixed_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`comixed_role_docker_image_pull`"
 
@@ -232,7 +231,8 @@ Password: comixedreader
         comixed_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='comixed') }}:{{ lookup('role_var', '_docker_image_tag', role='comixed') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`comixed_role_docker_volumes_default`"
 
@@ -250,7 +250,8 @@ Password: comixedreader
         comixed_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`comixed_role_docker_hostname`"
 
@@ -259,7 +260,8 @@ Password: comixedreader
         comixed_role_docker_hostname: "{{ comixed_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`comixed_role_docker_networks_alias`"
 
@@ -282,7 +284,8 @@ Password: comixedreader
         comixed_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`comixed_role_docker_restart_policy`"
 
@@ -291,7 +294,8 @@ Password: comixedreader
         comixed_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`comixed_role_docker_state`"
 
@@ -433,10 +437,10 @@ Password: comixedreader
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        comixed_role_web_fqdn_override: # (1)!
+        comixed_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             comixed_role_web_fqdn_override:
@@ -452,10 +456,10 @@ Password: comixedreader
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        comixed_role_web_host_override: # (1)!
+        comixed_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             comixed_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'comixed2.' + user.domain }}`)"

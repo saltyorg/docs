@@ -59,14 +59,11 @@ Save and Test
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    teslamate_name: "custom_value"
+    ```
 
-        ```yaml
-        teslamate_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `teslamate_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -290,7 +287,8 @@ Save and Test
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`teslamate_role_docker_container`"
 
@@ -299,7 +297,8 @@ Save and Test
         teslamate_role_docker_container: "{{ teslamate_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`teslamate_role_docker_image_pull`"
 
@@ -329,7 +328,8 @@ Save and Test
         teslamate_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='teslamate') }}:{{ lookup('role_var', '_docker_image_tag', role='teslamate') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`teslamate_role_docker_envs_default`"
 
@@ -356,7 +356,8 @@ Save and Test
         teslamate_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`teslamate_role_docker_volumes_default`"
 
@@ -373,7 +374,8 @@ Save and Test
         teslamate_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`teslamate_role_docker_hostname`"
 
@@ -382,7 +384,8 @@ Save and Test
         teslamate_role_docker_hostname: "{{ teslamate_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`teslamate_role_docker_networks_alias`"
 
@@ -405,7 +408,8 @@ Save and Test
         teslamate_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`teslamate_role_docker_restart_policy`"
 
@@ -414,7 +418,8 @@ Save and Test
         teslamate_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`teslamate_role_docker_state`"
 
@@ -556,10 +561,10 @@ Save and Test
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        teslamate_role_web_fqdn_override: # (1)!
+        teslamate_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             teslamate_role_web_fqdn_override:
@@ -575,10 +580,10 @@ Save and Test
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        teslamate_role_web_host_override: # (1)!
+        teslamate_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             teslamate_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'teslamate2.' + user.domain }}`)"

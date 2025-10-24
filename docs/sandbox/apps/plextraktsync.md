@@ -73,14 +73,11 @@ docker exec plextraktsync plextraktsync --help
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    plextraktsync_name: "custom_value"
+    ```
 
-        ```yaml
-        plextraktsync_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `plextraktsync_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -127,7 +124,8 @@ docker exec plextraktsync plextraktsync --help
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`plextraktsync_role_docker_container`"
 
@@ -136,7 +134,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_container: "{{ plextraktsync_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`plextraktsync_role_docker_image_pull`"
 
@@ -166,7 +165,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='plextraktsync') }}:{{ lookup('role_var', '_docker_image_tag', role='plextraktsync') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`plextraktsync_role_docker_envs_default`"
 
@@ -183,7 +183,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_envs_custom: {}
         ```
 
-    ##### Commands
+    Commands
+    { .sb-h5 }
 
     ??? variable list "`plextraktsync_role_docker_commands_default`"
 
@@ -200,7 +201,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_commands_custom: []
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`plextraktsync_role_docker_volumes_default`"
 
@@ -217,7 +219,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`plextraktsync_role_docker_hostname`"
 
@@ -226,7 +229,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_hostname: "{{ plextraktsync_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`plextraktsync_role_docker_networks_alias`"
 
@@ -249,7 +253,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`plextraktsync_role_docker_restart_policy`"
 
@@ -258,7 +263,8 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`plextraktsync_role_docker_state`"
 
@@ -400,10 +406,10 @@ docker exec plextraktsync plextraktsync --help
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        plextraktsync_role_web_fqdn_override: # (1)!
+        plextraktsync_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plextraktsync_role_web_fqdn_override:
@@ -419,10 +425,10 @@ docker exec plextraktsync plextraktsync --help
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        plextraktsync_role_web_host_override: # (1)!
+        plextraktsync_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plextraktsync_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plextraktsync2.' + user.domain }}`)"

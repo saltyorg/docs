@@ -38,14 +38,11 @@ PLex-auto-languages has no UI; it is driven by a config file
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    plex_auto_languages_name: "custom_value"
+    ```
 
-        ```yaml
-        plex_auto_languages_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `plex_auto_languages_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -85,7 +82,8 @@ PLex-auto-languages has no UI; it is driven by a config file
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_container`"
 
@@ -94,7 +92,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_container: "{{ plex_auto_languages_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_image_tag`"
 
@@ -124,7 +123,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_image_pull: true
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`plex_auto_languages_role_docker_envs_default`"
 
@@ -141,7 +141,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`plex_auto_languages_role_docker_volumes_default`"
 
@@ -158,7 +159,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_hostname`"
 
@@ -167,7 +169,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_hostname: "{{ plex_auto_languages_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_networks_alias`"
 
@@ -190,7 +193,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_restart_policy`"
 
@@ -199,7 +203,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_state`"
 
@@ -208,7 +213,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_state: started
         ```
 
-    ##### Stop Timeout
+    Stop Timeout
+    { .sb-h5 }
 
     ??? variable int "`plex_auto_languages_role_docker_stop_timeout`"
 
@@ -217,7 +223,8 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_stop_timeout: 10
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`plex_auto_languages_role_docker_user`"
 
@@ -359,10 +366,10 @@ PLex-auto-languages has no UI; it is driven by a config file
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        plex_auto_languages_role_web_fqdn_override: # (1)!
+        plex_auto_languages_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plex_auto_languages_role_web_fqdn_override:
@@ -378,10 +385,10 @@ PLex-auto-languages has no UI; it is driven by a config file
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        plex_auto_languages_role_web_host_override: # (1)!
+        plex_auto_languages_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plex_auto_languages_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex_auto_languages2.' + user.domain }}`)"

@@ -43,14 +43,11 @@ The password provisioned is your Saltbox password.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    wireguard_name: "custom_value"
+    ```
 
-        ```yaml
-        wireguard_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `wireguard_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -198,7 +195,8 @@ The password provisioned is your Saltbox password.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`wireguard_role_docker_container`"
 
@@ -207,7 +205,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_container: "{{ wireguard_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`wireguard_role_docker_image_pull`"
 
@@ -237,7 +236,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wireguard') }}:{{ lookup('role_var', '_docker_image_tag', role='wireguard') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`wireguard_role_docker_ports_defaults`"
 
@@ -254,7 +254,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`wireguard_role_docker_envs_default`"
 
@@ -274,7 +275,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`wireguard_role_docker_volumes_default`"
 
@@ -291,7 +293,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`wireguard_role_docker_hostname`"
 
@@ -300,7 +303,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_hostname: "{{ wireguard_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`wireguard_role_docker_networks_alias`"
 
@@ -323,7 +327,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_networks_custom: []
         ```
 
-    ##### Capabilities
+    Capabilities
+    { .sb-h5 }
 
     ??? variable list "`wireguard_role_docker_capabilities_default`"
 
@@ -341,7 +346,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_capabilities_custom: []
         ```
 
-    ##### Sysctls
+    Sysctls
+    { .sb-h5 }
 
     ??? variable dict "`wireguard_role_docker_sysctls`"
 
@@ -352,7 +358,8 @@ The password provisioned is your Saltbox password.
           net.ipv4.ip_forward: "1"
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`wireguard_role_docker_restart_policy`"
 
@@ -361,7 +368,8 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`wireguard_role_docker_state`"
 
@@ -503,10 +511,10 @@ The password provisioned is your Saltbox password.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        wireguard_role_web_fqdn_override: # (1)!
+        wireguard_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             wireguard_role_web_fqdn_override:
@@ -522,10 +530,10 @@ The password provisioned is your Saltbox password.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        wireguard_role_web_host_override: # (1)!
+        wireguard_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             wireguard_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wireguard2.' + user.domain }}`)"

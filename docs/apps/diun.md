@@ -34,14 +34,11 @@ sb install diun
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    diun_name: "custom_value"
+    ```
 
-        ```yaml
-        diun_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `diun_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -74,7 +71,8 @@ sb install diun
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`diun_role_docker_container`"
 
@@ -83,7 +81,8 @@ sb install diun
         diun_role_docker_container: "{{ diun_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`diun_role_docker_image_pull`"
 
@@ -113,7 +112,8 @@ sb install diun
         diun_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='diun') }}:{{ lookup('role_var', '_docker_image_tag', role='diun') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`diun_role_docker_envs_default`"
 
@@ -132,7 +132,8 @@ sb install diun
         diun_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`diun_role_docker_volumes_default`"
 
@@ -151,7 +152,8 @@ sb install diun
         diun_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`diun_role_docker_labels_default`"
 
@@ -168,7 +170,8 @@ sb install diun
         diun_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`diun_role_docker_hostname`"
 
@@ -177,7 +180,8 @@ sb install diun
         diun_role_docker_hostname: "{{ diun_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`diun_role_docker_networks_alias`"
 
@@ -200,7 +204,8 @@ sb install diun
         diun_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`diun_role_docker_restart_policy`"
 
@@ -209,7 +214,8 @@ sb install diun
         diun_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`diun_role_docker_state`"
 
@@ -220,11 +226,10 @@ sb install diun
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`diun_role_docker_blkio_weight`"
 
@@ -310,7 +315,8 @@ sb install diun
         diun_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`diun_role_docker_cap_drop`"
 
@@ -389,7 +395,8 @@ sb install diun
         diun_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`diun_role_docker_dns_opts`"
 
@@ -433,7 +440,8 @@ sb install diun
         diun_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`diun_role_docker_keep_volumes`"
 
@@ -477,7 +485,8 @@ sb install diun
         diun_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`diun_role_docker_healthcheck`"
 
@@ -514,7 +523,8 @@ sb install diun
         diun_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`diun_role_docker_auto_remove`"
 
@@ -901,10 +911,10 @@ sb install diun
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        diun_role_web_fqdn_override: # (1)!
+        diun_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             diun_role_web_fqdn_override:
@@ -920,10 +930,10 @@ sb install diun
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        diun_role_web_host_override: # (1)!
+        diun_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             diun_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'diun2.' + user.domain }}`)"

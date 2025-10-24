@@ -59,14 +59,11 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    ddns_name: "custom_value"
+    ```
 
-        ```yaml
-        ddns_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `ddns_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -100,7 +97,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_docker_container`"
 
@@ -109,7 +107,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_container: "{{ ddns_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`ddns_role_docker_image_pull`"
 
@@ -139,7 +138,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='ddns') }}:{{ lookup('role_var', '_docker_image_tag', role='ddns') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`ddns_role_docker_envs_default`"
 
@@ -164,7 +164,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable bool "`ddns_role_docker_volumes_global`"
 
@@ -173,7 +174,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_volumes_global: false
         ```
 
-    ##### Mounts
+    Mounts
+    { .sb-h5 }
 
     ??? variable list "`ddns_role_docker_mounts_default`"
 
@@ -191,7 +193,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_mounts_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_docker_hostname`"
 
@@ -200,7 +203,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_hostname: "{{ ddns_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_docker_networks_alias`"
 
@@ -223,7 +227,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_docker_restart_policy`"
 
@@ -232,7 +237,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_docker_state`"
 
@@ -241,7 +247,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_state: started
         ```
 
-    ##### Init
+    Init
+    { .sb-h5 }
 
     ??? variable bool "`ddns_role_docker_init`"
 
@@ -250,7 +257,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_init: true
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`ddns_role_depends_on`"
 
@@ -275,11 +283,10 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`ddns_role_docker_blkio_weight`"
 
@@ -365,7 +372,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`ddns_role_docker_cap_drop`"
 
@@ -444,7 +452,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`ddns_role_docker_dns_opts`"
 
@@ -488,7 +497,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`ddns_role_docker_keep_volumes`"
 
@@ -525,7 +535,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`ddns_role_docker_healthcheck`"
 
@@ -555,7 +566,8 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`ddns_role_docker_auto_remove`"
 
@@ -949,10 +961,10 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        ddns_role_web_fqdn_override: # (1)!
+        ddns_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             ddns_role_web_fqdn_override:
@@ -968,10 +980,10 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        ddns_role_web_host_override: # (1)!
+        ddns_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             ddns_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'ddns2.' + user.domain }}`)"

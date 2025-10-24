@@ -41,14 +41,11 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    crafty_name: "custom_value"
+    ```
 
-        ```yaml
-        crafty_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `crafty_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -251,7 +248,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`crafty_role_docker_container`"
 
@@ -260,7 +258,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_container: "{{ crafty_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`crafty_role_docker_image_pull`"
 
@@ -290,7 +289,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='crafty') }}:{{ lookup('role_var', '_docker_image_tag', role='crafty') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`crafty_role_docker_ports_defaults`"
 
@@ -308,7 +308,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`crafty_role_docker_envs_default`"
 
@@ -325,7 +326,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`crafty_role_docker_volumes_default`"
 
@@ -346,7 +348,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable list "`crafty_role_docker_labels_default`"
 
@@ -375,7 +378,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`crafty_role_docker_hostname`"
 
@@ -384,7 +388,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_hostname: "{{ crafty_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`crafty_role_docker_networks_alias`"
 
@@ -407,7 +412,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`crafty_role_docker_restart_policy`"
 
@@ -416,7 +422,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`crafty_role_docker_state`"
 
@@ -425,7 +432,8 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_state: started
         ```
 
-    ##### Stop Timeout
+    Stop Timeout
+    { .sb-h5 }
 
     ??? variable int "`crafty_role_docker_stop_timeout`"
 
@@ -567,10 +575,10 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        crafty_role_web_fqdn_override: # (1)!
+        crafty_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             crafty_role_web_fqdn_override:
@@ -586,10 +594,10 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        crafty_role_web_host_override: # (1)!
+        crafty_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             crafty_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'crafty2.' + user.domain }}`)"

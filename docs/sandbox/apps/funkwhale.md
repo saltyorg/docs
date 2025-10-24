@@ -92,14 +92,11 @@ If everything goes as planned you'll get prompted like this:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    funkwhale_name: "custom_value"
+    ```
 
-        ```yaml
-        funkwhale_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `funkwhale_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -238,7 +235,8 @@ If everything goes as planned you'll get prompted like this:
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`funkwhale_role_docker_container`"
 
@@ -247,7 +245,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_container: "{{ funkwhale_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`funkwhale_role_docker_image_pull`"
 
@@ -277,7 +276,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='funkwhale') }}:{{ lookup('role_var', '_docker_image_tag', role='funkwhale') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`funkwhale_role_docker_envs_default`"
 
@@ -298,7 +298,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`funkwhale_role_docker_volumes_default`"
 
@@ -316,7 +317,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`funkwhale_role_docker_hostname`"
 
@@ -325,7 +327,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_hostname: "{{ funkwhale_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`funkwhale_role_docker_networks_alias`"
 
@@ -348,7 +351,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`funkwhale_role_docker_restart_policy`"
 
@@ -357,7 +361,8 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`funkwhale_role_docker_state`"
 
@@ -499,10 +504,10 @@ If everything goes as planned you'll get prompted like this:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        funkwhale_role_web_fqdn_override: # (1)!
+        funkwhale_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             funkwhale_role_web_fqdn_override:
@@ -518,10 +523,10 @@ If everything goes as planned you'll get prompted like this:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        funkwhale_role_web_host_override: # (1)!
+        funkwhale_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             funkwhale_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'funkwhale2.' + user.domain }}`)"

@@ -87,14 +87,11 @@ Redeploy the Semaphoreui role to apply any of the above changes.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    semaphoreui_name: "custom_value"
+    ```
 
-        ```yaml
-        semaphoreui_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `semaphoreui_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -310,7 +307,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_docker_container`"
 
@@ -319,7 +317,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_container: "{{ semaphoreui_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`semaphoreui_role_docker_image_pull`"
 
@@ -349,7 +348,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='semaphoreui') }}:{{ lookup('role_var', '_docker_image_tag', role='semaphoreui') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`semaphoreui_role_docker_envs_default`"
 
@@ -378,7 +378,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_docker_hostname`"
 
@@ -387,7 +388,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_hostname: "{{ semaphoreui_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_docker_networks_alias`"
 
@@ -410,7 +412,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_docker_restart_policy`"
 
@@ -419,7 +422,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_docker_state`"
 
@@ -428,7 +432,8 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`semaphoreui_role_depends_on`"
 
@@ -584,10 +589,10 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        semaphoreui_role_web_fqdn_override: # (1)!
+        semaphoreui_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             semaphoreui_role_web_fqdn_override:
@@ -603,10 +608,10 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        semaphoreui_role_web_host_override: # (1)!
+        semaphoreui_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             semaphoreui_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'semaphoreui2.' + user.domain }}`)"

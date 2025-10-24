@@ -36,14 +36,11 @@ sb install sandbox-factorio
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    factorio_name: "custom_value"
+    ```
 
-        ```yaml
-        factorio_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `factorio_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -122,7 +119,8 @@ sb install sandbox-factorio
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`factorio_role_docker_container`"
 
@@ -131,7 +129,8 @@ sb install sandbox-factorio
         factorio_role_docker_container: "{{ factorio_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`factorio_role_docker_image_pull`"
 
@@ -161,7 +160,8 @@ sb install sandbox-factorio
         factorio_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='factorio') }}:{{ lookup('role_var', '_docker_image_tag', role='factorio') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`factorio_role_docker_ports_defaults`"
 
@@ -179,7 +179,8 @@ sb install sandbox-factorio
         factorio_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`factorio_role_docker_envs_default`"
 
@@ -198,7 +199,8 @@ sb install sandbox-factorio
         factorio_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`factorio_role_docker_volumes_default`"
 
@@ -215,7 +217,8 @@ sb install sandbox-factorio
         factorio_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`factorio_role_docker_hostname`"
 
@@ -224,7 +227,8 @@ sb install sandbox-factorio
         factorio_role_docker_hostname: "{{ factorio_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`factorio_role_docker_networks_alias`"
 
@@ -247,7 +251,8 @@ sb install sandbox-factorio
         factorio_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`factorio_role_docker_restart_policy`"
 
@@ -256,7 +261,8 @@ sb install sandbox-factorio
         factorio_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`factorio_role_docker_state`"
 
@@ -398,10 +404,10 @@ sb install sandbox-factorio
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        factorio_role_web_fqdn_override: # (1)!
+        factorio_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             factorio_role_web_fqdn_override:
@@ -417,10 +423,10 @@ sb install sandbox-factorio
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        factorio_role_web_host_override: # (1)!
+        factorio_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             factorio_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'factorio2.' + user.domain }}`)"

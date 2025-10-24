@@ -36,14 +36,11 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    authelia_name: "custom_value"
+    ```
 
-        ```yaml
-        authelia_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `authelia_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -1127,7 +1124,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_docker_container`"
 
@@ -1136,7 +1134,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_container: "{{ authelia_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`authelia_role_docker_image_pull`"
 
@@ -1166,7 +1165,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='authelia') }}:{{ lookup('role_var', '_docker_image_tag', role='authelia') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`authelia_role_docker_envs_default`"
 
@@ -1185,7 +1185,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`authelia_role_docker_volumes_default`"
 
@@ -1202,7 +1203,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_docker_hostname`"
 
@@ -1211,7 +1213,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_hostname: "{{ authelia_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_docker_networks_alias`"
 
@@ -1234,7 +1237,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_docker_restart_policy`"
 
@@ -1243,7 +1247,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_docker_state`"
 
@@ -1252,7 +1257,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`authelia_role_depends_on`"
 
@@ -1277,11 +1283,10 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`authelia_role_docker_blkio_weight`"
 
@@ -1367,7 +1372,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`authelia_role_docker_cap_drop`"
 
@@ -1446,7 +1452,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`authelia_role_docker_dns_opts`"
 
@@ -1490,7 +1497,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`authelia_role_docker_keep_volumes`"
 
@@ -1534,7 +1542,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`authelia_role_docker_healthcheck`"
 
@@ -1571,7 +1580,8 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`authelia_role_docker_auto_remove`"
 
@@ -1965,10 +1975,10 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        authelia_role_web_fqdn_override: # (1)!
+        authelia_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             authelia_role_web_fqdn_override:
@@ -1984,10 +1994,10 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        authelia_role_web_host_override: # (1)!
+        authelia_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             authelia_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'authelia2.' + user.domain }}`)"

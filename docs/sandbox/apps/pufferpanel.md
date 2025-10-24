@@ -37,14 +37,11 @@ sb install sandbox-pufferpanel
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    pufferpanel_name: "custom_value"
+    ```
 
-        ```yaml
-        pufferpanel_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `pufferpanel_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -169,7 +166,8 @@ sb install sandbox-pufferpanel
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`pufferpanel_role_docker_container`"
 
@@ -178,7 +176,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_container: "{{ pufferpanel_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`pufferpanel_role_docker_image_pull`"
 
@@ -208,7 +207,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='pufferpanel') }}:{{ lookup('role_var', '_docker_image_tag', role='pufferpanel') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`pufferpanel_role_docker_ports_defaults`"
 
@@ -225,7 +225,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`pufferpanel_role_docker_envs_default`"
 
@@ -243,7 +244,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`pufferpanel_role_docker_volumes_default`"
 
@@ -263,7 +265,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`pufferpanel_role_docker_hostname`"
 
@@ -272,7 +275,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_hostname: "{{ pufferpanel_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`pufferpanel_role_docker_networks_alias`"
 
@@ -295,7 +299,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`pufferpanel_role_docker_restart_policy`"
 
@@ -304,7 +309,8 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`pufferpanel_role_docker_state`"
 
@@ -446,10 +452,10 @@ sb install sandbox-pufferpanel
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        pufferpanel_role_web_fqdn_override: # (1)!
+        pufferpanel_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             pufferpanel_role_web_fqdn_override:
@@ -465,10 +471,10 @@ sb install sandbox-pufferpanel
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        pufferpanel_role_web_host_override: # (1)!
+        pufferpanel_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             pufferpanel_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'pufferpanel2.' + user.domain }}`)"

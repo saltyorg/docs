@@ -118,14 +118,11 @@ qbit_manage:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    qbit_manage_name: "custom_value"
+    ```
 
-        ```yaml
-        qbit_manage_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `qbit_manage_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -264,7 +261,8 @@ qbit_manage:
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`qbit_manage_role_docker_container`"
 
@@ -273,7 +271,8 @@ qbit_manage:
         qbit_manage_role_docker_container: "{{ qbit_manage_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`qbit_manage_role_docker_image_pull`"
 
@@ -303,7 +302,8 @@ qbit_manage:
         qbit_manage_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='qbit_manage') }}:{{ lookup('role_var', '_docker_image_tag', role='qbit_manage') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`qbit_manage_role_docker_ports_defaults`"
 
@@ -319,7 +319,8 @@ qbit_manage:
         qbit_manage_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`qbit_manage_role_docker_envs_default`"
 
@@ -358,7 +359,8 @@ qbit_manage:
         qbit_manage_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`qbit_manage_role_docker_volumes_default`"
 
@@ -375,7 +377,8 @@ qbit_manage:
         qbit_manage_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`qbit_manage_role_docker_hostname`"
 
@@ -384,7 +387,8 @@ qbit_manage:
         qbit_manage_role_docker_hostname: "{{ qbit_manage_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`qbit_manage_role_docker_networks_alias`"
 
@@ -407,7 +411,8 @@ qbit_manage:
         qbit_manage_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`qbit_manage_role_docker_restart_policy`"
 
@@ -423,7 +428,8 @@ qbit_manage:
         qbit_manage_role_docker_restart_retries: 3
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`qbit_manage_role_docker_state`"
 
@@ -565,10 +571,10 @@ qbit_manage:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        qbit_manage_role_web_fqdn_override: # (1)!
+        qbit_manage_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             qbit_manage_role_web_fqdn_override:
@@ -584,10 +590,10 @@ qbit_manage:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        qbit_manage_role_web_host_override: # (1)!
+        qbit_manage_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             qbit_manage_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'qbit_manage2.' + user.domain }}`)"

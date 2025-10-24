@@ -90,14 +90,11 @@ Redeploy the Firefly III role to apply the above changes.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    fireflyiii_role_mariadb_docker_image_tag: "custom_value"
+    ```
 
-        ```yaml
-        fireflyiii_role_mariadb_docker_image_tag: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `fireflyiii_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -280,7 +277,8 @@ Redeploy the Firefly III role to apply the above changes.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_docker_container`"
 
@@ -289,7 +287,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_container: "{{ fireflyiii_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`fireflyiii_role_docker_image_pull`"
 
@@ -319,7 +318,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='fireflyiii') }}:{{ lookup('role_var', '_docker_image_tag', role='fireflyiii') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`fireflyiii_role_docker_envs_default`"
 
@@ -354,7 +354,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`fireflyiii_role_docker_volumes_default`"
 
@@ -373,7 +374,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_docker_hostname`"
 
@@ -382,7 +384,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_hostname: "{{ fireflyiii_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_docker_networks_alias`"
 
@@ -405,7 +408,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_docker_restart_policy`"
 
@@ -414,7 +418,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_docker_state`"
 
@@ -423,7 +428,8 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`fireflyiii_role_depends_on`"
 
@@ -579,10 +585,10 @@ Redeploy the Firefly III role to apply the above changes.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        fireflyiii_role_web_fqdn_override: # (1)!
+        fireflyiii_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             fireflyiii_role_web_fqdn_override:
@@ -598,10 +604,10 @@ Redeploy the Firefly III role to apply the above changes.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        fireflyiii_role_web_host_override: # (1)!
+        fireflyiii_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             fireflyiii_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'fireflyiii2.' + user.domain }}`)"

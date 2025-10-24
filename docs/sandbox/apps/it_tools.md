@@ -37,14 +37,11 @@ sb install sandbox-it-tools
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    it_tools_name: "custom_value"
+    ```
 
-        ```yaml
-        it_tools_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `it_tools_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -167,7 +164,8 @@ sb install sandbox-it-tools
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`it_tools_role_docker_container`"
 
@@ -176,7 +174,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_container: "{{ it_tools_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`it_tools_role_docker_image_pull`"
 
@@ -206,7 +205,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='it_tools') }}:{{ lookup('role_var', '_docker_image_tag', role='it_tools') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable bool "`it_tools_role_docker_volumes_global`"
 
@@ -215,7 +215,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_volumes_global: false
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`it_tools_role_docker_hostname`"
 
@@ -224,7 +225,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_hostname: "{{ it_tools_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`it_tools_role_docker_networks_alias`"
 
@@ -247,7 +249,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`it_tools_role_docker_restart_policy`"
 
@@ -256,7 +259,8 @@ sb install sandbox-it-tools
         it_tools_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`it_tools_role_docker_state`"
 
@@ -398,10 +402,10 @@ sb install sandbox-it-tools
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        it_tools_role_web_fqdn_override: # (1)!
+        it_tools_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             it_tools_role_web_fqdn_override:
@@ -417,10 +421,10 @@ sb install sandbox-it-tools
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        it_tools_role_web_host_override: # (1)!
+        it_tools_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             it_tools_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'it_tools2.' + user.domain }}`)"

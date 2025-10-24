@@ -42,14 +42,11 @@ sb install sandbox-goaccess
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    goaccess_name: "custom_value"
+    ```
 
-        ```yaml
-        goaccess_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `goaccess_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -188,7 +185,8 @@ sb install sandbox-goaccess
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`goaccess_role_docker_container`"
 
@@ -197,7 +195,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_container: "{{ goaccess_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`goaccess_role_docker_image_pull`"
 
@@ -227,7 +226,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='goaccess') }}:{{ lookup('role_var', '_docker_image_tag', role='goaccess') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`goaccess_role_docker_envs_default`"
 
@@ -246,7 +246,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`goaccess_role_docker_volumes_default`"
 
@@ -264,7 +265,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`goaccess_role_docker_hostname`"
 
@@ -273,7 +275,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_hostname: "{{ goaccess_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`goaccess_role_docker_networks_alias`"
 
@@ -296,7 +299,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`goaccess_role_docker_restart_policy`"
 
@@ -305,7 +309,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`goaccess_role_docker_state`"
 
@@ -314,7 +319,8 @@ sb install sandbox-goaccess
         goaccess_role_docker_state: started
         ```
 
-    ##### Force Kill
+    Force Kill
+    { .sb-h5 }
 
     ??? variable bool "`goaccess_role_docker_force_kill`"
 
@@ -456,10 +462,10 @@ sb install sandbox-goaccess
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        goaccess_role_web_fqdn_override: # (1)!
+        goaccess_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             goaccess_role_web_fqdn_override:
@@ -475,10 +481,10 @@ sb install sandbox-goaccess
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        goaccess_role_web_host_override: # (1)!
+        goaccess_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             goaccess_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'goaccess2.' + user.domain }}`)"

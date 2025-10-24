@@ -50,14 +50,11 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    tdarr_name: "custom_value"
+    ```
 
-        ```yaml
-        tdarr_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `tdarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -240,7 +237,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`tdarr_role_docker_container`"
 
@@ -249,7 +247,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_container: "{{ tdarr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`tdarr_role_docker_image_pull`"
 
@@ -279,7 +278,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tdarr') }}:{{ lookup('role_var', '_docker_image_tag', role='tdarr') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`tdarr_role_docker_ports_defaults`"
 
@@ -296,7 +296,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`tdarr_role_docker_envs_default`"
 
@@ -320,7 +321,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`tdarr_role_docker_volumes_default`"
 
@@ -344,7 +346,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`tdarr_role_docker_hostname`"
 
@@ -353,7 +356,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_hostname: "{{ tdarr_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`tdarr_role_docker_networks_alias`"
 
@@ -376,7 +380,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`tdarr_role_docker_restart_policy`"
 
@@ -385,7 +390,8 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`tdarr_role_docker_state`"
 
@@ -527,10 +533,10 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        tdarr_role_web_fqdn_override: # (1)!
+        tdarr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tdarr_role_web_fqdn_override:
@@ -546,10 +552,10 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        tdarr_role_web_host_override: # (1)!
+        tdarr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tdarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'tdarr2.' + user.domain }}`)"

@@ -41,14 +41,11 @@ Default login is admin/admin. Configure authentication and users through the app
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    grocy_name: "custom_value"
+    ```
 
-        ```yaml
-        grocy_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `grocy_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -187,7 +184,8 @@ Default login is admin/admin. Configure authentication and users through the app
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`grocy_role_docker_container`"
 
@@ -196,7 +194,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_container: "{{ grocy_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`grocy_role_docker_image_pull`"
 
@@ -226,7 +225,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='grocy') }}:{{ lookup('role_var', '_docker_image_tag', role='grocy') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`grocy_role_docker_envs_default`"
 
@@ -245,7 +245,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`grocy_role_docker_volumes_default`"
 
@@ -262,7 +263,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`grocy_role_docker_hostname`"
 
@@ -271,7 +273,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_hostname: "{{ grocy_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`grocy_role_docker_networks_alias`"
 
@@ -294,7 +297,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`grocy_role_docker_restart_policy`"
 
@@ -303,7 +307,8 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`grocy_role_docker_state`"
 
@@ -445,10 +450,10 @@ Default login is admin/admin. Configure authentication and users through the app
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        grocy_role_web_fqdn_override: # (1)!
+        grocy_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             grocy_role_web_fqdn_override:
@@ -464,10 +469,10 @@ Default login is admin/admin. Configure authentication and users through the app
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        grocy_role_web_host_override: # (1)!
+        grocy_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             grocy_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'grocy2.' + user.domain }}`)"

@@ -49,14 +49,11 @@ sb install sandbox-forgejo
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    forgejo_name: "custom_value"
+    ```
 
-        ```yaml
-        forgejo_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `forgejo_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -202,7 +199,8 @@ sb install sandbox-forgejo
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_docker_container`"
 
@@ -211,7 +209,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_container: "{{ forgejo_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`forgejo_role_docker_image_pull`"
 
@@ -241,7 +240,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='forgejo') }}:{{ lookup('role_var', '_docker_image_tag', role='forgejo') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`forgejo_role_docker_envs_default`"
 
@@ -266,7 +266,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`forgejo_role_docker_volumes_default`"
 
@@ -285,7 +286,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_docker_hostname`"
 
@@ -294,7 +296,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_hostname: "{{ forgejo_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_docker_networks_alias`"
 
@@ -317,7 +320,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_docker_restart_policy`"
 
@@ -326,7 +330,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_docker_state`"
 
@@ -335,7 +340,8 @@ sb install sandbox-forgejo
         forgejo_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`forgejo_role_depends_on`"
 
@@ -491,10 +497,10 @@ sb install sandbox-forgejo
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        forgejo_role_web_fqdn_override: # (1)!
+        forgejo_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             forgejo_role_web_fqdn_override:
@@ -510,10 +516,10 @@ sb install sandbox-forgejo
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        forgejo_role_web_host_override: # (1)!
+        forgejo_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             forgejo_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'forgejo2.' + user.domain }}`)"

@@ -217,24 +217,19 @@ Below are some example inventory entries for some common VPN providers. These ar
 
     This role supports multiple instances via `gluetun_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of gluetun:" }
+    gluetun_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of gluetun:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `gluetun2`):" }
+    gluetun2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        gluetun_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `gluetun2`):
-
-        ```yaml
-        gluetun2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `gluetun_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -249,7 +244,7 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun_instances: ["gluetun"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -258,2222 +253,1898 @@ Below are some example inventory entries for some common VPN providers. These ar
 
 === "Settings"
 
-    === "Role-level"
+    ??? variable string "`gluetun_role_vpn_service_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_service_provider`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # These variables map to the appropriate Docker ENVs
+        # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
+        # Type: string
+        gluetun_role_vpn_service_provider: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # These variables map to the appropriate Docker ENVs
+        # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
+        # Type: string
+        gluetun2_vpn_service_provider: ""
+        ```
+
+    ??? variable string "`gluetun_role_vpn_type`{ .sb-show-on-unchecked }`gluetun2_vpn_type`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_type: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_type: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_custom_config`{ .sb-show-on-unchecked }`gluetun2_openvpn_custom_config`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_custom_config: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_custom_config: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_endpoint_ip: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_endpoint_ip: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_endpoint_port: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_endpoint_port: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_user: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_user: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_password`{ .sb-show-on-unchecked }`gluetun2_openvpn_password`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_password: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_password: ""
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_key_passphrase`{ .sb-show-on-unchecked }`gluetun2_openvpn_key_passphrase`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_key_passphrase: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_key_passphrase: ""
+        ```
+
+    ??? variable string "`gluetun_role_vpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_endpoint_ip: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_endpoint_ip: ""
+        ```
 
-        ??? variable string "`gluetun_role_vpn_service_provider`"
+    ??? variable string "`gluetun_role_vpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_endpoint_port: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_endpoint_port: ""
+        ```
 
-            ```yaml
-            # These variables map to the appropriate Docker ENVs
-            # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
-            # Type: string
-            gluetun_role_vpn_service_provider: ""
-            ```
+    ??? variable string "`gluetun_role_wireguard_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_endpoint_ip: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_endpoint_ip: ""
+        ```
 
-        ??? variable string "`gluetun_role_vpn_type`"
+    ??? variable string "`gluetun_role_wireguard_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_endpoint_port: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_endpoint_port: ""
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_vpn_type: ""
-            ```
+    ??? variable string "`gluetun_role_wireguard_mtu`{ .sb-show-on-unchecked }`gluetun2_wireguard_mtu`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_mtu: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_mtu: ""
+        ```
 
-        ??? variable string "`gluetun_role_openvpn_custom_config`"
+    ??? variable string "`gluetun_role_wireguard_public_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_public_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_public_key: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_public_key: ""
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_custom_config: ""
-            ```
+    ??? variable string "`gluetun_role_wireguard_private_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_private_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_private_key: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_private_key: ""
+        ```
 
-        ??? variable string "`gluetun_role_openvpn_endpoint_ip`"
+    ??? variable string "`gluetun_role_wireguard_preshared_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_preshared_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_preshared_key: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_preshared_key: ""
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_endpoint_ip: ""
-            ```
+    ??? variable string "`gluetun_role_wireguard_addresses`{ .sb-show-on-unchecked }`gluetun2_wireguard_addresses`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_addresses: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_addresses: ""
+        ```
 
-        ??? variable string "`gluetun_role_openvpn_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun_role_openvpn_user`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_user: ""
-            ```
-
-        ??? variable string "`gluetun_role_openvpn_password`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_password: ""
-            ```
-
-        ??? variable string "`gluetun_role_openvpn_key_passphrase`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_openvpn_key_passphrase: ""
-            ```
-
-        ??? variable string "`gluetun_role_vpn_endpoint_ip`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_vpn_endpoint_ip: ""
-            ```
-
-        ??? variable string "`gluetun_role_vpn_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_vpn_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_endpoint_ip`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_endpoint_ip: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_mtu`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_mtu: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_public_key`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_public_key: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_private_key`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_private_key: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_preshared_key`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_preshared_key: ""
-            ```
-
-        ??? variable string "`gluetun_role_wireguard_addresses`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_wireguard_addresses: ""
-            ```
-
-        ??? variable string "`gluetun_role_server_countries`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_server_countries: ""
-            ```
-
-        ??? variable string "`gluetun_role_server_cities`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_server_cities: ""
-            ```
-
-        ??? variable string "`gluetun_role_server_hostnames`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_server_hostnames: ""
-            ```
-
-        ??? variable string "`gluetun_role_server_names`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_server_names: ""
-            ```
-
-        ??? variable string "`gluetun_role_server_regions`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_server_regions: ""
-            ```
-
-        ??? variable string "`gluetun_role_firewall_vpn_input_ports`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_firewall_vpn_input_ports: ""
-            ```
-
-        ??? variable string "`gluetun_role_firewall_input_ports`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_firewall_input_ports: ""
-            ```
-
-        ??? variable string "`gluetun_role_firewall_outbound_subnets`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_firewall_outbound_subnets: ""
-            ```
-
-        ??? variable bool "`gluetun_role_docker_resolver`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_resolver: true
-            ```
-
-    === "Instance-level"
-
-        ??? variable string "`gluetun2_vpn_service_provider`"
-
-            ```yaml
-            # These variables map to the appropriate Docker ENVs
-            # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
-            # Type: string
-            gluetun2_vpn_service_provider: ""
-            ```
-
-        ??? variable string "`gluetun2_vpn_type`"
-
-            ```yaml
-            # Type: string
-            gluetun2_vpn_type: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_custom_config`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_custom_config: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_endpoint_ip`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_endpoint_ip: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_user`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_user: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_password`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_password: ""
-            ```
-
-        ??? variable string "`gluetun2_openvpn_key_passphrase`"
-
-            ```yaml
-            # Type: string
-            gluetun2_openvpn_key_passphrase: ""
-            ```
-
-        ??? variable string "`gluetun2_vpn_endpoint_ip`"
-
-            ```yaml
-            # Type: string
-            gluetun2_vpn_endpoint_ip: ""
-            ```
-
-        ??? variable string "`gluetun2_vpn_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun2_vpn_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_endpoint_ip`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_endpoint_ip: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_endpoint_port`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_endpoint_port: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_mtu`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_mtu: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_public_key`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_public_key: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_private_key`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_private_key: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_preshared_key`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_preshared_key: ""
-            ```
-
-        ??? variable string "`gluetun2_wireguard_addresses`"
-
-            ```yaml
-            # Type: string
-            gluetun2_wireguard_addresses: ""
-            ```
-
-        ??? variable string "`gluetun2_server_countries`"
-
-            ```yaml
-            # Type: string
-            gluetun2_server_countries: ""
-            ```
-
-        ??? variable string "`gluetun2_server_cities`"
-
-            ```yaml
-            # Type: string
-            gluetun2_server_cities: ""
-            ```
-
-        ??? variable string "`gluetun2_server_hostnames`"
-
-            ```yaml
-            # Type: string
-            gluetun2_server_hostnames: ""
-            ```
-
-        ??? variable string "`gluetun2_server_names`"
-
-            ```yaml
-            # Type: string
-            gluetun2_server_names: ""
-            ```
-
-        ??? variable string "`gluetun2_server_regions`"
-
-            ```yaml
-            # Type: string
-            gluetun2_server_regions: ""
-            ```
-
-        ??? variable string "`gluetun2_firewall_vpn_input_ports`"
-
-            ```yaml
-            # Type: string
-            gluetun2_firewall_vpn_input_ports: ""
-            ```
-
-        ??? variable string "`gluetun2_firewall_input_ports`"
-
-            ```yaml
-            # Type: string
-            gluetun2_firewall_input_ports: ""
-            ```
-
-        ??? variable string "`gluetun2_firewall_outbound_subnets`"
-
-            ```yaml
-            # Type: string
-            gluetun2_firewall_outbound_subnets: ""
-            ```
-
-        ??? variable bool "`gluetun2_docker_resolver`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_resolver: true
-            ```
+    ??? variable string "`gluetun_role_server_countries`{ .sb-show-on-unchecked }`gluetun2_server_countries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_countries: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_countries: ""
+        ```
+
+    ??? variable string "`gluetun_role_server_cities`{ .sb-show-on-unchecked }`gluetun2_server_cities`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_cities: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_cities: ""
+        ```
+
+    ??? variable string "`gluetun_role_server_hostnames`{ .sb-show-on-unchecked }`gluetun2_server_hostnames`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_hostnames: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_hostnames: ""
+        ```
+
+    ??? variable string "`gluetun_role_server_names`{ .sb-show-on-unchecked }`gluetun2_server_names`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_names: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_names: ""
+        ```
+
+    ??? variable string "`gluetun_role_server_regions`{ .sb-show-on-unchecked }`gluetun2_server_regions`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_regions: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_regions: ""
+        ```
+
+    ??? variable string "`gluetun_role_firewall_vpn_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_vpn_input_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_firewall_vpn_input_ports: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_firewall_vpn_input_ports: ""
+        ```
+
+    ??? variable string "`gluetun_role_firewall_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_input_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_firewall_input_ports: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_firewall_input_ports: ""
+        ```
+
+    ??? variable string "`gluetun_role_firewall_outbound_subnets`{ .sb-show-on-unchecked }`gluetun2_firewall_outbound_subnets`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_firewall_outbound_subnets: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_firewall_outbound_subnets: ""
+        ```
+
+    ??? variable bool "`gluetun_role_docker_resolver`{ .sb-show-on-unchecked }`gluetun2_docker_resolver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_resolver: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_resolver: true
+        ```
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`gluetun_role_paths_folder`{ .sb-show-on-unchecked }`gluetun2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_paths_folder: "{{ gluetun_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_paths_folder: "{{ gluetun_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_paths_folder: "{{ gluetun_name }}"
+        ```
 
-        ??? variable string "`gluetun_role_paths_location`"
+    ??? variable string "`gluetun_role_paths_location`{ .sb-show-on-unchecked }`gluetun2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
+        ```
 
-    === "Instance-level"
-
-        ??? variable string "`gluetun2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            gluetun2_paths_folder: "{{ gluetun_name }}"
-            ```
-
-        ??? variable string "`gluetun2_paths_location`"
-
-            ```yaml
-            # Type: string
-            gluetun2_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
+        ```
 
 === "Docker"
 
-    === "Role-level"
-
-        ##### Container
-
-        ??? variable string "`gluetun_role_docker_container`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_container: "{{ gluetun_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`gluetun_role_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_image_pull: true
-            ```
-
-        ??? variable string "`gluetun_role_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_image_repo: "qmcgaw/gluetun"
-            ```
-
-        ??? variable string "`gluetun_role_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_image_tag: "v3"
-            ```
-
-        ??? variable string "`gluetun_role_docker_image`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gluetun') }}:{{ lookup('role_var', '_docker_image_tag', role='gluetun') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`gluetun_role_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_envs_default: 
-              DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
-              FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
-              FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
-              FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
-              HTTPPROXY: "on"
-              HTTPPROXY_STEALTH: "on"
-              OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
-              PGID: "{{ gid }}"
-              PUID: "{{ uid }}"
-              SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
-              SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
-              SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
-              SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
-              SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
-              TZ: "{{ tz }}"
-              VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
-              VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
-            ```
-
-        ??? variable dict "`gluetun_role_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable bool "`gluetun_role_docker_volumes_global`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_volumes_global: false
-            ```
-
-        ??? variable list "`gluetun_role_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_volumes_default: 
-              - "{{ gluetun_role_paths_location }}:/gluetun"
-            ```
-
-        ??? variable list "`gluetun_role_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_volumes_custom: []
-            ```
-
-        ##### Labels
-
-        ??? variable dict "`gluetun_role_docker_labels_default`"
-
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_labels_default: 
-              com.centurylinklabs.watchtower.enable: "false"
-            ```
-
-        ??? variable dict "`gluetun_role_docker_labels_custom`"
-
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_labels_custom: {}
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`gluetun_role_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_hostname: "{{ gluetun_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`gluetun_role_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_networks_alias: "{{ gluetun_name }}"
-            ```
-
-        ??? variable list "`gluetun_role_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_networks_default: []
-            ```
-
-        ??? variable list "`gluetun_role_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_networks_custom: []
-            ```
-
-        ##### Capabilities
-
-        ??? variable list "`gluetun_role_docker_capabilities_default`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_capabilities_default: 
-              - NET_ADMIN
-            ```
-
-        ??? variable list "`gluetun_role_docker_capabilities_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun_role_docker_capabilities_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`gluetun_role_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`gluetun_role_docker_state`"
-
-            ```yaml
-            # Type: string
-            gluetun_role_docker_state: started
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`gluetun2_docker_container`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_container: "{{ gluetun_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`gluetun2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_image_pull: true
-            ```
-
-        ??? variable string "`gluetun2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_image_repo: "qmcgaw/gluetun"
-            ```
-
-        ??? variable string "`gluetun2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_image_tag: "v3"
-            ```
-
-        ??? variable string "`gluetun2_docker_image`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gluetun') }}:{{ lookup('role_var', '_docker_image_tag', role='gluetun') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`gluetun2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_envs_default: 
-              DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
-              FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
-              FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
-              FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
-              HTTPPROXY: "on"
-              HTTPPROXY_STEALTH: "on"
-              OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
-              OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
-              PGID: "{{ gid }}"
-              PUID: "{{ uid }}"
-              SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
-              SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
-              SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
-              SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
-              SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
-              TZ: "{{ tz }}"
-              VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
-              VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
-              WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
-            ```
-
-        ??? variable dict "`gluetun2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable bool "`gluetun2_docker_volumes_global`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_volumes_global: false
-            ```
-
-        ??? variable list "`gluetun2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_volumes_default: 
-              - "{{ gluetun_role_paths_location }}:/gluetun"
-            ```
-
-        ??? variable list "`gluetun2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_volumes_custom: []
-            ```
-
-        ##### Labels
-
-        ??? variable dict "`gluetun2_docker_labels_default`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_labels_default: 
-              com.centurylinklabs.watchtower.enable: "false"
-            ```
-
-        ??? variable dict "`gluetun2_docker_labels_custom`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_labels_custom: {}
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`gluetun2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_hostname: "{{ gluetun_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`gluetun2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_networks_alias: "{{ gluetun_name }}"
-            ```
-
-        ??? variable list "`gluetun2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_networks_default: []
-            ```
-
-        ??? variable list "`gluetun2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_networks_custom: []
-            ```
-
-        ##### Capabilities
-
-        ??? variable list "`gluetun2_docker_capabilities_default`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_capabilities_default: 
-              - NET_ADMIN
-            ```
-
-        ??? variable list "`gluetun2_docker_capabilities_custom`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_capabilities_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`gluetun2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`gluetun2_docker_state`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_state: started
-            ```
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`gluetun_role_docker_container`{ .sb-show-on-unchecked }`gluetun2_docker_container`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_container: "{{ gluetun_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_container: "{{ gluetun_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`gluetun_role_docker_image_pull`{ .sb-show-on-unchecked }`gluetun2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_image_pull: true
+        ```
+
+    ??? variable string "`gluetun_role_docker_image_repo`{ .sb-show-on-unchecked }`gluetun2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_image_repo: "qmcgaw/gluetun"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_image_repo: "qmcgaw/gluetun"
+        ```
+
+    ??? variable string "`gluetun_role_docker_image_tag`{ .sb-show-on-unchecked }`gluetun2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_image_tag: "v3"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_image_tag: "v3"
+        ```
+
+    ??? variable string "`gluetun_role_docker_image`{ .sb-show-on-unchecked }`gluetun2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gluetun') }}:{{ lookup('role_var', '_docker_image_tag', role='gluetun') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gluetun') }}:{{ lookup('role_var', '_docker_image_tag', role='gluetun') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`gluetun_role_docker_envs_default`{ .sb-show-on-unchecked }`gluetun2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_envs_default: 
+          DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
+          FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
+          FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
+          FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
+          HTTPPROXY: "on"
+          HTTPPROXY_STEALTH: "on"
+          OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
+          PGID: "{{ gid }}"
+          PUID: "{{ uid }}"
+          SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
+          SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
+          SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
+          SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
+          SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
+          TZ: "{{ tz }}"
+          VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
+          VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_envs_default: 
+          DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
+          FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
+          FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
+          FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
+          HTTPPROXY: "on"
+          HTTPPROXY_STEALTH: "on"
+          OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
+          OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
+          PGID: "{{ gid }}"
+          PUID: "{{ uid }}"
+          SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
+          SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
+          SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
+          SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
+          SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
+          TZ: "{{ tz }}"
+          VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
+          VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
+          WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
+        ```
+
+    ??? variable dict "`gluetun_role_docker_envs_custom`{ .sb-show-on-unchecked }`gluetun2_docker_envs_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_envs_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_envs_custom: {}
+        ```
+
+    Volumes
+    { .sb-h5 }
+
+    ??? variable bool "`gluetun_role_docker_volumes_global`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_global`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_volumes_global: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_volumes_global: false
+        ```
+
+    ??? variable list "`gluetun_role_docker_volumes_default`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_volumes_default: 
+          - "{{ gluetun_role_paths_location }}:/gluetun"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_volumes_default: 
+          - "{{ gluetun_role_paths_location }}:/gluetun"
+        ```
+
+    ??? variable list "`gluetun_role_docker_volumes_custom`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_volumes_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_volumes_custom: []
+        ```
+
+    Labels
+    { .sb-h5 }
+
+    ??? variable dict "`gluetun_role_docker_labels_default`{ .sb-show-on-unchecked }`gluetun2_docker_labels_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_labels_default: 
+          com.centurylinklabs.watchtower.enable: "false"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_labels_default: 
+          com.centurylinklabs.watchtower.enable: "false"
+        ```
+
+    ??? variable dict "`gluetun_role_docker_labels_custom`{ .sb-show-on-unchecked }`gluetun2_docker_labels_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_labels_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_labels_custom: {}
+        ```
+
+    Hostname
+    { .sb-h5 }
+
+    ??? variable string "`gluetun_role_docker_hostname`{ .sb-show-on-unchecked }`gluetun2_docker_hostname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_hostname: "{{ gluetun_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_hostname: "{{ gluetun_name }}"
+        ```
+
+    Networks
+    { .sb-h5 }
+
+    ??? variable string "`gluetun_role_docker_networks_alias`{ .sb-show-on-unchecked }`gluetun2_docker_networks_alias`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_networks_alias: "{{ gluetun_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_networks_alias: "{{ gluetun_name }}"
+        ```
+
+    ??? variable list "`gluetun_role_docker_networks_default`{ .sb-show-on-unchecked }`gluetun2_docker_networks_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_networks_default: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_networks_default: []
+        ```
+
+    ??? variable list "`gluetun_role_docker_networks_custom`{ .sb-show-on-unchecked }`gluetun2_docker_networks_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_networks_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_networks_custom: []
+        ```
+
+    Capabilities
+    { .sb-h5 }
+
+    ??? variable list "`gluetun_role_docker_capabilities_default`{ .sb-show-on-unchecked }`gluetun2_docker_capabilities_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_capabilities_default: 
+          - NET_ADMIN
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_capabilities_default: 
+          - NET_ADMIN
+        ```
+
+    ??? variable list "`gluetun_role_docker_capabilities_custom`{ .sb-show-on-unchecked }`gluetun2_docker_capabilities_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_capabilities_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_capabilities_custom: []
+        ```
+
+    Restart Policy
+    { .sb-h5 }
+
+    ??? variable string "`gluetun_role_docker_restart_policy`{ .sb-show-on-unchecked }`gluetun2_docker_restart_policy`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_restart_policy: unless-stopped
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_restart_policy: unless-stopped
+        ```
+
+    State
+    { .sb-h5 }
+
+    ??? variable string "`gluetun_role_docker_state`{ .sb-show-on-unchecked }`gluetun2_docker_state`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_state: started
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_state: started
+        ```
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    === "Role-level"
+    Resource Limits
+    { .sb-h5 }
 
-        ##### Resource Limits
+    ??? variable int "`gluetun_role_docker_blkio_weight`{ .sb-show-on-unchecked }`gluetun2_docker_blkio_weight`{ .sb-show-on-checked }"
 
-        ??? variable int "`gluetun_role_docker_blkio_weight`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_blkio_weight:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_blkio_weight:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_blkio_weight:
-            ```
+    ??? variable int "`gluetun_role_docker_cpu_period`{ .sb-show-on-unchecked }`gluetun2_docker_cpu_period`{ .sb-show-on-checked }"
 
-        ??? variable int "`gluetun_role_docker_cpu_period`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_cpu_period:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_cpu_period:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_cpu_period:
-            ```
+    ??? variable int "`gluetun_role_docker_cpu_quota`{ .sb-show-on-unchecked }`gluetun2_docker_cpu_quota`{ .sb-show-on-checked }"
 
-        ??? variable int "`gluetun_role_docker_cpu_quota`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_cpu_quota:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_cpu_quota:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_cpu_quota:
-            ```
+    ??? variable int "`gluetun_role_docker_cpu_shares`{ .sb-show-on-unchecked }`gluetun2_docker_cpu_shares`{ .sb-show-on-checked }"
 
-        ??? variable int "`gluetun_role_docker_cpu_shares`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_cpu_shares:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_cpu_shares:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_cpu_shares:
-            ```
+    ??? variable string "`gluetun_role_docker_cpus`{ .sb-show-on-unchecked }`gluetun2_docker_cpus`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cpus:
+        ```
 
-        ??? variable string "`gluetun_role_docker_cpuset_cpus`"
+    ??? variable string "`gluetun_role_docker_cpuset_cpus`{ .sb-show-on-unchecked }`gluetun2_docker_cpuset_cpus`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cpuset_cpus:
+        ```
 
-        ??? variable string "`gluetun_role_docker_cpuset_mems`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cpuset_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_cpuset_mems:
-            ```
+    ??? variable string "`gluetun_role_docker_cpuset_mems`{ .sb-show-on-unchecked }`gluetun2_docker_cpuset_mems`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_kernel_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cpuset_mems:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_kernel_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cpuset_mems:
+        ```
 
-        ??? variable string "`gluetun_role_docker_memory`"
+    ??? variable string "`gluetun_role_docker_kernel_memory`{ .sb-show-on-unchecked }`gluetun2_docker_kernel_memory`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_memory:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_kernel_memory:
+        ```
 
-        ??? variable string "`gluetun_role_docker_memory_reservation`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_kernel_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_memory_reservation:
-            ```
+    ??? variable string "`gluetun_role_docker_memory`{ .sb-show-on-unchecked }`gluetun2_docker_memory`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_memory_swap`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_memory_swap:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_memory:
+        ```
 
-        ??? variable int "`gluetun_role_docker_memory_swappiness`"
+    ??? variable string "`gluetun_role_docker_memory_reservation`{ .sb-show-on-unchecked }`gluetun2_docker_memory_reservation`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_memory_reservation:
+        ```
 
-        ##### Security & Devices
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_memory_reservation:
+        ```
 
-        ??? variable list "`gluetun_role_docker_cap_drop`"
+    ??? variable string "`gluetun_role_docker_memory_swap`{ .sb-show-on-unchecked }`gluetun2_docker_memory_swap`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_memory_swap:
+        ```
 
-        ??? variable list "`gluetun_role_docker_device_cgroup_rules`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_memory_swap:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_cgroup_rules:
-            ```
+    ??? variable int "`gluetun_role_docker_memory_swappiness`{ .sb-show-on-unchecked }`gluetun2_docker_memory_swappiness`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_device_read_bps`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_memory_swappiness:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_read_bps:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_memory_swappiness:
+        ```
 
-        ??? variable list "`gluetun_role_docker_device_read_iops`"
+    Security & Devices
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_read_iops:
-            ```
+    ??? variable list "`gluetun_role_docker_cap_drop`{ .sb-show-on-unchecked }`gluetun2_docker_cap_drop`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_device_requests`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_cap_drop:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_requests:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_cap_drop:
+        ```
 
-        ??? variable list "`gluetun_role_docker_device_write_bps`"
+    ??? variable list "`gluetun_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`gluetun2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_write_bps:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_cgroup_rules:
+        ```
 
-        ??? variable list "`gluetun_role_docker_device_write_iops`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_cgroup_rules:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_device_write_iops:
-            ```
+    ??? variable list "`gluetun_role_docker_device_read_bps`{ .sb-show-on-unchecked }`gluetun2_docker_device_read_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_devices`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_read_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_devices:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_read_bps:
+        ```
 
-        ??? variable string "`gluetun_role_docker_devices_default`"
+    ??? variable list "`gluetun_role_docker_device_read_iops`{ .sb-show-on-unchecked }`gluetun2_docker_device_read_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_devices_default:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_read_iops:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_privileged`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_read_iops:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_privileged:
-            ```
+    ??? variable list "`gluetun_role_docker_device_requests`{ .sb-show-on-unchecked }`gluetun2_docker_device_requests`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_security_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_requests:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_security_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_requests:
+        ```
 
-        ##### Networking
+    ??? variable list "`gluetun_role_docker_device_write_bps`{ .sb-show-on-unchecked }`gluetun2_docker_device_write_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_dns_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_write_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_dns_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_write_bps:
+        ```
 
-        ??? variable list "`gluetun_role_docker_dns_search_domains`"
+    ??? variable list "`gluetun_role_docker_device_write_iops`{ .sb-show-on-unchecked }`gluetun2_docker_device_write_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_dns_search_domains:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_device_write_iops:
+        ```
 
-        ??? variable list "`gluetun_role_docker_dns_servers`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_device_write_iops:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_dns_servers:
-            ```
+    ??? variable list "`gluetun_role_docker_devices`{ .sb-show-on-unchecked }`gluetun2_docker_devices`{ .sb-show-on-checked }"
 
-        ??? variable dict "`gluetun_role_docker_hosts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_devices:
+        ```
 
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_hosts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_devices:
+        ```
 
-        ??? variable string "`gluetun_role_docker_hosts_use_common`"
+    ??? variable string "`gluetun_role_docker_devices_default`{ .sb-show-on-unchecked }`gluetun2_docker_devices_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_hosts_use_common:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_devices_default:
+        ```
 
-        ??? variable string "`gluetun_role_docker_network_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_devices_default:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_network_mode:
-            ```
+    ??? variable bool "`gluetun_role_docker_privileged`{ .sb-show-on-unchecked }`gluetun2_docker_privileged`{ .sb-show-on-checked }"
 
-        ##### Storage
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_privileged:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_keep_volumes`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_privileged:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_keep_volumes:
-            ```
+    ??? variable list "`gluetun_role_docker_security_opts`{ .sb-show-on-unchecked }`gluetun2_docker_security_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_mounts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_security_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_mounts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_security_opts:
+        ```
 
-        ??? variable string "`gluetun_role_docker_volume_driver`"
+    Networking
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_volume_driver:
-            ```
+    ??? variable list "`gluetun_role_docker_dns_opts`{ .sb-show-on-unchecked }`gluetun2_docker_dns_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_volumes_from`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_dns_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_volumes_from:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_dns_opts:
+        ```
 
-        ??? variable string "`gluetun_role_docker_working_dir`"
+    ??? variable list "`gluetun_role_docker_dns_search_domains`{ .sb-show-on-unchecked }`gluetun2_docker_dns_search_domains`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_working_dir:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_dns_search_domains:
+        ```
 
-        ##### Monitoring & Lifecycle
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_dns_search_domains:
+        ```
 
-        ??? variable dict "`gluetun_role_docker_healthcheck`"
+    ??? variable list "`gluetun_role_docker_dns_servers`{ .sb-show-on-unchecked }`gluetun2_docker_dns_servers`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_healthcheck:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_dns_servers:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_init`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_dns_servers:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_init:
-            ```
+    ??? variable dict "`gluetun_role_docker_hosts`{ .sb-show-on-unchecked }`gluetun2_docker_hosts`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_log_driver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_hosts:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_log_driver:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_hosts:
+        ```
 
-        ??? variable dict "`gluetun_role_docker_log_options`"
+    ??? variable string "`gluetun_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_log_options:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_hosts_use_common:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_output_logs`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_hosts_use_common:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_output_logs:
-            ```
+    ??? variable string "`gluetun_role_docker_network_mode`{ .sb-show-on-unchecked }`gluetun2_docker_network_mode`{ .sb-show-on-checked }"
 
-        ##### Other Options
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_network_mode:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_auto_remove`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_network_mode:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_auto_remove:
-            ```
+    Storage
+    { .sb-h5 }
 
-        ??? variable string "`gluetun_role_docker_cgroup_parent`"
+    ??? variable bool "`gluetun_role_docker_keep_volumes`{ .sb-show-on-unchecked }`gluetun2_docker_keep_volumes`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_cgroup_parent:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_keep_volumes:
+        ```
 
-        ??? variable string "`gluetun_role_docker_cgroupns_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_keep_volumes:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_cgroupns_mode:
-            ```
+    ??? variable list "`gluetun_role_docker_mounts`{ .sb-show-on-unchecked }`gluetun2_docker_mounts`{ .sb-show-on-checked }"
 
-        ??? variable bool "`gluetun_role_docker_cleanup`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_mounts:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_cleanup:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_mounts:
+        ```
 
-        ??? variable list "`gluetun_role_docker_commands`"
+    ??? variable string "`gluetun_role_docker_volume_driver`{ .sb-show-on-unchecked }`gluetun2_docker_volume_driver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_commands:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_volume_driver:
+        ```
 
-        ??? variable string "`gluetun_role_docker_create_timeout`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_volume_driver:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_create_timeout:
-            ```
+    ??? variable list "`gluetun_role_docker_volumes_from`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_from`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_domainname`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_volumes_from:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_domainname:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_volumes_from:
+        ```
 
-        ??? variable string "`gluetun_role_docker_entrypoint`"
+    ??? variable string "`gluetun_role_docker_working_dir`{ .sb-show-on-unchecked }`gluetun2_docker_working_dir`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_entrypoint:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_working_dir:
+        ```
 
-        ??? variable string "`gluetun_role_docker_env_file`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_working_dir:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_env_file:
-            ```
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
-        ??? variable list "`gluetun_role_docker_exposed_ports`"
+    ??? variable dict "`gluetun_role_docker_healthcheck`{ .sb-show-on-unchecked }`gluetun2_docker_healthcheck`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_exposed_ports:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_healthcheck:
+        ```
 
-        ??? variable string "`gluetun_role_docker_force_kill`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_healthcheck:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_force_kill:
-            ```
+    ??? variable bool "`gluetun_role_docker_init`{ .sb-show-on-unchecked }`gluetun2_docker_init`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_groups`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_init:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_groups:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_init:
+        ```
 
-        ??? variable int "`gluetun_role_docker_healthy_wait_timeout`"
+    ??? variable string "`gluetun_role_docker_log_driver`{ .sb-show-on-unchecked }`gluetun2_docker_log_driver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_healthy_wait_timeout:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_log_driver:
+        ```
 
-        ??? variable string "`gluetun_role_docker_ipc_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_log_driver:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_ipc_mode:
-            ```
+    ??? variable dict "`gluetun_role_docker_log_options`{ .sb-show-on-unchecked }`gluetun2_docker_log_options`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_kill_signal`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_log_options:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_kill_signal:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_log_options:
+        ```
 
-        ??? variable string "`gluetun_role_docker_labels_use_common`"
+    ??? variable bool "`gluetun_role_docker_output_logs`{ .sb-show-on-unchecked }`gluetun2_docker_output_logs`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_labels_use_common:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_output_logs:
+        ```
 
-        ??? variable list "`gluetun_role_docker_links`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_output_logs:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_links:
-            ```
+    Other Options
+    { .sb-h5 }
 
-        ??? variable bool "`gluetun_role_docker_oom_killer`"
+    ??? variable bool "`gluetun_role_docker_auto_remove`{ .sb-show-on-unchecked }`gluetun2_docker_auto_remove`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_oom_killer:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_auto_remove:
+        ```
 
-        ??? variable int "`gluetun_role_docker_oom_score_adj`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_auto_remove:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_oom_score_adj:
-            ```
+    ??? variable string "`gluetun_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`gluetun2_docker_cgroup_parent`{ .sb-show-on-checked }"
 
-        ??? variable bool "`gluetun_role_docker_paused`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cgroup_parent:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_paused:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cgroup_parent:
+        ```
 
-        ??? variable string "`gluetun_role_docker_pid_mode`"
+    ??? variable string "`gluetun_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_cgroupns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_pid_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cgroupns_mode:
+        ```
 
-        ??? variable list "`gluetun_role_docker_ports`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cgroupns_mode:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_ports:
-            ```
+    ??? variable bool "`gluetun_role_docker_cleanup`{ .sb-show-on-unchecked }`gluetun2_docker_cleanup`{ .sb-show-on-checked }"
 
-        ??? variable bool "`gluetun_role_docker_read_only`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_cleanup:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_read_only:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_cleanup:
+        ```
 
-        ??? variable bool "`gluetun_role_docker_recreate`"
+    ??? variable list "`gluetun_role_docker_commands`{ .sb-show-on-unchecked }`gluetun2_docker_commands`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_docker_recreate:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_commands:
+        ```
 
-        ??? variable int "`gluetun_role_docker_restart_retries`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_commands:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_restart_retries:
-            ```
+    ??? variable string "`gluetun_role_docker_create_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_create_timeout`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_runtime`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_create_timeout:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_runtime:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_create_timeout:
+        ```
 
-        ??? variable string "`gluetun_role_docker_shm_size`"
+    ??? variable string "`gluetun_role_docker_domainname`{ .sb-show-on-unchecked }`gluetun2_docker_domainname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_shm_size:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_domainname:
+        ```
 
-        ??? variable int "`gluetun_role_docker_stop_timeout`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_domainname:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun_role_docker_stop_timeout:
-            ```
+    ??? variable string "`gluetun_role_docker_entrypoint`{ .sb-show-on-unchecked }`gluetun2_docker_entrypoint`{ .sb-show-on-checked }"
 
-        ??? variable dict "`gluetun_role_docker_storage_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_entrypoint:
+        ```
 
-            ```yaml
-            # Type: dict
-            gluetun_role_docker_storage_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_entrypoint:
+        ```
 
-        ??? variable list "`gluetun_role_docker_sysctls`"
+    ??? variable string "`gluetun_role_docker_env_file`{ .sb-show-on-unchecked }`gluetun2_docker_env_file`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_sysctls:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_env_file:
+        ```
 
-        ??? variable list "`gluetun_role_docker_tmpfs`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_env_file:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_tmpfs:
-            ```
+    ??? variable list "`gluetun_role_docker_exposed_ports`{ .sb-show-on-unchecked }`gluetun2_docker_exposed_ports`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun_role_docker_ulimits`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_exposed_ports:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun_role_docker_ulimits:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_exposed_ports:
+        ```
 
-        ??? variable string "`gluetun_role_docker_user`"
+    ??? variable string "`gluetun_role_docker_force_kill`{ .sb-show-on-unchecked }`gluetun2_docker_force_kill`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_user:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_force_kill:
+        ```
 
-        ??? variable string "`gluetun_role_docker_userns_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_force_kill:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_userns_mode:
-            ```
+    ??? variable list "`gluetun_role_docker_groups`{ .sb-show-on-unchecked }`gluetun2_docker_groups`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun_role_docker_uts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_groups:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun_role_docker_uts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_groups:
+        ```
 
-    === "Instance-level"
+    ??? variable int "`gluetun_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
-        ##### Resource Limits
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_healthy_wait_timeout:
+        ```
 
-        ??? variable int "`gluetun2_docker_blkio_weight`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_healthy_wait_timeout:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun2_docker_blkio_weight:
-            ```
+    ??? variable string "`gluetun_role_docker_ipc_mode`{ .sb-show-on-unchecked }`gluetun2_docker_ipc_mode`{ .sb-show-on-checked }"
 
-        ??? variable int "`gluetun2_docker_cpu_period`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_ipc_mode:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun2_docker_cpu_period:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_ipc_mode:
+        ```
 
-        ??? variable int "`gluetun2_docker_cpu_quota`"
+    ??? variable string "`gluetun_role_docker_kill_signal`{ .sb-show-on-unchecked }`gluetun2_docker_kill_signal`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            gluetun2_docker_cpu_quota:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_kill_signal:
+        ```
 
-        ??? variable int "`gluetun2_docker_cpu_shares`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_kill_signal:
+        ```
 
-            ```yaml
-            # Type: int
-            gluetun2_docker_cpu_shares:
-            ```
+    ??? variable string "`gluetun_role_docker_labels_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_labels_use_common`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_labels_use_common:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_labels_use_common:
+        ```
 
-        ??? variable string "`gluetun2_docker_cpuset_cpus`"
+    ??? variable list "`gluetun_role_docker_links`{ .sb-show-on-unchecked }`gluetun2_docker_links`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_links:
+        ```
 
-        ??? variable string "`gluetun2_docker_cpuset_mems`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_links:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_cpuset_mems:
-            ```
+    ??? variable bool "`gluetun_role_docker_oom_killer`{ .sb-show-on-unchecked }`gluetun2_docker_oom_killer`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_kernel_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_oom_killer:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_kernel_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_oom_killer:
+        ```
 
-        ??? variable string "`gluetun2_docker_memory`"
+    ??? variable int "`gluetun_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`gluetun2_docker_oom_score_adj`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_memory:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_oom_score_adj:
+        ```
 
-        ??? variable string "`gluetun2_docker_memory_reservation`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_oom_score_adj:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_memory_reservation:
-            ```
+    ??? variable bool "`gluetun_role_docker_paused`{ .sb-show-on-unchecked }`gluetun2_docker_paused`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_memory_swap`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_paused:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_memory_swap:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_paused:
+        ```
 
-        ??? variable int "`gluetun2_docker_memory_swappiness`"
+    ??? variable string "`gluetun_role_docker_pid_mode`{ .sb-show-on-unchecked }`gluetun2_docker_pid_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            gluetun2_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_pid_mode:
+        ```
 
-        ##### Security & Devices
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_pid_mode:
+        ```
 
-        ??? variable list "`gluetun2_docker_cap_drop`"
+    ??? variable list "`gluetun_role_docker_ports`{ .sb-show-on-unchecked }`gluetun2_docker_ports`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_ports:
+        ```
 
-        ??? variable list "`gluetun2_docker_device_cgroup_rules`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_ports:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_cgroup_rules:
-            ```
+    ??? variable bool "`gluetun_role_docker_read_only`{ .sb-show-on-unchecked }`gluetun2_docker_read_only`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun2_docker_device_read_bps`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_read_only:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_read_bps:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_read_only:
+        ```
 
-        ??? variable list "`gluetun2_docker_device_read_iops`"
+    ??? variable bool "`gluetun_role_docker_recreate`{ .sb-show-on-unchecked }`gluetun2_docker_recreate`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_read_iops:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_recreate:
+        ```
 
-        ??? variable list "`gluetun2_docker_device_requests`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_recreate:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_requests:
-            ```
+    ??? variable int "`gluetun_role_docker_restart_retries`{ .sb-show-on-unchecked }`gluetun2_docker_restart_retries`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun2_docker_device_write_bps`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_restart_retries:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_write_bps:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_restart_retries:
+        ```
 
-        ??? variable list "`gluetun2_docker_device_write_iops`"
+    ??? variable string "`gluetun_role_docker_runtime`{ .sb-show-on-unchecked }`gluetun2_docker_runtime`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_device_write_iops:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_runtime:
+        ```
 
-        ??? variable list "`gluetun2_docker_devices`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_runtime:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_devices:
-            ```
+    ??? variable string "`gluetun_role_docker_shm_size`{ .sb-show-on-unchecked }`gluetun2_docker_shm_size`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_devices_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_shm_size:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_devices_default:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_shm_size:
+        ```
 
-        ??? variable bool "`gluetun2_docker_privileged`"
+    ??? variable int "`gluetun_role_docker_stop_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_stop_timeout`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_privileged:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_stop_timeout:
+        ```
 
-        ??? variable list "`gluetun2_docker_security_opts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_stop_timeout:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_security_opts:
-            ```
+    ??? variable dict "`gluetun_role_docker_storage_opts`{ .sb-show-on-unchecked }`gluetun2_docker_storage_opts`{ .sb-show-on-checked }"
 
-        ##### Networking
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_storage_opts:
+        ```
 
-        ??? variable list "`gluetun2_docker_dns_opts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_storage_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_dns_opts:
-            ```
+    ??? variable list "`gluetun_role_docker_sysctls`{ .sb-show-on-unchecked }`gluetun2_docker_sysctls`{ .sb-show-on-checked }"
 
-        ??? variable list "`gluetun2_docker_dns_search_domains`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_sysctls:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_dns_search_domains:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_sysctls:
+        ```
 
-        ??? variable list "`gluetun2_docker_dns_servers`"
+    ??? variable list "`gluetun_role_docker_tmpfs`{ .sb-show-on-unchecked }`gluetun2_docker_tmpfs`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_dns_servers:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_tmpfs:
+        ```
 
-        ??? variable dict "`gluetun2_docker_hosts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_tmpfs:
+        ```
 
-            ```yaml
-            # Type: dict
-            gluetun2_docker_hosts:
-            ```
+    ??? variable list "`gluetun_role_docker_ulimits`{ .sb-show-on-unchecked }`gluetun2_docker_ulimits`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_hosts_use_common`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_ulimits:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_hosts_use_common:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_ulimits:
+        ```
 
-        ??? variable string "`gluetun2_docker_network_mode`"
+    ??? variable string "`gluetun_role_docker_user`{ .sb-show-on-unchecked }`gluetun2_docker_user`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_network_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_user:
+        ```
 
-        ##### Storage
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_user:
+        ```
 
-        ??? variable bool "`gluetun2_docker_keep_volumes`"
+    ??? variable string "`gluetun_role_docker_userns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_userns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_keep_volumes:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_userns_mode:
+        ```
 
-        ??? variable list "`gluetun2_docker_mounts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_userns_mode:
+        ```
 
-            ```yaml
-            # Type: list
-            gluetun2_docker_mounts:
-            ```
+    ??? variable string "`gluetun_role_docker_uts`{ .sb-show-on-unchecked }`gluetun2_docker_uts`{ .sb-show-on-checked }"
 
-        ??? variable string "`gluetun2_docker_volume_driver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_uts:
+        ```
 
-            ```yaml
-            # Type: string
-            gluetun2_docker_volume_driver:
-            ```
-
-        ??? variable list "`gluetun2_docker_volumes_from`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_volumes_from:
-            ```
-
-        ??? variable string "`gluetun2_docker_working_dir`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_working_dir:
-            ```
-
-        ##### Monitoring & Lifecycle
-
-        ??? variable dict "`gluetun2_docker_healthcheck`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_healthcheck:
-            ```
-
-        ??? variable bool "`gluetun2_docker_init`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_init:
-            ```
-
-        ??? variable string "`gluetun2_docker_log_driver`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_log_driver:
-            ```
-
-        ??? variable dict "`gluetun2_docker_log_options`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_log_options:
-            ```
-
-        ??? variable bool "`gluetun2_docker_output_logs`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_output_logs:
-            ```
-
-        ##### Other Options
-
-        ??? variable bool "`gluetun2_docker_auto_remove`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_auto_remove:
-            ```
-
-        ??? variable string "`gluetun2_docker_cgroup_parent`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_cgroup_parent:
-            ```
-
-        ??? variable string "`gluetun2_docker_cgroupns_mode`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_cgroupns_mode:
-            ```
-
-        ??? variable bool "`gluetun2_docker_cleanup`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_cleanup:
-            ```
-
-        ??? variable list "`gluetun2_docker_commands`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_commands:
-            ```
-
-        ??? variable string "`gluetun2_docker_create_timeout`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_create_timeout:
-            ```
-
-        ??? variable string "`gluetun2_docker_domainname`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_domainname:
-            ```
-
-        ??? variable string "`gluetun2_docker_entrypoint`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_entrypoint:
-            ```
-
-        ??? variable string "`gluetun2_docker_env_file`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_env_file:
-            ```
-
-        ??? variable list "`gluetun2_docker_exposed_ports`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_exposed_ports:
-            ```
-
-        ??? variable string "`gluetun2_docker_force_kill`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_force_kill:
-            ```
-
-        ??? variable list "`gluetun2_docker_groups`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_groups:
-            ```
-
-        ??? variable int "`gluetun2_docker_healthy_wait_timeout`"
-
-            ```yaml
-            # Type: int
-            gluetun2_docker_healthy_wait_timeout:
-            ```
-
-        ??? variable string "`gluetun2_docker_ipc_mode`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_ipc_mode:
-            ```
-
-        ??? variable string "`gluetun2_docker_kill_signal`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_kill_signal:
-            ```
-
-        ??? variable string "`gluetun2_docker_labels_use_common`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_labels_use_common:
-            ```
-
-        ??? variable list "`gluetun2_docker_links`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_links:
-            ```
-
-        ??? variable bool "`gluetun2_docker_oom_killer`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_oom_killer:
-            ```
-
-        ??? variable int "`gluetun2_docker_oom_score_adj`"
-
-            ```yaml
-            # Type: int
-            gluetun2_docker_oom_score_adj:
-            ```
-
-        ??? variable bool "`gluetun2_docker_paused`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_paused:
-            ```
-
-        ??? variable string "`gluetun2_docker_pid_mode`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_pid_mode:
-            ```
-
-        ??? variable list "`gluetun2_docker_ports`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_ports:
-            ```
-
-        ??? variable bool "`gluetun2_docker_read_only`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_read_only:
-            ```
-
-        ??? variable bool "`gluetun2_docker_recreate`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_docker_recreate:
-            ```
-
-        ??? variable int "`gluetun2_docker_restart_retries`"
-
-            ```yaml
-            # Type: int
-            gluetun2_docker_restart_retries:
-            ```
-
-        ??? variable string "`gluetun2_docker_runtime`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_runtime:
-            ```
-
-        ??? variable string "`gluetun2_docker_shm_size`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_shm_size:
-            ```
-
-        ??? variable int "`gluetun2_docker_stop_timeout`"
-
-            ```yaml
-            # Type: int
-            gluetun2_docker_stop_timeout:
-            ```
-
-        ??? variable dict "`gluetun2_docker_storage_opts`"
-
-            ```yaml
-            # Type: dict
-            gluetun2_docker_storage_opts:
-            ```
-
-        ??? variable list "`gluetun2_docker_sysctls`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_sysctls:
-            ```
-
-        ??? variable list "`gluetun2_docker_tmpfs`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_tmpfs:
-            ```
-
-        ??? variable list "`gluetun2_docker_ulimits`"
-
-            ```yaml
-            # Type: list
-            gluetun2_docker_ulimits:
-            ```
-
-        ??? variable string "`gluetun2_docker_user`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_user:
-            ```
-
-        ??? variable string "`gluetun2_docker_userns_mode`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_userns_mode:
-            ```
-
-        ??? variable string "`gluetun2_docker_uts`"
-
-            ```yaml
-            # Type: string
-            gluetun2_docker_uts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_uts:
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`gluetun_role_autoheal_enabled`{ .sb-show-on-unchecked }`gluetun2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        gluetun_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`gluetun_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        gluetun2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`gluetun_role_depends_on`{ .sb-show-on-unchecked }`gluetun2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        gluetun_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        gluetun2_depends_on: ""
+        ```
+
+    ??? variable string "`gluetun_role_depends_on_delay`{ .sb-show-on-unchecked }`gluetun2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        gluetun_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        gluetun2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`gluetun_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`gluetun2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        gluetun_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        gluetun2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`gluetun_role_diun_enabled`{ .sb-show-on-unchecked }`gluetun2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        gluetun_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        gluetun2_diun_enabled: true
+        ```
+
+    ??? variable bool "`gluetun_role_dns_enabled`{ .sb-show-on-unchecked }`gluetun2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        gluetun_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        gluetun2_dns_enabled: true
+        ```
+
+    ??? variable bool "`gluetun_role_docker_controller`{ .sb-show-on-unchecked }`gluetun2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        gluetun_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        gluetun2_docker_controller: true
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`gluetun2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`gluetun2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`gluetun_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        gluetun_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        gluetun2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`gluetun_role_web_fqdn_override`{ .sb-show-on-unchecked }`gluetun2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        gluetun_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        gluetun2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            gluetun_role_autoheal_enabled: true
+            gluetun_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "gluetun2.{{ user.domain }}"
+              - "gluetun.otherdomain.tld"
             ```
 
-        ??? variable string "`gluetun_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            gluetun_role_depends_on: ""
+            gluetun2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "gluetun2.{{ user.domain }}"
+              - "gluetun.otherdomain.tld"
             ```
 
-        ??? variable string "`gluetun_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`gluetun_role_web_host_override`{ .sb-show-on-unchecked }`gluetun2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        gluetun_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        gluetun2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            gluetun_role_depends_on_delay: "0"
+            gluetun_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`gluetun_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            gluetun_role_depends_on_healthchecks:
+            gluetun2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`gluetun_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            gluetun_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`gluetun_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            gluetun_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`gluetun_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            gluetun_role_docker_controller: true
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`gluetun_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            gluetun_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`gluetun_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            gluetun_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                gluetun_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "gluetun2.{{ user.domain }}"
-                  - "gluetun.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`gluetun_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            gluetun_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                gluetun_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`gluetun_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            gluetun_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `gluetun2`):
-
-        ??? variable bool "`gluetun2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            gluetun2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`gluetun2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            gluetun2_depends_on: ""
-            ```
-
-        ??? variable string "`gluetun2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            gluetun2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`gluetun2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            gluetun2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`gluetun2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            gluetun2_diun_enabled: true
-            ```
-
-        ??? variable bool "`gluetun2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            gluetun2_dns_enabled: true
-            ```
-
-        ??? variable bool "`gluetun2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            gluetun2_docker_controller: true
-            ```
-
-        ??? variable bool "`gluetun2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`gluetun2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`gluetun2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`gluetun2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`gluetun2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`gluetun2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            gluetun2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`gluetun2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`gluetun2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`gluetun2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            gluetun2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`gluetun2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            gluetun2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                gluetun2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "gluetun2.{{ user.domain }}"
-                  - "gluetun.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`gluetun2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            gluetun2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                gluetun2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`gluetun2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            gluetun2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`gluetun_role_web_scheme`{ .sb-show-on-unchecked }`gluetun2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        gluetun_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        gluetun2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

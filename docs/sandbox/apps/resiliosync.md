@@ -47,14 +47,11 @@ resiliosync_data_port: "#####"
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    resiliosync_name: "custom_value"
+    ```
 
-        ```yaml
-        resiliosync_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `resiliosync_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -202,7 +199,8 @@ resiliosync_data_port: "#####"
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_container`"
 
@@ -211,7 +209,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_container: "{{ resiliosync_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`resiliosync_role_docker_image_pull`"
 
@@ -241,7 +240,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='resiliosync') }}:{{ lookup('role_var', '_docker_image_tag', role='resiliosync') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`resiliosync_role_docker_ports_defaults`"
 
@@ -258,7 +258,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_ports_custom: []
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable bool "`resiliosync_role_docker_volumes_global`"
 
@@ -284,7 +285,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_hostname`"
 
@@ -293,7 +295,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_hostname: "{{ resiliosync_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_networks_alias`"
 
@@ -316,7 +319,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_restart_policy`"
 
@@ -325,7 +329,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_state`"
 
@@ -334,7 +339,8 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`resiliosync_role_docker_user`"
 
@@ -476,10 +482,10 @@ resiliosync_data_port: "#####"
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        resiliosync_role_web_fqdn_override: # (1)!
+        resiliosync_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             resiliosync_role_web_fqdn_override:
@@ -495,10 +501,10 @@ resiliosync_data_port: "#####"
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        resiliosync_role_web_host_override: # (1)!
+        resiliosync_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             resiliosync_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'resiliosync2.' + user.domain }}`)"

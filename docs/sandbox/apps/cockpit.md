@@ -37,14 +37,11 @@ sb install sandbox-cockpit
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    cockpit_name: "custom_value"
+    ```
 
-        ```yaml
-        cockpit_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `cockpit_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -365,10 +362,10 @@ sb install sandbox-cockpit
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        cockpit_role_web_fqdn_override: # (1)!
+        cockpit_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             cockpit_role_web_fqdn_override:
@@ -384,10 +381,10 @@ sb install sandbox-cockpit
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        cockpit_role_web_host_override: # (1)!
+        cockpit_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             cockpit_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'cockpit2.' + user.domain }}`)"

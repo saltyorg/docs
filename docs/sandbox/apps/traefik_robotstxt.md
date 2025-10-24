@@ -44,14 +44,11 @@ When you want to reach `*.yourdomain.tld/robots.txt`
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    traefik_robotstxt_role_docker_image_tag: "custom_value"
+    ```
 
-        ```yaml
-        traefik_robotstxt_role_docker_image_tag: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `traefik_robotstxt_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -68,7 +65,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`traefik_robotstxt_role_docker_container`"
 
@@ -77,7 +75,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_container: "{{ traefik_robotstxt_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`traefik_robotstxt_role_docker_image_pull`"
 
@@ -107,7 +106,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='traefik_robotstxt') }}:{{ lookup('role_var', '_docker_image_tag', role='traefik_robotstxt') }}"
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`traefik_robotstxt_role_docker_labels_default`"
 
@@ -129,7 +129,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`traefik_robotstxt_role_docker_hostname`"
 
@@ -138,7 +139,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_hostname: "{{ traefik_robotstxt_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`traefik_robotstxt_role_docker_networks_alias`"
 
@@ -161,7 +163,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`traefik_robotstxt_role_docker_restart_policy`"
 
@@ -170,7 +173,8 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`traefik_robotstxt_role_docker_state`"
 
@@ -312,10 +316,10 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        traefik_robotstxt_role_web_fqdn_override: # (1)!
+        traefik_robotstxt_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             traefik_robotstxt_role_web_fqdn_override:
@@ -331,10 +335,10 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        traefik_robotstxt_role_web_host_override: # (1)!
+        traefik_robotstxt_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             traefik_robotstxt_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'traefik_robotstxt2.' + user.domain }}`)"

@@ -506,24 +506,19 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
     This role supports multiple instances via `sonarr_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of sonarr:" }
+    sonarr_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of sonarr:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `sonarr2`):" }
+    sonarr2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        sonarr_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `sonarr2`):
-
-        ```yaml
-        sonarr2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `sonarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -538,7 +533,7 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
         sonarr_instances: ["sonarr"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -547,2126 +542,1797 @@ Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
 
 === "Settings"
 
-    === "Role-level"
+    ??? variable bool "`sonarr_role_external_auth`{ .sb-show-on-unchecked }`sonarr2_external_auth`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_external_auth`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_external_auth: true
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_external_auth: true
-            ```
-
-    === "Instance-level"
-
-        ??? variable bool "`sonarr2_external_auth`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_external_auth: true
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_external_auth: true
+        ```
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`sonarr_role_paths_folder`{ .sb-show-on-unchecked }`sonarr2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_paths_folder: "{{ sonarr_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_paths_folder: "{{ sonarr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_paths_folder: "{{ sonarr_name }}"
+        ```
 
-        ??? variable string "`sonarr_role_paths_location`"
+    ??? variable string "`sonarr_role_paths_location`{ .sb-show-on-unchecked }`sonarr2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_paths_location: "{{ server_appdata_path }}/{{ sonarr_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_paths_location: "{{ server_appdata_path }}/{{ sonarr_role_paths_folder }}"
+        ```
 
-        ??? variable string "`sonarr_role_paths_config_location`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_paths_location: "{{ server_appdata_path }}/{{ sonarr_role_paths_folder }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_paths_config_location: "{{ sonarr_role_paths_location }}/config.xml"
-            ```
+    ??? variable string "`sonarr_role_paths_config_location`{ .sb-show-on-unchecked }`sonarr2_paths_config_location`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_paths_config_location: "{{ sonarr_role_paths_location }}/config.xml"
+        ```
 
-        ??? variable string "`sonarr2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            sonarr2_paths_folder: "{{ sonarr_name }}"
-            ```
-
-        ??? variable string "`sonarr2_paths_location`"
-
-            ```yaml
-            # Type: string
-            sonarr2_paths_location: "{{ server_appdata_path }}/{{ sonarr_role_paths_folder }}"
-            ```
-
-        ??? variable string "`sonarr2_paths_config_location`"
-
-            ```yaml
-            # Type: string
-            sonarr2_paths_config_location: "{{ sonarr_role_paths_location }}/config.xml"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_paths_config_location: "{{ sonarr_role_paths_location }}/config.xml"
+        ```
 
 === "Web"
 
-    === "Role-level"
+    ??? variable string "`sonarr_role_web_subdomain`{ .sb-show-on-unchecked }`sonarr2_web_subdomain`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_web_subdomain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_web_subdomain: "{{ sonarr_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_web_subdomain: "{{ sonarr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_web_subdomain: "{{ sonarr_name }}"
+        ```
 
-        ??? variable string "`sonarr_role_web_domain`"
+    ??? variable string "`sonarr_role_web_domain`{ .sb-show-on-unchecked }`sonarr2_web_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_web_domain: "{{ user.domain }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_web_domain: "{{ user.domain }}"
+        ```
 
-        ??? variable string "`sonarr_role_web_port`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_web_domain: "{{ user.domain }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_web_port: "8989"
-            ```
+    ??? variable string "`sonarr_role_web_port`{ .sb-show-on-unchecked }`sonarr2_web_port`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_web_url`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_web_port: "8989"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
-                                  if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='sonarr')) }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_web_port: "8989"
+        ```
 
-    === "Instance-level"
+    ??? variable string "`sonarr_role_web_url`{ .sb-show-on-unchecked }`sonarr2_web_url`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            sonarr2_web_subdomain: "{{ sonarr_name }}"
-            ```
-
-        ??? variable string "`sonarr2_web_domain`"
-
-            ```yaml
-            # Type: string
-            sonarr2_web_domain: "{{ user.domain }}"
-            ```
-
-        ??? variable string "`sonarr2_web_port`"
-
-            ```yaml
-            # Type: string
-            sonarr2_web_port: "8989"
-            ```
-
-        ??? variable string "`sonarr2_web_url`"
-
-            ```yaml
-            # Type: string
-            sonarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
                               if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
                               else lookup('role_var', '_web_domain', role='sonarr')) }}"
-            ```
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
+                          if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
+                          else lookup('role_var', '_web_domain', role='sonarr')) }}"
+        ```
 
 === "DNS"
 
-    === "Role-level"
+    ??? variable string "`sonarr_role_dns_record`{ .sb-show-on-unchecked }`sonarr2_dns_record`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_dns_record`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='sonarr') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='sonarr') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='sonarr') }}"
+        ```
 
-        ??? variable string "`sonarr_role_dns_zone`"
+    ??? variable string "`sonarr_role_dns_zone`{ .sb-show-on-unchecked }`sonarr2_dns_zone`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='sonarr') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='sonarr') }}"
+        ```
 
-        ??? variable bool "`sonarr_role_dns_proxy`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_dns_zone: "{{ lookup('role_var', '_web_domain', role='sonarr') }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_dns_proxy: "{{ dns_proxied }}"
-            ```
+    ??? variable bool "`sonarr_role_dns_proxy`{ .sb-show-on-unchecked }`sonarr2_dns_proxy`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_dns_proxy: "{{ dns_proxied }}"
+        ```
 
-        ??? variable string "`sonarr2_dns_record`"
-
-            ```yaml
-            # Type: string
-            sonarr2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='sonarr') }}"
-            ```
-
-        ??? variable string "`sonarr2_dns_zone`"
-
-            ```yaml
-            # Type: string
-            sonarr2_dns_zone: "{{ lookup('role_var', '_web_domain', role='sonarr') }}"
-            ```
-
-        ??? variable bool "`sonarr2_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_dns_proxy: "{{ dns_proxied }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_dns_proxy: "{{ dns_proxied }}"
+        ```
 
 === "Traefik"
 
-    === "Role-level"
+    ??? variable string "`sonarr_role_traefik_sso_middleware`{ .sb-show-on-unchecked }`sonarr2_traefik_sso_middleware`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-        ??? variable string "`sonarr_role_traefik_middleware_default`"
+    ??? variable string "`sonarr_role_traefik_middleware_default`{ .sb-show-on-unchecked }`sonarr2_traefik_middleware_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_traefik_middleware_default: "{{ traefik_default_middleware
-                                                        + (',themepark-' + sonarr_name
-                                                          if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
-                                                          else '') }}"
-            ```
-
-        ??? variable string "`sonarr_role_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            sonarr_role_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`sonarr_role_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            sonarr_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_traefik_enabled: true
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_api_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_traefik_api_enabled: true
-            ```
-
-        ??? variable string "`sonarr_role_traefik_api_endpoint`"
-
-            ```yaml
-            # Type: string
-            sonarr_role_traefik_api_endpoint: "PathPrefix(`/api`) || PathPrefix(`/feed`) || PathPrefix(`/ping`)"
-            ```
-
-    === "Instance-level"
-
-        ??? variable string "`sonarr2_traefik_sso_middleware`"
-
-            ```yaml
-            # Type: string
-            sonarr2_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
-
-        ??? variable string "`sonarr2_traefik_middleware_default`"
-
-            ```yaml
-            # Type: string
-            sonarr2_traefik_middleware_default: "{{ traefik_default_middleware
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',themepark-' + sonarr_name
                                                       if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
                                                       else '') }}"
-            ```
+        ```
 
-        ??? variable string "`sonarr2_traefik_middleware_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_traefik_middleware_default: "{{ traefik_default_middleware
+                                                + (',themepark-' + sonarr_name
+                                                  if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
+                                                  else '') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_traefik_middleware_custom: ""
-            ```
+    ??? variable string "`sonarr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`sonarr2_traefik_middleware_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_traefik_certresolver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_traefik_middleware_custom: ""
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_traefik_middleware_custom: ""
+        ```
 
-        ??? variable bool "`sonarr2_traefik_enabled`"
+    ??? variable string "`sonarr_role_traefik_certresolver`{ .sb-show-on-unchecked }`sonarr2_traefik_certresolver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_traefik_enabled: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-        ??? variable bool "`sonarr2_traefik_api_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_traefik_api_enabled: true
-            ```
+    ??? variable bool "`sonarr_role_traefik_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_traefik_api_endpoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_traefik_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_traefik_api_endpoint: "PathPrefix(`/api`) || PathPrefix(`/feed`) || PathPrefix(`/ping`)"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_traefik_enabled: true
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_api_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_api_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_traefik_api_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_traefik_api_enabled: true
+        ```
+
+    ??? variable string "`sonarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`sonarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_traefik_api_endpoint: "PathPrefix(`/api`) || PathPrefix(`/feed`) || PathPrefix(`/ping`)"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_traefik_api_endpoint: "PathPrefix(`/api`) || PathPrefix(`/feed`) || PathPrefix(`/ping`)"
+        ```
 
 === "Theme"
 
-    === "Role-level"
+    ??? variable bool "`sonarr_role_themepark_enabled`{ .sb-show-on-unchecked }`sonarr2_themepark_enabled`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_themepark_enabled`"
+        ```yaml { .sb-show-on-unchecked }
+        # Options can be found at https://github.com/themepark-dev/theme.park
+        # Type: bool (true/false)
+        sonarr_role_themepark_enabled: false
+        ```
 
-            ```yaml
-            # Options can be found at https://github.com/themepark-dev/theme.park
-            # Type: bool (true/false)
-            sonarr_role_themepark_enabled: false
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Options can be found at https://github.com/themepark-dev/theme.park
+        # Type: bool (true/false)
+        sonarr2_themepark_enabled: false
+        ```
 
-        ??? variable string "`sonarr_role_themepark_app`"
+    ??? variable string "`sonarr_role_themepark_app`{ .sb-show-on-unchecked }`sonarr2_themepark_app`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_themepark_app: "sonarr"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_themepark_app: "sonarr"
+        ```
 
-        ??? variable string "`sonarr_role_themepark_theme`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_themepark_app: "sonarr"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_themepark_theme: "{{ global_themepark_theme }}"
-            ```
+    ??? variable string "`sonarr_role_themepark_theme`{ .sb-show-on-unchecked }`sonarr2_themepark_theme`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_themepark_domain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_themepark_theme: "{{ global_themepark_theme }}"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_themepark_domain: "{{ global_themepark_domain }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_themepark_theme: "{{ global_themepark_theme }}"
+        ```
 
-        ??? variable list "`sonarr_role_themepark_addons`"
+    ??? variable string "`sonarr_role_themepark_domain`{ .sb-show-on-unchecked }`sonarr2_themepark_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_themepark_addons: []
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_themepark_domain: "{{ global_themepark_domain }}"
+        ```
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_themepark_domain: "{{ global_themepark_domain }}"
+        ```
 
-        ??? variable bool "`sonarr2_themepark_enabled`"
+    ??? variable list "`sonarr_role_themepark_addons`{ .sb-show-on-unchecked }`sonarr2_themepark_addons`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Options can be found at https://github.com/themepark-dev/theme.park
-            # Type: bool (true/false)
-            sonarr2_themepark_enabled: false
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_themepark_addons: []
+        ```
 
-        ??? variable string "`sonarr2_themepark_app`"
-
-            ```yaml
-            # Type: string
-            sonarr2_themepark_app: "sonarr"
-            ```
-
-        ??? variable string "`sonarr2_themepark_theme`"
-
-            ```yaml
-            # Type: string
-            sonarr2_themepark_theme: "{{ global_themepark_theme }}"
-            ```
-
-        ??? variable string "`sonarr2_themepark_domain`"
-
-            ```yaml
-            # Type: string
-            sonarr2_themepark_domain: "{{ global_themepark_domain }}"
-            ```
-
-        ??? variable list "`sonarr2_themepark_addons`"
-
-            ```yaml
-            # Type: list
-            sonarr2_themepark_addons: []
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_themepark_addons: []
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`sonarr_role_docker_container`{ .sb-show-on-unchecked }`sonarr2_docker_container`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_container: "{{ sonarr_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_container: "{{ sonarr_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`sonarr_role_docker_image_pull`{ .sb-show-on-unchecked }`sonarr2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_image_pull: true
+        ```
+
+    ??? variable string "`sonarr_role_docker_image_repo`{ .sb-show-on-unchecked }`sonarr2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_image_repo: "ghcr.io/hotio/sonarr"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_image_repo: "ghcr.io/hotio/sonarr"
+        ```
+
+    ??? variable string "`sonarr_role_docker_image_tag`{ .sb-show-on-unchecked }`sonarr2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_image_tag: "release"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_image_tag: "release"
+        ```
+
+    ??? variable string "`sonarr_role_docker_image`{ .sb-show-on-unchecked }`sonarr2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='sonarr') }}:{{ lookup('role_var', '_docker_image_tag', role='sonarr') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='sonarr') }}:{{ lookup('role_var', '_docker_image_tag', role='sonarr') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`sonarr_role_docker_envs_default`{ .sb-show-on-unchecked }`sonarr2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_envs_default: 
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
+          UMASK: "002"
+          TZ: "{{ tz }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_envs_default: 
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
+          UMASK: "002"
+          TZ: "{{ tz }}"
+        ```
+
+    ??? variable dict "`sonarr_role_docker_envs_custom`{ .sb-show-on-unchecked }`sonarr2_docker_envs_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_envs_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_envs_custom: {}
+        ```
+
+    Volumes
+    { .sb-h5 }
 
-        ##### Container
+    ??? variable list "`sonarr_role_docker_volumes_default`{ .sb-show-on-unchecked }`sonarr2_docker_volumes_default`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_container`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_volumes_default: 
+          - "{{ sonarr_role_paths_location }}:/config"
+          - "{{ server_appdata_path }}/scripts:/scripts"
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_container: "{{ sonarr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_volumes_default: 
+          - "{{ sonarr_role_paths_location }}:/config"
+          - "{{ server_appdata_path }}/scripts:/scripts"
+        ```
 
-        ##### Image
+    ??? variable list "`sonarr_role_docker_volumes_legacy`{ .sb-show-on-unchecked }`sonarr2_docker_volumes_legacy`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_volumes_legacy: 
+          - "/mnt/unionfs/Media/TV:/tv"
+        ```
 
-        ??? variable bool "`sonarr_role_docker_image_pull`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_volumes_legacy: 
+          - "/mnt/unionfs/Media/TV:/tv"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_image_pull: true
-            ```
+    ??? variable list "`sonarr_role_docker_volumes_custom`{ .sb-show-on-unchecked }`sonarr2_docker_volumes_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_image_repo`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_image_repo: "ghcr.io/hotio/sonarr"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`sonarr_role_docker_image_tag`"
+    Labels
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_image_tag: "release"
-            ```
+    ??? variable dict "`sonarr_role_docker_labels_default`{ .sb-show-on-unchecked }`sonarr2_docker_labels_default`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_image`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_labels_default: {}
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='sonarr') }}:{{ lookup('role_var', '_docker_image_tag', role='sonarr') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_labels_default: {}
+        ```
 
-        ##### Envs
+    ??? variable dict "`sonarr_role_docker_labels_custom`{ .sb-show-on-unchecked }`sonarr2_docker_labels_custom`{ .sb-show-on-checked }"
 
-        ??? variable dict "`sonarr_role_docker_envs_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_labels_custom: {}
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_envs_default: 
-              PUID: "{{ uid }}"
-              PGID: "{{ gid }}"
-              UMASK: "002"
-              TZ: "{{ tz }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_labels_custom: {}
+        ```
 
-        ??? variable dict "`sonarr_role_docker_envs_custom`"
+    Hostname
+    { .sb-h5 }
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_envs_custom: {}
-            ```
+    ??? variable string "`sonarr_role_docker_hostname`{ .sb-show-on-unchecked }`sonarr2_docker_hostname`{ .sb-show-on-checked }"
 
-        ##### Volumes
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_hostname: "{{ sonarr_name }}"
+        ```
 
-        ??? variable list "`sonarr_role_docker_volumes_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_hostname: "{{ sonarr_name }}"
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_volumes_default: 
-              - "{{ sonarr_role_paths_location }}:/config"
-              - "{{ server_appdata_path }}/scripts:/scripts"
-            ```
+    Networks
+    { .sb-h5 }
 
-        ??? variable list "`sonarr_role_docker_volumes_legacy`"
+    ??? variable string "`sonarr_role_docker_networks_alias`{ .sb-show-on-unchecked }`sonarr2_docker_networks_alias`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_volumes_legacy: 
-              - "/mnt/unionfs/Media/TV:/tv"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_networks_alias: "{{ sonarr_name }}"
+        ```
 
-        ??? variable list "`sonarr_role_docker_volumes_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_networks_alias: "{{ sonarr_name }}"
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_volumes_custom: []
-            ```
+    ??? variable list "`sonarr_role_docker_networks_default`{ .sb-show-on-unchecked }`sonarr2_docker_networks_default`{ .sb-show-on-checked }"
 
-        ##### Labels
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_networks_default: []
+        ```
 
-        ??? variable dict "`sonarr_role_docker_labels_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_networks_default: []
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_labels_default: {}
-            ```
+    ??? variable list "`sonarr_role_docker_networks_custom`{ .sb-show-on-unchecked }`sonarr2_docker_networks_custom`{ .sb-show-on-checked }"
 
-        ??? variable dict "`sonarr_role_docker_labels_custom`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_networks_custom: []
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_labels_custom: {}
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_networks_custom: []
+        ```
 
-        ##### Hostname
+    Restart Policy
+    { .sb-h5 }
 
-        ??? variable string "`sonarr_role_docker_hostname`"
+    ??? variable string "`sonarr_role_docker_restart_policy`{ .sb-show-on-unchecked }`sonarr2_docker_restart_policy`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_hostname: "{{ sonarr_name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_restart_policy: unless-stopped
+        ```
 
-        ##### Networks
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_restart_policy: unless-stopped
+        ```
 
-        ??? variable string "`sonarr_role_docker_networks_alias`"
+    State
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_networks_alias: "{{ sonarr_name }}"
-            ```
+    ??? variable string "`sonarr_role_docker_state`{ .sb-show-on-unchecked }`sonarr2_docker_state`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_networks_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_state: started
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_networks_default: []
-            ```
-
-        ??? variable list "`sonarr_role_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            sonarr_role_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`sonarr_role_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            sonarr_role_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`sonarr_role_docker_state`"
-
-            ```yaml
-            # Type: string
-            sonarr_role_docker_state: started
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`sonarr2_docker_container`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_container: "{{ sonarr_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`sonarr2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_image_pull: true
-            ```
-
-        ??? variable string "`sonarr2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_image_repo: "ghcr.io/hotio/sonarr"
-            ```
-
-        ??? variable string "`sonarr2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_image_tag: "release"
-            ```
-
-        ??? variable string "`sonarr2_docker_image`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='sonarr') }}:{{ lookup('role_var', '_docker_image_tag', role='sonarr') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`sonarr2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_envs_default: 
-              PUID: "{{ uid }}"
-              PGID: "{{ gid }}"
-              UMASK: "002"
-              TZ: "{{ tz }}"
-            ```
-
-        ??? variable dict "`sonarr2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`sonarr2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_volumes_default: 
-              - "{{ sonarr_role_paths_location }}:/config"
-              - "{{ server_appdata_path }}/scripts:/scripts"
-            ```
-
-        ??? variable list "`sonarr2_docker_volumes_legacy`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_volumes_legacy: 
-              - "/mnt/unionfs/Media/TV:/tv"
-            ```
-
-        ??? variable list "`sonarr2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_volumes_custom: []
-            ```
-
-        ##### Labels
-
-        ??? variable dict "`sonarr2_docker_labels_default`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_labels_default: {}
-            ```
-
-        ??? variable dict "`sonarr2_docker_labels_custom`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_labels_custom: {}
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`sonarr2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_hostname: "{{ sonarr_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`sonarr2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_networks_alias: "{{ sonarr_name }}"
-            ```
-
-        ??? variable list "`sonarr2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_networks_default: []
-            ```
-
-        ??? variable list "`sonarr2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`sonarr2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`sonarr2_docker_state`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_state: started
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_state: started
+        ```
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    === "Role-level"
+    Resource Limits
+    { .sb-h5 }
 
-        ##### Resource Limits
+    ??? variable int "`sonarr_role_docker_blkio_weight`{ .sb-show-on-unchecked }`sonarr2_docker_blkio_weight`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr_role_docker_blkio_weight`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_blkio_weight:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_blkio_weight:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_blkio_weight:
-            ```
+    ??? variable int "`sonarr_role_docker_cpu_period`{ .sb-show-on-unchecked }`sonarr2_docker_cpu_period`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr_role_docker_cpu_period`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_cpu_period:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_cpu_period:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_cpu_period:
-            ```
+    ??? variable int "`sonarr_role_docker_cpu_quota`{ .sb-show-on-unchecked }`sonarr2_docker_cpu_quota`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr_role_docker_cpu_quota`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_cpu_quota:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_cpu_quota:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_cpu_quota:
-            ```
+    ??? variable int "`sonarr_role_docker_cpu_shares`{ .sb-show-on-unchecked }`sonarr2_docker_cpu_shares`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr_role_docker_cpu_shares`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_cpu_shares:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_cpu_shares:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_cpu_shares:
-            ```
+    ??? variable string "`sonarr_role_docker_cpus`{ .sb-show-on-unchecked }`sonarr2_docker_cpus`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_cpus:
+        ```
 
-        ??? variable string "`sonarr_role_docker_cpuset_cpus`"
+    ??? variable string "`sonarr_role_docker_cpuset_cpus`{ .sb-show-on-unchecked }`sonarr2_docker_cpuset_cpus`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_cpuset_cpus:
+        ```
 
-        ??? variable string "`sonarr_role_docker_cpuset_mems`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_cpuset_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_cpuset_mems:
-            ```
+    ??? variable string "`sonarr_role_docker_cpuset_mems`{ .sb-show-on-unchecked }`sonarr2_docker_cpuset_mems`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_kernel_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_cpuset_mems:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_kernel_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_cpuset_mems:
+        ```
 
-        ??? variable string "`sonarr_role_docker_memory`"
+    ??? variable string "`sonarr_role_docker_kernel_memory`{ .sb-show-on-unchecked }`sonarr2_docker_kernel_memory`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_memory:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_kernel_memory:
+        ```
 
-        ??? variable string "`sonarr_role_docker_memory_reservation`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_kernel_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_memory_reservation:
-            ```
+    ??? variable string "`sonarr_role_docker_memory`{ .sb-show-on-unchecked }`sonarr2_docker_memory`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_memory_swap`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_memory_swap:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_memory:
+        ```
 
-        ??? variable int "`sonarr_role_docker_memory_swappiness`"
+    ??? variable string "`sonarr_role_docker_memory_reservation`{ .sb-show-on-unchecked }`sonarr2_docker_memory_reservation`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_memory_reservation:
+        ```
 
-        ##### Security & Devices
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_memory_reservation:
+        ```
 
-        ??? variable list "`sonarr_role_docker_cap_drop`"
+    ??? variable string "`sonarr_role_docker_memory_swap`{ .sb-show-on-unchecked }`sonarr2_docker_memory_swap`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_memory_swap:
+        ```
 
-        ??? variable list "`sonarr_role_docker_device_cgroup_rules`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_memory_swap:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_cgroup_rules:
-            ```
+    ??? variable int "`sonarr_role_docker_memory_swappiness`{ .sb-show-on-unchecked }`sonarr2_docker_memory_swappiness`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_device_read_bps`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_memory_swappiness:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_read_bps:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_memory_swappiness:
+        ```
 
-        ??? variable list "`sonarr_role_docker_device_read_iops`"
+    Security & Devices
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_read_iops:
-            ```
+    ??? variable list "`sonarr_role_docker_cap_drop`{ .sb-show-on-unchecked }`sonarr2_docker_cap_drop`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_device_requests`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_cap_drop:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_requests:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_cap_drop:
+        ```
 
-        ??? variable list "`sonarr_role_docker_device_write_bps`"
+    ??? variable list "`sonarr_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`sonarr2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_write_bps:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_cgroup_rules:
+        ```
 
-        ??? variable list "`sonarr_role_docker_device_write_iops`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_cgroup_rules:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_device_write_iops:
-            ```
+    ??? variable list "`sonarr_role_docker_device_read_bps`{ .sb-show-on-unchecked }`sonarr2_docker_device_read_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_devices`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_read_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_devices:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_read_bps:
+        ```
 
-        ??? variable string "`sonarr_role_docker_devices_default`"
+    ??? variable list "`sonarr_role_docker_device_read_iops`{ .sb-show-on-unchecked }`sonarr2_docker_device_read_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_devices_default:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_read_iops:
+        ```
 
-        ??? variable bool "`sonarr_role_docker_privileged`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_read_iops:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_privileged:
-            ```
+    ??? variable list "`sonarr_role_docker_device_requests`{ .sb-show-on-unchecked }`sonarr2_docker_device_requests`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_security_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_requests:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_security_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_requests:
+        ```
 
-        ##### Networking
+    ??? variable list "`sonarr_role_docker_device_write_bps`{ .sb-show-on-unchecked }`sonarr2_docker_device_write_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_dns_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_write_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_dns_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_write_bps:
+        ```
 
-        ??? variable list "`sonarr_role_docker_dns_search_domains`"
+    ??? variable list "`sonarr_role_docker_device_write_iops`{ .sb-show-on-unchecked }`sonarr2_docker_device_write_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_dns_search_domains:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_device_write_iops:
+        ```
 
-        ??? variable list "`sonarr_role_docker_dns_servers`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_device_write_iops:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_dns_servers:
-            ```
+    ??? variable list "`sonarr_role_docker_devices`{ .sb-show-on-unchecked }`sonarr2_docker_devices`{ .sb-show-on-checked }"
 
-        ??? variable dict "`sonarr_role_docker_hosts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_devices:
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_hosts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_devices:
+        ```
 
-        ??? variable string "`sonarr_role_docker_hosts_use_common`"
+    ??? variable string "`sonarr_role_docker_devices_default`{ .sb-show-on-unchecked }`sonarr2_docker_devices_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_hosts_use_common:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_devices_default:
+        ```
 
-        ??? variable string "`sonarr_role_docker_network_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_devices_default:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_network_mode:
-            ```
+    ??? variable bool "`sonarr_role_docker_privileged`{ .sb-show-on-unchecked }`sonarr2_docker_privileged`{ .sb-show-on-checked }"
 
-        ##### Storage
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_privileged:
+        ```
 
-        ??? variable bool "`sonarr_role_docker_keep_volumes`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_privileged:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_keep_volumes:
-            ```
+    ??? variable list "`sonarr_role_docker_security_opts`{ .sb-show-on-unchecked }`sonarr2_docker_security_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_mounts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_security_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_mounts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_security_opts:
+        ```
 
-        ??? variable string "`sonarr_role_docker_volume_driver`"
+    Networking
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_volume_driver:
-            ```
+    ??? variable list "`sonarr_role_docker_dns_opts`{ .sb-show-on-unchecked }`sonarr2_docker_dns_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_volumes_from`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_dns_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_volumes_from:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_dns_opts:
+        ```
 
-        ??? variable string "`sonarr_role_docker_volumes_global`"
+    ??? variable list "`sonarr_role_docker_dns_search_domains`{ .sb-show-on-unchecked }`sonarr2_docker_dns_search_domains`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_volumes_global:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_dns_search_domains:
+        ```
 
-        ??? variable string "`sonarr_role_docker_working_dir`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_dns_search_domains:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_working_dir:
-            ```
+    ??? variable list "`sonarr_role_docker_dns_servers`{ .sb-show-on-unchecked }`sonarr2_docker_dns_servers`{ .sb-show-on-checked }"
 
-        ##### Monitoring & Lifecycle
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_dns_servers:
+        ```
 
-        ??? variable dict "`sonarr_role_docker_healthcheck`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_dns_servers:
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_healthcheck:
-            ```
+    ??? variable dict "`sonarr_role_docker_hosts`{ .sb-show-on-unchecked }`sonarr2_docker_hosts`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_docker_init`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_hosts:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_init:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_hosts:
+        ```
 
-        ??? variable string "`sonarr_role_docker_log_driver`"
+    ??? variable string "`sonarr_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`sonarr2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_log_driver:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_hosts_use_common:
+        ```
 
-        ??? variable dict "`sonarr_role_docker_log_options`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_hosts_use_common:
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_log_options:
-            ```
+    ??? variable string "`sonarr_role_docker_network_mode`{ .sb-show-on-unchecked }`sonarr2_docker_network_mode`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_docker_output_logs`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_network_mode:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_output_logs:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_network_mode:
+        ```
 
-        ##### Other Options
+    Storage
+    { .sb-h5 }
 
-        ??? variable bool "`sonarr_role_docker_auto_remove`"
+    ??? variable bool "`sonarr_role_docker_keep_volumes`{ .sb-show-on-unchecked }`sonarr2_docker_keep_volumes`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_auto_remove:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_keep_volumes:
+        ```
 
-        ??? variable list "`sonarr_role_docker_capabilities`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_keep_volumes:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_capabilities:
-            ```
+    ??? variable list "`sonarr_role_docker_mounts`{ .sb-show-on-unchecked }`sonarr2_docker_mounts`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_cgroup_parent`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_mounts:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_cgroup_parent:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_mounts:
+        ```
 
-        ??? variable string "`sonarr_role_docker_cgroupns_mode`"
+    ??? variable string "`sonarr_role_docker_volume_driver`{ .sb-show-on-unchecked }`sonarr2_docker_volume_driver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_cgroupns_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_volume_driver:
+        ```
 
-        ??? variable bool "`sonarr_role_docker_cleanup`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_volume_driver:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_cleanup:
-            ```
+    ??? variable list "`sonarr_role_docker_volumes_from`{ .sb-show-on-unchecked }`sonarr2_docker_volumes_from`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_commands`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_volumes_from:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_commands:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_volumes_from:
+        ```
 
-        ??? variable string "`sonarr_role_docker_create_timeout`"
+    ??? variable string "`sonarr_role_docker_volumes_global`{ .sb-show-on-unchecked }`sonarr2_docker_volumes_global`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_create_timeout:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_volumes_global:
+        ```
 
-        ??? variable string "`sonarr_role_docker_domainname`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_volumes_global:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_domainname:
-            ```
+    ??? variable string "`sonarr_role_docker_working_dir`{ .sb-show-on-unchecked }`sonarr2_docker_working_dir`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_entrypoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_working_dir:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_entrypoint:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_working_dir:
+        ```
 
-        ??? variable string "`sonarr_role_docker_env_file`"
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_env_file:
-            ```
+    ??? variable dict "`sonarr_role_docker_healthcheck`{ .sb-show-on-unchecked }`sonarr2_docker_healthcheck`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_exposed_ports`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_healthcheck:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_exposed_ports:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_healthcheck:
+        ```
 
-        ??? variable string "`sonarr_role_docker_force_kill`"
+    ??? variable bool "`sonarr_role_docker_init`{ .sb-show-on-unchecked }`sonarr2_docker_init`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_force_kill:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_init:
+        ```
 
-        ??? variable list "`sonarr_role_docker_groups`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_init:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_groups:
-            ```
+    ??? variable string "`sonarr_role_docker_log_driver`{ .sb-show-on-unchecked }`sonarr2_docker_log_driver`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr_role_docker_healthy_wait_timeout`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_log_driver:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_healthy_wait_timeout:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_log_driver:
+        ```
 
-        ??? variable string "`sonarr_role_docker_ipc_mode`"
+    ??? variable dict "`sonarr_role_docker_log_options`{ .sb-show-on-unchecked }`sonarr2_docker_log_options`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_ipc_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_log_options:
+        ```
 
-        ??? variable string "`sonarr_role_docker_kill_signal`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_log_options:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_kill_signal:
-            ```
+    ??? variable bool "`sonarr_role_docker_output_logs`{ .sb-show-on-unchecked }`sonarr2_docker_output_logs`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_labels_use_common`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_output_logs:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_labels_use_common:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_output_logs:
+        ```
 
-        ??? variable list "`sonarr_role_docker_links`"
+    Other Options
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_links:
-            ```
+    ??? variable bool "`sonarr_role_docker_auto_remove`{ .sb-show-on-unchecked }`sonarr2_docker_auto_remove`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_docker_oom_killer`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_auto_remove:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_oom_killer:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_auto_remove:
+        ```
 
-        ??? variable int "`sonarr_role_docker_oom_score_adj`"
+    ??? variable list "`sonarr_role_docker_capabilities`{ .sb-show-on-unchecked }`sonarr2_docker_capabilities`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_oom_score_adj:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_capabilities:
+        ```
 
-        ??? variable bool "`sonarr_role_docker_paused`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_capabilities:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_paused:
-            ```
+    ??? variable string "`sonarr_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`sonarr2_docker_cgroup_parent`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_pid_mode`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_cgroup_parent:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_pid_mode:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_cgroup_parent:
+        ```
 
-        ??? variable list "`sonarr_role_docker_ports`"
+    ??? variable string "`sonarr_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`sonarr2_docker_cgroupns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_ports:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_cgroupns_mode:
+        ```
 
-        ??? variable bool "`sonarr_role_docker_read_only`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_cgroupns_mode:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_read_only:
-            ```
+    ??? variable bool "`sonarr_role_docker_cleanup`{ .sb-show-on-unchecked }`sonarr2_docker_cleanup`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr_role_docker_recreate`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_cleanup:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_docker_recreate:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_cleanup:
+        ```
 
-        ??? variable int "`sonarr_role_docker_restart_retries`"
+    ??? variable list "`sonarr_role_docker_commands`{ .sb-show-on-unchecked }`sonarr2_docker_commands`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_restart_retries:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_commands:
+        ```
 
-        ??? variable string "`sonarr_role_docker_runtime`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_commands:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_runtime:
-            ```
+    ??? variable string "`sonarr_role_docker_create_timeout`{ .sb-show-on-unchecked }`sonarr2_docker_create_timeout`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_shm_size`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_create_timeout:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_shm_size:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_create_timeout:
+        ```
 
-        ??? variable int "`sonarr_role_docker_stop_timeout`"
+    ??? variable string "`sonarr_role_docker_domainname`{ .sb-show-on-unchecked }`sonarr2_docker_domainname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr_role_docker_stop_timeout:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_domainname:
+        ```
 
-        ??? variable dict "`sonarr_role_docker_storage_opts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_domainname:
+        ```
 
-            ```yaml
-            # Type: dict
-            sonarr_role_docker_storage_opts:
-            ```
+    ??? variable string "`sonarr_role_docker_entrypoint`{ .sb-show-on-unchecked }`sonarr2_docker_entrypoint`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr_role_docker_sysctls`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_entrypoint:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_sysctls:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_entrypoint:
+        ```
 
-        ??? variable list "`sonarr_role_docker_tmpfs`"
+    ??? variable string "`sonarr_role_docker_env_file`{ .sb-show-on-unchecked }`sonarr2_docker_env_file`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_tmpfs:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_env_file:
+        ```
 
-        ??? variable list "`sonarr_role_docker_ulimits`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_env_file:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr_role_docker_ulimits:
-            ```
+    ??? variable list "`sonarr_role_docker_exposed_ports`{ .sb-show-on-unchecked }`sonarr2_docker_exposed_ports`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr_role_docker_user`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_exposed_ports:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_user:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_exposed_ports:
+        ```
 
-        ??? variable string "`sonarr_role_docker_userns_mode`"
+    ??? variable string "`sonarr_role_docker_force_kill`{ .sb-show-on-unchecked }`sonarr2_docker_force_kill`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_userns_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_force_kill:
+        ```
 
-        ??? variable string "`sonarr_role_docker_uts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_force_kill:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr_role_docker_uts:
-            ```
+    ??? variable list "`sonarr_role_docker_groups`{ .sb-show-on-unchecked }`sonarr2_docker_groups`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_groups:
+        ```
 
-        ##### Resource Limits
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_groups:
+        ```
 
-        ??? variable int "`sonarr2_docker_blkio_weight`"
+    ??? variable int "`sonarr_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`sonarr2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr2_docker_blkio_weight:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_healthy_wait_timeout:
+        ```
 
-        ??? variable int "`sonarr2_docker_cpu_period`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_healthy_wait_timeout:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr2_docker_cpu_period:
-            ```
+    ??? variable string "`sonarr_role_docker_ipc_mode`{ .sb-show-on-unchecked }`sonarr2_docker_ipc_mode`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr2_docker_cpu_quota`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_ipc_mode:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr2_docker_cpu_quota:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_ipc_mode:
+        ```
 
-        ??? variable int "`sonarr2_docker_cpu_shares`"
+    ??? variable string "`sonarr_role_docker_kill_signal`{ .sb-show-on-unchecked }`sonarr2_docker_kill_signal`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            sonarr2_docker_cpu_shares:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_kill_signal:
+        ```
 
-        ??? variable string "`sonarr2_docker_cpus`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_kill_signal:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_cpus:
-            ```
+    ??? variable string "`sonarr_role_docker_labels_use_common`{ .sb-show-on-unchecked }`sonarr2_docker_labels_use_common`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_docker_cpuset_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_labels_use_common:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_labels_use_common:
+        ```
 
-        ??? variable string "`sonarr2_docker_cpuset_mems`"
+    ??? variable list "`sonarr_role_docker_links`{ .sb-show-on-unchecked }`sonarr2_docker_links`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_cpuset_mems:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_links:
+        ```
 
-        ??? variable string "`sonarr2_docker_kernel_memory`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_links:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_kernel_memory:
-            ```
+    ??? variable bool "`sonarr_role_docker_oom_killer`{ .sb-show-on-unchecked }`sonarr2_docker_oom_killer`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_docker_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_oom_killer:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_oom_killer:
+        ```
 
-        ??? variable string "`sonarr2_docker_memory_reservation`"
+    ??? variable int "`sonarr_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`sonarr2_docker_oom_score_adj`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_memory_reservation:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_oom_score_adj:
+        ```
 
-        ??? variable string "`sonarr2_docker_memory_swap`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_oom_score_adj:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_memory_swap:
-            ```
+    ??? variable bool "`sonarr_role_docker_paused`{ .sb-show-on-unchecked }`sonarr2_docker_paused`{ .sb-show-on-checked }"
 
-        ??? variable int "`sonarr2_docker_memory_swappiness`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_paused:
+        ```
 
-            ```yaml
-            # Type: int
-            sonarr2_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_paused:
+        ```
 
-        ##### Security & Devices
+    ??? variable string "`sonarr_role_docker_pid_mode`{ .sb-show-on-unchecked }`sonarr2_docker_pid_mode`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr2_docker_cap_drop`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_pid_mode:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_pid_mode:
+        ```
 
-        ??? variable list "`sonarr2_docker_device_cgroup_rules`"
+    ??? variable list "`sonarr_role_docker_ports`{ .sb-show-on-unchecked }`sonarr2_docker_ports`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_cgroup_rules:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_ports:
+        ```
 
-        ??? variable list "`sonarr2_docker_device_read_bps`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_ports:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_read_bps:
-            ```
+    ??? variable bool "`sonarr_role_docker_read_only`{ .sb-show-on-unchecked }`sonarr2_docker_read_only`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr2_docker_device_read_iops`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_read_only:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_read_iops:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_read_only:
+        ```
 
-        ??? variable list "`sonarr2_docker_device_requests`"
+    ??? variable bool "`sonarr_role_docker_recreate`{ .sb-show-on-unchecked }`sonarr2_docker_recreate`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_requests:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_docker_recreate:
+        ```
 
-        ??? variable list "`sonarr2_docker_device_write_bps`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_docker_recreate:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_write_bps:
-            ```
+    ??? variable int "`sonarr_role_docker_restart_retries`{ .sb-show-on-unchecked }`sonarr2_docker_restart_retries`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr2_docker_device_write_iops`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_restart_retries:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_device_write_iops:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_restart_retries:
+        ```
 
-        ??? variable list "`sonarr2_docker_devices`"
+    ??? variable string "`sonarr_role_docker_runtime`{ .sb-show-on-unchecked }`sonarr2_docker_runtime`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_devices:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_runtime:
+        ```
 
-        ??? variable string "`sonarr2_docker_devices_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_runtime:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_devices_default:
-            ```
+    ??? variable string "`sonarr_role_docker_shm_size`{ .sb-show-on-unchecked }`sonarr2_docker_shm_size`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr2_docker_privileged`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_shm_size:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_privileged:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_shm_size:
+        ```
 
-        ??? variable list "`sonarr2_docker_security_opts`"
+    ??? variable int "`sonarr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`sonarr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_security_opts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        sonarr_role_docker_stop_timeout:
+        ```
 
-        ##### Networking
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        sonarr2_docker_stop_timeout:
+        ```
 
-        ??? variable list "`sonarr2_docker_dns_opts`"
+    ??? variable dict "`sonarr_role_docker_storage_opts`{ .sb-show-on-unchecked }`sonarr2_docker_storage_opts`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_dns_opts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        sonarr_role_docker_storage_opts:
+        ```
 
-        ??? variable list "`sonarr2_docker_dns_search_domains`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        sonarr2_docker_storage_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_dns_search_domains:
-            ```
+    ??? variable list "`sonarr_role_docker_sysctls`{ .sb-show-on-unchecked }`sonarr2_docker_sysctls`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr2_docker_dns_servers`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_sysctls:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_dns_servers:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_sysctls:
+        ```
 
-        ??? variable dict "`sonarr2_docker_hosts`"
+    ??? variable list "`sonarr_role_docker_tmpfs`{ .sb-show-on-unchecked }`sonarr2_docker_tmpfs`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            sonarr2_docker_hosts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_tmpfs:
+        ```
 
-        ??? variable string "`sonarr2_docker_hosts_use_common`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_tmpfs:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_hosts_use_common:
-            ```
+    ??? variable list "`sonarr_role_docker_ulimits`{ .sb-show-on-unchecked }`sonarr2_docker_ulimits`{ .sb-show-on-checked }"
 
-        ??? variable string "`sonarr2_docker_network_mode`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        sonarr_role_docker_ulimits:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_network_mode:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        sonarr2_docker_ulimits:
+        ```
 
-        ##### Storage
+    ??? variable string "`sonarr_role_docker_user`{ .sb-show-on-unchecked }`sonarr2_docker_user`{ .sb-show-on-checked }"
 
-        ??? variable bool "`sonarr2_docker_keep_volumes`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_user:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_keep_volumes:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_user:
+        ```
 
-        ??? variable list "`sonarr2_docker_mounts`"
+    ??? variable string "`sonarr_role_docker_userns_mode`{ .sb-show-on-unchecked }`sonarr2_docker_userns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_mounts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_userns_mode:
+        ```
 
-        ??? variable string "`sonarr2_docker_volume_driver`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_userns_mode:
+        ```
 
-            ```yaml
-            # Type: string
-            sonarr2_docker_volume_driver:
-            ```
+    ??? variable string "`sonarr_role_docker_uts`{ .sb-show-on-unchecked }`sonarr2_docker_uts`{ .sb-show-on-checked }"
 
-        ??? variable list "`sonarr2_docker_volumes_from`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        sonarr_role_docker_uts:
+        ```
 
-            ```yaml
-            # Type: list
-            sonarr2_docker_volumes_from:
-            ```
-
-        ??? variable string "`sonarr2_docker_volumes_global`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_volumes_global:
-            ```
-
-        ??? variable string "`sonarr2_docker_working_dir`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_working_dir:
-            ```
-
-        ##### Monitoring & Lifecycle
-
-        ??? variable dict "`sonarr2_docker_healthcheck`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_healthcheck:
-            ```
-
-        ??? variable bool "`sonarr2_docker_init`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_init:
-            ```
-
-        ??? variable string "`sonarr2_docker_log_driver`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_log_driver:
-            ```
-
-        ??? variable dict "`sonarr2_docker_log_options`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_log_options:
-            ```
-
-        ??? variable bool "`sonarr2_docker_output_logs`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_output_logs:
-            ```
-
-        ##### Other Options
-
-        ??? variable bool "`sonarr2_docker_auto_remove`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_auto_remove:
-            ```
-
-        ??? variable list "`sonarr2_docker_capabilities`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_capabilities:
-            ```
-
-        ??? variable string "`sonarr2_docker_cgroup_parent`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_cgroup_parent:
-            ```
-
-        ??? variable string "`sonarr2_docker_cgroupns_mode`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_cgroupns_mode:
-            ```
-
-        ??? variable bool "`sonarr2_docker_cleanup`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_cleanup:
-            ```
-
-        ??? variable list "`sonarr2_docker_commands`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_commands:
-            ```
-
-        ??? variable string "`sonarr2_docker_create_timeout`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_create_timeout:
-            ```
-
-        ??? variable string "`sonarr2_docker_domainname`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_domainname:
-            ```
-
-        ??? variable string "`sonarr2_docker_entrypoint`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_entrypoint:
-            ```
-
-        ??? variable string "`sonarr2_docker_env_file`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_env_file:
-            ```
-
-        ??? variable list "`sonarr2_docker_exposed_ports`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_exposed_ports:
-            ```
-
-        ??? variable string "`sonarr2_docker_force_kill`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_force_kill:
-            ```
-
-        ??? variable list "`sonarr2_docker_groups`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_groups:
-            ```
-
-        ??? variable int "`sonarr2_docker_healthy_wait_timeout`"
-
-            ```yaml
-            # Type: int
-            sonarr2_docker_healthy_wait_timeout:
-            ```
-
-        ??? variable string "`sonarr2_docker_ipc_mode`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_ipc_mode:
-            ```
-
-        ??? variable string "`sonarr2_docker_kill_signal`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_kill_signal:
-            ```
-
-        ??? variable string "`sonarr2_docker_labels_use_common`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_labels_use_common:
-            ```
-
-        ??? variable list "`sonarr2_docker_links`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_links:
-            ```
-
-        ??? variable bool "`sonarr2_docker_oom_killer`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_oom_killer:
-            ```
-
-        ??? variable int "`sonarr2_docker_oom_score_adj`"
-
-            ```yaml
-            # Type: int
-            sonarr2_docker_oom_score_adj:
-            ```
-
-        ??? variable bool "`sonarr2_docker_paused`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_paused:
-            ```
-
-        ??? variable string "`sonarr2_docker_pid_mode`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_pid_mode:
-            ```
-
-        ??? variable list "`sonarr2_docker_ports`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_ports:
-            ```
-
-        ??? variable bool "`sonarr2_docker_read_only`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_read_only:
-            ```
-
-        ??? variable bool "`sonarr2_docker_recreate`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_docker_recreate:
-            ```
-
-        ??? variable int "`sonarr2_docker_restart_retries`"
-
-            ```yaml
-            # Type: int
-            sonarr2_docker_restart_retries:
-            ```
-
-        ??? variable string "`sonarr2_docker_runtime`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_runtime:
-            ```
-
-        ??? variable string "`sonarr2_docker_shm_size`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_shm_size:
-            ```
-
-        ??? variable int "`sonarr2_docker_stop_timeout`"
-
-            ```yaml
-            # Type: int
-            sonarr2_docker_stop_timeout:
-            ```
-
-        ??? variable dict "`sonarr2_docker_storage_opts`"
-
-            ```yaml
-            # Type: dict
-            sonarr2_docker_storage_opts:
-            ```
-
-        ??? variable list "`sonarr2_docker_sysctls`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_sysctls:
-            ```
-
-        ??? variable list "`sonarr2_docker_tmpfs`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_tmpfs:
-            ```
-
-        ??? variable list "`sonarr2_docker_ulimits`"
-
-            ```yaml
-            # Type: list
-            sonarr2_docker_ulimits:
-            ```
-
-        ??? variable string "`sonarr2_docker_user`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_user:
-            ```
-
-        ??? variable string "`sonarr2_docker_userns_mode`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_userns_mode:
-            ```
-
-        ??? variable string "`sonarr2_docker_uts`"
-
-            ```yaml
-            # Type: string
-            sonarr2_docker_uts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        sonarr2_docker_uts:
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`sonarr_role_autoheal_enabled`{ .sb-show-on-unchecked }`sonarr2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        sonarr_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`sonarr_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        sonarr2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`sonarr_role_depends_on`{ .sb-show-on-unchecked }`sonarr2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        sonarr_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        sonarr2_depends_on: ""
+        ```
+
+    ??? variable string "`sonarr_role_depends_on_delay`{ .sb-show-on-unchecked }`sonarr2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        sonarr_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        sonarr2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`sonarr_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`sonarr2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        sonarr_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        sonarr2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`sonarr_role_diun_enabled`{ .sb-show-on-unchecked }`sonarr2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        sonarr_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        sonarr2_diun_enabled: true
+        ```
+
+    ??? variable bool "`sonarr_role_dns_enabled`{ .sb-show-on-unchecked }`sonarr2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        sonarr_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        sonarr2_dns_enabled: true
+        ```
+
+    ??? variable bool "`sonarr_role_docker_controller`{ .sb-show-on-unchecked }`sonarr2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        sonarr_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        sonarr2_docker_controller: true
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`sonarr2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`sonarr2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        sonarr_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        sonarr2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`sonarr_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`sonarr2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        sonarr_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        sonarr2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`sonarr_role_web_fqdn_override`{ .sb-show-on-unchecked }`sonarr2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        sonarr_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        sonarr2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            sonarr_role_autoheal_enabled: true
+            sonarr_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "sonarr2.{{ user.domain }}"
+              - "sonarr.otherdomain.tld"
             ```
 
-        ??? variable string "`sonarr_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            sonarr_role_depends_on: ""
+            sonarr2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "sonarr2.{{ user.domain }}"
+              - "sonarr.otherdomain.tld"
             ```
 
-        ??? variable string "`sonarr_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`sonarr_role_web_host_override`{ .sb-show-on-unchecked }`sonarr2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        sonarr_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        sonarr2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            sonarr_role_depends_on_delay: "0"
+            sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`sonarr_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            sonarr_role_depends_on_healthchecks:
+            sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`sonarr_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            sonarr_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`sonarr_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            sonarr_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`sonarr_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            sonarr_role_docker_controller: true
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`sonarr_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            sonarr_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`sonarr_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            sonarr_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                sonarr_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "sonarr2.{{ user.domain }}"
-                  - "sonarr.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`sonarr_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            sonarr_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                sonarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`sonarr_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            sonarr_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `sonarr2`):
-
-        ??? variable bool "`sonarr2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            sonarr2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`sonarr2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            sonarr2_depends_on: ""
-            ```
-
-        ??? variable string "`sonarr2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            sonarr2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`sonarr2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            sonarr2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`sonarr2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            sonarr2_diun_enabled: true
-            ```
-
-        ??? variable bool "`sonarr2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            sonarr2_dns_enabled: true
-            ```
-
-        ??? variable bool "`sonarr2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            sonarr2_docker_controller: true
-            ```
-
-        ??? variable bool "`sonarr2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`sonarr2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`sonarr2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`sonarr2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`sonarr2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`sonarr2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            sonarr2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`sonarr2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`sonarr2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`sonarr2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            sonarr2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`sonarr2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            sonarr2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                sonarr2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "sonarr2.{{ user.domain }}"
-                  - "sonarr.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`sonarr2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            sonarr2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                sonarr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sonarr2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`sonarr2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            sonarr2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`sonarr_role_web_scheme`{ .sb-show-on-unchecked }`sonarr2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        sonarr_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        sonarr2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

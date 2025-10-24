@@ -47,14 +47,11 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    esphome_name: "custom_value"
+    ```
 
-        ```yaml
-        esphome_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `esphome_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -200,7 +197,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_container`"
 
@@ -209,7 +207,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_container: "{{ esphome_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`esphome_role_docker_image_pull`"
 
@@ -239,7 +238,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='esphome') }}:{{ lookup('role_var', '_docker_image_tag', role='esphome') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`esphome_role_docker_envs_default`"
 
@@ -258,7 +258,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`esphome_role_docker_volumes_default`"
 
@@ -276,7 +277,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_hostname`"
 
@@ -285,7 +287,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_hostname: "{{ esphome_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_networks_alias`"
 
@@ -308,7 +311,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_networks_custom: []
         ```
 
-    ##### Network Mode
+    Network Mode
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_network_mode`"
 
@@ -317,7 +321,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_network_mode: "host"
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_restart_policy`"
 
@@ -326,7 +331,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`esphome_role_docker_state`"
 
@@ -335,7 +341,8 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_state: started
         ```
 
-    ##### Privileged
+    Privileged
+    { .sb-h5 }
 
     ??? variable bool "`esphome_role_docker_privileged`"
 
@@ -477,10 +484,10 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        esphome_role_web_fqdn_override: # (1)!
+        esphome_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             esphome_role_web_fqdn_override:
@@ -496,10 +503,10 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        esphome_role_web_host_override: # (1)!
+        esphome_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             esphome_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'esphome2.' + user.domain }}`)"

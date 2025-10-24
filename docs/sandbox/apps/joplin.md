@@ -47,14 +47,11 @@ Change this asap.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    joplin_name: "custom_value"
+    ```
 
-        ```yaml
-        joplin_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `joplin_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -270,7 +267,8 @@ Change this asap.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_docker_container`"
 
@@ -279,7 +277,8 @@ Change this asap.
         joplin_role_docker_container: "{{ joplin_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`joplin_role_docker_image_pull`"
 
@@ -309,7 +308,8 @@ Change this asap.
         joplin_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='joplin') }}:{{ lookup('role_var', '_docker_image_tag', role='joplin') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`joplin_role_docker_envs_default`"
 
@@ -334,7 +334,8 @@ Change this asap.
         joplin_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_docker_hostname`"
 
@@ -343,7 +344,8 @@ Change this asap.
         joplin_role_docker_hostname: "{{ joplin_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_docker_networks_alias`"
 
@@ -366,7 +368,8 @@ Change this asap.
         joplin_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_docker_restart_policy`"
 
@@ -375,7 +378,8 @@ Change this asap.
         joplin_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_docker_state`"
 
@@ -384,7 +388,8 @@ Change this asap.
         joplin_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`joplin_role_depends_on`"
 
@@ -407,7 +412,8 @@ Change this asap.
         joplin_role_depends_on_healthchecks: "false"
         ```
 
-    ##### Create Docker Container Timeout
+    Create Docker Container Timeout
+    { .sb-h5 }
 
     ??? variable int "`joplin_docker_create_timeout`"
 
@@ -549,10 +555,10 @@ Change this asap.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        joplin_role_web_fqdn_override: # (1)!
+        joplin_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             joplin_role_web_fqdn_override:
@@ -568,10 +574,10 @@ Change this asap.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        joplin_role_web_host_override: # (1)!
+        joplin_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             joplin_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'joplin2.' + user.domain }}`)"

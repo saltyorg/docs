@@ -49,14 +49,11 @@ Enter email, and password from accounts.yml setting.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    invoiceninjav5_name: "custom_value"
+    ```
 
-        ```yaml
-        invoiceninjav5_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `invoiceninjav5_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -174,7 +171,8 @@ Enter email, and password from accounts.yml setting.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_docker_container`"
 
@@ -183,7 +181,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_container: "{{ invoiceninjav5_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`invoiceninjav5_role_docker_image_pull`"
 
@@ -213,7 +212,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='invoiceninjav5') }}:{{ lookup('role_var', '_docker_image_tag', role='invoiceninjav5') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`invoiceninjav5_role_docker_envs_default`"
 
@@ -247,7 +247,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`invoiceninjav5_role_docker_volumes_default`"
 
@@ -267,7 +268,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_docker_hostname`"
 
@@ -276,7 +278,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_hostname: "{{ invoiceninjav5_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_docker_networks_alias`"
 
@@ -299,7 +302,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_docker_restart_policy`"
 
@@ -308,7 +312,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_docker_state`"
 
@@ -317,7 +322,8 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`invoiceninjav5_role_depends_on`"
 
@@ -473,10 +479,10 @@ Enter email, and password from accounts.yml setting.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        invoiceninjav5_role_web_fqdn_override: # (1)!
+        invoiceninjav5_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             invoiceninjav5_role_web_fqdn_override:
@@ -492,10 +498,10 @@ Enter email, and password from accounts.yml setting.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        invoiceninjav5_role_web_host_override: # (1)!
+        invoiceninjav5_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             invoiceninjav5_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'invoiceninjav52.' + user.domain }}`)"

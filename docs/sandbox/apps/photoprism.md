@@ -48,14 +48,11 @@ sb install sandbox-photoprism
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    photoprism_name: "custom_value"
+    ```
 
-        ```yaml
-        photoprism_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `photoprism_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -194,7 +191,8 @@ sb install sandbox-photoprism
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_container`"
 
@@ -203,7 +201,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_container: "{{ photoprism_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`photoprism_role_docker_image_pull`"
 
@@ -233,7 +232,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='photoprism') }}:{{ lookup('role_var', '_docker_image_tag', role='photoprism') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`photoprism_role_docker_envs_default`"
 
@@ -277,7 +277,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`photoprism_role_docker_volumes_default`"
 
@@ -296,7 +297,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_hostname`"
 
@@ -305,7 +307,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_hostname: "{{ photoprism_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_networks_alias`"
 
@@ -328,7 +331,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_networks_custom: []
         ```
 
-    ##### Security Opts
+    Security Opts
+    { .sb-h5 }
 
     ??? variable list "`photoprism_role_docker_security_opts_default`"
 
@@ -346,7 +350,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_security_opts_custom: []
         ```
 
-    ##### Working Directory
+    Working Directory
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_working_dir`"
 
@@ -355,7 +360,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_working_dir: "/photoprism"
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_restart_policy`"
 
@@ -364,7 +370,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_state`"
 
@@ -373,7 +380,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_docker_user`"
 
@@ -382,7 +390,8 @@ sb install sandbox-photoprism
         photoprism_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`photoprism_role_depends_on`"
 
@@ -538,10 +547,10 @@ sb install sandbox-photoprism
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        photoprism_role_web_fqdn_override: # (1)!
+        photoprism_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             photoprism_role_web_fqdn_override:
@@ -557,10 +566,10 @@ sb install sandbox-photoprism
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        photoprism_role_web_host_override: # (1)!
+        photoprism_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             photoprism_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'photoprism2.' + user.domain }}`)"

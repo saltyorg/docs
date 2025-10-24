@@ -56,14 +56,11 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    dockwatch_name: "custom_value"
+    ```
 
-        ```yaml
-        dockwatch_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `dockwatch_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -231,7 +228,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_docker_container`"
 
@@ -240,7 +238,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_container: "{{ dockwatch_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`dockwatch_role_docker_image_pull`"
 
@@ -270,7 +269,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='dockwatch') }}:{{ lookup('role_var', '_docker_image_tag', role='dockwatch') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`dockwatch_role_docker_envs_default`"
 
@@ -290,7 +290,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`dockwatch_role_docker_volumes_default`"
 
@@ -307,7 +308,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_docker_hostname`"
 
@@ -316,7 +318,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_hostname: "{{ dockwatch_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_docker_networks_alias`"
 
@@ -339,7 +342,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_docker_restart_policy`"
 
@@ -348,7 +352,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_docker_state`"
 
@@ -357,7 +362,8 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`dockwatch_role_depends_on`"
 
@@ -513,10 +519,10 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        dockwatch_role_web_fqdn_override: # (1)!
+        dockwatch_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dockwatch_role_web_fqdn_override:
@@ -532,10 +538,10 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        dockwatch_role_web_host_override: # (1)!
+        dockwatch_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             dockwatch_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'dockwatch2.' + user.domain }}`)"

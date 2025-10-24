@@ -153,3 +153,34 @@
   -webkit-mask-image: var(--md-admonition-icon--dict);
   mask-image: var(--md-admonition-icon--dict);
 }
+
+label[for="sb-checkbox--var-level"] {
+  display: flex !important;
+  align-items: center;
+  gap: .5rem;
+  padding-left: .5rem !important;
+  padding-right: 2.5rem !important;
+
+  input {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  span {
+    min-width: 0;
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+  }
+}
+
+.sb-h5 {
+  font-size: .8em;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 1.25em 0;
+  text-transform: uppercase;
+}

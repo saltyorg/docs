@@ -48,14 +48,11 @@ sb install sandbox-puddletag
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    puddletag_name: "custom_value"
+    ```
 
-        ```yaml
-        puddletag_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `puddletag_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -194,7 +191,8 @@ sb install sandbox-puddletag
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`puddletag_role_docker_container`"
 
@@ -203,7 +201,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_container: "{{ puddletag_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`puddletag_role_docker_image_pull`"
 
@@ -233,7 +232,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='puddletag') }}:{{ lookup('role_var', '_docker_image_tag', role='puddletag') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`puddletag_role_docker_envs_default`"
 
@@ -255,7 +255,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`puddletag_role_docker_volumes_default`"
 
@@ -272,7 +273,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`puddletag_role_docker_hostname`"
 
@@ -281,7 +283,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_hostname: "{{ puddletag_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`puddletag_role_docker_networks_alias`"
 
@@ -304,7 +307,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`puddletag_role_docker_restart_policy`"
 
@@ -313,7 +317,8 @@ sb install sandbox-puddletag
         puddletag_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`puddletag_role_docker_state`"
 
@@ -455,10 +460,10 @@ sb install sandbox-puddletag
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        puddletag_role_web_fqdn_override: # (1)!
+        puddletag_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             puddletag_role_web_fqdn_override:
@@ -474,10 +479,10 @@ sb install sandbox-puddletag
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        puddletag_role_web_host_override: # (1)!
+        puddletag_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             puddletag_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'puddletag2.' + user.domain }}`)"

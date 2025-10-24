@@ -46,14 +46,11 @@ sb install sandbox-adguardhome
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    adguardhome_name: "custom_value"
+    ```
 
-        ```yaml
-        adguardhome_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `adguardhome_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -199,7 +196,8 @@ sb install sandbox-adguardhome
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`adguardhome_role_docker_container`"
 
@@ -208,7 +206,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_container: "{{ adguardhome_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`adguardhome_role_docker_image_pull`"
 
@@ -238,7 +237,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='adguardhome') }}:{{ lookup('role_var', '_docker_image_tag', role='adguardhome') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`adguardhome_role_docker_envs_default`"
 
@@ -257,7 +257,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`adguardhome_role_docker_volumes_default`"
 
@@ -275,7 +276,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`adguardhome_role_docker_hostname`"
 
@@ -284,7 +286,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_hostname: "{{ adguardhome_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`adguardhome_role_docker_networks_alias`"
 
@@ -307,7 +310,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`adguardhome_role_docker_restart_policy`"
 
@@ -316,7 +320,8 @@ sb install sandbox-adguardhome
         adguardhome_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`adguardhome_role_docker_state`"
 
@@ -458,10 +463,10 @@ sb install sandbox-adguardhome
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        adguardhome_role_web_fqdn_override: # (1)!
+        adguardhome_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             adguardhome_role_web_fqdn_override:
@@ -477,10 +482,10 @@ sb install sandbox-adguardhome
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        adguardhome_role_web_host_override: # (1)!
+        adguardhome_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             adguardhome_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'adguardhome2.' + user.domain }}`)"

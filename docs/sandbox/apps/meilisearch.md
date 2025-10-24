@@ -46,14 +46,11 @@ Visit `https://www.meilisearch.com/docs`.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    meilisearch_name: "custom_value"
+    ```
 
-        ```yaml
-        meilisearch_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `meilisearch_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -86,7 +83,8 @@ Visit `https://www.meilisearch.com/docs`.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`meilisearch_role_docker_container`"
 
@@ -95,7 +93,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_container: "{{ meilisearch_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`meilisearch_role_docker_image_pull`"
 
@@ -125,7 +124,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_image_tag: "v1.11.1"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`meilisearch_role_docker_envs_default`"
 
@@ -146,7 +146,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`meilisearch_role_docker_volumes_default`"
 
@@ -163,7 +164,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`meilisearch_role_docker_hostname`"
 
@@ -172,7 +174,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_hostname: "{{ meilisearch_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`meilisearch_role_docker_networks_alias`"
 
@@ -195,7 +198,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`meilisearch_role_docker_restart_policy`"
 
@@ -204,7 +208,8 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`meilisearch_role_docker_state`"
 
@@ -346,10 +351,10 @@ Visit `https://www.meilisearch.com/docs`.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        meilisearch_role_web_fqdn_override: # (1)!
+        meilisearch_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             meilisearch_role_web_fqdn_override:
@@ -365,10 +370,10 @@ Visit `https://www.meilisearch.com/docs`.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        meilisearch_role_web_host_override: # (1)!
+        meilisearch_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             meilisearch_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'meilisearch2.' + user.domain }}`)"

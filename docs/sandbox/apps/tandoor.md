@@ -77,14 +77,11 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    tandoor_name: "custom_value"
+    ```
 
-        ```yaml
-        tandoor_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `tandoor_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -300,7 +297,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_docker_container`"
 
@@ -309,7 +307,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_container: "{{ tandoor_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`tandoor_role_docker_image_pull`"
 
@@ -339,7 +338,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tandoor') }}:{{ lookup('role_var', '_docker_image_tag', role='tandoor') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`tandoor_role_docker_envs_default`"
 
@@ -366,7 +366,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`tandoor_role_docker_volumes_default`"
 
@@ -384,7 +385,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_docker_hostname`"
 
@@ -393,7 +395,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_hostname: "{{ tandoor_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_docker_networks_alias`"
 
@@ -416,7 +419,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_docker_restart_policy`"
 
@@ -425,7 +429,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_docker_state`"
 
@@ -434,7 +439,8 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`tandoor_role_depends_on`"
 
@@ -590,10 +596,10 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        tandoor_role_web_fqdn_override: # (1)!
+        tandoor_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tandoor_role_web_fqdn_override:
@@ -609,10 +615,10 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        tandoor_role_web_host_override: # (1)!
+        tandoor_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tandoor_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'tandoor2.' + user.domain }}`)"

@@ -80,14 +80,11 @@ docker restart rutorrent
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    rutorrent_name: "custom_value"
+    ```
 
-        ```yaml
-        rutorrent_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `rutorrent_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -432,7 +429,8 @@ docker restart rutorrent
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_container`"
 
@@ -441,7 +439,8 @@ docker restart rutorrent
         rutorrent_role_docker_container: "{{ rutorrent_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`rutorrent_role_docker_image_pull`"
 
@@ -471,7 +470,8 @@ docker restart rutorrent
         rutorrent_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='rutorrent') }}:{{ lookup('role_var', '_docker_image_tag', role='rutorrent') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_ports_51413`"
 
@@ -508,7 +508,8 @@ docker restart rutorrent
         rutorrent_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`rutorrent_role_docker_envs_default`"
 
@@ -527,7 +528,8 @@ docker restart rutorrent
         rutorrent_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`rutorrent_role_docker_volumes_default`"
 
@@ -545,7 +547,8 @@ docker restart rutorrent
         rutorrent_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`rutorrent_role_docker_labels_default`"
 
@@ -562,7 +565,8 @@ docker restart rutorrent
         rutorrent_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_hostname`"
 
@@ -571,7 +575,8 @@ docker restart rutorrent
         rutorrent_role_docker_hostname: "{{ rutorrent_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_networks_alias`"
 
@@ -594,7 +599,8 @@ docker restart rutorrent
         rutorrent_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_restart_policy`"
 
@@ -603,7 +609,8 @@ docker restart rutorrent
         rutorrent_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### Stop Timeout
+    Stop Timeout
+    { .sb-h5 }
 
     ??? variable int "`rutorrent_role_docker_stop_timeout`"
 
@@ -612,7 +619,8 @@ docker restart rutorrent
         rutorrent_role_docker_stop_timeout: 900
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`rutorrent_role_docker_state`"
 
@@ -623,11 +631,10 @@ docker restart rutorrent
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`rutorrent_role_docker_blkio_weight`"
 
@@ -713,7 +720,8 @@ docker restart rutorrent
         rutorrent_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`rutorrent_role_docker_cap_drop`"
 
@@ -792,7 +800,8 @@ docker restart rutorrent
         rutorrent_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`rutorrent_role_docker_dns_opts`"
 
@@ -836,7 +845,8 @@ docker restart rutorrent
         rutorrent_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`rutorrent_role_docker_keep_volumes`"
 
@@ -880,7 +890,8 @@ docker restart rutorrent
         rutorrent_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`rutorrent_role_docker_healthcheck`"
 
@@ -917,7 +928,8 @@ docker restart rutorrent
         rutorrent_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`rutorrent_role_docker_auto_remove`"
 
@@ -1290,10 +1302,10 @@ docker restart rutorrent
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        rutorrent_role_web_fqdn_override: # (1)!
+        rutorrent_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             rutorrent_role_web_fqdn_override:
@@ -1309,10 +1321,10 @@ docker restart rutorrent
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        rutorrent_role_web_host_override: # (1)!
+        rutorrent_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             rutorrent_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'rutorrent2.' + user.domain }}`)"

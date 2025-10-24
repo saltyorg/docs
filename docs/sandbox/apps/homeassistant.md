@@ -52,14 +52,11 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    homeassistant_name: "custom_value"
+    ```
 
-        ```yaml
-        homeassistant_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `homeassistant_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -205,7 +202,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_container`"
 
@@ -214,7 +212,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_container: "{{ homeassistant_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`homeassistant_role_docker_image_pull`"
 
@@ -244,7 +243,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='homeassistant') }}:{{ lookup('role_var', '_docker_image_tag', role='homeassistant') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`homeassistant_role_docker_envs_default`"
 
@@ -263,7 +263,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`homeassistant_role_docker_volumes_default`"
 
@@ -281,7 +282,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_hostname`"
 
@@ -290,7 +292,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_hostname: "{{ homeassistant_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_networks_alias`"
 
@@ -313,7 +316,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_networks_custom: []
         ```
 
-    ##### Network Mode
+    Network Mode
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_network_mode`"
 
@@ -322,7 +326,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_network_mode: "host"
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_restart_policy`"
 
@@ -331,7 +336,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`homeassistant_role_docker_state`"
 
@@ -340,7 +346,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_state: started
         ```
 
-    ##### Privileged
+    Privileged
+    { .sb-h5 }
 
     ??? variable bool "`homeassistant_role_docker_privileged`"
 
@@ -482,10 +489,10 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        homeassistant_role_web_fqdn_override: # (1)!
+        homeassistant_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             homeassistant_role_web_fqdn_override:
@@ -501,10 +508,10 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        homeassistant_role_web_host_override: # (1)!
+        homeassistant_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             homeassistant_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'homeassistant2.' + user.domain }}`)"

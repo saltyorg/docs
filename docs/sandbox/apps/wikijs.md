@@ -48,14 +48,11 @@ sb install sandbox-wikijs
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    wikijs_name: "custom_value"
+    ```
 
-        ```yaml
-        wikijs_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `wikijs_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -271,7 +268,8 @@ sb install sandbox-wikijs
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_docker_container`"
 
@@ -280,7 +278,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_container: "{{ wikijs_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`wikijs_role_docker_image_pull`"
 
@@ -310,7 +309,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wikijs') }}:{{ lookup('role_var', '_docker_image_tag', role='wikijs') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`wikijs_role_docker_envs_default`"
 
@@ -333,7 +333,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_docker_hostname`"
 
@@ -342,7 +343,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_hostname: "{{ wikijs_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_docker_networks_alias`"
 
@@ -365,7 +367,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_docker_restart_policy`"
 
@@ -374,7 +377,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_docker_state`"
 
@@ -383,7 +387,8 @@ sb install sandbox-wikijs
         wikijs_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`wikijs_role_depends_on`"
 
@@ -539,10 +544,10 @@ sb install sandbox-wikijs
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        wikijs_role_web_fqdn_override: # (1)!
+        wikijs_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             wikijs_role_web_fqdn_override:
@@ -558,10 +563,10 @@ sb install sandbox-wikijs
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        wikijs_role_web_host_override: # (1)!
+        wikijs_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             wikijs_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'wikijs2.' + user.domain }}`)"

@@ -43,14 +43,11 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    prometheus_name: "custom_value"
+    ```
 
-        ```yaml
-        prometheus_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `prometheus_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -212,7 +209,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_container`"
 
@@ -221,7 +219,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_container: "{{ prometheus_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`prometheus_role_docker_image_pull`"
 
@@ -251,7 +250,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='prometheus') }}:{{ lookup('role_var', '_docker_image_tag', role='prometheus') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`prometheus_role_docker_envs_default`"
 
@@ -268,7 +268,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_envs_custom: {}
         ```
 
-    ##### Commands
+    Commands
+    { .sb-h5 }
 
     ??? variable list "`prometheus_role_docker_commands_default`"
 
@@ -288,7 +289,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_commands_custom: []
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`prometheus_role_docker_volumes_default`"
 
@@ -306,7 +308,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`prometheus_role_docker_labels_default`"
 
@@ -323,7 +326,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_hostname`"
 
@@ -332,7 +336,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_hostname: "{{ prometheus_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_networks_alias`"
 
@@ -355,7 +360,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_restart_policy`"
 
@@ -364,7 +370,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_state`"
 
@@ -373,7 +380,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`prometheus_role_docker_user`"
 
@@ -384,11 +392,10 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`prometheus_role_docker_blkio_weight`"
 
@@ -474,7 +481,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`prometheus_role_docker_cap_drop`"
 
@@ -553,7 +561,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`prometheus_role_docker_dns_opts`"
 
@@ -597,7 +606,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`prometheus_role_docker_keep_volumes`"
 
@@ -641,7 +651,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`prometheus_role_docker_healthcheck`"
 
@@ -678,7 +689,8 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`prometheus_role_docker_auto_remove`"
 
@@ -1051,10 +1063,10 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        prometheus_role_web_fqdn_override: # (1)!
+        prometheus_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             prometheus_role_web_fqdn_override:
@@ -1070,10 +1082,10 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        prometheus_role_web_host_override: # (1)!
+        prometheus_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             prometheus_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'prometheus2.' + user.domain }}`)"

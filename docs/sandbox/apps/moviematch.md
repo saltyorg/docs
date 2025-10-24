@@ -64,14 +64,11 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    moviematch_name: "custom_value"
+    ```
 
-        ```yaml
-        moviematch_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `moviematch_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -210,7 +207,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`moviematch_role_docker_container`"
 
@@ -219,7 +217,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_container: "{{ moviematch_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`moviematch_role_docker_image_pull`"
 
@@ -249,7 +248,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='moviematch') }}:{{ lookup('role_var', '_docker_image_tag', role='moviematch') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`moviematch_role_docker_envs_default`"
 
@@ -272,7 +272,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`moviematch_role_docker_hostname`"
 
@@ -281,7 +282,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_hostname: "{{ moviematch_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`moviematch_role_docker_networks_alias`"
 
@@ -304,7 +306,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`moviematch_role_docker_restart_policy`"
 
@@ -313,7 +316,8 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`moviematch_role_docker_state`"
 
@@ -455,10 +459,10 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        moviematch_role_web_fqdn_override: # (1)!
+        moviematch_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             moviematch_role_web_fqdn_override:
@@ -474,10 +478,10 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        moviematch_role_web_host_override: # (1)!
+        moviematch_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             moviematch_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'moviematch2.' + user.domain }}`)"

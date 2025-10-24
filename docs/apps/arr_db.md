@@ -62,11 +62,9 @@ The arr_db role performs the following operations for each enabled application:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
-
-        ```yaml
-        arr_db_sonarr_enabled: true
-        ```
+    ```yaml title="Example Override"
+    arr_db_sonarr_enabled: true
+    ```
 
 === "Settings"
 
@@ -297,10 +295,10 @@ The arr_db role performs the following operations for each enabled application:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        arr_db_role_web_fqdn_override: # (1)!
+        arr_db_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             arr_db_role_web_fqdn_override:
@@ -316,10 +314,10 @@ The arr_db role performs the following operations for each enabled application:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        arr_db_role_web_host_override: # (1)!
+        arr_db_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             arr_db_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'arr_db2.' + user.domain }}`)"

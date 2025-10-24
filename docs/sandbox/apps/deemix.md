@@ -36,14 +36,11 @@ sb install sandbox-deemix
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    deemix_name: "custom_value"
+    ```
 
-        ```yaml
-        deemix_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `deemix_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -182,7 +179,8 @@ sb install sandbox-deemix
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`deemix_role_docker_container`"
 
@@ -191,7 +189,8 @@ sb install sandbox-deemix
         deemix_role_docker_container: "{{ deemix_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`deemix_role_docker_image_pull`"
 
@@ -221,7 +220,8 @@ sb install sandbox-deemix
         deemix_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='deemix') }}:{{ lookup('role_var', '_docker_image_tag', role='deemix') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`deemix_role_docker_envs_default`"
 
@@ -242,7 +242,8 @@ sb install sandbox-deemix
         deemix_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`deemix_role_docker_volumes_default`"
 
@@ -259,7 +260,8 @@ sb install sandbox-deemix
         deemix_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`deemix_role_docker_hostname`"
 
@@ -268,7 +270,8 @@ sb install sandbox-deemix
         deemix_role_docker_hostname: "{{ deemix_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`deemix_role_docker_networks_alias`"
 
@@ -291,7 +294,8 @@ sb install sandbox-deemix
         deemix_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`deemix_role_docker_restart_policy`"
 
@@ -300,7 +304,8 @@ sb install sandbox-deemix
         deemix_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`deemix_role_docker_state`"
 
@@ -442,10 +447,10 @@ sb install sandbox-deemix
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        deemix_role_web_fqdn_override: # (1)!
+        deemix_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             deemix_role_web_fqdn_override:
@@ -461,10 +466,10 @@ sb install sandbox-deemix
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        deemix_role_web_host_override: # (1)!
+        deemix_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             deemix_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'deemix2.' + user.domain }}`)"

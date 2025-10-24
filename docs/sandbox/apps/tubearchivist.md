@@ -61,14 +61,11 @@ sb install sandbox-tubearchivist
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    tubearchivist_name: "custom_value"
+    ```
 
-        ```yaml
-        tubearchivist_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `tubearchivist_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -223,7 +220,8 @@ sb install sandbox-tubearchivist
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_container`"
 
@@ -232,7 +230,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_container: "{{ tubearchivist_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`tubearchivist_role_docker_image_pull`"
 
@@ -262,7 +261,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tubearchivist') }}:{{ lookup('role_var', '_docker_image_tag', role='tubearchivist') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_envs_http_header`"
 
@@ -301,7 +301,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`tubearchivist_role_docker_volumes_default`"
 
@@ -319,7 +320,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_hostname`"
 
@@ -328,7 +330,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_hostname: "{{ tubearchivist_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_networks_alias`"
 
@@ -351,7 +354,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_restart_policy`"
 
@@ -360,7 +364,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_docker_state`"
 
@@ -369,7 +374,8 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`tubearchivist_role_depends_on`"
 
@@ -525,10 +531,10 @@ sb install sandbox-tubearchivist
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        tubearchivist_role_web_fqdn_override: # (1)!
+        tubearchivist_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tubearchivist_role_web_fqdn_override:
@@ -544,10 +550,10 @@ sb install sandbox-tubearchivist
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        tubearchivist_role_web_host_override: # (1)!
+        tubearchivist_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tubearchivist_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'tubearchivist2.' + user.domain }}`)"

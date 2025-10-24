@@ -38,14 +38,11 @@ sb install sandbox-rocketchat
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    rocketchat_mongodb_role_docker_image_tag: "custom_value"
+    ```
 
-        ```yaml
-        rocketchat_mongodb_role_docker_image_tag: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `rocketchat_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -223,7 +220,8 @@ sb install sandbox-rocketchat
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_docker_container`"
 
@@ -232,7 +230,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_container: "{{ rocketchat_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`rocketchat_role_docker_image_pull`"
 
@@ -262,7 +261,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='rocketchat') }}:{{ lookup('role_var', '_docker_image_tag', role='rocketchat') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`rocketchat_role_docker_envs_default`"
 
@@ -283,7 +283,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`rocketchat_role_docker_volumes_default`"
 
@@ -300,7 +301,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_volumes_custom: []
         ```
 
-    ##### Mounts
+    Mounts
+    { .sb-h5 }
 
     ??? variable list "`rocketchat_role_docker_mounts_default`"
 
@@ -318,7 +320,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_mounts_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_docker_hostname`"
 
@@ -327,7 +330,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_hostname: "{{ rocketchat_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_docker_networks_alias`"
 
@@ -350,7 +354,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_docker_restart_policy`"
 
@@ -359,7 +364,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_docker_state`"
 
@@ -368,7 +374,8 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`rocketchat_role_depends_on`"
 
@@ -524,10 +531,10 @@ sb install sandbox-rocketchat
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        rocketchat_role_web_fqdn_override: # (1)!
+        rocketchat_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             rocketchat_role_web_fqdn_override:
@@ -543,10 +550,10 @@ sb install sandbox-rocketchat
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        rocketchat_role_web_host_override: # (1)!
+        rocketchat_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             rocketchat_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'rocketchat2.' + user.domain }}`)"

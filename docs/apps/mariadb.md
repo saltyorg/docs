@@ -49,24 +49,19 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
     This role supports multiple instances via `mariadb_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of mariadb:" }
+    mariadb_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of mariadb:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `mariadb2`):" }
+    mariadb2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        mariadb_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `mariadb2`):
-
-        ```yaml
-        mariadb2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `mariadb_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -81,7 +76,7 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
         mariadb_instances: ["mariadb"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -90,1860 +85,1577 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
 === "Settings"
 
-    === "Role-level"
+    ??? variable string "`mariadb_role_docker_env_password`{ .sb-show-on-unchecked }`mariadb2_docker_env_password`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_env_password`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_env_password: "password321"
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_env_password: "password321"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_env_password: "password321"
+        ```
 
-        ??? variable string "`mariadb_role_docker_env_user`"
+    ??? variable string "`mariadb_role_docker_env_user`{ .sb-show-on-unchecked }`mariadb2_docker_env_user`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_env_user: "{{ user.name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_env_user: "{{ user.name }}"
+        ```
 
-        ??? variable string "`mariadb_role_docker_env_db`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_env_user: "{{ user.name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_env_db: "saltbox"
-            ```
+    ??? variable string "`mariadb_role_docker_env_db`{ .sb-show-on-unchecked }`mariadb2_docker_env_db`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_env_db: "saltbox"
+        ```
 
-        ??? variable string "`mariadb2_docker_env_password`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_env_password: "password321"
-            ```
-
-        ??? variable string "`mariadb2_docker_env_user`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_env_user: "{{ user.name }}"
-            ```
-
-        ??? variable string "`mariadb2_docker_env_db`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_env_db: "saltbox"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_env_db: "saltbox"
+        ```
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`mariadb_role_paths_folder`{ .sb-show-on-unchecked }`mariadb2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_paths_folder: "{{ mariadb_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_paths_folder: "{{ mariadb_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_paths_folder: "{{ mariadb_name }}"
+        ```
 
-        ??? variable string "`mariadb_role_paths_location`"
+    ??? variable string "`mariadb_role_paths_location`{ .sb-show-on-unchecked }`mariadb2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
+        ```
 
-    === "Instance-level"
-
-        ??? variable string "`mariadb2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            mariadb2_paths_folder: "{{ mariadb_name }}"
-            ```
-
-        ??? variable string "`mariadb2_paths_location`"
-
-            ```yaml
-            # Type: string
-            mariadb2_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
+        ```
 
 === "Migration Settings"
 
-    === "Role-level"
+    ??? variable string "`mariadb_role_docker_envs_mysql_root_password`{ .sb-show-on-unchecked }`mariadb2_docker_envs_mysql_root_password`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_envs_mysql_root_password`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_envs_mysql_root_password: password321
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_envs_mysql_root_password: password321
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_envs_mysql_root_password: password321
+        ```
 
-        ??? variable string "`mariadb_role_docker_image_migration`"
+    ??? variable string "`mariadb_role_docker_image_migration`{ .sb-show-on-unchecked }`mariadb2_docker_image_migration`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
+        ```
 
-        ??? variable list "`mariadb_role_docker_volumes_migration`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_volumes_migration: 
-              - "{{ mariadb_role_paths_location }}:/config"
-            ```
+    ??? variable list "`mariadb_role_docker_volumes_migration`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_migration`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_volumes_migration: 
+          - "{{ mariadb_role_paths_location }}:/config"
+        ```
 
-        ??? variable string "`mariadb2_docker_envs_mysql_root_password`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_envs_mysql_root_password: password321
-            ```
-
-        ??? variable string "`mariadb2_docker_image_migration`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
-            ```
-
-        ??? variable list "`mariadb2_docker_volumes_migration`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_volumes_migration: 
-              - "{{ mariadb_role_paths_location }}:/config"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_volumes_migration: 
+          - "{{ mariadb_role_paths_location }}:/config"
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`mariadb_role_docker_container`{ .sb-show-on-unchecked }`mariadb2_docker_container`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_container: "{{ mariadb_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_container: "{{ mariadb_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`mariadb_role_docker_image_pull`{ .sb-show-on-unchecked }`mariadb2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_image_pull: true
+        ```
+
+    ??? variable string "`mariadb_role_docker_image_repo`{ .sb-show-on-unchecked }`mariadb2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_image_repo: "mariadb"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_image_repo: "mariadb"
+        ```
+
+    ??? variable string "`mariadb_role_docker_image_tag`{ .sb-show-on-unchecked }`mariadb2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_image_tag: "10"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_image_tag: "10"
+        ```
+
+    ??? variable string "`mariadb_role_docker_image`{ .sb-show-on-unchecked }`mariadb2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mariadb') }}:{{ lookup('role_var', '_docker_image_tag', role='mariadb') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mariadb') }}:{{ lookup('role_var', '_docker_image_tag', role='mariadb') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`mariadb_role_docker_envs_default`{ .sb-show-on-unchecked }`mariadb2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_envs_default: 
+          TZ: "{{ tz }}"
+          MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+          MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
+          MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+          MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
+          MARIADB_AUTO_UPGRADE: "1"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_envs_default: 
+          TZ: "{{ tz }}"
+          MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+          MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
+          MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+          MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
+          MARIADB_AUTO_UPGRADE: "1"
+        ```
+
+    ??? variable dict "`mariadb_role_docker_envs_custom`{ .sb-show-on-unchecked }`mariadb2_docker_envs_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_envs_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_envs_custom: {}
+        ```
 
-        ##### Container
+    Volumes
+    { .sb-h5 }
 
-        ??? variable string "`mariadb_role_docker_container`"
+    ??? variable list "`mariadb_role_docker_volumes_default`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_container: "{{ mariadb_name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_volumes_default: 
+          - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
+        ```
 
-        ##### Image
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_volumes_default: 
+          - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
+        ```
 
-        ??? variable bool "`mariadb_role_docker_image_pull`"
+    ??? variable list "`mariadb_role_docker_volumes_custom`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_image_pull: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`mariadb_role_docker_image_repo`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_image_repo: "mariadb"
-            ```
+    Hostname
+    { .sb-h5 }
 
-        ??? variable string "`mariadb_role_docker_image_tag`"
+    ??? variable string "`mariadb_role_docker_hostname`{ .sb-show-on-unchecked }`mariadb2_docker_hostname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_image_tag: "10"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_hostname: "{{ mariadb_name }}"
+        ```
 
-        ??? variable string "`mariadb_role_docker_image`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_hostname: "{{ mariadb_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mariadb') }}:{{ lookup('role_var', '_docker_image_tag', role='mariadb') }}"
-            ```
+    Networks
+    { .sb-h5 }
 
-        ##### Envs
+    ??? variable string "`mariadb_role_docker_networks_alias`{ .sb-show-on-unchecked }`mariadb2_docker_networks_alias`{ .sb-show-on-checked }"
 
-        ??? variable dict "`mariadb_role_docker_envs_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_networks_alias: "{{ mariadb_name }}"
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_envs_default: 
-              TZ: "{{ tz }}"
-              MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-              MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
-              MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-              MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
-              MARIADB_AUTO_UPGRADE: "1"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_networks_alias: "{{ mariadb_name }}"
+        ```
 
-        ??? variable dict "`mariadb_role_docker_envs_custom`"
+    ??? variable list "`mariadb_role_docker_networks_default`{ .sb-show-on-unchecked }`mariadb2_docker_networks_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_envs_custom: {}
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_networks_default: []
+        ```
 
-        ##### Volumes
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_networks_default: []
+        ```
 
-        ??? variable list "`mariadb_role_docker_volumes_default`"
+    ??? variable list "`mariadb_role_docker_networks_custom`{ .sb-show-on-unchecked }`mariadb2_docker_networks_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_volumes_default: 
-              - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_networks_custom: []
+        ```
 
-        ??? variable list "`mariadb_role_docker_volumes_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_networks_custom: []
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_volumes_custom: []
-            ```
+    Restart Policy
+    { .sb-h5 }
 
-        ##### Hostname
+    ??? variable string "`mariadb_role_docker_restart_policy`{ .sb-show-on-unchecked }`mariadb2_docker_restart_policy`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_hostname`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_restart_policy: unless-stopped
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_hostname: "{{ mariadb_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_restart_policy: unless-stopped
+        ```
 
-        ##### Networks
+    State
+    { .sb-h5 }
 
-        ??? variable string "`mariadb_role_docker_networks_alias`"
+    ??? variable string "`mariadb_role_docker_state`{ .sb-show-on-unchecked }`mariadb2_docker_state`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_networks_alias: "{{ mariadb_name }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_state: started
+        ```
 
-        ??? variable list "`mariadb_role_docker_networks_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_state: started
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_networks_default: []
-            ```
+    User
+    { .sb-h5 }
 
-        ??? variable list "`mariadb_role_docker_networks_custom`"
+    ??? variable string "`mariadb_role_docker_user`{ .sb-show-on-unchecked }`mariadb2_docker_user`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_networks_custom: []
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
-        ##### Restart Policy
-
-        ??? variable string "`mariadb_role_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            mariadb_role_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`mariadb_role_docker_state`"
-
-            ```yaml
-            # Type: string
-            mariadb_role_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`mariadb_role_docker_user`"
-
-            ```yaml
-            # Type: string
-            mariadb_role_docker_user: "{{ uid }}:{{ gid }}"
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`mariadb2_docker_container`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_container: "{{ mariadb_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`mariadb2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_image_pull: true
-            ```
-
-        ??? variable string "`mariadb2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_image_repo: "mariadb"
-            ```
-
-        ??? variable string "`mariadb2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_image_tag: "10"
-            ```
-
-        ??? variable string "`mariadb2_docker_image`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mariadb') }}:{{ lookup('role_var', '_docker_image_tag', role='mariadb') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`mariadb2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_envs_default: 
-              TZ: "{{ tz }}"
-              MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-              MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
-              MARIADB_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-              MARIADB_DATABASE: "{{ lookup('role_var', '_docker_env_db', role='mariadb') }}"
-              MARIADB_AUTO_UPGRADE: "1"
-            ```
-
-        ??? variable dict "`mariadb2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`mariadb2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_volumes_default: 
-              - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
-            ```
-
-        ??? variable list "`mariadb2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_volumes_custom: []
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`mariadb2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_hostname: "{{ mariadb_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`mariadb2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_networks_alias: "{{ mariadb_name }}"
-            ```
-
-        ??? variable list "`mariadb2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_networks_default: []
-            ```
-
-        ??? variable list "`mariadb2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`mariadb2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`mariadb2_docker_state`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`mariadb2_docker_user`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_user: "{{ uid }}:{{ gid }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    === "Role-level"
+    Resource Limits
+    { .sb-h5 }
 
-        ##### Resource Limits
+    ??? variable int "`mariadb_role_docker_blkio_weight`{ .sb-show-on-unchecked }`mariadb2_docker_blkio_weight`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb_role_docker_blkio_weight`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_blkio_weight:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_blkio_weight:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_blkio_weight:
-            ```
+    ??? variable int "`mariadb_role_docker_cpu_period`{ .sb-show-on-unchecked }`mariadb2_docker_cpu_period`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb_role_docker_cpu_period`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_cpu_period:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_cpu_period:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_cpu_period:
-            ```
+    ??? variable int "`mariadb_role_docker_cpu_quota`{ .sb-show-on-unchecked }`mariadb2_docker_cpu_quota`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb_role_docker_cpu_quota`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_cpu_quota:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_cpu_quota:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_cpu_quota:
-            ```
+    ??? variable int "`mariadb_role_docker_cpu_shares`{ .sb-show-on-unchecked }`mariadb2_docker_cpu_shares`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb_role_docker_cpu_shares`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_cpu_shares:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_cpu_shares:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_cpu_shares:
-            ```
+    ??? variable string "`mariadb_role_docker_cpus`{ .sb-show-on-unchecked }`mariadb2_docker_cpus`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_cpus:
+        ```
 
-        ??? variable string "`mariadb_role_docker_cpuset_cpus`"
+    ??? variable string "`mariadb_role_docker_cpuset_cpus`{ .sb-show-on-unchecked }`mariadb2_docker_cpuset_cpus`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_cpuset_cpus:
+        ```
 
-        ??? variable string "`mariadb_role_docker_cpuset_mems`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_cpuset_cpus:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_cpuset_mems:
-            ```
+    ??? variable string "`mariadb_role_docker_cpuset_mems`{ .sb-show-on-unchecked }`mariadb2_docker_cpuset_mems`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_kernel_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_cpuset_mems:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_kernel_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_cpuset_mems:
+        ```
 
-        ??? variable string "`mariadb_role_docker_memory`"
+    ??? variable string "`mariadb_role_docker_kernel_memory`{ .sb-show-on-unchecked }`mariadb2_docker_kernel_memory`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_memory:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_kernel_memory:
+        ```
 
-        ??? variable string "`mariadb_role_docker_memory_reservation`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_kernel_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_memory_reservation:
-            ```
+    ??? variable string "`mariadb_role_docker_memory`{ .sb-show-on-unchecked }`mariadb2_docker_memory`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_memory_swap`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_memory:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_memory_swap:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_memory:
+        ```
 
-        ??? variable int "`mariadb_role_docker_memory_swappiness`"
+    ??? variable string "`mariadb_role_docker_memory_reservation`{ .sb-show-on-unchecked }`mariadb2_docker_memory_reservation`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_memory_reservation:
+        ```
 
-        ##### Security & Devices
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_memory_reservation:
+        ```
 
-        ??? variable list "`mariadb_role_docker_cap_drop`"
+    ??? variable string "`mariadb_role_docker_memory_swap`{ .sb-show-on-unchecked }`mariadb2_docker_memory_swap`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_memory_swap:
+        ```
 
-        ??? variable list "`mariadb_role_docker_device_cgroup_rules`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_memory_swap:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_cgroup_rules:
-            ```
+    ??? variable int "`mariadb_role_docker_memory_swappiness`{ .sb-show-on-unchecked }`mariadb2_docker_memory_swappiness`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_device_read_bps`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_memory_swappiness:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_read_bps:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_memory_swappiness:
+        ```
 
-        ??? variable list "`mariadb_role_docker_device_read_iops`"
+    Security & Devices
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_read_iops:
-            ```
+    ??? variable list "`mariadb_role_docker_cap_drop`{ .sb-show-on-unchecked }`mariadb2_docker_cap_drop`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_device_requests`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_cap_drop:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_requests:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_cap_drop:
+        ```
 
-        ??? variable list "`mariadb_role_docker_device_write_bps`"
+    ??? variable list "`mariadb_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`mariadb2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_write_bps:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_cgroup_rules:
+        ```
 
-        ??? variable list "`mariadb_role_docker_device_write_iops`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_cgroup_rules:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_device_write_iops:
-            ```
+    ??? variable list "`mariadb_role_docker_device_read_bps`{ .sb-show-on-unchecked }`mariadb2_docker_device_read_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_devices`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_read_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_devices:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_read_bps:
+        ```
 
-        ??? variable string "`mariadb_role_docker_devices_default`"
+    ??? variable list "`mariadb_role_docker_device_read_iops`{ .sb-show-on-unchecked }`mariadb2_docker_device_read_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_devices_default:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_read_iops:
+        ```
 
-        ??? variable bool "`mariadb_role_docker_privileged`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_read_iops:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_privileged:
-            ```
+    ??? variable list "`mariadb_role_docker_device_requests`{ .sb-show-on-unchecked }`mariadb2_docker_device_requests`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_security_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_requests:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_security_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_requests:
+        ```
 
-        ##### Networking
+    ??? variable list "`mariadb_role_docker_device_write_bps`{ .sb-show-on-unchecked }`mariadb2_docker_device_write_bps`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_dns_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_write_bps:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_dns_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_write_bps:
+        ```
 
-        ??? variable list "`mariadb_role_docker_dns_search_domains`"
+    ??? variable list "`mariadb_role_docker_device_write_iops`{ .sb-show-on-unchecked }`mariadb2_docker_device_write_iops`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_dns_search_domains:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_device_write_iops:
+        ```
 
-        ??? variable list "`mariadb_role_docker_dns_servers`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_device_write_iops:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_dns_servers:
-            ```
+    ??? variable list "`mariadb_role_docker_devices`{ .sb-show-on-unchecked }`mariadb2_docker_devices`{ .sb-show-on-checked }"
 
-        ??? variable dict "`mariadb_role_docker_hosts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_devices:
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_hosts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_devices:
+        ```
 
-        ??? variable string "`mariadb_role_docker_hosts_use_common`"
+    ??? variable string "`mariadb_role_docker_devices_default`{ .sb-show-on-unchecked }`mariadb2_docker_devices_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_hosts_use_common:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_devices_default:
+        ```
 
-        ??? variable string "`mariadb_role_docker_network_mode`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_devices_default:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_network_mode:
-            ```
+    ??? variable bool "`mariadb_role_docker_privileged`{ .sb-show-on-unchecked }`mariadb2_docker_privileged`{ .sb-show-on-checked }"
 
-        ##### Storage
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_privileged:
+        ```
 
-        ??? variable bool "`mariadb_role_docker_keep_volumes`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_privileged:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_keep_volumes:
-            ```
+    ??? variable list "`mariadb_role_docker_security_opts`{ .sb-show-on-unchecked }`mariadb2_docker_security_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_mounts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_security_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_mounts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_security_opts:
+        ```
 
-        ??? variable string "`mariadb_role_docker_volume_driver`"
+    Networking
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_volume_driver:
-            ```
+    ??? variable list "`mariadb_role_docker_dns_opts`{ .sb-show-on-unchecked }`mariadb2_docker_dns_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_volumes_from`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_dns_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_volumes_from:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_dns_opts:
+        ```
 
-        ??? variable string "`mariadb_role_docker_volumes_global`"
+    ??? variable list "`mariadb_role_docker_dns_search_domains`{ .sb-show-on-unchecked }`mariadb2_docker_dns_search_domains`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_volumes_global:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_dns_search_domains:
+        ```
 
-        ??? variable string "`mariadb_role_docker_working_dir`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_dns_search_domains:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_working_dir:
-            ```
+    ??? variable list "`mariadb_role_docker_dns_servers`{ .sb-show-on-unchecked }`mariadb2_docker_dns_servers`{ .sb-show-on-checked }"
 
-        ##### Monitoring & Lifecycle
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_dns_servers:
+        ```
 
-        ??? variable dict "`mariadb_role_docker_healthcheck`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_dns_servers:
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_healthcheck:
-            ```
+    ??? variable dict "`mariadb_role_docker_hosts`{ .sb-show-on-unchecked }`mariadb2_docker_hosts`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb_role_docker_init`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_hosts:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_init:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_hosts:
+        ```
 
-        ??? variable string "`mariadb_role_docker_log_driver`"
+    ??? variable string "`mariadb_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`mariadb2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_log_driver:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_hosts_use_common:
+        ```
 
-        ??? variable dict "`mariadb_role_docker_log_options`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_hosts_use_common:
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_log_options:
-            ```
+    ??? variable string "`mariadb_role_docker_network_mode`{ .sb-show-on-unchecked }`mariadb2_docker_network_mode`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb_role_docker_output_logs`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_network_mode:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_output_logs:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_network_mode:
+        ```
 
-        ##### Other Options
+    Storage
+    { .sb-h5 }
 
-        ??? variable bool "`mariadb_role_docker_auto_remove`"
+    ??? variable bool "`mariadb_role_docker_keep_volumes`{ .sb-show-on-unchecked }`mariadb2_docker_keep_volumes`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_auto_remove:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_keep_volumes:
+        ```
 
-        ??? variable list "`mariadb_role_docker_capabilities`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_keep_volumes:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_capabilities:
-            ```
+    ??? variable list "`mariadb_role_docker_mounts`{ .sb-show-on-unchecked }`mariadb2_docker_mounts`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_cgroup_parent`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_mounts:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_cgroup_parent:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_mounts:
+        ```
 
-        ??? variable string "`mariadb_role_docker_cgroupns_mode`"
+    ??? variable string "`mariadb_role_docker_volume_driver`{ .sb-show-on-unchecked }`mariadb2_docker_volume_driver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_cgroupns_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_volume_driver:
+        ```
 
-        ??? variable bool "`mariadb_role_docker_cleanup`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_volume_driver:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_cleanup:
-            ```
+    ??? variable list "`mariadb_role_docker_volumes_from`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_from`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_commands`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_volumes_from:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_commands:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_volumes_from:
+        ```
 
-        ??? variable string "`mariadb_role_docker_create_timeout`"
+    ??? variable string "`mariadb_role_docker_volumes_global`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_global`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_create_timeout:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_volumes_global:
+        ```
 
-        ??? variable string "`mariadb_role_docker_domainname`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_volumes_global:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_domainname:
-            ```
+    ??? variable string "`mariadb_role_docker_working_dir`{ .sb-show-on-unchecked }`mariadb2_docker_working_dir`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_entrypoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_working_dir:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_entrypoint:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_working_dir:
+        ```
 
-        ??? variable string "`mariadb_role_docker_env_file`"
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_env_file:
-            ```
+    ??? variable dict "`mariadb_role_docker_healthcheck`{ .sb-show-on-unchecked }`mariadb2_docker_healthcheck`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_exposed_ports`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_healthcheck:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_exposed_ports:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_healthcheck:
+        ```
 
-        ??? variable string "`mariadb_role_docker_force_kill`"
+    ??? variable bool "`mariadb_role_docker_init`{ .sb-show-on-unchecked }`mariadb2_docker_init`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_force_kill:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_init:
+        ```
 
-        ??? variable list "`mariadb_role_docker_groups`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_init:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_groups:
-            ```
+    ??? variable string "`mariadb_role_docker_log_driver`{ .sb-show-on-unchecked }`mariadb2_docker_log_driver`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb_role_docker_healthy_wait_timeout`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_log_driver:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_healthy_wait_timeout:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_log_driver:
+        ```
 
-        ??? variable string "`mariadb_role_docker_ipc_mode`"
+    ??? variable dict "`mariadb_role_docker_log_options`{ .sb-show-on-unchecked }`mariadb2_docker_log_options`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_ipc_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_log_options:
+        ```
 
-        ??? variable string "`mariadb_role_docker_kill_signal`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_log_options:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_kill_signal:
-            ```
+    ??? variable bool "`mariadb_role_docker_output_logs`{ .sb-show-on-unchecked }`mariadb2_docker_output_logs`{ .sb-show-on-checked }"
 
-        ??? variable dict "`mariadb_role_docker_labels`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_output_logs:
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_labels:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_output_logs:
+        ```
 
-        ??? variable string "`mariadb_role_docker_labels_use_common`"
+    Other Options
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_labels_use_common:
-            ```
+    ??? variable bool "`mariadb_role_docker_auto_remove`{ .sb-show-on-unchecked }`mariadb2_docker_auto_remove`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_links`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_auto_remove:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_links:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_auto_remove:
+        ```
 
-        ??? variable bool "`mariadb_role_docker_oom_killer`"
+    ??? variable list "`mariadb_role_docker_capabilities`{ .sb-show-on-unchecked }`mariadb2_docker_capabilities`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_oom_killer:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_capabilities:
+        ```
 
-        ??? variable int "`mariadb_role_docker_oom_score_adj`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_capabilities:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_oom_score_adj:
-            ```
+    ??? variable string "`mariadb_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`mariadb2_docker_cgroup_parent`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb_role_docker_paused`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_cgroup_parent:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_paused:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_cgroup_parent:
+        ```
 
-        ??? variable string "`mariadb_role_docker_pid_mode`"
+    ??? variable string "`mariadb_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`mariadb2_docker_cgroupns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_pid_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_cgroupns_mode:
+        ```
 
-        ??? variable list "`mariadb_role_docker_ports`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_cgroupns_mode:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_ports:
-            ```
+    ??? variable bool "`mariadb_role_docker_cleanup`{ .sb-show-on-unchecked }`mariadb2_docker_cleanup`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb_role_docker_read_only`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_cleanup:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_read_only:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_cleanup:
+        ```
 
-        ??? variable bool "`mariadb_role_docker_recreate`"
+    ??? variable list "`mariadb_role_docker_commands`{ .sb-show-on-unchecked }`mariadb2_docker_commands`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_docker_recreate:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_commands:
+        ```
 
-        ??? variable int "`mariadb_role_docker_restart_retries`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_commands:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_restart_retries:
-            ```
+    ??? variable string "`mariadb_role_docker_create_timeout`{ .sb-show-on-unchecked }`mariadb2_docker_create_timeout`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb_role_docker_runtime`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_create_timeout:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_runtime:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_create_timeout:
+        ```
 
-        ??? variable string "`mariadb_role_docker_shm_size`"
+    ??? variable string "`mariadb_role_docker_domainname`{ .sb-show-on-unchecked }`mariadb2_docker_domainname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_shm_size:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_domainname:
+        ```
 
-        ??? variable int "`mariadb_role_docker_stop_timeout`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_domainname:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb_role_docker_stop_timeout:
-            ```
+    ??? variable string "`mariadb_role_docker_entrypoint`{ .sb-show-on-unchecked }`mariadb2_docker_entrypoint`{ .sb-show-on-checked }"
 
-        ??? variable dict "`mariadb_role_docker_storage_opts`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_entrypoint:
+        ```
 
-            ```yaml
-            # Type: dict
-            mariadb_role_docker_storage_opts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_entrypoint:
+        ```
 
-        ??? variable list "`mariadb_role_docker_sysctls`"
+    ??? variable string "`mariadb_role_docker_env_file`{ .sb-show-on-unchecked }`mariadb2_docker_env_file`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_sysctls:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_env_file:
+        ```
 
-        ??? variable list "`mariadb_role_docker_tmpfs`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_env_file:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_tmpfs:
-            ```
+    ??? variable list "`mariadb_role_docker_exposed_ports`{ .sb-show-on-unchecked }`mariadb2_docker_exposed_ports`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb_role_docker_ulimits`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_exposed_ports:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb_role_docker_ulimits:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_exposed_ports:
+        ```
 
-        ??? variable string "`mariadb_role_docker_userns_mode`"
+    ??? variable string "`mariadb_role_docker_force_kill`{ .sb-show-on-unchecked }`mariadb2_docker_force_kill`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_userns_mode:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_force_kill:
+        ```
 
-        ??? variable string "`mariadb_role_docker_uts`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_force_kill:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb_role_docker_uts:
-            ```
+    ??? variable list "`mariadb_role_docker_groups`{ .sb-show-on-unchecked }`mariadb2_docker_groups`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_groups:
+        ```
 
-        ##### Resource Limits
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_groups:
+        ```
 
-        ??? variable int "`mariadb2_docker_blkio_weight`"
+    ??? variable int "`mariadb_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`mariadb2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            mariadb2_docker_blkio_weight:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_healthy_wait_timeout:
+        ```
 
-        ??? variable int "`mariadb2_docker_cpu_period`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_healthy_wait_timeout:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb2_docker_cpu_period:
-            ```
+    ??? variable string "`mariadb_role_docker_ipc_mode`{ .sb-show-on-unchecked }`mariadb2_docker_ipc_mode`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb2_docker_cpu_quota`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_ipc_mode:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb2_docker_cpu_quota:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_ipc_mode:
+        ```
 
-        ??? variable int "`mariadb2_docker_cpu_shares`"
+    ??? variable string "`mariadb_role_docker_kill_signal`{ .sb-show-on-unchecked }`mariadb2_docker_kill_signal`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: int
-            mariadb2_docker_cpu_shares:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_kill_signal:
+        ```
 
-        ??? variable string "`mariadb2_docker_cpus`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_kill_signal:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_cpus:
-            ```
+    ??? variable dict "`mariadb_role_docker_labels`{ .sb-show-on-unchecked }`mariadb2_docker_labels`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb2_docker_cpuset_cpus`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_labels:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_cpuset_cpus:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_labels:
+        ```
 
-        ??? variable string "`mariadb2_docker_cpuset_mems`"
+    ??? variable string "`mariadb_role_docker_labels_use_common`{ .sb-show-on-unchecked }`mariadb2_docker_labels_use_common`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_cpuset_mems:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_labels_use_common:
+        ```
 
-        ??? variable string "`mariadb2_docker_kernel_memory`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_labels_use_common:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_kernel_memory:
-            ```
+    ??? variable list "`mariadb_role_docker_links`{ .sb-show-on-unchecked }`mariadb2_docker_links`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb2_docker_memory`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_links:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_memory:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_links:
+        ```
 
-        ??? variable string "`mariadb2_docker_memory_reservation`"
+    ??? variable bool "`mariadb_role_docker_oom_killer`{ .sb-show-on-unchecked }`mariadb2_docker_oom_killer`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_memory_reservation:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_oom_killer:
+        ```
 
-        ??? variable string "`mariadb2_docker_memory_swap`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_oom_killer:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_memory_swap:
-            ```
+    ??? variable int "`mariadb_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`mariadb2_docker_oom_score_adj`{ .sb-show-on-checked }"
 
-        ??? variable int "`mariadb2_docker_memory_swappiness`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_oom_score_adj:
+        ```
 
-            ```yaml
-            # Type: int
-            mariadb2_docker_memory_swappiness:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_oom_score_adj:
+        ```
 
-        ##### Security & Devices
+    ??? variable bool "`mariadb_role_docker_paused`{ .sb-show-on-unchecked }`mariadb2_docker_paused`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb2_docker_cap_drop`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_paused:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_cap_drop:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_paused:
+        ```
 
-        ??? variable list "`mariadb2_docker_device_cgroup_rules`"
+    ??? variable string "`mariadb_role_docker_pid_mode`{ .sb-show-on-unchecked }`mariadb2_docker_pid_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_cgroup_rules:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_pid_mode:
+        ```
 
-        ??? variable list "`mariadb2_docker_device_read_bps`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_pid_mode:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_read_bps:
-            ```
+    ??? variable list "`mariadb_role_docker_ports`{ .sb-show-on-unchecked }`mariadb2_docker_ports`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb2_docker_device_read_iops`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_ports:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_read_iops:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_ports:
+        ```
 
-        ??? variable list "`mariadb2_docker_device_requests`"
+    ??? variable bool "`mariadb_role_docker_read_only`{ .sb-show-on-unchecked }`mariadb2_docker_read_only`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_requests:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_read_only:
+        ```
 
-        ??? variable list "`mariadb2_docker_device_write_bps`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_read_only:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_write_bps:
-            ```
+    ??? variable bool "`mariadb_role_docker_recreate`{ .sb-show-on-unchecked }`mariadb2_docker_recreate`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb2_docker_device_write_iops`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_recreate:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_device_write_iops:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_recreate:
+        ```
 
-        ??? variable list "`mariadb2_docker_devices`"
+    ??? variable int "`mariadb_role_docker_restart_retries`{ .sb-show-on-unchecked }`mariadb2_docker_restart_retries`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_devices:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_restart_retries:
+        ```
 
-        ??? variable string "`mariadb2_docker_devices_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_restart_retries:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_devices_default:
-            ```
+    ??? variable string "`mariadb_role_docker_runtime`{ .sb-show-on-unchecked }`mariadb2_docker_runtime`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb2_docker_privileged`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_runtime:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_privileged:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_runtime:
+        ```
 
-        ??? variable list "`mariadb2_docker_security_opts`"
+    ??? variable string "`mariadb_role_docker_shm_size`{ .sb-show-on-unchecked }`mariadb2_docker_shm_size`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_security_opts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_shm_size:
+        ```
 
-        ##### Networking
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_shm_size:
+        ```
 
-        ??? variable list "`mariadb2_docker_dns_opts`"
+    ??? variable int "`mariadb_role_docker_stop_timeout`{ .sb-show-on-unchecked }`mariadb2_docker_stop_timeout`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_dns_opts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        mariadb_role_docker_stop_timeout:
+        ```
 
-        ??? variable list "`mariadb2_docker_dns_search_domains`"
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        mariadb2_docker_stop_timeout:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_dns_search_domains:
-            ```
+    ??? variable dict "`mariadb_role_docker_storage_opts`{ .sb-show-on-unchecked }`mariadb2_docker_storage_opts`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb2_docker_dns_servers`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        mariadb_role_docker_storage_opts:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_dns_servers:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        mariadb2_docker_storage_opts:
+        ```
 
-        ??? variable dict "`mariadb2_docker_hosts`"
+    ??? variable list "`mariadb_role_docker_sysctls`{ .sb-show-on-unchecked }`mariadb2_docker_sysctls`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            mariadb2_docker_hosts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_sysctls:
+        ```
 
-        ??? variable string "`mariadb2_docker_hosts_use_common`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_sysctls:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_hosts_use_common:
-            ```
+    ??? variable list "`mariadb_role_docker_tmpfs`{ .sb-show-on-unchecked }`mariadb2_docker_tmpfs`{ .sb-show-on-checked }"
 
-        ??? variable string "`mariadb2_docker_network_mode`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_tmpfs:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_network_mode:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_tmpfs:
+        ```
 
-        ##### Storage
+    ??? variable list "`mariadb_role_docker_ulimits`{ .sb-show-on-unchecked }`mariadb2_docker_ulimits`{ .sb-show-on-checked }"
 
-        ??? variable bool "`mariadb2_docker_keep_volumes`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        mariadb_role_docker_ulimits:
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_keep_volumes:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        mariadb2_docker_ulimits:
+        ```
 
-        ??? variable list "`mariadb2_docker_mounts`"
+    ??? variable string "`mariadb_role_docker_userns_mode`{ .sb-show-on-unchecked }`mariadb2_docker_userns_mode`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_mounts:
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_userns_mode:
+        ```
 
-        ??? variable string "`mariadb2_docker_volume_driver`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_userns_mode:
+        ```
 
-            ```yaml
-            # Type: string
-            mariadb2_docker_volume_driver:
-            ```
+    ??? variable string "`mariadb_role_docker_uts`{ .sb-show-on-unchecked }`mariadb2_docker_uts`{ .sb-show-on-checked }"
 
-        ??? variable list "`mariadb2_docker_volumes_from`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_uts:
+        ```
 
-            ```yaml
-            # Type: list
-            mariadb2_docker_volumes_from:
-            ```
-
-        ??? variable string "`mariadb2_docker_volumes_global`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_volumes_global:
-            ```
-
-        ??? variable string "`mariadb2_docker_working_dir`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_working_dir:
-            ```
-
-        ##### Monitoring & Lifecycle
-
-        ??? variable dict "`mariadb2_docker_healthcheck`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_healthcheck:
-            ```
-
-        ??? variable bool "`mariadb2_docker_init`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_init:
-            ```
-
-        ??? variable string "`mariadb2_docker_log_driver`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_log_driver:
-            ```
-
-        ??? variable dict "`mariadb2_docker_log_options`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_log_options:
-            ```
-
-        ??? variable bool "`mariadb2_docker_output_logs`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_output_logs:
-            ```
-
-        ##### Other Options
-
-        ??? variable bool "`mariadb2_docker_auto_remove`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_auto_remove:
-            ```
-
-        ??? variable list "`mariadb2_docker_capabilities`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_capabilities:
-            ```
-
-        ??? variable string "`mariadb2_docker_cgroup_parent`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_cgroup_parent:
-            ```
-
-        ??? variable string "`mariadb2_docker_cgroupns_mode`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_cgroupns_mode:
-            ```
-
-        ??? variable bool "`mariadb2_docker_cleanup`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_cleanup:
-            ```
-
-        ??? variable list "`mariadb2_docker_commands`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_commands:
-            ```
-
-        ??? variable string "`mariadb2_docker_create_timeout`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_create_timeout:
-            ```
-
-        ??? variable string "`mariadb2_docker_domainname`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_domainname:
-            ```
-
-        ??? variable string "`mariadb2_docker_entrypoint`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_entrypoint:
-            ```
-
-        ??? variable string "`mariadb2_docker_env_file`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_env_file:
-            ```
-
-        ??? variable list "`mariadb2_docker_exposed_ports`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_exposed_ports:
-            ```
-
-        ??? variable string "`mariadb2_docker_force_kill`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_force_kill:
-            ```
-
-        ??? variable list "`mariadb2_docker_groups`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_groups:
-            ```
-
-        ??? variable int "`mariadb2_docker_healthy_wait_timeout`"
-
-            ```yaml
-            # Type: int
-            mariadb2_docker_healthy_wait_timeout:
-            ```
-
-        ??? variable string "`mariadb2_docker_ipc_mode`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_ipc_mode:
-            ```
-
-        ??? variable string "`mariadb2_docker_kill_signal`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_kill_signal:
-            ```
-
-        ??? variable dict "`mariadb2_docker_labels`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_labels:
-            ```
-
-        ??? variable string "`mariadb2_docker_labels_use_common`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_labels_use_common:
-            ```
-
-        ??? variable list "`mariadb2_docker_links`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_links:
-            ```
-
-        ??? variable bool "`mariadb2_docker_oom_killer`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_oom_killer:
-            ```
-
-        ??? variable int "`mariadb2_docker_oom_score_adj`"
-
-            ```yaml
-            # Type: int
-            mariadb2_docker_oom_score_adj:
-            ```
-
-        ??? variable bool "`mariadb2_docker_paused`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_paused:
-            ```
-
-        ??? variable string "`mariadb2_docker_pid_mode`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_pid_mode:
-            ```
-
-        ??? variable list "`mariadb2_docker_ports`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_ports:
-            ```
-
-        ??? variable bool "`mariadb2_docker_read_only`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_read_only:
-            ```
-
-        ??? variable bool "`mariadb2_docker_recreate`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_docker_recreate:
-            ```
-
-        ??? variable int "`mariadb2_docker_restart_retries`"
-
-            ```yaml
-            # Type: int
-            mariadb2_docker_restart_retries:
-            ```
-
-        ??? variable string "`mariadb2_docker_runtime`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_runtime:
-            ```
-
-        ??? variable string "`mariadb2_docker_shm_size`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_shm_size:
-            ```
-
-        ??? variable int "`mariadb2_docker_stop_timeout`"
-
-            ```yaml
-            # Type: int
-            mariadb2_docker_stop_timeout:
-            ```
-
-        ??? variable dict "`mariadb2_docker_storage_opts`"
-
-            ```yaml
-            # Type: dict
-            mariadb2_docker_storage_opts:
-            ```
-
-        ??? variable list "`mariadb2_docker_sysctls`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_sysctls:
-            ```
-
-        ??? variable list "`mariadb2_docker_tmpfs`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_tmpfs:
-            ```
-
-        ??? variable list "`mariadb2_docker_ulimits`"
-
-            ```yaml
-            # Type: list
-            mariadb2_docker_ulimits:
-            ```
-
-        ??? variable string "`mariadb2_docker_userns_mode`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_userns_mode:
-            ```
-
-        ??? variable string "`mariadb2_docker_uts`"
-
-            ```yaml
-            # Type: string
-            mariadb2_docker_uts:
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_uts:
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`mariadb_role_autoheal_enabled`{ .sb-show-on-unchecked }`mariadb2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        mariadb_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`mariadb_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        mariadb2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`mariadb_role_depends_on`{ .sb-show-on-unchecked }`mariadb2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        mariadb_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        mariadb2_depends_on: ""
+        ```
+
+    ??? variable string "`mariadb_role_depends_on_delay`{ .sb-show-on-unchecked }`mariadb2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        mariadb_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        mariadb2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`mariadb_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`mariadb2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        mariadb_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        mariadb2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`mariadb_role_diun_enabled`{ .sb-show-on-unchecked }`mariadb2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        mariadb_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        mariadb2_diun_enabled: true
+        ```
+
+    ??? variable bool "`mariadb_role_dns_enabled`{ .sb-show-on-unchecked }`mariadb2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        mariadb_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        mariadb2_dns_enabled: true
+        ```
+
+    ??? variable bool "`mariadb_role_docker_controller`{ .sb-show-on-unchecked }`mariadb2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        mariadb_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        mariadb2_docker_controller: true
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`mariadb2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`mariadb2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`mariadb_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        mariadb_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        mariadb2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`mariadb_role_web_fqdn_override`{ .sb-show-on-unchecked }`mariadb2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        mariadb_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        mariadb2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            mariadb_role_autoheal_enabled: true
+            mariadb_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "mariadb2.{{ user.domain }}"
+              - "mariadb.otherdomain.tld"
             ```
 
-        ??? variable string "`mariadb_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            mariadb_role_depends_on: ""
+            mariadb2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "mariadb2.{{ user.domain }}"
+              - "mariadb.otherdomain.tld"
             ```
 
-        ??? variable string "`mariadb_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`mariadb_role_web_host_override`{ .sb-show-on-unchecked }`mariadb2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        mariadb_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        mariadb2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            mariadb_role_depends_on_delay: "0"
+            mariadb_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'mariadb2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`mariadb_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            mariadb_role_depends_on_healthchecks:
+            mariadb2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'mariadb2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`mariadb_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            mariadb_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`mariadb_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            mariadb_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`mariadb_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            mariadb_role_docker_controller: true
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`mariadb_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            mariadb_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`mariadb_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            mariadb_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                mariadb_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "mariadb2.{{ user.domain }}"
-                  - "mariadb.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`mariadb_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            mariadb_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                mariadb_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'mariadb2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`mariadb_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            mariadb_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `mariadb2`):
-
-        ??? variable bool "`mariadb2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            mariadb2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`mariadb2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            mariadb2_depends_on: ""
-            ```
-
-        ??? variable string "`mariadb2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            mariadb2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`mariadb2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            mariadb2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`mariadb2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            mariadb2_diun_enabled: true
-            ```
-
-        ??? variable bool "`mariadb2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            mariadb2_dns_enabled: true
-            ```
-
-        ??? variable bool "`mariadb2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            mariadb2_docker_controller: true
-            ```
-
-        ??? variable bool "`mariadb2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`mariadb2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`mariadb2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`mariadb2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`mariadb2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`mariadb2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            mariadb2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`mariadb2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`mariadb2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`mariadb2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            mariadb2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`mariadb2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            mariadb2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                mariadb2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "mariadb2.{{ user.domain }}"
-                  - "mariadb.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`mariadb2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            mariadb2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                mariadb2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'mariadb2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`mariadb2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            mariadb2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`mariadb_role_web_scheme`{ .sb-show-on-unchecked }`mariadb2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        mariadb_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        mariadb2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

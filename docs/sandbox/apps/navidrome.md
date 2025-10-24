@@ -50,14 +50,11 @@ sb install sandbox-navidrome
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    navidrome_name: "custom_value"
+    ```
 
-        ```yaml
-        navidrome_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `navidrome_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -196,7 +193,8 @@ sb install sandbox-navidrome
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_container`"
 
@@ -205,7 +203,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_container: "{{ navidrome_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`navidrome_role_docker_image_pull`"
 
@@ -235,7 +234,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='navidrome') }}:{{ lookup('role_var', '_docker_image_tag', role='navidrome') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`navidrome_role_docker_volumes_default`"
 
@@ -253,7 +253,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_hostname`"
 
@@ -262,7 +263,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_hostname: "{{ navidrome_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_networks_alias`"
 
@@ -285,7 +287,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_restart_policy`"
 
@@ -294,7 +297,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_state`"
 
@@ -303,7 +307,8 @@ sb install sandbox-navidrome
         navidrome_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`navidrome_role_docker_user`"
 
@@ -445,10 +450,10 @@ sb install sandbox-navidrome
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        navidrome_role_web_fqdn_override: # (1)!
+        navidrome_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             navidrome_role_web_fqdn_override:
@@ -464,10 +469,10 @@ sb install sandbox-navidrome
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        navidrome_role_web_host_override: # (1)!
+        navidrome_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             navidrome_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'navidrome2.' + user.domain }}`)"

@@ -124,14 +124,11 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    guacamole_name: "custom_value"
+    ```
 
-        ```yaml
-        guacamole_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `guacamole_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -328,7 +325,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`guacamole_role_docker_container`"
 
@@ -337,7 +335,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_container: "{{ guacamole_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`guacamole_role_docker_image_pull`"
 
@@ -367,7 +366,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='guacamole') }}:{{ lookup('role_var', '_docker_image_tag', role='guacamole') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`guacamole_role_docker_envs_default`"
 
@@ -394,7 +394,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`guacamole_role_docker_volumes_default`"
 
@@ -411,7 +412,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`guacamole_role_docker_hostname`"
 
@@ -420,7 +422,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_hostname: "{{ guacamole_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`guacamole_role_docker_networks_alias`"
 
@@ -443,7 +446,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`guacamole_role_docker_restart_policy`"
 
@@ -452,7 +456,8 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`guacamole_role_docker_state`"
 
@@ -594,10 +599,10 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        guacamole_role_web_fqdn_override: # (1)!
+        guacamole_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             guacamole_role_web_fqdn_override:
@@ -613,10 +618,10 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        guacamole_role_web_host_override: # (1)!
+        guacamole_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             guacamole_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'guacamole2.' + user.domain }}`)"

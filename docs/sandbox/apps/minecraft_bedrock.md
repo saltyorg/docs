@@ -42,14 +42,11 @@ By default, the server will be using the latest version available. To choose a s
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    minecraft_bedrock_name: "custom_value"
+    ```
 
-        ```yaml
-        minecraft_bedrock_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `minecraft_bedrock_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -130,7 +127,8 @@ By default, the server will be using the latest version available. To choose a s
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`minecraft_bedrock_role_docker_container`"
 
@@ -139,7 +137,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_container: "{{ minecraft_bedrock_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`minecraft_bedrock_role_docker_image_pull`"
 
@@ -169,7 +168,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='minecraft_bedrock') }}:{{ lookup('role_var', '_docker_image_tag', role='minecraft_bedrock') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`minecraft_bedrock_role_docker_ports_defaults`"
 
@@ -186,7 +186,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`minecraft_bedrock_role_docker_envs_default`"
 
@@ -207,7 +208,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`minecraft_bedrock_role_docker_volumes_default`"
 
@@ -224,7 +226,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`minecraft_bedrock_role_docker_hostname`"
 
@@ -233,7 +236,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_hostname: "{{ minecraft_bedrock_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`minecraft_bedrock_role_docker_networks_alias`"
 
@@ -256,7 +260,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`minecraft_bedrock_role_docker_restart_policy`"
 
@@ -265,7 +270,8 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`minecraft_bedrock_role_docker_state`"
 
@@ -407,10 +413,10 @@ By default, the server will be using the latest version available. To choose a s
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        minecraft_bedrock_role_web_fqdn_override: # (1)!
+        minecraft_bedrock_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             minecraft_bedrock_role_web_fqdn_override:
@@ -426,10 +432,10 @@ By default, the server will be using the latest version available. To choose a s
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        minecraft_bedrock_role_web_host_override: # (1)!
+        minecraft_bedrock_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             minecraft_bedrock_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'minecraft_bedrock2.' + user.domain }}`)"

@@ -37,14 +37,11 @@ sb install sandbox-koel
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    koel_name: "custom_value"
+    ```
 
-        ```yaml
-        koel_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `koel_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -183,7 +180,8 @@ sb install sandbox-koel
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`koel_role_docker_container`"
 
@@ -192,7 +190,8 @@ sb install sandbox-koel
         koel_role_docker_container: "{{ koel_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`koel_role_docker_image_pull`"
 
@@ -222,7 +221,8 @@ sb install sandbox-koel
         koel_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='koel') }}:{{ lookup('role_var', '_docker_image_tag', role='koel') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`koel_role_docker_envs_default`"
 
@@ -248,7 +248,8 @@ sb install sandbox-koel
         koel_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`koel_role_docker_volumes_default`"
 
@@ -267,7 +268,8 @@ sb install sandbox-koel
         koel_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`koel_role_docker_hostname`"
 
@@ -276,7 +278,8 @@ sb install sandbox-koel
         koel_role_docker_hostname: "{{ koel_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`koel_role_docker_networks_alias`"
 
@@ -299,7 +302,8 @@ sb install sandbox-koel
         koel_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`koel_role_docker_restart_policy`"
 
@@ -308,7 +312,8 @@ sb install sandbox-koel
         koel_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`koel_role_docker_state`"
 
@@ -317,7 +322,8 @@ sb install sandbox-koel
         koel_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`koel_role_depends_on`"
 
@@ -473,10 +479,10 @@ sb install sandbox-koel
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        koel_role_web_fqdn_override: # (1)!
+        koel_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             koel_role_web_fqdn_override:
@@ -492,10 +498,10 @@ sb install sandbox-koel
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        koel_role_web_host_override: # (1)!
+        koel_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             koel_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'koel2.' + user.domain }}`)"

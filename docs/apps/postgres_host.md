@@ -42,11 +42,9 @@ Configure per-version users, databases, and access control using `postgres_host_
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
-
-        ```yaml
-        postgres_host_role_versions: ["17", "18"]
-        ```
+    ```yaml title="Example Override"
+    postgres_host_role_versions: ["17", "18"]
+    ```
 
 === "Basics"
 
@@ -280,10 +278,10 @@ Configure per-version users, databases, and access control using `postgres_host_
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        postgres_host_role_web_fqdn_override: # (1)!
+        postgres_host_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             postgres_host_role_web_fqdn_override:
@@ -299,10 +297,10 @@ Configure per-version users, databases, and access control using `postgres_host_
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        postgres_host_role_web_host_override: # (1)!
+        postgres_host_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             postgres_host_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres_host2.' + user.domain }}`)"

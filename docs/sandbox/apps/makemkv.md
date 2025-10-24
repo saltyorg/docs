@@ -39,14 +39,11 @@ sb install sandbox-makemkv
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    makemkv_name: "custom_value"
+    ```
 
-        ```yaml
-        makemkv_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `makemkv_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -185,7 +182,8 @@ sb install sandbox-makemkv
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`makemkv_role_docker_container`"
 
@@ -194,7 +192,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_container: "{{ makemkv_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`makemkv_role_docker_image_pull`"
 
@@ -224,7 +223,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='makemkv') }}:{{ lookup('role_var', '_docker_image_tag', role='makemkv') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`makemkv_role_docker_envs_default`"
 
@@ -244,7 +244,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`makemkv_role_docker_volumes_default`"
 
@@ -263,7 +264,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`makemkv_role_docker_hostname`"
 
@@ -272,7 +274,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_hostname: "{{ makemkv_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`makemkv_role_docker_networks_alias`"
 
@@ -295,7 +298,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`makemkv_role_docker_restart_policy`"
 
@@ -304,7 +308,8 @@ sb install sandbox-makemkv
         makemkv_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`makemkv_role_docker_state`"
 
@@ -446,10 +451,10 @@ sb install sandbox-makemkv
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        makemkv_role_web_fqdn_override: # (1)!
+        makemkv_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             makemkv_role_web_fqdn_override:
@@ -465,10 +470,10 @@ sb install sandbox-makemkv
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        makemkv_role_web_host_override: # (1)!
+        makemkv_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             makemkv_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'makemkv2.' + user.domain }}`)"

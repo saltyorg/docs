@@ -26,14 +26,11 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    a_train_name: "custom_value"
+    ```
 
-        ```yaml
-        a_train_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `a_train_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -96,7 +93,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_container`"
 
@@ -105,7 +103,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_container: "{{ a_train_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`a_train_role_docker_image_pull`"
 
@@ -135,7 +134,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='a_train') }}:{{ lookup('role_var', '_docker_image_tag', role='a_train') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`a_train_role_docker_envs_default`"
 
@@ -152,7 +152,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`a_train_role_docker_volumes_default`"
 
@@ -169,7 +170,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_hostname`"
 
@@ -178,7 +180,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_hostname: "{{ a_train_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_networks_alias`"
 
@@ -201,7 +204,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_restart_policy`"
 
@@ -210,7 +214,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_state`"
 
@@ -219,7 +224,8 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`a_train_role_docker_user`"
 
@@ -361,10 +367,10 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        a_train_role_web_fqdn_override: # (1)!
+        a_train_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             a_train_role_web_fqdn_override:
@@ -380,10 +386,10 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        a_train_role_web_host_override: # (1)!
+        a_train_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             a_train_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'a_train2.' + user.domain }}`)"

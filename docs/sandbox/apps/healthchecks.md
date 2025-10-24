@@ -40,14 +40,11 @@ sb install sandbox-healthchecks
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    healthchecks_name: "custom_value"
+    ```
 
-        ```yaml
-        healthchecks_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `healthchecks_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -193,7 +190,8 @@ sb install sandbox-healthchecks
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`healthchecks_role_docker_container`"
 
@@ -202,7 +200,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_container: "{{ healthchecks_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`healthchecks_role_docker_image_pull`"
 
@@ -232,7 +231,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='healthchecks') }}:{{ lookup('role_var', '_docker_image_tag', role='healthchecks') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`healthchecks_role_docker_envs_default`"
 
@@ -257,7 +257,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`healthchecks_role_docker_volumes_default`"
 
@@ -274,7 +275,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`healthchecks_role_docker_hostname`"
 
@@ -283,7 +285,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_hostname: "{{ healthchecks_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`healthchecks_role_docker_networks_alias`"
 
@@ -306,7 +309,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`healthchecks_role_docker_restart_policy`"
 
@@ -315,7 +319,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`healthchecks_role_docker_state`"
 
@@ -324,7 +329,8 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_state: started
         ```
 
-    ##### Force Kill
+    Force Kill
+    { .sb-h5 }
 
     ??? variable bool "`healthchecks_role_docker_force_kill`"
 
@@ -466,10 +472,10 @@ sb install sandbox-healthchecks
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        healthchecks_role_web_fqdn_override: # (1)!
+        healthchecks_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             healthchecks_role_web_fqdn_override:
@@ -485,10 +491,10 @@ sb install sandbox-healthchecks
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        healthchecks_role_web_host_override: # (1)!
+        healthchecks_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             healthchecks_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'healthchecks2.' + user.domain }}`)"

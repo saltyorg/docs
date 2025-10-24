@@ -46,14 +46,11 @@ sb install sandbox-jdownloader2
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    jdownloader2_name: "custom_value"
+    ```
 
-        ```yaml
-        jdownloader2_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `jdownloader2_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -206,7 +203,8 @@ sb install sandbox-jdownloader2
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`jdownloader2_role_docker_container`"
 
@@ -215,7 +213,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_container: "{{ jdownloader2_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`jdownloader2_role_docker_image_pull`"
 
@@ -245,7 +244,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jdownloader2') }}:{{ lookup('role_var', '_docker_image_tag', role='jdownloader2') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`jdownloader2_role_docker_envs_default`"
 
@@ -270,7 +270,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`jdownloader2_role_docker_volumes_default`"
 
@@ -288,7 +289,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`jdownloader2_role_docker_hostname`"
 
@@ -297,7 +299,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_hostname: "{{ jdownloader2_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`jdownloader2_role_docker_networks_alias`"
 
@@ -320,7 +323,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`jdownloader2_role_docker_restart_policy`"
 
@@ -329,7 +333,8 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`jdownloader2_role_docker_state`"
 
@@ -471,10 +476,10 @@ sb install sandbox-jdownloader2
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        jdownloader2_role_web_fqdn_override: # (1)!
+        jdownloader2_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             jdownloader2_role_web_fqdn_override:
@@ -490,10 +495,10 @@ sb install sandbox-jdownloader2
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        jdownloader2_role_web_host_override: # (1)!
+        jdownloader2_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             jdownloader2_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jdownloader22.' + user.domain }}`)"

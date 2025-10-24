@@ -36,14 +36,11 @@ sb install sandbox-embystat
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    embystat_name: "custom_value"
+    ```
 
-        ```yaml
-        embystat_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `embystat_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -182,7 +179,8 @@ sb install sandbox-embystat
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`embystat_role_docker_container`"
 
@@ -191,7 +189,8 @@ sb install sandbox-embystat
         embystat_role_docker_container: "{{ embystat_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`embystat_role_docker_image_pull`"
 
@@ -221,7 +220,8 @@ sb install sandbox-embystat
         embystat_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='embystat') }}:{{ lookup('role_var', '_docker_image_tag', role='embystat') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`embystat_role_docker_volumes_default`"
 
@@ -238,7 +238,8 @@ sb install sandbox-embystat
         embystat_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`embystat_role_docker_hostname`"
 
@@ -247,7 +248,8 @@ sb install sandbox-embystat
         embystat_role_docker_hostname: "{{ embystat_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`embystat_role_docker_networks_alias`"
 
@@ -270,7 +272,8 @@ sb install sandbox-embystat
         embystat_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`embystat_role_docker_restart_policy`"
 
@@ -279,7 +282,8 @@ sb install sandbox-embystat
         embystat_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`embystat_role_docker_state`"
 
@@ -421,10 +425,10 @@ sb install sandbox-embystat
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        embystat_role_web_fqdn_override: # (1)!
+        embystat_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             embystat_role_web_fqdn_override:
@@ -440,10 +444,10 @@ sb install sandbox-embystat
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        embystat_role_web_host_override: # (1)!
+        embystat_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             embystat_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'embystat2.' + user.domain }}`)"

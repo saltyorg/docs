@@ -37,14 +37,11 @@ sb install sandbox-elasticsearch
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    elasticsearch_name: "custom_value"
+    ```
 
-        ```yaml
-        elasticsearch_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `elasticsearch_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -114,7 +111,8 @@ sb install sandbox-elasticsearch
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_container`"
 
@@ -123,7 +121,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_container: "{{ elasticsearch_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`elasticsearch_role_docker_image_pull`"
 
@@ -153,7 +152,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='elasticsearch') }}:{{ lookup('role_var', '_docker_image_tag', role='elasticsearch') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`elasticsearch_role_docker_envs_default`"
 
@@ -174,7 +174,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`elasticsearch_role_docker_volumes_default`"
 
@@ -191,7 +192,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_hostname`"
 
@@ -200,7 +202,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_hostname: "{{ elasticsearch_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_networks_alias`"
 
@@ -223,7 +226,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_restart_policy`"
 
@@ -232,7 +236,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_state`"
 
@@ -241,7 +246,8 @@ sb install sandbox-elasticsearch
         elasticsearch_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`elasticsearch_role_docker_user`"
 
@@ -383,10 +389,10 @@ sb install sandbox-elasticsearch
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        elasticsearch_role_web_fqdn_override: # (1)!
+        elasticsearch_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             elasticsearch_role_web_fqdn_override:
@@ -402,10 +408,10 @@ sb install sandbox-elasticsearch
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        elasticsearch_role_web_host_override: # (1)!
+        elasticsearch_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             elasticsearch_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'elasticsearch2.' + user.domain }}`)"

@@ -56,24 +56,19 @@ sb install sandbox-jellyseerr
 
     This role supports multiple instances via `jellyseerr_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of jellyseerr:" }
+    jellyseerr_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of jellyseerr:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `jellyseerr2`):" }
+    jellyseerr2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        jellyseerr_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `jellyseerr2`):
-
-        ```yaml
-        jellyseerr2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `jellyseerr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -88,7 +83,7 @@ sb install sandbox-jellyseerr
         jellyseerr_instances: ["jellyseerr"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -97,896 +92,751 @@ sb install sandbox-jellyseerr
 
 === "Settings"
 
-    === "Role-level"
+    ??? variable string "`jellyseerr_role_log_level`{ .sb-show-on-unchecked }`jellyseerr2_log_level`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_log_level`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_log_level: "INFO"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_log_level: "INFO"
-            ```
-
-    === "Instance-level"
-
-        ??? variable string "`jellyseerr2_log_level`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_log_level: "INFO"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_log_level: "INFO"
+        ```
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`jellyseerr_role_paths_folder`{ .sb-show-on-unchecked }`jellyseerr2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_paths_folder: "{{ jellyseerr_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_paths_folder: "{{ jellyseerr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_paths_folder: "{{ jellyseerr_name }}"
+        ```
 
-        ??? variable string "`jellyseerr_role_paths_location`"
+    ??? variable string "`jellyseerr_role_paths_location`{ .sb-show-on-unchecked }`jellyseerr2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
+        ```
 
-    === "Instance-level"
-
-        ??? variable string "`jellyseerr2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_paths_folder: "{{ jellyseerr_name }}"
-            ```
-
-        ??? variable string "`jellyseerr2_paths_location`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
+        ```
 
 === "Web"
 
-    === "Role-level"
+    ??? variable string "`jellyseerr_role_web_subdomain`{ .sb-show-on-unchecked }`jellyseerr2_web_subdomain`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_web_subdomain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_web_subdomain: "{{ jellyseerr_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_web_subdomain: "{{ jellyseerr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_web_subdomain: "{{ jellyseerr_name }}"
+        ```
 
-        ??? variable string "`jellyseerr_role_web_domain`"
+    ??? variable string "`jellyseerr_role_web_domain`{ .sb-show-on-unchecked }`jellyseerr2_web_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_web_domain: "{{ user.domain }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_web_domain: "{{ user.domain }}"
+        ```
 
-        ??? variable string "`jellyseerr_role_web_port`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_web_domain: "{{ user.domain }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_web_port: "5055"
-            ```
+    ??? variable string "`jellyseerr_role_web_port`{ .sb-show-on-unchecked }`jellyseerr2_web_port`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_web_url`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_web_port: "5055"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
-                                      if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_web_port: "5055"
+        ```
 
-    === "Instance-level"
+    ??? variable string "`jellyseerr_role_web_url`{ .sb-show-on-unchecked }`jellyseerr2_web_url`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr2_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_web_subdomain: "{{ jellyseerr_name }}"
-            ```
-
-        ??? variable string "`jellyseerr2_web_domain`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_web_domain: "{{ user.domain }}"
-            ```
-
-        ??? variable string "`jellyseerr2_web_port`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_web_port: "5055"
-            ```
-
-        ??? variable string "`jellyseerr2_web_url`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
                                   if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
                                   else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
-            ```
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
+                              if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
+                              else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
+        ```
 
 === "DNS"
 
-    === "Role-level"
+    ??? variable string "`jellyseerr_role_dns_record`{ .sb-show-on-unchecked }`jellyseerr2_dns_record`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_dns_record`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='jellyseerr') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='jellyseerr') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='jellyseerr') }}"
+        ```
 
-        ??? variable string "`jellyseerr_role_dns_zone`"
+    ??? variable string "`jellyseerr_role_dns_zone`{ .sb-show-on-unchecked }`jellyseerr2_dns_zone`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='jellyseerr') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='jellyseerr') }}"
+        ```
 
-        ??? variable bool "`jellyseerr_role_dns_proxy`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_dns_zone: "{{ lookup('role_var', '_web_domain', role='jellyseerr') }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_dns_proxy: "{{ dns_proxied }}"
-            ```
+    ??? variable bool "`jellyseerr_role_dns_proxy`{ .sb-show-on-unchecked }`jellyseerr2_dns_proxy`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_dns_proxy: "{{ dns_proxied }}"
+        ```
 
-        ??? variable string "`jellyseerr2_dns_record`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='jellyseerr') }}"
-            ```
-
-        ??? variable string "`jellyseerr2_dns_zone`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_dns_zone: "{{ lookup('role_var', '_web_domain', role='jellyseerr') }}"
-            ```
-
-        ??? variable bool "`jellyseerr2_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_dns_proxy: "{{ dns_proxied }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_dns_proxy: "{{ dns_proxied }}"
+        ```
 
 === "Traefik"
 
-    === "Role-level"
+    ??? variable string "`jellyseerr_role_traefik_sso_middleware`{ .sb-show-on-unchecked }`jellyseerr2_traefik_sso_middleware`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_traefik_sso_middleware: ""
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_traefik_sso_middleware: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_traefik_sso_middleware: ""
+        ```
 
-        ??? variable string "`jellyseerr_role_traefik_middleware_default`"
+    ??? variable string "`jellyseerr_role_traefik_middleware_default`{ .sb-show-on-unchecked }`jellyseerr2_traefik_middleware_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-        ??? variable string "`jellyseerr_role_traefik_middleware_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_traefik_middleware_custom: ""
-            ```
+    ??? variable string "`jellyseerr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`jellyseerr2_traefik_middleware_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_traefik_certresolver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_traefik_middleware_custom: ""
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_traefik_middleware_custom: ""
+        ```
 
-        ??? variable bool "`jellyseerr_role_traefik_enabled`"
+    ??? variable string "`jellyseerr_role_traefik_certresolver`{ .sb-show-on-unchecked }`jellyseerr2_traefik_certresolver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_enabled: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-        ??? variable bool "`jellyseerr_role_traefik_api_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_api_enabled: false
-            ```
+    ??? variable bool "`jellyseerr_role_traefik_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_traefik_api_endpoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_traefik_enabled: true
+        ```
 
-    === "Instance-level"
+    ??? variable bool "`jellyseerr_role_traefik_api_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_api_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr2_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_api_enabled: false
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr2_traefik_sso_middleware: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_traefik_api_enabled: false
+        ```
 
-        ??? variable string "`jellyseerr2_traefik_middleware_default`"
+    ??? variable string "`jellyseerr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`jellyseerr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr2_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_traefik_api_endpoint: ""
+        ```
 
-        ??? variable string "`jellyseerr2_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`jellyseerr2_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_traefik_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_api_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_traefik_api_enabled: false
-            ```
-
-        ??? variable string "`jellyseerr2_traefik_api_endpoint`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_traefik_api_endpoint: ""
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_traefik_api_endpoint: ""
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`jellyseerr_role_docker_container`{ .sb-show-on-unchecked }`jellyseerr2_docker_container`{ .sb-show-on-checked }"
 
-        ##### Container
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_container: "{{ jellyseerr_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_container: "{{ jellyseerr_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`jellyseerr_role_docker_image_pull`{ .sb-show-on-unchecked }`jellyseerr2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_docker_image_pull: true
+        ```
+
+    ??? variable string "`jellyseerr_role_docker_image_repo`{ .sb-show-on-unchecked }`jellyseerr2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_image_repo: "fallenbagel/jellyseerr"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_image_repo: "fallenbagel/jellyseerr"
+        ```
+
+    ??? variable string "`jellyseerr_role_docker_image_tag`{ .sb-show-on-unchecked }`jellyseerr2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_image_tag: "latest"
+        ```
 
-        ??? variable string "`jellyseerr_role_docker_container`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`jellyseerr_role_docker_image`{ .sb-show-on-unchecked }`jellyseerr2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jellyseerr') }}:{{ lookup('role_var', '_docker_image_tag', role='jellyseerr') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_container: "{{ jellyseerr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jellyseerr') }}:{{ lookup('role_var', '_docker_image_tag', role='jellyseerr') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`jellyseerr_role_docker_envs_default`{ .sb-show-on-unchecked }`jellyseerr2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        jellyseerr_role_docker_envs_default: 
+          UMASK: "002"
+          TZ: "{{ tz }}"
+          LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        jellyseerr2_docker_envs_default: 
+          UMASK: "002"
+          TZ: "{{ tz }}"
+          LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
+        ```
+
+    ??? variable dict "`jellyseerr_role_docker_envs_custom`{ .sb-show-on-unchecked }`jellyseerr2_docker_envs_custom`{ .sb-show-on-checked }"
 
-        ##### Image
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        jellyseerr_role_docker_envs_custom: {}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        jellyseerr2_docker_envs_custom: {}
+        ```
+
+    Volumes
+    { .sb-h5 }
 
-        ??? variable bool "`jellyseerr_role_docker_image_pull`"
+    ??? variable list "`jellyseerr_role_docker_volumes_default`{ .sb-show-on-unchecked }`jellyseerr2_docker_volumes_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_docker_image_pull: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyseerr_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
+        ```
 
-        ??? variable string "`jellyseerr_role_docker_image_repo`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyseerr2_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_image_repo: "fallenbagel/jellyseerr"
-            ```
+    ??? variable list "`jellyseerr_role_docker_volumes_custom`{ .sb-show-on-unchecked }`jellyseerr2_docker_volumes_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_docker_image_tag`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyseerr_role_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_image_tag: "latest"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyseerr2_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`jellyseerr_role_docker_image`"
+    Hostname
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jellyseerr') }}:{{ lookup('role_var', '_docker_image_tag', role='jellyseerr') }}"
-            ```
+    ??? variable string "`jellyseerr_role_docker_hostname`{ .sb-show-on-unchecked }`jellyseerr2_docker_hostname`{ .sb-show-on-checked }"
 
-        ##### Envs
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_hostname: "{{ jellyseerr_name }}"
+        ```
 
-        ??? variable dict "`jellyseerr_role_docker_envs_default`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_hostname: "{{ jellyseerr_name }}"
+        ```
 
-            ```yaml
-            # Type: dict
-            jellyseerr_role_docker_envs_default: 
-              UMASK: "002"
-              TZ: "{{ tz }}"
-              LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
-            ```
+    Networks
+    { .sb-h5 }
 
-        ??? variable dict "`jellyseerr_role_docker_envs_custom`"
+    ??? variable string "`jellyseerr_role_docker_networks_alias`{ .sb-show-on-unchecked }`jellyseerr2_docker_networks_alias`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: dict
-            jellyseerr_role_docker_envs_custom: {}
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_networks_alias: "{{ jellyseerr_name }}"
+        ```
 
-        ##### Volumes
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_networks_alias: "{{ jellyseerr_name }}"
+        ```
 
-        ??? variable list "`jellyseerr_role_docker_volumes_default`"
+    ??? variable list "`jellyseerr_role_docker_networks_default`{ .sb-show-on-unchecked }`jellyseerr2_docker_networks_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            jellyseerr_role_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyseerr_role_docker_networks_default: []
+        ```
 
-        ??? variable list "`jellyseerr_role_docker_volumes_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyseerr2_docker_networks_default: []
+        ```
 
-            ```yaml
-            # Type: list
-            jellyseerr_role_docker_volumes_custom: []
-            ```
+    ??? variable list "`jellyseerr_role_docker_networks_custom`{ .sb-show-on-unchecked }`jellyseerr2_docker_networks_custom`{ .sb-show-on-checked }"
 
-        ##### Hostname
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyseerr_role_docker_networks_custom: []
+        ```
 
-        ??? variable string "`jellyseerr_role_docker_hostname`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyseerr2_docker_networks_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_hostname: "{{ jellyseerr_name }}"
-            ```
+    Restart Policy
+    { .sb-h5 }
 
-        ##### Networks
+    ??? variable string "`jellyseerr_role_docker_restart_policy`{ .sb-show-on-unchecked }`jellyseerr2_docker_restart_policy`{ .sb-show-on-checked }"
 
-        ??? variable string "`jellyseerr_role_docker_networks_alias`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_restart_policy: unless-stopped
+        ```
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_networks_alias: "{{ jellyseerr_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_restart_policy: unless-stopped
+        ```
 
-        ??? variable list "`jellyseerr_role_docker_networks_default`"
+    State
+    { .sb-h5 }
 
-            ```yaml
-            # Type: list
-            jellyseerr_role_docker_networks_default: []
-            ```
+    ??? variable string "`jellyseerr_role_docker_state`{ .sb-show-on-unchecked }`jellyseerr2_docker_state`{ .sb-show-on-checked }"
 
-        ??? variable list "`jellyseerr_role_docker_networks_custom`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_state: started
+        ```
 
-            ```yaml
-            # Type: list
-            jellyseerr_role_docker_networks_custom: []
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_state: started
+        ```
 
-        ##### Restart Policy
+    User
+    { .sb-h5 }
 
-        ??? variable string "`jellyseerr_role_docker_restart_policy`"
+    ??? variable string "`jellyseerr_role_docker_user`{ .sb-show-on-unchecked }`jellyseerr2_docker_user`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_restart_policy: unless-stopped
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
-        ##### State
-
-        ??? variable string "`jellyseerr_role_docker_state`"
-
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`jellyseerr_role_docker_user`"
-
-            ```yaml
-            # Type: string
-            jellyseerr_role_docker_user: "{{ uid }}:{{ gid }}"
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`jellyseerr2_docker_container`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_container: "{{ jellyseerr_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`jellyseerr2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_docker_image_pull: true
-            ```
-
-        ??? variable string "`jellyseerr2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_image_repo: "fallenbagel/jellyseerr"
-            ```
-
-        ??? variable string "`jellyseerr2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_image_tag: "latest"
-            ```
-
-        ??? variable string "`jellyseerr2_docker_image`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jellyseerr') }}:{{ lookup('role_var', '_docker_image_tag', role='jellyseerr') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`jellyseerr2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            jellyseerr2_docker_envs_default: 
-              UMASK: "002"
-              TZ: "{{ tz }}"
-              LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
-            ```
-
-        ??? variable dict "`jellyseerr2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            jellyseerr2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`jellyseerr2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            jellyseerr2_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
-            ```
-
-        ??? variable list "`jellyseerr2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            jellyseerr2_docker_volumes_custom: []
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`jellyseerr2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_hostname: "{{ jellyseerr_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`jellyseerr2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_networks_alias: "{{ jellyseerr_name }}"
-            ```
-
-        ??? variable list "`jellyseerr2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            jellyseerr2_docker_networks_default: []
-            ```
-
-        ??? variable list "`jellyseerr2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            jellyseerr2_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`jellyseerr2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`jellyseerr2_docker_state`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`jellyseerr2_docker_user`"
-
-            ```yaml
-            # Type: string
-            jellyseerr2_docker_user: "{{ uid }}:{{ gid }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`jellyseerr_role_autoheal_enabled`{ .sb-show-on-unchecked }`jellyseerr2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        jellyseerr_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`jellyseerr_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        jellyseerr2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`jellyseerr_role_depends_on`{ .sb-show-on-unchecked }`jellyseerr2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        jellyseerr_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        jellyseerr2_depends_on: ""
+        ```
+
+    ??? variable string "`jellyseerr_role_depends_on_delay`{ .sb-show-on-unchecked }`jellyseerr2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        jellyseerr_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        jellyseerr2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`jellyseerr_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`jellyseerr2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        jellyseerr_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        jellyseerr2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`jellyseerr_role_diun_enabled`{ .sb-show-on-unchecked }`jellyseerr2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        jellyseerr_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        jellyseerr2_diun_enabled: true
+        ```
+
+    ??? variable bool "`jellyseerr_role_dns_enabled`{ .sb-show-on-unchecked }`jellyseerr2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        jellyseerr_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        jellyseerr2_dns_enabled: true
+        ```
+
+    ??? variable bool "`jellyseerr_role_docker_controller`{ .sb-show-on-unchecked }`jellyseerr2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        jellyseerr_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        jellyseerr2_docker_controller: true
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`jellyseerr2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`jellyseerr2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`jellyseerr_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        jellyseerr_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        jellyseerr2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`jellyseerr_role_web_fqdn_override`{ .sb-show-on-unchecked }`jellyseerr2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        jellyseerr_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        jellyseerr2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            jellyseerr_role_autoheal_enabled: true
+            jellyseerr_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "jellyseerr2.{{ user.domain }}"
+              - "jellyseerr.otherdomain.tld"
             ```
 
-        ??? variable string "`jellyseerr_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            jellyseerr_role_depends_on: ""
+            jellyseerr2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "jellyseerr2.{{ user.domain }}"
+              - "jellyseerr.otherdomain.tld"
             ```
 
-        ??? variable string "`jellyseerr_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`jellyseerr_role_web_host_override`{ .sb-show-on-unchecked }`jellyseerr2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        jellyseerr_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        jellyseerr2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            jellyseerr_role_depends_on_delay: "0"
+            jellyseerr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyseerr2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`jellyseerr_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            jellyseerr_role_depends_on_healthchecks:
+            jellyseerr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyseerr2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`jellyseerr_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            jellyseerr_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            jellyseerr_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            jellyseerr_role_docker_controller: true
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            jellyseerr_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`jellyseerr_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            jellyseerr_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                jellyseerr_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "jellyseerr2.{{ user.domain }}"
-                  - "jellyseerr.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`jellyseerr_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            jellyseerr_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                jellyseerr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyseerr2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`jellyseerr_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            jellyseerr_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `jellyseerr2`):
-
-        ??? variable bool "`jellyseerr2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            jellyseerr2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`jellyseerr2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            jellyseerr2_depends_on: ""
-            ```
-
-        ??? variable string "`jellyseerr2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            jellyseerr2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`jellyseerr2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            jellyseerr2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`jellyseerr2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            jellyseerr2_diun_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            jellyseerr2_dns_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            jellyseerr2_docker_controller: true
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            jellyseerr2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`jellyseerr2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            jellyseerr2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`jellyseerr2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            jellyseerr2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                jellyseerr2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "jellyseerr2.{{ user.domain }}"
-                  - "jellyseerr.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`jellyseerr2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            jellyseerr2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                jellyseerr2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jellyseerr2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`jellyseerr2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            jellyseerr2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`jellyseerr_role_web_scheme`{ .sb-show-on-unchecked }`jellyseerr2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        jellyseerr_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        jellyseerr2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

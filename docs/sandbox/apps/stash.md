@@ -40,14 +40,11 @@ On a clean installation, Stash only creates its config file when the user has go
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    stash_name: "custom_value"
+    ```
 
-        ```yaml
-        stash_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `stash_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -186,7 +183,8 @@ On a clean installation, Stash only creates its config file when the user has go
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`stash_role_docker_container`"
 
@@ -195,7 +193,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_container: "{{ stash_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`stash_role_docker_image_pull`"
 
@@ -225,7 +224,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='stash') }}:{{ lookup('role_var', '_docker_image_tag', role='stash') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`stash_role_docker_envs_default`"
 
@@ -244,7 +244,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`stash_role_docker_volumes_default`"
 
@@ -265,7 +266,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`stash_role_docker_hostname`"
 
@@ -274,7 +276,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_hostname: "{{ stash_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`stash_role_docker_networks_alias`"
 
@@ -297,7 +300,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`stash_role_docker_restart_policy`"
 
@@ -306,7 +310,8 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`stash_role_docker_state`"
 
@@ -448,10 +453,10 @@ On a clean installation, Stash only creates its config file when the user has go
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        stash_role_web_fqdn_override: # (1)!
+        stash_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             stash_role_web_fqdn_override:
@@ -467,10 +472,10 @@ On a clean installation, Stash only creates its config file when the user has go
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        stash_role_web_host_override: # (1)!
+        stash_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             stash_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'stash2.' + user.domain }}`)"

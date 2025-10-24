@@ -40,14 +40,11 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    uptime_kuma_name: "custom_value"
+    ```
 
-        ```yaml
-        uptime_kuma_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `uptime_kuma_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -204,7 +201,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_docker_container`"
 
@@ -213,7 +211,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_container: "{{ uptime_kuma_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`uptime_kuma_role_docker_image_pull`"
 
@@ -243,7 +242,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='uptime_kuma') }}:{{ lookup('role_var', '_docker_image_tag', role='uptime_kuma') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`uptime_kuma_role_docker_envs_default`"
 
@@ -262,7 +262,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`uptime_kuma_role_docker_volumes_default`"
 
@@ -279,7 +280,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_docker_hostname`"
 
@@ -288,7 +290,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_hostname: "{{ uptime_kuma_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_docker_networks_alias`"
 
@@ -311,7 +314,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_docker_restart_policy`"
 
@@ -320,7 +324,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_docker_state`"
 
@@ -329,7 +334,8 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_state: started
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`uptime_kuma_role_depends_on`"
 
@@ -485,10 +491,10 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        uptime_kuma_role_web_fqdn_override: # (1)!
+        uptime_kuma_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             uptime_kuma_role_web_fqdn_override:
@@ -504,10 +510,10 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        uptime_kuma_role_web_host_override: # (1)!
+        uptime_kuma_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             uptime_kuma_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'uptime_kuma2.' + user.domain }}`)"

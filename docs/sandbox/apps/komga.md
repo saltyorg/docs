@@ -45,14 +45,11 @@ sb install sandbox-komga
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    komga_name: "custom_value"
+    ```
 
-        ```yaml
-        komga_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `komga_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -191,7 +188,8 @@ sb install sandbox-komga
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_container`"
 
@@ -200,7 +198,8 @@ sb install sandbox-komga
         komga_role_docker_container: "{{ komga_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`komga_role_docker_image_pull`"
 
@@ -230,7 +229,8 @@ sb install sandbox-komga
         komga_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='komga') }}:{{ lookup('role_var', '_docker_image_tag', role='komga') }}"
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`komga_role_docker_volumes_default`"
 
@@ -248,7 +248,8 @@ sb install sandbox-komga
         komga_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_hostname`"
 
@@ -257,7 +258,8 @@ sb install sandbox-komga
         komga_role_docker_hostname: "{{ komga_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_networks_alias`"
 
@@ -280,7 +282,8 @@ sb install sandbox-komga
         komga_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_restart_policy`"
 
@@ -289,7 +292,8 @@ sb install sandbox-komga
         komga_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_state`"
 
@@ -298,7 +302,8 @@ sb install sandbox-komga
         komga_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`komga_role_docker_user`"
 
@@ -440,10 +445,10 @@ sb install sandbox-komga
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        komga_role_web_fqdn_override: # (1)!
+        komga_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             komga_role_web_fqdn_override:
@@ -459,10 +464,10 @@ sb install sandbox-komga
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        komga_role_web_host_override: # (1)!
+        komga_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             komga_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'komga2.' + user.domain }}`)"

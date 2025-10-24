@@ -199,11 +199,9 @@ tail -f /opt/tqm/activity.log
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
-
-        ```yaml
-        tqm_name: "custom_value"
-        ```
+    ```yaml title="Example Override"
+    tqm_name: "custom_value"
+    ```
 
 === "Basics"
 
@@ -384,10 +382,10 @@ tail -f /opt/tqm/activity.log
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        tqm_role_web_fqdn_override: # (1)!
+        tqm_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tqm_role_web_fqdn_override:
@@ -403,10 +401,10 @@ tail -f /opt/tqm/activity.log
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        tqm_role_web_host_override: # (1)!
+        tqm_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             tqm_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'tqm2.' + user.domain }}`)"

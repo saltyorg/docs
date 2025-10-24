@@ -44,14 +44,11 @@ sb install sandbox-flaresolverr
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    flaresolverr_role_docker_image_tag: "custom_value"
+    ```
 
-        ```yaml
-        flaresolverr_role_docker_image_tag: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `flaresolverr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -68,7 +65,8 @@ sb install sandbox-flaresolverr
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`flaresolverr_role_docker_container`"
 
@@ -77,7 +75,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_container: "{{ flaresolverr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`flaresolverr_role_docker_image_pull`"
 
@@ -107,7 +106,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='flaresolverr') }}:{{ lookup('role_var', '_docker_image_tag', role='flaresolverr') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`flaresolverr_role_docker_envs_default`"
 
@@ -127,7 +127,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`flaresolverr_role_docker_hostname`"
 
@@ -136,7 +137,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_hostname: "{{ flaresolverr_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`flaresolverr_role_docker_networks_alias`"
 
@@ -159,7 +161,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`flaresolverr_role_docker_restart_policy`"
 
@@ -168,7 +171,8 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`flaresolverr_role_docker_state`"
 
@@ -310,10 +314,10 @@ sb install sandbox-flaresolverr
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        flaresolverr_role_web_fqdn_override: # (1)!
+        flaresolverr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             flaresolverr_role_web_fqdn_override:
@@ -329,10 +333,10 @@ sb install sandbox-flaresolverr
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        flaresolverr_role_web_host_override: # (1)!
+        flaresolverr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             flaresolverr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'flaresolverr2.' + user.domain }}`)"

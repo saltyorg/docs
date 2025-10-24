@@ -138,14 +138,11 @@ These settings are up to the user
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    mylar3_name: "custom_value"
+    ```
 
-        ```yaml
-        mylar3_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `mylar3_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -284,7 +281,8 @@ These settings are up to the user
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`mylar3_role_docker_container`"
 
@@ -293,7 +291,8 @@ These settings are up to the user
         mylar3_role_docker_container: "{{ mylar3_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`mylar3_role_docker_image_pull`"
 
@@ -323,7 +322,8 @@ These settings are up to the user
         mylar3_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mylar3') }}:{{ lookup('role_var', '_docker_image_tag', role='mylar3') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`mylar3_role_docker_envs_default`"
 
@@ -342,7 +342,8 @@ These settings are up to the user
         mylar3_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`mylar3_role_docker_volumes_default`"
 
@@ -360,7 +361,8 @@ These settings are up to the user
         mylar3_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`mylar3_role_docker_hostname`"
 
@@ -369,7 +371,8 @@ These settings are up to the user
         mylar3_role_docker_hostname: "{{ mylar3_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`mylar3_role_docker_networks_alias`"
 
@@ -392,7 +395,8 @@ These settings are up to the user
         mylar3_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`mylar3_role_docker_restart_policy`"
 
@@ -401,7 +405,8 @@ These settings are up to the user
         mylar3_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`mylar3_role_docker_state`"
 
@@ -543,10 +548,10 @@ These settings are up to the user
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        mylar3_role_web_fqdn_override: # (1)!
+        mylar3_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             mylar3_role_web_fqdn_override:
@@ -562,10 +567,10 @@ These settings are up to the user
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        mylar3_role_web_host_override: # (1)!
+        mylar3_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             mylar3_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'mylar32.' + user.domain }}`)"

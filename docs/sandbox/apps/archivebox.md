@@ -70,14 +70,11 @@ By default, your new installation has a publicly accessible web index, snapshots
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    archivebox_name: "custom_value"
+    ```
 
-        ```yaml
-        archivebox_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `archivebox_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -202,7 +199,8 @@ By default, your new installation has a publicly accessible web index, snapshots
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`archivebox_role_docker_container`"
 
@@ -211,7 +209,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_container: "{{ archivebox_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`archivebox_role_docker_image_pull`"
 
@@ -241,7 +240,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='archivebox') }}:{{ lookup('role_var', '_docker_image_tag', role='archivebox') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`archivebox_role_docker_envs_default`"
 
@@ -260,7 +260,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`archivebox_role_docker_volumes_default`"
 
@@ -277,7 +278,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`archivebox_role_docker_hostname`"
 
@@ -286,7 +288,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_hostname: "{{ archivebox_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`archivebox_role_docker_networks_alias`"
 
@@ -309,7 +312,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`archivebox_role_docker_restart_policy`"
 
@@ -318,7 +322,8 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`archivebox_role_docker_state`"
 
@@ -460,10 +465,10 @@ By default, your new installation has a publicly accessible web index, snapshots
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        archivebox_role_web_fqdn_override: # (1)!
+        archivebox_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             archivebox_role_web_fqdn_override:
@@ -479,10 +484,10 @@ By default, your new installation has a publicly accessible web index, snapshots
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        archivebox_role_web_host_override: # (1)!
+        archivebox_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             archivebox_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'archivebox2.' + user.domain }}`)"

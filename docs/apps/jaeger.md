@@ -43,14 +43,11 @@ Note: Data is stored in-memory by default and will be lost when the container re
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    jaeger_name: "custom_value"
+    ```
 
-        ```yaml
-        jaeger_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `jaeger_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -189,7 +186,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`jaeger_role_docker_container`"
 
@@ -198,7 +196,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_container: "{{ jaeger_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`jaeger_role_docker_image_pull`"
 
@@ -228,7 +227,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jaeger') }}:{{ lookup('role_var', '_docker_image_tag', role='jaeger') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`jaeger_role_docker_envs_default`"
 
@@ -246,7 +246,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_envs_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`jaeger_role_docker_hostname`"
 
@@ -255,7 +256,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_hostname: "{{ jaeger_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`jaeger_role_docker_networks_alias`"
 
@@ -278,7 +280,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`jaeger_role_docker_restart_policy`"
 
@@ -287,7 +290,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`jaeger_role_docker_state`"
 
@@ -298,11 +302,10 @@ Note: Data is stored in-memory by default and will be lost when the container re
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`jaeger_role_docker_blkio_weight`"
 
@@ -388,7 +391,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`jaeger_role_docker_cap_drop`"
 
@@ -467,7 +471,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`jaeger_role_docker_dns_opts`"
 
@@ -511,7 +516,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`jaeger_role_docker_keep_volumes`"
 
@@ -562,7 +568,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`jaeger_role_docker_healthcheck`"
 
@@ -599,7 +606,8 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`jaeger_role_docker_auto_remove`"
 
@@ -993,10 +1001,10 @@ Note: Data is stored in-memory by default and will be lost when the container re
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        jaeger_role_web_fqdn_override: # (1)!
+        jaeger_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             jaeger_role_web_fqdn_override:
@@ -1012,10 +1020,10 @@ Note: Data is stored in-memory by default and will be lost when the container re
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        jaeger_role_web_host_override: # (1)!
+        jaeger_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             jaeger_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'jaeger2.' + user.domain }}`)"

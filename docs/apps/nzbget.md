@@ -59,14 +59,11 @@ tags:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    nzbget_name: "custom_value"
+    ```
 
-        ```yaml
-        nzbget_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `nzbget_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -466,7 +463,8 @@ tags:
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`nzbget_role_docker_container`"
 
@@ -475,7 +473,8 @@ tags:
         nzbget_role_docker_container: "{{ nzbget_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`nzbget_role_docker_image_pull`"
 
@@ -505,7 +504,8 @@ tags:
         nzbget_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='nzbget') }}:{{ lookup('role_var', '_docker_image_tag', role='nzbget') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`nzbget_role_docker_envs_default`"
 
@@ -526,7 +526,8 @@ tags:
         nzbget_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`nzbget_role_docker_volumes_default`"
 
@@ -544,7 +545,8 @@ tags:
         nzbget_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`nzbget_role_docker_labels_default`"
 
@@ -560,7 +562,8 @@ tags:
         nzbget_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`nzbget_role_docker_hostname`"
 
@@ -569,7 +572,8 @@ tags:
         nzbget_role_docker_hostname: "{{ nzbget_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`nzbget_role_docker_networks_alias`"
 
@@ -592,7 +596,8 @@ tags:
         nzbget_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`nzbget_role_docker_restart_policy`"
 
@@ -601,7 +606,8 @@ tags:
         nzbget_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`nzbget_role_docker_state`"
 
@@ -612,11 +618,10 @@ tags:
 
 === "Docker+"
 
-    #### Additional Docker Options
-
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    ##### Resource Limits
+    Resource Limits
+    { .sb-h5 }
 
     ??? variable int "`nzbget_role_docker_blkio_weight`"
 
@@ -702,7 +707,8 @@ tags:
         nzbget_role_docker_memory_swappiness:
         ```
 
-    ##### Security & Devices
+    Security & Devices
+    { .sb-h5 }
 
     ??? variable list "`nzbget_role_docker_cap_drop`"
 
@@ -781,7 +787,8 @@ tags:
         nzbget_role_docker_security_opts:
         ```
 
-    ##### Networking
+    Networking
+    { .sb-h5 }
 
     ??? variable list "`nzbget_role_docker_dns_opts`"
 
@@ -825,7 +832,8 @@ tags:
         nzbget_role_docker_network_mode:
         ```
 
-    ##### Storage
+    Storage
+    { .sb-h5 }
 
     ??? variable bool "`nzbget_role_docker_keep_volumes`"
 
@@ -869,7 +877,8 @@ tags:
         nzbget_role_docker_working_dir:
         ```
 
-    ##### Monitoring & Lifecycle
+    Monitoring & Lifecycle
+    { .sb-h5 }
 
     ??? variable dict "`nzbget_role_docker_healthcheck`"
 
@@ -906,7 +915,8 @@ tags:
         nzbget_role_docker_output_logs:
         ```
 
-    ##### Other Options
+    Other Options
+    { .sb-h5 }
 
     ??? variable bool "`nzbget_role_docker_auto_remove`"
 
@@ -1293,10 +1303,10 @@ tags:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        nzbget_role_web_fqdn_override: # (1)!
+        nzbget_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             nzbget_role_web_fqdn_override:
@@ -1312,10 +1322,10 @@ tags:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        nzbget_role_web_host_override: # (1)!
+        nzbget_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             nzbget_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'nzbget2.' + user.domain }}`)"

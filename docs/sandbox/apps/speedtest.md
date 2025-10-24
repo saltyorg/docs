@@ -40,14 +40,11 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    speedtest_name: "custom_value"
+    ```
 
-        ```yaml
-        speedtest_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `speedtest_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -210,7 +207,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`speedtest_role_docker_container`"
 
@@ -219,7 +217,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_container: "{{ speedtest_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`speedtest_role_docker_image_pull`"
 
@@ -249,7 +248,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='speedtest') }}:{{ lookup('role_var', '_docker_image_tag', role='speedtest') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`speedtest_role_docker_envs_default`"
 
@@ -273,7 +273,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`speedtest_role_docker_volumes_default`"
 
@@ -290,7 +291,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`speedtest_role_docker_hostname`"
 
@@ -299,7 +301,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_hostname: "{{ speedtest_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`speedtest_role_docker_networks_alias`"
 
@@ -322,7 +325,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`speedtest_role_docker_restart_policy`"
 
@@ -331,7 +335,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`speedtest_role_docker_state`"
 
@@ -340,7 +345,8 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_state: started
         ```
 
-    ##### Force Kill
+    Force Kill
+    { .sb-h5 }
 
     ??? variable bool "`speedtest_role_docker_force_kill`"
 
@@ -482,10 +488,10 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        speedtest_role_web_fqdn_override: # (1)!
+        speedtest_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             speedtest_role_web_fqdn_override:
@@ -501,10 +507,10 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        speedtest_role_web_host_override: # (1)!
+        speedtest_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             speedtest_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'speedtest2.' + user.domain }}`)"

@@ -46,11 +46,9 @@ Further information:
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
-
-        ```yaml
-        plex_db_integrity_check_only: true
-        ```
+    ```yaml title="Example Override"
+    plex_db_integrity_check_only: true
+    ```
 
 === "General"
 
@@ -218,10 +216,10 @@ Further information:
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        plex_db_role_web_fqdn_override: # (1)!
+        plex_db_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plex_db_role_web_fqdn_override:
@@ -237,10 +235,10 @@ Further information:
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        plex_db_role_web_host_override: # (1)!
+        plex_db_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             plex_db_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'plex_db2.' + user.domain }}`)"

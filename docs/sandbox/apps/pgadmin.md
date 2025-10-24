@@ -48,14 +48,11 @@ sb install sandbox-pgadmin
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    pgadmin_name: "custom_value"
+    ```
 
-        ```yaml
-        pgadmin_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `pgadmin_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -178,7 +175,8 @@ sb install sandbox-pgadmin
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`pgadmin_role_docker_container`"
 
@@ -187,7 +185,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_container: "{{ pgadmin_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`pgadmin_role_docker_image_pull`"
 
@@ -217,7 +216,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='pgadmin') }}:{{ lookup('role_var', '_docker_image_tag', role='pgadmin') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`pgadmin_role_docker_envs_default`"
 
@@ -235,7 +235,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`pgadmin_role_docker_volumes_default`"
 
@@ -252,7 +253,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`pgadmin_role_docker_hostname`"
 
@@ -261,7 +263,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_hostname: "{{ pgadmin_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`pgadmin_role_docker_networks_alias`"
 
@@ -284,7 +287,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`pgadmin_role_docker_restart_policy`"
 
@@ -293,7 +297,8 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`pgadmin_role_docker_state`"
 
@@ -435,10 +440,10 @@ sb install sandbox-pgadmin
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        pgadmin_role_web_fqdn_override: # (1)!
+        pgadmin_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             pgadmin_role_web_fqdn_override:
@@ -454,10 +459,10 @@ sb install sandbox-pgadmin
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        pgadmin_role_web_host_override: # (1)!
+        pgadmin_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             pgadmin_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'pgadmin2.' + user.domain }}`)"

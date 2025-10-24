@@ -40,14 +40,11 @@ sb install sandbox-glances-web
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    glances_web_name: "custom_value"
+    ```
 
-        ```yaml
-        glances_web_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `glances_web_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -204,7 +201,8 @@ sb install sandbox-glances-web
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_container`"
 
@@ -213,7 +211,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_container: "{{ glances_web_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`glances_web_role_docker_image_pull`"
 
@@ -243,7 +242,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='glances_web') }}:{{ lookup('role_var', '_docker_image_tag', role='glances_web') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`glances_web_role_docker_envs_default`"
 
@@ -264,7 +264,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`glances_web_role_docker_volumes_default`"
 
@@ -281,7 +282,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_hostname`"
 
@@ -290,7 +292,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_hostname: "{{ glances_web_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_network_mode`"
 
@@ -299,7 +302,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_network_mode: "host"
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_restart_policy`"
 
@@ -308,7 +312,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_state`"
 
@@ -317,7 +322,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_state: started
         ```
 
-    ##### Force Kill
+    Force Kill
+    { .sb-h5 }
 
     ??? variable bool "`glances_web_role_docker_force_kill`"
 
@@ -326,7 +332,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_force_kill: true
         ```
 
-    ##### PID Mode
+    PID Mode
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_docker_pid_mode`"
 
@@ -335,7 +342,8 @@ sb install sandbox-glances-web
         glances_web_role_docker_pid_mode: host
         ```
 
-    ##### Dependencies
+    Dependencies
+    { .sb-h5 }
 
     ??? variable string "`glances_web_role_depends_on`"
 
@@ -491,10 +499,10 @@ sb install sandbox-glances-web
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        glances_web_role_web_fqdn_override: # (1)!
+        glances_web_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             glances_web_role_web_fqdn_override:
@@ -510,10 +518,10 @@ sb install sandbox-glances-web
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        glances_web_role_web_host_override: # (1)!
+        glances_web_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             glances_web_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'glances_web2.' + user.domain }}`)"

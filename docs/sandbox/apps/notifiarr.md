@@ -76,14 +76,11 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    notifiarr_name: "custom_value"
+    ```
 
-        ```yaml
-        notifiarr_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `notifiarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -273,7 +270,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_container`"
 
@@ -282,7 +280,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_container: "{{ notifiarr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`notifiarr_role_docker_image_pull`"
 
@@ -312,7 +311,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='notifiarr') }}:{{ lookup('role_var', '_docker_image_tag', role='notifiarr') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`notifiarr_role_docker_envs_default`"
 
@@ -329,7 +329,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`notifiarr_role_docker_volumes_default`"
 
@@ -347,7 +348,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_volumes_custom: []
         ```
 
-    ##### Mounts
+    Mounts
+    { .sb-h5 }
 
     ??? variable list "`notifiarr_role_docker_mounts_default`"
 
@@ -365,7 +367,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_mounts_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_hostname`"
 
@@ -374,7 +377,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_hostname: "{{ traefik_host }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_networks_alias`"
 
@@ -397,7 +401,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_restart_policy`"
 
@@ -406,7 +411,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_state`"
 
@@ -415,7 +421,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_user`"
 
@@ -424,7 +431,8 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    ##### Privileged
+    Privileged
+    { .sb-h5 }
 
     ??? variable string "`notifiarr_role_docker_privileged`"
 
@@ -566,10 +574,10 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        notifiarr_role_web_fqdn_override: # (1)!
+        notifiarr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             notifiarr_role_web_fqdn_override:
@@ -585,10 +593,10 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        notifiarr_role_web_host_override: # (1)!
+        notifiarr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             notifiarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'notifiarr2.' + user.domain }}`)"

@@ -48,14 +48,11 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    trackarr_name: "custom_value"
+    ```
 
-        ```yaml
-        trackarr_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `trackarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -211,7 +208,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_container`"
 
@@ -220,7 +218,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_container: "{{ trackarr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`trackarr_role_docker_image_pull`"
 
@@ -250,7 +249,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='trackarr') }}:{{ lookup('role_var', '_docker_image_tag', role='trackarr') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_envs_log_level`"
 
@@ -277,7 +277,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`trackarr_role_docker_volumes_default`"
 
@@ -294,7 +295,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_hostname`"
 
@@ -303,7 +305,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_hostname: "{{ trackarr_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_networks_alias`"
 
@@ -326,7 +329,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_restart_policy`"
 
@@ -335,7 +339,8 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`trackarr_role_docker_state`"
 
@@ -477,10 +482,10 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        trackarr_role_web_fqdn_override: # (1)!
+        trackarr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             trackarr_role_web_fqdn_override:
@@ -496,10 +501,10 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        trackarr_role_web_host_override: # (1)!
+        trackarr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             trackarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'trackarr2.' + user.domain }}`)"

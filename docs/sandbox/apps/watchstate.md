@@ -45,24 +45,19 @@ Visit `https://watchstate._yourdomain.com_`.
 
     This role supports multiple instances via `watchstate_instances`.
 
-    === "Role-level Override"
+    ```yaml { .sb-show-on-unchecked title="Applies to all instances of watchstate:" }
+    watchstate_role_web_subdomain: "custom"
+    ```
 
-        Applies to all instances of watchstate:
+    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `watchstate2`):" }
+    watchstate2_web_subdomain: "custom2"
+    ```
 
-        ```yaml
-        watchstate_role_web_subdomain: "custom"
-        ```
+<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
+   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
+</label>
 
-    === "Instance-level Override"
-
-        Applies to a specific instance (e.g., `watchstate2`):
-
-        ```yaml
-        watchstate2_web_subdomain: "custom2"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `watchstate_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -77,7 +72,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate_instances: ["watchstate"]
         ```
 
-        !!! example
+        !!! example "Example Override"
 
             ```yaml
             # Type: list
@@ -86,938 +81,789 @@ Visit `https://watchstate._yourdomain.com_`.
 
 === "Settings"
 
-    === "Role-level"
+    ??? variable bool "`watchstate_role_api_auto`{ .sb-show-on-unchecked }`watchstate2_api_auto`{ .sb-show-on-checked }"
 
-        ??? variable bool "`watchstate_role_api_auto`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_api_auto: true
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_api_auto: true
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_api_auto: true
+        ```
 
-        ??? variable bool "`watchstate_role_trust_proxy`"
+    ??? variable bool "`watchstate_role_trust_proxy`{ .sb-show-on-unchecked }`watchstate2_trust_proxy`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_trust_proxy: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_trust_proxy: true
+        ```
 
-        ??? variable bool "`watchstate_role_secure_api_endpoints`"
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_trust_proxy: true
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_secure_api_endpoints: true
-            ```
+    ??? variable bool "`watchstate_role_secure_api_endpoints`{ .sb-show-on-unchecked }`watchstate2_secure_api_endpoints`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_secure_api_endpoints: true
+        ```
 
-        ??? variable bool "`watchstate2_api_auto`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_api_auto: true
-            ```
-
-        ??? variable bool "`watchstate2_trust_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_trust_proxy: true
-            ```
-
-        ??? variable bool "`watchstate2_secure_api_endpoints`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_secure_api_endpoints: true
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_secure_api_endpoints: true
+        ```
 
 === "Paths"
 
-    === "Role-level"
+    ??? variable string "`watchstate_role_paths_folder`{ .sb-show-on-unchecked }`watchstate2_paths_folder`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_paths_folder`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_paths_folder: "{{ watchstate_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_paths_folder: "{{ watchstate_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_paths_folder: "{{ watchstate_name }}"
+        ```
 
-        ??? variable string "`watchstate_role_paths_location`"
+    ??? variable string "`watchstate_role_paths_location`{ .sb-show-on-unchecked }`watchstate2_paths_location`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
+        ```
 
-    === "Instance-level"
-
-        ??? variable string "`watchstate2_paths_folder`"
-
-            ```yaml
-            # Type: string
-            watchstate2_paths_folder: "{{ watchstate_name }}"
-            ```
-
-        ??? variable string "`watchstate2_paths_location`"
-
-            ```yaml
-            # Type: string
-            watchstate2_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
+        ```
 
 === "Web"
 
-    === "Role-level"
+    ??? variable string "`watchstate_role_web_subdomain`{ .sb-show-on-unchecked }`watchstate2_web_subdomain`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_web_subdomain`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_web_subdomain: "{{ watchstate_name }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_web_subdomain: "{{ watchstate_name }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_web_subdomain: "{{ watchstate_name }}"
+        ```
 
-        ??? variable string "`watchstate_role_web_domain`"
+    ??? variable string "`watchstate_role_web_domain`{ .sb-show-on-unchecked }`watchstate2_web_domain`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_web_domain: "{{ user.domain }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_web_domain: "{{ user.domain }}"
+        ```
 
-        ??? variable string "`watchstate_role_web_port`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_web_domain: "{{ user.domain }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_web_port: "8080"
-            ```
+    ??? variable string "`watchstate_role_web_port`{ .sb-show-on-unchecked }`watchstate2_web_port`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_web_url`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_web_port: "8080"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
-                                      if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='watchstate')) }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_web_port: "8080"
+        ```
 
-    === "Instance-level"
+    ??? variable string "`watchstate_role_web_url`{ .sb-show-on-unchecked }`watchstate2_web_url`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate2_web_subdomain`"
-
-            ```yaml
-            # Type: string
-            watchstate2_web_subdomain: "{{ watchstate_name }}"
-            ```
-
-        ??? variable string "`watchstate2_web_domain`"
-
-            ```yaml
-            # Type: string
-            watchstate2_web_domain: "{{ user.domain }}"
-            ```
-
-        ??? variable string "`watchstate2_web_port`"
-
-            ```yaml
-            # Type: string
-            watchstate2_web_port: "8080"
-            ```
-
-        ??? variable string "`watchstate2_web_url`"
-
-            ```yaml
-            # Type: string
-            watchstate2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
                                   if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
                                   else lookup('role_var', '_web_domain', role='watchstate')) }}"
-            ```
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
+                              if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
+                              else lookup('role_var', '_web_domain', role='watchstate')) }}"
+        ```
 
 === "DNS"
 
-    === "Role-level"
+    ??? variable string "`watchstate_role_dns_record`{ .sb-show-on-unchecked }`watchstate2_dns_record`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_dns_record`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='watchstate') }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='watchstate') }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='watchstate') }}"
+        ```
 
-        ??? variable string "`watchstate_role_dns_zone`"
+    ??? variable string "`watchstate_role_dns_zone`{ .sb-show-on-unchecked }`watchstate2_dns_zone`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='watchstate') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='watchstate') }}"
+        ```
 
-        ??? variable bool "`watchstate_role_dns_proxy`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_dns_zone: "{{ lookup('role_var', '_web_domain', role='watchstate') }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_dns_proxy: "{{ dns_proxied }}"
-            ```
+    ??? variable bool "`watchstate_role_dns_proxy`{ .sb-show-on-unchecked }`watchstate2_dns_proxy`{ .sb-show-on-checked }"
 
-    === "Instance-level"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_dns_proxy: "{{ dns_proxied }}"
+        ```
 
-        ??? variable string "`watchstate2_dns_record`"
-
-            ```yaml
-            # Type: string
-            watchstate2_dns_record: "{{ lookup('role_var', '_web_subdomain', role='watchstate') }}"
-            ```
-
-        ??? variable string "`watchstate2_dns_zone`"
-
-            ```yaml
-            # Type: string
-            watchstate2_dns_zone: "{{ lookup('role_var', '_web_domain', role='watchstate') }}"
-            ```
-
-        ??? variable bool "`watchstate2_dns_proxy`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_dns_proxy: "{{ dns_proxied }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_dns_proxy: "{{ dns_proxied }}"
+        ```
 
 === "Traefik"
 
-    === "Role-level"
+    ??? variable string "`watchstate_role_traefik_sso_middleware`{ .sb-show-on-unchecked }`watchstate2_traefik_sso_middleware`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
 
-        ??? variable string "`watchstate_role_traefik_middleware_default`"
+    ??? variable string "`watchstate_role_traefik_middleware_default`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_default`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-        ??? variable string "`watchstate_role_traefik_middleware_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_traefik_middleware_custom: ""
-            ```
+    ??? variable string "`watchstate_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_custom`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_traefik_certresolver`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_traefik_middleware_custom: ""
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_traefik_middleware_custom: ""
+        ```
 
-        ??? variable bool "`watchstate_role_traefik_enabled`"
+    ??? variable string "`watchstate_role_traefik_certresolver`{ .sb-show-on-unchecked }`watchstate2_traefik_certresolver`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_traefik_enabled: true
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-        ??? variable bool "`watchstate_role_traefik_api_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_traefik_api_enabled: true
-            ```
+    ??? variable bool "`watchstate_role_traefik_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_traefik_api_endpoint`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_traefik_api_endpoint: "PathRegexp(`backend/[^/]+/webhook`)"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_enabled: true
+        ```
 
-    === "Instance-level"
+    ??? variable bool "`watchstate_role_traefik_api_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_api_enabled`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate2_traefik_sso_middleware`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_api_enabled: true
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate2_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_api_enabled: true
+        ```
 
-        ??? variable string "`watchstate2_traefik_middleware_default`"
+    ??? variable string "`watchstate_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`watchstate2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate2_traefik_middleware_default: "{{ traefik_default_middleware }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_traefik_api_endpoint: "PathRegexp(`backend/[^/]+/webhook`)"
+        ```
 
-        ??? variable string "`watchstate2_traefik_middleware_custom`"
-
-            ```yaml
-            # Type: string
-            watchstate2_traefik_middleware_custom: ""
-            ```
-
-        ??? variable string "`watchstate2_traefik_certresolver`"
-
-            ```yaml
-            # Type: string
-            watchstate2_traefik_certresolver: "{{ traefik_default_certresolver }}"
-            ```
-
-        ??? variable bool "`watchstate2_traefik_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_traefik_enabled: true
-            ```
-
-        ??? variable bool "`watchstate2_traefik_api_enabled`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_traefik_api_enabled: true
-            ```
-
-        ??? variable string "`watchstate2_traefik_api_endpoint`"
-
-            ```yaml
-            # Type: string
-            watchstate2_traefik_api_endpoint: "PathRegexp(`backend/[^/]+/webhook`)"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_traefik_api_endpoint: "PathRegexp(`backend/[^/]+/webhook`)"
+        ```
 
 === "Docker"
 
-    === "Role-level"
+    Container
+    { .sb-h5 }
+
+    ??? variable string "`watchstate_role_docker_container`{ .sb-show-on-unchecked }`watchstate2_docker_container`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_container: "{{ watchstate_name }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_container: "{{ watchstate_name }}"
+        ```
+
+    Image
+    { .sb-h5 }
+
+    ??? variable bool "`watchstate_role_docker_image_pull`{ .sb-show-on-unchecked }`watchstate2_docker_image_pull`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_docker_image_pull: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_docker_image_pull: true
+        ```
+
+    ??? variable string "`watchstate_role_docker_image_repo`{ .sb-show-on-unchecked }`watchstate2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_image_repo: "ghcr.io/arabcoders/watchstate"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_image_repo: "ghcr.io/arabcoders/watchstate"
+        ```
+
+    ??? variable string "`watchstate_role_docker_image_tag`{ .sb-show-on-unchecked }`watchstate2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_image_tag: "latest"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`watchstate_role_docker_image`{ .sb-show-on-unchecked }`watchstate2_docker_image`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='watchstate') }}:{{ lookup('role_var', '_docker_image_tag', role='watchstate') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='watchstate') }}:{{ lookup('role_var', '_docker_image_tag', role='watchstate') }}"
+        ```
+
+    Envs
+    { .sb-h5 }
+
+    ??? variable dict "`watchstate_role_docker_envs_default`{ .sb-show-on-unchecked }`watchstate2_docker_envs_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        watchstate_role_docker_envs_default: 
+          WS_TZ: "{{ tz }}"
+          WS_API_AUTO: "{{ 'true'
+                        if lookup('role_var', '_api_auto', role='watchstate')
+                        else omit }}"
+          WS_TRUST_PROXY: "{{ 'true'
+                           if lookup('role_var', '_trust_proxy', role='watchstate')
+                           else omit }}"
+          WS_SECURE_API_ENDPOINTS: "{{ 'true'
+                                    if lookup('role_var', '_secure_api_endpoints', role='watchstate')
+                                    else omit }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        watchstate2_docker_envs_default: 
+          WS_TZ: "{{ tz }}"
+          WS_API_AUTO: "{{ 'true'
+                        if lookup('role_var', '_api_auto', role='watchstate')
+                        else omit }}"
+          WS_TRUST_PROXY: "{{ 'true'
+                           if lookup('role_var', '_trust_proxy', role='watchstate')
+                           else omit }}"
+          WS_SECURE_API_ENDPOINTS: "{{ 'true'
+                                    if lookup('role_var', '_secure_api_endpoints', role='watchstate')
+                                    else omit }}"
+        ```
+
+    ??? variable dict "`watchstate_role_docker_envs_custom`{ .sb-show-on-unchecked }`watchstate2_docker_envs_custom`{ .sb-show-on-checked }"
 
-        ##### Container
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        watchstate_role_docker_envs_custom: {}
+        ```
 
-        ??? variable string "`watchstate_role_docker_container`"
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        watchstate2_docker_envs_custom: {}
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_container: "{{ watchstate_name }}"
-            ```
+    Volumes
+    { .sb-h5 }
 
-        ##### Image
+    ??? variable list "`watchstate_role_docker_volumes_default`{ .sb-show-on-unchecked }`watchstate2_docker_volumes_default`{ .sb-show-on-checked }"
 
-        ??? variable bool "`watchstate_role_docker_image_pull`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        watchstate_role_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
+        ```
 
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_docker_image_pull: true
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        watchstate2_docker_volumes_default: 
+          - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
+        ```
 
-        ??? variable string "`watchstate_role_docker_image_repo`"
+    ??? variable list "`watchstate_role_docker_volumes_custom`{ .sb-show-on-unchecked }`watchstate2_docker_volumes_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_image_repo: "ghcr.io/arabcoders/watchstate"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        watchstate_role_docker_volumes_custom: []
+        ```
 
-        ??? variable string "`watchstate_role_docker_image_tag`"
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        watchstate2_docker_volumes_custom: []
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_image_tag: "latest"
-            ```
+    Hostname
+    { .sb-h5 }
 
-        ??? variable string "`watchstate_role_docker_image`"
+    ??? variable string "`watchstate_role_docker_hostname`{ .sb-show-on-unchecked }`watchstate2_docker_hostname`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='watchstate') }}:{{ lookup('role_var', '_docker_image_tag', role='watchstate') }}"
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_hostname: "{{ watchstate_name }}"
+        ```
 
-        ##### Envs
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_hostname: "{{ watchstate_name }}"
+        ```
 
-        ??? variable dict "`watchstate_role_docker_envs_default`"
+    Networks
+    { .sb-h5 }
 
-            ```yaml
-            # Type: dict
-            watchstate_role_docker_envs_default: 
-              WS_TZ: "{{ tz }}"
-              WS_API_AUTO: "{{ 'true'
-                            if lookup('role_var', '_api_auto', role='watchstate')
-                            else omit }}"
-              WS_TRUST_PROXY: "{{ 'true'
-                               if lookup('role_var', '_trust_proxy', role='watchstate')
-                               else omit }}"
-              WS_SECURE_API_ENDPOINTS: "{{ 'true'
-                                        if lookup('role_var', '_secure_api_endpoints', role='watchstate')
-                                        else omit }}"
-            ```
+    ??? variable string "`watchstate_role_docker_networks_alias`{ .sb-show-on-unchecked }`watchstate2_docker_networks_alias`{ .sb-show-on-checked }"
 
-        ??? variable dict "`watchstate_role_docker_envs_custom`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_networks_alias: "{{ watchstate_name }}"
+        ```
 
-            ```yaml
-            # Type: dict
-            watchstate_role_docker_envs_custom: {}
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_networks_alias: "{{ watchstate_name }}"
+        ```
 
-        ##### Volumes
+    ??? variable list "`watchstate_role_docker_networks_default`{ .sb-show-on-unchecked }`watchstate2_docker_networks_default`{ .sb-show-on-checked }"
 
-        ??? variable list "`watchstate_role_docker_volumes_default`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        watchstate_role_docker_networks_default: []
+        ```
 
-            ```yaml
-            # Type: list
-            watchstate_role_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        watchstate2_docker_networks_default: []
+        ```
 
-        ??? variable list "`watchstate_role_docker_volumes_custom`"
+    ??? variable list "`watchstate_role_docker_networks_custom`{ .sb-show-on-unchecked }`watchstate2_docker_networks_custom`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            watchstate_role_docker_volumes_custom: []
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        watchstate_role_docker_networks_custom: []
+        ```
 
-        ##### Hostname
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        watchstate2_docker_networks_custom: []
+        ```
 
-        ??? variable string "`watchstate_role_docker_hostname`"
+    Restart Policy
+    { .sb-h5 }
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_hostname: "{{ watchstate_name }}"
-            ```
+    ??? variable string "`watchstate_role_docker_restart_policy`{ .sb-show-on-unchecked }`watchstate2_docker_restart_policy`{ .sb-show-on-checked }"
 
-        ##### Networks
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_restart_policy: unless-stopped
+        ```
 
-        ??? variable string "`watchstate_role_docker_networks_alias`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_restart_policy: unless-stopped
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_networks_alias: "{{ watchstate_name }}"
-            ```
+    State
+    { .sb-h5 }
 
-        ??? variable list "`watchstate_role_docker_networks_default`"
+    ??? variable string "`watchstate_role_docker_state`{ .sb-show-on-unchecked }`watchstate2_docker_state`{ .sb-show-on-checked }"
 
-            ```yaml
-            # Type: list
-            watchstate_role_docker_networks_default: []
-            ```
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_state: started
+        ```
 
-        ??? variable list "`watchstate_role_docker_networks_custom`"
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_state: started
+        ```
 
-            ```yaml
-            # Type: list
-            watchstate_role_docker_networks_custom: []
-            ```
+    User
+    { .sb-h5 }
 
-        ##### Restart Policy
+    ??? variable string "`watchstate_role_docker_user`{ .sb-show-on-unchecked }`watchstate2_docker_user`{ .sb-show-on-checked }"
 
-        ??? variable string "`watchstate_role_docker_restart_policy`"
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        watchstate_role_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
-            ```yaml
-            # Type: string
-            watchstate_role_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`watchstate_role_docker_state`"
-
-            ```yaml
-            # Type: string
-            watchstate_role_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`watchstate_role_docker_user`"
-
-            ```yaml
-            # Type: string
-            watchstate_role_docker_user: "{{ uid }}:{{ gid }}"
-            ```
-
-    === "Instance-level"
-
-        ##### Container
-
-        ??? variable string "`watchstate2_docker_container`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_container: "{{ watchstate_name }}"
-            ```
-
-        ##### Image
-
-        ??? variable bool "`watchstate2_docker_image_pull`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_docker_image_pull: true
-            ```
-
-        ??? variable string "`watchstate2_docker_image_repo`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_image_repo: "ghcr.io/arabcoders/watchstate"
-            ```
-
-        ??? variable string "`watchstate2_docker_image_tag`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_image_tag: "latest"
-            ```
-
-        ??? variable string "`watchstate2_docker_image`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='watchstate') }}:{{ lookup('role_var', '_docker_image_tag', role='watchstate') }}"
-            ```
-
-        ##### Envs
-
-        ??? variable dict "`watchstate2_docker_envs_default`"
-
-            ```yaml
-            # Type: dict
-            watchstate2_docker_envs_default: 
-              WS_TZ: "{{ tz }}"
-              WS_API_AUTO: "{{ 'true'
-                            if lookup('role_var', '_api_auto', role='watchstate')
-                            else omit }}"
-              WS_TRUST_PROXY: "{{ 'true'
-                               if lookup('role_var', '_trust_proxy', role='watchstate')
-                               else omit }}"
-              WS_SECURE_API_ENDPOINTS: "{{ 'true'
-                                        if lookup('role_var', '_secure_api_endpoints', role='watchstate')
-                                        else omit }}"
-            ```
-
-        ??? variable dict "`watchstate2_docker_envs_custom`"
-
-            ```yaml
-            # Type: dict
-            watchstate2_docker_envs_custom: {}
-            ```
-
-        ##### Volumes
-
-        ??? variable list "`watchstate2_docker_volumes_default`"
-
-            ```yaml
-            # Type: list
-            watchstate2_docker_volumes_default: 
-              - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
-            ```
-
-        ??? variable list "`watchstate2_docker_volumes_custom`"
-
-            ```yaml
-            # Type: list
-            watchstate2_docker_volumes_custom: []
-            ```
-
-        ##### Hostname
-
-        ??? variable string "`watchstate2_docker_hostname`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_hostname: "{{ watchstate_name }}"
-            ```
-
-        ##### Networks
-
-        ??? variable string "`watchstate2_docker_networks_alias`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_networks_alias: "{{ watchstate_name }}"
-            ```
-
-        ??? variable list "`watchstate2_docker_networks_default`"
-
-            ```yaml
-            # Type: list
-            watchstate2_docker_networks_default: []
-            ```
-
-        ??? variable list "`watchstate2_docker_networks_custom`"
-
-            ```yaml
-            # Type: list
-            watchstate2_docker_networks_custom: []
-            ```
-
-        ##### Restart Policy
-
-        ??? variable string "`watchstate2_docker_restart_policy`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_restart_policy: unless-stopped
-            ```
-
-        ##### State
-
-        ??? variable string "`watchstate2_docker_state`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_state: started
-            ```
-
-        ##### User
-
-        ??? variable string "`watchstate2_docker_user`"
-
-            ```yaml
-            # Type: string
-            watchstate2_docker_user: "{{ uid }}:{{ gid }}"
-            ```
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        watchstate2_docker_user: "{{ uid }}:{{ gid }}"
+        ```
 
 === "Global Override Options"
 
-    === "Role-level"
+    ??? variable bool "`watchstate_role_autoheal_enabled`{ .sb-show-on-unchecked }`watchstate2_autoheal_enabled`{ .sb-show-on-checked }"
 
-        Override for all instances:
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        watchstate_role_autoheal_enabled: true
+        ```
 
-        ??? variable bool "`watchstate_role_autoheal_enabled`"
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Autoheal monitoring for containers created when deploying
+        # Type: bool (true/false)
+        watchstate2_autoheal_enabled: true
+        ```
+
+    ??? variable string "`watchstate_role_depends_on`{ .sb-show-on-unchecked }`watchstate2_depends_on`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        watchstate_role_depends_on: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # List of container dependencies that must be running before containers start
+        # Type: string
+        watchstate2_depends_on: ""
+        ```
+
+    ??? variable string "`watchstate_role_depends_on_delay`{ .sb-show-on-unchecked }`watchstate2_depends_on_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        watchstate_role_depends_on_delay: "0"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Delay in seconds before starting containers after dependencies are ready
+        # Type: string (quoted number)
+        watchstate2_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`watchstate_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`watchstate2_depends_on_healthchecks`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        watchstate_role_depends_on_healthchecks:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        watchstate2_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`watchstate_role_diun_enabled`{ .sb-show-on-unchecked }`watchstate2_diun_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        watchstate_role_diun_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Diun update notifications for containers created when deploying
+        # Type: bool (true/false)
+        watchstate2_diun_enabled: true
+        ```
+
+    ??? variable bool "`watchstate_role_dns_enabled`{ .sb-show-on-unchecked }`watchstate2_dns_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        watchstate_role_dns_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable automatic DNS record creation for containers
+        # Type: bool (true/false)
+        watchstate2_dns_enabled: true
+        ```
+
+    ??? variable bool "`watchstate_role_docker_controller`{ .sb-show-on-unchecked }`watchstate2_docker_controller`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        watchstate_role_docker_controller: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable or disable Saltbox Docker Controller management for containers
+        # Type: bool (true/false)
+        watchstate2_docker_controller: true
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_autodetect_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Traefik autodetect middleware for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_crowdsec_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable CrowdSec middleware for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_error_pages_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable custom error pages middleware for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_gzip_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_gzip_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable gzip compression middleware for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_robot_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_robot_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable robots.txt middleware for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_tailscale_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable Tailscale-specific Traefik configuration for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        watchstate_role_traefik_wildcard_enabled: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Enable wildcard certificate for containers
+        # Type: bool (true/false)
+        watchstate2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable list "`watchstate_role_web_fqdn_override`{ .sb-show-on-unchecked }`watchstate2_web_fqdn_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        watchstate_role_web_fqdn_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik fully qualified domain name (FQDN) for containers
+        # Type: list
+        watchstate2_web_fqdn_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            watchstate_role_autoheal_enabled: true
+            watchstate_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "watchstate2.{{ user.domain }}"
+              - "watchstate.otherdomain.tld"
             ```
 
-        ??? variable string "`watchstate_role_depends_on`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            watchstate_role_depends_on: ""
+            watchstate2_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "watchstate2.{{ user.domain }}"
+              - "watchstate.otherdomain.tld"
             ```
 
-        ??? variable string "`watchstate_role_depends_on_delay`"
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    ??? variable string "`watchstate_role_web_host_override`{ .sb-show-on-unchecked }`watchstate2_web_host_override`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        watchstate_role_web_host_override:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Override the Traefik web host configuration for containers
+        # Type: string
+        watchstate2_web_host_override:
+        ```
+
+        !!! example sb-show-on-unchecked "Example Override"
 
             ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            watchstate_role_depends_on_delay: "0"
+            watchstate_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'watchstate2.' + user.domain }}`)"
             ```
 
-        ??? variable string "`watchstate_role_depends_on_healthchecks`"
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+        !!! example sb-show-on-checked "Example Override"
 
             ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            watchstate_role_depends_on_healthchecks:
+            watchstate2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'watchstate2.' + user.domain }}`)"
             ```
 
-        ??? variable bool "`watchstate_role_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            watchstate_role_diun_enabled: true
-            ```
-
-        ??? variable bool "`watchstate_role_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            watchstate_role_dns_enabled: true
-            ```
-
-        ??? variable bool "`watchstate_role_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            watchstate_role_docker_controller: true
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate_role_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`watchstate_role_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            watchstate_role_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`watchstate_role_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            watchstate_role_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                watchstate_role_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "watchstate2.{{ user.domain }}"
-                  - "watchstate.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`watchstate_role_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            watchstate_role_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                watchstate_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'watchstate2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`watchstate_role_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            watchstate_role_web_scheme:
-            ```
-
-    === "Instance-level"
-
-        Override for a specific instance (e.g., `watchstate2`):
-
-        ??? variable bool "`watchstate2_autoheal_enabled`"
-
-            ```yaml
-            # Enable or disable Autoheal monitoring for containers created when deploying
-            # Type: bool (true/false)
-            watchstate2_autoheal_enabled: true
-            ```
-
-        ??? variable string "`watchstate2_depends_on`"
-
-            ```yaml
-            # List of container dependencies that must be running before containers start
-            # Type: string
-            watchstate2_depends_on: ""
-            ```
-
-        ??? variable string "`watchstate2_depends_on_delay`"
-
-            ```yaml
-            # Delay in seconds before starting containers after dependencies are ready
-            # Type: string (quoted number)
-            watchstate2_depends_on_delay: "0"
-            ```
-
-        ??? variable string "`watchstate2_depends_on_healthchecks`"
-
-            ```yaml
-            # Enable healthcheck waiting for container dependencies
-            # Type: string ("true"/"false")
-            watchstate2_depends_on_healthchecks:
-            ```
-
-        ??? variable bool "`watchstate2_diun_enabled`"
-
-            ```yaml
-            # Enable or disable Diun update notifications for containers created when deploying
-            # Type: bool (true/false)
-            watchstate2_diun_enabled: true
-            ```
-
-        ??? variable bool "`watchstate2_dns_enabled`"
-
-            ```yaml
-            # Enable or disable automatic DNS record creation for containers
-            # Type: bool (true/false)
-            watchstate2_dns_enabled: true
-            ```
-
-        ??? variable bool "`watchstate2_docker_controller`"
-
-            ```yaml
-            # Enable or disable Saltbox Docker Controller management for containers
-            # Type: bool (true/false)
-            watchstate2_docker_controller: true
-            ```
-
-        ??? variable bool "`watchstate2_traefik_autodetect_enabled`"
-
-            ```yaml
-            # Enable Traefik autodetect middleware for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_autodetect_enabled: false
-            ```
-
-        ??? variable bool "`watchstate2_traefik_crowdsec_enabled`"
-
-            ```yaml
-            # Enable CrowdSec middleware for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_crowdsec_enabled: false
-            ```
-
-        ??? variable bool "`watchstate2_traefik_error_pages_enabled`"
-
-            ```yaml
-            # Enable custom error pages middleware for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_error_pages_enabled: false
-            ```
-
-        ??? variable bool "`watchstate2_traefik_gzip_enabled`"
-
-            ```yaml
-            # Enable gzip compression middleware for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_gzip_enabled: false
-            ```
-
-        ??? variable bool "`watchstate2_traefik_middleware_http_api_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_traefik_middleware_http_api_insecure:
-            ```
-
-        ??? variable bool "`watchstate2_traefik_middleware_http_insecure`"
-
-            ```yaml
-            # Type: bool (true/false)
-            watchstate2_traefik_middleware_http_insecure:
-            ```
-
-        ??? variable bool "`watchstate2_traefik_robot_enabled`"
-
-            ```yaml
-            # Enable robots.txt middleware for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_robot_enabled: true
-            ```
-
-        ??? variable bool "`watchstate2_traefik_tailscale_enabled`"
-
-            ```yaml
-            # Enable Tailscale-specific Traefik configuration for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_tailscale_enabled: false
-            ```
-
-        ??? variable bool "`watchstate2_traefik_wildcard_enabled`"
-
-            ```yaml
-            # Enable wildcard certificate for containers
-            # Type: bool (true/false)
-            watchstate2_traefik_wildcard_enabled: true
-            ```
-
-        ??? variable list "`watchstate2_web_fqdn_override`"
-
-            ```yaml
-            # Override the Traefik fully qualified domain name (FQDN) for containers
-            # Type: list
-            watchstate2_web_fqdn_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                watchstate2_web_fqdn_override:
-                  - "{{ traefik_host }}"
-                  - "watchstate2.{{ user.domain }}"
-                  - "watchstate.otherdomain.tld"
-                ```
-
-                Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        ??? variable string "`watchstate2_web_host_override`"
-
-            ```yaml
-            # Override the Traefik web host configuration for containers
-            # Type: string
-            watchstate2_web_host_override: # (1)!
-            ```
-
-            1.  Example:
-
-                ```yaml
-                watchstate2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'watchstate2.' + user.domain }}`)"
-                ```
-
-                Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        ??? variable string "`watchstate2_web_scheme`"
-
-            ```yaml
-            # URL scheme to use for web access to containers
-            # Type: string ("http"/"https")
-            watchstate2_web_scheme:
-            ```
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    ??? variable string "`watchstate_role_web_scheme`{ .sb-show-on-unchecked }`watchstate2_web_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        watchstate_role_web_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # URL scheme to use for web access to containers
+        # Type: string ("http"/"https")
+        watchstate2_web_scheme:
+        ```
 
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

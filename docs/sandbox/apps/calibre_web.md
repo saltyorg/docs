@@ -122,14 +122,11 @@ If this paragraph does not make sense to you, then please do not try it.
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    calibre_web_role_name: "custom_value"
+    ```
 
-        ```yaml
-        calibre_web_role_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `calibre_web_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -278,7 +275,8 @@ If this paragraph does not make sense to you, then please do not try it.
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`calibre_web_role_docker_container`"
 
@@ -287,7 +285,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_container: "{{ calibre_web_role_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`calibre_web_role_docker_image_pull`"
 
@@ -317,7 +316,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='calibre_web') }}:{{ lookup('role_var', '_docker_image_tag', role='calibre_web') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`calibre_web_role_docker_envs_default`"
 
@@ -349,7 +349,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`calibre_web_role_docker_volumes_default`"
 
@@ -369,7 +370,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_volumes_custom: []
         ```
 
-    ##### Labels
+    Labels
+    { .sb-h5 }
 
     ??? variable dict "`calibre_web_role_docker_labels_default`"
 
@@ -386,7 +388,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_labels_custom: {}
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`calibre_web_role_docker_hostname`"
 
@@ -395,7 +398,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_hostname: "{{ calibre_web_role_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`calibre_web_role_docker_networks_alias`"
 
@@ -418,7 +422,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`calibre_web_role_docker_restart_policy`"
 
@@ -427,7 +432,8 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`calibre_web_role_docker_state`"
 
@@ -569,10 +575,10 @@ If this paragraph does not make sense to you, then please do not try it.
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        calibre_web_role_web_fqdn_override: # (1)!
+        calibre_web_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             calibre_web_role_web_fqdn_override:
@@ -588,10 +594,10 @@ If this paragraph does not make sense to you, then please do not try it.
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        calibre_web_role_web_host_override: # (1)!
+        calibre_web_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             calibre_web_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'calibre_web2.' + user.domain }}`)"

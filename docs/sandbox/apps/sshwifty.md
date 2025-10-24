@@ -40,14 +40,11 @@ sb install sandbox-sshwifty
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    sshwifty_name: "custom_value"
+    ```
 
-        ```yaml
-        sshwifty_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `sshwifty_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -200,7 +197,8 @@ sb install sandbox-sshwifty
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_container`"
 
@@ -209,7 +207,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_container: "{{ sshwifty_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`sshwifty_role_docker_image_pull`"
 
@@ -239,7 +238,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='sshwifty') }}:{{ lookup('role_var', '_docker_image_tag', role='sshwifty') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`sshwifty_role_docker_envs_default`"
 
@@ -256,7 +256,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`sshwifty_role_docker_volumes_default`"
 
@@ -273,7 +274,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_hostname`"
 
@@ -282,7 +284,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_hostname: "{{ sshwifty_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_networks_alias`"
 
@@ -305,7 +308,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_restart_policy`"
 
@@ -314,7 +318,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_state`"
 
@@ -323,7 +328,8 @@ sb install sandbox-sshwifty
         sshwifty_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`sshwifty_role_docker_user`"
 
@@ -465,10 +471,10 @@ sb install sandbox-sshwifty
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        sshwifty_role_web_fqdn_override: # (1)!
+        sshwifty_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             sshwifty_role_web_fqdn_override:
@@ -484,10 +490,10 @@ sb install sandbox-sshwifty
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        sshwifty_role_web_host_override: # (1)!
+        sshwifty_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             sshwifty_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'sshwifty2.' + user.domain }}`)"

@@ -39,14 +39,11 @@ sb install sandbox-booksonic
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    booksonic_name: "custom_value"
+    ```
 
-        ```yaml
-        booksonic_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `booksonic_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -171,7 +168,8 @@ sb install sandbox-booksonic
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`booksonic_role_docker_container`"
 
@@ -180,7 +178,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_container: "{{ booksonic_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`booksonic_role_docker_image_pull`"
 
@@ -210,7 +209,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='booksonic') }}:{{ lookup('role_var', '_docker_image_tag', role='booksonic') }}"
         ```
 
-    ##### Ports
+    Ports
+    { .sb-h5 }
 
     ??? variable list "`booksonic_role_docker_ports_defaults`"
 
@@ -226,7 +226,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_ports_custom: []
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`booksonic_role_docker_envs_default`"
 
@@ -246,7 +247,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`booksonic_role_docker_volumes_default`"
 
@@ -266,7 +268,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`booksonic_role_docker_hostname`"
 
@@ -275,7 +278,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_hostname: "{{ booksonic_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`booksonic_role_docker_networks_alias`"
 
@@ -298,7 +302,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`booksonic_role_docker_restart_policy`"
 
@@ -307,7 +312,8 @@ sb install sandbox-booksonic
         booksonic_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`booksonic_role_docker_state`"
 
@@ -449,10 +455,10 @@ sb install sandbox-booksonic
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        booksonic_role_web_fqdn_override: # (1)!
+        booksonic_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             booksonic_role_web_fqdn_override:
@@ -468,10 +474,10 @@ sb install sandbox-booksonic
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        booksonic_role_web_host_override: # (1)!
+        booksonic_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             booksonic_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'booksonic2.' + user.domain }}`)"

@@ -66,14 +66,11 @@ Follow documentation to complete configuration
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
-    === "Example"
+    ```yaml title="Example Override"
+    recyclarr_name: "custom_value"
+    ```
 
-        ```yaml
-        recyclarr_name: "custom_value"
-        ```
-
-!!! warning
-    **Avoid overriding variables ending in `_default`**
+??? warning "Avoid overriding variables ending in `_default`"
 
     When overriding variables that end in `_default` (like `recyclarr_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
@@ -115,7 +112,8 @@ Follow documentation to complete configuration
 
 === "Docker"
 
-    ##### Container
+    Container
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_container`"
 
@@ -124,7 +122,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_container: "{{ recyclarr_name }}"
         ```
 
-    ##### Image
+    Image
+    { .sb-h5 }
 
     ??? variable bool "`recyclarr_role_docker_image_pull`"
 
@@ -154,7 +153,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='recyclarr') }}:{{ lookup('role_var', '_docker_image_tag', role='recyclarr') }}"
         ```
 
-    ##### Envs
+    Envs
+    { .sb-h5 }
 
     ??? variable dict "`recyclarr_role_docker_envs_default`"
 
@@ -173,7 +173,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_envs_custom: {}
         ```
 
-    ##### Volumes
+    Volumes
+    { .sb-h5 }
 
     ??? variable list "`recyclarr_role_docker_volumes_default`"
 
@@ -190,7 +191,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_volumes_custom: []
         ```
 
-    ##### Hostname
+    Hostname
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_hostname`"
 
@@ -199,7 +201,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_hostname: "{{ recyclarr_name }}"
         ```
 
-    ##### Networks
+    Networks
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_networks_alias`"
 
@@ -222,7 +225,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_networks_custom: []
         ```
 
-    ##### Restart Policy
+    Restart Policy
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_restart_policy`"
 
@@ -231,7 +235,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_restart_policy: unless-stopped
         ```
 
-    ##### State
+    State
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_state`"
 
@@ -240,7 +245,8 @@ Follow documentation to complete configuration
         recyclarr_role_docker_state: started
         ```
 
-    ##### User
+    User
+    { .sb-h5 }
 
     ??? variable string "`recyclarr_role_docker_user`"
 
@@ -382,10 +388,10 @@ Follow documentation to complete configuration
         ```yaml
         # Override the Traefik fully qualified domain name (FQDN) for the container
         # Type: list
-        recyclarr_role_web_fqdn_override: # (1)!
+        recyclarr_role_web_fqdn_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             recyclarr_role_web_fqdn_override:
@@ -401,10 +407,10 @@ Follow documentation to complete configuration
         ```yaml
         # Override the Traefik web host configuration for the container
         # Type: string
-        recyclarr_role_web_host_override: # (1)!
+        recyclarr_role_web_host_override:
         ```
 
-        1.  Example:
+        !!! example "Example Override"
 
             ```yaml
             recyclarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'recyclarr2.' + user.domain }}`)"

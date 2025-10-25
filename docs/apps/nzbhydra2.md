@@ -269,7 +269,7 @@ Are you setting Saltbox up for the first time?  Continue to [Jackett](jackett.md
 
         ```yaml
         # Type: string
-        nzbhydra2_role_config_settings_jvm_memory: "{{ ((ansible_memory_mb.real.total / 1024)
+        nzbhydra2_role_config_settings_jvm_memory: "{{ ((ansible_facts['memory_mb']['real']['total'] / 1024)
                                                        | round(0, 'ceil') | int >= 8)
                                                        | ternary('512', '256') }}"
         ```

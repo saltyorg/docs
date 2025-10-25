@@ -10,7 +10,7 @@ tags:
 
 Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-button-grid" markdown data-search-exclude>
 
 [:material-home: Homepage&nbsp;&nbsp;](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 
@@ -361,20 +361,6 @@ docker exec plextraktsync plextraktsync --help
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         plextraktsync_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`plextraktsync_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        plextraktsync_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`plextraktsync_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        plextraktsync_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`plextraktsync_role_traefik_robot_enabled`"

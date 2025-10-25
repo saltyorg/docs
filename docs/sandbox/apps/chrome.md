@@ -13,7 +13,7 @@ Headless container running Google Chrome. Useful for testing, filling out forms,
 
 This was created for use with Hoarder which calls for a specific version (123)
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-button-grid" markdown data-search-exclude>
 
 [:material-bookshelf: Github Repo&nbsp;&nbsp;](https://github.com/jlandure/alpine-chrome/blob/master/Dockerfile){ .md-button .md-button--stretch }
 
@@ -312,20 +312,6 @@ The docker commands are set to the following by default. Port 9222 is open to th
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         chrome_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`chrome_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        chrome_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`chrome_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        chrome_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`chrome_role_traefik_robot_enabled`"

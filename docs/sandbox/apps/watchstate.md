@@ -12,7 +12,7 @@ tags:
 
 This tool's primary goal is to sync your backends' play states without relying on third party services. Out of the box, it supports Jellyfin, Plex and Emby media servers.
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-button-grid" markdown data-search-exclude>
 
 [:material-home: Homepage&nbsp;&nbsp;](https://github.com/arabcoders/watchstate){ .md-button .md-button--stretch }
 
@@ -718,30 +718,6 @@ Visit `https://watchstate._yourdomain.com_`.
         # Enable gzip compression middleware for containers
         # Type: bool (true/false)
         watchstate2_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`watchstate_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        watchstate_role_traefik_middleware_http_api_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        watchstate2_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`watchstate_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        watchstate_role_traefik_middleware_http_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        watchstate2_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`watchstate_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_robot_enabled`{ .sb-show-on-checked }"

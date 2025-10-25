@@ -10,7 +10,7 @@ tags:
 
 Implements a Docker container for Firefox. The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
 
-<div class="grid sb-buttons" markdown data-search-exclude>
+<div class="grid sb-button-grid" markdown data-search-exclude>
 
 [:material-home: Homepage&nbsp;&nbsp;](https://jlesage.github.io/docker-apps){ .md-button .md-button--stretch }
 
@@ -47,7 +47,7 @@ Settings are available as environment variables[<sup>:octicons-link-external-16:
 sb install sandbox-firefox
 ```
 
-!!! info inline end sb-wide "Downloads Save Location"
+!!! info inline end sb-has-fixed-width "Downloads Save Location"
     ```
     /mnt/unionfs/downloads/firefox
     ```
@@ -249,7 +249,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 === "Docker"
 
     Container
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_container`"
 
@@ -259,7 +259,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Image
-    { .sb-h5 }
+    { h5 }
 
     ??? variable bool "`firefox_role_docker_image_pull`"
 
@@ -290,7 +290,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Envs
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_env_file`"
 
@@ -300,7 +300,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Volumes
-    { .sb-h5 }
+    { h5 }
 
     ??? variable list "`firefox_role_docker_volumes_default`"
 
@@ -318,7 +318,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Hostname
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_hostname`"
 
@@ -328,7 +328,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Networks
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_networks_alias`"
 
@@ -352,7 +352,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Capabilities
-    { .sb-h5 }
+    { h5 }
 
     ??? variable list "`firefox_role_docker_capabilities_default`"
 
@@ -370,7 +370,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     Restart Policy
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_restart_policy`"
 
@@ -380,7 +380,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         ```
 
     State
-    { .sb-h5 }
+    { h5 }
 
     ??? variable string "`firefox_role_docker_state`"
 
@@ -477,20 +477,6 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         firefox_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`firefox_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        firefox_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`firefox_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        firefox_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`firefox_role_traefik_robot_enabled`"

@@ -54,7 +54,7 @@ The variables that can be used for customization within the Inventory are listed
 
 === "GitHub File View"
 
-    <div class="sb-no-thead">
+    <div class="sb-table--no-header">
 
     | Scope   | Location |
     |---------|----------|
@@ -119,7 +119,7 @@ Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/
 
 Saltbox variable files are a combination of static and dynamic configuration. Many variable assignments are integral to how the component is deployed, and if modified, can break functionality or cause conflicts during updates. Some keywords and contents can help identify which variables may be customized:
 
-<div class="sb-table-heat-map" markdown>
+<div class="sb-table--heatmap" markdown>
 
 | Pattern                      | Purpose                                                               |
 |------------------------------|-----------------------------------------------------------------------|

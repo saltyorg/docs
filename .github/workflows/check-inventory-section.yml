@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - role-refactor
-      - role-refactor-rolevars
     paths:
       - 'docs/apps/**'
       - 'docs/sandbox/apps/**'

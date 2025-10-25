@@ -176,11 +176,3 @@ label[for="sb-checkbox--var-level"] {
     text-overflow: ellipsis;
   }
 }
-
-.sb-h5 {
-  font-size: .8em;
-  font-weight: 700;
-  letter-spacing: -.01em;
-  margin: 1.25em 0;
-  text-transform: uppercase;
-}

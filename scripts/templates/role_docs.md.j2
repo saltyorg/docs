@@ -121,8 +121,7 @@
     {% for var in section_vars %}
       {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
         {% for comment_line in var.comment_lines %}
-    {{ comment_line }}
-    { .sb-h5 }
+    <h5>{{ comment_line }}</h5>
 
         {% endfor %}
       {% endif %}
@@ -160,8 +159,7 @@
 
       {% for category in docker_info.category_order %}
         {% if category in docker_info.categories %}
-    {{ category }}
-    { .sb-h5 }
+    <h5>{{ category }}</h5>
 
           {% for var_suffix in docker_info.categories[category]|sort %}
     ??? variable {{ get_docker_var_type(var_suffix) }} "`{{ role_name }}_role_docker_{{ var_suffix }}`{ .sb-show-on-unchecked }`{{ role_name }}2_docker_{{ var_suffix }}`{ .sb-show-on-checked }"
@@ -206,8 +204,7 @@
     {% for var in section_vars %}
       {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
         {% for comment_line in var.comment_lines %}
-    {{ comment_line }}
-    { .sb-h5 }
+    <h5>{{ comment_line }}</h5>
 
         {% endfor %}
       {% endif %}
@@ -233,8 +230,7 @@
 
       {% for category in docker_info.category_order %}
         {% if category in docker_info.categories %}
-    {{ category }}
-    { .sb-h5 }
+    <h5>{{ category }}</h5>
 
           {% for var_suffix in docker_info.categories[category]|sort %}
     ??? variable {{ get_docker_var_type(var_suffix) }} "`{{ role_name }}_role_docker_{{ var_suffix }}`"

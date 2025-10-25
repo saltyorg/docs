@@ -415,8 +415,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`calibre_role_docker_container`{ .sb-show-on-unchecked }`calibre2_docker_container`{ .sb-show-on-checked }"
 
@@ -430,8 +429,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_container: "{{ calibre_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`calibre_role_docker_image_pull`{ .sb-show-on-unchecked }`calibre2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -481,8 +479,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='calibre') }}:{{ lookup('role_var', '_docker_image_tag', role='calibre') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`calibre_role_docker_envs_default`{ .sb-show-on-unchecked }`calibre2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -520,8 +517,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`calibre_role_docker_volumes_default`{ .sb-show-on-unchecked }`calibre2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -551,8 +547,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable list "`calibre_role_docker_labels_default`{ .sb-show-on-unchecked }`calibre2_docker_labels_default`{ .sb-show-on-checked }"
 
@@ -604,8 +599,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`calibre_role_docker_hostname`{ .sb-show-on-unchecked }`calibre2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -619,8 +613,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_hostname: "{{ calibre_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`calibre_role_docker_networks_alias`{ .sb-show-on-unchecked }`calibre2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -658,8 +651,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_networks_custom: []
         ```
 
-    Security Opts
-    { .sb-h5 }
+    <h5>Security Opts</h5>
 
     ??? variable list "`calibre_role_docker_security_opts_default`{ .sb-show-on-unchecked }`calibre2_docker_security_opts_default`{ .sb-show-on-checked }"
 
@@ -687,8 +679,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_security_opts_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`calibre_role_docker_restart_policy`{ .sb-show-on-unchecked }`calibre2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -702,8 +693,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`calibre_role_docker_state`{ .sb-show-on-unchecked }`calibre2_docker_state`{ .sb-show-on-checked }"
 

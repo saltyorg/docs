@@ -248,8 +248,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`crafty_role_docker_container`"
 
@@ -258,8 +257,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_container: "{{ crafty_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`crafty_role_docker_image_pull`"
 
@@ -289,8 +287,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='crafty') }}:{{ lookup('role_var', '_docker_image_tag', role='crafty') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`crafty_role_docker_ports_defaults`"
 
@@ -308,8 +305,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`crafty_role_docker_envs_default`"
 
@@ -326,8 +322,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`crafty_role_docker_volumes_default`"
 
@@ -348,8 +343,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable list "`crafty_role_docker_labels_default`"
 
@@ -378,8 +372,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`crafty_role_docker_hostname`"
 
@@ -388,8 +381,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_hostname: "{{ crafty_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`crafty_role_docker_networks_alias`"
 
@@ -412,8 +404,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`crafty_role_docker_restart_policy`"
 
@@ -422,8 +413,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`crafty_role_docker_state`"
 
@@ -432,8 +422,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_state: started
         ```
 
-    Stop Timeout
-    { .sb-h5 }
+    <h5>Stop Timeout</h5>
 
     ??? variable int "`crafty_role_docker_stop_timeout`"
 

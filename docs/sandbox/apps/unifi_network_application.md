@@ -264,8 +264,7 @@ sb install sandbox-unifi-network-application
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`unifi_network_application_role_docker_container`"
 
@@ -274,8 +273,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_container: "{{ unifi_network_application_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`unifi_network_application_role_docker_image_pull`"
 
@@ -305,8 +303,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='unifi_network_application') }}:{{ lookup('role_var', '_docker_image_tag', role='unifi_network_application') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`unifi_network_application_role_docker_ports_defaults`"
 
@@ -325,8 +322,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`unifi_network_application_role_docker_envs_default`"
 
@@ -350,8 +346,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`unifi_network_application_role_docker_volumes_default`"
 
@@ -368,8 +363,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`unifi_network_application_role_docker_hostname`"
 
@@ -378,8 +372,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_hostname: "{{ unifi_network_application_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`unifi_network_application_role_docker_networks_alias`"
 
@@ -402,8 +395,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`unifi_network_application_role_docker_restart_policy`"
 
@@ -412,8 +404,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`unifi_network_application_role_docker_state`"
 
@@ -422,8 +413,7 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`unifi_network_application_role_depends_on`"
 

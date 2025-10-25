@@ -197,8 +197,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`esphome_role_docker_container`"
 
@@ -207,8 +206,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_container: "{{ esphome_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`esphome_role_docker_image_pull`"
 
@@ -238,8 +236,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='esphome') }}:{{ lookup('role_var', '_docker_image_tag', role='esphome') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`esphome_role_docker_envs_default`"
 
@@ -258,8 +255,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`esphome_role_docker_volumes_default`"
 
@@ -277,8 +273,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`esphome_role_docker_hostname`"
 
@@ -287,8 +282,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_hostname: "{{ esphome_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`esphome_role_docker_networks_alias`"
 
@@ -311,8 +305,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_networks_custom: []
         ```
 
-    Network Mode
-    { .sb-h5 }
+    <h5>Network Mode</h5>
 
     ??? variable string "`esphome_role_docker_network_mode`"
 
@@ -321,8 +314,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_network_mode: "host"
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`esphome_role_docker_restart_policy`"
 
@@ -331,8 +323,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`esphome_role_docker_state`"
 
@@ -341,8 +332,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_state: started
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable bool "`esphome_role_docker_privileged`"
 

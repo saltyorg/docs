@@ -217,8 +217,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`thelounge_role_docker_container`"
 
@@ -227,8 +226,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_container: "{{ thelounge_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`thelounge_role_docker_image_pull`"
 
@@ -258,8 +256,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='thelounge') }}:{{ lookup('role_var', '_docker_image_tag', role='thelounge') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`thelounge_role_docker_envs_default`"
 
@@ -278,8 +275,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`thelounge_role_docker_volumes_default`"
 
@@ -296,8 +292,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`thelounge_role_docker_hostname`"
 
@@ -306,8 +301,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_hostname: "{{ thelounge_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`thelounge_role_docker_networks_alias`"
 
@@ -330,8 +324,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`thelounge_role_docker_restart_policy`"
 
@@ -340,8 +333,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`thelounge_role_docker_state`"
 

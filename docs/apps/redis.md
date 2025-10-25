@@ -103,8 +103,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`redis_role_docker_container`{ .sb-show-on-unchecked }`redis2_docker_container`{ .sb-show-on-checked }"
 
@@ -118,8 +117,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_container: "{{ redis_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`redis_role_docker_image_pull`{ .sb-show-on-unchecked }`redis2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -169,8 +167,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='redis') }}:{{ lookup('role_var', '_docker_image_tag', role='redis') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`redis_role_docker_envs_default`{ .sb-show-on-unchecked }`redis2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -198,8 +195,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`redis_role_docker_volumes_default`{ .sb-show-on-unchecked }`redis2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -227,8 +223,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`redis_role_docker_hostname`{ .sb-show-on-unchecked }`redis2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -242,8 +237,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_hostname: "{{ redis_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`redis_role_docker_networks_alias`{ .sb-show-on-unchecked }`redis2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -281,8 +275,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`redis_role_docker_restart_policy`{ .sb-show-on-unchecked }`redis2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -296,8 +289,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`redis_role_docker_state`{ .sb-show-on-unchecked }`redis2_docker_state`{ .sb-show-on-checked }"
 
@@ -311,8 +303,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`redis_role_docker_user`{ .sb-show-on-unchecked }`redis2_docker_user`{ .sb-show-on-checked }"
 
@@ -330,8 +321,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    Resource Limits
-    { .sb-h5 }
+    <h5>Resource Limits</h5>
 
     ??? variable int "`redis_role_docker_blkio_weight`{ .sb-show-on-unchecked }`redis2_docker_blkio_weight`{ .sb-show-on-checked }"
 
@@ -477,8 +467,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_memory_swappiness:
         ```
 
-    Security & Devices
-    { .sb-h5 }
+    <h5>Security & Devices</h5>
 
     ??? variable list "`redis_role_docker_cap_drop`{ .sb-show-on-unchecked }`redis2_docker_cap_drop`{ .sb-show-on-checked }"
 
@@ -612,8 +601,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_security_opts:
         ```
 
-    Networking
-    { .sb-h5 }
+    <h5>Networking</h5>
 
     ??? variable list "`redis_role_docker_dns_opts`{ .sb-show-on-unchecked }`redis2_docker_dns_opts`{ .sb-show-on-checked }"
 
@@ -687,8 +675,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_network_mode:
         ```
 
-    Storage
-    { .sb-h5 }
+    <h5>Storage</h5>
 
     ??? variable bool "`redis_role_docker_keep_volumes`{ .sb-show-on-unchecked }`redis2_docker_keep_volumes`{ .sb-show-on-checked }"
 
@@ -762,8 +749,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_working_dir:
         ```
 
-    Monitoring & Lifecycle
-    { .sb-h5 }
+    <h5>Monitoring & Lifecycle</h5>
 
     ??? variable dict "`redis_role_docker_healthcheck`{ .sb-show-on-unchecked }`redis2_docker_healthcheck`{ .sb-show-on-checked }"
 
@@ -825,8 +811,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_output_logs:
         ```
 
-    Other Options
-    { .sb-h5 }
+    <h5>Other Options</h5>
 
     ??? variable bool "`redis_role_docker_auto_remove`{ .sb-show-on-unchecked }`redis2_docker_auto_remove`{ .sb-show-on-checked }"
 

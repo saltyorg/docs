@@ -267,8 +267,7 @@ sb install sandbox-n8n
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`n8n_role_docker_container`"
 
@@ -277,8 +276,7 @@ sb install sandbox-n8n
         n8n_role_docker_container: "{{ n8n_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`n8n_role_docker_image_pull`"
 
@@ -308,8 +306,7 @@ sb install sandbox-n8n
         n8n_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='n8n') }}:{{ lookup('role_var', '_docker_image_tag', role='n8n') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`n8n_role_docker_envs_default`"
 
@@ -342,8 +339,7 @@ sb install sandbox-n8n
         n8n_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`n8n_role_docker_volumes_default`"
 
@@ -360,8 +356,7 @@ sb install sandbox-n8n
         n8n_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`n8n_role_docker_hostname`"
 
@@ -370,8 +365,7 @@ sb install sandbox-n8n
         n8n_role_docker_hostname: "{{ n8n_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`n8n_role_docker_networks_alias`"
 
@@ -394,8 +388,7 @@ sb install sandbox-n8n
         n8n_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`n8n_role_docker_restart_policy`"
 
@@ -404,8 +397,7 @@ sb install sandbox-n8n
         n8n_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`n8n_role_docker_state`"
 
@@ -414,8 +406,7 @@ sb install sandbox-n8n
         n8n_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`n8n_role_depends_on`"
 
@@ -438,8 +429,7 @@ sb install sandbox-n8n
         n8n_role_depends_on_healthchecks: "false"
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`n8n_role_docker_user`"
 

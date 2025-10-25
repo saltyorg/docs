@@ -275,8 +275,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`calibre_web_role_docker_container`"
 
@@ -285,8 +284,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_container: "{{ calibre_web_role_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`calibre_web_role_docker_image_pull`"
 
@@ -316,8 +314,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='calibre_web') }}:{{ lookup('role_var', '_docker_image_tag', role='calibre_web') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`calibre_web_role_docker_envs_default`"
 
@@ -349,8 +346,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`calibre_web_role_docker_volumes_default`"
 
@@ -370,8 +366,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable dict "`calibre_web_role_docker_labels_default`"
 
@@ -388,8 +383,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`calibre_web_role_docker_hostname`"
 
@@ -398,8 +392,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_hostname: "{{ calibre_web_role_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`calibre_web_role_docker_networks_alias`"
 
@@ -422,8 +415,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`calibre_web_role_docker_restart_policy`"
 
@@ -432,8 +424,7 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`calibre_web_role_docker_state`"
 

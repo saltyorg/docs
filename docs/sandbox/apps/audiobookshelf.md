@@ -175,8 +175,7 @@ sb install sandbox-audiobookshelf
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`audiobookshelf_role_docker_container`"
 
@@ -185,8 +184,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_container: "{{ audiobookshelf_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`audiobookshelf_role_docker_image_pull`"
 
@@ -216,8 +214,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='audiobookshelf') }}:{{ lookup('role_var', '_docker_image_tag', role='audiobookshelf') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`audiobookshelf_role_docker_envs_default`"
 
@@ -234,8 +231,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`audiobookshelf_role_docker_volumes_default`"
 
@@ -255,8 +251,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`audiobookshelf_role_docker_hostname`"
 
@@ -265,8 +260,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_hostname: "{{ audiobookshelf_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`audiobookshelf_role_docker_networks_alias`"
 
@@ -289,8 +283,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`audiobookshelf_role_docker_restart_policy`"
 
@@ -299,8 +292,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`audiobookshelf_role_docker_state`"
 
@@ -309,8 +301,7 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`audiobookshelf_role_docker_user`"
 

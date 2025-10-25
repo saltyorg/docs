@@ -186,8 +186,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`jaeger_role_docker_container`"
 
@@ -196,8 +195,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_container: "{{ jaeger_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`jaeger_role_docker_image_pull`"
 
@@ -227,8 +225,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jaeger') }}:{{ lookup('role_var', '_docker_image_tag', role='jaeger') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`jaeger_role_docker_envs_default`"
 
@@ -246,8 +243,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_envs_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`jaeger_role_docker_hostname`"
 
@@ -256,8 +252,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_hostname: "{{ jaeger_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`jaeger_role_docker_networks_alias`"
 
@@ -280,8 +275,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`jaeger_role_docker_restart_policy`"
 
@@ -290,8 +284,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`jaeger_role_docker_state`"
 
@@ -304,8 +297,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    Resource Limits
-    { .sb-h5 }
+    <h5>Resource Limits</h5>
 
     ??? variable int "`jaeger_role_docker_blkio_weight`"
 
@@ -391,8 +383,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_memory_swappiness:
         ```
 
-    Security & Devices
-    { .sb-h5 }
+    <h5>Security & Devices</h5>
 
     ??? variable list "`jaeger_role_docker_cap_drop`"
 
@@ -471,8 +462,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_security_opts:
         ```
 
-    Networking
-    { .sb-h5 }
+    <h5>Networking</h5>
 
     ??? variable list "`jaeger_role_docker_dns_opts`"
 
@@ -516,8 +506,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_network_mode:
         ```
 
-    Storage
-    { .sb-h5 }
+    <h5>Storage</h5>
 
     ??? variable bool "`jaeger_role_docker_keep_volumes`"
 
@@ -568,8 +557,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_working_dir:
         ```
 
-    Monitoring & Lifecycle
-    { .sb-h5 }
+    <h5>Monitoring & Lifecycle</h5>
 
     ??? variable dict "`jaeger_role_docker_healthcheck`"
 
@@ -606,8 +594,7 @@ Note: Data is stored in-memory by default and will be lost when the container re
         jaeger_role_docker_output_logs:
         ```
 
-    Other Options
-    { .sb-h5 }
+    <h5>Other Options</h5>
 
     ??? variable bool "`jaeger_role_docker_auto_remove`"
 

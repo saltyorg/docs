@@ -210,8 +210,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`homepage_role_docker_container`"
 
@@ -220,8 +219,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_container: "{{ homepage_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`homepage_role_docker_image_pull`"
 
@@ -251,8 +249,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='homepage') }}:{{ lookup('role_var', '_docker_image_tag', role='homepage') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`homepage_role_docker_envs_default`"
 
@@ -272,8 +269,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`homepage_role_docker_volumes_default`"
 
@@ -292,8 +288,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`homepage_role_docker_hostname`"
 
@@ -302,8 +297,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_hostname: "{{ homepage_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`homepage_role_docker_networks_alias`"
 
@@ -326,8 +320,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`homepage_role_docker_restart_policy`"
 
@@ -336,8 +329,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`homepage_role_docker_state`"
 
@@ -346,8 +338,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`homepage_role_docker_user`"
 
@@ -356,8 +347,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`homepage_role_depends_on`"
 

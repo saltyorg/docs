@@ -179,8 +179,7 @@ sb install sandbox-medusa
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`medusa_role_docker_container`"
 
@@ -189,8 +188,7 @@ sb install sandbox-medusa
         medusa_role_docker_container: "{{ medusa_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`medusa_role_docker_image_pull`"
 
@@ -220,8 +218,7 @@ sb install sandbox-medusa
         medusa_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='medusa') }}:{{ lookup('role_var', '_docker_image_tag', role='medusa') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`medusa_role_docker_envs_default`"
 
@@ -241,8 +238,7 @@ sb install sandbox-medusa
         medusa_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`medusa_role_docker_volumes_default`"
 
@@ -261,8 +257,7 @@ sb install sandbox-medusa
         medusa_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`medusa_role_docker_hostname`"
 
@@ -271,8 +266,7 @@ sb install sandbox-medusa
         medusa_role_docker_hostname: "{{ medusa_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`medusa_role_docker_networks_alias`"
 
@@ -295,8 +289,7 @@ sb install sandbox-medusa
         medusa_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`medusa_role_docker_restart_policy`"
 
@@ -305,8 +298,7 @@ sb install sandbox-medusa
         medusa_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`medusa_role_docker_state`"
 

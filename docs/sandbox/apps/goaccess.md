@@ -185,8 +185,7 @@ sb install sandbox-goaccess
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`goaccess_role_docker_container`"
 
@@ -195,8 +194,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_container: "{{ goaccess_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`goaccess_role_docker_image_pull`"
 
@@ -226,8 +224,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='goaccess') }}:{{ lookup('role_var', '_docker_image_tag', role='goaccess') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`goaccess_role_docker_envs_default`"
 
@@ -246,8 +243,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`goaccess_role_docker_volumes_default`"
 
@@ -265,8 +261,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`goaccess_role_docker_hostname`"
 
@@ -275,8 +270,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_hostname: "{{ goaccess_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`goaccess_role_docker_networks_alias`"
 
@@ -299,8 +293,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`goaccess_role_docker_restart_policy`"
 
@@ -309,8 +302,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`goaccess_role_docker_state`"
 
@@ -319,8 +311,7 @@ sb install sandbox-goaccess
         goaccess_role_docker_state: started
         ```
 
-    Force Kill
-    { .sb-h5 }
+    <h5>Force Kill</h5>
 
     ??? variable bool "`goaccess_role_docker_force_kill`"
 

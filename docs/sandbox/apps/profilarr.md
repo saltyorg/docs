@@ -189,8 +189,7 @@ Visit `https://profilarr._yourdomain.com_`.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`profilarr_role_docker_container`"
 
@@ -199,8 +198,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_container: "{{ profilarr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`profilarr_role_docker_image_pull`"
 
@@ -230,8 +228,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='profilarr') }}:{{ lookup('role_var', '_docker_image_tag', role='profilarr') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`profilarr_role_docker_envs_default`"
 
@@ -250,8 +247,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`profilarr_role_docker_volumes_default`"
 
@@ -268,8 +264,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`profilarr_role_docker_hostname`"
 
@@ -278,8 +273,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_hostname: "{{ profilarr_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`profilarr_role_docker_networks_alias`"
 
@@ -302,8 +296,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`profilarr_role_docker_restart_policy`"
 
@@ -312,8 +305,7 @@ Visit `https://profilarr._yourdomain.com_`.
         profilarr_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`profilarr_role_docker_state`"
 
@@ -410,6 +402,20 @@ Visit `https://profilarr._yourdomain.com_`.
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         profilarr_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`profilarr_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        profilarr_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`profilarr_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        profilarr_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`profilarr_role_traefik_robot_enabled`"

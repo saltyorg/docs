@@ -325,8 +325,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`guacamole_role_docker_container`"
 
@@ -335,8 +334,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_container: "{{ guacamole_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`guacamole_role_docker_image_pull`"
 
@@ -366,8 +364,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='guacamole') }}:{{ lookup('role_var', '_docker_image_tag', role='guacamole') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`guacamole_role_docker_envs_default`"
 
@@ -394,8 +391,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`guacamole_role_docker_volumes_default`"
 
@@ -412,8 +408,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`guacamole_role_docker_hostname`"
 
@@ -422,8 +417,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_hostname: "{{ guacamole_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`guacamole_role_docker_networks_alias`"
 
@@ -446,8 +440,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`guacamole_role_docker_restart_policy`"
 
@@ -456,8 +449,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`guacamole_role_docker_state`"
 

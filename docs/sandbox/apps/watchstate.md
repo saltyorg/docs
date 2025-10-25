@@ -323,8 +323,7 @@ Visit `https://watchstate._yourdomain.com_`.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`watchstate_role_docker_container`{ .sb-show-on-unchecked }`watchstate2_docker_container`{ .sb-show-on-checked }"
 
@@ -338,8 +337,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_container: "{{ watchstate_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`watchstate_role_docker_image_pull`{ .sb-show-on-unchecked }`watchstate2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -389,8 +387,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='watchstate') }}:{{ lookup('role_var', '_docker_image_tag', role='watchstate') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`watchstate_role_docker_envs_default`{ .sb-show-on-unchecked }`watchstate2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -436,8 +433,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`watchstate_role_docker_volumes_default`{ .sb-show-on-unchecked }`watchstate2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -465,8 +461,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`watchstate_role_docker_hostname`{ .sb-show-on-unchecked }`watchstate2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -480,8 +475,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_hostname: "{{ watchstate_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`watchstate_role_docker_networks_alias`{ .sb-show-on-unchecked }`watchstate2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -519,8 +513,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`watchstate_role_docker_restart_policy`{ .sb-show-on-unchecked }`watchstate2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -534,8 +527,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`watchstate_role_docker_state`{ .sb-show-on-unchecked }`watchstate2_docker_state`{ .sb-show-on-checked }"
 
@@ -549,8 +541,7 @@ Visit `https://watchstate._yourdomain.com_`.
         watchstate2_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`watchstate_role_docker_user`{ .sb-show-on-unchecked }`watchstate2_docker_user`{ .sb-show-on-checked }"
 
@@ -718,6 +709,30 @@ Visit `https://watchstate._yourdomain.com_`.
         # Enable gzip compression middleware for containers
         # Type: bool (true/false)
         watchstate2_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_middleware_http_api_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`watchstate_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`watchstate2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_traefik_middleware_http_insecure:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`watchstate_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_robot_enabled`{ .sb-show-on-checked }"

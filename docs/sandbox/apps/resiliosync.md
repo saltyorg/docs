@@ -199,8 +199,7 @@ resiliosync_data_port: "#####"
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`resiliosync_role_docker_container`"
 
@@ -209,8 +208,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_container: "{{ resiliosync_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`resiliosync_role_docker_image_pull`"
 
@@ -240,8 +238,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='resiliosync') }}:{{ lookup('role_var', '_docker_image_tag', role='resiliosync') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`resiliosync_role_docker_ports_defaults`"
 
@@ -258,8 +255,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_ports_custom: []
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable bool "`resiliosync_role_docker_volumes_global`"
 
@@ -285,8 +281,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`resiliosync_role_docker_hostname`"
 
@@ -295,8 +290,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_hostname: "{{ resiliosync_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`resiliosync_role_docker_networks_alias`"
 
@@ -319,8 +313,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`resiliosync_role_docker_restart_policy`"
 
@@ -329,8 +322,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`resiliosync_role_docker_state`"
 
@@ -339,8 +331,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`resiliosync_role_docker_user`"
 

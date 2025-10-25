@@ -208,8 +208,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`trackarr_role_docker_container`"
 
@@ -218,8 +217,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_container: "{{ trackarr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`trackarr_role_docker_image_pull`"
 
@@ -249,8 +247,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='trackarr') }}:{{ lookup('role_var', '_docker_image_tag', role='trackarr') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable string "`trackarr_role_docker_envs_log_level`"
 
@@ -277,8 +274,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`trackarr_role_docker_volumes_default`"
 
@@ -295,8 +291,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`trackarr_role_docker_hostname`"
 
@@ -305,8 +300,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_hostname: "{{ trackarr_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`trackarr_role_docker_networks_alias`"
 
@@ -329,8 +323,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`trackarr_role_docker_restart_policy`"
 
@@ -339,8 +332,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`trackarr_role_docker_state`"
 

@@ -253,8 +253,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`fireflyiii_importer_role_docker_container`"
 
@@ -263,8 +262,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_container: "{{ fireflyiii_importer_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`fireflyiii_importer_role_docker_image_pull`"
 
@@ -294,8 +292,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='fireflyiii_importer') }}:{{ lookup('role_var', '_docker_image_tag', role='fireflyiii_importer') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`fireflyiii_importer_role_docker_envs_default`"
 
@@ -316,8 +313,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`fireflyiii_importer_role_docker_volumes_default`"
 
@@ -336,8 +332,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`fireflyiii_importer_role_docker_hostname`"
 
@@ -346,8 +341,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_hostname: "{{ fireflyiii_importer_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`fireflyiii_importer_role_docker_networks_alias`"
 
@@ -370,8 +364,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`fireflyiii_importer_role_docker_restart_policy`"
 
@@ -380,8 +373,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`fireflyiii_importer_role_docker_state`"
 
@@ -390,8 +382,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`fireflyiii_importer_role_depends_on`"
 

@@ -59,8 +59,7 @@ sb install sandbox-gotenberg
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`gotenberg_role_docker_container`"
 
@@ -69,8 +68,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_container: "{{ gotenberg_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`gotenberg_role_docker_image_pull`"
 
@@ -100,8 +98,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gotenberg') }}:{{ lookup('role_var', '_docker_image_tag', role='gotenberg') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`gotenberg_role_docker_envs_default`"
 
@@ -118,8 +115,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_envs_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`gotenberg_role_docker_hostname`"
 
@@ -128,8 +124,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_hostname: "{{ gotenberg_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`gotenberg_role_docker_networks_alias`"
 
@@ -152,8 +147,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`gotenberg_role_docker_restart_policy`"
 
@@ -162,8 +156,7 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`gotenberg_role_docker_state`"
 

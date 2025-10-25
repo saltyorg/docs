@@ -183,8 +183,7 @@ On a clean installation, Stash only creates its config file when the user has go
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`stash_role_docker_container`"
 
@@ -193,8 +192,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_container: "{{ stash_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`stash_role_docker_image_pull`"
 
@@ -224,8 +222,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='stash') }}:{{ lookup('role_var', '_docker_image_tag', role='stash') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`stash_role_docker_envs_default`"
 
@@ -244,8 +241,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`stash_role_docker_volumes_default`"
 
@@ -266,8 +262,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`stash_role_docker_hostname`"
 
@@ -276,8 +271,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_hostname: "{{ stash_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`stash_role_docker_networks_alias`"
 
@@ -300,8 +294,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`stash_role_docker_restart_policy`"
 
@@ -310,8 +303,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`stash_role_docker_state`"
 

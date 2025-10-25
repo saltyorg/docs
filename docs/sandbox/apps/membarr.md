@@ -129,8 +129,7 @@ Now restart the Membarr container `docker restart membarr`.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`membarr_role_docker_container`"
 
@@ -139,8 +138,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_container: "{{ membarr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`membarr_role_docker_image_pull`"
 
@@ -170,8 +168,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='membarr') }}:{{ lookup('role_var', '_docker_image_tag', role='membarr') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`membarr_role_docker_envs_default`"
 
@@ -189,8 +186,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`membarr_role_docker_volumes_default`"
 
@@ -207,8 +203,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`membarr_role_docker_hostname`"
 
@@ -217,8 +212,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_hostname: "{{ membarr_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`membarr_role_docker_networks_alias`"
 
@@ -241,8 +235,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`membarr_role_docker_restart_policy`"
 
@@ -251,8 +244,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`membarr_role_docker_state`"
 
@@ -261,8 +253,7 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`membarr_role_docker_user`"
 

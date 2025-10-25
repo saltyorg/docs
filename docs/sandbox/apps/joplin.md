@@ -267,8 +267,7 @@ Change this asap.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`joplin_role_docker_container`"
 
@@ -277,8 +276,7 @@ Change this asap.
         joplin_role_docker_container: "{{ joplin_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`joplin_role_docker_image_pull`"
 
@@ -308,8 +306,7 @@ Change this asap.
         joplin_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='joplin') }}:{{ lookup('role_var', '_docker_image_tag', role='joplin') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`joplin_role_docker_envs_default`"
 
@@ -334,8 +331,7 @@ Change this asap.
         joplin_role_docker_envs_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`joplin_role_docker_hostname`"
 
@@ -344,8 +340,7 @@ Change this asap.
         joplin_role_docker_hostname: "{{ joplin_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`joplin_role_docker_networks_alias`"
 
@@ -368,8 +363,7 @@ Change this asap.
         joplin_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`joplin_role_docker_restart_policy`"
 
@@ -378,8 +372,7 @@ Change this asap.
         joplin_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`joplin_role_docker_state`"
 
@@ -388,8 +381,7 @@ Change this asap.
         joplin_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`joplin_role_depends_on`"
 
@@ -412,8 +404,7 @@ Change this asap.
         joplin_role_depends_on_healthchecks: "false"
         ```
 
-    Create Docker Container Timeout
-    { .sb-h5 }
+    <h5>Create Docker Container Timeout</h5>
 
     ??? variable int "`joplin_docker_create_timeout`"
 

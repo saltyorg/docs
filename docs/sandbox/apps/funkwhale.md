@@ -235,8 +235,7 @@ If everything goes as planned you'll get prompted like this:
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`funkwhale_role_docker_container`"
 
@@ -245,8 +244,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_container: "{{ funkwhale_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`funkwhale_role_docker_image_pull`"
 
@@ -276,8 +274,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='funkwhale') }}:{{ lookup('role_var', '_docker_image_tag', role='funkwhale') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`funkwhale_role_docker_envs_default`"
 
@@ -298,8 +295,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`funkwhale_role_docker_volumes_default`"
 
@@ -317,8 +313,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`funkwhale_role_docker_hostname`"
 
@@ -327,8 +322,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_hostname: "{{ funkwhale_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`funkwhale_role_docker_networks_alias`"
 
@@ -351,8 +345,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`funkwhale_role_docker_restart_policy`"
 
@@ -361,8 +354,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`funkwhale_role_docker_state`"
 

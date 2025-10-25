@@ -175,8 +175,7 @@ sb install sandbox-bookstack
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`bookstack_role_docker_container`"
 
@@ -185,8 +184,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_container: "{{ bookstack_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`bookstack_role_docker_image_pull`"
 
@@ -216,8 +214,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='bookstack') }}:{{ lookup('role_var', '_docker_image_tag', role='bookstack') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`bookstack_role_docker_envs_default`"
 
@@ -243,8 +240,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`bookstack_role_docker_volumes_default`"
 
@@ -261,8 +257,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`bookstack_role_docker_hostname`"
 
@@ -271,8 +266,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_hostname: "{{ bookstack_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`bookstack_role_docker_networks_alias`"
 
@@ -295,8 +289,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`bookstack_role_docker_restart_policy`"
 
@@ -305,8 +298,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`bookstack_role_docker_state`"
 
@@ -315,8 +307,7 @@ sb install sandbox-bookstack
         bookstack_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`bookstack_role_depends_on`"
 

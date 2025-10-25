@@ -127,8 +127,7 @@ By default, the server will be using the latest version available. To choose a s
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`minecraft_bedrock_role_docker_container`"
 
@@ -137,8 +136,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_container: "{{ minecraft_bedrock_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`minecraft_bedrock_role_docker_image_pull`"
 
@@ -168,8 +166,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='minecraft_bedrock') }}:{{ lookup('role_var', '_docker_image_tag', role='minecraft_bedrock') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`minecraft_bedrock_role_docker_ports_defaults`"
 
@@ -186,8 +183,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`minecraft_bedrock_role_docker_envs_default`"
 
@@ -208,8 +204,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`minecraft_bedrock_role_docker_volumes_default`"
 
@@ -226,8 +221,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`minecraft_bedrock_role_docker_hostname`"
 
@@ -236,8 +230,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_hostname: "{{ minecraft_bedrock_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`minecraft_bedrock_role_docker_networks_alias`"
 
@@ -260,8 +253,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`minecraft_bedrock_role_docker_restart_policy`"
 
@@ -270,8 +262,7 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`minecraft_bedrock_role_docker_state`"
 

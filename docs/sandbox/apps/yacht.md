@@ -199,8 +199,7 @@ sb install sandbox-yacht
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`yacht_role_docker_container`"
 
@@ -209,8 +208,7 @@ sb install sandbox-yacht
         yacht_role_docker_container: "{{ yacht_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`yacht_role_docker_image_pull`"
 
@@ -240,8 +238,7 @@ sb install sandbox-yacht
         yacht_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='yacht') }}:{{ lookup('role_var', '_docker_image_tag', role='yacht') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`yacht_role_docker_envs_default`"
 
@@ -263,8 +260,7 @@ sb install sandbox-yacht
         yacht_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`yacht_role_docker_volumes_default`"
 
@@ -282,8 +278,7 @@ sb install sandbox-yacht
         yacht_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`yacht_role_docker_hostname`"
 
@@ -292,8 +287,7 @@ sb install sandbox-yacht
         yacht_role_docker_hostname: "{{ yacht_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`yacht_role_docker_networks_alias`"
 
@@ -316,8 +310,7 @@ sb install sandbox-yacht
         yacht_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`yacht_role_docker_restart_policy`"
 
@@ -326,8 +319,7 @@ sb install sandbox-yacht
         yacht_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`yacht_role_docker_state`"
 
@@ -336,8 +328,7 @@ sb install sandbox-yacht
         yacht_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`yacht_role_depends_on`"
 

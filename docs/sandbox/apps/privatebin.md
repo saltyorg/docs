@@ -184,8 +184,7 @@ sb install sandbox-privatebin
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`privatebin_role_docker_container`"
 
@@ -194,8 +193,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_container: "{{ privatebin_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`privatebin_role_docker_image_pull`"
 
@@ -218,8 +216,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_image: "privatebin/nginx-fpm-alpine:{{ lookup('role_var', '_docker_image_tag', role='privatebin') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`privatebin_role_docker_envs_default`"
 
@@ -237,8 +234,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`privatebin_role_docker_volumes_default`"
 
@@ -257,8 +253,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_volumes_custom: []
         ```
 
-    Mounts
-    { .sb-h5 }
+    <h5>Mounts</h5>
 
     ??? variable list "`privatebin_role_docker_mounts_default`"
 
@@ -278,8 +273,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_mounts_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`privatebin_role_docker_hostname`"
 
@@ -288,8 +282,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_hostname: "{{ privatebin_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`privatebin_role_docker_networks_alias`"
 
@@ -312,8 +305,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_networks_custom: []
         ```
 
-    Read Only
-    { .sb-h5 }
+    <h5>Read Only</h5>
 
     ??? variable bool "`privatebin_role_docker_read_only`"
 
@@ -322,8 +314,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_read_only: true
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`privatebin_role_docker_restart_policy`"
 
@@ -332,8 +323,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`privatebin_role_docker_state`"
 
@@ -342,8 +332,7 @@ sb install sandbox-privatebin
         privatebin_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`privatebin_role_docker_user`"
 

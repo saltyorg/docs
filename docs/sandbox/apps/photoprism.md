@@ -191,8 +191,7 @@ sb install sandbox-photoprism
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`photoprism_role_docker_container`"
 
@@ -201,8 +200,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_container: "{{ photoprism_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`photoprism_role_docker_image_pull`"
 
@@ -232,8 +230,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='photoprism') }}:{{ lookup('role_var', '_docker_image_tag', role='photoprism') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`photoprism_role_docker_envs_default`"
 
@@ -277,8 +274,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`photoprism_role_docker_volumes_default`"
 
@@ -297,8 +293,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`photoprism_role_docker_hostname`"
 
@@ -307,8 +302,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_hostname: "{{ photoprism_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`photoprism_role_docker_networks_alias`"
 
@@ -331,8 +325,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_networks_custom: []
         ```
 
-    Security Opts
-    { .sb-h5 }
+    <h5>Security Opts</h5>
 
     ??? variable list "`photoprism_role_docker_security_opts_default`"
 
@@ -350,8 +343,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_security_opts_custom: []
         ```
 
-    Working Directory
-    { .sb-h5 }
+    <h5>Working Directory</h5>
 
     ??? variable string "`photoprism_role_docker_working_dir`"
 
@@ -360,8 +352,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_working_dir: "/photoprism"
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`photoprism_role_docker_restart_policy`"
 
@@ -370,8 +361,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`photoprism_role_docker_state`"
 
@@ -380,8 +370,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`photoprism_role_docker_user`"
 
@@ -390,8 +379,7 @@ sb install sandbox-photoprism
         photoprism_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`photoprism_role_depends_on`"
 

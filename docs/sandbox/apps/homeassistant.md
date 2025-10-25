@@ -202,8 +202,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`homeassistant_role_docker_container`"
 
@@ -212,8 +211,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_container: "{{ homeassistant_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`homeassistant_role_docker_image_pull`"
 
@@ -243,8 +241,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='homeassistant') }}:{{ lookup('role_var', '_docker_image_tag', role='homeassistant') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`homeassistant_role_docker_envs_default`"
 
@@ -263,8 +260,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`homeassistant_role_docker_volumes_default`"
 
@@ -282,8 +278,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`homeassistant_role_docker_hostname`"
 
@@ -292,8 +287,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_hostname: "{{ homeassistant_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`homeassistant_role_docker_networks_alias`"
 
@@ -316,8 +310,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_networks_custom: []
         ```
 
-    Network Mode
-    { .sb-h5 }
+    <h5>Network Mode</h5>
 
     ??? variable string "`homeassistant_role_docker_network_mode`"
 
@@ -326,8 +319,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_network_mode: "host"
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`homeassistant_role_docker_restart_policy`"
 
@@ -336,8 +328,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`homeassistant_role_docker_state`"
 
@@ -346,8 +337,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_state: started
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable bool "`homeassistant_role_docker_privileged`"
 

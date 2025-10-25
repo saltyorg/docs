@@ -207,8 +207,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`moviematch_role_docker_container`"
 
@@ -217,8 +216,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_container: "{{ moviematch_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`moviematch_role_docker_image_pull`"
 
@@ -248,8 +246,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='moviematch') }}:{{ lookup('role_var', '_docker_image_tag', role='moviematch') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`moviematch_role_docker_envs_default`"
 
@@ -272,8 +269,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_envs_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`moviematch_role_docker_hostname`"
 
@@ -282,8 +278,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_hostname: "{{ moviematch_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`moviematch_role_docker_networks_alias`"
 
@@ -306,8 +301,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`moviematch_role_docker_restart_policy`"
 
@@ -316,8 +310,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`moviematch_role_docker_state`"
 

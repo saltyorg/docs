@@ -119,8 +119,7 @@ sb install sandbox-factorio
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`factorio_role_docker_container`"
 
@@ -129,8 +128,7 @@ sb install sandbox-factorio
         factorio_role_docker_container: "{{ factorio_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`factorio_role_docker_image_pull`"
 
@@ -160,8 +158,7 @@ sb install sandbox-factorio
         factorio_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='factorio') }}:{{ lookup('role_var', '_docker_image_tag', role='factorio') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`factorio_role_docker_ports_defaults`"
 
@@ -179,8 +176,7 @@ sb install sandbox-factorio
         factorio_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`factorio_role_docker_envs_default`"
 
@@ -199,8 +195,7 @@ sb install sandbox-factorio
         factorio_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`factorio_role_docker_volumes_default`"
 
@@ -217,8 +212,7 @@ sb install sandbox-factorio
         factorio_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`factorio_role_docker_hostname`"
 
@@ -227,8 +221,7 @@ sb install sandbox-factorio
         factorio_role_docker_hostname: "{{ factorio_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`factorio_role_docker_networks_alias`"
 
@@ -251,8 +244,7 @@ sb install sandbox-factorio
         factorio_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`factorio_role_docker_restart_policy`"
 
@@ -261,8 +253,7 @@ sb install sandbox-factorio
         factorio_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`factorio_role_docker_state`"
 

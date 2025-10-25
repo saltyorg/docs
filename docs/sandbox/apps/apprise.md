@@ -182,8 +182,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`apprise_role_docker_container`"
 
@@ -192,8 +191,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_container: "{{ apprise_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`apprise_role_docker_image_pull`"
 
@@ -223,8 +221,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='apprise') }}:{{ lookup('role_var', '_docker_image_tag', role='apprise') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`apprise_role_docker_envs_default`"
 
@@ -243,8 +240,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`apprise_role_docker_volumes_default`"
 
@@ -261,8 +257,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`apprise_role_docker_hostname`"
 
@@ -271,8 +266,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_hostname: "{{ apprise_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`apprise_role_docker_networks_alias`"
 
@@ -295,8 +289,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`apprise_role_docker_restart_policy`"
 
@@ -305,8 +298,7 @@ https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
         apprise_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`apprise_role_docker_state`"
 

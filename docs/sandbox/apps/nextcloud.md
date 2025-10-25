@@ -202,8 +202,7 @@ sb install sandbox-nextcloud
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`nextcloud_role_docker_container`"
 
@@ -212,8 +211,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_container: "{{ nextcloud_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`nextcloud_role_docker_image_pull`"
 
@@ -243,8 +241,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='nextcloud') }}:{{ lookup('role_var', '_docker_image_tag', role='nextcloud') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`nextcloud_role_docker_envs_default`"
 
@@ -275,8 +272,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`nextcloud_role_docker_volumes_default`"
 
@@ -293,8 +289,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable dict "`nextcloud_role_docker_labels_default`"
 
@@ -312,8 +307,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`nextcloud_role_docker_hostname`"
 
@@ -322,8 +316,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_hostname: "{{ nextcloud_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`nextcloud_role_docker_networks_alias`"
 
@@ -346,8 +339,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`nextcloud_role_docker_restart_policy`"
 
@@ -356,8 +348,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`nextcloud_role_docker_state`"
 
@@ -366,8 +357,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`nextcloud_role_docker_user`"
 
@@ -376,8 +366,7 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`nextcloud_role_depends_on`"
 

@@ -82,8 +82,7 @@ PLex-auto-languages has no UI; it is driven by a config file
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_container`"
 
@@ -92,8 +91,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_container: "{{ plex_auto_languages_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_image_tag`"
 
@@ -123,8 +121,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_image_pull: true
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`plex_auto_languages_role_docker_envs_default`"
 
@@ -141,8 +138,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`plex_auto_languages_role_docker_volumes_default`"
 
@@ -159,8 +155,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_hostname`"
 
@@ -169,8 +164,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_hostname: "{{ plex_auto_languages_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_networks_alias`"
 
@@ -193,8 +187,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_restart_policy`"
 
@@ -203,8 +196,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_state`"
 
@@ -213,8 +205,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_state: started
         ```
 
-    Stop Timeout
-    { .sb-h5 }
+    <h5>Stop Timeout</h5>
 
     ??? variable int "`plex_auto_languages_role_docker_stop_timeout`"
 
@@ -223,8 +214,7 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_stop_timeout: 10
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`plex_auto_languages_role_docker_user`"
 

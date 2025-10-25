@@ -209,8 +209,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`prometheus_role_docker_container`"
 
@@ -219,8 +218,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_container: "{{ prometheus_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`prometheus_role_docker_image_pull`"
 
@@ -250,8 +248,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='prometheus') }}:{{ lookup('role_var', '_docker_image_tag', role='prometheus') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`prometheus_role_docker_envs_default`"
 
@@ -268,8 +265,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_envs_custom: {}
         ```
 
-    Commands
-    { .sb-h5 }
+    <h5>Commands</h5>
 
     ??? variable list "`prometheus_role_docker_commands_default`"
 
@@ -289,8 +285,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_commands_custom: []
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`prometheus_role_docker_volumes_default`"
 
@@ -308,8 +303,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable dict "`prometheus_role_docker_labels_default`"
 
@@ -326,8 +320,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`prometheus_role_docker_hostname`"
 
@@ -336,8 +329,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_hostname: "{{ prometheus_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`prometheus_role_docker_networks_alias`"
 
@@ -360,8 +352,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`prometheus_role_docker_restart_policy`"
 
@@ -370,8 +361,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`prometheus_role_docker_state`"
 
@@ -380,8 +370,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`prometheus_role_docker_user`"
 
@@ -394,8 +383,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    Resource Limits
-    { .sb-h5 }
+    <h5>Resource Limits</h5>
 
     ??? variable int "`prometheus_role_docker_blkio_weight`"
 
@@ -481,8 +469,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_memory_swappiness:
         ```
 
-    Security & Devices
-    { .sb-h5 }
+    <h5>Security & Devices</h5>
 
     ??? variable list "`prometheus_role_docker_cap_drop`"
 
@@ -561,8 +548,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_security_opts:
         ```
 
-    Networking
-    { .sb-h5 }
+    <h5>Networking</h5>
 
     ??? variable list "`prometheus_role_docker_dns_opts`"
 
@@ -606,8 +592,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_network_mode:
         ```
 
-    Storage
-    { .sb-h5 }
+    <h5>Storage</h5>
 
     ??? variable bool "`prometheus_role_docker_keep_volumes`"
 
@@ -651,8 +636,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_working_dir:
         ```
 
-    Monitoring & Lifecycle
-    { .sb-h5 }
+    <h5>Monitoring & Lifecycle</h5>
 
     ??? variable dict "`prometheus_role_docker_healthcheck`"
 
@@ -689,8 +673,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_output_logs:
         ```
 
-    Other Options
-    { .sb-h5 }
+    <h5>Other Options</h5>
 
     ??? variable bool "`prometheus_role_docker_auto_remove`"
 

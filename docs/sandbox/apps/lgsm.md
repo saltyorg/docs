@@ -195,8 +195,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`lgsm_role_docker_container`{ .sb-show-on-unchecked }`lgsm2_docker_container`{ .sb-show-on-checked }"
 
@@ -210,8 +209,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_container: "{{ lgsm_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`lgsm_role_docker_image_pull`{ .sb-show-on-unchecked }`lgsm2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -261,8 +259,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='lgsm') }}:{{ lookup('role_var', '_docker_image_tag', role='lgsm') }}"
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`lgsm_role_docker_volumes_default`{ .sb-show-on-unchecked }`lgsm2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -290,8 +287,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`lgsm_role_docker_hostname`{ .sb-show-on-unchecked }`lgsm2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -305,8 +301,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_hostname: "{{ lgsm_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`lgsm_role_docker_networks_alias`{ .sb-show-on-unchecked }`lgsm2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -344,8 +339,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`lgsm_role_docker_restart_policy`{ .sb-show-on-unchecked }`lgsm2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -359,8 +353,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`lgsm_role_docker_state`{ .sb-show-on-unchecked }`lgsm2_docker_state`{ .sb-show-on-checked }"
 

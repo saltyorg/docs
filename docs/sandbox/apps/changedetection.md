@@ -179,8 +179,7 @@ sb install sandbox-changedetection
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`changedetection_role_docker_container`"
 
@@ -189,8 +188,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_container: "{{ changedetection_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`changedetection_role_docker_image_pull`"
 
@@ -220,8 +218,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='changedetection') }}:{{ lookup('role_var', '_docker_image_tag', role='changedetection') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`changedetection_role_docker_envs_default`"
 
@@ -241,8 +238,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`changedetection_role_docker_volumes_default`"
 
@@ -259,8 +255,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`changedetection_role_docker_hostname`"
 
@@ -269,8 +264,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_hostname: "{{ changedetection_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`changedetection_role_docker_networks_alias`"
 
@@ -293,8 +287,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`changedetection_role_docker_restart_policy`"
 
@@ -303,8 +296,7 @@ sb install sandbox-changedetection
         changedetection_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`changedetection_role_docker_state`"
 

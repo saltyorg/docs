@@ -284,8 +284,7 @@ sb install sandbox-miniflux
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`miniflux_role_docker_container`"
 
@@ -294,8 +293,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_container: "{{ miniflux_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`miniflux_role_docker_image_pull`"
 
@@ -325,8 +323,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='miniflux') }}:{{ lookup('role_var', '_docker_image_tag', role='miniflux') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`miniflux_role_docker_envs_default`"
 
@@ -347,8 +344,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`miniflux_role_docker_volumes_default`"
 
@@ -365,8 +361,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`miniflux_role_docker_hostname`"
 
@@ -375,8 +370,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_hostname: "{{ miniflux_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`miniflux_role_docker_networks_alias`"
 
@@ -399,8 +393,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`miniflux_role_docker_restart_policy`"
 
@@ -409,8 +402,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`miniflux_role_docker_state`"
 
@@ -419,8 +411,7 @@ sb install sandbox-miniflux
         miniflux_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`minuflux_role_depends_on`"
 

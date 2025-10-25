@@ -86,8 +86,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`chrome_role_docker_container`"
 
@@ -96,8 +95,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_container: "{{ chrome_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`chrome_role_docker_image_pull`"
 
@@ -127,8 +125,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='chrome') }}:{{ lookup('role_var', '_docker_image_tag', role='chrome') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`chrome_role_docker_envs_default`"
 
@@ -147,8 +144,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_envs_custom: {}
         ```
 
-    Commands
-    { .sb-h5 }
+    <h5>Commands</h5>
 
     ??? variable list "`chrome_role_docker_commands_default`"
 
@@ -170,8 +166,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_commands_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`chrome_role_docker_hostname`"
 
@@ -180,8 +175,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_hostname: "{{ chrome_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`chrome_role_docker_networks_alias`"
 
@@ -204,8 +198,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`chrome_role_docker_restart_policy`"
 
@@ -214,8 +207,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`chrome_role_docker_state`"
 
@@ -312,6 +304,20 @@ The docker commands are set to the following by default. Port 9222 is open to th
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         chrome_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`chrome_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        chrome_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`chrome_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        chrome_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`chrome_role_traefik_robot_enabled`"

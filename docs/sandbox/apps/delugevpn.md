@@ -359,8 +359,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`delugevpn_role_docker_container`"
 
@@ -369,8 +368,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_container: "{{ delugevpn_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`delugevpn_role_docker_image_pull`"
 
@@ -400,8 +398,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='delugevpn') }}:{{ lookup('role_var', '_docker_image_tag', role='delugevpn') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`delugevpn_role_docker_ports_defaults`"
 
@@ -419,8 +416,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`delugevpn_role_docker_envs_default`"
 
@@ -452,8 +448,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`delugevpn_role_docker_volumes_default`"
 
@@ -472,8 +467,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`delugevpn_role_docker_hostname`"
 
@@ -482,8 +476,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_hostname: "{{ delugevpn_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`delugevpn_role_docker_networks_alias`"
 
@@ -506,8 +499,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`delugevpn_role_docker_restart_policy`"
 
@@ -516,8 +508,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`delugevpn_role_docker_state`"
 
@@ -526,8 +517,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_state: started
         ```
 
-    Sysctls
-    { .sb-h5 }
+    <h5>Sysctls</h5>
 
     ??? variable dict "`delugevpn_role_docker_sysctls`"
 
@@ -537,8 +527,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable bool "`delugevpn_role_docker_privileged`"
 

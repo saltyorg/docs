@@ -212,8 +212,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`dashy_role_docker_container`"
 
@@ -222,8 +221,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_container: "{{ dashy_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`dashy_role_docker_image_pull`"
 
@@ -253,8 +251,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='dashy') }}:{{ lookup('role_var', '_docker_image_tag', role='dashy') }}"
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`dashy_role_docker_volumes_default`"
 
@@ -271,8 +268,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`dashy_role_docker_hostname`"
 
@@ -281,8 +277,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_hostname: "{{ dashy_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`dashy_role_docker_networks_alias`"
 
@@ -305,8 +300,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`dashy_role_docker_restart_policy`"
 
@@ -315,8 +309,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`dashy_role_docker_state`"
 
@@ -325,8 +318,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_role_docker_state: started
         ```
 
-    Healthcheck
-    { .sb-h5 }
+    <h5>Healthcheck</h5>
 
     ??? variable dict "`dashy_role_docker_healthcheck`"
 

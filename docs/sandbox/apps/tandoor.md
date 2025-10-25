@@ -297,8 +297,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`tandoor_role_docker_container`"
 
@@ -307,8 +306,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_container: "{{ tandoor_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`tandoor_role_docker_image_pull`"
 
@@ -338,8 +336,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tandoor') }}:{{ lookup('role_var', '_docker_image_tag', role='tandoor') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`tandoor_role_docker_envs_default`"
 
@@ -366,8 +363,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`tandoor_role_docker_volumes_default`"
 
@@ -385,8 +381,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`tandoor_role_docker_hostname`"
 
@@ -395,8 +390,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_hostname: "{{ tandoor_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`tandoor_role_docker_networks_alias`"
 
@@ -419,8 +413,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`tandoor_role_docker_restart_policy`"
 
@@ -429,8 +422,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`tandoor_role_docker_state`"
 
@@ -439,8 +431,7 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`tandoor_role_depends_on`"
 

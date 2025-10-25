@@ -217,8 +217,7 @@ Visit `https://karakeep.app/`.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`karakeep_role_docker_container`"
 
@@ -227,8 +226,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_container: "{{ karakeep_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`karakeep_role_docker_image_pull`"
 
@@ -258,8 +256,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='karakeep') }}:{{ lookup('role_var', '_docker_image_tag', role='karakeep') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`karakeep_role_docker_envs_default`"
 
@@ -285,8 +282,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`karakeep_role_docker_volumes_default`"
 
@@ -303,8 +299,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`karakeep_role_docker_hostname`"
 
@@ -313,8 +308,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_hostname: "{{ karakeep_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`karakeep_role_docker_networks_alias`"
 
@@ -337,8 +331,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`karakeep_role_docker_restart_policy`"
 
@@ -347,8 +340,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`karakeep_role_docker_state`"
 

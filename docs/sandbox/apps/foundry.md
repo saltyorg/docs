@@ -187,8 +187,7 @@ sb install sandbox-foundry
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`foundry_role_docker_container`"
 
@@ -197,8 +196,7 @@ sb install sandbox-foundry
         foundry_role_docker_container: "{{ foundry_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`foundry_role_docker_image_pull`"
 
@@ -228,8 +226,7 @@ sb install sandbox-foundry
         foundry_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='foundry') }}:{{ lookup('role_var', '_docker_image_tag', role='foundry') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`foundry_role_docker_envs_default`"
 
@@ -256,8 +253,7 @@ sb install sandbox-foundry
         foundry_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`foundry_role_docker_volumes_default`"
 
@@ -276,8 +272,7 @@ sb install sandbox-foundry
         foundry_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`foundry_role_docker_hostname`"
 
@@ -286,8 +281,7 @@ sb install sandbox-foundry
         foundry_role_docker_hostname: "{{ foundry_name }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`foundry_role_docker_ports_defaults`"
 
@@ -304,8 +298,7 @@ sb install sandbox-foundry
         foundry_role_docker_ports_custom: []
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`foundry_role_docker_networks_alias`"
 
@@ -328,8 +321,7 @@ sb install sandbox-foundry
         foundry_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`foundry_role_docker_restart_policy`"
 
@@ -338,8 +330,7 @@ sb install sandbox-foundry
         foundry_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`foundry_role_docker_state`"
 

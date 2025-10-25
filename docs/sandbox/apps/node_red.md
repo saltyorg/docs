@@ -287,8 +287,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`node_red_role_docker_container`{ .sb-show-on-unchecked }`node_red2_docker_container`{ .sb-show-on-checked }"
 
@@ -302,8 +301,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_container: "{{ node_red_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`node_red_role_docker_image_pull`{ .sb-show-on-unchecked }`node_red2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -353,8 +351,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='node_red') }}:{{ lookup('role_var', '_docker_image_tag', role='node_red') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`node_red_role_docker_envs_default`{ .sb-show-on-unchecked }`node_red2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -382,8 +379,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`node_red_role_docker_volumes_default`{ .sb-show-on-unchecked }`node_red2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -411,8 +407,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`node_red_role_docker_hostname`{ .sb-show-on-unchecked }`node_red2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -426,8 +421,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_hostname: "{{ node_red_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`node_red_role_docker_networks_alias`{ .sb-show-on-unchecked }`node_red2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -465,8 +459,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`node_red_role_docker_restart_policy`{ .sb-show-on-unchecked }`node_red2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -480,8 +473,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`node_red_role_docker_state`{ .sb-show-on-unchecked }`node_red2_docker_state`{ .sb-show-on-checked }"
 
@@ -495,8 +487,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`node_red_role_docker_user`{ .sb-show-on-unchecked }`node_red2_docker_user`{ .sb-show-on-checked }"
 

@@ -237,8 +237,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`tdarr_role_docker_container`"
 
@@ -247,8 +246,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_container: "{{ tdarr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`tdarr_role_docker_image_pull`"
 
@@ -278,8 +276,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tdarr') }}:{{ lookup('role_var', '_docker_image_tag', role='tdarr') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`tdarr_role_docker_ports_defaults`"
 
@@ -296,8 +293,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`tdarr_role_docker_envs_default`"
 
@@ -321,8 +317,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`tdarr_role_docker_volumes_default`"
 
@@ -346,8 +341,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`tdarr_role_docker_hostname`"
 
@@ -356,8 +350,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_hostname: "{{ tdarr_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`tdarr_role_docker_networks_alias`"
 
@@ -380,8 +373,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`tdarr_role_docker_restart_policy`"
 
@@ -390,8 +382,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`tdarr_role_docker_state`"
 

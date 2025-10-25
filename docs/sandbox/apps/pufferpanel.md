@@ -166,8 +166,7 @@ sb install sandbox-pufferpanel
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`pufferpanel_role_docker_container`"
 
@@ -176,8 +175,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_container: "{{ pufferpanel_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`pufferpanel_role_docker_image_pull`"
 
@@ -207,8 +205,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='pufferpanel') }}:{{ lookup('role_var', '_docker_image_tag', role='pufferpanel') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`pufferpanel_role_docker_ports_defaults`"
 
@@ -225,8 +222,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`pufferpanel_role_docker_envs_default`"
 
@@ -244,8 +240,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`pufferpanel_role_docker_volumes_default`"
 
@@ -265,8 +260,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`pufferpanel_role_docker_hostname`"
 
@@ -275,8 +269,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_hostname: "{{ pufferpanel_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`pufferpanel_role_docker_networks_alias`"
 
@@ -299,8 +292,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`pufferpanel_role_docker_restart_policy`"
 
@@ -309,8 +301,7 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`pufferpanel_role_docker_state`"
 

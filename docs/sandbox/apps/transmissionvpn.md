@@ -211,8 +211,7 @@ sb install sandbox-transmissionvpn
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`transmissionvpn_role_docker_container`"
 
@@ -221,8 +220,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_container: "{{ transmissionvpn_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`transmissionvpn_role_docker_image_pull`"
 
@@ -252,8 +250,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='transmissionvpn') }}:{{ lookup('role_var', '_docker_image_tag', role='transmissionvpn') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`transmissionvpn_role_docker_envs_default`"
 
@@ -278,8 +275,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`transmissionvpn_role_docker_volumes_default`"
 
@@ -300,8 +296,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`transmissionvpn_role_docker_hostname`"
 
@@ -310,8 +305,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_hostname: "{{ transmissionvpn_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`transmissionvpn_role_docker_networks_alias`"
 
@@ -334,8 +328,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_networks_custom: []
         ```
 
-    Capabilities
-    { .sb-h5 }
+    <h5>Capabilities</h5>
 
     ??? variable list "`transmissionvpn_role_docker_capabilities_default`"
 
@@ -352,8 +345,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_capabilities_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`transmissionvpn_role_docker_restart_policy`"
 
@@ -362,8 +354,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`transmissionvpn_role_docker_state`"
 
@@ -372,8 +363,7 @@ sb install sandbox-transmissionvpn
         transmissionvpn_role_docker_state: started
         ```
 
-    Sysctls
-    { .sb-h5 }
+    <h5>Sysctls</h5>
 
     ??? variable dict "`transmissionvpn_role_docker_sysctls`"
 
@@ -383,8 +373,7 @@ sb install sandbox-transmissionvpn
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable bool "`transmissionvpn_role_docker_privileged`"
 

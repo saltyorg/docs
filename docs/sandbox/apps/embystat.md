@@ -179,8 +179,7 @@ sb install sandbox-embystat
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`embystat_role_docker_container`"
 
@@ -189,8 +188,7 @@ sb install sandbox-embystat
         embystat_role_docker_container: "{{ embystat_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`embystat_role_docker_image_pull`"
 
@@ -220,8 +218,7 @@ sb install sandbox-embystat
         embystat_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='embystat') }}:{{ lookup('role_var', '_docker_image_tag', role='embystat') }}"
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`embystat_role_docker_volumes_default`"
 
@@ -238,8 +235,7 @@ sb install sandbox-embystat
         embystat_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`embystat_role_docker_hostname`"
 
@@ -248,8 +244,7 @@ sb install sandbox-embystat
         embystat_role_docker_hostname: "{{ embystat_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`embystat_role_docker_networks_alias`"
 
@@ -272,8 +267,7 @@ sb install sandbox-embystat
         embystat_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`embystat_role_docker_restart_policy`"
 
@@ -282,8 +276,7 @@ sb install sandbox-embystat
         embystat_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`embystat_role_docker_state`"
 

@@ -93,8 +93,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`a_train_role_docker_container`"
 
@@ -103,8 +102,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_container: "{{ a_train_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`a_train_role_docker_image_pull`"
 
@@ -134,8 +132,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='a_train') }}:{{ lookup('role_var', '_docker_image_tag', role='a_train') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`a_train_role_docker_envs_default`"
 
@@ -152,8 +149,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`a_train_role_docker_volumes_default`"
 
@@ -170,8 +166,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`a_train_role_docker_hostname`"
 
@@ -180,8 +175,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_hostname: "{{ a_train_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`a_train_role_docker_networks_alias`"
 
@@ -204,8 +198,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`a_train_role_docker_restart_policy`"
 
@@ -214,8 +207,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`a_train_role_docker_state`"
 
@@ -224,8 +216,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`a_train_role_docker_user`"
 

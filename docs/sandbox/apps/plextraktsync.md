@@ -124,8 +124,7 @@ docker exec plextraktsync plextraktsync --help
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`plextraktsync_role_docker_container`"
 
@@ -134,8 +133,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_container: "{{ plextraktsync_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`plextraktsync_role_docker_image_pull`"
 
@@ -165,8 +163,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='plextraktsync') }}:{{ lookup('role_var', '_docker_image_tag', role='plextraktsync') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`plextraktsync_role_docker_envs_default`"
 
@@ -183,8 +180,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_envs_custom: {}
         ```
 
-    Commands
-    { .sb-h5 }
+    <h5>Commands</h5>
 
     ??? variable list "`plextraktsync_role_docker_commands_default`"
 
@@ -201,8 +197,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_commands_custom: []
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`plextraktsync_role_docker_volumes_default`"
 
@@ -219,8 +214,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`plextraktsync_role_docker_hostname`"
 
@@ -229,8 +223,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_hostname: "{{ plextraktsync_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`plextraktsync_role_docker_networks_alias`"
 
@@ -253,8 +246,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`plextraktsync_role_docker_restart_policy`"
 
@@ -263,8 +255,7 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`plextraktsync_role_docker_state`"
 
@@ -361,6 +352,20 @@ docker exec plextraktsync plextraktsync --help
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         plextraktsync_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`plextraktsync_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plextraktsync_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`plextraktsync_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plextraktsync_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`plextraktsync_role_traefik_robot_enabled`"

@@ -201,8 +201,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`uptime_kuma_role_docker_container`"
 
@@ -211,8 +210,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_container: "{{ uptime_kuma_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`uptime_kuma_role_docker_image_pull`"
 
@@ -242,8 +240,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='uptime_kuma') }}:{{ lookup('role_var', '_docker_image_tag', role='uptime_kuma') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`uptime_kuma_role_docker_envs_default`"
 
@@ -262,8 +259,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`uptime_kuma_role_docker_volumes_default`"
 
@@ -280,8 +276,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`uptime_kuma_role_docker_hostname`"
 
@@ -290,8 +285,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_hostname: "{{ uptime_kuma_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`uptime_kuma_role_docker_networks_alias`"
 
@@ -314,8 +308,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`uptime_kuma_role_docker_restart_policy`"
 
@@ -324,8 +317,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`uptime_kuma_role_docker_state`"
 
@@ -334,8 +326,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`uptime_kuma_role_depends_on`"
 

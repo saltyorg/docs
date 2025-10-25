@@ -180,8 +180,7 @@ sb install sandbox-paperless-ai
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`paperless_ai_role_docker_container`"
 
@@ -190,8 +189,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_container: "{{ paperless_ai_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`paperless_ai_role_docker_image_pull`"
 
@@ -221,8 +219,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='paperless_ai') }}:{{ lookup('role_var', '_docker_image_tag', role='paperless_ai') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`paperless_ai_role_docker_envs_default`"
 
@@ -241,8 +238,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`paperless_ai_role_docker_volumes_default`"
 
@@ -259,8 +255,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`paperless_ai_role_docker_hostname`"
 
@@ -269,8 +264,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_hostname: "{{ paperless_ai_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`paperless_ai_role_docker_networks_alias`"
 
@@ -293,8 +287,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`paperless_ai_role_docker_restart_policy`"
 
@@ -303,8 +296,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`paperless_ai_role_docker_state`"
 
@@ -313,8 +305,7 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_state: started
         ```
 
-    Create Docker Container Timeout
-    { .sb-h5 }
+    <h5>Create Docker Container Timeout</h5>
 
     ??? variable int "`paperless_ai_docker_create_timeout`"
 

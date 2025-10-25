@@ -195,8 +195,7 @@ The password provisioned is your Saltbox password.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`wireguard_role_docker_container`"
 
@@ -205,8 +204,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_container: "{{ wireguard_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`wireguard_role_docker_image_pull`"
 
@@ -236,8 +234,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='wireguard') }}:{{ lookup('role_var', '_docker_image_tag', role='wireguard') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`wireguard_role_docker_ports_defaults`"
 
@@ -254,8 +251,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`wireguard_role_docker_envs_default`"
 
@@ -275,8 +271,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`wireguard_role_docker_volumes_default`"
 
@@ -293,8 +288,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`wireguard_role_docker_hostname`"
 
@@ -303,8 +297,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_hostname: "{{ wireguard_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`wireguard_role_docker_networks_alias`"
 
@@ -327,8 +320,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_networks_custom: []
         ```
 
-    Capabilities
-    { .sb-h5 }
+    <h5>Capabilities</h5>
 
     ??? variable list "`wireguard_role_docker_capabilities_default`"
 
@@ -346,8 +338,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_capabilities_custom: []
         ```
 
-    Sysctls
-    { .sb-h5 }
+    <h5>Sysctls</h5>
 
     ??? variable dict "`wireguard_role_docker_sysctls`"
 
@@ -358,8 +349,7 @@ The password provisioned is your Saltbox password.
           net.ipv4.ip_forward: "1"
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`wireguard_role_docker_restart_policy`"
 
@@ -368,8 +358,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`wireguard_role_docker_state`"
 

@@ -83,8 +83,7 @@ By default, library statistics are updated once every hour, and stream data is u
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`tauticord_role_docker_container`"
 
@@ -93,8 +92,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_container: "{{ tauticord_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`tauticord_role_docker_image_pull`"
 
@@ -124,8 +122,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tauticord') }}:{{ lookup('role_var', '_docker_image_tag', role='tauticord') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`tauticord_role_docker_envs_default`"
 
@@ -145,8 +142,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`tauticord_role_docker_volumes_default`"
 
@@ -164,8 +160,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`tauticord_role_docker_hostname`"
 
@@ -174,8 +169,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_hostname: "{{ tauticord_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`tauticord_role_docker_networks_alias`"
 
@@ -198,8 +192,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`tauticord_role_docker_restart_policy`"
 
@@ -208,8 +201,7 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`tauticord_role_docker_state`"
 

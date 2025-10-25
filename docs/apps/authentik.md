@@ -495,8 +495,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`authentik_role_docker_container`"
 
@@ -505,8 +504,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_container: "{{ authentik_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`authentik_role_docker_image_pull`"
 
@@ -536,8 +534,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='authentik') }}:{{ lookup('role_var', '_docker_image_tag', role='authentik') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`authentik_role_docker_envs_default`"
 
@@ -569,8 +566,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_envs_custom: {}
         ```
 
-    Commands
-    { .sb-h5 }
+    <h5>Commands</h5>
 
     ??? variable list "`authentik_role_docker_commands_default`"
 
@@ -587,8 +583,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_commands_custom: []
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`authentik_role_docker_volumes_default`"
 
@@ -606,8 +601,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_volumes_custom: []
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable dict "`authentik_role_docker_labels_default`"
 
@@ -637,8 +631,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`authentik_role_docker_hostname`"
 
@@ -647,8 +640,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_hostname: "{{ authentik_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`authentik_role_docker_networks_alias`"
 
@@ -671,8 +663,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`authentik_role_docker_restart_policy`"
 
@@ -681,8 +672,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`authentik_role_docker_state`"
 
@@ -691,8 +681,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`authentik_role_depends_on`"
 
@@ -719,8 +708,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
-    Resource Limits
-    { .sb-h5 }
+    <h5>Resource Limits</h5>
 
     ??? variable int "`authentik_role_docker_blkio_weight`"
 
@@ -806,8 +794,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_memory_swappiness:
         ```
 
-    Security & Devices
-    { .sb-h5 }
+    <h5>Security & Devices</h5>
 
     ??? variable list "`authentik_role_docker_cap_drop`"
 
@@ -886,8 +873,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_security_opts:
         ```
 
-    Networking
-    { .sb-h5 }
+    <h5>Networking</h5>
 
     ??? variable list "`authentik_role_docker_dns_opts`"
 
@@ -931,8 +917,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_network_mode:
         ```
 
-    Storage
-    { .sb-h5 }
+    <h5>Storage</h5>
 
     ??? variable bool "`authentik_role_docker_keep_volumes`"
 
@@ -976,8 +961,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_working_dir:
         ```
 
-    Monitoring & Lifecycle
-    { .sb-h5 }
+    <h5>Monitoring & Lifecycle</h5>
 
     ??? variable dict "`authentik_role_docker_healthcheck`"
 
@@ -1014,8 +998,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_output_logs:
         ```
 
-    Other Options
-    { .sb-h5 }
+    <h5>Other Options</h5>
 
     ??? variable bool "`authentik_role_docker_auto_remove`"
 

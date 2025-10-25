@@ -310,8 +310,7 @@ sb install sandbox-jellyseerr
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`jellyseerr_role_docker_container`{ .sb-show-on-unchecked }`jellyseerr2_docker_container`{ .sb-show-on-checked }"
 
@@ -325,8 +324,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_container: "{{ jellyseerr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`jellyseerr_role_docker_image_pull`{ .sb-show-on-unchecked }`jellyseerr2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -376,8 +374,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='jellyseerr') }}:{{ lookup('role_var', '_docker_image_tag', role='jellyseerr') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`jellyseerr_role_docker_envs_default`{ .sb-show-on-unchecked }`jellyseerr2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -409,8 +406,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`jellyseerr_role_docker_volumes_default`{ .sb-show-on-unchecked }`jellyseerr2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -438,8 +434,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`jellyseerr_role_docker_hostname`{ .sb-show-on-unchecked }`jellyseerr2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -453,8 +448,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_hostname: "{{ jellyseerr_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`jellyseerr_role_docker_networks_alias`{ .sb-show-on-unchecked }`jellyseerr2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -492,8 +486,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`jellyseerr_role_docker_restart_policy`{ .sb-show-on-unchecked }`jellyseerr2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -507,8 +500,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`jellyseerr_role_docker_state`{ .sb-show-on-unchecked }`jellyseerr2_docker_state`{ .sb-show-on-checked }"
 
@@ -522,8 +514,7 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`jellyseerr_role_docker_user`{ .sb-show-on-unchecked }`jellyseerr2_docker_user`{ .sb-show-on-checked }"
 

@@ -228,8 +228,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`dockwatch_role_docker_container`"
 
@@ -238,8 +237,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_container: "{{ dockwatch_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`dockwatch_role_docker_image_pull`"
 
@@ -269,8 +267,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='dockwatch') }}:{{ lookup('role_var', '_docker_image_tag', role='dockwatch') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`dockwatch_role_docker_envs_default`"
 
@@ -290,8 +287,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`dockwatch_role_docker_volumes_default`"
 
@@ -308,8 +304,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`dockwatch_role_docker_hostname`"
 
@@ -318,8 +313,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_hostname: "{{ dockwatch_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`dockwatch_role_docker_networks_alias`"
 
@@ -342,8 +336,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`dockwatch_role_docker_restart_policy`"
 
@@ -352,8 +345,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`dockwatch_role_docker_state`"
 
@@ -362,8 +354,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`dockwatch_role_depends_on`"
 

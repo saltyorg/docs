@@ -220,8 +220,7 @@ sb install sandbox-rocketchat
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`rocketchat_role_docker_container`"
 
@@ -230,8 +229,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_container: "{{ rocketchat_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`rocketchat_role_docker_image_pull`"
 
@@ -261,8 +259,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='rocketchat') }}:{{ lookup('role_var', '_docker_image_tag', role='rocketchat') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`rocketchat_role_docker_envs_default`"
 
@@ -283,8 +280,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`rocketchat_role_docker_volumes_default`"
 
@@ -301,8 +297,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_volumes_custom: []
         ```
 
-    Mounts
-    { .sb-h5 }
+    <h5>Mounts</h5>
 
     ??? variable list "`rocketchat_role_docker_mounts_default`"
 
@@ -320,8 +315,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_mounts_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`rocketchat_role_docker_hostname`"
 
@@ -330,8 +324,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_hostname: "{{ rocketchat_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`rocketchat_role_docker_networks_alias`"
 
@@ -354,8 +347,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`rocketchat_role_docker_restart_policy`"
 
@@ -364,8 +356,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`rocketchat_role_docker_state`"
 
@@ -374,8 +365,7 @@ sb install sandbox-rocketchat
         rocketchat_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`rocketchat_role_depends_on`"
 

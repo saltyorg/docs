@@ -266,8 +266,7 @@ sb install sandbox-paperless-ngx
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`paperless_ngx_role_docker_container`"
 
@@ -276,8 +275,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_container: "{{ paperless_ngx_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`paperless_ngx_role_docker_image_pull`"
 
@@ -307,8 +305,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='paperless_ngx') }}:{{ lookup('role_var', '_docker_image_tag', role='paperless_ngx') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`paperless_ngx_role_docker_envs_default`"
 
@@ -346,8 +343,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`paperless_ngx_role_docker_volumes_default`"
 
@@ -368,8 +364,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`paperless_ngx_role_docker_hostname`"
 
@@ -378,8 +373,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_hostname: "{{ paperless_ngx_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`paperless_ngx_role_docker_networks_alias`"
 
@@ -402,8 +396,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`paperless_ngx_role_docker_restart_policy`"
 
@@ -412,8 +405,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`paperless_ngx_role_docker_state`"
 
@@ -422,8 +414,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`paperless_ngx_role_depends_on`"
 
@@ -446,8 +437,7 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_depends_on_healthchecks: "false"
         ```
 
-    Create Docker Container Timeout
-    { .sb-h5 }
+    <h5>Create Docker Container Timeout</h5>
 
     ??? variable int "`paperless_ngx_docker_create_timeout`"
 

@@ -200,8 +200,7 @@ sb install sandbox-krusader
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`krusader_role_docker_container`"
 
@@ -210,8 +209,7 @@ sb install sandbox-krusader
         krusader_role_docker_container: "{{ krusader_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`krusader_role_docker_image_pull`"
 
@@ -241,8 +239,7 @@ sb install sandbox-krusader
         krusader_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='krusader') }}:{{ lookup('role_var', '_docker_image_tag', role='krusader') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`krusader_role_docker_envs_default`"
 
@@ -265,8 +262,7 @@ sb install sandbox-krusader
         krusader_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`krusader_role_docker_volumes_default`"
 
@@ -283,8 +279,7 @@ sb install sandbox-krusader
         krusader_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`krusader_role_docker_hostname`"
 
@@ -293,8 +288,7 @@ sb install sandbox-krusader
         krusader_role_docker_hostname: "{{ krusader_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`krusader_role_docker_networks_alias`"
 
@@ -317,8 +311,7 @@ sb install sandbox-krusader
         krusader_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`krusader_role_docker_restart_policy`"
 
@@ -327,8 +320,7 @@ sb install sandbox-krusader
         krusader_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`krusader_role_docker_state`"
 
@@ -337,8 +329,7 @@ sb install sandbox-krusader
         krusader_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`krusader_role_depends_on`"
 

@@ -181,8 +181,7 @@ sb install sandbox-mkvtoolnix
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`mkvtoolnix_role_docker_container`"
 
@@ -191,8 +190,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_container: "{{ mkvtoolnix_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`mkvtoolnix_role_docker_image_pull`"
 
@@ -222,8 +220,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='mkvtoolnix') }}:{{ lookup('role_var', '_docker_image_tag', role='mkvtoolnix') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`mkvtoolnix_role_docker_envs_default`"
 
@@ -247,8 +244,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`mkvtoolnix_role_docker_volumes_default`"
 
@@ -266,8 +262,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`mkvtoolnix_role_docker_hostname`"
 
@@ -276,8 +271,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_hostname: "{{ mkvtoolnix_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`mkvtoolnix_role_docker_networks_alias`"
 
@@ -300,8 +294,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`mkvtoolnix_role_docker_restart_policy`"
 
@@ -310,8 +303,7 @@ sb install sandbox-mkvtoolnix
         mkvtoolnix_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`mkvtoolnix_role_docker_state`"
 

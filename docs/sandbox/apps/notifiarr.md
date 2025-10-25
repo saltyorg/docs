@@ -270,8 +270,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`notifiarr_role_docker_container`"
 
@@ -280,8 +279,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_container: "{{ notifiarr_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`notifiarr_role_docker_image_pull`"
 
@@ -311,8 +309,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='notifiarr') }}:{{ lookup('role_var', '_docker_image_tag', role='notifiarr') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`notifiarr_role_docker_envs_default`"
 
@@ -329,8 +326,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`notifiarr_role_docker_volumes_default`"
 
@@ -348,8 +344,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_volumes_custom: []
         ```
 
-    Mounts
-    { .sb-h5 }
+    <h5>Mounts</h5>
 
     ??? variable list "`notifiarr_role_docker_mounts_default`"
 
@@ -367,8 +362,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_mounts_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`notifiarr_role_docker_hostname`"
 
@@ -377,8 +371,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_hostname: "{{ traefik_host }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`notifiarr_role_docker_networks_alias`"
 
@@ -401,8 +394,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`notifiarr_role_docker_restart_policy`"
 
@@ -411,8 +403,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`notifiarr_role_docker_state`"
 
@@ -421,8 +412,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`notifiarr_role_docker_user`"
 
@@ -431,8 +421,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable string "`notifiarr_role_docker_privileged`"
 

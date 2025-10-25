@@ -199,8 +199,7 @@ By default, your new installation has a publicly accessible web index, snapshots
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`archivebox_role_docker_container`"
 
@@ -209,8 +208,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_container: "{{ archivebox_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`archivebox_role_docker_image_pull`"
 
@@ -240,8 +238,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='archivebox') }}:{{ lookup('role_var', '_docker_image_tag', role='archivebox') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`archivebox_role_docker_envs_default`"
 
@@ -260,8 +257,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`archivebox_role_docker_volumes_default`"
 
@@ -278,8 +274,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`archivebox_role_docker_hostname`"
 
@@ -288,8 +283,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_hostname: "{{ archivebox_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`archivebox_role_docker_networks_alias`"
 
@@ -312,8 +306,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`archivebox_role_docker_restart_policy`"
 
@@ -322,8 +315,7 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`archivebox_role_docker_state`"
 

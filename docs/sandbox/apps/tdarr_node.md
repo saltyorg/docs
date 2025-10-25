@@ -108,8 +108,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`tdarr_node_role_docker_container`"
 
@@ -118,8 +117,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_container: "{{ tdarr_node_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`tdarr_node_role_docker_image_pull`"
 
@@ -149,8 +147,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tdarr_node') }}:{{ lookup('role_var', '_docker_image_tag', role='tdarr_node') }}"
         ```
 
-    Ports
-    { .sb-h5 }
+    <h5>Ports</h5>
 
     ??? variable list "`tdarr_node_role_docker_ports_defaults`"
 
@@ -167,8 +164,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_ports_custom: []
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`tdarr_node_role_docker_envs_default`"
 
@@ -191,8 +187,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`tdarr_node_role_docker_volumes_default`"
 
@@ -215,8 +210,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`tdarr_node_role_docker_hostname`"
 
@@ -225,8 +219,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_hostname: "{{ tdarr_node_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`tdarr_node_role_docker_networks_alias`"
 
@@ -249,8 +242,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`tdarr_node_role_docker_restart_policy`"
 
@@ -259,8 +251,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`tdarr_node_role_docker_state`"
 

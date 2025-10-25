@@ -190,8 +190,7 @@ sb install sandbox-healthchecks
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`healthchecks_role_docker_container`"
 
@@ -200,8 +199,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_container: "{{ healthchecks_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`healthchecks_role_docker_image_pull`"
 
@@ -231,8 +229,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='healthchecks') }}:{{ lookup('role_var', '_docker_image_tag', role='healthchecks') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`healthchecks_role_docker_envs_default`"
 
@@ -257,8 +254,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`healthchecks_role_docker_volumes_default`"
 
@@ -275,8 +271,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`healthchecks_role_docker_hostname`"
 
@@ -285,8 +280,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_hostname: "{{ healthchecks_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`healthchecks_role_docker_networks_alias`"
 
@@ -309,8 +303,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`healthchecks_role_docker_restart_policy`"
 
@@ -319,8 +312,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`healthchecks_role_docker_state`"
 
@@ -329,8 +321,7 @@ sb install sandbox-healthchecks
         healthchecks_role_docker_state: started
         ```
 
-    Force Kill
-    { .sb-h5 }
+    <h5>Force Kill</h5>
 
     ??? variable bool "`healthchecks_role_docker_force_kill`"
 

@@ -175,8 +175,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`actualbudget_role_docker_container`"
 
@@ -185,8 +184,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_container: "{{ actualbudget_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`actualbudget_role_docker_image_pull`"
 
@@ -216,8 +214,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='actualbudget') }}:{{ lookup('role_var', '_docker_image_tag', role='actualbudget') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`actualbudget_role_docker_envs_default`"
 
@@ -234,8 +231,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`actualbudget_role_docker_volumes_default`"
 
@@ -253,8 +249,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`actualbudget_role_docker_hostname`"
 
@@ -263,8 +258,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_hostname: "{{ actualbudget_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`actualbudget_role_docker_networks_alias`"
 
@@ -287,8 +281,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`actualbudget_role_docker_restart_policy`"
 
@@ -297,8 +290,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`actualbudget_role_docker_state`"
 
@@ -307,8 +299,7 @@ To access Actual Budget, visit ``https://actualbudget._yourdomain.com_``
         actualbudget_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`actualbudget_role_docker_user`"
 

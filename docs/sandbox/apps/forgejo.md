@@ -199,8 +199,7 @@ sb install sandbox-forgejo
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`forgejo_role_docker_container`"
 
@@ -209,8 +208,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_container: "{{ forgejo_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`forgejo_role_docker_image_pull`"
 
@@ -240,8 +238,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='forgejo') }}:{{ lookup('role_var', '_docker_image_tag', role='forgejo') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`forgejo_role_docker_envs_default`"
 
@@ -266,8 +263,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`forgejo_role_docker_volumes_default`"
 
@@ -286,8 +282,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`forgejo_role_docker_hostname`"
 
@@ -296,8 +291,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_hostname: "{{ forgejo_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`forgejo_role_docker_networks_alias`"
 
@@ -320,8 +314,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`forgejo_role_docker_restart_policy`"
 
@@ -330,8 +323,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`forgejo_role_docker_state`"
 
@@ -340,8 +332,7 @@ sb install sandbox-forgejo
         forgejo_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`forgejo_role_depends_on`"
 

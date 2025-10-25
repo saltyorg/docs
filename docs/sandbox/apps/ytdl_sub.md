@@ -219,8 +219,7 @@ Configure your subscriptions using YAML files in the config directory.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`ytdl_sub_role_docker_container`"
 
@@ -229,8 +228,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_container: "{{ ytdl_sub_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`ytdl_sub_role_docker_image_pull`"
 
@@ -260,8 +258,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='ytdl_sub') }}:{{ lookup('role_var', '_docker_image_tag', role='ytdl_sub') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`ytdl_sub_role_docker_envs_default`"
 
@@ -282,8 +279,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`ytdl_sub_role_docker_volumes_default`"
 
@@ -305,8 +301,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`ytdl_sub_role_docker_hostname`"
 
@@ -315,8 +310,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_hostname: "{{ ytdl_sub_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`ytdl_sub_role_docker_networks_alias`"
 
@@ -339,8 +333,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`ytdl_sub_role_docker_restart_policy`"
 
@@ -349,8 +342,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`ytdl_sub_role_docker_state`"
 

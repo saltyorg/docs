@@ -65,8 +65,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`traefik_robotstxt_role_docker_container`"
 
@@ -75,8 +74,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_container: "{{ traefik_robotstxt_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`traefik_robotstxt_role_docker_image_pull`"
 
@@ -106,8 +104,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='traefik_robotstxt') }}:{{ lookup('role_var', '_docker_image_tag', role='traefik_robotstxt') }}"
         ```
 
-    Labels
-    { .sb-h5 }
+    <h5>Labels</h5>
 
     ??? variable dict "`traefik_robotstxt_role_docker_labels_default`"
 
@@ -129,8 +126,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_labels_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`traefik_robotstxt_role_docker_hostname`"
 
@@ -139,8 +135,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_hostname: "{{ traefik_robotstxt_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`traefik_robotstxt_role_docker_networks_alias`"
 
@@ -163,8 +158,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`traefik_robotstxt_role_docker_restart_policy`"
 
@@ -173,8 +167,7 @@ When you want to reach `*.yourdomain.tld/robots.txt`
         traefik_robotstxt_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`traefik_robotstxt_role_docker_state`"
 

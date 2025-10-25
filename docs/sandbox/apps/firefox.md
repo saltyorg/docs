@@ -248,8 +248,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
 === "Docker"
 
-    Container
-    { h5 }
+    <h5>Container</h5>
 
     ??? variable string "`firefox_role_docker_container`"
 
@@ -258,8 +257,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_container: "{{ firefox_name }}"
         ```
 
-    Image
-    { h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`firefox_role_docker_image_pull`"
 
@@ -289,8 +287,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='firefox') }}:{{ lookup('role_var', '_docker_image_tag', role='firefox') }}"
         ```
 
-    Envs
-    { h5 }
+    <h5>Envs</h5>
 
     ??? variable string "`firefox_role_docker_env_file`"
 
@@ -299,8 +296,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_env_file: "{{ lookup('role_var', '_paths_env_file_location', role='firefox') }}"
         ```
 
-    Volumes
-    { h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`firefox_role_docker_volumes_default`"
 
@@ -317,8 +313,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`firefox_role_docker_hostname`"
 
@@ -327,8 +322,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_hostname: "{{ firefox_name }}"
         ```
 
-    Networks
-    { h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`firefox_role_docker_networks_alias`"
 
@@ -351,8 +345,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_networks_custom: []
         ```
 
-    Capabilities
-    { h5 }
+    <h5>Capabilities</h5>
 
     ??? variable list "`firefox_role_docker_capabilities_default`"
 
@@ -369,8 +362,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_capabilities_custom: []
         ```
 
-    Restart Policy
-    { h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`firefox_role_docker_restart_policy`"
 
@@ -379,8 +371,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { h5 }
+    <h5>State</h5>
 
     ??? variable string "`firefox_role_docker_state`"
 
@@ -477,6 +468,20 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         firefox_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable bool "`firefox_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`firefox_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        firefox_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`firefox_role_traefik_robot_enabled`"

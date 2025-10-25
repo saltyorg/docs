@@ -190,8 +190,7 @@ Password: comixedreader
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`comixed_role_docker_container`"
 
@@ -200,8 +199,7 @@ Password: comixedreader
         comixed_role_docker_container: "{{ comixed_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`comixed_role_docker_image_pull`"
 
@@ -231,8 +229,7 @@ Password: comixedreader
         comixed_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='comixed') }}:{{ lookup('role_var', '_docker_image_tag', role='comixed') }}"
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`comixed_role_docker_volumes_default`"
 
@@ -250,8 +247,7 @@ Password: comixedreader
         comixed_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`comixed_role_docker_hostname`"
 
@@ -260,8 +256,7 @@ Password: comixedreader
         comixed_role_docker_hostname: "{{ comixed_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`comixed_role_docker_networks_alias`"
 
@@ -284,8 +279,7 @@ Password: comixedreader
         comixed_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`comixed_role_docker_restart_policy`"
 
@@ -294,8 +288,7 @@ Password: comixedreader
         comixed_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`comixed_role_docker_state`"
 

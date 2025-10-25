@@ -178,8 +178,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`code_server_role_docker_container`"
 
@@ -188,8 +187,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_container: "{{ code_server_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`code_server_role_docker_image_pull`"
 
@@ -219,8 +217,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='code_server') }}:{{ lookup('role_var', '_docker_image_tag', role='code_server') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`code_server_role_docker_envs_default`"
 
@@ -240,8 +237,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`code_server_role_docker_volumes_default`"
 
@@ -261,8 +257,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`code_server_role_docker_hostname`"
 
@@ -271,8 +266,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_hostname: "{{ code_server_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`code_server_role_docker_networks_alias`"
 
@@ -295,8 +289,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`code_server_role_docker_restart_policy`"
 
@@ -305,8 +298,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`code_server_role_docker_state`"
 
@@ -315,8 +307,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_state: started
         ```
 
-    User
-    { .sb-h5 }
+    <h5>User</h5>
 
     ??? variable string "`code_server_role_docker_user`"
 

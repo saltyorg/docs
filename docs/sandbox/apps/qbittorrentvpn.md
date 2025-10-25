@@ -404,8 +404,7 @@ tags:
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_container`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_container`{ .sb-show-on-checked }"
 
@@ -419,8 +418,7 @@ tags:
         qbittorrentvpn2_docker_container: "{{ qbittorrentvpn_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`qbittorrentvpn_role_docker_image_pull`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -470,8 +468,7 @@ tags:
         qbittorrentvpn2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='qbittorrentvpn') }}:{{ lookup('role_var', '_docker_image_tag', role='qbittorrentvpn') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`qbittorrentvpn_role_docker_envs_default`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -523,8 +520,7 @@ tags:
         qbittorrentvpn2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`qbittorrentvpn_role_docker_volumes_default`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -554,8 +550,7 @@ tags:
         qbittorrentvpn2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_hostname`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -569,8 +564,7 @@ tags:
         qbittorrentvpn2_docker_hostname: "{{ qbittorrentvpn_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_networks_alias`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -608,8 +602,7 @@ tags:
         qbittorrentvpn2_docker_networks_custom: []
         ```
 
-    Capabilities
-    { .sb-h5 }
+    <h5>Capabilities</h5>
 
     ??? variable list "`qbittorrentvpn_role_docker_capabilities_default`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_capabilities_default`{ .sb-show-on-checked }"
 
@@ -637,8 +630,7 @@ tags:
         qbittorrentvpn2_docker_capabilities_custom: []
         ```
 
-    Sysctls
-    { .sb-h5 }
+    <h5>Sysctls</h5>
 
     ??? variable dict "`qbittorrentvpn_role_docker_sysctls`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_sysctls`{ .sb-show-on-checked }"
 
@@ -654,8 +646,7 @@ tags:
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_restart_policy`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -669,8 +660,7 @@ tags:
         qbittorrentvpn2_docker_restart_policy: unless-stopped
         ```
 
-    Stop Timeout
-    { .sb-h5 }
+    <h5>Stop Timeout</h5>
 
     ??? variable int "`qbittorrentvpn_role_docker_stop_timeout`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_stop_timeout`{ .sb-show-on-checked }"
 
@@ -684,8 +674,7 @@ tags:
         qbittorrentvpn2_docker_stop_timeout: 900
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_state`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_state`{ .sb-show-on-checked }"
 
@@ -699,8 +688,7 @@ tags:
         qbittorrentvpn2_docker_state: started
         ```
 
-    Privileged
-    { .sb-h5 }
+    <h5>Privileged</h5>
 
     ??? variable bool "`qbittorrentvpn_role_docker_privileged`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_privileged`{ .sb-show-on-checked }"
 

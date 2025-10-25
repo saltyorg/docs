@@ -307,8 +307,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`semaphoreui_role_docker_container`"
 
@@ -317,8 +316,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_container: "{{ semaphoreui_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`semaphoreui_role_docker_image_pull`"
 
@@ -348,8 +346,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='semaphoreui') }}:{{ lookup('role_var', '_docker_image_tag', role='semaphoreui') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`semaphoreui_role_docker_envs_default`"
 
@@ -378,8 +375,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_envs_custom: {}
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`semaphoreui_role_docker_hostname`"
 
@@ -388,8 +384,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_hostname: "{{ semaphoreui_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`semaphoreui_role_docker_networks_alias`"
 
@@ -412,8 +407,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`semaphoreui_role_docker_restart_policy`"
 
@@ -422,8 +416,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`semaphoreui_role_docker_state`"
 
@@ -432,8 +425,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_docker_state: started
         ```
 
-    Dependencies
-    { .sb-h5 }
+    <h5>Dependencies</h5>
 
     ??? variable string "`semaphoreui_role_depends_on`"
 

@@ -280,8 +280,7 @@ sb install sandbox-ombi
 
 === "Docker"
 
-    Container
-    { .sb-h5 }
+    <h5>Container</h5>
 
     ??? variable string "`ombi_role_docker_container`{ .sb-show-on-unchecked }`ombi2_docker_container`{ .sb-show-on-checked }"
 
@@ -295,8 +294,7 @@ sb install sandbox-ombi
         ombi2_docker_container: "{{ ombi_name }}"
         ```
 
-    Image
-    { .sb-h5 }
+    <h5>Image</h5>
 
     ??? variable bool "`ombi_role_docker_image_pull`{ .sb-show-on-unchecked }`ombi2_docker_image_pull`{ .sb-show-on-checked }"
 
@@ -346,8 +344,7 @@ sb install sandbox-ombi
         ombi2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='ombi') }}:{{ lookup('role_var', '_docker_image_tag', role='ombi') }}"
         ```
 
-    Envs
-    { .sb-h5 }
+    <h5>Envs</h5>
 
     ??? variable dict "`ombi_role_docker_envs_default`{ .sb-show-on-unchecked }`ombi2_docker_envs_default`{ .sb-show-on-checked }"
 
@@ -381,8 +378,7 @@ sb install sandbox-ombi
         ombi2_docker_envs_custom: {}
         ```
 
-    Volumes
-    { .sb-h5 }
+    <h5>Volumes</h5>
 
     ??? variable list "`ombi_role_docker_volumes_default`{ .sb-show-on-unchecked }`ombi2_docker_volumes_default`{ .sb-show-on-checked }"
 
@@ -410,8 +406,7 @@ sb install sandbox-ombi
         ombi2_docker_volumes_custom: []
         ```
 
-    Hostname
-    { .sb-h5 }
+    <h5>Hostname</h5>
 
     ??? variable string "`ombi_role_docker_hostname`{ .sb-show-on-unchecked }`ombi2_docker_hostname`{ .sb-show-on-checked }"
 
@@ -425,8 +420,7 @@ sb install sandbox-ombi
         ombi2_docker_hostname: "{{ ombi_name }}"
         ```
 
-    Networks
-    { .sb-h5 }
+    <h5>Networks</h5>
 
     ??? variable string "`ombi_role_docker_networks_alias`{ .sb-show-on-unchecked }`ombi2_docker_networks_alias`{ .sb-show-on-checked }"
 
@@ -464,8 +458,7 @@ sb install sandbox-ombi
         ombi2_docker_networks_custom: []
         ```
 
-    Restart Policy
-    { .sb-h5 }
+    <h5>Restart Policy</h5>
 
     ??? variable string "`ombi_role_docker_restart_policy`{ .sb-show-on-unchecked }`ombi2_docker_restart_policy`{ .sb-show-on-checked }"
 
@@ -479,8 +472,7 @@ sb install sandbox-ombi
         ombi2_docker_restart_policy: unless-stopped
         ```
 
-    State
-    { .sb-h5 }
+    <h5>State</h5>
 
     ??? variable string "`ombi_role_docker_state`{ .sb-show-on-unchecked }`ombi2_docker_state`{ .sb-show-on-checked }"
 

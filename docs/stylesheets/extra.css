@@ -107,7 +107,7 @@
         Content for a generic variable.
 
   For specific types, add the type name after "variable":
-    !!! variable string "string_var_name"
+    !!! variable string "`string_var_name`"
         Content for a string variable.
 
     !!! variable int "`int_var_name`"

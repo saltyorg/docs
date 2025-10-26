@@ -206,3 +206,8 @@ label[for="sb-checkbox--var-level"] {
     text-overflow: ellipsis;
   }
 }
+
+.sb-icon--sm {
+  --md-icon-size: .75em !important;
+  margin: .07em;
+}

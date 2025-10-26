@@ -26,7 +26,7 @@ Implements a Docker container for Firefox. The GUI of the application is accesse
 
 ## Configuration
 
-Settings are available as environment variables[<sup>:octicons-link-external-16:</sup>][envs] in `/opt/firefox/.env`.
+Settings are available as [environment variables:octicons-link-external-16:{ .sb-icon--sm }](https://github.com/jlesage/docker-firefox#environment-variables) in `/opt/firefox/.env`.
 
 ???+ question "Security"
 
@@ -72,8 +72,6 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
         Complete the command with your usual SSH info: `USERNAME@SALTBOX_EXTERNAL_IP -p SSH_PORT`.
 
 While the tunnel is active, you can use a VNC client to access the GUI via the address `localhost:5900`.
-
-  [envs]: https://github.com/jlesage/docker-firefox#environment-variables "Access project Docker environment variables breakdown"
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

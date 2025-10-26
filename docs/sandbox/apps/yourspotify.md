@@ -28,12 +28,12 @@ Recommended install types: Saltbox, Core
 
 ``` shell
 
-sb install sandbox-your_spotify
+sb install sandbox-your-spotify
 
 ```
 
 ### 2. URL
 
-- To access Yourspotify, visit `https://your_spotify._yourdomain.com_`
+- To access Yourspotify, visit `https://spotify._yourdomain.com_`
 
 - [:octicons-link-16: Documentation: Yourspotify Docs](https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents){: .header-icons }

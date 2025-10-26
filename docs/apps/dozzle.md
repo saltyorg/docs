@@ -53,7 +53,7 @@ To view log files that are NOT written to stdout or stderr, use the following to
 5. Provide your `uid:gid` if they are different. You can check these values by running the `id` command.
 
 ???+ note
-    To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#creating-and-running-the-container).
+    To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#docker-compose).
 
 ### 4. Adding Additional Hosts
 
@@ -1099,20 +1099,6 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         dozzle_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`dozzle_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        dozzle_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`dozzle_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        dozzle_role_traefik_middleware_http_insecure:
         ```
 
     ??? variable bool "`dozzle_role_traefik_robot_enabled`"

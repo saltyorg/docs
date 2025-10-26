@@ -11,13 +11,13 @@ tags:
 
 # Adding your own containers to Saltbox
 
-Use this guide to extend your setup beyond our stock catalog. While arbitrary deployments fall outside our support scope, we offer resources to facilitate their integration with the Saltbox ecosystem.
+Use this guide to extend your setup beyond the stock catalog. While arbitrary deployments fall outside our support scope, we offer resources to facilitate their integration with the Saltbox ecosystem.
 
 ## [Docker Compose:octicons-link-external-16:{ .sb-icon--sm }](https://docs.docker.com/reference/cli/docker/compose)
 
 Recommended for GUI applications and web services.
 
-1.  Run our interactive role to generate a Compose file with Traefik provisioning:
+1.  Run the interactive role to generate a Compose file with Traefik provisioning:
 
     ```sh
     sb install generate-traefik-template
@@ -31,7 +31,7 @@ Recommended for GUI applications and web services.
     mkdir /opt/APPNAME
     ```
 
-1.  We recommend storing the Compose file in the root of the application directory:
+1.  It is recommended to store the Compose file in the root of the application directory:
 
     ```sh
     mv /tmp/docker-compose.yml /opt/APPNAME/compose.yaml
@@ -242,7 +242,7 @@ Recommended for GUI applications and web services.
 
         35. This section tells Docker Compose that the network is managed outside of this compose file.
 
-1.  Ensure a DNS A record exists that points to the application (e.g., `APPNAME.domain.tld`). This can be achieved by manually creating one, by running [DDNS](../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
+1.  Ensure a DNS A record exists that points to the application (e.g., `APPNAME.domain.tld`). This can be achieved by creating it manually, by running [DDNS](../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
 
 1.  Deploy and start the container:
 

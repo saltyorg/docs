@@ -28,13 +28,13 @@ Recommended install types: Saltbox, Core
 
 ``` shell
 
-sb install sandbox-your_spotify
+sb install sandbox-your-spotify
 
 ```
 
 ### 2. URL
 
-- To access Yourspotify, visit `https://your_spotify._yourdomain.com_`
+- To access Yourspotify, visit `https://spotify._yourdomain.com_`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

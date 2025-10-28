@@ -235,27 +235,6 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_access_token_validity: "24" # Hours, only fresh installs use this
         ```
 
-=== "Redis"
-
-    ??? variable string "`authentik_role_redis_name`"
-
-        ```yaml
-        # Type: string
-        authentik_role_redis_name: "{{ authentik_name }}-redis"
-        ```
-
-    ??? variable dict "`authentik_role_redis_docker_healthcheck`"
-
-        ```yaml
-        # Type: dict
-        authentik_role_redis_docker_healthcheck: 
-          interval: 30s
-          retries: 5
-          start_period: 20s
-          test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
-          timeout: 3s
-        ```
-
 === "Postgres"
 
     ??? variable bool "`authentik_role_postgres_deploy`"
@@ -524,7 +503,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: string
-        authentik_role_docker_image_tag: "2025.8"
+        authentik_role_docker_image_tag: "2025.10"
         ```
 
     ??? variable string "`authentik_role_docker_image`"
@@ -541,7 +520,6 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         ```yaml
         # Type: dict
         authentik_role_docker_envs_default: 
-          AUTHENTIK_REDIS__HOST: authentik-redis
           AUTHENTIK_POSTGRESQL__HOST: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
           AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik') }}"
           AUTHENTIK_POSTGRESQL__NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }}"
@@ -687,7 +665,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: string
-        authentik_role_depends_on: "{{ authentik_name }}-redis,{{ lookup('role_var', '_postgres_name', role='authentik') }}"
+        authentik_role_depends_on: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
         ```
 
     ??? variable string "`authentik_role_depends_on_delay`"

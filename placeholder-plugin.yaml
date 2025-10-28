@@ -1,0 +1,29 @@
+settings:
+  expand_auto_tables: false
+  inline_editor_style: custom
+
+placeholders:
+  YOUR_DOMAIN_NAME:
+    replace_everywhere: true
+    description: Your domain name
+    default: yourdomain.tld
+  CUSTOM_APP_NAME:
+    description: Your app's name
+    default: appname
+  CUSTOM_APP_FQDN: # For a Markdown absolute link use `<https://iCUSTOM_APP_FQDNi>`
+    read_only: true
+    replace_everywhere: true
+    description: Your app's FQDN
+    default: xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx
+  CUSTOM_DOCKER_IMAGE_REPO:
+    description: Your container's Docker image
+    default: namespace/imagename
+  CUSTOM_DOCKER_IMAGE_TAG:
+    description: Your container's Docker image tag
+    default: latest
+  CUSTOM_APP_WEB_PORT:
+    description: Your container's web listening port
+    default: 1337
+  CUSTOM_CONTAINER_APPDATA_PATH:
+    description: Your container's application data path
+    default: /config

@@ -238,7 +238,6 @@ label[for="sb-checkbox--var-level"] {
 /* Placeholders styling */
 .inline-editor-custom {
   .placeholder-value-any {
-    /* font-style: italic; */
     box-shadow: inset 0 0 .5em .01em rgba(0, 0, 0, .2);
     border: 1px solid color-mix(in srgb, var(--md-default-fg-color), transparent 90%);
     padding-inline: .15em;

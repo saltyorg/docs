@@ -27,7 +27,7 @@ sb install sandbox-glances-web
 
 ### 2. URL
 
-- To access Glances, visit `https://glances._yourdomain.com_`
+- To access Glances, visit <https://glances.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

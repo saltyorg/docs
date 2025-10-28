@@ -27,7 +27,7 @@ sb install sandbox-speedtest
 
 ### 2. URL
 
-- To access Speedtest, visit `https://speedtest._yourdomain.com_`
+- To access Speedtest, visit <https://speedtest.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

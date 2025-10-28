@@ -17,7 +17,7 @@ tags:
 
 ## URL
 
-- To access Sonarr, visit `https://sonarr._yourdomain.com_`
+- To access Sonarr, visit <https://sonarr.iYOUR_DOMAIN_NAMEi>
 
 ## Settings
 

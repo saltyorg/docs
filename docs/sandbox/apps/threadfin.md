@@ -29,11 +29,11 @@ sb install sandbox-threadfin
 
 ### 2. URL
 
-- To access Threadfin, visit `https://threadfin._yourdomain.com_/web`
+- To access Threadfin, visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>
 
 ### 3. Setup
 
-- Access Threadfin web GUI at `https://threadfin._yourdomain.com_/web`
+- Access Threadfin web GUI at <https://threadfin.iYOUR_DOMAIN_NAMEi/web>
 
 - Run through the Configuration Wizard.
 

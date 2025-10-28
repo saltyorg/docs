@@ -27,7 +27,7 @@ sb install sandbox-airsonic
 
 ### 2. URL
 
-- To access Airsonic, visit `https://airsonic._yourdomain.com_`
+- To access Airsonic, visit <https://airsonic.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

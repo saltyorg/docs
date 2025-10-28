@@ -28,7 +28,7 @@ sb install scrutiny
 
 ### 2. URL
 
-- To access Scrutiny, visit `https://scrutiny._yourdomain.com_`
+- To access Scrutiny, visit <https://scrutiny.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

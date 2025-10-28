@@ -25,7 +25,7 @@ sb install prowlarr
 
 ### 2. URL
 
-- To access Prowlarr, visit `https://prowlarr._yourdomain.com_`
+- To access Prowlarr, visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

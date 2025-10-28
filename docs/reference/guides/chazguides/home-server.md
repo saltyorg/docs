@@ -20,8 +20,8 @@ Prerequisites:
 - Your ISP supports you running servers on ports 80 and 443.  Some ISPs don’t allow or actively block this.
 
 - Your [Router supports port forwarding and hairpin NAT (or NAT loopback)](#router)
-   Saltbox assumes that you are accessing apps via subdomains like “radarr.mydomain.com” rather than ip and port like 192.168.1.25:7878.
-   Without “hairpin NAT”, a request to “radarr.mydomain.com” from inside the network will not find its way to the proxy which does that routing. [You can configure internal DNS in various ways to get around this, but this article is assuming the simplest path.]
+   Saltbox assumes that you are accessing apps via subdomains like “radarr.xYOUR_DOMAIN_NAMEx” rather than ip and port like 192.168.1.25:7878.
+   Without “hairpin NAT”, a request to “radarr.xYOUR_DOMAIN_NAMEx” from inside the network will not find its way to the proxy which does that routing. [You can configure internal DNS in various ways to get around this, but this article is assuming the simplest path.]
 
 - Your [Router supports port forwarding specifically on ports 80 and 443](#router).  Some ISP hardware apparently supports port forwarding *generally*, but not for these specific ports.
 
@@ -118,7 +118,7 @@ Ports used by the stock saltbox apps can be found [here](../../ports.md).
 At this point, you should be able to SSH to that machine using your domain.
 
 ```shell
-ssh YOU@YOUR_DOMAIN -p 3526
+ssh YOU@xYOUR_DOMAIN_NAMEx -p 3526
 ```
 
 That should work just like:
@@ -137,7 +137,7 @@ Verify this part is working by installing apache on your server:
 sudo apt install apache2
 ```
 
-Then open a web browser and go to your domain [http://yourdomain.tld] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.  Requests coming from inside the house are not only bad in horror movies, they are bad for verifying port forwards as well.
+Then open a web browser and go to your domain [http://xYOUR_DOMAIN_NAMEx] . Maybe use your phone with wifi off to make sure the request is coming from outside your house.  Requests coming from inside the house are not only bad in horror movies, they are bad for verifying port forwards as well.
 
 If you see the default apache page, you’re set to go.
 
@@ -184,7 +184,7 @@ In my `accounts.yml`, I’m entering an existing account on the ubuntu machine [
 user:
   name: chaz           # Existing account name
   pass: REDACTED       # Existing account password
-  domain: domain.tld
+  domain: xYOUR_DOMAIN_NAMEx
   email: chaz@whatever.com
 plex:
   user: REDACTED

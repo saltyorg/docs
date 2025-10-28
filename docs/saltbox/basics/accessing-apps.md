@@ -13,23 +13,23 @@ _Note 1: If pages don't load at all, make sure you've set up your [domain](../..
 
 ## Default Apps
 
-Saltbox apps will be accessed via appname._yourdomain.com_ (see table below).
+Saltbox apps will be accessed via appname.xYOUR_DOMAIN_NAMEx (see table below).
 
 | **App  Name**          | **with domain**                           |
 |:---------------------- |:----------------------------------------- |
-| Jackett                | <https://jackett._yourdomain.com_>        |
-| Lidarr                 | <https://lidarr._yourdomain.com_>         |
-| SABnzbd                | <https://sabnzbd._yourdomain.com_>        |
-| NZBHydra2              | <https://nzbhydra2._yourdomain.com_>      |
-| Organizr               | <https://organizr._yourdomain.com_>       |
-| Overseerr              | <https://overseerr._yourdomain.com_>      |
-| Plex                   | <https://plex._yourdomain.com_>           |
-| Portainer              | <https://portainer._yourdomain.com_>      |
-| Radarr                 | <https://radarr._yourdomain.com_>         |
-| qbittorrent            | <https://qbittorrent._yourdomain.com_>    |
-| Sonarr                 | <https://sonarr._yourdomain.com_>         |
-| Tautulli               | <https://tautulli._yourdomain.com_>       |
-| Traefik Dashboard      | <https://dash._yourdomain.com_>           |
+| Jackett                | <https://jackett.iYOUR_DOMAIN_NAMEi>        |
+| Lidarr                 | <https://lidarr.iYOUR_DOMAIN_NAMEi>         |
+| SABnzbd                | <https://sabnzbd.iYOUR_DOMAIN_NAMEi>        |
+| NZBHydra2              | <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>      |
+| Organizr               | <https://organizr.iYOUR_DOMAIN_NAMEi>       |
+| Overseerr              | <https://overseerr.iYOUR_DOMAIN_NAMEi>      |
+| Plex                   | <https://plex.iYOUR_DOMAIN_NAMEi>           |
+| Portainer              | <https://portainer.iYOUR_DOMAIN_NAMEi>      |
+| Radarr                 | <https://radarr.iYOUR_DOMAIN_NAMEi>         |
+| qbittorrent            | <https://qbittorrent.iYOUR_DOMAIN_NAMEi>    |
+| Sonarr                 | <https://sonarr.iYOUR_DOMAIN_NAMEi>         |
+| Tautulli               | <https://tautulli.iYOUR_DOMAIN_NAMEi>       |
+| Traefik Dashboard      | <https://dash.iYOUR_DOMAIN_NAMEi>           |
 
 ## Additional Apps
 

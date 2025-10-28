@@ -18,7 +18,7 @@ tags:
 
 ## URL
 
-1. To access Plex, visit `https://plex._yourdomain.com_`
+1. To access Plex, visit <https://plex.iYOUR_DOMAIN_NAMEi>
 
 2. Login with your Plex account
 

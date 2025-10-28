@@ -29,7 +29,7 @@ sb install sandbox-varken
 
 ### 2. URL
 
-- To access the Varken dashboard, visit `https://grafana._yourdomain.com_`
+- To access the Varken dashboard, visit <https://grafana.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -57,7 +57,7 @@ sb install sandbox-varken
 
     ```
 
-4. Visit grafana `https://grafana._yourdomain.com_`
+4. Visit grafana <https://grafana.iYOUR_DOMAIN_NAMEi>
 
       - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

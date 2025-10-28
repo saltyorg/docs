@@ -17,7 +17,7 @@ tags:
 
 ## 1. Accessing NZBGet
 
-- To access NZBGet, visit `https://nzbget._yourdomain.com_`
+- To access NZBGet, visit <https://nzbget.iYOUR_DOMAIN_NAMEi>
 
 ## 2. Settings
 

@@ -25,7 +25,7 @@ sb install authentik
 
 ### 2. URL
 
-- To access Authentik, visit `https://auth._yourdomain.com_`
+- To access Authentik, visit <https://auth.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -99,7 +99,7 @@ authentik_email_from: "authentik@localhost" # (6)!
 3. Replace `""` with your email username if necessary.
 4. Replace `""` with your email password if necessary.
 5. Replace `10` with your email timeout in seconds.
-6. Replace `authentik@localhost` with your email from email address. IE: `Authentik <noreply@your_domain.com>`
+6. Replace `authentik@localhost` with your email from email address. IE: `Authentik <noreply@iYOUR_DOMAIN_NAMEi>`
 
 Redeploy the Authentik role to apply these changes.
 
@@ -130,8 +130,8 @@ Under the `Protocol Settings` section, fill in the following fields:
 - `Client ID`: `immich` (This can be anything you want, and is auto filled in. You can change it if you want)
 - `Client Secret`: Its probably best to leave this as is, but you can change it if you want.
 - `Redirect URI/Origins`:
-  - `https://immich.your_domain.com/auth/login`
-  - `https://immich.your_domain.com/user-settings`
+  - `https://immich.xYOUR_DOMAIN_NAMEx/auth/login`
+  - `https://immich.xYOUR_DOMAIN_NAMEx/user-settings`
   - `app.immich:/`
 
 #### OIDC Configuration Example
@@ -140,7 +140,7 @@ In the screenshot below, you can see how the [Immich](../sandbox/apps/immich.md)
 
 ![Authentik Oauth Example](../images/authentik/authentik-oauth-example.png)
 
-The only other field you need to concern yourself with is the `Mobile Redirect URI`, which is `https://immich.your_domain.com/api/oauth/mobile-redirect`.
+The only other field you need to concern yourself with is the `Mobile Redirect URI`, which is `https://immich.xYOUR_DOMAIN_NAMEx/api/oauth/mobile-redirect`.
 
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }
 

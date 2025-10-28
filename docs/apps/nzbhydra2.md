@@ -30,7 +30,7 @@ To Setup NZBHydra2, follow the steps below.
 
 ## 2. URL
 
-- URL to access NZBHydra2, visit `https://nzbhydra2._yourdomain.com_`
+- URL to access NZBHydra2, visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>
 
 ## 3. Setup
 

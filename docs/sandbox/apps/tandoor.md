@@ -54,7 +54,7 @@ To create your initial user you need to
 
 ### 3. URL
 
-- To access Tandoor, visit `https://tandoor._yourdomain.com_`
+- To access Tandoor, visit <https://tandoor.iYOUR_DOMAIN_NAMEi>
 
 ### 4. Other
 

@@ -17,7 +17,7 @@ tags:
 
 ## 2. URL
 
-To access Tautulli, visit `https://tautulli._yourdomain_.com`
+To access Tautulli, visit <https://tautulli.iYOUR_DOMAIN_NAMEi>
 
 ## 3. Setup Wizard
 

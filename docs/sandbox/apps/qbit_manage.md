@@ -43,7 +43,7 @@ sb install sandbox-qbit-manage
 
 ### 2. URL
 
-- To access qBit Manage, visit `https://qbit-manage._yourdomain.com_`
+- To access qBit Manage, visit <https://qbit-manage.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

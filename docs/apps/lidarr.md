@@ -17,7 +17,7 @@ tags:
 
 ## URL
 
-- To access Lidarr, visit `https://lidarr._yourdomain.com_`
+- To access Lidarr, visit <https://lidarr.iYOUR_DOMAIN_NAMEi>
 
 ## Settings
 

@@ -29,7 +29,7 @@ sb install sandbox-semaphoreui
 
 ### 2. URL
 
-- To access the Semaphore UI dashboard, visit `https://semaphoreui._yourdomain.com_`
+- To access the Semaphore UI dashboard, visit <https://semaphoreui.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

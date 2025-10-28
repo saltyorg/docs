@@ -27,7 +27,7 @@ sb install sandbox-syncthing
 
 ### 2. URL
 
-- To access the Syncthing dashboard, visit `https://syncthing._yourdomain.com_`
+- To access the Syncthing dashboard, visit <https://syncthing.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

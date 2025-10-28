@@ -27,7 +27,7 @@ sb install sandbox-delugevpn
 
 ### 2. URL
 
-- To access DelugeVPN, visit `https://delugevpn._yourdomain.com_`
+- To access DelugeVPN, visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

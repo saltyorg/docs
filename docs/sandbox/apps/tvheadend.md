@@ -50,7 +50,7 @@ sb install sandbox-tvheadend
 
 ### 2. URL
 
-- To access Tvheadend, visit `https://tvheadend._yourdomain.com_`
+- To access Tvheadend, visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

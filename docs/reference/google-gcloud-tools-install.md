@@ -92,7 +92,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
     ```text
     DISPLAY_NAME            ID  DIRECTORY_CUSTOMER_ID
-    YOUR-DOMAIN   123456789098              XXXXXXXXX
+    xYOUR_DOMAIN_NAMEx   123456789098              XXXXXXXXX
                   ^^^ HERE ^^^
     ```
 

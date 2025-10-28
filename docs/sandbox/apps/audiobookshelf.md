@@ -30,7 +30,7 @@ sb install sandbox-audiobookshelf
 
 ### 2. URL
 
-- To access Audiobookshelf, visit `https://audiobookshelf._yourdomain.com_`
+- To access Audiobookshelf, visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

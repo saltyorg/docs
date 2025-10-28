@@ -31,7 +31,7 @@ sb install sandbox-plex_utills
 
 ### 2. URL
 
-- To access Plex Utills, visit `https://plex-utills._yourdomain.com_`
+- To access Plex Utills, visit <https://plex-utills.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

@@ -7,7 +7,7 @@ tags:
 
 ## Domain Name
 
-**You will need a domain name** as Saltbox apps are only accessed via <https://appname>._yourdomain.com_ (see [Accessing Saltbox Apps](../saltbox/basics/accessing-apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
+**You will need a domain name** as Saltbox apps are only accessed via <https://appname.iYOUR_DOMAIN_NAMEi> (see [Accessing Saltbox Apps](../saltbox/basics/accessing-apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
@@ -156,13 +156,13 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
    
     === "Namecheap.com"
    
-        "Dashboard" -> _your domain.tld_ -> "Manage" -> "Name Servers" -> "Custom DNS" -> add the nameservers in.
+        "Dashboard" -> xYOUR_DOMAIN_NAMEx -> "Manage" -> "Name Servers" -> "Custom DNS" -> add the nameservers in.
    
         ![Namecheap domain management showing Custom DNS nameserver configuration](../images/namecheap-dns.png)
    
     === "Namesilo.com"
    
-        "Manage My Domains" -> _your domain.tld_ -> "NameServers" -> "Change" ->  add the nameservers in.
+        "Manage My Domains" -> xYOUR_DOMAIN_NAMEx -> "NameServers" -> "Change" ->  add the nameservers in.
    
         ![Namesilo domain management interface showing nameserver change options](../images/namesilo-dns.png)
    

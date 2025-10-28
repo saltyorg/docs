@@ -27,13 +27,13 @@ sb install sandbox-jdownloader2
 
 ### 2. URL
 
-- To access JDownloader, visit `https://jdownloader2._yourdomain.com_`
+- To access JDownloader, visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
 1. The configured password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
-2. Configure your myjdownloader account (Create at <https://my.jdownloader.org/> if needed) and name your instance so you can connect via web or browser extensions. Use clipboard for two step copy and paste if needed. Note that some settings are only accessible via `jdownloader2.yourdomain.com`. Premium accounts such as mega.nz can be added via web interface.
+2. Configure your myjdownloader account (Create at <https://my.jdownloader.org/> if needed) and name your instance so you can connect via web or browser extensions. Use clipboard for two step copy and paste if needed. Note that some settings are only accessible via `jdownloader2.xYOUR_DOMAIN_NAMEx`. Premium accounts such as mega.nz can be added via web interface.
 
 3. Use manual import from sonarr / radarr and navigate to `/mnt/local/downloads/myjdownloader/output/` to import your files, note they must be already added as wanted media for import to recognise and identify your downloaded media.
 

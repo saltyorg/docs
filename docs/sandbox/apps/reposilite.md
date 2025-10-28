@@ -27,7 +27,7 @@ sb install sandbox-reposilite
 
 ### 2. URL
 
-- To access reposilite, visit `https://reposilite._yourdomain.com_`
+- To access reposilite, visit <https://reposilite.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Usage
 

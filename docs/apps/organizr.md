@@ -17,7 +17,7 @@ tags:
 
 ## 2. URL
 
-- To access Organizr, visit `https://organizr._yourdomain_.com`
+- To access Organizr, visit <https://organizr.iYOUR_DOMAIN_NAMEi>
 
 ## 3. Initial Setup
 
@@ -76,21 +76,21 @@ Note: it is suggested to enter your `plex username and password`
 
     | Tab Name      | Tab URL                             | Icon URL                      | Category | Group | Type | Active |
     | ------------- | ----------------------------------- | ----------------------------- |:------:|:----:|:-----:|:---------:|
-    | Portainer     | `https://portainer.yourdomain.tld`    | images/organizr.png (default) |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Sonarr        | `https://sonarr.yourdomain.tld`       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Radarr        | `https://radarr.yourdomain.tld`       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBGet        | `https://nzbget.yourdomain.tld`       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | qbittorrent     | `https://qbittorrent.yourdomain.tld`    | images/qbittorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBHydra2     | `https://nzbhydra2.yourdomain.tld`    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Jackett       | `https://jackett.yourdomain.tld`      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Plex          | `https://plex.yourdomain.tld`         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Tautulli      | `https://tautulli.yourdomain.tld`     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Ombi          | `https://ombi.yourdomain.tld`         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Overseerr     | `https://overseerr.yourdomain.tld`    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Portainer     | <https://portainer.iYOUR_DOMAIN_NAMEi>    | images/organizr.png (default) |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Sonarr        | <https://sonarr.iYOUR_DOMAIN_NAMEi>       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Radarr        | <https://radarr.iYOUR_DOMAIN_NAMEi>       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | NZBGet        | <https://nzbget.iYOUR_DOMAIN_NAMEi>       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | qbittorrent     | <https://qbittorrent.iYOUR_DOMAIN_NAMEi>    | images/qbittorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | NZBHydra2     | <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Jackett       | <https://jackett.iYOUR_DOMAIN_NAMEi>      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
+    | Plex          | <https://plex.iYOUR_DOMAIN_NAMEi>         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Tautulli      | <https://tautulli.iYOUR_DOMAIN_NAMEi>     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Ombi          | <https://ombi.iYOUR_DOMAIN_NAMEi>         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Overseerr     | <https://overseerr.iYOUR_DOMAIN_NAMEi>    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
 
     ![Tab Editor](https://i.imgur.com/aXwGxpx.png)
 
-- Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: `https://sonarr.yourdomain.com/calendar` ; Radarr: `https://radarr.yourdomain.com/activity/history`)
+- Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: <https://sonarr.iYOUR_DOMAIN_NAMEi/calendar> ; Radarr: <https://radarr.iYOUR_DOMAIN_NAMEi/activity/history>)
 
 ### Homepage (Make you have Homepage ACTIVE in Tabs section)
 

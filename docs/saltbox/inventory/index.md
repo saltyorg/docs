@@ -348,7 +348,7 @@ sonarr_traefik_middleware_custom: "appAuth"
     #### Make Organizr available only at the base domain ####
     organizr_web_subdomain: ""
     
-    #### Make Tautulli available only at `stats.domain.tld` ####
+    #### Make Tautulli available only at `stats.xYOUR_DOMAIN_NAMEx` ####
     tautulli_web_subdomain: "stats"
     ```
 
@@ -358,13 +358,13 @@ sonarr_traefik_middleware_custom: "appAuth"
         DNS records for the following examples won't be set up by Saltbox. You can add them manually or if using Cloudflare, have the `ddns` service handle it.
     
     ```yaml
-    #### Make Organizr available at `organizr.domain.tld`, `domain.tld` and `example.com` ####
+    #### Make Organizr available at `organizr.xYOUR_DOMAIN_NAMEx`, `xYOUR_DOMAIN_NAMEx` and `example.com` ####
     organizr_web_fqdn_override:
       - "{{ traefik_host }}"
       - "{{ organizr_web_domain }}"
       - "example.com"
 
-    #### Make Overseerr available at both `overseerr.domain.tld` and `requests.domain.tld` ####
+    #### Make Overseerr available at both `overseerr.xYOUR_DOMAIN_NAMEx` and `requests.xYOUR_DOMAIN_NAMEx` ####
     overseerr_web_fqdn_override:
       - "{{ traefik_host }}"
       - "requests.{{ overseerr_web_domain }}"

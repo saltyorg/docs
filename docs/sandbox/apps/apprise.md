@@ -30,7 +30,7 @@ sb install sandbox-apprise
 
 ### 2. URL
 
-- To access apprise, visit `https://apprise._yourdomain.com_`
+- To access apprise, visit <https://apprise.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -40,11 +40,7 @@ The configured username/password are taken from your Saltbox [`accounts.yml`](..
 
 A typical apprise URL would look like this:
 
-``` shell
-
-https://apprise._yourdomain.com_/notify?service=discord&title=Hello&body=World
-
-```
+<https://apprise.iYOUR_DOMAIN_NAMEi/notify?service=discord&title=Hello&body=World>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

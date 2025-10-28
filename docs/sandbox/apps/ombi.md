@@ -29,7 +29,7 @@ sb install sandbox-ombi
 
 ### 2. URL
 
-- To access Ombi, visit `https://ombi._yourdomain.com_`
+- To access Ombi, visit <https://ombi.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

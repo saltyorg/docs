@@ -27,7 +27,7 @@ sb install petio
 
 ### 2. URL
 
-- To access Petio, visit `https://petio._yourdomain.com_`
+- To access Petio, visit <https://petio.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

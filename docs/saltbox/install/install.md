@@ -356,7 +356,7 @@ To edit any of the following configuration files use the command written in the 
 
     11. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
 
-    12. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at `https://metrics.domain.tld/prometheus` assuming default settings.
+    12. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at <https://metrics.iYOUR_DOMAIN_NAMEi/prometheus> assuming default settings.
 
     13. Allows alternate DNS validation providers supported by Traefik.
 

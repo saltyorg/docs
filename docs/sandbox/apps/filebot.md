@@ -31,7 +31,7 @@ sb install sandbox-filebot
 
 ### 2. URL
 
-- To access FileBot, visit `https://filebot._yourdomain.com_`
+- To access FileBot, visit <https://filebot.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

@@ -46,7 +46,7 @@ sb install sandbox-codex
 
 ### 2. URL
 
-- To access Codex, visit `https://codex._yourdomain.com_`
+- To access Codex, visit <https://codex.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

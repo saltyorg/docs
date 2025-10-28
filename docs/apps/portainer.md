@@ -19,7 +19,7 @@ THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
 ## 2. URL
 
-To access Portainer, visit  `https://portainer._yourdomain.com_`
+To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
 
 ## 3. Initial Setup
 

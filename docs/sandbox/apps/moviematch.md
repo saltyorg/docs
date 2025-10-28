@@ -33,7 +33,7 @@ sb install sandbox-moviematch
 
 ### 2. URL
 
-- To access MovieMatch, visit `https://moviematch._yourdomain.com_`
+- To access MovieMatch, visit <https://moviematch.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -51,7 +51,7 @@ sb install sandbox-moviematch
     host: 0.0.0.0
     port: 8000
     servers:
-      - url: https://plex.example.com
+      - url: https://plex.xYOUR_DOMAIN_NAMEx
         token: abcdef12346
   ```
 

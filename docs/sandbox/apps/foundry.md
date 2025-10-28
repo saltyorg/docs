@@ -35,7 +35,7 @@ sb install sandbox-foundry
 
 ### 2. URL
 
-- To access foundry, visit `https://foundry._yourdomain.com_`
+- To access foundry, visit <https://foundry.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

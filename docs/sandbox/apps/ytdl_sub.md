@@ -28,7 +28,7 @@ sb install sandbox-ytdl-sub
 
 ### 2. URL
 
-- To access ytdl-sub, visit `https://ytdl-sub._yourdomain.com_`
+- To access ytdl-sub, visit <https://ytdl-sub.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

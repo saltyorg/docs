@@ -31,7 +31,7 @@ sb install sandbox-rflood
 
 ### 2. URL
 
-- To access rFlood, visit `https://rflood._yourdomain.com_`
+- To access rFlood, visit <https://rflood.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

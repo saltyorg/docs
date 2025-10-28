@@ -34,7 +34,7 @@ sb install sandbox-watchstate
 
 ## Usage
 
-Visit `https://watchstate._yourdomain.com_`.
+Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

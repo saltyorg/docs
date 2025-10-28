@@ -27,11 +27,11 @@ sb install sandbox-wordpress
 
 ### 2. URL
 
-- To access WordPress , visit `https://wordpress._yourdomain.com_`
+- To access WordPress , visit <https://wordpress.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
-- Visit the wordpress site at `https://wordpress._yourdomain.com_` and the setup screen will appear.
+- Visit the wordpress site at <https://wordpress.iYOUR_DOMAIN_NAMEi> and the setup screen will appear.
 
 - No default user is configured until you run through the setup screen, so you should ideally run through setup as soon as wordpress is deployed to secure the site.
 

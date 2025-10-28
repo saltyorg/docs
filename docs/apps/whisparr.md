@@ -28,7 +28,7 @@ sb install whisparr
 
 ### 2. URL
 
-- To access whisparr, visit `https://whisparr._yourdomain.com_`
+- To access whisparr, visit <https://whisparr.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

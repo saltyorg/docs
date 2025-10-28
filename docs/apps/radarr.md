@@ -17,7 +17,7 @@ tags:
 
 ## URL
 
-- To access Radarr, visit `https://radarr._yourdomain.com_`
+- To access Radarr, visit <https://radarr.iYOUR_DOMAIN_NAMEi>
 
 ## Settings
 

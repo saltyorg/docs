@@ -32,7 +32,7 @@ sb install sandbox-mealie
 
 ### 2. URL
 
-- To access Mealie, visit `https://mealie._yourdomain.tld_`
+- To access Mealie, visit <https://mealie.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

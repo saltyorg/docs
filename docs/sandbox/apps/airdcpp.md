@@ -27,7 +27,7 @@ sb install sandbox-airdcpp
 
 ### 2. URL
 
-- To access AirDC++, visit `https://airdcpp._yourdomain.com_`
+- To access AirDC++, visit <https://airdcpp.iYOUR_DOMAIN_NAMEi>
 - Username / password for the default admin account is: admin / password
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

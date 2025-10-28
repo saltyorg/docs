@@ -89,7 +89,7 @@ Each tab shows a "section" in the file.
     user:
       name: seed
       pass: password1234
-      domain: testsaltbox.ml
+      domain: xYOUR_DOMAIN_NAMEx
       email: your@email.com
       ssh_key:
     ```
@@ -115,7 +115,7 @@ Each tab shows a "section" in the file.
 
     This parameter is **required**.
     If you don't have one, see [here](domain.md).
-    This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.domain.tld", enter "domain.tld".  If you want "sonarr.foo.domain.tld", enter "foo.domain.tld".
+    This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.xYOUR_DOMAIN_NAMEx", enter "xYOUR_DOMAIN_NAMEx".  If you want "sonarr.foo.xYOUR_DOMAIN_NAMEx", enter "foo.xYOUR_DOMAIN_NAMEx".
 
     `email`: E-mail address.
 

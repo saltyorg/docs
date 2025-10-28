@@ -28,7 +28,7 @@ sb install sandbox-cockpit
 
 ### 2. URL
 
-- To access Cockpit, visit `https://cockpit._yourdomain.com_`
+- To access Cockpit, visit <https://cockpit.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -29,7 +29,7 @@ sb install sandbox-mylar3
 
 ### 2. URL
 
-- To access Mylar3, visit `https://mylar3._yourdomain.com_`
+- To access Mylar3, visit <https://mylar3.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -59,7 +59,7 @@ sb install sandbox-mylar3
 
 #### Configure NZBGet
 
-1. Log into `https://nzbget._youdomain_.com`
+1. Log into <https://nzbget.iYOUR_DOMAIN_NAMEi>
 
 2. Go to `Settings > Categories`
 

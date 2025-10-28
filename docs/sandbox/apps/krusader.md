@@ -31,7 +31,7 @@ sb install sandbox-krusader
 
 ### 2. URL
 
-- To access Krusader, visit `https://krusader._yourdomain.com_`
+- To access Krusader, visit <https://krusader.iYOUR_DOMAIN_NAMEi>
 - Now you can click on vnc.html or vnc_lite.html
 
 ### 3. Setup

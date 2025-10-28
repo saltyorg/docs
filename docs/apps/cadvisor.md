@@ -27,7 +27,7 @@ sb install cadvisor
 
 ### 2. URL
 
-- To access cAdvisor, visit `https://cadvisor._yourdomain.com_`
+- To access cAdvisor, visit <https://cadvisor.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

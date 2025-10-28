@@ -28,7 +28,7 @@ sb install sandbox-linkwarden
 
 ### 2. URL
 
-- To access LinkWarden, visit `https://linkwarden._yourdomain.com_`
+- To access LinkWarden, visit <https://linkwarden.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

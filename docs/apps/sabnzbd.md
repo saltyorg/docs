@@ -26,7 +26,7 @@ sb install sabnzbd
 
 ## 1. URL
 
-- To access SABnzbd, visit `https://sabnzbd._yourdomain.com_`
+- To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
 
 ## 2. Basics
 

@@ -56,7 +56,7 @@ sb install sandbox-firefox
 
 ### :material-web: Web
 
-Visit `https://firefox._yourdomain.com_`.
+Visit <https://firefox.iYOUR_DOMAIN_NAMEi>.
 
 ### :material-remote-desktop: VNC
 

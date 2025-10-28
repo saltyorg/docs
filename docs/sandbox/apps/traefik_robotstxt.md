@@ -35,7 +35,7 @@ User-agent: *
 Disallow: /
 ```
 
-When you want to reach `*.yourdomain.tld/robots.txt`
+When you want to reach `*.xYOUR_DOMAIN_NAMEx/robots.txt`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

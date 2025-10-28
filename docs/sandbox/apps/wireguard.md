@@ -28,7 +28,7 @@ sb install sandbox-wireguard
 
 ### 2. URL
 
-- To access Wireguard, visit `https://wireguard._yourdomain.com_`
+- To access Wireguard, visit <https://wireguard.iYOUR_DOMAIN_NAMEi>
 
 The password provisioned is your Saltbox password.
 

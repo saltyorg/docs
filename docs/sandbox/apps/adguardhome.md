@@ -32,12 +32,12 @@ sb install sandbox-adguardhome
 
 ### 2. URL
 
-- To access AdGuard Home dashboard, visit `https://adguardhome._yourdomain.com_`
+- To access AdGuard Home dashboard, visit <https://adguardhome.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Usage
 
 - Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for Android](https://play.google.com/store/apps/details?id=app.intra) or [DNSCloak for iOS](https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351)
-- Connect to AdGuard Home with one of the above applications using `https://adguardhome._yourdomain.com/dns-query`
+- Connect to AdGuard Home with one of the above applications using <https://adguardhome.iYOUR_DOMAIN_NAMEi/dns-query>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -28,7 +28,7 @@ sb install sandbox-grocy
 
 ### 2. URL
 
-- To access Grocy, visit `https://grocy._yourdomain.com_`
+- To access Grocy, visit <https://grocy.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

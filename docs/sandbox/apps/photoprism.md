@@ -30,7 +30,7 @@ sb install sandbox-photoprism
 
 ### 2. URL
 
-- To access Photoprism, visit `https://photoprism._yourdomain.com_`
+- To access Photoprism, visit <https://photoprism.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

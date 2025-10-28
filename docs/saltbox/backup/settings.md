@@ -81,7 +81,7 @@ backup:
 
 10. Username used for the OPTIONAL restore service.
 
-    Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
+    Has to be unique across all users of the service. Try sticking with a url for the server `box.xYOUR_DOMAIN_NAMEx` unique to each server for something easily remembered.
 
     Usernames are hashed before requests are sent to the restore service.
 
@@ -125,7 +125,7 @@ These copies are encrypted on your local saltbox machine using the password you 
     
     2. Username used for the OPTIONAL restore service.
     
-        Has to be unique across all users of the service. Try sticking with a url for the server `box.domain.tld` unique to each server for something easily remembered.
+        Has to be unique across all users of the service. Try sticking with a url for the server `box.xYOUR_DOMAIN_NAMEx` unique to each server for something easily remembered.
     
         Usernames are hashed before requests are sent to the restore service.
     

@@ -37,7 +37,7 @@ sb install sandbox-comixed
 
 ### 2. URL
 
-- To access ComiXed, visit `https://comixed._yourdomain.com_`
+- To access ComiXed, visit <https://comixed.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

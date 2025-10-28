@@ -30,7 +30,7 @@ sb install sandbox-homebox
 
 ### 2. URL
 
-- To access Homebox, visit `https://homebox._yourdomain.com_`
+- To access Homebox, visit <https://homebox.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

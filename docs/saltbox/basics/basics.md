@@ -23,7 +23,7 @@ tags:
 
 ### Custom Domains
 
-- Have your server set up behind your own domain, securely (e.g. <https://apps.yourdomain.com>).
+- Have your server set up behind your own domain, securely (e.g. <https://apps.iYOUR_DOMAIN_NAMEi>).
 
 ### Fast Deployment
 

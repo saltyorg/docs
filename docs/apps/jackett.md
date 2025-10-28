@@ -19,7 +19,7 @@ _Note: If you don't use torrents, you may just skip this page._
 
 ## 1. URL
 
-- To access Jackett, visit `http://jackett._yourdomain.com_`
+- To access Jackett, visit <http://jackett.iYOUR_DOMAIN_NAMEi>
 
 ## 2. Settings
 
@@ -53,7 +53,7 @@ Under "Configured Indexers":
 
            - `https` with `http`
 
-           - `jackett.yourdomain.com` with `jackett:9117`
+           - `jackett.xYOUR_DOMAIN_NAMEx` with `jackett:9117`
 
     2. Jacket API Key
 

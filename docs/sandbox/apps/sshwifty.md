@@ -27,7 +27,7 @@ sb install sandbox-sshwifty
 
 ### 2. URL
 
-- To access Sshwifty, visit `https://sshwifty._yourdomain.com_`
+- To access Sshwifty, visit <https://sshwifty.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

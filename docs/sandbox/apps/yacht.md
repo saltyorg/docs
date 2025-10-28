@@ -27,7 +27,7 @@ sb install sandbox-yacht
 
 ### 2. URL
 
-- To access Yacht, visit `https://yacht._yourdomain.com_`
+- To access Yacht, visit <https://yacht.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

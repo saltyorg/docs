@@ -88,10 +88,10 @@ Given the example above, `sb install sonarr` would install:
 
 | List entry    | Container Name | Config Directory   | Subdomain                    |
 | ------------- | -------------- | ------------------ | ---------------------------- |
-| sonarr        | sonarr         | `/opt/sonarr`      | sonarr.YOURDOMAIN.TLD        |
-| sonarrbing    | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.YOURDOMAIN.TLD    |
-| sonarrbang    | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.YOURDOMAIN.TLD    |
-| sonarrboing   | sonarrboing    | `/opt/sonarrboing` | sonarrboing.YOURDOMAIN.TLD   |
+| sonarr        | sonarr         | `/opt/sonarr`      | sonarr.xYOUR_DOMAIN_NAMEx        |
+| sonarrbing    | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.xYOUR_DOMAIN_NAMEx    |
+| sonarrbang    | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.xYOUR_DOMAIN_NAMEx    |
+| sonarrboing   | sonarrboing    | `/opt/sonarrboing` | sonarrboing.xYOUR_DOMAIN_NAMEx   |
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 
@@ -155,7 +155,7 @@ For example, this will install a single standard instance of photoprism:
 sb install sandbox-photoprism
 ```
 
-Then if you wanted a second at `photoprism_again.DOMAIN.TLD`:
+Then if you wanted a second at `photoprism_again.xYOUR_DOMAIN_NAMEx`:
 
 ```shell
 sb install sandbox-photoprism  -e photoprism_name=photoprism_again

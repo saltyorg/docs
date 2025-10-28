@@ -28,7 +28,7 @@ sb install sandbox-wizarr
 
 ### 2. Setup
 
-After installation, go to wizarr.yourdomain.tld, enter a name for your server, enter the plex server, plex token and choose the default librarys. As optional you can setup a request platform. Save, and you're ready to make your first invite URL!
+After installation, go to wizarr.xYOUR_DOMAIN_NAMEx, enter a name for your server, enter the plex server, plex token and choose the default librarys. As optional you can setup a request platform. Save, and you're ready to make your first invite URL!
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

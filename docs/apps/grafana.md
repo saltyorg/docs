@@ -25,7 +25,7 @@ sb install grafana
 
 ### 2. URL
 
-- To access Grafana, visit `https://grafana._yourdomain.com_`
+- To access Grafana, visit <https://grafana.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

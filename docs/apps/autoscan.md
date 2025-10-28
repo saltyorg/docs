@@ -90,7 +90,7 @@ triggers:
 
 targets:
   plex:
-    - url: https://plex.DOMAIN.TLD # plex
+    - url: https://plex.xYOUR_DOMAIN_NAMEx # plex
       token: YOUR_PLEX_TOKEN
 ```
 
@@ -176,7 +176,7 @@ You will set up the webhooks for radarr/sonarr/lidarr as part of their setup, so
 
 ### Manual Scan URL
 
-The manual scan URL will be https://autoscan.YOUR_DOMAIN/triggers/manual.  Usage is described in the autoscan docs linked below.
+The manual scan URL will be <https://autoscan.iYOUR_DOMAIN_NAMEi/triggers/manual>.  Usage is described in the autoscan docs linked below.
 
 ### A-Train
 

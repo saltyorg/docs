@@ -28,7 +28,7 @@ sb install sandbox-dashdot
 
 ### 2. URL
 
-- To access Dashdot, visit `https://dashdot._yourdomain.com_`
+- To access Dashdot, visit <https://dashdot.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

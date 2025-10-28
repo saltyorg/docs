@@ -27,7 +27,7 @@ sb install sandbox-filezilla
 
 ### 2. URL
 
-- To access FileZilla, visit `https://filezilla._yourdomain.com_`
+- To access FileZilla, visit <https://filezilla.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

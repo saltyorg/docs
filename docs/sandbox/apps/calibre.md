@@ -27,7 +27,7 @@ sb install sandbox-calibre
 
 ### 2. URL
 
-- To access Calibre, visit `https://calibre._yourdomain.com_`
+- To access Calibre, visit <https://calibre.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

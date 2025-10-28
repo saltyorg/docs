@@ -39,7 +39,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 ### 3. URL
 
-- To access Trackarr, visit `https://trackarr._yourdomain.com_`
+- To access Trackarr, visit <https://trackarr.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

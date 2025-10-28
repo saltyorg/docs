@@ -127,7 +127,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     KEYS_DIR=/opt/sa/all
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
-    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full email address as shown] you created previously
+    GROUP_NAME="mygroup@xYOUR_DOMAIN_NAMEx"  <<<< the group [full email address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3

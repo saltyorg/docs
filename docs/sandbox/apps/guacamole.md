@@ -31,7 +31,7 @@ sb install sandbox-guacamole
 
 ### 2. URL
 
-- To access Guacamole, visit `https://guacamole._yourdomain.com_`
+- To access Guacamole, visit <https://guacamole.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

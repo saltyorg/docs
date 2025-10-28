@@ -61,7 +61,7 @@ plex_pass =
 plex_server_name = ServerFriendlyName
 plex_roles =
 plex_token = token
-plex_base_url = https://plex.domain.tld
+plex_base_url = https://plex.xYOUR_DOMAIN_NAMEx
 plex_enabled = True
 ```
 

@@ -32,7 +32,7 @@ sb install sandbox-calibre-web
 
 ### 2. URL
 
-- To access Calibre-Web, visit `https://calibre-web._yourdomain.com_`
+- To access Calibre-Web, visit <https://calibre-web.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -77,7 +77,7 @@ Useful docker commands
 
 A useful function of Calibre-Web is sending ebooks by email.  Therefore, you need to set up SMTP e-mail server settings.
 
-I am using Google to host the email for mydomain.com.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles. These settings can be found under `Apps > Google Workspace > Settings for Gmail > Routing` and the setting you need to add or change is `SMTP relay service`. or just search `SMTP` in the search bar at the top of the Google admin console, and find `SMTP relay service` from there.
+I am using Google to host the email for my domain name.  In my case, after trial and error, I found it most reliable to go into my Google control panel, go to the SMTP settings, and whitelist my server’s IP address without authentication.  Now, I can send email from any Saltbox app that supports it (Ombi, Tautelli, Organizr, and Calibre-Web) with no troubles. These settings can be found under `Apps > Google Workspace > Settings for Gmail > Routing` and the setting you need to add or change is `SMTP relay service`. or just search `SMTP` in the search bar at the top of the Google admin console, and find `SMTP relay service` from there.
 
 ```text
 Hostname: smtp-relay.gmail.com, Port:  25,  SSL: No
@@ -95,11 +95,11 @@ If you (or your users) want to have books sent directly to a Kindle from Calibre
   - Towards the top of the white section, in the middle, click on `Preferences`
   - Scroll down to Personal Document Settings. Click the title to open up that section of the page.
   - Under `Approved Personal Document E-mail List`, click the link for `"Add a new approved e-mail address"`
-  - In the popup, add `@yourdomain.com` and save.  Done!
+  - In the popup, add `@xYOUR_DOMAIN_NAMEx` and save.  Done!
 
     Before closing the website, you might want to grab your device email address for the next step.  Under the Send-to-Kindle E-Mail Settings, copy the email address where you want the books sent by default.
 
-- **Add your Kindle email address to your profile on books.yourdomain.com**
+- **Add your Kindle email address to your profile on books.xYOUR_DOMAIN_NAMEx**
   - Once logged in, on the top ride side, click your name to open your profile
   - Add your kindle email address and save
   - Your Kindle email address will be something like <name_79@kindle.com>.  Every Kindle device and mobile app has its own unique address, however, you can send to any of your devices and it will still be available on all of them.  You can find this email address either in the Settings of the device/app, or copy it from the Devices page

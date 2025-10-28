@@ -29,7 +29,7 @@ sb install sandbox-znc
 
 ### 2. URL
 
-- To access ZNC, visit `https://znc._yourdomain.com_`
+- To access ZNC, visit <https://znc.iYOUR_DOMAIN_NAMEi>
 
 Default user/password: admin/admin
 

@@ -25,7 +25,7 @@ sb install bazarr
 
 ### 2. URL
 
-- To access Bazarr, visit `https://bazarr._yourdomain.com_`
+- To access Bazarr, visit <https://bazarr.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

@@ -79,7 +79,7 @@ So Autoscan looks for a Plex library that has `/tv/` as one of its root director
 Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library [there isn't one with `/tv/` as one of its root dirs], so Autoscan will report:
 
 ```
-No target libraries found error="/tv/#killerpost (2016)/Season 1/: failed determining libraries" target=plex url=https://plex.mydomain.tld/
+No target libraries found error="/tv/#killerpost (2016)/Season 1/: failed determining libraries" target=plex url=https://plex.xYOUR_DOMAIN_NAMEx/
 ```
 
 This problem is what rewrites are used to solve.
@@ -99,7 +99,7 @@ One way to do this is shown in [Autoscan's README](https://github.com/Cloudbox/a
 
 targets:
   plex:
-    - url: https://plex.domain.tld
+    - url: https://plex.xYOUR_DOMAIN_NAMEx
       token: XXXX
       rewrite:
         - from: /mnt/unionfs/Media/
@@ -138,13 +138,13 @@ Using this method might be useful if you have multiple targets:
 ```
 targets:
   plex:
-    - url: https://plex.domain.tld
+    - url: https://plex.xYOUR_DOMAIN_NAMEx
       token: XXXX
       rewrite:
         - from: /mnt/unionfs/Media/
           to: /plex/sees/files/here/
   emby:
-    - url: https://emby.domain.tld
+    - url: https://emby.xYOUR_DOMAIN_NAMEx
       token: XXXX
       rewrite:
         - from: /mnt/unionfs/Media/
@@ -164,7 +164,7 @@ You could also do this with a single rewrite as:
 
 targets:
   plex:
-    - url: https://plex.domain.tld
+    - url: https://plex.xYOUR_DOMAIN_NAMEx
       token: XXXX
 ```
 

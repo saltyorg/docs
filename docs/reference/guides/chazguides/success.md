@@ -118,9 +118,9 @@ cloudflare:
 We get:
 
 ```
-TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
+TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'xYOUR_DOMAIN_NAMEx'] ********************************************************************************************
 Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)    0:00:52.892 *********
-fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=DOMAIN.TLD; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=xYOUR_DOMAIN_NAMEx; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
 
 PLAY RECAP *********************************************************************************
 localhost               : ok=131  changed=2 unreachable=0 failed=1
@@ -163,8 +163,8 @@ You can verify this with the ping utility:
 You should see something like:
 
 ```
-chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
-PING ombi.YOURDOMAIN.TLD (111.222.333.444): 56 data bytes
+chaz@oberon:~/saltbox$ ping ombi.xYOUR_DOMAIN_NAMEx
+PING ombi.xYOUR_DOMAIN_NAMEx (111.222.333.444): 56 data bytes
 64 bytes from 111.222.333.444: icmp_seq=0 ttl=48 time=114.425 ms
 ```
 
@@ -173,8 +173,8 @@ That IP address should be the IP address of the server.  If this is a home serve
 If instead you should see something like:
 
 ```
-chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
-ping: cannot resolve ombi.YOURDOMAIN.TLD: Unknown host
+chaz@oberon:~/saltbox$ ping ombi.xYOUR_DOMAIN_NAMEx
+ping: cannot resolve ombi.xYOUR_DOMAIN_NAMEx: Unknown host
 ```
 
 ...then you need to fix your DNS setup.  Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
@@ -216,7 +216,7 @@ You can verify the proxy with curl:
 (nothing special about my choice of ombi here)
 
 ```text
-chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
+chaz@oberon:~/saltbox$ curl http://ombi.xYOUR_DOMAIN_NAMEx | head -n 20
   % Total % Received % Xferd  Average Speed   Time Time  Time  Current
                               Dload  Upload   Total   Spent Left  Speed
 100   169  100   169 0  0  12071   0 --:--:-- --:--:-- --:--:-- 12071

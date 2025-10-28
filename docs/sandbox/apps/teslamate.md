@@ -27,7 +27,7 @@ sb install sandbox-teslamate
 
 ### 2. URL
 
-- To access Teslamate, visit `https://teslamate._yourdomain.com_`
+- To access Teslamate, visit <https://teslamate.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

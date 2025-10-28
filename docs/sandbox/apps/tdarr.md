@@ -30,7 +30,7 @@ sb install sandbox-tdarr
 
 ### 2. URL
 
-- To access Tdarr, visit `https://tdarr._yourdomain.com_`
+- To access Tdarr, visit <https://tdarr.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

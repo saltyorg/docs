@@ -37,7 +37,7 @@ sb install sandbox-profilarr
 
 ## Usage
 
-Visit `https://profilarr._yourdomain.com_`.
+Visit <https://profilarr.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

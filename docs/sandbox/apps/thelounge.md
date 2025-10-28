@@ -27,7 +27,7 @@ sb install sandbox-thelounge
 
 ### 2. URL
 
-- To access The Lounge, visit `https://thelounge._yourdomain.com_`
+- To access The Lounge, visit <https://thelounge.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -44,7 +44,7 @@ sb install sandbox-thelounge
       ```
   - You will be prompted to enter a password that will not be echoed.
   - Saving logs to disk is the default, this consumes more space but allows scrollback.
-- To log in to the application, browse to `https://thelounge._yourdomain.com_`
+- To log in to the application, browse to <https://thelounge.iYOUR_DOMAIN_NAMEi>
 - You should now be prompted for a username and password on the webinterface.
 - Once logged in, you can add an IRC network. Some defaults are preset for Freenode.
 

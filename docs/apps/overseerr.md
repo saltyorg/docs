@@ -17,7 +17,7 @@ tags:
 
 ## 1. URL
 
-- To access Overseerr, visit `https://overseerr._yourdomain.com_`
+- To access Overseerr, visit <https://overseerr.iYOUR_DOMAIN_NAMEi>
 
 ## 2. Settings
 

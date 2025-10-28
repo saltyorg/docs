@@ -19,7 +19,7 @@ tags:
 
 ## 1. URL
 
-- To access maintainerr, visit `https://maintainerr._yourdomain.com_`
+- To access maintainerr, visit <https://maintainerr.iYOUR_DOMAIN_NAMEi>
 
 ## 2. Settings
 

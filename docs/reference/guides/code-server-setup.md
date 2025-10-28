@@ -10,7 +10,7 @@ sb install sandbox-code-server
 
 ## initial setup
 
-By default, code-server will be available at [https://code-server.yourdomain.tld].
+By default, code-server will be available at <https://code-server.iYOUR_DOMAIN_NAMEi>.
 
    ![](../../images/code-server-setup/01-login.png)
 

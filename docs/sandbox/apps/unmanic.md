@@ -27,7 +27,7 @@ sb install sandbox-unmanic
 
 ### 2. URL
 
-- To access Unmanic, visit `https://unmanic._yourdomain.com_`
+- To access Unmanic, visit <https://unmanic.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

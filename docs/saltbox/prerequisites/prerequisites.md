@@ -70,7 +70,7 @@ The server will need to be accessible from the internet via ports 22 [or whateve
 
 ## Domain
 
-**You will need a domain name** as Saltbox apps are only accessed via <https://appname>.*yourdomain.com* (see [Accessing Apps](../basics/accessing-apps.md)).
+**You will need a domain name** as Saltbox apps are only accessed via <https://appname.iYOUR_DOMAIN_NAMEi> (see [Accessing Apps](../basics/accessing-apps.md)).
 
 Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect** to the apps using `IP:PORT`.
 

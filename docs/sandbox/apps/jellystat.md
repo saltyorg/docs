@@ -28,7 +28,7 @@ sb install sandbox-jellystat
 
 ### 2. URL
 
-- To access Jellystat, visit `https://jellystat._yourdomain.com_`
+- To access Jellystat, visit <https://jellystat.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

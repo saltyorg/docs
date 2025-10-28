@@ -26,7 +26,7 @@ sb install transfer
 
 ### 2. URL
 
-- To access transfer.sh, visit `https://transfer._yourdomain.com_`
+- To access transfer.sh, visit <https://transfer.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

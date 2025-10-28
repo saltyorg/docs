@@ -27,7 +27,7 @@ sb install sandbox-trilium
 
 ### 2. URL
 
-- To access Trilium Notes, visit `https://trilium._yourdomain.com_`
+- To access Trilium Notes, visit <https://trilium.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

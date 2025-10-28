@@ -29,7 +29,7 @@ sb install sandbox-mkvtoolnix
 
 ### 2. URL
 
-- To access MKVToolNix, visit `https://mkvtoolnix._yourdomain.com_`
+- To access MKVToolNix, visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -32,7 +32,7 @@ sb install sandbox-paperless-ngx
 
 ### 2. URL
 
-- To access pgadmin, visit `https://paperless._yourdomain.com_`
+- To access pgadmin, visit <https://paperless.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

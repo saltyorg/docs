@@ -25,7 +25,7 @@ sb install jellyfin
 
 ### 2. URL
 
-- To access Jellyfin, visit `https://jellyfin._yourdomain.com_`
+- To access Jellyfin, visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -17,7 +17,7 @@ tags:
 
 ## 2. URL
 
-To access Authelia, visit `https://login._yourdomain_.com` or the subdomain set for Authelia in [settings.yml](../reference/accounts.md#options-in-settingsyml). This merely presents a simple login page where a user can configure Two Factor Authentication if Authelia is configured to accept/require 2FA.
+To access Authelia, visit <https://login.iYOUR_DOMAIN_NAMEi> or the subdomain set for Authelia in [settings.yml](../reference/accounts.md#options-in-settingsyml). This merely presents a simple login page where a user can configure Two Factor Authentication if Authelia is configured to accept/require 2FA.
 
 ## 3. Settings
 

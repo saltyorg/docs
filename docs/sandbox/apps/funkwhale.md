@@ -27,7 +27,7 @@ sb install sandbox-funkwhale
 
 ### 2. URL
 
-- To access Funkwhale, visit `https://funkwhale._yourdomain.com_`
+- To access Funkwhale, visit <https://funkwhale.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 
@@ -39,7 +39,7 @@ sb install sandbox-funkwhale
 
 - Now configure these settings via the web GUI
 
-- Access Funkwhale, visit `https://funkwhale._yourdomain.com_` and log in with the user and password you just created.
+- Access Funkwhale, visit <https://funkwhale.iYOUR_DOMAIN_NAMEi> and log in with the user and password you just created.
 - Enter `Music->Add Content->Create a new Library` and fill out the information.
 - Enter your new Library and Details. There will be a sharing link such as:
   `https://funkwhale.domain.com/federation/music/libraries/da8bd97b-3c3f-4e7b-92cb-6ba45721837b`

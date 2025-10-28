@@ -32,7 +32,7 @@ sb install sandbox-homeassistant
 
 ### 2. URL
 
-- To access Homeassistant, visit `https://homeassistant._yourdomain.com_`
+- To access Homeassistant, visit <https://homeassistant.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

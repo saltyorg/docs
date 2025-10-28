@@ -27,7 +27,7 @@ sb install sandbox-gotify
 
 ### 2. URL
 
-- To access Gotify, visit `https://gotify._yourdomain.com_`
+- To access Gotify, visit <https://gotify.iYOUR_DOMAIN_NAMEi>
 
 ### 3. Setup
 

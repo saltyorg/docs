@@ -28,16 +28,16 @@ Recommended for GUI applications and web services.
 1.  Create the application directory (under `/opt` is recommended, for consistency and backup purposes)
 
     ```sh
-    mkdir /opt/APPNAME
+    mkdir /opt/xCUSTOM_APP_NAMEx
     ```
 
 1.  It is recommended to store the Compose file in the root of the application directory:
 
     ```sh
-    mv /tmp/docker-compose.yml /opt/APPNAME/compose.yaml
+    mv /tmp/docker-compose.yml /opt/xCUSTOM_APP_NAMEx/compose.yaml
     ```
 
-1.  Edit `/opt/APPNAME/compose.yaml` as appropriate for your application.
+1.  Edit `/opt/xCUSTOM_APP_NAMEx/compose.yaml` as appropriate for your application.
 
     - Always needs changing:
 
@@ -56,7 +56,7 @@ Recommended for GUI applications and web services.
 
         ```yaml hl_lines="2-3"
         volumes:
-          - /opt/APPNAME:/config # (1)!
+          - /opt/xCUSTOM_APP_NAMEx:/config # (1)!
           # (2)!
         ```
 
@@ -68,11 +68,11 @@ Recommended for GUI applications and web services.
 
         ```yaml
         services:
-          APPNAME:
+          xCUSTOM_APP_NAMEx:
             restart: unless-stopped # (1)!
-            container_name: APPNAME # (2)!
+            container_name: xCUSTOM_APP_NAMEx # (2)!
             image: DOCKER/IMAGE:TAG # (3)!
-            hostname: APPNAME # (4)!
+            hostname: xCUSTOM_APP_NAMEx # (4)!
             environment: # (5)!
               - PUID=1000
               - PGID=1000
@@ -83,31 +83,31 @@ Recommended for GUI applications and web services.
               com.github.saltbox.saltbox_managed: true # (7)!
               diun.enable: true # (8)!
               traefik.enable: true # (9)!
-              traefik.http.routers.APPNAME-api-http.entrypoints: web # (10)!
-              traefik.http.routers.APPNAME-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
-              traefik.http.routers.APPNAME-api-http.priority: 99 # (12)!
-              traefik.http.routers.APPNAME-api-http.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (13)!
-              traefik.http.routers.APPNAME-api-http.service: APPNAME # (14)!
-              traefik.http.routers.APPNAME-api.entrypoints: websecure # (15)!
-              traefik.http.routers.APPNAME-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (16)!
-              traefik.http.routers.APPNAME-api.priority: 99 # (17)!
-              traefik.http.routers.APPNAME-api.rule: Host(`APPNAME.domain.tld`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (18)!
-              traefik.http.routers.APPNAME-api.service: APPNAME # (19)!
-              traefik.http.routers.APPNAME-api.tls.certresolver: cfdns # (20)!
-              traefik.http.routers.APPNAME-api.tls.options: securetls@file # (21)!
-              traefik.http.routers.APPNAME-http.entrypoints: web # (22)!
-              traefik.http.routers.APPNAME-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (23)!
-              traefik.http.routers.APPNAME-http.rule: Host(`APPNAME.yourdomain.com`) # (24)!
-              traefik.http.routers.APPNAME-http.service: APPNAME # (25)!
-              traefik.http.routers.APPNAME.entrypoints: websecure # (26)!
-              traefik.http.routers.APPNAME.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (27)!
-              traefik.http.routers.APPNAME.rule: Host(`APPNAME.yourdomain.com`) # (28)!
-              traefik.http.routers.APPNAME.service: APPNAME # (29)!
-              traefik.http.routers.APPNAME.tls.certresolver: cfdns # (30)!
-              traefik.http.routers.APPNAME.tls.options: securetls@file # (31)!
-              traefik.http.services.APPNAME.loadbalancer.server.port: APPLICATION_PORT # (32)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api-http.entrypoints: web # (10)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker # (11)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api-http.priority: 99 # (12)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api-http.rule: Host(`xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (13)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api-http.service: xCUSTOM_APP_NAMEx # (14)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.entrypoints: websecure # (15)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker # (16)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.priority: 99 # (17)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.rule: Host(`xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx`) && (PathPrefix(`/api`) || PathPrefix(`/ping`)) # (18)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.service: xCUSTOM_APP_NAMEx # (19)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.tls.certresolver: cfdns # (20)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-api.tls.options: securetls@file # (21)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-http.entrypoints: web # (22)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (23)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-http.rule: Host(`xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx`) # (24)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx-http.service: xCUSTOM_APP_NAMEx # (25)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.entrypoints: websecure # (26)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker # (27)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.rule: Host(`xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx`) # (28)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.service: xCUSTOM_APP_NAMEx # (29)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.tls.certresolver: cfdns # (30)!
+              traefik.http.routers.xCUSTOM_APP_NAMEx.tls.options: securetls@file # (31)!
+              traefik.http.services.xCUSTOM_APP_NAMEx.loadbalancer.server.port: APPLICATION_PORT # (32)!
             volumes: # (33)!
-              - /opt/APPNAME:/PATH/TO/CONFIG
+              - /opt/xCUSTOM_APP_NAMEx:xCUSTOM_CONTAINER_APPDATA_PATHx
               - /etc/localtime:/etc/localtime:ro # (34)!
 
         networks: # (35)!
@@ -144,7 +144,7 @@ Recommended for GUI applications and web services.
 
         11. Defines which middleware is used on the router.
 
-            A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
+            A list of currently added middleware can be found on the Traefik dashboard (dash.xYOUR_DOMAIN_NAMEx).
 
             Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
@@ -166,7 +166,7 @@ Recommended for GUI applications and web services.
 
         16. Defines which middleware is used on the router.
 
-            A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
+            A list of currently added middleware can be found on the Traefik dashboard (dash.xYOUR_DOMAIN_NAMEx).
 
         17. Defines router priority.
 
@@ -196,7 +196,7 @@ Recommended for GUI applications and web services.
 
         23. Defines which middleware is used on the router.
 
-            A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
+            A list of currently added middleware can be found on the Traefik dashboard (dash.xYOUR_DOMAIN_NAMEx).
 
             Unless you intend to allow HTTP traffic instead of auto-upgrading to HTTPS, make sure to include the redirect-to-https middleware.
 
@@ -212,7 +212,7 @@ Recommended for GUI applications and web services.
 
         27. Defines which middleware is used on the router.
 
-            A list of currently added middleware can be found on the Traefik dashboard (dash.domain.tld).
+            A list of currently added middleware can be found on the Traefik dashboard (dash.xYOUR_DOMAIN_NAMEx).
 
         28. This value defines which locations Traefik routes to the application.
 
@@ -242,14 +242,16 @@ Recommended for GUI applications and web services.
 
         35. This section tells Docker Compose that the network is managed outside of this compose file.
 
-1.  Ensure a DNS A record exists that points to the application (e.g., `APPNAME.domain.tld`). This can be achieved by creating it manually, by running [DDNS](../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
+1.  Ensure a DNS A record exists that points to the application (e.g., `xCUSTOM_APP_FQDNx`). This can be achieved by creating it manually, by running [DDNS](../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
 
 1.  Deploy and start the container:
 
     ```sh
-    cd /opt/APPNAME
+    cd /opt/xCUSTOM_APP_NAMEx
     docker compose up -d
     ```
+
+1.  Access your application at <https://iCUSTOM_APP_FQDNi>.
 
 ## [Docker CLI:octicons-link-external-16:{ .sb-icon--sm }](https://docs.docker.com/reference/cli/docker/container/run)
 
@@ -260,7 +262,7 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
 === "`~/.bashrc` `~/.zshrc`"
 
     ```sh
-    APPNAME() {
+    xCUSTOM_APP_NAMEx() {
       docker run --rm -it \
         DOCKER/IMAGE:TAG "$@"
     }
@@ -273,7 +275,7 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
         ```yaml
         shell_bash_bashrc_block_custom: |
 
-          APPNAME() {
+          xCUSTOM_APP_NAMEx() {
             docker run --rm -it \
               DOCKER/IMAGE:TAG "$@"
           }
@@ -284,13 +286,13 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
         ```yaml
         shell_zsh_zshrc_block_custom: |
 
-          APPNAME() {
+          xCUSTOM_APP_NAMEx() {
             docker run --rm -it \
               DOCKER/IMAGE:TAG "$@"
           }
         ```
 
-Then call from your regular shell with a command such as `APPNAME --help`.
+Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --help`.
 
 !!! example
 

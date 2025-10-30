@@ -21,7 +21,6 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
   ``` yaml
 
   adv_settings.yml
-  ansible.cfg
   backup_config.yml
 
   ```
@@ -39,7 +38,6 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 - **Community files to keep handy (these files should be found in `/opt/community/`):**
 
   ``` yaml
-  ansible.cfg
   hetzner_nfs.yml
   settings.yml
   telly.yml

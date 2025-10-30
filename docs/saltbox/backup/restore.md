@@ -101,12 +101,6 @@ Next retrieve the configuration files from a backup by following the instruction
     !!! info
         Don't copy any other files; they will be dealt with in a couple minutes.
 
-## Base Ansible config
-To ensure that future ansible commands work correctly, copy the default config into place:
-```
-cp /srv/git/saltbox/defaults/ansible.cfg.default /srv/git/saltbox/ansible.cfg
-```
-
 ## Settings
 To insure that your configuration files are up to date run:
 ```shell

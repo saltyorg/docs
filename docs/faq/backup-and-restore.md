@@ -28,8 +28,6 @@ If `keep_local_copy` is enabled, the backup will remain locally in the backup fo
 
 The config files that are backed up are:
 
-- `ansible.cfg`
-
 - `accounts.yml`
 
 - `settings.yml`
@@ -47,7 +45,6 @@ Nice table to see what is restored during simple backup/restore:
 | <pre>                         </pre> Items Backed UP              | <pre>     </pre> Backed Up From                   | <pre>     </pre> Restored To |
 |:----------------------------- |:-------------------------------- |:----------- |
 | Application Data              | `/opt/`                          | `/opt/`     |
-| Ansible Config                | `/srv/git/saltbox/ansible.cfg`         |             |
 | Account Settings              | `/srv/git/saltbox/accounts.yml`        |             |
 | Saltbox Settings             | `/srv/git/saltbox/settings.yml`        |             |
 | Saltbox Advanced Settings    | `/srv/git/saltbox/adv_settings.yml`    |             |
@@ -60,8 +57,6 @@ Nice table to see what is restored during simple backup/restore:
 An optional service that allows for easy backing up and restoring of CLIENT-SIDE ENCRYPTED config files.
 
 The config files that are backed up are:
-
-- `ansible.cfg`
 
 - `accounts.yml`
 

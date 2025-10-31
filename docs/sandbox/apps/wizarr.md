@@ -9,8 +9,6 @@ tags:
 
 # Wizarr
 
-## What is it?
-
 [Wizarr](https://github.com/Wizarrrr/wizarr)  is a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!
 
 

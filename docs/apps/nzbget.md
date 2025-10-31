@@ -7,8 +7,6 @@ tags:
 
 # NZBGet
 
-# What is it?
-
 [NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
 
 | Details     |             |             |             |

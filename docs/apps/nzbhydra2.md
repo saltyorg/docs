@@ -8,57 +8,69 @@ tags:
 
 # NZBHydra2
 
-# What is it?
-
-[NZBHydra2](https://github.com/theotherp/nzbhydra2), by _TheOtherP_, is a meta search tool for NZB indexers. It provides easy access to a number of NZB indexers. You can search all your indexers from one place and use it as indexer source for tools like Sonarr or CouchPotato.
+[NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | :material-home: Project home | [:octicons-link-16: Docs](https://github.com/theotherp/nzbhydra2/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/theotherp/nzbhydra2){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/nzbhydra2){: .header-icons }|
 
-Three Ways to setup NZB indexers with Sonarr/Radarr/Lidarr:
-
-1. Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
-
-2. Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
-
-3. Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
-
 ---
 
-To Setup NZBHydra2, follow the steps below.
+!!! abstract sb-directions "Saltbox Setup Process"
 
-## 2. URL
+    <div>
 
-- URL to access NZBHydra2, visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>
+    <div>
 
-## 3. Setup
+    Opting for another indexer manager?
+    
+    [Skip to qBittorrent :material-forward:](qbittorrent.md){ .md-button }
 
-Enter setup by clicking on "Config" at the top.
+    </div>
 
-### Main
+    </div>
 
-- Under 'Security', click the icon next to the 'API key *' field to generate an API key. Click 'Save'.
+!!! tip "Three ways to setup NZB indexers with Sonarr/Radarr/Lidarr"
 
-### Authorization
+    - Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
 
-- Login settings are preset out of the box (`user` / `passwd` as set in [accounts.yml](../reference/accounts.md)).
+    - Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
 
-### Indexers
+    - Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
 
-- Add your indexers. Click "Save".
+## Deployment
 
-### Downloaders
+```sh
+sb install nzbydra2
+```
 
-- NZBGet settings are preset out of the box.
+## Usage
 
-## 4. API Key
+Visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>.
 
-To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used later in [Sonarr](sonarr.md) and [Radarr](radarr.md).
+## Basics
+
+1.  Enter setup by clicking on "Config" at the top.
+
+1.  Main: Under 'Security', click the icon next to the 'API key *' field to generate an API key. Click 'Save'.
+
+1.  Authorization: Login settings are preset out of the box (`user` / `passwd` as set in [accounts.yml](../reference/accounts.md)).
+
+1.  Indexers: Add your indexers. Click "Save".
+
+1.  Downloaders: NZBGet settings are preset out of the box.
+
+1.  API Key: To find the NZBHydra2 API Key, go to "Config" --> "Main". This will be used later in [Sonarr](sonarr.md) and [Radarr](radarr.md).
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Jackett](jackett.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to qBittorrent :material-forward:](qbittorrent.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

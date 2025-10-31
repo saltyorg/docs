@@ -9,8 +9,6 @@ tags:
 
 # reposilite
 
-## What is it?
-
 [reposilite](https://reposilite.com/) is a...
 
 | Details     |             |             |             |

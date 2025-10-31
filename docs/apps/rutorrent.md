@@ -9,7 +9,6 @@ tags:
 
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-# What is it?
 
 [ruTorrent](https://github.com/Novik/ruTorrent) (by Novik) is a front-end for the popular, lightweight, and extensible BitTorrent client [rtorrent](https://github.com/rakshasa/rtorrent) (by Jari Sundell aka rakshasa).
 

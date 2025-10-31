@@ -7,8 +7,6 @@ tags:
 
 # Emby
 
-# What is it?
-
 [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
 
 | Details     |             |             |             |

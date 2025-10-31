@@ -11,8 +11,6 @@ tags:
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-## What is it?
-
 [xbackbone](https://xbackbone.url) is a...
 
 | Details     |             |             |             |

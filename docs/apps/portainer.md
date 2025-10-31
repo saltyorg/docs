@@ -9,19 +9,26 @@ tags:
 
 THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
 
-# What is it?
-
-[Portainer](https://portainer.io/) is an open-source lightweight management UI which allows you to easily manage your Docker containers, images, networks and volumes.
+[Portainer](https://portainer.io/) is a lightweight, open-source management UI that provides a graphical interface for managing containerized applications across various environments, including Docker, Kubernetes, Docker Swarm, and Podman.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://portainer.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.portainer.io//){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/portainer/portainer/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/portainer/portainer-ce){: .header-icons }|
 
-## 2. URL
+---
+
+## Deployment
+```sh
+sb install portainer
+```
+
+## Usage
 
 To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
 
-## 3. Initial Setup
+## Basics
+
+### Initial Setup
 
 1. The first time you go to the Portainer page, you will be presented with the message "Please create the initial administrator user.". Fill in your preferred admin username and password. Click `Create User`.
 
@@ -41,7 +48,13 @@ To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Organizr](organizr.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to Organizr :material-forward:](organizr.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -9,8 +9,6 @@ tags:
 
 # Dashdot
 
-## What is it?
-
 [Dashdot](https://getdashdot.com/) is a simple, modern server dashboard designed with glassmorphism aesthetics, primarily intended for smaller VPS and private servers. It provides real-time system monitoring and beautiful visualizations.
 
 !!! info

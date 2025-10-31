@@ -9,8 +9,6 @@ tags:
 
 # Trackarr
 
-## What is it?
-
 [Trackarr](https://gitlab.com/cloudb0x/trackarr) monitors tracker announce IRC channel, parses the announcements, and forwards those announcements to ARR PVRs (eg Sonarr/Radarr).
 
 !!! info

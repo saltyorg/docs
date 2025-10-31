@@ -8,8 +8,6 @@ tags:
 
 # Codex
 
-## What is it?
-
 [Codex](https://github.com/ajslater/codex) is a web based comic archive browser and reader
 
 - Codex is a web server.

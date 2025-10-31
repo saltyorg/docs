@@ -422,16 +422,16 @@ nav:
 
   - Apps:
       - Saltbox standard [set up in this order]:
-        - Sabnzbd: apps/sabnzbd.md
-        - Qbittorrent: apps/qbittorrent.md
-        - Nzbhydra2: apps/nzbhydra2.md
-        - Jackett: apps/jackett.md
-        - Plex: apps/plex.md
+        - Plex Media Server: apps/plex.md
+        - Tautulli: apps/tautulli.md
         - Autoscan: apps/autoscan.md
+        - SABnzbd: apps/sabnzbd.md
+        - NZBHydra2: apps/nzbhydra2.md
+        - qBittorrent: apps/qbittorrent.md
+        - Jackett: apps/jackett.md
         - Sonarr: apps/sonarr.md
         - Radarr: apps/radarr.md
         - Lidarr: apps/lidarr.md
-        - Tautulli: apps/tautulli.md
         - Overseerr: apps/overseerr.md
         - Portainer: apps/portainer.md
       - Other Media Servers:

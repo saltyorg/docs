@@ -7,17 +7,25 @@ tags:
 
 # Autoscan
 
-## What is it?
-
-[Autoscan](https://github.com/Cloudbox/autoscan) replaces the default Plex, Emby, and Jellyfin behaviour for picking up file changes on the file system. Autoscan integrates with Sonarr, Radarr, Lidarr and Google Shared Drives to fetch changes in near real-time without relying on the file system.
-
-Autoscan is a rewrite of the original Plex Autoscan written in the Go language. In addition, this rewrite introduces a more modular approach and should be easy to extend in the future.
+[Autoscan](https://github.com/Cloudbox/autoscan) is an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/Cloudbox/autoscan){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Cloudbox/autoscan){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Cloudbox/autoscan){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/autoscan){: .header-icons } |
 
-## Setup
+---
+
+## Deployment
+
+```sh
+sb install autoscan
+```
+
+## Usage
+
+Manual scan URL: <https://autoscan.iYOUR_DOMAIN_NAMEi/triggers/manual>.
+
+## Basics
 
 The Plex API is known to have trouble when scanning items into empty libraries.  You should add at least one item to each Plex library and perform a manual scan as a first step.  If you don't do this, things may not get scanned into Plex in response to autoscan's requests.
 
@@ -174,10 +182,6 @@ No.  These files can be named whatever you want.  If you don't like `mounted.bin
 
 You will set up the webhooks for radarr/sonarr/lidarr as part of their setup, so they aren't discussed here
 
-### Manual Scan URL
-
-The manual scan URL will be <https://autoscan.iYOUR_DOMAIN_NAMEi/triggers/manual>.  Usage is described in the autoscan docs linked below.
-
 ### A-Train
 
 Autoscan can monitor **Google Drive** changes via a trigger called "Bernard".  The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
@@ -271,7 +275,13 @@ Further documentation:
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Sonarr](sonarr.md).
+<div class="sb-directions-row" markdown>
+
+Are you Setting Saltbox up for the first time?
+
+[Continue to SABnzbd](sabnzbd.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

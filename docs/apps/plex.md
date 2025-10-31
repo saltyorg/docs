@@ -6,17 +6,37 @@ tags:
   - pms
 ---
 
-# Plex
+# Plex Media Server
 
-## What is it?
-
-[Plex](https://plex.tv/) is a media server.
+[Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://plex.tv/){: .header-icons } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons } | :octicons-mark-github-16: Github | [:material-docker: Docker](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons }|
 
-## URL
+---
+
+!!! abstract sb-directions "Saltbox Setup Process"
+
+    <div>
+
+    <div>
+
+    Opting for another media server solution?
+    
+    [Skip to Autoscan :material-forward:](autoscan.md){ .md-button }
+
+    </div>
+
+    </div>
+
+## Deployment
+
+```sh
+sb install plex
+```
+
+## Usage
 
 1. To access Plex, visit <https://plex.iYOUR_DOMAIN_NAMEi>
 
@@ -24,7 +44,9 @@ tags:
 
     ![](../images/plex-media-server/plex-01-signin.png)
 
-## Setup Wizard
+## Basics
+
+### Setup Wizard
 
 1. First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.
 
@@ -154,7 +176,7 @@ tags:
             ![](../images/plex-media-server/plex-11a-remote.png)
 
 
-## Add Media Libraries
+### Add Media Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV.
 
@@ -232,7 +254,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
             ![](../images/plex-media-server/plex-23-tv-advanced.png)
 
-## Scan Media libraries
+### Scan Media libraries
 
 As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
@@ -248,7 +270,13 @@ To do so:
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Autoscan](autoscan.md).
+<div class="sb-directions-row" markdown>
+
+Are you Setting Saltbox up for the first time?
+
+[Continue to Tautulli :material-forward:](tautulli.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

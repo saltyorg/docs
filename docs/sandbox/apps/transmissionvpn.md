@@ -11,8 +11,6 @@ tags:
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-## What is it?
-
 [transmissionvpn](https://transmissionvpn.url) is a...
 
 | Details     |             |             |             |

@@ -9,8 +9,6 @@ tags:
 
 # Goplaxt
 
-## What is it?
-
 [Goplaxt](https://github.com/XanderStrike/goplaxt) scrobbles Plex plays to Trakt with ease!
 
 | Details     |             |             |             |

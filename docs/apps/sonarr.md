@@ -7,19 +7,27 @@ tags:
 
 # Sonarr
 
-# What is it?
-
-[Sonarr](https://sonarr.tv/) is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+[Sonarr](https://sonarr.tv/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://sonarr.tv/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/sonarr/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Sonarr/Sonarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sonarr){: .header-icons }|
 
-## URL
+---
 
-- To access Sonarr, visit <https://sonarr.iYOUR_DOMAIN_NAMEi>
+## Deployment
 
-## Settings
+```sh
+sb install sonarr
+```
+
+## Usage
+
+To access Sonarr, visit <https://sonarr.iYOUR_DOMAIN_NAMEi>
+
+## Basics
+
+### Settings
 
 Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
@@ -471,7 +479,7 @@ Make changes in the following sections:
 
             - Click "Save".
 
-## TV Path
+### TV Path
 
 1. When you are ready to add your first show to Sonarr, click the "Root Path" drop-down and select "Add a different path".
 
@@ -483,19 +491,25 @@ Make changes in the following sections:
 
 ![Sonarr Add](../images/sonarr/sonarr-add.png)
 
-## API Key
+### API Key
 
 This is used during the setup of [Overseer](overseerr.md) and [Organizr](organizr.md).
 
 - Go to "Settings" -> "General" -> "Security" -> "API Key".
 
-## Guides
+### Guides
 
 [TraSH Guides](https://trash-guides.info/Sonarr/)
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Radarr](radarr.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to Radarr :material-forward:](radarr.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

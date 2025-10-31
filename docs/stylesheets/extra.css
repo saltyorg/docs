@@ -261,3 +261,43 @@ label[for="sb-checkbox--var-level"] {
     }
   }
 }
+
+/* Traffic direction signs with buttons */
+.admonition.sb-directions > div {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  margin-top: .6rem;
+}
+
+.admonition.sb-directions > div > div,
+.sb-directions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  & > p {
+    margin-block: 0;
+  }
+
+  & > p:last-child {
+    margin-left: auto;
+
+    .md-button {
+      position: relative;
+      padding: .3em .6em .3em .5em;
+      text-align: center;
+      width: 18em;
+      white-space: nowrap;
+      overflow: clip;
+      text-overflow: ellipsis;
+
+      .twemoji {
+        position: absolute;
+        top: 21%;
+        right: 3%;
+      }
+    }
+  }
+}

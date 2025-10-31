@@ -11,8 +11,6 @@ tags:
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-## What is it?
-
 [pyload](https://pyload.net/) is a...
 
 | Details     |             |             |             |

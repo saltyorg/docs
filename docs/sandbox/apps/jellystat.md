@@ -9,8 +9,6 @@ tags:
 
 # Jellystat
 
-## What is it?
-
 [Jellystat](https://github.com/CyferShepard/Jellystat) is a free and open source statistics web application for Jellyfin that provides a dashboard with information about the server, libraries, users, and playback activity. Still in development with some expected functionality gaps.
 
 !!! info

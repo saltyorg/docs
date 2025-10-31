@@ -9,8 +9,6 @@ tags:
 
 # AdGuard Home
 
-## What is it?
-
 [AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) is a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network. After you set it up, it'll cover ALL devices in your home Wi-Fi network, and you won't need any client-side software for that. At the same time, it provides a user-friendly web interface that allows you to easily manage the traffic, even from a mobile device.
 
 There are some concerns with the security of running a DNS server remotely so just be aware of this if you choose to run it on a public network.

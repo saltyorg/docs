@@ -11,8 +11,6 @@ tags:
 
 ## THIS DOCUMENTATION IS NOT YET COMPLETED
 
-## What is it?
-
 [rocketchat](https://rocketchat.url) is a...
 
 | Details     |             |             |             |

@@ -8,8 +8,6 @@ tags:
 
 # transfer.sh
 
-## What is it?
-
 [transfer.sh](https://transfer.sh/) is an easy and fast file sharing from the command-line or web gui app.
 
 | Details     |             |             |             |

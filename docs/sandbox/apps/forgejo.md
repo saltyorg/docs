@@ -9,8 +9,6 @@ tags:
 
 # Forgejo
 
-## What is it?
-
 [Forgejo](https://www.Forgejo.dev/) is a self-hosted lightweight software forge.
 Easy to install and low maintenance, it just does the job.
 

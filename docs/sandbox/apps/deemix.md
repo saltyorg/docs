@@ -9,8 +9,6 @@ tags:
 
 # deemix
 
-## What is it?
-
 [deemix](https://deemix.app/) is a barebone deezer downloader library built from the ashes of Deezloader Remix.
 
 | Details     |             |             |             |

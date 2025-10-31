@@ -8,7 +8,6 @@ tags:
 ---
 
 # Actual Budget
-## What is it?
 
 [Actual Budget](https://actualbudget.org/) is a super fast, privacy-focused app for managing your finances. Its heart is the well-proven and much-loved Envelope Budgeting methodology.
 You own your data and can do whatever you want with it. Featuring multi-device sync, optional end-to-end encryption and so much more.

@@ -7,19 +7,27 @@ tags:
 
 # Lidarr
 
-# What is it?
-
-[Lidarr](https://lidarr.audio) is basically Sonarr for music. It functions as a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds from Bittorrent trackers and Usenet Indexers, looking for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+[Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://lidarr.audio){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Lidarr/Lidarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/lidarr){: .header-icons }|
+| [:material-home: Project home](https://lidarr.audio){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Lidarr/Lidarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/lidarr){: .header-icons }||
 
-## URL
+---
 
-- To access Lidarr, visit <https://lidarr.iYOUR_DOMAIN_NAMEi>
+## Deployment
 
-## Settings
+```sh
+sb install lidarr
+```
+
+## Usage
+
+To access Lidarr, visit <https://lidarr.iYOUR_DOMAIN_NAMEi>
+
+## Basics
+
+### Settings
 
 Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
 
@@ -396,7 +404,7 @@ Make changes in the following sections:
 
             - Click "Save".
 
-## Music Path
+### Music Path
 
 1. When you are ready to add your first artist to Lidarr, click the "Path" drop-down and select "Add a different path".
 
@@ -406,7 +414,7 @@ Make changes in the following sections:
 
 1. All artists added now will have that path set.
 
-## API Key
+### API Key
 
 This is used during the setup of [Organizr](organizr.md).
 
@@ -414,7 +422,13 @@ This is used during the setup of [Organizr](organizr.md).
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Tautulli](tautulli.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to Overseerr :material-forward:](overseerr.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

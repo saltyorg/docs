@@ -9,8 +9,6 @@ tags:
 
 # qBittorrentvpn
 
-## What is it?
-
 [qbittorrentvpn](https://github.com/binhex/arch-qbittorrentvpn) is a qbittorrent container which includes OpenVPN and WireGuard to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites.
 
 | Details     |             |             |             |

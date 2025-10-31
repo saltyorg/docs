@@ -9,8 +9,6 @@ tags:
 
 # Stash
 
-## What is it?
-
 [Stash](https://stashapp.cc/) is a locally hosted web-based app written in Go which organizes and serves your porn.
 
 | Details     |             |             |             |

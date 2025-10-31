@@ -7,19 +7,21 @@ tags:
 
 # Organizr
 
-# What is it?
-
 [Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://organizr.app){: .header-icons } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/causefx/Organizr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/organizr/organizr){: .header-icons }|
 
-## 2. URL
+---
 
-- To access Organizr, visit <https://organizr.iYOUR_DOMAIN_NAMEi>
+## Usage
 
-## 3. Initial Setup
+To access Organizr, visit <https://organizr.iYOUR_DOMAIN_NAMEi>
+
+## Basics
+
+### 3. Initial Setup
 
 1. The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
 In the `Install Type` section select `Personal`
@@ -51,13 +53,13 @@ Note: it is suggested to enter your `plex username and password`
 
    ![Main Setup-Database](https://i.imgur.com/wbOhf12.png)
 
-## 4. Settings
+### 4. Settings
 
 1. You will now be taken to the main Organizr Page and asked to login with the credentials you created in the previous steps.
 
     ![Organizr](https://i.imgur.com/J1rVQQk.png)
 
-### Tabs
+#### Tabs
 
 1. Click "Settings" on the left menu, to be taken to the "Organizr Settings" page.
 
@@ -92,7 +94,7 @@ Note: it is suggested to enter your `plex username and password`
 
 - Note: If Sonarr or Radarr are lagging a lot, you may set it to a specific page in each. (e.g. Sonarr: <https://sonarr.iYOUR_DOMAIN_NAMEi/calendar> ; Radarr: <https://radarr.iYOUR_DOMAIN_NAMEi/activity/history>)
 
-### Homepage (Make you have Homepage ACTIVE in Tabs section)
+#### Homepage (Make you have Homepage ACTIVE in Tabs section)
 
 1. Click "Homepage Items" under the Tab Editor section, to be taken to the "Homepage Items" page.
 
@@ -152,7 +154,7 @@ Note: it is suggested to enter your `plex username and password`
 
     ![  ](https://i.imgur.com/MRzv0Sa.png)
 
-### Homepage Order
+#### Homepage Order
 
 1. This is where you organize the apps and other items and how they will appear on your Homepage.  There's no right or wrong order so simply move things around and find out what works for you.
 
@@ -162,7 +164,16 @@ Any additional question please reach out to the [Organizr](https://organizr.app/
 
 ## Next
 
-Are you setting Saltbox up for the first time?  You're ready to explore Saltbox! You can start checking out community apps in [Sandbox](../sandbox/basics.md) if you wish.
+
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+You're ready to explore Saltbox! You can start checking out community apps if you wish.
+
+[Continue to Sandbox :material-forward:](../sandbox/basics.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

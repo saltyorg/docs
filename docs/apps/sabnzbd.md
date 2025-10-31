@@ -8,27 +8,47 @@ tags:
 
 # SABnzbd
 
-# What is it?
-
-[SABnzbd](https://github.com/sabnzbd/sabnzbd) is an Open Source Binary Newsreader written in Python.
-
-It's totally free, easy to use, and works practically everywhere. SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction. SABnzbd offers an easy setup wizard and has self-analysis tools to verify your setup.
+[SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://sabnzbd.org/){: .header-icons } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons }|
 
-## 1. Installation
+---
 
-```shell
+!!! abstract sb-directions "Saltbox Setup Process"
+
+    <div>
+
+    <div>
+
+    Opting out of Usenet?
+    
+    [Skip to qBittorrent :material-forward:](qbittorrent.md){ .md-button }
+
+    </div>
+
+    <div>
+
+    Opting for another Usenet client?
+    
+    [Skip to NZBHydra2 :material-forward:](nzbhydra2.md){ .md-button }
+
+    </div>
+
+    </div>
+
+## Deployment
+
+```sh
 sb install sabnzbd
 ```
 
-## 1. URL
+## Usage
 
-- To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
+To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
 
-## 2. Basics
+## Basics
 
 - Go through the setup wizard.  You will need to enter server details:
 
@@ -68,7 +88,13 @@ sb install sabnzbd
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Qbittorrent](qbittorrent.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to NZBHydra2 :material-forward:](nzbhydra2.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

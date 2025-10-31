@@ -7,19 +7,42 @@ tags:
 
 # Overseerr
 
-# What is it?
-
-[Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.
+[Overseerr](https://overseerr.dev/) is a free and open-source request management and media discovery tool designed to work with the Plex ecosystem.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://overseerr.dev/){: .header-icons } | [:octicons-link-16: Docs](https://docs.overseerr.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sct/overseerr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/sctx/overseerr){: .header-icons }|
 
-## 1. URL
+---
 
-- To access Overseerr, visit <https://overseerr.iYOUR_DOMAIN_NAMEi>
+!!! abstract sb-directions "Saltbox Setup Process"
 
-## 2. Settings
+    <div>
+
+    <div>
+
+    Opting out of Plex Media Server?  
+    Opting for another requests manager?
+    
+    [Skip to Portainer :material-forward:](portainer.md){ .md-button }
+
+    </div>
+
+    </div>
+
+## Deployment
+
+```sh
+sb install overseerr
+```
+
+## Usage
+
+To access Overseerr, visit <https://overseerr.iYOUR_DOMAIN_NAMEi>
+
+## Basics
+
+### Settings
 
 This setup needs to take place **AFTER** you've set up Plex, Radarr, and Sonarr, since it involves connections to all three of those.
 
@@ -85,7 +108,13 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Portainer](portainer.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to Portainer :material-forward:](portainer.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

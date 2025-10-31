@@ -12,7 +12,6 @@ tags:
 !!! warning
     The upstream Booksonic Docker image has been deprecated and is no longer receiving updates. This means the image is not receiving regular security package updates. The role may be dropped from Sandbox at some point in the future.
 
-## What is it?
 
 [Booksonic Air](http://booksonic.org/) is a platform for accessing the audibooks you own wherever you are. At the moment the platform consists of Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic. Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
 

@@ -7,21 +7,41 @@ tags:
 
 # Jackett
 
-# What is it?
-
-[Jackett](https://github.com/Jackett/Jackett) (based on the original work of Matthew Little aka _zone117x_) is a web-based app that acts like a proxy server, directing search queries from download clients (e.g. Sonarr) to torrent tracker sites and sending the results back. Download clients can also use Jackett to fetch RSS feeds from tracker sites. Finally, it can be used as a meta search tool to find torrents, right from within the app.
+[Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jackett){: .header-icons }|
 
-_Note: If you don't use torrents, you may just skip this page._
+---
 
-## 1. URL
+!!! abstract sb-directions "Saltbox Setup Process"
 
-- To access Jackett, visit <http://jackett.iYOUR_DOMAIN_NAMEi>
+    <div>
 
-## 2. Settings
+    <div>
+
+    Opting for another indexer manager?
+    
+    [Skip to Sonarr :material-forward:](sonarr.md){ .md-button }
+
+    </div>
+
+    </div>
+
+## Deployment
+
+```sh
+sb install jackett
+```
+
+## Usage
+
+To access Jackett, visit <http://jackett.iYOUR_DOMAIN_NAMEi>
+
+## Basics
+
+### Settings
 
    ![](../images/jackett-settings.png)
 
@@ -37,7 +57,7 @@ Under "Jackett Configuration":
 
 1. The page will now reload.
 
-## 3. Adding Indexers to Sonarr/Radarr
+### Adding Indexers to Sonarr/Radarr
 
 Under "Configured Indexers":
 
@@ -59,7 +79,13 @@ Under "Configured Indexers":
 
 ## Next
 
-Are you setting Saltbox up for the first time?  Continue to [Plex Media Server](plex.md).
+<div class="sb-directions-row" markdown>
+
+Are you setting Saltbox up for the first time?
+
+[Continue to Sonarr :material-forward:](sonarr.md){ .md-button }
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

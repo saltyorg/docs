@@ -9,8 +9,6 @@ tags:
 
 # Gotify
 
-## What is it?
-
 [Gotify](https://gotify.net/) a simple server for sending and receiving messages.
 
 | Details     |             |             |             |

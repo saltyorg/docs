@@ -81,7 +81,7 @@ sb install sandbox-tika
 
         ```yaml
         # Type: string
-        tika_role_docker_image_repo: "ghcr.io/paperless-ngx/tika"
+        tika_role_docker_image_repo: "apache/tika"
         ```
 
     ??? variable string "`tika_role_docker_image_tag`"

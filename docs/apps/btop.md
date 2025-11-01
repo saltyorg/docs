@@ -9,7 +9,7 @@ tags:
 
 # btop
 
-## What is it?
+## Overview
 
 [btop](https://github.com/aristocratos/btop) is a resource monitor that shows usage and stats for processor, memory, disks, network and processes. It's a modern replacement for htop/top with a beautiful interface and extensive customization options.
 

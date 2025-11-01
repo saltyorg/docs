@@ -9,7 +9,7 @@ tags:
 
 # Transmission
 
-## What is it?
+## Overview
 
 [Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client.
 

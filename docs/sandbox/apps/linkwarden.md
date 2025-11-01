@@ -9,7 +9,7 @@ tags:
 
 # LinkWarden
 
-## What is it?
+## Overview
 
 [LinkWarden](https://linkwarden.app/) is a self-hosted collaborative bookmark manager designed to collect, read, annotate, and fully preserve web content. It automatically captures screenshots, PDFs, and HTML files of bookmarked pages to prevent link rot.
 

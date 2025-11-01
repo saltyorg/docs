@@ -7,6 +7,8 @@ tags:
 
 # diun
 
+## Overview
+
 [diun](https://crazymax.dev/diun/) Docker Image Update Notifier is a CLI application written in Go and delivered as a single executable (and a Docker image) to receive notifications when a Docker image is updated on a Docker registry.
 
 | Details     |             |             |             |

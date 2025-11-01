@@ -9,7 +9,7 @@ tags:
 
 # A-Train
 
-## What is it?
+## Overview
 
 A-Train is the official Autoscan trigger that listens for changes within Google Drive. It is the successor of Autoscan's Bernard trigger, which unfortunately contains enough logic errors to prompt a rewrite.
 

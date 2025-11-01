@@ -9,7 +9,7 @@ tags:
 
 # cAdvisor
 
-## What is it?
+## Overview
 
 [cAdvisor](https://github.com/google/cadvisor) (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers.
 

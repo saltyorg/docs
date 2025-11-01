@@ -9,7 +9,7 @@ tags:
 
 # PufferPanel
 
-## What is it?
+## Overview
 
 [PufferPanel](https://pufferpanel.com/) is an open-source web-based game server management system designed for both small networks and personal use. It supports Minecraft, Source Dedicated Servers, BungeeCord, and many other game servers.
 

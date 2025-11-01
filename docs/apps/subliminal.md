@@ -9,7 +9,7 @@ tags:
 
 # Subliminal
 
-## What is it?
+## Overview
 
 [Subliminal](https://github.com/Diaoul/subliminal) is a Python library and command-line tool to search and download subtitles for your videos. It supports multiple subtitle providers and languages, making it easy to find and download subtitles for your media collection.
 

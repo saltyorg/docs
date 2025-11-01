@@ -10,7 +10,7 @@ tags:
 
 # Jaeger
 
-## What is it?
+## Overview
 
 Jaeger is an open-source, end-to-end distributed tracing system. It's used for monitoring and troubleshooting microservices-based distributed systems, including distributed context propagation, distributed transaction monitoring, root cause analysis, service dependency analysis, and performance/latency optimization.
 

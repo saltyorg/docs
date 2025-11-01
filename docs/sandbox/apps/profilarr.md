@@ -10,6 +10,8 @@ tags:
 
 # Profilarr
 
+## Overview
+
 Configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
 
 <div class="grid sb-button-grid" markdown data-search-exclude>

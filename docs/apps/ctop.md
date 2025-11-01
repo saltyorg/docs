@@ -9,7 +9,7 @@ tags:
 
 # ctop
 
-## What is it?
+## Overview
 
 [ctop](https://github.com/bcicen/ctop) provides a concise and condensed overview of real-time metrics for multiple containers, similar to the Unix 'top' command but specifically designed for Docker containers. It offers an interactive interface for monitoring container resource usage.
 

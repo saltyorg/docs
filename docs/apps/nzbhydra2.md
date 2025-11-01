@@ -8,6 +8,8 @@ tags:
 
 # NZBHydra2
 
+## Overview
+
 [NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
 
 | Details     |             |             |             |

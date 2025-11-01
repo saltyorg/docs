@@ -9,7 +9,7 @@ tags:
 
 # plex_patrol
 
-## What is it?
+## Overview
 
 [plex_patrol](https://github.com/l3uddz/plex_patrol) is a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
 

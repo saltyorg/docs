@@ -9,7 +9,7 @@ tags:
 
 # Extended Personal Media Shows Agent and Scanner
 
-## What is it?
+## Overview
 
 [EPMS](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/) is very useful for sports or things that do not have a DB to scrape against, creates episode numbers for date-based media and sorts correctly in Plex interface.
 

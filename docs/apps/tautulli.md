@@ -7,6 +7,8 @@ tags:
 
 # Tautulli
 
+## Overview
+
 [Tautulli](http://tautulli.com/) is a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
 
 | Details     |             |             |             |

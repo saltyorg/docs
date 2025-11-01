@@ -9,7 +9,7 @@ tags:
 
 # Arr DB
 
-## What is it?
+## Overview
 
 Arr DB is a Saltbox maintenance role that performs database optimization tasks on SQLite databases used by *arr applications (Sonarr, Radarr, Lidarr, Whisparr, Prowlarr) and Tautulli. The role performs integrity checks, vacuuming, and reindexing operations to maintain database health and performance.
 

@@ -9,7 +9,7 @@ tags:
 
 # Lunasea
 
-## What is it?
+## Overview
 
 [Lunasea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller focused on giving you a seamless experience between all of your self-hosted media software remotely on your devices.
 

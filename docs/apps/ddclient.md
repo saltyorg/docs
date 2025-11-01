@@ -10,7 +10,7 @@ tags:
 
 # DDClient
 
-## What is it?
+## Overview
 
 [DDClient](https://ddclient.net/) is a dynamic DNS client that automatically updates DNS records when your public IP address changes. The Saltbox implementation comes pre-configured for Cloudflare with common Saltbox subdomain entries.
 

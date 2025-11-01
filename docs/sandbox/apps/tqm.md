@@ -9,7 +9,7 @@ tags:
 
 # tqm
 
-## What is it?
+## Overview
 
 [tqm](https://github.com/autobrr/tqm) is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
 

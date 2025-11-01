@@ -9,7 +9,7 @@ tags:
 
 # Cockpit
 
-## What is it?
+## Overview
 
 [Cockpit](https://cockpit-project.org/) is an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser. It provides comprehensive server management capabilities with a modern web interface.
 

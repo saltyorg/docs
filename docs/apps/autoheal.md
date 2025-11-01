@@ -9,7 +9,7 @@ tags:
 
 # Autoheal
 
-## What is it?
+## Overview
 
 [Autoheal](https://github.com/willfarrell/docker-autoheal) monitors and restarts unhealthy Docker containers. It watches for containers that have a `HEALTHCHECK` defined and automatically restarts them when they become unhealthy, helping maintain service availability without manual intervention.
 

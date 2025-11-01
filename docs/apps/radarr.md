@@ -7,6 +7,8 @@ tags:
 
 # Radarr
 
+## Overview
+
 [Radarr](https://radarr.video/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies.
 
 | Details     |             |             |             |

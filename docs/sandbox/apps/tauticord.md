@@ -9,7 +9,7 @@ tags:
 
 # Tauticord
 
-## What is it?
+## Overview
 
 [Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that
 will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library

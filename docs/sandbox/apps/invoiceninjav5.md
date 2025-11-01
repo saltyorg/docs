@@ -9,7 +9,7 @@ tags:
 
 # Invoice Ninja v5
 
-## What is it?
+## Overview
 
 [InvoiceNinja](https://www.invoiceninja.com/) is a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
 

@@ -9,7 +9,7 @@ tags:
 
 # Homarr
 
-## What is it?
+## Overview
 
 [Homarr](https://www.homarr.dev/) is a simple and modern homepage for your server that helps you access all of your services in one place. It integrates with the services you use to display useful information or control them. It's easy to install and supports many different devices.
 

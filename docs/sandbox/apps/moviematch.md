@@ -9,7 +9,7 @@ tags:
 
 # MovieMatch
 
-## What is it?
+## Overview
 
 [MovieMatch](https://github.com/LukeChannings/moviematch) is an app that helps you and your friends pick a movie to watch from a Plex server.
 

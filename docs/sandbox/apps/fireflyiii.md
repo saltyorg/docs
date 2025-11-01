@@ -11,7 +11,7 @@ tags:
 
 [TOC]
 
-## What is it?
+## Overview
 
 [Firefly III](https://www.firefly-iii.org) is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
 

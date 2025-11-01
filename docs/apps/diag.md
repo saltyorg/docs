@@ -9,7 +9,7 @@ tags:
 
 # Diag
 
-## What is it?
+## Overview
 
 A diagnostic role that displays important Saltbox configuration information and system state. This role gathers and displays critical information about your Saltbox installation, including repository status, Cloudflare configuration, DNS settings, and filesystem mounts.
 

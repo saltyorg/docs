@@ -9,7 +9,7 @@ tags:
 
 # Gitea
 
-## What is it?
+## Overview
 
 [Gitea](https://gitea.io/en-us/) is a community managed lightweight code hosting solution written in Go.
 

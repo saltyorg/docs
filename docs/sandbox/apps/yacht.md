@@ -9,7 +9,7 @@ tags:
 
 # Yacht
 
-## What is it?
+## Overview
 
 [Yacht](https://yacht.sh/) is a web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
 

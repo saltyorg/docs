@@ -11,7 +11,7 @@ tags:
 
 [TOC]
 
-## What is it?
+## Overview
 
 [Firefly III](https://www.firefly-iii.org) is a (self-hosted) manager for your personal finances. The data importer is built to help you import transactions into Firefly III. It is separated from Firefly III for security and maintenance reasons.
 

@@ -9,7 +9,7 @@ tags:
 
 # DiscoFlix
 
-## What is it?
+## Overview
 
 [DiscoFlix](https://github.com/nickheyer/discoflix) is a user-request-management system for your media server. With Radarr / Sonarr / Discord integration, DiscoFlix facilitates requests by your users for your media server.
 

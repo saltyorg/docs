@@ -9,7 +9,7 @@ tags:
 
 # SABThrottle
 
-## What is it?
+## Overview
 
 [SABThrottle](https://github.com/8a8al00ey/sabthrottle) Sabthrottle was designed in order to dynamically control the bandwidth allocation when users are actively streaming from Plex to avoid unnecessary buffering while still allowing the user to download at the fastest rate possible. Remember nzbthrottle from daghaian, yes its exactly like that but for SABnzbd with some additional tweaks.
 

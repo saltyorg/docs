@@ -10,7 +10,7 @@ tags:
 
 # Node Exporter
 
-## What is it?
+## Overview
 
 Node Exporter is a Prometheus exporter for hardware and OS metrics. It exposes system-level metrics such as CPU usage, memory, disk I/O, network statistics, and more, which can be scraped by Prometheus for monitoring and alerting.
 

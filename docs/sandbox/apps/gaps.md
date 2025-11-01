@@ -9,7 +9,7 @@ tags:
 
 # Gaps
 
-## What is it?
+## Overview
 
 [Gaps](https://github.com/JasonHHouse/gaps) searches through your Plex Server for all movies, then queries for known movies in the same collection. If those movies don't exist in your library, Gaps will recommend getting those movies, legally of course.
 

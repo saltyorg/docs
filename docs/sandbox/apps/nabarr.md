@@ -9,7 +9,7 @@ tags:
 
 # Nabarr
 
-## What is it?
+## Overview
 
 [Nabarr](https://github.com/l3uddz/nabarr) monitors Newznab/Torznab RSS feeds to find new media to add to Sonarr and or Radarr.
 

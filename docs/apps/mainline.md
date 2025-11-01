@@ -10,7 +10,7 @@ tags:
 
 # Mainline
 
-## What is it?
+## Overview
 
 [Mainline](https://github.com/bkw777/mainline) is a graphical tool for installing and managing mainline Linux kernels on Ubuntu-based systems. It provides an easy way to upgrade to the latest stable, RC, or LTS kernels directly from kernel.org.
 

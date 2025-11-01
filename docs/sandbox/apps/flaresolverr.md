@@ -9,7 +9,7 @@ tags:
 
 # FlareSolverr
 
-## What is it?
+## Overview
 
 [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) is a proxy server to bypass Cloudflare protection.
 

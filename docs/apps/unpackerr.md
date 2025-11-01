@@ -7,6 +7,8 @@ tags:
 
 # Unpackerr
 
+## Overview
+
 [Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
 
 | Details     |             |             |             |

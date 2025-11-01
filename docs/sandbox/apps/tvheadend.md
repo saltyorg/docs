@@ -9,7 +9,7 @@ tags:
 
 # Tvheadend
 
-## What is it?
+## Overview
 
 [Tvheadend](https://tvheadend.org/) is a TV streaming server and digital video recorder.
 

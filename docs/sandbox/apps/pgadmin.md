@@ -9,7 +9,7 @@ tags:
 
 # pgadmin
 
-## What is it?
+## Overview
 
 [pgadmin](https://www.pgadmin.org/) is a popular and feature rich Open Source administration and development platform for PostgreSQL.
 

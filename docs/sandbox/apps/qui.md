@@ -9,7 +9,7 @@ tags:
 
 # Qui
 
-## What is it?
+## Overview
 
 [Qui](https://github.com/autobrr/qui) is a fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
 

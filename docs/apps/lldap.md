@@ -10,7 +10,7 @@ tags:
 
 # LLDAP
 
-## What is it?
+## Overview
 
 LLDAP (Light LDAP) is a lightweight, simplified LDAP server for authentication. It provides a user-friendly interface for managing users and groups, with a simplified LDAP implementation that's easier to configure and maintain than traditional LDAP servers like OpenLDAP.
 

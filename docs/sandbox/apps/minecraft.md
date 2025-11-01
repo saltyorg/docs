@@ -5,7 +5,7 @@ tags:
 
 # Minecraft
 
-## What is it?
+## Overview
 
 Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft server and MC-Router to allow each server to have its own subdomain with the default port.
 

@@ -7,6 +7,8 @@ tags:
 
 # Jackett
 
+## Overview
+
 [Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
 
 | Details     |             |             |             |

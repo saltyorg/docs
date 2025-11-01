@@ -9,7 +9,7 @@ tags:
 
 # Linkding
 
-## What is it?
+## Overview
 
 [Linkding](https://github.com/sissbruecker/linkding#introduction) is a simple bookmark service that you can host yourself. It's designed be to be minimal and fast.
 

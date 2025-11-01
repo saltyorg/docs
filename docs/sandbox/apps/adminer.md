@@ -9,7 +9,7 @@ tags:
 
 # Adminer
 
-## What is it?
+## Overview
 
 [Adminer](https://www.adminer.org/) Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Adminer is available for MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and others via plugin.
 

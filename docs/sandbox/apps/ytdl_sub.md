@@ -9,7 +9,7 @@ tags:
 
 # ytdl-sub
 
-## What is it?
+## Overview
 
 [ytdl-sub](https://github.com/jmbannon/ytdl-sub) is a lightweight tool to automate downloading and metadata generation with yt-dlp. It uses YAML files to define subscriptions and prepares media for popular media players like Plex, Jellyfin, Kodi, and Emby.
 

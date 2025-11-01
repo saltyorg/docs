@@ -9,7 +9,7 @@ tags:
 
 # PlexShare
 
-## What is it?
+## Overview
 
 [PlexShare](https://chewbaka69.github.io/PlexShare/) is a standalone web application that provides management of local users and multiple Plex servers with their libraries. It allows users to access libraries from all registered servers through a single interface without requiring plex.tv registration.
 

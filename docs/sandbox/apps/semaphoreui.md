@@ -9,7 +9,7 @@ tags:
 
 # SemaphoreUI
 
-## What is it?
+## Overview
 
 [Semaphore UI](https://github.com/semaphoreui/semaphore) is a modern UI for Ansible, Terraform, OpenTofu and Pulumi. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 

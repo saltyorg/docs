@@ -9,7 +9,7 @@ tags:
 
 # Maybe Finance
 
-## What is it?
+## Overview
 
 [Maybe Finance](https://maybe.co/) is a personal finance app that functions as an operating system for managing finances, with interactive tools and calculators. The open-source version is available under AGPLv3 license but is no longer actively maintained.
 

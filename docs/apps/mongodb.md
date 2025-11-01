@@ -9,7 +9,7 @@ tags:
 
 # MongoDB
 
-## What is it?
+## Overview
 
 MongoDB is a popular NoSQL document database that stores data in flexible, JSON-like documents. It's designed for scalability and developer productivity, and is used by many applications for data persistence.
 

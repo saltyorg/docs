@@ -5,7 +5,7 @@ tags:
 
 # Minecraft Bedrock
 
-## What is it?
+## Overview
 
 [Minecraft Bedrock](https://github.com/itzg/docker-minecraft-bedrock-server) is a server for the multi-platform version of Minecraft.
 

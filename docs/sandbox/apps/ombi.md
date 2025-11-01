@@ -9,7 +9,7 @@ tags:
 
 # Ombi
 
-## What is it?
+## Overview
 
 [Ombi](https://ombi.io/) is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
 

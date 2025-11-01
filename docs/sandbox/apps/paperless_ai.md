@@ -9,7 +9,7 @@ tags:
 
 # Paperless AI
 
-## What is it?
+## Overview
 
 [Paperless AI](https://clusterzx.github.io/paperless-ai/) is an AI-enhanced extension for Paperless-ngx that adds automatic classification, smart tagging, and semantic search using OpenAI-compatible APIs. It builds on the community-supported document management system that scans, indexes and archives documents with OCR.
 

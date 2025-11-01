@@ -7,6 +7,8 @@ tags:
 
 # Sonarr
 
+## Overview
+
 [Sonarr](https://sonarr.tv/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
 
 | Details     |             |             |             |

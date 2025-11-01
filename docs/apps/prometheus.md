@@ -10,7 +10,7 @@ tags:
 
 # Prometheus
 
-## What is it?
+## Overview
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It collects and stores metrics as time series data, providing a powerful query language (PromQL) for analyzing system behavior and setting up alerts.
 

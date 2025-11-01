@@ -9,7 +9,7 @@ tags:
 
 # Factorio
 
-## What is it?
+## Overview
 
 Run a [Factorio](https://www.factorio.com) headless server.
 

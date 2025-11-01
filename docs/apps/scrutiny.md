@@ -10,7 +10,7 @@ tags:
 
 # Scrutiny
 
-## What is it?
+## Overview
 
 Scrutiny is a hard drive health monitoring tool that tracks S.M.A.R.T. metrics for your drives. It provides a WebUI with historical data tracking, alerting, and beautiful visualizations to help you monitor drive health and predict failures before they happen.
 

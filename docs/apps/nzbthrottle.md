@@ -10,7 +10,7 @@ tags:
 
 # NZBThrottle
 
-## What is it?
+## Overview
 
 NZBThrottle is a utility that automatically throttles Usenet download speeds based on custom schedules and conditions. It can dynamically adjust your download client's speed limits to ensure bandwidth is available when you need it most, such as during work hours or peak usage times.
 

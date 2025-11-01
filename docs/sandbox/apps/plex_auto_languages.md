@@ -9,7 +9,7 @@ tags:
 
 # plex_auto_languages
 
-## What is it?
+## Overview
 
 [plex_auto_languages](https://github.com/RemiRigal/Plex-Auto-Languages) auto-updates the language of your Plex TV Show episodes based on the current language you are using without messing with your existing language preferences.
 

@@ -9,7 +9,7 @@ tags:
 
 # Immich
 
-## What is it?
+## Overview
 
 [Immich](https://immich.app/) is a self-hosted photo and video backup tool, similar to google photos and apple photos.
 

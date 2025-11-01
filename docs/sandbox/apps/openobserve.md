@@ -9,7 +9,7 @@ tags:
 
 # OpenObserve
 
-## What is it?
+## Overview
 
 [OpenObserve](https://openobserve.ai/) is an open-source observability platform for logs, metrics, and traces with 140x lower storage cost than Elasticsearch. Built for petabyte scale with high performance and ~40x compression.
 

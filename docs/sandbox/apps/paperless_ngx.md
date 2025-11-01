@@ -9,7 +9,7 @@ tags:
 
 # Paperless NGX
 
-## What is it?
+## Overview
 
 [Paperless NGX](https://github.com/paperless-ngx/paperless-ngx#paperless-ngx) is a simple Django application running in two parts: a Consumer (the thing that does the indexing) and the Web server (the part that lets you search & download already-indexed documents).
 

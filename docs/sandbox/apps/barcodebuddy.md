@@ -9,7 +9,7 @@ tags:
 
 # BarcodeBuddy
 
-## What is it?
+## Overview
 
 [BarcodeBuddy](https://github.com/Forceu/barcodebuddy) is a barcode system for Grocy that enables barcode scanning and product management. It automatically handles known and unknown barcodes, integrating seamlessly with Grocy's inventory management system.
 

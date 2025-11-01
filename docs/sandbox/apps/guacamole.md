@@ -9,6 +9,8 @@ tags:
 
 # Guacamole
 
+## Overview
+
 [Guacamole](https://guacamole.apache.org/) is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
 
 We call it clientless because no plugins or client software are required.

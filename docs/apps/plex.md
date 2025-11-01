@@ -8,6 +8,8 @@ tags:
 
 # Plex Media Server
 
+## Overview
+
 [Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location.
 
 | Details     |             |             |             |

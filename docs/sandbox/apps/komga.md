@@ -9,6 +9,8 @@ tags:
 
 # Komga
 
+## Overview
+
 [Komga](https://komga.org/) is a free and open source comics/mangas server.
 
 | Details     |             |             |             |

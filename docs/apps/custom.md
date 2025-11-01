@@ -7,7 +7,7 @@ tags:
 
 # Custom
 
-## What is it?
+## Overview
 
 The Custom role allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation. This role gives you the flexibility to add tools and dependencies specific to your needs.
 

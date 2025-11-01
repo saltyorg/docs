@@ -7,6 +7,8 @@ tags:
 
 # Autoscan
 
+## Overview
+
 [Autoscan](https://github.com/Cloudbox/autoscan) is an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
 
 | Details     |             |             |             |

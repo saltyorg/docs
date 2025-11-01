@@ -9,7 +9,7 @@ tags:
 
 # Beets
 
-## What is it?
+## Overview
 
 [Beets](https://beets.io/) catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.
 

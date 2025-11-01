@@ -7,6 +7,8 @@ tags:
 
 # Overseerr
 
+## Overview
+
 [Overseerr](https://overseerr.dev/) is a free and open-source request management and media discovery tool designed to work with the Plex ecosystem.
 
 | Details     |             |             |             |

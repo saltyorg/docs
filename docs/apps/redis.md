@@ -10,7 +10,7 @@ tags:
 
 # Redis
 
-## What is it?
+## Overview
 
 Redis is an open-source, in-memory data structure store used as a database, cache, message broker, and streaming engine. It supports various data structures such as strings, hashes, lists, sets, and sorted sets, making it extremely versatile and fast.
 

@@ -9,7 +9,7 @@ tags:
 
 # Crafty Controller
 
-## What is it?
+## Overview
 
 [Crafty Controller](https://craftycontrol.com/) is a cross-platform Minecraft server control panel with web-based interface. It features server scheduling, interactive console, and support for multiple server types including vanilla, modded, and plugin-based servers.
 

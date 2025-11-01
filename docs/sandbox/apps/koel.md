@@ -9,7 +9,7 @@ tags:
 
 # Koel
 
-## What is it?
+## Overview
 
 [Koel](https://koel.dev/) is a simple web-based personal audio streaming service written in Vue and Laravel that embraces modern web technologies. It features transparent FLAC support, cross-device sync, smart playlists, and multi-user support.
 

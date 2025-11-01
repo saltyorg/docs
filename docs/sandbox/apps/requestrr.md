@@ -9,6 +9,8 @@ tags:
 
 # Requestrr
 
+## Overview
+
 [Requestrr](https://github.com/thomst08/requestrr) is a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms.
 
 | Details     |             |             |             |

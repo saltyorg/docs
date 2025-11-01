@@ -9,7 +9,7 @@ tags:
 
 # EmbyStat
 
-## What is it?
+## Overview
 
 [EmbyStat](https://github.com/mregni/EmbyStat/) is a personal web server that can calculate all kinds of statistics from your (local) Emby or Jellyfin server. Just install this on your server and let him calculate all kinds of fun stuff.
 

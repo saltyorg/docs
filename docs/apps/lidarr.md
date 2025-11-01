@@ -7,6 +7,8 @@ tags:
 
 # Lidarr
 
+## Overview
+
 [Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
 
 | Details     |             |             |             |

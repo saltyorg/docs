@@ -9,7 +9,7 @@ tags:
 
 # Nginx
 
-## What is it?
+## Overview
 
 Nginx is a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications.
 

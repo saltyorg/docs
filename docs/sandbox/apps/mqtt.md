@@ -9,7 +9,7 @@ tags:
 
 # MQTT
 
-## What is it?
+## Overview
 
 [MQTT](https://mosquitto.org/) (or Eclipse Mosquitto) is a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
 

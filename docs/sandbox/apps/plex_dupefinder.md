@@ -9,7 +9,7 @@ tags:
 
 # Plex_Dupefinder
 
-## What is it?
+## Overview
 
 [Plex_Dupefinder](https://github.com/l3uddz/plex_dupefinder#readme/) Plex DupeFinder is a python script that finds duplicate versions of media (TV episodes and movies) in your Plex Library and tells Plex to remove the lowest rated files/versions (based on user-specified scoring) to leave behind a single file/version.
 

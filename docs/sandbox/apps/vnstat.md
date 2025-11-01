@@ -9,7 +9,7 @@ tags:
 
 # vnStat
 
-## What is it?
+## Overview
 
 [vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:
 

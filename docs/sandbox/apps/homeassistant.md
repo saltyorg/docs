@@ -9,7 +9,7 @@ tags:
 
 # Homeassistant
 
-## What is it?
+## Overview
 
 [Homeassistant](https://www.home-assistant.io/) is a tool designed for (open source) home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.
 

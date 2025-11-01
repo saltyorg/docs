@@ -9,7 +9,7 @@ tags:
 
 # Apprise
 
-## What is it?
+## Overview
 
 [Apprise](https://github.com/caronc/apprise) allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
 

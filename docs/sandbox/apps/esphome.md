@@ -9,7 +9,7 @@ tags:
 
 # ESPHome
 
-## What is it?
+## Overview
 
 [ESPHome](https://esphome.io/)  is an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers.
 

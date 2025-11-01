@@ -9,7 +9,7 @@ tags:
 
 # Telegraf
 
-## What is it?
+## Overview
 
 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) is a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
 

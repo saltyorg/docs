@@ -7,6 +7,8 @@ tags:
 
 # Authentik
 
+## Overview
+
 [Authentik](https://goauthentik.io/) is an IdP (Identity Provider) and SSO (single sign on) that is built with security at the forefront of every piece of code, every feature, with an emphasis on flexibility and versatility. It supports all of the major providers, such as OAuth2, SAML, LDAP, and SCIM, so you can pick the protocol that you need for each application.
 
 | Details     |             |             |             |

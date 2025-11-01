@@ -9,6 +9,8 @@ tags:
 
 # Meilisearch
 
+## Overview
+
 [Meilisearch](https://www.meilisearch.com/) Meilisearch is an AI powered search tool.
 
 <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>

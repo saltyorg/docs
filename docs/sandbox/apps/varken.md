@@ -9,7 +9,7 @@ tags:
 
 # Varken
 
-## What is it?
+## Overview
 
 [Varken](https://github.com/Boerderij/Varken) is Dutch for **PIG**. PIG is an Acronym for **P**lex/**I**nfluxDB/**G**rafana
 

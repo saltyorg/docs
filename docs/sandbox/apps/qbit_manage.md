@@ -9,7 +9,7 @@ tags:
 
 # qBit Manage
 
-## What is it?
+## Overview
 
 [qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 

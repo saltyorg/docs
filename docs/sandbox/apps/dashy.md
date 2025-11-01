@@ -9,7 +9,7 @@ tags:
 
 # Dashy
 
-## What is it?
+## Overview
 
 [Dashy](https://dashy.to/) is the "Ultimate homepage for your homelab"
 

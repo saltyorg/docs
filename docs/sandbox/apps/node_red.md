@@ -9,7 +9,7 @@ tags:
 
 # Node Red
 
-## What is it?
+## Overview
 
 [Node Red](https://www.nodered.org/) is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things.
 

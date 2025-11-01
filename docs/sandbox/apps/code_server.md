@@ -9,7 +9,7 @@ tags:
 
 # code-server
 
-## What is it?
+## Overview
 
 [code-server](https://github.com/coder/code-server). Run [VS Code](https://github.com/Microsoft/vscode) on any machine anywhere and access it in the browser.
 

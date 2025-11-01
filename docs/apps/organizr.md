@@ -7,6 +7,8 @@ tags:
 
 # Organizr
 
+## Overview
+
 [Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
 
 | Details     |             |             |             |

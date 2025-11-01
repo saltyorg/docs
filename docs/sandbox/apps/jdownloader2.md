@@ -9,7 +9,7 @@ tags:
 
 # JDownloader
 
-## What is it?
+## Overview
 
 [JDownloader](https://beta.jdownloader.org/) is a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!
 

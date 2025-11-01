@@ -9,7 +9,7 @@ tags:
 
 # Freshrss
 
-## What is it?
+## Overview
 
 [Freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator.
 

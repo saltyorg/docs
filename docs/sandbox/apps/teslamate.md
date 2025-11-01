@@ -9,7 +9,7 @@ tags:
 
 # Teslamate
 
-## What is it?
+## Overview
 
 [Teslamate](https://github.com/teslamate-org/teslamate) is a powerful, self-hosted data logger for your Tesla.
 

@@ -9,7 +9,7 @@ tags:
 
 # InfluxDB2
 
-## What is it?
+## Overview
 
 [InfluxDB2](https://www.influxdata.com/products/influxdb/) is an open source time series database for recording metrics, events, and analytics.
 

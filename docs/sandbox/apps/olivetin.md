@@ -9,7 +9,7 @@ tags:
 
 # OliveTin
 
-## What is it?
+## Overview
 
 [OliveTin](https://olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.
 

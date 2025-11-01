@@ -9,7 +9,7 @@ tags:
 
 # Error Pages
 
-## What is it?
+## Overview
 
 Custom error pages that display when services return HTTP errors (400-599). Deployed automatically with Traefik.
 

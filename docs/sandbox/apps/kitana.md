@@ -9,6 +9,8 @@ tags:
 
 # Kitana
 
+## Overview
+
 [Kitana](https://github.com/pannal/Kitana) is a responsive Plex plugin web frontend.
 
 Running one instance of Kitana can serve infinite amounts of servers and plugins - you can even expose your Kitana instance to your friends, so they can manage their plugins as well, so they don't have to run their own Kitana instance.

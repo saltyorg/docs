@@ -9,6 +9,8 @@ tags:
 
 # FileBot
 
+## Overview
+
 [FileBot](http://www.filebot.net/) is the ultimate tool for organizing and renaming your movies, tv shows or anime, and music well as downloading subtitles and artwork. It's smart and just works.
 
 This is a Docker container for FileBot.

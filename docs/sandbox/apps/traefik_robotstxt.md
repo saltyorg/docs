@@ -9,7 +9,7 @@ tags:
 
 # Robotstxt
 
-## What is it?
+## Overview
 
 [Robotstxt](https://github.com/mstroecker/zig-robotstxt) is a lightweight http-server, just serving a disallow-robots.txt file using the Zig programming language([https://ziglang.org/](https://ziglang.org/)).
 

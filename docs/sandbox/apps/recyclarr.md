@@ -9,6 +9,8 @@ tags:
 
 # Recyclarr
 
+## Overview
+
 [Recyclarr](https://github.com/recyclarr/recyclarr) automatically synchronizes recommended settings from TRaSH guides to your Sonarr/Radarr instances.
 
 | Details     |             |             |             |

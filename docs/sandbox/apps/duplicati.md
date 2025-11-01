@@ -9,7 +9,7 @@ tags:
 
 # Duplicati
 
-## What is it?
+## Overview
 
 [Duplicati](https://duplicati.com/) is a free, open-source backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with a variety of storage types, including FTP, SSH, WebDAV, and cloud services like Backblaze B2, Tardigrade, and Amazon S3.
 

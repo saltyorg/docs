@@ -8,7 +8,7 @@ tags:
 
 # Wireguard
 
-## What is it?
+## Overview
 
 [Wireguard](https://wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 

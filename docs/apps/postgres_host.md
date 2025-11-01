@@ -10,7 +10,7 @@ tags:
 
 # PostgreSQL Host
 
-## What is it?
+## Overview
 
 A host-based PostgreSQL installation role that deploys PostgreSQL directly on your server (not in Docker). This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
 

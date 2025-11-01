@@ -7,7 +7,7 @@ tags:
 
 # Plex DB
 
-## What is it?
+## Overview
 
 `plex-db` runs some database maintenance tasks on the plex databases for each of your defined plex instances:
 

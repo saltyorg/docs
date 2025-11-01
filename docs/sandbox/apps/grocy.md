@@ -9,7 +9,7 @@ tags:
 
 # Grocy
 
-## What is it?
+## Overview
 
 [Grocy](https://grocy.info/) is a self-hosted ERP system for groceries and household management. It features barcode scanning, shopping lists, expiration tracking, and comprehensive inventory management for home use.
 

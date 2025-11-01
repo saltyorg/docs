@@ -9,6 +9,8 @@ tags:
 
 # Trilium Notes
 
+## Overview
+
 [Trilium Notes](https://github.com/zadam/trilium) is a hierarchical note taking application with focus on building large personal knowledge bases.
 
 | Details     |             |             |             |

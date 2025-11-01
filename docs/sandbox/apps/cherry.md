@@ -9,7 +9,7 @@ tags:
 
 # Cherry
 
-## What is it?
+## Overview
 
 [Cherry](https://cherry.haishan.me/) is a bookmark service that is open source.
 

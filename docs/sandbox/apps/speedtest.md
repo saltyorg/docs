@@ -9,7 +9,7 @@ tags:
 
 # Speedtest
 
-## What is it?
+## Overview
 
 [Speedtest](https://github.com/librespeed/speedtest)  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
 

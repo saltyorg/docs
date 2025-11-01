@@ -9,7 +9,7 @@ tags:
 
 # The Lounge
 
-## What is it?
+## Overview
 
 [The Lounge](https://thelounge.chat/) is a self hosted web IRC client. In private mode, The Lounge acts like a bouncer and a client combined, in order to offer an experience similar to other modern chat applications outside the IRC world. Users can then access and resume their session without being disconnected from their channels.
 

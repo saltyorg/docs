@@ -9,7 +9,7 @@ tags:
 
 # Uptime Kuma
 
-## What is it?
+## Overview
 
 [Uptime Kuma](https://github.com/louislam/uptime-kuma) is a self-hosted monitoring tool like "Uptime Robot".
 

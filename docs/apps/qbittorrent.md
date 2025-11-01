@@ -7,6 +7,8 @@ tags:
 
 # qBittorrent
 
+## Overview
+
 [qBittorrent](https://www.qbittorrent.org/) is a free, open-source, cross-platform BitTorrent client written in C++ and Qt, designed as a reliable and ad-free alternative to other clients like µTorrent.
 
 | Details     |             |             |             |

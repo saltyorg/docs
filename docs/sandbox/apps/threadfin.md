@@ -9,7 +9,7 @@ tags:
 
 # Threadfin
 
-## What is it?
+## Overview
 
 [Threadfin](https://github.com/Threadfin/Threadfin) is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
 

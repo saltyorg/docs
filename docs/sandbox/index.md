@@ -137,7 +137,6 @@ tags:
 - **[qbit_manage](../sandbox/apps/qbit_manage.md)**  - tag - `sandbox-qbit-manage`
 - **[qbittorrentvpn](../sandbox/apps/qbittorrentvpn.md)**  - tag - `sandbox-qbittorrentvpn`
 - **[qui](../sandbox/apps/qui.md)**  - tag - `sandbox-qui`
-- **[rdtclient](../sandbox/apps/rdtclient.md)**  - tag - `sandbox-rdtclient`
 - **[recyclarr](../sandbox/apps/recyclarr.md)**  - tag - `sandbox-recyclarr`
 - **[reposilite](../sandbox/apps/reposilite.md)**  - tag - `sandbox-reposilite`
 - **[requestrr](../sandbox/apps/requestrr.md)**  - tag - `sandbox-requestrr`

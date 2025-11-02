@@ -1,15 +1,16 @@
 ---
+icon: material/docker
 hide:
   - tags
 tags:
   - postgres
 ---
 
-# Postgres
+# PostgreSQL
 
 ## Overview
 
-[Postgres](https://www.postgresql.org/) PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+[PostgreSQL](https://www.postgresql.org/), often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|

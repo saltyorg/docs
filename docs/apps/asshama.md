@@ -1,11 +1,12 @@
 ---
+icon: material/power-plug
 hide:
   - tags
 tags:
   - asshama
 ---
 
-# Absolute Series Scanner and HAMA role for anime
+# ASSHAMA
 
 ## Overview
 

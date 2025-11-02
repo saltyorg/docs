@@ -1,4 +1,5 @@
 ---
+icon: material/cogs
 hide:
   - tags
 tags:

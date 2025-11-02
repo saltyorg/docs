@@ -1,4 +1,5 @@
 ---
+icon: material/desktop-classic
 hide:
   - tags
 tags:

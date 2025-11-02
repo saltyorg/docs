@@ -1,4 +1,5 @@
 ---
+icon: material/play
 hide:
   - tags
 tags:

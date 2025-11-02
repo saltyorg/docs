@@ -1,4 +1,5 @@
 ---
+icon: material/power-plug
 hide:
   - tags
 tags:
@@ -7,7 +8,7 @@ tags:
   - metadata
 ---
 
-# Extended Personal Media Shows Agent and Scanner
+# Extended Personal Media Shows Agent
 
 ## Overview
 

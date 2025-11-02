@@ -1,4 +1,5 @@
 ---
+icon: material/docker
 hide:
   - tags
 tags:
@@ -7,7 +8,7 @@ tags:
   - invoicing
 ---
 
-# Invoice Ninja v5
+# Invoice Ninja
 
 ## Overview
 

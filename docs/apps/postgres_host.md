@@ -1,4 +1,5 @@
 ---
+icon: material/cogs
 hide:
   - tags
 tags:
@@ -8,7 +9,7 @@ tags:
   - sql
 ---
 
-# PostgreSQL Host
+# PostgreSQL (Host Install)
 
 ## Overview
 

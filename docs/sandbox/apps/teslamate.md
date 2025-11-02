@@ -1,4 +1,5 @@
 ---
+icon: material/docker
 hide:
   - tags
 tags:

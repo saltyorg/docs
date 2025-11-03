@@ -95,7 +95,6 @@ tags:
 - **[lgsm](../sandbox/apps/lgsm.md)**  - tag - `sandbox-lgsm`
 - **[linkding](../sandbox/apps/linkding.md)**  - tag - `sandbox-linkding`
 - **[linkwarden](../sandbox/apps/linkwarden.md)**  - tag - `sandbox-linkwarden`
-- **[lunasea](../sandbox/apps/lunasea.md)**  - tag - `sandbox-lunasea`
 - **[makemkv](../sandbox/apps/makemkv.md)**  - tag - `sandbox-makemkv`
 - **[maintainerr](../sandbox/apps/maintainerr.md)**  - tag - `sandbox-maintainerr`
 - **[maybe_finance](../sandbox/apps/maybe_finance.md)**  - tag - `sandbox-maybe-finance`

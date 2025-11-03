@@ -264,7 +264,6 @@ nav:
           - YTDL-Sub: sandbox/apps/ytdl_sub.md
           - Torrents:
             - Delugevpn: sandbox/apps/delugevpn.md
-            - LunaSea: sandbox/apps/lunasea.md
             - QBittorrentVPN: sandbox/apps/qbittorrentvpn.md
             - qBit Manage: sandbox/apps/qbit_manage.md
             - Qui: sandbox/apps/qui.md

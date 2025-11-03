@@ -14,6 +14,10 @@ DOCKER_VAR_LOOKUP_PATTERN = re.compile(r"lookup\('docker_var',\s*'([^']+)'")
 ROLE_VAR_LOOKUP_PATTERN = re.compile(r"lookup\('role_var',\s*'([^']+)'[^)]*\)")
 COMMENT_IGNORE_PATTERN = re.compile(r'^(Title:|Author|https?://)')
 VALID_ROLE_NAME_PATTERN = re.compile(r'^[a-z][a-z0-9_-]*$')
+SUBSECTION_START_PATTERN = re.compile(r'^#\s+(.+?)\s+-\s+Sub-section\s+Start\s*$', re.IGNORECASE)
+SUBSECTION_END_PATTERN = re.compile(r'^#\s+(.+?)\s+-\s+Sub-section\s+End\s*$', re.IGNORECASE)
+GLOBAL_COMMENT_PATTERN = re.compile(r'^\[GLOBAL\]\s*(.*)$')
+NO_GLOBAL_COMMENT_PATTERN = re.compile(r'^\[NOGLOBAL\]\s*(.*)$')
 
 @dataclass
 class Variable:
@@ -314,8 +318,12 @@ class RoleVariableParser:
         """
         variables = OrderedDict()
         current_section = None
+        current_subsection = None
         pending_comments = []
+        no_global_flag = False  # Track if current comments should exclude global
         yaml_started = False  # Track if we've encountered the --- separator
+        open_subsections = {}  # Track open sub-sections for validation: {name: line_number}
+        subsection_global_comments = {}  # Track global comments for each subsection
 
         # Store raw lines for later reference
         self._raw_lines = {}
@@ -357,26 +365,96 @@ class RoleVariableParser:
                             section_text = next_line.lstrip('#').strip()
                             if section_text:
                                 current_section = section_text
+                                # Close any open sub-sections when entering new main section
+                                if open_subsections:
+                                    print(f"Warning: Unclosed sub-sections when entering section '{current_section}' in {file_path}:", file=sys.stderr)
+                                    for name, line_num in open_subsections.items():
+                                        print(f"  - '{name}' started at line {line_num}", file=sys.stderr)
+                                    open_subsections = {}
+                                current_subsection = None
                                 pending_comments = []
                                 continue
+
+            # Check for sub-section Start marker
+            subsection_start_match = SUBSECTION_START_PATTERN.match(stripped)
+            if subsection_start_match:
+                subsection_name = subsection_start_match.group(1).strip()
+
+                # Validate: must be inside a main section
+                if not current_section:
+                    print(f"Error: Sub-section '{subsection_name}' at line {i+1} found before any main section in {file_path}", file=sys.stderr)
+                    sys.exit(1)
+
+                # Validate: no nested sub-sections
+                if current_subsection:
+                    print(f"Error: Nested sub-section '{subsection_name}' at line {i+1} inside '{current_subsection}' in {file_path}", file=sys.stderr)
+                    print(f"  '{current_subsection}' started at line {open_subsections[current_subsection]}", file=sys.stderr)
+                    print(f"  Nesting is not supported. Close '{current_subsection}' before starting '{subsection_name}'.", file=sys.stderr)
+                    sys.exit(1)
+
+                # Open new sub-section
+                current_subsection = subsection_name
+                open_subsections[subsection_name] = i + 1
+                pending_comments = []
+                continue
+
+            # Check for sub-section End marker
+            subsection_end_match = SUBSECTION_END_PATTERN.match(stripped)
+            if subsection_end_match:
+                subsection_name = subsection_end_match.group(1).strip()
+
+                # Validate: must match current open sub-section
+                if not current_subsection:
+                    print(f"Error: Sub-section End for '{subsection_name}' at line {i+1} without matching Start in {file_path}", file=sys.stderr)
+                    sys.exit(1)
+
+                if current_subsection != subsection_name:
+                    print(f"Error: Mismatched sub-section End at line {i+1} in {file_path}", file=sys.stderr)
+                    print(f"  Found: '{subsection_name}'", file=sys.stderr)
+                    print(f"  Expected: '{current_subsection}' (started at line {open_subsections[current_subsection]})", file=sys.stderr)
+                    print(f"  Sub-section Start/End names must match exactly (case-sensitive).", file=sys.stderr)
+                    sys.exit(1)
+
+                # Close sub-section
+                del open_subsections[subsection_name]
+                current_subsection = None
+                pending_comments = []
+                continue
 
             # Track comments that appear right before variables (not section headers)
             # Skip indented comments as they are part of multi-line values (lists/dicts)
             if stripped.startswith('#') and not SECTION_PATTERN.match(stripped) and not line.startswith(' '):
                 # Check if this looks like a variable comment (not URL, Title, Author, etc.)
                 comment_text = stripped.lstrip('#').strip()
-                if comment_text and not COMMENT_IGNORE_PATTERN.match(comment_text):
-                    # Check if the next non-comment line is a variable
-                    is_var_comment = False
-                    for j in range(i + 1, min(i + 1 + LOOKAHEAD_LINES, len(lines))):
-                        next_line = lines[j].strip()
-                        if not next_line.startswith('#') and next_line:
-                            if ':' in next_line and not next_line.startswith('---'):
-                                is_var_comment = True
-                            break
 
-                    if is_var_comment:
-                        pending_comments.append(comment_text)
+                # Check if this is a [GLOBAL] comment marker
+                global_match = GLOBAL_COMMENT_PATTERN.match(comment_text)
+                if global_match and current_subsection:
+                    # Extract text after [GLOBAL] and store as subsection-level comment
+                    global_comment_text = global_match.group(1).strip()
+                    if current_subsection not in subsection_global_comments:
+                        subsection_global_comments[current_subsection] = []
+                    subsection_global_comments[current_subsection].append(global_comment_text)
+                else:
+                    # Check if this is a #! (no global) comment marker
+                    no_global_match = NO_GLOBAL_COMMENT_PATTERN.match(comment_text)
+                    if no_global_match:
+                        # Extract text after ! and set no_global flag
+                        comment_text = no_global_match.group(1).strip()
+                        no_global_flag = True
+
+                    if comment_text and not COMMENT_IGNORE_PATTERN.match(comment_text):
+                        # Check if the next non-comment line is a variable
+                        is_var_comment = False
+                        for j in range(i + 1, min(i + 1 + LOOKAHEAD_LINES, len(lines))):
+                            next_line = lines[j].strip()
+                            if not next_line.startswith('#') and next_line:
+                                if ':' in next_line and not next_line.startswith('---'):
+                                    is_var_comment = True
+                                break
+
+                        if is_var_comment:
+                            pending_comments.append(comment_text)
             # Clear pending comments if we hit a blank line
             elif not stripped:
                 # Don't clear if next line is a variable (blank lines between comment and var are ok)
@@ -384,6 +462,7 @@ class RoleVariableParser:
                     next_line = lines[i + 1].strip()
                     if not (':' in next_line and not next_line.startswith('#')):
                         pending_comments = []
+                        no_global_flag = False
 
             # Parse variable definitions
             if ':' in line and not stripped.startswith('#') and not stripped.startswith('---'):
@@ -421,13 +500,46 @@ class RoleVariableParser:
                     self._raw_lines[var_name] = raw_value
 
                     # Join multi-line comments
-                    full_comment = '\n'.join(pending_comments) if pending_comments else None
+                    var_comment = '\n'.join(pending_comments) if pending_comments else None
+                    global_comment = None
+
+                    # Get global comment if available
+                    if current_subsection and current_subsection in subsection_global_comments:
+                        global_comment = '\n'.join(subsection_global_comments[current_subsection])
+
+                    # Combine comments based on no_global flag
+                    if no_global_flag:
+                        # #! marker: use only variable comment, exclude global
+                        full_comment = var_comment
+                    elif var_comment and global_comment:
+                        # Both exist: global first, then variable comment
+                        full_comment = global_comment + '\n' + var_comment
+                    elif var_comment:
+                        # Only variable comment (no global available)
+                        full_comment = var_comment
+                    elif global_comment:
+                        # Only global comment (no variable comment)
+                        full_comment = global_comment
+                    else:
+                        # No comments at all
+                        full_comment = None
+
                     variables[var_name] = {
                         'line': i + 1,  # Convert to 1-based line number for display
                         'section': current_section or 'General',
+                        'subsection': current_subsection,
                         'comment': full_comment
                     }
                     pending_comments = []
+                    no_global_flag = False  # Reset flag for next variable
+
+        # Final validation: check for unclosed sub-sections at end of file
+        if open_subsections:
+            print(f"Error: Unclosed sub-sections at end of file {file_path}:", file=sys.stderr)
+            for name, line_num in open_subsections.items():
+                print(f"  - '{name}' started at line {line_num}", file=sys.stderr)
+            print(f"\nSub-sections must be closed with: # {list(open_subsections.keys())[0]} - Sub-section End", file=sys.stderr)
+            sys.exit(1)
 
         return variables
 
@@ -795,7 +907,7 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
         if '_paths_folders_list' in var_name:
             ignored_vars.add(var_name)
 
-    # Group variables by section
+    # Group variables by section and subsection
     sections = OrderedDict()
     section_order = []
 
@@ -803,6 +915,10 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
         var = role_vars.get(var_name)
         if var and var.name not in has_default_custom and var.name not in ignored_vars:
             raw_value = parser.get_raw_value(var.name)
+
+            # Get subsection info from parsed data
+            subsection = parsed[var_name].get('subsection')
+
             # Create variable dict for template
             var_dict = {
                 'name': var.name,
@@ -816,14 +932,29 @@ def prepare_template_context(role_name, role_vars, parsed, instances_var, role_v
                 'is_multiline': '\n' in raw_value,
                 'value_lines': raw_value.split('\n') if '\n' in raw_value else [raw_value],
                 'instance_name': var.name.replace(f'{role_name}_role_', f'{role_name}2_'),
-                'section': var.section
+                'section': var.section,
+                'subsection': subsection
             }
 
+            # Initialize section structure if needed
             if var.section not in sections:
-                sections[var.section] = []
+                sections[var.section] = {
+                    'subsections': OrderedDict(),
+                    'has_subsections': False
+                }
                 section_order.append(var.section)
 
-            sections[var.section].append(var_dict)
+            # Determine which subsection to add to
+            subsection_key = subsection if subsection else '_default'
+
+            if subsection_key not in sections[var.section]['subsections']:
+                sections[var.section]['subsections'][subsection_key] = []
+
+            # Mark section as having subsections if we found a named one
+            if subsection:
+                sections[var.section]['has_subsections'] = True
+
+            sections[var.section]['subsections'][subsection_key].append(var_dict)
 
     # Find example variable
     example_var = None

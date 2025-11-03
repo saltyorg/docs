@@ -32,11 +32,67 @@
     Instead, use the corresponding `_custom` variable (like `{{ role_name }}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 {% endif %}
-{% for section_name, section_vars in sections.items() %}
+{% for section_name, section_data in sections.items() %}
 === "{{ section_name }}"
 
   {% if instances_var and section_name == "Basics" %}
-    {% for var in section_vars %}
+    {% if section_data.has_subsections %}
+    This section is organized into multiple subsections
+
+    {% endif %}
+    {% for subsection_name, section_vars in section_data.subsections.items() %}
+      {% if section_data.has_subsections %}
+        {% if subsection_name == '_default' %}
+    === "No Section"
+
+        {% else %}
+    === "{{ subsection_name }}"
+
+        {% endif %}
+      {% endif %}
+      {% for var in section_vars %}
+        {% if section_data.has_subsections %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`"
+
+            ```yaml
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+            {% endfor %}
+          {% endif %}
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+            !!! example "Example Override"
+
+                ```yaml
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+                # {{ comment_line }}
+            {% endfor %}
+          {% endif %}
+                {{ format_type_comment(var.var_type) }}
+          {% if var.name == instances_var %}
+                {{ var.name }}: ["{{ role_name }}", "{{ role_name }}2"]
+          {% elif var.is_multiline %}
+                {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+                {{ line }}
+            {% endfor %}
+          {% else %}
+                {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+                ```
+
+        {% else %}
     ??? variable {{ var.var_type }} "`{{ var.name }}`"
 
         ```yaml
@@ -77,9 +133,63 @@
       {% endif %}
             ```
 
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   {% elif instances_var and section_name != "Docker" %}
-    {% for var in section_vars %}
+    {% if section_data.has_subsections %}
+    This section is organized into multiple subsections:
+
+    {% endif %}
+    {% for subsection_name, section_vars in section_data.subsections.items() %}
+      {% if section_data.has_subsections %}
+        {% if subsection_name == '_default' %}
+    === "No Section"
+
+        {% else %}
+    === "{{ subsection_name }}"
+
+        {% endif %}
+      {% endif %}
+      {% for var in section_vars %}
+        {% if section_data.has_subsections %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`{ .sb-show-on-unchecked }`{{ var.instance_name }}`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+            {% endfor %}
+          {% endif %}
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+            ```yaml { .sb-show-on-checked }
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+            {% endfor %}
+          {% endif %}
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "") %}
+            {% for line in adjusted %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.instance_name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+        {% else %}
     ??? variable {{ var.var_type }} "`{{ var.name }}`{ .sb-show-on-unchecked }`{{ var.instance_name }}`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -116,9 +226,59 @@
       {% endif %}
         ```
 
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   {% elif section_name == "Docker" and instances_var %}
-    {% for var in section_vars %}
+    {% if section_data.has_subsections %}
+    This section is organized into multiple subsections:
+
+    {% endif %}
+    {% for subsection_name, section_vars in section_data.subsections.items() %}
+      {% if section_data.has_subsections %}
+        {% if subsection_name == '_default' %}
+    === "No Section"
+
+        {% else %}
+    === "{{ subsection_name }}"
+
+        {% endif %}
+      {% endif %}
+      {% for var in section_vars %}
+        {% if section_data.has_subsections %}
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+        <h5>{{ comment_line }}</h5>
+
+            {% endfor %}
+          {% endif %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`{ .sb-show-on-unchecked }`{{ var.instance_name }}`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {% set adjusted = adjust_multiline_indentation(var.value_lines, var.name, var.instance_name, "") %}
+            {% for line in adjusted %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.instance_name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+        {% else %}
       {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
         {% for comment_line in var.comment_lines %}
     <h5>{{ comment_line }}</h5>
@@ -151,6 +311,8 @@
       {% endif %}
         ```
 
+        {% endif %}
+      {% endfor %}
     {% endfor %}
     {% if docker_info %}
 === "Docker+"
@@ -179,7 +341,42 @@
       {% endfor %}
     {% endif %}
   {% elif section_name != "Docker" %}
-    {% for var in section_vars %}
+    {% if section_data.has_subsections %}
+    This section is organized into multiple subsections
+
+    {% endif %}
+    {% for subsection_name, section_vars in section_data.subsections.items() %}
+      {% if section_data.has_subsections %}
+        {% if subsection_name == '_default' %}
+    === "No Section"
+
+        {% else %}
+    === "{{ subsection_name }}"
+
+        {% endif %}
+      {% endif %}
+      {% for var in section_vars %}
+        {% if section_data.has_subsections %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`"
+
+            ```yaml
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+            # {{ comment_line }}
+            {% endfor %}
+          {% endif %}
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+        {% else %}
     ??? variable {{ var.var_type }} "`{{ var.name }}`"
 
         ```yaml
@@ -199,9 +396,47 @@
       {% endif %}
         ```
 
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   {% else %}
-    {% for var in section_vars %}
+    {% if section_data.has_subsections %}
+    This section is organized into multiple subsections:
+
+    {% endif %}
+    {% for subsection_name, section_vars in section_data.subsections.items() %}
+      {% if section_data.has_subsections %}
+        {% if subsection_name == '_default' %}
+    === "No Section"
+
+        {% else %}
+    === "{{ subsection_name }}"
+
+        {% endif %}
+      {% endif %}
+      {% for var in section_vars %}
+        {% if section_data.has_subsections %}
+          {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
+            {% for comment_line in var.comment_lines %}
+        <h5>{{ comment_line }}</h5>
+
+            {% endfor %}
+          {% endif %}
+        ??? variable {{ var.var_type }} "`{{ var.name }}`"
+
+            ```yaml
+            {{ format_type_comment(var.var_type) }}
+          {% if var.is_multiline %}
+            {{ var.name }}: {{ var.value_lines[0] }}
+            {% for line in var.value_lines[1:] %}
+            {{ line }}
+            {% endfor %}
+          {% else %}
+            {{ var.name }}: {{ var.raw_value }}
+          {% endif %}
+            ```
+
+        {% else %}
       {% if var.comment and not var.has_inline_comments and var.comment.strip() != section_name %}
         {% for comment_line in var.comment_lines %}
     <h5>{{ comment_line }}</h5>
@@ -222,6 +457,8 @@
       {% endif %}
         ```
 
+        {% endif %}
+      {% endfor %}
     {% endfor %}
     {% if docker_info %}
 === "Docker+"

@@ -58,948 +58,955 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
 === "Settings"
 
-    ??? variable string "`authelia_role_theme`"
+    This section is organized into multiple subsections
 
-        ```yaml
-        # Options are light, dark, grey or auto.
-        # Type: string
-        authelia_role_theme: "auto"
-        ```
+    === "Themes"
 
-    ??? variable string "`authelia_role_log_max_backups`"
+        ??? variable string "`authelia_role_theme`"
 
-        ```yaml
-        # Logs
-        # Type: string
-        authelia_role_log_max_backups: "3"
-        ```
+            ```yaml
+            # Options are light, dark, grey or auto.
+            # Type: string
+            authelia_role_theme: "auto"
+            ```
 
-    ??? variable string "`authelia_role_log_max_size`"
+    === "Logs"
 
-        ```yaml
-        # Type: string
-        authelia_role_log_max_size: "10"
-        ```
+        ??? variable string "`authelia_role_log_max_backups`"
 
-    ??? variable string "`authelia_role_authentication_backend`"
+            ```yaml
+            # Logrotate configuration variable
+            # Type: string
+            authelia_role_log_max_backups: "3"
+            ```
 
-        ```yaml
-        # Options are file or ldap
-        # Type: string
-        authelia_role_authentication_backend: "file"
-        ```
+        ??? variable string "`authelia_role_log_max_size`"
 
-    ??? variable bool "`authelia_role_authentication_backend_password_change_disable`"
+            ```yaml
+            # Logrotate configuration variable
+            # Type: string
+            authelia_role_log_max_size: "10"
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_authentication_backend_password_change_disable: false
-        ```
+        ??? variable string "`authelia_role_log_level`"
 
-    ??? variable string "`authelia_role_authentication_backend_password_reset_disable`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/logging/
+            # Type: string
+            authelia_role_log_level: "info"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_password_reset_disable: "false"
-        ```
+        ??? variable string "`authelia_role_log_format`"
 
-    ??? variable string "`authelia_role_authentication_backend_password_reset_custom_url`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/logging/
+            # Type: string
+            authelia_role_log_format: "text"
+            ```
+
+        ??? variable string "`authelia_role_log_file_path`"
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_password_reset_custom_url: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/logging/
+            # Type: string
+            authelia_role_log_file_path: "/config/authelia.log"
+            ```
+
+        ??? variable bool "`authelia_role_log_keep_stdout`"
 
-    ??? variable string "`authelia_role_authentication_backend_refresh_interval`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/logging/
+            # Type: bool (true/false)
+            authelia_role_log_keep_stdout: true
+            ```
+
+    === "Authentication Backend"
+
+        ??? variable string "`authelia_role_authentication_backend`"
+
+            ```yaml
+            # Options are file or ldap
+            # Type: string
+            authelia_role_authentication_backend: "file"
+            ```
+
+        ??? variable bool "`authelia_role_authentication_backend_password_change_disable`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: bool (true/false)
+            authelia_role_authentication_backend_password_change_disable: false
+            ```
+
+        ??? variable bool "`authelia_role_authentication_backend_password_reset_disable`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: bool (true/false)
+            authelia_role_authentication_backend_password_reset_disable: false
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_password_reset_custom_url`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_password_reset_custom_url: ""
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_refresh_interval`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_refresh_interval: "5m"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_path`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_path: "/config/users_database.yml"
+            ```
+
+        ??? variable bool "`authelia_role_authentication_backend_file_watch`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: bool (true/false)
+            authelia_role_authentication_backend_file_watch: true
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_algorithm`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_algorithm: "argon2"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_variant`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_variant: "argon2id"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_iterations`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_iterations: "3"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_memory`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_memory: "65536"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_parallelism`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_parallelism: "4"
+            ```
+
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_key_length`"
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_refresh_interval: "5m"
-        ```
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_key_length: "32"
+            ```
 
-    ??? variable string "`authelia_role_authentication_backend_file_path`"
+        ??? variable string "`authelia_role_authentication_backend_file_password_argon2_salt_length`"
+
+            ```yaml
+            # https://www.authelia.com/configuration/first-factor/introduction/
+            # https://www.authelia.com/configuration/first-factor/file/
+            # Type: string
+            authelia_role_authentication_backend_file_password_argon2_salt_length: "16"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_path: "/config/users_database.yml"
-        ```
+    === "Access Control"
+
+        ??? variable string "`authelia_role_access_control_policy`"
+
+            ```yaml
+            # Setting for default Access Control Policy - recommended options one_factor or two_factor
+            # Reference: https://www.authelia.com/configuration/security/access-control/#one_factor
+            # Type: string
+            authelia_role_access_control_policy: "one_factor"
+            ```
+
+        ??? variable bool "`authelia_role_access_control_whitelist_host`"
+
+            ```yaml
+            # Whitelists the host IPv4/IPv6 addresses depending on which are enabled
+            # Type: bool (true/false)
+            authelia_role_access_control_whitelist_host: false
+            ```
+
+        ??? variable bool "`authelia_role_access_control_whitelist_docker`"
+
+            ```yaml
+            # Whitelists the saltbox Docker network IP subnet
+            # Type: bool (true/false)
+            authelia_role_access_control_whitelist_docker: false
+            ```
+
+    === "Second Factor"
+
+        ??? variable string "`authelia_role_default_2fa_method`"
 
-    ??? variable string "`authelia_role_authentication_backend_file_watch`"
+            ```yaml
+            # Type: string
+            authelia_role_default_2fa_method: ""
+            ```
+
+    === "Second Factor - Duo"
+
+        ??? variable bool "`authelia_role_duo_enabled`"
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_watch: "true"
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/duo/
+            # Type: bool (true/false)
+            authelia_role_duo_enabled: false
+            ```
+
+        ??? variable string "`authelia_role_duo_hostname`"
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_algorithm`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/duo/
+            # Type: string
+            authelia_role_duo_hostname: ""
+            ```
+
+        ??? variable string "`authelia_role_duo_integration_key`"
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_algorithm: "argon2"
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/duo/
+            # Type: string
+            authelia_role_duo_integration_key: ""
+            ```
+
+        ??? variable string "`authelia_role_duo_secret_key`"
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_variant`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/duo/
+            # Type: string
+            authelia_role_duo_secret_key: ""
+            ```
+
+        ??? variable bool "`authelia_role_duo_self_enrollment`"
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_variant: "argon2id"
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/duo/
+            # Type: bool (true/false)
+            authelia_role_duo_self_enrollment: true
+            ```
+
+    === "Second Factor - Webauthn"
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_iterations`"
+        ??? variable bool "`authelia_role_webauthn_disable`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_disable: false
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_iterations: "3"
-        ```
+        ??? variable bool "`authelia_role_webauthn_enable_passkey_login`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_enable_passkey_login: false
+            ```
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_memory`"
+        ??? variable string "`authelia_role_webauthn_display_name`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_display_name: "Authelia"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_memory: "65536"
-        ```
+        ??? variable string "`authelia_role_webauthn_attestation_conveyance_preference`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_attestation_conveyance_preference: "indirect"
+            ```
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_parallelism`"
+        ??? variable string "`authelia_role_webauthn_timeout`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_timeout: "60s"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_parallelism: "4"
-        ```
+        ??? variable bool "`authelia_role_webauthn_filtering_prohibit_backup_eligibility`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_filtering_prohibit_backup_eligibility: false
+            ```
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_key_length`"
+        ??? variable list "`authelia_role_webauthn_filtering_permitted_aaguids`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: list
+            authelia_role_webauthn_filtering_permitted_aaguids: []
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_key_length: "32"
-        ```
+        ??? variable list "`authelia_role_webauthn_filtering_prohibited_aaguids`"
 
-    ??? variable string "`authelia_role_authentication_backend_file_password_argon2_salt_length`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: list
+            authelia_role_webauthn_filtering_prohibited_aaguids: []
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend_file_password_argon2_salt_length: "16"
-        ```
+        ??? variable string "`authelia_role_webauthn_selection_criteria_attachment`"
 
-    ??? variable string "`authelia_role_access_control_policy`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_selection_criteria_attachment: "cross-platform"
+            ```
 
-        ```yaml
-        # Setting for default Access Control Policy - recommended options one_factor or two_factor
-        # Reference: https://www.authelia.com/configuration/security/access-control/#one_factor
-        # Type: string
-        authelia_role_access_control_policy: "one_factor"
-        ```
+        ??? variable string "`authelia_role_webauthn_selection_criteria_discoverability`"
 
-    ??? variable bool "`authelia_role_duo_enabled`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_selection_criteria_discoverability: "discouraged"
+            ```
 
-        ```yaml
-        # Settings for Duo
-        # Reference: https://www.authelia.com/configuration/second-factor/duo/
-        # Type: bool (true/false)
-        authelia_role_duo_enabled: false
-        ```
+        ??? variable string "`authelia_role_webauthn_selection_criteria_user_verification`"
 
-    ??? variable string "`authelia_role_duo_hostname`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_selection_criteria_user_verification: "preferred"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_duo_hostname: ""
-        ```
+        ??? variable bool "`authelia_role_webauthn_metadata_enabled`"
 
-    ??? variable string "`authelia_role_duo_integration_key`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_metadata_enabled: false
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_duo_integration_key: ""
-        ```
+        ??? variable string "`authelia_role_webauthn_metadata_cache_policy`"
 
-    ??? variable string "`authelia_role_duo_secret_key`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: string
+            authelia_role_webauthn_metadata_cache_policy: "strict"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_duo_secret_key: ""
-        ```
+        ??? variable bool "`authelia_role_webauthn_metadata_validate_trust_anchor`"
 
-    ??? variable string "`authelia_role_duo_self_enrollment`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_metadata_validate_trust_anchor: true
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_duo_self_enrollment: "true"
-        ```
+        ??? variable bool "`authelia_role_webauthn_metadata_validate_entry`"
 
-    ??? variable bool "`authelia_role_webauthn_disable`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_metadata_validate_entry: true
+            ```
 
-        ```yaml
-        # Settings for Webauthn
-        # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
-        # Type: bool (true/false)
-        authelia_role_webauthn_disable: false
-        ```
+        ??? variable bool "`authelia_role_webauthn_metadata_validate_entry_permit_zero_aaguid`"
 
-    ??? variable bool "`authelia_role_webauthn_enable_passkey_login`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_metadata_validate_entry_permit_zero_aaguid: false
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_enable_passkey_login: false
-        ```
+        ??? variable bool "`authelia_role_webauthn_metadata_validate_status`"
 
-    ??? variable string "`authelia_role_webauthn_display_name`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: bool (true/false)
+            authelia_role_webauthn_metadata_validate_status: true
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_display_name: "Authelia"
-        ```
+        ??? variable list "`authelia_role_webauthn_metadata_validate_status_permitted`"
 
-    ??? variable string "`authelia_role_webauthn_attestation_conveyance_preference`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: list
+            authelia_role_webauthn_metadata_validate_status_permitted: []
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_attestation_conveyance_preference: "indirect"
-        ```
+        ??? variable list "`authelia_role_webauthn_metadata_validate_status_prohibited`"
 
-    ??? variable string "`authelia_role_webauthn_timeout`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/second-factor/webauthn/
+            # Type: list
+            authelia_role_webauthn_metadata_validate_status_prohibited: []
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_timeout: "60s"
-        ```
+    === "Notifier"
 
-    ??? variable bool "`authelia_role_webauthn_filtering_prohibit_backup_eligibility`"
+        ??? variable string "`authelia_role_notifier`"
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_filtering_prohibit_backup_eligibility: false
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Options are filesystem or smtp. Options specific to smtp prefixed with smtp
+            # Type: string
+            authelia_role_notifier: "filesystem"
+            ```
 
-    ??? variable list "`authelia_role_webauthn_filtering_permitted_aaguids`"
+        ??? variable bool "`authelia_role_notifier_disable_startup_check`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: bool (true/false)
+            authelia_role_notifier_disable_startup_check: false
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_webauthn_filtering_permitted_aaguids: []
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_host`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_host: ""
+            ```
 
-    ??? variable list "`authelia_role_webauthn_filtering_prohibited_aaguids`"
+        ??? variable string "`authelia_role_notifier_smtp_port`"
+
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_port: ""
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_webauthn_filtering_prohibited_aaguids: []
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_timeout`"
 
-    ??? variable string "`authelia_role_webauthn_selection_criteria_attachment`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_timeout: ""
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_selection_criteria_attachment: "cross-platform"
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_username`"
 
-    ??? variable string "`authelia_role_webauthn_selection_criteria_discoverability`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_username: ""
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_selection_criteria_discoverability: "discouraged"
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_password`"
 
-    ??? variable string "`authelia_role_webauthn_selection_criteria_user_verification`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_password: ""
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_selection_criteria_user_verification: "preferred"
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_sender`"
 
-    ??? variable bool "`authelia_role_webauthn_metadata_enabled`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_sender: ""
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_metadata_enabled: false
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_identifier`"
 
-    ??? variable string "`authelia_role_webauthn_metadata_cache_policy`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_identifier: ""
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_webauthn_metadata_cache_policy: "strict"
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_subject`"
 
-    ??? variable bool "`authelia_role_webauthn_metadata_validate_trust_anchor`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_subject: ""
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_metadata_validate_trust_anchor: true
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_startup_check_address`"
 
-    ??? variable bool "`authelia_role_webauthn_metadata_validate_entry`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_startup_check_address: ""
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_metadata_validate_entry: true
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_disable_require_tls`"
 
-    ??? variable bool "`authelia_role_webauthn_metadata_validate_entry_permit_zero_aaguid`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_disable_require_tls: ""
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_metadata_validate_entry_permit_zero_aaguid: false
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_disable_html_emails`"
 
-    ??? variable bool "`authelia_role_webauthn_metadata_validate_status`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_disable_html_emails: ""
+            ```
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_webauthn_metadata_validate_status: true
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_tls_server_name`"
 
-    ??? variable list "`authelia_role_webauthn_metadata_validate_status_permitted`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_tls_server_name: ""
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_webauthn_metadata_validate_status_permitted: []
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_tls_skip_verify`"
 
-    ??? variable list "`authelia_role_webauthn_metadata_validate_status_prohibited`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_tls_skip_verify: ""
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_webauthn_metadata_validate_status_prohibited: []
-        ```
+        ??? variable string "`authelia_role_notifier_smtp_tls_minimum_version`"
 
-    ??? variable string "`authelia_role_notifier`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/notifications/introduction/
+            # Type: string
+            authelia_role_notifier_smtp_tls_minimum_version: ""
+            ```
 
-        ```yaml
-        # Settings for Notifier
-        # Reference: https://www.authelia.com/configuration/notifications/introduction/
-        # Options are filesystem or smtp. Options specific to smtp prefixed with smtp
-        # Type: string
-        authelia_role_notifier: "filesystem"
-        ```
+    === "Server"
 
-    ??? variable string "`authelia_role_notifier_disable_startup_check`"
+        ??? variable string "`authelia_role_server_address`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_disable_startup_check: "false"
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_address: "0.0.0.0:9091"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_host`"
+        ??? variable string "`authelia_role_server_asset_path`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_host: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_asset_path: ""
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_port`"
+        ??? variable bool "`authelia_role_server_disable_healthcheck`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_port: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: bool (true/false)
+            authelia_role_server_disable_healthcheck: false
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_timeout`"
+        ??? variable string "`authelia_role_server_buffers_read`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_timeout: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_buffers_read: "10485760"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_username`"
+        ??? variable string "`authelia_role_server_buffers_write`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_username: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_buffers_write: "10485760"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_password`"
+        ??? variable string "`authelia_role_server_timeouts_read`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_password: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_timeouts_read: "6s"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_sender`"
+        ??? variable string "`authelia_role_server_timeouts_write`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_sender: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_timeouts_write: "6s"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_identifier`"
+        ??? variable string "`authelia_role_server_timeouts_idle`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_identifier: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_timeouts_idle: "30s"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_subject`"
+        ??? variable bool "`authelia_role_server_endpoints_enable_pprof`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_subject: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: bool (true/false)
+            authelia_role_server_endpoints_enable_pprof: false
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_startup_check_address`"
+        ??? variable bool "`authelia_role_server_endpoints_enable_expvars`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_startup_check_address: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: bool (true/false)
+            authelia_role_server_endpoints_enable_expvars: false
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_disable_require_tls`"
+        ??? variable string "`authelia_role_server_headers_csp_template`"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_disable_require_tls: ""
-        ```
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/miscellaneous/server/
+            # Type: string
+            authelia_role_server_headers_csp_template: "default-src 'self' *.{{ user.domain }} {{ user.domain }}; script-src 'self' *.{{ user.domain }} {{ user.domain }}; script-src-elem 'self' *.{{ user.domain }} {{ user.domain }}; script-src-attr 'self' *.{{ user.domain }} {{ user.domain }}; style-src 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; style-src-elem 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; style-src-attr 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; img-src 'self' *.{{ user.domain }} {{ user.domain }}; font-src 'self' *.{{ user.domain }} {{ user.domain }}; connect-src 'self' *.{{ user.domain }} {{ user.domain }}; media-src 'self' *.{{ user.domain }} {{ user.domain }}; object-src 'self' *.{{ user.domain }} {{ user.domain }}; child-src 'self' *.{{ user.domain }} {{ user.domain }}; frame-src 'self' *.{{ user.domain }} {{ user.domain }}; worker-src 'self' *.{{ user.domain }} {{ user.domain }}; frame-ancestors 'self' *.{{ user.domain }} {{ user.domain }}; form-action 'self' *.{{ user.domain }} {{ user.domain }}; base-uri 'self'"
+            ```
 
-    ??? variable string "`authelia_role_notifier_smtp_disable_html_emails`"
+    === "Metrics"
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_disable_html_emails: ""
-        ```
+        ??? variable bool "`authelia_role_telemetry_metrics_enabled`"
 
-    ??? variable string "`authelia_role_notifier_smtp_tls_server_name`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: bool (true/false)
+            authelia_role_telemetry_metrics_enabled: false
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_tls_server_name: ""
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_address`"
 
-    ??? variable string "`authelia_role_notifier_smtp_tls_skip_verify`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_address: "tcp://0.0.0.0:9959"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_tls_skip_verify: ""
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_buffers_read`"
 
-    ??? variable string "`authelia_role_notifier_smtp_tls_minimum_version`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_buffers_read: "4096"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_notifier_smtp_tls_minimum_version: ""
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_buffers_write`"
 
-    ??? variable string "`authelia_role_server_address`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_buffers_write: "4096"
+            ```
 
-        ```yaml
-        # Settings for Authelia's server
-        # Reference: https://www.authelia.com/configuration/miscellaneous/server/
-        # Type: string
-        authelia_role_server_address: "0.0.0.0:9091"
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_timeouts_read`"
 
-    ??? variable string "`authelia_role_server_asset_path`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_timeouts_read: "6s"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_server_asset_path: ""
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_timeouts_write`"
 
-    ??? variable string "`authelia_role_server_disable_healthcheck`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_timeouts_write: "6s"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_server_disable_healthcheck: "false"
-        ```
+        ??? variable string "`authelia_role_telemetry_metrics_timeouts_idle`"
 
-    ??? variable string "`authelia_role_server_buffers_read`"
+            ```yaml
+            # Reference: https://www.authelia.com/configuration/telemetry/metrics/
+            # Type: string
+            authelia_role_telemetry_metrics_timeouts_idle: "30s"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_server_buffers_read: "10485760"
-        ```
+    === "Identity Validation"
 
-    ??? variable string "`authelia_role_server_buffers_write`"
+        ??? variable string "`authelia_role_identity_validation_reset_password_jwt_lifespan`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_buffers_write: "10485760"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_identity_validation_reset_password_jwt_lifespan: "5m"
+            ```
 
-    ??? variable string "`authelia_role_server_timeouts_read`"
+        ??? variable string "`authelia_role_identity_validation_reset_password_jwt_algorithm`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_timeouts_read: "6s"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_identity_validation_reset_password_jwt_algorithm: "HS256"
+            ```
 
-    ??? variable string "`authelia_role_server_timeouts_write`"
+        ??? variable string "`authelia_role_identity_validation_elevated_session_code_lifespan`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_timeouts_write: "6s"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_identity_validation_elevated_session_code_lifespan: "5m"
+            ```
 
-    ??? variable string "`authelia_role_server_timeouts_idle`"
+        ??? variable string "`authelia_role_identity_validation_elevated_session_elevation_lifespan`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_timeouts_idle: "30s"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_identity_validation_elevated_session_elevation_lifespan: "10m"
+            ```
 
-    ??? variable string "`authelia_role_server_endpoints_enable_pprof`"
+        ??? variable string "`authelia_role_identity_validation_elevated_session_characters`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_endpoints_enable_pprof: "false"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_identity_validation_elevated_session_characters: "8"
+            ```
 
-    ??? variable string "`authelia_role_server_endpoints_enable_expvars`"
+        ??? variable bool "`authelia_role_identity_validation_elevated_session_require_second_factor`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_endpoints_enable_expvars: "false"
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_identity_validation_elevated_session_require_second_factor: false
+            ```
 
-    ??? variable string "`authelia_role_server_headers_csp_template`"
+        ??? variable bool "`authelia_role_identity_validation_elevated_session_skip_second_factor`"
 
-        ```yaml
-        # Type: string
-        authelia_role_server_headers_csp_template: "default-src 'self' *.{{ user.domain }} {{ user.domain }}; script-src 'self' *.{{ user.domain }} {{ user.domain }}; script-src-elem 'self' *.{{ user.domain }} {{ user.domain }}; script-src-attr 'self' *.{{ user.domain }} {{ user.domain }}; style-src 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; style-src-elem 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; style-src-attr 'self' *.{{ user.domain }} {{ user.domain }} 'nonce-${NONCE}'; img-src 'self' *.{{ user.domain }} {{ user.domain }}; font-src 'self' *.{{ user.domain }} {{ user.domain }}; connect-src 'self' *.{{ user.domain }} {{ user.domain }}; media-src 'self' *.{{ user.domain }} {{ user.domain }}; object-src 'self' *.{{ user.domain }} {{ user.domain }}; child-src 'self' *.{{ user.domain }} {{ user.domain }}; frame-src 'self' *.{{ user.domain }} {{ user.domain }}; worker-src 'self' *.{{ user.domain }} {{ user.domain }}; frame-ancestors 'self' *.{{ user.domain }} {{ user.domain }}; form-action 'self' *.{{ user.domain }} {{ user.domain }}; base-uri 'self'"
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_identity_validation_elevated_session_skip_second_factor: false
+            ```
 
-    ??? variable string "`authelia_role_log_level`"
+    === "JWT"
 
-        ```yaml
-        # Settings for Logging
-        # Reference: https://www.authelia.com/configuration/miscellaneous/logging/
-        # Type: string
-        authelia_role_log_level: "info"
-        ```
+        ??? variable string "`authelia_role_jwt_secret`"
 
-    ??? variable string "`authelia_role_log_format`"
+            ```yaml
+            # Type: string
+            authelia_role_jwt_secret: "{{ lookup('password', '/dev/null', chars=['ascii_letters', 'digits'], length=32) }}"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_log_format: "text"
-        ```
+    === "TOTP"
 
-    ??? variable string "`authelia_role_log_file_path`"
+        ??? variable bool "`authelia_role_totp_disable`"
 
-        ```yaml
-        # Type: string
-        authelia_role_log_file_path: "/config/authelia.log"
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_totp_disable: false
+            ```
 
-    ??? variable string "`authelia_role_log_keep_stdout`"
+        ??? variable string "`authelia_role_totp_issuer`"
 
-        ```yaml
-        # Type: string
-        authelia_role_log_keep_stdout: "true"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_issuer: "{{ lookup('role_var', '_web_subdomain', role='authelia') + '.' + lookup('role_var', '_web_domain', role='authelia') }}"
+            ```
 
-    ??? variable bool "`authelia_role_telemetry_metrics_enabled`"
+        ??? variable string "`authelia_role_totp_algorithm`"
 
-        ```yaml
-        # Settings for Telemetry/Metrics
-        # Reference: https://www.authelia.com/configuration/telemetry/metrics/
-        # Type: bool (true/false)
-        authelia_role_telemetry_metrics_enabled: false
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_algorithm: "SHA1"
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_address`"
+        ??? variable string "`authelia_role_totp_digits`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_address: "tcp://0.0.0.0:9959"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_digits: "6"
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_buffers_read`"
+        ??? variable string "`authelia_role_totp_period`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_buffers_read: "4096"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_period: "30"
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_buffers_write`"
+        ??? variable string "`authelia_role_totp_skew`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_buffers_write: "4096"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_skew: "1"
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_timeouts_read`"
+        ??? variable string "`authelia_role_totp_secret_size`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_timeouts_read: "6s"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_totp_secret_size: "32"
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_timeouts_write`"
+        ??? variable list "`authelia_role_totp_allowed_algorithms`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_timeouts_write: "6s"
-        ```
+            ```yaml
+            # Type: list
+            authelia_role_totp_allowed_algorithms: ["SHA1"]
+            ```
 
-    ??? variable string "`authelia_role_telemetry_metrics_timeouts_idle`"
+        ??? variable list "`authelia_role_totp_allowed_digits`"
 
-        ```yaml
-        # Type: string
-        authelia_role_telemetry_metrics_timeouts_idle: "30s"
-        ```
+            ```yaml
+            # Type: list
+            authelia_role_totp_allowed_digits: ["6"]
+            ```
 
-    ??? variable string "`authelia_role_identity_validation_reset_password_jwt_lifespan`"
+        ??? variable list "`authelia_role_totp_allowed_periods`"
 
-        ```yaml
-        # Identity Validation Settings
-        # Reset password flow
-        # Type: string
-        authelia_role_identity_validation_reset_password_jwt_lifespan: "5m"
-        ```
+            ```yaml
+            # Type: list
+            authelia_role_totp_allowed_periods: ["30"]
+            ```
 
-    ??? variable string "`authelia_role_identity_validation_reset_password_jwt_algorithm`"
+        ??? variable bool "`authelia_role_totp_disable_reuse_security_policy`"
 
-        ```yaml
-        # Type: string
-        authelia_role_identity_validation_reset_password_jwt_algorithm: "HS256"
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_totp_disable_reuse_security_policy: false
+            ```
 
-    ??? variable string "`authelia_role_identity_validation_elevated_session_code_lifespan`"
+    === "Session"
 
-        ```yaml
-        # Elevated session flows
-        # Type: string
-        authelia_role_identity_validation_elevated_session_code_lifespan: "5m"
-        ```
+        ??? variable string "`authelia_role_default_redirection_url`"
 
-    ??? variable string "`authelia_role_identity_validation_elevated_session_elevation_lifespan`"
+            ```yaml
+            # Type: string
+            authelia_role_default_redirection_url: ""
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_identity_validation_elevated_session_elevation_lifespan: "10m"
-        ```
+    === "NTP"
 
-    ??? variable string "`authelia_role_identity_validation_elevated_session_characters`"
+        ??? variable string "`authelia_role_ntp_address`"
 
-        ```yaml
-        # Type: string
-        authelia_role_identity_validation_elevated_session_characters: "8"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_ntp_address: "time.cloudflare.com:123"
+            ```
 
-    ??? variable bool "`authelia_role_identity_validation_elevated_session_require_second_factor`"
+        ??? variable string "`authelia_role_ntp_version`"
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_identity_validation_elevated_session_require_second_factor: false
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_ntp_version: "3"
+            ```
 
-    ??? variable bool "`authelia_role_identity_validation_elevated_session_skip_second_factor`"
+        ??? variable string "`authelia_role_ntp_max_desync`"
 
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_identity_validation_elevated_session_skip_second_factor: false
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_ntp_max_desync: "3s"
+            ```
 
-    ??? variable string "`authelia_role_jwt_secret`"
+        ??? variable bool "`authelia_role_ntp_disable_startup_check`"
 
-        ```yaml
-        # JWT
-        # Type: string
-        authelia_role_jwt_secret: "{{ lookup('password', '/dev/null', chars=['ascii_letters', 'digits'], length=32) }}"
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_ntp_disable_startup_check: false
+            ```
 
-    ??? variable bool "`authelia_role_totp_disable`"
+        ??? variable bool "`authelia_role_ntp_disable_failure`"
 
-        ```yaml
-        # TOTP
-        # Type: bool (true/false)
-        authelia_role_totp_disable: false
-        ```
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_ntp_disable_failure: false
+            ```
 
-    ??? variable string "`authelia_role_totp_issuer`"
+    === "Password Policy"
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_issuer: "{{ lookup('role_var', '_web_subdomain', role='authelia') + '.' + lookup('role_var', '_web_domain', role='authelia') }}"
-        ```
+        ??? variable bool "`authelia_role_password_policy_standard_enabled`"
 
-    ??? variable string "`authelia_role_totp_algorithm`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_standard_enabled: false
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_algorithm: "SHA1"
-        ```
+        ??? variable string "`authelia_role_password_policy_standard_min_length`"
 
-    ??? variable string "`authelia_role_totp_digits`"
+            ```yaml
+            # Type: string
+            authelia_role_password_policy_standard_min_length: "8"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_digits: "6"
-        ```
+        ??? variable string "`authelia_role_password_policy_standard_max_length`"
 
-    ??? variable string "`authelia_role_totp_period`"
+            ```yaml
+            # Type: string
+            authelia_role_password_policy_standard_max_length: "0"
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_period: "30"
-        ```
+        ??? variable bool "`authelia_role_password_policy_standard_require_uppercase`"
 
-    ??? variable string "`authelia_role_totp_skew`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_standard_require_uppercase: true
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_skew: "1"
-        ```
+        ??? variable bool "`authelia_role_password_policy_standard_require_lowercase`"
 
-    ??? variable string "`authelia_role_totp_secret_size`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_standard_require_lowercase: true
+            ```
 
-        ```yaml
-        # Type: string
-        authelia_role_totp_secret_size: "32"
-        ```
+        ??? variable bool "`authelia_role_password_policy_standard_require_number`"
 
-    ??? variable list "`authelia_role_totp_allowed_algorithms`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_standard_require_number: true
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_totp_allowed_algorithms: ["SHA1"]
-        ```
+        ??? variable bool "`authelia_role_password_policy_standard_require_special`"
 
-    ??? variable list "`authelia_role_totp_allowed_digits`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_standard_require_special: true
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_totp_allowed_digits: ["6"]
-        ```
+        ??? variable bool "`authelia_role_password_policy_zxcvbn_enabled`"
 
-    ??? variable list "`authelia_role_totp_allowed_periods`"
+            ```yaml
+            # Type: bool (true/false)
+            authelia_role_password_policy_zxcvbn_enabled: false
+            ```
 
-        ```yaml
-        # Type: list
-        authelia_role_totp_allowed_periods: ["30"]
-        ```
+        ??? variable string "`authelia_role_password_policy_zxcvbn_min_score`"
 
-    ??? variable bool "`authelia_role_totp_disable_reuse_security_policy`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_totp_disable_reuse_security_policy: false
-        ```
-
-    ??? variable string "`authelia_role_default_redirection_url`"
-
-        ```yaml
-        # Default redirection
-        # Type: string
-        authelia_role_default_redirection_url: ""
-        ```
-
-    ??? variable string "`authelia_role_default_2fa_method`"
-
-        ```yaml
-        # Default 2FA Method
-        # Type: string
-        authelia_role_default_2fa_method: ""
-        ```
-
-    ??? variable string "`authelia_role_ntp_address`"
-
-        ```yaml
-        # NTP
-        # Type: string
-        authelia_role_ntp_address: "time.cloudflare.com:123"
-        ```
-
-    ??? variable string "`authelia_role_ntp_version`"
-
-        ```yaml
-        # Type: string
-        authelia_role_ntp_version: "3"
-        ```
-
-    ??? variable string "`authelia_role_ntp_max_desync`"
-
-        ```yaml
-        # Type: string
-        authelia_role_ntp_max_desync: "3s"
-        ```
-
-    ??? variable string "`authelia_role_ntp_disable_startup_check`"
-
-        ```yaml
-        # Type: string
-        authelia_role_ntp_disable_startup_check: "false"
-        ```
-
-    ??? variable string "`authelia_role_ntp_disable_failure`"
-
-        ```yaml
-        # Type: string
-        authelia_role_ntp_disable_failure: "false"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_enabled`"
-
-        ```yaml
-        # Password Policy
-        # Type: string
-        authelia_role_password_policy_standard_enabled: "false"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_min_length`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_min_length: "8"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_max_length`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_max_length: "0"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_require_uppercase`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_require_uppercase: "true"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_require_lowercase`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_require_lowercase: "true"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_require_number`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_require_number: "true"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_standard_require_special`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_standard_require_special: "true"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_zxcvbn_enabled`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_zxcvbn_enabled: "false"
-        ```
-
-    ??? variable string "`authelia_role_password_policy_zxcvbn_min_score`"
-
-        ```yaml
-        # Type: string
-        authelia_role_password_policy_zxcvbn_min_score: "3"
-        ```
-
-    ??? variable bool "`authelia_role_access_control_whitelist_host`"
-
-        ```yaml
-        # Access Control
-        # Type: bool (true/false)
-        authelia_role_access_control_whitelist_host: false
-        ```
-
-    ??? variable bool "`authelia_role_access_control_whitelist_docker`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_access_control_whitelist_docker: false
-        ```
-
-    ??? variable string "`authelia_role_access_control_default_policy`"
-
-        ```yaml
-        # Type: string
-        authelia_role_access_control_default_policy: "deny"
-        ```
-
-    ??? variable list "`authelia_role_access_control_rules`"
-
-        ```yaml
-        # Type: list
-        authelia_role_access_control_rules: 
-          - domain:
-              - "{{ '*.' + user.domain | lower }}"
-              - "{{ user.domain | lower }}"
-            policy: "{{ lookup('role_var', '_access_control_policy', role='authelia') }}"
-        ```
-
-    ??? variable string "`authelia_role_access_control_whitelist_rules_lookup`"
-
-        ```yaml
-        # Type: string
-        authelia_role_access_control_whitelist_rules_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_docker_lookup', role='authelia')
-                                                                 + lookup('role_var', '_access_control_whitelist_rules_host_lookup', role='authelia') }}"
-        ```
-
-    ??? variable string "`authelia_role_access_control_whitelist_rules_docker_lookup`"
-
-        ```yaml
-        # Type: string
-        authelia_role_access_control_whitelist_rules_docker_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_docker', role='authelia')
-                                                                     if lookup('role_var', '_access_control_whitelist_docker', role='authelia')
-                                                                     else [] }}"
-        ```
-
-    ??? variable string "`authelia_role_access_control_whitelist_rules_host_lookup`"
-
-        ```yaml
-        # Type: string
-        authelia_role_access_control_whitelist_rules_host_lookup: "{{ lookup('role_var', '_access_control_whitelist_rules_host', role='authelia')
-                                                                   if lookup('role_var', '_access_control_whitelist_host', role='authelia') and (dns_ipv4_enabled or dns_ipv6_enabled)
-                                                                   else [] }}"
-        ```
-
-    ??? variable list "`authelia_role_access_control_whitelist_rules_host`"
-
-        ```yaml
-        # Type: list
-        authelia_role_access_control_whitelist_rules_host: 
-          - domain:
-              - "{{ '*.' + user.domain }}"
-              - "{{ user.domain }}"
-            policy: bypass
-            networks: "{{ lookup('role_var', '_access_control_whitelist_networks_host', role='authelia') | unique | reject('equalto', omit) | list }}"
-        ```
-
-    ??? variable list "`authelia_role_access_control_whitelist_rules_docker`"
-
-        ```yaml
-        # Type: list
-        authelia_role_access_control_whitelist_rules_docker: 
-          - domain:
-              - "{{ '*.' + user.domain }}"
-              - "{{ user.domain }}"
-            policy: bypass
-            networks: "{{ lookup('role_var', '_access_control_whitelist_networks_docker', role='authelia') | unique | reject('equalto', omit) | list }}"
-        ```
-
-    ??? variable list "`authelia_role_access_control_whitelist_networks_docker`"
-
-        ```yaml
-        # Type: list
-        authelia_role_access_control_whitelist_networks_docker: 
-          - "172.19.0.0/16"
-        ```
-
-    ??? variable list "`authelia_role_access_control_whitelist_networks_host`"
-
-        ```yaml
-        # Type: list
-        authelia_role_access_control_whitelist_networks_host: 
-          - "{{ (ip_address_public + '/32') if dns_ipv4_enabled else omit }}"
-          - "{{ (ipv6_address_public + '/128') if dns_ipv6_enabled else omit }}"
-        ```
-
-    ??? variable list "`authelia_role_response_headers`"
-
-        ```yaml
-        # Type: list
-        authelia_role_response_headers: 
-          - "Remote-User"
-          - "Remote-Groups"
-          - "Remote-Name"
-          - "Remote-Email"
-        ```
+            ```yaml
+            # Type: string
+            authelia_role_password_policy_zxcvbn_min_score: "3"
+            ```
 
 === "Paths"
 

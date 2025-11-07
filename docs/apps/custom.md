@@ -1,5 +1,5 @@
 ---
-icon: material/ansible
+icon: material/tag
 hide:
   - tags
 tags:

@@ -1,5 +1,5 @@
 ---
-icon: material/cogs
+icon: material/server-network-outline
 hide:
   - tags
 tags:

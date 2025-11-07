@@ -1,5 +1,6 @@
 ---
 icon: material/play
+status: Outdated
 hide:
   - tags
 tags:

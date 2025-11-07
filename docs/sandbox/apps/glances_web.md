@@ -8,7 +8,7 @@ tags:
   - system
 ---
 
-# Glances
+# Glances (web)
 
 ## Overview
 

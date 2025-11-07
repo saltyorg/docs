@@ -18,3 +18,6 @@ Opt in via Inventory toggle.
 ```sh
 sb install crowdsec
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

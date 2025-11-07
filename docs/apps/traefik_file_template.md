@@ -16,3 +16,6 @@ Generates a Traefik file template.
 ```sh
 generate-traefik-file-template
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -16,3 +16,6 @@ Clones the saltbox_mod repository.
 ```sh
 sb install saltbox-mod
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

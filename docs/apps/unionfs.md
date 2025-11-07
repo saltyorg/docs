@@ -20,3 +20,6 @@ UnionFS is a filesystem service for Linux, FreeBSD and NetBSD which implements a
 ```sh
 sb install mounts
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

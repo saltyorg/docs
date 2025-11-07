@@ -16,3 +16,6 @@ Checks for system reboot requirements and optionally reboots the host if configu
 ```sh
 sb install reboot
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

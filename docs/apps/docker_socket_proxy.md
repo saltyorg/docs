@@ -16,3 +16,6 @@ The Socket Proxy is a security-enhanced proxy designed to limit the attack surfa
 ```sh
 sb install docker-socket-proxy
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

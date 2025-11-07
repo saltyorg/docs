@@ -16,3 +16,6 @@ Generates a Docker Compose template with Traefik provisioning.
 ```sh
 generate-traefik-template
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

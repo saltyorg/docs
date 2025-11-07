@@ -16,3 +16,6 @@ Configures VLAN interfaces on a Hetzner host.
 ```sh
 sb install hetzner-vlan-deploy
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -18,3 +18,6 @@ Sets up common directories, installs essential packages, handles BTRFS optimizat
 ```sh
 sb install common
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

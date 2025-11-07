@@ -16,3 +16,6 @@ Performs a streamed backup of user data.
 ```sh
 sb install backup2
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

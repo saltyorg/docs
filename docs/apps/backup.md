@@ -16,3 +16,6 @@ Performs a staged backup of user data.
 ```sh
 sb install backup
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

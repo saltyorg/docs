@@ -22,3 +22,6 @@ sb install traefik
 ## Usage
 
 Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -18,3 +18,6 @@ Configures system-wide settings including APT updates, network optimizations, sy
 ```sh
 sb install system
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

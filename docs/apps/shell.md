@@ -18,3 +18,6 @@ Installs and configures a user's shell (Bash or Zsh) with tools like z for direc
 ```sh
 sb install shell
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

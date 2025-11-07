@@ -16,3 +16,6 @@ Enhances the Message of the Day (MOTD) displayed upon user login to provide pers
 ```sh
 sb install motd
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

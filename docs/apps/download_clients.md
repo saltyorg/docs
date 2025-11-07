@@ -16,3 +16,6 @@ Ansible tag for deploying your download client apps stack.
 ```sh
 sb install download-clients
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

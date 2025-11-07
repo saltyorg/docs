@@ -24,3 +24,6 @@ sb install mediabox
 ```sh
 sb install feederbox
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

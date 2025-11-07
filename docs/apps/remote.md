@@ -18,3 +18,6 @@ Manages remote storage mounts.
 ```sh
 sb install mounts
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

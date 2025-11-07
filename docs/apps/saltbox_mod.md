@@ -14,5 +14,5 @@ Clones the saltbox_mod repository.
 ## Deployment
 
 ```sh
-sb install saltbox_mod
+sb install saltbox-mod
 ```

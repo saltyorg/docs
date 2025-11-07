@@ -491,6 +491,40 @@ nav:
       - TODO - NEED UPDATING:
           - Organizr: apps/organizr.md
           - Plex-DB: apps/plex_db.md
+          - apps/backup.md
+          - apps/backup2.md
+          - apps/common.md
+          - apps/crowdsec.md
+          - apps/docker.md
+          - apps/docker_socket_proxy.md
+          - apps/download_clients.md
+          - apps/download_indexers.md
+          - apps/glances.md
+          - apps/hetzner_vlan.md
+          - apps/kernel.md
+          - apps/main_tags.md
+          - apps/media_server.md
+          - apps/motd.md
+          - apps/mount_templates.md
+          - apps/permissions.md
+          - apps/plex_auth_token.md
+          - apps/plex_fix_futures.md
+          - apps/python.md
+          - apps/rclone.md
+          - apps/reboot.md
+          - apps/remote.md
+          - apps/restore.md
+          - apps/saltbox_mod.md
+          - apps/sandbox.md
+          - apps/shell.md
+          - apps/system.md
+          - apps/traefik.md
+          - apps/traefik_file_template.md
+          - apps/traefik_template.md
+          - apps/unionfs.md
+          - apps/user.md
+          - apps/yyq.md
+          - sandbox/apps/main_tag.md
 
   - FAQ:
       - System: faq/system.md

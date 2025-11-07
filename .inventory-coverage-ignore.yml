@@ -10,10 +10,14 @@ saltbox:
   - custom
   - ddclient
   - diag
+  - glances
   - hetzner_nfs
   - iperf3
   - mainline
+  - mount_templates
   - node_exporter
+  - permissions
+  - sandbox
   - subliminal
 
 sandbox:

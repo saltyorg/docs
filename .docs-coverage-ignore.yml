@@ -11,13 +11,16 @@ saltbox:
   - "cloudflare"
   - "cloudplow_disable"
   - "common"
+  - "custom" # moved to modules
   - "crowdsec"
+  - "diag" # moved to modules
   - "docker"
   - "docker_socket_proxy"
   - "download_clients"
   - "download_indexers"
   - "glances"
   - "hetzner"
+  - "hetzner_nfs" # moved to modules
   - "hetzner_vlan"  # covered by hetzner_nfs documentation
   - "kernel"
   - "main_tags"

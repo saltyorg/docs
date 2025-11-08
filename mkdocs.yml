@@ -597,7 +597,6 @@ nav:
               - reference/modules/permissions.md
               - reference/modules/reboot.md
               - reference/modules/remote.md
-              - reference/modules/restore.md
               - reference/modules/saltbox_mod.md
               - reference/modules/sandbox.md
               - reference/modules/shell.md

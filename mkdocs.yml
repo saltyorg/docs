@@ -195,7 +195,6 @@ nav:
       - Accessing Apps: saltbox/basics/accessing-apps.md
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
-      - saltbox/modules/index.md
       - CLI: saltbox/basics/sb.md
       - Data Management:
           - Backup Settings: saltbox/backup/settings.md
@@ -454,7 +453,6 @@ nav:
         - Mainline: apps/mainline.md
         - Subliminal: apps/subliminal.md
         - Gluetun: apps/gluetun.md
-        - Hetzner NFS: apps/hetzner_nfs.md
         - Netdata: apps/netdata.md
         - Transfer: apps/transfer.md
         - asshama: apps/asshama.md
@@ -477,8 +475,6 @@ nav:
           - DDClient: apps/ddclient.md
           - Nginx: apps/nginx.md
       - Support Apps:
-          - Custom: apps/custom.md
-          - Diag: apps/diag.md
           - Error Pages: apps/error_pages.md
           - diun: apps/diun.md
           - iperf3: apps/iperf3.md
@@ -499,11 +495,8 @@ nav:
           - apps/download_clients.md
           - apps/download_indexers.md
           - apps/glances.md
-          - apps/hetzner_vlan.md
           - apps/main_tags.md
           - apps/media_server.md
-          - apps/plex_auth_token.md
-          - apps/plex_fix_futures.md
           - apps/python.md
           - apps/rclone.md
           - apps/traefik.md
@@ -542,15 +535,15 @@ nav:
       - Guides:
         - General:
           - Chazlarson Guides:
-              - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
-              - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
-              - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
-              - I can't see my media!: reference/guides/chazguides/no-media.md
-              - Why is my disk full?: reference/guides/chazguides/disk-full.md
-              - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
-              - Obsolete and deprecated:
-                - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
-                - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
+            - Can I run Saltbox on this server?: reference/guides/chazguides/server.md
+            - Did my Saltbox install succeed?: reference/guides/chazguides/success.md
+            - How do I mount a cloud drive?: reference/guides/chazguides/teamdrive.md
+            - I can't see my media!: reference/guides/chazguides/no-media.md
+            - Why is my disk full?: reference/guides/chazguides/disk-full.md
+            - Installing Saltbox on a home server: reference/guides/chazguides/home-server.md
+            - Obsolete and deprecated:
+              - Tip 44 Guide to Shared Drive/Service Account setup for Saltbox: reference/guides/chazguides/tip44.md
+              - Plex Autoscan Mappings; how do they work?: reference/guides/chazguides/pas-map.md
         - Linux:
           - Aliases: reference/guides/aliases.md
           - code-server for easier file editing: reference/guides/code-server-setup.md
@@ -590,22 +583,6 @@ nav:
           # - Rclone [Auto]: reference/rclone-auto.md
           - Rclone [Manual]: reference/rclone-manual.md
           - Install: reference/install.md
-          - Modules:
-              - reference/modules/common.md
-              - reference/modules/kernel.md
-              - reference/modules/motd.md
-              - reference/modules/mount_templates.md
-              - reference/modules/permissions.md
-              - reference/modules/reboot.md
-              - reference/modules/remote.md
-              - reference/modules/saltbox_mod.md
-              - reference/modules/sandbox.md
-              - reference/modules/shell.md
-              - reference/modules/system.md
-              - reference/modules/traefik_file_template.md
-              - reference/modules/traefik_template.md
-              - reference/modules/unionfs.md
-              - reference/modules/user.md
         - Google References:
           - Google Permissions: reference/google-account-perms.md
           - Google Project: reference/google-project-setup.md
@@ -634,3 +611,27 @@ nav:
           - HW transcoding on OVH: reference/ovh.md
         - Deprecated Guides:
           - Traefik 3.0 Upgrade: reference/guides/deprecated/traefik3.md
+
+      - Saltbox Modules:
+        - reference/modules/index.md
+        - reference/modules/common.md
+        - reference/modules/custom.md
+        - reference/modules/diag.md
+        - reference/modules/hetzner_nfs.md
+        - reference/modules/hetzner_vlan.md
+        - reference/modules/kernel.md
+        - reference/modules/motd.md
+        - reference/modules/mount_templates.md
+        - reference/modules/permissions.md
+        - reference/modules/plex_auth_token.md
+        - reference/modules/plex_fix_futures.md
+        - reference/modules/reboot.md
+        - reference/modules/remote.md
+        - reference/modules/saltbox_mod.md
+        - reference/modules/sandbox.md
+        - reference/modules/shell.md
+        - reference/modules/system.md
+        - reference/modules/traefik_file_template.md
+        - reference/modules/traefik_template.md
+        - reference/modules/unionfs.md
+        - reference/modules/user.md

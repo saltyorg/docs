@@ -35,17 +35,17 @@ There are 3 phases to the setup. They are broken down below.
 
 1. Create a VLAN (_vSwitch_) and add servers to it. Note the VLAN ID.
 
-  ![](../images/community/hetzner_vswitch.png)
+  ![](../../images/community/hetzner_vswitch.png)
 
 1. Setup Firewall.
 
       - Mediabox:
 
-      ![](../images/community/hetzner_mbox.png)
+      ![](../../images/community/hetzner_mbox.png)
 
       - Feederbox:
 
-      ![](../images/community/hetzner_fbox.png)
+      ![](../../images/community/hetzner_fbox.png)
 
 ### NFS Server (Feederbox)
 

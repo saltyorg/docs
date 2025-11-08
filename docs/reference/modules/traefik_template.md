@@ -7,7 +7,7 @@ status: WIP
 
 ## Overview
 
-Generates a Docker Compose template with Traefik provisioning.
+Generates a Docker Compose template with Traefik configuration.
 
 ---
 

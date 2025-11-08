@@ -17,7 +17,7 @@ Use this guide to extend your setup beyond the stock catalog. While arbitrary de
 
 Recommended for GUI applications and web services.
 
-1.  Run the interactive role to generate a Compose file with Traefik provisioning:
+1.  Run the interactive role to generate a Compose file with Traefik configuration:
 
     ```sh
     sb install generate-traefik-template

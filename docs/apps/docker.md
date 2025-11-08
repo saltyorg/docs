@@ -443,11 +443,59 @@ docker
 
 === "Docker DNS"
 
-    ??? variable string "`docker_dns_python_version`"
+    ??? variable string "`docker_dns_binary_path`"
 
         ```yaml
         # Type: string
-        docker_dns_python_version: "3.10"
+        docker_dns_binary_path: "/usr/local/bin/sdhm"
+        ```
+
+    ??? variable string "`docker_dns_releases_url`"
+
+        ```yaml
+        # Type: string
+        docker_dns_releases_url: "{{ svm }}https://api.github.com/repos/saltyorg/sdhm/releases/latest"
+        ```
+
+    ??? variable string "`docker_dns_releases_download_url`"
+
+        ```yaml
+        # Type: string
+        docker_dns_releases_download_url: https://github.com/saltyorg/sdhm/releases/download
+        ```
+
+    ??? variable string "`docker_dns_release_lookup_command`"
+
+        ```yaml
+        # Type: string
+        docker_dns_release_lookup_command: |
+          curl -s {{ docker_dns_releases_url }} \
+            | jq -r ".assets[] | select(.name == \"sdhm_linux_amd64\") \
+            | .browser_download_url"
+        ```
+
+    ??? variable string "`docker_dns_ports_8090`"
+
+        ```yaml
+        # Type: string
+        docker_dns_ports_8090: "{{ port_lookup_8090.meta.port
+                                if (port_lookup_8090.meta.port is defined) and (port_lookup_8090.meta.port | trim | length > 0)
+                                else '8090' }}"
+        ```
+
+    ??? variable list "`docker_dns_networks`"
+
+        ```yaml
+        # Type: list
+        docker_dns_networks: 
+          - "saltbox"
+        ```
+
+    ??? variable string "`docker_dns_periodic_validation`"
+
+        ```yaml
+        # Type: string
+        docker_dns_periodic_validation: "5m"
         ```
 
 === "Global Override Options"

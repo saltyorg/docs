@@ -5,7 +5,7 @@ tags:
   - backup
 ---
 
-# Staged Backup
+# Standard Backup
 
 With Saltbox you can either run a backup task manually or schedule it to run automatically.
 

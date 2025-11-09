@@ -196,8 +196,8 @@ nav:
       - Paths: saltbox/basics/paths.md
       - Inventory: saltbox/inventory/index.md
       - CLI: saltbox/basics/sb.md
-      - Data Management:
-          - Backup Settings: saltbox/backup/settings.md
+      - Backup/Restore:
+          - Settings: saltbox/backup/settings.md
           - saltbox/backup/backup.md
           - saltbox/backup/backup2.md
           - Restore: saltbox/backup/restore.md

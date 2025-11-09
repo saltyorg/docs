@@ -379,6 +379,19 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_state: started
         ```
 
+    ??? variable dict "`lldap_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        lldap_role_docker_healthcheck: 
+          test: ["CMD", "/app/lldap", "healthcheck", "--config-file", "/data/lldap_config.toml"]
+          interval: 30s
+          timeout: 30s
+          retries: 3
+          start_period: 30s
+          start_interval: 1s
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
@@ -637,13 +650,6 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         ```
 
     <h5>Monitoring & Lifecycle</h5>
-
-    ??? variable dict "`lldap_role_docker_healthcheck`"
-
-        ```yaml
-        # Type: dict
-        lldap_role_docker_healthcheck:
-        ```
 
     ??? variable bool "`lldap_role_docker_init`"
 

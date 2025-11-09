@@ -427,16 +427,41 @@ docker
 
 === "Docker Controller"
 
-    ??? variable string "`docker_controller_python_version`"
+    ??? variable string "`docker_controller_binary_path`"
 
         ```yaml
         # Type: string
-        docker_controller_python_version: "3.10"
+        docker_controller_binary_path: "/usr/local/bin/sdc"
+        ```
+
+    ??? variable string "`docker_controller_releases_url`"
+
+        ```yaml
+        # Type: string
+        docker_controller_releases_url: "{{ svm }}https://api.github.com/repos/saltyorg/sdc/releases/latest"
+        ```
+
+    ??? variable string "`docker_controller_releases_download_url`"
+
+        ```yaml
+        # Type: string
+        docker_controller_releases_download_url: https://github.com/saltyorg/sdc/releases/download
+        ```
+
+    ??? variable string "`docker_controller_release_lookup_command`"
+
+        ```yaml
+        # Type: string
+        docker_controller_release_lookup_command: |
+          curl -s {{ docker_controller_releases_url }} \
+            | jq -r ".assets[] | select(.name == \"sdc_linux_amd64\") \
+            | .browser_download_url"
         ```
 
     ??? variable string "`docker_controller_venv_path`"
 
         ```yaml
+        # Legacy
         # Type: string
         docker_controller_venv_path: "/srv/docker-controller/venv"
         ```

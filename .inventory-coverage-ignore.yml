@@ -12,6 +12,7 @@ saltbox:
   - diag
   - glances
   - hetzner_nfs
+  - index
   - iperf3
   - mainline
   - mount_templates

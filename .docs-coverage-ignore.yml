@@ -22,6 +22,7 @@ saltbox:
   - "hetzner"
   - "hetzner_nfs" # moved to modules
   - "hetzner_vlan"  # covered by hetzner_nfs documentation
+  - "index"
   - "kernel"
   - "main_tags"
   - "media_server"

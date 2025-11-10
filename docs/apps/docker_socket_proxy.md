@@ -1,6 +1,6 @@
 ---
 icon: material/docker
-status: WIP
+status: wip
 ---
 
 # Docker Socket Proxy

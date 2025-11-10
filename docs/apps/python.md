@@ -1,6 +1,6 @@
 ---
 icon: material/desktop-classic
-status: WIP
+status: wip
 ---
 
 # Python

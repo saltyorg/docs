@@ -1,13 +1,13 @@
 ---
 icon: material/tag
-status: WIP
+status: wip
 ---
 
 # Main Tags
 
 ## Overview
 
-Ansible tags for deploying the main app stacks.
+Ansible tags for deploying the main role stacks.
 
 ---
 

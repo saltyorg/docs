@@ -1,13 +1,13 @@
 ---
 icon: material/tag
-status: WIP
+status: wip
 ---
 
 # Media Server
 
 ## Overview
 
-Ansible tag for deploying your media server app.
+Ansible tag for deploying your media server apps stack.
 
 ---
 

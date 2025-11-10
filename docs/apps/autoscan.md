@@ -1,6 +1,6 @@
 ---
 icon: material/docker
-status: Outdated
+status: outdated
 hide:
   - tags
 tags:

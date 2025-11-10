@@ -12,11 +12,11 @@ tags:
 
 ## Backup
 
-| :material-book-information-variant:{.xl}   | :material-connection:{.xl} |
-|--------------------------------------------|:--------------------------:|
-| [Backup](../../saltbox/backup/backup.md)   |          `backup`          |
-| [Backup2](../../saltbox/backup/backup2.md) |         `backup2`          |
-| [Restore](../../saltbox/backup/restore.md) |         `restore`          |
+|                                            | :material-airplane-takeoff:{.xl} |
+|--------------------------------------------|:--------------------------------:|
+| [Backup](../../saltbox/backup/backup.md)   |             `backup`             |
+| [Backup2](../../saltbox/backup/backup2.md) |            `backup2`             |
+| [Restore](../../saltbox/backup/restore.md) |            `restore`             |
 
 ## Custom Deployment
 

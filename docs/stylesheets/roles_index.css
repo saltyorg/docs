@@ -1,26 +1,34 @@
 .md-typeset {
 
-  table {
-    table-layout: fixed;
+  h2:first-of-type:has(+ .md-typeset__scrollwrap) {
+    margin-bottom: -2em;
+  }
 
-    thead {
+  .md-typeset__table > table {
+    table-layout: fixed;
+    background-color: inherit;
+    border: none;
+
+    > thead {
       display: none;
 
-      th {
-        text-align: center !important;
+      > th {
+        text-align: center;
       }
     }
 
-    code {
-      display: inline-block;
-    }
-
     td {
-      vertical-align: middle !important;
+      vertical-align: middle;
+
+      code {
+        display: inline-block;
+      }
     }
   }
 
-  & > .md-typeset__scrollwrap:first-of-type table thead {
-    display: table-header-group;
+  & > .md-typeset__scrollwrap:first-of-type table {
+    thead {
+      display: table-header-group;
+    }
   }
 }

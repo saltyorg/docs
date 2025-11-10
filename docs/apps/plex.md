@@ -259,7 +259,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 ### Scan Media libraries
 
-As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
+As mentioned in the [Introduction](../saltbox/basics/index.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
 To do so:
 

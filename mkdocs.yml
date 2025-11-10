@@ -34,6 +34,7 @@ theme:
     - content.tooltips
     - header.autohide
     - navigation.footer
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
@@ -186,7 +187,7 @@ extra_javascript:
 nav:
   - Home: index.md
   - Saltbox:
-      - Basics: saltbox/basics/basics.md
+      - Basics: saltbox/basics/index.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md
       - Install Types: saltbox/basics/install-types.md
       - Install: saltbox/install/install.md

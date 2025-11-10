@@ -1,0 +1,26 @@
+.md-typeset {
+
+  table {
+    table-layout: fixed;
+
+    thead {
+      display: none;
+
+      th {
+        text-align: center !important;
+      }
+    }
+
+    code {
+      display: inline-block;
+    }
+
+    td {
+      vertical-align: middle !important;
+    }
+  }
+
+  & > .md-typeset__scrollwrap:first-of-type table thead {
+    display: table-header-group;
+  }
+}

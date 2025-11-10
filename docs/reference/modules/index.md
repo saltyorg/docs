@@ -1,55 +1,60 @@
 ---
 extra_stylesheets:
   - stylesheets/roles_index.css
+hide:
+  - tags
+tags:
+  - module
+  - role
 ---
 
 # Modules Index
 
-## Customization
+## Backup
 
-| :material-cube:{.xl}                              | :material-connection:{.xl} |
-|---------------------------------------------------|:--------------------------:|
-| [Custom](custom.md)                               |          `custom`          |
-| [Traefik File Template](traefik_file_template.md) |  `traefik-file-template`   |
-| [Traefik Template](traefik_template.md)           |     `traefik-template`     |
+| :material-book-information-variant:{.xl}   | :material-connection:{.xl} |
+|--------------------------------------------|:--------------------------:|
+| [Backup](../../saltbox/backup/backup.md)   |          `backup`          |
+| [Backup2](../../saltbox/backup/backup2.md) |         `backup2`          |
+| [Restore](../../saltbox/backup/restore.md) |         `restore`          |
 
-## Storage
+## Custom Deployment
 
-|                                            |                                                                                                             |
-|--------------------------------------------|:-----------------------------------------------------------------------------------------------------------:|
-| [Backup](../../saltbox/backup/backup.md)   |                                                  `backup`                                                   |
-| [Backup2](../../saltbox/backup/backup2.md) |                                                  `backup2`                                                  |
-| [Hetzner NFS](hetzner_nfs.md)              | `hetzner-nfs-server` `hetzner-nfs-server-uninstall` `hetzner-nfs-client-mount` `hetzner-nfs-client-unmount` |
-| [Permissions](permissions.md)              |                                              `fix-permissions`                                              |
-| [Remote](remote.md)                        |                                                  `mounts`                                                   |
-| [Restore](../../saltbox/backup/restore.md) |                                                  `restore`                                                  |
-| [UnionFS](unionfs.md)                      |                                                  `mounts`                                                   |
+|                                                   |                                  |
+|---------------------------------------------------|:--------------------------------:|
+| [Custom](custom.md)                               |             `custom`             |
+| [Mount Templates](mount_templates.md)             |        `mount-templates`         |
+| [Traefik File Template](traefik_file_template.md) | `generate-traefik-file-template` |
+| [Traefik Template](traefik_template.md)           |   `generate-traefik-template`    |
+| [Saltbox Mod](saltbox_mod.md)                     |          `saltbox-mod`           |
 
 ## Host Configuration
 
-|                                 |                                             |
-|---------------------------------|:-------------------------------------------:|
-| [Common](common.md)             |                  `common`                   |
-| [Hetzner VLAN](hetzner_vlan.md) | `hetzner-vlan-deploy` `hetzner-vlan-remove` | 
-| [Kernel](kernel.md)             |                  `kernel`                   |
-| [MOTD](motd.md)                 |                   `motd`                    |
-| [Reboot](reboot.md)             |                  `reboot`                   |
-| [System](system.md)             |                  `system`                   |
-| [Shell](shell.md)               |                   `shell`                   |
-| [User](user.md)                 |                   `user`                    |
+|                     |                               |
+|---------------------|:-----------------------------:|
+| [Common](common.md) |           `common`            |
+| [Kernel](kernel.md) |           `kernel`            |
+| [MOTD](motd.md)     | `motd` `motd-generate-config` |
+| [System](system.md) |           `system`            |
+| [Shell](shell.md)   |            `shell`            |
+| [User](user.md)     |            `user`             |
 
-## Repositories
+## Filesystem
 
-|                                       |                   |
-|---------------------------------------|:-----------------:|
-| [Sandbox](sandbox.md)                 |     `sandbox`     |
-| [Saltbox Mod](saltbox_mod.md)         |   `saltbox-mod`   |
-| [Mount Templates](mount_templates.md) | `mount-templates` |
+|                               |                                                                                                             |
+|-------------------------------|:-----------------------------------------------------------------------------------------------------------:|
+| [Hetzner NFS](hetzner_nfs.md) | `hetzner-nfs-server` `hetzner-nfs-server-uninstall` `hetzner-nfs-client-mount` `hetzner-nfs-client-unmount` |
+| [Permissions](permissions.md) |                                              `fix-permissions`                                              |
+| [Remote](remote.md)           |                                                  `mounts`                                                   |
+| [UnionFS](unionfs.md)         |                                                  `mounts`                                                   |
 
 ## Misc
 
-|                                         |                    |
-|-----------------------------------------|:------------------:|
-| [Diag](diag.md)                         |       `diag`       |
-| [Plex Auth Token](plex_auth_token.md)   | `plex-auth-token`  |
-| [Plex Fix Futures](plex_fix_futures.md) | `plex-fix-futures` | 
+|                                         |                                             |
+|-----------------------------------------|:-------------------------------------------:|
+| [Diag](diag.md)                         |                   `diag`                    |
+| [Hetzner VLAN](hetzner_vlan.md)         | `hetzner-vlan-deploy` `hetzner-vlan-remove` | 
+| [Plex Auth Token](plex_auth_token.md)   |              `plex-auth-token`              |
+| [Plex Fix Futures](plex_fix_futures.md) |             `plex-fix-futures`              | 
+| [Reboot](reboot.md)                     |                                             |
+| [Sandbox](sandbox.md)                   |                  `sandbox`                  |

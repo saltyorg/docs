@@ -1,6 +1,6 @@
 ---
 icon: material/server-network-outline
-status: Outdated
+status: deprecated
 hide:
   - tags
 tags:

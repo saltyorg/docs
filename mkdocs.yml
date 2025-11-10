@@ -467,7 +467,6 @@ nav:
           - btop: apps/btop.md
           - cAdvisor: apps/cadvisor.md
           - ctop: apps/ctop.md
-          - Jaeger: apps/jaeger.md
           - Node Exporter: apps/node_exporter.md
           - Prometheus: apps/prometheus.md
           - Scrutiny: apps/scrutiny.md

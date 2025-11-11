@@ -95,6 +95,13 @@ sb install download-clients
         download_clients_role_docker_controller: true
         ```
 
+    ??? variable bool "`download_clients_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        download_clients_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`download_clients_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -394,6 +394,13 @@ sb install sandbox-jdownloader2
         jdownloader2_role_docker_controller: true
         ```
 
+    ??? variable bool "`jdownloader2_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        jdownloader2_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`jdownloader2_role_traefik_autodetect_enabled`"
 
         ```yaml

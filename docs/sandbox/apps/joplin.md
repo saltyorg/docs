@@ -472,6 +472,13 @@ Change this asap.
         joplin_role_docker_controller: true
         ```
 
+    ??? variable bool "`joplin_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        joplin_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`joplin_role_traefik_autodetect_enabled`"
 
         ```yaml

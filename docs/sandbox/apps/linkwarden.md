@@ -467,6 +467,13 @@ sb install sandbox-linkwarden
         linkwarden_role_docker_controller: true
         ```
 
+    ??? variable bool "`linkwarden_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        linkwarden_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`linkwarden_role_traefik_autodetect_enabled`"
 
         ```yaml

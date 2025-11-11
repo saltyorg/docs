@@ -371,6 +371,13 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_docker_controller: true
         ```
 
+    ??? variable bool "`stash_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        stash_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`stash_role_traefik_autodetect_enabled`"
 
         ```yaml

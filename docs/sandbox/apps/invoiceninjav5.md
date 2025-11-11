@@ -396,6 +396,13 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_docker_controller: true
         ```
 
+    ??? variable bool "`invoiceninjav5_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        invoiceninjav5_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`invoiceninjav5_role_traefik_autodetect_enabled`"
 
         ```yaml

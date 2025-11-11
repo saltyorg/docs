@@ -414,6 +414,13 @@ sb install sandbox-glances-web
         glances_web_role_docker_controller: true
         ```
 
+    ??? variable bool "`glances_web_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        glances_web_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`glances_web_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -403,6 +403,13 @@ sb install sandbox-gitea
         gitea_role_docker_controller: true
         ```
 
+    ??? variable bool "`gitea_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gitea_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`gitea_role_traefik_autodetect_enabled`"
 
         ```yaml

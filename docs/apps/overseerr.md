@@ -1736,6 +1736,18 @@ Are you setting Saltbox up for the first time?
         overseerr2_docker_controller: true
         ```
 
+    ??? variable bool "`overseerr_role_docker_volumes_download`{ .sb-show-on-unchecked }`overseerr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        overseerr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        overseerr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`overseerr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`overseerr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

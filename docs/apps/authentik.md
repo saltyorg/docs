@@ -1282,6 +1282,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_controller: true
         ```
 
+    ??? variable bool "`authentik_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`authentik_role_traefik_autodetect_enabled`"
 
         ```yaml

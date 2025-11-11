@@ -398,6 +398,13 @@ sb install sandbox-foundry
         foundry_role_docker_controller: true
         ```
 
+    ??? variable bool "`foundry_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`foundry_role_traefik_autodetect_enabled`"
 
         ```yaml

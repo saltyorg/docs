@@ -517,6 +517,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_controller: true
         ```
 
+    ??? variable bool "`guacamole_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`guacamole_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -364,6 +364,13 @@ sb install sandbox-airsonic
         airsonic_role_docker_controller: true
         ```
 
+    ??? variable bool "`airsonic_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        airsonic_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`airsonic_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -366,6 +366,13 @@ sb install sandbox-medusa
         medusa_role_docker_controller: true
         ```
 
+    ??? variable bool "`medusa_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        medusa_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`medusa_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -375,6 +375,13 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_docker_controller: true
         ```
 
+    ??? variable bool "`code_server_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        code_server_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`code_server_role_traefik_autodetect_enabled`"
 
         ```yaml

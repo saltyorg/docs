@@ -497,6 +497,13 @@ sb install sandbox-n8n
         n8n_role_docker_controller: true
         ```
 
+    ??? variable bool "`n8n_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        n8n_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`n8n_role_traefik_autodetect_enabled`"
 
         ```yaml

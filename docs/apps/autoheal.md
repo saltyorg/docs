@@ -794,6 +794,13 @@ docker logs autoheal
         autoheal_role_docker_controller: true
         ```
 
+    ??? variable bool "`autoheal_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        autoheal_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`autoheal_role_traefik_autodetect_enabled`"
 
         ```yaml

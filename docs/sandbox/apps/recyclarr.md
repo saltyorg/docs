@@ -305,6 +305,13 @@ Follow documentation to complete configuration
         recyclarr_role_docker_controller: true
         ```
 
+    ??? variable bool "`recyclarr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        recyclarr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`recyclarr_role_traefik_autodetect_enabled`"
 
         ```yaml

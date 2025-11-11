@@ -1393,6 +1393,18 @@ sb install postgres
         postgres2_docker_controller: true
         ```
 
+    ??? variable bool "`postgres_role_docker_volumes_download`{ .sb-show-on-unchecked }`postgres2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_volumes_download:
+        ```
+
     ??? variable bool "`postgres_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -1527,6 +1527,18 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
         nginx2_docker_controller: true
         ```
 
+    ??? variable bool "`nginx_role_docker_volumes_download`{ .sb-show-on-unchecked }`nginx2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        nginx_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        nginx2_docker_volumes_download:
+        ```
+
     ??? variable bool "`nginx_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`nginx2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

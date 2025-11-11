@@ -808,6 +808,18 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_docker_controller: true
         ```
 
+    ??? variable bool "`calibre_role_docker_volumes_download`{ .sb-show-on-unchecked }`calibre2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        calibre_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        calibre2_docker_volumes_download:
+        ```
+
     ??? variable bool "`calibre_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`calibre2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

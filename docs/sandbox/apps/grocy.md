@@ -368,6 +368,13 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_docker_controller: true
         ```
 
+    ??? variable bool "`grocy_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grocy_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`grocy_role_traefik_autodetect_enabled`"
 
         ```yaml

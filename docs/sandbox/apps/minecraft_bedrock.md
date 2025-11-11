@@ -330,6 +330,13 @@ By default, the server will be using the latest version available. To choose a s
         minecraft_bedrock_role_docker_controller: true
         ```
 
+    ??? variable bool "`minecraft_bedrock_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        minecraft_bedrock_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`minecraft_bedrock_role_traefik_autodetect_enabled`"
 
         ```yaml

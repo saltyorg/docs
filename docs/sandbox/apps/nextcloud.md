@@ -448,6 +448,13 @@ sb install sandbox-nextcloud
         nextcloud_role_docker_controller: true
         ```
 
+    ??? variable bool "`nextcloud_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nextcloud_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`nextcloud_role_traefik_autodetect_enabled`"
 
         ```yaml

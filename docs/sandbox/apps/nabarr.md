@@ -261,6 +261,13 @@ sb install sandbox-nabarr
         nabarr_role_docker_controller: true
         ```
 
+    ??? variable bool "`nabarr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nabarr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`nabarr_role_traefik_autodetect_enabled`"
 
         ```yaml

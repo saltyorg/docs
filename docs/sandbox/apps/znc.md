@@ -387,6 +387,13 @@ Change that password ASAP.
         znc_role_docker_controller: true
         ```
 
+    ??? variable bool "`znc_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        znc_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`znc_role_traefik_autodetect_enabled`"
 
         ```yaml

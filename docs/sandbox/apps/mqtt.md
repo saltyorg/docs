@@ -290,6 +290,13 @@ password <password> # (3)!
         mqtt_role_docker_controller: true
         ```
 
+    ??? variable bool "`mqtt_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        mqtt_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`mqtt_role_traefik_autodetect_enabled`"
 
         ```yaml

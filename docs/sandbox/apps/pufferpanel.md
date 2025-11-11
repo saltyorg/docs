@@ -369,6 +369,13 @@ sb install sandbox-pufferpanel
         pufferpanel_role_docker_controller: true
         ```
 
+    ??? variable bool "`pufferpanel_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        pufferpanel_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`pufferpanel_role_traefik_autodetect_enabled`"
 
         ```yaml

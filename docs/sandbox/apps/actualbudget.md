@@ -368,6 +368,13 @@ To access Actual Budget, visit <https://actualbudget.iYOUR_DOMAIN_NAMEi>
         actualbudget_role_docker_controller: true
         ```
 
+    ??? variable bool "`actualbudget_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        actualbudget_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`actualbudget_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -403,6 +403,13 @@ sb install sandbox-filebrowser
         filebrowser_role_docker_controller: true
         ```
 
+    ??? variable bool "`filebrowser_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        filebrowser_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`filebrowser_role_traefik_autodetect_enabled`"
 
         ```yaml

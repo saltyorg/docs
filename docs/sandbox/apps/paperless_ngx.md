@@ -505,6 +505,13 @@ sb install sandbox-paperless-ngx
         paperless_ngx_role_docker_controller: true
         ```
 
+    ??? variable bool "`paperless_ngx_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        paperless_ngx_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`paperless_ngx_role_traefik_autodetect_enabled`"
 
         ```yaml

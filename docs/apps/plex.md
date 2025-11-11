@@ -2212,6 +2212,18 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_controller: true
         ```
 
+    ??? variable bool "`plex_role_docker_volumes_download`{ .sb-show-on-unchecked }`plex2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_volumes_download:
+        ```
+
     ??? variable bool "`plex_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`plex2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

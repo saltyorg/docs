@@ -224,6 +224,13 @@ sb install sandbox-gotenberg
         gotenberg_role_docker_controller: true
         ```
 
+    ??? variable bool "`gotenberg_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        gotenberg_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`gotenberg_role_traefik_autodetect_enabled`"
 
         ```yaml

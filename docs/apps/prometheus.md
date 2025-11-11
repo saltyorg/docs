@@ -972,6 +972,13 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_docker_controller: true
         ```
 
+    ??? variable bool "`prometheus_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        prometheus_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`prometheus_role_traefik_autodetect_enabled`"
 
         ```yaml

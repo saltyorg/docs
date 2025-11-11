@@ -404,6 +404,13 @@ sb install sandbox-goplaxt
         goplaxt_role_docker_controller: true
         ```
 
+    ??? variable bool "`goplaxt_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        goplaxt_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`goplaxt_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -1893,6 +1893,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_controller: true
         ```
 
+    ??? variable bool "`authelia_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`authelia_role_traefik_autodetect_enabled`"
 
         ```yaml

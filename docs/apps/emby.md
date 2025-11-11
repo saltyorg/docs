@@ -1919,6 +1919,18 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_docker_controller: true
         ```
 
+    ??? variable bool "`emby_role_docker_volumes_download`{ .sb-show-on-unchecked }`emby2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        emby_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        emby2_docker_volumes_download:
+        ```
+
     ??? variable bool "`emby_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`emby2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

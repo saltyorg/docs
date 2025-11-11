@@ -378,6 +378,13 @@ sb install sandbox-puddletag
         puddletag_role_docker_controller: true
         ```
 
+    ??? variable bool "`puddletag_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        puddletag_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`puddletag_role_traefik_autodetect_enabled`"
 
         ```yaml

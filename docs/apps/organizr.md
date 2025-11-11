@@ -1077,6 +1077,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_controller: true
         ```
 
+    ??? variable bool "`organizr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`organizr_role_traefik_autodetect_enabled`"
 
         ```yaml

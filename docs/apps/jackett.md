@@ -1029,6 +1029,13 @@ Are you setting Saltbox up for the first time?
         jackett_role_docker_controller: true
         ```
 
+    ??? variable bool "`jackett_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        jackett_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`jackett_role_traefik_autodetect_enabled`"
 
         ```yaml

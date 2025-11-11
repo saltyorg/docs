@@ -870,6 +870,13 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_controller: true
         ```
 
+    ??? variable bool "`ddns_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`ddns_role_traefik_autodetect_enabled`"
 
         ```yaml

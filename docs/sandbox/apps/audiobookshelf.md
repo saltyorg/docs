@@ -369,6 +369,13 @@ sb install sandbox-audiobookshelf
         audiobookshelf_role_docker_controller: true
         ```
 
+    ??? variable bool "`audiobookshelf_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        audiobookshelf_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`audiobookshelf_role_traefik_autodetect_enabled`"
 
         ```yaml

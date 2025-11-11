@@ -391,6 +391,13 @@ sb install sandbox-airdcpp
         airdcpp_role_docker_controller: true
         ```
 
+    ??? variable bool "`airdcpp_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        airdcpp_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`airdcpp_role_traefik_autodetect_enabled`"
 
         ```yaml

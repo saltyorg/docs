@@ -372,6 +372,13 @@ sb install sandbox-sqlitebrowser
         sqlitebrowser_role_docker_controller: true
         ```
 
+    ??? variable bool "`sqlitebrowser_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        sqlitebrowser_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`sqlitebrowser_role_traefik_autodetect_enabled`"
 
         ```yaml

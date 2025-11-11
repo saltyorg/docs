@@ -1351,6 +1351,18 @@ Note: No authentication is configured by default.
         mongodb2_docker_controller: true
         ```
 
+    ??? variable bool "`mongodb_role_docker_volumes_download`{ .sb-show-on-unchecked }`mongodb2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mongodb_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mongodb2_docker_volumes_download:
+        ```
+
     ??? variable bool "`mongodb_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`mongodb2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

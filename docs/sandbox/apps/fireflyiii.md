@@ -502,6 +502,13 @@ Redeploy the Firefly III role to apply the above changes.
         fireflyiii_role_docker_controller: true
         ```
 
+    ??? variable bool "`fireflyiii_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`fireflyiii_role_traefik_autodetect_enabled`"
 
         ```yaml

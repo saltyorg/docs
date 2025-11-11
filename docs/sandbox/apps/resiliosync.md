@@ -399,6 +399,13 @@ resiliosync_data_port: "#####"
         resiliosync_role_docker_controller: true
         ```
 
+    ??? variable bool "`resiliosync_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        resiliosync_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`resiliosync_role_traefik_autodetect_enabled`"
 
         ```yaml

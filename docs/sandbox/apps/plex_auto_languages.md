@@ -282,6 +282,13 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_role_docker_controller: true
         ```
 
+    ??? variable bool "`plex_auto_languages_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_auto_languages_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`plex_auto_languages_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -450,6 +450,13 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_docker_controller: true
         ```
 
+    ??? variable bool "`tdarr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tdarr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`tdarr_role_traefik_autodetect_enabled`"
 
         ```yaml

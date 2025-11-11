@@ -495,6 +495,13 @@ sb install sandbox-unifi-network-application
         unifi_network_application_role_docker_controller: true
         ```
 
+    ??? variable bool "`unifi_network_application_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unifi_network_application_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`unifi_network_application_role_traefik_autodetect_enabled`"
 
         ```yaml

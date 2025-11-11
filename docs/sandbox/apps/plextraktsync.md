@@ -325,6 +325,13 @@ docker exec plextraktsync plextraktsync --help
         plextraktsync_role_docker_controller: true
         ```
 
+    ??? variable bool "`plextraktsync_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plextraktsync_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`plextraktsync_role_traefik_autodetect_enabled`"
 
         ```yaml

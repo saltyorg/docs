@@ -397,6 +397,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_service_wants: ""
         ```
 
+    ??? variable string "`qbittorrent_role_service_partof`{ .sb-show-on-unchecked }`qbittorrent2_service_partof`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_service_partof: "docker.service"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_service_partof: "docker.service"
+        ```
+
 === "Paths"
 
     ??? variable string "`qbittorrent_role_paths_folder`{ .sb-show-on-unchecked }`qbittorrent2_paths_folder`{ .sb-show-on-checked }"
@@ -2035,6 +2047,18 @@ Are you setting Saltbox up for the first time?
         # Enable or disable Saltbox Docker Controller management for containers
         # Type: bool (true/false)
         qbittorrent2_docker_controller: true
+        ```
+
+    ??? variable bool "`qbittorrent_role_docker_volumes_download`{ .sb-show-on-unchecked }`qbittorrent2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_volumes_download:
         ```
 
     ??? variable bool "`qbittorrent_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`qbittorrent2_traefik_autodetect_enabled`{ .sb-show-on-checked }"

@@ -372,6 +372,13 @@ sb install sandbox-unmanic
         unmanic_role_docker_controller: true
         ```
 
+    ??? variable bool "`unmanic_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unmanic_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`unmanic_role_traefik_autodetect_enabled`"
 
         ```yaml

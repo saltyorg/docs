@@ -389,6 +389,13 @@ sb install sandbox-bookstack
         bookstack_role_docker_controller: true
         ```
 
+    ??? variable bool "`bookstack_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        bookstack_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`bookstack_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -373,6 +373,13 @@ sb install sandbox-booksonic
         booksonic_role_docker_controller: true
         ```
 
+    ??? variable bool "`booksonic_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        booksonic_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`booksonic_role_traefik_autodetect_enabled`"
 
         ```yaml

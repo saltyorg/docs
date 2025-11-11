@@ -354,6 +354,13 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_role_docker_controller: true
         ```
 
+    ??? variable bool "`barcodebuddy_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        barcodebuddy_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`barcodebuddy_role_traefik_autodetect_enabled`"
 
         ```yaml

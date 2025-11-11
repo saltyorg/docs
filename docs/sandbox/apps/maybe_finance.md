@@ -476,6 +476,13 @@ sb install sandbox-maybe-finance
         maybe_finance_role_docker_controller: true
         ```
 
+    ??? variable bool "`maybe_finance_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`maybe_finance_role_traefik_autodetect_enabled`"
 
         ```yaml

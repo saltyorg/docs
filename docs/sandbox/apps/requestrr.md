@@ -585,6 +585,18 @@ sb install sandbox-requestrr
         requestrr2_docker_controller: true
         ```
 
+    ??? variable bool "`requestrr_role_docker_volumes_download`{ .sb-show-on-unchecked }`requestrr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        requestrr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        requestrr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`requestrr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`requestrr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

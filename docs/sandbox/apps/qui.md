@@ -623,6 +623,18 @@ sb install sandbox-qui
         qui2_docker_controller: true
         ```
 
+    ??? variable bool "`qui_role_docker_volumes_download`{ .sb-show-on-unchecked }`qui2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qui_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qui2_docker_volumes_download:
+        ```
+
     ??? variable bool "`qui_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`qui2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

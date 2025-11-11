@@ -426,6 +426,13 @@ The password provisioned is your Saltbox password.
         wireguard_role_docker_controller: true
         ```
 
+    ??? variable bool "`wireguard_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        wireguard_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`wireguard_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -462,6 +462,13 @@ sb install sandbox-wikijs
         wikijs_role_docker_controller: true
         ```
 
+    ??? variable bool "`wikijs_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        wikijs_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`wikijs_role_traefik_autodetect_enabled`"
 
         ```yaml

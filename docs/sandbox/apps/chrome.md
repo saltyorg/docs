@@ -277,6 +277,13 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_role_docker_controller: true
         ```
 
+    ??? variable bool "`chrome_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        chrome_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`chrome_role_traefik_autodetect_enabled`"
 
         ```yaml

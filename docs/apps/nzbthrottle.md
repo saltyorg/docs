@@ -820,6 +820,13 @@ Note: Configuration is file-based with no web interface.
         nzbthrottle_role_docker_controller: true
         ```
 
+    ??? variable bool "`nzbthrottle_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbthrottle_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`nzbthrottle_role_traefik_autodetect_enabled`"
 
         ```yaml

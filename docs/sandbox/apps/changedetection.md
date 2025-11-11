@@ -364,6 +364,13 @@ sb install sandbox-changedetection
         changedetection_role_docker_controller: true
         ```
 
+    ??? variable bool "`changedetection_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        changedetection_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`changedetection_role_traefik_autodetect_enabled`"
 
         ```yaml

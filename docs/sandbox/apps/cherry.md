@@ -396,6 +396,13 @@ sb install sandbox-cherry
         cherry_role_docker_controller: true
         ```
 
+    ??? variable bool "`cherry_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`cherry_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -358,6 +358,13 @@ sb install sandbox-pgadmin
         pgadmin_role_docker_controller: true
         ```
 
+    ??? variable bool "`pgadmin_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        pgadmin_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`pgadmin_role_traefik_autodetect_enabled`"
 
         ```yaml

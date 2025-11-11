@@ -235,6 +235,13 @@ When you want to reach `*.xYOUR_DOMAIN_NAMEx/robots.txt`
         traefik_robotstxt_role_docker_controller: true
         ```
 
+    ??? variable bool "`traefik_robotstxt_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_robotstxt_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`traefik_robotstxt_role_traefik_autodetect_enabled`"
 
         ```yaml

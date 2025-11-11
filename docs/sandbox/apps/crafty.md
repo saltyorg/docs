@@ -490,6 +490,13 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_role_docker_controller: true
         ```
 
+    ??? variable bool "`crafty_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        crafty_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`crafty_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -365,6 +365,13 @@ sb install sandbox-deemix
         deemix_role_docker_controller: true
         ```
 
+    ??? variable bool "`deemix_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        deemix_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`deemix_role_traefik_autodetect_enabled`"
 
         ```yaml

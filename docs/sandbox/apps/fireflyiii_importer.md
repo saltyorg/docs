@@ -464,6 +464,13 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
         fireflyiii_importer_role_docker_controller: true
         ```
 
+    ??? variable bool "`fireflyiii_importer_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        fireflyiii_importer_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`fireflyiii_importer_role_traefik_autodetect_enabled`"
 
         ```yaml

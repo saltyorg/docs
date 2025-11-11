@@ -204,6 +204,13 @@ Configure per-version users, databases, and access control using `postgres_host_
         postgres_host_role_docker_controller: true
         ```
 
+    ??? variable bool "`postgres_host_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        postgres_host_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`postgres_host_role_traefik_autodetect_enabled`"
 
         ```yaml

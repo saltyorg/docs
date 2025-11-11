@@ -411,6 +411,13 @@ sb install sandbox-krusader
         krusader_role_docker_controller: true
         ```
 
+    ??? variable bool "`krusader_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        krusader_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`krusader_role_traefik_autodetect_enabled`"
 
         ```yaml

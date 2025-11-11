@@ -1442,6 +1442,18 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
         mariadb2_docker_controller: true
         ```
 
+    ??? variable bool "`mariadb_role_docker_volumes_download`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        mariadb_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        mariadb2_docker_volumes_download:
+        ```
+
     ??? variable bool "`mariadb_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`mariadb2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -492,6 +492,13 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_docker_controller: true
         ```
 
+    ??? variable bool "`calibre_web_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        calibre_web_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`calibre_web_role_traefik_autodetect_enabled`"
 
         ```yaml

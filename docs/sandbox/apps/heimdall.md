@@ -367,6 +367,13 @@ sb install sandbox-heimdall
         heimdall_role_docker_controller: true
         ```
 
+    ??? variable bool "`heimdall_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        heimdall_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`heimdall_role_traefik_autodetect_enabled`"
 
         ```yaml

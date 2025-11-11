@@ -657,6 +657,18 @@ sb install sandbox-wordpress
         wordpress2_docker_controller: true
         ```
 
+    ??? variable bool "`wordpress_role_docker_volumes_download`{ .sb-show-on-unchecked }`wordpress2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        wordpress_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        wordpress2_docker_volumes_download:
+        ```
+
     ??? variable bool "`wordpress_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

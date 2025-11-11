@@ -998,6 +998,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_controller: true
         ```
 
+    ??? variable bool "`lldap_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`lldap_role_traefik_autodetect_enabled`"
 
         ```yaml

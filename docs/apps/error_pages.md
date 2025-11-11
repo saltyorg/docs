@@ -858,6 +858,13 @@ plex_role_traefik_error_pages_enabled: false
         error_pages_role_docker_controller: true
         ```
 
+    ??? variable bool "`error_pages_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        error_pages_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`error_pages_role_traefik_autodetect_enabled`"
 
         ```yaml

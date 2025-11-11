@@ -1731,6 +1731,18 @@ sb install jellyfin
         jellyfin2_docker_controller: true
         ```
 
+    ??? variable bool "`jellyfin_role_docker_volumes_download`{ .sb-show-on-unchecked }`jellyfin2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyfin_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyfin2_docker_volumes_download:
+        ```
+
     ??? variable bool "`jellyfin_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`jellyfin2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

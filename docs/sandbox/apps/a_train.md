@@ -284,6 +284,13 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
         a_train_role_docker_controller: true
         ```
 
+    ??? variable bool "`a_train_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        a_train_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`a_train_role_traefik_autodetect_enabled`"
 
         ```yaml

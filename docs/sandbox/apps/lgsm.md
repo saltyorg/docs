@@ -468,6 +468,18 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_docker_controller: true
         ```
 
+    ??? variable bool "`lgsm_role_docker_volumes_download`{ .sb-show-on-unchecked }`lgsm2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        lgsm_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        lgsm2_docker_volumes_download:
+        ```
+
     ??? variable bool "`lgsm_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`lgsm2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -399,6 +399,13 @@ sb install sandbox-kitana
         kitana_role_docker_controller: true
         ```
 
+    ??? variable bool "`kitana_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        kitana_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`kitana_role_traefik_autodetect_enabled`"
 
         ```yaml

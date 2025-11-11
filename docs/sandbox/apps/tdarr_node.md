@@ -319,6 +319,13 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_controller: true
         ```
 
+    ??? variable bool "`tdarr_node_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tdarr_node_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`tdarr_node_role_traefik_autodetect_enabled`"
 
         ```yaml

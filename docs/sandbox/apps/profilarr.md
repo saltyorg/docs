@@ -375,6 +375,13 @@ Visit <https://profilarr.iYOUR_DOMAIN_NAMEi>.
         profilarr_role_docker_controller: true
         ```
 
+    ??? variable bool "`profilarr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        profilarr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`profilarr_role_traefik_autodetect_enabled`"
 
         ```yaml

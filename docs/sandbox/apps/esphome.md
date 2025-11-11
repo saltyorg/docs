@@ -400,6 +400,13 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
         esphome_role_docker_controller: true
         ```
 
+    ??? variable bool "`esphome_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        esphome_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`esphome_role_traefik_autodetect_enabled`"
 
         ```yaml

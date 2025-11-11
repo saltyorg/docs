@@ -364,6 +364,13 @@ sb install sandbox-lazylibrarian
         lazylibrarian_role_docker_controller: true
         ```
 
+    ??? variable bool "`lazylibrarian_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lazylibrarian_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`lazylibrarian_role_traefik_autodetect_enabled`"
 
         ```yaml

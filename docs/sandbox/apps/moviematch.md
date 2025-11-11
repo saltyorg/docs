@@ -378,6 +378,13 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_role_docker_controller: true
         ```
 
+    ??? variable bool "`moviematch_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        moviematch_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`moviematch_role_traefik_autodetect_enabled`"
 
         ```yaml

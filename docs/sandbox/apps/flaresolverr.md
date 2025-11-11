@@ -233,6 +233,13 @@ sb install sandbox-flaresolverr
         flaresolverr_role_docker_controller: true
         ```
 
+    ??? variable bool "`flaresolverr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        flaresolverr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`flaresolverr_role_traefik_autodetect_enabled`"
 
         ```yaml

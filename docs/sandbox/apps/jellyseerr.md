@@ -629,6 +629,18 @@ sb install sandbox-jellyseerr
         jellyseerr2_docker_controller: true
         ```
 
+    ??? variable bool "`jellyseerr_role_docker_volumes_download`{ .sb-show-on-unchecked }`jellyseerr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        jellyseerr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        jellyseerr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`jellyseerr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`jellyseerr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

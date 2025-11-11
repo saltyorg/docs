@@ -356,6 +356,13 @@ sb install sandbox-discoflix
         discoflix_role_docker_controller: true
         ```
 
+    ??? variable bool "`discoflix_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        discoflix_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`discoflix_role_traefik_autodetect_enabled`"
 
         ```yaml

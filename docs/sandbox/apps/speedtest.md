@@ -405,6 +405,13 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_role_docker_controller: true
         ```
 
+    ??? variable bool "`speedtest_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        speedtest_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`speedtest_role_traefik_autodetect_enabled`"
 
         ```yaml

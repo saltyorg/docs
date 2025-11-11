@@ -1346,6 +1346,18 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
         redis2_docker_controller: true
         ```
 
+    ??? variable bool "`redis_role_docker_volumes_download`{ .sb-show-on-unchecked }`redis2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        redis_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        redis2_docker_volumes_download:
+        ```
+
     ??? variable bool "`redis_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`redis2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

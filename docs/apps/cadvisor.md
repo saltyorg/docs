@@ -912,6 +912,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_controller: true
         ```
 
+    ??? variable bool "`cadvisor_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`cadvisor_role_traefik_autodetect_enabled`"
 
         ```yaml

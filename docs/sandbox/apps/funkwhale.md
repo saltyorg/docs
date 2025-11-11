@@ -422,6 +422,13 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_docker_controller: true
         ```
 
+    ??? variable bool "`funkwhale_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        funkwhale_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`funkwhale_role_traefik_autodetect_enabled`"
 
         ```yaml

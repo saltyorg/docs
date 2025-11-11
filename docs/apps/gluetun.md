@@ -1930,6 +1930,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_controller: true
         ```
 
+    ??? variable bool "`gluetun_role_docker_volumes_download`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_volumes_download:
+        ```
+
     ??? variable bool "`gluetun_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

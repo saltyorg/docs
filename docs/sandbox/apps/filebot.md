@@ -381,6 +381,13 @@ sb install sandbox-filebot
         filebot_role_docker_controller: true
         ```
 
+    ??? variable bool "`filebot_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        filebot_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`filebot_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -269,6 +269,13 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_role_docker_controller: true
         ```
 
+    ??? variable bool "`tauticord_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`tauticord_role_traefik_autodetect_enabled`"
 
         ```yaml

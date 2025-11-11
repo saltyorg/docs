@@ -2054,6 +2054,18 @@ Are you setting Saltbox up for the first time?
         lidarr2_docker_controller: true
         ```
 
+    ??? variable bool "`lidarr_role_docker_volumes_download`{ .sb-show-on-unchecked }`lidarr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        lidarr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        lidarr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`lidarr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`lidarr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

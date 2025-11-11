@@ -408,6 +408,13 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
         uptime_kuma_role_docker_controller: true
         ```
 
+    ??? variable bool "`uptime_kuma_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        uptime_kuma_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`uptime_kuma_role_traefik_autodetect_enabled`"
 
         ```yaml

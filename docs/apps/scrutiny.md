@@ -913,6 +913,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_controller: true
         ```
 
+    ??? variable bool "`scrutiny_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`scrutiny_role_traefik_autodetect_enabled`"
 
         ```yaml

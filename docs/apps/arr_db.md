@@ -221,6 +221,13 @@ The arr_db role performs the following operations for each enabled application:
         arr_db_role_docker_controller: true
         ```
 
+    ??? variable bool "`arr_db_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        arr_db_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`arr_db_role_traefik_autodetect_enabled`"
 
         ```yaml

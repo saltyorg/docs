@@ -452,6 +452,18 @@ To configure the time that Kometa should run, you may override the `kometa_time`
         kometa2_docker_controller: true
         ```
 
+    ??? variable bool "`kometa_role_docker_volumes_download`{ .sb-show-on-unchecked }`kometa2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        kometa_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        kometa2_docker_volumes_download:
+        ```
+
     ??? variable bool "`kometa_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`kometa2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

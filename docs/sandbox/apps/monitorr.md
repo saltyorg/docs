@@ -363,6 +363,13 @@ sb install sandbox-monitorr
         monitorr_role_docker_controller: true
         ```
 
+    ??? variable bool "`monitorr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        monitorr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`monitorr_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -382,6 +382,13 @@ sb install sandbox-codex
         codex_role_docker_controller: true
         ```
 
+    ??? variable bool "`codex_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        codex_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`codex_role_traefik_autodetect_enabled`"
 
         ```yaml

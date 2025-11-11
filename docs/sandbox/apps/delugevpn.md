@@ -595,6 +595,13 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_docker_controller: true
         ```
 
+    ??? variable bool "`delugevpn_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        delugevpn_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`delugevpn_role_traefik_autodetect_enabled`"
 
         ```yaml

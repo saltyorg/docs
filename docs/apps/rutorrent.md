@@ -1212,6 +1212,13 @@ docker restart rutorrent
         rutorrent_role_docker_controller: true
         ```
 
+    ??? variable bool "`rutorrent_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        rutorrent_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`rutorrent_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -370,6 +370,13 @@ Default credentials are configured using your user email and password. Root user
         openobserve_role_docker_controller: true
         ```
 
+    ??? variable bool "`openobserve_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        openobserve_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`openobserve_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -775,6 +775,18 @@ sb install sandbox-rflood
         rflood2_docker_controller: true
         ```
 
+    ??? variable bool "`rflood_role_docker_volumes_download`{ .sb-show-on-unchecked }`rflood2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        rflood_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        rflood2_docker_volumes_download:
+        ```
+
     ??? variable bool "`rflood_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`rflood2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

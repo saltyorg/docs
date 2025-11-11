@@ -382,6 +382,13 @@ sb install sandbox-syncthing
         syncthing_role_docker_controller: true
         ```
 
+    ??? variable bool "`syncthing_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        syncthing_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`syncthing_role_traefik_autodetect_enabled`"
 
         ```yaml

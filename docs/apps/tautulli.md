@@ -1692,6 +1692,18 @@ Are you setting Saltbox up for the first time?
         tautulli2_docker_controller: true
         ```
 
+    ??? variable bool "`tautulli_role_docker_volumes_download`{ .sb-show-on-unchecked }`tautulli2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        tautulli_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        tautulli2_docker_volumes_download:
+        ```
+
     ??? variable bool "`tautulli_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`tautulli2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

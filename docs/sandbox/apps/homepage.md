@@ -429,6 +429,13 @@ This role will add both the homepage container, and the homepage-docker-socket-p
         homepage_role_docker_controller: true
         ```
 
+    ??? variable bool "`homepage_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homepage_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`homepage_role_traefik_autodetect_enabled`"
 
         ```yaml

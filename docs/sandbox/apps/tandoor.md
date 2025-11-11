@@ -513,6 +513,13 @@ To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the
         tandoor_role_docker_controller: true
         ```
 
+    ??? variable bool "`tandoor_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tandoor_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`tandoor_role_traefik_autodetect_enabled`"
 
         ```yaml

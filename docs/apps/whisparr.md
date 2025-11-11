@@ -1642,6 +1642,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_controller: true
         ```
 
+    ??? variable bool "`whisparr_role_docker_volumes_download`{ .sb-show-on-unchecked }`whisparr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`whisparr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`whisparr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

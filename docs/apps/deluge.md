@@ -1704,6 +1704,18 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
         deluge2_docker_controller: true
         ```
 
+    ??? variable bool "`deluge_role_docker_volumes_download`{ .sb-show-on-unchecked }`deluge2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        deluge_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        deluge2_docker_volumes_download:
+        ```
+
     ??? variable bool "`deluge_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`deluge2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

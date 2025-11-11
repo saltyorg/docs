@@ -373,6 +373,13 @@ sb install sandbox-paperless-ai
         paperless_ai_role_docker_controller: true
         ```
 
+    ??? variable bool "`paperless_ai_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        paperless_ai_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`paperless_ai_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -602,6 +602,18 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_docker_controller: true
         ```
 
+    ??? variable bool "`node_red_role_docker_volumes_download`{ .sb-show-on-unchecked }`node_red2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        node_red_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        node_red2_docker_volumes_download:
+        ```
+
     ??? variable bool "`node_red_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`node_red2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

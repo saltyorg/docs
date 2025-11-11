@@ -321,6 +321,13 @@ sb install sandbox-it-tools
         it_tools_role_docker_controller: true
         ```
 
+    ??? variable bool "`it_tools_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        it_tools_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`it_tools_role_traefik_autodetect_enabled`"
 
         ```yaml

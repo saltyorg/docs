@@ -461,6 +461,13 @@ sb install sandbox-photoprism
         photoprism_role_docker_controller: true
         ```
 
+    ??? variable bool "`photoprism_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        photoprism_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`photoprism_role_traefik_autodetect_enabled`"
 
         ```yaml

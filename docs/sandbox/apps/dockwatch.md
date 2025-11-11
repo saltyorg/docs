@@ -436,6 +436,13 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_controller: true
         ```
 
+    ??? variable bool "`dockwatch_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`dockwatch_role_traefik_autodetect_enabled`"
 
         ```yaml

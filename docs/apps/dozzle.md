@@ -1070,6 +1070,13 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_docker_controller: true
         ```
 
+    ??? variable bool "`dozzle_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dozzle_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`dozzle_role_traefik_autodetect_enabled`"
 
         ```yaml

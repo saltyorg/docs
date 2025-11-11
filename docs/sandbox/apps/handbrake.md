@@ -394,6 +394,13 @@ sb install sandbox-handbrake
         handbrake_role_docker_controller: true
         ```
 
+    ??? variable bool "`handbrake_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        handbrake_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`handbrake_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -270,6 +270,13 @@ sb install sandbox-sabthrottle
         sabthrottle_role_docker_controller: true
         ```
 
+    ??? variable bool "`sabthrottle_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        sabthrottle_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`sabthrottle_role_traefik_autodetect_enabled`"
 
         ```yaml

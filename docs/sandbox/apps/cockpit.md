@@ -288,6 +288,13 @@ sb install sandbox-cockpit
         cockpit_role_docker_controller: true
         ```
 
+    ??? variable bool "`cockpit_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cockpit_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`cockpit_role_traefik_autodetect_enabled`"
 
         ```yaml

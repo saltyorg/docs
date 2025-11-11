@@ -658,6 +658,18 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
         watchstate2_docker_controller: true
         ```
 
+    ??? variable bool "`watchstate_role_docker_volumes_download`{ .sb-show-on-unchecked }`watchstate2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        watchstate_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        watchstate2_docker_volumes_download:
+        ```
+
     ??? variable bool "`watchstate_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`watchstate2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

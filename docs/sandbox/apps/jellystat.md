@@ -487,6 +487,13 @@ sb install sandbox-jellystat
         jellystat_role_docker_controller: true
         ```
 
+    ??? variable bool "`jellystat_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        jellystat_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`jellystat_role_traefik_autodetect_enabled`"
 
         ```yaml

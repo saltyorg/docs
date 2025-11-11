@@ -365,6 +365,13 @@ sb install sandbox-duplicati
         duplicati_role_docker_controller: true
         ```
 
+    ??? variable bool "`duplicati_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        duplicati_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`duplicati_role_traefik_autodetect_enabled`"
 
         ```yaml

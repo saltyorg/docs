@@ -414,6 +414,13 @@ sb install sandbox-forgejo
         forgejo_role_docker_controller: true
         ```
 
+    ??? variable bool "`forgejo_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        forgejo_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`forgejo_role_traefik_autodetect_enabled`"
 
         ```yaml

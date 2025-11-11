@@ -1836,6 +1836,18 @@ Are you Setting Saltbox up for the first time?
         autoscan2_docker_controller: true
         ```
 
+    ??? variable bool "`autoscan_role_docker_volumes_download`{ .sb-show-on-unchecked }`autoscan2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        autoscan_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        autoscan2_docker_volumes_download:
+        ```
+
     ??? variable bool "`autoscan_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`autoscan2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

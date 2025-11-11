@@ -489,6 +489,13 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_docker_controller: true
         ```
 
+    ??? variable bool "`notifiarr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        notifiarr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`notifiarr_role_traefik_autodetect_enabled`"
 
         ```yaml

@@ -964,6 +964,13 @@ sb install petio
         petio_role_docker_controller: true
         ```
 
+    ??? variable bool "`petio_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`petio_role_traefik_autodetect_enabled`"
 
         ```yaml

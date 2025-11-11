@@ -641,6 +641,18 @@ You will need your API Keys from both Radarr and Sonarr.
         maintainerr2_docker_controller: true
         ```
 
+    ??? variable bool "`maintainerr_role_docker_volumes_download`{ .sb-show-on-unchecked }`maintainerr2_docker_volumes_download`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        maintainerr_role_docker_volumes_download:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        maintainerr2_docker_volumes_download:
+        ```
+
     ??? variable bool "`maintainerr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`maintainerr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -832,6 +832,13 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_controller: true
         ```
 
+    ??? variable bool "`unpackerr_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`unpackerr_role_traefik_autodetect_enabled`"
 
         ```yaml

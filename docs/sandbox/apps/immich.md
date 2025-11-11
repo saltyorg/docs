@@ -527,6 +527,13 @@ immich_docker_envs_custom:
         immich_role_docker_controller: true
         ```
 
+    ??? variable bool "`immich_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        immich_role_docker_volumes_download:
+        ```
+
     ??? variable bool "`immich_role_traefik_autodetect_enabled`"
 
         ```yaml

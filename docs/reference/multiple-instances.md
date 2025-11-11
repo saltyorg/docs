@@ -49,7 +49,6 @@ tautulli
 traktarr
 transmission
 watchstate
-watchtower
 whisparr
 ```
 

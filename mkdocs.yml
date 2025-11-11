@@ -375,7 +375,6 @@ nav:
             - phpmyadmin: sandbox/apps/phpmyadmin.md
           - Docker:
             - Dockwatch: sandbox/apps/dockwatch.md
-            - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
           - Guacamole: sandbox/apps/guacamole.md
@@ -660,7 +659,6 @@ nav:
       - sandbox/apps/vaultwarden.md
       - sandbox/apps/vnstat.md
       - sandbox/apps/watchstate.md
-      - sandbox/apps/watchtower.md
       - sandbox/apps/wikijs.md
       - sandbox/apps/wireguard.md
       - sandbox/apps/wizarr.md

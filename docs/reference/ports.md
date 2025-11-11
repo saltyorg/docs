@@ -30,4 +30,3 @@ tags:
 | qBittorrent       | 6881 (UDP), 51413                            |                                                                                                                                            |
 | Sonarr              |                                              |                                                                                                                                            |
 | Cloudplow           |                                              |                                                                                                                                            |
-| Watchtower          |                                              |                                                                                                                                            |

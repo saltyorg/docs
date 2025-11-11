@@ -74,7 +74,6 @@ When in doubt, you can always rerun the relevant Ansible tag to update the app.
 | Ombi                        | `ombi`          |
 | Organizr                    | `organizr`      |
 | Portainer                   | `portainer`     |
-| Watchtower                  | `watchtower`    |
 | Cloudplow                   | `cloudplow`     |
 | Emby                        | `emby`          |
 | Traefik                     | `traefik`       |

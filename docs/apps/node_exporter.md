@@ -23,7 +23,7 @@ Node Exporter is a Prometheus exporter for hardware and OS metrics. It exposes s
 
 ``` shell
 
-sb install node_exporter
+sb install node-exporter
 
 ```
 

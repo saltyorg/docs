@@ -294,7 +294,7 @@ tags:
 | [diun](diun.md)                               |        `diun`         | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Dozzle](dozzle.md)                           |       `dozzle`        | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Docker Socket Proxy](docker_socket_proxy.md) | `docker-socket-proxy` | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
-| [ctop](ctop.md)                               |        `ctop`         |             :octicons-shield-lock-24:              |
+| [ctop](ctop.md)                               |       `docker`        |             :octicons-shield-lock-24:              |
 
 ### Database
 

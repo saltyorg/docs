@@ -18,22 +18,14 @@ tags:
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/bcicen/ctop){: .header-icons } | [:octicons-link-16: Docs](https://github.com/bcicen/ctop#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/bcicen/ctop){: .header-icons } | :material-docker: Docker |
 
-### 1. Installation
+## Deployment
 
-``` shell
-
-sb install ctop
-
+```sh
+sb install docker
 ```
 
-### 2. Usage
+## Usage
 
-After installation, launch ctop from the command line:
-
-``` shell
+```sh
 ctop
 ```
-
-ctop provides real-time metrics and an interactive interface for monitoring and managing Docker containers. Press `q` to exit or `h` for help.
-
-- [:octicons-link-16: Documentation: ctop Docs](https://github.com/bcicen/ctop#readme){: .header-icons }

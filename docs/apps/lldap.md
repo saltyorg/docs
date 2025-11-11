@@ -19,19 +19,19 @@ LLDAP (Light LDAP) is a lightweight, simplified LDAP server for authentication. 
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/lldap/lldap){: .header-icons } | [:octicons-link-16: Docs](https://github.com/lldap/lldap/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/lldap/lldap){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nitnelave/lldap){: .header-icons }|
 
-### 1. Installation
+## Deployment
 
-``` shell
+Opt in via Authelia authentication backend.
 
-sb install lldap
-
+```sh
+sb install authelia
 ```
 
-### 2. URL
+## Usage
 
-- To access LLDAP, visit <https://lldap.iYOUR_DOMAIN_NAMEi>
+Visit <https://lldap.iYOUR_DOMAIN_NAMEi>
 
-### 3. Setup
+## Basics
 
 LLDAP provides a lightweight LDAP server with a user-friendly web interface for managing users and groups. The configuration file is at `/opt/lldap/lldap_config.toml`. Optional SMTP settings for password resets can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `lldap_role_smtp_*` variables.
 

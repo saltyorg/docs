@@ -13,9 +13,7 @@ Checks for system reboot requirements and optionally reboots the host if configu
 
 ## Deployment
 
-```sh
-sb install reboot
-```
+Invoked during main role runs.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

@@ -56,5 +56,5 @@ tags:
 | [Hetzner VLAN](hetzner_vlan.md)         | `hetzner-vlan-deploy` `hetzner-vlan-remove` | 
 | [Plex Auth Token](plex_auth_token.md)   |              `plex-auth-token`              |
 | [Plex Fix Futures](plex_fix_futures.md) |             `plex-fix-futures`              | 
-| [Reboot](reboot.md)                     |                                             |
+| [Reboot](reboot.md)                     |                  `system`                   |
 | [Sandbox](sandbox.md)                   |                  `sandbox`                  |

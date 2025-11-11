@@ -54,6 +54,9 @@ def get_documented_apps(docs_path: Path, folder: str = "apps") -> Set[str]:
 
     documented = set()
     for doc_file in apps_path.glob("*.md"):
+        # Skip index.md files
+        if doc_file.name == "index.md":
+            continue
         # Remove .md extension to get app name
         app_name = doc_file.stem
         documented.add(app_name)

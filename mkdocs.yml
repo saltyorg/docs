@@ -347,7 +347,6 @@ nav:
             - phpmyadmin: sandbox/apps/phpmyadmin.md
           - Docker:
             - Dockwatch: sandbox/apps/dockwatch.md
-            - Watchtower: sandbox/apps/watchtower.md
           - Flaresolverr: sandbox/apps/flaresolverr.md
           - FreshRSS: sandbox/apps/freshrss.md
           - Guacamole: sandbox/apps/guacamole.md

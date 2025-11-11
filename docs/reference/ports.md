@@ -30,5 +30,4 @@ tags:
 | qBittorrent       | 6881 (UDP), 51413                            |                                                                                                                                            |
 | Sonarr              |                                              |                                                                                                                                            |
 | Cloudplow           |                                              |                                                                                                                                            |
-| Watchtower          |                                              |                                                                                                                                            |
 | WebTools for Plex | 33400, 33443                                 |                                                                                                                                            |

@@ -21,7 +21,7 @@ tags:
 ## Deployment
 
 ```sh
-sb install docker
+sb install ctop
 ```
 
 ## Usage

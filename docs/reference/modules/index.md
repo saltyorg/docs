@@ -12,11 +12,11 @@ tags:
 
 ## Backup
 
-|                                            | :material-airplane-takeoff:{.xl} |
-|--------------------------------------------|:--------------------------------:|
-| [Backup](../../saltbox/backup/backup.md)   |             `backup`             |
-| [Backup2](../../saltbox/backup/backup2.md) |            `backup2`             |
-| [Restore](../../saltbox/backup/restore.md) |            `restore`             |
+|                                            |                                    :material-airplane-takeoff:{.xl}                                     |
+|--------------------------------------------|:-------------------------------------------------------------------------------------------------------:|
+| [Backup](../../saltbox/backup/backup.md)   | `backup` `restore-service` `saltbox-restore-service` `set-backup` `unset-backup` `wipe-restore-service` |
+| [Backup2](../../saltbox/backup/backup2.md) |          `backup2` `restore-service2` `saltbox-restore-service2` `set-backup2` `unset-backup2`          |
+| [Restore](../../saltbox/backup/restore.md) |                                    `restore` `opt-permissions-reset`                                    |
 
 ## Custom Deployment
 
@@ -30,14 +30,14 @@ tags:
 
 ## Host Configuration
 
-|                     |                               |
-|---------------------|:-----------------------------:|
-| [Common](common.md) |           `common`            |
-| [Kernel](kernel.md) |           `kernel`            |
-| [MOTD](motd.md)     | `motd` `motd-generate-config` |
-| [System](system.md) |           `system`            |
-| [Shell](shell.md)   |            `shell`            |
-| [User](user.md)     |            `user`             |
+|                     |                                      |
+|---------------------|:------------------------------------:|
+| [Common](common.md) |               `common`               |
+| [Kernel](kernel.md) |               `kernel`               |
+| [MOTD](motd.md)     |    `motd` `motd-generate-config`     |
+| [System](system.md) | `system` `set-locale` `set-timezone` |
+| [Shell](shell.md)   |               `shell`                |
+| [User](user.md)     |                `user`                |
 
 ## Filesystem
 

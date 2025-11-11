@@ -278,12 +278,12 @@ tags:
 
 #### Management
 
-|                                           |                                     |                                   |
-|-------------------------------------------|:-----------------------------------:|:---------------------------------:|
-| [Portainer](portainer.md)                 |             `portainer`             | `feederbox_roles` `saltbox_roles` |
-| [Docker](docker.md)                       | `docker` `docker-filesystem-resize` |     :octicons-shield-lock-24:     |
-| [Dockwatch](../sandbox/apps/dockwatch.md) |         `sandbox-dockwatch`         |          `sandbox_roles`          |
-| [Yacht](../sandbox/apps/yacht.md)         |           `sandbox-yacht`           |          `sandbox_roles`          |
+|                                           |                                                                                        |                                   |
+|-------------------------------------------|:--------------------------------------------------------------------------------------:|:---------------------------------:|
+| [Portainer](portainer.md)                 |                                      `portainer`                                       | `feederbox_roles` `saltbox_roles` |
+| [Docker](docker.md)                       | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |     :octicons-shield-lock-24:     |
+| [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |          `sandbox_roles`          |
+| [Yacht](../sandbox/apps/yacht.md)         |                                    `sandbox-yacht`                                     |          `sandbox_roles`          |
 
 #### Misc
 
@@ -294,7 +294,7 @@ tags:
 | [diun](diun.md)                               |        `diun`         | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Dozzle](dozzle.md)                           |       `dozzle`        | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Docker Socket Proxy](docker_socket_proxy.md) | `docker-socket-proxy` | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
-| [ctop](ctop.md)                               |       `docker`        |             :octicons-shield-lock-24:              |
+| [ctop](ctop.md)                               |        `ctop`         |             :octicons-shield-lock-24:              |
 
 ### Database
 

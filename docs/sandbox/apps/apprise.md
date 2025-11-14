@@ -37,7 +37,7 @@ sb install sandbox-apprise
 
 The instance runs on the Docker network accessible to other saltbox network containers at `http://apprise:8000`
 
-The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#__tabbed_2_1) file located in `/srv/git/saltbox/accounts.yml`
+The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration-accountsyml) file located in `/srv/git/saltbox/accounts.yml`
 
 A typical apprise URL would look like this:
 

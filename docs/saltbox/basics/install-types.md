@@ -73,7 +73,7 @@ As with any Ansible tags provided by saltbox, it is safe to run these install ta
 
 ## Feederbox/Mediabox Setup Considerations
 
-- If your servers will share a domain, it is preferred to run only one instance of Authelia. This can run either on the Feederbox or Mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [Authelia configuration](../install/install.md#__tabbed_2_2).
+- If your servers will share a domain, it is preferred to run only one instance of Authelia. This can run either on the Feederbox or Mediabox as you may choose. The server that will host Authelia should be set as `master: yes` under `authelia:` in `settings.yml` - see [Authelia configuration](../install/install.md#step-2-configuration-settingsyml).
 
 - On the server hosting Authelia, it is advised to set the `traefik_trusted_ips` variable in your [Inventories](../inventory/index.md) file following the format below. This is for a Mediabox hosting Authelia. If the Feederbox will be hosting, the Mediabox IP would be substituted.
 

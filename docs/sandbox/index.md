@@ -185,6 +185,7 @@ tags:
 - **[watchstate](../sandbox/apps/watchstate.md)**  - tag - `sandbox-watchstate`
 - **[wikijs](../sandbox/apps/wikijs.md)**  - tag - `sandbox-wikijs`
 - **[wireguard](../sandbox/apps/wireguard.md)**  - tag - `sandbox-wireguard`
+- **[wishlist](../sandbox/apps/wishlist.md)** - tag - `sandbox-wishlist`
 - **[wizarr](../sandbox/apps/wizarr.md)**  - tag - `sandbox-wizarr`
 - **[wordpress](../sandbox/apps/wordpress.md)**  - tag - `sandbox-wordpress`
 - **[wrapperr](../sandbox/apps/wrapperr.md)**  - tag - `sandbox-wrapperr`

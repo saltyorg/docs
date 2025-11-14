@@ -17,7 +17,7 @@ Wishlist is a self-hosted wishlist application that you can share with your frie
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
- [:material-home: Project home](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-link-16: Docs](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/cmintey/wishlist){: .header-icons } | [:material-docker: Docker](ghcr.io/cmintey/wishlist){: .header-icons }|
+| [:material-home: Project home](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-link-16: Docs](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/cmintey/wishlist){: .header-icons } | [:material-docker: Docker](ghcr.io/cmintey/wishlist){: .header-icons }|
 
 !!! warning This is not behind Authelia by default since Wishlist has its own authentication and allows configuration for public lists
 

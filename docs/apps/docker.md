@@ -166,8 +166,12 @@ docker
 
         ```yaml
         # Version
+        # Supported formats:
+        # "28"      - Major version (installs latest 28.x.x, auto-updates within 28.x)
+        # "28.5"    - Major.minor version (installs latest 28.5.x, auto-updates within 28.5.x)
+        # "28.5.2"  - Exact version (installs exactly 28.5.2, no auto-updates)
         # Type: string
-        docker_version: "latest"
+        docker_version: "28"
         ```
 
     ??? variable string "`docker_ce_name`"
@@ -182,9 +186,7 @@ docker
 
         ```yaml
         # Type: string
-        docker_ce_package: "{{ 'docker-ce'
-                            if (docker_version is defined and docker_version | lower == 'latest')
-                            else 'docker-ce=*' + docker_version + '*~' + ansible_facts['distribution'] | lower + '.' + ansible_facts['distribution_version'] + '~' + ansible_facts['distribution_release'] | lower }}"
+        docker_ce_package: "docker-ce={{ docker_ce_resolved_version }}"
         ```
 
     ??? variable string "`docker_ce_filepath`"
@@ -213,9 +215,7 @@ docker
 
         ```yaml
         # Type: string
-        docker_ce_cli_package: "{{ 'docker-ce-cli'
-                                if (docker_version is defined and docker_version | lower == 'latest')
-                                else 'docker-ce-cli=*' + docker_version + '*~' + ansible_facts['distribution'] | lower + '.' + ansible_facts['distribution_version'] + '~' + ansible_facts['distribution_release'] | lower }}"
+        docker_ce_cli_package: "docker-ce-cli={{ docker_ce_cli_resolved_version }}"
         ```
 
     ??? variable string "`docker_ce_cli_filepath`"
@@ -319,19 +319,10 @@ docker
         docker_rootless_dpkg: "docker-ce-rootless-extras"
         ```
 
-    ??? variable string "`docker_package_state`"
-
-        ```yaml
-        # Misc
-        # Type: string
-        docker_package_state: "{{ 'latest'
-                               if (docker_version is defined and docker_version | lower == 'latest')
-                               else 'present' }}"
-        ```
-
     ??? variable bool "`put_docker_dpkg_into_hold`"
 
         ```yaml
+        # Misc
         # Type: bool (true/false)
         put_docker_dpkg_into_hold: true
         ```

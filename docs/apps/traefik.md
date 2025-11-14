@@ -647,7 +647,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: string
-        traefik_role_docker_image_tag: "v3.5"
+        traefik_role_docker_image_tag: "v3.6"
         ```
 
     ??? variable string "`traefik_role_docker_image`"

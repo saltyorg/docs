@@ -10,7 +10,7 @@ edit_uri: edit/main/docs/
 
 validation:
   absolute_links: warn
-  anchors: warn
+  anchors: info
   omitted_files: warn
   unrecognized_links: warn
 

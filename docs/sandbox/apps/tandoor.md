@@ -12,64 +12,80 @@ tags:
 
 ## Overview
 
-[Tandoor Recipes](https://github.com/TandoorRecipes/recipes)  is an application for managing recipes, planning meals, building shopping lists and much much more!
-
-### Core Features
-
-- 🥗 Manage your recipes with a fast and intuitive editor
-
-- 📆 Plan multiple meals for each day
-
-- 🛒 Shopping lists via the meal plan or straight from recipes
-
-- 📚 Cookbooks collect recipes into books
-
-- 👪 Share and collaborate on recipes with friends and family
-
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[Tandoor Recipes](https://github.com/TandoorRecipes/recipes) is an application for managing recipes, planning meals, building shopping lists and much, much more!
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:octicons-link-16: Docs](https://docs.tandoor.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/vabene1111/recipes){: .header-icons }|
 
-### 1. Installation
+---
 
-``` shell
+???+ warning "Migration Required for Existing Users"
+    
+    As of _role-refactor_, this role has been updated to use its own dedicated PostgreSQL database container instead of the shared `postgres` container. Once upgraded to role-refactor, existing users must follow the migration steps below to preserve their data.
 
+    1.  Stop the containers:
+
+        === "If additional apps use the `postgres` container"
+
+            Be aware that this will cause the additional apps to go offline temporarily.
+
+            ```shell
+            docker stop tandoor postgres
+            ```
+        
+        === "If Tandoor alone uses the `postgres` container"
+
+            ```shell
+            docker stop tandoor postgres
+            docker rm postgres
+            ```
+
+    1.  Copy or rename the existing Postgres directory:
+        
+        === "If additional apps use the `postgres` container"
+
+            ```shell
+            cp -r /opt/postgres /opt/tandoor-postgres
+            docker start postgres
+            ```
+        
+        === "If Tandoor alone uses the `postgres` container"
+
+            ```shell
+            mv /opt/postgres /opt/tandoor-postgres
+            ```
+
+    1.  [Deploy Tandoor :material-arrow-down-bold:](#deployment)
+
+## Deployment
+
+```sh
 sb install sandbox-tandoor
-
 ```
 
-### 2. Setup
+## Usage
 
-#### How do I add an admin user?
+Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
 
-To create your initial user you need to
+## Basics
 
-- execute a shell in the container using `docker exec -it tandoor sh`
+### Adding An Admin User
 
-- activate the virtual environment `source venv/bin/activate`
+1.  Execute a shell in the container using `docker exec -it tandoor sh`,
 
-- run `python manage.py createsuperuser` and follow the steps shown.
+1.  activate the virtual environment `source venv/bin/activate`,
 
-### 3. URL
+1.  run `python manage.py createsuperuser` and follow the steps shown.
 
-- To access Tandoor, visit <https://tandoor.iYOUR_DOMAIN_NAMEi>
 
-### 4. Other
+### Password Reset
 
-#### How do I reset passwords?
+1.  Execute a shell in the container using `docker exec -it tandoor sh`,
 
-To reset a lost password if access to the container is lost you need to
+1.  activate the virtual environment `source venv/bin/activate`,
 
-- execute a shell in the container using `docker exec -it tandoor sh`
-
-- activate the virtual environment `source venv/bin/activate`
-
-- run `python manage.py changepassword <username>` and follow the steps shown.
-
-To use a custom subdomain, add a custom value for `tandoor_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
+1.  run `python manage.py changepassword <username>` and follow the steps shown.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->

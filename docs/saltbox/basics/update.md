@@ -10,38 +10,42 @@ tags:
 
 ## Updating Saltbox
 
-To update Saltbox run:
+To pull changes, run:
 
-``` shell
-
+```sh
 sb update
-
 ```
 
-This will also upgrade Ansible as needed and migrate the configuration files as options are added, removed or changed over time.
+!!! info "Updates the Saltbox files *only*—*does not* update your containers."
 
-This updates the Saltbox files *only*;  It *does not* update your containers.
+    For example, if a new feature is added to Saltbox, `sb update` will get that new feature. If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
 
-For example, if a new feature is added to Saltbox, `sb update` will get that new feature.  If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
+This will also update the Saltbox CLI, Ansible, and migrate the configuration files as needed.
+
+## Upgrading Saltbox
+
+Every `sb update` should be followed by one of the [main tags](../../apps/main_tags.md), or at a minimum:
+
+```sh
+sb install core
+```
+
+This ensures dependencies and system configuration are up to spec with the latest Saltbox changes.
 
 ## Updating apps
 
-Generally, to update individual applications, run the tag for that application.  For example,
+Generally, to update individual applications, run the tag for that application. For example,
 
-``` shell
-
+```sh
 sb install radarr
-
 ```
 
 This will retrieve the current version of the Radarr image and recreate the container, which will update the application version.
 
 The same thing happens if you run one of the top-level tags:
 
-``` shell
-
+```sh
 sb install saltbox
-
 ```
 
 This will do as above for *all* the containers installed by the `saltbox` tag.

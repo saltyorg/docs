@@ -20,92 +20,28 @@ The inventory system offers a centralized approach to customizing roles, allowin
 
 Enter your new values in:
 
-```shell
+!!! tip inline end "Shell Shortcut"
+
+    ```sh
+    sb edit inventory
+    ```
+
+```
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
-For convenient shell access, you can use the `sb inventory` command.
-
-Changes take effect after running the affected tag(s) using the `sb install` command prefix.
-
-!!! example "Examples for reference. Not necessarily what you will have to run for your changes to apply!"
-
-    <div class="grid" markdown>
-
-    ```shell
-    sb install sonarr # (1)!
-    ```
-
-    1. The tag to run will usually match the variable prefix. In this case, `sonarr` for when you have added lines that start with `sonarr_`, such as the one shown in the [Override Demo](#override).
-
-    ```shell
-    sb install sonarr,sandbox-code-server,shell # (1)!
-    ```
-
-    2. - We recommend grouping tags for when you need to deploy multiple roles.
-        - For global variables, you may want to use a higher-level tag such as `core`, `feederbox`, `mediabox`, `saltbox`, or others as appropriate.
-        - The `shell` tag affects custom bash or zsh additions such as the ones shown [further down](#additional-examples).
-
-    </div>
+Changes take effect after deploying the affected role(s) using `sb install`.
 
 ## Finding Available Variables
 
-The variables that can be used for customization within the Inventory are listed in the following locations:
+Variables that can be used for customization within the Inventory are listed under ***Role Defaults*** at the end of role documentations. Find roles by using search or browsing the indexes:
 
-=== "GitHub File View"
-
-    <div class="sb-table--no-header">
-
-    | Scope   | Location |
-    |---------|----------|
-    | Saltbox | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/tree/master/roles/](https://github.com/saltyorg/Saltbox/tree/master/roles)<role_name\>[**/defaults/main.yml**](https://github.com/saltyorg/Saltbox/tree/master/roles) |
-    | Sandbox | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Sandbox/tree/master/roles/](https://github.com/saltyorg/Sandbox/tree/master/roles)<role_name\>[**/defaults/main.yml**](https://github.com/saltyorg/Sandbox/tree/master/roles) |
-    | Global  | [:fontawesome-solid-folder-tree: https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml](https://github.com/saltyorg/Saltbox/blob/master/inventories/group_vars/all.yml) |
-    
-    </div>
-
-=== "File Path on Saltbox Host"
-
-    !!! warning inline end "Never Edit These Files"
-    
-        Updates will overwrite your changes. Use the inventory system instead.
-
-    ```shell
-    /srv/git/saltbox/roles/<role_name>/defaults/main.yml
-    ```
-
-    ```shell
-    /opt/sandbox/roles/<role_name>/defaults/main.yml
-    ```
-
-    ```shell
-    /srv/git/saltbox/inventories/group_vars/all.yml
-    ```
-
-=== "Docker Parameters Reference"
-
-    !!! example inline end "Example"
-    
-        To obtain a `shm_size` variable for Plex, simply prepend `plex_docker_` to the parameter name: 
-      
-        ```yaml
-        plex_docker_shm_size
-        ```
-
-    For use cases involving Docker parameters beyond those exposed in the role files, it is still possible to construct usable Saltbox variables. The following resources provide the required syntax elements:
-
-    [:material-github: Saltbox Source Code](https://github.com/saltyorg/Saltbox/blob/master/resources/tasks/docker/create_docker_container.yml){ target="_blank" }  
-    [:material-ansible: Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html#parameters){ target="_blank" }
-
-=== "Something Missing?"
-
-    In some cases, usually resulting from incomplete role migration, certain settings may not be exposed for use in the Inventory system. 
-
-    Should you require additional functionality, feel free to create an issue on the [main repository](https://github.com/saltyorg/Saltbox/) and we will consider accommodating it.
+[Apps](../../apps/index.md){ .md-button }
+[Modules](../../reference/modules/index.md){ .md-button }
 
 ## Data Types
 
-Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). You will encounter five data types in the variable files:
+Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). You will encounter five data types in the defaults:
 
 | Data Type       | Token          | Syntax Template                                                                  | Saltbox Example                                                                                                                   |
 |-----------------|----------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -119,7 +55,7 @@ Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/
 
 Saltbox variable files are a combination of static and dynamic configuration. Many variable assignments are integral to how the component is deployed, and if modified, can break functionality or cause conflicts during updates. Some keywords and contents can help identify which variables may be customized:
 
-<div class="sb-table--heatmap" markdown>
+<div class="md-table--heatmap" markdown>
 
 | Pattern                      | Purpose                                                               |
 |------------------------------|-----------------------------------------------------------------------|
@@ -137,37 +73,34 @@ If the role supports multiple instances, you can choose to apply a configuration
 
 <div class="grid" markdown>
 
-<div class="annotate" markdown>
+<div markdown>
 
-```yaml title="Role-level (1)"
-rolename_role_setting_enabled: false
+:material-rhombus: **Role-level**
+
+```yaml
+rolename_role_setting_enabled: false # (1)!
 ```
 
-<div class="result" markdown>
+1.  Variable name unchanged
 
-Applies to all instances of the role
-
-</div>
+:material-arrow-right-bottom-bold: Applies to all instances of the role
 
 </div>
 
-1. Variable name unchanged
+<div markdown>
 
-<div class="annotate" markdown>
+:material-rhombus-split: **Instance-level**
 
-```yaml title="Instance-level (1)"
-instancename_setting_enabled: true
+```yaml
+instancename_setting_enabled: true # (1)!
 ```
-<div class="result" markdown>
 
-Applies to the specified instance
+1.  -   `_role` segment removed
+    -   name of role replaced with name of instance
+
+:material-arrow-right-bottom-bold: Applies to the specified instance
 
 </div>
-
-</div>
-
-1. - `_role` segment removed
-    - name of role replaced with name of instance
 
 </div>
 
@@ -175,57 +108,64 @@ Applies to the specified instance
 
 Let's explore two example use cases for customizing roles using variables in the Saltbox Inventory.
 
-### Override
+### Replacing a Default Value
 
-A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by looking into `/srv/git/saltbox/roles/sonarr/defaults/main.yml` around line 89:
+A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by navigating to [Sonarr: Role Defaults](../../apps/sonarr.md#role-defaults) and in the ***Docker*** tab, scrolling down to:
 
-```yaml linenums="83" hl_lines="10" title="https://github.com/saltyorg/Saltbox/blob/master/roles/sonarr/defaults/main.yml#L89"
-# Docker
-################################
+???+ variable string "`sonarr_role_docker_image_tag`"
 
-# Container
-sonarr_docker_container: "{{ sonarr_name }}"
+    === "Role-level"
 
-# Image
-sonarr_docker_image_pull: true
-sonarr_docker_image_repo: "ghcr.io/hotio/sonarr"
-sonarr_docker_image_tag: "release"
-sonarr_docker_image: "{{ lookup('vars', sonarr_name + '_docker_image_repo', default=sonarr_docker_image_repo)
-                         + ':' + lookup('vars', sonarr_name + '_docker_image_tag', default=sonarr_docker_image_tag) }}"
-```
+        ```yaml
+        # Type: string
+        sonarr_role_docker_image_tag: "release"
+        ```
 
-Note: `sonarr_docker_image_tag: "release"`. 
+    === "Instance-level"
+   
+        ```yaml
+        # Type: string
+        sonarr2_docker_image_tag: "release"
+        ```
 
-By default, Saltbox will use `ghcr.io/hotio/sonarr:release` as the Sonarr Docker image.
+In light of this default, Saltbox will use `ghcr.io/hotio/sonarr:release` as the Sonarr Docker image.
 
-Should we choose to switch to "nightly" versions, we can add the following line to `localhost.yml`:
+Opting to switch to "nightly" versions across all Sonarr instances, we can add the following line to `localhost.yml`:
 
 ```yaml
-sonarr_docker_image_tag: "nightly"
+sonarr_role_docker_image_tag: "nightly"
 ```
 
 This will cause Saltbox to use the `ghcr.io/hotio/sonarr:nightly` Docker image, overriding the default: `release`. When we update Saltbox, our tag change to `nightly` will remain in effect.
 
-### Addition
+### Adding an Item to a List
 
-A common use for additions is to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md) container access to more locations on the host:
+A common use for lists to specify extra Docker mappings or flags. Let's examine how to give our [code-server](../../sandbox/apps/code_server.md#role-defaults) container access to more locations on the host. In the ***Docker*** section yet again, we find:
 
-```yaml linenums="87" hl_lines="7" title="https://github.com/saltyorg/Sandbox/blob/master/roles/code_server/defaults/main.yml#L87"
-# Volumes
-code_server_docker_volumes_default:
-  - "{{ code_server_paths_location }}/project:/home/coder/project"
-  - "{{ code_server_paths_location }}/.config:/home/coder/.config"
-  - "{{ code_server_paths_location }}/.local:/home/coder/.local"
-  - "{{ server_appdata_path }}:/host_opt"
-code_server_docker_volumes_custom: []
-```
+??? variable list "`code_server_role_docker_volumes_default`"
+
+    ```yaml
+    # Type: list
+    code_server_role_docker_volumes_default: 
+      - "{{ lookup('role_var', '_paths_location', role='code_server') }}/project:/home/coder/project"
+      - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.config:/home/coder/.config"
+      - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.local:/home/coder/.local"
+      - "{{ server_appdata_path }}:/host_opt"
+    ```
+
+???+variable list "`code_server_role_docker_volumes_custom`"
+
+    ```yaml
+    # Type: list
+    code_server_role_docker_volumes_custom: []
+    ```
 
 Note the list syntax. Since we want the container to preserve existing volumes, the `_docker_volumes_default` list should not be overridden. Instead, we use the `_docker_volumes_custom` list.
 
 To expose additional host locations (in this case, `/srv` and our home directory), we can add custom volumes to the list using the following syntax in the Inventory:
 
 ```yaml
-code_server_docker_volumes_custom:
+code_server_role_docker_volumes_custom:
   - "/srv:/host_srv"
   - "/home:/host_home"
 ```

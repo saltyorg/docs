@@ -195,7 +195,10 @@ nav:
       - Update: saltbox/basics/update.md
       - Accessing Apps: saltbox/basics/accessing-apps.md
       - Paths: saltbox/basics/paths.md
-      - Inventory: saltbox/inventory/index.md
+      - Inventory:
+          - saltbox/inventory/index.md
+          - saltbox/inventory/example-overrides.md
+          - saltbox/inventory/danger-zone.md
       - CLI: saltbox/basics/sb.md
       - Backup/Restore:
           - Settings: saltbox/backup/settings.md

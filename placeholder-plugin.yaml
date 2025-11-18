@@ -7,6 +7,12 @@ placeholders:
     replace_everywhere: true
     description: Your domain name
     default: yourdomain.tld
+  ROLE_NAME:
+    description: Name of the role
+    default: sonarr
+  CUSTOM_SUBDOMAIN_NAME:
+    description: Name of your custom subdomain
+    default: requests
   CUSTOM_APP_NAME:
     description: Your app's name
     default: appname

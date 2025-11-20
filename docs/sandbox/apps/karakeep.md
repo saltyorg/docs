@@ -18,9 +18,9 @@ The GUI of the application is accessed through a modern web browser (no installa
 
 <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
 
-[:material-bookshelf: Project Docs](https://docs.karakeep.app/){ .md-button .md-button--stretch }
+[:material-bookshelf:**Project Docs**](https://docs.karakeep.app/){ .md-button .md-button--stretch }
 
-[:material-git: GitHub Repo](https://github.com/karakeep-app/karakeep){ .md-button .md-button--stretch }
+[:material-git:**GitHub Repo**](https://github.com/karakeep-app/karakeep){ .md-button .md-button--stretch }
 
 </div>
 

@@ -4,32 +4,35 @@ settings:
 
 placeholders:
   YOUR_DOMAIN_NAME:
-    replace_everywhere: true
-    description: Your domain name
     default: yourdomain.tld
+    description: Your domain name
+    replace_everywhere: true
   ROLE_NAME:
-    description: Name of the role
     default: sonarr
+    description: Name of the role
+  INSTANCE_SUFFIX:
+    default: 4k
+    description: Instance suffix
   CUSTOM_SUBDOMAIN_NAME:
-    description: Name of your custom subdomain
     default: requests
+    description: Name of your custom subdomain
   CUSTOM_APP_NAME:
-    description: Your app's name
     default: appname
+    description: Your app's name
   CUSTOM_APP_FQDN: # For a Markdown absolute link use `<https://iCUSTOM_APP_FQDNi>`
+    default: xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx
+    description: Your app's FQDN
     read_only: true
     replace_everywhere: true
-    description: Your app's FQDN
-    default: xCUSTOM_APP_NAMEx.xYOUR_DOMAIN_NAMEx
   CUSTOM_DOCKER_IMAGE_REPO:
-    description: Your container's Docker image
     default: namespace/imagename
+    description: Your container's Docker image
   CUSTOM_DOCKER_IMAGE_TAG:
-    description: Your container's Docker image tag
     default: latest
+    description: Your container's Docker image tag
   CUSTOM_APP_WEB_PORT:
-    description: Your container's web listening port
     default: 1337
+    description: Your container's web listening port
   CUSTOM_CONTAINER_APPDATA_PATH:
-    description: Your container's application data path
     default: /config
+    description: Your container's application data path

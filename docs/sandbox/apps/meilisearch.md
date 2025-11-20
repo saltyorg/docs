@@ -16,9 +16,9 @@ tags:
 
 <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
 
-[:material-bookshelf: Project Home](https://www.meilisearch.com/){ .md-button .md-button--stretch }
+[:material-bookshelf:**Project Home**](https://www.meilisearch.com/){ .md-button .md-button--stretch }
 
-[:material-git: GitHub Repo](https://github.com/meilisearch/meilisearch){ .md-button .md-button--stretch }
+[:material-git:**GitHub Repo**](https://github.com/meilisearch/meilisearch){ .md-button .md-button--stretch }
 
 </div>
 

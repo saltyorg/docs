@@ -19,15 +19,21 @@ tags:
 
 ---
 
-!!! abstract sb-directions "Saltbox Setup Process"
+!!! abstract directions "Saltbox Setup Process"
 
-    <div>
+    <div data-search-exclude>
 
     <div>
 
     Opting for another media server solution?
+
+    <div>
+
+    [**Explore alternatives**:material-shuffle-variant:](index.md#media-server){ .md-button }
     
-    [Skip to Autoscan :material-forward:](autoscan.md){ .md-button }
+    [**Skip to Autoscan**:material-fast-forward:](autoscan.md){ .md-button }
+
+    </div>
 
     </div>
 
@@ -41,9 +47,9 @@ sb install plex
 
 ## Usage
 
-1. To access Plex, visit <https://plex.iYOUR_DOMAIN_NAMEi>
+1.  To access Plex, visit <https://plex.iYOUR_DOMAIN_NAMEi>
 
-2. Login with your Plex account
+2.  Login with your Plex account
 
     ![](../images/plex-media-server/plex-01-signin.png)
 
@@ -51,19 +57,19 @@ sb install plex
 
 ### Setup Wizard
 
-1. First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.
+1.  First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.
 
     ![](../images/plex-media-server/plex-02-intro.png)
 
-2. Next screen will show you your server, with a randomly generated name. Give it a friendly name and click "NEXT".
+2.  Next screen will show you your server, with a randomly generated name. Give it a friendly name and click "NEXT".
 
     ![](../images/plex-media-server/plex-03-server-setup-1.png)
 
-3. On the next screen, click "NEXT" (we will add Libraries later).
+3.  On the next screen, click "NEXT" (we will add Libraries later).
 
     ![](../images/plex-media-server/plex-04-server-setup-2.png)
 
-4. Click "DONE".
+4.  Click "DONE".
 
     ![](../images/plex-media-server/plex-05-server-setup-3.png)
 
@@ -263,21 +269,25 @@ As mentioned in the [Introduction](../saltbox/basics/index.md) page, [Autoscan](
 
 To do so:
 
-1. Click the 3 dots next to a Plex library.
+1.  Click the 3 dots next to a Plex library.
 
-2. Select "Scan Library Files".
+2.  Select "Scan Library Files".
 
-   ![](../images/plex-media-server/plex-24-scan-library.png)
+    ![](../images/plex-media-server/plex-24-scan-library.png)
 
-3. Repeat steps 1-2 for each library.
+3.  Repeat steps 1-2 for each library.
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you Setting Saltbox up for the first time?
 
-[Continue to Tautulli :material-forward:](tautulli.md){ .md-button }
+<div markdown>
+
+[**Continue to Tautulli**:material-forward:](tautulli.md){ .md-button }
+
+</div>
 
 </div>
 

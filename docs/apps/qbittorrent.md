@@ -18,23 +18,33 @@ tags:
 
 ---
 
-!!! abstract sb-directions "Saltbox Setup Process"
+!!! abstract directions "Saltbox Setup Process"
 
-    <div>
+    <div data-search-exclude>
 
     <div>
     
     Opting out of torrents?
+
+    <div>
     
-    [Skip to Sonarr :material-forward:](sonarr.md){ .md-button }
+    [Skip to Sonarr:material-fast-forward:](sonarr.md){ .md-button }
     
+    </div>
+
     </div>
 
     <div>
 
     Opting for another BitTorrent client?
+
+    <div>
     
-    [Skip to Jackett :material-forward:](jackett.md){ .md-button }
+    [Explore alternatives:material-shuffle-variant:](index.md#download-client){ .md-button }
+    
+    [Skip to Jackett:material-fast-forward:](jackett.md){ .md-button }
+    
+    </div>
     
     </div>
 
@@ -98,11 +108,15 @@ To access qBittorrent, visit <https://qbittorrent.iYOUR_DOMAIN_NAMEi>
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to Jackett :material-forward:](jackett.md){ .md-button }
+<div markdown>
+
+[**Continue to Jackett**:material-forward:](jackett.md){ .md-button }
+
+</div>
 
 </div>
 

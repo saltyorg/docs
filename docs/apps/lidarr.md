@@ -425,11 +425,15 @@ This is used during the setup of [Organizr](organizr.md).
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to Overseerr :material-forward:](overseerr.md){ .md-button }
+<div markdown>
+
+[**Continue to Overseerr**:material-forward:](overseerr.md){ .md-button }
+
+</div>
 
 </div>
 

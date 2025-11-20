@@ -13,15 +13,15 @@ tags:
 
 Implements a Docker container for Firefox. The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
 
-<div class="grid sb-button-grid" markdown data-search-exclude>
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-home: Homepage&nbsp;&nbsp;](https://jlesage.github.io/docker-apps){ .md-button .md-button--stretch }
+[:material-home:**Homepage**](https://jlesage.github.io/docker-apps){ .md-button .md-button--stretch }
 
-[:material-bookshelf: Manual&nbsp;&nbsp;](https://github.com/jlesage/docker-firefox/blob/master/README.md#usage){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](https://github.com/jlesage/docker-firefox/blob/master/README.md#usage){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker: Releases&nbsp;&nbsp;](https://hub.docker.com/r/jlesage/firefox/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/firefox/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github: Community&nbsp;&nbsp;](https://github.com/jlesage/docker-firefox/discussions){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/jlesage/docker-firefox/discussions){ .md-button .md-button--stretch }
 
 </div>
 
@@ -29,11 +29,11 @@ Implements a Docker container for Firefox. The GUI of the application is accesse
 
 ## Configuration
 
-Settings are available as [environment variables:octicons-link-external-16:{ .sb-icon--sm }](https://github.com/jlesage/docker-firefox#environment-variables) in `/opt/firefox/.env`.
+Settings are available as [environment variables:octicons-link-external-16:{ .md-icon--sm }](https://github.com/jlesage/docker-firefox#environment-variables) in `/opt/firefox/.env`.
 
-???+ question "Security"
+??? tip "Access Control"
 
-    By default, web access is restricted by Authelia, and VNC access is secured through SSH authentication; hence, no VNC password is configured. To add this extra layer of security, the process is straightforward:
+    By default, web access is restricted by Authelia and VNC access by SSH authentication; hence, no VNC password is configured. To add this extra layer of authorization, the process is straightforward:
 
     1. Run the following command:
        ```shell
@@ -46,26 +46,32 @@ Settings are available as [environment variables:octicons-link-external-16:{ .sb
 
 ## Deployment
 
-``` shell
+```shell
 sb install sandbox-firefox
 ```
 
-!!! info inline end sb-has-fixed-width "Downloads Save Location"
+## Usage
+
+!!! info inline end inline-fit-content "Downloads Save Location"
+
     ```
     /mnt/unionfs/downloads/firefox
     ```
 
-## Usage
-
-### :material-web: Web
+### Web
 
 Visit <https://firefox.iYOUR_DOMAIN_NAMEi>.
 
-### :material-remote-desktop: VNC
+### VNC
 
 The role supports VNC access over an SSH tunnel (local port forwarding) to Saltbox.
 
-!!! example "Example Command on Local Machine <span style="float:right;color:#00bfa5">:material-fire: Some VNC apps have this functionality built-in!</span>"
+???+ example "Example Command on Local Machine"
+
+    !!! tip ""
+    
+        Some VNC apps have this functionality built-in!
+
     ```shell
     ssh -L localhost:5900:firefox:5900 seed@203.0.113.1 -p 8843 # (1)!
     ```

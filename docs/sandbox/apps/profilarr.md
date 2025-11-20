@@ -15,15 +15,15 @@ tags:
 
 Configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
 
-<div class="grid sb-button-grid" markdown data-search-exclude>
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-home: Homepage&nbsp;&nbsp;](https://dictionarry.dev){ .md-button .md-button--stretch }
+[:material-home:**Homepage**](https://dictionarry.dev){ .md-button .md-button--stretch }
 
-[:material-bookshelf: Manual&nbsp;&nbsp;](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker: Releases&nbsp;&nbsp;](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord: Community&nbsp;&nbsp;](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 
 </div>
 

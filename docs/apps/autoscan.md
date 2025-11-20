@@ -279,11 +279,15 @@ Further documentation:
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you Setting Saltbox up for the first time?
 
-[Continue to SABnzbd](sabnzbd.md){ .md-button }
+<div markdown>
+
+[**Continue to SABnzbd**:material-forward:](sabnzbd.md){ .md-button }
+
+</div>
 
 </div>
 

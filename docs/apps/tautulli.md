@@ -79,11 +79,15 @@ To access Tautulli, visit <https://tautulli.iYOUR_DOMAIN_NAMEi>
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to Autoscan :material-forward:](autoscan.md){ .md-button }
+<div markdown>
+
+[**Continue to Autoscan**:material-forward:](autoscan.md){ .md-button }
+
+</div>
 
 </div>
 

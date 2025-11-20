@@ -168,14 +168,17 @@ Any additional question please reach out to the [Organizr](https://organizr.app/
 
 ## Next
 
-
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
 You're ready to explore Saltbox! You can start checking out community apps if you wish.
 
-[Continue to Sandbox :material-forward:](../sandbox/basics.md){ .md-button }
+<div markdown>
+
+[**Continue to Sandbox**:material-forward:](../reference/modules/sandbox.md){ .md-button }
+
+</div>
 
 </div>
 

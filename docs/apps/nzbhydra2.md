@@ -19,15 +19,21 @@ tags:
 
 ---
 
-!!! abstract sb-directions "Saltbox Setup Process"
+!!! abstract directions "Saltbox Setup Process"
 
-    <div>
+    <div data-search-exclude>
 
     <div>
 
     Opting for another indexer manager?
+
+    <div>
     
-    [Skip to qBittorrent :material-forward:](qbittorrent.md){ .md-button }
+    [Explore alternatives:material-shuffle-variant:](index.md#indexer-management){ .md-button }
+    
+    [Skip to qBittorrent:material-fast-forward:](qbittorrent.md){ .md-button }
+
+    </div>
 
     </div>
 
@@ -67,11 +73,15 @@ Visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>.
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to qBittorrent :material-forward:](qbittorrent.md){ .md-button }
+<div markdown>
+
+[**Continue to qBittorrent**:material-forward:](qbittorrent.md){ .md-button }
+
+</div>
 
 </div>
 

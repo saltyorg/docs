@@ -1,4 +1,6 @@
 :root {
+  --md-default-fg-color: inherit;
+  --md-primary-fg-color: inherit;
   --md-admonition-icon--variable: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.41 3c1.39 2.71 1.94 5.84 1.59 9-.2 3.16-1.3 6.29-3.17 9l-1.53-1c1.61-2.43 2.55-5.2 2.7-8 .34-2.8-.11-5.57-1.3-8zM5.17 3 6.7 4C5.09 6.43 4.15 9.2 4 12c-.34 2.8.12 5.57 1.3 8l-1.69 1c-1.4-2.71-1.96-5.83-1.61-9 .2-3.16 1.3-6.29 3.17-9m6.91 7.68 2.32-3.23h2.53l-3.78 5 2.2 4.92h-2.26L11.71 14l-2.43 3.33H6.76l3.9-5.12-2.13-4.76h2.27z"/></svg>');
   --md-admonition-icon--string: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="2,5 5.5,5 4.7,12 2.8,12"/><polygon points="7,5 10.5,5 9.7,12 7.8,12"/><polygon points="13.5,5 17,5 16.2,12 14.3,12"/><polygon points="18.5,5 22,5 21.2,12 19.3,12"/></svg>');
   --md-admonition-icon--int: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75M7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.9 2.9 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.07 1.07 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.75.75 0 0 1 .762-.02"/></svg>');
@@ -9,14 +11,6 @@
 
 .md-typeset__table {
   min-width: 100%;
-}
-
-.md-typeset table:not([class]) {
-  display: table;
-}
-
-.md-typeset .md-button--stretch {
-  width: 100%;
 }
 
 @media only screen and (min-width: 76.25em) {
@@ -50,139 +44,6 @@
   animation: heart 1000ms infinite;
 }
 
-/*
-  Overrides for button grids
-  Usage: wrap a 4 button block in a div with this class
-*/
-.sb-button-grid {
-  grid-template-columns: repeat(auto-fit, minmax(8.8rem, 1fr)) !important;
-
-  .md-button {
-    text-align: center;
-    white-space: nowrap;
-    overflow: clip;
-    text-overflow: ellipsis;
-  }
-}
-
-/* Override inline admonition to be wider */
-@media only screen and (min-width: 45em) {
-  .sb-has-fixed-width {
-    width: 13.5rem !important;
-  }
-}
-
-/*
-  Hide table header
-  Usage: wrap markdown table in a div with this class
-*/
-.sb-table--no-header thead {
-  display: none;
-}
-
-/*
-  Colorizes table rows to convey risk level
-  Usage: wrap markdown table in a div with this class
-*/
-.sb-table--heatmap {
-  tbody {
-    tr:nth-child(1) {
-      background: #00c8531a;
-    }
-
-    tr:nth-child(2) {
-      background: #64dd171a;
-    }
-
-    tr:nth-child(3) {
-      background: #ff91001a;
-    }
-
-    tr:nth-child(4) {
-      background: #ff52521a;;
-    }
-
-    tr:nth-child(5) {
-      background: #f500571a;
-    }
-  }
-}
-
-/*
-  Custom admonitions for variables.
-
-  Usage:
-    !!! variable "`var_name`"
-        Content for a generic variable.
-
-  For specific types, add the type name after "variable":
-    !!! variable string "`string_var_name`"
-        Content for a string variable.
-
-    !!! variable int "`int_var_name`"
-        Content for an integer variable.
-
-    !!! variable bool "`bool_var_name`"
-        Content for a boolean variable.
-
-    !!! variable list "`list_var_name`"
-        Content for a list variable.
-
-    !!! variable dict "`dict_var_name`"
-        Content for a dictionary variable.
-*/
-.md-typeset .admonition.variable,
-.md-typeset details.variable {
-  border-color: rgb(84, 109, 120);
-}
-
-.md-typeset .variable > .admonition-title,
-.md-typeset .variable > summary {
-  background-color: rgba(84, 109, 120, 0.1);
-
-  code {
-    background: none;
-    box-shadow: none;
-  }
-}
-
-.md-typeset .variable > .admonition-title::before,
-.md-typeset .variable > summary::before {
-  background-color: rgb(84, 109, 120);
-  -webkit-mask-image: var(--md-admonition-icon--variable);
-  mask-image: var(--md-admonition-icon--variable);
-}
-
-.md-typeset .variable.string > .admonition-title::before,
-.md-typeset .variable.string > summary::before {
-  -webkit-mask-image: var(--md-admonition-icon--string);
-  mask-image: var(--md-admonition-icon--string);
-}
-
-.md-typeset .variable.int > .admonition-title::before,
-.md-typeset .variable.int > summary::before {
-  -webkit-mask-image: var(--md-admonition-icon--int);
-  mask-image: var(--md-admonition-icon--int);
-}
-
-.md-typeset .variable.bool > .admonition-title::before,
-.md-typeset .variable.bool > summary::before {
-  -webkit-mask-image: var(--md-admonition-icon--bool);
-  mask-image: var(--md-admonition-icon--bool);
-}
-
-.md-typeset .variable.list > .admonition-title::before,
-.md-typeset .variable.list > summary::before {
-  -webkit-mask-image: var(--md-admonition-icon--list);
-  mask-image: var(--md-admonition-icon--list);
-}
-
-.md-typeset .variable.dict > .admonition-title::before,
-.md-typeset .variable.dict > summary::before {
-  -webkit-mask-image: var(--md-admonition-icon--dict);
-  mask-image: var(--md-admonition-icon--dict);
-}
-
 /* Button styling overrides for the role variables visibility toggle */
 label[for="sb-checkbox--var-level"] {
   display: flex !important;
@@ -205,11 +66,6 @@ label[for="sb-checkbox--var-level"] {
     overflow: clip;
     text-overflow: ellipsis;
   }
-}
-
-.sb-icon--sm {
-  --md-icon-size: .75em !important;
-  margin: .07em;
 }
 
 /* Placeholders auto input table overrides */
@@ -262,42 +118,182 @@ label[for="sb-checkbox--var-level"] {
   }
 }
 
-/* Traffic direction signs with buttons */
-.admonition.sb-directions > div {
-  display: flex;
-  gap: 1em;
-  flex-direction: column;
-  margin-top: .6rem;
-}
-
-.admonition.sb-directions > div > div,
-.sb-directions-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1em;
-
-  & > p {
-    margin-block: 0;
+.md-typeset {
+  table:not([class]) {
+    display: table;
   }
 
-  & > p:last-child {
-    margin-left: auto;
+  .md-button--stretch {
+    width: 100%;
+  }
+
+  .md-icon--sm {
+    --md-icon-size: .75em;
+    margin: .07em;
+  }
+
+  /*
+    Overrides for button grids
+    Usage: wrap a 4 button block in a div with this class
+  */
+
+  .grid--buttons {
+    grid-template-columns: repeat(auto-fit, minmax(8.8rem, 1fr));
 
     .md-button {
-      position: relative;
-      padding: .3em .6em .3em .5em;
       text-align: center;
-      width: 18em;
       white-space: nowrap;
       overflow: clip;
       text-overflow: ellipsis;
+    }
+  }
 
-      .twemoji {
-        position: absolute;
-        top: 21%;
-        right: 3%;
+  /* Dodge inline admonition scrollbars */
+
+  .inline-fit-content {
+    width: fit-content;
+  }
+
+  /*
+    Custom admonitions for variables.
+
+    Usage:
+      !!! variable "`var_name`"
+          Content for a generic variable.
+
+    For specific types, add the type name after "variable":
+      !!! variable string "`string_var_name`"
+          Content for a string variable.
+
+      !!! variable int "`int_var_name`"
+          Content for an integer variable.
+
+      !!! variable bool "`bool_var_name`"
+          Content for a boolean variable.
+
+      !!! variable list "`list_var_name`"
+          Content for a list variable.
+
+      !!! variable dict "`dict_var_name`"
+          Content for a dictionary variable.
+  */
+
+  .admonition.variable,
+  details.variable {
+    border-color: rgb(84, 109, 120);
+  }
+
+  .variable > .admonition-title,
+  .variable > summary {
+    background-color: rgba(84, 109, 120, 0.1);
+
+    code {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .variable > .admonition-title::before,
+  .variable > summary::before {
+    background-color: rgb(84, 109, 120);
+    -webkit-mask-image: var(--md-admonition-icon--variable);
+    mask-image: var(--md-admonition-icon--variable);
+  }
+
+  .variable.string > .admonition-title::before,
+  .variable.string > summary::before {
+    -webkit-mask-image: var(--md-admonition-icon--string);
+    mask-image: var(--md-admonition-icon--string);
+  }
+
+  .variable.int > .admonition-title::before,
+  .variable.int > summary::before {
+    -webkit-mask-image: var(--md-admonition-icon--int);
+    mask-image: var(--md-admonition-icon--int);
+  }
+
+  .variable.bool > .admonition-title::before,
+  .variable.bool > summary::before {
+    -webkit-mask-image: var(--md-admonition-icon--bool);
+    mask-image: var(--md-admonition-icon--bool);
+  }
+
+  .variable.list > .admonition-title::before,
+  .variable.list > summary::before {
+    -webkit-mask-image: var(--md-admonition-icon--list);
+    mask-image: var(--md-admonition-icon--list);
+  }
+
+  .variable.dict > .admonition-title::before,
+  .variable.dict > summary::before {
+    -webkit-mask-image: var(--md-admonition-icon--dict);
+    mask-image: var(--md-admonition-icon--dict);
+  }
+
+  /* Traffic direction signs with buttons */
+
+  .admonition.directions > div {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    margin-top: .6rem;
+  }
+
+  .admonition.directions > div > div,
+  .directions-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    & > * {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-block: 0;
+      justify-content: end;
+
+      > p {
+        margin-block: 0;
+
+        .md-button {
+          position: relative;
+          padding: .3em 2em .3em 2em;
+          width: 18em;
+          text-align: center;
+          white-space: nowrap;
+          overflow: clip;
+          text-overflow: ellipsis;
+        }
       }
+    }
+
+    & > *:last-child {
+      margin-left: auto;
+    }
+  }
+
+  /*
+    Button side icons
+    Requires **bold** link text and an :icon: on one side or both
+    Ex: [**Go Home**:material-home:](index.md){ .md-button }
+  */
+
+  .md-button:has(> strong) {
+    position: relative;
+
+    > .twemoji:first-child {
+      position: absolute;
+      top: 49%;
+      left: calc(0.5em + 3%);
+      transform: translateY(-50%);
+    }
+
+    > .twemoji:not(:first-child) {
+      position: absolute;
+      top: 49%;
+      right: calc(0.5em + 3%);
+      transform: translateY(-50%);
     }
   }
 }

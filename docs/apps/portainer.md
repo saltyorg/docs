@@ -51,11 +51,15 @@ To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to Organizr :material-forward:](organizr.md){ .md-button }
+<div markdown>
+
+[**Continue to Organizr**:material-forward:](organizr.md){ .md-button }
+
+</div>
 
 </div>
 

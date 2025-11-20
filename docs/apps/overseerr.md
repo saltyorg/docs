@@ -18,16 +18,22 @@ tags:
 
 ---
 
-!!! abstract sb-directions "Saltbox Setup Process"
+!!! abstract directions "Saltbox Setup Process"
 
-    <div>
+    <div data-search-exclude>
 
     <div>
 
     Opting out of Plex Media Server?  
     Opting for another requests manager?
-    
-    [Skip to Portainer :material-forward:](portainer.md){ .md-button }
+
+    <div>
+
+    [Explore alternatives:material-shuffle-variant:](index.md#request){ .md-button }
+
+    [Skip to Portainer:material-fast-forward:](portainer.md){ .md-button }
+
+    </div>
 
     </div>
 
@@ -111,11 +117,15 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ## Next
 
-<div class="sb-directions-row" markdown>
+<div class="directions-menu" markdown>
 
 Are you setting Saltbox up for the first time?
 
-[Continue to Portainer :material-forward:](portainer.md){ .md-button }
+<div markdown>
+
+[**Continue to Portainer**:material-forward:](portainer.md){ .md-button }
+
+</div>
 
 </div>
 

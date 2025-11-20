@@ -29,9 +29,9 @@ tags:
 
     <div>
 
-    [Explore alternatives:material-shuffle-variant:](index.md#request){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#request){ .md-button }
 
-    [Skip to Portainer:material-fast-forward:](portainer.md){ .md-button }
+    [**Skip to Portainer**:material-fast-forward:](portainer.md){ .md-button }
 
     </div>
 

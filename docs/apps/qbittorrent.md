@@ -28,7 +28,7 @@ tags:
 
     <div>
     
-    [Skip to Sonarr:material-fast-forward:](sonarr.md){ .md-button }
+    [**Skip to Sonarr**:material-fast-forward:](sonarr.md){ .md-button }
     
     </div>
 
@@ -40,9 +40,9 @@ tags:
 
     <div>
     
-    [Explore alternatives:material-shuffle-variant:](index.md#download-client){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
     
-    [Skip to Jackett:material-fast-forward:](jackett.md){ .md-button }
+    [**Skip to Jackett**:material-fast-forward:](jackett.md){ .md-button }
     
     </div>
     

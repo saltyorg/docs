@@ -29,7 +29,7 @@ tags:
 
     <div>
     
-    [Skip to qBittorrent:material-fast-forward:](qbittorrent.md){ .md-button }
+    [**Skip to qBittorrent**:material-fast-forward:](qbittorrent.md){ .md-button }
 
     </div>
 
@@ -41,9 +41,9 @@ tags:
 
     <div>
     
-    [Explore alternatives:material-shuffle-variant:](index.md#download-client){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
 
-    [Skip to NZBHydra2:material-fast-forward:](nzbhydra2.md){ .md-button }
+    [**Skip to NZBHydra2**:material-fast-forward:](nzbhydra2.md){ .md-button }
 
     </div>
 

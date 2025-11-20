@@ -29,14 +29,25 @@ Enter your new values in:
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
-Changes take effect after deploying the affected role(s) using `sb install` with their tag(s).
+Changes take effect after deploying the affected role(s) using `sb install` with the matching role tag(s).
 
 ## Finding Available Variables
 
-Variables that can be used for customization within the Inventory are listed under ***Role Defaults*** at the end of role documentations. Find roles by using search or browsing the indexes:
+Variables that can be used for customization within the Inventory are listed under ***Role Defaults*** at the end of role documentations.
 
-[Apps](../../apps/index.md){ .md-button }
-[Modules](../../reference/modules/index.md){ .md-button }
+<div class="directions-menu" markdown>
+
+Find a role by using search or browsing the indexes:
+
+<div markdown>
+
+[Browse Apps](../../apps/index.md){ .md-button }
+
+[Browse Modules](../../reference/modules/index.md){ .md-button }
+
+</div>
+
+</div>
 
 ## Data Types
 
@@ -52,19 +63,19 @@ Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/
 
 ## Override Levels
 
-If the role supports instantiation, you can choose to apply a configuration across all instances (role-level) or to a specified instance only (instance-level). This is done by shaping the variable name as follows:
+When a role supports [multiple instances](../../reference/multiple-instances.md), you can apply a configuration across all instances or to a specified instance. This is achieved by shaping the variable name as follows:
 
 <div class="grid" markdown>
 
 <div markdown>
 
-:material-rhombus: **Role-level**
+:material-rhombus: **Role-level** (default)
 
 ```yaml
-rolename_role_setting_enabled: false # (1)!
+xROLE_NAMEx_role_setting_enabled: false # (1)!
 ```
 
-1.  Variable name unchanged (single-instance default)
+1.  Variable name unchanged (default when no instances are defined)
 
 :material-arrow-right-bottom-bold: Applies to all instances of the role
 
@@ -75,17 +86,19 @@ rolename_role_setting_enabled: false # (1)!
 :material-rhombus-split: **Instance-level**
 
 ```yaml
-instancename_setting_enabled: true # (1)!
+dROLE_NAMEdxINSTANCE_SUFFIXx_setting_enabled: true # (1)!
 ```
 
 1.  -   `_role` segment removed
-    -   name of role replaced with name of instance
+    -   instance name can be the role name (`xROLE_NAMEx`) or prefixed with it (`dROLE_NAMEdxINSTANCE_SUFFIXx`)
 
 :material-arrow-right-bottom-bold: Applies to the specified instance
 
 </div>
 
 </div>
+
+When both forms of the variable are used in the Inventory, the instance-level value takes precedence.
 
 ## Demo
 

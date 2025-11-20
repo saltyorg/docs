@@ -1,6 +1,6 @@
 # Danger Zone :material-sign-caution:
 
-Override patterns that may compromise the security or stability of your setup and fall **outside our support** scope. Proceed at your own risk.
+Override patterns that are **not officially supported** and may compromise the security or stability of your setup. Proceed at your own risk.
 
 ## Authelia App Bypass
 
@@ -48,38 +48,10 @@ xROLE_NAMEx_traefik_middleware_custom: "appAuth"
 
 ## Plex Shared Data
 
-=== "2 instances"
-
-    ```yaml
-    #### Shared metadata between all Plex instances ####
-    plex2_docker_volumes_custom:
-      - "{{ plex_paths_application_support_location }}/Media:/config/Library/Application Support/Plex Media Server/Media:ro"
-      - "{{ plex_paths_application_support_location }}/Metadata:/config/Library/Application Support/Plex Media Server/Metadata:ro"
-    ```
-
-=== "Many instances (option A)"
-
-    ```yaml
-    #### Shared metadata between all Plex instances ####
-    plex_shared_data:
-      - "{{ plex_paths_application_support_location }}/Media:/config/Library/Application Support/Plex Media Server/Media:ro"
-      - "{{ plex_paths_application_support_location }}/Metadata:/config/Library/Application Support/Plex Media Server/Metadata:ro"
-
-    plex2_docker_volumes_custom: "{{ plex_shared_data }}"
-    plex3_docker_volumes_custom: "{{ plex_shared_data }}"
-    # .. additional lines for additional instances
-    ```
-
-=== "Many instances (option B)"
-
-    ```yaml
-    #### Shared metadata between all Plex instances ####
-    plex_role_docker_volumes_custom:
-      - "{{ plex_paths_application_support_location }}/Media:/config/Library/Application Support/Plex Media Server/Media:ro"
-      - "{{ plex_paths_application_support_location }}/Metadata:/config/Library/Application Support/Plex Media Server/Metadata:ro"
-    plex_docker_volumes_custom: [] # (1)! You can add mounts to this but don't remove it, or the base instance will lose write permissions to its metadata directories.
-    ```
-    
-    1.  You can add other mounts to this but do not remove it.
-        
-        Clears the base instance of its own shares, so it retains write permissions to those directories.
+```yaml
+#### Shared metadata between all Plex instances ####
+#### Presumes one of the instances is named `plex` ####
+plex_role_docker_volumes_custom: "{{ [] if plex_name == 'plex' else 
+                                     [plex_paths_application_support_location + '/Media:/config/Library/Application Support/Plex Media Server/Media:ro',
+                                      plex_paths_application_support_location + '/Metadata:/config/Library/Application Support/Plex Media Server/Metadata:ro'] }}"
+```

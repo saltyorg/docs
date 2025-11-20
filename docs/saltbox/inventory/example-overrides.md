@@ -67,16 +67,16 @@ sandbox_roles: ["jellyseerr", "jellystat"]
     seerr_role_web_domain: "example.com" # (1)!
     ```
 
-    1.  Combined with the subdomain override, this sets all Seerr instances without instance-level domain or subdomain overrides to `xCUSTOM_SUBDOMAIN_NAMEx.example.com`.
+    1.  Combined with the above subdomain override, this sets all Seerr instances without instance-level domain or subdomain overrides to `xCUSTOM_SUBDOMAIN_NAMEx.example.com`.
         
         Be aware that multiple instances cannot have the same FQDN.
 
     ```yaml
     #### Make specified Seerr instance available at a different base domain ####
-    seerr02_web_domain: "bing.com" # (1)!
+    seerrxINSTANCE_SUFFIXx_web_domain: "bing.com" # (1)!
     ```
     
-    1. Combined with the subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-level domain value.
+    1. Combined with the above subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-level domain value.
 
 
 === "Extension"
@@ -140,11 +140,11 @@ plex_open_local_ports: true
 ```
 
 ```yaml
-#### Configure Sonarr 4k/Radarr 4k Instance Name (assumed instances defined as `sonarr4k` and `radarr4k`)
-sonarr4k_docker_envs_custom:
-  SONARR__APP__INSTANCENAME: "Sonarr4k" # Must start or end with the word Sonarr
-radarr4k_docker_envs_custom:
-  RADARR__APP__INSTANCENAME: "Radarr4k" # Must start or end with the word Radarr
+#### Configure Sonarr xINSTANCE_SUFFIXx/Radarr xINSTANCE_SUFFIXx Instance Name (assumed instances defined as `sonarrxINSTANCE_SUFFIXx` and `radarrxINSTANCE_SUFFIXx`)
+sonarrxINSTANCE_SUFFIXx_docker_envs_custom:
+  SONARR__APP__INSTANCENAME: "SonarrxINSTANCE_SUFFIXx" # Must start or end with the word Sonarr
+radarrxINSTANCE_SUFFIXx_docker_envs_custom:
+  RADARR__APP__INSTANCENAME: "RadarrxINSTANCE_SUFFIXx" # Must start or end with the word Radarr
 ```
 
 ```yaml
@@ -155,18 +155,24 @@ transfer_role_docker_envs_custom:
   RATE_LIMIT: "60"
 ```
 
-```yaml
-#### Add custom aliases to bash shell ####
-#### Note the syntax - a pipe and two space indentation for the contents ####
-shell_bash_bashrc_block_custom: |
-  alias sbu='sb update'
-  alias sbi='sb install'
-```
+=== "Bash"
 
-```yaml
-#### Add custom aliases to zsh shell ###
-#### Note the syntax - a pipe and two space indentation for the contents ####
-shell_zsh_zshrc_block_custom: |
-  alias sbu='sb update'
-  alias sbi='sb install'
-```
+    ```yaml
+    #### Add custom aliases to bash shell ####
+    #### Note the syntax - a pipe and two space indentation for the contents ####
+    shell_bash_bashrc_block_custom: |
+      alias sbu='sb update'
+      alias sbi='sb install'
+      sb-upgrade() { sb install saltbox,sandbox-roles "$@" }
+    ```
+
+=== "Zsh"
+
+    ```yaml
+    #### Add custom aliases to zsh shell ###
+    #### Note the syntax - a pipe and two space indentation for the contents ####
+    shell_zsh_zshrc_block_custom: |
+      alias sbu='sb update'
+      alias sbi='sb install'
+      sb-upgrade() { sb install saltbox,sandbox-roles "$@" }
+    ```

@@ -65,11 +65,18 @@ The password provisioned is your Saltbox password.
 
 === "Settings"
 
-    ??? variable string "`wireguard_listen_port`"
+    ??? variable string "`wireguard_role_listen_port`"
 
         ```yaml
         # Type: string
-        wireguard_listen_port: "51820"
+        wireguard_role_listen_port: "51820"
+        ```
+
+    ??? variable string "`wireguard_role_dns`"
+
+        ```yaml
+        # Type: string
+        wireguard_role_dns: "1.1.1.1,8.8.8.8"
         ```
 
 === "Paths"
@@ -118,6 +125,15 @@ The password provisioned is your Saltbox password.
         wireguard_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wireguard') + '.' + lookup('role_var', '_web_domain', role='wireguard')
                                  if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
                                  else lookup('role_var', '_web_domain', role='wireguard')) }}"
+        ```
+
+    ??? variable string "`wireguard_role_web_host`"
+
+        ```yaml
+        # Type: string
+        wireguard_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='wireguard') + '.' + lookup('role_var', '_web_domain', role='wireguard')
+                                  if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='wireguard')) }}"
         ```
 
 === "DNS"
@@ -225,7 +241,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: string
-        wireguard_role_docker_image_tag: "14"
+        wireguard_role_docker_image_tag: "15"
         ```
 
     ??? variable string "`wireguard_role_docker_image`"
@@ -242,7 +258,7 @@ The password provisioned is your Saltbox password.
         ```yaml
         # Type: list
         wireguard_role_docker_ports_defaults: 
-          - "{{ wireguard_listen_port }}:51820/udp"
+          - "{{ lookup('role_var', '_listen_port', role='wireguard') }}:{{ lookup('role_var', '_listen_port', role='wireguard') }}/udp"
         ```
 
     ??? variable list "`wireguard_role_docker_ports_custom`"
@@ -260,9 +276,23 @@ The password provisioned is your Saltbox password.
         # Type: dict
         wireguard_role_docker_envs_default: 
           TZ: "{{ tz }}"
-          WG_HOST: "{{ ip_address_public }}"
-          PASSWORD_HASH: "{{ user.pass | password_hash('bcrypt') }}"
-          WG_PORT: "{{ wireguard_listen_port }}"
+          DISABLE_IPV6: "{{ 'false' if docker_ipv6 else 'true' }}"
+          WG_DEVICE: "eth0"
+        ```
+
+    ??? variable dict "`wireguard_role_docker_envs_setup`"
+
+        ```yaml
+        # Type: dict
+        wireguard_role_docker_envs_setup: 
+          INIT_ENABLED: "true"
+          INIT_USERNAME: "{{ user.name }}"
+          INIT_PASSWORD: "{{ user.pass }}"
+          INIT_HOST: "{{ lookup('role_var', '_web_host', role='wireguard') }}"
+          INIT_PORT: "{{ lookup('role_var', '_listen_port', role='wireguard') }}"
+          INIT_DNS: "{{ lookup('role_var', '_dns', role='wireguard') }}"
+          INIT_IPV4_CIDR: "10.8.0.0/24"
+          INIT_IPV6_CIDR: "2001:0DB8::/32"
         ```
 
     ??? variable dict "`wireguard_role_docker_envs_custom`"
@@ -280,6 +310,7 @@ The password provisioned is your Saltbox password.
         # Type: list
         wireguard_role_docker_volumes_default: 
           - "{{ lookup('role_var', '_paths_location', role='wireguard') }}:/etc/wireguard"
+          - /lib/modules:/lib/modules:ro
         ```
 
     ??? variable list "`wireguard_role_docker_volumes_custom`"
@@ -311,7 +342,13 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: list
-        wireguard_role_docker_networks_default: []
+        wireguard_role_docker_networks_default: 
+          - name: wg
+            ipv4_address: "10.42.42.42"
+            ipv6_address: "{{ 'fdcc:ad94:bacf:61a3::2a' if docker_ipv6 else omit }}"
+            gw_priority: 1
+            driver_opts:
+              com.docker.network.endpoint.ifname: eth0
         ```
 
     ??? variable list "`wireguard_role_docker_networks_custom`"
@@ -341,13 +378,33 @@ The password provisioned is your Saltbox password.
 
     <h5>Sysctls</h5>
 
-    ??? variable dict "`wireguard_role_docker_sysctls`"
+    ??? variable dict "`wireguard_role_docker_sysctls_ipv4`"
 
         ```yaml
         # Type: dict
-        wireguard_role_docker_sysctls: 
+        wireguard_role_docker_sysctls_ipv4: 
           net.ipv4.conf.all.src_valid_mark: "1"
           net.ipv4.ip_forward: "1"
+        ```
+
+    ??? variable dict "`wireguard_role_docker_sysctls_ipv6`"
+
+        ```yaml
+        # Type: dict
+        wireguard_role_docker_sysctls_ipv6: 
+          net.ipv6.conf.all.disable_ipv6: "0"
+          net.ipv6.conf.all.forwarding: "1"
+          net.ipv6.conf.default.forwarding: "1"
+        ```
+
+    ??? variable string "`wireguard_role_docker_sysctls`"
+
+        ```yaml
+        # Type: string
+        wireguard_role_docker_sysctls: "{{ lookup('role_var', '_docker_sysctls_ipv4', role='wireguard')
+                                           + (lookup('role_var', '_docker_sysctls_ipv6', role='wireguard')
+                                             if docker_ipv6
+                                             else []) }}"
         ```
 
     <h5>Restart Policy</h5>

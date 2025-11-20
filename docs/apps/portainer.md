@@ -220,7 +220,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: string
-        portainer_role_traefik_api_endpoint: "PathPrefix(`/api/websocket/`)"
+        portainer_role_traefik_api_endpoint: "PathPrefix(`/api`)"
         ```
 
 === "Theme"

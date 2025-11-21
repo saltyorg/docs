@@ -8,7 +8,7 @@ status: wip
 ## Overview
 
 Saltbox dependency.
- 
+
 Rclone is an open-source, command-line program designed to manage files on remote storage.
 
 ## Deployment

@@ -28,9 +28,9 @@ tags:
     Opting for another indexer manager?
 
     <div>
-    
+
     [**Explore alternatives**:material-shuffle-variant:](index.md#indexer-management){ .md-button }
-    
+
     [**Skip to qBittorrent**:material-fast-forward:](qbittorrent.md){ .md-button }
 
     </div>

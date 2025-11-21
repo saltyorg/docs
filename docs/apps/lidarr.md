@@ -32,7 +32,7 @@ To access Lidarr, visit <https://lidarr.iYOUR_DOMAIN_NAMEi>
 
 ### Settings
 
-Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
+Click on "Settings" in the sidebar. Click "Show Advanced" at the top of the Settings pane.
 
 Make changes in the following sections:
 
@@ -187,7 +187,6 @@ Make changes in the following sections:
                 ![Lidarr Jackett](../images/lidarr/lidarr-jackett.png)
 
             5. Click "Save" to add the indexer.
-
 
     === "Download Clients"
 

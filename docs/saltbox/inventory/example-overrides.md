@@ -56,34 +56,33 @@ sandbox_roles: ["jellyseerr", "jellystat"]
     #### Make Organizr available only at the base domain ####
     organizr_role_web_subdomain: ""
     ```
-    
+
     ```yaml
     #### Make Seerr available only at `xCUSTOM_SUBDOMAIN_NAMEx.xYOUR_DOMAIN_NAMEx` ####
     seerr_role_web_subdomain: "xCUSTOM_SUBDOMAIN_NAMEx"
     ```
-    
+
     ```yaml
     #### Make Seerr available at a different base domain ####
     seerr_role_web_domain: "example.com" # (1)!
     ```
 
     1.  Combined with the above subdomain override, this sets all Seerr instances without instance-level domain or subdomain overrides to `xCUSTOM_SUBDOMAIN_NAMEx.example.com`.
-        
+
         Be aware that multiple instances cannot have the same FQDN.
 
     ```yaml
     #### Make specified Seerr instance available at a different base domain ####
     seerrxINSTANCE_SUFFIXx_web_domain: "bing.com" # (1)!
     ```
-    
-    1. Combined with the above subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-level domain value.
 
+    1. Combined with the above subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-level domain value.
 
 === "Extension"
 
     !!! warning ""
         Extra DNS records for the following examples will not be set up by Saltbox. Your options: create them manually, run [DDNS](../../apps/ddns.md) (Cloudflare only), or use a wildcard DNS record.
-    
+
     ```yaml
     #### Make Organizr available at `organizr.xYOUR_DOMAIN_NAMEx`, `xYOUR_DOMAIN_NAMEx` and `example.com` ####
     organizr_role_web_fqdn_override:

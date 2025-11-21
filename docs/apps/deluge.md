@@ -53,7 +53,7 @@ sb install deluge
   - enable and the `Extractor` plugin. <br />
       In order for Sonarr or Radarr to import media packaged within .rar files, they will have to be extracted.
   - After clicking `"Apply"`, select the `Extractor`  plugin on the left. <br />
-      Make sure the directory points to the `completed` folder within your Deluge data directory.  <br />
+      Make sure the directory points to the `completed` folder within your Deluge data directory.<br />
       `/mnt/unionfs/downloads/torrents/deluge/completed` <br />
       Also, make sure that the Create torrent name sub-folder setting is checked.
 

@@ -23,7 +23,7 @@ tags:
 === "PIA VPN"
 
     In `/opt/sandbox/settings.yml`, adjust the following:
-    
+
     ```
     qbittorrentvpn:
       vpn_pass: your_vpn_password
@@ -47,9 +47,9 @@ tags:
     Step 03 - Go to [ProtonVPN-Downloads](https://account.protonvpn.com/downloads)
     Step 04 - Scroll down to "WireGuard configuration" - Please fill/select your desired settings for the configuration.
     Step 05 - Under "3. Select VPN options" —> Turn on "NAT-PMP (Port Forwarding)" —> Now download the config file and rename it to `wg0.conf`
-    
+
     Now, In `/opt/sandbox/settings.yml`, adjust the following:
-    
+
     ```
     qbittorrentvpn:
       vpn_pass: "protonvpn-account-password"

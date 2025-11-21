@@ -78,7 +78,7 @@ elasticsearch_docker_healthcheck:
   timeout: 5s
   retries: 10
   start_period: 10s
-  
+
 firefox_docker_healthcheck:
   test: ["CMD", "wget", "--spider", "http://localhost:{{ firefox_web_port }}"]
   interval: 10s

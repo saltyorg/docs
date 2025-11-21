@@ -30,7 +30,7 @@ tags:
     <div>
 
     [**Explore alternatives**:material-shuffle-variant:](index.md#media-server){ .md-button }
-    
+
     [**Skip to Autoscan**:material-fast-forward:](autoscan.md){ .md-button }
 
     </div>
@@ -77,7 +77,7 @@ sb install plex
 
     === "Library"
 
-        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left).  Click "SHOW ADVANCED" in the upper right.
+        1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Library" (left). Click "SHOW ADVANCED" in the upper right.
 
         2. Set the following:
 
@@ -99,12 +99,11 @@ sb install plex
 
             - "Analyze audio tracks for sonic features": `never`
 
-                > The reasoning behind disabling these things is mostly related to Google Drive API usage, data transfer, and disk space.  Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer.  Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all.  Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage.  These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
+                > The reasoning behind disabling these things is mostly related to Google Drive API usage, data transfer, and disk space. Accessing large portions of a given video file to generate thumbnails *may* generate large numbers of Google Drive API calls, and large amounts of data transfer. Either of these things *may* result in your account suffering one of the various types of 24-hour bans Google hands out, which *may* prevent your server from playing media at all. Also, storing these images *will* greatly inflate the size of `/opt/plex`, which can affect the speed of backups, your ability to download, and anything else related to disk space usage. These are generally considered Bad Things, so the recommendation is to avoid the possibility by turning these options off.
 
          1. Click "SAVE CHANGES".
 
             ![](../images/plex-media-server/plex-07-library.png)
-
 
     === "Network"
 
@@ -124,7 +123,6 @@ sb install plex
 
             ![Plex Network settings page showing custom server access URLs configuration](../images/plex-media-server/plex-08-network.jpeg)
 
-
     === "Transcoder"
 
         1. Click the Settings icon (top right) &rightarrow; "Server" (top) &rightarrow; "Transcoder" (left).
@@ -142,7 +140,6 @@ sb install plex
         3. Click "SAVE CHANGES".
 
             ![](../images/plex-media-server/plex-09-transcoder.png)
-
 
     === "DLNA"
 
@@ -180,10 +177,9 @@ sb install plex
 
         2. Click the grey button labelled "Disable Remote Access"
 
-            - You will see a scary warning.  You are sure, so click the red "Disable" button.
+            - You will see a scary warning. You are sure, so click the red "Disable" button.
 
             ![](../images/plex-media-server/plex-11a-remote.png)
-
 
 ### Add Media Libraries
 

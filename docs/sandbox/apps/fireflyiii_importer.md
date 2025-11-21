@@ -44,7 +44,7 @@ The Required variables that should be defined in [inventory](../../saltbox/inven
 To authenticate the Data Importer to Firefly III you require to use either:
 
 - [Access Token](#311-access-token)
-- [Client ID](#312-client-id) 
+- [Client ID](#312-client-id)
 
 #### 3.1.1 Access Token
 

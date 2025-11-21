@@ -1,6 +1,6 @@
 # Using code-server for editing
 
-code-server is a version of VS Code that runs on your server.  It's friendlier than something like `nano`, and you can use it anywhere you can get at your domain.
+code-server is a version of VS Code that runs on your server. It's friendlier than something like `nano`, and you can use it anywhere you can get at your domain.
 
 ## install code-server
 
@@ -22,7 +22,7 @@ VSCode will present with a checklist of "getting started" items.
 
 If you've never used VSCode before, take a few minutes to go through the fundamentals tutorial.
 
-You can change the default theme if you wish.  I'm going to choose the dark theme.
+You can change the default theme if you wish. I'm going to choose the dark theme.
 
    ![](../../images/code-server-setup/03-dark-mode-home-dir.png)
 
@@ -40,7 +40,7 @@ Navigate to `/host_opt/`, click the arrow:
 
    ![](../../images/code-server-setup/05-host-opt.png)
 
-and you should be presented with your `/opt` directory.  Most of the things you will want to edit are here.
+and you should be presented with your `/opt` directory. Most of the things you will want to edit are here.
 
    ![](../../images/code-server-setup/06-host-opt.png)
 

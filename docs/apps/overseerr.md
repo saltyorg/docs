@@ -61,11 +61,11 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ![](../images/overseerr/01-overseerr.png)
 
-1. Click the "refresh" icon, then select your Plex server from the dropdown.  Click "Save Changes" to retrieve the libraries from Plex.
+1. Click the "refresh" icon, then select your Plex server from the dropdown. Click "Save Changes" to retrieve the libraries from Plex.
 
 ![](../images/overseerr/02-overseerr.png)
 
-1. Scroll down and flip the switch on the libraries you want to expose for requests and discovery.  Click "Continue".
+1. Scroll down and flip the switch on the libraries you want to expose for requests and discovery. Click "Continue".
 
 ![](../images/overseerr/03-overseerr.png)
 
@@ -82,7 +82,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ![](../images/overseerr/05-overseerr.png)
 
-1. Select a Quality, Root Folder, and Minimum Availability, then click "Add Server".  This will return you to the screen from the previous step. Click "Add Sonarr Server"
+1. Select a Quality, Root Folder, and Minimum Availability, then click "Add Server". This will return you to the screen from the previous step. Click "Add Sonarr Server"
 
 ![](../images/overseerr/06-overseerr.png)
 
@@ -95,7 +95,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ![](../images/overseerr/07-overseerr.png)
 
-1. Select a Quality, Root Folder, and Minimum Availability for standard and Anime series.  Click  "Add Server".
+1. Select a Quality, Root Folder, and Minimum Availability for standard and Anime series. Click  "Add Server".
 
 ![](../images/overseerr/08-overseerr.png)
 

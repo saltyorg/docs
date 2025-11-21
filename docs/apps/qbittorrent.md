@@ -23,13 +23,13 @@ tags:
     <div data-search-exclude>
 
     <div>
-    
+
     Opting out of torrents?
 
     <div>
-    
+
     [**Skip to Sonarr**:material-fast-forward:](sonarr.md){ .md-button }
-    
+
     </div>
 
     </div>
@@ -39,13 +39,13 @@ tags:
     Opting for another BitTorrent client?
 
     <div>
-    
+
     [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
-    
+
     [**Skip to Jackett**:material-fast-forward:](jackett.md){ .md-button }
-    
+
     </div>
-    
+
     </div>
 
     </div>

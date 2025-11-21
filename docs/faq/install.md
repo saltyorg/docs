@@ -18,7 +18,7 @@ IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 
 Run multiple tags together by separating them with commas, no spaces. Quotes are optional. Order is not important.
 
-Use this to install containers or roles that are not included in "default" install types.  
+Use this to install containers or roles that are not included in "default" install types.
 
 Example:
 

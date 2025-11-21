@@ -18,4 +18,4 @@ If you plan on using [Usenet](https://www.reddit.com/r/usenet/wiki/faq#wiki_usen
 
 ## ii. BitTorrent
 
-If you plan on using torrents with Saltbox, we recommend you have access to a [private torrent tracker](https://www.reddit.com/r/trackers/wiki/getting_into_private_trackers) as most servers don't allow public ones. However, if you still want to use public torrent trackers with Saltbox, you are free to do so.  You will need to make some changes to the configuration to [allow access to public trackers](../faq/rutorrent.md?h=public#enable-access-to-public-torrent-trackers), as they are blocked by default.
+If you plan on using torrents with Saltbox, we recommend you have access to a [private torrent tracker](https://www.reddit.com/r/trackers/wiki/getting_into_private_trackers) as most servers don't allow public ones. However, if you still want to use public torrent trackers with Saltbox, you are free to do so. You will need to make some changes to the configuration to [allow access to public trackers](../faq/rutorrent.md?h=public#enable-access-to-public-torrent-trackers), as they are blocked by default.

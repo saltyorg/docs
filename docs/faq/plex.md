@@ -15,7 +15,7 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
 ## If you are unable to find your Plex server
 
 === "Delete everything and start again"
-    
+
     !!! warning
         **THIS WILL DELETE ANY EXISTING PLEX CONFIGURATION SUCH AS LIBRARIES**
 
@@ -26,11 +26,11 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
         ```
 
     - Remove the Plex folder:
- 
+
         !!! warning
-            **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA.  THERE IS NO UNDO.**
-    
-        ??? danger "I understand the risk!  Show me!"
+            **THIS IS DESTRUCTIVE AND WILL DELETE ALL PLEX LIBRARIES AND DATA. THERE IS NO UNDO.**
+
+        ??? danger "I understand the risk! Show me!"
 
             ```shell
             sudo rm -rf /opt/plex
@@ -66,9 +66,9 @@ SOME COMMANDS ON THIS PAGE IRREVOCABLY DELETE DATA
        ```shell
        ssh <user>@<yourserveripaddress> -L 32400:0.0.0.0:32400 -N
        ```
-       
+
        Of course, replace `<user>` with your user name and `<yourserveripaddress>` with your serveripaddress - no arrows
-       
+
        This will just hang there without any message. That is normal.
 
     - In a browser **ON THAT MACHINE**, go to <http://localhost:32400/web>.

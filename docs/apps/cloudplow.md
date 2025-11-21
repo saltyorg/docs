@@ -35,7 +35,7 @@ Cloudplow can also use service accounts to upload and work around this limitatio
 
 ## Config
 
-Note that this is an extract from the cloudplow docs and does not cover everything that cloudplow can do.  Please refer to the Cloudplow github for complete details on available options.
+Note that this is an extract from the cloudplow docs and does not cover everything that cloudplow can do. Please refer to the Cloudplow github for complete details on available options.
 
 ### Default config.json file
 
@@ -57,7 +57,7 @@ Edit in your favorite code editor  (with json highlighting) or even a unix edito
 nano /opt/cloudplow/config.json
 ```
 
-Note: The cloudplow config file is a JSON file.  JSON files have a particular format and syntax.  If you are unfamiliar with JSON formatting and syntax, don't edit this file until you have gained that familiarity.  Here's a [random YouTube video](https://www.youtube.com/watch?v=GpOO5iKzOmY) that will give you a ten-minute overview.
+Note: The cloudplow config file is a JSON file. JSON files have a particular format and syntax. If you are unfamiliar with JSON formatting and syntax, don't edit this file until you have gained that familiarity. Here's a [random YouTube video](https://www.youtube.com/watch?v=GpOO5iKzOmY) that will give you a ten-minute overview.
 
 ### Modify Upload Threshold and Interval
 
@@ -86,7 +86,7 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
 
     - Setting this to `2GB` will trigger on a little more than 1GB of data in the upload directory, since there needs to be more than 1G there for the value to get rounded up to 2G and trigger the upload.
 
-    - THIS IS ONLY A SIGNIFICANT ISSUE WITH THESE SMALL NUMBERS.  It's not a general "Cloudplow triggers at half the threshold".  This rounding means that the default 200G threshold will actually trigger at 199+G, since 199.2G would get rounded up to 200G.
+    - THIS IS ONLY A SIGNIFICANT ISSUE WITH THESE SMALL NUMBERS. It's not a general "Cloudplow triggers at half the threshold". This rounding means that the default 200G threshold will actually trigger at 199+G, since 199.2G would get rounded up to 200G.
 
 ### Plex Integration
 
@@ -164,7 +164,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 ### Service account uploading
 
-You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available in the [cloudplow uploader documentation](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit. Details are available in the [cloudplow uploader documentation](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
 ```json
 "uploader": {

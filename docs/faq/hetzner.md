@@ -89,7 +89,7 @@ After doing any changes to Cloudplow or crop configuration remember to restart t
 
 Setup this [script](https://github.com/Nebarik/mediscripts-shared/blob/main/googleapis.sh) and let it modify your hosts file.
 
-[Markschrik](https://github.com/markschrik) has created a version of the script that will do the required setup for you if you are using the default Saltbox setup; it can be found in the [Saltbox Google Bandwidth script](https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh).  Download it, mark it executable, and run it.
+[Markschrik](https://github.com/markschrik) has created a version of the script that will do the required setup for you if you are using the default Saltbox setup; it can be found in the [Saltbox Google Bandwidth script](https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh). Download it, mark it executable, and run it.
 
 ```shell
 wget https://raw.githubusercontent.com/markschrik/Saltbox-GoogleBandwith/main/bandwithtest.sh

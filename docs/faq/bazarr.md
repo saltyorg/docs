@@ -7,7 +7,7 @@ Especially useful: [:octicons-link-16: Performance Tuning](https://wiki.bazarr.m
 
 ### Some settings of note - AS OF 22ND OCTOBER 2023 - MIGHT BE OUTDATED IF YOU READ THIS LATER
 
-- `Settings` => `Subtitles` => `Performance / Optimization` Disable `Use Embedded Subtitles` Embedded subtitles are subtitles that are in the video container (mkv, mp4, etc) Bazarr needs to look inside the video container to know which subtitles are in it, causing issues with API Limits 
+- `Settings` => `Subtitles` => `Performance / Optimization` Disable `Use Embedded Subtitles` Embedded subtitles are subtitles that are in the video container (mkv, mp4, etc) Bazarr needs to look inside the video container to know which subtitles are in it, causing issues with API Limits
 
 - `Settings` => `Languages` => `Embedded Tracks Language` Disable `Deep analyze media file to get audio tracks language.`
 

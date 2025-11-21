@@ -32,7 +32,7 @@ To access Sonarr, visit <https://sonarr.iYOUR_DOMAIN_NAMEi>
 
 ### Settings
 
-Click on "Settings" in the sidebar.  Click "Show Advanced" at the top of the Settings pane.
+Click on "Settings" in the sidebar. Click "Show Advanced" at the top of the Settings pane.
 
 Make changes in the following sections:
 
@@ -53,7 +53,7 @@ Make changes in the following sections:
                 <details>
                 <summary>TRaSH' naming guide [Recommended]</summary> <br />
 
-                Go to the [TRaSH Guides Sonarr naming scheme](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates.  These examples may be out of date.
+                Go to the [TRaSH Guides Sonarr naming scheme](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/) for the latest updates. These examples may be out of date.
 
                 Example:  <br />
                 ```
@@ -75,7 +75,6 @@ Make changes in the following sections:
                 </details>
 
                 The TRaSH naming guide is recommended since some other tools, notably Kometa, expect it in their default setup.
-
 
                 <details>
                 <summary>Plex's Naming Preference</summary>
@@ -208,7 +207,6 @@ Make changes in the following sections:
                 ![Radarr Jackett](../images/sonarr/sonarr-jackett.png)
 
             5. Click "Save" to add the indexer.
-
 
     === "Download Clients"
 
@@ -394,15 +392,13 @@ Make changes in the following sections:
 
             5. Click "Save" to add the Torrent Cleanup script.
 
-
         === "Autoscan"
 
-            IMPORTANT:  The Sonarr UI may differ from what is shown here; there may be additional events listed in the UI.  
+            IMPORTANT: The Sonarr UI may differ from what is shown here; there may be additional events listed in the UI.
 
-            GENERALLY SPEAKING, if you have events listed that are not explicitly listed below, LEAVE THEM UNCHECKED.  Such events will generate errors in the autoscan logs; those errors can be ignored, but they are errors and can cause panic and confusion.
+            GENERALLY SPEAKING, if you have events listed that are not explicitly listed below, LEAVE THEM UNCHECKED. Such events will generate errors in the autoscan logs; those errors can be ignored, but they are errors and can cause panic and confusion.
 
             MORE SPECIFICALLY, Autoscan is expecting a request that points to an individual file that is ready for Plex. so any event you may have that refers to a show being added, manual intervention, or anything else that is not "this specific video file ON DISK was imported/upgraded/deleted/etc", LEAVE IT UNCHECKED.
-
 
             1. Click "Settings" -> "Connect".
 
@@ -440,9 +436,7 @@ Make changes in the following sections:
 
                 ![Sonarr Autoscan](../images/sonarr/sonarr-autoscan.png)
 
-
             5. Click "Save" to add Autoscan.
-
 
     === "General"
 

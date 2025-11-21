@@ -16,7 +16,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 This guide is assuming you are using a standard GSuite Business or GSuite Workspace account.
 
-IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT [CLOUDBOX, PTS, ETC.], THERE IS NO REASON TO REPEAT IT.  You only need one of these projects.
+IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT [CLOUDBOX, PTS, ETC.], THERE IS NO REASON TO REPEAT IT. You only need one of these projects.
 
 1. Open Google APIs Console site: <https://console.developers.google.com> and login with your Google account.
 
@@ -56,7 +56,7 @@ IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT [CLOUDBOX, PTS, ETC.], THERE I
 
     ![](../images/gdrive-project/09-admin-enable.png)
 
-    You'll go to a API Overview page.  Click the browser back button twice:
+    You'll go to a API Overview page. Click the browser back button twice:
 
     ![](../images/gdrive-project/10-admin-enabled.png)
 
@@ -130,12 +130,12 @@ IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT [CLOUDBOX, PTS, ETC.], THERE I
 
     ![](../images/gdrive-project/26-credentials-type-name.png)
 
-17. You'll be presented with the Client ID and Secret.  Copy and save them somewhere; you may need them to configure other tools later.  Click on "DOWNLOAD JSON" to download the credential file:
+17. You'll be presented with the Client ID and Secret. Copy and save them somewhere; you may need them to configure other tools later. Click on "DOWNLOAD JSON" to download the credential file:
 
     ![](../images/gdrive-project/27-credentials-done.png)
 
 Later on, I'm going to assume you put it on the saltbox server in `/opt/sa/` and named it `project-creds.json`.
-    
+
 To do that you may need to create `/opt/sa` and make sure it's writable by you.
 
 <details>

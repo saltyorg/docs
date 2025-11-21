@@ -19,11 +19,11 @@ On this page, we break down the options available in the following files:
 - `/srv/git/saltbox/settings.yml`
 - `/srv/git/saltbox/adv_settings.yml`
 
-IMPORTANT: If you make changes to values in these files, you will have to run the relevant role[s] to make them take effect.  For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect.  The only thing that looks at these settings files is the Ansible script.
+IMPORTANT: If you make changes to values in these files, you will have to run the relevant role[s] to make them take effect. For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect. The only thing that looks at these settings files is the Ansible script.
 
 ## Options in accounts.yml
 
-**Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
+**Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
 Each tab shows a "section" in the file.
 
@@ -65,7 +65,7 @@ Each tab shows a "section" in the file.
     These parameters are optional.
     Default is blank.
     Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
-    Cloudflare does not support all top-level domains though its API.  Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531).  As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
+    Cloudflare does not support all top-level domains though its API. Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531). As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
 === "dockerhub"
     ```yaml
@@ -78,8 +78,8 @@ Each tab shows a "section" in the file.
 
     `token` - Docker Hub access token.
 
-    Note that this is a Docker Hub *token*, not your Docker Hub password.  You create one of these in the security tab of your account settings at dockerhub, and it will look something like: `dckr_pat_EZ-YVvzrb_OzZyToNyGeEzErBiLl`
-    
+    Note that this is a Docker Hub *token*, not your Docker Hub password. You create one of these in the security tab of your account settings at dockerhub, and it will look something like: `dckr_pat_EZ-YVvzrb_OzZyToNyGeEzErBiLl`
+
     This parameter is optional.
     Entering Dockerhub credentials increases the number of images one can pull.
 
@@ -106,7 +106,7 @@ Each tab shows a "section" in the file.
     This parameter is **required**. Minimum 12 characters.
     Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
     Also used to create first-time logins for NZBGet, qbittorrent, NZBHydra2, and potentially other apps.
-    Don't leave it blank, even if you are planning to use SSH keys to connect to your box.  This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
+    Don't leave it blank, even if you are planning to use SSH keys to connect to your box. This user and password are used to set up authentication for some applications in this repo and Sandbox, and a blank password may cause trouble there.
     Don't leave it as `password1234`.
     See the [password considerations](#password-considerations) below.
     [Relevant XKCD](https://xkcd.com/936/)
@@ -115,7 +115,7 @@ Each tab shows a "section" in the file.
 
     This parameter is **required**.
     If you don't have one, see [here](domain.md).
-    This should be the domain "below" the saltbox subdomains.  For example, if you want to access Sonarr at "sonarr.xYOUR_DOMAIN_NAMEx", enter "xYOUR_DOMAIN_NAMEx".  If you want "sonarr.foo.xYOUR_DOMAIN_NAMEx", enter "foo.xYOUR_DOMAIN_NAMEx".
+    This should be the domain "below" the saltbox subdomains. For example, if you want to access Sonarr at "sonarr.xYOUR_DOMAIN_NAMEx", enter "xYOUR_DOMAIN_NAMEx". If you want "sonarr.foo.xYOUR_DOMAIN_NAMEx", enter "foo.xYOUR_DOMAIN_NAMEx".
 
     `email`: E-mail address.
 
@@ -129,15 +129,13 @@ Each tab shows a "section" in the file.
     This is used to provision a SSH key in your user's `authorized_keys` file
     This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
-
-
 ---
 
 ## Options in settings.yml
 
 **Note:** Having `{{ user }}` in the path tells Ansible to fill in the username, automatically. You do not need to fill in your actual username.
 
-**Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
+**Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
 Each tab shows a "section" in the file.
 
@@ -215,9 +213,9 @@ Each tab shows a "section" in the file.
 
     `remotes/settings/mount`: Toggles whether you want this remote mounted in the file system.
 
-    `remotes/settings/template`: The name of the template you want to use for the mount.  Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mount-templates/remote.j2") containing either jinja2 template or an actual copy of a systemd service file. A [community repo](https://github.com/saltyorg/mount-templates) is maintained of user submitted mount options which can be referenced via path (i.e. `/opt/mount-templates/generic.j2`.) We recommend saving your own custom templates/services in `/opt/mount-templates/custom` to ensure they are backed up and not subject to being overwritten by the repo.
+    `remotes/settings/template`: The name of the template you want to use for the mount. Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mount-templates/remote.j2") containing either jinja2 template or an actual copy of a systemd service file. A [community repo](https://github.com/saltyorg/mount-templates) is maintained of user submitted mount options which can be referenced via path (i.e. `/opt/mount-templates/generic.j2`.) We recommend saving your own custom templates/services in `/opt/mount-templates/custom` to ensure they are backed up and not subject to being overwritten by the repo.
 
-    `remotes/settings/union`: Toggles whether you want to add this remote mount to `/mnt/unionfs`.  This requires that `mount` be enabled.
+    `remotes/settings/union`: Toggles whether you want to add this remote mount to `/mnt/unionfs`. This requires that `mount` be enabled.
 
     `remotes/settings/upload`: Toggles whether you intend to upload to this remote using Cloudplow.
 
@@ -227,8 +225,8 @@ Each tab shows a "section" in the file.
 
     `remotes/settings/vfs_cache/max_age`: Defines the max age of files in the cache.
 
-    `remotes/settings/vfs_cache/size`: Defines the max size of the cache.  The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
-        
+    `remotes/settings/vfs_cache/size`: Defines the max size of the cache. The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+
     `version`: Rclone version that is installed by Saltbox.
     Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
     Default is `latest`.
@@ -258,7 +256,7 @@ Each tab shows a "section" in the file.
 
 ## Options in adv_settings.yml
 
-**Note**: There must always be a space between the key and the value in YAML files.  `key: value` NOT `key:value`
+**Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
 Each tab shows a "section" in the file.
 
@@ -322,7 +320,7 @@ Each tab shows a "section" in the file.
     `timezone`: Timezone to use on the server.
 
     Default is `auto`, which will pick the timezone based on geolocation of the server.
-    Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).  For example, "America/Costa_Rica".
+    Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For example, "America/Costa_Rica".
     `timedatectl list-timezones` at your server's command prompt will also list the options.
 
 === "traefik"
@@ -385,7 +383,7 @@ Each tab shows a "section" in the file.
 
 Your chosen password must have a minimum of 12 characters.
 
-These are a YAML files, and values you enter here are subject to YAML file format rules.  If you use special characters in your password, wrap the password in quotes [or escape the characters correctly, if you are familiar with that concept].  It would be easiest to avoid using quote characters themselves within your password.
+These are a YAML files, and values you enter here are subject to YAML file format rules. If you use special characters in your password, wrap the password in quotes [or escape the characters correctly, if you are familiar with that concept]. It would be easiest to avoid using quote characters themselves within your password.
 
 For example:
 
@@ -393,4 +391,3 @@ For example:
 - `pass: "!@#$%^&*"(){`
 - `pass: multiple words work fine unquoted`
 - `pass: "or quote them to be safe"`
-

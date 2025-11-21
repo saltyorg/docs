@@ -10,7 +10,7 @@ tags:
 
 ## Overview
 
-[ComiXed](https://github.com/comixed/comixed) is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books. 
+[ComiXed](https://github.com/comixed/comixed) is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
 
 It does the following and more:
 

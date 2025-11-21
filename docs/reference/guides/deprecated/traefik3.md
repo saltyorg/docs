@@ -40,7 +40,7 @@ These changes include:
 
         IF you set up Dropbox or Box or some other non-Google cloud storage using guides from this wiki or the Discord, you have custom mount services.
 
-        You will define all your mounts in the settings.yml file, and Saltbox will create and manage all the mount services and the mergerfs config.  The cloudplow role will look at the same information to build its config file.
+        You will define all your mounts in the settings.yml file, and Saltbox will create and manage all the mount services and the mergerfs config. The cloudplow role will look at the same information to build its config file.
 
         If you have custom mount services:
 

@@ -40,7 +40,7 @@ The info below will show you how to update your Saltbox apps, individually.
 
 - **"Container restart"**
 
-   This means that the Docker container will auto-update the app on container restart.  _Currently nothing in Saltbox is updated in this way._
+   This means that the Docker container will auto-update the app on container restart. _Currently nothing in Saltbox is updated in this way._
 
    ```shell
    docker stop <name> && docker start <name>

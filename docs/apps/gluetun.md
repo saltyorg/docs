@@ -48,15 +48,14 @@ gluetun_firewall_outbound_subnets: ""
 
 !!! caution
     Any values which are entirely numeric or contain special characters should be wrapped in quotes:
-    
+
     ```yaml
     gluetun_openvpn_user: "ePWh!Y^fs6p%B*6S"
     gluetun_openvpn_password: "qA5V6&#ASx4DY8qG"
     gluetun_openvpn_endpoint_port: "12345"
     ```
-    
-    Generally speaking it's safest to just wrap everything in quotes rather than worrying about what needs to be.  Quotes are plentiful and free.
 
+    Generally speaking it's safest to just wrap everything in quotes rather than worrying about what needs to be. Quotes are plentiful and free.
 
 !!! warning
     The role uses the built-in Docker DNS resolver by default instead of using the DoH/DoT functionality Gluetun normally provides.
@@ -67,7 +66,6 @@ gluetun_firewall_outbound_subnets: ""
     ```
 
     Just be aware that this toggle will make any network linked containers unable to resolve docker hostnames.
-  
 
 Additional Docker envs may be set via `gluetun_docker_envs_custom`.
 
@@ -103,7 +101,7 @@ plex2_docker_network_mode_default: "container:gluetun2"
 plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
 
-Once you have made these changes to the inventory, run the plex tag to apply the changes [i.e. `sb install plex`].  This will update all your plex containers.
+Once you have made these changes to the inventory, run the plex tag to apply the changes [i.e. `sb install plex`]. This will update all your plex containers.
 
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
@@ -119,7 +117,7 @@ Depending on if the role in question supports instances or not there will be two
 === "With instances"
 
     To route a Saltbox-configured container through Gluetun, you must set `<rolename_instance>_docker_network_mode_default: "container:gluetun"` via the inventory system.
-    
+
     For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode_default: "container:gluetun"`.
 
     For example, to route `qbittorrent2` through Gluetun, the entry would be `qbittorrent2_docker_network_mode_default: "container:gluetun2"`.
@@ -130,7 +128,7 @@ Depending on if the role in question supports instances or not there will be two
 === "Without instances"
 
     To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode: "container:gluetun"` via the inventory system.
-    
+
     For example, to route `jackett` through Gluetun, the entry would be `jackett_docker_network_mode: "container:gluetun"`.
 
 Once you have made these changes to the inventory, run the relevant tags to apply the changes [i.e. `sb install qbittorrent` or `sb install jackett,sonarr,radarr`].

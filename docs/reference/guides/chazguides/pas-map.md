@@ -29,11 +29,11 @@ Each one should be filled out like this:
     ],
 ```
 
-Case is significant.  “Movies” does not match “movies”, for example.
+Case is significant. “Movies” does not match “movies”, for example.
 
-The JSON formatting is significant.  Those brackets and such matter.
+The JSON formatting is significant. Those brackets and such matter.
 
-The various paths are only required if you're using them.  For example, if you aren't using Google Drive Monitoring you don't have to include the Google Drive path.
+The various paths are only required if you're using them. For example, if you aren't using Google Drive Monitoring you don't have to include the Google Drive path.
 
 ### What does Plex Autoscan do with them?
 
@@ -58,7 +58,7 @@ Plex Autoscan gets a request for a path like this:
 /radarr/movie/path/Big Space Movie (2022)/Big Space Movie (2022).mkv
 ```
 
-It looks at the table above to find which one matches the path.  In this case it's:
+It looks at the table above to find which one matches the path. In this case it's:
 
 ```json
      "/plex/Movie/path/": [
@@ -75,7 +75,7 @@ PAS then changes "`/radarr/movie/path/`" to "`/plex/Movie/path/`" to make it int
 
 Then tells Plex to scan that location.
 
-Part of “tells Plex to scan” is finding out which library contains the thing.  To do this PAS gets a list of libraries from Plex, then loops through all of them comparing the root paths in the libraries to the path it's about to send. If there’s a match, PAS then issues the scan request to Plex.
+Part of “tells Plex to scan” is finding out which library contains the thing. To do this PAS gets a list of libraries from Plex, then loops through all of them comparing the root paths in the libraries to the path it's about to send. If there’s a match, PAS then issues the scan request to Plex.
 
 If there is no Plex Library that matches the path, PAS will display an error in its log [“unable to map to a section ID”].
 
@@ -172,7 +172,7 @@ You need a mapping for each unique library path; for example:
    },
 ```
 
-If there are common roots, they can be consolidated.  For example, this:
+If there are common roots, they can be consolidated. For example, this:
 
 ```json
    "SERVER_PATH_MAPPINGS": {
@@ -200,7 +200,7 @@ Could be reduced to:
 
 That’s possible since the TV and Movie folders are all the same until that bottom level.
 
-This is just a string replacement.  You don’t need a map for every media type, necessarily.  You need a map for each unique set of answers to the question:
+This is just a string replacement. You don’t need a map for every media type, necessarily. You need a map for each unique set of answers to the question:
 
 “When some app sees a file at location /what/ever/it/is, where does Plex sees it?”
 
@@ -248,7 +248,7 @@ Plex Autoscan processes
 PATH_WHERE_APP_TWO_LOOKS/bing/bang/boing
 ```
 
-based on a request from a second application; maybe it's a second Radarr, or Couch Potato, or a custom script.  Whatever the source, this source sees those same files at `PATH_WHERE_APP_TWO_LOOKS`, so that’s what it sends to Plex Autoscan.
+based on a request from a second application; maybe it's a second Radarr, or Couch Potato, or a custom script. Whatever the source, this source sees those same files at `PATH_WHERE_APP_TWO_LOOKS`, so that’s what it sends to Plex Autoscan.
 
 Plex Autoscan finds
 

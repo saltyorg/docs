@@ -39,9 +39,9 @@ Settings are available as [environment variables:octicons-link-external-16:{ .md
        ```shell
        $EDITOR /opt/firefox/.vncpass_clear
        ```
-    
+
     2. Enter your desired password (up to 8 characters in length) and save the file.
-    
+
     3. At a minimum, a container restart is required for changes to take effect.
 
 ## Deployment
@@ -69,7 +69,7 @@ The role supports VNC access over an SSH tunnel (local port forwarding) to Saltb
 ???+ example "Example Command on Local Machine"
 
     !!! tip ""
-    
+
         Some VNC apps have this functionality built-in!
 
     ```shell

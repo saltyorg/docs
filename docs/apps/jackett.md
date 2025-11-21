@@ -27,9 +27,9 @@ tags:
     Opting for another indexer manager?
 
     <div>
-    
+
     [**Explore alternatives**:material-shuffle-variant:](index.md#indexer-management){ .md-button }
-    
+
     [**Skip to Sonarr**:material-fast-forward:](sonarr.md){ .md-button }
 
     </div>

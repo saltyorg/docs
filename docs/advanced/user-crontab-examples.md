@@ -9,11 +9,11 @@ tags:
 
 ## Note that these are just some examples, not a list of things that any particular user should have in their crontab
 
-Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is suggesting that you *should* do all these things.  They may not work as shown here, depending on your setup.
+Nothing in here is a specific recommendation. DO NOT copy and paste this with the idea that saltbox team is suggesting that you *should* do all these things. They may not work as shown here, depending on your setup.
 
 It's just a catalog of examples to demonstrate how one might set this sort of thing up.
 
-There are scripts in here that DELETE files.  DO NOT enable such things without understanding WHAT files will be deleted, WHY, and WHEN.
+There are scripts in here that DELETE files. DO NOT enable such things without understanding WHAT files will be deleted, WHY, and WHEN.
 
 If you are unfamiliar with the syntax shown below, [crontab generator](https://crontab-generator.org/) can be useful, but you should be familiar with what cron does before blindly enabling things in this way.
 
@@ -133,7 +133,7 @@ eval "${command}"
 
 ### RXWatcher's cleanup.sh
 
-Note that this script is specific to its author's setup when it was written.  It probably won't work for you as-is.  You'll need to edit the paths to match your situation.
+Note that this script is specific to its author's setup when it was written. It probably won't work for you as-is. You'll need to edit the paths to match your situation.
 
 ```shell
 #!/bin/bash
@@ -151,7 +151,7 @@ find /mnt/local/downloads/nzbget/completed/anime/* -type d -mmin +60 -ls -exec r
 
 ```shell
 #!/bin/sh
-# Get the contents of the Preferences file, keep only what we need,  push to a temp, then use it in the curl command
+# Get the contents of the Preferences file, keep only what we need, push to a temp, then use it in the curl command
 
 cat "/opt/plex/Library/Application Support/Plex Media Server/Preferences.xml" |  \
 sed -e 's;^.* PlexOnlineToken=";;' | sed -e 's;".*$;;' | tail -1 > /tmp/plex.tmp

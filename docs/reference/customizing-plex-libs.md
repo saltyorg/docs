@@ -9,7 +9,7 @@ tags:
 # Customizing Plex Libraries
 
 !!! important
-    This guide was written before Dropbox was a popular choice; all the concepts here apply to Dropbox as well.  Nothing here is Google-specific, though all the examples use Google Drive.
+    This guide was written before Dropbox was a popular choice; all the concepts here apply to Dropbox as well. Nothing here is Google-specific, though all the examples use Google Drive.
 
 !!! info
     This guide was written before the default shared drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
@@ -28,7 +28,7 @@ tags:
     ├── TV
     └── TV-4K
     ```
-    
+
     You can point Plex libraries at those existing directories, and use those directories as root dirs in the *arrs, whether you create multiple instances or not.
 
     If you ran the optional cloudplow script as part of that process, the cloudplow mods discussed below are done for you.

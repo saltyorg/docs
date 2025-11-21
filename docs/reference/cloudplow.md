@@ -10,7 +10,7 @@ tags:
 
 ## Cloudplow with Default Config
 
-This is the default config; it contains a single remote/uploader pair.  This set uploads everything from `/mnt/local/Media` to `google:/Media` once there is 200GB in `/mnt/local/Media`.
+This is the default config; it contains a single remote/uploader pair. This set uploads everything from `/mnt/local/Media` to `google:/Media` once there is 200GB in `/mnt/local/Media`.
 
 <details>
 <summary>Example config.json (click to expand)</summary><br />
@@ -203,7 +203,7 @@ A couple points:
 
 ## Cloudplow with Multiple Folders
 
-This config uploads everything from `/mnt/local/Media` to `google:/Media` [triggered at 100GB] and  everything in `/mnt/local/downloads/torrents/qbittorrent/completed/` to `google:/Downloads/` [triggered at 50GB].
+This config uploads everything from `/mnt/local/Media` to `google:/Media` [triggered at 100GB] and everything in `/mnt/local/downloads/torrents/qbittorrent/completed/` to `google:/Downloads/` [triggered at 50GB].
 
 <details>
 <summary>Example config.json (click to expand)</summary><br />

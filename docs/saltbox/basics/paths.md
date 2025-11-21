@@ -11,7 +11,7 @@ tags:
 
 ## General Info
 
-It is recommended to assign all your disk space to `/`, as all of your imported media and app data will be saved to `/mnt/local/` and `/opt/`,  respectively.  This allows your application metadata and your staged media to  make the most use of your available disk space without worrying about partitioning.
+It is recommended to assign all your disk space to `/`, as all of your imported media and app data will be saved to `/mnt/local/` and `/opt/`, respectively. This allows your application metadata and your staged media to make the most use of your available disk space without worrying about partitioning.
 
 Note 1: **ALL** folders/paths mentioned below, and elsewhere on the wiki, are **CASE SENSITIVE** (e.g. Google Drive: `Media` not `media`, `Movies` not `movies`, `TV` not `tv`; Plex Requests: `/logs` not `/Logs`, etc). This is important, or else apps like Plex, Sonarr, and Radarr will not be able find your media.
 
@@ -30,7 +30,7 @@ Media
 
   ![](../../images/google-drive-filesystem.png)
 
-There may be other mediatype directories here depending on your specific setup.  The current automated rclone setup creates several more [Movies-4K, Books, Anime, and so forth].
+There may be other mediatype directories here depending on your specific setup. The current automated rclone setup creates several more [Movies-4K, Books, Anime, and so forth].
 
 | Path  <pre>                 </pre>                 | Description  <pre>                                                                                              </pre>                                                                                                                                                          |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -57,7 +57,7 @@ mnt
 
 | <pre>                 </pre> Path                   | <pre>                                                                                                 </pre> Description                                                                                                                                                            |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `/mnt/local/Media/`     | Location of media stored on the server.  <br /><br />This is the local part of `/mnt/unionfs/Media/`.                                                                                                                        |
+| `/mnt/local/Media/`     | Location of media stored on the server.<br /><br />This is the local part of `/mnt/unionfs/Media/`.                                                                                                                        |
 | `/mnt/remote/Media/` | Location of media stored on Google Drive (mounted by rclone).                                                                                                  |
 | `/mnt/unionfs/Media/`   | Combined folder of local media (`/mnt/local/Media/`) and online media (`/mnt/remote/Media/`). <br /><br /> This is the folder that Plex, Sonarr, and Radarr read when scanning for media.|
 
@@ -87,7 +87,7 @@ _Note: It is advised to leave at least 100GB free on `/opt` for the storage of D
 
 Every container sees any path inside `/mnt` the same as the host and same as any other container.
 
-That means that no path translation is required from context to context.  If nzbget reports a download at `/mnt/unionfs/downloads/...` then Radarr will see it in the same place; when Radarr tells Plex-Autoscan [PAS] about it, PAS sees it in that same place; when PAS tells Plex about it, Plex sees it in that same place.
+That means that no path translation is required from context to context. If nzbget reports a download at `/mnt/unionfs/downloads/...` then Radarr will see it in the same place; when Radarr tells Plex-Autoscan [PAS] about it, PAS sees it in that same place; when PAS tells Plex about it, Plex sees it in that same place.
 
 ### Plex
 
@@ -102,24 +102,24 @@ That means that no path translation is required from context to context.  If nzb
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
 | `/mnt/unionfs/Media/TV/`              | `/mnt/unionfs/Media/TV/`       | Sonarr will import to `/mnt/unionfs/Media/TV/`. |
-| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Sonarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
-| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using qBittorrent, Sonarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
+| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using NZBGet, Sonarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
+| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using qBittorrent, Sonarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
 
 ### Radarr
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
 | `/mnt/unionfs/Media/movies/`              | `/mnt/unionfs/Media/Movies/`       | Radarr will import to `/mnt/unionfs/Media/Movies/`. |
-| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Radarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
-| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using qBittorrent, Radarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
+| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using NZBGet, Radarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
+| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using qBittorrent, Radarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
 
 ### Lidarr
 
 | Docker Path  <pre>                 </pre>          | Host Path <pre>                                     </pre>                        | Description <pre>                                                                                                                                                             </pre>                                                                |
 |:---------------------- |:--------------------------------- |:--------------------------------------------------------------------------- |
 | `/mnt/unionfs/Media/Music/`              | `/mnt/unionfs/Media/Music/`       | Lidarr will import to `/mnt/unionfs/Media/Music/`. |
-| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using NZBGet, Lidarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
-| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).  <br /> <br /> For example, when using qBittorrent, Lidarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
+| `/mnt/unionfs/downloads/nzbs/`    | `/mnt/unionfs/downloads/nzbs/` (default) | NZB downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using NZBGet, Lidarr will import from `/mnt/unionfs/downloads/nzbs/nzbget/`, which is ultimately `/mnt/local/downloads/nzbs/nzbget/` on host system.                          |
+| `/mnt/unionfs/downloads/torrents/` | `/mnt/unionfs/downloads/torrents/` (default) | Torrent downloads folder as set in [settings.yml](../../reference/accounts.md#options-in-settingsyml)).<br /> <br /> For example, when using qBittorrent, Lidarr will import from `/mnt/unionfs/downloads/torrents/qbittorrent/`, which is ultimately `/mnt/local/downloads/torrents/qbittorrent/` on host system.                     |
 
 ---
 

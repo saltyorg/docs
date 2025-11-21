@@ -2,7 +2,7 @@
 
 Saltbox is a continuation of the Cloudbox project and is mostly compatible out of the box. Very little has to be done to bring your old Cloudbox data into Saltbox. Any customisations you have made or special roles are going to require extra work as Saltbox uses Traefik instead of nginx.
 
-IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 22.04 or higher and try to run this migration.  It won't work.
+IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*. You will have to back up, reinstall the OS fresh on the machine, then start the migration. Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 22.04 or higher and try to run this migration. It won't work.
 
 ## Before Migration
 
@@ -26,13 +26,13 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
   ```
 
   If you are using a service account to authenticate your rclone backup remote, you will need to put that service account file in place on the saltbox server before you run the restore.
-  
+
   This trips people up frequently, so it bears repeating:
 
   If you are using a service account to authenticate your rclone backup remote, you will need to put that service account file in place on the saltbox server before you run the restore.
 
   This warning applies **specifically and only** to the rclone remote from which you are going to retrieve your cloudbox backup; if that one is authenticated with a client ID/secret and others are authenticated with a service account, this does not apply.
-  
+
   If you don't understand what this means, ask on the Discord before you attempt this migration; doing so will save you a failure that will drive you to the Discord anyway.
 
 - **Community files to keep handy (these files should be found in `/opt/community/`):**
@@ -94,7 +94,7 @@ Backup from Cloudbox as you normally would. You will need to make the backup dri
 
 ## Migration
 
-IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*.  You will have to back up, reinstall the OS fresh on the machine, then start the migration.  Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04+ and try to run this migration.  It won't work.
+IMPORTANT: Migration has the same requirements as a new install; Saltbox still expects a clean install of the OS; this means that you *cannot* upgrade an existing Cloudbox setup to Saltbox *in place*. You will have to back up, reinstall the OS fresh on the machine, then start the migration. Do not upgrade your Ubuntu 18.04 Cloudbox machine to Ubuntu 20.04+ and try to run this migration. It won't work.
 
 Do not proceed unless the machine you're using is a fresh install of Ubuntu 22.04 or 24.04.
 
@@ -107,12 +107,12 @@ Do not proceed unless the machine you're using is a fresh install of Ubuntu 22.0
   ```
 
 - Copy `rclone.conf` to `/srv/git/saltbox` <Br/> and edit the configuration files as needed. You can follow the [saltbox install instructions for saltbox for this](../../saltbox/install/install.md)<Br/>
-  
+
   Saltbox is going to move this file into the correct location; you're putting it here only so saltbox knows where to find it.
 
-  You can refer to your Cloudbox configuration files and copy relevant settings over from them, but do not just copy your existing Cloudbox config files into place.  Direct compatibility with Cloudbox config files is not guaranteed and will not be maintained going forward.
+  You can refer to your Cloudbox configuration files and copy relevant settings over from them, but do not just copy your existing Cloudbox config files into place. Direct compatibility with Cloudbox config files is not guaranteed and will not be maintained going forward.
 
-IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste individual values [values like your plex username and token, not sections like the entire plex section] from your cloudbox files, but DO NOT use the originals.  Things have moved from file to file compared to Cloudbox, there are new values that are required, there are values that have been deprecated.  Work on the new default settings files and edit them using your cloudbox files as a reference.
+IMPORTANT: DO NOT use your cloudbox configuration files. You can copy and paste individual values [values like your plex username and token, not sections like the entire plex section] from your cloudbox files, but DO NOT use the originals. Things have moved from file to file compared to Cloudbox, there are new values that are required, there are values that have been deprecated. Work on the new default settings files and edit them using your cloudbox files as a reference.
 
 - Run the preinstall command.
 
@@ -126,7 +126,7 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
 
 - switch to the newly created user specified in your configuration. <br />
 
-- If you are restoring a Cloudbox backup, you should change the default rclone backup path in `/srv/git/saltbox/backup_config.yml` to point to your Cloudbox backup.  Once you've done this initial restore, change it back to the location of your choice.
+- If you are restoring a Cloudbox backup, you should change the default rclone backup path in `/srv/git/saltbox/backup_config.yml` to point to your Cloudbox backup. Once you've done this initial restore, change it back to the location of your choice.
 
   ```yaml
   ---
@@ -156,7 +156,7 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
   Then you should be able to install tags as you want.
 
 - install top-level tag [as appropriate] <br />
-  
+
   Note: These are options, not a list of commands to run.
 
   ``` shell
@@ -197,4 +197,4 @@ IMPORTANT: DO NOT use your cloudbox configuration files.  You can copy and paste
     sb install sandbox-nextcloud
 
   ```
-As with a Cloudbox restore, any non-standard service files will be present in `/opt/service-files`, but you will need to copy them into `/etc/systemd/system`, then activate and start them.  If you used the "tip44" method for adding teamdrives, for example, you'll need to do this.
+As with a Cloudbox restore, any non-standard service files will be present in `/opt/service-files`, but you will need to copy them into `/etc/systemd/system`, then activate and start them. If you used the "tip44" method for adding teamdrives, for example, you'll need to do this.

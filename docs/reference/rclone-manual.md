@@ -35,16 +35,15 @@ The guide below assumes you are using Google Drive.
 Further, it is assuming you are starting from nothing; a new Google account with no existing media on Google Drive.
 
 !!! info
-    IMPORTANT: This guide was written *before* Google began cracking down on storage usage on workspace accounts; it's assuming that you have effectively unlimited storage.  Now that this is not the case, you should evaluate whether you actually need or want to go through this for little to no benefit generally.
-    
+    IMPORTANT: This guide was written *before* Google began cracking down on storage usage on workspace accounts; it's assuming that you have effectively unlimited storage. Now that this is not the case, you should evaluate whether you actually need or want to go through this for little to no benefit generally.
+
     This process creates 300 service accounts and multiple Google projects to enable you to upload more than 750Gb per day; now that the total storage available to workspace accounts is in the tens of TB, this is not as important or useful as it used to be.
 
     This process creates multiple shared drives to help you avoid hitting file-count limitations; again, now that the total storage available to workspace accounts is in the tens of TB, this is not as important or useful as it used to be, as you're unlikely to have hundreds of thousands of files.
 
     Take the time to consider whether this process holds value for you.
 
-
-THIS PROCESS IS OPTIONAL.  THIS IS NOT A REQUIRED PART OF THE SALTBOX INSTALL.
+THIS PROCESS IS OPTIONAL. THIS IS NOT A REQUIRED PART OF THE SALTBOX INSTALL.
 
 IF YOU ARE USING A BACKEND OTHER THAN GOOGLE DRIVE [say, Dropbox], THIS DOES NOT APPLY TO YOU.
 
@@ -52,14 +51,14 @@ Rclone supports many cloud provider backends, but the only one routinely used by
 
 This process will use various scripts to do as much of this for you as possible, but there are some things that can't be scripted easily, like steps 1 and 2 below.
 
-It also assumes you are using a [Google Workspace](https://workspace.google.com/) account, since it assumes you can create shared drives.  You can do some of this without a Workspace account, but the differences are not documented here.  You won't be able to directly follow the steps below, and most of the scripts won't work for you.
+It also assumes you are using a [Google Workspace](https://workspace.google.com/) account, since it assumes you can create shared drives. You can do some of this without a Workspace account, but the differences are not documented here. You won't be able to directly follow the steps below, and most of the scripts won't work for you.
 
 !!! warning
-    IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT.  IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP.  THERE'S NO REASON TO CREATE A SECOND SET USING THE SAME GOOGLE ACCOUNT.
+    IF YOU ARE HERE TO DO THIS A SECOND TIME, RETHINK THAT. IF YOU SUCCESSFULLY RAN THROUGH THIS PROCESS ONCE, YOU HAVE EVERYTHING YOU NEED TO SET SALTBOX UP AND SHOULD REUSE THOSE SHARED DRIVES, SERVICE ACCOUNTS, AND GROUP. THERE'S NO REASON TO CREATE A SECOND SET USING THE SAME GOOGLE ACCOUNT.
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
-If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or the like, you DO NOT WANT TO DO THIS.  This process is assuming you are starting from scratch without any of this already set up.  It will overwrite aspects of an existing rclone setup with no undo.
+If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or the like, you DO NOT WANT TO DO THIS. This process is assuming you are starting from scratch without any of this already set up. It will overwrite aspects of an existing rclone setup with no undo.
 
 That said, let's proceed.
 
@@ -68,15 +67,12 @@ That said, let's proceed.
 !!! warning
     YOU CANNOT SKIP STEPS HERE: EACH OF THESE STEPS IS ASSUMING YOU HAVE PERFORMED THE PREVIOUS ONE.
 
-
 !!! info
     IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT [Cloudbox, PG, etc] USE THAT CONFIG [NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS] IN A MIGRATION.
-
 
 !!! warning
     THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
 
-   
 ### Step 1: Verify that the Shared Drive permissions are correct on your Google account
 
 [Detailed instructions here](google-account-perms.md)
@@ -85,7 +81,7 @@ That said, let's proceed.
 
 [Detailed instructions here](google-project-setup.md)
 
-Save that credential file on your server at `/opt/sa/project-creds.json`.  You may need to create `/opt/sa` and make sure it's writable by you.
+Save that credential file on your server at `/opt/sa/project-creds.json`. You may need to create `/opt/sa` and make sure it's writable by you.
 
 <details>
 <summary>How do I do that?</summary>
@@ -116,7 +112,7 @@ Your randomly-generated prefix is:
 <br />
 Apparently the Javascript didn't work or you have Javascript disabled.
 
-Try reloading the page.  If that doesn't work, generate it manually:
+Try reloading the page. If that doesn't work, generate it manually:
 
 [Type this at a command prompt on your server]
 
@@ -129,7 +125,7 @@ prefix=$(head /dev/urandom | tr -dc a-z | head -c10 ;) && echo $prefix
 Make a note of that prefix; you will use it in the next two steps.
 
 !!! info
-    There is nothing special about that prefix; it is ten random characters.  It's not tied to *you* literally.  When you reload this page, the prefix will change.  That's fine.  The specific prefix doesn't matter; just pick one and use it.
+    There is nothing special about that prefix; it is ten random characters. It's not tied to *you* literally. When you reload this page, the prefix will change. That's fine. The specific prefix doesn't matter; just pick one and use it.
 
 <details>
 <summary>Why do I need this?</summary>
@@ -186,7 +182,7 @@ If you see an error like this:
 Failed to tree: 3 errors: aZaSjsklaj-Movies: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BINGBANGBOING, notFound; aZaSjsklaj-Music: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BANGBOINGBING, notFound; aZaSjsklaj-TV: failed to get Shared Drive info: googleapi: Error 404: Shared drive not found: BOINGBINGBANG, notFound
 ```
 
-The most likely cause is that something went wrong in the group setup.  Perhaps all the service accounts didn't get added to the group.
+The most likely cause is that something went wrong in the group setup. Perhaps all the service accounts didn't get added to the group.
 Repeat the last part of [this step](google-group-setup.md) where you upload the members.csv and verify that the group shows at least 300 members after you're done.
 
 </details>
@@ -199,7 +195,7 @@ US-centric trash-TV reference aside, there is one thing you may wish to do after
 
 The "saltbox install" is the full installation of saltbox using `sb install saltbox` or the like, not the process you just completed above.
 
-You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives.  Eventually this will be automated, but for now there is [this guide](cloudplow-config.md).  The script described there operates on the default cloudplow config file, which does not exist yet if you are going through this for the first time.
+You will still be limited to the 750GB/day Google upload limit until you configure cloudplow to upload directly to the individual shared drives. Eventually this will be automated, but for now there is [this guide](cloudplow-config.md). The script described there operates on the default cloudplow config file, which does not exist yet if you are going through this for the first time.
 
 For now, go [back to the install process](../saltbox/install/install.md#step-5-saltbox).
 

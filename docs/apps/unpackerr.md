@@ -28,7 +28,7 @@ sb install unpackerr
 
 - [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons }
 
-The important part of the setup is the setup for the applications.  You'll need to change these three settings for each:
+The important part of the setup is the setup for the applications. You'll need to change these three settings for each:
 
 ```text
 [[sonarr]]

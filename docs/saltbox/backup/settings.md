@@ -105,35 +105,35 @@ backup:
 
 ### Restore service
 
-Use of the restore service is optional.  Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.  
+Use of the restore service is optional. Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.
 
-These copies are encrypted on your local saltbox machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable].  The password is not sent to saltbox servers; they do not know your password and cannot decrypt these files.  If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
+These copies are encrypted on your local saltbox machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable]. The password is not sent to saltbox servers; they do not know your password and cannot decrypt these files. If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 !!! important
 
     These values:
-    
+
     ``` { .yaml .annotate }
       restore_service:
         pass: # (1)!
         user: # (2)!
     ```
-    
-    1. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service. 
-    
+
+    1. Password used encrypt/decrypt the configuration files for the OPTIONAL restore service.
+
         Only used on the client side in scripts.
-    
+
     2. Username used for the OPTIONAL restore service.
-    
+
         Has to be unique across all users of the service. Try sticking with a url for the server `box.xYOUR_DOMAIN_NAMEx` unique to each server for something easily remembered.
-    
+
         Usernames are hashed before requests are sent to the restore service.
-    
+
     SHOULD NOT BE YOUR SERVER ACCOUNT CREDENTIALS.
-    
-    These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service.  They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption.  They are not sent or stored anywhere else.  If they are not filled in, then your config files will not be sent to the saltbox restore service.
-    
-    We'd recommend you use some random text for **both** the username and password, like perhaps a randomly-generated password from BitWarden or some other password generator.  This should avoid collisions like someone else choosing the username "saltboxbackup".  This sort of thing:
+
+    These are an *arbitrary* username/password that you make up which are used ONLY with this backup/restore service. They are used to encrypt your config files before they are placed on the saltbox restore server, and then in the restore command that retrieves the backup for decryption. They are not sent or stored anywhere else. If they are not filled in, then your config files will not be sent to the saltbox restore service.
+
+    We'd recommend you use some random text for **both** the username and password, like perhaps a randomly-generated password from BitWarden or some other password generator. This should avoid collisions like someone else choosing the username "saltboxbackup". This sort of thing:
 
     ``` { .yaml }
       restore_service:

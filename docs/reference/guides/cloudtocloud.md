@@ -2,7 +2,7 @@
 
 This article discusses adding a new cloud provider into your setup.
 
-A typical scenario is moving from Google to Dropbox.  However, this article will cover this in a generalized manner, since the concepts are universal.  Maybe you're transitioning from Google to Dropbox.  Maybe you're adding Box but keeping Dropbox.  Conceptually that part doesn't matter.  You need to do basically the same things either way.
+A typical scenario is moving from Google to Dropbox. However, this article will cover this in a generalized manner, since the concepts are universal. Maybe you're transitioning from Google to Dropbox. Maybe you're adding Box but keeping Dropbox. Conceptually that part doesn't matter. You need to do basically the same things either way.
 
 Throughout, I will refer to "Cloud A" and "Cloud B", where "A" is your current provider and "B" is the new one.
 
@@ -46,7 +46,7 @@ _Optionally_, if you want to abandon Cloud A:
     3. add that mount point to the mergerfs
 
     Steps 1-3 are covered [here](chazguides/teamdrive.md).
-    
+
     4. point cloudplow at remote from step 1 instead of the original.
 
     Basically, this involves changing the target remote in your cloudplow `config.json`.
@@ -60,7 +60,7 @@ _Optionally_, if you want to abandon Cloud A:
         "upload_remote": "google:/Media"
     ```
     `google` is the name of the rclone remote that points to Cloud A.
-    
+
     change that to: 
     ```
         "sync_remote": "cloud_b_remote:/Media",
@@ -74,8 +74,8 @@ _Optionally_, if you want to abandon Cloud A:
     OPTIONAL:
 
     Change `google` to `cloud_b_remote` wherever else it appears in the file
-    
-    Aside from the two instances mentioned above, THAT NAME IS TOTALLY INTERNAL TO CLOUDPLOW.  YOU DO NOT NEED TO CHANGE IT.
+
+    Aside from the two instances mentioned above, THAT NAME IS TOTALLY INTERNAL TO CLOUDPLOW. YOU DO NOT NEED TO CHANGE IT.
 
     If you want, change these:
     ```

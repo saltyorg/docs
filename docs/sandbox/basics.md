@@ -35,7 +35,7 @@ sb update
 ```
 
 !!! info
-    Note that `sb update` updates only the saltbox files themselves; it does not update any applications.  You will need to follow this with an `sb install <tags here>` command to update applications or installed components.
+    Note that `sb update` updates only the saltbox files themselves; it does not update any applications. You will need to follow this with an `sb install <tags here>` command to update applications or installed components.
 
 ## How to Install Sandbox Apps
 
@@ -70,12 +70,12 @@ sb list
 
 ### Requesting Sandbox Apps
 
-If you have an idea for a container that you think fits into the Saltbox system but you don't feel you have the required skills to create a role, open an issue in the [Sandbox repository](https://github.com/saltyorg/Sandbox/issues).  Take a look at some other app requests and follow the same pattern.  If your suggestion catches a developer's interest, perhaps they will pick it up.
+If you have an idea for a container that you think fits into the Saltbox system but you don't feel you have the required skills to create a role, open an issue in the [Sandbox repository](https://github.com/saltyorg/Sandbox/issues). Take a look at some other app requests and follow the same pattern. If your suggestion catches a developer's interest, perhaps they will pick it up.
 
 !!! note
-    Requests are just that, *requests*.  Nobody is being paid for their work on this.  Requests may not be implemented in a timely manner or at all.
+    Requests are just that, *requests*. Nobody is being paid for their work on this. Requests may not be implemented in a timely manner or at all.
 
-The person requesting is often the best person to implement it, since that person has the interest along with knowledge of the task and the test environment.  An arbitrary developer probably won't install and set up SomeRandomApp in order to fill a request for something that works alongside SomeRandomApp.
+The person requesting is often the best person to implement it, since that person has the interest along with knowledge of the task and the test environment. An arbitrary developer probably won't install and set up SomeRandomApp in order to fill a request for something that works alongside SomeRandomApp.
 
 ### Contributing to Sandbox Apps
 
@@ -140,10 +140,10 @@ Next step is to create the role. At a minimum, you will need to modify:
 ```text
 roles
 └── my-cool-role
-    ├── defaults
-    │   └── main.yml
-    └── tasks
-        └── main.yml
+    ├── defaults
+    │   └── main.yml
+    └── tasks
+        └── main.yml
 sandbox.yml
 ```
 
@@ -200,14 +200,14 @@ defaults
 └── settings.yml.default
 ```
 
-This file provides the prototype settings file; if your role requires some new settings, add them to this file.  When the sandbox repo is updated, your new settings will be added to the user's current settings file and they will be prompted to review it.
+This file provides the prototype settings file; if your role requires some new settings, add them to this file. When the sandbox repo is updated, your new settings will be added to the user's current settings file and they will be prompted to review it.
 
 ```text
 templates
 └── my-cool-role.j2
 ```
 
-Perhaps you need to create a config file, or a service file, or the like.  Create templates for them here and fill them in at install time.  THere are lots of examples in the existing roles.
+Perhaps you need to create a config file, or a service file, or the like. Create templates for them here and fill them in at install time. THere are lots of examples in the existing roles.
 
 ##### Testing
 

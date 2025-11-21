@@ -43,7 +43,7 @@ To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
 
 3. On the "Connect Portainer to the Docker environment you want to manage." screen, select `Local: Manage the local Docker environment` and click `Connect`.
 
-    _Note: Don't be confused by "local" in this context. It is referring to the relationship between the Docker instance you're managing on your Saltbox server and this instance of Portainer. These things are local to each other on your Saltbox server, wherever that is. They may be remote from you, but they are local to each other.  Pay no mind to what looks like a warning at the bottom. Saltbox has already taken care of that._
+    _Note: Don't be confused by "local" in this context. It is referring to the relationship between the Docker instance you're managing on your Saltbox server and this instance of Portainer. These things are local to each other on your Saltbox server, wherever that is. They may be remote from you, but they are local to each other. Pay no mind to what looks like a warning at the bottom. Saltbox has already taken care of that._
 
     ![](../images/portainer/portainer-03.png)
 

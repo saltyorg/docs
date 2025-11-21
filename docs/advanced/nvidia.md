@@ -77,13 +77,12 @@ This tag will:
 2. Upgrade or downgrade the driver if a different version is already installed.
 3. Install and configure the Nvidia Docker toolkit.
 
-**If you run this tag to install the driver**, you also need to run a tag to reinstall any containers in which you want to use the Nvidia card, like `saltbox`, or `plex`, or the like.  Merely installing the driver does not configure Plex (for example) to use the card.
+**If you run this tag to install the driver**, you also need to run a tag to reinstall any containers in which you want to use the Nvidia card, like `saltbox`, or `plex`, or the like. Merely installing the driver does not configure Plex (for example) to use the card.
 
 ## Important Notes
 
 - Always ensure your `nvidia_enabled` is set to `true` before running the `nvidia` tag or any of the main tags if you want Nvidia support.
 - If you're upgrading or downgrading your driver, make sure to update the `nvidia_driver_version` in your inventory before running the `nvidia` tag.
 - Running the main tags will not affect an existing driver installation. To change the driver version, you must use the `nvidia` tag.
-
 
 By following these guidelines, you can effectively enable and manage Nvidia support in your Saltbox installation, allowing you to take advantage of GPU acceleration for compatible applications and services.

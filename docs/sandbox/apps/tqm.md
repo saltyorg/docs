@@ -17,7 +17,7 @@ tags:
 - The tqm binary is downloaded and a service and timer file created when the config is identified.
 
 !!! note
-      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully.  [Here](https://github.com/autobrr/tqm#example-configuration) is an example config you can grab and fill in with your own details.
+      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully. [Here](https://github.com/autobrr/tqm#example-configuration) is an example config you can grab and fill in with your own details.
 
 | Details     |
 |-------------|

@@ -28,7 +28,7 @@ tags:
     Opting out of Usenet?
 
     <div>
-    
+
     [**Skip to qBittorrent**:material-fast-forward:](qbittorrent.md){ .md-button }
 
     </div>
@@ -40,7 +40,7 @@ tags:
     Opting for another Usenet client?
 
     <div>
-    
+
     [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
 
     [**Skip to NZBHydra2**:material-fast-forward:](nzbhydra2.md){ .md-button }
@@ -63,7 +63,7 @@ To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
 
 ## Basics
 
-- Go through the setup wizard.  You will need to enter server details:
+- Go through the setup wizard. You will need to enter server details:
 
 ![](../images/sabnzbd/02-sabnzbd.png)
 
@@ -97,7 +97,7 @@ To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
 
 ![](../images/sabnzbd/07-sabnzbd.png)
 
-   Note that the category matches between Radarr and SABnzbd.  The specific category doesn't matter; just that they match.
+   Note that the category matches between Radarr and SABnzbd. The specific category doesn't matter; just that they match.
 
 ## Next
 

@@ -80,7 +80,6 @@ However, it is safe to run any saltbox tag[s] [including the install tags] at wi
 !!! info
     See [dependencies documentation](../../reference/dependencies.md) for more information about the dependencies.
 
-
 ## Step 2: Configuration
 
 Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
@@ -123,7 +122,7 @@ To edit any of the following configuration files use the command written in the 
 
     4. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
 
-    5. Docker Hub account token. *Not your password.*  A token can be created in the Security tab of your Docker Hub account.
+    5. Docker Hub account token. *Not your password.* A token can be created in the Security tab of your Docker Hub account.
 
     6. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
 
@@ -236,7 +235,7 @@ To edit any of the following configuration files use the command written in the 
         Currently Saltbox supports 4 options:
 
         `google`, `dropbox`, `sftp` and alternatively a path to a file ("/opt/mount-templates/custom/remote.j2") containing either jinja2 template or an actual copy of a systemd service file.
-        
+
         We recommend having the template file in a folder in /opt so that it moves with your install after a restore.
 
     9. Toggles whether you want this remote mount included in the union at `/mnt/unionfs`. This requires that `mount` be enabled.
@@ -263,7 +262,7 @@ To edit any of the following configuration files use the command written in the 
 
     17. Folder used for temporary transcode files.
 
-    18. Does this remote type require a refresh service to find new files?  For example, `sftp`
+    18. Does this remote type require a refresh service to find new files? For example, `sftp`
 
 === "adv_settings.yml"
 
@@ -319,7 +318,7 @@ To edit any of the following configuration files use the command written in the 
     3. Toggles the Cloudflare A or AAAA record proxy state (CDN) when records are changed.
 
         This setting can be overridden on a per role basis using the inventory like this:
-        
+
         ```yaml
         rolename_dns_proxy: false
         ```
@@ -383,7 +382,7 @@ sb install preinstall
 !!! warning
     From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`
 
-If the server rebooted due to a kernel update, reconnect via SSH **as the user specified in `accounts.yml`.** 
+If the server rebooted due to a kernel update, reconnect via SSH **as the user specified in `accounts.yml`.**
 
 If your server did not need to reboot, **and the user in `accounts.yml` is different from the user as whom you are currently connected to the server** you can run `su username` to switch user or disconnect and reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in `accounts.yml`
 
@@ -413,16 +412,16 @@ Note that generally speaking these five options are mutually exclusive.
 
 === "Cloudbox User"
     This option is aimed at you if you are migrating your cloudbox setup.
-    
+
     You already have the required setup complete. You should use your existing Google setup at least to start with.
-    
+
     Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup. If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
 
     [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
 
 === "I have media on cloud storage"
     This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
-    
+
     You probably already have the required setup complete. You should use your existing setup at least to start with.
 
     You will need to enter details of your remote[s] into `settings.yml`. If you have custom mount services, you can use them instead of one of the supplied templates. If not, perhaps start with the `google` template to see if it's "good enough".
@@ -448,7 +447,7 @@ Note that generally speaking these five options are mutually exclusive.
         4. enter details about that remote in `settings.yml`
 
         Note: that mentions shared drives since that's our recommendation. If you want to point that remote at My Drive you can of course do so.
-        
+
         Note: This is the SIMPLEST POSSIBLE CASE as noted above; it doesn't discuss service accounts or multiple disks because it's the SIMPLEST POSSIBLE CASE.
 
     === "Dropbox"
@@ -458,10 +457,10 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Other Cloud Storage"
 
-        Rclone supports a variety of [cloud storage providers](https://rclone.org/overview/).  This does not imply that any or all cloud storage providers are suitable for the saltbox use case.
+        Rclone supports a variety of [cloud storage providers](https://rclone.org/overview/). This does not imply that any or all cloud storage providers are suitable for the saltbox use case.
 
         You will need to perform two steps:
-        
+
         1. Create an rclone remote pointing at your cloud storage as described in the [generic rclone guide](../../reference/guides/rclone-remote-generic.md)
         2. enter those remote details in `settings.yml`
 
@@ -476,7 +475,7 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
     You must run at least `core` prior to *any other* Saltbox tag; if you run any other tag prior to running `core`, you will see a variety of odd errors. You need to run one of these options as shown below before moving on or installing any other tags/apps.
 
 !!! warning
-    Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`?  If not, go back and fix that.
+    Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`? If not, go back and fix that.
 
 If you are installing a [Feederbox/Mediabox setup](../basics/install-types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
@@ -485,7 +484,7 @@ You can get a list of available install tags with `sb list`.
 === "Saltbox"
 
     `saltbox` is an all-in-one media server for downloading and playback. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
-    
+
     ```shell
     sb install saltbox
 
@@ -494,7 +493,7 @@ You can get a list of available install tags with `sb list`.
 === "Mediabox [playback]"
 
     `mediabox` is just the parts required for playback. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
-    
+
     ```shell
     sb install mediabox
 
@@ -503,7 +502,7 @@ You can get a list of available install tags with `sb list`.
 === "Feederbox [downloading]"
 
     `feederbox` is just the parts required for downloading. It installs `core` and a set of application as described in [install types](../basics/install-types.md)
-    
+
     ```shell
     sb install feederbox
 
@@ -512,7 +511,7 @@ You can get a list of available install tags with `sb list`.
 === "Core [minimal]"
 
     `core` is the bare minimum required for saltbox. It installs the basics as described in [install types](../basics/install-types.md)
-    
+
     ```shell
     sb install core
 
@@ -521,7 +520,7 @@ You can get a list of available install tags with `sb list`.
 === "Dealer's choice"
 
     If you want to install a personal selection of apps, install `core` and the app tags you want as listed [here](../basics/install-types.md)
-    
+
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent
 

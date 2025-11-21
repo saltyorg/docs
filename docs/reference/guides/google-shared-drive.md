@@ -2,7 +2,7 @@
 
 This article describes how to create a Google Shared Drive for use with Saltbox.
 
-This is a general descrioption of the process.  If you go through the documented Google Drive setup process you most likely don't have to do this.
+This is a general descrioption of the process. If you go through the documented Google Drive setup process you most likely don't have to do this.
 
 ## Prerequisites
 

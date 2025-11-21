@@ -23,7 +23,6 @@ You will need to reinstall traefik after changing this setting:
 sb install traefik
 ```
 
-
 ## What themes are available?
 
 There are initially seven "themes" available, which are stored in `/opt/error_pages`:

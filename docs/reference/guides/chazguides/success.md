@@ -1,4 +1,4 @@
-NOTE: THIS ARTICLE STARTED AS A CLOUDBOX GUIDE AND SOME OUTPUT STILL REFLECTS THAT.  CONCEPTS ARE THE SAME, HOWEVER.
+NOTE: THIS ARTICLE STARTED AS A CLOUDBOX GUIDE AND SOME OUTPUT STILL REFLECTS THAT. CONCEPTS ARE THE SAME, HOWEVER.
 
 # Did my Saltbox install succeed?
 
@@ -6,9 +6,9 @@ If you started with the first install [step](../../../saltbox/install/install.md
 
 And went through the first five steps, completely and without seeing any errors, it should be.
 
-Perhaps you skipped some of those 5 required steps.  If so, why?  Go back to the beginning and start again.
+Perhaps you skipped some of those 5 required steps. If so, why? Go back to the beginning and start again.
 
-Perhaps you ignored some errors.  If so, why?  Go back to the beginning and start again.
+Perhaps you ignored some errors. If so, why? Go back to the beginning and start again.
 
 The install is complete when you get to the end of [this step](../../../saltbox/install/install.md#step-5-saltbox) with no errors.
 
@@ -25,7 +25,6 @@ After running the Saltbox install command:
 A lot of logging information will scroll by.
 
 Eventually, it will stop, and if successful, will display something like this:
-
 
 ```text
 PLAY RECAP ************************************************************************************
@@ -168,7 +167,7 @@ PING ombi.xYOUR_DOMAIN_NAMEx (111.222.333.444): 56 data bytes
 64 bytes from 111.222.333.444: icmp_seq=0 ttl=48 time=114.425 ms
 ```
 
-That IP address should be the IP address of the server.  If this is a home server, it should be your external IP.
+That IP address should be the IP address of the server. If this is a home server, it should be your external IP.
 
 If instead you should see something like:
 
@@ -177,7 +176,7 @@ chaz@oberon:~/saltbox$ ping ombi.xYOUR_DOMAIN_NAMEx
 ping: cannot resolve ombi.xYOUR_DOMAIN_NAMEx: Unknown host
 ```
 
-...then you need to fix your DNS setup.  Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
+...then you need to fix your DNS setup. Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
 
 Are the containers running?
 

@@ -17,11 +17,11 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
-1. Open the Google Admin site: <https://admin.google.com/> and login with your Google account.  Click on the groups heading:
+1. Open the Google Admin site: <https://admin.google.com/> and login with your Google account. Click on the groups heading:
 
    ![](../images/google-group/01-admin-top-level.png)
 
-2. You should now see a list of your groups [which may be empty].  Click on "Create Group":
+2. You should now see a list of your groups [which may be empty]. Click on "Create Group":
 
    ![](../images/google-group/02-create-group.png)
 

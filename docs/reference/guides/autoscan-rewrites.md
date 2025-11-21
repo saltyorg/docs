@@ -8,7 +8,7 @@ This article will attempt to clear them up.
 
 Basically, autoscan rewrites are a way to convert a path as one thing [typically an app like Sonarr] sees it to a path where another thing [typically an app like Plex] sees it.
 
-The source of the scan [Sonarr, for example] sees a thing at one path, and the target of scan [Plex, for example] may see the same file at a different path.  Autoscan uses "rewrites" to convert the source path to the target path.
+The source of the scan [Sonarr, for example] sees a thing at one path, and the target of scan [Plex, for example] may see the same file at a different path. Autoscan uses "rewrites" to convert the source path to the target path.
 
 ## Do I always need rewrites?
 
@@ -72,7 +72,7 @@ Autoscan first needs to figure out which library to tell Plex about, since it's 
 
 > "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library something-or-other."
 
-So Autoscan looks for a Plex library that has `/tv/` as one of its root directories.  If it finds that to be library ID 12, it tells Plex:
+So Autoscan looks for a Plex library that has `/tv/` as one of its root directories. If it finds that to be library ID 12, it tells Plex:
 
 > "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library **12**."
 
@@ -177,4 +177,3 @@ The Sonarr rewrite goes straight to the final path required by Plex:
 and Plex accepts the path as is.
 
 Of course, that works best when there's only a single target. 
-

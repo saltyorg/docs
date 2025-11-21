@@ -52,7 +52,7 @@ Recommended for GUI applications and web services.
           # (1)!
         ```
 
-        1.  Set image-specific environment variables and remove unsupported ones          
+        1.  Set image-specific environment variables and remove unsupported ones
 
         ```yaml hl_lines="2-3"
         volumes:
@@ -62,7 +62,7 @@ Recommended for GUI applications and web services.
 
         1.  Image may use a different path than `/config`
 
-        2.  Set other volume mappings the image requires 
+        2.  Set other volume mappings the image requires
 
     ??? info "Cheat Sheet (some content may be outdated)"
 
@@ -271,7 +271,7 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
 === "Saltbox Inventory"
 
     ??? variable string "`shell_bash_bashrc_block_custom`"
-    
+
         ```yaml
         shell_bash_bashrc_block_custom: |
 
@@ -282,7 +282,7 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
         ```
 
     ??? variable string "`shell_zsh_zshrc_block_custom`"
-    
+
         ```yaml
         shell_zsh_zshrc_block_custom: |
 
@@ -306,7 +306,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
             ghcr.io/jauderho/yt-dlp:latest "$@"
         }
         ```
-    
+
         ```sh
         speedtest() {
           docker run --rm -it \
@@ -317,7 +317,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
     === "Saltbox Inventory"
 
         ??? variable string "`shell_bash_bashrc_block_custom`"
-    
+
             ```yaml
             shell_bash_bashrc_block_custom: |
 
@@ -327,15 +327,15 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
                   -u $(id -u):$(id -g) \
                 ghcr.io/jauderho/yt-dlp:latest "$@"
               }
-    
+
               speedtest() {
                 docker run --rm -it \
                   gists/speedtest-cli "$@"
               }
             ```
-    
+
         ??? variable string "`shell_zsh_zshrc_block_custom`"
-    
+
             ```yaml
             shell_zsh_zshrc_block_custom: |
 
@@ -345,7 +345,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
                   -u $(id -u):$(id -g) \
                 ghcr.io/jauderho/yt-dlp:latest "$@"
               }
-    
+
               speedtest() {
                 docker run --rm -it \
                   gists/speedtest-cli "$@"

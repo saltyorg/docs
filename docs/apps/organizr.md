@@ -70,29 +70,29 @@ Note: it is suggested to enter your `plex username and password`
     ![Settings Tab](https://i.imgur.com/M7wfb1z.png)
     ![Tabs Editor](https://i.imgur.com/DJIvrh2.png)
 
-1. Things to note on this page, the Homepage is disabled by default and note the "Type" is set to "Internal".  Your normal Apps with Saltbox will all need to have a Type: "iFrame" unless you have a particular app you wish to open in another window which is also a Type option.  Go ahead and click "+ on the right". You will be prompted for information regarding the tab.
+1. Things to note on this page, the Homepage is disabled by default and note the "Type" is set to "Internal". Your normal Apps with Saltbox will all need to have a Type: "iFrame" unless you have a particular app you wish to open in another window which is also a Type option. Go ahead and click "+ on the right". You will be prompted for information regarding the tab.
 
     ![](https://i.imgur.com/KiXsQUI.png)
 
-1. Before hitting the Edit Tab button in the bottom right, please hit the "Test Tab" button, sometimes the Tab will check for you if iFrame is possible.  This will test if the information you inputted can be open in an iFrame.  Which is the secret sauce in Organizr's tabbed browsing.
+1. Before hitting the Edit Tab button in the bottom right, please hit the "Test Tab" button, sometimes the Tab will check for you if iFrame is possible. This will test if the information you inputted can be open in an iFrame. Which is the secret sauce in Organizr's tabbed browsing.
 
     ![New Tab](https://i.imgur.com/7UyBDAA.png)
 
-1. You will need to create multiple tabs with the information below. These are merely a suggestion and examples to get you up and going.  Any changes made, won't be reflected until Organizr is reloaded. You can also drag and drop to change the order of the apps (don't forget to reload)
+1. You will need to create multiple tabs with the information below. These are merely a suggestion and examples to get you up and going. Any changes made, won't be reflected until Organizr is reloaded. You can also drag and drop to change the order of the apps (don't forget to reload)
 
-    | Tab Name      | Tab URL                             | Icon URL                      | Category | Group | Type | Active |
-    | ------------- | ----------------------------------- | ----------------------------- |:------:|:----:|:-----:|:---------:|
-    | Portainer     | <https://portainer.iYOUR_DOMAIN_NAMEi>    | images/organizr.png (default) |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Sonarr        | <https://sonarr.iYOUR_DOMAIN_NAMEi>       | images/sonarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Radarr        | <https://radarr.iYOUR_DOMAIN_NAMEi>       | images/radarr.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBGet        | <https://nzbget.iYOUR_DOMAIN_NAMEi>       | images/nzbget.png             |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | qbittorrent     | <https://qbittorrent.iYOUR_DOMAIN_NAMEi>    | images/qbittorrent.png          |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | NZBHydra2     | <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>    | images/hydra.png              |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Jackett       | <https://jackett.iYOUR_DOMAIN_NAMEi>      | images/jackett.png            |   Unsorted   |  Admin   |   iFrame   |     Y     |
-    | Plex          | <https://plex.iYOUR_DOMAIN_NAMEi>         | images/plex.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Tautulli      | <https://tautulli.iYOUR_DOMAIN_NAMEi>     | images/tautulli.png           |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Ombi          | <https://ombi.iYOUR_DOMAIN_NAMEi>         | images/ombi.png               |   Unsorted   |  User    |   iFrame   |     Y     |
-    | Overseerr     | <https://overseerr.iYOUR_DOMAIN_NAMEi>    | images/overseerr.png          |   Unsorted   |  User    |   iFrame   |     Y     |
+    | Tab Name    | Tab URL                                  | Icon URL                      | Category | Group |  Type  | Active |
+    |-------------|------------------------------------------|-------------------------------|:--------:|:-----:|:------:|:------:|
+    | Portainer   | <https://portainer.iYOUR_DOMAIN_NAMEi>   | images/organizr.png (default) | Unsorted | Admin | iFrame |   Y    |
+    | Sonarr      | <https://sonarr.iYOUR_DOMAIN_NAMEi>      | images/sonarr.png             | Unsorted | Admin | iFrame |   Y    |
+    | Radarr      | <https://radarr.iYOUR_DOMAIN_NAMEi>      | images/radarr.png             | Unsorted | Admin | iFrame |   Y    |
+    | NZBGet      | <https://nzbget.iYOUR_DOMAIN_NAMEi>      | images/nzbget.png             | Unsorted | Admin | iFrame |   Y    |
+    | qbittorrent | <https://qbittorrent.iYOUR_DOMAIN_NAMEi> | images/qbittorrent.png        | Unsorted | Admin | iFrame |   Y    |
+    | NZBHydra2   | <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>   | images/hydra.png              | Unsorted | Admin | iFrame |   Y    |
+    | Jackett     | <https://jackett.iYOUR_DOMAIN_NAMEi>     | images/jackett.png            | Unsorted | Admin | iFrame |   Y    |
+    | Plex        | <https://plex.iYOUR_DOMAIN_NAMEi>        | images/plex.png               | Unsorted | User  | iFrame |   Y    |
+    | Tautulli    | <https://tautulli.iYOUR_DOMAIN_NAMEi>    | images/tautulli.png           | Unsorted | User  | iFrame |   Y    |
+    | Ombi        | <https://ombi.iYOUR_DOMAIN_NAMEi>        | images/ombi.png               | Unsorted | User  | iFrame |   Y    |
+    | Overseerr   | <https://overseerr.iYOUR_DOMAIN_NAMEi>   | images/overseerr.png          | Unsorted | User  | iFrame |   Y    |
 
     ![Tab Editor](https://i.imgur.com/aXwGxpx.png)
 
@@ -160,7 +160,7 @@ Note: it is suggested to enter your `plex username and password`
 
 #### Homepage Order
 
-1. This is where you organize the apps and other items and how they will appear on your Homepage.  There's no right or wrong order so simply move things around and find out what works for you.
+1. This is where you organize the apps and other items and how they will appear on your Homepage. There's no right or wrong order so simply move things around and find out what works for you.
 
     ![Homepage Order](https://i.imgur.com/A2FPosN.png)
 

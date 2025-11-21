@@ -21,7 +21,7 @@ tags:
 ---
 
 ???+ warning "Migration Required for Existing Users"
-    
+
     As of _role-refactor_, this role has been updated to use its own dedicated PostgreSQL database container instead of the shared `postgres` container. Once upgraded to role-refactor, existing users must follow the migration steps below to preserve their data.
 
     1.  Stop the containers:
@@ -33,7 +33,7 @@ tags:
             ```shell
             docker stop tandoor postgres
             ```
-        
+
         === "If Tandoor alone uses the `postgres` container"
 
             ```shell
@@ -42,14 +42,14 @@ tags:
             ```
 
     1.  Copy or rename the existing Postgres directory:
-        
+
         === "If additional apps use the `postgres` container"
 
             ```shell
             cp -r /opt/postgres /opt/tandoor-postgres
             docker start postgres
             ```
-        
+
         === "If Tandoor alone uses the `postgres` container"
 
             ```shell
@@ -77,7 +77,6 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
 1.  activate the virtual environment `source venv/bin/activate`,
 
 1.  run `python manage.py createsuperuser` and follow the steps shown.
-
 
 ### Password Reset
 

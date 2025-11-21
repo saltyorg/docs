@@ -22,7 +22,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![Drive and Docs settings page showing Drive is turned on for the organization](../images/google-shared-drive-settings/02-DND-main.png)
 
-3. If it is not, click on the triangle on the right of that section and enable it if needed.  After clicking "SAVE" [if you changed the setting] click back to "Settings for Drive and Docs":
+3. If it is not, click on the triangle on the right of that section and enable it if needed. After clicking "SAVE" [if you changed the setting] click back to "Settings for Drive and Docs":
 
     ![Drive status configuration page with settings enabled](../images/google-shared-drive-settings/03-DND-status.png)
 
@@ -30,7 +30,7 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
     ![Drive and Docs settings highlighting the Sharing settings section](../images/google-shared-drive-settings/04-DND-sharing.png)
 
-5. Scroll down and verify that your "Shared Drive Settings" match these.  Change them if required and save:
+5. Scroll down and verify that your "Shared Drive Settings" match these. Change them if required and save:
 
     ![Shared Drive Settings configuration page with recommended settings](../images/google-shared-drive-settings/05-DND-sharing-settings.png)
 

@@ -9,11 +9,11 @@ To go through this process, you will need the following:
    1. rclone installed on your saltbox machine [which means the preinstall has been run]
    2. the backing rclone remote pointing to your cloud storage must be created and working
 
-When I say "backing remote" here I am referring to the rclone remote that points directly at your cloud storage, like [`google`](rclone-remote.md) or [`dropbox`](rclone-remote-dropbox.md) or whatever.  This article uses `dropbox`, but that should be considered a placeholder for the name of *your* cloud-storage rclone remote.
+When I say "backing remote" here I am referring to the rclone remote that points directly at your cloud storage, like [`google`](rclone-remote.md) or [`dropbox`](rclone-remote-dropbox.md) or whatever. This article uses `dropbox`, but that should be considered a placeholder for the name of *your* cloud-storage rclone remote.
 
 ## Walkthrough
 
-First, create a directory on the backing remote at which to point the crypt remote.  This is especially important for Dropbox, where paths starting with a `/` have special meaning.
+First, create a directory on the backing remote at which to point the crypt remote. This is especially important for Dropbox, where paths starting with a `/` have special meaning.
 
 1. Create the `encrypt` directory on the backing remote:
 
@@ -61,7 +61,7 @@ Now move on to creating the actual crypt remote.
     name> dropbox-crypt
     ```
 
-4. For "Type of storage", type in `crypt`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>.  Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here.  **Read what's on the screen.**
+4. For "Type of storage", type in `crypt`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>. Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here. **Read what's on the screen.**
 
     ```
     Option Storage.
@@ -87,8 +87,8 @@ Now move on to creating the actual crypt remote.
 
     Remember a moment ago when you read: "MAKE NOTE OF THIS; YOU WILL NEED IT LATER"?
 
-    This is "LATER".  If you didn't follow the recommandation to use `dropbox:encrypt` then of course use whatever you entered above and made note of.
-   
+    This is "LATER". If you didn't follow the recommandation to use `dropbox:encrypt` then of course use whatever you entered above and made note of.
+
     === "I am using my personal folder"
 
         ```shell
@@ -144,7 +144,7 @@ Now move on to creating the actual crypt remote.
     directory_name_encryption>
     ```
 
-8. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you.  Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
+8. You're now going to choose two passwords; you can make them up yourself or let rclone generate them for you. Here we are going to let rclone choose them, but follow the prompts as suits your requirements.
 
     ```
     Option password.
@@ -291,8 +291,7 @@ Now move on to creating the actual crypt remote.
     e/n/d/r/c/s/q> q
     ```
 
-
-15. repeat steps 2-15 with any other remotes you wish to apply encryption to.  
+15. repeat steps 2-15 with any other remotes you wish to apply encryption to.
 
     **IMPORTANT**: If you are creating multiple remotes to access the same files [like one for upload and one for mount], use the same passwords with all of them.
 

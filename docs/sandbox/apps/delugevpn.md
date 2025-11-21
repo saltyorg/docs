@@ -48,7 +48,7 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
 **For Private Internet Access** <br />
 
 - Add your user name and password
-- Change the vpn_endpoint to your chosen server.  Note that PIA occasionally changes which servers have port forwarding.  The Netherlands server no longer offers port forwarding.  See configuration section for more details.
+- Change the vpn_endpoint to your chosen server. Note that PIA occasionally changes which servers have port forwarding. The Netherlands server no longer offers port forwarding. See configuration section for more details.
 
 **For other VPN providers** <br />
 
@@ -138,7 +138,7 @@ docker start delugevpn
 | de_frankfurt.ovpn | mexico.ovpn | taiwan.ovpn |
 | denmark.ovpn | moldova.ovpn | turkey.ovpn |
 
-As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to work properly, are: CA Toronto, CA Montreal, CA Vancouver, Czech Republic, DE Berlin, DE Frankfurt, France, Israel, Romania, Spain, Switzerland, Sweden.  Check the PIA website for changes if these servers do not work.
+As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to work properly, are: CA Toronto, CA Montreal, CA Vancouver, Czech Republic, DE Berlin, DE Frankfurt, France, Israel, Romania, Spain, Switzerland, Sweden. Check the PIA website for changes if these servers do not work.
 
 ### Tips
 

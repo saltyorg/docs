@@ -27,7 +27,7 @@ You will need to create a config file prior to running the tag:
 
 `/opt/kometa/config.yml`
 
-There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wiki/en/latest/kometa/install/docker/) that you can use to learn how to create this file.  Once you've created it, move the file into `/opt/kometa/` and then run the tag.
+There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wiki/en/latest/kometa/install/docker/) that you can use to learn how to create this file. Once you've created it, move the file into `/opt/kometa/` and then run the tag.
 
 ``` shell
 sb install sandbox-kometa

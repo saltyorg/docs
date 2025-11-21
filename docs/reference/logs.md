@@ -62,7 +62,7 @@ or
 sudo journalctl -o cat -fu saltbox_managed_cloudplow.service
 ```
 
-Sometimes, debug-level logging can be useful.  To enable this, make this change in the service file and restart the service.
+Sometimes, debug-level logging can be useful. To enable this, make this change in the service file and restart the service.
 
 In this file: `/etc/systemd/system/saltbox_managed_cloudplow.service`, change the log level to "DEBUG":
 

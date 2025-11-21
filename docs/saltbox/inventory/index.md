@@ -118,7 +118,7 @@ A common use for overrides will be specifying the version of the Docker image to
         ```
 
     === "Instance-level"
-   
+
         ```yaml
         # Type: string
         sonarr2_docker_image_tag: "release"

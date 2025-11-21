@@ -42,10 +42,8 @@ Recommended install types: Saltbox, Core
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-dashy
-
 ```
 
 ### 2. URL

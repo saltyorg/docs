@@ -24,8 +24,6 @@ This scanner is not meant to be full replacement of the Plex Media Scanner. Requ
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-epms
-
 ```

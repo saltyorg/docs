@@ -41,28 +41,24 @@ However, it is safe to run any saltbox tag[s] [including the install tags] at wi
 
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-
     ```
 
 === "wget"
 
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-
     ```
 
 === "curl (verbose)"
 
     ```shell
     curl -sL https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-
     ```
 
 === "wget (verbose)"
 
     ```shell
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
-
     ```
 
 ??? info "What will I see in the terminal?"
@@ -91,7 +87,7 @@ To edit any of the following configuration files use the command written in the 
 
 === "accounts.yml"
 
-    ``` yaml title="nano /srv/git/saltbox/accounts.yml"
+    ```yaml title="nano /srv/git/saltbox/accounts.yml"
     ---
     apprise: # (1)!
     cloudflare:
@@ -111,9 +107,7 @@ To edit any of the following configuration files use the command written in the 
     1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
 
         ```yaml
-
         apprise: discord://webhook_id/webhook_token
-
         ```
 
     2. Email used for the Cloudflare account.
@@ -150,7 +144,7 @@ To edit any of the following configuration files use the command written in the 
 
     Note that you will likely not be able to fill in the rclone remote information until *after* you've completed the upcoming "Step 4: Rclone"  This is fine and expected.
 
-    ``` yaml title="nano /srv/git/saltbox/settings.yml"
+    ```yaml title="nano /srv/git/saltbox/settings.yml"
     ---
     authelia:
         master: yes # (1)!
@@ -266,7 +260,7 @@ To edit any of the following configuration files use the command written in the 
 
 === "adv_settings.yml"
 
-    ``` yaml title="nano /srv/git/saltbox/adv_settings.yml"
+    ```yaml title="nano /srv/git/saltbox/adv_settings.yml"
     ---
     dns:
       ipv4: yes # (1)!
@@ -487,7 +481,6 @@ You can get a list of available install tags with `sb list`.
 
     ```shell
     sb install saltbox
-
     ```
 
 === "Mediabox [playback]"
@@ -496,7 +489,6 @@ You can get a list of available install tags with `sb list`.
 
     ```shell
     sb install mediabox
-
     ```
 
 === "Feederbox [downloading]"
@@ -505,7 +497,6 @@ You can get a list of available install tags with `sb list`.
 
     ```shell
     sb install feederbox
-
     ```
 
 === "Core [minimal]"
@@ -514,7 +505,6 @@ You can get a list of available install tags with `sb list`.
 
     ```shell
     sb install core
-
     ```
 
 === "Dealer's choice"
@@ -523,7 +513,6 @@ You can get a list of available install tags with `sb list`.
 
     ```shell
     sb install core,plex,sonarr,radarr,jackett,qbittorrent
-
     ```
 
 !!! info

@@ -28,10 +28,8 @@ If your project has grown and deploying from the terminal is no longer for you t
 
 ## 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-fireflyiii
-
 ```
 
 ## 2. URL
@@ -50,7 +48,7 @@ sb install sandbox-fireflyiii
 #### 3.1 Email Notifications
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
-``` yaml title="Firefly III Email Settings"
+```yaml title="Firefly III Email Settings"
 MAIL_MAILER: "log"  # (1)!
 MAIL_HOST: "localhost"  # (2)!
 MAIL_PORT: "25"  # (3)!
@@ -78,7 +76,7 @@ This can be changed to do 1 of the following:
 
 #### 3.2.1 Remove Authelia Authentication (Not Recommended)
 
-``` yaml title="Firefly III Remove Authelia"
+```yaml title="Firefly III Remove Authelia"
 fireflyiii_traefik_sso_middleware: ""
 ```
 

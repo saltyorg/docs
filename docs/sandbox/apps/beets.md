@@ -22,10 +22,8 @@ Beets is a music library manager and not, for the most part, a music player. It 
 
 ### 1. Installation
 
-```  { .shell }
-
+```shell
 sb install sandbox-beets
-
 ```
 
 ### 2. URL
@@ -39,7 +37,7 @@ sb install sandbox-beets
   If a match is under 95% beets will skip the file and it will need manual importing.
 - To run a manual import (which will help correct any matches under 95%) run the following command:
 
-    ``` { .shell }
+    ```shell
     rm /opt/beets/state.pickle && docker exec -it beets /bin/bash -c 'beet import /downloads'
     ```
 
@@ -49,7 +47,7 @@ sb install sandbox-beets
 
     If you already have imported music you will need to run an import using the following command:
 
-    ``` { .shell }
+    ```shell
     docker exec -it beets /bin/bash -c 'beet import /music'
     ```
 

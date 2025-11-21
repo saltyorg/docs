@@ -21,10 +21,8 @@ Scrutiny is a hard drive health monitoring tool that tracks S.M.A.R.T. metrics f
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install scrutiny
-
 ```
 
 ### 2. URL

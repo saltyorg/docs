@@ -23,10 +23,8 @@ Arr DB is a Saltbox maintenance role that performs database optimization tasks o
 
 ### 1. Usage
 
-``` shell
-
+```shell
 sb install arr-db
-
 ```
 
 ### 2. Setup

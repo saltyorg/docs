@@ -21,10 +21,8 @@ The Wireguard server is deployed using the [WG-Easy](https://github.com/WeeJeWel
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-wireguard
-
 ```
 
 ### 2. URL

@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-nabarr
-
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

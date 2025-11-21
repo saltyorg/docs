@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-delugevpn
-
 ```
 
 ### 2. URL
@@ -36,7 +34,7 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
 
 - Edit the DelugeVPN settings in the delugevpn section in [saltbox `settings.yml`:](../settings.md) as shown below.
 
-   ``` { .yaml }
+   ```yaml
     delugevpn:
       vpn_endpoint: netherlands.ovpn
       vpn_pass: your_vpn_password
@@ -59,10 +57,8 @@ See the parent [Deluge](../../apps/deluge.md) role for app setup.
 
 ### Run the DelugeVPN Role
 
-``` { .shell }
-
+```shell
 sb install sandbox-delugevpn
-
 ```
 
 ### Configuring Server for Custom VPN providers (only for non-pia)**

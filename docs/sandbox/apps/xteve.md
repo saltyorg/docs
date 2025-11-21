@@ -34,10 +34,8 @@ xTeVe emulates a SiliconDust HDHomeRun OTA tuner, which allows it to expose IPTV
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-xteve
-
 ```
 
 ### 2. URL

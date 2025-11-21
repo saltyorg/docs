@@ -71,7 +71,7 @@ Additional Docker envs may be set via `gluetun_docker_envs_custom`.
 
 ### 2. Installation
 
-``` shell
+```shell
 sb install gluetun
 ```
 
@@ -82,7 +82,7 @@ sb install gluetun
 
 To route Plex via your Gluetun container, you must set the following via the inventory system. These settings will also DNS block the metrics servers and use Gluetun's HTTP proxy when connecting with the Plex API for Saltbox tasks such as generating auth tokens:
 
-``` yaml
+```yaml
 gluetun_docker_hosts_default:
   "metric.plex.tv": "{{ ip_address_localhost }}"
   "metrics.plex.tv": "{{ ip_address_localhost }}"

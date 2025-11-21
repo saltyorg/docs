@@ -21,10 +21,8 @@ iperf3 is a network performance measurement tool that can test TCP, UDP, and SCT
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install iperf3
-
 ```
 
 ### 2. Setup

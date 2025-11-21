@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-goplaxt
-
 ```
 
 ### 2. URL
@@ -36,7 +34,7 @@ sb install sandbox-goplaxt
 
 2. Edit the Goplaxt section in [saltbox `settings.yml`:](../settings.md) substituting your own `ID` and `secret`.
 
-    ``` { .yaml }
+    ```yaml
     goplaxt:
       trakt_id: IDHERE
       trakt_secret: SECRETHERE
@@ -44,10 +42,8 @@ sb install sandbox-goplaxt
 
 3. Run the role install command
 
-    ``` { .shell }
-
+    ```shell
     sb install sandbox-goplaxt
-
     ```
 
 4. Visit the goplaxt site at `https://goplaxt.domain.com`. <br />

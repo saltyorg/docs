@@ -25,10 +25,8 @@ There are some concerns with the security of running a DNS server remotely so ju
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-adguardhome
-
 ```
 
 ### 2. URL

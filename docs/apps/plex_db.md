@@ -27,10 +27,8 @@ The plex containers are stopped for the duration of this process.
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install plex-db
-
 ```
 
 Further information:

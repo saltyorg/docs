@@ -21,10 +21,8 @@ Prometheus is an open-source systems monitoring and alerting toolkit. It collect
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install prometheus
-
 ```
 
 ### 2. URL

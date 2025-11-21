@@ -22,10 +22,8 @@ It provides fast and valuable HTTP statistics for system administrators that req
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-goaccess
-
 ```
 
 ### 2. URL

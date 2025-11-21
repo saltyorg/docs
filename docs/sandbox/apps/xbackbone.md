@@ -22,10 +22,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-xbackbone
-
 ```
 
 ### 2. URL

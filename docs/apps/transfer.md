@@ -19,10 +19,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install transfer
-
 ```
 
 ### 2. URL

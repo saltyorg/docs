@@ -20,10 +20,8 @@ Nginx is a high-performance web server, reverse proxy, and load balancer. This r
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install nginx
-
 ```
 
 ### 2. URL

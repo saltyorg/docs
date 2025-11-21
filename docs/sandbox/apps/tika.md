@@ -22,10 +22,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-tika
-
 ```
 
 ### 2. URL

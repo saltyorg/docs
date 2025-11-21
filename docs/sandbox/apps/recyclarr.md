@@ -20,17 +20,15 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-recyclarr
-
 ```
 
 ### 2. Setup
 
 Edit the Recyclarr section in [sandbox `settings.yml`:](../settings.md) and enter your desired update schedule using standard cron syntax.
 
-``` { .yaml }
+```yaml
      recyclarr:
        cron_schedule: "@daily"
 ```
@@ -42,7 +40,7 @@ If a config file does not exist, a default config is generated but it is not fun
 
 - Configure Sonarr section
 
-  ``` { .yaml }
+  ```yaml
       sonarr:
         sonarr:
           base_url: http://sonarr:8989
@@ -51,7 +49,7 @@ If a config file does not exist, a default config is generated but it is not fun
 
 - Configure Radarr section
 
-  ``` { .yaml }
+  ```yaml
       radarr:
         radarr:
           base_url: http://radarr:7878

@@ -25,10 +25,8 @@ Paperless-NGX is forked from paperless-ng to continue the great work and distrib
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-paperless-ngx
-
 ```
 
 ### 2. URL

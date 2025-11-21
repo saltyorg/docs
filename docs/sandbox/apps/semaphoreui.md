@@ -22,10 +22,8 @@ If your project has grown and deploying from the terminal is no longer for you t
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-semaphoreui
-
 ```
 
 ### 2. URL
@@ -40,8 +38,7 @@ The default installation utilises a seperate postgres database. There is an opti
 
 To enable email notifications, set these [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
-``` yaml title="Semaphoreui Email Settings"
-
+```yaml title="Semaphoreui Email Settings"
 SEMAPHORE_EMAIL_ALERT: "true" # (1)!
 SEMAPHORE_EMAIL_SENDER: ""  # (2)!
 SEMAPHORE_EMAIL_HOST: "localhost"  # (3)!¿˘˘˘˘˘˘˘˘˘¿¿˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘˘
@@ -59,8 +56,7 @@ SEMAPHORE_EMAIL_SECURE: ""  # (7)!
 6. Replace `""` with your email password if necessary.
 7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
 
-``` yaml title="Semaphoreui Telgram Settings"
-
+```yaml title="Semaphoreui Telgram Settings"
 SEMAPHORE_TELEGRAM_ALERT: ""  # (1)!
 SEMAPHORE_TELEGRAM_CHAT: ""  # (2)!
 SEMAPHORE_TELEGRAM_TOKEN: ""  # (3)!
@@ -70,8 +66,7 @@ SEMAPHORE_TELEGRAM_TOKEN: ""  # (3)!
 2. The chat id of which you want to send the message to
 3. Your Telegram bot token
 
-``` yaml title="Semaphoreui Telgram Settings"
-
+```yaml title="Semaphoreui Telgram Settings"
 SEMAPHORE_SLACK_ALERT: ""  # (1)!
 SEMAPHORE_SLACK_URL: ""  # (2)!
 ```

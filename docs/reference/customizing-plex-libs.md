@@ -202,7 +202,6 @@ Media
 ├── Movies-Kids
 ├── Music
 └── TV
-
 ```
 
 ### 1. Create Folders in Google Drive

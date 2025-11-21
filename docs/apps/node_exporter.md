@@ -21,10 +21,8 @@ Node Exporter is a Prometheus exporter for hardware and OS metrics. It exposes s
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install node-exporter
-
 ```
 
 ### 2. Setup

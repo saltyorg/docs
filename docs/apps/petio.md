@@ -20,10 +20,8 @@ Petio is an ongoing, forever free, always evolving project currently in alpha pr
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install petio
-
 ```
 
 ### 2. URL

@@ -52,7 +52,7 @@ tags:
 
 ## Deployment
 
-``` sh
+```sh
 sb install qbittorrent
 ```
 

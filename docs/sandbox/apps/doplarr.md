@@ -65,17 +65,15 @@ You can get your api keys in your main setting page in overseer: <https://overse
 
 ### 3. Installation
 
-``` shell
-
+```shell
 sb install sandbox-doplarr
-
 ```
 
 !!! note
       📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr.
       The recommended way to customize these parameters is to use the [inventory](../../saltbox/inventory/index.md). You should edit `/srv/git/saltbox/inventories/host_vars/localhost.yml` and add the following section.
 
-    ``` yaml title="Inventory"
+    ```yaml title="Inventory"
     doplarr_docker_envs_defaults:
       SONARR__URL: # (1)!
       RADARR__URL: # (2)!

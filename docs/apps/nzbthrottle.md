@@ -21,10 +21,8 @@ NZBThrottle is a utility that automatically throttles Usenet download speeds bas
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install nzbthrottle
-
 ```
 
 ### 2. Setup

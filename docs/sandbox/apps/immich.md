@@ -36,10 +36,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-immich
-
 ```
 
 ### 2. URL
@@ -56,11 +54,9 @@ sb install sandbox-immich
 
 If you would like to have the config file available, create a new config file (e.g. immich.config, and the config format is `.json`) and map it in inventory; just keep in mind that this disallows you from configuring Immich admin settings from the web ui.
 
-``` yaml
-
+```yaml
 immich_docker_envs_custom:
   IMMICH_CONFIG_FILE: "/config/immich.config"
-
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

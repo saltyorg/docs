@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-telegraf
-
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

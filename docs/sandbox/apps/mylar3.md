@@ -22,10 +22,8 @@ Mylar allows you to create a watchlist of series that it monitors for various th
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-mylar3
-
 ```
 
 ### 2. URL

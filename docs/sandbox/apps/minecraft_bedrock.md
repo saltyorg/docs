@@ -19,10 +19,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-minecraft-bedrock
-
 ```
 
 ### 2. Join Server

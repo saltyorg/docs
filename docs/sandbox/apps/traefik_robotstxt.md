@@ -22,7 +22,7 @@ __Robots.txt__ basically works like a “No Trespassing” sign. It actually, te
 
 ### 1. Installation
 
-``` shell
+```shell
 sb install sandbox-traefik-robotstxt
 ```
 

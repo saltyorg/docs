@@ -25,10 +25,8 @@ Calibre-Web allows you to add users, and each user can set up a Kindle email add
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-calibre-web
-
 ```
 
 ### 2. URL
@@ -39,7 +37,7 @@ sb install sandbox-calibre-web
 
 - Default admin login:
 
-  ``` { .yaml}
+  ```yaml
   Username: admin
   Password: admin123
   ```
@@ -56,19 +54,19 @@ sb install sandbox-calibre-web
 
 Useful docker commands
 
-  ``` shell title="Shell access whilst the container is running:"
+  ```shell title="Shell access whilst the container is running:"
   docker exec -it calibre-web /bin/bash
   ```
 
-  ``` shall title="To monitor the logs of the container in realtime:"
+  ```shell title="To monitor the logs of the container in realtime:"
   docker logs -f calibre-web
   ```
 
-  ``` shell title="Container version number:"
+  ```shell title="Container version number:"
   docker inspect -f '{{ index .Config.Labels "build_version" }}' calibre-web
   ```
 
-  ``` shell title="Image version number:"
+  ```shell title="Image version number:"
   docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web
   ```
 

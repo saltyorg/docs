@@ -23,7 +23,7 @@ tags:
 
 ### 1. Installation
 
-``` shell
+```shell
 sb install sandbox-trackarr
 ```
 
@@ -31,7 +31,7 @@ sb install sandbox-trackarr
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: "your user from accounts.yml"
   Password: your_normal_password
   ```

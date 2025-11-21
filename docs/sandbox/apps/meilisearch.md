@@ -26,13 +26,13 @@ This role is not externally exposed by default.
 
 ## Configuration
 
-Use the ```sb inventory``` system to set any environment variables that are desired.
+Use the `sb inventory` system to set any environment variables that are desired.
 
 See [Meilisearch Environment Variables](https://www.meilisearch.com/docs/learn/self_hosted/configure_meilisearch_at_launch#environment) for supported variables
 
 ## Deployment
 
-``` shell
+```shell
 sb install sandbox-meilisearch
 ```
 

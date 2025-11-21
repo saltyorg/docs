@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-teslamate
-
 ```
 
 ### 2. URL
@@ -45,10 +43,8 @@ Table: `teslamate`
 
 Authentication for Postgres: Run the command below to have saltbox output the DB password.
 
-``` shell
-
+```shell
 sb install sandbox-teslamate-postgres-password
-
 ```
 
 Save and Test

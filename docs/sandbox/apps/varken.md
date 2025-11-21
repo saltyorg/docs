@@ -22,10 +22,8 @@ Varken is a standalone application to aggregate data from the Plex ecosystem int
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-varken
-
 ```
 
 ### 2. URL
@@ -36,26 +34,20 @@ sb install sandbox-varken
 
 1. Run the Saltbox varken role to install varken/influxdb/telegraf/grafana:
 
-    ``` { .shell }
-
-        sb install sandbox-varken
-
+    ```shell
+    sb install sandbox-varken
     ```
 
 2. Add your Maxmind API key to varken.ini:
 
-    ``` { .shell }
-
-        nano /opt/varken/varken.ini
-
+    ```shell
+    nano /opt/varken/varken.ini
     ```
 
 3. Restart Varken:
 
-    ``` { .shell }
-
-        docker restart varken
-
+    ```shell
+    docker restart varken
     ```
 
 4. Visit grafana <https://grafana.iYOUR_DOMAIN_NAMEi>

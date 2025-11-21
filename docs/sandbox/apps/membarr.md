@@ -45,17 +45,15 @@ tags:
 
 ### 2. Installation
 
-``` shell
-
+```shell
 sb install sandbox-membarr
-
 ```
 
 ### 3. Set up Plex parameters
 
 When you install the role, it will create 2 files, an `app.db` file and `config.ini`. You will need to edit the `config.ini` file with your preferred editing program. (ie `nano` or `vim` etc) Add your Plex credentials like so:
 
-``` toml
+```toml
 [bot_envs]
 plex_user =
 plex_pass =

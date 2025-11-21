@@ -29,10 +29,8 @@ Recommended install types: Feederbox, Saltbox, Core
 
 Edit in your favorite code editor  (with yaml highlighting) or even a unix editor like nano.
 
-``` shell
-
+```shell
 nano /opt/tqm/config.yaml
-
 ```
 
 ### Modify "Client" section
@@ -43,7 +41,6 @@ nano /opt/tqm/config.yaml
 Client Example:
 
 ```yaml
-
 ...
   deluge:
     enabled: false
@@ -70,7 +67,6 @@ Client Example:
     user: seed
     password: super_strong_password
 ...
-
 ```
 
 `download_path:` Where your downloaded files are stored.
@@ -90,7 +86,6 @@ Client Example:
 Filter Example:
 
 ```yaml
-
 ...
 filters:
   default:
@@ -106,7 +101,6 @@ filters:
       - Label in ["lidarr-imported"] && (Ratio > 5.0 || SeedingDays >= 25.0)
       - Label in ["autoremove-btn"] && (Ratio > 3.0 || SeedingDays >= 15.0)
 ...
-
 ```
 
 `ignore:` Instructs **tqm** to ignore anything defined.
@@ -120,7 +114,6 @@ Note: There are many ways to do the same thing. Check the **language definitions
 Label Example:
 
 ```yaml
-
 ...
     label:
       # Permaseed Animebytes torrents (all must evaluate to true)
@@ -137,7 +130,6 @@ Label Example:
           - not (Name contains "1080p")
           - len(Files) >= 3
 ...
-
 ```
 
 !!! note
@@ -155,7 +147,6 @@ You can edit the **settings.yml** file in `/opt/sandbox/`. The default is `qbt`,
 Shortened example of **settings.yml**:
 
 ```yaml
-
 ...
 tandoor:
   secret_key:
@@ -166,31 +157,24 @@ transmissionvpn:
   vpn_pass:
   vpn_prov:
 ...
-
 ```
 
 ### 2. Installation
 
-``` shell
-
+```shell
 sb install sandbox-tqm
-
 ```
 
 To check the status of the service, you can run:
 
 ```shell
-
 sudo systemctl status tqm.service
-
 ```
 
 You can also follow the logs with:
 
 ```shell
-
 tail -f /opt/tqm/activity.log
-
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

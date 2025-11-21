@@ -25,10 +25,8 @@ Note that while it will work on a remote server, it takes some doing to get it t
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-homeassistant
-
 ```
 
 ### 2. URL

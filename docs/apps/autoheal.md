@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install autoheal
-
 ```
 
 ### 2. Setup
@@ -32,7 +30,7 @@ Autoheal works automatically by monitoring Docker containers with health checks.
 
 You can view Autoheal's activity in the container logs:
 
-``` shell
+```shell
 docker logs autoheal
 ```
 

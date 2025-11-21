@@ -14,7 +14,7 @@ tags:
 
 If you want to examine the dependencies script before running it:
 
-``` shell
+```shell
 curl -sL https://install.saltbox.dev | more
 ```
 

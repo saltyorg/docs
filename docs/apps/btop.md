@@ -20,17 +20,15 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install btop
-
 ```
 
 ### 2. Usage
 
 After installation, launch btop from the command line:
 
-``` shell
+```shell
 btop
 ```
 

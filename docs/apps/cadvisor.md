@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install cadvisor
-
 ```
 
 ### 2. URL

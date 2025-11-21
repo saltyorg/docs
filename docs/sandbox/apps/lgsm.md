@@ -22,13 +22,11 @@ tags:
 
 To add instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 
-``` yaml title="Inventory"
-
+```yaml title="Inventory"
 lgsm_instances: ["lgsm_valheim", "lgsm_rust"] # (1)!
 lgsm_valheim_docker_image_tag: "vh" # (2)!
 lgsm_valheim_docker_ports_defaults: ["2456:2456/udp","2457:2457/udp"] # (3)!
 lgsm_rust_docker_ports_defaults: ["28015:28015/udp","28017:28017/udp","28082:28082/udp"] # (4)!
-
 ```
 
 1. Example setting image tag to correct shortcode from <https://github.com/GameServerManagers/LinuxGSM/blob/master/lgsm/data/serverlist.csv> using lgsm_shortcode will automatically pull the correct image tag
@@ -38,10 +36,8 @@ lgsm_rust_docker_ports_defaults: ["28015:28015/udp","28017:28017/udp","28082:280
 
 Then run:
 
-``` shell
-
+```shell
 sb install sandbox-lgsm
-
 ```
 
 This will start the installation of LinuxGSM using the specified image tag per instance, which allows for the installation and management of multiple game servers.

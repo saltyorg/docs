@@ -31,10 +31,8 @@ Recommended install types: Saltbox, Core
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-n8n
-
 ```
 
 ### 2. URL

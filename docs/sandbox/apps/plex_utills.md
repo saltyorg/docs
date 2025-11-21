@@ -24,10 +24,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-plex-utills
-
 ```
 
 ### 2. URL

@@ -16,7 +16,7 @@ tags:
 
 This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration and install Rclone and reboot the server if needed.
 
-``` shell
+```shell
 sb install preinstall
 ```
 

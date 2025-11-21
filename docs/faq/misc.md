@@ -26,7 +26,6 @@ And restoring it back:
 
 ```shell
 cat nextcloud_backup.sql | docker exec -i mariadb /usr/bin/mysql -u root --password=password321 nextcloud
-
 ```
 
 ## JSON Format Errors

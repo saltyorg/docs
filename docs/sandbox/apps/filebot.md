@@ -24,10 +24,8 @@ The GUI of the application is accessed through a modern web browser (no installa
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-filebot
-
 ```
 
 ### 2. URL

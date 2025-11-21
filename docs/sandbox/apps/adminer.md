@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-adminer
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-adminer
 
 - Default login for [MariaDB](../../apps/mariadb.md)
 
-``` yaml title="Adminer Mariadb Login"
+```yaml title="Adminer Mariadb Login"
   System: Mysql
   Server: mariadb:3306
   Username: root
@@ -46,7 +44,7 @@ sb install sandbox-adminer
 
 - Default login for [Postgres](../../apps/postgres.md)
 
-``` yaml title="Adminer Postgres Login"
+```yaml title="Adminer Postgres Login"
   System: PostgreSQL
   Server: postgres:5432
   Username: your_saltbox_user

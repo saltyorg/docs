@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install subliminal
-
 ```
 
 ### 2. Setup
@@ -32,13 +30,13 @@ Subliminal is available as a command-line tool after installation.
 
 Download subtitles for a video:
 
-``` shell
+```shell
 subliminal download -l en /path/to/video.mkv
 ```
 
 Download for an entire directory:
 
-``` shell
+```shell
 subliminal download -l en /path/to/media/
 ```
 

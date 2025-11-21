@@ -22,10 +22,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-rocketchat
-
 ```
 
 ### 2. URL

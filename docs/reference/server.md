@@ -108,7 +108,7 @@ Examples:
 
      - Hetzner installimage
 
-         ``` bash
+         ```bash
          # Hetzner Online GmbH - installimage
          #
          # This file contains the configuration used to install this
@@ -136,7 +136,7 @@ Examples:
 
      - Hetzner installimage (with a separate 250G partition for `/opt` utilizing BTRFS for snapshot backups)
 
-         ``` bash
+         ```bash
          # Hetzner Online GmbH - installimage
          #
          # This file contains the configuration used to install this

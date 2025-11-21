@@ -24,7 +24,7 @@ Recommended install types: Mediabox, Saltbox
 
 ### 1. Installation
 
-``` shell
+```shell
 sb install sandbox-tauticord
 ```
 

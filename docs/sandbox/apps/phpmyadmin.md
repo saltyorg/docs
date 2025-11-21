@@ -41,10 +41,8 @@ Recommended install types: Saltbox, Core
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-phpmyadmin
-
 ```
 
 ### 2. URL

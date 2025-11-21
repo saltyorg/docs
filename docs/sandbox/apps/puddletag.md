@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-puddletag
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-puddletag
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: "your user from accounts.yml"
   Password: your_normal_password
   ```

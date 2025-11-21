@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-tdarr
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-tdarr
 
 Tdarr is configured with the following defaults which can be modified via the inventory system.
 
-``` yaml
+```yaml
 tdarr_server_port: "8266"
 tdarr_server_external: false
 ```

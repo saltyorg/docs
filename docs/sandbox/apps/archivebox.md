@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-archivebox
-
 ```
 
 ### 2. URL
@@ -36,26 +34,26 @@ Initial setup guide thanks to `erisheaded` on CB discord.
 
 1. Run tag:
 
-    ``` { .shell }
+    ```shell
     sb install sandbox-archivebox
     ```
 
 2. Connect to container:
 
-   ``` { .shell }
+   ```shell
    docker exec -it archivebox /bin/bash
    ```
 
    - NOTE: (This drops you in the /data folder. DO NOT switch to /data/archive directory)
 3. Switch to `archivebox` user for config:
 
-   ``` { .shell }
+   ```shell
    su archivebox
    ```
 
 4. Initialize with setup to create a web admin:
 
-   ``` { .shell }
+   ```shell
    archivebox init --setup
    ```
 

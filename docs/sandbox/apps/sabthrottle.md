@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-sabthrottle
-
 ```
 
 ### 2. Setup
@@ -34,7 +32,7 @@ sb install sandbox-sabthrottle
   - If you require more then 5 stream count just follow the example and add more using proper yml formatting.
   - You can always check logs via
 
-        ``` shell
+        ```shell
         docker logs -f sabthrottle
         ```
 

@@ -20,10 +20,8 @@ A diagnostic role that displays important Saltbox configuration information and 
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install diag
-
 ```
 
 ### 2. Setup

@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-funkwhale
-
 ```
 
 ### 2. URL
@@ -61,7 +59,7 @@ The above line explained:
 
 If everything goes as planned you'll get prompted like this:
 
-``` { .shell }
+```shell
 > Checking imported paths against settings.MUSIC_DIRECTORY_PATH
 > Import summary:
 > - 149828 files found matching this pattern: ['/music/Media/Audio/Music/**/**/*.flac']
@@ -71,7 +69,6 @@ If everything goes as planned you'll get prompted like this:
 > Selected options: in place
 > Are you sure you want to do this?
 > Type 'yes' to continue, or 'no' to cancel:
-
 ```
 
 - Answer yes at the prompt and the import will begin.

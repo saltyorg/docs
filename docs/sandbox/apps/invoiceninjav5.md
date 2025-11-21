@@ -23,16 +23,14 @@ tags:
 Ideally you should set a unique app key in settings.yml.
 Generate the key using:
 
-``` shell
+```shell
 docker run --rm -it invoiceninja/invoiceninja php artisan key:generate --show
 ```
 
 insert this in the invoiceninja.app_key setting in `/opt/sandbox/settings.yml`
 
-``` shell
-
+```shell
 sb install sandbox-invoiceninja
-
 ```
 
 ### 2. URL

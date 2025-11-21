@@ -18,10 +18,8 @@ The Custom role allows you to install additional software packages (APT, DEB, an
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install custom
-
 ```
 
 ### 2. Setup

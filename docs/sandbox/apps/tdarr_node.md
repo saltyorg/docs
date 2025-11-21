@@ -22,17 +22,15 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-tdarr-node
-
 ```
 
 ### 2. Usage
 
 The Tdarr Node is configured with the following defaults which can be modified via the inventory system.
 
-``` yaml
+```yaml
 tdarr_node_server_ip: "tdarr"
 tdarr_node_server_port: "8266"
 tdarr_node_node_id: "MainNode"

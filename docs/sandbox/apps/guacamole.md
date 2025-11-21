@@ -24,10 +24,8 @@ Thanks to HTML5, once Guacamole is installed on a server, all you need to access
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-guacamole
-
 ```
 
 ### 2. URL

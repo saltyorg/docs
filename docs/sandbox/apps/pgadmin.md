@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-pgadmin
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-pgadmin
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: "your email from accounts.yml"
   Password: your_normal_password
   ```

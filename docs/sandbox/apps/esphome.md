@@ -24,9 +24,8 @@ Using a docker image from ImageGenius since adds user permission mapping (as of 
 
 ### 1. Installation
 
-``` shell
+```shell
 sb install sandbox-esphome
-
 ```
 
 ### 2. URL

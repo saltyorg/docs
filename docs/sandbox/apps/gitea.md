@@ -22,10 +22,8 @@ Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket,
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-gitea
-
 ```
 
 ### 2. URL

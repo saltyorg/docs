@@ -26,10 +26,8 @@ If two (or more) people swipe right on the same movie, it'll show up in everyone
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-moviematch
-
 ```
 
 ### 2. URL

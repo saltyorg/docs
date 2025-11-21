@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-code-server
-
 ```
 
 ### 2. URL
@@ -35,10 +33,8 @@ sb install sandbox-code-server
 The old `coder` role was renamed to `code-server` on Dec 19th 2022.
 In order to migrate to the new role, if you aren't using a custom folder for `coder`, rename the inventory variables if you have any, then run:
 
-``` shell
-
+```shell
 sb install sandbox-code-server -e 'code_server_migrate_coder=true'
-
 ```
 
 The `coder` role is currently deprecated and won't receive any updates, so please run the migration to the new role as soon as possible.

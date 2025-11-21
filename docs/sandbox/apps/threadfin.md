@@ -22,10 +22,8 @@ Threadfin emulates a SiliconDust HDHomeRun OTA tuner, which allows it to expose 
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-threadfin
-
 ```
 
 ### 2. URL

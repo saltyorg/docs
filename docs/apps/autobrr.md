@@ -22,10 +22,8 @@ autobrr monitors IRC announce channels and torznab RSS feeds to get releases as 
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install autobrr
-
 ```
 
 ### 2. URL

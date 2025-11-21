@@ -36,10 +36,8 @@ Recommended install types: Saltbox, Core, Mediabox
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-homepage
-
 ```
 
 ### 2. URL

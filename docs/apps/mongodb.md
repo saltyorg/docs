@@ -20,10 +20,8 @@ MongoDB is a popular NoSQL document database that stores data in flexible, JSON-
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install mongodb
-
 ```
 
 ### 2. Setup

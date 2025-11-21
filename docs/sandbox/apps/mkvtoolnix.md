@@ -22,10 +22,8 @@ You can use MKVToolNix to create, split, edit, mux, demux, merge, extract or ins
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-mkvtoolnix
-
 ```
 
 ### 2. URL

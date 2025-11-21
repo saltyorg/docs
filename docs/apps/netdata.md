@@ -24,10 +24,8 @@ Netdata is free, open-source software.
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install netdata
-
 ```
 
 ### 2. URL

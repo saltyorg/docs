@@ -37,10 +37,8 @@ You also need to define a username and password for the Notifiarr client webui i
 
 ### 2. Installation
 
-``` shell
-
+```shell
 sb install sandbox-notifiarr
-
 ```
 
 ### 3. URL

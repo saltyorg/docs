@@ -22,10 +22,8 @@ You
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-plex-auto-languages
-
 ```
 
 ### 2. URL

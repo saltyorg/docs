@@ -18,10 +18,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install bazarr
-
 ```
 
 ### 2. URL

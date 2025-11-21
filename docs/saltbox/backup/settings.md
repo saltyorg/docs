@@ -32,7 +32,6 @@ backup:
     destination: rsync://somehost.com/Backups/Saltbox # (10)!
     enable: false # (11)!
     port: 22 # (12)!
-
 ```
 
 1. Schedule for when the backup task will be executed.
@@ -135,11 +134,12 @@ These copies are encrypted on your local saltbox machine using the password you 
 
     We'd recommend you use some random text for **both** the username and password, like perhaps a randomly-generated password from BitWarden or some other password generator. This should avoid collisions like someone else choosing the username "saltboxbackup". This sort of thing:
 
-    ``` { .yaml }
+    ```yaml
       restore_service:
         pass: T5CIqmRRx5Da6U0s
         user: p1i4IMkEyfiJ9iyG
     ```
+
     Of course, don't use *those* values.
 
 ## Retained backups ['rclone' specific]

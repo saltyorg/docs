@@ -32,10 +32,8 @@ Recommended install types: Saltbox, Core
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-homarr
-
 ```
 
 ### 2. URL
@@ -46,10 +44,8 @@ sb install sandbox-homarr
 
 - Default login:
 
-  ``` { .yaml}
-
+  ```yaml
   Password: your_normal_password
-
   ```
 
 - [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/getting-started/){: .header-icons }

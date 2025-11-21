@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-linkding
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-linkding
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: user from accounts.yml
   Password: password from accounts.yml
   ```

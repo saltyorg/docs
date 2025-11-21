@@ -18,10 +18,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install dozzle
-
 ```
 
 ### 2. URL
@@ -32,7 +30,7 @@ sb install dozzle
 
 To view log files that are NOT written to stdout or stderr, use the following to setup a basic Alpine Linux container via Docker Compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to Dozzle. Adjust as needed for your circumstances.
 
-``` yaml
+```yaml
   tail-cloudplow: # (1)!
     container_name: tail-cloudplow # (2)!
     image: alpine

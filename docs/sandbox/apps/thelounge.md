@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-thelounge
-
 ```
 
 ### 2. URL
@@ -40,7 +38,7 @@ sb install sandbox-thelounge
 - Once you have the configuration you want, save it and start the container again
 - For each user, run the command
 
-      ``` shell
+      ```shell
         docker exec -it thelounge s6-setuidgid abc thelounge add <user>
       ```
   - You will be prompted to enter a password that will not be echoed.

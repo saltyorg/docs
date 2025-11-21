@@ -20,10 +20,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-handbrake
-
 ```
 
 ### 2. URL
@@ -34,17 +32,15 @@ sb install sandbox-handbrake
 
 1. Edit the HandBrake section in [sandbox `settings.yml`:](../settings.md) and enter your desired password. Please note that it MUST be less than eight characters.
 
-    ``` { .yaml }
+    ```yaml
     handbrake:
       handbrake_pass: saltbox
     ```
 
 2. Run the role install command
 
-    ``` { .shell }
-
+    ```shell
     sb install sandbox-handbrake
-
     ```
 
 3. Access HandBrake <https://handbrake.iYOUR_DOMAIN_NAMEi>

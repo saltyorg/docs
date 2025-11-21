@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-photoprism
-
 ```
 
 ### 2. URL
@@ -37,7 +35,7 @@ sb install sandbox-photoprism
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: admin
   Password: your_normal_password
   ```

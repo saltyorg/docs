@@ -200,7 +200,7 @@ A-Train does not support anything other than **Google Drive**, as it uses the Go
 !!! warning
     A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts. It *does not* support encrypted drives, My Drive, or authentication via Client ID/Secret or other means.
 
-Enter the names of the remotes you want to monitor in the [sandbox settings.yml](../sandbox/settings.md). The Remotes can be either drive remotes or union remotes. You may use ```rclone listremotes``` to get your drive remotes.
+Enter the names of the remotes you want to monitor in the [sandbox settings.yml](../sandbox/settings.md). The Remotes can be either drive remotes or union remotes. You may use `rclone listremotes` to get your drive remotes.
 
 Example:
 

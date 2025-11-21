@@ -22,10 +22,8 @@ Also, MQTT does not have a web interface, so you will need to use a client to in
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-mqtt
-
 ```
 
 ### 2. Setup
@@ -36,7 +34,7 @@ While MQTT can be set up to use a username and password, it is not recommended t
 
 To add a username and password, you will need to edit the `mosquitto.conf` file. You can find the file in the `/opt/mqtt/config/` directory. You will need to add the following lines to the file:
 
-``` shell title="mosquitto.conf"
+```shell title="mosquitto.conf"
 allow_anonymous false # (1)!
 user <username> # (2)!
 password <password> # (3)!

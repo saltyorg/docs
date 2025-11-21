@@ -22,10 +22,8 @@ Also comes with a [REST-API](https://tinyurl.com/discoflix).
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-discoflix
-
 ```
 
 ### 2. URL

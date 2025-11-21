@@ -21,10 +21,8 @@ A Saltbox-specific Dynamic DNS service that automatically manages DNS records wi
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install ddns
-
 ```
 
 ### 2. Setup

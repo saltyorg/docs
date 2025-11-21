@@ -18,20 +18,16 @@ All Saltbox applications **must** have documentation
 
 ## Install
 
-``` shell
-
+```shell
 sb install sandbox
-
 ```
 
 ## Update
 
 To update Sandbox run a standard saltbox update; Sandbox and Saltbox will both be updated
 
-``` shell
-
+```shell
 sb update
-
 ```
 
 !!! info
@@ -41,18 +37,14 @@ sb update
 
 For most apps it is as simple as running the `sb install` command in a shell with a `sandbox-` prefix followed by the name of the role.
 
-``` shell
-
+```shell
 sb install sandbox-rolename
-
 ```
 
 For example, to install mkvtoolnix you would run the mkvtoolnix role:-
 
-``` shell
-
+```shell
 sb install sandbox-mkvtoolnix
-
 ```
 
 Before running any role you should first carefully read through any docs to see if there are any additional steps or pre configuration settings required.
@@ -60,9 +52,7 @@ Before running any role you should first carefully read through any docs to see 
 A list of all roles available to Saltbox including Sandbox can be called from the terminal via:-
 
 ```shell
-
 sb list
-
 ```
 
 !!! tip

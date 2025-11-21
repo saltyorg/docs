@@ -55,11 +55,11 @@ There are 3 phases to the setup. They are broken down below.
 
    2. `mount_client` setting is ignored for the NFS server (i.e. it will just use `2`).
 
-      ``` { .shell }
+      ```shell
       nano /srv/git/saltbox/hetzner_nfs.yml
       ```
 
-      ``` { .yaml }
+      ```yaml
       hetzner_nfs:
         vlan_id: 4001
         mount_client: 3
@@ -67,10 +67,8 @@ There are 3 phases to the setup. They are broken down below.
 
 1. Run Ansible role to configure the NFS server.
 
-    ``` { .shell }
-
+    ```shell
     sb install hetzner-nfs-server
-
     ```
 
 ### NFS Client (Mediabox)
@@ -83,11 +81,11 @@ There are 3 phases to the setup. They are broken down below.
 
       Note: `mount_client` will need to be either `3` or a number > `250`.
 
-      ``` { .shell }
+      ```shell
       nano /srv/git/saltbox/hetzner_nfs.yml
       ```
 
-      ``` { .yaml }
+      ```yaml
       hetzner_nfs:
         vlan_id: 4001
         mount_client: 3
@@ -95,10 +93,8 @@ There are 3 phases to the setup. They are broken down below.
 
 2. Run Ansible role to configure the NFS client.
 
-    ``` { .shell }
-
+    ```shell
     sb install hetzner-nfs-client-mount
-
     ```
 
 ## Uninstall

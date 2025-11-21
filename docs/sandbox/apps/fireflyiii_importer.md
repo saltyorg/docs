@@ -28,7 +28,7 @@ You can run the data importer once, for a bulk import. You can also run it regul
 
 ## 1. Installation
 
-``` shell
+```shell
 sb install sandbox-fireflyiii_importer
 ```
 
@@ -48,7 +48,7 @@ To authenticate the Data Importer to Firefly III you require to use either:
 
 #### 3.1.1 Access Token
 
-``` yaml title="Firefly III Data Importer Access Token Settings"
+```yaml title="Firefly III Data Importer Access Token Settings"
 fireflyiii_importer_docker_envs_custom:
   - FIREFLY_III_ACCESS_TOKEN: ""  # (1)!
 ```
@@ -57,7 +57,7 @@ fireflyiii_importer_docker_envs_custom:
 
 #### 3.1.2 Client ID
 
-``` yaml title="Firefly III Data Importer Client ID Settings"
+```yaml title="Firefly III Data Importer Client ID Settings"
 fireflyiii_importer_docker_envs_custom:
   - FIREFLY_III_CLIENT_ID: "1"  # (1)!
 ```
@@ -84,7 +84,7 @@ You can refer to the following documentation to execute import from the server: 
 ### 5.1 Email Notifications
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
-``` yaml title="Firefly III Data Importer Email Settings"
+```yaml title="Firefly III Data Importer Email Settings"
 MAIL_MAILER: "log"  # (1)!
 MAIL_HOST: "localhost"  # (2)!
 MAIL_PORT: "25"  # (3)!

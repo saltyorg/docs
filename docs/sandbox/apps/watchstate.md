@@ -31,7 +31,7 @@ This tool's primary goal is to sync your backends' play states without relying o
 
 ## Deployment
 
-``` shell
+```shell
 sb install sandbox-watchstate
 ```
 

@@ -16,10 +16,8 @@ Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-minecraft
-
 ```
 
 This will install mc-router and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
@@ -36,10 +34,8 @@ This will install mc-router and the minecraft server. If you have listed multipl
 
 To add multiple instances, add the following to the inventory. See the [inventory configuration instructions](../../saltbox/inventory/index.md).
 
-``` yaml
-
+```yaml
 minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
-
 ```
 
 1. This will install two servers, server1 and server2.
@@ -56,12 +52,10 @@ For a single install, the inventory vars will look like this `minecraft_docker_i
 
 When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`.
 
-``` yaml title="Inventory"
-
+```yaml title="Inventory"
 minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
 mcserver1_docker_image_tag: "itzg/minecraft-server:latest" # (2)!
 mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
-
 ```
 
 1. This will install two servers, mcserver1 and mcserver2.

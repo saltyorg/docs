@@ -12,7 +12,7 @@ The configuration file for Saltbox Sandbox settings is called settings.yml and i
 
 settings.yml
 
-``` yaml
+```yaml
 ---
 a_train:
   remotes: [""]

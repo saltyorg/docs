@@ -21,8 +21,6 @@ Each of the tasks can be turned on/off and configured independently. The default
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install btrfsmaintenance
-
 ```

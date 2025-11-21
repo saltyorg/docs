@@ -26,13 +26,13 @@ The GUI of the application is accessed through a modern web browser (no installa
 
 ## Configuration
 
-Use the ```sb inventory``` system to set any environment variables that are desired such as OpenAI API keys, downloading videos, document size limits, etc
+Use the `sb inventory` system to set any environment variables that are desired such as OpenAI API keys, downloading videos, document size limits, etc
 
 See [Karakeep Configuration](https://docs.karakeep.app/configuration) for supported variables
 
 ## Deployment
 
-``` shell
+```shell
 sb install sandbox-karakeep
 ```
 

@@ -25,10 +25,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-vnstat
-
 ```
 
 ### 2. URL

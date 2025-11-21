@@ -27,10 +27,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-wikijs
-
 ```
 
 ### 2. URL

@@ -30,10 +30,8 @@ It is NOT:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-comixed
-
 ```
 
 ### 2. URL
@@ -45,12 +43,12 @@ sb install sandbox-comixed
 !!! info
     📢 ComiXed has 2 default users created when you run the role. It is a good idea to change the passwords for each account from the default asap.
 
-``` shell
+```shell
 Username: comixedadmin@localhost
 Password: comixedadmin
 ```
 
-``` shell
+```shell
 Username: comixedreader@localhost
 Password: comixedreader
 ```

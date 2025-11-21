@@ -21,10 +21,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install whisparr
-
 ```
 
 ### 2. URL

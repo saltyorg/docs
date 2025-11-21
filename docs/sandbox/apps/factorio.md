@@ -20,10 +20,8 @@ Run a [Factorio](https://www.factorio.com) headless server.
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-factorio
-
 ```
 
 ### 2. Setup

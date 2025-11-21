@@ -21,10 +21,8 @@ Redis is an open-source, in-memory data structure store used as a database, cach
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install redis
-
 ```
 
 ### 2. Setup

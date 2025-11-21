@@ -21,14 +21,12 @@ First, create a directory on the backing remote at which to point the crypt remo
 
         ```shell
         rclone mkdir dropbox:encrypt
-
         ```
 
     === "I want to use a team folder"
 
         ```shell
         rclone mkdir dropbox:/encrypt
-
         ```
 
     **MAKE NOTE OF THIS; YOU WILL NEED IT LATER**

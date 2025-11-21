@@ -29,7 +29,7 @@ Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media
 
 ## Deployment
 
-``` shell
+```shell
 sb install sandbox-plextraktsync
 ```
 

@@ -24,10 +24,8 @@ A host-based PostgreSQL installation role that deploys PostgreSQL directly on yo
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install postgres-host
-
 ```
 
 ### 2. Setup

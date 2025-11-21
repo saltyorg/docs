@@ -128,7 +128,6 @@ eval "${command}"
 command="${FIND} ${TARGET_FOLDER} -mindepth 1 -type d -empty ${FIND_ACTION}"
 #echo "Executing ${command}"
 eval "${command}"
-
 ```
 
 ### RXWatcher's cleanup.sh

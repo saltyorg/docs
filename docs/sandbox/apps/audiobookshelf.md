@@ -23,10 +23,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-audiobookshelf
-
 ```
 
 ### 2. URL

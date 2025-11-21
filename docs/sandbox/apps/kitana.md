@@ -24,10 +24,8 @@ Kitana was built for Sub-Zero originally, but handles other plugins just as well
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-kitana
-
 ```
 
 ### 2. URL

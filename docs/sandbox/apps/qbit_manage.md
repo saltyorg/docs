@@ -36,10 +36,8 @@ tags:
 
 Before installing qBit Manage, you should have a **[qBittorrent](../../apps/qbittorrent.md)** instance running on your local machine.
 
-``` shell
-
+```shell
 sb install sandbox-qbit-manage
-
 ```
 
 ### 2. URL
@@ -82,10 +80,8 @@ Either tail the log ( `tail -f "/opt/qbit-manage/logs/activity.log"` ) or open t
 
 Apply the changes to the sandbox settings file with:
 
-``` shell
-
+```shell
 sb install sandbox-qbit-manage
-
 ```
 
 ### 4. Configuration

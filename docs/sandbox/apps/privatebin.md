@@ -21,10 +21,8 @@ It's privacy-preserving and encrypted-by-default.
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install sandbox-privatebin
-
 ```
 
 ### 2. URL

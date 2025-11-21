@@ -18,10 +18,8 @@ tags:
 
 ### 1. Installation
 
-``` shell
-
+```shell
 sb install authentik
-
 ```
 
 ### 2. URL
@@ -32,11 +30,9 @@ sb install authentik
 
 !!! info
 
-    ``` yaml title="Default Login"
-
+    ```yaml title="Default Login"
         user: saltbox_user # (1)!
         password: saltbox_password # (2)!
-
     ```
 
     1. Replace `saltbox_user` with the username you set when installing Saltbox.
@@ -44,18 +40,14 @@ sb install authentik
 
 To enable Authentik with a single container, or on a per role basis, set the following [inventory](../saltbox/inventory/index.md) entry:
 
-``` yaml title="Authentik Single Container Toggle"
-
+```yaml title="Authentik Single Container Toggle"
 radarr_traefik_sso_middleware: "authentik@docker"
-
 ```
 
 To enable Authentik globally, set the following [inventory](../saltbox/inventory/index.md) entry:
 
-``` yaml title="Authentik Global Toggle"
-
+```yaml title="Authentik Global Toggle"
 traefik_default_sso_middleware: "authentik@docker"
-
 ```
 
 You would use one or the other, the global toggle will install Authentik together with Traefik when it is being installed, the role toggle requires manually installing Authentik. Traefik needs to be reinstalled at least once after updating to deploy the Authentik middleware to enable use of it. If you are using the global toggle, you will need to reinstall all of the other roles you use to enable Authentik.
@@ -82,8 +74,7 @@ You can change these values to anything you want, but for this example, we will 
 
 To enable email notifications, set these [inventory](../saltbox/inventory/index.md) entries to your desired values:
 
-``` yaml title="Authentik Email Settings"
-
+```yaml title="Authentik Email Settings"
 authentik_email_host: "localhost" # (1)!
 authentik_email_port: "25" # (2)!
 authentik_email_username: "" # (3)!
@@ -92,7 +83,6 @@ authentik_email_tls: "false"
 authentik_email_ssl: "false"
 authentik_email_timeout: "10" # (5)!
 authentik_email_from: "authentik@localhost" # (6)!
-
 ```
 
 1. Replace `localhost` with your email host. IE: `smtp-relay.gmail.com`

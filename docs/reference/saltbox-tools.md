@@ -51,7 +51,7 @@ TorrentCleanup.py has been explained in the Sonarr section, but in a nutshell, s
 
 ## NCDU
 
-( ```cd / && sudo ncdu -x```)
+(`cd / && sudo ncdu -x`)
 
 ## Frontail - view logs over http
 

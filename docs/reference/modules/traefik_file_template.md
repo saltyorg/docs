@@ -14,7 +14,7 @@ Generates a Traefik file template.
 ## Deployment
 
 ```sh
-generate-traefik-file-template
+sb install generate-traefik-file-template
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

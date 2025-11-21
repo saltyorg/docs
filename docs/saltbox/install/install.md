@@ -30,7 +30,7 @@ ALL STEPS ARE REQUIRED
 !!! warning
     There is no "uninstall" available. To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS. You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
 
-However, it is safe to run any saltbox tag[s] [including the install tags] at will. Existing configurations are not overwritten [except for some "reset" tags and the "mounts" tag].
+However, it is safe to run any saltbox tag(s) (including the install tags) at will. Existing configurations are not overwritten (except for some "reset" tags and the "mounts" tag).
 
 ## Step 1: Dependencies
 
@@ -418,7 +418,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     You probably already have the required setup complete. You should use your existing setup at least to start with.
 
-    You will need to enter details of your remote[s] into `settings.yml`. If you have custom mount services, you can use them instead of one of the supplied templates. If not, perhaps start with the `google` template to see if it's "good enough".
+    You will need to enter details of your remote(s) into `settings.yml`. If you have custom mount services, you can use them instead of one of the supplied templates. If not, perhaps start with the `google` template to see if it's "good enough".
 
     If you have lost your rclone config and need to recreate it, go to the "minimal setup" tab to the right. In step one, you can probably download the existing credential.
 
@@ -434,7 +434,7 @@ Note that generally speaking these five options are mutually exclusive.
         1. Set up a Google Project and OAuth Credential file if you don't already have one.
         This process is described in [Google project setup](../../reference/google-project-setup.md). You will need the ID and Secret from that process in step 3 below. That link takes you to one step in a multi-step process. Don't continue to follow that. Follow the steps on that page and then come back here.
         2. Create a Shared Drive in the Google Web UI. [optional]
-        If you don't want to use a shared drive, skip this step, but know that some pieces of saltbox [notably drive monitoring in autoscan] won't work.
+        If you don't want to use a shared drive, skip this step, but know that some pieces of saltbox (notably drive monitoring in autoscan) won't work.
         This process is described in the [Google shared drive guide](../../reference/guides/google-shared-drive.md). If your Google account doesn't let you create shared drives, it's not the type af account we are assuming, and other things may not work as well.
         3. Create an rclone remote with those credentials.
         This process is described in the [rclone remote guide](../../reference/guides/rclone-remote.md).
@@ -446,7 +446,7 @@ Note that generally speaking these five options are mutually exclusive.
 
     === "Dropbox"
 
-        1. Create rclone remote[s] pointing at Dropbox as described in the [Dropbox rclone guide](../../reference/guides/rclone-remote-dropbox.md)
+        1. Create rclone remote(s) pointing at Dropbox as described in the [Dropbox rclone guide](../../reference/guides/rclone-remote-dropbox.md)
         2. enter remote details in `settings.yml`
 
     === "Other Cloud Storage"
@@ -458,10 +458,10 @@ Note that generally speaking these five options are mutually exclusive.
         1. Create an rclone remote pointing at your cloud storage as described in the [generic rclone guide](../../reference/guides/rclone-remote-generic.md)
         2. enter those remote details in `settings.yml`
 
-Once you have set up your rclone remote[s], enter their details in `settings.yml` as discussed above in Step 2.
+Once you have set up your rclone remote(s), enter their details in `settings.yml` as discussed above in Step 2.
 
 !!! warning
-    Do not proceed until you have fully configured your rclone remote[s] as described above or disabled cloud storage in the settings.
+    Do not proceed until you have fully configured your rclone remote(s) as described above or disabled cloud storage in the settings.
 
 ## Step 5: Saltbox
 
@@ -471,7 +471,7 @@ Once you have set up your rclone remote[s], enter their details in `settings.yml
 !!! warning
     Have you either disabled rclone OR set up your remotes in both `rclone config` and `settings.yml`? If not, go back and fix that.
 
-If you are installing a [Feederbox/Mediabox setup](../basics/install-types.md) [if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install], set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
+If you are installing a [Feederbox/Mediabox setup](../basics/install-types.md) (if your reaction to this question is "huh?" then you are not, and should probably use the `saltbox` install), set up the Feederbox first, then add the [feeder mount](../../advanced/feeder.md) to the mediabox prior to install.
 
 You can get a list of available install tags with `sb list`.
 

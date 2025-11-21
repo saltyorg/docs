@@ -24,9 +24,9 @@ The answer to this question depends on a whole bunch of things, including but no
 
 For example, at time of writing the author had a Hetzner EX42-NVME in Helsinki. Nearly all users were in the Minneapolis area on Comcast cable. One user in Utah, one in Brisbane, Australia. No 4K media. The box was an AIO; usenet downloading happened on that box as well as streaming and no throttles were in place to slow NZBget or Cloudplow while Plex was streaming.
 
-For the most part, this box met requirements during its tenure. All author's streaming happened over a 1G fiber line to an AppleTV. Most other active streamers used Plex Web, Roku, or a Smart TV Plex app. The guy in Brisbane had trouble streaming due to his local ISP [Telstra], but streaming worked great from a Gold Coast hotel.
+For the most part, this box met requirements during its tenure. All author's streaming happened over a 1G fiber line to an AppleTV. Most other active streamers used Plex Web, Roku, or a Smart TV Plex app. The guy in Brisbane had trouble streaming due to his local ISP (Telstra), but streaming worked great from a Gold Coast hotel.
 
-However, another fellow, who lives blocks away from the author, got one of these same servers and found it unusable for his target usage. Maybe that was a config issue [didn't seem to be], but it illustrates that there is no "one-size-fits-all" answer.
+However, another fellow, who lives blocks away from the author, got one of these same servers and found it unusable for his target usage. Maybe that was a config issue (didn't seem to be), but it illustrates that there is no "one-size-fits-all" answer.
 
 Ultimately, there’s not really a sure way to answer this question.
 
@@ -34,7 +34,7 @@ Plex’ article on the topic is [here](https://support.plex.tv/articles/20037566
 
 ## Plex Metadata
 
-Plex saves metadata [posters, etc] for all your media; that gets stored in `/opt/plex` and as your library grows so does that directory. Required disk space therefore grows over time. This directory can be quite large.
+Plex saves metadata (posters, etc) for all your media; that gets stored in `/opt/plex` and as your library grows so does that directory. Required disk space therefore grows over time. This directory can be quite large.
 
 For example:
 
@@ -63,9 +63,9 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
 
 Ideally, all your clients would Direct Play everything; in that case the server is just shoveling bits out as fast as it can and you don’t need any CPU power. In practice, some transcoding will be happening.
 
-There are two types of video transcoding; hardware or software. Software video transcoding is CPU intensive, but higher-quality. Hardware video transcoding doesn’t burden your CPU [so it’s free to continue extracting rar files or something], but it’s typically lower quality. Depending on the specific CPU, dramatically lower quality.
+There are two types of video transcoding; hardware or software. Software video transcoding is CPU intensive, but higher-quality. Hardware video transcoding doesn’t burden your CPU (so it’s free to continue extracting rar files or something), but it’s typically lower quality. Depending on the specific CPU, dramatically lower quality.
 
-Some Intel CPUs support hardware video transcoding, a smaller subset of AMD processors support hardware video transcoding, so if you want hardware video transcoding you probably want Intel [assuming you’re not using a separate GPU on a video card to do it].
+Some Intel CPUs support hardware video transcoding, a smaller subset of AMD processors support hardware video transcoding, so if you want hardware video transcoding you probably want Intel (assuming you’re not using a separate GPU on a video card to do it).
 
 Audio transcoding is always done by the CPU, but is generally far less resource-intensive.
 

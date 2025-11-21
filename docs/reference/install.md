@@ -47,4 +47,4 @@ Note the `failed=0`.
 
 If you don't see that, scroll up and the actual error should not be far away.
 
-As with any tag, it is safe to run the install tag[s] at will.
+As with any tag, it is safe to run the install tag(s) at will.

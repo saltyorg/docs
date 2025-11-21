@@ -18,7 +18,7 @@ It's easiest if you have a Plex account *even if you're not planning to use Plex
 
 ## Emby
 
-You can use [Emby](https://emby.media/) in lieu of Plex [admonitions above about needing a Plex account for install still apply].
+You can use [Emby](https://emby.media/) in lieu of Plex (admonitions above about needing a Plex account for install still apply).
 
 Sign up for a free Emby Connect account at <https://emby.media/connect.html>, if you don't already have one.
 

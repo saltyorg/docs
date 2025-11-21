@@ -104,9 +104,9 @@ backup:
 
 ### Restore service
 
-Use of the restore service is optional. Using it means that [client-side] encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.
+Use of the restore service is optional. Using it means that (client-side) encrypted copies of your config files are stored on saltbox servers for later use with the `sb restore` command.
 
-These copies are encrypted on your local saltbox machine using the password you specify in the settings and stored on saltbox servers under the username you specify [which should be a random string rather than anything identifiable]. The password is not sent to saltbox servers; they do not know your password and cannot decrypt these files. If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
+These copies are encrypted on your local saltbox machine using the password you specify in the settings and stored on saltbox servers under the username you specify (which should be a random string rather than anything identifiable). The password is not sent to saltbox servers; they do not know your password and cannot decrypt these files. If you are uncomfortable with this, leave the username and password blank and the restore server will not be used.
 
 !!! important
 
@@ -142,7 +142,7 @@ These copies are encrypted on your local saltbox machine using the password you 
 
     Of course, don't use *those* values.
 
-## Retained backups ['rclone' specific]
+## Retained backups ('rclone' specific)
 
 By default, Saltbox will keep all previous backups that have been pushed to an rclone target.
 
@@ -159,9 +159,9 @@ backup2_cleanup_enabled: false
 backup2_cleanup_custom_rclone_flags: ""
 ```
 
-1. How many previous backups to retain [excluding the most recent]
+1. How many previous backups to retain (excluding the most recent)
 
-2. Enable or disable this backup pruning [if this is false, the previous value is ignored]
+2. Enable or disable this backup pruning (if this is false, the previous value is ignored)
 
 3. Add these flags to the rclone run that performs the cleanup.
 

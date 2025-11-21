@@ -11,7 +11,7 @@ tags:
 
 # Multiple App Instances
 
-Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app [as opposed to installing multiple instances one at a time] are being transitioned to a new generalized, inventory-driven approach.
+Apps that used to be supported by the "ArrX" system which allowed the user to define a set of instances of a given app (as opposed to installing multiple instances one at a time) are being transitioned to a new generalized, inventory-driven approach.
 
 The general idea is to move all the configuration into the `/srv/git/saltbox/inventories/host_vars/localhost.yml` along with [other customizations](../saltbox/inventory/index.md).
 
@@ -68,7 +68,7 @@ Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git
 sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
 
-Run the standard app tag [in this case `sb install sonarr`] to set up all the instances you've defined. If you attempt to run any of your new instance names as tags, the install will fail with an error. Run ONLY the standard app tag. If one or more of the instances already exist, their existing configurations *TYPICALLY* will not be touched or overwritten, though this is dependent on the specific role. If the standard role overwrites or modifies the configuration, then so will this, since it's calling the standard role for each instance.
+Run the standard app tag (in this case `sb install sonarr`) to set up all the instances you've defined. If you attempt to run any of your new instance names as tags, the install will fail with an error. Run ONLY the standard app tag. If one or more of the instances already exist, their existing configurations *TYPICALLY* will not be touched or overwritten, though this is dependent on the specific role. If the standard role overwrites or modifies the configuration, then so will this, since it's calling the standard role for each instance.
 
 !!! info
     Note that the first entry in the list is `sonarr`, the standard instance of the app. You probably want to follow this pattern, since other tags might iterate through this list of "sonarr"s to take some action and if an instance is not listed here it will be skipped in that case.

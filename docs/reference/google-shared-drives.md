@@ -22,7 +22,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
-If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or the like, you most likely DO NOT WANT TO DO THIS. This process is assuming you are starting from scratch without any of this already set up. It may overwrite aspects of an existing rclone setup with no undo.
+If you already have media on Google Drive (My Drive OR Shared Drives) from your time with Cloudbox or the like, you most likely DO NOT WANT TO DO THIS. This process is assuming you are starting from scratch without any of this already set up. It may overwrite aspects of an existing rclone setup with no undo.
 
 1. Retrieve the `sb-gd` code
 
@@ -164,7 +164,7 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
 
     NOTE: It will not touch any shared drives which it didn't create itself, and it does not delete data from any shared drives.
 
-    If you defined a "backup_drive" in the config [or left it as "automatic"], then script will zip up:
+    If you defined a "backup_drive" in the config (or left it as "automatic"), then script will zip up:
 
     1. All your service account JSON files
     1. Your rclone config file
@@ -178,7 +178,7 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
 
     This of course takes the place of the BEFORE YOU DO ANYTHING ELSE admonition at the bottom of this page:
 
-    You should see output similar to this [of course, you will see more than one shared drive creation; the rest are left out here for space]:
+    You should see output similar to this (of course, you will see more than one shared drive creation; the rest are left out here for space):
 
     ```text
     [previous shared drive creations removed]
@@ -210,7 +210,7 @@ If you already have media on Google Drive [My Drive OR Shared Drives] from your 
     All done.
     ```
 
-    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create [you'll note that it hasn't been mentioned much above]. That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
+    Note: the script uses `/opt/sa/all/150.json` in the rclone configuration for these remotes; that's not something you have to set or create (you'll note that it hasn't been mentioned much above). That one is used because it's right in the middle of the SAs you just created, so it's unlikely that SA cycling in cloudplow will ever exhaust enough SAs to hit this one and possibly affect your mounts.
 
     Drive names and IDs will be written to `drive_create_log`.
 

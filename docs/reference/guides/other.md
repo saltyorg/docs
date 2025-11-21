@@ -8,7 +8,7 @@ Here are some general notes on things you will probably need to address. This ar
 
 Saltbox assumes that your cloud storage is accessible through an rclone remote called `google`. The saltbox setup describes creating Google projects and so forth to support this, but if you already have this running somewhere, you have already done all that and can just use what you have.
 
-In the rclone install step, copy your `rclone.conf` into place at `/home/seed/.config/rclone/rclone.conf` [substitute `seed` with your username if you've changed that]. If you are using service accounts to authenticate your rclone remote[s], copy them to the appropriate location.
+In the rclone install step, copy your `rclone.conf` into place at `/home/seed/.config/rclone/rclone.conf` (substitute `seed` with your username if you've changed that). If you are using service accounts to authenticate your rclone remote(s), copy them to the appropriate location.
 
 If your cloud storage remote is not called `google`, you can either rename it, or change the `remote` in settings.yml:
 

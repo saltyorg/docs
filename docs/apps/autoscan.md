@@ -135,7 +135,7 @@ rclone touch NAME_OF_CLOUD_REMOTE:mounted.bin
 ```
 To create one of these files on *each distinct element* of cloud storage. If you're using Dropbox, there is just one. If you have eleven OneDrive mounts, you need to create eleven of these.
 
-Do this on each rclone remote that you have *mounted*. For example, if you're using box.com and have three remotes [`box_remote`, `box_crypt`, `chunker_remote`], run this command on the last one, `chunker_remote`, since that';s the remote that you are mounting.
+Do this on each rclone remote that you have *mounted*. For example, if you're using box.com and have three remotes (`box_remote`, `box_crypt`, `chunker_remote`), run this command on the last one, `chunker_remote`, since that';s the remote that you are mounting.
 
 Once you've done that, verify that they show up in the union mount with:
 
@@ -151,7 +151,7 @@ Everything else should be ready to go for standard usage.
 <summary>What are those mount files?</summary>
 <br />
 <br />
-Autoscan uses these to determine if your cloud storage is mounted and visible; if autoscan can't see these files, no scans will be sent to Plex since doing so would empty your library as Plex removed all the files it can no longer see [assuming that "empty trash on scan" is enabled].
+Autoscan uses these to determine if your cloud storage is mounted and visible; if autoscan can't see these files, no scans will be sent to Plex since doing so would empty your library as Plex removed all the files it can no longer see (assuming that "empty trash on scan" is enabled).
 <br />
 <br />
 There's nothing special about the contents of these files; autoscan just needs to see that they exist. Typically they are empty.
@@ -169,7 +169,7 @@ If you went through the saltbox rclone setup, these files got created for you.
 Strictly speaking, no, not with the way saltbox sets up the mounts. All those shared drives are part of a union remote, and the union remote is mounted, so there's really no possibility that some of those files would be present but not others. Any one of them is probably sufficient.
 <br />
 <br />
-However, there's no reason *not* to include them all as you can grab the list with a single command and a copy-paste. You save a few keystrokes by not including all of them [you don't have to copy-paste `  - ` in front of those few lines], but in thinking about it at all you've spent the same amount of time. Reading this question and answer have taken more time than it would have taken to include all of them as a belt-and-suspenders measure.
+However, there's no reason *not* to include them all as you can grab the list with a single command and a copy-paste. You save a few keystrokes by not including all of them (you don't have to copy-paste `  - ` in front of those few lines), but in thinking about it at all you've spent the same amount of time. Reading this question and answer have taken more time than it would have taken to include all of them as a belt-and-suspenders measure.
 <br />
 <br />
 </details>

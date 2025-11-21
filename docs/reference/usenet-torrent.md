@@ -10,7 +10,7 @@ tags:
 
 Probably, you're setting this up because you're planning to download media.
 
-To do this, there are requirements dependings on which method[s] you choose to download your media. It can either be [Usenet, Torrents, or both](https://www.htpcguides.com/comparing-usenet-vs-torrents/).
+To do this, there are requirements dependings on which method(s) you choose to download your media. It can either be [Usenet, Torrents, or both](https://www.htpcguides.com/comparing-usenet-vs-torrents/).
 
 ## i. Usenet
 

@@ -9,7 +9,7 @@ tags:
 
 **You will need a domain name** as Saltbox apps are only accessed via <https://appname.iYOUR_DOMAIN_NAMEi> (see [Accessing Saltbox Apps](../saltbox/basics/accessing-apps.md)). The steps below will help you set up a domain and DNS settings for use with Saltbox.
 
-Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
+Ports are (for the most part) bound only to the internal `saltbox` docker network, which means they are not visible on the host; you won't be able to connect externally to the apps using `IP:PORT`.
 
 # 1. Domain Provider
 
@@ -19,7 +19,7 @@ If you already have one, you may skip this step.
 
 _Note: Free domain name providers, such as [Freenom](https://www.freenom.com/), do not support wildcard DNS settings, and paid domain names can be had for less than a dollar per year ([tld-list](https://tld-list.com/) is useful in this regard)._
 
-If you are planning to use the automatic Cloudflare integration, there are some top-level domains [TLDs] that will not work with it. Refer to [this page](https://developers.cloudflare.com/dns/troubleshooting/faq/#why-cant-i-add-certain-tlds-via-the-dns-api).
+If you are planning to use the automatic Cloudflare integration, there are some top-level domains (TLDs) that will not work with it. Refer to [this page](https://developers.cloudflare.com/dns/troubleshooting/faq/#why-cant-i-add-certain-tlds-via-the-dns-api).
 
 As of 2023/10/22:  "The DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs"
 
@@ -119,7 +119,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     If you want Saltbox to work with Cloudflare and automate setting up DNS, you need to:
 
     1. Set up Cloudflare as your DNS provider
-    2. Get a [free] Cloudflare Global API Key
+    2. Get a (free) Cloudflare Global API Key
     3. Enter that Global API key into the Saltbox settings
     4. run the saltbox install, during which all the required subdomains will be created at Cloudflare for you
     5. do some optional post-install adjustments.
@@ -130,7 +130,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
     Saltbox makes adding subdomains to Cloudflare's DNS settings a breeze via automation. All you need is the Global API key.
 
-    Note that there are some top-level domains [TLDs] that will not work with this automation. Refer to [this page](https://developers.cloudflare.com/dns/troubleshooting/faq/#why-cant-i-add-certain-tlds-via-the-dns-api).
+    Note that there are some top-level domains (TLDs) that will not work with this automation. Refer to [this page](https://developers.cloudflare.com/dns/troubleshooting/faq/#why-cant-i-add-certain-tlds-via-the-dns-api).
 
     As of 2023/10/22:  "The DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs"
 
@@ -180,7 +180,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
        ![Cloudflare SSL/TLS settings page with Full (strict) encryption mode selected](../images/cloudflare/cloudflare-full-strict.png)
 
-    #### Get a [free] Cloudflare API Key
+    #### Get a (free) Cloudflare API Key
 
     1. Go to [Cloudflare.com](https://www.cloudflare.com/).
 
@@ -208,7 +208,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
     #### After saltbox is installed
 
-    After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like. Note, however, that enabling proxying on your plex or emby subdomains [or more generally proxying large amounts of non-HTML content] is against Cloudflare TOS and may end up getting your Cloudflare account banned.
+    After Saltbox has added in the subdomains, you may go back in and turn on CDN for for them if you like. Note, however, that enabling proxying on your plex or emby subdomains (or more generally proxying large amounts of non-HTML content) is against Cloudflare TOS and may end up getting your Cloudflare account banned.
 
     Do this AFTER all your certs have been assigned and you have confirmed that all the Saltbox app sites are loading OK.
 
@@ -230,7 +230,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
        ![Cloudflare DNS tab showing subdomain with proxy status toggle (DNS Only mode)](../images/cloudflare/cloudflare-proxy-off.png){ width=60% }
 
-<!-- Temporarily removed from setup [last steps] - may not be needed..
+<!-- Temporarily removed from setup (last steps) - may not be needed..
 
     1. Set **Always Use HTTPS** to `off`.
 

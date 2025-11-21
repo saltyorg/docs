@@ -30,7 +30,7 @@ Media
 
   ![](../../images/google-drive-filesystem.png)
 
-There may be other mediatype directories here depending on your specific setup. The current automated rclone setup creates several more [Movies-4K, Books, Anime, and so forth].
+There may be other mediatype directories here depending on your specific setup. The current automated rclone setup creates several more (Movies-4K, Books, Anime, and so forth).
 
 | Path  <pre>                 </pre>                 | Description  <pre>                                                                                              </pre>                                                                                                                                                          |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -87,7 +87,7 @@ _Note: It is advised to leave at least 100GB free on `/opt` for the storage of D
 
 Every container sees any path inside `/mnt` the same as the host and same as any other container.
 
-That means that no path translation is required from context to context. If nzbget reports a download at `/mnt/unionfs/downloads/...` then Radarr will see it in the same place; when Radarr tells Plex-Autoscan [PAS] about it, PAS sees it in that same place; when PAS tells Plex about it, Plex sees it in that same place.
+That means that no path translation is required from context to context. If nzbget reports a download at `/mnt/unionfs/downloads/...` then Radarr will see it in the same place; when Radarr tells Plex-Autoscan (PAS) about it, PAS sees it in that same place; when PAS tells Plex about it, Plex sees it in that same place.
 
 ### Plex
 

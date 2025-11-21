@@ -79,4 +79,4 @@ rclone:
 
 It should go without saying that you need to change `THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to whatever you called the rclone remote you created pointing at the NAS.
 
-Then run the regular saltbox install. Your NAS [or whatever] will be mounted at `/mnt/remote/THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.
+Then run the regular saltbox install. Your NAS (or whatever) will be mounted at `/mnt/remote/THE_NAME_OF_THE_REMOTE_YOU_JUST_CREATED`, added to the unionfs, and Cloudplow will handle moving from your local disk to the NAS.

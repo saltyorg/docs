@@ -10,7 +10,7 @@ tags:
 With Saltbox you can either run a backup task manually or schedule it to run automatically.
 
 !!! important
-    A successful backup will require free space [in `/mnt/local/Backups/Saltbox` by default] *at least* equal to the aggregate size of `/opt`. The backup creates tar archives from the directories in `/opt` and then uploads the tar archives to any destinations that you have set up in the [backup config](../../saltbox/backup/settings.md). These archives are not compressed, so there needs to be enough space for a second copy of `/opt`.
+    A successful backup will require free space (in `/mnt/local/Backups/Saltbox` by default) *at least* equal to the aggregate size of `/opt`. The backup creates tar archives from the directories in `/opt` and then uploads the tar archives to any destinations that you have set up in the [backup config](../../saltbox/backup/settings.md). These archives are not compressed, so there needs to be enough space for a second copy of `/opt`.
 
     `sudo ncdu -x /` is one way to verify the size of `/opt`.
 
@@ -45,7 +45,7 @@ This backup will take some time, likely hours, and all your containers may be do
     sb install backup
     ```
 
-    This will begin the backup in the active terminal; you will not be able to close the terminal or disconnect from your server while the backup proceeds. If you do so [deliberately or accidentally], the backup will be aborted.
+    This will begin the backup in the active terminal; you will not be able to close the terminal or disconnect from your server while the backup proceeds. If you do so (deliberately or accidentally), the backup will be aborted.
 
 === "With Screen"
 
@@ -60,7 +60,7 @@ This backup will take some time, likely hours, and all your containers may be do
 
     The backup is now running in the background.
 
-    If you want to get a look at what's going on, this command will bring it to the foreground and show you the ongoing output. [this is assuming you have a single thing running in a single `screen`; see the note above about not teaching `screen` generally]
+    If you want to get a look at what's going on, this command will bring it to the foreground and show you the ongoing output. (this is assuming you have a single thing running in a single `screen`; see the note above about not teaching `screen` generally)
 
     ```shell
     screen -r

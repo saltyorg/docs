@@ -19,8 +19,8 @@ In terms of functionality the high points are
 - Support for IPv6 within the docker container network using NAT since we still want to keep things behind the reverse proxy.
 - Inventory system for simpler, upgrade-protected customization
 - Authelia single sign-on
-- Choice of SSL provider [Let's Encrypt or ZeroSSL]
+- Choice of SSL provider (Let's Encrypt or ZeroSSL)
 - ability to use a nested subdomain (`rolename.subdomain.xYOUR_DOMAIN_NAMEx` rather than `rolename.xYOUR_DOMAIN_NAMEx`)
-- Generalized support for multiple app instances [replacement for the "ArrX" system]
+- Generalized support for multiple app instances (replacement for the "ArrX" system)
 - Ongoing maintenance and active development
-- largely automated system to set up shared drives and service accounts for the user [for Cloudbox users, this is the "tip 44" setup].
+- largely automated system to set up shared drives and service accounts for the user (for Cloudbox users, this is the "tip 44" setup).

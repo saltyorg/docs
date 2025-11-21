@@ -6,9 +6,9 @@ Usually this is a simple problem, but there are several places where it could be
 
 NOTE: THIS IS WRITTEN IN TERMS OF GOOGLE DRIVE, BUT THE CONCEPTS ARE APPLICABLE TO ANY RCLONE-BASED STORAGE.
 
-Service names and directories may differ depending on the specific configuration in use. You may have multi-layer remotes in the case of encryption or chunking. None of those things affect the concepts of: remote[s] -> mounts -> unionfs -> apps.
+Service names and directories may differ depending on the specific configuration in use. You may have multi-layer remotes in the case of encryption or chunking. None of those things affect the concepts of: remote(s) -> mounts -> unionfs -> apps.
 
-There are several layers between your Google Drive and Plex [or other app].
+There are several layers between your Google Drive and Plex (or other app).
 
 - rclone remote, which provides the link to your Google Drive. This is where you sign into your Google account.
 - rclone_vfs service, which makes that rclone remote visible at `/mnt/remote`
@@ -49,11 +49,11 @@ google:              1.0P  107T   1.0P   10%  /mnt/remote/google
 ➜  ~
 ```
 
-That shows a device called “google” [created by rclone config] mounted at `/mnt/remote/google` [done by saltbox_managed_rclone_google.service], 
+That shows a device called “google” (created by rclone config) mounted at `/mnt/remote/google` (done by saltbox_managed_rclone_google.service), 
 ```
 google:              1.0P  107T   1.0P   10%  /mnt/remote
 ```
-and then two directories [local and remote/google, which are both inside the /mnt directory] combined into `/mnt/unionfs` [that’s done by saltbox_managed_mergerfs.service]
+and then two directories (local and remote/google, which are both inside the /mnt directory) combined into `/mnt/unionfs` [that’s done by saltbox_managed_mergerfs.service]
 ```
 local:remote/google  6.1P  107T   224G  100%  /mnt/unionfs
 ```
@@ -165,7 +165,7 @@ Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal rclone[1247]: Serving remote contr
 Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal systemd[1]: Started Rclone VFS Mount.
 ```
 
-In that log you can see an error from last night when my server ran out of disk space, the rclone_vfs service died, then a reboot [after clearing space]  and it came back up.
+In that log you can see an error from last night when my server ran out of disk space, the rclone_vfs service died, then a reboot (after clearing space)  and it came back up.
 ```
 Nov 02 06:44:09 Ubuntu-1804-bionic-64-minimal rclone[9625]: Fatal error: failed to umount FUSE fs: exit status 1: fusermount: entry for /mnt/remote/google not found in /etc/mtab
 ```
@@ -178,7 +178,7 @@ sudo systemctl restart saltbox_managed_rclone_google
 
 If that doesn’t get you to an “`active (running)`” state, try a reboot of the machine.
 
-If that doesn’t work, the problem is deeper; maybe a config problem or a failed install? Read the log. Chances are the specific problem is called out [missing directory, perhaps]. You’re running a server. Learn to read logs. If all fails, take the log information to the Discord, but be prepared to describe what you’ve done and provide details. Don’t come in with “Shit’s busted, my dudes! What’s wrong?”
+If that doesn’t work, the problem is deeper; maybe a config problem or a failed install? Read the log. Chances are the specific problem is called out (missing directory, perhaps). You’re running a server. Learn to read logs. If all fails, take the log information to the Discord, but be prepared to describe what you’ve done and provide details. Don’t come in with “Shit’s busted, my dudes! What’s wrong?”
 
 Now that the service is running, let’s make sure the files are showing up where they are supposed to be.
 
@@ -307,7 +307,7 @@ All the docker containers that need to access your media files have the relevant
 
 I’ve trimmed some stuff out there particularly on the top]. If the “Binds” section isn’t visible, try scrolling up, or increase the “90” to display more lines. It should be right around the same place as mine, though.
 
-Take a look at the “`Binds`” section. Each entry there shows a path on the host [on the left] and the location where those files appear inside the container.
+Take a look at the “`Binds`” section. Each entry there shows a path on the host (on the left) and the location where those files appear inside the container.
 
 ## Media-related defaults
 

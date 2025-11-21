@@ -291,6 +291,6 @@ Now move on to creating the actual crypt remote.
 
 15. repeat steps 2-15 with any other remotes you wish to apply encryption to.
 
-    **IMPORTANT**: If you are creating multiple remotes to access the same files [like one for upload and one for mount], use the same passwords with all of them.
+    **IMPORTANT**: If you are creating multiple remotes to access the same files (like one for upload and one for mount), use the same passwords with all of them.
 
-The name of this remote [`dropbox-crypt` in this case] is what you should enter in the saltbox rclone settings as you proceed with the install.
+The name of this remote (`dropbox-crypt` in this case) is what you should enter in the saltbox rclone settings as you proceed with the install.

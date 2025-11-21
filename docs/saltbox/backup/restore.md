@@ -182,13 +182,13 @@ backup:
         root_folder_id =
         ```
 
-        You will need to make sure that service account file [`/opt/sa/all/1500.json`] is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
+        You will need to make sure that service account file (`/opt/sa/all/1500.json`) is available on the new saltbox machine at that same path in order to authenticate against google and download the backup files you're about to restore.
 
     Once `rclone lsd google:/Backups/Saltbox` shows you the expected `opt` directory, you are clear to continue.
 
 === "I want to pull the backup from the local location"
 
-    You will need to make sure that the tar archives are available in `/mnt/local/Backups/Saltbox/opt` [or whatever path is specicfied in *your* `backup_config.yml` if you've changed it]:
+    You will need to make sure that the tar archives are available in `/mnt/local/Backups/Saltbox/opt` (or whatever path is specicfied in *your* `backup_config.yml` if you've changed it):
     ```
     /mnt/local/Backups/Saltbox/
     ├── opt
@@ -203,12 +203,12 @@ backup:
     fatal: [localhost]: FAILED! => {"changed": false, "msg": ["Rclone is not enabled and no local backup exists.", "You must either enable rclone, in the backup settings, or provide backup tarball files locally, to perform a restore."]}
     ```
 
-    Copy your backup tar files from wherever they are now to that location. Once you have done this and the backup tar archives are present in `/mnt/local/Backups/Saltbox/opt` [or whatever path *you* set that to], you are clear to continue.
+    Copy your backup tar files from wherever they are now to that location. Once you have done this and the backup tar archives are present in `/mnt/local/Backups/Saltbox/opt` (or whatever path *you* set that to), you are clear to continue.
 
 ## Restore
 
 ???+ info
-    From this point you'll want to **make sure** you run commands as the user specified in the `accounts.yml`; this means you should log out and log back in as `seed` [or the user in `accounts.yml` if you changed it]
+    From this point you'll want to **make sure** you run commands as the user specified in the `accounts.yml`; this means you should log out and log back in as `seed` (or the user in `accounts.yml` if you changed it)
 
 Start the restore process.
 

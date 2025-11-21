@@ -77,9 +77,9 @@ Then tells Plex to scan that location.
 
 Part of “tells Plex to scan” is finding out which library contains the thing. To do this PAS gets a list of libraries from Plex, then loops through all of them comparing the root paths in the libraries to the path it's about to send. If there’s a match, PAS then issues the scan request to Plex.
 
-If there is no Plex Library that matches the path, PAS will display an error in its log [“unable to map to a section ID”].
+If there is no Plex Library that matches the path, PAS will display an error in its log (“unable to map to a section ID”).
 
-This can also happen if the Plex path is incorrectly entered [It’s not actually the folder configured in a library] or if one of the source paths is incorrect [Radarr isn’t set to save files in the path listed] or some combination of that sort of thing.
+This can also happen if the Plex path is incorrectly entered (It’s not actually the folder configured in a library) or if one of the source paths is incorrect (Radarr isn’t set to save files in the path listed) or some combination of that sort of thing.
 
 ### Actual example from a working setup
 

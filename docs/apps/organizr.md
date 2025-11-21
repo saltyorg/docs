@@ -124,7 +124,7 @@ Note: it is suggested to enter your `plex username and password`
 
     - On the Connections Tab, Set "Sonarr URL": `http://sonarr:8989`
 
-    - Set "Sonarr API Key": [[Your Sonarr API Key|Install: Sonarr#9-retrieving-the-api-key]]
+    - Set "Sonarr API Key": [Your Sonarr API Key|Install: Sonarr#9-retrieving-the-api-key]
 
     - Go over any other Miscellaneous Options on the next Tab and set your preferences.
 
@@ -138,7 +138,7 @@ Note: it is suggested to enter your `plex username and password`
 
     - Set "Radarr URL": `http://radarr:7878`
 
-    - Set "Radarr API Key": [[Your Radarr API Key|Install: Radarr#9-retrieving-the-api-key]]
+    - Set "Radarr API Key": [Your Radarr API Key|Install: Radarr#9-retrieving-the-api-key]
 
     - Go over any other Miscellaneous Options on the next Tab and set your preferences.
 
@@ -152,7 +152,7 @@ Note: it is suggested to enter your `plex username and password`
 
     - Set "NZBGet URL": `http://nzbget:6789`
 
-    - For "Username" / "Password": fill in your NZBGet login (see [[NZBGet|Install: NZBGet#2-setup]])
+    - For "Username" / "Password": fill in your NZBGet login (see [NZBGet|Install: NZBGet#2-setup])
 
     - Click "SAVE".
 

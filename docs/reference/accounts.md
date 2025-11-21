@@ -19,7 +19,7 @@ On this page, we break down the options available in the following files:
 - `/srv/git/saltbox/settings.yml`
 - `/srv/git/saltbox/adv_settings.yml`
 
-IMPORTANT: If you make changes to values in these files, you will have to run the relevant role[s] to make them take effect. For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect. The only thing that looks at these settings files is the Ansible script.
+IMPORTANT: If you make changes to values in these files, you will have to run the relevant role(s) to make them take effect. For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect. The only thing that looks at these settings files is the Ansible script.
 
 ## Options in accounts.yml
 
@@ -209,7 +209,7 @@ Each tab shows a "section" in the file.
 
     `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` or `remote: "my-sftp:/path/to/my/files"`  Quotes are important.
 
-    `remotes/settings/enable_refresh`: Toggles whether this remote required a refresh service to look for new files [for example, an `sftp` remote].
+    `remotes/settings/enable_refresh`: Toggles whether this remote required a refresh service to look for new files (for example, an `sftp` remote).
 
     `remotes/settings/mount`: Toggles whether you want this remote mounted in the file system.
 
@@ -383,7 +383,7 @@ Each tab shows a "section" in the file.
 
 Your chosen password must have a minimum of 12 characters.
 
-These are a YAML files, and values you enter here are subject to YAML file format rules. If you use special characters in your password, wrap the password in quotes [or escape the characters correctly, if you are familiar with that concept]. It would be easiest to avoid using quote characters themselves within your password.
+These are a YAML files, and values you enter here are subject to YAML file format rules. If you use special characters in your password, wrap the password in quotes (or escape the characters correctly, if you are familiar with that concept). It would be easiest to avoid using quote characters themselves within your password.
 
 For example:
 

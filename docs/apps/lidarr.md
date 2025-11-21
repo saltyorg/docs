@@ -358,9 +358,9 @@ Make changes in the following sections:
 
                 Method:`POST`
 
-                Username: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Username]
+                Username: AS SET IN AUTOSCAN CONFIG (defaults to Saltbox Username)
 
-                Password: AS SET IN AUTOSCAN CONFIG [defaults to Saltbox Password]
+                Password: AS SET IN AUTOSCAN CONFIG (defaults to Saltbox Password)
 
             4. The settings will look like this:
 

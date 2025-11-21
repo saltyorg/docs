@@ -101,7 +101,7 @@ plex2_docker_network_mode_default: "container:gluetun2"
 plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
 
-Once you have made these changes to the inventory, run the plex tag to apply the changes [i.e. `sb install plex`]. This will update all your plex containers.
+Once you have made these changes to the inventory, run the plex tag to apply the changes (i.e. `sb install plex`). This will update all your plex containers.
 
 !!! caution
     When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
@@ -131,7 +131,7 @@ Depending on if the role in question supports instances or not there will be two
 
     For example, to route `jackett` through Gluetun, the entry would be `jackett_docker_network_mode: "container:gluetun"`.
 
-Once you have made these changes to the inventory, run the relevant tags to apply the changes [i.e. `sb install qbittorrent` or `sb install jackett,sonarr,radarr`].
+Once you have made these changes to the inventory, run the relevant tags to apply the changes (i.e. `sb install qbittorrent` or `sb install jackett,sonarr,radarr`).
 
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.

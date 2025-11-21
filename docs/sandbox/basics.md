@@ -77,7 +77,7 @@ If you want to create a role to allow others to install your role, keep reading.
 
 #### Editing an existing role
 
-If you want to make a change to an existing role [for example, changing the docker image it uses], you don't have [or want to] to create a new role. You make changes like this for either core or sandbox roles using the [inventory system](../saltbox/inventory/index.md)
+If you want to make a change to an existing role (for example, changing the docker image it uses), you don't have (or want to) to create a new role. You make changes like this for either core or sandbox roles using the [inventory system](../saltbox/inventory/index.md)
 
 #### Preparatory work
 
@@ -225,7 +225,7 @@ You do this by switching to your feature branch in your repo and clicking "Pull 
 
 This is a request for the Saltbox team to "pull" your changes into their repo.
 
-If there are special instructions or details that your role needs, add them to the pull request comments. If needed, create a doc page [which will be its own pull request] for the role.
+If there are special instructions or details that your role needs, add them to the pull request comments. If needed, create a doc page (which will be its own pull request) for the role.
 
 !!! warning
     BE SURE YOU DO NOT COMMIT FILES CONTAINING SECRETS LIKE API KEYS OR TOKENS.

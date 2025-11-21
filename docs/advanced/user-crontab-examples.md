@@ -31,18 +31,18 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 **Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - REQUIRED to use `sb` commands in cronjobs. e.g `sb update`
 
-**Line 2:** `plex-meta-manager` script to make Plex collections. - [Runs midnight daily **server time**]
+**Line 2:** `plex-meta-manager` script to make Plex collections. - (Runs midnight daily **server time**)
 
-**Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**] [This requires line 1]
+**Line 3:** Saltbox backup. - (Runs every Sunday @ 7AM **server time**) (This requires line 1)
 
-**Line 4:** optimize the plex database using the `plex-db` tag. - [Runs daily @ 4AM **server time**] [This requires line 1]
+**Line 4:** optimize the plex database using the `plex-db` tag. - (Runs daily @ 4AM **server time**) (This requires line 1)
 
-**Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
+**Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - (Runs every minute) `Note: Scroll down for a couple ideas for this script.`
 
-**Line 6:** Different script to optimize the Plex database. - [Runs daily @ 10AM **server time**]
+**Line 6:** Different script to optimize the Plex database. - (Runs daily @ 10AM **server time**)
 `Note: Scroll down for script.`
 
-**Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]
+**Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - (Runs hourly)
 
 ***
 

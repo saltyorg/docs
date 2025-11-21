@@ -6,9 +6,9 @@ This article will attempt to clear them up.
 
 ## Why are rewrites needed in autoscan?
 
-Basically, autoscan rewrites are a way to convert a path as one thing [typically an app like Sonarr] sees it to a path where another thing [typically an app like Plex] sees it.
+Basically, autoscan rewrites are a way to convert a path as one thing (typically an app like Sonarr) sees it to a path where another thing (typically an app like Plex) sees it.
 
-The source of the scan [Sonarr, for example] sees a thing at one path, and the target of scan [Plex, for example] may see the same file at a different path. Autoscan uses "rewrites" to convert the source path to the target path.
+The source of the scan (Sonarr, for example) sees a thing at one path, and the target of scan (Plex, for example) may see the same file at a different path. Autoscan uses "rewrites" to convert the source path to the target path.
 
 ## Do I always need rewrites?
 
@@ -16,7 +16,7 @@ No.
 
 If Sonarr and Plex both see an episode at `/mnt/unionfs/Media/TV/SomeShow/Season 01/SomeShow S01E01.mkv`, then no rewrite is needed.
 
-If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for Sonarr/Radarr/Lidarr [a-train or inotify triggers probably still need rewrites].
+If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for Sonarr/Radarr/Lidarr (a-train or inotify triggers probably still need rewrites).
 
 Rewrites *are* needed when:
 ```
@@ -76,7 +76,7 @@ So Autoscan looks for a Plex library that has `/tv/` as one of its root director
 
 > "Please scan this folder: `/tv/#killerpost (2016)/Season 1/`; it's in library **12**."
 
-Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library [there isn't one with `/tv/` as one of its root dirs], so Autoscan will report:
+Howver, in our example above, the Plex library is pointed at `/data/TV`, so Autoscan won't be able to find the target library (there isn't one with `/tv/` as one of its root dirs), so Autoscan will report:
 
 ```
 No target libraries found error="/tv/#killerpost (2016)/Season 1/: failed determining libraries" target=plex url=https://plex.xYOUR_DOMAIN_NAMEx/

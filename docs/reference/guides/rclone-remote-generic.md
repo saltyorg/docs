@@ -10,7 +10,7 @@ To go through this process, you will need the following:
 
    1. Whatever access details are required by your cloud storage; typically this is an appID/secret pair, or a token of some kind. Details can be found at the [rclone site](https://rclone.org/overview/), or you can just work through the config process and go get the things you are asked for.
    2. `rclone` installed on your saltbox machine [which means the preinstall has been run]
-   3. `rclone` [same or higher version as on the saltbox machine] and a web browser installed on a machine local to you [this machine needs a GUI]. NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
+   3. `rclone` (same or higher version as on the saltbox machine) and a web browser installed on a machine local to you (this machine needs a GUI). NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
 
 ## Walkthrough
 
@@ -123,4 +123,4 @@ To go through this process, you will need the following:
 
 If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md). That page is written with dropbox in mind, but the concepts apply to any cloud storage provider.
 
-If you are doing this as part of the initial install, you will need the name of the remote you created [`cloudstorage` in this example] to enter into the settings file.
+If you are doing this as part of the initial install, you will need the name of the remote you created (`cloudstorage` in this example) to enter into the settings file.

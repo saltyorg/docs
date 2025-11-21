@@ -24,7 +24,7 @@ This script is only useful if you have used the [scripted rclone method](rclone-
 
 AGAIN: This script is **only useful if you have used the [scripted rclone method](rclone-manual.md).**
 
-This script is going to load the config from the last script in that process, and if it finds that config unmodified [specifically the prefix found in the config, which you create as part of that process] it will exit with a message to that effect. There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
+This script is going to load the config from the last script in that process, and if it finds that config unmodified (specifically the prefix found in the config, which you create as part of that process) it will exit with a message to that effect. There is no point in trying to circumvent this, since it is going to look for rclone remotes with specific names based on that prefix, which point at shared drives that it created with that prefix, etc.
 
 ### Important
 
@@ -62,7 +62,7 @@ You will have to have completed `sb install saltbox` before using this script.
 
 # Updating Cloudplow Config for additional shared drives
 
-A backup of the stock `config.json` will be created as `config.json.old`; if you want to run this script a second time [perhaps you ran the previous script again and added some shared drives], run `cp config.json.old config.json` before running the script:
+A backup of the stock `config.json` will be created as `config.json.old`; if you want to run this script a second time (perhaps you ran the previous script again and added some shared drives), run `cp config.json.old config.json` before running the script:
 
 NOTE: This will overwrite the customized config.json, losing any changes you have made. If the only changes you've made were via this script, that's totally safe. If you've made other changes, they will be overwritten and you will have to repeat them
 

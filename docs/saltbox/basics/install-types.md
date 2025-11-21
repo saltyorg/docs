@@ -43,7 +43,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
   [yes]:../../images/check-mark.png
 
 [^1]:
-    Note that the default apps installed by each top-level tag can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that the default apps installed by each top-level tag can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
 
     The relevant variables and their default values are:
     ```
@@ -53,7 +53,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     ```
 
 [^2]:
-    Note that the default media server[s] can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that the default media server(s) can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
 
     The relevant variables and their default values are:
     ```
@@ -61,7 +61,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     ```
 
 [^3]:
-    Note that these default download clients and indexers can be overridden with other Saltbox roles [NOT SANDBOX] in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that these default download clients and indexers can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
 
     The relevant variables and their default values are:
     ```
@@ -69,7 +69,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     download_indexers_enabled: ["jackett", "nzbhydra2"]
     ```
 
-As with any Ansible tags provided by saltbox, it is safe to run these install tag[s] at will. Existing configurations are not overwritten [except for some "reset" tags and the "mounts" tag].
+As with any Ansible tags provided by saltbox, it is safe to run these install tag(s) at will. Existing configurations are not overwritten (except for some "reset" tags and the "mounts" tag).
 
 ## Feederbox/Mediabox Setup Considerations
 

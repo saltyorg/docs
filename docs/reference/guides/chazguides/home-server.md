@@ -136,7 +136,7 @@ Verify this part is working by installing apache on your server:
 sudo apt install apache2
 ```
 
-Then open a web browser and go to your domain [http://xYOUR_DOMAIN_NAMEx] . Maybe use your phone with wifi off to make sure the request is coming from outside your house. Requests coming from inside the house are not only bad in horror movies, they are bad for verifying port forwards as well.
+Then open a web browser and go to your domain (http://xYOUR_DOMAIN_NAMEx). Maybe use your phone with wifi off to make sure the request is coming from outside your house. Requests coming from inside the house are not only bad in horror movies, they are bad for verifying port forwards as well.
 
 If you see the default apache page, you’re set to go.
 

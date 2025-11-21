@@ -45,11 +45,11 @@ At this time, we only support LTS releases of Ubuntu Server [22.04](https://rele
 
 For best results, the assumed server environment for Saltbox is:
 
-- a dedicated remote server [not a VPS or a virtualized setup like proxmox] [see below for important information about Hetzner],
-- with a processor compliant with the `x86_64`/`amd64` [`arm` NOT SUPPORTED] architecture,
+- a dedicated remote server (not a VPS or a virtualized setup like proxmox) (see below for important information about Hetzner),
+- with a processor compliant with the `x86_64`/`amd64` (`arm` NOT SUPPORTED) architecture,
 - running a brand new fresh install of the server version of Ubuntu 22.04, or 24.04,
 - from a server provider like Hetzner, OVH, kimsufi, etc.,
-- nothing else [docker, for example] preinstalled,
+- nothing else (docker, for example) preinstalled,
 - with at least 500GB of disk space, and
 - allowing root access.
 
@@ -66,15 +66,15 @@ When you install Ubuntu on the server, do not preinstall anything other than Ope
 
 #### Networking
 
-The server will need to be accessible from the internet via ports 22 [or whatever port you are using for SSH], 80, and 443; if this is a home server most likely you will need to configure port-forwarding in your router to send these ports to this device.
+The server will need to be accessible from the internet via ports 22 (or whatever port you are using for SSH), 80, and 443; if this is a home server most likely you will need to configure port-forwarding in your router to send these ports to this device.
 
 ## Domain
 
 **You will need a domain name** as Saltbox apps are only accessed via <https://appname.iYOUR_DOMAIN_NAMEi> (see [Accessing Apps](../basics/accessing-apps.md)).
 
-Ports are [for the most part] bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect** to the apps using `IP:PORT`.
+Ports are (for the most part) bound only to the internal `saltbox` docker network, which means they are not visible on the host; you **won't be able to connect** to the apps using `IP:PORT`.
 
-If you use Cloudflare for DNS [which is free and doesn't require that you register your domain through Cloudflare], the Saltbox setup can make the required DNS settings for you. If you aren't using Cloudflare, you will have to set this up at your DNS provider yourself. See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
+If you use Cloudflare for DNS (which is free and doesn't require that you register your domain through Cloudflare), the Saltbox setup can make the required DNS settings for you. If you aren't using Cloudflare, you will have to set this up at your DNS provider yourself. See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
 
 ## Cloud Storage
 
@@ -98,7 +98,7 @@ See [here](../../reference/plex.md) for more details about Plex account requirem
 
 If you are planning to set up a standard Saltbox or a feederbox, you will need a source of media; [Usenet, Torrents, or both](https://www.htpcguides.com/comparing-usenet-vs-torrents/)
 
-You won't need these particular [media source] details for the initial install, but you will need them for application setup.
+You won't need these particular (media source) details for the initial install, but you will need them for application setup.
 
 See [here](../../reference/usenet-torrent.md) for more details about media source requirements.
 

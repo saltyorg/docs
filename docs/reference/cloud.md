@@ -16,7 +16,7 @@ Saltbox can be set up to use any cloud storage provider that [Rclone](https://rc
 
 This documentation has not yet been fully updated to cover Dropbox specifics or idiosyncrasies.
 
-We advise that you do NOT use a educational account or any account or drive access plan you may buy on the secondary market [eBay and the like] or get free from some random website, unless you are aware of and planning for the likelihood that it disappears without warning one day.
+We advise that you do NOT use a educational account or any account or drive access plan you may buy on the secondary market (eBay and the like) or get free from some random website, unless you are aware of and planning for the likelihood that it disappears without warning one day.
 
 Note that rclone offering support for a storage backend does not mean that backend is suitable for the Saltbox use case. The only backends that see any significant testing and use are Google Drive and Dropbox.
 
@@ -93,7 +93,7 @@ Shared Drives provide advantages for our purposes over My Drive, while My Drive 
 
 The primary advantage of Shared Drives is that access to them can be controlled via Service accounts, which allows credential rotation to increase upload limits and reduce likelihood of usage-based server-side bans.
 
-Some newer related utilities [like the Golang "Autoscan" replacement for plex-autoscan] have features that work exclusively with Shared Drives.
+Some newer related utilities (like the Golang "Autoscan" replacement for plex-autoscan) have features that work exclusively with Shared Drives.
 
 The primary disadvantage of Shared Drives is that they have a fixed limit of 400,000 files. For this reason one common strategy is to create separate Shared Drives for each media type.
 
@@ -111,7 +111,7 @@ While the typical use case for Saltbox includes cloud storage, nothing prevents 
 
 If, in `settings.yml`, you leave the rclone remote name blank, neither `cloudplow` nor the rclone_vfs mount will be configured. Your media will be imported to `/mnt/local` and stay there. You can mount whatever storage you wish to use at `/mnt/local`.
 
-Alternatively, you can configure an rclone remote pointing at your primary storage [named "google"], then install normally. Everything would then work as it typically does, except that cloudplow would move media from the local system to your NAS or whatever. Perhaps that would allow downloads and imports to go faster.
+Alternatively, you can configure an rclone remote pointing at your primary storage (named "google"), then install normally. Everything would then work as it typically does, except that cloudplow would move media from the local system to your NAS or whatever. Perhaps that would allow downloads and imports to go faster.
 
 ---
  <sub> <a id="note1" href="#note1ref"><sup>1</sup></a> If you would like to customize your Plex libraries beyond what is listed above, see [Customizing Plex Libraries](../reference/customizing-plex-libs.md).</sub>

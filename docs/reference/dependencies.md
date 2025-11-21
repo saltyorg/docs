@@ -22,7 +22,7 @@ This script will:
 
 1. install `git`
 2. delete an existing repo
-3. clone the saltbox repo to the system [default location `/srv/git/sb`]
+3. clone the saltbox repo to the system (default location `/srv/git/sb`)
 4. create some script aliases
 5. run [`sb_dep.sh`](https://github.com/saltyorg/sb/blob/master/sb_dep.sh)
 6. run [`sb_repo.sh`](https://github.com/saltyorg/sb/blob/master/sb_repo.sh)

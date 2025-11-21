@@ -36,7 +36,7 @@ These changes include:
 
     ??? note "What Does this mean for me?"
 
-        If you have custom mount services and mergerfs changes to support your multiple remotes [maybe you have google and dropbox both configured, for example] saltbox will now manage that for you.
+        If you have custom mount services and mergerfs changes to support your multiple remotes (maybe you have google and dropbox both configured, for example) saltbox will now manage that for you.
 
         IF you set up Dropbox or Box or some other non-Google cloud storage using guides from this wiki or the Discord, you have custom mount services.
 
@@ -80,7 +80,7 @@ These changes include:
     1. No longer includes autodl
 
 10. Docker volumes such as `/data`, `/tv` and `/movies` are no longer mounted into relevant containers by default.
-    1. Restore the old behavior by setting `docker_legacy_volume: true` using the [inventory](../../../saltbox/inventory/index.md), then running the relevant tags [**typically** `plex, radarr, sonarr` but your setup may differ].
+    1. Restore the old behavior by setting `docker_legacy_volume: true` using the [inventory](../../../saltbox/inventory/index.md), then running the relevant tags (**typically** `plex, radarr, sonarr` but your setup may differ).
 
 11. The `backup` role now explicitly requires a tag when run even if referencing the `backup.yml` playbook file. You may need to re-run `sb install set-backup` to re-provision your backup cron or edit your cron to include the `--tag backup` argument if using the backup role (or `backup2` if using that role).
 

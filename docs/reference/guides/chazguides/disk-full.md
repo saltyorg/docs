@@ -74,7 +74,7 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
     3.7 GiB [          ] /transcodes
 ```
 
-Here, I have 473 GB of unimported downloads [`/downloads`] and 44 GB waiting to be uploaded by Cloudplow [`/Media`].
+Here, I have 473 GB of unimported downloads (`/downloads`) and 44 GB waiting to be uploaded by Cloudplow (`/Media`).
 
 Rclone vfs cache is more install-dependent. I’m going to assume that if you’re reading this you didn’t change things from the defaults, and chances are you’ll see something like this:
 
@@ -172,7 +172,7 @@ If you do, cloudplow is working as expected. If you want cloudplow to start uplo
 }
 ```
 
-That’s going to check every 30 minutes [`"check_interval": 30,`], and start uploading when the folder reaches 200GB [`"max_size_gb": 200,`]. Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
+That’s going to check every 30 minutes (`"check_interval": 30,`), and start uploading when the folder reaches 200GB (`"max_size_gb": 200,`). Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
 
 In the default setup, you can upload 750GB per day.
 

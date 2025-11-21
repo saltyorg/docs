@@ -8,7 +8,7 @@ Throughout, I will refer to "Cloud A" and "Cloud B", where "A" is your current p
 
 In the basic case, you need to:
 
-1. create remote[s] for Cloud B
+1. create remote(s) for Cloud B
    [this might be just one, or base + encrypted, or base + encrypted + chunker, depending on what *you* want to do.]
 2. create mount service for that last remote in the chain.
    [this mounts it in the file system]
@@ -33,7 +33,7 @@ _Optionally_, if you want to abandon Cloud A:
 
 === "Add Cloud B but keep uploading to Cloud A"
 
-    1. create remote[s] for cloud storage
+    1. create remote(s) for cloud storage
     2. create mount service for cloud storage
     3. add that mount point to the mergerfs
 
@@ -41,7 +41,7 @@ _Optionally_, if you want to abandon Cloud A:
 
 === "Add Cloud B and upload to it"
 
-    1. create remote[s] for cloud storage
+    1. create remote(s) for cloud storage
     2. create mount service for cloud storage
     3. add that mount point to the mergerfs
 
@@ -99,7 +99,7 @@ _Optionally_, if you want to abandon Cloud A:
                 }
             },
     ```
-    to something that will tell Cloudplow to cool it on uploading to Cloud B, whatever those triggers might be [assuming that's needed].
+    to something that will tell Cloudplow to cool it on uploading to Cloud B, whatever those triggers might be (assuming that's needed).
 
     If you have multiple remotes defined or some other more complicated setup, you'll need to look into the cloudplow docs, but basically you will be replacing whatever remote or remotes you currntly have targeting Cloud A with one or more targeting Cloud B.
 

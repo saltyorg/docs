@@ -45,7 +45,7 @@ Further, it is assuming you are starting from nothing; a new Google account with
 
 THIS PROCESS IS OPTIONAL. THIS IS NOT A REQUIRED PART OF THE SALTBOX INSTALL.
 
-IF YOU ARE USING A BACKEND OTHER THAN GOOGLE DRIVE [say, Dropbox], THIS DOES NOT APPLY TO YOU.
+IF YOU ARE USING A BACKEND OTHER THAN GOOGLE DRIVE (say, Dropbox), THIS DOES NOT APPLY TO YOU.
 
 Rclone supports many cloud provider backends, but the only one routinely used by the Saltbox team is Google Drive.
 
@@ -58,7 +58,7 @@ It also assumes you are using a [Google Workspace](https://workspace.google.com/
 
 If you already have Rclone configured, you can jump directly to the [relevant section](#existing-rclone-setup).
 
-If you already have media on Google Drive [My Drive OR Shared Drives] from your time with Cloudbox or the like, you DO NOT WANT TO DO THIS. This process is assuming you are starting from scratch without any of this already set up. It will overwrite aspects of an existing rclone setup with no undo.
+If you already have media on Google Drive (My Drive OR Shared Drives) from your time with Cloudbox or the like, you DO NOT WANT TO DO THIS. This process is assuming you are starting from scratch without any of this already set up. It will overwrite aspects of an existing rclone setup with no undo.
 
 That said, let's proceed.
 
@@ -68,7 +68,7 @@ That said, let's proceed.
     YOU CANNOT SKIP STEPS HERE: EACH OF THESE STEPS IS ASSUMING YOU HAVE PERFORMED THE PREVIOUS ONE.
 
 !!! info
-    IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT [Cloudbox, PG, etc] USE THAT CONFIG [NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS] IN A MIGRATION.
+    IF YOU HAVE EXISTING GOOGLE DRIVES FROM ANOTHER CONTEXT (Cloudbox, PG, etc) USE THAT CONFIG (NOTABLY THE RCLONE CONFIG AND ANY SERVICE ACCOUNTS) IN A MIGRATION.
 
 !!! warning
     THIS PROCESS DOES NOT ACCOUNT FOR USING YOUR OWN TEAMDRIVES.
@@ -89,7 +89,7 @@ Save that credential file on your server at `/opt/sa/project-creds.json`. You ma
 sudo mkdir -p /opt/sa
 sudo chown -R <user>:<group> /opt/sa
 ```
-Where the two placeholders are the Saltbox user and group [by default `seed:seed`]
+Where the two placeholders are the Saltbox user and group (by default `seed:seed`)
 <br />
 </details>
 
@@ -132,7 +132,7 @@ Make a note of that prefix; you will use it in the next two steps.
 <br />
 This prefix is used for two purposes:<br /><br />
 
-  1. Project names need to be unique across all of Google; a random prefix helps ensure this [the error that results in this case is non-obvious].<br /><br />
+  1. Project names need to be unique across all of Google; a random prefix helps ensure this (the error that results in this case is non-obvious).<br /><br />
 
   2. It helps these scripts unambiguously identify things that they have created, so they don't affect any projects, service accounts, or drives you may already have created.
 
@@ -155,7 +155,7 @@ This prefix is used for two purposes:<br /><br />
 rclone tree google:/
 ```
 
-This should display something like [the number and names of the files and folders may vary somewhat depending on your config]:
+This should display something like (the number and names of the files and folders may vary somewhat depending on your config):
 
 ```text
 /

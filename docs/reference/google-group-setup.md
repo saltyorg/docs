@@ -21,11 +21,11 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
    ![](../images/google-group/01-admin-top-level.png)
 
-2. You should now see a list of your groups [which may be empty]. Click on "Create Group":
+2. You should now see a list of your groups (which may be empty). Click on "Create Group":
 
    ![](../images/google-group/02-create-group.png)
 
-3. Enter a name, description and email address for the group; choose an owner [this should be the account with which you just logged in]. Click "Next".
+3. Enter a name, description and email address for the group; choose an owner (this should be the account with which you just logged in). Click "Next".
 
    ![](../images/google-group/03-group-detail.png)
 

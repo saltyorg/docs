@@ -73,7 +73,7 @@ tags:
 
 Once the downloads are complete, Sonarr & Radarr will move (or copy/link in the case of torrents) these downloads to your server's `/mnt/local/Media/` folder[^3] and send a notification to _Autoscan_.
 
-The original seeding torrents will remain in the download directory [they never leave the local machine] until they are deleted by you or some form of automation.
+The original seeding torrents will remain in the download directory (they never leave the local machine) until they are deleted by you or some form of automation.
 
 [Autoscan](https://github.com/cloudbox/autoscan/) will, in turn, tell your media server to scan for the newly downloaded show or movie, by only scanning the specific season or movie folder. This will
 
@@ -116,12 +116,12 @@ flowchart TB
 
 [^2]: If you want to use torrents, it is recommended to be a member of a private tracker as opposed to using public ones. If you want to use Usenet, you will need to purchase Usenet provider service (or multiple services) and also be a member of one or more Usenet indexers.
 
-[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however, `/mnt/local` is the only _writeable_ part of the Mergerfs [for the purpose of creating new files], so the newly-written files will be placed in `/mnt/local`.
+[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however, `/mnt/local` is the only _writeable_ part of the Mergerfs (for the purpose of creating new files), so the newly-written files will be placed in `/mnt/local`.
 
 [^4]: This ten-minute delay can be changed in the Autoscan config file. It's here for two reasons; it ensures that the file is completely copied into the media directory before the media server scans it, and it allows a season of TV to be collected and sent to the media server as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to the media server ten minutes after the last episode completed downloading.
 
 [^5]: By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive. This threshold can be adjusted as needed in the Cloudplow config.
 
-[^6]: **Note:** Due to changes in Google Drive this doesn't really apply any more. Limits are much tighter and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads [750 GB/day/service account].~~
+[^6]: **Note:** Due to changes in Google Drive this doesn't really apply any more. Limits are much tighter and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads (750 GB/day/service account).~~
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

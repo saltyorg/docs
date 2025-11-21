@@ -18,7 +18,7 @@ This server can be either local to you or rented from a server provider.
 
 Some examples of "server provider" would be places like [OVH](https://us.ovhcloud.com/), [LeaseWeb](https://www.leaseweb.com/dedicated-servers). [Hetzner](https://www.hetzner.com/), and the like. Saltbox does not recommend any server provider specifically; these are just examples. Historically, Hetzner has been popular, but recent changes by Plex have made it less attractive.
 
-Plex Inc has recently [mid-October 2023] instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters [at least European data centers]. This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication. If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
+Plex Inc has recently (mid-October 2023) instituted network roadblocks that cause problems connecting to Plex servers running in Hetzner datacenters (at least European data centers). This can be worked around by putting Plex behind a VPN using Gluetun, but this is of course an added complication. If you are starting fresh, perhaps consider a host other than Hetzner, assuming you want to use Plex.
 
 When you install Ubuntu on the server, do not preinstall anything other than OpenSSH.
 
@@ -36,7 +36,7 @@ You will need root access to install Saltbox.
 
 The server should be a completely fresh OS install. Do not try to install any dependencies on your own, Saltbox will do that for you.
 
-Saltbox only supports x64 (i.e. Intel or AMD 64) machines. ARM based hardware [such as the Raspberry Pi] is not supported.
+Saltbox only supports x64 (i.e. Intel or AMD 64) machines. ARM based hardware (such as the Raspberry Pi) is not supported.
 
 Get a server with at least 100GB+ of hard disk space. Even though media is uploaded to the cloud, there is still a need local storage for things like app data and backups.
 
@@ -48,16 +48,16 @@ If you are planning to use Usenet, SSD should be considered required, and NVME h
 
 If you are planning to use torrents, you should have much more disk space than that available for seeding. Your seeding torrents will not be moved to your cloud storage; they will consume local disk space as long as they are seeding.
 
-If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives the disk requirements on the Feederbox [as discussed above] and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox. Depending on the size of your library, that metadata can be quite large.
+If you are installing as a Feederbox/Mediabox setup rather than the all-in-one Saltbox, the disk requirements change a bit. Downloading drives the disk requirements on the Feederbox (as discussed above) and primarily the Plex/Emby metadata drives the disk requirements on the Mediabox. Depending on the size of your library, that metadata can be quite large.
 
 ### Home Server considerations
 
 If you are setting this up on a home server, verify, **before installing Saltbox**:
 
-  1. Make sure your ISP doesn't block ports 80 and 443 [if your ISP blocks these ports, it won't work.]
-  2. Make sure that your router supports hairpin NAT [if this isn't supported, you won't be able to access apps via subdomain from inside your network or you will have to do manual setup to allow it]
+  1. Make sure your ISP doesn't block ports 80 and 443 (if your ISP blocks these ports, it won't work.)
+  2. Make sure that your router supports hairpin NAT (if this isn't supported, you won't be able to access apps via subdomain from inside your network or you will have to do manual setup to allow it)
   3. Open the relevant [ports](ports.md){target=_blank} (eg `80`, `443`, etc) in your [router](https://portforward.com/router.htm)/firewall and forward them to the IP of the box on which you want to install Saltbox, **before installing Saltbox**.
-  4. Point your domain at your home IP and configure some dynamic DNS software to keep it updated. Saltbox has a dynamic dns client available [it's not installed by default], but there are many ways to set this up. Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
+  4. Point your domain at your home IP and configure some dynamic DNS software to keep it updated. Saltbox has a dynamic dns client available (it's not installed by default), but there are many ways to set this up. Make sure that DNS has propagated and your domain returns your home IP via `ping` or something like it, **before installing Saltbox**.
   5. Review the notes about [local storage](local-storage.md) if you're not planning to use cloud storage.
 
 ### Tips

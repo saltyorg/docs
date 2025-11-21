@@ -25,7 +25,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 1. Install the Google CLI tools. Enter these commands in your terminal:
 
     ```shell
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    echo "deb (signed-by=/usr/share/keyrings/cloud.google.gpg) https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
     ```
 
     ```shell

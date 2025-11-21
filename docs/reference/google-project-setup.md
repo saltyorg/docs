@@ -16,7 +16,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 This guide is assuming you are using a standard GSuite Business or GSuite Workspace account.
 
-IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT [CLOUDBOX, PTS, ETC.], THERE IS NO REASON TO REPEAT IT. You only need one of these projects.
+IF YOU HAVE DONE THIS BEFORE IN ANY OTHER CONTEXT (CLOUDBOX, PTS, ETC.), THERE IS NO REASON TO REPEAT IT. You only need one of these projects.
 
 1. Open Google APIs Console site: <https://console.developers.google.com> and login with your Google account.
 
@@ -144,7 +144,7 @@ To do that you may need to create `/opt/sa` and make sure it's writable by you.
 sudo mkdir -p /opt/sa
 sudo chown -R <user>:<group> /opt/sa
 ```
-Where the two placeholders are the Saltbox user and group [by default `seed:seed`]
+Where the two placeholders are the Saltbox user and group (by default `seed:seed`)
 <br />
 </details>
 

@@ -23,9 +23,9 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 SERVICE ACCOUNTS CREATED THE FIRST TIME.
 
-IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT [CLOUDBOX, PTS, ETC.]  YOU CAN USE THOSE. THERE IS NO REQUIREMENT TO CREATE MORE.
+IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT (CLOUDBOX, PTS, ETC.)  YOU CAN USE THOSE. THERE IS NO REQUIREMENT TO CREATE MORE.
 
-`sa-gen` has recently [May 2023] changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
+`sa-gen` has recently (May 2023) changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
 
 IMPORTANT: Google has made changes to the service account infrastructure on their side. When running this script you may see a message like:
 ```
@@ -66,7 +66,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 1. Verify that the google project has the right APIs enabled:
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     gcloud services list --enabled
@@ -102,7 +102,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 2. Retrieve the `sa-gen` code
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen/old
@@ -110,7 +110,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 3. Edit the `sa-gen` script:
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     nano sa-gen_2022

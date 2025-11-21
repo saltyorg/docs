@@ -79,7 +79,7 @@ To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
 
   Set a relative directory name for each category.
 
-  You will need a category for each instance of `sonarr`/`radarr`/`lidarr` [for example, if you have a `radarr` and `radarr4k` you will need a category for each]
+  You will need a category for each instance of `sonarr`/`radarr`/`lidarr` (for example, if you have a `radarr` and `radarr4k` you will need a category for each)
 
   SABnzbd requires the server to be filled in to set categories up.
 

@@ -245,7 +245,7 @@ By default, your new installation has a publicly accessible web index, snapshots
 
         ```yaml
         # Type: dict
-        archivebox_role_docker_envs_default: 
+        archivebox_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -264,7 +264,7 @@ By default, your new installation has a publicly accessible web index, snapshots
 
         ```yaml
         # Type: list
-        archivebox_role_docker_volumes_default: 
+        archivebox_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='archivebox') }}:/data"
         ```
 

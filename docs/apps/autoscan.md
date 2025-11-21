@@ -634,7 +634,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        autoscan_role_docker_envs_default: 
+        autoscan_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -666,7 +666,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        autoscan_role_docker_volumes_default: 
+        autoscan_role_docker_volumes_default:
           - "{{ autoscan_role_paths_location }}:/config"
         ```
 
@@ -694,7 +694,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        autoscan_role_docker_labels_default: 
+        autoscan_role_docker_labels_default:
           - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.regex": "^/$" }'
           - '{ "traefik.http.middlewares.{{ traefik_router }}-replacepathregex.replacepathregex.replacement": "/triggers/manual" }'
           - '{ "traefik.http.routers.{{ traefik_router }}-triggers.entrypoints": "{{ traefik_entrypoint_websecure }}" }'

@@ -237,7 +237,7 @@ sb install sandbox-puddletag
 
         ```yaml
         # Type: dict
-        puddletag_role_docker_envs_default: 
+        puddletag_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -259,7 +259,7 @@ sb install sandbox-puddletag
 
         ```yaml
         # Type: list
-        puddletag_role_docker_volumes_default: 
+        puddletag_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='puddletag') }}:/config"
         ```
 

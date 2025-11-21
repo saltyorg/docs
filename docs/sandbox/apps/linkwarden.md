@@ -112,7 +112,7 @@ sb install sandbox-linkwarden
 
         ```yaml
         # Type: dict
-        linkwarden_role_postgres_docker_healthcheck: 
+        linkwarden_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='linkwarden') }} -U {{ lookup('role_var', '_postgres_user', role='linkwarden') }}"]
           start_period: 20s
           interval: 30s
@@ -303,7 +303,7 @@ sb install sandbox-linkwarden
 
         ```yaml
         # Type: dict
-        linkwarden_role_docker_envs_default: 
+        linkwarden_role_docker_envs_default:
           TZ: "{{ tz }}"
           NEXT_PUBLIC_CREDENTIALS_ENABLED: "true"
           STORAGE_FOLDER: "/data"
@@ -325,7 +325,7 @@ sb install sandbox-linkwarden
 
         ```yaml
         # Type: list
-        linkwarden_role_docker_volumes_default: 
+        linkwarden_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='linkwarden') }}:/data/data"
         ```
 

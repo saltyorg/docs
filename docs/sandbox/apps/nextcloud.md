@@ -248,7 +248,7 @@ sb install sandbox-nextcloud
 
         ```yaml
         # Type: dict
-        nextcloud_role_docker_envs_default: 
+        nextcloud_role_docker_envs_default:
           TZ: "{{ tz }}"
           NEXTCLOUD_ADMIN_USER: "{{ user.name }}"
           NEXTCLOUD_ADMIN_PASSWORD: "{{ user.pass }}"
@@ -279,7 +279,7 @@ sb install sandbox-nextcloud
 
         ```yaml
         # Type: list
-        nextcloud_role_docker_volumes_default: 
+        nextcloud_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='nextcloud') }}:/var/www/html"
         ```
 
@@ -296,7 +296,7 @@ sb install sandbox-nextcloud
 
         ```yaml
         # Type: dict
-        nextcloud_role_docker_labels_default: 
+        nextcloud_role_docker_labels_default:
           traefik.http.middlewares.nextcloud-caldav.replacepathregex.regex: "^/.well-known/ca(l|rd)dav"
           traefik.http.middlewares.nextcloud-caldav.replacepathregex.replacement: "/remote.php/dav/"
         ```

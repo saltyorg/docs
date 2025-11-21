@@ -248,7 +248,7 @@ sb install petio
 
         ```yaml
         # Type: dict
-        petio_role_docker_envs_default: 
+        petio_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -265,7 +265,7 @@ sb install petio
 
         ```yaml
         # Type: list
-        petio_role_docker_volumes_default: 
+        petio_role_docker_volumes_default:
           - "{{ petio_role_paths_location }}:/app/api/config"
         ```
 

@@ -283,7 +283,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 
         ```yaml
         # Type: list
-        tdarr_role_docker_ports_defaults: 
+        tdarr_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_server_port', role='tdarr') }}:{{ lookup('role_var', '_server_port', role='tdarr') }}"
         ```
 
@@ -300,7 +300,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 
         ```yaml
         # Type: dict
-        tdarr_role_docker_envs_default: 
+        tdarr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -324,7 +324,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
 
         ```yaml
         # Type: list
-        tdarr_role_docker_volumes_default: 
+        tdarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_configs_location', role='tdarr') }}:/app/configs"
           - "{{ lookup('role_var', '_paths_server_location', role='tdarr') }}:/app/server"
           - "{{ lookup('role_var', '_paths_logs_location', role='tdarr') }}:/app/logs"

@@ -573,7 +573,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        emby_role_config_settings_default: 
+        emby_role_config_settings_default:
           - { xpath: 'IsBehindProxy', value: 'true' }
           - { xpath: 'WanDdns', value: '{{ lookup("role_var", "_web_subdomain", role="emby") }}.{{ lookup("role_var", "_web_domain", role="emby") }}' }
           - { xpath: 'PublicPort', value: '80' }
@@ -693,7 +693,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        emby_role_docker_envs_default: 
+        emby_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -725,7 +725,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        emby_role_docker_volumes_default: 
+        emby_role_docker_volumes_default:
           - "{{ emby_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "/dev/shm:/dev/shm"
@@ -745,7 +745,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        emby_role_docker_volumes_legacy: 
+        emby_role_docker_volumes_legacy:
           - "/mnt/unionfs/Media:/data"
         ```
 
@@ -773,7 +773,7 @@ Instructions below will guide you through creating an API Key for a specific app
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        emby_role_docker_mounts_default: 
+        emby_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

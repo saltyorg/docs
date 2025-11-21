@@ -336,7 +336,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: dict
-        jackett_role_docker_envs_default: 
+        jackett_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -356,7 +356,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: list
-        jackett_role_docker_volumes_default: 
+        jackett_role_docker_volumes_default:
           - "{{ jackett_role_paths_location }}:/config"
         ```
 

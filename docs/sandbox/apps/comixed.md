@@ -236,7 +236,7 @@ Password: comixedreader
 
         ```yaml
         # Type: list
-        comixed_role_docker_volumes_default: 
+        comixed_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='comixed') }}:/root/.comixed"
           - "/mnt/unionfs/Media/Comics:/comic_dir"
         ```

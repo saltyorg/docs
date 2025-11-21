@@ -289,7 +289,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: dict
-        portainer_role_docker_envs_default: 
+        portainer_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -306,7 +306,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: list
-        portainer_role_docker_volumes_default: 
+        portainer_role_docker_volumes_default:
           - "{{ portainer_role_paths_location }}:/data"
           - "/var/run/docker.sock:/var/run/docker.sock"
         ```

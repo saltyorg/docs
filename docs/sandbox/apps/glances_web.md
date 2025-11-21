@@ -66,7 +66,7 @@ sb install sandbox-glances-web
 
         ```yaml
         # Type: dict
-        glances_role_docker_socket_proxy_envs: 
+        glances_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           IMAGES: "1"
         ```
@@ -247,7 +247,7 @@ sb install sandbox-glances-web
 
         ```yaml
         # Type: dict
-        glances_web_role_docker_envs_default: 
+        glances_web_role_docker_envs_default:
           UID: "{{ uid }}"
           GID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -268,7 +268,7 @@ sb install sandbox-glances-web
 
         ```yaml
         # Type: list
-        glances_web_role_docker_volumes_default: 
+        glances_web_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_config_location', role='glances_web') }}:/glances/conf/glances.conf"
         ```
 

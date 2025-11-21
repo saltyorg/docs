@@ -243,7 +243,7 @@ sb install sandbox-sshwifty
 
         ```yaml
         # Type: dict
-        sshwifty_role_docker_envs_default: 
+        sshwifty_role_docker_envs_default:
           SSHWIFTY_CONFIG: "/config/sshwifty.conf.json"
         ```
 
@@ -260,7 +260,7 @@ sb install sandbox-sshwifty
 
         ```yaml
         # Type: list
-        sshwifty_role_docker_volumes_default: 
+        sshwifty_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='sshwifty') }}/config:/config"
         ```
 

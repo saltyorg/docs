@@ -227,7 +227,7 @@ sb install sandbox-xbackbone
 
         ```yaml
         # Type: dict
-        xbackbone_role_docker_envs_default: 
+        xbackbone_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -246,7 +246,7 @@ sb install sandbox-xbackbone
 
         ```yaml
         # Type: list
-        xbackbone_role_docker_volumes_default: 
+        xbackbone_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='xbackbone') }}:/config"
         ```
 

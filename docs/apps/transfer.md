@@ -235,7 +235,7 @@ sb install transfer
 
         ```yaml
         # Type: dict
-        transfer_role_docker_envs_default: 
+        transfer_role_docker_envs_default:
           TZ: "{{ tz }}"
           BASEDIR: "{{ lookup('role_var', '_uploads_location', role='transfer') }}"
           PROVIDER: "local"
@@ -256,7 +256,7 @@ sb install transfer
 
         ```yaml
         # Type: list
-        transfer_role_docker_mounts_default: 
+        transfer_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

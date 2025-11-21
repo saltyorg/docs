@@ -294,7 +294,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
         ```yaml
         # Type: list
-        crafty_role_docker_ports_defaults: 
+        crafty_role_docker_ports_defaults:
           - "19132:19132/udp"
           - "25500-25600:25500-25600"
         ```
@@ -312,7 +312,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
         ```yaml
         # Type: dict
-        crafty_role_docker_envs_default: 
+        crafty_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -329,7 +329,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
         ```yaml
         # Type: list
-        crafty_role_docker_volumes_default: 
+        crafty_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='crafty') }}/backups:/crafty/backups"
           - "{{ lookup('role_var', '_paths_location', role='crafty') }}/logs:/crafty/logs"
           - "{{ lookup('role_var', '_paths_location', role='crafty') }}/servers:/crafty/servers"
@@ -350,7 +350,7 @@ Default credentials are generated on first run and stored in `default-creds.txt`
 
         ```yaml
         # Type: list
-        crafty_role_docker_labels_default: 
+        crafty_role_docker_labels_default:
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.entrypoints": "web" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.service": "{{ crafty_name }}-map" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.rule": "Host(`{{ lookup("role_var", "_dynmap_host", role="crafty") }}`)" }'

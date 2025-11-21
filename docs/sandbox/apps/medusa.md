@@ -225,7 +225,7 @@ sb install sandbox-medusa
 
         ```yaml
         # Type: dict
-        medusa_role_docker_envs_default: 
+        medusa_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -245,7 +245,7 @@ sb install sandbox-medusa
 
         ```yaml
         # Type: list
-        medusa_role_docker_volumes_default: 
+        medusa_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='medusa') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "/mnt/unionfs/Media/TV:/tv"

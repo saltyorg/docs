@@ -96,7 +96,7 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
 
         ```yaml
         # Type: dict
-        dozzle_docker_socket_proxy_envs: 
+        dozzle_docker_socket_proxy_envs:
           CONTAINERS: "1"
           INFO: "1"
         ```
@@ -334,7 +334,7 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
 
         ```yaml
         # Type: dict
-        dozzle_role_docker_envs_default: 
+        dozzle_role_docker_envs_default:
           DOZZLE_AUTH_PROVIDER: "{{ 'forward-proxy' if (lookup('role_var', '_traefik_sso_middleware', role='dozzle') | length > 0) else omit }}"
           DOZZLE_REMOTE_AGENT: "{{ lookup('role_var', '_agent_hosts', role='dozzle') if (lookup('role_var', '_additional_hosts', role='dozzle') | length > 0) else omit }}"
           DOZZLE_REMOTE_HOST: "{{ 'tcp://' + dozzle_name + '-docker-socket-proxy:2375|' + traefik_host + ',' + lookup('role_var', '_additional_hosts', role='dozzle')

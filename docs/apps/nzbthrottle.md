@@ -129,7 +129,7 @@ Note: Configuration is file-based with no web interface.
 
         ```yaml
         # Type: dict
-        nzbthrottle_role_docker_envs_default: 
+        nzbthrottle_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -146,7 +146,7 @@ Note: Configuration is file-based with no web interface.
 
         ```yaml
         # Type: list
-        nzbthrottle_role_docker_volumes_default: 
+        nzbthrottle_role_docker_volumes_default:
           - "{{ nzbthrottle_role_paths_config_location }}:/nzbthrottle/config.json:ro"
         ```
 

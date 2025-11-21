@@ -111,7 +111,7 @@ When you want to reach `*.xYOUR_DOMAIN_NAMEx/robots.txt`
 
         ```yaml
         # Type: dict
-        traefik_robotstxt_role_docker_labels_default: 
+        traefik_robotstxt_role_docker_labels_default:
           traefik.enable: "true"
           traefik.http.routers.robotstxt.entrypoints: "web,websecure"
           traefik.http.routers.robotstxt.rule: "Path(`/robots.txt`)"

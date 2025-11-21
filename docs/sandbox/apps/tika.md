@@ -105,7 +105,7 @@ sb install sandbox-tika
 
         ```yaml
         # Type: dict
-        tika_role_docker_envs_default: 
+        tika_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 

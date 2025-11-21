@@ -256,7 +256,7 @@ sb install sandbox-filebrowser
 
         ```yaml
         # Type: dict
-        filebrowser_role_docker_envs_default: 
+        filebrowser_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -273,7 +273,7 @@ sb install sandbox-filebrowser
 
         ```yaml
         # Type: list
-        filebrowser_role_docker_volumes_default: 
+        filebrowser_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_db_folder', role='filebrowser') }}:/database"
           - "{{ lookup('role_var', '_paths_config_folder', role='filebrowser') }}:/config"
           - "/mnt/unionfs:/srv:rslave"

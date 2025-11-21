@@ -224,7 +224,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
 
         ```yaml
         # Type: dict
-        code_server_role_docker_envs_default: 
+        code_server_role_docker_envs_default:
           UMASK: "002"
           TZ: "{{ tz }}"
           PASSWORD: "{{ user.pass }}"
@@ -244,7 +244,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
 
         ```yaml
         # Type: list
-        code_server_role_docker_volumes_default: 
+        code_server_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='code_server') }}/project:/home/coder/project"
           - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.config:/home/coder/.config"
           - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.local:/home/coder/.local"

@@ -138,7 +138,7 @@ Same setup is required for radarr and lidarr if you are using them.
 
         ```yaml
         # Type: dict
-        unpackerr_role_docker_envs_default: 
+        unpackerr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -158,7 +158,7 @@ Same setup is required for radarr and lidarr if you are using them.
 
         ```yaml
         # Type: list
-        unpackerr_role_docker_volumes_default: 
+        unpackerr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='unpackerr') }}:/config"
         ```
 

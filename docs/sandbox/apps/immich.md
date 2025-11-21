@@ -151,7 +151,7 @@ immich_docker_envs_custom:
 
         ```yaml
         # Type: dict
-        immich_role_postgres_docker_healthcheck: 
+        immich_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='immich') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -184,7 +184,7 @@ immich_docker_envs_custom:
 
         ```yaml
         # Type: dict
-        immich_role_postgres_docker_envs_custom: 
+        immich_role_postgres_docker_envs_custom:
           POSTGRES_INITDB_ARGS: '--data-checksums'
         ```
 
@@ -357,7 +357,7 @@ immich_docker_envs_custom:
 
         ```yaml
         # Type: dict
-        immich_role_docker_envs_default: 
+        immich_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -384,7 +384,7 @@ immich_docker_envs_custom:
 
         ```yaml
         # Type: list
-        immich_role_docker_volumes_default: 
+        immich_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='immich') }}:/config"
           - "{{ lookup('role_var', '_photos_location', role='immich') }}:/photos"
         ```

@@ -58,7 +58,7 @@ sb install crowdsec
 
         ```yaml
         # Type: list
-        crowdsec_collections_install_default: 
+        crowdsec_collections_install_default:
           - "crowdsecurity/linux"
           - "crowdsecurity/iptables"
           - "crowdsecurity/sshd"
@@ -106,7 +106,7 @@ sb install crowdsec
 
         ```yaml
         # Type: list
-        crowdsec_scenarios_remove_default: 
+        crowdsec_scenarios_remove_default:
           - "crowdsecurity/http-crawl-non_statics"
           - "crowdsecurity/http-probing"
         ```

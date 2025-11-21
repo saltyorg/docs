@@ -168,7 +168,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        tandoor_role_postgres_docker_healthcheck: 
+        tandoor_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -359,7 +359,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        tandoor_role_docker_envs_default: 
+        tandoor_role_docker_envs_default:
           TZ: "{{ tz }}"
           SECRET_KEY: "{{ tandoor_saltbox_facts.facts.secret_key }}"
           DB_ENGINE: "django.db.backends.postgresql"
@@ -386,7 +386,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        tandoor_role_docker_volumes_default: 
+        tandoor_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='tandoor') }}/staticfiles:/opt/recipes/staticfiles"
           - "{{ lookup('role_var', '_paths_location', role='tandoor') }}/mediafiles:/opt/recipes/mediafiles"
         ```

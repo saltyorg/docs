@@ -209,7 +209,7 @@ sb install postgres
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        postgres_role_docker_envs_default: 
+        postgres_role_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/data"
           POSTGRES_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='postgres') }}"
@@ -245,7 +245,7 @@ sb install postgres
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        postgres_role_docker_volumes_default: 
+        postgres_role_docker_volumes_default:
           - "{{ postgres_role_paths_location }}:/data"
           - "/etc/passwd:/etc/passwd:ro"
         ```

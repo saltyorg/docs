@@ -237,7 +237,7 @@ sb install sandbox-photoprism
 
         ```yaml
         # Type: dict
-        photoprism_role_docker_envs_default: 
+        photoprism_role_docker_envs_default:
           PHOTOPRISM_ADMIN_PASSWORD: "{{ user.pass }}"
           PHOTOPRISM_AUTH_MODE: "password"
           PHOTOPRISM_SITE_URL: "{{ lookup('role_var', '_web_url', role='photoprism') }}"
@@ -281,7 +281,7 @@ sb install sandbox-photoprism
 
         ```yaml
         # Type: list
-        photoprism_role_docker_volumes_default: 
+        photoprism_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='photoprism') }}/originals:/photoprism/originals"
           - "{{ lookup('role_var', '_paths_location', role='photoprism') }}/import:/photoprism/import"
           - "{{ lookup('role_var', '_paths_location', role='photoprism') }}/storage:/photoprism/storage"
@@ -332,7 +332,7 @@ sb install sandbox-photoprism
 
         ```yaml
         # Type: list
-        photoprism_role_docker_security_opts_default: 
+        photoprism_role_docker_security_opts_default:
           - "seccomp=unconfined"
           - "apparmor=unconfined"
         ```

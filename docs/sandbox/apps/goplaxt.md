@@ -265,7 +265,7 @@ sb install sandbox-goplaxt
 
         ```yaml
         # Type: dict
-        goplaxt_role_docker_envs_default: 
+        goplaxt_role_docker_envs_default:
           TZ: "{{ tz }}"
           TRAKT_ID: "{{ lookup('role_var', '_trakt_id', role='goplaxt') }}"
           TRAKT_SECRET: "{{ lookup('role_var', '_trakt_secret', role='goplaxt') }}"
@@ -285,7 +285,7 @@ sb install sandbox-goplaxt
 
         ```yaml
         # Type: list
-        goplaxt_role_docker_volumes_default: 
+        goplaxt_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='goplaxt') }}:/app/keystore"
         ```
 

@@ -234,7 +234,7 @@ sb install sandbox-threadfin
 
         ```yaml
         # Type: dict
-        threadfin_role_docker_envs_default: 
+        threadfin_role_docker_envs_default:
           TZ: "{{ tz }}"
           THREADFIN_BRANCH: "main"
           THREADFIN_DEBUG: "0"
@@ -253,7 +253,7 @@ sb install sandbox-threadfin
 
         ```yaml
         # Type: list
-        threadfin_role_docker_volumes_default: 
+        threadfin_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='threadfin') }}:/home/threadfin/conf"
         ```
 

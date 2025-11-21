@@ -253,7 +253,7 @@ sb install sandbox-xteve
 
         ```yaml
         # Type: dict
-        xteve_role_docker_envs_default: 
+        xteve_role_docker_envs_default:
           TZ: "{{ tz }}"
           XTEVE_BRANCH: "beta"
           XTEVE_UID: "{{ uid }}"
@@ -274,7 +274,7 @@ sb install sandbox-xteve
 
         ```yaml
         # Type: list
-        xteve_role_docker_volumes_default: 
+        xteve_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='xteve') }}/app/config:/home/xteve/conf"
           - "{{ lookup('role_var', '_paths_location', role='xteve') }}/app/tmp:/tmp/xteve"
           - "{{ lookup('role_var', '_paths_location', role='xteve') }}/app/guide2go:/home/xteve/guide2go/conf"

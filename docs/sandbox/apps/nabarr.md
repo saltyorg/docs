@@ -122,7 +122,7 @@ sb install sandbox-nabarr
 
         ```yaml
         # Type: dict
-        nabarr_role_docker_envs_default: 
+        nabarr_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -142,7 +142,7 @@ sb install sandbox-nabarr
 
         ```yaml
         # Type: list
-        nabarr_role_docker_volumes_default: 
+        nabarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='nabarr') }}:/config"
         ```
 

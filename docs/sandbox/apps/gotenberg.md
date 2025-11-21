@@ -105,7 +105,7 @@ sb install sandbox-gotenberg
 
         ```yaml
         # Type: dict
-        gotenberg_role_docker_envs_default: 
+        gotenberg_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 

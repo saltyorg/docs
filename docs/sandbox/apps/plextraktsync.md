@@ -172,7 +172,7 @@ docker exec plextraktsync plextraktsync --help
 
         ```yaml
         # Type: dict
-        plextraktsync_role_docker_envs_default: 
+        plextraktsync_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -189,7 +189,7 @@ docker exec plextraktsync plextraktsync --help
 
         ```yaml
         # Type: list
-        plextraktsync_role_docker_commands_default: 
+        plextraktsync_role_docker_commands_default:
           - watch
         ```
 
@@ -206,7 +206,7 @@ docker exec plextraktsync plextraktsync --help
 
         ```yaml
         # Type: list
-        plextraktsync_role_docker_volumes_default: 
+        plextraktsync_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='plextraktsync') }}:/app/config"
         ```
 

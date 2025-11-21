@@ -371,7 +371,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
         ```yaml
         # Type: dict
-        guacamole_role_docker_envs_default: 
+        guacamole_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           OPT_MYSQL: "Y"
@@ -398,7 +398,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
         ```yaml
         # Type: list
-        guacamole_role_docker_volumes_default: 
+        guacamole_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='guacamole') }}/config:/config"
         ```
 

@@ -237,7 +237,7 @@ Visit <https://profilarr.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        profilarr_role_docker_envs_default: 
+        profilarr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -256,7 +256,7 @@ Visit <https://profilarr.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        profilarr_role_docker_volumes_default: 
+        profilarr_role_docker_volumes_default:
           - "{{ profilarr_role_paths_location }}:/config"
         ```
 

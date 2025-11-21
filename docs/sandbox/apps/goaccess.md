@@ -231,7 +231,7 @@ sb install sandbox-goaccess
 
         ```yaml
         # Type: dict
-        goaccess_role_docker_envs_default: 
+        goaccess_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -250,7 +250,7 @@ sb install sandbox-goaccess
 
         ```yaml
         # Type: list
-        goaccess_role_docker_volumes_default: 
+        goaccess_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='goaccess') }}:/config"
           - "{{ lookup('role_var', '_paths_location', role='traefik') }}:/opt/log"
         ```

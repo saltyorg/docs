@@ -242,7 +242,7 @@ sb install sandbox-adguardhome
 
         ```yaml
         # Type: dict
-        adguardhome_role_docker_envs_default: 
+        adguardhome_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -261,7 +261,7 @@ sb install sandbox-adguardhome
 
         ```yaml
         # Type: list
-        adguardhome_role_docker_volumes_default: 
+        adguardhome_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='adguardhome') }}/work:/opt/adguardhome/work"
           - "{{ lookup('role_var', '_paths_location', role='adguardhome') }}/conf:/opt/adguardhome/conf"
         ```

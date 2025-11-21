@@ -309,7 +309,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
         ```yaml
         # Type: list
-        firefox_role_docker_volumes_default: 
+        firefox_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='firefox') }}:/config"
         ```
 
@@ -358,7 +358,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
 
         ```yaml
         # Type: list
-        firefox_role_docker_capabilities_default: 
+        firefox_role_docker_capabilities_default:
           - "SYS_NICE"
         ```
 

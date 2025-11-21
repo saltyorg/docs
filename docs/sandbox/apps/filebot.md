@@ -240,7 +240,7 @@ sb install sandbox-filebot
 
         ```yaml
         # Type: dict
-        filebot_role_docker_envs_default: 
+        filebot_role_docker_envs_default:
           TZ: "{{ tz }}"
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
@@ -260,7 +260,7 @@ sb install sandbox-filebot
 
         ```yaml
         # Type: list
-        filebot_role_docker_volumes_default: 
+        filebot_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='filebot') }}:/config"
           - "/mnt/unionfs/Media/:/storage/Media/"
           - "/mnt/local/downloads:/storage/downloads"

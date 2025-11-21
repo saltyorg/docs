@@ -221,7 +221,7 @@ sb install sandbox-adminer
 
         ```yaml
         # Type: dict
-        adminer_role_docker_envs_default: 
+        adminer_role_docker_envs_default:
           ADMINER_DEFAULT_SERVER: "mysql"
         ```
 

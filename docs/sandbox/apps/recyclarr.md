@@ -158,7 +158,7 @@ Follow documentation to complete configuration
 
         ```yaml
         # Type: dict
-        recyclarr_role_docker_envs_default: 
+        recyclarr_role_docker_envs_default:
           TZ: "{{ tz }}"
           CRON_SCHEDULE: "{{ lookup('role_var', '_cron_schedule', role='recyclarr') }}"
           RECYCLARR_CREATE_CONFIG: "true"
@@ -177,7 +177,7 @@ Follow documentation to complete configuration
 
         ```yaml
         # Type: list
-        recyclarr_role_docker_volumes_default: 
+        recyclarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='recyclarr') }}:/config"
         ```
 

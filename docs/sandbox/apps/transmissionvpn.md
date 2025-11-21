@@ -257,7 +257,7 @@ sb install sandbox-transmissionvpn
 
         ```yaml
         # Type: dict
-        transmissionvpn_role_docker_envs_default: 
+        transmissionvpn_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -282,7 +282,7 @@ sb install sandbox-transmissionvpn
 
         ```yaml
         # Type: list
-        transmissionvpn_role_docker_volumes_default: 
+        transmissionvpn_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='transmissionvpn') }}:/config"
           - "{{ lookup('role_var', '_paths_location', role='transmissionvpn') }}/data:/opt/transmissionvpn"
           - "{{ server_appdata_path }}/scripts:/scripts"
@@ -335,7 +335,7 @@ sb install sandbox-transmissionvpn
 
         ```yaml
         # Type: list
-        transmissionvpn_role_docker_capabilities_default: 
+        transmissionvpn_role_docker_capabilities_default:
           - NET_ADMIN
         ```
 
@@ -370,7 +370,7 @@ sb install sandbox-transmissionvpn
 
         ```yaml
         # Type: dict
-        transmissionvpn_role_docker_sysctls: 
+        transmissionvpn_role_docker_sysctls:
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 

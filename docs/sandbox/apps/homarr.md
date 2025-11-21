@@ -86,7 +86,7 @@ sb install sandbox-homarr
 
         ```yaml
         # Type: dict
-        homarr_role_docker_socket_proxy_envs: 
+        homarr_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           POST: "0"
         ```
@@ -260,7 +260,7 @@ sb install sandbox-homarr
 
         ```yaml
         # Type: dict
-        homarr_role_docker_envs_default: 
+        homarr_role_docker_envs_default:
           TZ: "{{ tz }}"
           BASE_URL: "{{ lookup('role_var', '_web_subdomain', role='homarr') + '.' + lookup('role_var', '_web_domain', role='homarr') }}"
           PASSWORD: "{{ user.pass }}"
@@ -281,7 +281,7 @@ sb install sandbox-homarr
 
         ```yaml
         # Type: list
-        homarr_role_docker_volumes_default: 
+        homarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='homarr') }}:/app/data/configs"
           - "{{ lookup('role_var', '_paths_location', role='homarr') }}/icons:/app/public/icons"
         ```

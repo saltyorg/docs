@@ -123,7 +123,7 @@ sb install sandbox-wikijs
 
         ```yaml
         # Type: dict
-        wikijs_role_postgres_docker_healthcheck: 
+        wikijs_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -314,7 +314,7 @@ sb install sandbox-wikijs
 
         ```yaml
         # Type: dict
-        wikijs_role_docker_envs_default: 
+        wikijs_role_docker_envs_default:
           TZ: "{{ tz }}"
           DB_TYPE: "postgres"
           DB_HOST: "{{ lookup('role_var', '_postgres_name', role='wikijs') }}"

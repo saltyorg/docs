@@ -66,7 +66,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 
         ```yaml
         # Type: dict
-        uptime_kuma_role_docker_socket_proxy_envs: 
+        uptime_kuma_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           IMAGES: "1"
         ```
@@ -247,7 +247,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 
         ```yaml
         # Type: dict
-        uptime_kuma_role_docker_envs_default: 
+        uptime_kuma_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -266,7 +266,7 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
 
         ```yaml
         # Type: list
-        uptime_kuma_role_docker_volumes_default: 
+        uptime_kuma_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='uptime_kuma') }}:/app/data"
         ```
 

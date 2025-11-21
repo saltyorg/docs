@@ -248,7 +248,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
         ```yaml
         # Type: dict
-        homeassistant_role_docker_envs_default: 
+        homeassistant_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -267,7 +267,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
         ```yaml
         # Type: list
-        homeassistant_role_docker_volumes_default: 
+        homeassistant_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='homeassistant') }}:/config"
           - /etc/localtime:/etc/localtime:ro
         ```

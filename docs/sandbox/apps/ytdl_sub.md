@@ -265,7 +265,7 @@ Configure your subscriptions using YAML files in the config directory.
 
         ```yaml
         # Type: dict
-        ytdl_sub_role_docker_envs_default: 
+        ytdl_sub_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -286,7 +286,7 @@ Configure your subscriptions using YAML files in the config directory.
 
         ```yaml
         # Type: list
-        ytdl_sub_role_docker_volumes_default: 
+        ytdl_sub_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='ytdl_sub') }}:/config"
           - "{{ lookup('role_var', '_paths_download_folder', role='ytdl_sub') }}:/ytdl_sub"
           - "{{ lookup('role_var', '_paths_download_folder', role='ytdl_sub') }}/tv_shows:/tv_shows"

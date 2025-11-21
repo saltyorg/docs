@@ -243,7 +243,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
 
         ```yaml
         # Type: dict
-        esphome_role_docker_envs_default: 
+        esphome_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -262,7 +262,7 @@ If adding ESPHome into your Homeassistant, it should auto-detect any newly creat
 
         ```yaml
         # Type: list
-        esphome_role_docker_volumes_default: 
+        esphome_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='esphome') }}:/config"
           - /etc/localtime:/etc/localtime:ro
         ```

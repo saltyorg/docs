@@ -129,7 +129,7 @@ By default, library statistics are updated once every hour, and stream data is u
 
         ```yaml
         # Type: dict
-        tauticord_role_docker_envs_default: 
+        tauticord_role_docker_envs_default:
           TZ: "{{ tz }}"
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
@@ -149,7 +149,7 @@ By default, library statistics are updated once every hour, and stream data is u
 
         ```yaml
         # Type: list
-        tauticord_role_docker_volumes_default: 
+        tauticord_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='tauticord') }}/config:/config"
           - "{{ lookup('role_var', '_paths_location', role='tauticord') }}/logs:/logs"
         ```

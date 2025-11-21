@@ -349,7 +349,7 @@ sb install sandbox-requestrr
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        requestrr_role_docker_envs_default: 
+        requestrr_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -383,7 +383,7 @@ sb install sandbox-requestrr
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        requestrr_role_docker_volumes_default: 
+        requestrr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='requestrr') }}:/root/config"
         ```
 

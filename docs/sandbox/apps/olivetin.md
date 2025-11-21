@@ -245,7 +245,7 @@ sb install sandbox-olivetin
 
         ```yaml
         # Type: dict
-        olivetin_role_docker_envs_default: 
+        olivetin_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -262,7 +262,7 @@ sb install sandbox-olivetin
 
         ```yaml
         # Type: list
-        olivetin_role_docker_volumes_default: 
+        olivetin_role_docker_volumes_default:
           - "/var/run/docker.sock:/var/run/docker.sock"
           - "{{ lookup('role_var', '_paths_location', role='olivetin') }}:/config"
         ```

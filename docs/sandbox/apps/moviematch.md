@@ -253,7 +253,7 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
 
         ```yaml
         # Type: dict
-        moviematch_role_docker_envs_default: 
+        moviematch_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"

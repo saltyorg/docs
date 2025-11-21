@@ -134,7 +134,7 @@ sb install sandbox-sabthrottle
 
         ```yaml
         # Type: dict
-        sabthrottle_role_docker_envs_default: 
+        sabthrottle_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -151,7 +151,7 @@ sb install sandbox-sabthrottle
 
         ```yaml
         # Type: list
-        sabthrottle_role_docker_volumes_default: 
+        sabthrottle_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_config_location', role='sabthrottle') }}:/sabthrottle/config.json:ro"
         ```
 

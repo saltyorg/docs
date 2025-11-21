@@ -91,7 +91,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
         ```yaml
         # Type: dict
-        dockwatch_role_docker_socket_proxy_envs: 
+        dockwatch_role_docker_socket_proxy_envs:
           ALLOW_START: "1"
           ALLOW_STOP: "1"
           ALLOW_RESTARTS: "1"
@@ -274,7 +274,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
         ```yaml
         # Type: dict
-        dockwatch_role_docker_envs_default: 
+        dockwatch_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -294,7 +294,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
         ```yaml
         # Type: list
-        dockwatch_role_docker_volumes_default: 
+        dockwatch_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='dockwatch') }}:/config"
         ```
 

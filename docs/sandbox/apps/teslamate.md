@@ -142,7 +142,7 @@ Save and Test
 
         ```yaml
         # Type: dict
-        teslamate_role_postgres_docker_healthcheck: 
+        teslamate_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -333,7 +333,7 @@ Save and Test
 
         ```yaml
         # Type: dict
-        teslamate_role_docker_envs_default: 
+        teslamate_role_docker_envs_default:
           DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='teslamate') }}"
           DATABASE_PASS: "{{ lookup('role_var', '_postgres_password', role='teslamate') }}"
           DATABASE_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }}"
@@ -360,7 +360,7 @@ Save and Test
 
         ```yaml
         # Type: list
-        teslamate_role_docker_volumes_default: 
+        teslamate_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='teslamate') }}:/opt/app/import"
         ```
 

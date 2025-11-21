@@ -353,7 +353,7 @@ sb install sandbox-influxdb2
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        influxdb2_role_docker_volumes_default: 
+        influxdb2_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
           - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
         ```

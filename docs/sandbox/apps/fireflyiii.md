@@ -323,7 +323,7 @@ Redeploy the Firefly III role to apply the above changes.
 
         ```yaml
         # Type: dict
-        fireflyiii_role_docker_envs_default: 
+        fireflyiii_role_docker_envs_default:
           APP_ENV: "production"
           SITE_OWNER: "{{ user.email }}"
           APP_KEY: "{{ fireflyiii_appkey_saltbox_facts.facts.secret_key }}"
@@ -358,7 +358,7 @@ Redeploy the Firefly III role to apply the above changes.
 
         ```yaml
         # Type: list
-        fireflyiii_role_docker_volumes_default: 
+        fireflyiii_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='fireflyiii') }}/upload:/var/www/html/storage/upload"
           - /etc/timezone:/etc/timezone:ro
           - /etc/localtime:/etc/localtime:ro

@@ -253,7 +253,7 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
 
         ```yaml
         # Type: dict
-        speedtest_role_docker_envs_default: 
+        speedtest_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -277,7 +277,7 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
 
         ```yaml
         # Type: list
-        speedtest_role_docker_volumes_default: 
+        speedtest_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='speedtest') }}:/config"
         ```
 

@@ -405,7 +405,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
         ```yaml
         # Type: list
-        delugevpn_role_docker_ports_defaults: 
+        delugevpn_role_docker_ports_defaults:
           - "58112:58112"
           - "58846:58846"
         ```
@@ -423,7 +423,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
         ```yaml
         # Type: dict
-        delugevpn_role_docker_envs_default: 
+        delugevpn_role_docker_envs_default:
           DEBUG: "false"
           DELUGE_DAEMON_LOG_LEVEL: "{{ lookup('role_var', '_log_level_daemon', role='delugevpn') }}"
           DELUGE_WEB_LOG_LEVEL: "{{ lookup('role_var', '_log_level_web', role='delugevpn') }}"
@@ -455,7 +455,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
         ```yaml
         # Type: list
-        delugevpn_role_docker_volumes_default: 
+        delugevpn_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='delugevpn') }}:/config"
           - "/etc/localtime:/etc/localtime:ro"
           - "{{ server_appdata_path }}/scripts:/scripts"
@@ -524,7 +524,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
 
         ```yaml
         # Type: dict
-        delugevpn_role_docker_sysctls: 
+        delugevpn_role_docker_sysctls:
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 

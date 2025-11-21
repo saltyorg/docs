@@ -246,7 +246,7 @@ sb install sandbox-kitana
 
         ```yaml
         # Type: dict
-        kitana_role_docker_envs_default: 
+        kitana_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -263,7 +263,7 @@ sb install sandbox-kitana
 
         ```yaml
         # Type: list
-        kitana_role_docker_commands_default: 
+        kitana_role_docker_commands_default:
           - "-P"
         ```
 
@@ -280,7 +280,7 @@ sb install sandbox-kitana
 
         ```yaml
         # Type: list
-        kitana_role_docker_volumes_default: 
+        kitana_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='kitana') }}:/app/data"
         ```
 

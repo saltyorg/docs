@@ -475,7 +475,7 @@ tags:
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        qbittorrentvpn_role_docker_envs_default: 
+        qbittorrentvpn_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -527,7 +527,7 @@ tags:
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        qbittorrentvpn_role_docker_volumes_default: 
+        qbittorrentvpn_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='qbittorrentvpn') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
@@ -609,7 +609,7 @@ tags:
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        qbittorrentvpn_role_docker_capabilities_default: 
+        qbittorrentvpn_role_docker_capabilities_default:
           - NET_ADMIN
         ```
 
@@ -637,7 +637,7 @@ tags:
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        qbittorrentvpn_role_docker_sysctls: 
+        qbittorrentvpn_role_docker_sysctls:
           net.ipv4.conf.all.src_valid_mark: "1"
         ```
 

@@ -157,7 +157,7 @@ sb install sandbox-elasticsearch
 
         ```yaml
         # Type: dict
-        elasticsearch_role_docker_envs_default: 
+        elasticsearch_role_docker_envs_default:
           TZ: "{{ tz }}"
           discovery.type: "single-node"
           node.name: "{{ elasticsearch_name }}"
@@ -178,7 +178,7 @@ sb install sandbox-elasticsearch
 
         ```yaml
         # Type: list
-        elasticsearch_role_docker_volumes_default: 
+        elasticsearch_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='elasticsearch') }}:/usr/share/elasticsearch/data"
         ```
 

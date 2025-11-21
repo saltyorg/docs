@@ -230,7 +230,7 @@ Default credentials are configured using your user email and password. Root user
 
         ```yaml
         # Type: dict
-        openobserve_role_docker_envs_default: 
+        openobserve_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -251,7 +251,7 @@ Default credentials are configured using your user email and password. Root user
 
         ```yaml
         # Type: list
-        openobserve_role_docker_volumes_default: 
+        openobserve_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='openobserve') }}:/data"
         ```
 

@@ -849,7 +849,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        qbittorrent_role_docker_ports_defaults: 
+        qbittorrent_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
         ```
@@ -879,7 +879,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        qbittorrent_role_docker_envs_default: 
+        qbittorrent_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -915,7 +915,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        qbittorrent_role_docker_volumes_default: 
+        qbittorrent_role_docker_volumes_default:
           - "{{ qbittorrent_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```

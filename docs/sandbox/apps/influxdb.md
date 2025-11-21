@@ -125,7 +125,7 @@ sb install sandbox-influxdb
 
         ```yaml
         # Type: list
-        influxdb_role_docker_volumes_default: 
+        influxdb_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='influxdb') }}:/var/lib/influxdb"
         ```
 

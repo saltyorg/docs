@@ -353,7 +353,7 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        nginx_role_docker_envs_default: 
+        nginx_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -385,7 +385,7 @@ Nginx is deployed using the LinuxServer.io container with configuration files at
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        nginx_role_docker_volumes_default: 
+        nginx_role_docker_volumes_default:
           - "{{ nginx_role_paths_location }}:/config"
         ```
 

@@ -229,7 +229,7 @@ sb install sandbox-wrapperr
 
         ```yaml
         # Type: list
-        wrapperr_role_docker_volumes_default: 
+        wrapperr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='wrapperr') }}:/app/config"
         ```
 

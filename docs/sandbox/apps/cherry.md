@@ -246,7 +246,7 @@ sb install sandbox-cherry
 
         ```yaml
         # Type: dict
-        cherry_role_docker_envs_default: 
+        cherry_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -267,7 +267,7 @@ sb install sandbox-cherry
 
         ```yaml
         # Type: list
-        cherry_role_docker_volumes_default: 
+        cherry_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='cherry') }}:/data"
         ```
 
@@ -334,7 +334,7 @@ sb install sandbox-cherry
 
         ```yaml
         # Type: dict
-        cherry_role_docker_healthcheck: 
+        cherry_role_docker_healthcheck:
           test: ["NONE"]
         ```
 

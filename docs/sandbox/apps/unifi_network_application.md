@@ -310,7 +310,7 @@ sb install sandbox-unifi-network-application
 
         ```yaml
         # Type: list
-        unifi_network_application_role_docker_ports_defaults: 
+        unifi_network_application_role_docker_ports_defaults:
           - "8080:8080/tcp"
           - "3478:3478/udp"
           - "10001:10001/udp"
@@ -329,7 +329,7 @@ sb install sandbox-unifi-network-application
 
         ```yaml
         # Type: dict
-        unifi_network_application_role_docker_envs_default: 
+        unifi_network_application_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -353,7 +353,7 @@ sb install sandbox-unifi-network-application
 
         ```yaml
         # Type: list
-        unifi_network_application_role_docker_volumes_default: 
+        unifi_network_application_role_docker_volumes_default:
           - "{{ unifi_network_application_role_paths_location }}:/config"
         ```
 

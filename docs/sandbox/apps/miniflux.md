@@ -139,7 +139,7 @@ sb install sandbox-miniflux
 
         ```yaml
         # Type: dict
-        miniflux_role_postgres_docker_healthcheck: 
+        miniflux_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -330,7 +330,7 @@ sb install sandbox-miniflux
 
         ```yaml
         # Type: dict
-        miniflux_role_docker_envs_default: 
+        miniflux_role_docker_envs_default:
           DATABASE_URL: "postgres://{{ lookup('role_var', '_postgres_user', role='miniflux') }}:{{ lookup('role_var', '_postgres_password', role='miniflux') }}@{{ lookup('role_var', '_postgres_name', role='miniflux') }}/{{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }}?sslmode=disable"
           RUN_MIGRATIONS: "{{ lookup('role_var', '_run_migrations', role='miniflux') }}"
           CREATE_ADMIN: "{{ lookup('role_var', '_create_admin', role='miniflux') }}"
@@ -351,7 +351,7 @@ sb install sandbox-miniflux
 
         ```yaml
         # Type: list
-        miniflux_role_docker_volumes_default: 
+        miniflux_role_docker_volumes_default:
           - /etc/localtime:/etc/localtime:ro
         ```
 

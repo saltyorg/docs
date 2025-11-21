@@ -486,7 +486,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        calibre_role_docker_envs_default: 
+        calibre_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -524,7 +524,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        calibre_role_docker_volumes_default: 
+        calibre_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='calibre') }}:/config"
           - "/mnt/unionfs/Media/Books:/library"
         ```
@@ -554,7 +554,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        calibre_role_docker_labels_default: 
+        calibre_role_docker_labels_default:
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.entrypoints": "web" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.service": "{{ lookup("role_var", "_web2_subdomain", role="calibre") }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}-http.rule": "Host(`{{ lookup("role_var", "_web2_subdomain", role="calibre") + "." + lookup("role_var", "_web2_domain", role="calibre") }}`)" }'
@@ -658,7 +658,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        calibre_role_docker_security_opts_default: 
+        calibre_role_docker_security_opts_default:
           - seccomp=unconfined
         ```
 

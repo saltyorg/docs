@@ -131,7 +131,7 @@ The arr_db role performs the following operations for each enabled application:
 
         ```yaml
         # Type: list
-        arr_db_files: 
+        arr_db_files:
           - "logs.db"
           - "{{ arr_type }}.db"
         ```
@@ -140,7 +140,7 @@ The arr_db role performs the following operations for each enabled application:
 
         ```yaml
         # Type: list
-        arr_db_temp_files: 
+        arr_db_temp_files:
           - "logs.db-wal"
           - "logs.db-shm"
           - "{{ arr_type }}.db-wal"
@@ -158,7 +158,7 @@ The arr_db role performs the following operations for each enabled application:
 
         ```yaml
         # Type: list
-        arr_db_tautulli_temp_files: 
+        arr_db_tautulli_temp_files:
           - "tautulli.db-wal"
           - "tautulli.db-shm"
         ```

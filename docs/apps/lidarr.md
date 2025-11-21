@@ -852,7 +852,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        lidarr_role_docker_envs_default: 
+        lidarr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -886,7 +886,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        lidarr_role_docker_volumes_default: 
+        lidarr_role_docker_volumes_default:
           - "{{ lidarr_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
@@ -902,7 +902,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        lidarr_role_docker_volumes_legacy: 
+        lidarr_role_docker_volumes_legacy:
           - "/mnt/unionfs/Media/Music:/music"
         ```
 

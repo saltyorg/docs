@@ -215,7 +215,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
         ```yaml
         # Type: dict
-        cadvisor_role_docker_envs_default: 
+        cadvisor_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -232,7 +232,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
         ```yaml
         # Type: list
-        cadvisor_role_docker_volumes_default: 
+        cadvisor_role_docker_volumes_default:
           - "/:/rootfs:ro"
           - "/var/run:/var/run:ro"
           - "/sys:/sys:ro"

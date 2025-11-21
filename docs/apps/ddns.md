@@ -143,7 +143,7 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 
         ```yaml
         # Type: dict
-        ddns_role_docker_envs_default: 
+        ddns_role_docker_envs_default:
           TZ: "{{ tz }}"
           CLOUDFLARE_API_KEY: "{{ cloudflare.api }}"
           CLOUDFLARE_EMAIL: "{{ cloudflare.email }}"
@@ -177,7 +177,7 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 
         ```yaml
         # Type: list
-        ddns_role_docker_mounts_default: 
+        ddns_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

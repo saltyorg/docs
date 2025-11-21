@@ -230,7 +230,7 @@ sb install sandbox-mealie
 
         ```yaml
         # Type: dict
-        mealie_role_docker_envs_default: 
+        mealie_role_docker_envs_default:
           ALLOW_SIGNUP: "false"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -251,7 +251,7 @@ sb install sandbox-mealie
 
         ```yaml
         # Type: list
-        mealie_role_docker_volumes_default: 
+        mealie_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='mealie') }}:/app/data"
         ```
 

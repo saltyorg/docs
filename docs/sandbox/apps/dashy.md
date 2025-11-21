@@ -258,7 +258,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
 
         ```yaml
         # Type: list
-        dashy_role_docker_volumes_default: 
+        dashy_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='dashy') }}:/app/user-data"
         ```
 
@@ -325,7 +325,7 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
 
         ```yaml
         # Type: dict
-        dashy_role_docker_healthcheck: 
+        dashy_role_docker_healthcheck:
           test: ["CMD", "yarn", "health-check"]
           interval: 10s
           timeout: 5s

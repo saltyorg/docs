@@ -299,7 +299,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
         ```yaml
         # Type: dict
-        lldap_role_docker_envs_default: 
+        lldap_role_docker_envs_default:
           TZ: "{{ tz }}"
           UID: "{{ uid }}"
           GID: "{{ gid }}"
@@ -318,7 +318,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
         ```yaml
         # Type: list
-        lldap_role_docker_volumes_default: 
+        lldap_role_docker_volumes_default:
           - "{{ lldap_role_paths_location }}:/data"
         ```
 
@@ -383,7 +383,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
         ```yaml
         # Type: dict
-        lldap_role_docker_healthcheck: 
+        lldap_role_docker_healthcheck:
           test: ["CMD", "/app/lldap", "healthcheck", "--config-file", "/data/lldap_config.toml"]
           interval: 30s
           timeout: 30s

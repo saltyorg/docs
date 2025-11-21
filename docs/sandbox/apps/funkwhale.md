@@ -281,7 +281,7 @@ If everything goes as planned you'll get prompted like this:
 
         ```yaml
         # Type: dict
-        funkwhale_role_docker_envs_default: 
+        funkwhale_role_docker_envs_default:
           FUNKWHALE_HOSTNAME: "{{ lookup('role_var', '_web_subdomain', role='funkwhale') + '.' + lookup('role_var', '_web_domain', role='funkwhale') }}"
           NESTED_PROXY: "1"
           PUID: "{{ uid }}"
@@ -302,7 +302,7 @@ If everything goes as planned you'll get prompted like this:
 
         ```yaml
         # Type: list
-        funkwhale_role_docker_volumes_default: 
+        funkwhale_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='funkwhale') }}/data:/data"
           - "/mnt/unionfs:/music:ro"
         ```

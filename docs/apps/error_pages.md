@@ -149,7 +149,7 @@ plex_role_traefik_error_pages_enabled: false
 
         ```yaml
         # Type: dict
-        error_pages_role_docker_envs_default: 
+        error_pages_role_docker_envs_default:
           TEMPLATE_NAME: "{{ lookup('role_var', '_template', role='error_pages') }}"
         ```
 
@@ -166,7 +166,7 @@ plex_role_traefik_error_pages_enabled: false
 
         ```yaml
         # Type: list
-        error_pages_role_docker_volumes_default: 
+        error_pages_role_docker_volumes_default:
           - "{{ server_appdata_path }}/error-pages:/opt/html"
         ```
 
@@ -183,7 +183,7 @@ plex_role_traefik_error_pages_enabled: false
 
         ```yaml
         # Type: dict
-        error_pages_role_docker_labels_default: 
+        error_pages_role_docker_labels_default:
           traefik.enable: "true"
           traefik.http.routers.error-pages-router.rule: "PathPrefix(`/`)"
           traefik.http.routers.error-pages-router.priority: "5"

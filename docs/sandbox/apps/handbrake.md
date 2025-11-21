@@ -250,7 +250,7 @@ sb install sandbox-handbrake
 
         ```yaml
         # Type: dict
-        handbrake_role_docker_envs_default: 
+        handbrake_role_docker_envs_default:
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -272,7 +272,7 @@ sb install sandbox-handbrake
 
         ```yaml
         # Type: list
-        handbrake_role_docker_volumes_default: 
+        handbrake_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='handbrake') }}:/config"
           - "/mnt:/storage:ro"
           - "/mnt/local/downloads/handbrake/watch:/watch"

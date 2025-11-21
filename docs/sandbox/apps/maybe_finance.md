@@ -112,7 +112,7 @@ sb install sandbox-maybe-finance
 
         ```yaml
         # Type: dict
-        maybe_finance_role_postgres_docker_healthcheck: 
+        maybe_finance_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='maybe_finance') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -303,7 +303,7 @@ sb install sandbox-maybe-finance
 
         ```yaml
         # Type: dict
-        maybe_finance_role_docker_envs_default: 
+        maybe_finance_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -334,7 +334,7 @@ sb install sandbox-maybe-finance
 
         ```yaml
         # Type: list
-        maybe_finance_role_docker_volumes_default: 
+        maybe_finance_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='maybe_finance') }}:/rails/storage"
         ```
 

@@ -225,7 +225,7 @@ sb install sandbox-trilium
 
         ```yaml
         # Type: dict
-        trilium_role_docker_envs_default: 
+        trilium_role_docker_envs_default:
           USER_UID: "{{ uid }}"
           USER_GID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -245,7 +245,7 @@ sb install sandbox-trilium
 
         ```yaml
         # Type: list
-        trilium_role_docker_volumes_default: 
+        trilium_role_docker_volumes_default:
           - "{{ trilium_role_paths_location }}:/home/node/trilium-data"
         ```
 

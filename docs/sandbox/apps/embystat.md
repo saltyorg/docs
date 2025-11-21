@@ -225,7 +225,7 @@ sb install sandbox-embystat
 
         ```yaml
         # Type: list
-        embystat_role_docker_volumes_default: 
+        embystat_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='embystat') }}/config:/app/data"
         ```
 

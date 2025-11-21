@@ -321,7 +321,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: dict
-        calibre_web_role_docker_envs_default: 
+        calibre_web_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -334,7 +334,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: dict
-        calibre_web_role_docker_envs_theme: 
+        calibre_web_role_docker_envs_theme:
           DOCKER_MODS: "linuxserver/mods:universal-calibre|ghcr.io/themepark-dev/theme.park:calibre-web"
           TP_DOMAIN: "{{ lookup('role_var', '_themepark_domain', role='calibre_web') }}"
           TP_THEME: "{{ lookup('role_var', '_themepark_theme', role='calibre_web') }}"
@@ -353,7 +353,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: list
-        calibre_web_role_docker_volumes_default: 
+        calibre_web_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='calibre_web') }}:/calibre-web"
           - "{{ lookup('role_var', '_paths_location', role='calibre_web') }}/config:/config"
           - "{{ lookup('role_var', '_paths_location', role='calibre_web') }}/cache:/cache"
@@ -373,7 +373,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: dict
-        calibre_web_role_docker_labels_default: 
+        calibre_web_role_docker_labels_default:
           traefik.http.middlewares.kobo-sync-headers.headers.customrequestheaders.X-Scheme: "https"
         ```
 

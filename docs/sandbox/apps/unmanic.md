@@ -232,7 +232,7 @@ sb install sandbox-unmanic
 
         ```yaml
         # Type: dict
-        unmanic_role_docker_envs_default: 
+        unmanic_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -251,7 +251,7 @@ sb install sandbox-unmanic
 
         ```yaml
         # Type: list
-        unmanic_role_docker_volumes_default: 
+        unmanic_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='unmanic') }}:/config"
           - "{{ lookup('role_var', '_paths_transcodes_location', role='unmanic') }}:/tmp/unmanic"
           - "/mnt/unionfs/Media:/library"

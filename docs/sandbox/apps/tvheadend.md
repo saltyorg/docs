@@ -255,7 +255,7 @@ sb install sandbox-tvheadend
 
         ```yaml
         # Type: dict
-        tvheadend_role_docker_envs_default: 
+        tvheadend_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -274,7 +274,7 @@ sb install sandbox-tvheadend
 
         ```yaml
         # Type: list
-        tvheadend_role_docker_volumes_default: 
+        tvheadend_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='tvheadend') }}:/config"
           - "{{ lookup('role_var', '_paths_downloads_location', role='tvheadend') }}:/recordings"
         ```

@@ -102,7 +102,7 @@ docker logs autoheal
 
         ```yaml
         # Type: dict
-        autoheal_role_docker_envs_default: 
+        autoheal_role_docker_envs_default:
           AUTOHEAL_CONTAINER_LABEL: "autoheal"
         ```
 
@@ -119,7 +119,7 @@ docker logs autoheal
 
         ```yaml
         # Type: list
-        autoheal_role_docker_volumes_default: 
+        autoheal_role_docker_volumes_default:
           - "/var/run/docker.sock:/var/run/docker.sock"
           - "/etc/localtime:/etc/localtime:ro"
         ```

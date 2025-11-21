@@ -115,7 +115,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
         ```yaml
         # Type: list
-        postgres_host_role_allowed_hosts: 
+        postgres_host_role_allowed_hosts:
           - "172.19.0.0/16"
         ```
 
@@ -132,7 +132,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
         ```yaml
         # Type: list
-        postgres_host_role_users: 
+        postgres_host_role_users:
           - name: "{{ user.name }}"
             password: "{{ user.pass }}"
         ```
@@ -141,7 +141,7 @@ Configure per-version users, databases, and access control using `postgres_host_
 
         ```yaml
         # Type: list
-        postgres_host_role_databases: 
+        postgres_host_role_databases:
           - name: "saltbox"
             users: ["{{ user.name }}"]
         ```

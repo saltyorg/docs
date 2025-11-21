@@ -226,7 +226,7 @@ sb install sandbox-koel
 
         ```yaml
         # Type: dict
-        koel_role_docker_envs_default: 
+        koel_role_docker_envs_default:
           TZ: "{{ tz }}"
           DB_CONNECTION: "mysql"
           DB_HOST: "{{ koel_name }}-mariadb"
@@ -252,7 +252,7 @@ sb install sandbox-koel
 
         ```yaml
         # Type: list
-        koel_role_docker_volumes_default: 
+        koel_role_docker_volumes_default:
           - "/mnt/unionfs/Media/Music:/music:ro"
           - "{{ lookup('role_var', '_paths_location', role='koel') }}/app/covers:/var/www/html/public/img/covers"
           - "{{ lookup('role_var', '_paths_location', role='koel') }}/app/search-indexes:/var/www/html/storage/search-indexes"

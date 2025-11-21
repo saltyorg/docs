@@ -277,7 +277,7 @@ sb install sandbox-doplarr
 
         ```yaml
         # Type: dict
-        doplarr_role_docker_envs_default: 
+        doplarr_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"

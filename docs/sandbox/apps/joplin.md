@@ -122,7 +122,7 @@ Change this asap.
 
         ```yaml
         # Type: dict
-        joplin_role_postgres_docker_healthcheck: 
+        joplin_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='joplin') }} -U {{ lookup('role_var', '_postgres_user', role='joplin') }}"]
           start_period: 20s
           interval: 30s
@@ -313,7 +313,7 @@ Change this asap.
 
         ```yaml
         # Type: dict
-        joplin_role_docker_envs_default: 
+        joplin_role_docker_envs_default:
           TZ: "{{ tz }}"
           APP_BASE_URL: "{{ lookup('role_var', '_web_url', role='joplin') }}"
           APP_PORT: "22300"

@@ -222,7 +222,7 @@ To access Actual Budget, visit <https://actualbudget.iYOUR_DOMAIN_NAMEi>
 
         ```yaml
         # Type: dict
-        actualbudget_role_docker_envs_default: 
+        actualbudget_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -239,7 +239,7 @@ To access Actual Budget, visit <https://actualbudget.iYOUR_DOMAIN_NAMEi>
 
         ```yaml
         # Type: list
-        actualbudget_role_docker_volumes_default: 
+        actualbudget_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='actualbudget') }}:/data"
           - "/etc/localtime:/etc/localtime:ro"
         ```

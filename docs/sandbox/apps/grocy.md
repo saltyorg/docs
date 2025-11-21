@@ -230,7 +230,7 @@ Default login is admin/admin. Configure authentication and users through the app
 
         ```yaml
         # Type: dict
-        grocy_role_docker_envs_default: 
+        grocy_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -249,7 +249,7 @@ Default login is admin/admin. Configure authentication and users through the app
 
         ```yaml
         # Type: list
-        grocy_role_docker_volumes_default: 
+        grocy_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='grocy') }}:/config"
         ```
 

@@ -354,7 +354,7 @@ sb install jellyfin
         ```yaml { .sb-show-on-unchecked }
         # System
         # Type: list
-        jellyfin_role_system_settings_default: 
+        jellyfin_role_system_settings_default:
           - { xpath: 'PublicPort', value: '80' }
           - { xpath: 'PublicHttpsPort', value: '443' }
           - { xpath: 'EnableFolderView', value: 'true' }
@@ -404,7 +404,7 @@ sb install jellyfin
         ```yaml { .sb-show-on-unchecked }
         # Network
         # Type: list
-        jellyfin_role_network_settings_default: 
+        jellyfin_role_network_settings_default:
           - { xpath: 'KnownProxies', value: 'traefik' }
           - { xpath: 'PublicPort', value: '80' }
           - { xpath: 'PublicHttpsPort', value: '443' }
@@ -517,7 +517,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        jellyfin_role_docker_envs_default: 
+        jellyfin_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -551,7 +551,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        jellyfin_role_docker_volumes_default: 
+        jellyfin_role_docker_volumes_default:
           - "{{ jellyfin_role_paths_location }}:/config:rw"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "/dev/shm:/dev/shm"
@@ -571,7 +571,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        jellyfin_role_docker_volumes_legacy: 
+        jellyfin_role_docker_volumes_legacy:
           - "/mnt/unionfs/Media:/data"
         ```
 
@@ -599,7 +599,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        jellyfin_role_docker_mounts_default: 
+        jellyfin_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

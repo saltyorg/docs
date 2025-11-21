@@ -175,7 +175,7 @@ Now restart the Membarr container `docker restart membarr`.
 
         ```yaml
         # Type: dict
-        membarr_role_docker_envs_default: 
+        membarr_role_docker_envs_default:
           TZ: "{{ tz }}"
           token: "{{ membarr.discord_token }}"
         ```
@@ -193,7 +193,7 @@ Now restart the Membarr container `docker restart membarr`.
 
         ```yaml
         # Type: list
-        membarr_role_docker_volumes_default: 
+        membarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='membarr') }}:/app/app/config"
         ```
 

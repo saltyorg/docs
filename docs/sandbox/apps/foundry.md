@@ -233,7 +233,7 @@ sb install sandbox-foundry
 
         ```yaml
         # Type: dict
-        foundry_role_docker_envs_default: 
+        foundry_role_docker_envs_default:
           FOUNDRY_HOSTNAME: "{{ foundry_name }}.{{ user.domain }}"
           FOUNDRY_ADMIN_KEY: "{{ user.pass }}"
           FOUNDRY_GID: "{{ gid }}"
@@ -260,7 +260,7 @@ sb install sandbox-foundry
 
         ```yaml
         # Type: list
-        foundry_role_docker_volumes_default: 
+        foundry_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='foundry') }}/data:/data"
           - "{{ lookup('role_var', '_paths_location', role='foundry') }}/container_cache:/container_cache"
           - "/mnt/unionfs/Media/Foundry:/data/Data/Media"
@@ -288,7 +288,7 @@ sb install sandbox-foundry
 
         ```yaml
         # Type: list
-        foundry_role_docker_ports_defaults: 
+        foundry_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_web_port', role='foundry') }}:{{ lookup('role_var', '_web_port', role='foundry') }}"
         ```
 

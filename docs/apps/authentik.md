@@ -292,7 +292,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: dict
-        authentik_role_postgres_docker_healthcheck: 
+        authentik_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -458,7 +458,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: list
-        authentik_role_response_headers: 
+        authentik_role_response_headers:
           - "X-authentik-username"
           - "X-authentik-groups"
           - "X-authentik-entitlements"
@@ -520,7 +520,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: dict
-        authentik_role_docker_envs_default: 
+        authentik_role_docker_envs_default:
           AUTHENTIK_POSTGRESQL__HOST: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
           AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik') }}"
           AUTHENTIK_POSTGRESQL__NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }}"
@@ -551,7 +551,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: list
-        authentik_role_docker_commands_default: 
+        authentik_role_docker_commands_default:
           - "server"
         ```
 
@@ -568,7 +568,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: list
-        authentik_role_docker_volumes_default: 
+        authentik_role_docker_volumes_default:
           - "{{ authentik_role_paths_location }}/media:/media"
           - "{{ authentik_role_paths_location }}/custom-templates:/templates"
         ```
@@ -586,7 +586,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
         ```yaml
         # Type: dict
-        authentik_role_docker_labels_default: 
+        authentik_role_docker_labels_default:
           traefik.http.routers.authentik-outpost-http.entrypoints: "web"
           traefik.http.routers.authentik-outpost-http.service: "authentik-outpost-http"
           traefik.http.routers.authentik-outpost-http.rule: "PathPrefix(`/outpost.goauthentik.io/`)"

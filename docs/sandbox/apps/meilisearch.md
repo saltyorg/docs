@@ -131,7 +131,7 @@ Visit `https://www.meilisearch.com/docs`.
 
         ```yaml
         # Type: dict
-        meilisearch_role_docker_envs_default: 
+        meilisearch_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -152,7 +152,7 @@ Visit `https://www.meilisearch.com/docs`.
 
         ```yaml
         # Type: list
-        meilisearch_role_docker_volumes_default: 
+        meilisearch_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='meilisearch') }}/data:/meili_data"
         ```
 

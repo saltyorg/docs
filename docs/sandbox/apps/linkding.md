@@ -251,7 +251,7 @@ sb install sandbox-linkding
 
         ```yaml
         # Type: dict
-        linkding_role_docker_envs_default: 
+        linkding_role_docker_envs_default:
           TZ: "{{ tz }}"
           LD_CONTAINER_NAME: "{{ linkding_name }}"
           LD_HOST_PORT: "9090"
@@ -277,7 +277,7 @@ sb install sandbox-linkding
 
         ```yaml
         # Type: list
-        linkding_role_docker_volumes_default: 
+        linkding_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='linkding') }}:/etc/linkding/data"
         ```
 

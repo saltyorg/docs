@@ -165,7 +165,7 @@ sb install sandbox-factorio
 
         ```yaml
         # Type: list
-        factorio_role_docker_ports_defaults: 
+        factorio_role_docker_ports_defaults:
           - "27015:27015/tcp"
           - "34197:34197/udp"
         ```
@@ -183,7 +183,7 @@ sb install sandbox-factorio
 
         ```yaml
         # Type: dict
-        factorio_role_docker_envs_default: 
+        factorio_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -202,7 +202,7 @@ sb install sandbox-factorio
 
         ```yaml
         # Type: list
-        factorio_role_docker_volumes_default: 
+        factorio_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='factorio') }}:/factorio"
         ```
 

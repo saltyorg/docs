@@ -142,7 +142,7 @@ password <password> # (3)!
 
         ```yaml
         # Type: dict
-        mqtt_role_docker_envs_default: 
+        mqtt_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -159,7 +159,7 @@ password <password> # (3)!
 
         ```yaml
         # Type: list
-        mqtt_role_docker_volumes_default: 
+        mqtt_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='mqtt') }}/config:/mosquitto/config"
           - "{{ lookup('role_var', '_paths_location', role='mqtt') }}/data:/mosquitto/data"
           - "{{ lookup('role_var', '_paths_location', role='mqtt') }}/log:/mosquitto/log"

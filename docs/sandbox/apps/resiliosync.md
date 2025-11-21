@@ -245,7 +245,7 @@ resiliosync_data_port: "#####"
 
         ```yaml
         # Type: list
-        resiliosync_role_docker_ports_defaults: 
+        resiliosync_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_data_port', role='resiliosync') }}:{{ lookup('role_var', '_data_port', role='resiliosync') }}"
         ```
 
@@ -269,7 +269,7 @@ resiliosync_data_port: "#####"
 
         ```yaml
         # Type: list
-        resiliosync_role_docker_volumes_default: 
+        resiliosync_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='resiliosync') }}:/mnt/sync"
           - "/mnt:/mnt/mounted_folders/mnt"
           - "/home:/mnt/mounted_folders/home"

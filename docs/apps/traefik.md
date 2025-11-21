@@ -225,7 +225,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_template: 
+        traefik_entrypoint_template:
           - "--entrypoints.{{ item.key }}.address={{ item.value.address + ':' + (item.value.port | string) }}"
         ```
 
@@ -233,7 +233,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_tls_template: 
+        traefik_entrypoint_tls_template:
           - "--entrypoints.{{ item.key }}.address={{ item.value.address + ':' + (item.value.port | string) }}"
           - "--entrypoints.{{ item.key }}.http.tls.certResolver={{ traefik_default_certresolver }}"
         ```
@@ -242,7 +242,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_http3_template: 
+        traefik_entrypoint_http3_template:
           - "--entrypoints.{{ item.key }}.http3"
           - "--entrypoints.{{ item.key }}.http3.advertisedport={{ item.value.port }}"
         ```
@@ -251,7 +251,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_ports_tcp_template: 
+        traefik_entrypoint_ports_tcp_template:
           - "{{ item.value.port }}:{{ item.value.port }}/tcp"
         ```
 
@@ -259,7 +259,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_ports_udp_template: 
+        traefik_entrypoint_ports_udp_template:
           - "{{ item.value.port }}:{{ item.value.port }}/udp"
         ```
 
@@ -267,7 +267,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_entrypoint_ports_both_template: 
+        traefik_entrypoint_ports_both_template:
           - "{{ item.value.port }}:{{ item.value.port }}/tcp"
           - "{{ item.value.port }}:{{ item.value.port }}/udp"
         ```
@@ -474,7 +474,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_cloudflare_tmp: 
+        traefik_dns_provider_cloudflare_tmp:
           CLOUDFLARE_EMAIL: "{{ cloudflare.email }}"
           CLOUDFLARE_API_KEY: "{{ cloudflare.api }}"
         ```
@@ -492,7 +492,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_cloudns: 
+        traefik_dns_provider_cloudns:
           CLOUDDNS_CLIENT_ID: "{{ cloudns.client_id }}"
           CLOUDDNS_EMAIL: "{{ cloudns.email }}"
           CLOUDDNS_PASSWORD: "{{ cloudns.password }}"
@@ -502,7 +502,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_duckdns: 
+        traefik_dns_provider_duckdns:
           DUCKDNS_TOKEN: "{{ duckdns.token }}"
         ```
 
@@ -510,7 +510,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_dynu: 
+        traefik_dns_provider_dynu:
           DYNU_API_KEY: "{{ dynu.api_key }}"
         ```
 
@@ -518,7 +518,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_godaddy: 
+        traefik_dns_provider_godaddy:
           GODADDY_API_KEY: "{{ godaddy.api_key }}"
           GODADDY_API_SECRET: "{{ godaddy.api_secret }}"
         ```
@@ -527,7 +527,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_hetzner: 
+        traefik_dns_provider_hetzner:
           HETZNER_API_KEY: "{{ hetzner.api_key }}"
         ```
 
@@ -535,7 +535,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_linode: 
+        traefik_dns_provider_linode:
           LINODE_TOKEN: "{{ linode.token }}"
         ```
 
@@ -543,7 +543,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_namecheap: 
+        traefik_dns_provider_namecheap:
           NAMECHEAP_API_USER: "{{ namecheap.api_user }}"
           NAMECHEAP_API_KEY: "{{ namecheap.api_key }}"
         ```
@@ -552,7 +552,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_namedotcom: 
+        traefik_dns_provider_namedotcom:
           NAMECOM_USERNAME: "{{ namedotcom.username }}"
           NAMECOM_API_TOKEN: "{{ namedotcom.api_token }}"
           NAMECOM_SERVER: "{{ namedotcom.server }}"
@@ -562,7 +562,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_netcup: 
+        traefik_dns_provider_netcup:
           NETCUP_CUSTOMER_NUMBER: "{{ netcup.customer_number }}"
           NETCUP_API_KEY: "{{ netcup.api_key }}"
           NETCUP_API_PASSWORD: "{{ netcup.api_password }}"
@@ -572,7 +572,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_porkbun: 
+        traefik_dns_provider_porkbun:
           PORKBUN_API_KEY: "{{ porkbun.api_key }}"
           PORKBUN_SECRET_API_KEY: "{{ porkbun.secret_key }}"
         ```
@@ -581,7 +581,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_dns_provider_powerdns: 
+        traefik_dns_provider_powerdns:
           PDNS_API_KEY: "{{ powerdns.api_key }}"
           PDNS_API_URL: "{{ powerdns.api_url }}"
         ```
@@ -663,7 +663,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_defaults: 
+        traefik_role_docker_ports_defaults:
           - "{{ traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
@@ -673,7 +673,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_tailscale_ipv4_defaults: 
+        traefik_role_docker_ports_tailscale_ipv4_defaults:
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
@@ -686,7 +686,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_tailscale_ipv6_defaults: 
+        traefik_role_docker_ports_tailscale_ipv6_defaults:
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
@@ -708,7 +708,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_envs_default: 
+        traefik_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -725,7 +725,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_default: 
+        traefik_role_docker_commands_default:
           - "--global.sendanonymoususage=false"
           - "--providers.file.directory=/etc/traefik"
           - "--providers.file.watch={{ traefik_file_watch }}"
@@ -774,7 +774,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_zerossl_acme: 
+        traefik_role_docker_commands_zerossl_acme:
           - "--certificatesresolvers.zerossl.acme.dnschallenge.provider={{ traefik_challenge_provider }}"
           - "{{ '--certificatesresolvers.zerossl.acme.dnschallenge.resolvers=' + traefik_dns_resolvers if (traefik_dns_resolvers | length > 0) else omit }}"
           - "--certificatesresolvers.zerossl.acme.email={{ user.email }}"
@@ -790,7 +790,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_http_validation_acme: 
+        traefik_role_docker_commands_http_validation_acme:
           - "--certificatesresolvers.httpresolver.acme.httpchallenge.entrypoint=web"
           - "--certificatesresolvers.httpresolver.acme.email={{ user.email }}"
           - "--certificatesresolvers.httpresolver.acme.storage=/etc/traefik/acme.json"
@@ -800,7 +800,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_http_validation_acme_zerossl: 
+        traefik_role_docker_commands_http_validation_acme_zerossl:
           - "--certificatesresolvers.zerosslhttp.acme.httpchallenge.entrypoint=web"
           - "--certificatesresolvers.zerosslhttp.acme.email={{ user.email }}"
           - "--certificatesresolvers.zerosslhttp.acme.caserver=https://acme.zerossl.com/v2/DV90"
@@ -813,7 +813,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_google_acme: 
+        traefik_role_docker_commands_google_acme:
           - "--certificatesresolvers.google.acme.dnschallenge.provider={{ traefik_challenge_provider }}"
           - "{{ ('--certificatesresolvers.google.acme.dnschallenge.resolvers=' + traefik_dns_resolvers) if (traefik_dns_resolvers | length > 0) else omit }}"
           - "--certificatesresolvers.google.acme.email={{ user.email }}"
@@ -829,7 +829,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_google_acme_http: 
+        traefik_role_docker_commands_google_acme_http:
           - "--certificatesresolvers.googlehttp.acme.httpchallenge.entrypoint=web"
           - "--certificatesresolvers.googlehttp.acme.email={{ user.email }}"
           - "--certificatesresolvers.googlehttp.acme.caserver=https://dv.acme-v02.api.pki.goog/directory"
@@ -842,7 +842,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_metrics: 
+        traefik_role_docker_commands_metrics:
           - "--metrics.prometheus=true"
           - "--metrics.prometheus.addentrypointslabels=true"
           - "--metrics.prometheus.addrouterslabels=true"
@@ -854,7 +854,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_cloudflarewarp_plugin: 
+        traefik_role_docker_commands_cloudflarewarp_plugin:
           - "--experimental.plugins.cloudflarewarp.modulename=github.com/saltyorg/cloudflarewarp"
           - "--experimental.plugins.cloudflarewarp.version=v1.0.0"
         ```
@@ -863,7 +863,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_themepark_plugin: 
+        traefik_role_docker_commands_themepark_plugin:
           - "--experimental.plugins.themepark.modulename=github.com/packruler/traefik-themepark"
           - "--experimental.plugins.themepark.version=v1.4.2"
         ```
@@ -872,7 +872,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_http3: 
+        traefik_role_docker_commands_http3:
           - "--entrypoints.websecure.http3.advertisedport={{ traefik_entrypoint_websecure_port }}"
         ```
 
@@ -880,7 +880,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_tailscale: 
+        traefik_role_docker_commands_tailscale:
           - "--entrypoints.tailscale-web.address=:81"
           - "--entrypoints.tailscale-websecure.address=:444"
         ```
@@ -889,7 +889,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_commands_crowdsec: 
+        traefik_role_docker_commands_crowdsec:
           - "--experimental.plugins.bouncer.modulename=github.com/maxlerebourg/crowdsec-bouncer-traefik-plugin"
           - "--experimental.plugins.bouncer.version=v1.4.4"
         ```
@@ -907,7 +907,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: list
-        traefik_role_docker_volumes_default: 
+        traefik_role_docker_volumes_default:
           - "/var/run/docker.sock:/var/run/docker.sock"
           - "{{ traefik_role_paths_location }}:/etc/traefik"
         ```
@@ -925,7 +925,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_hosts_default: 
+        traefik_role_docker_hosts_default:
           host.docker.internal: "172.19.0.1"
         ```
 
@@ -949,7 +949,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_default: 
+        traefik_role_docker_labels_default:
           traefik.enable: "true"
           traefik.http.routers.traefik-internal.rule: "Host(`{{ traefik_name }}`)"
           traefik.http.routers.traefik-internal.entrypoints: "internal"
@@ -991,7 +991,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_cloudflare: 
+        traefik_role_docker_labels_cloudflare:
           traefik.http.middlewares.cloudflarewarp.plugin.cloudflarewarp.disableDefault: "false"
         ```
 
@@ -999,7 +999,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_dns_validation: 
+        traefik_role_docker_labels_dns_validation:
           traefik.http.routers.traefik.tls.certresolver: "{{ traefik_default_certresolver }}"
           traefik.http.routers.traefik.tls.domains[0].main: "{{ user.domain }}"
           traefik.http.routers.traefik.tls.domains[0].sans: "{{ '*.' + user.domain }}"
@@ -1009,7 +1009,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_http_validation: 
+        traefik_role_docker_labels_http_validation:
           traefik.http.routers.traefik.tls.certresolver: "{{ traefik_default_certresolver }}"
         ```
 
@@ -1017,7 +1017,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_metrics: 
+        traefik_role_docker_labels_metrics:
           traefik.http.routers.metrics-http.rule: "Host(`{{ lookup('role_var', '_metrics_subdomain', role='traefik') }}.{{ lookup('role_var', '_metrics_domain', role='traefik') }}`) && Path(`/prometheus`)"
           traefik.http.routers.metrics-http.service: prometheus@internal
           traefik.http.routers.metrics-http.entrypoints: "{{ traefik_entrypoint_web }}"
@@ -1036,7 +1036,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml
         # Type: dict
-        traefik_role_docker_labels_crowdsec: 
+        traefik_role_docker_labels_crowdsec:
           traefik.http.middlewares.crowdsec.plugin.bouncer.enabled: "true"
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapikey: "{{ traefik_crowdsec_bouncer_key | default('') }}"
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapischeme: "http"

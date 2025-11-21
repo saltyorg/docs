@@ -71,7 +71,7 @@ sb install sandbox-rocketchat
 
         ```yaml
         # Type: list
-        rocketchat_mongodb_role_docker_commands: 
+        rocketchat_mongodb_role_docker_commands:
           - "mongod --oplogSize 128 --replSet rs0"
         ```
 
@@ -79,7 +79,7 @@ sb install sandbox-rocketchat
 
         ```yaml
         # Type: list
-        rocketchat_mongodb_role_docker_volumes_custom: 
+        rocketchat_mongodb_role_docker_volumes_custom:
           - "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro"
         ```
 
@@ -266,7 +266,7 @@ sb install sandbox-rocketchat
 
         ```yaml
         # Type: dict
-        rocketchat_role_docker_envs_default: 
+        rocketchat_role_docker_envs_default:
           TZ: "{{ tz }}"
           ROOT_URL: "{{ lookup('role_var', '_web_url', role='rocketchat') }}"
           MONGO_URL: "mongodb://rocketchat-mongo:27017/rocketchat?replicaSet=rs0&directConnection=true"
@@ -287,7 +287,7 @@ sb install sandbox-rocketchat
 
         ```yaml
         # Type: list
-        rocketchat_role_docker_volumes_default: 
+        rocketchat_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/uploads:/app/uploads"
         ```
 
@@ -304,7 +304,7 @@ sb install sandbox-rocketchat
 
         ```yaml
         # Type: list
-        rocketchat_role_docker_mounts_default: 
+        rocketchat_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

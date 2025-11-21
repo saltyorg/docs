@@ -266,7 +266,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        lgsm_role_docker_volumes_default: 
+        lgsm_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='lgsm') }}:/data"
         ```
 

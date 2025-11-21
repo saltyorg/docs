@@ -223,7 +223,7 @@ sb install sandbox-privatebin
 
         ```yaml
         # Type: dict
-        privatebin_role_docker_envs_default: 
+        privatebin_role_docker_envs_default:
           TZ: "{{ tz }}"
           PHP_TZ: "{{ tz }}"
         ```
@@ -241,7 +241,7 @@ sb install sandbox-privatebin
 
         ```yaml
         # Type: list
-        privatebin_role_docker_volumes_default: 
+        privatebin_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='privatebin') }}:/srv/data"
           - "{{ lookup('role_var', '_paths_location', role='privatebin') }}/conf.php:/srv/cfg/conf.php:ro"
           - "{{ privatebin_name }}_tmpfs_run:/run"
@@ -260,7 +260,7 @@ sb install sandbox-privatebin
 
         ```yaml
         # Type: list
-        privatebin_role_docker_mounts_default: 
+        privatebin_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
           - target: /var/lib/nginx/tmp

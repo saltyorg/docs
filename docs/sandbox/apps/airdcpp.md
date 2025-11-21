@@ -226,7 +226,7 @@ sb install sandbox-airdcpp
 
         ```yaml
         # Type: list
-        airdcpp_role_docker_ports_defaults: 
+        airdcpp_role_docker_ports_defaults:
           - "21248:21248"
           - "21248:21248/udp"
           - "21249:21249"
@@ -245,7 +245,7 @@ sb install sandbox-airdcpp
 
         ```yaml
         # Type: dict
-        airdcpp_role_docker_envs_default: 
+        airdcpp_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -262,7 +262,7 @@ sb install sandbox-airdcpp
 
         ```yaml
         # Type: list
-        airdcpp_role_docker_volumes_default: 
+        airdcpp_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='airdcpp') }}:/.airdcpp"
           - "/mnt/local/downloads/airdcpp:/Downloads"
         ```

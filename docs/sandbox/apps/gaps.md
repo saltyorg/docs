@@ -232,7 +232,7 @@ sb install sandbox-gaps
 
         ```yaml
         # Type: dict
-        gaps_role_docker_envs_default: 
+        gaps_role_docker_envs_default:
           TZ: "{{ tz }}"
           ENABLE_LOGIN: "false"
           ENABLE_SSL: "false"
@@ -251,7 +251,7 @@ sb install sandbox-gaps
 
         ```yaml
         # Type: list
-        gaps_role_docker_volumes_default: 
+        gaps_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='gaps') }}:/usr/data"
         ```
 

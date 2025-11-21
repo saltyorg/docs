@@ -239,7 +239,7 @@ sb install sandbox-navidrome
 
         ```yaml
         # Type: list
-        navidrome_role_docker_volumes_default: 
+        navidrome_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='navidrome') }}:/data"
           - "/mnt/unionfs/Media/Music:/music"
         ```

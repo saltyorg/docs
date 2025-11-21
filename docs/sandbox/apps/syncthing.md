@@ -225,7 +225,7 @@ sb install sandbox-syncthing
 
         ```yaml
         # Type: list
-        syncthing_role_docker_ports_defaults: 
+        syncthing_role_docker_ports_defaults:
           - "22000:22000/tcp"
           - "22000:22000/udp"
           - "21027:21027/udp"
@@ -244,7 +244,7 @@ sb install sandbox-syncthing
 
         ```yaml
         # Type: dict
-        syncthing_role_docker_envs_default: 
+        syncthing_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -263,7 +263,7 @@ sb install sandbox-syncthing
 
         ```yaml
         # Type: list
-        syncthing_role_docker_volumes_default: 
+        syncthing_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='syncthing') }}:/config"
         ```
 

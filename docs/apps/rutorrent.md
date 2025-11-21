@@ -290,7 +290,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: list
-        rutorrent_role_config_new_installs_rutorrent_rc_settings_default: 
+        rutorrent_role_config_new_installs_rutorrent_rc_settings_default:
           # Minimum number of peers to connect to per torrent
           - { option: "throttle.min_peers.normal.set", value: "1" }
           # Maximum number of simultaneous upload slots per torrent
@@ -338,7 +338,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: list
-        rutorrent_role_config_new_installs_php_local_ini_settings_default: 
+        rutorrent_role_config_new_installs_php_local_ini_settings_default:
           # Maximum Upload File Size via Web Browser (eg Uploading Torrent Files)
           - { option: "upload_max_filesize", value: "20M" }
         ```
@@ -362,7 +362,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: list
-        rutorrent_role_config_existing_installs_rutorrent_rc_settings_default: 
+        rutorrent_role_config_existing_installs_rutorrent_rc_settings_default:
           # Execute - Initiate Plugins
           - { option: "execute", value: "{sh,-c,/usr/bin/php /app/rutorrent/php/initplugins.php abc &}" }
           # IP address that is reported to the tracker
@@ -494,7 +494,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: list
-        rutorrent_role_docker_ports_defaults: 
+        rutorrent_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}"
           - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}/udp"
           - "{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}/udp"
@@ -513,7 +513,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: dict
-        rutorrent_role_docker_envs_default: 
+        rutorrent_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -532,7 +532,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: list
-        rutorrent_role_docker_volumes_default: 
+        rutorrent_role_docker_volumes_default:
           - "{{ rutorrent_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
@@ -550,7 +550,7 @@ docker restart rutorrent
 
         ```yaml
         # Type: dict
-        rutorrent_role_docker_labels_default: 
+        rutorrent_role_docker_labels_default:
           traefik.http.middlewares.rutorrent-auth.basicauth.usersfile: "/etc/traefik/auth"
         ```
 

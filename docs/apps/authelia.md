@@ -1177,7 +1177,7 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
         ```yaml
         # Type: dict
-        authelia_role_docker_envs_default: 
+        authelia_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -1196,7 +1196,7 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
         ```yaml
         # Type: list
-        authelia_role_docker_volumes_default: 
+        authelia_role_docker_volumes_default:
           - "{{ authelia_role_paths_location }}:/config"
         ```
 

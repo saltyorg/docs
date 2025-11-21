@@ -277,7 +277,7 @@ sb install sandbox-tubearchivist
 
         ```yaml
         # Type: dict
-        tubearchivist_role_docker_envs_default: 
+        tubearchivist_role_docker_envs_default:
           TZ: "{{ tz }}"
           ES_URL: "http://{{ tubearchivist_name }}-elasticsearch:9200"
           REDIS_HOST: "{{ tubearchivist_name }}-redis"
@@ -305,7 +305,7 @@ sb install sandbox-tubearchivist
 
         ```yaml
         # Type: list
-        tubearchivist_role_docker_volumes_default: 
+        tubearchivist_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_downloads_location', role='tubearchivist') }}/:/youtube"
           - "{{ lookup('role_var', '_paths_location', role='tubearchivist') }}/cache:/cache"
         ```

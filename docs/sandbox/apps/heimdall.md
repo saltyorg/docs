@@ -229,7 +229,7 @@ sb install sandbox-heimdall
 
         ```yaml
         # Type: dict
-        heimdall_role_docker_envs_default: 
+        heimdall_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -248,7 +248,7 @@ sb install sandbox-heimdall
 
         ```yaml
         # Type: list
-        heimdall_role_docker_volumes_default: 
+        heimdall_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='heimdall') }}:/config"
         ```
 

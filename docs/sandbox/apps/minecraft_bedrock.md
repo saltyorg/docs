@@ -173,7 +173,7 @@ By default, the server will be using the latest version available. To choose a s
 
         ```yaml
         # Type: list
-        minecraft_bedrock_role_docker_ports_defaults: 
+        minecraft_bedrock_role_docker_ports_defaults:
           - "19132:19132/udp"
         ```
 
@@ -190,7 +190,7 @@ By default, the server will be using the latest version available. To choose a s
 
         ```yaml
         # Type: dict
-        minecraft_bedrock_role_docker_envs_default: 
+        minecraft_bedrock_role_docker_envs_default:
           TZ: "{{ tz }}"
           UID: "{{ uid }}"
           GID: "{{ gid }}"
@@ -211,7 +211,7 @@ By default, the server will be using the latest version available. To choose a s
 
         ```yaml
         # Type: list
-        minecraft_bedrock_role_docker_volumes_default: 
+        minecraft_bedrock_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='minecraft_bedrock') }}:/data"
         ```
 

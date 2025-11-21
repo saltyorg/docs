@@ -245,7 +245,7 @@ sb install sandbox-vaultwarden
 
         ```yaml
         # Type: dict
-        vaultwarden_role_docker_envs_default: 
+        vaultwarden_role_docker_envs_default:
           TZ: "{{ tz }}"
           ROCKET_PORT: "{{ lookup('role_var', '_web_port', role='vaultwarden') }}"
         ```
@@ -263,7 +263,7 @@ sb install sandbox-vaultwarden
 
         ```yaml
         # Type: list
-        vaultwarden_role_docker_volumes_default: 
+        vaultwarden_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='vaultwarden') }}:/data"
           - "{{ lookup('role_var', '_paths_location', role='vaultwarden') }}/env:/.env"
         ```

@@ -230,7 +230,7 @@ sb install sandbox-phpmyadmin
 
         ```yaml
         # Type: dict
-        phpmyadmin_role_docker_envs_default: 
+        phpmyadmin_role_docker_envs_default:
           TZ: "{{ tz }}"
           PMA_ARBITRARY: "1"
           PMA_ABSOLUTE_URI: "{{ lookup('role_var', '_web_url', role='phpmyadmin') }}"

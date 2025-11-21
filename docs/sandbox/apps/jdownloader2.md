@@ -249,7 +249,7 @@ sb install sandbox-jdownloader2
 
         ```yaml
         # Type: dict
-        jdownloader2_role_docker_envs_default: 
+        jdownloader2_role_docker_envs_default:
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -274,7 +274,7 @@ sb install sandbox-jdownloader2
 
         ```yaml
         # Type: list
-        jdownloader2_role_docker_volumes_default: 
+        jdownloader2_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='jdownloader2') }}/config:/config"
           - "{{ lookup('role_var', '_paths_downloads_location', role='jdownloader2') }}:/output"
         ```

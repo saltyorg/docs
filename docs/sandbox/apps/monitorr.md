@@ -225,7 +225,7 @@ sb install sandbox-monitorr
 
         ```yaml
         # Type: dict
-        monitorr_role_docker_envs_default: 
+        monitorr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -244,7 +244,7 @@ sb install sandbox-monitorr
 
         ```yaml
         # Type: list
-        monitorr_role_docker_volumes_default: 
+        monitorr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='monitorr') }}:/app"
         ```
 

@@ -90,7 +90,7 @@ sb install docker-socket-proxy
 
         ```yaml
         # Type: dict
-        docker_socket_proxy_role_docker_envs_default: 
+        docker_socket_proxy_role_docker_envs_default:
           TZ: "{{ tz }}"
           DISABLE_IPV6: "{{ '0' if dns_ipv6_enabled else '1' }}"
         ```
@@ -108,7 +108,7 @@ sb install docker-socket-proxy
 
         ```yaml
         # Type: list
-        docker_socket_proxy_role_docker_volumes_default: 
+        docker_socket_proxy_role_docker_volumes_default:
           - "/var/run/docker.sock:/var/run/docker.sock"
         ```
 
@@ -125,7 +125,7 @@ sb install docker-socket-proxy
 
         ```yaml
         # Type: list
-        docker_socket_proxy_role_docker_mounts_default: 
+        docker_socket_proxy_role_docker_mounts_default:
           - target: /run
             type: tmpfs
         ```

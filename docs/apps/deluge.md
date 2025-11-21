@@ -492,7 +492,7 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        deluge_role_docker_ports_default: 
+        deluge_role_docker_ports_default:
           - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}"
           - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}/udp"
         ```
@@ -522,7 +522,7 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        deluge_role_docker_envs_default: 
+        deluge_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -556,7 +556,7 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        deluge_role_docker_volumes_default: 
+        deluge_role_docker_volumes_default:
           - "{{ deluge_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```

@@ -503,7 +503,7 @@ docker
 
         ```yaml
         # Type: list
-        docker_dns_networks: 
+        docker_dns_networks:
           - "saltbox"
         ```
 

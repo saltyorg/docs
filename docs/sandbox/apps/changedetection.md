@@ -225,7 +225,7 @@ sb install sandbox-changedetection
 
         ```yaml
         # Type: dict
-        changedetection_role_docker_envs_default: 
+        changedetection_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -245,7 +245,7 @@ sb install sandbox-changedetection
 
         ```yaml
         # Type: list
-        changedetection_role_docker_volumes_default: 
+        changedetection_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='changedetection') }}:/config"
         ```
 

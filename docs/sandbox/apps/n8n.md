@@ -122,7 +122,7 @@ sb install sandbox-n8n
 
         ```yaml
         # Type: dict
-        n8n_role_postgres_docker_healthcheck: 
+        n8n_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -313,7 +313,7 @@ sb install sandbox-n8n
 
         ```yaml
         # Type: dict
-        n8n_role_docker_envs_default: 
+        n8n_role_docker_envs_default:
           GENERIC_TIMEZONE: "{{ tz }}"
           TZ: "{{ tz }}"
           DB_TYPE: "postgresdb"
@@ -346,7 +346,7 @@ sb install sandbox-n8n
 
         ```yaml
         # Type: list
-        n8n_role_docker_volumes_default: 
+        n8n_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='n8n') }}/data:/data"
         ```
 

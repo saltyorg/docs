@@ -229,7 +229,7 @@ On a clean installation, Stash only creates its config file when the user has go
 
         ```yaml
         # Type: dict
-        stash_role_docker_envs_default: 
+        stash_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -248,7 +248,7 @@ On a clean installation, Stash only creates its config file when the user has go
 
         ```yaml
         # Type: list
-        stash_role_docker_volumes_default: 
+        stash_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='stash') }}/config:/config"
           - "{{ lookup('role_var', '_paths_location', role='stash') }}/metadata:/metadata"
           - "{{ lookup('role_var', '_paths_location', role='stash') }}/cache:/cache"

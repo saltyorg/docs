@@ -128,7 +128,7 @@ PLex-auto-languages has no UI; it is driven by a config file
 
         ```yaml
         # Type: dict
-        plex_auto_languages_role_docker_envs_default: 
+        plex_auto_languages_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -145,7 +145,7 @@ PLex-auto-languages has no UI; it is driven by a config file
 
         ```yaml
         # Type: list
-        plex_auto_languages_role_docker_volumes_default: 
+        plex_auto_languages_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='plex_auto_languages') }}:/config"
         ```
 

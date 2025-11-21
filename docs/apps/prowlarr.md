@@ -273,7 +273,7 @@ sb install prowlarr
 
         ```yaml
         # Type: dict
-        prowlarr_role_docker_envs_default: 
+        prowlarr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -293,7 +293,7 @@ sb install prowlarr
 
         ```yaml
         # Type: list
-        prowlarr_role_docker_volumes_default: 
+        prowlarr_role_docker_volumes_default:
           - "{{ prowlarr_role_paths_location }}:/config"
         ```
 

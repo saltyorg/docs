@@ -234,7 +234,7 @@ sb install sandbox-beets
 
         ```yaml
         # Type: dict
-        beets_role_docker_envs_default: 
+        beets_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -253,7 +253,7 @@ sb install sandbox-beets
 
         ```yaml
         # Type: list
-        beets_role_docker_volumes_default: 
+        beets_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='beets') }}:/config"
           - "/mnt/unionfs/Media/Music:/music"
         ```

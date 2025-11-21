@@ -245,7 +245,7 @@ sb install sandbox-forgejo
 
         ```yaml
         # Type: dict
-        forgejo_role_docker_envs_default: 
+        forgejo_role_docker_envs_default:
           USER_UID: "{{ uid }}"
           USER_GID: "{{ gid }}"
           DB_TYPE: "mysql"
@@ -270,7 +270,7 @@ sb install sandbox-forgejo
 
         ```yaml
         # Type: list
-        forgejo_role_docker_volumes_default: 
+        forgejo_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='forgejo') }}:/data"
           - /etc/timezone:/etc/timezone:ro
           - /etc/localtime:/etc/localtime:ro

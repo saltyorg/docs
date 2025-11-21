@@ -299,7 +299,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
 
         ```yaml
         # Type: dict
-        fireflyiii_importer_role_docker_envs_default: 
+        fireflyiii_importer_role_docker_envs_default:
           IMPORT_DIR_ALLOWLIST: /import
           FIREFLY_III_URL: "http://{{ fireflyiii_name }}:8080"
           VANITY_URL: "{{ lookup('role_var', '_web_url', role='fireflyiii') }}"
@@ -320,7 +320,7 @@ Redeploy the Firefly III Importer Role role to apply the above changes.
 
         ```yaml
         # Type: list
-        fireflyiii_importer_role_docker_volumes_default: 
+        fireflyiii_importer_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='fireflyiii') }}/import:/import"
           - "/etc/timezone:/etc/timezone:ro"
           - "/etc/localtime:/etc/localtime:ro"

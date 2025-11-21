@@ -117,7 +117,7 @@ sb install diun
 
         ```yaml
         # Type: dict
-        diun_role_docker_envs_default: 
+        diun_role_docker_envs_default:
           TZ: "{{ tz }}"
           LOG_LEVEL: "info"
           LOG_JSON: "false"
@@ -136,7 +136,7 @@ sb install diun
 
         ```yaml
         # Type: list
-        diun_role_docker_volumes_default: 
+        diun_role_docker_volumes_default:
           - "{{ diun_role_paths_location }}/data:/data"
           - "{{ diun_role_paths_location }}/diun.yml:/diun.yml:ro"
           - "/var/run/docker.sock:/var/run/docker.sock"
@@ -155,7 +155,7 @@ sb install diun
 
         ```yaml
         # Type: dict
-        diun_role_docker_labels_default: 
+        diun_role_docker_labels_default:
           diun.enable: "true"
         ```
 

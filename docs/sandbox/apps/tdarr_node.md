@@ -154,7 +154,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 
         ```yaml
         # Type: list
-        tdarr_node_role_docker_ports_defaults: 
+        tdarr_node_role_docker_ports_defaults:
           - "{{ tdarr_node_node_port }}:{{ tdarr_node_node_port }}"
         ```
 
@@ -171,7 +171,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 
         ```yaml
         # Type: dict
-        tdarr_node_role_docker_envs_default: 
+        tdarr_node_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -194,7 +194,7 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 
         ```yaml
         # Type: list
-        tdarr_node_role_docker_volumes_default: 
+        tdarr_node_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_configs_location', role='tdarr') }}:/app/configs"
           - "{{ lookup('role_var', '_paths_logs_location', role='tdarr') }}:/app/logs"
           - "{{ lookup('role_var', '_paths_transcodes_location', role='tdarr') }}:/temp"

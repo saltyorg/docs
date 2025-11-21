@@ -217,7 +217,7 @@ Enter email, and password from accounts.yml setting.
 
         ```yaml
         # Type: dict
-        invoiceninjav5_role_docker_envs_default: 
+        invoiceninjav5_role_docker_envs_default:
           TZ: "{{ tz }}"
           APP_URL: "{{ lookup('role_var', '_nginx_web_url', role='invoiceninjav5') }}"
           APP_KEY: "{{ invoiceninja.app_key | default('base64:O1S3kAJEDgo92gPkXtxfdCJpoGShgKloUSdcaHMXmoY=', true) }}"
@@ -251,7 +251,7 @@ Enter email, and password from accounts.yml setting.
 
         ```yaml
         # Type: list
-        invoiceninjav5_role_docker_volumes_default: 
+        invoiceninjav5_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='invoiceninjav5') }}/public:/var/www/app/public"
           - "{{ lookup('role_var', '_paths_location', role='invoiceninjav5') }}/storage:/var/www/app/storage"
           - "{{ lookup('role_var', '_paths_location', role='invoiceninjav5') }}/php.ini:/usr/local/etc/php/php.ini"

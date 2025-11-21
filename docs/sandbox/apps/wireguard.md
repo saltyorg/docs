@@ -257,7 +257,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: list
-        wireguard_role_docker_ports_defaults: 
+        wireguard_role_docker_ports_defaults:
           - "{{ lookup('role_var', '_listen_port', role='wireguard') }}:{{ lookup('role_var', '_listen_port', role='wireguard') }}/udp"
         ```
 
@@ -274,7 +274,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: dict
-        wireguard_role_docker_envs_default: 
+        wireguard_role_docker_envs_default:
           TZ: "{{ tz }}"
           DISABLE_IPV6: "{{ 'false' if docker_ipv6 else 'true' }}"
           WG_DEVICE: "eth0"
@@ -284,7 +284,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: dict
-        wireguard_role_docker_envs_setup: 
+        wireguard_role_docker_envs_setup:
           INIT_ENABLED: "true"
           INIT_USERNAME: "{{ user.name }}"
           INIT_PASSWORD: "{{ user.pass }}"
@@ -308,7 +308,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: list
-        wireguard_role_docker_volumes_default: 
+        wireguard_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='wireguard') }}:/etc/wireguard"
           - /lib/modules:/lib/modules:ro
         ```
@@ -342,7 +342,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: list
-        wireguard_role_docker_networks_default: 
+        wireguard_role_docker_networks_default:
           - name: wg
             ipv4_address: "10.42.42.42"
             ipv6_address: "{{ 'fdcc:ad94:bacf:61a3::2a' if docker_ipv6 else omit }}"
@@ -364,7 +364,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: list
-        wireguard_role_docker_capabilities_default: 
+        wireguard_role_docker_capabilities_default:
           - NET_ADMIN
           - SYS_MODULE
         ```
@@ -382,7 +382,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: dict
-        wireguard_role_docker_sysctls_ipv4: 
+        wireguard_role_docker_sysctls_ipv4:
           net.ipv4.conf.all.src_valid_mark: "1"
           net.ipv4.ip_forward: "1"
         ```
@@ -391,7 +391,7 @@ The password provisioned is your Saltbox password.
 
         ```yaml
         # Type: dict
-        wireguard_role_docker_sysctls_ipv6: 
+        wireguard_role_docker_sysctls_ipv6:
           net.ipv6.conf.all.disable_ipv6: "0"
           net.ipv6.conf.all.forwarding: "1"
           net.ipv6.conf.default.forwarding: "1"

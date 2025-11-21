@@ -226,7 +226,7 @@ sb install sandbox-paperless-ai
 
         ```yaml
         # Type: dict
-        paperless_ai_role_docker_envs_default: 
+        paperless_ai_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -245,7 +245,7 @@ sb install sandbox-paperless-ai
 
         ```yaml
         # Type: list
-        paperless_ai_role_docker_volumes_default: 
+        paperless_ai_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='paperless_ai') }}:/app/data"
         ```
 

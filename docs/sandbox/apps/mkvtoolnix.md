@@ -227,7 +227,7 @@ sb install sandbox-mkvtoolnix
 
         ```yaml
         # Type: dict
-        mkvtoolnix_role_docker_envs_default: 
+        mkvtoolnix_role_docker_envs_default:
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -251,7 +251,7 @@ sb install sandbox-mkvtoolnix
 
         ```yaml
         # Type: list
-        mkvtoolnix_role_docker_volumes_default: 
+        mkvtoolnix_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='mkvtoolnix') }}:/config"
           - "/mnt/unionfs:/storage"
         ```

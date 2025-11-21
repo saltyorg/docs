@@ -232,7 +232,7 @@ sb install sandbox-your-spotify
 
         ```yaml
         # Type: dict
-        your_spotify_role_docker_envs_default: 
+        your_spotify_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"

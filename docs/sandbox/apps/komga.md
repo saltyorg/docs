@@ -234,7 +234,7 @@ sb install sandbox-komga
 
         ```yaml
         # Type: list
-        komga_role_docker_volumes_default: 
+        komga_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='komga') }}:/config"
           - "/mnt/unionfs/Media/Comics:/comics"
         ```

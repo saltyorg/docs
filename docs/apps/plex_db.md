@@ -80,7 +80,7 @@ Further information:
         ```yaml
         # Do not enable globally if deploying multiple instances
         # Type: list
-        plex_db_files: 
+        plex_db_files:
           - "com.plexapp.plugins.library.db"
           - "com.plexapp.plugins.library.blobs.db"
         ```

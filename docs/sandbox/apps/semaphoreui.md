@@ -162,7 +162,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
 
         ```yaml
         # Type: dict
-        semaphoreui_role_postgres_docker_healthcheck: 
+        semaphoreui_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='semaphoreui') }} -U {{ lookup('role_var', '_postgres_user', role='semaphoreui') }}"]
           start_period: 20s
           interval: 30s
@@ -353,7 +353,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
 
         ```yaml
         # Type: dict
-        semaphoreui_role_docker_envs_default: 
+        semaphoreui_role_docker_envs_default:
           SEMAPHORE_DB_USER: "{{ lookup('role_var', '_postgres_user', role='semaphoreui') }}"
           SEMAPHORE_DB_PASS: "{{ lookup('role_var', '_postgres_password', role='semaphoreui') }}"
           SEMAPHORE_DB_HOST: "{{ lookup('role_var', '_postgres_name', role='semaphoreui') }}"

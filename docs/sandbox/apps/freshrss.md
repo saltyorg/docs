@@ -225,7 +225,7 @@ sb install sandbox-freshrss
 
         ```yaml
         # Type: dict
-        freshrss_role_docker_envs_default: 
+        freshrss_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -244,7 +244,7 @@ sb install sandbox-freshrss
 
         ```yaml
         # Type: list
-        freshrss_role_docker_volumes_default: 
+        freshrss_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='freshrss') }}:/config"
         ```
 

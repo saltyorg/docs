@@ -230,7 +230,7 @@ sb install sandbox-vnstat
 
         ```yaml
         # Type: dict
-        vnstat_role_docker_envs_default: 
+        vnstat_role_docker_envs_default:
           TZ: "{{ tz }}"
           HTTP_PORT: "8685"
           PAGE_REFRESH: "{{ vnstat_page_refresh }}"
@@ -251,7 +251,7 @@ sb install sandbox-vnstat
 
         ```yaml
         # Type: list
-        vnstat_role_docker_volumes_default: 
+        vnstat_role_docker_volumes_default:
           - "vnstat:/var/lib/vnstat:ro"
         ```
 

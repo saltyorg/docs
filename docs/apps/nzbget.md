@@ -236,7 +236,7 @@ tags:
 
         ```yaml
         # Type: list
-        nzbget_role_config_new_installs_settings_default: 
+        nzbget_role_config_new_installs_settings_default:
           # Authentication
           - { regexp: '^ControlUsername\s?=.*', line: "ControlUsername={{ user.name }}" }
           - { regexp: '^ControlPassword\s?=.*', line: "ControlPassword={{ user.pass }}" }
@@ -307,7 +307,7 @@ tags:
 
         ```yaml
         # Type: list
-        nzbget_role_config_existing_installs_settings_default: 
+        nzbget_role_config_existing_installs_settings_default:
           # Logging
           - { regexp: '^WriteLog\s?=.*', line: 'WriteLog=rotate' }
           - { regexp: '^RotateLog\s?=.*', line: 'RotateLog=3' }
@@ -356,7 +356,7 @@ tags:
         ```yaml
         # Repos Downloaded
         # Type: list
-        nzbget_role_scripts_repos_default: 
+        nzbget_role_scripts_repos_default:
           - 'https://github.com/Prinz23/nzbgetpp.git'
         ```
 
@@ -379,7 +379,7 @@ tags:
         ```yaml
         # URLs Downloaded
         # Type: list
-        nzbget_role_scripts_direct_downloads_default: 
+        nzbget_role_scripts_direct_downloads_default:
           - "https://raw.githubusercontent.com/clinton-hall/GetScripts/master/flatten.py"
           - "https://raw.githubusercontent.com/clinton-hall/GetScripts/master/DeleteSamples.py"
           - "https://raw.githubusercontent.com/Prinz23/nzbget-pp-reverse/master/reverse_name.py"
@@ -509,7 +509,7 @@ tags:
 
         ```yaml
         # Type: dict
-        nzbget_role_docker_envs_default: 
+        nzbget_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -530,7 +530,7 @@ tags:
 
         ```yaml
         # Type: list
-        nzbget_role_docker_volumes_default: 
+        nzbget_role_docker_volumes_default:
           - "{{ nzbget_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```

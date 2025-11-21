@@ -139,7 +139,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 
         ```yaml
         # Type: dict
-        a_train_role_docker_envs_default: 
+        a_train_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -156,7 +156,7 @@ A-Train is the official Autoscan trigger that listens for changes within Google 
 
         ```yaml
         # Type: list
-        a_train_role_docker_volumes_default: 
+        a_train_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='a_train') }}:/data"
         ```
 

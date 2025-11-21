@@ -68,7 +68,7 @@ sb install sandbox-yacht
 
         ```yaml
         # Type: dict
-        yacht_role_docker_socket_proxy_envs: 
+        yacht_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           POST: "0"
           IMAGES: "1"
@@ -245,7 +245,7 @@ sb install sandbox-yacht
 
         ```yaml
         # Type: dict
-        yacht_role_docker_envs_default: 
+        yacht_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -267,7 +267,7 @@ sb install sandbox-yacht
 
         ```yaml
         # Type: list
-        yacht_role_docker_volumes_default: 
+        yacht_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='yacht') }}/config:/config"
           - "{{ lookup('role_var', '_paths_location', role='yacht') }}/storage:/storage"
         ```

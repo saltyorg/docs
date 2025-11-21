@@ -386,7 +386,7 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
         ```yaml
         # Type: dict
-        organizr_role_docker_envs_default: 
+        organizr_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -406,7 +406,7 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
         ```yaml
         # Type: list
-        organizr_role_docker_volumes_default: 
+        organizr_role_docker_volumes_default:
           - "{{ organizr_role_paths_location }}:/config"
         ```
 

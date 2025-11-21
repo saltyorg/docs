@@ -239,7 +239,7 @@ sb install sandbox-plex-utills
 
         ```yaml
         # Type: dict
-        plex_utills_role_docker_envs_default: 
+        plex_utills_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -258,7 +258,7 @@ sb install sandbox-plex-utills
 
         ```yaml
         # Type: list
-        plex_utills_role_docker_volumes_default: 
+        plex_utills_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='plex_utills') }}:/config"
           - "{{ lookup('role_var', '_paths_location', role='plex_utills') }}/logs:/logs"
           - "/mnt:/films"

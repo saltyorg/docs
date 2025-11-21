@@ -312,7 +312,7 @@ sb install sandbox-dashdot
 
         ```yaml
         # Type: dict
-        dashdot_role_docker_envs_default: 
+        dashdot_role_docker_envs_default:
           DASHDOT_SHOW_HOST: "{{ lookup('role_var', '_show_host', role='dashdot') }}"
           DASHDOT_CUSTOM_HOST: "{{ lookup('role_var', '_web_subdomain', role='dashdot') + '.' + lookup('role_var', '_web_domain', role='dashdot') }}"
           DASHDOT_ENABLE_CPU_TEMPS: "{{ lookup('role_var', '_cpu_temps', role='dashdot') }}"
@@ -342,7 +342,7 @@ sb install sandbox-dashdot
 
         ```yaml
         # Type: list
-        dashdot_role_docker_volumes_default: 
+        dashdot_role_docker_volumes_default:
           - "/:/mnt/host:ro"
         ```
 

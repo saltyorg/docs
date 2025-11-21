@@ -237,7 +237,7 @@ sb install grafana
 
         ```yaml
         # Type: dict
-        grafana_role_docker_envs_default: 
+        grafana_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -260,7 +260,7 @@ sb install grafana
 
         ```yaml
         # Type: list
-        grafana_role_docker_volumes_default: 
+        grafana_role_docker_volumes_default:
           - "{{ grafana_role_paths_location }}:/var/lib/grafana"
         ```
 

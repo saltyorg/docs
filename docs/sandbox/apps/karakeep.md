@@ -265,7 +265,7 @@ Visit `https://karakeep.app/`.
 
         ```yaml
         # Type: dict
-        karakeep_role_docker_envs_default: 
+        karakeep_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -291,7 +291,7 @@ Visit `https://karakeep.app/`.
 
         ```yaml
         # Type: list
-        karakeep_role_docker_volumes_default: 
+        karakeep_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='karakeep') }}/data:/data"
         ```
 

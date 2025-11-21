@@ -218,7 +218,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
         ```yaml
         # Type: dict
-        scrutiny_role_docker_envs_default: 
+        scrutiny_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -235,7 +235,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
         ```yaml
         # Type: list
-        scrutiny_role_docker_volumes_default: 
+        scrutiny_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='scrutiny') }}/scrutiny:/opt/scrutiny/config"
           - "{{ lookup('role_var', '_paths_location', role='scrutiny') }}/influxdb:/opt/scrutiny/influxdb"
           - "/run/udev:/run/udev:ro"

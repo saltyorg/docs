@@ -111,7 +111,7 @@ sb install sandbox-flaresolverr
 
         ```yaml
         # Type: dict
-        flaresolverr_role_docker_envs_default: 
+        flaresolverr_role_docker_envs_default:
           LOG_LEVEL: "info"
           LOG_HTML: "false"
           CAPTCHA_SOLVER: "hcaptcha-solver"

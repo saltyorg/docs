@@ -121,7 +121,7 @@ sb install sandbox-paperless-ngx
 
         ```yaml
         # Type: dict
-        paperless_ngx_role_postgres_docker_healthcheck: 
+        paperless_ngx_role_postgres_docker_healthcheck:
           test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }} -U {{ postgres_role_docker_env_user }}"]
           start_period: 20s
           interval: 30s
@@ -312,7 +312,7 @@ sb install sandbox-paperless-ngx
 
         ```yaml
         # Type: dict
-        paperless_ngx_role_docker_envs_default: 
+        paperless_ngx_role_docker_envs_default:
           PAPERLESS_TIME_ZONE: "{{ tz }}"
           USERMAP_UID: "{{ uid }}"
           USERMAP_GID: "{{ gid }}"
@@ -350,7 +350,7 @@ sb install sandbox-paperless-ngx
 
         ```yaml
         # Type: list
-        paperless_ngx_role_docker_volumes_default: 
+        paperless_ngx_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='paperless_ngx') }}/data:/usr/src/paperless/data"
           - "{{ lookup('role_var', '_paths_location', role='paperless_ngx') }}/config:/usr/src/paperless/config"
           - "{{ lookup('role_var', '_paths_location', role='paperless_ngx') }}/consume:/usr/src/paperless/consume"

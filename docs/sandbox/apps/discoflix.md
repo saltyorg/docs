@@ -220,7 +220,7 @@ sb install sandbox-discoflix
 
         ```yaml
         # Type: dict
-        discoflix_role_docker_envs_default: 
+        discoflix_role_docker_envs_default:
           internal_df_url: "http://{{ discoflix_name }}:{{ lookup('role_var', '_web_port', role='discoflix') }}"
         ```
 
@@ -237,7 +237,7 @@ sb install sandbox-discoflix
 
         ```yaml
         # Type: list
-        discoflix_role_docker_volumes_default: 
+        discoflix_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='discoflix') }}/data:/app/data"
         ```
 

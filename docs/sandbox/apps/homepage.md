@@ -82,7 +82,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
 
         ```yaml
         # Type: dict
-        homepage_role_docker_socket_proxy_envs: 
+        homepage_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           POST: "0"
         ```
@@ -256,7 +256,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
 
         ```yaml
         # Type: dict
-        homepage_role_docker_envs_default: 
+        homepage_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -276,7 +276,7 @@ This role will add both the homepage container, and the homepage-docker-socket-p
 
         ```yaml
         # Type: list
-        homepage_role_docker_volumes_default: 
+        homepage_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='homepage') }}/config:/app/config"
           - "{{ lookup('role_var', '_paths_location', role='homepage') }}/images:/app/public/images"
           - "{{ lookup('role_var', '_paths_location', role='homepage') }}/icons:/app/public/icons"

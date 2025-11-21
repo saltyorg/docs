@@ -668,7 +668,7 @@ Below are some example inventory entries for some common VPN providers. These ar
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        gluetun_role_docker_envs_default: 
+        gluetun_role_docker_envs_default:
           DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
           FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
           FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
@@ -768,7 +768,7 @@ Below are some example inventory entries for some common VPN providers. These ar
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        gluetun_role_docker_volumes_default: 
+        gluetun_role_docker_volumes_default:
           - "{{ gluetun_role_paths_location }}:/gluetun"
         ```
 
@@ -796,7 +796,7 @@ Below are some example inventory entries for some common VPN providers. These ar
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        gluetun_role_docker_labels_default: 
+        gluetun_role_docker_labels_default:
           com.centurylinklabs.watchtower.enable: "false"
         ```
 
@@ -876,7 +876,7 @@ Below are some example inventory entries for some common VPN providers. These ar
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        gluetun_role_docker_capabilities_default: 
+        gluetun_role_docker_capabilities_default:
           - NET_ADMIN
         ```
 

@@ -89,7 +89,7 @@ sb install netdata
 
         ```yaml
         # Type: dict
-        netdata_role_docker_socket_proxy_envs: 
+        netdata_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
         ```
 
@@ -276,7 +276,7 @@ sb install netdata
 
         ```yaml
         # Type: dict
-        netdata_role_docker_envs_default: 
+        netdata_role_docker_envs_default:
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
           DOCKER_HOST: "{{ netdata_name }}-docker-socket-proxy:2375"
@@ -298,7 +298,7 @@ sb install netdata
 
         ```yaml
         # Type: list
-        netdata_role_docker_volumes_default: 
+        netdata_role_docker_volumes_default:
           - "{{ netdata_role_paths_location }}/config:/etc/netdata"
           - "netdatalib:/var/lib/netdata"
           - "netdatacache:/var/cache/netdata"
@@ -372,7 +372,7 @@ sb install netdata
 
         ```yaml
         # Type: list
-        netdata_role_docker_capabilities_default: 
+        netdata_role_docker_capabilities_default:
           - SYS_PTRACE
           - SYS_ADMIN
         ```
@@ -390,7 +390,7 @@ sb install netdata
 
         ```yaml
         # Type: list
-        netdata_role_docker_security_opts_default: 
+        netdata_role_docker_security_opts_default:
           - apparmor=unconfined
         ```
 

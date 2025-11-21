@@ -303,7 +303,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: list
-        nzbhydra2_role_config_settings_default: 
+        nzbhydra2_role_config_settings_default:
           # NZBGet
           - del(.downloading.downloaders)
           - .downloading.downloaders[0].apiKey = "{{ nzbhydra2_sabnzbd_api_lookup | default('not-found') }}"
@@ -384,7 +384,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: dict
-        nzbhydra2_role_docker_envs_default: 
+        nzbhydra2_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -404,7 +404,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml
         # Type: list
-        nzbhydra2_role_docker_volumes_default: 
+        nzbhydra2_role_docker_volumes_default:
           - "{{ nzbhydra2_role_paths_location }}:/config"
         ```
 

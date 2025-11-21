@@ -994,7 +994,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        plex_role_docker_envs_default: 
+        plex_role_docker_envs_default:
           PLEX_UID: "{{ uid }}"
           PLEX_GID: "{{ gid }}"
           PLEX_CLAIM: "{{ (plex_claim_code) | default(omit) }}"
@@ -1032,7 +1032,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        plex_role_docker_volumes_default: 
+        plex_role_docker_volumes_default:
           - "{{ plex_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "/dev/shm:/dev/shm"
@@ -1052,7 +1052,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        plex_role_docker_volumes_legacy: 
+        plex_role_docker_volumes_legacy:
           - "/mnt/unionfs/Media:/data"
         ```
 
@@ -1080,7 +1080,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        plex_role_docker_mounts_default: 
+        plex_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```
@@ -1110,7 +1110,7 @@ Are you Setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        plex_role_docker_hosts_default: 
+        plex_role_docker_hosts_default:
           metric.plex.tv: "{{ ip_address_localhost }}"
           metrics.plex.tv: "{{ ip_address_localhost }}"
           analytics.plex.tv: "{{ ip_address_localhost }}"

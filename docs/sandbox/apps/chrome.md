@@ -134,7 +134,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
 
         ```yaml
         # Type: dict
-        chrome_role_docker_envs_default: 
+        chrome_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -153,7 +153,7 @@ The docker commands are set to the following by default. Port 9222 is open to th
 
         ```yaml
         # Type: list
-        chrome_role_docker_commands_default: 
+        chrome_role_docker_commands_default:
           - "--no-sandbox"
           - "--disable-gpu"
           - "--disable-dev-shm-usage"

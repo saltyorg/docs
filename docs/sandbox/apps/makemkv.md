@@ -228,7 +228,7 @@ sb install sandbox-makemkv
 
         ```yaml
         # Type: dict
-        makemkv_role_docker_envs_default: 
+        makemkv_role_docker_envs_default:
           TZ: "{{ tz }}"
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
@@ -248,7 +248,7 @@ sb install sandbox-makemkv
 
         ```yaml
         # Type: list
-        makemkv_role_docker_volumes_default: 
+        makemkv_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='makemkv') }}:/docker/appdata/makemkv"
           - "/mnt/unionfs:/storage:ro"
           - "/mnt/unionfs/makemkv:/output"

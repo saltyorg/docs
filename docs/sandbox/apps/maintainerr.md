@@ -397,7 +397,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        maintainerr_role_docker_envs_default: 
+        maintainerr_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -425,7 +425,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        maintainerr_role_docker_volumes_default: 
+        maintainerr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='maintainerr') }}:/opt/data"
         ```
 

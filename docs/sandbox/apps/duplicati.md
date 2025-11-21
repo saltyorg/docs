@@ -225,7 +225,7 @@ sb install sandbox-duplicati
 
         ```yaml
         # Type: dict
-        duplicati_role_docker_envs_default: 
+        duplicati_role_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -244,7 +244,7 @@ sb install sandbox-duplicati
 
         ```yaml
         # Type: list
-        duplicati_role_docker_volumes_default: 
+        duplicati_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='duplicati') }}:/config"
           - "{{ server_appdata_path }}:/saltbox/opt"
           - "/srv/git/saltbox:/saltbox/saltbox"

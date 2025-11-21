@@ -178,7 +178,7 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        mariadb_role_docker_volumes_migration: 
+        mariadb_role_docker_volumes_migration:
           - "{{ mariadb_role_paths_location }}:/config"
         ```
 
@@ -260,7 +260,7 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        mariadb_role_docker_envs_default: 
+        mariadb_role_docker_envs_default:
           TZ: "{{ tz }}"
           MARIADB_ROOT_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
           MARIADB_USER: "{{ lookup('role_var', '_docker_env_user', role='mariadb') }}"
@@ -298,7 +298,7 @@ The dump file remains on disk at `/opt/mariadb_legacy/dump.sql` post-migration i
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        mariadb_role_docker_volumes_default: 
+        mariadb_role_docker_volumes_default:
           - "{{ mariadb_role_paths_location }}:/var/lib/mysql"
         ```
 

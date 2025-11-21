@@ -225,7 +225,7 @@ sb install sandbox-filezilla
 
         ```yaml
         # Type: dict
-        filezilla_role_docker_envs_default: 
+        filezilla_role_docker_envs_default:
           USER_ID: "{{ uid }}"
           GROUP_ID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -245,7 +245,7 @@ sb install sandbox-filezilla
 
         ```yaml
         # Type: list
-        filezilla_role_docker_volumes_default: 
+        filezilla_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='filezilla') }}/config:/config"
           - "/home/{{ user.name }}:/storage"
         ```

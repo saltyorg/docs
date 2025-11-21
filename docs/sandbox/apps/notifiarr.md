@@ -316,7 +316,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 
         ```yaml
         # Type: dict
-        notifiarr_role_docker_envs_default: 
+        notifiarr_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -333,7 +333,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 
         ```yaml
         # Type: list
-        notifiarr_role_docker_volumes_default: 
+        notifiarr_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='notifiarr') }}:/config"
           - "/var/run/utmp:/var/run/utmp"
         ```
@@ -351,7 +351,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
 
         ```yaml
         # Type: list
-        notifiarr_role_docker_mounts_default: 
+        notifiarr_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

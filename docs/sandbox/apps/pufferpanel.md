@@ -212,7 +212,7 @@ sb install sandbox-pufferpanel
 
         ```yaml
         # Type: list
-        pufferpanel_role_docker_ports_defaults: 
+        pufferpanel_role_docker_ports_defaults:
           - "5657:5657"
         ```
 
@@ -229,7 +229,7 @@ sb install sandbox-pufferpanel
 
         ```yaml
         # Type: dict
-        pufferpanel_role_docker_envs_default: 
+        pufferpanel_role_docker_envs_default:
           TZ: "{{ tz }}"
           GIN_MODE: "release"
         ```
@@ -247,7 +247,7 @@ sb install sandbox-pufferpanel
 
         ```yaml
         # Type: list
-        pufferpanel_role_docker_volumes_default: 
+        pufferpanel_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='pufferpanel') }}/config:/etc/pufferpanel"
           - "{{ lookup('role_var', '_paths_location', role='pufferpanel') }}/data:/var/lib/pufferpanel"
           - "{{ lookup('role_var', '_paths_location', role='pufferpanel') }}/logs:/var/log/pufferpanel"

@@ -323,7 +323,7 @@ qbit_manage:
 
         ```yaml
         # Type: dict
-        qbit_manage_role_docker_envs_default: 
+        qbit_manage_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -362,7 +362,7 @@ qbit_manage:
 
         ```yaml
         # Type: list
-        qbit_manage_role_docker_volumes_default: 
+        qbit_manage_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='qbit_manage') }}:/config"
         ```
 

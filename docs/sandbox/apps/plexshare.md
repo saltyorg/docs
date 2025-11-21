@@ -226,7 +226,7 @@ sb install sandbox-plexshare
 
         ```yaml
         # Type: dict
-        plexshare_role_docker_envs_default: 
+        plexshare_role_docker_envs_default:
           TZ: "{{ tz }}"
           WEB_DOCUMENT_ROOT: "/app/public"
           WEB_DOCUMENT_INDEX: "index.php"

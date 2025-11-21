@@ -221,7 +221,7 @@ sb install sandbox-pgadmin
 
         ```yaml
         # Type: dict
-        pgadmin_role_docker_envs_default: 
+        pgadmin_role_docker_envs_default:
           PGADMIN_DEFAULT_EMAIL: "{{ user.email }}"
           PGADMIN_DEFAULT_PASSWORD: "{{ user.pass }}"
         ```
@@ -239,7 +239,7 @@ sb install sandbox-pgadmin
 
         ```yaml
         # Type: list
-        pgadmin_role_docker_volumes_default: 
+        pgadmin_role_docker_volumes_default:
           - "pgadmin:/var/lib/pgadmin"
         ```
 

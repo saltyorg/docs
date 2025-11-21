@@ -255,7 +255,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
         ```yaml
         # Type: dict
-        prometheus_role_docker_envs_default: 
+        prometheus_role_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -272,7 +272,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
         ```yaml
         # Type: list
-        prometheus_role_docker_commands_default: 
+        prometheus_role_docker_commands_default:
           - "--config.file=/etc/prometheus/prometheus.yml"
           - "--storage.tsdb.path=/data"
           - "--storage.tsdb.retention.time={{ lookup('role_var', '_retention', role='prometheus') }}"
@@ -292,7 +292,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
         ```yaml
         # Type: list
-        prometheus_role_docker_volumes_default: 
+        prometheus_role_docker_volumes_default:
           - "{{ prometheus_role_paths_location }}:/etc/prometheus"
           - "{{ prometheus_role_paths_location }}/data:/data"
         ```
@@ -310,7 +310,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
 
         ```yaml
         # Type: dict
-        prometheus_role_docker_labels_default: 
+        prometheus_role_docker_labels_default:
           traefik.http.middlewares.prometheus-auth.basicauth.usersfile: "/etc/traefik/auth"
         ```
 

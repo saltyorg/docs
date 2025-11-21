@@ -224,7 +224,7 @@ A typical apprise URL would look like this:
 
         ```yaml
         # Type: dict
-        apprise_role_docker_envs_default: 
+        apprise_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -243,7 +243,7 @@ A typical apprise URL would look like this:
 
         ```yaml
         # Type: list
-        apprise_role_docker_volumes_default: 
+        apprise_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='apprise') }}:/config"
         ```
 

@@ -263,7 +263,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
         ```yaml
         # Type: dict
-        thelounge_role_docker_envs_default: 
+        thelounge_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -282,7 +282,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
         ```yaml
         # Type: list
-        thelounge_role_docker_volumes_default: 
+        thelounge_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='thelounge') }}:/config"
         ```
 

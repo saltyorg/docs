@@ -228,7 +228,7 @@ sb install sandbox-pyload
 
         ```yaml
         # Type: dict
-        pyload_role_docker_envs_default: 
+        pyload_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -247,7 +247,7 @@ sb install sandbox-pyload
 
         ```yaml
         # Type: list
-        pyload_role_docker_volumes_default: 
+        pyload_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='pyload') }}:/config"
         ```
 

@@ -62,7 +62,7 @@
           {% endif %}
             {{ format_type_comment(var.var_type) }}
           {% if var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
             {{ line }}
             {% endfor %}
@@ -83,7 +83,7 @@
           {% if var.name == instances_var %}
                 {{ var.name }}: ["{{ role_name }}", "{{ role_name }}2"]
           {% elif var.is_multiline %}
-                {{ var.name }}: {{ var.value_lines[0] }}
+                {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
                 {{ line }}
             {% endfor %}
@@ -103,7 +103,7 @@
       {% endif %}
         {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
+        {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
         {{ line }}
         {% endfor %}
@@ -124,7 +124,7 @@
       {% if var.name == instances_var %}
             {{ var.name }}: ["{{ role_name }}", "{{ role_name }}2"]
       {% elif var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
             {{ line }}
         {% endfor %}
@@ -163,7 +163,7 @@
           {% endif %}
             {{ format_type_comment(var.var_type) }}
           {% if var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
             {{ line }}
             {% endfor %}
@@ -200,7 +200,7 @@
       {% endif %}
         {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
+        {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
         {{ line }}
         {% endfor %}
@@ -257,7 +257,7 @@
             ```yaml { .sb-show-on-unchecked }
             {{ format_type_comment(var.var_type) }}
           {% if var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
             {{ line }}
             {% endfor %}
@@ -290,7 +290,7 @@
         ```yaml { .sb-show-on-unchecked }
         {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
+        {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
         {{ line }}
         {% endfor %}
@@ -367,7 +367,7 @@
           {% endif %}
             {{ format_type_comment(var.var_type) }}
           {% if var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
             {{ line }}
             {% endfor %}
@@ -387,7 +387,7 @@
       {% endif %}
         {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
+        {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
         {{ line }}
         {% endfor %}
@@ -427,7 +427,7 @@
             ```yaml
             {{ format_type_comment(var.var_type) }}
           {% if var.is_multiline %}
-            {{ var.name }}: {{ var.value_lines[0] }}
+            {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
             {% for line in var.value_lines[1:] %}
             {{ line }}
             {% endfor %}
@@ -448,7 +448,7 @@
         ```yaml
         {{ format_type_comment(var.var_type) }}
       {% if var.is_multiline %}
-        {{ var.name }}: {{ var.value_lines[0] }}
+        {{ var.name }}:{% if var.value_lines[0] %} {{ var.value_lines[0] }}{% endif +%}
         {% for line in var.value_lines[1:] %}
         {{ line }}
         {% endfor %}

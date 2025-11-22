@@ -72,4 +72,4 @@ sb install sandbox-varken
 
 7. You can find an example dashboard [here](https://raw.githubusercontent.com/thezak48/Varken/develop/dashboard_overseerr.json) which can be uploaded or pasted into Grafana to import.
 
-- For app specific instructions refer to the [grafana role](../../apps/grafana.md) and the upstream documentation 
+- For app specific instructions refer to the [grafana role](../../apps/grafana.md) and the upstream documentation

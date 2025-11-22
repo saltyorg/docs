@@ -142,7 +142,7 @@ A common use for lists is to specify extra Docker mappings or flags. Let's exami
 
     ```yaml
     # Type: list
-    code_server_role_docker_volumes_default: 
+    code_server_role_docker_volumes_default:
       - "{{ lookup('role_var', '_paths_location', role='code_server') }}/project:/home/coder/project"
       - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.config:/home/coder/.config"
       - "{{ lookup('role_var', '_paths_location', role='code_server') }}/.local:/home/coder/.local"

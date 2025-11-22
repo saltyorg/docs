@@ -54,11 +54,14 @@ sonarr : Create and start container --------------------------------------------
 lidarr : Create and start container -----------------------------------------------...- 4.88s
 chaz@oberon:~/saltbox$
 ```
+
 Note this part: it’s even color-coded:
+
 ```
 PLAY RECAP ************************************************************************************
 localhost               : ok=713  changed=180  unreachable=0 failed=0
 ```
+
 There should be no red there.
 
 If you are not left at a prompt like this after running the saltbox install, chances are an error occurred during the install, and typically that error is shown at the end here.
@@ -114,6 +117,7 @@ cloudflare:
   api: REDACTED
 ...
 ```
+
 We get:
 
 ```

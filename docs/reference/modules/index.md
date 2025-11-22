@@ -53,8 +53,8 @@ tags:
 |                                         |                                             |
 |-----------------------------------------|:-------------------------------------------:|
 | [Diag](diag.md)                         |                   `diag`                    |
-| [Hetzner VLAN](hetzner_vlan.md)         | `hetzner-vlan-deploy` `hetzner-vlan-remove` | 
+| [Hetzner VLAN](hetzner_vlan.md)         | `hetzner-vlan-deploy` `hetzner-vlan-remove` |
 | [Plex Auth Token](plex_auth_token.md)   |              `plex-auth-token`              |
-| [Plex Fix Futures](plex_fix_futures.md) |             `plex-fix-futures`              | 
+| [Plex Fix Futures](plex_fix_futures.md) |             `plex-fix-futures`              |
 | [Reboot](reboot.md)                     |                  `system`                   |
 | [Sandbox](sandbox.md)                   |                  `sandbox`                  |

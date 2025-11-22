@@ -59,6 +59,7 @@ First, create an rclone remote pointing to your NAS using whatever connection sc
     If your connection to this NAS is speedy enough, you could mount it at `/mnt/local/Media` as described in the "truly local storage" option above instead of using cloudplow.
 
 Then fill out the remote details in `settings.yml`
+
 ```ini
 rclone:
   enabled: yes

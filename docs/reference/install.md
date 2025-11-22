@@ -15,21 +15,25 @@ tags:
 ## Install Saltbox
 
 === "Saltbox"
+
     ```shell
     sb install saltbox
     ```
 
 === "Mediabox"
+
     ```shell
     sb install mediabox
     ```
 
 === "Feederbox"
+
     ```shell
     sb install feederbox
     ```
 
 === "Core"
+
     ```shell
     sb install core
     ```

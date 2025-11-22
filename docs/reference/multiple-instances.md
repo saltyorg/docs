@@ -78,19 +78,21 @@ Run the standard app tag (in this case `sb install sonarr`) to set up all the in
     ```yaml
     sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
     ```
+
     not
+
     ```yaml
     sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
     ```
 
 Given the example above, `sb install sonarr` would install:
 
-| List entry    | Container Name | Config Directory   | Subdomain                    |
-| ------------- | -------------- | ------------------ | ---------------------------- |
-| sonarr        | sonarr         | `/opt/sonarr`      | sonarr.xYOUR_DOMAIN_NAMEx        |
-| sonarrbing    | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.xYOUR_DOMAIN_NAMEx    |
-| sonarrbang    | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.xYOUR_DOMAIN_NAMEx    |
-| sonarrboing   | sonarrboing    | `/opt/sonarrboing` | sonarrboing.xYOUR_DOMAIN_NAMEx   |
+| List entry  | Container Name | Config Directory   | Subdomain                      |
+|-------------|----------------|--------------------|--------------------------------|
+| sonarr      | sonarr         | `/opt/sonarr`      | sonarr.xYOUR_DOMAIN_NAMEx      |
+| sonarrbing  | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.xYOUR_DOMAIN_NAMEx  |
+| sonarrbang  | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.xYOUR_DOMAIN_NAMEx  |
+| sonarrboing | sonarrboing    | `/opt/sonarrboing` | sonarrboing.xYOUR_DOMAIN_NAMEx |
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 

@@ -36,6 +36,7 @@ Settings are available as [environment variables:octicons-link-external-16:{ .md
     By default, web access is restricted by Authelia and VNC access by SSH authentication; hence, no VNC password is configured. To add this extra layer of authorization, the process is straightforward:
 
     1. Run the following command:
+
        ```shell
        $EDITOR /opt/firefox/.vncpass_clear
        ```

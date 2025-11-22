@@ -51,7 +51,7 @@ xROLE_NAMEx_traefik_middleware_custom: "appAuth"
 ```yaml
 #### Shared metadata between all Plex instances ####
 #### Presumes one of the instances is named `plex` ####
-plex_role_docker_volumes_custom: "{{ [] if plex_name == 'plex' else 
+plex_role_docker_volumes_custom: "{{ [] if plex_name == 'plex' else
                                      [plex_paths_application_support_location + '/Media:/config/Library/Application Support/Plex Media Server/Media:ro',
                                       plex_paths_application_support_location + '/Metadata:/config/Library/Application Support/Plex Media Server/Metadata:ro'] }}"
 ```

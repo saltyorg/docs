@@ -69,7 +69,7 @@ OVH's default grub config looks like this:
 ```
 > cat /etc/default/grub
 
-# This file is based on /usr/share/grub/default/grub, some settings 
+# This file is based on /usr/share/grub/default/grub, some settings
 # have been changed by OVHcloud.
 # If you change this file, run 'update-grub' afterwards to update
 # /boot/grub/grub.cfg.

@@ -68,6 +68,7 @@ tags:
     ```shell
     sb install sandbox-qbittorrentvpn
     ```
+
     While the above command runs, go to this directory `/opt/qbittorrentvpn/wireguard` (Use FTP file manager like WinSCP)
     if you don't see this directory wait for few seconds, while the previous command creates this.
 

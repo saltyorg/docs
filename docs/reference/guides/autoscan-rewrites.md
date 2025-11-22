@@ -19,13 +19,17 @@ If Sonarr and Plex both see an episode at `/mnt/unionfs/Media/TV/SomeShow/Season
 If you are setting up saltbox from scratch and use our recommended paths, your autoscan config needs no rewrites for Sonarr/Radarr/Lidarr (a-train or inotify triggers probably still need rewrites).
 
 Rewrites *are* needed when:
+
 ```
 /the/path/where/the/trigger/sees/files
 ```
-and 
+
+and
+
 ```
 /the/path/where/the/target/sees/files
 ```
+
 are different.
 
 Sonarr has a root directory:
@@ -53,13 +57,17 @@ And things in that library are relative to that root:
 ![](images/autoscan-05-plex-episode.png)
 
 Those two paths are different, so Autoscan needs a rewrite to change this path:
+
 ```
 /tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
+
 to this path:
+
 ```
 /data/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
+
 so Plex can see it.
 
 ## What happens during a scan:
@@ -107,34 +115,44 @@ targets:
 ```
 
 Sonarr sends a path to Autoscan, which uses this rewrite:
+
 ```
       rewrite:
         - from: /tv/
           to: /mnt/unionfs/Media/TV/
 ```
+
 to make this change:
+
 ```
                   /tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 |||||||||||||||||||||
 /mnt/unionfs/Media/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
+
 then queues the scan.
 
 Later, when Autoscan goes to send the scan to Plex, it uses this rewrite:
+
 ```
       rewrite:
         - from: /mnt/unionfs/Media/
           to: /data/
 ```
+
 to make this change:
+
 ```
+
 /mnt/unionfs/Media/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ||||||||||||||||||
              /data/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
+
 so it matches what Plex expects.
 
 Using this method might be useful if you have multiple targets:
+
 ```
 targets:
   plex:
@@ -150,9 +168,11 @@ targets:
         - from: /mnt/unionfs/Media/
           to: /emby/sees/files/here/
 ```
+
 so that the local `/mnt/unionfs/Media/` path is used as a common interchange.
 
 You could also do this with a single rewrite as:
+
 ```
   sonarr:
     - name: sonarr
@@ -169,11 +189,13 @@ targets:
 ```
 
 The Sonarr rewrite goes straight to the final path required by Plex:
+
 ```
      /tv/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ||||||||
 /data/TV/#killerpost (2016) (tvdb-307250)/Season 1/#killerpost - S01E01 (tvdb-307250) Payne Potter [HDTV-720p x264 AC3 5.1]-W4F.mkv
 ```
+
 and Plex accepts the path as is.
 
-Of course, that works best when there's only a single target. 
+Of course, that works best when there's only a single target.

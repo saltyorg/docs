@@ -268,6 +268,7 @@ To go through this process, you will need the following:
         n) No (default)
         y/n> y
         ```
+
         You'll be presented with a list of shared drives you have access to. Enter a number and press <kbd class="platform-all">Enter</kbd>.
 
         ```shell

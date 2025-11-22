@@ -61,7 +61,7 @@ _Optionally_, if you want to abandon Cloud A:
     ```
     `google` is the name of the rclone remote that points to Cloud A.
 
-    change that to: 
+    change that to:
     ```
         "sync_remote": "cloud_b_remote:/Media",
         "upload_remote": "cloud_b_remote:/Media"

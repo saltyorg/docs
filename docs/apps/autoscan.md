@@ -130,9 +130,11 @@ anchors:
 You should enter the entire list of bin files that were created by the automated script here.
 
 If you didn't go through that process, use:
+
 ```
 rclone touch NAME_OF_CLOUD_REMOTE:mounted.bin
 ```
+
 To create one of these files on *each distinct element* of cloud storage. If you're using Dropbox, there is just one. If you have eleven OneDrive mounts, you need to create eleven of these.
 
 Do this on each rclone remote that you have *mounted*. For example, if you're using box.com and have three remotes (`box_remote`, `box_crypt`, `chunker_remote`), run this command on the last one, `chunker_remote`, since that';s the remote that you are mounting.

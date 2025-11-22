@@ -28,6 +28,7 @@ IMPORTANT: If you make changes to values in these files, you will have to run th
 Each tab shows a "section" in the file.
 
 === "apprise"
+
     ```yaml
     apprise:
     ```
@@ -52,6 +53,7 @@ Each tab shows a "section" in the file.
     ```
 
 === "cloudflare"
+
     ```yaml
     cloudflare:
       email:
@@ -68,6 +70,7 @@ Each tab shows a "section" in the file.
     Cloudflare does not support all top-level domains though its API. Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531). As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
 === "dockerhub"
+
     ```yaml
     dockerhub:
       user:
@@ -84,6 +87,7 @@ Each tab shows a "section" in the file.
     Entering Dockerhub credentials increases the number of images one can pull.
 
 === "user"
+
     ```yaml
     ---
     user:
@@ -140,6 +144,7 @@ Each tab shows a "section" in the file.
 Each tab shows a "section" in the file.
 
 === "authelia"
+
     ```yaml
     authelia:
       master: yes
@@ -153,6 +158,7 @@ Each tab shows a "section" in the file.
     Default is `login`.
 
 === "downloads"
+
     ```yaml
     ---
     downloads: /mnt/unionfs/downloads
@@ -163,6 +169,7 @@ Each tab shows a "section" in the file.
     Default is `/mnt/unionfs/downloads`.
 
 === "rclone"
+
     ```yaml
     rclone:
       enabled: yes
@@ -232,6 +239,7 @@ Each tab shows a "section" in the file.
     Default is `latest`.
 
 === "shell"
+
     ```yaml
     shell: bash
     ```
@@ -242,6 +250,7 @@ Each tab shows a "section" in the file.
     Default is `bash`.
 
 === "transcodes"
+
     ```yaml
     transcodes: /mnt/local/transcodes
     ```
@@ -261,6 +270,7 @@ Each tab shows a "section" in the file.
 Each tab shows a "section" in the file.
 
 === "dns"
+
     ```yaml
     dns:
       ipv4: yes
@@ -283,6 +293,7 @@ Each tab shows a "section" in the file.
     This is a global flag; if you want to override this for individual apps you can do so in the inventory.
 
 === "docker"
+
     ```yaml
     docker:
       json_driver: no
@@ -291,6 +302,7 @@ Each tab shows a "section" in the file.
     `json_driver` - make docker logs available as JSON
 
 === "gpu"
+
     ```yaml
     gpu:
       intel: yes
@@ -301,6 +313,7 @@ Each tab shows a "section" in the file.
     Default is `yes`.
 
 === "mounts"
+
     ```yaml
     mounts:
       ipv4_only: no
@@ -311,6 +324,7 @@ Each tab shows a "section" in the file.
     Default is `no`.
 
 === "system"
+
     ```yaml
     ---
     system:
@@ -324,6 +338,7 @@ Each tab shows a "section" in the file.
     `timedatectl list-timezones` at your server's command prompt will also list the options.
 
 === "traefik"
+
     ```yaml
     traefik:
       cert:

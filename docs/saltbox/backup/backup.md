@@ -82,7 +82,7 @@ This backup will take some time, likely hours, and all your containers may be do
 
     ```yaml
     cron:
-      cron_time: weekly 
+      cron_time: weekly
     ```
 
     Options are: `reboot`, `yearly`, `annually`, `monthly`, `weekly`, `daily`, `hourly`.
@@ -106,6 +106,7 @@ This backup will take some time, likely hours, and all your containers may be do
     ```shell
     0 4 * * * sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' '/usr/local/bin/ansible-playbook' '/srv/git/saltbox/backup.yml' '--tags' 'backup' >> '/srv/git/saltbox/saltbox_backup.log' 2>&1
     ```
+
     !!! note
         Visit [crontab.guru](https://crontab.guru/) for help with the scheduling format.
 

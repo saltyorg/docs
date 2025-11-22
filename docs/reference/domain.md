@@ -102,7 +102,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
         | A Record | nzbget       | _Feederbox IP Address_ | 300 |
         | A Record | nzbhydra2    | _Feederbox IP Address_ | 300 |
         | A Record | organizr     | _Feederbox IP Address_ | 300 |
-        | A Record | portainer    | _Feederbox IP Address_ | 300 | 
+        | A Record | portainer    | _Feederbox IP Address_ | 300 |
 
 === "Automatic Cloudflare DNS"
 

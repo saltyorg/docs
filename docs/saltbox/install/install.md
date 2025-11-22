@@ -217,7 +217,9 @@ To edit any of the following configuration files use the command written in the 
         ```yaml
         remote: "google:Media"
         ```
+
         or
+
         ```yaml
         remote: "my-sftp:/path/to/my/files"
         ```
@@ -332,9 +334,11 @@ To edit any of the following configuration files use the command written in the 
         Default is `auto` which will attempt to pick the timezone based on Geolocation of the server.
 
         For entering a manual value you can find supported values by using:
+
         ```shell
         timedatectl list-timezones
         ```
+
         Alternatively you can find a table on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
     8. Toggles whether Traefik is configured to use HTTP-01 certificate validation.

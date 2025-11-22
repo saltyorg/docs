@@ -137,7 +137,8 @@ IMPORTANT: DO NOT use your cloudbox configuration files. You can copy and paste 
   Remember that if you use a service account file to authenticate an rclone remote, you need to manually put that file into place before running the restore.
 
   If you still use the legacy /data, /tv or /movies docker volumes you will want to set this using the [inventory](../../saltbox/inventory/index.md)
-  ```yaml
+
+- ```yaml
   docker_legacy_volume: true
   ```
 
@@ -150,12 +151,15 @@ IMPORTANT: DO NOT use your cloudbox configuration files. You can copy and paste 
   ```shell
   sb install saltbox
   ```
+
   ```shell
   sb install feederbox
   ```
+
   ```shell
   sb install mediabox
   ```
+
   At a minimum (if you don't want all the apps that those tags install) you need to run:
 
   ```shell
@@ -173,4 +177,5 @@ IMPORTANT: DO NOT use your cloudbox configuration files. You can copy and paste 
   ```shell
   sb install sandbox-nextcloud
   ```
+
 As with a Cloudbox restore, any non-standard service files will be present in `/opt/service-files`, but you will need to copy them into `/etc/systemd/system`, then activate and start them. If you used the "tip44" method for adding teamdrives, for example, you'll need to do this.

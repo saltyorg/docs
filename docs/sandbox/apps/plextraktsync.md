@@ -44,7 +44,9 @@ docker exec -it plextraktsync plextraktsync login
 ```
 
 ???+ info "Plex"
+
     The target Plex server is initially set to your main Plex Saltbox instance using the owner account. To reset these credentials:
+
     ```shell
     docker exec -it plextraktsync plextraktsync plex-login
     ```

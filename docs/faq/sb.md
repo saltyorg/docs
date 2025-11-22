@@ -12,6 +12,7 @@ tags:
 ## My sb commands no longer work:
 
 Fix is to reinstall sb using the following command:
+
 ```shell
 curl -sL https://raw.githubusercontent.com/saltyorg/sb/master/sb_reinstall.sh | sudo -H bash
 ```

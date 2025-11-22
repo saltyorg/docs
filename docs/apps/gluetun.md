@@ -61,6 +61,7 @@ gluetun_firewall_outbound_subnets: ""
     The role uses the built-in Docker DNS resolver by default instead of using the DoH/DoT functionality Gluetun normally provides.
 
     If DNS leaks are a problem for your use case you will want to override this behavior with:
+
     ```yaml
     gluetun_docker_resolver: false
     ```

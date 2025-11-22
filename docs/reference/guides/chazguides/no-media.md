@@ -49,11 +49,14 @@ google:              1.0P  107T   1.0P   10%  /mnt/remote/google
 ➜  ~
 ```
 
-That shows a device called “google” (created by rclone config) mounted at `/mnt/remote/google` (done by saltbox_managed_rclone_google.service), 
+That shows a device called “google” (created by rclone config) mounted at `/mnt/remote/google` (done by saltbox_managed_rclone_google.service),
+
 ```
 google:              1.0P  107T   1.0P   10%  /mnt/remote
 ```
+
 and then two directories (local and remote/google, which are both inside the /mnt directory) combined into `/mnt/unionfs` [that’s done by saltbox_managed_mergerfs.service]
+
 ```
 local:remote/google  6.1P  107T   224G  100%  /mnt/unionfs
 ```
@@ -166,6 +169,7 @@ Nov 02 06:45:34 Ubuntu-1804-bionic-64-minimal systemd[1]: Started Rclone VFS Mou
 ```
 
 In that log you can see an error from last night when my server ran out of disk space, the rclone_vfs service died, then a reboot (after clearing space)  and it came back up.
+
 ```
 Nov 02 06:44:09 Ubuntu-1804-bionic-64-minimal rclone[9625]: Fatal error: failed to umount FUSE fs: exit status 1: fusermount: entry for /mnt/remote/google not found in /etc/mtab
 ```
@@ -191,6 +195,7 @@ ExecStop=/bin/fusermount -uz /mnt/remote/google
 ```
 
 You can see in that output that rclone_vfs is mounting your google: remote at /mnt/remote/google.
+
 ```
   google: /mnt/remote/google
   ^       ^
@@ -198,6 +203,7 @@ You can see in that output that rclone_vfs is mounting your google: remote at /m
   this
   remote
 ```
+
 That means that the content of your google drive should also appear at that location. Let’s check that:
 
 ```text

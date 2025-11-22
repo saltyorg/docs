@@ -61,20 +61,25 @@ Add or remove collections from these lists as needed.
 ##### Authentik Collection
 
 1. Add to `sb inventory`
-```yaml
-crowdsec_collections_install_custom:
-  - "firix/authentik"
-```
+
+    ```yaml
+    crowdsec_collections_install_custom:
+      - "firix/authentik"
+    ```
+
 2. Create a new file in `/etc/crowdsec/acquis.d` called `authentik.yaml`
+
 3. Add the below to `authentik.yaml`
-```yaml
----
-source: docker
-container_name:
- - authentik
-labels:
-  type: authentik
-```
+
+    ```yaml
+    ---
+    source: docker
+    container_name:
+     - authentik
+    labels:
+      type: authentik
+    ```
+
 4. Run `sb install crowdsec` to apply the collection
 
 #### Scenarios, Parsers, and Postoverflows

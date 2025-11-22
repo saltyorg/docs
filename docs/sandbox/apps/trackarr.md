@@ -199,12 +199,12 @@ The `trackarr` role will provision a config file with your pvr and server info. 
 
 === "API"
 
-    ??? variable null "`trackarr_server_apikey`"
+    ??? variable string "`trackarr_server_apikey`"
 
         ```yaml
         # default to blank
-        # Type: null
-        trackarr_server_apikey: 
+        # Type: string
+        trackarr_server_apikey: ""
         ```
 
 === "Docker"

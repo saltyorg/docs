@@ -19,7 +19,7 @@ Recommended for GUI applications and web services.
 
 1.  Run the interactive role to generate a Compose file with Traefik configuration:
 
-    ```sh
+    ```shell
     sb install generate-traefik-template
     ```
 
@@ -27,13 +27,13 @@ Recommended for GUI applications and web services.
 
 1.  Create the application directory (under `/opt` is recommended, for consistency and backup purposes)
 
-    ```sh
+    ```shell
     mkdir /opt/xCUSTOM_APP_NAMEx
     ```
 
 1.  It is recommended to store the Compose file in the root of the application directory:
 
-    ```sh
+    ```shell
     mv /tmp/docker-compose.yml /opt/xCUSTOM_APP_NAMEx/compose.yaml
     ```
 
@@ -246,7 +246,7 @@ Recommended for GUI applications and web services.
 
 1.  Deploy and start the container:
 
-    ```sh
+    ```shell
     cd /opt/xCUSTOM_APP_NAMEx
     docker compose up -d
     ```
@@ -261,7 +261,7 @@ While such containers can be run via Compose, you may prefer to avoid the extra 
 
 === "`~/.bashrc` `~/.zshrc`"
 
-    ```sh
+    ```shell
     xCUSTOM_APP_NAMEx() {
       docker run --rm -it \
         DOCKER/IMAGE:TAG "$@"
@@ -298,7 +298,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
 
     === "`~/.bashrc` `~/.zshrc`"
 
-        ```sh
+        ```shell
         yt-dlp() {
           docker run --rm -it \
             -v "$(pwd)":/downloads:rw \
@@ -307,7 +307,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
         }
         ```
 
-        ```sh
+        ```shell
         speedtest() {
           docker run --rm -it \
             gists/speedtest-cli "$@"

@@ -7,15 +7,15 @@ status: WIP
 
 ## Overview
 
-Saltbox dependency.
-
 Sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install common
 ```
 

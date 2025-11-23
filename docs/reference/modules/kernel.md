@@ -7,14 +7,14 @@ status: WIP
 
 ## Overview
 
-Saltbox dependency.
-
 Manages the Linux kernel.
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install kernel
 ```

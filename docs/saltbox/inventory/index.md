@@ -21,7 +21,7 @@ Enter your new values in:
 
 !!! tip inline end "Quick Shell Access"
 
-    ```sh
+    ```shell
     sb edit inventory
     ```
 

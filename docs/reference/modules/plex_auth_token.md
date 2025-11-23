@@ -11,6 +11,6 @@ Generates and validates Plex authentication tokens for API access, prompting use
 
 ## Deployment
 
-```sh
+```shell
 sb install plex-auth-token
 ```

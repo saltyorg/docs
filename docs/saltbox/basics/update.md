@@ -12,7 +12,7 @@ tags:
 
 To pull changes, run:
 
-```sh
+```shell
 sb update
 ```
 
@@ -26,7 +26,7 @@ This will also update the Saltbox CLI, Ansible, and migrate the configuration fi
 
 Every `sb update` should be followed by one of the [main tags](../../apps/main_tags.md), or at a minimum:
 
-```sh
+```shell
 sb install core
 ```
 
@@ -36,7 +36,7 @@ This ensures dependencies and system configuration are up to spec with the lates
 
 Generally, to update individual applications, run the tag for that application. For example,
 
-```sh
+```shell
 sb install radarr
 ```
 
@@ -44,7 +44,7 @@ This will retrieve the current version of the Radarr image and recreate the cont
 
 The same thing happens if you run one of the top-level tags:
 
-```sh
+```shell
 sb install saltbox
 ```
 

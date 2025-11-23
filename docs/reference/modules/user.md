@@ -7,14 +7,14 @@ status: WIP
 
 ## Overview
 
-Saltbox dependency.
-
 Creates and configures your user account.
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install user
 ```

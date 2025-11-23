@@ -13,7 +13,7 @@ Enhances the Message of the Day (MOTD) displayed upon user login to provide pers
 
 ## Deployment
 
-```sh
+```shell
 sb install motd
 ```
 

@@ -13,7 +13,7 @@ Generates a Docker Compose template with Traefik configuration.
 
 ## Deployment
 
-```sh
+```shell
 sb install generate-traefik-template
 ```
 

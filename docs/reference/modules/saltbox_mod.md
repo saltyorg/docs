@@ -13,7 +13,7 @@ Clones the saltbox_mod repository.
 
 ## Deployment
 
-```sh
+```shell
 sb install saltbox-mod
 ```
 

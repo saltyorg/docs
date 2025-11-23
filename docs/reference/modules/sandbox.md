@@ -32,7 +32,7 @@ The Sandbox repository serves as a community-driven space for unofficial Saltbox
 
 !!! info inline end "Installed By Default"
 
-```sh
+```shell
 sb install sandbox
 ```
 
@@ -40,7 +40,7 @@ sb install sandbox
 
 To pull repository changes, run a standard Saltbox update:
 
-```sh
+```shell
 sb update
 ```
 
@@ -50,7 +50,7 @@ Sandbox roles are listed via the `sb list` command and under [Apps](../../apps/i
 
 To deploy a Sandbox role, use `sb install`, prepending `sandbox-` to the role tag. Example:
 
-```sh title="To deploy Kometa"
+```shell title="To deploy Kometa"
 sb install sandbox-kometa
 ```
 

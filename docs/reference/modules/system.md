@@ -7,15 +7,15 @@ status: WIP
 
 ## Overview
 
-Saltbox dependency.
-
 Configures system-wide settings including APT updates, network optimizations, sysctl tunings, CPU performance mode, timezone, locale, and log rotation.
 
 ---
 
+Saltbox dependency.
+
 ## Deployment
 
-```sh
+```shell
 sb install system
 ```
 

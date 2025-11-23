@@ -13,7 +13,7 @@ Configures VLAN interfaces on a Hetzner host.
 
 ## Deployment
 
-```sh
+```shell
 sb install hetzner-vlan-deploy
 ```
 

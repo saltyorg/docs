@@ -13,6 +13,6 @@ Clones the mount-templates repository.
 
 ## Deployment
 
-```sh
+```shell
 sb install mount-templates
 ```

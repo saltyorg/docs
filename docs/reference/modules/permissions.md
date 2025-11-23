@@ -13,6 +13,6 @@ Resets ownership and permissions to the configured user's on key locations.
 
 ## Deployment
 
-```sh
+```shell
 sb install fix-permissions
 ```

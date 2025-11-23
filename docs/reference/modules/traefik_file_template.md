@@ -13,7 +13,7 @@ Generates a Traefik file template.
 
 ## Deployment
 
-```sh
+```shell
 sb install generate-traefik-file-template
 ```
 

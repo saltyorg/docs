@@ -7,15 +7,15 @@ status: WIP
 
 ## Overview
 
-Saltbox dependency.
-
 Manages remote storage mounts.
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install mounts
 ```
 

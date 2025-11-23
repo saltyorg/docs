@@ -13,6 +13,6 @@ Sets Plex items stuck in the future back to the past.
 
 ## Deployment
 
-```sh
+```shell
 sb install plex-fix-futures
 ```

@@ -151,7 +151,7 @@ tags:
 | [Kavita](../sandbox/apps/kavita.md) | `sandbox-kavita` | `sandbox_roles` |
 | [Komga](../sandbox/apps/komga.md)   | `sandbox-komga`  | `sandbox_roles` |
 
-## :pirate_flag: Content Acquisition Apps
+## :ocean: Content Acquisition Apps
 
 ### Download Client
 
@@ -197,7 +197,7 @@ tags:
 | [PyLoad](../sandbox/apps/pyload.md)            |    `sandbox-pyload`    |          `sandbox_roles`          |
 | [YTDL-Sub](../sandbox/apps/ytdl_sub.md)        |   `sandbox-ytdl-sub`   |          `sandbox_roles`          |
 
-## :magic_wand: Media Management Apps
+## :man_mage: Media Management Apps
 
 ### Collector
 

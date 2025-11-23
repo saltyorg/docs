@@ -12,166 +12,78 @@ tags:
 
 ## Overview
 
-[tqm](https://github.com/autobrr/tqm) is a CLI tool to manage your torrent client queues. Primary focus is on removing torrents that meet specific criteria.
+> [tqm](https://github.com/autobrr/tqm) is a CLI (Command Line Interface) tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
 
-- The tqm binary is downloaded and a service and timer file created when the config is identified.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-!!! note
-      📢 You will need to have `config.yaml` in place (`/opt/tqm/`) for the role to run successfully. [Here](https://github.com/autobrr/tqm#example-configuration) is an example config you can grab and fill in with your own details.
+[:material-home:**Homepage**](https://autobrr.com/3rd-party-tools/manage-torrents#tqm){ .md-button .md-button--stretch }
 
-| Details     |
-|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/autobrr/tqm){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/autobrr/tqm/blob/main/README.md){ .md-button .md-button--stretch }
 
-Recommended install types: Feederbox, Saltbox, Core
+[:material-tag:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
 
-### 1. Setup
+[:fontawesome-brands-discord:**Community**](https://discord.autobrr.com/){ .md-button .md-button--stretch }
 
-Edit in your favorite code editor  (with yaml highlighting) or even a unix editor like nano.
+</div>
 
-```shell
-nano /opt/tqm/config.yaml
-```
+---
 
-### Modify "Client" section
+???+ warning "Sandbox `settings.yml` Deprecation"
 
-!!! note
-      📢 As setup for Saltbox, tqm uses this path to find your downloaded files:  `/mnt/unionfs/downloads/...` (see [Paths](../../saltbox/basics/paths.md#media))
+    As of ***role-refactor***, `settings.yml` is no longer used to configure Sandbox roles. Values currently set in `/opt/sandbox/settings.yml` must be migrated to their Inventory form. See [Role Defaults](#role-defaults) for the expected syntax.
 
-Client Example:
+## Configuration
 
-```yaml
-...
-  deluge:
-    enabled: false
-    filter: default
-    download_path: /mnt/unionfs/downloads/torrents/deluge
-    free_space_path: /mnt/local/downloads/torrents/deluge
-    download_path_mapping:
-      /downloads/torrents/deluge: /mnt/unionfs/downloads/torrents/deluge
-    host: deluge
-    login: localclient
-    password: password-from-/opt/deluge/auth
-    port: 58846
-    type: deluge
-    v2: true
-  qbt:
-    download_path: /mnt/unionfs/downloads/torrents/qbittorrent/completed
-    free_space_path: /mnt/local/downloads/torrents/qbittorrent/completed
-    download_path_mapping:
-      /mnt/unionfs/downloads/torrents/qbittorrent/completed: /mnt/unionfs/downloads/torrents/qbittorrent/completed
-    enabled: true
-    filter: default
-    type: qbittorrent
-    url: http://qbittorrent:8080
-    user: seed
-    password: super_strong_password
-...
-```
+1.  Set your download client via the Inventory override.
 
-`download_path:` Where your downloaded files are stored.
+1.  Edit `/opt/tqm/config.yaml`.  
 
-`free_space_path:` Typically the local mergerfs path to show available space.
+Use Saltbox paths (`/mnt/unionfs/downloads/...`) for `download_path` as per [Saltbox media paths](../../saltbox/basics/paths.md#media).
 
-`enabled:` Set to boolean value (true, false) depending on the client you use.
-
-`url:` Set to the examples equivalent of your client.
-
-`user:` your default user from **accounts.yml**
-
-`password:` your default password from **accounts.yml**
-
-### Modify "Filter" section
-
-Filter Example:
+**Example client config:**
 
 ```yaml
-...
-filters:
-  default:
-    ignore:
-      - TrackerName contains "sportscult"
-      - TrackerStatus contains "Tracker is down"
-      - Label contains "upload"
-      - Downloaded == false && !IsUnregistered()
-    remove:
-      - IsUnregistered()
-      - Label contains "-imported" && TrackerName contains "avistaz.to" && (Ratio > 2.0 || SeedingDays >= 21.0)
-      - Label contains "-imported" && TrackerName contains "nebulance.io" && SeedingDays >= 6.0
-      - Label in ["lidarr-imported"] && (Ratio > 5.0 || SeedingDays >= 25.0)
-      - Label in ["autoremove-btn"] && (Ratio > 3.0 || SeedingDays >= 15.0)
-...
+deluge:
+  enabled: false
+  download_path: /mnt/unionfs/downloads/torrents/deluge
+  free_space_path: /mnt/local/downloads/torrents/deluge
+  download_path_mapping:
+    /downloads/torrents/deluge: /mnt/unionfs/downloads/torrents/deluge
+  host: deluge
+  login: localclient
+  password: password-from-/opt/deluge/auth
+  port: 58846
+  type: deluge
+  v2: true
+qbt:
+  enabled: true
+  download_path: /mnt/unionfs/downloads/torrents/qbittorrent/completed
+  free_space_path: /mnt/local/downloads/torrents/qbittorrent/completed
+  download_path_mapping:
+    /mnt/unionfs/downloads/torrents/qbittorrent/completed: /mnt/unionfs/downloads/torrents/qbittorrent/completed
+  type: qbittorrent
+  url: http://qbittorrent:8080
+  user: seed
+  password: super_strong_password
 ```
 
-`ignore:` Instructs **tqm** to ignore anything defined.
+See the [main documentation](https://github.com/autobrr/tqm#example-configuration) for full configuration and filter options.
 
-`remove:` Instructs **tqm** what files to delete based on what is defined in the **filter**.
-
-Note: There are many ways to do the same thing. Check the **language definitions** for an explanation [here](https://github.com/antonmedv/expr/blob/586b86b462d22497d442adbc924bfb701db3075d/docs/Language-Definition.md){: .header-icons }
-
-### Modify "Label" section
-
-Label Example:
-
-```yaml
-...
-    label:
-      # Permaseed Animebytes torrents (all must evaluate to true)
-      - name: permaseed-AB
-        update:
-          - SeedingSeconds > 1000.0
-          - Label contains "-imported"
-          - TrackerName contains "animebytes.tv"
-      # cleanup btn season packs to autoremove-btn (all must evaluate to true)
-      - name: autoremove-btn
-        update:
-          - Label == "sonarr-imported"
-          - TrackerName == "landof.tv"
-          - not (Name contains "1080p")
-          - len(Files) >= 3
-...
-```
-
-!!! note
-      📢 tqm will not create a category for you, so be sure to create the category first. If you
-      want the file moved as well, you will need to set **Default Torrent Management Mode: Automatic**.
-
-`name:` The category (label) you want the torrent changed to.
-
-`update:` Define what is to be moved by tqm.
-
-### Modify the "Settings" file
-
-You can edit the **settings.yml** file in `/opt/sandbox/`. The default is `qbt`, for qbittorrent. If you want to use deluge, change that entry. Once you set your download client, run the role again and it will update the service.
-
-Shortened example of **settings.yml**:
-
-```yaml
-...
-tandoor:
-  secret_key:
-tqm:
-  download_client: "qbt" # Change this to deluge or whatever you specify in config.yaml
-transmissionvpn:
-  vpn_user:
-  vpn_pass:
-  vpn_prov:
-...
-```
-
-### 2. Installation
+## Deployment
 
 ```shell
 sb install sandbox-tqm
 ```
 
-To check the status of the service, you can run:
+## Usage
+
+Check service status:
 
 ```shell
 sudo systemctl status tqm.service
 ```
 
-You can also follow the logs with:
+View logs:
 
 ```shell
 tail -f /opt/tqm/activity.log

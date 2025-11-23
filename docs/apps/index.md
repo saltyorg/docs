@@ -210,6 +210,7 @@ tags:
 | [Whisparr](whisparr.md)                           |       `whisparr`        | `feederbox_roles` `saltbox_roles` |
 | [Lazylibrarian](../sandbox/apps/lazylibrarian.md) | `sandbox-lazylibrarian` |          `sandbox_roles`          |
 | [Medusa](../sandbox/apps/medusa.md)               |    `sandbox-medusa`     |          `sandbox_roles`          |
+| [Mylar](../sandbox/apps/mylar3.md)                |    `sandbox-mylar3`     |          `sandbox_roles`          |
 
 ### Collector Accessory
 

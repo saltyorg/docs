@@ -375,7 +375,7 @@ sb install sandbox-wordpress
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        wordpress2_docker_envs_default: 
+        wordpress2_docker_envs_default:
           TZ: "{{ tz }}"
           WORDPRESS_DB_HOST: "mariadb:3306"
           WORDPRESS_DB_USER: "root"
@@ -407,7 +407,7 @@ sb install sandbox-wordpress
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        wordpress2_docker_volumes_default: 
+        wordpress2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='wordpress') }}:/var/www/html"
         ```
 

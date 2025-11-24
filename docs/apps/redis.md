@@ -178,7 +178,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        redis2_docker_envs_default: 
+        redis2_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -206,7 +206,7 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        redis2_docker_volumes_default: 
+        redis2_docker_volumes_default:
           - "{{ redis_role_paths_location }}:/data"
         ```
 

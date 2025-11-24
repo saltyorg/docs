@@ -387,7 +387,7 @@ sb install sandbox-jellyseerr
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        jellyseerr2_docker_envs_default: 
+        jellyseerr2_docker_envs_default:
           UMASK: "002"
           TZ: "{{ tz }}"
           LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='jellyseerr') }}"
@@ -417,7 +417,7 @@ sb install sandbox-jellyseerr
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        jellyseerr2_docker_volumes_default: 
+        jellyseerr2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='jellyseerr') }}:/app/config"
         ```
 

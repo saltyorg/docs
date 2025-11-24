@@ -564,7 +564,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        overseerr2_docker_envs_default: 
+        overseerr2_docker_envs_default:
           UMASK: "002"
           TZ: "{{ tz }}"
           LOG_LEVEL: "{{ lookup('role_var', '_log_level', role='overseerr') }}"
@@ -594,7 +594,7 @@ Are you setting Saltbox up for the first time?
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        overseerr2_docker_volumes_default: 
+        overseerr2_docker_volumes_default:
           - "{{ overseerr_role_paths_location }}:/app/config"
         ```
 

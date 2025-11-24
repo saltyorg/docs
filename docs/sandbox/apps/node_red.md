@@ -362,7 +362,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        node_red2_docker_envs_default: 
+        node_red2_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -390,7 +390,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        node_red2_docker_volumes_default: 
+        node_red2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='node_red') }}:/data"
         ```
 

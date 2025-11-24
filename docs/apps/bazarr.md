@@ -434,7 +434,7 @@ Please refer to the official documentation for an explanation of the settings. S
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        bazarr2_docker_envs_default: 
+        bazarr2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -466,7 +466,7 @@ Please refer to the official documentation for an explanation of the settings. S
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        bazarr2_docker_volumes_default: 
+        bazarr2_docker_volumes_default:
           - "{{ bazarr_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
@@ -482,7 +482,7 @@ Please refer to the official documentation for an explanation of the settings. S
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        bazarr2_docker_volumes_legacy: 
+        bazarr2_docker_volumes_legacy:
           - "/mnt/unionfs/Media/Movies:/movies"
           - "/mnt/unionfs/Media/TV:/tv"
         ```

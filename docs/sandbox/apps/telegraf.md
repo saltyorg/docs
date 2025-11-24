@@ -336,7 +336,7 @@ sb install sandbox-telegraf
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        telegraf2_docker_envs_default: 
+        telegraf2_docker_envs_default:
           TZ: "{{ tz }}"
           EULA: "TRUE"
           UID: "{{ uid }}"
@@ -373,7 +373,7 @@ sb install sandbox-telegraf
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        telegraf2_docker_volumes_default: 
+        telegraf2_docker_volumes_default:
           - "{{ server_appdata_path }}/telegraf/{{ telegraf_name }}:/etc/telegraf:ro"
           - "/var/run/docker.sock:/var/run/docker.sock:ro"
           - "/var/run/utmp:/var/run/utmp"

@@ -356,7 +356,7 @@ After installation, go to wizarr.xYOUR_DOMAIN_NAMEx, enter a name for your serve
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        wizarr2_docker_envs_default: 
+        wizarr2_docker_envs_default:
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
@@ -388,7 +388,7 @@ After installation, go to wizarr.xYOUR_DOMAIN_NAMEx, enter a name for your serve
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        wizarr2_docker_volumes_default: 
+        wizarr2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/database:/data/database"
           - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/wizard:/data/wizard"
         ```

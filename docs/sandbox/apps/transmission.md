@@ -406,7 +406,7 @@ sb install sandbox-transmission
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        transmission2_docker_ports_defaults: 
+        transmission2_docker_ports_defaults:
           - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}"
           - "{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}:{{ lookup('role_var', '_docker_ports_51413', role='transmission') }}/udp"
         ```
@@ -440,7 +440,7 @@ sb install sandbox-transmission
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        transmission2_docker_envs_default: 
+        transmission2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -475,7 +475,7 @@ sb install sandbox-transmission
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        transmission2_docker_volumes_default: 
+        transmission2_docker_volumes_default:
           - "{{ transmission_role_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "{{ transmission_role_paths_downloads_location }}/watched:/watch"

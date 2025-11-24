@@ -364,7 +364,7 @@ sb install jellyfin
         ```yaml { .sb-show-on-checked }
         # System
         # Type: list
-        jellyfin2_system_settings_default: 
+        jellyfin2_system_settings_default:
           - { xpath: 'PublicPort', value: '80' }
           - { xpath: 'PublicHttpsPort', value: '443' }
           - { xpath: 'EnableFolderView', value: 'true' }
@@ -412,7 +412,7 @@ sb install jellyfin
         ```yaml { .sb-show-on-checked }
         # Network
         # Type: list
-        jellyfin2_network_settings_default: 
+        jellyfin2_network_settings_default:
           - { xpath: 'KnownProxies', value: 'traefik' }
           - { xpath: 'PublicPort', value: '80' }
           - { xpath: 'PublicHttpsPort', value: '443' }
@@ -524,7 +524,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        jellyfin2_docker_envs_default: 
+        jellyfin2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -558,7 +558,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        jellyfin2_docker_volumes_default: 
+        jellyfin2_docker_volumes_default:
           - "{{ jellyfin_role_paths_location }}:/config:rw"
           - "{{ server_appdata_path }}/scripts:/scripts"
           - "/dev/shm:/dev/shm"
@@ -575,7 +575,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        jellyfin2_docker_volumes_legacy: 
+        jellyfin2_docker_volumes_legacy:
           - "/mnt/unionfs/Media:/data"
         ```
 
@@ -604,7 +604,7 @@ sb install jellyfin
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        jellyfin2_docker_mounts_default: 
+        jellyfin2_docker_mounts_default:
           - target: /tmp
             type: tmpfs
         ```

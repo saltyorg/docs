@@ -457,7 +457,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        whisparr2_docker_envs_default: 
+        whisparr2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -489,7 +489,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        whisparr2_docker_volumes_default: 
+        whisparr2_docker_volumes_default:
           - "{{ whisparr_paths_location }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```

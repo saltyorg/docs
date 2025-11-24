@@ -357,7 +357,7 @@ sb install sandbox-qui
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        qui2_docker_envs_default: 
+        qui2_docker_envs_default:
           TZ: "{{ tz }}"
         ```
 
@@ -385,7 +385,7 @@ sb install sandbox-qui
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        qui2_docker_volumes_default: 
+        qui2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='qui') }}:/config"
         ```
 

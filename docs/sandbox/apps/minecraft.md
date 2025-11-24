@@ -393,7 +393,7 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        minecraft2_docker_ports_defaults: 
+        minecraft2_docker_ports_defaults:
           - "{{ lookup('role_var', '_docker_ports_25565', role='minecraft') }}:25565/tcp"
         ```
 
@@ -424,7 +424,7 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        minecraft2_docker_envs_default: 
+        minecraft2_docker_envs_default:
           TZ: "{{ tz }}"
           EULA: "TRUE"
           UID: "{{ uid }}"
@@ -455,7 +455,7 @@ mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        minecraft2_docker_volumes_default: 
+        minecraft2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='minecraft') }}/{{ minecraft_name }}/data:/data"
         ```
 

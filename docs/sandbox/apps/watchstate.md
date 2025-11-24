@@ -411,7 +411,7 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        watchstate2_docker_envs_default: 
+        watchstate2_docker_envs_default:
           WS_TZ: "{{ tz }}"
           WS_API_AUTO: "{{ 'true'
                         if lookup('role_var', '_api_auto', role='watchstate')
@@ -448,7 +448,7 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        watchstate2_docker_volumes_default: 
+        watchstate2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='watchstate') }}:/config"
         ```
 

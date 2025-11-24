@@ -341,7 +341,7 @@ sb install sandbox-rflood
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        rflood2_config_rflood_rc_settings_default: 
+        rflood2_config_rflood_rc_settings_default:
           # IP address that is reported to the tracker
           - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
           # Ports
@@ -496,7 +496,7 @@ sb install sandbox-rflood
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        rflood2_docker_ports_defaults: 
+        rflood2_docker_ports_defaults:
           - "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}:{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}"
           - "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}:{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}/udp"
         ```
@@ -529,7 +529,7 @@ sb install sandbox-rflood
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        rflood2_docker_envs_default: 
+        rflood2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
@@ -562,7 +562,7 @@ sb install sandbox-rflood
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        rflood2_docker_volumes_default: 
+        rflood2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='rflood') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```

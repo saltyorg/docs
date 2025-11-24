@@ -358,7 +358,7 @@ sb install sandbox-ombi
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        ombi2_docker_envs_default: 
+        ombi2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           UMASK: "002"
@@ -389,7 +389,7 @@ sb install sandbox-ombi
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        ombi2_docker_volumes_default: 
+        ombi2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='ombi') }}:/config"
         ```
 

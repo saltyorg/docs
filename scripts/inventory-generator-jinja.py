@@ -274,7 +274,10 @@ class RoleVariableParser:
             List of formatted lines ready to append to output
         """
         result = []
-        result.append(f"{output_indent}{new_var_name}: {value_lines[0]}")
+        if value_lines[0]:
+            result.append(f"{output_indent}{new_var_name}: {value_lines[0]}")
+        else:
+            result.append(f"{output_indent}{new_var_name}:")
 
         # Calculate indentation adjustment based on variable name length change
         # Format: "var_name: " = name + ": " = len(name) + 2

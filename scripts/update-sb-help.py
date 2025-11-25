@@ -117,7 +117,7 @@ def format_help_as_markdown(help_text: str) -> str:
         "<!-- termynal -->",
         "",
         "```console",
-        "$ sb -h",
+        "$ sb --help",
     ]
 
     # Add each line of help output

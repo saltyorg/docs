@@ -10,38 +10,39 @@ hide:
 <!-- termynal -->
 
 ```console
-$ sb -h
-Saltbox CLI
-
-Usage:
-  sb [command]
-
-Available Commands:
-  bench            Runs bench.sh benchmark
-  branch           Change the branch used by Saltbox
-  branch-sandbox   Change the branch used by Sandbox
-  diag             Runs Saltbox diagnostics role
-  docker           Manage Docker containers managed by Saltbox
-  edit             Edit Saltbox configuration files
-  fact             Manage Saltbox configuration facts
-  help             Help about any command
-  install          Runs Ansible playbooks with specified tags
-  inventory        Manage Saltbox inventory
-  list             List available Saltbox, Sandbox or Saltbox-mod tags
-  logs             Display logs of managed systemd services
-  motd             Display system information
-  reinstall-facts  Reinstall the Rust saltbox.fact file
-  reinstall-python Reinstall the Python version used by Saltbox and related Ansible virtual environment using uv
-  reinstall-venv   Reinstall the Ansible virtual environment
-  self-update      Update Saltbox CLI
-  update           Update Saltbox & Sandbox
-  validate-config  Validate Saltbox configuration files
-  version          Print Saltbox CLI version
-
-Flags:
-  -h, --help   help for sb
-
-Use "sb [command] --help" for more information about a command.
+$ sb --help
+Saltbox CLI                                                                                                           
+         
+  USAGE  
+         
+    sb [command] [--flags]  
+            
+  COMMANDS  
+            
+    bench                             Runs bench.sh benchmark
+    branch [branch_name]              Change the branch used by Saltbox
+    branch-sandbox [branch_name]      Change the branch used by Sandbox
+    diag                              Runs Saltbox diagnostics role
+    docker [command]                  Manage Docker containers managed by Saltbox
+    edit [command]                    Edit Saltbox configuration files
+    fact [role] [instance] [--flags]  Manage Saltbox configuration facts
+    help [command]                    Help about any command
+    install [tags] [--flags]          Runs Ansible playbooks with specified tags
+    list [query] [--flags]            List available Saltbox, Sandbox or Saltbox-mod tags
+    logs                              Display logs of managed systemd services
+    motd [--flags]                    Display system information
+    reinstall-facts [--flags]         Reinstall the Rust saltbox.fact file
+    reinstall-python [--flags]        Reinstall the Python version used by Saltbox and related Ansible virtual environment using uv
+    reinstall-venv [--flags]          Reinstall the Ansible virtual environment
+    self-update [--flags]             Update Saltbox CLI
+    update [--flags]                  Update Saltbox & Sandbox
+    validate-config [--flags]         Validate Saltbox configuration files
+    version                           Print Saltbox CLI version
+         
+  FLAGS  
+         
+    -h --help                         Help for sb
+    -v --version                      Version for sb
 ```
 
 <!-- END SALTBOX MANAGED CLI SECTION -->

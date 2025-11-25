@@ -165,6 +165,7 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
+  - pymdownx.keys
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
@@ -806,3 +807,12 @@ nav:
         - reference/modules/traefik_template.md
         - reference/modules/unionfs.md
         - reference/modules/user.md
+
+  - Contributing:
+    - Development:
+      - contributing/development/index.md
+    - Documentation:
+      - contributing/documentation/index.md
+    - Requests:
+      - contributing/requests/features.md
+      - contributing/requests/support.md

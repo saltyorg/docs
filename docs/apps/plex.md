@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-[Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location.
+> [Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location.
 
 | Details     |             |             |             |
 |-------------|-------------|-------------|-------------|
@@ -41,13 +41,13 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install plex
 ```
 
 ## Usage
 
-1.  To access Plex, visit <https://plex.iYOUR_DOMAIN_NAMEi>
+Visit <https://plex.iYOUR_DOMAIN_NAMEi>.
 
 2.  Login with your Plex account
 
@@ -261,7 +261,7 @@ _Note: If you would like to have custom Plex libraries (more than just a Movies 
 
 ### Scan Media libraries
 
-As mentioned in the [Introduction](../saltbox/basics/index.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
+As mentioned in the [Introduction](../saltbox/basics/basics.md) page, [Autoscan](autoscan.md) will automatically scan the media files into Plex as they are downloaded, but this will require the Plex database to not be completely empty. So for every new library that is added, a one-time, manual scan is required.
 
 To do so:
 

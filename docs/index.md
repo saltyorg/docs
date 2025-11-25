@@ -17,7 +17,7 @@ hide:
 
 ### What is it?
 
-You can read more about what Saltbox is [here](saltbox/basics/index.md).
+You can read more about what Saltbox is [here](saltbox/basics/basics.md).
 
 ### How do I install it?
 

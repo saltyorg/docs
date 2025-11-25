@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - 'scripts/update-sb-help.py'
-
   schedule:
     - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   update-sb-help:

@@ -25,36 +25,41 @@ Always provide detailed context and relevant logs. This can include but is not l
 
 -   Your hosting specifics:
 
-    -   On-site (e.g., home) or off-site (specify provider: e.g., Hetzner)?
-    -   Bare metal or VM (specify hypervisor: e.g., Proxmox)?
-    -   Direct-attached (e.g., SATA, USB) or remote (e.g., rclone, cifs) storage?
+    -   Location: on-site (home?) or off-site (Hetzner? OVH?)
+    -   Environment: bare-metal or VM (Proxmox? Unraid?)
+    -   Media storage: direct-attached (internal drive? USB?) or remote (Rclone? CIFS?)
 
--   What you have tried so far (`sb update`, `sb install ...`, `docker restart ...`, etc.)
--   Output of `sb diag`, `sb logs`, `sb docker ps`, `sb docker logs`, `docker inspect ...`
--   Your [Inventory](../../saltbox/inventory/index.md) content
--   Traefik logs in `/opt/traefik`
--   Output of `dig`, `curl`, `ping` with the problem FQDN
+-   What you have tried: `sb update`, `sb install ...`, `docker restart ...`, etc.
+-   Saltbox logs in `/srv/git/Saltbox/`, Traefik logs in `/opt/traefik`
+-   Output of `sb docker ps`, `sb docker logs`, `docker inspect ...`, `sb logs`
+-   Your [Inventory](../../saltbox/inventory/index.md) content, output of `sb diag`
 -   Output of `curl http://traefik:8080/api/http/routers/xROLE_NAMEx@docker` with the problem app
--   Output of `lsblk`, `lspci`, `free -h`, `df -h`, `sudo lshw`, `uname -a`
+-   Output of `dig`, `curl`, `ping` with the problem FQDN
+-   Output of `lsblk`, `lspci`, `free -h`, `df -h`, `sudo lshw`, `uname -a`, `history | tail -100`
 
-**Large Data:** If your text exceeds the Discord character limit, upload it to [PrivateBin](https://privatebin.net/) or attach a text file.
+Please do not cherry-pick snippets that you believe are more relevant than others. We require the complete picture.
+
+**Note:** If your text exceeds the Discord character limit, use [PrivateBin][1] or attach a text file.
+
+[1]: https://privatebin.net "Please set the expiration to the longest duration available, and do not check *Burn after reading*."
 
 ## Best Practices
 
--   **Check Announcements:** Always review [:fontawesome-brands-discord: #announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent troubleshooting steps and updates. Many transient issues requiring user intervention are addressed there.
+-   **Check Announcements:** Always review [:fontawesome-brands-discord: #announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent developments. Broad issues requiring user intervention are usually covered there.
 -   **Threads:** Always create a dedicated thread for your support request to keep discussions organized.
--   **No Screenshots of Text:** Please do not use screenshots for terminal output—copy and paste the text instead, inside a code fence if necessary.
--   **Error Reporting:** For issues like HTTP errors (404, 500, SSL certificate...), pleaste avoid posting a screenshot of your web browser. Instead, paste the output of a command such as `curl` with the problem URL.
+-   **Beware the [XY problem](https://xyproblem.info)**: Present the core problem and mention everything you tried to overcome it, but leave out the self-diagnosis.
+-   **No Screenshots of Text:** Please do not use screenshots for terminal output—copy and paste the text instead, inside a [code fence](#code-fences) if appropriate.
+-   **Error Screens:** For issues like HTTP errors (404, 500, SSL certificate...), please avoid posting a screenshot of your web browser. Instead, paste the output of a command-line HTTP client such as `curl` with the problem URL. Screenshots in general are not welcome in support requests.
 
 ## Code Fences
 
-When sharing commands, logs, or error messages, use code fences for clarity.
+When sharing a command, log, or error message, use a code fence to escape native Discord formatting.
 
--   **Backtick Key:** The backtick ++grave++ is used for code fences.
+-   **Syntax:** The backtick is used for code fences.
 
     ![Backtick Key](https://www.computerhope.com/cdn/keyboard/tilde.jpg)
 
--   **Single-line:** For short inline content, wrap with a single backtick: `` `your inline content` ``
+-   **Single-line:** For short inline content, wrap with a single backtick ++grave++: `` `your inline content` ``
 -   **Multi-line:** For longer content, wrap with triple backticks ++grave+grave+grave++:
 
     ````markdown
@@ -65,7 +70,7 @@ When sharing commands, logs, or error messages, use code fences for clarity.
     ```
     ````
 
--   **Language Identifier:** For syntax highlighting, add a language identifier by the opening triple backticks.
+-   **Language:** For syntax highlighting, add a language identifier by the opening triple backticks.
 
     ````markdown title="YAML example"
     ```yaml

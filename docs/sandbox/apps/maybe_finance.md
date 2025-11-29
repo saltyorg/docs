@@ -32,7 +32,7 @@ sb install sandbox-maybe-finance
 - To access Maybe Finance, visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -407,15 +407,570 @@ sb install sandbox-maybe-finance
     ??? variable string "`maybe_finance_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         maybe_finance_role_depends_on_delay: "5"
         ```
 
     ??? variable string "`maybe_finance_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         maybe_finance_role_depends_on_healthchecks: "true"
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`maybe_finance_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_cpus:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_memory:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`maybe_finance_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_requests:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_devices:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_devices_default:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_groups:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_privileged:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_security_opts:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_user:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`maybe_finance_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_domainname:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`maybe_finance_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        maybe_finance_role_docker_hosts:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_links:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_network_mode:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_ports:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`maybe_finance_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_mounts:
+        ```
+
+    ??? variable dict "`maybe_finance_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        maybe_finance_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`maybe_finance_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_cleanup:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`maybe_finance_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        maybe_finance_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_init:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`maybe_finance_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        maybe_finance_role_docker_log_options:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_paused:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_recreate:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`maybe_finance_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_capabilities:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_commands:
+        ```
+
+    ??? variable int "`maybe_finance_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        maybe_finance_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_env_file:
+        ```
+
+    ??? variable dict "`maybe_finance_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        maybe_finance_role_docker_labels:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`maybe_finance_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        maybe_finance_role_docker_read_only:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_runtime:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_sysctls:
+        ```
+
+    ??? variable list "`maybe_finance_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        maybe_finance_role_docker_ulimits:
         ```
 
 === "Global Override Options"
@@ -476,11 +1031,102 @@ sb install sandbox-maybe-finance
         maybe_finance_role_docker_controller: true
         ```
 
+    ??? variable string "`maybe_finance_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_image_repo:
+        ```
+
+    ??? variable string "`maybe_finance_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_docker_image_tag:
+        ```
+
     ??? variable bool "`maybe_finance_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         maybe_finance_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`maybe_finance_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_paths_location:
+        ```
+
+    ??? variable string "`maybe_finance_role_postgres_docker_env_db`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_postgres_docker_env_db:
+        ```
+
+    ??? variable string "`maybe_finance_role_postgres_name`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_postgres_name:
+        ```
+
+    ??? variable string "`maybe_finance_role_postgres_password`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_postgres_password:
+        ```
+
+    ??? variable string "`maybe_finance_role_postgres_user`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_postgres_user:
+        ```
+
+    ??? variable string "`maybe_finance_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_themepark_addons:
+        ```
+
+    ??? variable string "`maybe_finance_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_themepark_app:
+        ```
+
+    ??? variable string "`maybe_finance_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`maybe_finance_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        maybe_finance_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`maybe_finance_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`maybe_finance_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`maybe_finance_role_traefik_autodetect_enabled`"
@@ -489,6 +1135,13 @@ sb install sandbox-maybe-finance
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         maybe_finance_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`maybe_finance_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_traefik_certresolver:
         ```
 
     ??? variable bool "`maybe_finance_role_traefik_crowdsec_enabled`"
@@ -515,6 +1168,13 @@ sb install sandbox-maybe-finance
         maybe_finance_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`maybe_finance_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`maybe_finance_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -527,6 +1187,13 @@ sb install sandbox-maybe-finance
         ```yaml
         # Type: bool (true/false)
         maybe_finance_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`maybe_finance_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_traefik_priority:
         ```
 
     ??? variable bool "`maybe_finance_role_traefik_robot_enabled`"
@@ -553,6 +1220,13 @@ sb install sandbox-maybe-finance
         maybe_finance_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`maybe_finance_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_web_domain:
+        ```
+
     ??? variable list "`maybe_finance_role_web_fqdn_override`"
 
         ```yaml
@@ -572,6 +1246,7 @@ sb install sandbox-maybe-finance
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`maybe_finance_role_web_host_override`"
 
         ```yaml
@@ -588,6 +1263,28 @@ sb install sandbox-maybe-finance
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`maybe_finance_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        maybe_finance_role_web_http_port:
+        ```
+
+    ??? variable string "`maybe_finance_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        maybe_finance_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`maybe_finance_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        maybe_finance_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`maybe_finance_role_web_scheme`"
 
         ```yaml
@@ -596,4 +1293,17 @@ sb install sandbox-maybe-finance
         maybe_finance_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`maybe_finance_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        maybe_finance_role_web_serverstransport:
+        ```
+
+    ??? variable string "`maybe_finance_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        maybe_finance_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

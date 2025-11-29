@@ -27,7 +27,7 @@ sb install diun
 - The config file for diun is located at `/opt/diun/diun.yml`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -216,7 +216,7 @@ sb install diun
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -304,6 +304,13 @@ sb install diun
         diun_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`diun_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`diun_role_docker_cap_drop`"
@@ -311,6 +318,13 @@ sb install diun
         ```yaml
         # Type: list
         diun_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`diun_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`diun_role_docker_device_cgroup_rules`"
@@ -369,6 +383,13 @@ sb install diun
         diun_role_docker_devices_default:
         ```
 
+    ??? variable list "`diun_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_groups:
+        ```
+
     ??? variable bool "`diun_role_docker_privileged`"
 
         ```yaml
@@ -381,6 +402,20 @@ sb install diun
         ```yaml
         # Type: list
         diun_role_docker_security_opts:
+        ```
+
+    ??? variable string "`diun_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_user:
+        ```
+
+    ??? variable string "`diun_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -406,6 +441,20 @@ sb install diun
         diun_role_docker_dns_servers:
         ```
 
+    ??? variable string "`diun_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_domainname:
+        ```
+
+    ??? variable list "`diun_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`diun_role_docker_hosts`"
 
         ```yaml
@@ -413,11 +462,25 @@ sb install diun
         diun_role_docker_hosts:
         ```
 
-    ??? variable string "`diun_role_docker_hosts_use_common`"
+    ??? variable bool "`diun_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`diun_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        diun_role_docker_hosts_use_common:
+        diun_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`diun_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_links:
         ```
 
     ??? variable string "`diun_role_docker_network_mode`"
@@ -425,6 +488,27 @@ sb install diun
         ```yaml
         # Type: string
         diun_role_docker_network_mode:
+        ```
+
+    ??? variable string "`diun_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`diun_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_ports:
+        ```
+
+    ??? variable string "`diun_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -443,6 +527,20 @@ sb install diun
         diun_role_docker_mounts:
         ```
 
+    ??? variable dict "`diun_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        diun_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`diun_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_tmpfs:
+        ```
+
     ??? variable string "`diun_role_docker_volume_driver`"
 
         ```yaml
@@ -457,10 +555,10 @@ sb install diun
         diun_role_docker_volumes_from:
         ```
 
-    ??? variable string "`diun_role_docker_volumes_global`"
+    ??? variable bool "`diun_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         diun_role_docker_volumes_global:
         ```
 
@@ -473,6 +571,27 @@ sb install diun
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`diun_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`diun_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_cleanup:
+        ```
+
+    ??? variable string "`diun_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_force_kill:
+        ```
+
     ??? variable dict "`diun_role_docker_healthcheck`"
 
         ```yaml
@@ -480,11 +599,25 @@ sb install diun
         diun_role_docker_healthcheck:
         ```
 
+    ??? variable int "`diun_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        diun_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`diun_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         diun_role_docker_init:
+        ```
+
+    ??? variable string "`diun_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_kill_signal:
         ```
 
     ??? variable string "`diun_role_docker_log_driver`"
@@ -501,141 +634,6 @@ sb install diun
         diun_role_docker_log_options:
         ```
 
-    ??? variable bool "`diun_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`diun_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`diun_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_capabilities:
-        ```
-
-    ??? variable string "`diun_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`diun_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`diun_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_docker_cleanup:
-        ```
-
-    ??? variable list "`diun_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_commands:
-        ```
-
-    ??? variable string "`diun_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`diun_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_domainname:
-        ```
-
-    ??? variable string "`diun_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`diun_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_env_file:
-        ```
-
-    ??? variable list "`diun_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`diun_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_force_kill:
-        ```
-
-    ??? variable list "`diun_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_groups:
-        ```
-
-    ??? variable int "`diun_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        diun_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`diun_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`diun_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_kill_signal:
-        ```
-
-    ??? variable string "`diun_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`diun_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_links:
-        ```
-
     ??? variable bool "`diun_role_docker_oom_killer`"
 
         ```yaml
@@ -650,32 +648,18 @@ sb install diun
         diun_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`diun_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_output_logs:
+        ```
+
     ??? variable bool "`diun_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         diun_role_docker_paused:
-        ```
-
-    ??? variable string "`diun_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`diun_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_ports:
-        ```
-
-    ??? variable bool "`diun_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_docker_read_only:
         ```
 
     ??? variable bool "`diun_role_docker_recreate`"
@@ -692,20 +676,6 @@ sb install diun
         diun_role_docker_restart_retries:
         ```
 
-    ??? variable string "`diun_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_runtime:
-        ```
-
-    ??? variable string "`diun_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_shm_size:
-        ```
-
     ??? variable int "`diun_role_docker_stop_timeout`"
 
         ```yaml
@@ -713,11 +683,69 @@ sb install diun
         diun_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`diun_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`diun_role_docker_capabilities`"
 
         ```yaml
-        # Type: dict
-        diun_role_docker_storage_opts:
+        # Type: list
+        diun_role_docker_capabilities:
+        ```
+
+    ??? variable string "`diun_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`diun_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        diun_role_docker_commands:
+        ```
+
+    ??? variable int "`diun_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        diun_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`diun_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`diun_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_env_file:
+        ```
+
+    ??? variable bool "`diun_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`diun_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        diun_role_docker_read_only:
+        ```
+
+    ??? variable string "`diun_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_runtime:
         ```
 
     ??? variable list "`diun_role_docker_sysctls`"
@@ -727,39 +755,11 @@ sb install diun
         diun_role_docker_sysctls:
         ```
 
-    ??? variable list "`diun_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        diun_role_docker_tmpfs:
-        ```
-
     ??? variable list "`diun_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         diun_role_docker_ulimits:
-        ```
-
-    ??? variable string "`diun_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_user:
-        ```
-
-    ??? variable string "`diun_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`diun_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -804,14 +804,6 @@ sb install diun
         diun_role_diun_enabled: true
         ```
 
-    ??? variable bool "`diun_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        diun_role_dns_enabled: true
-        ```
-
     ??? variable bool "`diun_role_docker_controller`"
 
         ```yaml
@@ -820,124 +812,24 @@ sb install diun
         diun_role_docker_controller: true
         ```
 
+    ??? variable string "`diun_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_image_repo:
+        ```
+
+    ??? variable string "`diun_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_image_tag:
+        ```
+
     ??? variable bool "`diun_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         diun_role_docker_volumes_download:
         ```
-
-    ??? variable bool "`diun_role_traefik_autodetect_enabled`"
-
-        ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        diun_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`diun_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        diun_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`diun_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        diun_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`diun_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        diun_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`diun_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`diun_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        diun_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`diun_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        diun_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`diun_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        diun_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`diun_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        diun_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`diun_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        diun_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            diun_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "diun2.{{ user.domain }}"
-              - "diun.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`diun_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
-        # Type: string
-        diun_role_web_host_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            diun_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'diun2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`diun_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        diun_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -54,7 +54,7 @@ tags:
 - Location within NZBGet: `/scripts/nzbget`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -232,10 +232,11 @@ tags:
 
 === "Config"
 
-    ??? variable list "`nzbget_role_config_new_installs_settings_default`"
+    ??? variable string "`nzbget_role_config_new_installs_settings_default`"
 
         ```yaml
-        # Type: list
+        # New Installs
+        # Type: string
         nzbget_role_config_new_installs_settings_default:
           # Authentication
           - { regexp: '^ControlUsername\s?=.*', line: "ControlUsername={{ user.name }}" }
@@ -303,10 +304,11 @@ tags:
                                                            + lookup('role_var', '_config_new_installs_settings_custom', role='nzbget') }}"
         ```
 
-    ??? variable list "`nzbget_role_config_existing_installs_settings_default`"
+    ??? variable string "`nzbget_role_config_existing_installs_settings_default`"
 
         ```yaml
-        # Type: list
+        # Existing Installs
+        # Type: string
         nzbget_role_config_existing_installs_settings_default:
           # Logging
           - { regexp: '^WriteLog\s?=.*', line: 'WriteLog=rotate' }
@@ -610,7 +612,7 @@ tags:
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -698,6 +700,13 @@ tags:
         nzbget_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`nzbget_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`nzbget_role_docker_cap_drop`"
@@ -705,6 +714,13 @@ tags:
         ```yaml
         # Type: list
         nzbget_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`nzbget_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`nzbget_role_docker_device_cgroup_rules`"
@@ -763,6 +779,13 @@ tags:
         nzbget_role_docker_devices_default:
         ```
 
+    ??? variable list "`nzbget_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_groups:
+        ```
+
     ??? variable bool "`nzbget_role_docker_privileged`"
 
         ```yaml
@@ -775,6 +798,20 @@ tags:
         ```yaml
         # Type: list
         nzbget_role_docker_security_opts:
+        ```
+
+    ??? variable string "`nzbget_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_user:
+        ```
+
+    ??? variable string "`nzbget_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -800,6 +837,20 @@ tags:
         nzbget_role_docker_dns_servers:
         ```
 
+    ??? variable string "`nzbget_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_domainname:
+        ```
+
+    ??? variable list "`nzbget_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`nzbget_role_docker_hosts`"
 
         ```yaml
@@ -807,11 +858,25 @@ tags:
         nzbget_role_docker_hosts:
         ```
 
-    ??? variable string "`nzbget_role_docker_hosts_use_common`"
+    ??? variable bool "`nzbget_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`nzbget_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        nzbget_role_docker_hosts_use_common:
+        nzbget_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`nzbget_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_links:
         ```
 
     ??? variable string "`nzbget_role_docker_network_mode`"
@@ -819,6 +884,27 @@ tags:
         ```yaml
         # Type: string
         nzbget_role_docker_network_mode:
+        ```
+
+    ??? variable string "`nzbget_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`nzbget_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_ports:
+        ```
+
+    ??? variable string "`nzbget_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -837,6 +923,20 @@ tags:
         nzbget_role_docker_mounts:
         ```
 
+    ??? variable dict "`nzbget_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        nzbget_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`nzbget_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_tmpfs:
+        ```
+
     ??? variable string "`nzbget_role_docker_volume_driver`"
 
         ```yaml
@@ -851,10 +951,10 @@ tags:
         nzbget_role_docker_volumes_from:
         ```
 
-    ??? variable string "`nzbget_role_docker_volumes_global`"
+    ??? variable bool "`nzbget_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         nzbget_role_docker_volumes_global:
         ```
 
@@ -867,6 +967,27 @@ tags:
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`nzbget_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`nzbget_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_cleanup:
+        ```
+
+    ??? variable string "`nzbget_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_force_kill:
+        ```
+
     ??? variable dict "`nzbget_role_docker_healthcheck`"
 
         ```yaml
@@ -874,11 +995,25 @@ tags:
         nzbget_role_docker_healthcheck:
         ```
 
+    ??? variable int "`nzbget_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        nzbget_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`nzbget_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         nzbget_role_docker_init:
+        ```
+
+    ??? variable string "`nzbget_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_kill_signal:
         ```
 
     ??? variable string "`nzbget_role_docker_log_driver`"
@@ -895,141 +1030,6 @@ tags:
         nzbget_role_docker_log_options:
         ```
 
-    ??? variable bool "`nzbget_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbget_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`nzbget_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbget_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`nzbget_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_capabilities:
-        ```
-
-    ??? variable string "`nzbget_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`nzbget_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`nzbget_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbget_role_docker_cleanup:
-        ```
-
-    ??? variable list "`nzbget_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_commands:
-        ```
-
-    ??? variable string "`nzbget_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`nzbget_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_domainname:
-        ```
-
-    ??? variable string "`nzbget_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`nzbget_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_env_file:
-        ```
-
-    ??? variable list "`nzbget_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`nzbget_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_force_kill:
-        ```
-
-    ??? variable list "`nzbget_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_groups:
-        ```
-
-    ??? variable int "`nzbget_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        nzbget_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`nzbget_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`nzbget_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_kill_signal:
-        ```
-
-    ??? variable string "`nzbget_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`nzbget_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_links:
-        ```
-
     ??? variable bool "`nzbget_role_docker_oom_killer`"
 
         ```yaml
@@ -1044,32 +1044,18 @@ tags:
         nzbget_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`nzbget_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_output_logs:
+        ```
+
     ??? variable bool "`nzbget_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         nzbget_role_docker_paused:
-        ```
-
-    ??? variable string "`nzbget_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`nzbget_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_ports:
-        ```
-
-    ??? variable bool "`nzbget_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbget_role_docker_read_only:
         ```
 
     ??? variable bool "`nzbget_role_docker_recreate`"
@@ -1086,20 +1072,6 @@ tags:
         nzbget_role_docker_restart_retries:
         ```
 
-    ??? variable string "`nzbget_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_runtime:
-        ```
-
-    ??? variable string "`nzbget_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_shm_size:
-        ```
-
     ??? variable int "`nzbget_role_docker_stop_timeout`"
 
         ```yaml
@@ -1107,11 +1079,69 @@ tags:
         nzbget_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`nzbget_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`nzbget_role_docker_capabilities`"
 
         ```yaml
-        # Type: dict
-        nzbget_role_docker_storage_opts:
+        # Type: list
+        nzbget_role_docker_capabilities:
+        ```
+
+    ??? variable string "`nzbget_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`nzbget_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_docker_commands:
+        ```
+
+    ??? variable int "`nzbget_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        nzbget_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`nzbget_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`nzbget_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_env_file:
+        ```
+
+    ??? variable bool "`nzbget_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`nzbget_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_docker_read_only:
+        ```
+
+    ??? variable string "`nzbget_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_runtime:
         ```
 
     ??? variable list "`nzbget_role_docker_sysctls`"
@@ -1121,39 +1151,11 @@ tags:
         nzbget_role_docker_sysctls:
         ```
 
-    ??? variable list "`nzbget_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        nzbget_role_docker_tmpfs:
-        ```
-
     ??? variable list "`nzbget_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         nzbget_role_docker_ulimits:
-        ```
-
-    ??? variable string "`nzbget_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_user:
-        ```
-
-    ??? variable string "`nzbget_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`nzbget_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1164,6 +1166,34 @@ tags:
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         nzbget_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`nzbget_role_config_existing_installs_settings_custom`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_config_existing_installs_settings_custom:
+        ```
+
+    ??? variable string "`nzbget_role_config_existing_installs_settings_default`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_config_existing_installs_settings_default:
+        ```
+
+    ??? variable string "`nzbget_role_config_new_installs_settings_custom`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_config_new_installs_settings_custom:
+        ```
+
+    ??? variable string "`nzbget_role_config_new_installs_settings_default`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_config_new_installs_settings_default:
         ```
 
     ??? variable string "`nzbget_role_depends_on`"
@@ -1214,11 +1244,116 @@ tags:
         nzbget_role_docker_controller: true
         ```
 
+    ??? variable string "`nzbget_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_image_repo:
+        ```
+
+    ??? variable string "`nzbget_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_docker_image_tag:
+        ```
+
     ??? variable bool "`nzbget_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         nzbget_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_direct_downloads_custom`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_direct_downloads_custom:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_direct_downloads_default`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_direct_downloads_default:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_local_copy_custom`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_local_copy_custom:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_local_copy_default`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_local_copy_default:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_repos_custom`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_repos_custom:
+        ```
+
+    ??? variable string "`nzbget_role_scripts_repos_default`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_scripts_repos_default:
+        ```
+
+    ??? variable string "`nzbget_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_themepark_addons:
+        ```
+
+    ??? variable string "`nzbget_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_themepark_app:
+        ```
+
+    ??? variable bool "`nzbget_role_themepark_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbget_role_themepark_enabled:
+        ```
+
+    ??? variable string "`nzbget_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`nzbget_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbget_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`nzbget_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`nzbget_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`nzbget_role_traefik_autodetect_enabled`"
@@ -1227,6 +1362,13 @@ tags:
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         nzbget_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`nzbget_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_traefik_certresolver:
         ```
 
     ??? variable bool "`nzbget_role_traefik_crowdsec_enabled`"
@@ -1253,6 +1395,13 @@ tags:
         nzbget_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`nzbget_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`nzbget_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1265,6 +1414,13 @@ tags:
         ```yaml
         # Type: bool (true/false)
         nzbget_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`nzbget_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_traefik_priority:
         ```
 
     ??? variable bool "`nzbget_role_traefik_robot_enabled`"
@@ -1291,6 +1447,13 @@ tags:
         nzbget_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`nzbget_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_web_domain:
+        ```
+
     ??? variable list "`nzbget_role_web_fqdn_override`"
 
         ```yaml
@@ -1310,6 +1473,7 @@ tags:
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`nzbget_role_web_host_override`"
 
         ```yaml
@@ -1326,6 +1490,42 @@ tags:
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`nzbget_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbget_role_web_http_port:
+        ```
+
+    ??? variable string "`nzbget_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        nzbget_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`nzbget_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbget_role_web_http_serverstransport:
+        ```
+
+    ??? variable string "`nzbget_role_web_login`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_web_login:
+        ```
+
+    ??? variable string "`nzbget_role_web_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbget_role_web_port:
+        ```
+
     ??? variable string "`nzbget_role_web_scheme`"
 
         ```yaml
@@ -1334,4 +1534,17 @@ tags:
         nzbget_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`nzbget_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbget_role_web_serverstransport:
+        ```
+
+    ??? variable string "`nzbget_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

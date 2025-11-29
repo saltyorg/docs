@@ -136,7 +136,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 - [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -662,20 +662,20 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
     ??? variable string "`authentik_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         authentik_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`authentik_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         authentik_role_depends_on_healthchecks: "true"
         ```
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -763,6 +763,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`authentik_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`authentik_role_docker_cap_drop`"
@@ -770,6 +777,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         ```yaml
         # Type: list
         authentik_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`authentik_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`authentik_role_docker_device_cgroup_rules`"
@@ -828,6 +842,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_devices_default:
         ```
 
+    ??? variable list "`authentik_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        authentik_role_docker_groups:
+        ```
+
     ??? variable bool "`authentik_role_docker_privileged`"
 
         ```yaml
@@ -840,6 +861,20 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         ```yaml
         # Type: list
         authentik_role_docker_security_opts:
+        ```
+
+    ??? variable string "`authentik_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_user:
+        ```
+
+    ??? variable string "`authentik_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -865,6 +900,20 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_dns_servers:
         ```
 
+    ??? variable string "`authentik_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_domainname:
+        ```
+
+    ??? variable list "`authentik_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        authentik_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`authentik_role_docker_hosts`"
 
         ```yaml
@@ -872,11 +921,25 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_hosts:
         ```
 
-    ??? variable string "`authentik_role_docker_hosts_use_common`"
+    ??? variable bool "`authentik_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`authentik_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        authentik_role_docker_hosts_use_common:
+        authentik_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`authentik_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        authentik_role_docker_links:
         ```
 
     ??? variable string "`authentik_role_docker_network_mode`"
@@ -884,6 +947,27 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         ```yaml
         # Type: string
         authentik_role_docker_network_mode:
+        ```
+
+    ??? variable string "`authentik_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`authentik_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        authentik_role_docker_ports:
+        ```
+
+    ??? variable string "`authentik_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -902,6 +986,20 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_mounts:
         ```
 
+    ??? variable dict "`authentik_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        authentik_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`authentik_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        authentik_role_docker_tmpfs:
+        ```
+
     ??? variable string "`authentik_role_docker_volume_driver`"
 
         ```yaml
@@ -916,10 +1014,10 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_volumes_from:
         ```
 
-    ??? variable string "`authentik_role_docker_volumes_global`"
+    ??? variable bool "`authentik_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         authentik_role_docker_volumes_global:
         ```
 
@@ -932,6 +1030,27 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`authentik_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`authentik_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_cleanup:
+        ```
+
+    ??? variable string "`authentik_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_force_kill:
+        ```
+
     ??? variable dict "`authentik_role_docker_healthcheck`"
 
         ```yaml
@@ -939,11 +1058,25 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_healthcheck:
         ```
 
+    ??? variable int "`authentik_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        authentik_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`authentik_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         authentik_role_docker_init:
+        ```
+
+    ??? variable string "`authentik_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_kill_signal:
         ```
 
     ??? variable string "`authentik_role_docker_log_driver`"
@@ -960,134 +1093,6 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_log_options:
         ```
 
-    ??? variable bool "`authentik_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authentik_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`authentik_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authentik_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`authentik_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_capabilities:
-        ```
-
-    ??? variable string "`authentik_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`authentik_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`authentik_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authentik_role_docker_cleanup:
-        ```
-
-    ??? variable string "`authentik_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`authentik_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_domainname:
-        ```
-
-    ??? variable string "`authentik_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`authentik_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_env_file:
-        ```
-
-    ??? variable list "`authentik_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`authentik_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_force_kill:
-        ```
-
-    ??? variable list "`authentik_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_groups:
-        ```
-
-    ??? variable int "`authentik_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        authentik_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`authentik_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`authentik_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_kill_signal:
-        ```
-
-    ??? variable string "`authentik_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`authentik_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_links:
-        ```
-
     ??? variable bool "`authentik_role_docker_oom_killer`"
 
         ```yaml
@@ -1102,32 +1107,18 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`authentik_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_output_logs:
+        ```
+
     ??? variable bool "`authentik_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         authentik_role_docker_paused:
-        ```
-
-    ??? variable string "`authentik_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`authentik_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_ports:
-        ```
-
-    ??? variable bool "`authentik_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authentik_role_docker_read_only:
         ```
 
     ??? variable bool "`authentik_role_docker_recreate`"
@@ -1144,20 +1135,6 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_restart_retries:
         ```
 
-    ??? variable string "`authentik_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_runtime:
-        ```
-
-    ??? variable string "`authentik_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_shm_size:
-        ```
-
     ??? variable int "`authentik_role_docker_stop_timeout`"
 
         ```yaml
@@ -1165,11 +1142,62 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`authentik_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`authentik_role_docker_capabilities`"
 
         ```yaml
-        # Type: dict
-        authentik_role_docker_storage_opts:
+        # Type: list
+        authentik_role_docker_capabilities:
+        ```
+
+    ??? variable string "`authentik_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_cgroup_parent:
+        ```
+
+    ??? variable int "`authentik_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        authentik_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`authentik_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`authentik_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_env_file:
+        ```
+
+    ??? variable bool "`authentik_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`authentik_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authentik_role_docker_read_only:
+        ```
+
+    ??? variable string "`authentik_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_runtime:
         ```
 
     ??? variable list "`authentik_role_docker_sysctls`"
@@ -1179,39 +1207,11 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_sysctls:
         ```
 
-    ??? variable list "`authentik_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        authentik_role_docker_tmpfs:
-        ```
-
     ??? variable list "`authentik_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         authentik_role_docker_ulimits:
-        ```
-
-    ??? variable string "`authentik_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_user:
-        ```
-
-    ??? variable string "`authentik_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`authentik_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1272,11 +1272,151 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_docker_controller: true
         ```
 
+    ??? variable string "`authentik_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_image_repo:
+        ```
+
+    ??? variable string "`authentik_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_image_tag:
+        ```
+
     ??? variable bool "`authentik_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         authentik_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`authentik_role_email_from`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_from:
+        ```
+
+    ??? variable string "`authentik_role_email_host`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_host:
+        ```
+
+    ??? variable string "`authentik_role_email_password`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_password:
+        ```
+
+    ??? variable string "`authentik_role_email_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_email_port:
+        ```
+
+    ??? variable string "`authentik_role_email_ssl`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_ssl:
+        ```
+
+    ??? variable string "`authentik_role_email_timeout`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_email_timeout:
+        ```
+
+    ??? variable string "`authentik_role_email_tls`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_tls:
+        ```
+
+    ??? variable string "`authentik_role_email_username`"
+
+        ```yaml
+        # Type: string
+        authentik_role_email_username:
+        ```
+
+    ??? variable string "`authentik_role_postgres_docker_env_db`"
+
+        ```yaml
+        # Type: string
+        authentik_role_postgres_docker_env_db:
+        ```
+
+    ??? variable string "`authentik_role_postgres_name`"
+
+        ```yaml
+        # Type: string
+        authentik_role_postgres_name:
+        ```
+
+    ??? variable string "`authentik_role_postgres_password`"
+
+        ```yaml
+        # Type: string
+        authentik_role_postgres_password:
+        ```
+
+    ??? variable string "`authentik_role_postgres_user`"
+
+        ```yaml
+        # Type: string
+        authentik_role_postgres_user:
+        ```
+
+    ??? variable string "`authentik_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        authentik_role_themepark_addons:
+        ```
+
+    ??? variable string "`authentik_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        authentik_role_themepark_app:
+        ```
+
+    ??? variable string "`authentik_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        authentik_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`authentik_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        authentik_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`authentik_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        authentik_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`authentik_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        authentik_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`authentik_role_traefik_autodetect_enabled`"
@@ -1285,6 +1425,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         authentik_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`authentik_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        authentik_role_traefik_certresolver:
         ```
 
     ??? variable bool "`authentik_role_traefik_crowdsec_enabled`"
@@ -1311,6 +1458,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`authentik_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        authentik_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`authentik_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1323,6 +1477,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         ```yaml
         # Type: bool (true/false)
         authentik_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`authentik_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        authentik_role_traefik_priority:
         ```
 
     ??? variable bool "`authentik_role_traefik_robot_enabled`"
@@ -1349,6 +1510,13 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`authentik_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        authentik_role_web_domain:
+        ```
+
     ??? variable list "`authentik_role_web_fqdn_override`"
 
         ```yaml
@@ -1368,6 +1536,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`authentik_role_web_host_override`"
 
         ```yaml
@@ -1384,6 +1553,35 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`authentik_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_web_http_port:
+        ```
+
+    ??? variable string "`authentik_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        authentik_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`authentik_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authentik_role_web_http_serverstransport:
+        ```
+
+    ??? variable string "`authentik_role_web_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_web_port:
+        ```
+
     ??? variable string "`authentik_role_web_scheme`"
 
         ```yaml
@@ -1392,4 +1590,17 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`authentik_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authentik_role_web_serverstransport:
+        ```
+
+    ??? variable string "`authentik_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        authentik_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -29,7 +29,7 @@ sb install postgres
     To easily manage the db, consider [adminer](../sandbox/apps/adminer.md)
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -377,7 +377,7 @@ sb install postgres
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -539,6 +539,18 @@ sb install postgres
         postgres2_docker_cap_drop:
         ```
 
+    ??? variable string "`postgres_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`postgres2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_cgroupns_mode:
+        ```
+
     ??? variable list "`postgres_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`postgres2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -635,6 +647,18 @@ sb install postgres
         postgres2_docker_devices_default:
         ```
 
+    ??? variable list "`postgres_role_docker_groups`{ .sb-show-on-unchecked }`postgres2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_groups:
+        ```
+
     ??? variable bool "`postgres_role_docker_privileged`{ .sb-show-on-unchecked }`postgres2_docker_privileged`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -657,6 +681,18 @@ sb install postgres
         ```yaml { .sb-show-on-checked }
         # Type: list
         postgres2_docker_security_opts:
+        ```
+
+    ??? variable string "`postgres_role_docker_userns_mode`{ .sb-show-on-unchecked }`postgres2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -697,6 +733,30 @@ sb install postgres
         postgres2_docker_dns_servers:
         ```
 
+    ??? variable string "`postgres_role_docker_domainname`{ .sb-show-on-unchecked }`postgres2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_domainname:
+        ```
+
+    ??? variable list "`postgres_role_docker_exposed_ports`{ .sb-show-on-unchecked }`postgres2_docker_exposed_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_exposed_ports:
+        ```
+
     ??? variable dict "`postgres_role_docker_hosts`{ .sb-show-on-unchecked }`postgres2_docker_hosts`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -709,16 +769,40 @@ sb install postgres
         postgres2_docker_hosts:
         ```
 
-    ??? variable string "`postgres_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`postgres2_docker_hosts_use_common`{ .sb-show-on-checked }"
+    ??? variable bool "`postgres_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`postgres2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         postgres_role_docker_hosts_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         postgres2_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`postgres_role_docker_ipc_mode`{ .sb-show-on-unchecked }`postgres2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_ipc_mode:
+        ```
+
+    ??? variable list "`postgres_role_docker_links`{ .sb-show-on-unchecked }`postgres2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_links:
         ```
 
     ??? variable string "`postgres_role_docker_network_mode`{ .sb-show-on-unchecked }`postgres2_docker_network_mode`{ .sb-show-on-checked }"
@@ -731,6 +815,42 @@ sb install postgres
         ```yaml { .sb-show-on-checked }
         # Type: string
         postgres2_docker_network_mode:
+        ```
+
+    ??? variable string "`postgres_role_docker_pid_mode`{ .sb-show-on-unchecked }`postgres2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_pid_mode:
+        ```
+
+    ??? variable list "`postgres_role_docker_ports`{ .sb-show-on-unchecked }`postgres2_docker_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_ports:
+        ```
+
+    ??? variable string "`postgres_role_docker_uts`{ .sb-show-on-unchecked }`postgres2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -759,6 +879,30 @@ sb install postgres
         postgres2_docker_mounts:
         ```
 
+    ??? variable dict "`postgres_role_docker_storage_opts`{ .sb-show-on-unchecked }`postgres2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        postgres_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        postgres2_docker_storage_opts:
+        ```
+
+    ??? variable list "`postgres_role_docker_tmpfs`{ .sb-show-on-unchecked }`postgres2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_tmpfs:
+        ```
+
     ??? variable string "`postgres_role_docker_volume_driver`{ .sb-show-on-unchecked }`postgres2_docker_volume_driver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -783,15 +927,15 @@ sb install postgres
         postgres2_docker_volumes_from:
         ```
 
-    ??? variable string "`postgres_role_docker_volumes_global`{ .sb-show-on-unchecked }`postgres2_docker_volumes_global`{ .sb-show-on-checked }"
+    ??? variable bool "`postgres_role_docker_volumes_global`{ .sb-show-on-unchecked }`postgres2_docker_volumes_global`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         postgres_role_docker_volumes_global:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         postgres2_docker_volumes_global:
         ```
 
@@ -809,6 +953,42 @@ sb install postgres
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`postgres_role_docker_auto_remove`{ .sb-show-on-unchecked }`postgres2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_auto_remove:
+        ```
+
+    ??? variable bool "`postgres_role_docker_cleanup`{ .sb-show-on-unchecked }`postgres2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_cleanup:
+        ```
+
+    ??? variable string "`postgres_role_docker_force_kill`{ .sb-show-on-unchecked }`postgres2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_force_kill:
+        ```
+
     ??? variable dict "`postgres_role_docker_healthcheck`{ .sb-show-on-unchecked }`postgres2_docker_healthcheck`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -821,6 +1001,18 @@ sb install postgres
         postgres2_docker_healthcheck:
         ```
 
+    ??? variable int "`postgres_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`postgres2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        postgres_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        postgres2_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`postgres_role_docker_init`{ .sb-show-on-unchecked }`postgres2_docker_init`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -831,6 +1023,18 @@ sb install postgres
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         postgres2_docker_init:
+        ```
+
+    ??? variable string "`postgres_role_docker_kill_signal`{ .sb-show-on-unchecked }`postgres2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_kill_signal:
         ```
 
     ??? variable string "`postgres_role_docker_log_driver`{ .sb-show-on-unchecked }`postgres2_docker_log_driver`{ .sb-show-on-checked }"
@@ -857,248 +1061,6 @@ sb install postgres
         postgres2_docker_log_options:
         ```
 
-    ??? variable bool "`postgres_role_docker_output_logs`{ .sb-show-on-unchecked }`postgres2_docker_output_logs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_docker_output_logs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`postgres_role_docker_auto_remove`{ .sb-show-on-unchecked }`postgres2_docker_auto_remove`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_docker_auto_remove:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_docker_auto_remove:
-        ```
-
-    ??? variable list "`postgres_role_docker_capabilities`{ .sb-show-on-unchecked }`postgres2_docker_capabilities`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_capabilities:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_capabilities:
-        ```
-
-    ??? variable string "`postgres_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`postgres2_docker_cgroup_parent`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_cgroup_parent:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`postgres_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`postgres2_docker_cgroupns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_cgroupns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`postgres_role_docker_cleanup`{ .sb-show-on-unchecked }`postgres2_docker_cleanup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_docker_cleanup:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_docker_cleanup:
-        ```
-
-    ??? variable list "`postgres_role_docker_commands`{ .sb-show-on-unchecked }`postgres2_docker_commands`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_commands:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_commands:
-        ```
-
-    ??? variable string "`postgres_role_docker_create_timeout`{ .sb-show-on-unchecked }`postgres2_docker_create_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_create_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_create_timeout:
-        ```
-
-    ??? variable string "`postgres_role_docker_domainname`{ .sb-show-on-unchecked }`postgres2_docker_domainname`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_domainname:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_domainname:
-        ```
-
-    ??? variable string "`postgres_role_docker_entrypoint`{ .sb-show-on-unchecked }`postgres2_docker_entrypoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_entrypoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_entrypoint:
-        ```
-
-    ??? variable string "`postgres_role_docker_env_file`{ .sb-show-on-unchecked }`postgres2_docker_env_file`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_env_file:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_env_file:
-        ```
-
-    ??? variable list "`postgres_role_docker_exposed_ports`{ .sb-show-on-unchecked }`postgres2_docker_exposed_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_exposed_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_exposed_ports:
-        ```
-
-    ??? variable string "`postgres_role_docker_force_kill`{ .sb-show-on-unchecked }`postgres2_docker_force_kill`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_force_kill:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_force_kill:
-        ```
-
-    ??? variable list "`postgres_role_docker_groups`{ .sb-show-on-unchecked }`postgres2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_groups:
-        ```
-
-    ??? variable int "`postgres_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`postgres2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        postgres_role_docker_healthy_wait_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        postgres2_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`postgres_role_docker_ipc_mode`{ .sb-show-on-unchecked }`postgres2_docker_ipc_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_ipc_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_ipc_mode:
-        ```
-
-    ??? variable string "`postgres_role_docker_kill_signal`{ .sb-show-on-unchecked }`postgres2_docker_kill_signal`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_kill_signal:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_kill_signal:
-        ```
-
-    ??? variable dict "`postgres_role_docker_labels`{ .sb-show-on-unchecked }`postgres2_docker_labels`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        postgres_role_docker_labels:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        postgres2_docker_labels:
-        ```
-
-    ??? variable string "`postgres_role_docker_labels_use_common`{ .sb-show-on-unchecked }`postgres2_docker_labels_use_common`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_labels_use_common:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_labels_use_common:
-        ```
-
-    ??? variable list "`postgres_role_docker_links`{ .sb-show-on-unchecked }`postgres2_docker_links`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_links:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_links:
-        ```
-
     ??? variable bool "`postgres_role_docker_oom_killer`{ .sb-show-on-unchecked }`postgres2_docker_oom_killer`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1123,6 +1085,18 @@ sb install postgres
         postgres2_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`postgres_role_docker_output_logs`{ .sb-show-on-unchecked }`postgres2_docker_output_logs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_output_logs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_output_logs:
+        ```
+
     ??? variable bool "`postgres_role_docker_paused`{ .sb-show-on-unchecked }`postgres2_docker_paused`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1133,42 +1107,6 @@ sb install postgres
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         postgres2_docker_paused:
-        ```
-
-    ??? variable string "`postgres_role_docker_pid_mode`{ .sb-show-on-unchecked }`postgres2_docker_pid_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_pid_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_pid_mode:
-        ```
-
-    ??? variable list "`postgres_role_docker_ports`{ .sb-show-on-unchecked }`postgres2_docker_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_ports:
-        ```
-
-    ??? variable bool "`postgres_role_docker_read_only`{ .sb-show-on-unchecked }`postgres2_docker_read_only`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_docker_read_only:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_docker_read_only:
         ```
 
     ??? variable bool "`postgres_role_docker_recreate`{ .sb-show-on-unchecked }`postgres2_docker_recreate`{ .sb-show-on-checked }"
@@ -1195,18 +1133,6 @@ sb install postgres
         postgres2_docker_restart_retries:
         ```
 
-    ??? variable string "`postgres_role_docker_runtime`{ .sb-show-on-unchecked }`postgres2_docker_runtime`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_runtime:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_runtime:
-        ```
-
     ??? variable int "`postgres_role_docker_stop_timeout`{ .sb-show-on-unchecked }`postgres2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1219,16 +1145,126 @@ sb install postgres
         postgres2_docker_stop_timeout:
         ```
 
-    ??? variable dict "`postgres_role_docker_storage_opts`{ .sb-show-on-unchecked }`postgres2_docker_storage_opts`{ .sb-show-on-checked }"
+    <h5>Other Options</h5>
+
+    ??? variable list "`postgres_role_docker_capabilities`{ .sb-show-on-unchecked }`postgres2_docker_capabilities`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_capabilities:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_capabilities:
+        ```
+
+    ??? variable string "`postgres_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`postgres2_docker_cgroup_parent`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_cgroup_parent:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`postgres_role_docker_commands`{ .sb-show-on-unchecked }`postgres2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_commands:
+        ```
+
+    ??? variable int "`postgres_role_docker_create_timeout`{ .sb-show-on-unchecked }`postgres2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        postgres_role_docker_create_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        postgres2_docker_create_timeout:
+        ```
+
+    ??? variable string "`postgres_role_docker_entrypoint`{ .sb-show-on-unchecked }`postgres2_docker_entrypoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_entrypoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_entrypoint:
+        ```
+
+    ??? variable string "`postgres_role_docker_env_file`{ .sb-show-on-unchecked }`postgres2_docker_env_file`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_env_file:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_env_file:
+        ```
+
+    ??? variable dict "`postgres_role_docker_labels`{ .sb-show-on-unchecked }`postgres2_docker_labels`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict
-        postgres_role_docker_storage_opts:
+        postgres_role_docker_labels:
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: dict
-        postgres2_docker_storage_opts:
+        postgres2_docker_labels:
+        ```
+
+    ??? variable bool "`postgres_role_docker_labels_use_common`{ .sb-show-on-unchecked }`postgres2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_labels_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`postgres_role_docker_read_only`{ .sb-show-on-unchecked }`postgres2_docker_read_only`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        postgres_role_docker_read_only:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        postgres2_docker_read_only:
+        ```
+
+    ??? variable string "`postgres_role_docker_runtime`{ .sb-show-on-unchecked }`postgres2_docker_runtime`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_runtime:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_runtime:
         ```
 
     ??? variable list "`postgres_role_docker_sysctls`{ .sb-show-on-unchecked }`postgres2_docker_sysctls`{ .sb-show-on-checked }"
@@ -1243,18 +1279,6 @@ sb install postgres
         postgres2_docker_sysctls:
         ```
 
-    ??? variable list "`postgres_role_docker_tmpfs`{ .sb-show-on-unchecked }`postgres2_docker_tmpfs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_tmpfs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_tmpfs:
-        ```
-
     ??? variable list "`postgres_role_docker_ulimits`{ .sb-show-on-unchecked }`postgres2_docker_ulimits`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1265,30 +1289,6 @@ sb install postgres
         ```yaml { .sb-show-on-checked }
         # Type: list
         postgres2_docker_ulimits:
-        ```
-
-    ??? variable string "`postgres_role_docker_userns_mode`{ .sb-show-on-unchecked }`postgres2_docker_userns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_userns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_userns_mode:
-        ```
-
-    ??? variable string "`postgres_role_docker_uts`{ .sb-show-on-unchecked }`postgres2_docker_uts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_docker_uts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1363,20 +1363,6 @@ sb install postgres
         postgres2_diun_enabled: true
         ```
 
-    ??? variable bool "`postgres_role_dns_enabled`{ .sb-show-on-unchecked }`postgres2_dns_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable or disable automatic DNS record creation for containers
-        # Type: bool (true/false)
-        postgres_role_dns_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable or disable automatic DNS record creation for containers
-        # Type: bool (true/false)
-        postgres2_dns_enabled: true
-        ```
-
     ??? variable bool "`postgres_role_docker_controller`{ .sb-show-on-unchecked }`postgres2_docker_controller`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1391,6 +1377,66 @@ sb install postgres
         postgres2_docker_controller: true
         ```
 
+    ??? variable string "`postgres_role_docker_env_db`{ .sb-show-on-unchecked }`postgres2_docker_env_db`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_env_db:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_env_db:
+        ```
+
+    ??? variable string "`postgres_role_docker_env_password`{ .sb-show-on-unchecked }`postgres2_docker_env_password`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_env_password:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_env_password:
+        ```
+
+    ??? variable string "`postgres_role_docker_env_user`{ .sb-show-on-unchecked }`postgres2_docker_env_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_env_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_env_user:
+        ```
+
+    ??? variable string "`postgres_role_docker_image_repo`{ .sb-show-on-unchecked }`postgres2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_image_repo:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_image_repo:
+        ```
+
+    ??? variable string "`postgres_role_docker_image_tag`{ .sb-show-on-unchecked }`postgres2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_image_tag:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_image_tag:
+        ```
+
     ??? variable bool "`postgres_role_docker_volumes_download`{ .sb-show-on-unchecked }`postgres2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1402,207 +1448,4 @@ sb install postgres
         # Type: bool (true/false)
         postgres2_docker_volumes_download:
         ```
-
-    ??? variable bool "`postgres_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable Traefik autodetect middleware for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_autodetect_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable Traefik autodetect middleware for containers
-        # Type: bool (true/false)
-        postgres2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`postgres_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable CrowdSec middleware for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_crowdsec_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable CrowdSec middleware for containers
-        # Type: bool (true/false)
-        postgres2_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`postgres_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable custom error pages middleware for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_error_pages_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable custom error pages middleware for containers
-        # Type: bool (true/false)
-        postgres2_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`postgres_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_gzip_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_gzip_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        postgres2_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`postgres_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`postgres2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_traefik_middleware_http_api_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`postgres_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`postgres2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        postgres_role_traefik_middleware_http_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        postgres2_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`postgres_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_robot_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable robots.txt middleware for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_robot_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable robots.txt middleware for containers
-        # Type: bool (true/false)
-        postgres2_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`postgres_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable Tailscale-specific Traefik configuration for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_tailscale_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable Tailscale-specific Traefik configuration for containers
-        # Type: bool (true/false)
-        postgres2_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`postgres_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`postgres2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable wildcard certificate for containers
-        # Type: bool (true/false)
-        postgres_role_traefik_wildcard_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable wildcard certificate for containers
-        # Type: bool (true/false)
-        postgres2_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`postgres_role_web_fqdn_override`{ .sb-show-on-unchecked }`postgres2_web_fqdn_override`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: list
-        postgres_role_web_fqdn_override:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: list
-        postgres2_web_fqdn_override:
-        ```
-
-        !!! example sb-show-on-unchecked "Example Override"
-
-            ```yaml
-            postgres_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "postgres2.{{ user.domain }}"
-              - "postgres.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        !!! example sb-show-on-checked "Example Override"
-
-            ```yaml
-            postgres2_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "postgres2.{{ user.domain }}"
-              - "postgres.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`postgres_role_web_host_override`{ .sb-show-on-unchecked }`postgres2_web_host_override`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Override the Traefik web host configuration for containers
-        # Type: string
-        postgres_role_web_host_override:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Override the Traefik web host configuration for containers
-        # Type: string
-        postgres2_web_host_override:
-        ```
-
-        !!! example sb-show-on-unchecked "Example Override"
-
-            ```yaml
-            postgres_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        !!! example sb-show-on-checked "Example Override"
-
-            ```yaml
-            postgres2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`postgres_role_web_scheme`{ .sb-show-on-unchecked }`postgres2_web_scheme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # URL scheme to use for web access to containers
-        # Type: string ("http"/"https")
-        postgres_role_web_scheme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # URL scheme to use for web access to containers
-        # Type: string ("http"/"https")
-        postgres2_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

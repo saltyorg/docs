@@ -32,7 +32,7 @@ sb install sandbox-cockpit
 - To access Cockpit, visit <https://cockpit.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -232,46 +232,6 @@ sb install sandbox-cockpit
 
 === "Global Override Options"
 
-    ??? variable bool "`cockpit_role_autoheal_enabled`"
-
-        ```yaml
-        # Enable or disable Autoheal monitoring for the container created when deploying
-        # Type: bool (true/false)
-        cockpit_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`cockpit_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        cockpit_role_depends_on: ""
-        ```
-
-    ??? variable string "`cockpit_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        cockpit_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`cockpit_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        cockpit_role_depends_on_healthchecks:
-        ```
-
-    ??? variable bool "`cockpit_role_diun_enabled`"
-
-        ```yaml
-        # Enable or disable Diun update notifications for the container created when deploying
-        # Type: bool (true/false)
-        cockpit_role_diun_enabled: true
-        ```
-
     ??? variable bool "`cockpit_role_dns_enabled`"
 
         ```yaml
@@ -280,19 +240,46 @@ sb install sandbox-cockpit
         cockpit_role_dns_enabled: true
         ```
 
-    ??? variable bool "`cockpit_role_docker_controller`"
+    ??? variable string "`cockpit_role_themepark_addons`"
 
         ```yaml
-        # Enable or disable Saltbox Docker Controller management for the container
-        # Type: bool (true/false)
-        cockpit_role_docker_controller: true
+        # Type: string
+        cockpit_role_themepark_addons:
         ```
 
-    ??? variable bool "`cockpit_role_docker_volumes_download`"
+    ??? variable string "`cockpit_role_themepark_app`"
 
         ```yaml
-        # Type: bool (true/false)
-        cockpit_role_docker_volumes_download:
+        # Type: string
+        cockpit_role_themepark_app:
+        ```
+
+    ??? variable string "`cockpit_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`cockpit_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        cockpit_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`cockpit_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`cockpit_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`cockpit_role_traefik_autodetect_enabled`"
@@ -301,6 +288,13 @@ sb install sandbox-cockpit
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         cockpit_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`cockpit_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_traefik_certresolver:
         ```
 
     ??? variable bool "`cockpit_role_traefik_crowdsec_enabled`"
@@ -327,6 +321,13 @@ sb install sandbox-cockpit
         cockpit_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`cockpit_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`cockpit_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -339,6 +340,13 @@ sb install sandbox-cockpit
         ```yaml
         # Type: bool (true/false)
         cockpit_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`cockpit_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_traefik_priority:
         ```
 
     ??? variable bool "`cockpit_role_traefik_robot_enabled`"
@@ -365,6 +373,13 @@ sb install sandbox-cockpit
         cockpit_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`cockpit_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_web_domain:
+        ```
+
     ??? variable list "`cockpit_role_web_fqdn_override`"
 
         ```yaml
@@ -384,6 +399,7 @@ sb install sandbox-cockpit
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`cockpit_role_web_host_override`"
 
         ```yaml
@@ -400,6 +416,28 @@ sb install sandbox-cockpit
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`cockpit_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cockpit_role_web_http_port:
+        ```
+
+    ??? variable string "`cockpit_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cockpit_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`cockpit_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cockpit_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`cockpit_role_web_scheme`"
 
         ```yaml
@@ -408,4 +446,17 @@ sb install sandbox-cockpit
         cockpit_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`cockpit_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cockpit_role_web_serverstransport:
+        ```
+
+    ??? variable string "`cockpit_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        cockpit_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

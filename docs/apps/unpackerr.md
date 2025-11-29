@@ -41,7 +41,7 @@ The `path` will depend on the torrent client you are using and its configuration
 Same setup is required for radarr and lidarr if you are using them.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -219,7 +219,7 @@ Same setup is required for radarr and lidarr if you are using them.
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -307,6 +307,13 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`unpackerr_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`unpackerr_role_docker_cap_drop`"
@@ -314,6 +321,13 @@ Same setup is required for radarr and lidarr if you are using them.
         ```yaml
         # Type: list
         unpackerr_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`unpackerr_role_docker_device_cgroup_rules`"
@@ -372,6 +386,13 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_devices_default:
         ```
 
+    ??? variable list "`unpackerr_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_groups:
+        ```
+
     ??? variable bool "`unpackerr_role_docker_privileged`"
 
         ```yaml
@@ -384,6 +405,20 @@ Same setup is required for radarr and lidarr if you are using them.
         ```yaml
         # Type: list
         unpackerr_role_docker_security_opts:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_user:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -409,6 +444,20 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_dns_servers:
         ```
 
+    ??? variable string "`unpackerr_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_domainname:
+        ```
+
+    ??? variable list "`unpackerr_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`unpackerr_role_docker_hosts`"
 
         ```yaml
@@ -416,11 +465,25 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_hosts:
         ```
 
-    ??? variable string "`unpackerr_role_docker_hosts_use_common`"
+    ??? variable bool "`unpackerr_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        unpackerr_role_docker_hosts_use_common:
+        unpackerr_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`unpackerr_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_links:
         ```
 
     ??? variable string "`unpackerr_role_docker_network_mode`"
@@ -428,6 +491,27 @@ Same setup is required for radarr and lidarr if you are using them.
         ```yaml
         # Type: string
         unpackerr_role_docker_network_mode:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`unpackerr_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_ports:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -446,6 +530,20 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_mounts:
         ```
 
+    ??? variable dict "`unpackerr_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        unpackerr_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`unpackerr_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_tmpfs:
+        ```
+
     ??? variable string "`unpackerr_role_docker_volume_driver`"
 
         ```yaml
@@ -460,10 +558,10 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_volumes_from:
         ```
 
-    ??? variable string "`unpackerr_role_docker_volumes_global`"
+    ??? variable bool "`unpackerr_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         unpackerr_role_docker_volumes_global:
         ```
 
@@ -476,6 +574,27 @@ Same setup is required for radarr and lidarr if you are using them.
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`unpackerr_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`unpackerr_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_cleanup:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_force_kill:
+        ```
+
     ??? variable dict "`unpackerr_role_docker_healthcheck`"
 
         ```yaml
@@ -483,11 +602,25 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_healthcheck:
         ```
 
+    ??? variable int "`unpackerr_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        unpackerr_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`unpackerr_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         unpackerr_role_docker_init:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_kill_signal:
         ```
 
     ??? variable string "`unpackerr_role_docker_log_driver`"
@@ -504,148 +637,6 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_log_options:
         ```
 
-    ??? variable bool "`unpackerr_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`unpackerr_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_capabilities:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`unpackerr_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_docker_cleanup:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_commands:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_domainname:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_env_file:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_force_kill:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_groups:
-        ```
-
-    ??? variable int "`unpackerr_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        unpackerr_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`unpackerr_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        unpackerr_role_docker_labels:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_links:
-        ```
-
     ??? variable bool "`unpackerr_role_docker_oom_killer`"
 
         ```yaml
@@ -660,32 +651,18 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`unpackerr_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_output_logs:
+        ```
+
     ??? variable bool "`unpackerr_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         unpackerr_role_docker_paused:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`unpackerr_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_ports:
-        ```
-
-    ??? variable bool "`unpackerr_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_docker_read_only:
         ```
 
     ??? variable bool "`unpackerr_role_docker_recreate`"
@@ -702,20 +679,6 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_restart_retries:
         ```
 
-    ??? variable string "`unpackerr_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_runtime:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_shm_size:
-        ```
-
     ??? variable int "`unpackerr_role_docker_stop_timeout`"
 
         ```yaml
@@ -723,11 +686,76 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`unpackerr_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`unpackerr_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_capabilities:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`unpackerr_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        unpackerr_role_docker_commands:
+        ```
+
+    ??? variable int "`unpackerr_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        unpackerr_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_env_file:
+        ```
+
+    ??? variable dict "`unpackerr_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        unpackerr_role_docker_storage_opts:
+        unpackerr_role_docker_labels:
+        ```
+
+    ??? variable bool "`unpackerr_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`unpackerr_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        unpackerr_role_docker_read_only:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_runtime:
         ```
 
     ??? variable list "`unpackerr_role_docker_sysctls`"
@@ -737,39 +765,11 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_sysctls:
         ```
 
-    ??? variable list "`unpackerr_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        unpackerr_role_docker_tmpfs:
-        ```
-
     ??? variable list "`unpackerr_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         unpackerr_role_docker_ulimits:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_user:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`unpackerr_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -814,20 +814,26 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_diun_enabled: true
         ```
 
-    ??? variable bool "`unpackerr_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        unpackerr_role_dns_enabled: true
-        ```
-
     ??? variable bool "`unpackerr_role_docker_controller`"
 
         ```yaml
         # Enable or disable Saltbox Docker Controller management for the container
         # Type: bool (true/false)
         unpackerr_role_docker_controller: true
+        ```
+
+    ??? variable string "`unpackerr_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_image_repo:
+        ```
+
+    ??? variable string "`unpackerr_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_image_tag:
         ```
 
     ??? variable bool "`unpackerr_role_docker_volumes_download`"
@@ -837,117 +843,10 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_role_docker_volumes_download:
         ```
 
-    ??? variable bool "`unpackerr_role_traefik_autodetect_enabled`"
+    ??? variable string "`unpackerr_role_paths_location`"
 
         ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        unpackerr_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`unpackerr_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        unpackerr_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`unpackerr_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        unpackerr_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            unpackerr_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "unpackerr2.{{ user.domain }}"
-              - "unpackerr.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`unpackerr_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
         # Type: string
-        unpackerr_role_web_host_override:
+        unpackerr_role_paths_location:
         ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            unpackerr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'unpackerr2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`unpackerr_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        unpackerr_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -52,7 +52,7 @@ sb install sandbox-tubearchivist
    Tubearchivist adds the downloaded media to `/mnt/unionfs/downloads/tubearchivist/YT_CHANNEL_NAME`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -375,15 +375,570 @@ sb install sandbox-tubearchivist
     ??? variable string "`tubearchivist_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         tubearchivist_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`tubearchivist_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         tubearchivist_role_depends_on_healthchecks: "false"
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`tubearchivist_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_cpus:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_memory:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`tubearchivist_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_requests:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_devices:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_devices_default:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_groups:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_privileged:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_security_opts:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_user:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`tubearchivist_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_domainname:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`tubearchivist_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        tubearchivist_role_docker_hosts:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_links:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_network_mode:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_ports:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`tubearchivist_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_mounts:
+        ```
+
+    ??? variable dict "`tubearchivist_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        tubearchivist_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`tubearchivist_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_cleanup:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`tubearchivist_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        tubearchivist_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_init:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`tubearchivist_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        tubearchivist_role_docker_log_options:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_paused:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_recreate:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`tubearchivist_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_capabilities:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_commands:
+        ```
+
+    ??? variable int "`tubearchivist_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        tubearchivist_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_env_file:
+        ```
+
+    ??? variable dict "`tubearchivist_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        tubearchivist_role_docker_labels:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`tubearchivist_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tubearchivist_role_docker_read_only:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_runtime:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_sysctls:
+        ```
+
+    ??? variable list "`tubearchivist_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        tubearchivist_role_docker_ulimits:
         ```
 
 === "Global Override Options"
@@ -444,11 +999,102 @@ sb install sandbox-tubearchivist
         tubearchivist_role_docker_controller: true
         ```
 
+    ??? variable string "`tubearchivist_role_docker_env_password`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_env_password:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_envs_http_header`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_envs_http_header:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_image_repo:
+        ```
+
+    ??? variable string "`tubearchivist_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_docker_image_tag:
+        ```
+
     ??? variable bool "`tubearchivist_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         tubearchivist_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`tubearchivist_role_enable_cast`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_enable_cast:
+        ```
+
+    ??? variable string "`tubearchivist_role_paths_downloads_location`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_paths_downloads_location:
+        ```
+
+    ??? variable string "`tubearchivist_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_paths_location:
+        ```
+
+    ??? variable string "`tubearchivist_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_themepark_addons:
+        ```
+
+    ??? variable string "`tubearchivist_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_themepark_app:
+        ```
+
+    ??? variable string "`tubearchivist_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`tubearchivist_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        tubearchivist_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`tubearchivist_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`tubearchivist_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`tubearchivist_role_traefik_autodetect_enabled`"
@@ -457,6 +1103,13 @@ sb install sandbox-tubearchivist
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         tubearchivist_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`tubearchivist_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_certresolver:
         ```
 
     ??? variable bool "`tubearchivist_role_traefik_crowdsec_enabled`"
@@ -483,6 +1136,13 @@ sb install sandbox-tubearchivist
         tubearchivist_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`tubearchivist_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`tubearchivist_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -497,12 +1157,26 @@ sb install sandbox-tubearchivist
         tubearchivist_role_traefik_middleware_http_insecure:
         ```
 
+    ??? variable string "`tubearchivist_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_priority:
+        ```
+
     ??? variable bool "`tubearchivist_role_traefik_robot_enabled`"
 
         ```yaml
         # Enable robots.txt middleware for the container
         # Type: bool (true/false)
         tubearchivist_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable string "`tubearchivist_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_traefik_sso_middleware:
         ```
 
     ??? variable bool "`tubearchivist_role_traefik_tailscale_enabled`"
@@ -519,6 +1193,13 @@ sb install sandbox-tubearchivist
         # Enable wildcard certificate for the container
         # Type: bool (true/false)
         tubearchivist_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`tubearchivist_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_web_domain:
         ```
 
     ??? variable list "`tubearchivist_role_web_fqdn_override`"
@@ -540,6 +1221,7 @@ sb install sandbox-tubearchivist
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`tubearchivist_role_web_host_override`"
 
         ```yaml
@@ -556,6 +1238,28 @@ sb install sandbox-tubearchivist
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`tubearchivist_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        tubearchivist_role_web_http_port:
+        ```
+
+    ??? variable string "`tubearchivist_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        tubearchivist_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`tubearchivist_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        tubearchivist_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`tubearchivist_role_web_scheme`"
 
         ```yaml
@@ -564,4 +1268,24 @@ sb install sandbox-tubearchivist
         tubearchivist_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`tubearchivist_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        tubearchivist_role_web_serverstransport:
+        ```
+
+    ??? variable string "`tubearchivist_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_web_subdomain:
+        ```
+
+    ??? variable string "`tubearchivist_role_web_url`"
+
+        ```yaml
+        # Type: string
+        tubearchivist_role_web_url:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

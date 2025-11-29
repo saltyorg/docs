@@ -52,7 +52,7 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 - DNS records are automatically managed based on active Traefik routes
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -258,20 +258,20 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
     ??? variable string "`ddns_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         ddns_role_depends_on_delay: "10"
         ```
 
     ??? variable string "`ddns_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         ddns_role_depends_on_healthchecks: "false"
         ```
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -359,6 +359,13 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`ddns_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`ddns_role_docker_cap_drop`"
@@ -366,6 +373,13 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ```yaml
         # Type: list
         ddns_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`ddns_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`ddns_role_docker_device_cgroup_rules`"
@@ -424,6 +438,13 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_devices_default:
         ```
 
+    ??? variable list "`ddns_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_groups:
+        ```
+
     ??? variable bool "`ddns_role_docker_privileged`"
 
         ```yaml
@@ -436,6 +457,20 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ```yaml
         # Type: list
         ddns_role_docker_security_opts:
+        ```
+
+    ??? variable string "`ddns_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_user:
+        ```
+
+    ??? variable string "`ddns_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -461,6 +496,20 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_dns_servers:
         ```
 
+    ??? variable string "`ddns_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_domainname:
+        ```
+
+    ??? variable list "`ddns_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`ddns_role_docker_hosts`"
 
         ```yaml
@@ -468,11 +517,25 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_hosts:
         ```
 
-    ??? variable string "`ddns_role_docker_hosts_use_common`"
+    ??? variable bool "`ddns_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`ddns_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        ddns_role_docker_hosts_use_common:
+        ddns_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`ddns_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_links:
         ```
 
     ??? variable string "`ddns_role_docker_network_mode`"
@@ -482,6 +545,27 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_network_mode:
         ```
 
+    ??? variable string "`ddns_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`ddns_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_ports:
+        ```
+
+    ??? variable string "`ddns_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_uts:
+        ```
+
     <h5>Storage</h5>
 
     ??? variable bool "`ddns_role_docker_keep_volumes`"
@@ -489,6 +573,20 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ```yaml
         # Type: bool (true/false)
         ddns_role_docker_keep_volumes:
+        ```
+
+    ??? variable dict "`ddns_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        ddns_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`ddns_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_tmpfs:
         ```
 
     ??? variable string "`ddns_role_docker_volume_driver`"
@@ -521,11 +619,46 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`ddns_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`ddns_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_cleanup:
+        ```
+
+    ??? variable string "`ddns_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_force_kill:
+        ```
+
     ??? variable dict "`ddns_role_docker_healthcheck`"
 
         ```yaml
         # Type: dict
         ddns_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`ddns_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        ddns_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable string "`ddns_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_kill_signal:
         ```
 
     ??? variable string "`ddns_role_docker_log_driver`"
@@ -542,148 +675,6 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_log_options:
         ```
 
-    ??? variable bool "`ddns_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`ddns_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`ddns_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_capabilities:
-        ```
-
-    ??? variable string "`ddns_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`ddns_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`ddns_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_docker_cleanup:
-        ```
-
-    ??? variable list "`ddns_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_commands:
-        ```
-
-    ??? variable string "`ddns_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`ddns_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_domainname:
-        ```
-
-    ??? variable string "`ddns_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`ddns_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_env_file:
-        ```
-
-    ??? variable list "`ddns_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`ddns_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_force_kill:
-        ```
-
-    ??? variable list "`ddns_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_groups:
-        ```
-
-    ??? variable int "`ddns_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        ddns_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`ddns_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`ddns_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`ddns_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        ddns_role_docker_labels:
-        ```
-
-    ??? variable string "`ddns_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`ddns_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_links:
-        ```
-
     ??? variable bool "`ddns_role_docker_oom_killer`"
 
         ```yaml
@@ -698,32 +689,18 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`ddns_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_output_logs:
+        ```
+
     ??? variable bool "`ddns_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         ddns_role_docker_paused:
-        ```
-
-    ??? variable string "`ddns_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`ddns_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_ports:
-        ```
-
-    ??? variable bool "`ddns_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_docker_read_only:
         ```
 
     ??? variable bool "`ddns_role_docker_recreate`"
@@ -740,20 +717,6 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_restart_retries:
         ```
 
-    ??? variable string "`ddns_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_runtime:
-        ```
-
-    ??? variable string "`ddns_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_shm_size:
-        ```
-
     ??? variable int "`ddns_role_docker_stop_timeout`"
 
         ```yaml
@@ -761,11 +724,76 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`ddns_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`ddns_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_capabilities:
+        ```
+
+    ??? variable string "`ddns_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`ddns_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        ddns_role_docker_commands:
+        ```
+
+    ??? variable int "`ddns_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        ddns_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`ddns_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`ddns_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_env_file:
+        ```
+
+    ??? variable dict "`ddns_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        ddns_role_docker_storage_opts:
+        ddns_role_docker_labels:
+        ```
+
+    ??? variable bool "`ddns_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`ddns_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        ddns_role_docker_read_only:
+        ```
+
+    ??? variable string "`ddns_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_runtime:
         ```
 
     ??? variable list "`ddns_role_docker_sysctls`"
@@ -775,39 +803,11 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_sysctls:
         ```
 
-    ??? variable list "`ddns_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        ddns_role_docker_tmpfs:
-        ```
-
     ??? variable list "`ddns_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         ddns_role_docker_ulimits:
-        ```
-
-    ??? variable string "`ddns_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_user:
-        ```
-
-    ??? variable string "`ddns_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`ddns_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -818,6 +818,20 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         ddns_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`ddns_role_custom_urls`"
+
+        ```yaml
+        # Type: string
+        ddns_role_custom_urls:
+        ```
+
+    ??? variable string "`ddns_role_delay`"
+
+        ```yaml
+        # Type: string
+        ddns_role_delay:
         ```
 
     ??? variable string "`ddns_role_depends_on`"
@@ -852,14 +866,6 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_diun_enabled: true
         ```
 
-    ??? variable bool "`ddns_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        ddns_role_dns_enabled: true
-        ```
-
     ??? variable bool "`ddns_role_docker_controller`"
 
         ```yaml
@@ -868,124 +874,24 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
         ddns_role_docker_controller: true
         ```
 
+    ??? variable string "`ddns_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_image_repo:
+        ```
+
+    ??? variable string "`ddns_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        ddns_role_docker_image_tag:
+        ```
+
     ??? variable bool "`ddns_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         ddns_role_docker_volumes_download:
         ```
-
-    ??? variable bool "`ddns_role_traefik_autodetect_enabled`"
-
-        ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`ddns_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`ddns_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`ddns_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`ddns_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`ddns_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        ddns_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`ddns_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`ddns_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`ddns_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        ddns_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`ddns_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        ddns_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            ddns_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "ddns2.{{ user.domain }}"
-              - "ddns.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`ddns_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
-        # Type: string
-        ddns_role_web_host_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            ddns_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'ddns2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`ddns_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        ddns_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

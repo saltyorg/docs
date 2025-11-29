@@ -6,7 +6,7 @@ hide:
 # Saltbox CLI
 
 <!-- BEGIN SALTBOX MANAGED CLI SECTION -->
-<!-- This section is managed by scripts/update-sb-help.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 <!-- termynal -->
 
 ```console

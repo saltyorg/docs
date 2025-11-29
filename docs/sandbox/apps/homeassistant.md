@@ -45,7 +45,7 @@ Home Assistant is pretty versatile and works with a lot of different apps/contai
 You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) to add more functionality to Home Assistant. For instance, adding the Node Red Companion, a "custom" integration for node-red-contrib-home-assistant-websocket. It allows you to integrate Node-RED with Home Assistant. For more information, see the [Node Red](node_red.md) page.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -345,6 +345,547 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_privileged: true
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`homeassistant_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_cpus:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_memory:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`homeassistant_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_requests:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_devices:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_devices_default:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_groups:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_security_opts:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_user:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`homeassistant_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_domainname:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`homeassistant_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        homeassistant_role_docker_hosts:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_links:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_ports:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`homeassistant_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_mounts:
+        ```
+
+    ??? variable dict "`homeassistant_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        homeassistant_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`homeassistant_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_cleanup:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`homeassistant_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        homeassistant_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_init:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`homeassistant_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        homeassistant_role_docker_log_options:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_paused:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_recreate:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`homeassistant_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_capabilities:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_commands:
+        ```
+
+    ??? variable int "`homeassistant_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        homeassistant_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_env_file:
+        ```
+
+    ??? variable dict "`homeassistant_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        homeassistant_role_docker_labels:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`homeassistant_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homeassistant_role_docker_read_only:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_runtime:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_sysctls:
+        ```
+
+    ??? variable list "`homeassistant_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        homeassistant_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`homeassistant_role_autoheal_enabled`"
@@ -403,11 +944,74 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_docker_controller: true
         ```
 
+    ??? variable string "`homeassistant_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_image_repo:
+        ```
+
+    ??? variable string "`homeassistant_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_docker_image_tag:
+        ```
+
     ??? variable bool "`homeassistant_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         homeassistant_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`homeassistant_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_paths_location:
+        ```
+
+    ??? variable string "`homeassistant_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_themepark_addons:
+        ```
+
+    ??? variable string "`homeassistant_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_themepark_app:
+        ```
+
+    ??? variable string "`homeassistant_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`homeassistant_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        homeassistant_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`homeassistant_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`homeassistant_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`homeassistant_role_traefik_autodetect_enabled`"
@@ -416,6 +1020,13 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         homeassistant_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`homeassistant_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_traefik_certresolver:
         ```
 
     ??? variable bool "`homeassistant_role_traefik_crowdsec_enabled`"
@@ -442,6 +1053,13 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`homeassistant_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`homeassistant_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -454,6 +1072,13 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         ```yaml
         # Type: bool (true/false)
         homeassistant_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`homeassistant_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_traefik_priority:
         ```
 
     ??? variable bool "`homeassistant_role_traefik_robot_enabled`"
@@ -480,6 +1105,13 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`homeassistant_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_web_domain:
+        ```
+
     ??? variable list "`homeassistant_role_web_fqdn_override`"
 
         ```yaml
@@ -499,6 +1131,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`homeassistant_role_web_host_override`"
 
         ```yaml
@@ -515,6 +1148,28 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`homeassistant_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        homeassistant_role_web_http_port:
+        ```
+
+    ??? variable string "`homeassistant_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        homeassistant_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`homeassistant_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homeassistant_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`homeassistant_role_web_scheme`"
 
         ```yaml
@@ -523,4 +1178,17 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`homeassistant_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homeassistant_role_web_serverstransport:
+        ```
+
+    ??? variable string "`homeassistant_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        homeassistant_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

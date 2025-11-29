@@ -80,7 +80,7 @@ tags:
 - To access qbittorrentvpn, visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -124,7 +124,7 @@ tags:
 
 === "Settings"
 
-    ??? variable string "`qbittorrentvpn_log_level_daemon`{ .sb-show-on-unchecked }`qbittorrentvpn_log_level_daemon`{ .sb-show-on-checked }"
+    ??? variable string "`qbittorrentvpn_log_level_daemon`{ .sb-show-on-unchecked }`qbittorrentvpn2_log_level_daemon`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -133,10 +133,10 @@ tags:
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrentvpn_log_level_daemon: info
+        qbittorrentvpn2_log_level_daemon: info
         ```
 
-    ??? variable string "`qbittorrentvpn_log_level_web`{ .sb-show-on-unchecked }`qbittorrentvpn_log_level_web`{ .sb-show-on-checked }"
+    ??? variable string "`qbittorrentvpn_log_level_web`{ .sb-show-on-unchecked }`qbittorrentvpn2_log_level_web`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -145,10 +145,10 @@ tags:
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrentvpn_log_level_web: info
+        qbittorrentvpn2_log_level_web: info
         ```
 
-    ??? variable string "`qbittorrentvpn_name_servers`{ .sb-show-on-unchecked }`qbittorrentvpn_name_servers`{ .sb-show-on-checked }"
+    ??? variable string "`qbittorrentvpn_name_servers`{ .sb-show-on-unchecked }`qbittorrentvpn2_name_servers`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -157,10 +157,10 @@ tags:
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrentvpn_name_servers: "84.200.69.80,1.1.1.1,84.200.70.40,1.0.0.1"
+        qbittorrentvpn2_name_servers: "84.200.69.80,1.1.1.1,84.200.70.40,1.0.0.1"
         ```
 
-    ??? variable string "`qbittorrentvpn_lan_network`{ .sb-show-on-unchecked }`qbittorrentvpn_lan_network`{ .sb-show-on-checked }"
+    ??? variable string "`qbittorrentvpn_lan_network`{ .sb-show-on-unchecked }`qbittorrentvpn2_lan_network`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -169,7 +169,7 @@ tags:
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrentvpn_lan_network: "172.19.0.0/16"
+        qbittorrentvpn2_lan_network: "172.19.0.0/16"
         ```
 
 === "Paths"
@@ -700,6 +700,898 @@ tags:
         qbittorrentvpn2_docker_privileged: true
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`qbittorrentvpn_role_docker_blkio_weight`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_blkio_weight`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_blkio_weight:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_blkio_weight:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_cpu_period`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpu_period`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_cpu_period:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_cpu_period:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_cpu_quota`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpu_quota`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_cpu_quota:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_cpu_quota:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_cpu_shares`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpu_shares`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_cpu_shares:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_cpu_shares:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_cpus`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpus`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_cpus:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_cpus:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_cpuset_cpus`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpuset_cpus`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_cpuset_cpus:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_cpuset_mems`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cpuset_mems`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_cpuset_mems:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_kernel_memory`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_kernel_memory`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_kernel_memory:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_kernel_memory:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_memory`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_memory`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_memory:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_memory:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_memory_reservation`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_memory_reservation`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_memory_reservation:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_memory_reservation:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_memory_swap`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_memory_swap`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_memory_swap:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_memory_swap:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_memory_swappiness`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_memory_swappiness`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_memory_swappiness:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_shm_size`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_shm_size:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`qbittorrentvpn_role_docker_cap_drop`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cap_drop`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_cap_drop:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_cap_drop:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_cgroup_rules:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_read_bps`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_read_bps`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_read_bps:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_read_bps:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_read_iops`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_read_iops`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_read_iops:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_read_iops:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_requests`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_requests`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_requests:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_requests:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_write_bps`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_write_bps`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_write_bps:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_write_bps:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_device_write_iops`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_device_write_iops`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_device_write_iops:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_device_write_iops:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_devices`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_devices`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_devices:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_devices:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_devices_default`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_devices_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_devices_default:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_devices_default:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_groups`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_groups:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_security_opts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_security_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_security_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_security_opts:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_user`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_user:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_userns_mode`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`qbittorrentvpn_role_docker_dns_opts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_dns_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_dns_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_dns_opts:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_dns_search_domains`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_dns_search_domains`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_dns_search_domains:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_dns_servers`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_dns_servers`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_dns_servers:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_dns_servers:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_domainname`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_domainname:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_exposed_ports`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_exposed_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`qbittorrentvpn_role_docker_hosts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_hosts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrentvpn_role_docker_hosts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrentvpn2_docker_hosts:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_hosts_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_hosts_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_ipc_mode`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_ipc_mode:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_links`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_links:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_network_mode`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_network_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_network_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_network_mode:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_pid_mode`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_pid_mode:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_ports`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_ports:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_uts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`qbittorrentvpn_role_docker_keep_volumes`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_keep_volumes`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_keep_volumes:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_keep_volumes:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_mounts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_mounts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_mounts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_mounts:
+        ```
+
+    ??? variable dict "`qbittorrentvpn_role_docker_storage_opts`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrentvpn_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrentvpn2_docker_storage_opts:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_tmpfs`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_tmpfs:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_volume_driver`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_volume_driver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_volume_driver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_volume_driver:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_volumes_from`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_volumes_from`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_volumes_from:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_volumes_from:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_volumes_global`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_volumes_global`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_volumes_global:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_volumes_global:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_working_dir`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_working_dir`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_working_dir:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`qbittorrentvpn_role_docker_auto_remove`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_auto_remove:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_cleanup`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_cleanup:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_force_kill`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_force_kill:
+        ```
+
+    ??? variable dict "`qbittorrentvpn_role_docker_healthcheck`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_healthcheck`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrentvpn_role_docker_healthcheck:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrentvpn2_docker_healthcheck:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_init`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_init`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_init:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_init:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_kill_signal`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_kill_signal:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_log_driver`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_log_driver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_log_driver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_log_driver:
+        ```
+
+    ??? variable dict "`qbittorrentvpn_role_docker_log_options`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_log_options`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrentvpn_role_docker_log_options:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrentvpn2_docker_log_options:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_oom_killer`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_oom_killer`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_oom_killer:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_oom_killer:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_oom_score_adj`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_oom_score_adj:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_output_logs`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_output_logs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_output_logs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_output_logs:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_paused`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_paused`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_paused:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_paused:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_recreate`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_recreate`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_recreate:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_recreate:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_restart_retries`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_restart_retries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_restart_retries:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_restart_retries:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable string "`qbittorrentvpn_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cgroup_parent`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_cgroup_parent:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_commands`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_commands:
+        ```
+
+    ??? variable int "`qbittorrentvpn_role_docker_create_timeout`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrentvpn_role_docker_create_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrentvpn2_docker_create_timeout:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_entrypoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_entrypoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_entrypoint:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_env_file`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_env_file`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_env_file:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_env_file:
+        ```
+
+    ??? variable dict "`qbittorrentvpn_role_docker_labels`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_labels`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrentvpn_role_docker_labels:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrentvpn2_docker_labels:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_labels_use_common`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_labels_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`qbittorrentvpn_role_docker_read_only`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_read_only`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrentvpn_role_docker_read_only:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrentvpn2_docker_read_only:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_runtime`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_runtime`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_runtime:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_runtime:
+        ```
+
+    ??? variable list "`qbittorrentvpn_role_docker_ulimits`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_ulimits`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrentvpn_role_docker_ulimits:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrentvpn2_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`qbittorrentvpn_role_autoheal_enabled`{ .sb-show-on-unchecked }`qbittorrentvpn2_autoheal_enabled`{ .sb-show-on-checked }"
@@ -800,6 +1692,30 @@ tags:
         qbittorrentvpn2_docker_controller: true
         ```
 
+    ??? variable string "`qbittorrentvpn_role_docker_image_repo`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_image_repo:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_image_repo:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_docker_image_tag`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_image_tag:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_image_tag:
+        ```
+
     ??? variable bool "`qbittorrentvpn_role_docker_volumes_download`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -810,6 +1726,90 @@ tags:
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrentvpn2_docker_volumes_download:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_paths_location`{ .sb-show-on-unchecked }`qbittorrentvpn2_paths_location`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_paths_location:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_paths_location:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_themepark_addons`{ .sb-show-on-unchecked }`qbittorrentvpn2_themepark_addons`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_themepark_addons:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_themepark_addons:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_themepark_app`{ .sb-show-on-unchecked }`qbittorrentvpn2_themepark_app`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_themepark_app:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_themepark_app:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_themepark_theme`{ .sb-show-on-unchecked }`qbittorrentvpn2_themepark_theme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_themepark_theme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`qbittorrentvpn_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrentvpn_role_traefik_api_endpoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrentvpn2_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_traefik_api_middleware`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_api_middleware`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_traefik_api_middleware:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_traefik_api_middleware:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_api_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_traefik_api_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`qbittorrentvpn_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
@@ -824,6 +1824,18 @@ tags:
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         qbittorrentvpn2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_traefik_certresolver`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_certresolver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_traefik_certresolver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_traefik_certresolver:
         ```
 
     ??? variable bool "`qbittorrentvpn_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -868,6 +1880,18 @@ tags:
         qbittorrentvpn2_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`qbittorrentvpn_role_traefik_middleware_http`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_traefik_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_traefik_middleware_http:
+        ```
+
     ??? variable bool "`qbittorrentvpn_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -890,6 +1914,18 @@ tags:
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrentvpn2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_traefik_priority`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_priority`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_traefik_priority:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_traefik_priority:
         ```
 
     ??? variable bool "`qbittorrentvpn_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_robot_enabled`{ .sb-show-on-checked }"
@@ -934,6 +1970,18 @@ tags:
         qbittorrentvpn2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`qbittorrentvpn_role_web_domain`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_domain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_web_domain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_web_domain:
+        ```
+
     ??? variable list "`qbittorrentvpn_role_web_fqdn_override`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -959,6 +2007,7 @@ tags:
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -969,6 +2018,7 @@ tags:
             ```
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
 
     ??? variable string "`qbittorrentvpn_role_web_host_override`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_host_override`{ .sb-show-on-checked }"
 
@@ -992,6 +2042,7 @@ tags:
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -999,6 +2050,43 @@ tags:
             ```
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+
+    ??? variable string "`qbittorrentvpn_role_web_http_port`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        qbittorrentvpn_role_web_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        qbittorrentvpn2_web_http_port:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_web_http_scheme`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        qbittorrentvpn_role_web_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        qbittorrentvpn2_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`qbittorrentvpn_role_web_http_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrentvpn_role_web_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrentvpn2_web_http_serverstransport:
+        ```
 
     ??? variable string "`qbittorrentvpn_role_web_scheme`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_scheme`{ .sb-show-on-checked }"
 
@@ -1014,4 +2102,27 @@ tags:
         qbittorrentvpn2_web_scheme:
         ```
 
+    ??? variable dict/omit "`qbittorrentvpn_role_web_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrentvpn_role_web_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrentvpn2_web_serverstransport:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_web_subdomain`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_subdomain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_web_subdomain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

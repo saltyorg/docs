@@ -209,7 +209,7 @@ Below are some example inventory entries for some common VPN providers. These ar
     ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -927,7 +927,7 @@ Below are some example inventory entries for some common VPN providers. These ar
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -1075,6 +1075,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_memory_swappiness:
         ```
 
+    ??? variable string "`gluetun_role_docker_shm_size`{ .sb-show-on-unchecked }`gluetun2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_shm_size:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`gluetun_role_docker_cap_drop`{ .sb-show-on-unchecked }`gluetun2_docker_cap_drop`{ .sb-show-on-checked }"
@@ -1087,6 +1099,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: list
         gluetun2_docker_cap_drop:
+        ```
+
+    ??? variable string "`gluetun_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_cgroupns_mode:
         ```
 
     ??? variable list "`gluetun_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`gluetun2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
@@ -1185,6 +1209,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_devices_default:
         ```
 
+    ??? variable list "`gluetun_role_docker_groups`{ .sb-show-on-unchecked }`gluetun2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_groups:
+        ```
+
     ??? variable bool "`gluetun_role_docker_privileged`{ .sb-show-on-unchecked }`gluetun2_docker_privileged`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1207,6 +1243,30 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: list
         gluetun2_docker_security_opts:
+        ```
+
+    ??? variable string "`gluetun_role_docker_user`{ .sb-show-on-unchecked }`gluetun2_docker_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_user:
+        ```
+
+    ??? variable string "`gluetun_role_docker_userns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -1247,6 +1307,30 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_dns_servers:
         ```
 
+    ??? variable string "`gluetun_role_docker_domainname`{ .sb-show-on-unchecked }`gluetun2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_domainname:
+        ```
+
+    ??? variable list "`gluetun_role_docker_exposed_ports`{ .sb-show-on-unchecked }`gluetun2_docker_exposed_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_exposed_ports:
+        ```
+
     ??? variable dict "`gluetun_role_docker_hosts`{ .sb-show-on-unchecked }`gluetun2_docker_hosts`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1259,16 +1343,40 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_hosts:
         ```
 
-    ??? variable string "`gluetun_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_hosts_use_common`{ .sb-show-on-checked }"
+    ??? variable bool "`gluetun_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         gluetun_role_docker_hosts_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         gluetun2_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`gluetun_role_docker_ipc_mode`{ .sb-show-on-unchecked }`gluetun2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_ipc_mode:
+        ```
+
+    ??? variable list "`gluetun_role_docker_links`{ .sb-show-on-unchecked }`gluetun2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_links:
         ```
 
     ??? variable string "`gluetun_role_docker_network_mode`{ .sb-show-on-unchecked }`gluetun2_docker_network_mode`{ .sb-show-on-checked }"
@@ -1281,6 +1389,42 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: string
         gluetun2_docker_network_mode:
+        ```
+
+    ??? variable string "`gluetun_role_docker_pid_mode`{ .sb-show-on-unchecked }`gluetun2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_pid_mode:
+        ```
+
+    ??? variable list "`gluetun_role_docker_ports`{ .sb-show-on-unchecked }`gluetun2_docker_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_ports:
+        ```
+
+    ??? variable string "`gluetun_role_docker_uts`{ .sb-show-on-unchecked }`gluetun2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -1307,6 +1451,30 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: list
         gluetun2_docker_mounts:
+        ```
+
+    ??? variable dict "`gluetun_role_docker_storage_opts`{ .sb-show-on-unchecked }`gluetun2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        gluetun_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        gluetun2_docker_storage_opts:
+        ```
+
+    ??? variable list "`gluetun_role_docker_tmpfs`{ .sb-show-on-unchecked }`gluetun2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_tmpfs:
         ```
 
     ??? variable string "`gluetun_role_docker_volume_driver`{ .sb-show-on-unchecked }`gluetun2_docker_volume_driver`{ .sb-show-on-checked }"
@@ -1347,6 +1515,42 @@ Below are some example inventory entries for some common VPN providers. These ar
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`gluetun_role_docker_auto_remove`{ .sb-show-on-unchecked }`gluetun2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_auto_remove:
+        ```
+
+    ??? variable bool "`gluetun_role_docker_cleanup`{ .sb-show-on-unchecked }`gluetun2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_cleanup:
+        ```
+
+    ??? variable string "`gluetun_role_docker_force_kill`{ .sb-show-on-unchecked }`gluetun2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_force_kill:
+        ```
+
     ??? variable dict "`gluetun_role_docker_healthcheck`{ .sb-show-on-unchecked }`gluetun2_docker_healthcheck`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1359,6 +1563,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_healthcheck:
         ```
 
+    ??? variable int "`gluetun_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`gluetun_role_docker_init`{ .sb-show-on-unchecked }`gluetun2_docker_init`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1369,6 +1585,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         gluetun2_docker_init:
+        ```
+
+    ??? variable string "`gluetun_role_docker_kill_signal`{ .sb-show-on-unchecked }`gluetun2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_kill_signal:
         ```
 
     ??? variable string "`gluetun_role_docker_log_driver`{ .sb-show-on-unchecked }`gluetun2_docker_log_driver`{ .sb-show-on-checked }"
@@ -1395,224 +1623,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_log_options:
         ```
 
-    ??? variable bool "`gluetun_role_docker_output_logs`{ .sb-show-on-unchecked }`gluetun2_docker_output_logs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_docker_output_logs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`gluetun_role_docker_auto_remove`{ .sb-show-on-unchecked }`gluetun2_docker_auto_remove`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_docker_auto_remove:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_docker_auto_remove:
-        ```
-
-    ??? variable string "`gluetun_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`gluetun2_docker_cgroup_parent`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_cgroup_parent:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`gluetun_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_cgroupns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_cgroupns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`gluetun_role_docker_cleanup`{ .sb-show-on-unchecked }`gluetun2_docker_cleanup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_docker_cleanup:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_docker_cleanup:
-        ```
-
-    ??? variable list "`gluetun_role_docker_commands`{ .sb-show-on-unchecked }`gluetun2_docker_commands`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_commands:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_commands:
-        ```
-
-    ??? variable string "`gluetun_role_docker_create_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_create_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_create_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_create_timeout:
-        ```
-
-    ??? variable string "`gluetun_role_docker_domainname`{ .sb-show-on-unchecked }`gluetun2_docker_domainname`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_domainname:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_domainname:
-        ```
-
-    ??? variable string "`gluetun_role_docker_entrypoint`{ .sb-show-on-unchecked }`gluetun2_docker_entrypoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_entrypoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_entrypoint:
-        ```
-
-    ??? variable string "`gluetun_role_docker_env_file`{ .sb-show-on-unchecked }`gluetun2_docker_env_file`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_env_file:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_env_file:
-        ```
-
-    ??? variable list "`gluetun_role_docker_exposed_ports`{ .sb-show-on-unchecked }`gluetun2_docker_exposed_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_exposed_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_exposed_ports:
-        ```
-
-    ??? variable string "`gluetun_role_docker_force_kill`{ .sb-show-on-unchecked }`gluetun2_docker_force_kill`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_force_kill:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_force_kill:
-        ```
-
-    ??? variable list "`gluetun_role_docker_groups`{ .sb-show-on-unchecked }`gluetun2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_groups:
-        ```
-
-    ??? variable int "`gluetun_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        gluetun_role_docker_healthy_wait_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        gluetun2_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`gluetun_role_docker_ipc_mode`{ .sb-show-on-unchecked }`gluetun2_docker_ipc_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_ipc_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_ipc_mode:
-        ```
-
-    ??? variable string "`gluetun_role_docker_kill_signal`{ .sb-show-on-unchecked }`gluetun2_docker_kill_signal`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_kill_signal:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_kill_signal:
-        ```
-
-    ??? variable string "`gluetun_role_docker_labels_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_labels_use_common`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_labels_use_common:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_labels_use_common:
-        ```
-
-    ??? variable list "`gluetun_role_docker_links`{ .sb-show-on-unchecked }`gluetun2_docker_links`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_links:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_links:
-        ```
-
     ??? variable bool "`gluetun_role_docker_oom_killer`{ .sb-show-on-unchecked }`gluetun2_docker_oom_killer`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1637,6 +1647,18 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`gluetun_role_docker_output_logs`{ .sb-show-on-unchecked }`gluetun2_docker_output_logs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_output_logs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_output_logs:
+        ```
+
     ??? variable bool "`gluetun_role_docker_paused`{ .sb-show-on-unchecked }`gluetun2_docker_paused`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1647,42 +1669,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         gluetun2_docker_paused:
-        ```
-
-    ??? variable string "`gluetun_role_docker_pid_mode`{ .sb-show-on-unchecked }`gluetun2_docker_pid_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_pid_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_pid_mode:
-        ```
-
-    ??? variable list "`gluetun_role_docker_ports`{ .sb-show-on-unchecked }`gluetun2_docker_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_ports:
-        ```
-
-    ??? variable bool "`gluetun_role_docker_read_only`{ .sb-show-on-unchecked }`gluetun2_docker_read_only`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_docker_read_only:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_docker_read_only:
         ```
 
     ??? variable bool "`gluetun_role_docker_recreate`{ .sb-show-on-unchecked }`gluetun2_docker_recreate`{ .sb-show-on-checked }"
@@ -1709,30 +1695,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_restart_retries:
         ```
 
-    ??? variable string "`gluetun_role_docker_runtime`{ .sb-show-on-unchecked }`gluetun2_docker_runtime`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_runtime:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_runtime:
-        ```
-
-    ??? variable string "`gluetun_role_docker_shm_size`{ .sb-show-on-unchecked }`gluetun2_docker_shm_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_shm_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_shm_size:
-        ```
-
     ??? variable int "`gluetun_role_docker_stop_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1745,16 +1707,102 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_stop_timeout:
         ```
 
-    ??? variable dict "`gluetun_role_docker_storage_opts`{ .sb-show-on-unchecked }`gluetun2_docker_storage_opts`{ .sb-show-on-checked }"
+    <h5>Other Options</h5>
+
+    ??? variable string "`gluetun_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`gluetun2_docker_cgroup_parent`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        gluetun_role_docker_storage_opts:
+        # Type: string
+        gluetun_role_docker_cgroup_parent:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: dict
-        gluetun2_docker_storage_opts:
+        # Type: string
+        gluetun2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`gluetun_role_docker_commands`{ .sb-show-on-unchecked }`gluetun2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        gluetun_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        gluetun2_docker_commands:
+        ```
+
+    ??? variable int "`gluetun_role_docker_create_timeout`{ .sb-show-on-unchecked }`gluetun2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        gluetun_role_docker_create_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        gluetun2_docker_create_timeout:
+        ```
+
+    ??? variable string "`gluetun_role_docker_entrypoint`{ .sb-show-on-unchecked }`gluetun2_docker_entrypoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_entrypoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_entrypoint:
+        ```
+
+    ??? variable string "`gluetun_role_docker_env_file`{ .sb-show-on-unchecked }`gluetun2_docker_env_file`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_env_file:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_env_file:
+        ```
+
+    ??? variable bool "`gluetun_role_docker_labels_use_common`{ .sb-show-on-unchecked }`gluetun2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_labels_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`gluetun_role_docker_read_only`{ .sb-show-on-unchecked }`gluetun2_docker_read_only`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        gluetun_role_docker_read_only:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        gluetun2_docker_read_only:
+        ```
+
+    ??? variable string "`gluetun_role_docker_runtime`{ .sb-show-on-unchecked }`gluetun2_docker_runtime`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_runtime:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_runtime:
         ```
 
     ??? variable list "`gluetun_role_docker_sysctls`{ .sb-show-on-unchecked }`gluetun2_docker_sysctls`{ .sb-show-on-checked }"
@@ -1769,18 +1817,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_sysctls:
         ```
 
-    ??? variable list "`gluetun_role_docker_tmpfs`{ .sb-show-on-unchecked }`gluetun2_docker_tmpfs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        gluetun_role_docker_tmpfs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        gluetun2_docker_tmpfs:
-        ```
-
     ??? variable list "`gluetun_role_docker_ulimits`{ .sb-show-on-unchecked }`gluetun2_docker_ulimits`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1791,42 +1827,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         ```yaml { .sb-show-on-checked }
         # Type: list
         gluetun2_docker_ulimits:
-        ```
-
-    ??? variable string "`gluetun_role_docker_user`{ .sb-show-on-unchecked }`gluetun2_docker_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_user:
-        ```
-
-    ??? variable string "`gluetun_role_docker_userns_mode`{ .sb-show-on-unchecked }`gluetun2_docker_userns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_userns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_userns_mode:
-        ```
-
-    ??? variable string "`gluetun_role_docker_uts`{ .sb-show-on-unchecked }`gluetun2_docker_uts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_uts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1901,20 +1901,6 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_diun_enabled: true
         ```
 
-    ??? variable bool "`gluetun_role_dns_enabled`{ .sb-show-on-unchecked }`gluetun2_dns_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable or disable automatic DNS record creation for containers
-        # Type: bool (true/false)
-        gluetun_role_dns_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable or disable automatic DNS record creation for containers
-        # Type: bool (true/false)
-        gluetun2_dns_enabled: true
-        ```
-
     ??? variable bool "`gluetun_role_docker_controller`{ .sb-show-on-unchecked }`gluetun2_docker_controller`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1929,6 +1915,42 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_controller: true
         ```
 
+    ??? variable string "`gluetun_role_docker_image_repo`{ .sb-show-on-unchecked }`gluetun2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_image_repo:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_image_repo:
+        ```
+
+    ??? variable string "`gluetun_role_docker_image_tag`{ .sb-show-on-unchecked }`gluetun2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_image_tag:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_image_tag:
+        ```
+
+    ??? variable string "`gluetun_role_docker_resolver`{ .sb-show-on-unchecked }`gluetun2_docker_resolver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_resolver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_resolver:
+        ```
+
     ??? variable bool "`gluetun_role_docker_volumes_download`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1941,206 +1963,303 @@ Below are some example inventory entries for some common VPN providers. These ar
         gluetun2_docker_volumes_download:
         ```
 
-    ??? variable bool "`gluetun_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
+    ??? variable string "`gluetun_role_firewall_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_input_ports`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Enable Traefik autodetect middleware for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_autodetect_enabled: false
+        # Type: string (quoted number)
+        gluetun_role_firewall_input_ports:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Enable Traefik autodetect middleware for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_autodetect_enabled: false
+        # Type: string (quoted number)
+        gluetun2_firewall_input_ports:
         ```
 
-    ??? variable bool "`gluetun_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
+    ??? variable string "`gluetun_role_firewall_outbound_subnets`{ .sb-show-on-unchecked }`gluetun2_firewall_outbound_subnets`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Enable CrowdSec middleware for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_crowdsec_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable CrowdSec middleware for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_error_pages_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_error_pages_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable custom error pages middleware for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_error_pages_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable custom error pages middleware for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_gzip_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_gzip_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`gluetun2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_traefik_middleware_http_api_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_middleware_http_insecure`{ .sb-show-on-unchecked }`gluetun2_traefik_middleware_http_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_traefik_middleware_http_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_robot_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable robots.txt middleware for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_robot_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable robots.txt middleware for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_tailscale_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_tailscale_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable Tailscale-specific Traefik configuration for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_tailscale_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable Tailscale-specific Traefik configuration for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`gluetun_role_traefik_wildcard_enabled`{ .sb-show-on-unchecked }`gluetun2_traefik_wildcard_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable wildcard certificate for containers
-        # Type: bool (true/false)
-        gluetun_role_traefik_wildcard_enabled: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable wildcard certificate for containers
-        # Type: bool (true/false)
-        gluetun2_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`gluetun_role_web_fqdn_override`{ .sb-show-on-unchecked }`gluetun2_web_fqdn_override`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: list
-        gluetun_role_web_fqdn_override:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Override the Traefik fully qualified domain name (FQDN) for containers
-        # Type: list
-        gluetun2_web_fqdn_override:
-        ```
-
-        !!! example sb-show-on-unchecked "Example Override"
-
-            ```yaml
-            gluetun_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "gluetun2.{{ user.domain }}"
-              - "gluetun.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-        !!! example sb-show-on-checked "Example Override"
-
-            ```yaml
-            gluetun2_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "gluetun2.{{ user.domain }}"
-              - "gluetun.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`gluetun_role_web_host_override`{ .sb-show-on-unchecked }`gluetun2_web_host_override`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Override the Traefik web host configuration for containers
         # Type: string
-        gluetun_role_web_host_override:
+        gluetun_role_firewall_outbound_subnets:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Override the Traefik web host configuration for containers
         # Type: string
-        gluetun2_web_host_override:
+        gluetun2_firewall_outbound_subnets:
         ```
 
-        !!! example sb-show-on-unchecked "Example Override"
-
-            ```yaml
-            gluetun_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-        !!! example sb-show-on-checked "Example Override"
-
-            ```yaml
-            gluetun2_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'gluetun2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`gluetun_role_web_scheme`{ .sb-show-on-unchecked }`gluetun2_web_scheme`{ .sb-show-on-checked }"
+    ??? variable string "`gluetun_role_firewall_vpn_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_vpn_input_ports`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # URL scheme to use for web access to containers
-        # Type: string ("http"/"https")
-        gluetun_role_web_scheme:
+        # Type: string (quoted number)
+        gluetun_role_firewall_vpn_input_ports:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # URL scheme to use for web access to containers
-        # Type: string ("http"/"https")
-        gluetun2_web_scheme:
+        # Type: string (quoted number)
+        gluetun2_firewall_vpn_input_ports:
         ```
 
+    ??? variable string "`gluetun_role_openvpn_custom_config`{ .sb-show-on-unchecked }`gluetun2_openvpn_custom_config`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_custom_config:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_custom_config:
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_endpoint_ip:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_endpoint_ip:
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        gluetun_role_openvpn_endpoint_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        gluetun2_openvpn_endpoint_port:
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_key_passphrase`{ .sb-show-on-unchecked }`gluetun2_openvpn_key_passphrase`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_key_passphrase:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_key_passphrase:
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_password`{ .sb-show-on-unchecked }`gluetun2_openvpn_password`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_password:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_password:
+        ```
+
+    ??? variable string "`gluetun_role_openvpn_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_openvpn_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_openvpn_user:
+        ```
+
+    ??? variable string "`gluetun_role_server_cities`{ .sb-show-on-unchecked }`gluetun2_server_cities`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_cities:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_cities:
+        ```
+
+    ??? variable string "`gluetun_role_server_countries`{ .sb-show-on-unchecked }`gluetun2_server_countries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_countries:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_countries:
+        ```
+
+    ??? variable string "`gluetun_role_server_hostnames`{ .sb-show-on-unchecked }`gluetun2_server_hostnames`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_hostnames:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_hostnames:
+        ```
+
+    ??? variable string "`gluetun_role_server_names`{ .sb-show-on-unchecked }`gluetun2_server_names`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_names:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_names:
+        ```
+
+    ??? variable string "`gluetun_role_server_regions`{ .sb-show-on-unchecked }`gluetun2_server_regions`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_server_regions:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_server_regions:
+        ```
+
+    ??? variable string "`gluetun_role_vpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_endpoint_ip:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_endpoint_ip:
+        ```
+
+    ??? variable string "`gluetun_role_vpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        gluetun_role_vpn_endpoint_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        gluetun2_vpn_endpoint_port:
+        ```
+
+    ??? variable string "`gluetun_role_vpn_service_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_service_provider`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_service_provider:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_service_provider:
+        ```
+
+    ??? variable string "`gluetun_role_vpn_type`{ .sb-show-on-unchecked }`gluetun2_vpn_type`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_vpn_type:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_vpn_type:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_addresses`{ .sb-show-on-unchecked }`gluetun2_wireguard_addresses`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_addresses:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_addresses:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_ip`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_endpoint_ip:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_endpoint_ip:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        gluetun_role_wireguard_endpoint_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        gluetun2_wireguard_endpoint_port:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_mtu`{ .sb-show-on-unchecked }`gluetun2_wireguard_mtu`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_mtu:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_mtu:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_preshared_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_preshared_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_preshared_key:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_preshared_key:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_private_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_private_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_private_key:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_private_key:
+        ```
+
+    ??? variable string "`gluetun_role_wireguard_public_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_public_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_wireguard_public_key:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_wireguard_public_key:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

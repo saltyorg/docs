@@ -43,7 +43,7 @@ sb install petio
 - See the Petio documentation for more information.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -345,20 +345,20 @@ sb install petio
     ??? variable string "`petio_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         petio_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`petio_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         petio_role_depends_on_healthchecks: "false"
         ```
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -446,6 +446,13 @@ sb install petio
         petio_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`petio_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`petio_role_docker_cap_drop`"
@@ -453,6 +460,13 @@ sb install petio
         ```yaml
         # Type: list
         petio_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`petio_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`petio_role_docker_device_cgroup_rules`"
@@ -511,6 +525,13 @@ sb install petio
         petio_role_docker_devices_default:
         ```
 
+    ??? variable list "`petio_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_groups:
+        ```
+
     ??? variable bool "`petio_role_docker_privileged`"
 
         ```yaml
@@ -523,6 +544,13 @@ sb install petio
         ```yaml
         # Type: list
         petio_role_docker_security_opts:
+        ```
+
+    ??? variable string "`petio_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -548,6 +576,20 @@ sb install petio
         petio_role_docker_dns_servers:
         ```
 
+    ??? variable string "`petio_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_domainname:
+        ```
+
+    ??? variable list "`petio_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`petio_role_docker_hosts`"
 
         ```yaml
@@ -555,11 +597,25 @@ sb install petio
         petio_role_docker_hosts:
         ```
 
-    ??? variable string "`petio_role_docker_hosts_use_common`"
+    ??? variable bool "`petio_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`petio_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        petio_role_docker_hosts_use_common:
+        petio_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`petio_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_links:
         ```
 
     ??? variable string "`petio_role_docker_network_mode`"
@@ -567,6 +623,27 @@ sb install petio
         ```yaml
         # Type: string
         petio_role_docker_network_mode:
+        ```
+
+    ??? variable string "`petio_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`petio_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_ports:
+        ```
+
+    ??? variable string "`petio_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -585,6 +662,20 @@ sb install petio
         petio_role_docker_mounts:
         ```
 
+    ??? variable dict "`petio_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        petio_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`petio_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_tmpfs:
+        ```
+
     ??? variable string "`petio_role_docker_volume_driver`"
 
         ```yaml
@@ -599,10 +690,10 @@ sb install petio
         petio_role_docker_volumes_from:
         ```
 
-    ??? variable string "`petio_role_docker_volumes_global`"
+    ??? variable bool "`petio_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         petio_role_docker_volumes_global:
         ```
 
@@ -615,6 +706,27 @@ sb install petio
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`petio_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`petio_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_cleanup:
+        ```
+
+    ??? variable string "`petio_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_force_kill:
+        ```
+
     ??? variable dict "`petio_role_docker_healthcheck`"
 
         ```yaml
@@ -622,11 +734,25 @@ sb install petio
         petio_role_docker_healthcheck:
         ```
 
+    ??? variable int "`petio_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        petio_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`petio_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         petio_role_docker_init:
+        ```
+
+    ??? variable string "`petio_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_kill_signal:
         ```
 
     ??? variable string "`petio_role_docker_log_driver`"
@@ -643,148 +769,6 @@ sb install petio
         petio_role_docker_log_options:
         ```
 
-    ??? variable bool "`petio_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        petio_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`petio_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        petio_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`petio_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_capabilities:
-        ```
-
-    ??? variable string "`petio_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`petio_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`petio_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        petio_role_docker_cleanup:
-        ```
-
-    ??? variable list "`petio_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_commands:
-        ```
-
-    ??? variable string "`petio_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`petio_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_domainname:
-        ```
-
-    ??? variable string "`petio_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`petio_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_env_file:
-        ```
-
-    ??? variable list "`petio_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`petio_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_force_kill:
-        ```
-
-    ??? variable list "`petio_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_groups:
-        ```
-
-    ??? variable int "`petio_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        petio_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`petio_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`petio_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`petio_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        petio_role_docker_labels:
-        ```
-
-    ??? variable string "`petio_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`petio_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_links:
-        ```
-
     ??? variable bool "`petio_role_docker_oom_killer`"
 
         ```yaml
@@ -799,32 +783,18 @@ sb install petio
         petio_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`petio_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_output_logs:
+        ```
+
     ??? variable bool "`petio_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         petio_role_docker_paused:
-        ```
-
-    ??? variable string "`petio_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`petio_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_ports:
-        ```
-
-    ??? variable bool "`petio_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        petio_role_docker_read_only:
         ```
 
     ??? variable bool "`petio_role_docker_recreate`"
@@ -841,20 +811,6 @@ sb install petio
         petio_role_docker_restart_retries:
         ```
 
-    ??? variable string "`petio_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_runtime:
-        ```
-
-    ??? variable string "`petio_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_shm_size:
-        ```
-
     ??? variable int "`petio_role_docker_stop_timeout`"
 
         ```yaml
@@ -862,11 +818,76 @@ sb install petio
         petio_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`petio_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`petio_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_capabilities:
+        ```
+
+    ??? variable string "`petio_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`petio_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        petio_role_docker_commands:
+        ```
+
+    ??? variable int "`petio_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        petio_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`petio_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`petio_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_env_file:
+        ```
+
+    ??? variable dict "`petio_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        petio_role_docker_storage_opts:
+        petio_role_docker_labels:
+        ```
+
+    ??? variable bool "`petio_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`petio_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        petio_role_docker_read_only:
+        ```
+
+    ??? variable string "`petio_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_runtime:
         ```
 
     ??? variable list "`petio_role_docker_sysctls`"
@@ -876,32 +897,11 @@ sb install petio
         petio_role_docker_sysctls:
         ```
 
-    ??? variable list "`petio_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        petio_role_docker_tmpfs:
-        ```
-
     ??? variable list "`petio_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         petio_role_docker_ulimits:
-        ```
-
-    ??? variable string "`petio_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`petio_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        petio_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -962,11 +962,67 @@ sb install petio
         petio_role_docker_controller: true
         ```
 
+    ??? variable string "`petio_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_image_repo:
+        ```
+
+    ??? variable string "`petio_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        petio_role_docker_image_tag:
+        ```
+
     ??? variable bool "`petio_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         petio_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`petio_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        petio_role_themepark_addons:
+        ```
+
+    ??? variable string "`petio_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        petio_role_themepark_app:
+        ```
+
+    ??? variable string "`petio_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        petio_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`petio_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        petio_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`petio_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        petio_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`petio_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        petio_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`petio_role_traefik_autodetect_enabled`"
@@ -975,6 +1031,13 @@ sb install petio
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         petio_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`petio_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        petio_role_traefik_certresolver:
         ```
 
     ??? variable bool "`petio_role_traefik_crowdsec_enabled`"
@@ -1001,6 +1064,13 @@ sb install petio
         petio_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`petio_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        petio_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`petio_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1013,6 +1083,13 @@ sb install petio
         ```yaml
         # Type: bool (true/false)
         petio_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`petio_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        petio_role_traefik_priority:
         ```
 
     ??? variable bool "`petio_role_traefik_robot_enabled`"
@@ -1039,6 +1116,13 @@ sb install petio
         petio_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`petio_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        petio_role_web_domain:
+        ```
+
     ??? variable list "`petio_role_web_fqdn_override`"
 
         ```yaml
@@ -1058,6 +1142,7 @@ sb install petio
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`petio_role_web_host_override`"
 
         ```yaml
@@ -1074,6 +1159,28 @@ sb install petio
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`petio_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        petio_role_web_http_port:
+        ```
+
+    ??? variable string "`petio_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        petio_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`petio_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        petio_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`petio_role_web_scheme`"
 
         ```yaml
@@ -1082,4 +1189,17 @@ sb install petio
         petio_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`petio_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        petio_role_web_serverstransport:
+        ```
+
+    ??? variable string "`petio_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        petio_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

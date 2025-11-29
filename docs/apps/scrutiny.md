@@ -36,7 +36,7 @@ Scrutiny monitors hard drive health using S.M.A.R.T. metrics. The omnibus contai
 The container runs in privileged mode to access hardware S.M.A.R.T. data. Configuration is largely zero-config with settings available through the web interface.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -307,7 +307,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -395,6 +395,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`scrutiny_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`scrutiny_role_docker_cap_drop`"
@@ -402,6 +409,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         ```yaml
         # Type: list
         scrutiny_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`scrutiny_role_docker_device_cgroup_rules`"
@@ -460,11 +474,32 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_devices_default:
         ```
 
+    ??? variable list "`scrutiny_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_groups:
+        ```
+
     ??? variable list "`scrutiny_role_docker_security_opts`"
 
         ```yaml
         # Type: list
         scrutiny_role_docker_security_opts:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_user:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -490,6 +525,20 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_dns_servers:
         ```
 
+    ??? variable string "`scrutiny_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_domainname:
+        ```
+
+    ??? variable list "`scrutiny_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`scrutiny_role_docker_hosts`"
 
         ```yaml
@@ -497,11 +546,25 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_hosts:
         ```
 
-    ??? variable string "`scrutiny_role_docker_hosts_use_common`"
+    ??? variable bool "`scrutiny_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        scrutiny_role_docker_hosts_use_common:
+        scrutiny_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`scrutiny_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_links:
         ```
 
     ??? variable string "`scrutiny_role_docker_network_mode`"
@@ -509,6 +572,27 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         ```yaml
         # Type: string
         scrutiny_role_docker_network_mode:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`scrutiny_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_ports:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -527,6 +611,20 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_mounts:
         ```
 
+    ??? variable dict "`scrutiny_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        scrutiny_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`scrutiny_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_tmpfs:
+        ```
+
     ??? variable string "`scrutiny_role_docker_volume_driver`"
 
         ```yaml
@@ -541,10 +639,10 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_volumes_from:
         ```
 
-    ??? variable string "`scrutiny_role_docker_volumes_global`"
+    ??? variable bool "`scrutiny_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         scrutiny_role_docker_volumes_global:
         ```
 
@@ -557,6 +655,27 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`scrutiny_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`scrutiny_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_cleanup:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_force_kill:
+        ```
+
     ??? variable dict "`scrutiny_role_docker_healthcheck`"
 
         ```yaml
@@ -564,11 +683,25 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_healthcheck:
         ```
 
+    ??? variable int "`scrutiny_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        scrutiny_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`scrutiny_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         scrutiny_role_docker_init:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_kill_signal:
         ```
 
     ??? variable string "`scrutiny_role_docker_log_driver`"
@@ -585,148 +718,6 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_log_options:
         ```
 
-    ??? variable bool "`scrutiny_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        scrutiny_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`scrutiny_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        scrutiny_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_capabilities:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`scrutiny_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        scrutiny_role_docker_cleanup:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_commands:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_domainname:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_env_file:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_force_kill:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_groups:
-        ```
-
-    ??? variable int "`scrutiny_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        scrutiny_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`scrutiny_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        scrutiny_role_docker_labels:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_links:
-        ```
-
     ??? variable bool "`scrutiny_role_docker_oom_killer`"
 
         ```yaml
@@ -741,32 +732,18 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`scrutiny_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_output_logs:
+        ```
+
     ??? variable bool "`scrutiny_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         scrutiny_role_docker_paused:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`scrutiny_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_ports:
-        ```
-
-    ??? variable bool "`scrutiny_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        scrutiny_role_docker_read_only:
         ```
 
     ??? variable bool "`scrutiny_role_docker_recreate`"
@@ -783,20 +760,6 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_restart_retries:
         ```
 
-    ??? variable string "`scrutiny_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_runtime:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_shm_size:
-        ```
-
     ??? variable int "`scrutiny_role_docker_stop_timeout`"
 
         ```yaml
@@ -804,11 +767,76 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`scrutiny_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`scrutiny_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_capabilities:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`scrutiny_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        scrutiny_role_docker_commands:
+        ```
+
+    ??? variable int "`scrutiny_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        scrutiny_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_env_file:
+        ```
+
+    ??? variable dict "`scrutiny_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        scrutiny_role_docker_storage_opts:
+        scrutiny_role_docker_labels:
+        ```
+
+    ??? variable bool "`scrutiny_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`scrutiny_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        scrutiny_role_docker_read_only:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_runtime:
         ```
 
     ??? variable list "`scrutiny_role_docker_sysctls`"
@@ -818,39 +846,11 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_sysctls:
         ```
 
-    ??? variable list "`scrutiny_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        scrutiny_role_docker_tmpfs:
-        ```
-
     ??? variable list "`scrutiny_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         scrutiny_role_docker_ulimits:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_user:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -911,11 +911,74 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_docker_controller: true
         ```
 
+    ??? variable string "`scrutiny_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_image_repo:
+        ```
+
+    ??? variable string "`scrutiny_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_docker_image_tag:
+        ```
+
     ??? variable bool "`scrutiny_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         scrutiny_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`scrutiny_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_paths_location:
+        ```
+
+    ??? variable string "`scrutiny_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_themepark_addons:
+        ```
+
+    ??? variable string "`scrutiny_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_themepark_app:
+        ```
+
+    ??? variable string "`scrutiny_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`scrutiny_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        scrutiny_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`scrutiny_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`scrutiny_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`scrutiny_role_traefik_autodetect_enabled`"
@@ -924,6 +987,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         scrutiny_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`scrutiny_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_traefik_certresolver:
         ```
 
     ??? variable bool "`scrutiny_role_traefik_crowdsec_enabled`"
@@ -950,6 +1020,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`scrutiny_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`scrutiny_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -962,6 +1039,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         ```yaml
         # Type: bool (true/false)
         scrutiny_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`scrutiny_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_traefik_priority:
         ```
 
     ??? variable bool "`scrutiny_role_traefik_robot_enabled`"
@@ -988,6 +1072,13 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`scrutiny_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_web_domain:
+        ```
+
     ??? variable list "`scrutiny_role_web_fqdn_override`"
 
         ```yaml
@@ -1007,6 +1098,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`scrutiny_role_web_host_override`"
 
         ```yaml
@@ -1023,6 +1115,28 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`scrutiny_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        scrutiny_role_web_http_port:
+        ```
+
+    ??? variable string "`scrutiny_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        scrutiny_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`scrutiny_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        scrutiny_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`scrutiny_role_web_scheme`"
 
         ```yaml
@@ -1031,4 +1145,17 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`scrutiny_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        scrutiny_role_web_serverstransport:
+        ```
+
+    ??? variable string "`scrutiny_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        scrutiny_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

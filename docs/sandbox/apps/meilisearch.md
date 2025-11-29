@@ -43,7 +43,7 @@ Port 7700 is open to the container by default. Also analytics are disabled by de
 Visit `https://www.meilisearch.com/docs`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -213,6 +213,561 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_state: started
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`meilisearch_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_cpus:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_memory:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`meilisearch_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_requests:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_devices:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_devices_default:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_groups:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_privileged:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_security_opts:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_user:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`meilisearch_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_domainname:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`meilisearch_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        meilisearch_role_docker_hosts:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_links:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_network_mode:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_ports:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`meilisearch_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_mounts:
+        ```
+
+    ??? variable dict "`meilisearch_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        meilisearch_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`meilisearch_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_cleanup:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`meilisearch_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        meilisearch_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_init:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`meilisearch_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        meilisearch_role_docker_log_options:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_paused:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_recreate:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`meilisearch_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_capabilities:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_commands:
+        ```
+
+    ??? variable int "`meilisearch_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        meilisearch_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_env_file:
+        ```
+
+    ??? variable dict "`meilisearch_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        meilisearch_role_docker_labels:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`meilisearch_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        meilisearch_role_docker_read_only:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_runtime:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_sysctls:
+        ```
+
+    ??? variable list "`meilisearch_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        meilisearch_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`meilisearch_role_autoheal_enabled`"
@@ -255,20 +810,26 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_diun_enabled: true
         ```
 
-    ??? variable bool "`meilisearch_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        meilisearch_role_dns_enabled: true
-        ```
-
     ??? variable bool "`meilisearch_role_docker_controller`"
 
         ```yaml
         # Enable or disable Saltbox Docker Controller management for the container
         # Type: bool (true/false)
         meilisearch_role_docker_controller: true
+        ```
+
+    ??? variable string "`meilisearch_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_image_repo:
+        ```
+
+    ??? variable string "`meilisearch_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        meilisearch_role_docker_image_tag:
         ```
 
     ??? variable bool "`meilisearch_role_docker_volumes_download`"
@@ -278,117 +839,10 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_role_docker_volumes_download:
         ```
 
-    ??? variable bool "`meilisearch_role_traefik_autodetect_enabled`"
+    ??? variable string "`meilisearch_role_paths_location`"
 
         ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        meilisearch_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        meilisearch_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`meilisearch_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        meilisearch_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`meilisearch_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        meilisearch_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            meilisearch_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "meilisearch2.{{ user.domain }}"
-              - "meilisearch.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`meilisearch_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
         # Type: string
-        meilisearch_role_web_host_override:
+        meilisearch_role_paths_location:
         ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            meilisearch_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'meilisearch2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`meilisearch_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        meilisearch_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

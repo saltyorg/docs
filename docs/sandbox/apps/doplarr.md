@@ -89,7 +89,7 @@ sb install sandbox-doplarr
     5. This line will set the Discord token. Place your token here. Wrap it in quotes.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -354,6 +354,568 @@ sb install sandbox-doplarr
         doplarr_role_docker_state: started
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`doplarr_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`doplarr_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`doplarr_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`doplarr_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`doplarr_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_cpus:
+        ```
+
+    ??? variable string "`doplarr_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`doplarr_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`doplarr_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`doplarr_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_memory:
+        ```
+
+    ??? variable string "`doplarr_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`doplarr_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`doplarr_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`doplarr_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`doplarr_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`doplarr_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_requests:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`doplarr_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`doplarr_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_devices:
+        ```
+
+    ??? variable string "`doplarr_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_devices_default:
+        ```
+
+    ??? variable list "`doplarr_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_groups:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_privileged:
+        ```
+
+    ??? variable list "`doplarr_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_security_opts:
+        ```
+
+    ??? variable string "`doplarr_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_user:
+        ```
+
+    ??? variable string "`doplarr_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`doplarr_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`doplarr_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`doplarr_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`doplarr_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_domainname:
+        ```
+
+    ??? variable list "`doplarr_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`doplarr_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        doplarr_role_docker_hosts:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`doplarr_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`doplarr_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_links:
+        ```
+
+    ??? variable string "`doplarr_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_network_mode:
+        ```
+
+    ??? variable string "`doplarr_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`doplarr_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_ports:
+        ```
+
+    ??? variable string "`doplarr_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`doplarr_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`doplarr_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_mounts:
+        ```
+
+    ??? variable dict "`doplarr_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        doplarr_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`doplarr_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`doplarr_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`doplarr_role_docker_volumes`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_volumes:
+        ```
+
+    ??? variable list "`doplarr_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`doplarr_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`doplarr_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_cleanup:
+        ```
+
+    ??? variable string "`doplarr_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`doplarr_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        doplarr_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`doplarr_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_init:
+        ```
+
+    ??? variable string "`doplarr_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`doplarr_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`doplarr_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        doplarr_role_docker_log_options:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`doplarr_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_paused:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_recreate:
+        ```
+
+    ??? variable int "`doplarr_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`doplarr_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`doplarr_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_capabilities:
+        ```
+
+    ??? variable string "`doplarr_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`doplarr_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_commands:
+        ```
+
+    ??? variable int "`doplarr_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        doplarr_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`doplarr_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`doplarr_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_env_file:
+        ```
+
+    ??? variable dict "`doplarr_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        doplarr_role_docker_labels:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`doplarr_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        doplarr_role_docker_read_only:
+        ```
+
+    ??? variable string "`doplarr_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_runtime:
+        ```
+
+    ??? variable list "`doplarr_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_sysctls:
+        ```
+
+    ??? variable list "`doplarr_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        doplarr_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`doplarr_role_autoheal_enabled`"
@@ -388,20 +950,40 @@ sb install sandbox-doplarr
         doplarr_role_depends_on_healthchecks:
         ```
 
+    ??? variable string "`doplarr_role_discord_max_results`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_discord_max_results:
+        ```
+
+    ??? variable string "`doplarr_role_discord_requested_msg_style`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_discord_requested_msg_style:
+        ```
+
+    ??? variable string "`doplarr_role_discord_role_id`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_discord_role_id:
+        ```
+
+    ??? variable string "`doplarr_role_discord_token`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_discord_token:
+        ```
+
     ??? variable bool "`doplarr_role_diun_enabled`"
 
         ```yaml
         # Enable or disable Diun update notifications for the container created when deploying
         # Type: bool (true/false)
         doplarr_role_diun_enabled: true
-        ```
-
-    ??? variable bool "`doplarr_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        doplarr_role_dns_enabled: true
         ```
 
     ??? variable bool "`doplarr_role_docker_controller`"
@@ -412,6 +994,20 @@ sb install sandbox-doplarr
         doplarr_role_docker_controller: true
         ```
 
+    ??? variable string "`doplarr_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_image_repo:
+        ```
+
+    ??? variable string "`doplarr_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_docker_image_tag:
+        ```
+
     ??? variable bool "`doplarr_role_docker_volumes_download`"
 
         ```yaml
@@ -419,117 +1015,87 @@ sb install sandbox-doplarr
         doplarr_role_docker_volumes_download:
         ```
 
-    ??? variable bool "`doplarr_role_traefik_autodetect_enabled`"
+    ??? variable string "`doplarr_role_log_level`"
 
         ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        doplarr_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        doplarr_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`doplarr_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        doplarr_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`doplarr_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        doplarr_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            doplarr_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "doplarr2.{{ user.domain }}"
-              - "doplarr.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`doplarr_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
         # Type: string
-        doplarr_role_web_host_override:
+        doplarr_role_log_level:
         ```
 
-        !!! example "Example Override"
-
-            ```yaml
-            doplarr_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'doplarr2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`doplarr_role_web_scheme`"
+    ??? variable string "`doplarr_role_overseer_default_id`"
 
         ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        doplarr_role_web_scheme:
+        # Type: string
+        doplarr_role_overseer_default_id:
         ```
 
+    ??? variable string "`doplarr_role_overseerr_api`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_overseerr_api:
+        ```
+
+    ??? variable string "`doplarr_role_overseerr_url`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_overseerr_url:
+        ```
+
+    ??? variable string "`doplarr_role_partial_seasons`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_partial_seasons:
+        ```
+
+    ??? variable string "`doplarr_role_radarr_api`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_radarr_api:
+        ```
+
+    ??? variable string "`doplarr_role_radarr_quality_profile`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_radarr_quality_profile:
+        ```
+
+    ??? variable string "`doplarr_role_radarr_url`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_radarr_url:
+        ```
+
+    ??? variable string "`doplarr_role_sonarr_api`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_sonarr_api:
+        ```
+
+    ??? variable string "`doplarr_role_sonarr_language_profile`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_sonarr_language_profile:
+        ```
+
+    ??? variable string "`doplarr_role_sonarr_quality_profile`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_sonarr_quality_profile:
+        ```
+
+    ??? variable string "`doplarr_role_sonarr_url`"
+
+        ```yaml
+        # Type: string
+        doplarr_role_sonarr_url:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

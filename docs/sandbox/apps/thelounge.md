@@ -68,7 +68,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 ![The Lounge network Screenshot](../../sandbox/images/lounge_network.png)
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -342,6 +342,561 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_state: started
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`thelounge_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`thelounge_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`thelounge_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`thelounge_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`thelounge_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_cpus:
+        ```
+
+    ??? variable string "`thelounge_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`thelounge_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`thelounge_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`thelounge_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_memory:
+        ```
+
+    ??? variable string "`thelounge_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`thelounge_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`thelounge_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`thelounge_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`thelounge_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`thelounge_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_requests:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`thelounge_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`thelounge_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_devices:
+        ```
+
+    ??? variable string "`thelounge_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_devices_default:
+        ```
+
+    ??? variable list "`thelounge_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_groups:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_privileged:
+        ```
+
+    ??? variable list "`thelounge_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_security_opts:
+        ```
+
+    ??? variable string "`thelounge_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_user:
+        ```
+
+    ??? variable string "`thelounge_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`thelounge_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`thelounge_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`thelounge_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`thelounge_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_domainname:
+        ```
+
+    ??? variable list "`thelounge_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`thelounge_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        thelounge_role_docker_hosts:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`thelounge_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`thelounge_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_links:
+        ```
+
+    ??? variable string "`thelounge_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_network_mode:
+        ```
+
+    ??? variable string "`thelounge_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`thelounge_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_ports:
+        ```
+
+    ??? variable string "`thelounge_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`thelounge_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`thelounge_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_mounts:
+        ```
+
+    ??? variable dict "`thelounge_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        thelounge_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`thelounge_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`thelounge_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`thelounge_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`thelounge_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`thelounge_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_cleanup:
+        ```
+
+    ??? variable string "`thelounge_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`thelounge_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        thelounge_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`thelounge_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_init:
+        ```
+
+    ??? variable string "`thelounge_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`thelounge_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`thelounge_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        thelounge_role_docker_log_options:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`thelounge_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_paused:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_recreate:
+        ```
+
+    ??? variable int "`thelounge_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`thelounge_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`thelounge_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_capabilities:
+        ```
+
+    ??? variable string "`thelounge_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`thelounge_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_commands:
+        ```
+
+    ??? variable int "`thelounge_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        thelounge_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`thelounge_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`thelounge_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_env_file:
+        ```
+
+    ??? variable dict "`thelounge_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        thelounge_role_docker_labels:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`thelounge_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        thelounge_role_docker_read_only:
+        ```
+
+    ??? variable string "`thelounge_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_runtime:
+        ```
+
+    ??? variable list "`thelounge_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_sysctls:
+        ```
+
+    ??? variable list "`thelounge_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        thelounge_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`thelounge_role_autoheal_enabled`"
@@ -400,11 +955,74 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_docker_controller: true
         ```
 
+    ??? variable string "`thelounge_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_image_repo:
+        ```
+
+    ??? variable string "`thelounge_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_docker_image_tag:
+        ```
+
     ??? variable bool "`thelounge_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         thelounge_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`thelounge_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_paths_location:
+        ```
+
+    ??? variable string "`thelounge_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_themepark_addons:
+        ```
+
+    ??? variable string "`thelounge_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_themepark_app:
+        ```
+
+    ??? variable string "`thelounge_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`thelounge_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        thelounge_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`thelounge_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`thelounge_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`thelounge_role_traefik_autodetect_enabled`"
@@ -413,6 +1031,13 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         thelounge_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`thelounge_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_traefik_certresolver:
         ```
 
     ??? variable bool "`thelounge_role_traefik_crowdsec_enabled`"
@@ -439,6 +1064,13 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`thelounge_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`thelounge_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -451,6 +1083,13 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         ```yaml
         # Type: bool (true/false)
         thelounge_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`thelounge_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_traefik_priority:
         ```
 
     ??? variable bool "`thelounge_role_traefik_robot_enabled`"
@@ -477,6 +1116,13 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`thelounge_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_web_domain:
+        ```
+
     ??? variable list "`thelounge_role_web_fqdn_override`"
 
         ```yaml
@@ -496,6 +1142,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`thelounge_role_web_host_override`"
 
         ```yaml
@@ -512,6 +1159,28 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`thelounge_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        thelounge_role_web_http_port:
+        ```
+
+    ??? variable string "`thelounge_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        thelounge_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`thelounge_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        thelounge_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`thelounge_role_web_scheme`"
 
         ```yaml
@@ -520,4 +1189,17 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`thelounge_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        thelounge_role_web_serverstransport:
+        ```
+
+    ??? variable string "`thelounge_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        thelounge_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

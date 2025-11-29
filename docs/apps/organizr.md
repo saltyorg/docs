@@ -183,7 +183,7 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 </div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -469,7 +469,7 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -557,6 +557,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`organizr_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`organizr_role_docker_cap_drop`"
@@ -564,6 +571,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         ```yaml
         # Type: list
         organizr_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`organizr_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`organizr_role_docker_device_cgroup_rules`"
@@ -622,6 +636,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_devices_default:
         ```
 
+    ??? variable list "`organizr_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_groups:
+        ```
+
     ??? variable bool "`organizr_role_docker_privileged`"
 
         ```yaml
@@ -634,6 +655,20 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         ```yaml
         # Type: list
         organizr_role_docker_security_opts:
+        ```
+
+    ??? variable string "`organizr_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_user:
+        ```
+
+    ??? variable string "`organizr_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -659,6 +694,20 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_dns_servers:
         ```
 
+    ??? variable string "`organizr_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_domainname:
+        ```
+
+    ??? variable list "`organizr_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`organizr_role_docker_hosts`"
 
         ```yaml
@@ -666,11 +715,25 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_hosts:
         ```
 
-    ??? variable string "`organizr_role_docker_hosts_use_common`"
+    ??? variable bool "`organizr_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`organizr_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        organizr_role_docker_hosts_use_common:
+        organizr_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`organizr_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_links:
         ```
 
     ??? variable string "`organizr_role_docker_network_mode`"
@@ -678,6 +741,27 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         ```yaml
         # Type: string
         organizr_role_docker_network_mode:
+        ```
+
+    ??? variable string "`organizr_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`organizr_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_ports:
+        ```
+
+    ??? variable string "`organizr_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -696,6 +780,20 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_mounts:
         ```
 
+    ??? variable dict "`organizr_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        organizr_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`organizr_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_tmpfs:
+        ```
+
     ??? variable string "`organizr_role_docker_volume_driver`"
 
         ```yaml
@@ -710,10 +808,10 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_volumes_from:
         ```
 
-    ??? variable string "`organizr_role_docker_volumes_global`"
+    ??? variable bool "`organizr_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         organizr_role_docker_volumes_global:
         ```
 
@@ -726,6 +824,27 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`organizr_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`organizr_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_cleanup:
+        ```
+
+    ??? variable string "`organizr_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_force_kill:
+        ```
+
     ??? variable dict "`organizr_role_docker_healthcheck`"
 
         ```yaml
@@ -733,11 +852,25 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_healthcheck:
         ```
 
+    ??? variable int "`organizr_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        organizr_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`organizr_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         organizr_role_docker_init:
+        ```
+
+    ??? variable string "`organizr_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_kill_signal:
         ```
 
     ??? variable string "`organizr_role_docker_log_driver`"
@@ -754,148 +887,6 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_log_options:
         ```
 
-    ??? variable bool "`organizr_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        organizr_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`organizr_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        organizr_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`organizr_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_capabilities:
-        ```
-
-    ??? variable string "`organizr_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`organizr_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`organizr_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        organizr_role_docker_cleanup:
-        ```
-
-    ??? variable list "`organizr_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_commands:
-        ```
-
-    ??? variable string "`organizr_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`organizr_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_domainname:
-        ```
-
-    ??? variable string "`organizr_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`organizr_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_env_file:
-        ```
-
-    ??? variable list "`organizr_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`organizr_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_force_kill:
-        ```
-
-    ??? variable list "`organizr_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_groups:
-        ```
-
-    ??? variable int "`organizr_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        organizr_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`organizr_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`organizr_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`organizr_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        organizr_role_docker_labels:
-        ```
-
-    ??? variable string "`organizr_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`organizr_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_links:
-        ```
-
     ??? variable bool "`organizr_role_docker_oom_killer`"
 
         ```yaml
@@ -910,32 +901,18 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`organizr_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_output_logs:
+        ```
+
     ??? variable bool "`organizr_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         organizr_role_docker_paused:
-        ```
-
-    ??? variable string "`organizr_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`organizr_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_ports:
-        ```
-
-    ??? variable bool "`organizr_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        organizr_role_docker_read_only:
         ```
 
     ??? variable bool "`organizr_role_docker_recreate`"
@@ -952,20 +929,6 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_restart_retries:
         ```
 
-    ??? variable string "`organizr_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_runtime:
-        ```
-
-    ??? variable string "`organizr_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_shm_size:
-        ```
-
     ??? variable int "`organizr_role_docker_stop_timeout`"
 
         ```yaml
@@ -973,11 +936,76 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`organizr_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`organizr_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_capabilities:
+        ```
+
+    ??? variable string "`organizr_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`organizr_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        organizr_role_docker_commands:
+        ```
+
+    ??? variable int "`organizr_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        organizr_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`organizr_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`organizr_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_env_file:
+        ```
+
+    ??? variable dict "`organizr_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        organizr_role_docker_storage_opts:
+        organizr_role_docker_labels:
+        ```
+
+    ??? variable bool "`organizr_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`organizr_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        organizr_role_docker_read_only:
+        ```
+
+    ??? variable string "`organizr_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_runtime:
         ```
 
     ??? variable list "`organizr_role_docker_sysctls`"
@@ -987,39 +1015,11 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_sysctls:
         ```
 
-    ??? variable list "`organizr_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        organizr_role_docker_tmpfs:
-        ```
-
     ??? variable list "`organizr_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         organizr_role_docker_ulimits:
-        ```
-
-    ??? variable string "`organizr_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_user:
-        ```
-
-    ??? variable string "`organizr_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`organizr_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        organizr_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1080,11 +1080,67 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_docker_controller: true
         ```
 
+    ??? variable string "`organizr_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_image_repo:
+        ```
+
+    ??? variable string "`organizr_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_image_tag:
+        ```
+
     ??? variable bool "`organizr_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         organizr_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`organizr_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        organizr_role_themepark_addons:
+        ```
+
+    ??? variable string "`organizr_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        organizr_role_themepark_app:
+        ```
+
+    ??? variable string "`organizr_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        organizr_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`organizr_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        organizr_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`organizr_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        organizr_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`organizr_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        organizr_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`organizr_role_traefik_autodetect_enabled`"
@@ -1093,6 +1149,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         organizr_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`organizr_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        organizr_role_traefik_certresolver:
         ```
 
     ??? variable bool "`organizr_role_traefik_crowdsec_enabled`"
@@ -1119,6 +1182,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`organizr_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        organizr_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`organizr_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1131,6 +1201,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         ```yaml
         # Type: bool (true/false)
         organizr_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`organizr_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        organizr_role_traefik_priority:
         ```
 
     ??? variable bool "`organizr_role_traefik_robot_enabled`"
@@ -1157,6 +1234,13 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`organizr_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        organizr_role_web_domain:
+        ```
+
     ??? variable list "`organizr_role_web_fqdn_override`"
 
         ```yaml
@@ -1176,6 +1260,7 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`organizr_role_web_host_override`"
 
         ```yaml
@@ -1192,6 +1277,28 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`organizr_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        organizr_role_web_http_port:
+        ```
+
+    ??? variable string "`organizr_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        organizr_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`organizr_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        organizr_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`organizr_role_web_scheme`"
 
         ```yaml
@@ -1200,4 +1307,17 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`organizr_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        organizr_role_web_serverstransport:
+        ```
+
+    ??? variable string "`organizr_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        organizr_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

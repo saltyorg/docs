@@ -50,14 +50,14 @@ sb install sandbox-teslamate-postgres-password
 Save and Test
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
     ```yaml title="Example Override"
-    teslamate_name: "custom_value"
+    teslamate_secret_key: "custom_value"
     ```
 
 ??? warning "Avoid overriding variables ending in `_default`"
@@ -65,16 +65,6 @@ Save and Test
     When overriding variables that end in `_default` (like `teslamate_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
 
     Instead, use the corresponding `_custom` variable (like `teslamate_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
-
-=== "General"
-
-    ??? variable string "`teslamate_name`"
-
-        ```yaml
-        # defaults/main.yml
-        # Type: string
-        teslamate_name: teslamate
-        ```
 
 === "Settings"
 
@@ -417,6 +407,561 @@ Save and Test
         teslamate_role_docker_state: started
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`teslamate_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`teslamate_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`teslamate_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`teslamate_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`teslamate_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_cpus:
+        ```
+
+    ??? variable string "`teslamate_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`teslamate_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`teslamate_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`teslamate_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_memory:
+        ```
+
+    ??? variable string "`teslamate_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`teslamate_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`teslamate_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`teslamate_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`teslamate_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`teslamate_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_requests:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`teslamate_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`teslamate_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_devices:
+        ```
+
+    ??? variable string "`teslamate_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_devices_default:
+        ```
+
+    ??? variable list "`teslamate_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_groups:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_privileged:
+        ```
+
+    ??? variable list "`teslamate_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_security_opts:
+        ```
+
+    ??? variable string "`teslamate_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_user:
+        ```
+
+    ??? variable string "`teslamate_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`teslamate_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`teslamate_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`teslamate_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`teslamate_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_domainname:
+        ```
+
+    ??? variable list "`teslamate_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`teslamate_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        teslamate_role_docker_hosts:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`teslamate_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`teslamate_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_links:
+        ```
+
+    ??? variable string "`teslamate_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_network_mode:
+        ```
+
+    ??? variable string "`teslamate_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`teslamate_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_ports:
+        ```
+
+    ??? variable string "`teslamate_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`teslamate_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`teslamate_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_mounts:
+        ```
+
+    ??? variable dict "`teslamate_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        teslamate_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`teslamate_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`teslamate_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`teslamate_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`teslamate_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`teslamate_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_cleanup:
+        ```
+
+    ??? variable string "`teslamate_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`teslamate_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        teslamate_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`teslamate_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_init:
+        ```
+
+    ??? variable string "`teslamate_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`teslamate_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`teslamate_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        teslamate_role_docker_log_options:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`teslamate_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_paused:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_recreate:
+        ```
+
+    ??? variable int "`teslamate_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`teslamate_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`teslamate_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_capabilities:
+        ```
+
+    ??? variable string "`teslamate_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`teslamate_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_commands:
+        ```
+
+    ??? variable int "`teslamate_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        teslamate_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`teslamate_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`teslamate_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_env_file:
+        ```
+
+    ??? variable dict "`teslamate_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        teslamate_role_docker_labels:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`teslamate_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        teslamate_role_docker_read_only:
+        ```
+
+    ??? variable string "`teslamate_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_runtime:
+        ```
+
+    ??? variable list "`teslamate_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_sysctls:
+        ```
+
+    ??? variable list "`teslamate_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        teslamate_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`teslamate_role_autoheal_enabled`"
@@ -475,11 +1020,102 @@ Save and Test
         teslamate_role_docker_controller: true
         ```
 
+    ??? variable string "`teslamate_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_image_repo:
+        ```
+
+    ??? variable string "`teslamate_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_image_tag:
+        ```
+
     ??? variable bool "`teslamate_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         teslamate_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`teslamate_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_paths_location:
+        ```
+
+    ??? variable string "`teslamate_role_postgres_docker_env_db`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_postgres_docker_env_db:
+        ```
+
+    ??? variable string "`teslamate_role_postgres_name`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_postgres_name:
+        ```
+
+    ??? variable string "`teslamate_role_postgres_password`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_postgres_password:
+        ```
+
+    ??? variable string "`teslamate_role_postgres_user`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_postgres_user:
+        ```
+
+    ??? variable string "`teslamate_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_themepark_addons:
+        ```
+
+    ??? variable string "`teslamate_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_themepark_app:
+        ```
+
+    ??? variable string "`teslamate_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`teslamate_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        teslamate_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`teslamate_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`teslamate_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`teslamate_role_traefik_autodetect_enabled`"
@@ -488,6 +1124,13 @@ Save and Test
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         teslamate_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`teslamate_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_traefik_certresolver:
         ```
 
     ??? variable bool "`teslamate_role_traefik_crowdsec_enabled`"
@@ -514,6 +1157,13 @@ Save and Test
         teslamate_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`teslamate_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`teslamate_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -526,6 +1176,13 @@ Save and Test
         ```yaml
         # Type: bool (true/false)
         teslamate_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`teslamate_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_traefik_priority:
         ```
 
     ??? variable bool "`teslamate_role_traefik_robot_enabled`"
@@ -552,6 +1209,13 @@ Save and Test
         teslamate_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`teslamate_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_web_domain:
+        ```
+
     ??? variable list "`teslamate_role_web_fqdn_override`"
 
         ```yaml
@@ -571,6 +1235,7 @@ Save and Test
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`teslamate_role_web_host_override`"
 
         ```yaml
@@ -587,6 +1252,28 @@ Save and Test
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`teslamate_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        teslamate_role_web_http_port:
+        ```
+
+    ??? variable string "`teslamate_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        teslamate_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`teslamate_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        teslamate_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`teslamate_role_web_scheme`"
 
         ```yaml
@@ -595,4 +1282,17 @@ Save and Test
         teslamate_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`teslamate_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        teslamate_role_web_serverstransport:
+        ```
+
+    ??? variable string "`teslamate_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -37,7 +37,7 @@ sb install sandbox-foundry
 - To access foundry, visit <https://foundry.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -282,11 +282,11 @@ sb install sandbox-foundry
 
     <h5>Ports</h5>
 
-    ??? variable list "`foundry_role_docker_ports_defaults`"
+    ??? variable list "`foundry_role_docker_ports_default`"
 
         ```yaml
         # Type: list
-        foundry_role_docker_ports_defaults:
+        foundry_role_docker_ports_default:
           - "{{ lookup('role_var', '_web_port', role='foundry') }}:{{ lookup('role_var', '_web_port', role='foundry') }}"
         ```
 
@@ -336,6 +336,554 @@ sb install sandbox-foundry
         ```yaml
         # Type: string
         foundry_role_docker_state: started
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`foundry_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`foundry_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`foundry_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`foundry_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`foundry_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_cpus:
+        ```
+
+    ??? variable string "`foundry_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`foundry_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`foundry_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`foundry_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_memory:
+        ```
+
+    ??? variable string "`foundry_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`foundry_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`foundry_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`foundry_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`foundry_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`foundry_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_requests:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`foundry_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`foundry_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_devices:
+        ```
+
+    ??? variable string "`foundry_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_devices_default:
+        ```
+
+    ??? variable list "`foundry_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_groups:
+        ```
+
+    ??? variable bool "`foundry_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_privileged:
+        ```
+
+    ??? variable list "`foundry_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_security_opts:
+        ```
+
+    ??? variable string "`foundry_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_user:
+        ```
+
+    ??? variable string "`foundry_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`foundry_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`foundry_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`foundry_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`foundry_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_domainname:
+        ```
+
+    ??? variable list "`foundry_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`foundry_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        foundry_role_docker_hosts:
+        ```
+
+    ??? variable bool "`foundry_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`foundry_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`foundry_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_links:
+        ```
+
+    ??? variable string "`foundry_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_network_mode:
+        ```
+
+    ??? variable string "`foundry_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_pid_mode:
+        ```
+
+    ??? variable string "`foundry_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`foundry_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`foundry_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_mounts:
+        ```
+
+    ??? variable dict "`foundry_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        foundry_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`foundry_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`foundry_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`foundry_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`foundry_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`foundry_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`foundry_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`foundry_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_cleanup:
+        ```
+
+    ??? variable string "`foundry_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`foundry_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        foundry_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`foundry_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`foundry_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_init:
+        ```
+
+    ??? variable string "`foundry_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`foundry_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`foundry_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        foundry_role_docker_log_options:
+        ```
+
+    ??? variable bool "`foundry_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`foundry_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`foundry_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`foundry_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_paused:
+        ```
+
+    ??? variable bool "`foundry_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_recreate:
+        ```
+
+    ??? variable int "`foundry_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`foundry_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`foundry_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_capabilities:
+        ```
+
+    ??? variable string "`foundry_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`foundry_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_commands:
+        ```
+
+    ??? variable int "`foundry_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        foundry_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`foundry_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`foundry_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_env_file:
+        ```
+
+    ??? variable dict "`foundry_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        foundry_role_docker_labels:
+        ```
+
+    ??? variable bool "`foundry_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`foundry_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        foundry_role_docker_read_only:
+        ```
+
+    ??? variable string "`foundry_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_runtime:
+        ```
+
+    ??? variable list "`foundry_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_sysctls:
+        ```
+
+    ??? variable list "`foundry_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        foundry_role_docker_ulimits:
         ```
 
 === "Global Override Options"
@@ -396,11 +944,74 @@ sb install sandbox-foundry
         foundry_role_docker_controller: true
         ```
 
+    ??? variable string "`foundry_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_image_repo:
+        ```
+
+    ??? variable string "`foundry_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_image_tag:
+        ```
+
     ??? variable bool "`foundry_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         foundry_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`foundry_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        foundry_role_paths_location:
+        ```
+
+    ??? variable string "`foundry_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        foundry_role_themepark_addons:
+        ```
+
+    ??? variable string "`foundry_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        foundry_role_themepark_app:
+        ```
+
+    ??? variable string "`foundry_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        foundry_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`foundry_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        foundry_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`foundry_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        foundry_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`foundry_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        foundry_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`foundry_role_traefik_autodetect_enabled`"
@@ -409,6 +1020,13 @@ sb install sandbox-foundry
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         foundry_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`foundry_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        foundry_role_traefik_certresolver:
         ```
 
     ??? variable bool "`foundry_role_traefik_crowdsec_enabled`"
@@ -435,6 +1053,13 @@ sb install sandbox-foundry
         foundry_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`foundry_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        foundry_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`foundry_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -447,6 +1072,13 @@ sb install sandbox-foundry
         ```yaml
         # Type: bool (true/false)
         foundry_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`foundry_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        foundry_role_traefik_priority:
         ```
 
     ??? variable bool "`foundry_role_traefik_robot_enabled`"
@@ -473,6 +1105,13 @@ sb install sandbox-foundry
         foundry_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`foundry_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        foundry_role_web_domain:
+        ```
+
     ??? variable list "`foundry_role_web_fqdn_override`"
 
         ```yaml
@@ -492,6 +1131,7 @@ sb install sandbox-foundry
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`foundry_role_web_host_override`"
 
         ```yaml
@@ -508,6 +1148,35 @@ sb install sandbox-foundry
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`foundry_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        foundry_role_web_http_port:
+        ```
+
+    ??? variable string "`foundry_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        foundry_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`foundry_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        foundry_role_web_http_serverstransport:
+        ```
+
+    ??? variable string "`foundry_role_web_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        foundry_role_web_port:
+        ```
+
     ??? variable string "`foundry_role_web_scheme`"
 
         ```yaml
@@ -516,4 +1185,17 @@ sb install sandbox-foundry
         foundry_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`foundry_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        foundry_role_web_serverstransport:
+        ```
+
+    ??? variable string "`foundry_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        foundry_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

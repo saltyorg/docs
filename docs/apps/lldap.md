@@ -38,7 +38,7 @@ LLDAP provides a lightweight LDAP server with a user-friendly web interface for 
 Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI). To reset LLDAP, run `sb install lldap-reset`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -394,7 +394,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -482,6 +482,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`lldap_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`lldap_role_docker_cap_drop`"
@@ -489,6 +496,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         ```yaml
         # Type: list
         lldap_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`lldap_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`lldap_role_docker_device_cgroup_rules`"
@@ -547,6 +561,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_devices_default:
         ```
 
+    ??? variable list "`lldap_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_groups:
+        ```
+
     ??? variable bool "`lldap_role_docker_privileged`"
 
         ```yaml
@@ -559,6 +580,20 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         ```yaml
         # Type: list
         lldap_role_docker_security_opts:
+        ```
+
+    ??? variable string "`lldap_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_user:
+        ```
+
+    ??? variable string "`lldap_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -584,6 +619,20 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_dns_servers:
         ```
 
+    ??? variable string "`lldap_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_domainname:
+        ```
+
+    ??? variable list "`lldap_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`lldap_role_docker_hosts`"
 
         ```yaml
@@ -591,11 +640,25 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_hosts:
         ```
 
-    ??? variable string "`lldap_role_docker_hosts_use_common`"
+    ??? variable bool "`lldap_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`lldap_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        lldap_role_docker_hosts_use_common:
+        lldap_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`lldap_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_links:
         ```
 
     ??? variable string "`lldap_role_docker_network_mode`"
@@ -603,6 +666,27 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         ```yaml
         # Type: string
         lldap_role_docker_network_mode:
+        ```
+
+    ??? variable string "`lldap_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`lldap_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_ports:
+        ```
+
+    ??? variable string "`lldap_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -621,6 +705,20 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_mounts:
         ```
 
+    ??? variable dict "`lldap_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        lldap_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`lldap_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_tmpfs:
+        ```
+
     ??? variable string "`lldap_role_docker_volume_driver`"
 
         ```yaml
@@ -635,10 +733,10 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_volumes_from:
         ```
 
-    ??? variable string "`lldap_role_docker_volumes_global`"
+    ??? variable bool "`lldap_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         lldap_role_docker_volumes_global:
         ```
 
@@ -651,11 +749,46 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`lldap_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`lldap_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_cleanup:
+        ```
+
+    ??? variable string "`lldap_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_force_kill:
+        ```
+
+    ??? variable int "`lldap_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        lldap_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`lldap_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         lldap_role_docker_init:
+        ```
+
+    ??? variable string "`lldap_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_kill_signal:
         ```
 
     ??? variable string "`lldap_role_docker_log_driver`"
@@ -672,148 +805,6 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_log_options:
         ```
 
-    ??? variable bool "`lldap_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        lldap_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`lldap_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        lldap_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`lldap_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_capabilities:
-        ```
-
-    ??? variable string "`lldap_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`lldap_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`lldap_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        lldap_role_docker_cleanup:
-        ```
-
-    ??? variable list "`lldap_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_commands:
-        ```
-
-    ??? variable string "`lldap_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`lldap_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_domainname:
-        ```
-
-    ??? variable string "`lldap_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`lldap_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_env_file:
-        ```
-
-    ??? variable list "`lldap_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`lldap_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_force_kill:
-        ```
-
-    ??? variable list "`lldap_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_groups:
-        ```
-
-    ??? variable int "`lldap_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        lldap_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`lldap_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`lldap_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`lldap_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        lldap_role_docker_labels:
-        ```
-
-    ??? variable string "`lldap_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`lldap_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_links:
-        ```
-
     ??? variable bool "`lldap_role_docker_oom_killer`"
 
         ```yaml
@@ -828,32 +819,18 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`lldap_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_output_logs:
+        ```
+
     ??? variable bool "`lldap_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         lldap_role_docker_paused:
-        ```
-
-    ??? variable string "`lldap_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`lldap_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_ports:
-        ```
-
-    ??? variable bool "`lldap_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        lldap_role_docker_read_only:
         ```
 
     ??? variable bool "`lldap_role_docker_recreate`"
@@ -870,20 +847,6 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_restart_retries:
         ```
 
-    ??? variable string "`lldap_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_runtime:
-        ```
-
-    ??? variable string "`lldap_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_shm_size:
-        ```
-
     ??? variable int "`lldap_role_docker_stop_timeout`"
 
         ```yaml
@@ -891,11 +854,76 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`lldap_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`lldap_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_capabilities:
+        ```
+
+    ??? variable string "`lldap_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`lldap_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        lldap_role_docker_commands:
+        ```
+
+    ??? variable int "`lldap_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        lldap_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`lldap_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`lldap_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_env_file:
+        ```
+
+    ??? variable dict "`lldap_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        lldap_role_docker_storage_opts:
+        lldap_role_docker_labels:
+        ```
+
+    ??? variable bool "`lldap_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`lldap_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        lldap_role_docker_read_only:
+        ```
+
+    ??? variable string "`lldap_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_runtime:
         ```
 
     ??? variable list "`lldap_role_docker_sysctls`"
@@ -905,39 +933,11 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_sysctls:
         ```
 
-    ??? variable list "`lldap_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        lldap_role_docker_tmpfs:
-        ```
-
     ??? variable list "`lldap_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         lldap_role_docker_ulimits:
-        ```
-
-    ??? variable string "`lldap_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_user:
-        ```
-
-    ??? variable string "`lldap_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`lldap_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -998,11 +998,67 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_docker_controller: true
         ```
 
+    ??? variable string "`lldap_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_image_repo:
+        ```
+
+    ??? variable string "`lldap_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        lldap_role_docker_image_tag:
+        ```
+
     ??? variable bool "`lldap_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         lldap_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`lldap_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        lldap_role_themepark_addons:
+        ```
+
+    ??? variable string "`lldap_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        lldap_role_themepark_app:
+        ```
+
+    ??? variable string "`lldap_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        lldap_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`lldap_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        lldap_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`lldap_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        lldap_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`lldap_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        lldap_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`lldap_role_traefik_autodetect_enabled`"
@@ -1011,6 +1067,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         lldap_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`lldap_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        lldap_role_traefik_certresolver:
         ```
 
     ??? variable bool "`lldap_role_traefik_crowdsec_enabled`"
@@ -1037,6 +1100,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`lldap_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        lldap_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`lldap_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1049,6 +1119,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         ```yaml
         # Type: bool (true/false)
         lldap_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`lldap_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        lldap_role_traefik_priority:
         ```
 
     ??? variable bool "`lldap_role_traefik_robot_enabled`"
@@ -1075,6 +1152,13 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`lldap_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        lldap_role_web_domain:
+        ```
+
     ??? variable list "`lldap_role_web_fqdn_override`"
 
         ```yaml
@@ -1094,6 +1178,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`lldap_role_web_host_override`"
 
         ```yaml
@@ -1110,6 +1195,28 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`lldap_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        lldap_role_web_http_port:
+        ```
+
+    ??? variable string "`lldap_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        lldap_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`lldap_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        lldap_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`lldap_role_web_scheme`"
 
         ```yaml
@@ -1118,4 +1225,17 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`lldap_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        lldap_role_web_serverstransport:
+        ```
+
+    ??? variable string "`lldap_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        lldap_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

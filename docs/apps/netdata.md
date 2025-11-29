@@ -33,7 +33,7 @@ sb install netdata
 - To access Netdata, visit <https://netdata.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -438,20 +438,20 @@ sb install netdata
     ??? variable string "`netdata_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         netdata_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`netdata_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         netdata_role_depends_on_healthchecks: "false"
         ```
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -539,6 +539,13 @@ sb install netdata
         netdata_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`netdata_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`netdata_role_docker_cap_drop`"
@@ -546,6 +553,13 @@ sb install netdata
         ```yaml
         # Type: list
         netdata_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`netdata_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`netdata_role_docker_device_cgroup_rules`"
@@ -604,11 +618,32 @@ sb install netdata
         netdata_role_docker_devices_default:
         ```
 
+    ??? variable list "`netdata_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_groups:
+        ```
+
     ??? variable bool "`netdata_role_docker_privileged`"
 
         ```yaml
         # Type: bool (true/false)
         netdata_role_docker_privileged:
+        ```
+
+    ??? variable string "`netdata_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_user:
+        ```
+
+    ??? variable string "`netdata_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -634,6 +669,20 @@ sb install netdata
         netdata_role_docker_dns_servers:
         ```
 
+    ??? variable string "`netdata_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_domainname:
+        ```
+
+    ??? variable list "`netdata_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`netdata_role_docker_hosts`"
 
         ```yaml
@@ -641,11 +690,25 @@ sb install netdata
         netdata_role_docker_hosts:
         ```
 
-    ??? variable string "`netdata_role_docker_hosts_use_common`"
+    ??? variable bool "`netdata_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`netdata_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        netdata_role_docker_hosts_use_common:
+        netdata_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`netdata_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_links:
         ```
 
     ??? variable string "`netdata_role_docker_network_mode`"
@@ -653,6 +716,20 @@ sb install netdata
         ```yaml
         # Type: string
         netdata_role_docker_network_mode:
+        ```
+
+    ??? variable list "`netdata_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_ports:
+        ```
+
+    ??? variable string "`netdata_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -671,6 +748,20 @@ sb install netdata
         netdata_role_docker_mounts:
         ```
 
+    ??? variable dict "`netdata_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        netdata_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`netdata_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_tmpfs:
+        ```
+
     ??? variable string "`netdata_role_docker_volume_driver`"
 
         ```yaml
@@ -685,10 +776,10 @@ sb install netdata
         netdata_role_docker_volumes_from:
         ```
 
-    ??? variable string "`netdata_role_docker_volumes_global`"
+    ??? variable bool "`netdata_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         netdata_role_docker_volumes_global:
         ```
 
@@ -701,6 +792,27 @@ sb install netdata
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`netdata_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`netdata_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_cleanup:
+        ```
+
+    ??? variable string "`netdata_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_force_kill:
+        ```
+
     ??? variable dict "`netdata_role_docker_healthcheck`"
 
         ```yaml
@@ -708,11 +820,25 @@ sb install netdata
         netdata_role_docker_healthcheck:
         ```
 
+    ??? variable int "`netdata_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        netdata_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`netdata_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         netdata_role_docker_init:
+        ```
+
+    ??? variable string "`netdata_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_kill_signal:
         ```
 
     ??? variable string "`netdata_role_docker_log_driver`"
@@ -729,134 +855,6 @@ sb install netdata
         netdata_role_docker_log_options:
         ```
 
-    ??? variable bool "`netdata_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        netdata_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`netdata_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        netdata_role_docker_auto_remove:
-        ```
-
-    ??? variable string "`netdata_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`netdata_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`netdata_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        netdata_role_docker_cleanup:
-        ```
-
-    ??? variable list "`netdata_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_commands:
-        ```
-
-    ??? variable string "`netdata_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`netdata_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_domainname:
-        ```
-
-    ??? variable string "`netdata_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`netdata_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_env_file:
-        ```
-
-    ??? variable list "`netdata_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`netdata_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_force_kill:
-        ```
-
-    ??? variable list "`netdata_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_groups:
-        ```
-
-    ??? variable int "`netdata_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        netdata_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`netdata_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`netdata_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_kill_signal:
-        ```
-
-    ??? variable string "`netdata_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`netdata_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_links:
-        ```
-
     ??? variable bool "`netdata_role_docker_oom_killer`"
 
         ```yaml
@@ -871,25 +869,18 @@ sb install netdata
         netdata_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`netdata_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_output_logs:
+        ```
+
     ??? variable bool "`netdata_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         netdata_role_docker_paused:
-        ```
-
-    ??? variable list "`netdata_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_ports:
-        ```
-
-    ??? variable bool "`netdata_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        netdata_role_docker_read_only:
         ```
 
     ??? variable bool "`netdata_role_docker_recreate`"
@@ -906,20 +897,6 @@ sb install netdata
         netdata_role_docker_restart_retries:
         ```
 
-    ??? variable string "`netdata_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_runtime:
-        ```
-
-    ??? variable string "`netdata_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_shm_size:
-        ```
-
     ??? variable int "`netdata_role_docker_stop_timeout`"
 
         ```yaml
@@ -927,11 +904,62 @@ sb install netdata
         netdata_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`netdata_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable string "`netdata_role_docker_cgroup_parent`"
 
         ```yaml
-        # Type: dict
-        netdata_role_docker_storage_opts:
+        # Type: string
+        netdata_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`netdata_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        netdata_role_docker_commands:
+        ```
+
+    ??? variable int "`netdata_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        netdata_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`netdata_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`netdata_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_env_file:
+        ```
+
+    ??? variable bool "`netdata_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`netdata_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        netdata_role_docker_read_only:
+        ```
+
+    ??? variable string "`netdata_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_runtime:
         ```
 
     ??? variable list "`netdata_role_docker_sysctls`"
@@ -941,39 +969,11 @@ sb install netdata
         netdata_role_docker_sysctls:
         ```
 
-    ??? variable list "`netdata_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        netdata_role_docker_tmpfs:
-        ```
-
     ??? variable list "`netdata_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         netdata_role_docker_ulimits:
-        ```
-
-    ??? variable string "`netdata_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_user:
-        ```
-
-    ??? variable string "`netdata_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`netdata_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -984,6 +984,27 @@ sb install netdata
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         netdata_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`netdata_role_claim_room`"
+
+        ```yaml
+        # Type: string
+        netdata_role_claim_room:
+        ```
+
+    ??? variable string "`netdata_role_claim_token`"
+
+        ```yaml
+        # Type: string
+        netdata_role_claim_token:
+        ```
+
+    ??? variable string "`netdata_role_claim_url`"
+
+        ```yaml
+        # Type: string
+        netdata_role_claim_url:
         ```
 
     ??? variable string "`netdata_role_depends_on`"
@@ -1034,11 +1055,67 @@ sb install netdata
         netdata_role_docker_controller: true
         ```
 
+    ??? variable string "`netdata_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_image_repo:
+        ```
+
+    ??? variable string "`netdata_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        netdata_role_docker_image_tag:
+        ```
+
     ??? variable bool "`netdata_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         netdata_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`netdata_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        netdata_role_themepark_addons:
+        ```
+
+    ??? variable string "`netdata_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        netdata_role_themepark_app:
+        ```
+
+    ??? variable string "`netdata_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        netdata_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`netdata_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        netdata_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`netdata_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        netdata_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`netdata_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        netdata_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`netdata_role_traefik_autodetect_enabled`"
@@ -1047,6 +1124,13 @@ sb install netdata
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         netdata_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`netdata_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        netdata_role_traefik_certresolver:
         ```
 
     ??? variable bool "`netdata_role_traefik_crowdsec_enabled`"
@@ -1073,6 +1157,13 @@ sb install netdata
         netdata_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`netdata_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        netdata_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`netdata_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1085,6 +1176,13 @@ sb install netdata
         ```yaml
         # Type: bool (true/false)
         netdata_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`netdata_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        netdata_role_traefik_priority:
         ```
 
     ??? variable bool "`netdata_role_traefik_robot_enabled`"
@@ -1111,6 +1209,13 @@ sb install netdata
         netdata_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`netdata_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        netdata_role_web_domain:
+        ```
+
     ??? variable list "`netdata_role_web_fqdn_override`"
 
         ```yaml
@@ -1130,6 +1235,7 @@ sb install netdata
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`netdata_role_web_host_override`"
 
         ```yaml
@@ -1146,6 +1252,28 @@ sb install netdata
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`netdata_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        netdata_role_web_http_port:
+        ```
+
+    ??? variable string "`netdata_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        netdata_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`netdata_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        netdata_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`netdata_role_web_scheme`"
 
         ```yaml
@@ -1154,4 +1282,17 @@ sb install netdata
         netdata_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`netdata_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        netdata_role_web_serverstransport:
+        ```
+
+    ??? variable string "`netdata_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        netdata_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

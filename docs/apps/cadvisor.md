@@ -35,7 +35,7 @@ cAdvisor automatically monitors all Docker containers on your system. No additio
 cAdvisor is often used with Prometheus and Grafana for advanced metrics collection and visualization.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -306,7 +306,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -394,6 +394,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`cadvisor_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`cadvisor_role_docker_cap_drop`"
@@ -401,6 +408,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         ```yaml
         # Type: list
         cadvisor_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`cadvisor_role_docker_device_cgroup_rules`"
@@ -459,11 +473,32 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_devices_default:
         ```
 
+    ??? variable list "`cadvisor_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_groups:
+        ```
+
     ??? variable list "`cadvisor_role_docker_security_opts`"
 
         ```yaml
         # Type: list
         cadvisor_role_docker_security_opts:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_user:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -489,6 +524,20 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_dns_servers:
         ```
 
+    ??? variable string "`cadvisor_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_domainname:
+        ```
+
+    ??? variable list "`cadvisor_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`cadvisor_role_docker_hosts`"
 
         ```yaml
@@ -496,11 +545,25 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_hosts:
         ```
 
-    ??? variable string "`cadvisor_role_docker_hosts_use_common`"
+    ??? variable bool "`cadvisor_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        cadvisor_role_docker_hosts_use_common:
+        cadvisor_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`cadvisor_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_links:
         ```
 
     ??? variable string "`cadvisor_role_docker_network_mode`"
@@ -508,6 +571,27 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         ```yaml
         # Type: string
         cadvisor_role_docker_network_mode:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`cadvisor_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_ports:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -526,6 +610,20 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_mounts:
         ```
 
+    ??? variable dict "`cadvisor_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        cadvisor_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`cadvisor_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_tmpfs:
+        ```
+
     ??? variable string "`cadvisor_role_docker_volume_driver`"
 
         ```yaml
@@ -540,10 +638,10 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_volumes_from:
         ```
 
-    ??? variable string "`cadvisor_role_docker_volumes_global`"
+    ??? variable bool "`cadvisor_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         cadvisor_role_docker_volumes_global:
         ```
 
@@ -556,6 +654,27 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`cadvisor_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`cadvisor_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_cleanup:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_force_kill:
+        ```
+
     ??? variable dict "`cadvisor_role_docker_healthcheck`"
 
         ```yaml
@@ -563,11 +682,25 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_healthcheck:
         ```
 
+    ??? variable int "`cadvisor_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        cadvisor_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`cadvisor_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         cadvisor_role_docker_init:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_kill_signal:
         ```
 
     ??? variable string "`cadvisor_role_docker_log_driver`"
@@ -584,148 +717,6 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_log_options:
         ```
 
-    ??? variable bool "`cadvisor_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        cadvisor_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`cadvisor_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        cadvisor_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_capabilities:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`cadvisor_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        cadvisor_role_docker_cleanup:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_commands:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_domainname:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_env_file:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_force_kill:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_groups:
-        ```
-
-    ??? variable int "`cadvisor_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        cadvisor_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`cadvisor_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        cadvisor_role_docker_labels:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_links:
-        ```
-
     ??? variable bool "`cadvisor_role_docker_oom_killer`"
 
         ```yaml
@@ -740,32 +731,18 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`cadvisor_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_output_logs:
+        ```
+
     ??? variable bool "`cadvisor_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         cadvisor_role_docker_paused:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`cadvisor_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_ports:
-        ```
-
-    ??? variable bool "`cadvisor_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        cadvisor_role_docker_read_only:
         ```
 
     ??? variable bool "`cadvisor_role_docker_recreate`"
@@ -782,20 +759,6 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_restart_retries:
         ```
 
-    ??? variable string "`cadvisor_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_runtime:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_shm_size:
-        ```
-
     ??? variable int "`cadvisor_role_docker_stop_timeout`"
 
         ```yaml
@@ -803,11 +766,76 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`cadvisor_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`cadvisor_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_capabilities:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`cadvisor_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        cadvisor_role_docker_commands:
+        ```
+
+    ??? variable int "`cadvisor_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        cadvisor_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_env_file:
+        ```
+
+    ??? variable dict "`cadvisor_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        cadvisor_role_docker_storage_opts:
+        cadvisor_role_docker_labels:
+        ```
+
+    ??? variable bool "`cadvisor_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`cadvisor_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cadvisor_role_docker_read_only:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_runtime:
         ```
 
     ??? variable list "`cadvisor_role_docker_sysctls`"
@@ -817,39 +845,11 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_sysctls:
         ```
 
-    ??? variable list "`cadvisor_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        cadvisor_role_docker_tmpfs:
-        ```
-
     ??? variable list "`cadvisor_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         cadvisor_role_docker_ulimits:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_user:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`cadvisor_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -910,11 +910,67 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_docker_controller: true
         ```
 
+    ??? variable string "`cadvisor_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_image_repo:
+        ```
+
+    ??? variable string "`cadvisor_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_docker_image_tag:
+        ```
+
     ??? variable bool "`cadvisor_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         cadvisor_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`cadvisor_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_themepark_addons:
+        ```
+
+    ??? variable string "`cadvisor_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_themepark_app:
+        ```
+
+    ??? variable string "`cadvisor_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`cadvisor_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        cadvisor_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`cadvisor_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`cadvisor_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`cadvisor_role_traefik_autodetect_enabled`"
@@ -923,6 +979,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         cadvisor_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`cadvisor_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_traefik_certresolver:
         ```
 
     ??? variable bool "`cadvisor_role_traefik_crowdsec_enabled`"
@@ -949,6 +1012,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`cadvisor_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`cadvisor_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -961,6 +1031,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         ```yaml
         # Type: bool (true/false)
         cadvisor_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`cadvisor_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_traefik_priority:
         ```
 
     ??? variable bool "`cadvisor_role_traefik_robot_enabled`"
@@ -987,6 +1064,13 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`cadvisor_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_web_domain:
+        ```
+
     ??? variable list "`cadvisor_role_web_fqdn_override`"
 
         ```yaml
@@ -1006,6 +1090,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`cadvisor_role_web_host_override`"
 
         ```yaml
@@ -1022,6 +1107,28 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`cadvisor_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cadvisor_role_web_http_port:
+        ```
+
+    ??? variable string "`cadvisor_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cadvisor_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`cadvisor_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cadvisor_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`cadvisor_role_web_scheme`"
 
         ```yaml
@@ -1030,4 +1137,17 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`cadvisor_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cadvisor_role_web_serverstransport:
+        ```
+
+    ??? variable string "`cadvisor_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        cadvisor_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

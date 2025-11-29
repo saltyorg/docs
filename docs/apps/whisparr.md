@@ -34,7 +34,7 @@ sb install whisparr
 Whisparr works more or less the same as the other apps in the arr suite, since this is a fork of sonarr.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -92,7 +92,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
 === "Paths"
 
-    ??? variable string "`whisparr_paths_folder`{ .sb-show-on-unchecked }`whisparr_paths_folder`{ .sb-show-on-checked }"
+    ??? variable string "`whisparr_paths_folder`{ .sb-show-on-unchecked }`whisparr2_paths_folder`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -101,10 +101,10 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        whisparr_paths_folder: "{{ whisparr_name }}"
+        whisparr2_paths_folder: "{{ whisparr_name }}"
         ```
 
-    ??? variable string "`whisparr_paths_location`{ .sb-show-on-unchecked }`whisparr_paths_location`{ .sb-show-on-checked }"
+    ??? variable string "`whisparr_paths_location`{ .sb-show-on-unchecked }`whisparr2_paths_location`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -113,10 +113,10 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        whisparr_paths_location: "{{ server_appdata_path }}/{{ whisparr_paths_folder }}"
+        whisparr2_paths_location: "{{ server_appdata_path }}/{{ whisparr_paths_folder }}"
         ```
 
-    ??? variable string "`whisparr_paths_config_location`{ .sb-show-on-unchecked }`whisparr_paths_config_location`{ .sb-show-on-checked }"
+    ??? variable string "`whisparr_paths_config_location`{ .sb-show-on-unchecked }`whisparr2_paths_config_location`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
@@ -125,7 +125,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        whisparr_paths_config_location: "{{ whisparr_paths_location }}/config.xml"
+        whisparr2_paths_config_location: "{{ whisparr_paths_location }}/config.xml"
         ```
 
 === "Web"
@@ -614,7 +614,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -762,6 +762,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_memory_swappiness:
         ```
 
+    ??? variable string "`whisparr_role_docker_shm_size`{ .sb-show-on-unchecked }`whisparr2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_shm_size:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`whisparr_role_docker_cap_drop`{ .sb-show-on-unchecked }`whisparr2_docker_cap_drop`{ .sb-show-on-checked }"
@@ -774,6 +786,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: list
         whisparr2_docker_cap_drop:
+        ```
+
+    ??? variable string "`whisparr_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`whisparr2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_cgroupns_mode:
         ```
 
     ??? variable list "`whisparr_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`whisparr2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
@@ -872,6 +896,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_devices_default:
         ```
 
+    ??? variable list "`whisparr_role_docker_groups`{ .sb-show-on-unchecked }`whisparr2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_groups:
+        ```
+
     ??? variable bool "`whisparr_role_docker_privileged`{ .sb-show-on-unchecked }`whisparr2_docker_privileged`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -894,6 +930,30 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: list
         whisparr2_docker_security_opts:
+        ```
+
+    ??? variable string "`whisparr_role_docker_user`{ .sb-show-on-unchecked }`whisparr2_docker_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_user:
+        ```
+
+    ??? variable string "`whisparr_role_docker_userns_mode`{ .sb-show-on-unchecked }`whisparr2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -934,6 +994,30 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_dns_servers:
         ```
 
+    ??? variable string "`whisparr_role_docker_domainname`{ .sb-show-on-unchecked }`whisparr2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_domainname:
+        ```
+
+    ??? variable list "`whisparr_role_docker_exposed_ports`{ .sb-show-on-unchecked }`whisparr2_docker_exposed_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_exposed_ports:
+        ```
+
     ??? variable dict "`whisparr_role_docker_hosts`{ .sb-show-on-unchecked }`whisparr2_docker_hosts`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -946,16 +1030,40 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_hosts:
         ```
 
-    ??? variable string "`whisparr_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`whisparr2_docker_hosts_use_common`{ .sb-show-on-checked }"
+    ??? variable bool "`whisparr_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`whisparr2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         whisparr_role_docker_hosts_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         whisparr2_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`whisparr_role_docker_ipc_mode`{ .sb-show-on-unchecked }`whisparr2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_ipc_mode:
+        ```
+
+    ??? variable list "`whisparr_role_docker_links`{ .sb-show-on-unchecked }`whisparr2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_links:
         ```
 
     ??? variable string "`whisparr_role_docker_network_mode`{ .sb-show-on-unchecked }`whisparr2_docker_network_mode`{ .sb-show-on-checked }"
@@ -968,6 +1076,42 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: string
         whisparr2_docker_network_mode:
+        ```
+
+    ??? variable string "`whisparr_role_docker_pid_mode`{ .sb-show-on-unchecked }`whisparr2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_pid_mode:
+        ```
+
+    ??? variable list "`whisparr_role_docker_ports`{ .sb-show-on-unchecked }`whisparr2_docker_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_ports:
+        ```
+
+    ??? variable string "`whisparr_role_docker_uts`{ .sb-show-on-unchecked }`whisparr2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -996,6 +1140,30 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_mounts:
         ```
 
+    ??? variable dict "`whisparr_role_docker_storage_opts`{ .sb-show-on-unchecked }`whisparr2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        whisparr_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        whisparr2_docker_storage_opts:
+        ```
+
+    ??? variable list "`whisparr_role_docker_tmpfs`{ .sb-show-on-unchecked }`whisparr2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_tmpfs:
+        ```
+
     ??? variable string "`whisparr_role_docker_volume_driver`{ .sb-show-on-unchecked }`whisparr2_docker_volume_driver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1020,15 +1188,15 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_volumes_from:
         ```
 
-    ??? variable string "`whisparr_role_docker_volumes_global`{ .sb-show-on-unchecked }`whisparr2_docker_volumes_global`{ .sb-show-on-checked }"
+    ??? variable bool "`whisparr_role_docker_volumes_global`{ .sb-show-on-unchecked }`whisparr2_docker_volumes_global`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         whisparr_role_docker_volumes_global:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         whisparr2_docker_volumes_global:
         ```
 
@@ -1046,6 +1214,42 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`whisparr_role_docker_auto_remove`{ .sb-show-on-unchecked }`whisparr2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_auto_remove:
+        ```
+
+    ??? variable bool "`whisparr_role_docker_cleanup`{ .sb-show-on-unchecked }`whisparr2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_cleanup:
+        ```
+
+    ??? variable string "`whisparr_role_docker_force_kill`{ .sb-show-on-unchecked }`whisparr2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_force_kill:
+        ```
+
     ??? variable dict "`whisparr_role_docker_healthcheck`{ .sb-show-on-unchecked }`whisparr2_docker_healthcheck`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1058,6 +1262,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_healthcheck:
         ```
 
+    ??? variable int "`whisparr_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`whisparr2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        whisparr_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        whisparr2_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`whisparr_role_docker_init`{ .sb-show-on-unchecked }`whisparr2_docker_init`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1068,6 +1284,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         whisparr2_docker_init:
+        ```
+
+    ??? variable string "`whisparr_role_docker_kill_signal`{ .sb-show-on-unchecked }`whisparr2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_kill_signal:
         ```
 
     ??? variable string "`whisparr_role_docker_log_driver`{ .sb-show-on-unchecked }`whisparr2_docker_log_driver`{ .sb-show-on-checked }"
@@ -1094,236 +1322,6 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_log_options:
         ```
 
-    ??? variable bool "`whisparr_role_docker_output_logs`{ .sb-show-on-unchecked }`whisparr2_docker_output_logs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        whisparr_role_docker_output_logs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        whisparr2_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`whisparr_role_docker_auto_remove`{ .sb-show-on-unchecked }`whisparr2_docker_auto_remove`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        whisparr_role_docker_auto_remove:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        whisparr2_docker_auto_remove:
-        ```
-
-    ??? variable list "`whisparr_role_docker_capabilities`{ .sb-show-on-unchecked }`whisparr2_docker_capabilities`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_capabilities:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_capabilities:
-        ```
-
-    ??? variable string "`whisparr_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`whisparr2_docker_cgroup_parent`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_cgroup_parent:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`whisparr_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`whisparr2_docker_cgroupns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_cgroupns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`whisparr_role_docker_cleanup`{ .sb-show-on-unchecked }`whisparr2_docker_cleanup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        whisparr_role_docker_cleanup:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        whisparr2_docker_cleanup:
-        ```
-
-    ??? variable list "`whisparr_role_docker_commands`{ .sb-show-on-unchecked }`whisparr2_docker_commands`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_commands:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_commands:
-        ```
-
-    ??? variable string "`whisparr_role_docker_create_timeout`{ .sb-show-on-unchecked }`whisparr2_docker_create_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_create_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_create_timeout:
-        ```
-
-    ??? variable string "`whisparr_role_docker_domainname`{ .sb-show-on-unchecked }`whisparr2_docker_domainname`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_domainname:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_domainname:
-        ```
-
-    ??? variable string "`whisparr_role_docker_entrypoint`{ .sb-show-on-unchecked }`whisparr2_docker_entrypoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_entrypoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_entrypoint:
-        ```
-
-    ??? variable string "`whisparr_role_docker_env_file`{ .sb-show-on-unchecked }`whisparr2_docker_env_file`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_env_file:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_env_file:
-        ```
-
-    ??? variable list "`whisparr_role_docker_exposed_ports`{ .sb-show-on-unchecked }`whisparr2_docker_exposed_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_exposed_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_exposed_ports:
-        ```
-
-    ??? variable string "`whisparr_role_docker_force_kill`{ .sb-show-on-unchecked }`whisparr2_docker_force_kill`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_force_kill:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_force_kill:
-        ```
-
-    ??? variable list "`whisparr_role_docker_groups`{ .sb-show-on-unchecked }`whisparr2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_groups:
-        ```
-
-    ??? variable int "`whisparr_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`whisparr2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        whisparr_role_docker_healthy_wait_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        whisparr2_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`whisparr_role_docker_ipc_mode`{ .sb-show-on-unchecked }`whisparr2_docker_ipc_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_ipc_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_ipc_mode:
-        ```
-
-    ??? variable string "`whisparr_role_docker_kill_signal`{ .sb-show-on-unchecked }`whisparr2_docker_kill_signal`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_kill_signal:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_kill_signal:
-        ```
-
-    ??? variable string "`whisparr_role_docker_labels_use_common`{ .sb-show-on-unchecked }`whisparr2_docker_labels_use_common`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_labels_use_common:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_labels_use_common:
-        ```
-
-    ??? variable list "`whisparr_role_docker_links`{ .sb-show-on-unchecked }`whisparr2_docker_links`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_links:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_links:
-        ```
-
     ??? variable bool "`whisparr_role_docker_oom_killer`{ .sb-show-on-unchecked }`whisparr2_docker_oom_killer`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1348,6 +1346,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`whisparr_role_docker_output_logs`{ .sb-show-on-unchecked }`whisparr2_docker_output_logs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_output_logs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_output_logs:
+        ```
+
     ??? variable bool "`whisparr_role_docker_paused`{ .sb-show-on-unchecked }`whisparr2_docker_paused`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1358,42 +1368,6 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         whisparr2_docker_paused:
-        ```
-
-    ??? variable string "`whisparr_role_docker_pid_mode`{ .sb-show-on-unchecked }`whisparr2_docker_pid_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_pid_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_pid_mode:
-        ```
-
-    ??? variable list "`whisparr_role_docker_ports`{ .sb-show-on-unchecked }`whisparr2_docker_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_ports:
-        ```
-
-    ??? variable bool "`whisparr_role_docker_read_only`{ .sb-show-on-unchecked }`whisparr2_docker_read_only`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        whisparr_role_docker_read_only:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        whisparr2_docker_read_only:
         ```
 
     ??? variable bool "`whisparr_role_docker_recreate`{ .sb-show-on-unchecked }`whisparr2_docker_recreate`{ .sb-show-on-checked }"
@@ -1420,30 +1394,6 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_restart_retries:
         ```
 
-    ??? variable string "`whisparr_role_docker_runtime`{ .sb-show-on-unchecked }`whisparr2_docker_runtime`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_runtime:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_runtime:
-        ```
-
-    ??? variable string "`whisparr_role_docker_shm_size`{ .sb-show-on-unchecked }`whisparr2_docker_shm_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_shm_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_shm_size:
-        ```
-
     ??? variable int "`whisparr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`whisparr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1456,16 +1406,114 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_stop_timeout:
         ```
 
-    ??? variable dict "`whisparr_role_docker_storage_opts`{ .sb-show-on-unchecked }`whisparr2_docker_storage_opts`{ .sb-show-on-checked }"
+    <h5>Other Options</h5>
+
+    ??? variable list "`whisparr_role_docker_capabilities`{ .sb-show-on-unchecked }`whisparr2_docker_capabilities`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        whisparr_role_docker_storage_opts:
+        # Type: list
+        whisparr_role_docker_capabilities:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: dict
-        whisparr2_docker_storage_opts:
+        # Type: list
+        whisparr2_docker_capabilities:
+        ```
+
+    ??? variable string "`whisparr_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`whisparr2_docker_cgroup_parent`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_cgroup_parent:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`whisparr_role_docker_commands`{ .sb-show-on-unchecked }`whisparr2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        whisparr_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        whisparr2_docker_commands:
+        ```
+
+    ??? variable int "`whisparr_role_docker_create_timeout`{ .sb-show-on-unchecked }`whisparr2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        whisparr_role_docker_create_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        whisparr2_docker_create_timeout:
+        ```
+
+    ??? variable string "`whisparr_role_docker_entrypoint`{ .sb-show-on-unchecked }`whisparr2_docker_entrypoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_entrypoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_entrypoint:
+        ```
+
+    ??? variable string "`whisparr_role_docker_env_file`{ .sb-show-on-unchecked }`whisparr2_docker_env_file`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_env_file:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_env_file:
+        ```
+
+    ??? variable bool "`whisparr_role_docker_labels_use_common`{ .sb-show-on-unchecked }`whisparr2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_labels_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`whisparr_role_docker_read_only`{ .sb-show-on-unchecked }`whisparr2_docker_read_only`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_docker_read_only:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_docker_read_only:
+        ```
+
+    ??? variable string "`whisparr_role_docker_runtime`{ .sb-show-on-unchecked }`whisparr2_docker_runtime`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_runtime:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_runtime:
         ```
 
     ??? variable list "`whisparr_role_docker_sysctls`{ .sb-show-on-unchecked }`whisparr2_docker_sysctls`{ .sb-show-on-checked }"
@@ -1480,18 +1528,6 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_sysctls:
         ```
 
-    ??? variable list "`whisparr_role_docker_tmpfs`{ .sb-show-on-unchecked }`whisparr2_docker_tmpfs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        whisparr_role_docker_tmpfs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        whisparr2_docker_tmpfs:
-        ```
-
     ??? variable list "`whisparr_role_docker_ulimits`{ .sb-show-on-unchecked }`whisparr2_docker_ulimits`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1502,42 +1538,6 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: list
         whisparr2_docker_ulimits:
-        ```
-
-    ??? variable string "`whisparr_role_docker_user`{ .sb-show-on-unchecked }`whisparr2_docker_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_user:
-        ```
-
-    ??? variable string "`whisparr_role_docker_userns_mode`{ .sb-show-on-unchecked }`whisparr2_docker_userns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_userns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_userns_mode:
-        ```
-
-    ??? variable string "`whisparr_role_docker_uts`{ .sb-show-on-unchecked }`whisparr2_docker_uts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_uts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1640,6 +1640,30 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_docker_controller: true
         ```
 
+    ??? variable string "`whisparr_role_docker_image_repo`{ .sb-show-on-unchecked }`whisparr2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_image_repo:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_image_repo:
+        ```
+
+    ??? variable string "`whisparr_role_docker_image_tag`{ .sb-show-on-unchecked }`whisparr2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_image_tag:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_image_tag:
+        ```
+
     ??? variable bool "`whisparr_role_docker_volumes_download`{ .sb-show-on-unchecked }`whisparr2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1650,6 +1674,90 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         whisparr2_docker_volumes_download:
+        ```
+
+    ??? variable string "`whisparr_role_themepark_addons`{ .sb-show-on-unchecked }`whisparr2_themepark_addons`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_themepark_addons:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_themepark_addons:
+        ```
+
+    ??? variable string "`whisparr_role_themepark_app`{ .sb-show-on-unchecked }`whisparr2_themepark_app`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_themepark_app:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_themepark_app:
+        ```
+
+    ??? variable bool "`whisparr_role_themepark_enabled`{ .sb-show-on-unchecked }`whisparr2_themepark_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        whisparr_role_themepark_enabled:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        whisparr2_themepark_enabled:
+        ```
+
+    ??? variable string "`whisparr_role_themepark_theme`{ .sb-show-on-unchecked }`whisparr2_themepark_theme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_themepark_theme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`whisparr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`whisparr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        whisparr_role_traefik_api_endpoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        whisparr2_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`whisparr_role_traefik_api_middleware`{ .sb-show-on-unchecked }`whisparr2_traefik_api_middleware`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_traefik_api_middleware:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_traefik_api_middleware:
+        ```
+
+    ??? variable string "`whisparr_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`whisparr2_traefik_api_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_traefik_api_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`whisparr_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`whisparr2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
@@ -1664,6 +1772,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         whisparr2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`whisparr_role_traefik_certresolver`{ .sb-show-on-unchecked }`whisparr2_traefik_certresolver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_traefik_certresolver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_traefik_certresolver:
         ```
 
     ??? variable bool "`whisparr_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`whisparr2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -1708,6 +1828,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`whisparr_role_traefik_middleware_http`{ .sb-show-on-unchecked }`whisparr2_traefik_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_traefik_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_traefik_middleware_http:
+        ```
+
     ??? variable bool "`whisparr_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`whisparr2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1730,6 +1862,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         whisparr2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`whisparr_role_traefik_priority`{ .sb-show-on-unchecked }`whisparr2_traefik_priority`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_traefik_priority:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_traefik_priority:
         ```
 
     ??? variable bool "`whisparr_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`whisparr2_traefik_robot_enabled`{ .sb-show-on-checked }"
@@ -1774,6 +1918,18 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`whisparr_role_web_domain`{ .sb-show-on-unchecked }`whisparr2_web_domain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_web_domain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_web_domain:
+        ```
+
     ??? variable list "`whisparr_role_web_fqdn_override`{ .sb-show-on-unchecked }`whisparr2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1799,6 +1955,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -1809,6 +1966,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
             ```
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
 
     ??? variable string "`whisparr_role_web_host_override`{ .sb-show-on-unchecked }`whisparr2_web_host_override`{ .sb-show-on-checked }"
 
@@ -1832,6 +1990,7 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -1839,6 +1998,43 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
             ```
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+
+    ??? variable string "`whisparr_role_web_http_port`{ .sb-show-on-unchecked }`whisparr2_web_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        whisparr_role_web_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        whisparr2_web_http_port:
+        ```
+
+    ??? variable string "`whisparr_role_web_http_scheme`{ .sb-show-on-unchecked }`whisparr2_web_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        whisparr_role_web_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        whisparr2_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`whisparr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`whisparr2_web_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        whisparr_role_web_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        whisparr2_web_http_serverstransport:
+        ```
 
     ??? variable string "`whisparr_role_web_scheme`{ .sb-show-on-unchecked }`whisparr2_web_scheme`{ .sb-show-on-checked }"
 
@@ -1854,4 +2050,27 @@ Whisparr works more or less the same as the other apps in the arr suite, since t
         whisparr2_web_scheme:
         ```
 
+    ??? variable dict/omit "`whisparr_role_web_serverstransport`{ .sb-show-on-unchecked }`whisparr2_web_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        whisparr_role_web_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        whisparr2_web_serverstransport:
+        ```
+
+    ??? variable string "`whisparr_role_web_subdomain`{ .sb-show-on-unchecked }`whisparr2_web_subdomain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_web_subdomain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

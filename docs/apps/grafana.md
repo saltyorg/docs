@@ -31,7 +31,7 @@ sb install grafana
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -330,7 +330,7 @@ sb install grafana
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -418,6 +418,13 @@ sb install grafana
         grafana_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`grafana_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`grafana_role_docker_cap_drop`"
@@ -425,6 +432,13 @@ sb install grafana
         ```yaml
         # Type: list
         grafana_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`grafana_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`grafana_role_docker_device_cgroup_rules`"
@@ -483,6 +497,13 @@ sb install grafana
         grafana_role_docker_devices_default:
         ```
 
+    ??? variable list "`grafana_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_groups:
+        ```
+
     ??? variable bool "`grafana_role_docker_privileged`"
 
         ```yaml
@@ -495,6 +516,13 @@ sb install grafana
         ```yaml
         # Type: list
         grafana_role_docker_security_opts:
+        ```
+
+    ??? variable string "`grafana_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -520,6 +548,20 @@ sb install grafana
         grafana_role_docker_dns_servers:
         ```
 
+    ??? variable string "`grafana_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_domainname:
+        ```
+
+    ??? variable list "`grafana_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`grafana_role_docker_hosts`"
 
         ```yaml
@@ -527,11 +569,25 @@ sb install grafana
         grafana_role_docker_hosts:
         ```
 
-    ??? variable string "`grafana_role_docker_hosts_use_common`"
+    ??? variable bool "`grafana_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`grafana_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        grafana_role_docker_hosts_use_common:
+        grafana_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`grafana_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_links:
         ```
 
     ??? variable string "`grafana_role_docker_network_mode`"
@@ -539,6 +595,27 @@ sb install grafana
         ```yaml
         # Type: string
         grafana_role_docker_network_mode:
+        ```
+
+    ??? variable string "`grafana_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`grafana_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_ports:
+        ```
+
+    ??? variable string "`grafana_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -557,6 +634,20 @@ sb install grafana
         grafana_role_docker_mounts:
         ```
 
+    ??? variable dict "`grafana_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        grafana_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`grafana_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_tmpfs:
+        ```
+
     ??? variable string "`grafana_role_docker_volume_driver`"
 
         ```yaml
@@ -571,10 +662,10 @@ sb install grafana
         grafana_role_docker_volumes_from:
         ```
 
-    ??? variable string "`grafana_role_docker_volumes_global`"
+    ??? variable bool "`grafana_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         grafana_role_docker_volumes_global:
         ```
 
@@ -587,6 +678,27 @@ sb install grafana
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`grafana_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`grafana_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_cleanup:
+        ```
+
+    ??? variable string "`grafana_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_force_kill:
+        ```
+
     ??? variable dict "`grafana_role_docker_healthcheck`"
 
         ```yaml
@@ -594,11 +706,25 @@ sb install grafana
         grafana_role_docker_healthcheck:
         ```
 
+    ??? variable int "`grafana_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        grafana_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`grafana_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         grafana_role_docker_init:
+        ```
+
+    ??? variable string "`grafana_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_kill_signal:
         ```
 
     ??? variable string "`grafana_role_docker_log_driver`"
@@ -615,148 +741,6 @@ sb install grafana
         grafana_role_docker_log_options:
         ```
 
-    ??? variable bool "`grafana_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        grafana_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`grafana_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        grafana_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`grafana_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_capabilities:
-        ```
-
-    ??? variable string "`grafana_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`grafana_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`grafana_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        grafana_role_docker_cleanup:
-        ```
-
-    ??? variable list "`grafana_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_commands:
-        ```
-
-    ??? variable string "`grafana_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`grafana_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_domainname:
-        ```
-
-    ??? variable string "`grafana_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`grafana_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_env_file:
-        ```
-
-    ??? variable list "`grafana_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`grafana_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_force_kill:
-        ```
-
-    ??? variable list "`grafana_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_groups:
-        ```
-
-    ??? variable int "`grafana_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        grafana_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`grafana_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`grafana_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`grafana_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        grafana_role_docker_labels:
-        ```
-
-    ??? variable string "`grafana_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`grafana_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_links:
-        ```
-
     ??? variable bool "`grafana_role_docker_oom_killer`"
 
         ```yaml
@@ -771,32 +755,18 @@ sb install grafana
         grafana_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`grafana_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_output_logs:
+        ```
+
     ??? variable bool "`grafana_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         grafana_role_docker_paused:
-        ```
-
-    ??? variable string "`grafana_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`grafana_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_ports:
-        ```
-
-    ??? variable bool "`grafana_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        grafana_role_docker_read_only:
         ```
 
     ??? variable bool "`grafana_role_docker_recreate`"
@@ -813,20 +783,6 @@ sb install grafana
         grafana_role_docker_restart_retries:
         ```
 
-    ??? variable string "`grafana_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_runtime:
-        ```
-
-    ??? variable string "`grafana_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_shm_size:
-        ```
-
     ??? variable int "`grafana_role_docker_stop_timeout`"
 
         ```yaml
@@ -834,11 +790,76 @@ sb install grafana
         grafana_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`grafana_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`grafana_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_capabilities:
+        ```
+
+    ??? variable string "`grafana_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`grafana_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        grafana_role_docker_commands:
+        ```
+
+    ??? variable int "`grafana_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        grafana_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`grafana_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`grafana_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_env_file:
+        ```
+
+    ??? variable dict "`grafana_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        grafana_role_docker_storage_opts:
+        grafana_role_docker_labels:
+        ```
+
+    ??? variable bool "`grafana_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`grafana_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grafana_role_docker_read_only:
+        ```
+
+    ??? variable string "`grafana_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_runtime:
         ```
 
     ??? variable list "`grafana_role_docker_sysctls`"
@@ -848,32 +869,11 @@ sb install grafana
         grafana_role_docker_sysctls:
         ```
 
-    ??? variable list "`grafana_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        grafana_role_docker_tmpfs:
-        ```
-
     ??? variable list "`grafana_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         grafana_role_docker_ulimits:
-        ```
-
-    ??? variable string "`grafana_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`grafana_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        grafana_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -934,11 +934,74 @@ sb install grafana
         grafana_role_docker_controller: true
         ```
 
+    ??? variable string "`grafana_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_image_repo:
+        ```
+
+    ??? variable string "`grafana_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_image_tag:
+        ```
+
     ??? variable bool "`grafana_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         grafana_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`grafana_role_plugins`"
+
+        ```yaml
+        # Type: string
+        grafana_role_plugins:
+        ```
+
+    ??? variable string "`grafana_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        grafana_role_themepark_addons:
+        ```
+
+    ??? variable string "`grafana_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        grafana_role_themepark_app:
+        ```
+
+    ??? variable string "`grafana_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        grafana_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`grafana_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        grafana_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`grafana_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        grafana_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`grafana_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        grafana_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`grafana_role_traefik_autodetect_enabled`"
@@ -947,6 +1010,13 @@ sb install grafana
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         grafana_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`grafana_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        grafana_role_traefik_certresolver:
         ```
 
     ??? variable bool "`grafana_role_traefik_crowdsec_enabled`"
@@ -973,6 +1043,13 @@ sb install grafana
         grafana_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`grafana_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        grafana_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`grafana_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -985,6 +1062,13 @@ sb install grafana
         ```yaml
         # Type: bool (true/false)
         grafana_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`grafana_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        grafana_role_traefik_priority:
         ```
 
     ??? variable bool "`grafana_role_traefik_robot_enabled`"
@@ -1011,6 +1095,13 @@ sb install grafana
         grafana_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`grafana_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        grafana_role_web_domain:
+        ```
+
     ??? variable list "`grafana_role_web_fqdn_override`"
 
         ```yaml
@@ -1030,6 +1121,7 @@ sb install grafana
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`grafana_role_web_host_override`"
 
         ```yaml
@@ -1046,6 +1138,28 @@ sb install grafana
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`grafana_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        grafana_role_web_http_port:
+        ```
+
+    ??? variable string "`grafana_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        grafana_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`grafana_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        grafana_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`grafana_role_web_scheme`"
 
         ```yaml
@@ -1054,4 +1168,24 @@ sb install grafana
         grafana_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`grafana_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        grafana_role_web_serverstransport:
+        ```
+
+    ??? variable string "`grafana_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        grafana_role_web_subdomain:
+        ```
+
+    ??? variable string "`grafana_role_web_url`"
+
+        ```yaml
+        # Type: string
+        grafana_role_web_url:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

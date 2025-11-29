@@ -31,7 +31,7 @@ Some of the features that can be enabled are Two Factor Authentication, Duo noti
 Saltbox offers an optional LDAP authentication backend for Authelia. This can be enabled by setting `authelia_authentication_backend: "ldap"` in your inventory file. The LDAP is provisioned via OpenLDAP and includes phpLDAPadmin.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -1269,20 +1269,20 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
     ??? variable string "`authelia_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         authelia_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`authelia_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         authelia_role_depends_on_healthchecks: "{{ 'true' if (lookup('role_var', '_authentication_backend', role='authelia') == 'ldap') else 'false' }}"
         ```
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -1370,6 +1370,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`authelia_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`authelia_role_docker_cap_drop`"
@@ -1377,6 +1384,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Type: list
         authelia_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`authelia_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`authelia_role_docker_device_cgroup_rules`"
@@ -1435,6 +1449,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_devices_default:
         ```
 
+    ??? variable list "`authelia_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_groups:
+        ```
+
     ??? variable bool "`authelia_role_docker_privileged`"
 
         ```yaml
@@ -1447,6 +1468,20 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Type: list
         authelia_role_docker_security_opts:
+        ```
+
+    ??? variable string "`authelia_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_user:
+        ```
+
+    ??? variable string "`authelia_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -1472,6 +1507,20 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_dns_servers:
         ```
 
+    ??? variable string "`authelia_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_domainname:
+        ```
+
+    ??? variable list "`authelia_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`authelia_role_docker_hosts`"
 
         ```yaml
@@ -1479,11 +1528,25 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_hosts:
         ```
 
-    ??? variable string "`authelia_role_docker_hosts_use_common`"
+    ??? variable bool "`authelia_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`authelia_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        authelia_role_docker_hosts_use_common:
+        authelia_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`authelia_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_links:
         ```
 
     ??? variable string "`authelia_role_docker_network_mode`"
@@ -1491,6 +1554,27 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Type: string
         authelia_role_docker_network_mode:
+        ```
+
+    ??? variable string "`authelia_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`authelia_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_ports:
+        ```
+
+    ??? variable string "`authelia_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -1509,6 +1593,20 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_mounts:
         ```
 
+    ??? variable dict "`authelia_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        authelia_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`authelia_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_tmpfs:
+        ```
+
     ??? variable string "`authelia_role_docker_volume_driver`"
 
         ```yaml
@@ -1523,10 +1621,10 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_volumes_from:
         ```
 
-    ??? variable string "`authelia_role_docker_volumes_global`"
+    ??? variable bool "`authelia_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         authelia_role_docker_volumes_global:
         ```
 
@@ -1539,6 +1637,27 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`authelia_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`authelia_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_cleanup:
+        ```
+
+    ??? variable string "`authelia_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_force_kill:
+        ```
+
     ??? variable dict "`authelia_role_docker_healthcheck`"
 
         ```yaml
@@ -1546,11 +1665,25 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_healthcheck:
         ```
 
+    ??? variable int "`authelia_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        authelia_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`authelia_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         authelia_role_docker_init:
+        ```
+
+    ??? variable string "`authelia_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_kill_signal:
         ```
 
     ??? variable string "`authelia_role_docker_log_driver`"
@@ -1567,148 +1700,6 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_log_options:
         ```
 
-    ??? variable bool "`authelia_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`authelia_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`authelia_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_capabilities:
-        ```
-
-    ??? variable string "`authelia_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`authelia_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`authelia_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_docker_cleanup:
-        ```
-
-    ??? variable list "`authelia_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_commands:
-        ```
-
-    ??? variable string "`authelia_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`authelia_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_domainname:
-        ```
-
-    ??? variable string "`authelia_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`authelia_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_env_file:
-        ```
-
-    ??? variable list "`authelia_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`authelia_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_force_kill:
-        ```
-
-    ??? variable list "`authelia_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_groups:
-        ```
-
-    ??? variable int "`authelia_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        authelia_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`authelia_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`authelia_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_kill_signal:
-        ```
-
-    ??? variable dict "`authelia_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        authelia_role_docker_labels:
-        ```
-
-    ??? variable string "`authelia_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`authelia_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_links:
-        ```
-
     ??? variable bool "`authelia_role_docker_oom_killer`"
 
         ```yaml
@@ -1723,32 +1714,18 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`authelia_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_output_logs:
+        ```
+
     ??? variable bool "`authelia_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         authelia_role_docker_paused:
-        ```
-
-    ??? variable string "`authelia_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`authelia_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_ports:
-        ```
-
-    ??? variable bool "`authelia_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        authelia_role_docker_read_only:
         ```
 
     ??? variable bool "`authelia_role_docker_recreate`"
@@ -1765,20 +1742,6 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_restart_retries:
         ```
 
-    ??? variable string "`authelia_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_runtime:
-        ```
-
-    ??? variable string "`authelia_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_shm_size:
-        ```
-
     ??? variable int "`authelia_role_docker_stop_timeout`"
 
         ```yaml
@@ -1786,11 +1749,76 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`authelia_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`authelia_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_capabilities:
+        ```
+
+    ??? variable string "`authelia_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`authelia_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        authelia_role_docker_commands:
+        ```
+
+    ??? variable int "`authelia_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        authelia_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`authelia_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`authelia_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_env_file:
+        ```
+
+    ??? variable dict "`authelia_role_docker_labels`"
 
         ```yaml
         # Type: dict
-        authelia_role_docker_storage_opts:
+        authelia_role_docker_labels:
+        ```
+
+    ??? variable bool "`authelia_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`authelia_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        authelia_role_docker_read_only:
+        ```
+
+    ??? variable string "`authelia_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_runtime:
         ```
 
     ??? variable list "`authelia_role_docker_sysctls`"
@@ -1800,13 +1828,6 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_sysctls:
         ```
 
-    ??? variable list "`authelia_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        authelia_role_docker_tmpfs:
-        ```
-
     ??? variable list "`authelia_role_docker_ulimits`"
 
         ```yaml
@@ -1814,28 +1835,14 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_ulimits:
         ```
 
-    ??? variable string "`authelia_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_user:
-        ```
-
-    ??? variable string "`authelia_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`authelia_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_uts:
-        ```
-
 === "Global Override Options"
+
+    ??? variable string "`authelia_role_authentication_backend`"
+
+        ```yaml
+        # Type: string
+        authelia_role_authentication_backend:
+        ```
 
     ??? variable bool "`authelia_role_autoheal_enabled`"
 
@@ -1893,11 +1900,67 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_docker_controller: true
         ```
 
+    ??? variable string "`authelia_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_image_repo:
+        ```
+
+    ??? variable string "`authelia_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        authelia_role_docker_image_tag:
+        ```
+
     ??? variable bool "`authelia_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         authelia_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`authelia_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        authelia_role_themepark_addons:
+        ```
+
+    ??? variable string "`authelia_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        authelia_role_themepark_app:
+        ```
+
+    ??? variable string "`authelia_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        authelia_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`authelia_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        authelia_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`authelia_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        authelia_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`authelia_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        authelia_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`authelia_role_traefik_autodetect_enabled`"
@@ -1906,6 +1969,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         authelia_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`authelia_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        authelia_role_traefik_certresolver:
         ```
 
     ??? variable bool "`authelia_role_traefik_crowdsec_enabled`"
@@ -1932,6 +2002,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`authelia_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        authelia_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`authelia_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1944,6 +2021,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         ```yaml
         # Type: bool (true/false)
         authelia_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`authelia_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        authelia_role_traefik_priority:
         ```
 
     ??? variable bool "`authelia_role_traefik_robot_enabled`"
@@ -1970,6 +2054,13 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`authelia_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        authelia_role_web_domain:
+        ```
+
     ??? variable list "`authelia_role_web_fqdn_override`"
 
         ```yaml
@@ -1989,6 +2080,7 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`authelia_role_web_host_override`"
 
         ```yaml
@@ -2005,6 +2097,28 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`authelia_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authelia_role_web_http_port:
+        ```
+
+    ??? variable string "`authelia_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        authelia_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`authelia_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authelia_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`authelia_role_web_scheme`"
 
         ```yaml
@@ -2013,4 +2127,17 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
         authelia_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`authelia_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authelia_role_web_serverstransport:
+        ```
+
+    ??? variable string "`authelia_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        authelia_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

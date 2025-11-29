@@ -117,7 +117,7 @@ Guacamole supports various authentication extensions that can be enabled through
 After adding any extension options, run `sb install sandbox-guacamole` to apply changes.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -457,6 +457,561 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_state: started
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`guacamole_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`guacamole_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`guacamole_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`guacamole_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`guacamole_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_cpus:
+        ```
+
+    ??? variable string "`guacamole_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`guacamole_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`guacamole_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`guacamole_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_memory:
+        ```
+
+    ??? variable string "`guacamole_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`guacamole_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`guacamole_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`guacamole_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`guacamole_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`guacamole_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_requests:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`guacamole_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`guacamole_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_devices:
+        ```
+
+    ??? variable string "`guacamole_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_devices_default:
+        ```
+
+    ??? variable list "`guacamole_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_groups:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_privileged:
+        ```
+
+    ??? variable list "`guacamole_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_security_opts:
+        ```
+
+    ??? variable string "`guacamole_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_user:
+        ```
+
+    ??? variable string "`guacamole_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`guacamole_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`guacamole_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`guacamole_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`guacamole_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_domainname:
+        ```
+
+    ??? variable list "`guacamole_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`guacamole_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        guacamole_role_docker_hosts:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`guacamole_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`guacamole_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_links:
+        ```
+
+    ??? variable string "`guacamole_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_network_mode:
+        ```
+
+    ??? variable string "`guacamole_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`guacamole_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_ports:
+        ```
+
+    ??? variable string "`guacamole_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`guacamole_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`guacamole_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_mounts:
+        ```
+
+    ??? variable dict "`guacamole_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        guacamole_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`guacamole_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`guacamole_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`guacamole_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`guacamole_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`guacamole_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_cleanup:
+        ```
+
+    ??? variable string "`guacamole_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`guacamole_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        guacamole_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`guacamole_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_init:
+        ```
+
+    ??? variable string "`guacamole_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`guacamole_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`guacamole_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        guacamole_role_docker_log_options:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`guacamole_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_paused:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_recreate:
+        ```
+
+    ??? variable int "`guacamole_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`guacamole_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`guacamole_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_capabilities:
+        ```
+
+    ??? variable string "`guacamole_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`guacamole_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_commands:
+        ```
+
+    ??? variable int "`guacamole_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        guacamole_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`guacamole_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`guacamole_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_env_file:
+        ```
+
+    ??? variable dict "`guacamole_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        guacamole_role_docker_labels:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`guacamole_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        guacamole_role_docker_read_only:
+        ```
+
+    ??? variable string "`guacamole_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_runtime:
+        ```
+
+    ??? variable list "`guacamole_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_sysctls:
+        ```
+
+    ??? variable list "`guacamole_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        guacamole_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`guacamole_role_autoheal_enabled`"
@@ -465,6 +1020,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         guacamole_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`guacamole_role_cas_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_cas_enable:
         ```
 
     ??? variable string "`guacamole_role_depends_on`"
@@ -515,11 +1077,123 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_docker_controller: true
         ```
 
+    ??? variable string "`guacamole_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_image_repo:
+        ```
+
+    ??? variable string "`guacamole_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_docker_image_tag:
+        ```
+
     ??? variable bool "`guacamole_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         guacamole_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`guacamole_role_duo_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_duo_enable:
+        ```
+
+    ??? variable string "`guacamole_role_header_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_header_enable:
+        ```
+
+    ??? variable string "`guacamole_role_ldap_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_ldap_enable:
+        ```
+
+    ??? variable string "`guacamole_role_openid_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_openid_enable:
+        ```
+
+    ??? variable string "`guacamole_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_paths_location:
+        ```
+
+    ??? variable string "`guacamole_role_radius_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_radius_enable:
+        ```
+
+    ??? variable string "`guacamole_role_saml_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_saml_enable:
+        ```
+
+    ??? variable string "`guacamole_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_themepark_addons:
+        ```
+
+    ??? variable string "`guacamole_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_themepark_app:
+        ```
+
+    ??? variable string "`guacamole_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_themepark_theme:
+        ```
+
+    ??? variable string "`guacamole_role_totp_enable`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_totp_enable:
+        ```
+
+    ??? variable dict/omit "`guacamole_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        guacamole_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`guacamole_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`guacamole_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`guacamole_role_traefik_autodetect_enabled`"
@@ -528,6 +1202,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         guacamole_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`guacamole_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_traefik_certresolver:
         ```
 
     ??? variable bool "`guacamole_role_traefik_crowdsec_enabled`"
@@ -554,6 +1235,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`guacamole_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`guacamole_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -566,6 +1254,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         ```yaml
         # Type: bool (true/false)
         guacamole_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`guacamole_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_traefik_priority:
         ```
 
     ??? variable bool "`guacamole_role_traefik_robot_enabled`"
@@ -592,6 +1287,13 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`guacamole_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_web_domain:
+        ```
+
     ??? variable list "`guacamole_role_web_fqdn_override`"
 
         ```yaml
@@ -611,6 +1313,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`guacamole_role_web_host_override`"
 
         ```yaml
@@ -627,6 +1330,28 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`guacamole_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        guacamole_role_web_http_port:
+        ```
+
+    ??? variable string "`guacamole_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        guacamole_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`guacamole_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        guacamole_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`guacamole_role_web_scheme`"
 
         ```yaml
@@ -635,4 +1360,17 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`guacamole_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        guacamole_role_web_serverstransport:
+        ```
+
+    ??? variable string "`guacamole_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        guacamole_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

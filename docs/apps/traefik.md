@@ -24,7 +24,7 @@ sb install traefik
 Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -176,6 +176,9 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
     ??? variable string "`traefik_dns_resolvers`"
 
         ```yaml
+        # Format is as follows (address can be empty string "" to bind on every interface):
+        # Type options are tcp, udp or both.
+        # traefik_entrypoint_custom:
         # tcp-entrypoint:
         # address: "IP"
         # port: "81"
@@ -659,21 +662,21 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
     <h5>Ports</h5>
 
-    ??? variable list "`traefik_role_docker_ports_defaults`"
+    ??? variable list "`traefik_role_docker_ports_default`"
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_defaults:
+        traefik_role_docker_ports_default:
           - "{{ traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
         ```
 
-    ??? variable list "`traefik_role_docker_ports_tailscale_ipv4_defaults`"
+    ??? variable list "`traefik_role_docker_ports_tailscale_ipv4_default`"
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_tailscale_ipv4_defaults:
+        traefik_role_docker_ports_tailscale_ipv4_default:
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ lookup('vars', 'traefik_tailscale_bind_ip', default=ip_address_public) + ':' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
@@ -682,11 +685,11 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
           - "{{ tailscale_ipv4 + ':' + traefik_entrypoint_websecure_port }}:444/udp"
         ```
 
-    ??? variable list "`traefik_role_docker_ports_tailscale_ipv6_defaults`"
+    ??? variable list "`traefik_role_docker_ports_tailscale_ipv6_default`"
 
         ```yaml
         # Type: list
-        traefik_role_docker_ports_tailscale_ipv6_defaults:
+        traefik_role_docker_ports_tailscale_ipv6_default:
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_web_port }}:{{ traefik_entrypoint_web_port }}/tcp"
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/tcp"
           - "{{ '[' + lookup('vars', 'traefik_tailscale_bind_ipv6', default=ipv6_address_public) + ']:' + traefik_entrypoint_websecure_port }}:{{ traefik_entrypoint_websecure_port }}/udp"
@@ -1104,7 +1107,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -1192,6 +1195,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`traefik_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`traefik_role_docker_cap_drop`"
@@ -1199,6 +1209,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: list
         traefik_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`traefik_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`traefik_role_docker_device_cgroup_rules`"
@@ -1257,6 +1274,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_devices_default:
         ```
 
+    ??? variable list "`traefik_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_groups:
+        ```
+
     ??? variable bool "`traefik_role_docker_privileged`"
 
         ```yaml
@@ -1269,6 +1293,20 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: list
         traefik_role_docker_security_opts:
+        ```
+
+    ??? variable string "`traefik_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_user:
+        ```
+
+    ??? variable string "`traefik_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -1294,11 +1332,39 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_dns_servers:
         ```
 
-    ??? variable string "`traefik_role_docker_hosts_use_common`"
+    ??? variable string "`traefik_role_docker_domainname`"
 
         ```yaml
         # Type: string
+        traefik_role_docker_domainname:
+        ```
+
+    ??? variable list "`traefik_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_exposed_ports:
+        ```
+
+    ??? variable bool "`traefik_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
         traefik_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`traefik_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`traefik_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_links:
         ```
 
     ??? variable string "`traefik_role_docker_network_mode`"
@@ -1306,6 +1372,20 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: string
         traefik_role_docker_network_mode:
+        ```
+
+    ??? variable string "`traefik_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_pid_mode:
+        ```
+
+    ??? variable string "`traefik_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -1324,6 +1404,20 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_mounts:
         ```
 
+    ??? variable dict "`traefik_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        traefik_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`traefik_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_tmpfs:
+        ```
+
     ??? variable string "`traefik_role_docker_volume_driver`"
 
         ```yaml
@@ -1338,10 +1432,10 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_volumes_from:
         ```
 
-    ??? variable string "`traefik_role_docker_volumes_global`"
+    ??? variable bool "`traefik_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         traefik_role_docker_volumes_global:
         ```
 
@@ -1354,6 +1448,27 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`traefik_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`traefik_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_cleanup:
+        ```
+
+    ??? variable string "`traefik_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_force_kill:
+        ```
+
     ??? variable dict "`traefik_role_docker_healthcheck`"
 
         ```yaml
@@ -1361,11 +1476,25 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_healthcheck:
         ```
 
+    ??? variable int "`traefik_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`traefik_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         traefik_role_docker_init:
+        ```
+
+    ??? variable string "`traefik_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_kill_signal:
         ```
 
     ??? variable string "`traefik_role_docker_log_driver`"
@@ -1382,127 +1511,6 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_log_options:
         ```
 
-    ??? variable bool "`traefik_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        traefik_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`traefik_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        traefik_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`traefik_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        traefik_role_docker_capabilities:
-        ```
-
-    ??? variable string "`traefik_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`traefik_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`traefik_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        traefik_role_docker_cleanup:
-        ```
-
-    ??? variable string "`traefik_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`traefik_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_domainname:
-        ```
-
-    ??? variable string "`traefik_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`traefik_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_env_file:
-        ```
-
-    ??? variable list "`traefik_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        traefik_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`traefik_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_force_kill:
-        ```
-
-    ??? variable list "`traefik_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        traefik_role_docker_groups:
-        ```
-
-    ??? variable int "`traefik_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        traefik_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`traefik_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`traefik_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_kill_signal:
-        ```
-
-    ??? variable list "`traefik_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        traefik_role_docker_links:
-        ```
-
     ??? variable bool "`traefik_role_docker_oom_killer`"
 
         ```yaml
@@ -1517,25 +1525,18 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`traefik_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_output_logs:
+        ```
+
     ??? variable bool "`traefik_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         traefik_role_docker_paused:
-        ```
-
-    ??? variable string "`traefik_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_pid_mode:
-        ```
-
-    ??? variable bool "`traefik_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        traefik_role_docker_read_only:
         ```
 
     ??? variable bool "`traefik_role_docker_recreate`"
@@ -1552,20 +1553,6 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_restart_retries:
         ```
 
-    ??? variable string "`traefik_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_runtime:
-        ```
-
-    ??? variable string "`traefik_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_shm_size:
-        ```
-
     ??? variable int "`traefik_role_docker_stop_timeout`"
 
         ```yaml
@@ -1573,11 +1560,55 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`traefik_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`traefik_role_docker_capabilities`"
 
         ```yaml
-        # Type: dict
-        traefik_role_docker_storage_opts:
+        # Type: list
+        traefik_role_docker_capabilities:
+        ```
+
+    ??? variable string "`traefik_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cgroup_parent:
+        ```
+
+    ??? variable int "`traefik_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`traefik_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`traefik_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_env_file:
+        ```
+
+    ??? variable bool "`traefik_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_read_only:
+        ```
+
+    ??? variable string "`traefik_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_runtime:
         ```
 
     ??? variable list "`traefik_role_docker_sysctls`"
@@ -1587,13 +1618,6 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_sysctls:
         ```
 
-    ??? variable list "`traefik_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        traefik_role_docker_tmpfs:
-        ```
-
     ??? variable list "`traefik_role_docker_ulimits`"
 
         ```yaml
@@ -1601,28 +1625,21 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_ulimits:
         ```
 
-    ??? variable string "`traefik_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_user:
-        ```
-
-    ??? variable string "`traefik_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`traefik_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_uts:
-        ```
-
 === "Global Override Options"
+
+    ??? variable bool "`traefik_role_access_buffer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_access_buffer:
+        ```
+
+    ??? variable bool "`traefik_role_access_log`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_access_log:
+        ```
 
     ??? variable bool "`traefik_role_autoheal_enabled`"
 
@@ -1680,11 +1697,130 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_docker_controller: true
         ```
 
+    ??? variable string "`traefik_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_image_repo:
+        ```
+
+    ??? variable string "`traefik_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_image_tag:
+        ```
+
     ??? variable bool "`traefik_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         traefik_role_docker_volumes_download:
+        ```
+
+    ??? variable bool "`traefik_role_log_compress`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_compress:
+        ```
+
+    ??? variable bool "`traefik_role_log_file`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_file:
+        ```
+
+    ??? variable bool "`traefik_role_log_level`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_level:
+        ```
+
+    ??? variable bool "`traefik_role_log_max_age`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_max_age:
+        ```
+
+    ??? variable bool "`traefik_role_log_max_backups`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_max_backups:
+        ```
+
+    ??? variable bool "`traefik_role_log_max_size`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_log_max_size:
+        ```
+
+    ??? variable string "`traefik_role_metrics_domain`"
+
+        ```yaml
+        # Type: string
+        traefik_role_metrics_domain:
+        ```
+
+    ??? variable string "`traefik_role_metrics_subdomain`"
+
+        ```yaml
+        # Type: string
+        traefik_role_metrics_subdomain:
+        ```
+
+    ??? variable string "`traefik_role_response_headers`"
+
+        ```yaml
+        # Type: string
+        traefik_role_response_headers:
+        ```
+
+    ??? variable string "`traefik_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        traefik_role_themepark_addons:
+        ```
+
+    ??? variable string "`traefik_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        traefik_role_themepark_app:
+        ```
+
+    ??? variable string "`traefik_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        traefik_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`traefik_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        traefik_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`traefik_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`traefik_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`traefik_role_traefik_autodetect_enabled`"
@@ -1693,6 +1829,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         traefik_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`traefik_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_certresolver:
         ```
 
     ??? variable bool "`traefik_role_traefik_crowdsec_enabled`"
@@ -1719,6 +1862,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`traefik_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`traefik_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1731,6 +1881,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: bool (true/false)
         traefik_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`traefik_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_priority:
         ```
 
     ??? variable bool "`traefik_role_traefik_robot_enabled`"
@@ -1757,6 +1914,13 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`traefik_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        traefik_role_web_domain:
+        ```
+
     ??? variable list "`traefik_role_web_fqdn_override`"
 
         ```yaml
@@ -1776,6 +1940,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`traefik_role_web_host_override`"
 
         ```yaml
@@ -1792,6 +1957,28 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`traefik_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        traefik_role_web_http_port:
+        ```
+
+    ??? variable string "`traefik_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        traefik_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`traefik_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        traefik_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`traefik_role_web_scheme`"
 
         ```yaml
@@ -1800,4 +1987,24 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`traefik_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        traefik_role_web_serverstransport:
+        ```
+
+    ??? variable string "`traefik_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        traefik_role_web_subdomain:
+        ```
+
+    ??? variable string "`traefik_role_web_url`"
+
+        ```yaml
+        # Type: string
+        traefik_role_web_url:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

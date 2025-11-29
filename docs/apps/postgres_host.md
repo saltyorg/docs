@@ -35,14 +35,14 @@ PostgreSQL is installed directly on the host with data stored in `/opt/postgresq
 Configure per-version users, databases, and access control using `postgres_host_role_config` in your inventory. Default root superuser is `root`/`password4321` (change this!). Connect from Docker using `host.docker.internal:5432`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
     ```yaml title="Example Override"
-    postgres_host_role_versions: ["17", "18"]
+    postgres_host_role_versions: ["item1", "item2"]
     ```
 
 === "Basics"
@@ -93,6 +93,27 @@ Configure per-version users, databases, and access control using `postgres_host_
     ??? variable dict "`postgres_host_role_config`"
 
         ```yaml
+        # Example:
+        # postgres_host_role_config:
+        # "16":
+        # allowed_hosts:
+        # - "172.19.0.0/16"
+        # - "10.0.0.0/8"
+        # auth_method: "md5"
+        # users:
+        # - name: "app_user"
+        # password: "password1"
+        # - name: "app_user2"
+        # password: "password2"
+        # databases:
+        # - name: "app_database"
+        # users:
+        # - "app_user"
+        # - "app_user2"
+        # - name: "metrics_db"
+        # users:
+        # - "app_user"
+        # "17":
         # allowed_hosts:
         # - "172.19.0.0/16"
         # auth_method: "scram-sha-256"
@@ -143,183 +164,4 @@ Configure per-version users, databases, and access control using `postgres_host_
           - name: "saltbox"
             users: ["{{ user.name }}"]
         ```
-
-=== "Global Override Options"
-
-    ??? variable bool "`postgres_host_role_autoheal_enabled`"
-
-        ```yaml
-        # Enable or disable Autoheal monitoring for the container created when deploying
-        # Type: bool (true/false)
-        postgres_host_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`postgres_host_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        postgres_host_role_depends_on: ""
-        ```
-
-    ??? variable string "`postgres_host_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        postgres_host_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`postgres_host_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        postgres_host_role_depends_on_healthchecks:
-        ```
-
-    ??? variable bool "`postgres_host_role_diun_enabled`"
-
-        ```yaml
-        # Enable or disable Diun update notifications for the container created when deploying
-        # Type: bool (true/false)
-        postgres_host_role_diun_enabled: true
-        ```
-
-    ??? variable bool "`postgres_host_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        postgres_host_role_dns_enabled: true
-        ```
-
-    ??? variable bool "`postgres_host_role_docker_controller`"
-
-        ```yaml
-        # Enable or disable Saltbox Docker Controller management for the container
-        # Type: bool (true/false)
-        postgres_host_role_docker_controller: true
-        ```
-
-    ??? variable bool "`postgres_host_role_docker_volumes_download`"
-
-        ```yaml
-        # Type: bool (true/false)
-        postgres_host_role_docker_volumes_download:
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_autodetect_enabled`"
-
-        ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        postgres_host_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        postgres_host_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`postgres_host_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        postgres_host_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`postgres_host_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        postgres_host_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            postgres_host_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "postgres_host2.{{ user.domain }}"
-              - "postgres_host.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`postgres_host_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
-        # Type: string
-        postgres_host_role_web_host_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            postgres_host_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'postgres_host2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`postgres_host_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        postgres_host_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

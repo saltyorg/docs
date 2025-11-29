@@ -121,7 +121,7 @@ Are you setting Saltbox up for the first time?
 </div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -845,18 +845,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_web_port_lookup: "{{ lookup('role_var', '_web_port', role='qbittorrent') }}"
         ```
 
-    ??? variable list "`qbittorrent_role_docker_ports_defaults`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_defaults`{ .sb-show-on-checked }"
+    ??? variable list "`qbittorrent_role_docker_ports_default`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
-        qbittorrent_role_docker_ports_defaults:
+        qbittorrent_role_docker_ports_default:
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
-        qbittorrent2_docker_ports_defaults:
+        qbittorrent2_docker_ports_default:
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
           - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
         ```
@@ -1061,7 +1061,7 @@ Are you setting Saltbox up for the first time?
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -1209,6 +1209,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_memory_swappiness:
         ```
 
+    ??? variable string "`qbittorrent_role_docker_shm_size`{ .sb-show-on-unchecked }`qbittorrent2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_shm_size:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`qbittorrent_role_docker_cap_drop`{ .sb-show-on-unchecked }`qbittorrent2_docker_cap_drop`{ .sb-show-on-checked }"
@@ -1221,6 +1233,18 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         qbittorrent2_docker_cap_drop:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_cgroupns_mode:
         ```
 
     ??? variable list "`qbittorrent_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`qbittorrent2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
@@ -1319,6 +1343,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_devices_default:
         ```
 
+    ??? variable list "`qbittorrent_role_docker_groups`{ .sb-show-on-unchecked }`qbittorrent2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_groups:
+        ```
+
     ??? variable bool "`qbittorrent_role_docker_privileged`{ .sb-show-on-unchecked }`qbittorrent2_docker_privileged`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1341,6 +1377,30 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         qbittorrent2_docker_security_opts:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_user`{ .sb-show-on-unchecked }`qbittorrent2_docker_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_user:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_userns_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -1381,6 +1441,30 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_dns_servers:
         ```
 
+    ??? variable string "`qbittorrent_role_docker_domainname`{ .sb-show-on-unchecked }`qbittorrent2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_domainname:
+        ```
+
+    ??? variable list "`qbittorrent_role_docker_exposed_ports`{ .sb-show-on-unchecked }`qbittorrent2_docker_exposed_ports`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_exposed_ports:
+        ```
+
     ??? variable dict "`qbittorrent_role_docker_hosts`{ .sb-show-on-unchecked }`qbittorrent2_docker_hosts`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1393,16 +1477,40 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_hosts:
         ```
 
-    ??? variable string "`qbittorrent_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`qbittorrent2_docker_hosts_use_common`{ .sb-show-on-checked }"
+    ??? variable bool "`qbittorrent_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`qbittorrent2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent_role_docker_hosts_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent2_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_ipc_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_ipc_mode:
+        ```
+
+    ??? variable list "`qbittorrent_role_docker_links`{ .sb-show-on-unchecked }`qbittorrent2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_links:
         ```
 
     ??? variable string "`qbittorrent_role_docker_network_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_network_mode`{ .sb-show-on-checked }"
@@ -1415,6 +1523,30 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: string
         qbittorrent2_docker_network_mode:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_pid_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_pid_mode:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_uts`{ .sb-show-on-unchecked }`qbittorrent2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -1443,6 +1575,30 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_mounts:
         ```
 
+    ??? variable dict "`qbittorrent_role_docker_storage_opts`{ .sb-show-on-unchecked }`qbittorrent2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qbittorrent_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qbittorrent2_docker_storage_opts:
+        ```
+
+    ??? variable list "`qbittorrent_role_docker_tmpfs`{ .sb-show-on-unchecked }`qbittorrent2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_tmpfs:
+        ```
+
     ??? variable string "`qbittorrent_role_docker_volume_driver`{ .sb-show-on-unchecked }`qbittorrent2_docker_volume_driver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1467,15 +1623,15 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_volumes_from:
         ```
 
-    ??? variable string "`qbittorrent_role_docker_volumes_global`{ .sb-show-on-unchecked }`qbittorrent2_docker_volumes_global`{ .sb-show-on-checked }"
+    ??? variable bool "`qbittorrent_role_docker_volumes_global`{ .sb-show-on-unchecked }`qbittorrent2_docker_volumes_global`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent_role_docker_volumes_global:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent2_docker_volumes_global:
         ```
 
@@ -1493,6 +1649,42 @@ Are you setting Saltbox up for the first time?
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`qbittorrent_role_docker_auto_remove`{ .sb-show-on-unchecked }`qbittorrent2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_auto_remove:
+        ```
+
+    ??? variable bool "`qbittorrent_role_docker_cleanup`{ .sb-show-on-unchecked }`qbittorrent2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_cleanup:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_force_kill`{ .sb-show-on-unchecked }`qbittorrent2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_force_kill:
+        ```
+
     ??? variable dict "`qbittorrent_role_docker_healthcheck`{ .sb-show-on-unchecked }`qbittorrent2_docker_healthcheck`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1505,6 +1697,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_healthcheck:
         ```
 
+    ??? variable int "`qbittorrent_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`qbittorrent_role_docker_init`{ .sb-show-on-unchecked }`qbittorrent2_docker_init`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1515,6 +1719,18 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrent2_docker_init:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_kill_signal`{ .sb-show-on-unchecked }`qbittorrent2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_kill_signal:
         ```
 
     ??? variable string "`qbittorrent_role_docker_log_driver`{ .sb-show-on-unchecked }`qbittorrent2_docker_log_driver`{ .sb-show-on-checked }"
@@ -1541,236 +1757,6 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_log_options:
         ```
 
-    ??? variable bool "`qbittorrent_role_docker_output_logs`{ .sb-show-on-unchecked }`qbittorrent2_docker_output_logs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        qbittorrent_role_docker_output_logs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        qbittorrent2_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`qbittorrent_role_docker_auto_remove`{ .sb-show-on-unchecked }`qbittorrent2_docker_auto_remove`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        qbittorrent_role_docker_auto_remove:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        qbittorrent2_docker_auto_remove:
-        ```
-
-    ??? variable list "`qbittorrent_role_docker_capabilities`{ .sb-show-on-unchecked }`qbittorrent2_docker_capabilities`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_capabilities:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_capabilities:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`qbittorrent2_docker_cgroup_parent`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_cgroup_parent:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_cgroupns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_cgroupns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`qbittorrent_role_docker_cleanup`{ .sb-show-on-unchecked }`qbittorrent2_docker_cleanup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        qbittorrent_role_docker_cleanup:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        qbittorrent2_docker_cleanup:
-        ```
-
-    ??? variable list "`qbittorrent_role_docker_commands`{ .sb-show-on-unchecked }`qbittorrent2_docker_commands`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_commands:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_commands:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_create_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_create_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_create_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_create_timeout:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_domainname`{ .sb-show-on-unchecked }`qbittorrent2_docker_domainname`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_domainname:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_domainname:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrent2_docker_entrypoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_entrypoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_entrypoint:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_env_file`{ .sb-show-on-unchecked }`qbittorrent2_docker_env_file`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_env_file:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_env_file:
-        ```
-
-    ??? variable list "`qbittorrent_role_docker_exposed_ports`{ .sb-show-on-unchecked }`qbittorrent2_docker_exposed_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_exposed_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_exposed_ports:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_force_kill`{ .sb-show-on-unchecked }`qbittorrent2_docker_force_kill`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_force_kill:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_force_kill:
-        ```
-
-    ??? variable list "`qbittorrent_role_docker_groups`{ .sb-show-on-unchecked }`qbittorrent2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_groups:
-        ```
-
-    ??? variable int "`qbittorrent_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        qbittorrent_role_docker_healthy_wait_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        qbittorrent2_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_ipc_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_ipc_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_ipc_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_ipc_mode:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_kill_signal`{ .sb-show-on-unchecked }`qbittorrent2_docker_kill_signal`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_kill_signal:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_kill_signal:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_labels_use_common`{ .sb-show-on-unchecked }`qbittorrent2_docker_labels_use_common`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_labels_use_common:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_labels_use_common:
-        ```
-
-    ??? variable list "`qbittorrent_role_docker_links`{ .sb-show-on-unchecked }`qbittorrent2_docker_links`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_links:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_links:
-        ```
-
     ??? variable bool "`qbittorrent_role_docker_oom_killer`{ .sb-show-on-unchecked }`qbittorrent2_docker_oom_killer`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1795,6 +1781,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`qbittorrent_role_docker_output_logs`{ .sb-show-on-unchecked }`qbittorrent2_docker_output_logs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_output_logs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_output_logs:
+        ```
+
     ??? variable bool "`qbittorrent_role_docker_paused`{ .sb-show-on-unchecked }`qbittorrent2_docker_paused`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1805,30 +1803,6 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrent2_docker_paused:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_pid_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_pid_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_pid_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_pid_mode:
-        ```
-
-    ??? variable bool "`qbittorrent_role_docker_read_only`{ .sb-show-on-unchecked }`qbittorrent2_docker_read_only`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        qbittorrent_role_docker_read_only:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        qbittorrent2_docker_read_only:
         ```
 
     ??? variable bool "`qbittorrent_role_docker_recreate`{ .sb-show-on-unchecked }`qbittorrent2_docker_recreate`{ .sb-show-on-checked }"
@@ -1855,6 +1829,104 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_restart_retries:
         ```
 
+    <h5>Other Options</h5>
+
+    ??? variable list "`qbittorrent_role_docker_capabilities`{ .sb-show-on-unchecked }`qbittorrent2_docker_capabilities`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_capabilities:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_capabilities:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`qbittorrent2_docker_cgroup_parent`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_cgroup_parent:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`qbittorrent_role_docker_commands`{ .sb-show-on-unchecked }`qbittorrent2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        qbittorrent_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        qbittorrent2_docker_commands:
+        ```
+
+    ??? variable int "`qbittorrent_role_docker_create_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_docker_create_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_docker_create_timeout:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrent2_docker_entrypoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_entrypoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_entrypoint:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_env_file`{ .sb-show-on-unchecked }`qbittorrent2_docker_env_file`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_env_file:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_env_file:
+        ```
+
+    ??? variable bool "`qbittorrent_role_docker_labels_use_common`{ .sb-show-on-unchecked }`qbittorrent2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_labels_use_common:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`qbittorrent_role_docker_read_only`{ .sb-show-on-unchecked }`qbittorrent2_docker_read_only`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_docker_read_only:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_docker_read_only:
+        ```
+
     ??? variable string "`qbittorrent_role_docker_runtime`{ .sb-show-on-unchecked }`qbittorrent2_docker_runtime`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1865,30 +1937,6 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: string
         qbittorrent2_docker_runtime:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_shm_size`{ .sb-show-on-unchecked }`qbittorrent2_docker_shm_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_shm_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_shm_size:
-        ```
-
-    ??? variable dict "`qbittorrent_role_docker_storage_opts`{ .sb-show-on-unchecked }`qbittorrent2_docker_storage_opts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        qbittorrent_role_docker_storage_opts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        qbittorrent2_docker_storage_opts:
         ```
 
     ??? variable list "`qbittorrent_role_docker_sysctls`{ .sb-show-on-unchecked }`qbittorrent2_docker_sysctls`{ .sb-show-on-checked }"
@@ -1903,18 +1951,6 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_sysctls:
         ```
 
-    ??? variable list "`qbittorrent_role_docker_tmpfs`{ .sb-show-on-unchecked }`qbittorrent2_docker_tmpfs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        qbittorrent_role_docker_tmpfs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        qbittorrent2_docker_tmpfs:
-        ```
-
     ??? variable list "`qbittorrent_role_docker_ulimits`{ .sb-show-on-unchecked }`qbittorrent2_docker_ulimits`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1925,42 +1961,6 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         qbittorrent2_docker_ulimits:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_user`{ .sb-show-on-unchecked }`qbittorrent2_docker_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_user:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_userns_mode`{ .sb-show-on-unchecked }`qbittorrent2_docker_userns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_userns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_userns_mode:
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_uts`{ .sb-show-on-unchecked }`qbittorrent2_docker_uts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_uts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_uts:
         ```
 
 === "Global Override Options"
@@ -2063,6 +2063,54 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_docker_controller: true
         ```
 
+    ??? variable string "`qbittorrent_role_docker_image_repo`{ .sb-show-on-unchecked }`qbittorrent2_docker_image_repo`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_image_repo:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_image_repo:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_image_tag`{ .sb-show-on-unchecked }`qbittorrent2_docker_image_tag`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_docker_image_tag:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_docker_image_tag:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_ports_56881`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_56881`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        qbittorrent_role_docker_ports_56881:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        qbittorrent2_docker_ports_56881:
+        ```
+
+    ??? variable string "`qbittorrent_role_docker_stop_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_stop_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        qbittorrent_role_docker_stop_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        qbittorrent2_docker_stop_timeout:
+        ```
+
     ??? variable bool "`qbittorrent_role_docker_volumes_download`{ .sb-show-on-unchecked }`qbittorrent2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2073,6 +2121,150 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrent2_docker_volumes_download:
+        ```
+
+    ??? variable string "`qbittorrent_role_host_branch`{ .sb-show-on-unchecked }`qbittorrent2_host_branch`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_host_branch:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_host_branch:
+        ```
+
+    ??? variable string "`qbittorrent_role_host_download_endpoint`{ .sb-show-on-unchecked }`qbittorrent2_host_download_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_host_download_endpoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_host_download_endpoint:
+        ```
+
+    ??? variable string "`qbittorrent_role_host_release_lookup`{ .sb-show-on-unchecked }`qbittorrent2_host_release_lookup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_host_release_lookup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_host_release_lookup:
+        ```
+
+    ??? variable string "`qbittorrent_role_host_release_url`{ .sb-show-on-unchecked }`qbittorrent2_host_release_url`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_host_release_url:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_host_release_url:
+        ```
+
+    ??? variable string "`qbittorrent_role_host_specific_version`{ .sb-show-on-unchecked }`qbittorrent2_host_specific_version`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_host_specific_version:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_host_specific_version:
+        ```
+
+    ??? variable string "`qbittorrent_role_themepark_addons`{ .sb-show-on-unchecked }`qbittorrent2_themepark_addons`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_themepark_addons:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_themepark_addons:
+        ```
+
+    ??? variable string "`qbittorrent_role_themepark_app`{ .sb-show-on-unchecked }`qbittorrent2_themepark_app`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_themepark_app:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_themepark_app:
+        ```
+
+    ??? variable bool "`qbittorrent_role_themepark_enabled`{ .sb-show-on-unchecked }`qbittorrent2_themepark_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        qbittorrent_role_themepark_enabled:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        qbittorrent2_themepark_enabled:
+        ```
+
+    ??? variable string "`qbittorrent_role_themepark_theme`{ .sb-show-on-unchecked }`qbittorrent2_themepark_theme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_themepark_theme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`qbittorrent_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`qbittorrent2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrent_role_traefik_api_endpoint:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrent2_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`qbittorrent_role_traefik_api_middleware`{ .sb-show-on-unchecked }`qbittorrent2_traefik_api_middleware`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_traefik_api_middleware:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_traefik_api_middleware:
+        ```
+
+    ??? variable string "`qbittorrent_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`qbittorrent2_traefik_api_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_traefik_api_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`qbittorrent_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`qbittorrent2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
@@ -2087,6 +2279,18 @@ Are you setting Saltbox up for the first time?
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         qbittorrent2_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`qbittorrent_role_traefik_certresolver`{ .sb-show-on-unchecked }`qbittorrent2_traefik_certresolver`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_traefik_certresolver:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_traefik_certresolver:
         ```
 
     ??? variable bool "`qbittorrent_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`qbittorrent2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -2131,6 +2335,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`qbittorrent_role_traefik_middleware_http`{ .sb-show-on-unchecked }`qbittorrent2_traefik_middleware_http`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_traefik_middleware_http:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_traefik_middleware_http:
+        ```
+
     ??? variable bool "`qbittorrent_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`qbittorrent2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2153,6 +2369,18 @@ Are you setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         qbittorrent2_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`qbittorrent_role_traefik_priority`{ .sb-show-on-unchecked }`qbittorrent2_traefik_priority`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_traefik_priority:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_traefik_priority:
         ```
 
     ??? variable bool "`qbittorrent_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`qbittorrent2_traefik_robot_enabled`{ .sb-show-on-checked }"
@@ -2197,6 +2425,18 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`qbittorrent_role_web_domain`{ .sb-show-on-unchecked }`qbittorrent2_web_domain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_web_domain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_web_domain:
+        ```
+
     ??? variable list "`qbittorrent_role_web_fqdn_override`{ .sb-show-on-unchecked }`qbittorrent2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2222,6 +2462,7 @@ Are you setting Saltbox up for the first time?
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -2232,6 +2473,7 @@ Are you setting Saltbox up for the first time?
             ```
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
 
     ??? variable string "`qbittorrent_role_web_host_override`{ .sb-show-on-unchecked }`qbittorrent2_web_host_override`{ .sb-show-on-checked }"
 
@@ -2255,6 +2497,7 @@ Are you setting Saltbox up for the first time?
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -2262,6 +2505,55 @@ Are you setting Saltbox up for the first time?
             ```
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+
+    ??? variable string "`qbittorrent_role_web_http_port`{ .sb-show-on-unchecked }`qbittorrent2_web_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        qbittorrent_role_web_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        qbittorrent2_web_http_port:
+        ```
+
+    ??? variable string "`qbittorrent_role_web_http_scheme`{ .sb-show-on-unchecked }`qbittorrent2_web_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        qbittorrent_role_web_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        qbittorrent2_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`qbittorrent_role_web_http_serverstransport`{ .sb-show-on-unchecked }`qbittorrent2_web_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrent_role_web_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrent2_web_http_serverstransport:
+        ```
+
+    ??? variable string "`qbittorrent_role_web_port`{ .sb-show-on-unchecked }`qbittorrent2_web_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        qbittorrent_role_web_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        qbittorrent2_web_port:
+        ```
 
     ??? variable string "`qbittorrent_role_web_scheme`{ .sb-show-on-unchecked }`qbittorrent2_web_scheme`{ .sb-show-on-checked }"
 
@@ -2277,4 +2569,27 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_web_scheme:
         ```
 
+    ??? variable dict/omit "`qbittorrent_role_web_serverstransport`{ .sb-show-on-unchecked }`qbittorrent2_web_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        qbittorrent_role_web_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        qbittorrent2_web_serverstransport:
+        ```
+
+    ??? variable string "`qbittorrent_role_web_subdomain`{ .sb-show-on-unchecked }`qbittorrent2_web_subdomain`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrent_role_web_subdomain:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrent2_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

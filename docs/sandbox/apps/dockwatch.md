@@ -49,7 +49,7 @@ Set up the update options first, if you want to set them all at the same time us
 Add your notifiarr API key in the notification tab in order to set up notifications.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -365,15 +365,570 @@ Add your notifiarr API key in the notification tab in order to set up notificati
     ??? variable string "`dockwatch_role_depends_on_delay`"
 
         ```yaml
-        # Type: string
+        # Type: string (quoted number)
         dockwatch_role_depends_on_delay: "0"
         ```
 
     ??? variable string "`dockwatch_role_depends_on_healthchecks`"
 
         ```yaml
-        # Type: string
+        # Type: string ("true"/"false")
         dockwatch_role_depends_on_healthchecks: "false"
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`dockwatch_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_cpus:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_memory:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`dockwatch_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_requests:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_devices:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_devices_default:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_groups:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_privileged:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_security_opts:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_user:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`dockwatch_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_domainname:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`dockwatch_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        dockwatch_role_docker_hosts:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_links:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_network_mode:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_ports:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`dockwatch_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_mounts:
+        ```
+
+    ??? variable dict "`dockwatch_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        dockwatch_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`dockwatch_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_cleanup:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`dockwatch_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        dockwatch_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_init:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`dockwatch_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        dockwatch_role_docker_log_options:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_paused:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_recreate:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`dockwatch_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_capabilities:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_commands:
+        ```
+
+    ??? variable int "`dockwatch_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        dockwatch_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_env_file:
+        ```
+
+    ??? variable dict "`dockwatch_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        dockwatch_role_docker_labels:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`dockwatch_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        dockwatch_role_docker_read_only:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_runtime:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_sysctls:
+        ```
+
+    ??? variable list "`dockwatch_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        dockwatch_role_docker_ulimits:
         ```
 
 === "Global Override Options"
@@ -434,11 +989,81 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_docker_controller: true
         ```
 
+    ??? variable string "`dockwatch_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_image_repo:
+        ```
+
+    ??? variable string "`dockwatch_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_image_tag:
+        ```
+
     ??? variable bool "`dockwatch_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         dockwatch_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`dockwatch_role_paths_location`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_paths_location:
+        ```
+
+    ??? variable string "`dockwatch_role_post_enable`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_post_enable:
+        ```
+
+    ??? variable string "`dockwatch_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_themepark_addons:
+        ```
+
+    ??? variable string "`dockwatch_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_themepark_app:
+        ```
+
+    ??? variable string "`dockwatch_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`dockwatch_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        dockwatch_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`dockwatch_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`dockwatch_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`dockwatch_role_traefik_autodetect_enabled`"
@@ -447,6 +1072,13 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         dockwatch_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`dockwatch_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_traefik_certresolver:
         ```
 
     ??? variable bool "`dockwatch_role_traefik_crowdsec_enabled`"
@@ -473,6 +1105,13 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`dockwatch_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`dockwatch_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -485,6 +1124,13 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         ```yaml
         # Type: bool (true/false)
         dockwatch_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`dockwatch_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_traefik_priority:
         ```
 
     ??? variable bool "`dockwatch_role_traefik_robot_enabled`"
@@ -511,6 +1157,13 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`dockwatch_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_web_domain:
+        ```
+
     ??? variable list "`dockwatch_role_web_fqdn_override`"
 
         ```yaml
@@ -530,6 +1183,7 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`dockwatch_role_web_host_override`"
 
         ```yaml
@@ -546,6 +1200,28 @@ Add your notifiarr API key in the notification tab in order to set up notificati
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`dockwatch_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        dockwatch_role_web_http_port:
+        ```
+
+    ??? variable string "`dockwatch_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        dockwatch_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`dockwatch_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        dockwatch_role_web_http_serverstransport:
+        ```
+
     ??? variable string "`dockwatch_role_web_scheme`"
 
         ```yaml
@@ -554,4 +1230,17 @@ Add your notifiarr API key in the notification tab in order to set up notificati
         dockwatch_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`dockwatch_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        dockwatch_role_web_serverstransport:
+        ```
+
+    ??? variable string "`dockwatch_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

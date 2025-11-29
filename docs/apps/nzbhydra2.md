@@ -86,7 +86,7 @@ Are you setting Saltbox up for the first time?
 </div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -299,10 +299,10 @@ Are you setting Saltbox up for the first time?
                                                        | ternary('512', '256') }}"
         ```
 
-    ??? variable list "`nzbhydra2_role_config_settings_default`"
+    ??? variable string "`nzbhydra2_role_config_settings_default`"
 
         ```yaml
-        # Type: list
+        # Type: string
         nzbhydra2_role_config_settings_default:
           # NZBGet
           - del(.downloading.downloaders)
@@ -483,7 +483,7 @@ Are you setting Saltbox up for the first time?
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
     <h5>Resource Limits</h5>
 
@@ -571,6 +571,13 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_memory_swappiness:
         ```
 
+    ??? variable string "`nzbhydra2_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_shm_size:
+        ```
+
     <h5>Security & Devices</h5>
 
     ??? variable list "`nzbhydra2_role_docker_cap_drop`"
@@ -578,6 +585,13 @@ Are you setting Saltbox up for the first time?
         ```yaml
         # Type: list
         nzbhydra2_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_cgroupns_mode:
         ```
 
     ??? variable list "`nzbhydra2_role_docker_device_cgroup_rules`"
@@ -636,6 +650,13 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_devices_default:
         ```
 
+    ??? variable list "`nzbhydra2_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_groups:
+        ```
+
     ??? variable bool "`nzbhydra2_role_docker_privileged`"
 
         ```yaml
@@ -648,6 +669,20 @@ Are you setting Saltbox up for the first time?
         ```yaml
         # Type: list
         nzbhydra2_role_docker_security_opts:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_user:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -673,6 +708,20 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_dns_servers:
         ```
 
+    ??? variable string "`nzbhydra2_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_domainname:
+        ```
+
+    ??? variable list "`nzbhydra2_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_exposed_ports:
+        ```
+
     ??? variable dict "`nzbhydra2_role_docker_hosts`"
 
         ```yaml
@@ -680,11 +729,25 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_hosts:
         ```
 
-    ??? variable string "`nzbhydra2_role_docker_hosts_use_common`"
+    ??? variable bool "`nzbhydra2_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_ipc_mode`"
 
         ```yaml
         # Type: string
-        nzbhydra2_role_docker_hosts_use_common:
+        nzbhydra2_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`nzbhydra2_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_links:
         ```
 
     ??? variable string "`nzbhydra2_role_docker_network_mode`"
@@ -692,6 +755,27 @@ Are you setting Saltbox up for the first time?
         ```yaml
         # Type: string
         nzbhydra2_role_docker_network_mode:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`nzbhydra2_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_ports:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_uts:
         ```
 
     <h5>Storage</h5>
@@ -710,6 +794,20 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_mounts:
         ```
 
+    ??? variable dict "`nzbhydra2_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        nzbhydra2_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`nzbhydra2_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_tmpfs:
+        ```
+
     ??? variable string "`nzbhydra2_role_docker_volume_driver`"
 
         ```yaml
@@ -724,10 +822,10 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_volumes_from:
         ```
 
-    ??? variable string "`nzbhydra2_role_docker_volumes_global`"
+    ??? variable bool "`nzbhydra2_role_docker_volumes_global`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         nzbhydra2_role_docker_volumes_global:
         ```
 
@@ -740,6 +838,27 @@ Are you setting Saltbox up for the first time?
 
     <h5>Monitoring & Lifecycle</h5>
 
+    ??? variable bool "`nzbhydra2_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`nzbhydra2_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_cleanup:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_force_kill:
+        ```
+
     ??? variable dict "`nzbhydra2_role_docker_healthcheck`"
 
         ```yaml
@@ -747,11 +866,25 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_healthcheck:
         ```
 
+    ??? variable int "`nzbhydra2_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        nzbhydra2_role_docker_healthy_wait_timeout:
+        ```
+
     ??? variable bool "`nzbhydra2_role_docker_init`"
 
         ```yaml
         # Type: bool (true/false)
         nzbhydra2_role_docker_init:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_kill_signal:
         ```
 
     ??? variable string "`nzbhydra2_role_docker_log_driver`"
@@ -768,141 +901,6 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_log_options:
         ```
 
-    ??? variable bool "`nzbhydra2_role_docker_output_logs`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbhydra2_role_docker_output_logs:
-        ```
-
-    <h5>Other Options</h5>
-
-    ??? variable bool "`nzbhydra2_role_docker_auto_remove`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbhydra2_role_docker_auto_remove:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_capabilities`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_capabilities:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_cgroup_parent`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_cgroup_parent:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_cgroupns_mode`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_cgroupns_mode:
-        ```
-
-    ??? variable bool "`nzbhydra2_role_docker_cleanup`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbhydra2_role_docker_cleanup:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_commands`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_commands:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_create_timeout:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_domainname`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_domainname:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_entrypoint`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_entrypoint:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_env_file`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_env_file:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_exposed_ports`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_exposed_ports:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_force_kill`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_force_kill:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_groups:
-        ```
-
-    ??? variable int "`nzbhydra2_role_docker_healthy_wait_timeout`"
-
-        ```yaml
-        # Type: int
-        nzbhydra2_role_docker_healthy_wait_timeout:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_ipc_mode`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_ipc_mode:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_kill_signal`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_kill_signal:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_labels_use_common`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_labels_use_common:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_links`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_links:
-        ```
-
     ??? variable bool "`nzbhydra2_role_docker_oom_killer`"
 
         ```yaml
@@ -917,32 +915,18 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_oom_score_adj:
         ```
 
+    ??? variable bool "`nzbhydra2_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_output_logs:
+        ```
+
     ??? variable bool "`nzbhydra2_role_docker_paused`"
 
         ```yaml
         # Type: bool (true/false)
         nzbhydra2_role_docker_paused:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_pid_mode`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_pid_mode:
-        ```
-
-    ??? variable list "`nzbhydra2_role_docker_ports`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_ports:
-        ```
-
-    ??? variable bool "`nzbhydra2_role_docker_read_only`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbhydra2_role_docker_read_only:
         ```
 
     ??? variable bool "`nzbhydra2_role_docker_recreate`"
@@ -959,20 +943,6 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_restart_retries:
         ```
 
-    ??? variable string "`nzbhydra2_role_docker_runtime`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_runtime:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_shm_size:
-        ```
-
     ??? variable int "`nzbhydra2_role_docker_stop_timeout`"
 
         ```yaml
@@ -980,11 +950,69 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_stop_timeout:
         ```
 
-    ??? variable dict "`nzbhydra2_role_docker_storage_opts`"
+    <h5>Other Options</h5>
+
+    ??? variable list "`nzbhydra2_role_docker_capabilities`"
 
         ```yaml
-        # Type: dict
-        nzbhydra2_role_docker_storage_opts:
+        # Type: list
+        nzbhydra2_role_docker_capabilities:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`nzbhydra2_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        nzbhydra2_role_docker_commands:
+        ```
+
+    ??? variable int "`nzbhydra2_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        nzbhydra2_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_env_file:
+        ```
+
+    ??? variable bool "`nzbhydra2_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`nzbhydra2_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_docker_read_only:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_runtime:
         ```
 
     ??? variable list "`nzbhydra2_role_docker_sysctls`"
@@ -994,39 +1022,11 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_sysctls:
         ```
 
-    ??? variable list "`nzbhydra2_role_docker_tmpfs`"
-
-        ```yaml
-        # Type: list
-        nzbhydra2_role_docker_tmpfs:
-        ```
-
     ??? variable list "`nzbhydra2_role_docker_ulimits`"
 
         ```yaml
         # Type: list
         nzbhydra2_role_docker_ulimits:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_user:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_userns_mode`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_userns_mode:
-        ```
-
-    ??? variable string "`nzbhydra2_role_docker_uts`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_docker_uts:
         ```
 
 === "Global Override Options"
@@ -1037,6 +1037,27 @@ Are you setting Saltbox up for the first time?
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         nzbhydra2_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`nzbhydra2_role_config_settings_custom`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_config_settings_custom:
+        ```
+
+    ??? variable string "`nzbhydra2_role_config_settings_default`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_config_settings_default:
+        ```
+
+    ??? variable string "`nzbhydra2_role_config_settings_jvm_memory`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_config_settings_jvm_memory:
         ```
 
     ??? variable string "`nzbhydra2_role_depends_on`"
@@ -1087,11 +1108,81 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_docker_controller: true
         ```
 
+    ??? variable string "`nzbhydra2_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_image_repo:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_image_tag:
+        ```
+
+    ??? variable string "`nzbhydra2_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_networks_alias:
+        ```
+
     ??? variable bool "`nzbhydra2_role_docker_volumes_download`"
 
         ```yaml
         # Type: bool (true/false)
         nzbhydra2_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`nzbhydra2_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_themepark_addons:
+        ```
+
+    ??? variable string "`nzbhydra2_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_themepark_app:
+        ```
+
+    ??? variable bool "`nzbhydra2_role_themepark_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        nzbhydra2_role_themepark_enabled:
+        ```
+
+    ??? variable string "`nzbhydra2_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_themepark_theme:
+        ```
+
+    ??? variable dict/omit "`nzbhydra2_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbhydra2_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`nzbhydra2_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`nzbhydra2_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`nzbhydra2_role_traefik_autodetect_enabled`"
@@ -1100,6 +1191,13 @@ Are you setting Saltbox up for the first time?
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         nzbhydra2_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`nzbhydra2_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_traefik_certresolver:
         ```
 
     ??? variable bool "`nzbhydra2_role_traefik_crowdsec_enabled`"
@@ -1126,6 +1224,13 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_traefik_gzip_enabled: false
         ```
 
+    ??? variable string "`nzbhydra2_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_traefik_middleware_http:
+        ```
+
     ??? variable bool "`nzbhydra2_role_traefik_middleware_http_api_insecure`"
 
         ```yaml
@@ -1138,6 +1243,13 @@ Are you setting Saltbox up for the first time?
         ```yaml
         # Type: bool (true/false)
         nzbhydra2_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`nzbhydra2_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_traefik_priority:
         ```
 
     ??? variable bool "`nzbhydra2_role_traefik_robot_enabled`"
@@ -1164,6 +1276,13 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`nzbhydra2_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_web_domain:
+        ```
+
     ??? variable list "`nzbhydra2_role_web_fqdn_override`"
 
         ```yaml
@@ -1183,6 +1302,7 @@ Are you setting Saltbox up for the first time?
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
+
     ??? variable string "`nzbhydra2_role_web_host_override`"
 
         ```yaml
@@ -1199,6 +1319,35 @@ Are you setting Saltbox up for the first time?
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
+
+    ??? variable string "`nzbhydra2_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbhydra2_role_web_http_port:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        nzbhydra2_role_web_http_scheme:
+        ```
+
+    ??? variable dict/omit "`nzbhydra2_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbhydra2_role_web_http_serverstransport:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbhydra2_role_web_port:
+        ```
+
     ??? variable string "`nzbhydra2_role_web_scheme`"
 
         ```yaml
@@ -1207,4 +1356,17 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_role_web_scheme:
         ```
 
+    ??? variable dict/omit "`nzbhydra2_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbhydra2_role_web_serverstransport:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_web_subdomain:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

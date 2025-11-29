@@ -6,6 +6,10 @@ tags:
   - arr_db
   - database
   - postgres
+saltbox_automation:
+  variables:
+    hide_sections:
+      - Variables
 ---
 
 # Arr DB

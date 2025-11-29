@@ -10,7 +10,7 @@ tags:
   - software
 ---
 
-# Apps Index
+# Apps by Category
 
 ## :dividers: Meta-Tags
 
@@ -80,15 +80,15 @@ tags:
 
 ##### Backend
 
-|                                                                |                               |                                  |
-|----------------------------------------------------------------|:-----------------------------:|:--------------------------------:|
-| [ASSHAMA](asshama.md)                                          |           `asshama`           | `mediabox_roles` `saltbox_roles` |
-| [Plex DB](plex_db.md)                                          |           `plex-db`           | `mediabox_roles` `saltbox_roles` |
-| [Extended Personal Media Shows Agent](../sandbox/apps/epms.md) |        `sandbox-epms`         |         `sandbox_roles`          |
-| [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md)  | `sandbox-plex-auto-languages` |         `sandbox_roles`          |
-| [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)          |   `sandbox-plex-dupefinder`   |         `sandbox_roles`          |
-| [Plex Patrol](../sandbox/apps/plex_patrol.md)                  |     `sandbox-plex-patrol`     |         `sandbox_roles`          |
-| [Plex-Utills](../sandbox/apps/plex_utills.md)                  |     `sandbox-plex-utills`     |         `sandbox_roles`          |
+|                                                               |                               |                                  |
+|---------------------------------------------------------------|:-----------------------------:|:--------------------------------:|
+| [ASSHAMA](asshama.md)                                         |           `asshama`           | `mediabox_roles` `saltbox_roles` |
+| [Plex DB](plex_db.md)                                         |           `plex-db`           | `mediabox_roles` `saltbox_roles` |
+| [Extended Personal Media Shows](../sandbox/apps/epms.md)      |        `sandbox-epms`         |         `sandbox_roles`          |
+| [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) | `sandbox-plex-auto-languages` |         `sandbox_roles`          |
+| [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |   `sandbox-plex-dupefinder`   |         `sandbox_roles`          |
+| [Plex Patrol](../sandbox/apps/plex_patrol.md)                 |     `sandbox-plex-patrol`     |         `sandbox_roles`          |
+| [Plex-Utills](../sandbox/apps/plex_utills.md)                 |     `sandbox-plex-utills`     |         `sandbox_roles`          |
 
 ##### Frontend
 
@@ -282,7 +282,7 @@ tags:
 |                                           |                                                                                        |                                   |
 |-------------------------------------------|:--------------------------------------------------------------------------------------:|:---------------------------------:|
 | [Portainer](portainer.md)                 |                                      `portainer`                                       | `feederbox_roles` `saltbox_roles` |
-| [Docker](docker.md)                       | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |     :octicons-shield-lock-24:     |
+| [Docker CE](docker.md)                    | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |     :octicons-shield-lock-24:     |
 | [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |          `sandbox_roles`          |
 | [Yacht](../sandbox/apps/yacht.md)         |                                    `sandbox-yacht`                                     |          `sandbox_roles`          |
 
@@ -385,7 +385,7 @@ tags:
 |------------------------------------------------|:-------------------------------:|:--------------------------------------------------:|
 | [DDNS](ddns.md)                                |             `ddns`              | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [DDClient](ddclient.md)                        |           `ddclient`            | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
-| [Traefik](traefik.md)                          | `traefik` `traefik-reset-certs` |             :octicons-shield-lock-24:              |
+| [Traefik Proxy](traefik.md)                    | `traefik` `traefik-reset-certs` |             :octicons-shield-lock-24:              |
 | [AdGuard Home](../sandbox/apps/adguardhome.md) |      `sandbox-adguardhome`      |                  `sandbox_roles`                   |
 
 #### VPN

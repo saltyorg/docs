@@ -6,6 +6,9 @@ tags:
   - varken
   - monitoring
   - analytics
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # Varken

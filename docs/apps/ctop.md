@@ -6,6 +6,9 @@ tags:
   - ctop
   - monitoring
   - docker
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # ctop

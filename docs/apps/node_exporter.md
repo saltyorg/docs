@@ -7,6 +7,9 @@ tags:
   - prometheus
   - monitoring
   - metrics
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # Node Exporter

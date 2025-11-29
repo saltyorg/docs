@@ -4,6 +4,9 @@ hide:
   - tags
 tags:
   - cloudplow
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # Cloudplow

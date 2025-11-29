@@ -7,6 +7,9 @@ tags:
   - network
   - performance
   - bandwidth
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # iperf3

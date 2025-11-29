@@ -6,6 +6,9 @@ tags:
   - btop
   - monitoring
   - system
+saltbox_automation:
+  sections:
+    inventory: false
 ---
 
 # btop

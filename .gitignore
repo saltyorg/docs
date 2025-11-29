@@ -11,3 +11,4 @@ go.sh
 .ansible
 # Python
 /scripts/__pycache__/
+.envrc

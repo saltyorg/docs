@@ -31,15 +31,63 @@ repositories:
 blacklist:
   docs_coverage:
     saltbox:
-      - "settings"
-      - "scripts"
-      - "sanity_check"
+      - "authentik_worker"
+      - "backup"
+      - "backup2"
+      - "cloudflare"
+      - "cloudplow_disable"
+      - "common"
+      - "custom" # moved to modules
+      - "crowdsec"
+      - "diag" # moved to modules
+      - "docker"
+      - "docker_socket_proxy"
+      - "download_clients"
+      - "download_indexers"
+      - "glances"
+      - "hetzner"
+      - "hetzner_nfs" # moved to modules
+      - "hetzner_vlan"  # covered by hetzner_nfs documentation
+      - "index"
+      - "kernel"
+      - "main_tags"
+      - "media_server"
+      - "mount_templates"
+      - "motd"
+      - "notify"
+      - "nvidia"
+      - "permissions"
+      - "plex_auth_token"
+      - "plex_extra_tasks"
+      - "plex_fix_futures"
       - "pre_tasks"
-      - "post_tasks"
-      # Add more saltbox roles to exclude...
+      - "python"
+      - "rclone"
+      - "reboot"
+      - "remote"
+      - "restore"
+      - "saltbox_mod"
+      - "sandbox"
+      - "sanity_check"
+      - "scripts"
+      - "shell"
+      - "system"
+      - "traefik"
+      - "traefik_file_template"
+      - "traefik_template"
+      - "unionfs"
+      - "user"
+      - "user_check"
+      - "yyq"
     sandbox:
-      - "settings"
-      # Add more sandbox roles to exclude...
+      - "main_tag"
+      - "maybe_finance_worker"
+      - "sanity_check"
+      - "tdarr_node"
+      # Deprecated roles
+      - "unifi"  # deprecated
+      - "hoarder"  # deprecated
+      - "plex_meta_manager"  # deprecated
 
 # =============================================================================
 # Path Overrides

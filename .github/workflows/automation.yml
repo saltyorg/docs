@@ -84,17 +84,11 @@ jobs:
           sb-docs version
           sb version
 
-      - name: Run documentation checks
-        id: check
+      - name: Update documentation and run checks
         run: |
-          sb-docs check --config docs/.docs-automation.yml --manage-issue
+          sb-docs update --config docs/.docs-automation.yml --check --manage-issue
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        continue-on-error: true
-
-      - name: Update all documentation
-        run: |
-          sb-docs update --config docs/.docs-automation.yml
         continue-on-error: true
 
       - name: Check for changes
@@ -120,14 +114,3 @@ jobs:
             -m "Updated by sb-docs automation" \
             -m "🤖 Generated with sb-docs"
           git push
-
-      - name: Generate summary
-        run: |
-          echo "## Documentation Automation Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-
-          if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then
-            echo "✅ Documentation updated and pushed" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "ℹ️ No documentation changes needed" >> $GITHUB_STEP_SUMMARY
-          fi

@@ -38,7 +38,7 @@ Visit <https://handbrake.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 
-1. Edit the HandBrake section in [sandbox `settings.yml`:](../settings.md) and enter your desired password. Please note that it MUST be less than eight characters.
+1. Edit the HandBrake section in Sandbox `settings.yml` and enter your desired password. Please note that it MUST be less than eight characters.
 
     ```yaml
     handbrake:

@@ -33,7 +33,7 @@ Listed below are some common scenarios and their migration instructions.
 
 3. Install the relevant Saltbox type: [Saltbox, Mediabox, or Feederbox](../install/install.md#step-5-saltbox).
 
-4. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+4. Install any extra, not-default containers you had installed previously from [Sandbox](../../reference/modules/sandbox.md) or on your own.
 
 ## Move Saltbox to Another Server and Change the Domain Name
 
@@ -73,7 +73,7 @@ Listed below are some common scenarios and their migration instructions.
 
 7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
-8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+8. Install any extra, not-default containers you had installed previously from [Sandbox](../../reference/modules/sandbox.md)) or on your own.
 
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
@@ -107,4 +107,4 @@ Listed below are some common scenarios and their migration instructions.
 
 7. Run `sb install authelia-reset` to set authelia up for the new domain.
 
-8. Install any extra, not-default containers you had installed previously from [Sandbox](../../sandbox/index.md) or on your own.
+8. Install any extra, not-default containers you had installed previously from [Sandbox](../../reference/modules/sandbox.md) or on your own.

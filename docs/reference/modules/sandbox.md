@@ -1,5 +1,4 @@
 ---
-icon: material/source-repository
 status: draft
 hide:
   - tags

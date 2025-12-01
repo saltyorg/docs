@@ -55,9 +55,9 @@ After logging in, you should be redirected to your profile screen.
 - Select your Notification Language
 - **Don't forget to Save your changes**
 
-Add your API key to the **[Sandbox settings file](../../sandbox/settings.md)**
+Add your API key to the **Sandbox settings file**
 
-You also need to define a username and password for the Notifiarr client webui in the [Sandbox settings file](../../sandbox/settings.md). You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
+You also need to define a username and password for the Notifiarr client webui in the Sandbox settings file. You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
 
 ## Deployment
 

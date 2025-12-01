@@ -14,25 +14,7 @@ tags:
 
 The Sandbox repository serves as a community-driven space for unofficial Saltbox enhancements.
 
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
-
-[:octicons-container-16:**Releases**](){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-discord:**Community**](https://discord.gg/ugfKXpFND8){ .md-button .md-button--stretch }
-
-</div>
-
 ---
-
-## Deployment
-
-!!! info inline end "Installed By Default"
-
-```shell
-sb install sandbox
-```
 
 ## Update
 
@@ -42,15 +24,25 @@ To pull repository changes, run a standard Saltbox update:
 sb update
 ```
 
+## Deployment
+
+!!! info inline end "Installed By Default"
+
+```shell
+sb install sandbox
+```
+
 ## Usage
 
 Sandbox roles are listed via the `sb list` command and under [Apps](../../apps/index.md).
 
-To deploy a Sandbox role, use `sb install`, prepending `sandbox-` to the role tag. Example:
+To deploy a Sandbox role, use `sb install`, prepending `sandbox-` to the role tag. For example, to deploy [Kometa](../../sandbox/apps/kometa.md):
 
-```shell title="To deploy Kometa"
+```shell
 sb install sandbox-kometa
 ```
+
+Before deploying a Sandbox role, it is recommended to review its documentation for any required configuration.
 
 !!! tip
 

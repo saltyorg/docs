@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[Freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator.
+[linuxserver/freshrss](https://docs.linuxserver.io/images/docker-freshrss) is a Docker container image for Freshrss.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://freshrss.org){: .header-icons } | [:octicons-link-16: Docs](https://freshrss.github.io/FreshRSS/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/FreshRSS/FreshRSS){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/freshrss/freshrss){: .header-icons }|
+> [Freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator. [:material-bookshelf:](https://freshrss.github.io/FreshRSS/)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/freshrss/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-freshrss
 ```
 
-### 2. URL
+## Usage
 
-- To access Freshrss, visit <https://freshrss.iYOUR_DOMAIN_NAMEi>
+Visit <https://freshrss.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

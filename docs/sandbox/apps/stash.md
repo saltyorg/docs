@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[Stash](https://stashapp.cc/) is a locally hosted web-based app written in Go which organizes and serves your porn.
+[hotio/stash](https://hotio.dev/containers/stash) is a Docker container image for Stash.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://stashapp.cc/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/stashapp/stash/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/stashapp/stash){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/stashapp/stash){: .header-icons }|
+> [Stash](https://stashapp.cc) is a web-based app that allows you to organize and view your own collection of adult video and image files.
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/stash/pkgs/container/stash){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-stash
 ```
 
-### 2. URL
+## Usage
 
-- To access Stash, visit <https://stash.iYOUR_DOMAIN_NAMEi>
+Visit <https://stash.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Configuration
 
 On a clean installation, Stash only creates its config file when the user has gone through the setup wizard. If you receive errors on future visits to Stash regarding public access, re-run `sb install sandbox-stash` to apply the appropriate config edits to disable these warnings.
 

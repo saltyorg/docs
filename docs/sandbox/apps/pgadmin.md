@@ -8,30 +8,35 @@ tags:
   - admin
 ---
 
-# pgadmin
+# pgAdmin
 
 ## Overview
 
-[pgadmin](https://www.pgadmin.org/) is a popular and feature rich Open Source administration and development platform for PostgreSQL.
+[pgAdmin](https://www.pgadmin.org/) is a popular and feature rich Open Source administration and development platform for PostgreSQL.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.pgadmin.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pgadmin-org/pgadmin4){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/dpage/pgadmin4/){: .header-icons }|
+[:material-bookshelf:**Manual**](https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dpage/pgadmin4/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-pgadmin
 ```
 
-### 2. URL
+## Usage
 
-- To access pgadmin, visit <https://pgadmin.iYOUR_DOMAIN_NAMEi>
+Visit <https://pgadmin.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 

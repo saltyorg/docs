@@ -14,21 +14,29 @@ tags:
 
 [Navidrome](https://www.navidrome.org/) allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.navidrome.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.navidrome.org/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/navidrome/navidrome/issues){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/deluan/navidrome){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://www.navidrome.org/docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/deluan/navidrome/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-navidrome
 ```
 
-### 2. URL
+## Usage
 
-- To access Navidrome, visit <https://navidrome.iYOUR_DOMAIN_NAMEi>
+Visit <https://navidrome.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - After installing Navidrome in your platform, you need to create your first user. This will be your admin user, a super user that can manage all aspects of Navidrome, including the ability to manage other users. Just browse to Navidrome’s homepage at <https://navidrome.iYOUR_DOMAIN_NAMEi> and you will be greeted with a screen like this: <br />
 

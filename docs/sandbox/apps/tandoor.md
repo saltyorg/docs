@@ -14,9 +14,15 @@ tags:
 
 [Tandoor Recipes](https://github.com/TandoorRecipes/recipes) is an application for managing recipes, planning meals, building shopping lists and much, much more!
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:octicons-link-16: Docs](https://docs.tandoor.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/TandoorRecipes/recipes){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/vabene1111/recipes){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.tandoor.dev){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/vabene1111/recipes/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -60,7 +66,7 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install sandbox-tandoor
 ```
 

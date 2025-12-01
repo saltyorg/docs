@@ -12,62 +12,23 @@ tags:
 
 ## Overview
 
-[Doplarr](https://kiranshila.github.io/Doplarr/#/) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
+[linuxserver/doplarr](https://docs.linuxserver.io/images/docker-doplarr) is a Docker container image for Doplarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://kiranshila.github.io/Doplarr/#/){: .header-icons } | [:octicons-link-16: Docs](https://kiranshila.github.io/Doplarr/#/configuration){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/kiranshila/doplarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/doplarr){: .header-icons }|
+> [Doplarr](https://kiranshila.github.io/Doplarr/#/) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only. [:material-bookshelf:](https://kiranshila.github.io/Doplarr/#/configuration)
 
-## Setup Doplarr
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Create Discord bot
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
-1. Create a new [Application](https://discord.com/developers/applications) in Discord
-2. Go to the Bot tab and add a new bot
-3. Copy the token and paste it in `/opt/sandbox/settings.yml` in the `doplarr.discord_token` field:
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/doplarr/tags){ .md-button .md-button--stretch }
 
-    ```yaml hl_lines="3" title="/opt/sandbox/settings.yml"
-    ...
-    doplarr:
-      discord_token: your_discord_bot_token
-      overseerr_url: "http://overseerr:5055"
-      overseerr_api:
-    ...
-    ```
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
 
-4. Go to OAuth2 and under "OAuth2 URL Generator", enable `applications.commands` and `bot`
-5. Copy the resulting URL and open it in your browser in order to invite your bot to your discord channel.
+</div>
 
-### 2. Set up overseer parameters
+---
 
-1. In `/opt/sandbox/settings.yml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct:
-
-    ```yaml hl_lines="4" title="/opt/sandbox/settings.yml"
-    ...
-    doplarr:
-      discord_token: your_discord_bot_token
-      overseerr_url: "http://overseerr:5055"
-      overseerr_api:
-    ...
-    ```
-
-2. In `/opt/sandbox/settings.yml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
-You can get your api keys in your main setting page in overseer: <https://overseerr.iYOUR_DOMAIN_NAMEi/settings>:
-
-    ```yaml hl_lines="5" title="/opt/sandbox/settings.yml"
-    ...
-    doplarr:
-      discord_token: your_discord_bot_token
-      overseerr_url: "http://overseerr:5055"
-      overseerr_api:
-    ...
-    ```
-
-### 3. Installation
-
-```shell
-sb install sandbox-doplarr
-```
+## Configuration
 
 !!! note
       📢 You may also override the default setting of Doplarr working with overseer, to work with Sonarr and Radarr.
@@ -87,6 +48,50 @@ sb install sandbox-doplarr
     3. This line will set the Sonarr API key. Place your API key here. Wrap it in quotes.
     4. This line will set the Radarr API key. Place your API key here. Wrap it in quotes.
     5. This line will set the Discord token. Place your token here. Wrap it in quotes.
+
+### Create Discord bot
+
+1. Create a new [Application](https://discord.com/developers/applications) in Discord
+2. Go to the Bot tab and add a new bot
+3. Copy the token and paste it in `/opt/sandbox/settings.yml` in the `doplarr.discord_token` field:
+
+    ```yaml title="/opt/sandbox/settings.yml"
+    doplarr:
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ```
+
+4. Go to OAuth2 and under "OAuth2 URL Generator", enable `applications.commands` and `bot`
+5. Copy the resulting URL and open it in your browser in order to invite your bot to your discord channel.
+
+### Set up overseer parameters
+
+1. In `/opt/sandbox/settings.yml` : set up the overseer url in the corresponding field `doplarr.overseerr_url` according to your setings. If you have not customize saltbox settings, the default url `http://overseerr:5055` should be correct:
+
+    ```yaml title="/opt/sandbox/settings.yml"
+    doplarr:
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ```
+
+2. In `/opt/sandbox/settings.yml` : set up the overseer API key in the corresponding field `doplarr.overseerr_api` according to your overseer settings.
+You can get your api keys in your main setting page in overseer: <https://overseerr.iYOUR_DOMAIN_NAMEi/settings>:
+
+    ```yaml title="/opt/sandbox/settings.yml"
+      discord_token: your_discord_bot_token
+      overseerr_url: "http://overseerr:5055"
+      overseerr_api:
+    ```
+
+## Deployment
+
+```shell
+sb install sandbox-doplarr
+```
+
+## Usage
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

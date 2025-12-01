@@ -8,25 +8,35 @@ tags:
   - streaming
 ---
 
-# Airsonic
+# Airsonic-Advanced
 
 ## Overview
 
-[Airsonic](https://github.com/airsonic/airsonic) is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
+[linuxserver/airsonic-advanced](https://docs.linuxserver.io/images/docker-airsonic-advanced) is a Docker container image for Airsonic.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/airsonic/airsonic){: .header-icons } | [:octicons-link-16: Docs](https://airsonic.github.io/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/airsonic/airsonic){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/airsonic){: .header-icons }|
+> [Airsonic-Advanced](https://github.com/kagemomiji/airsonic-advanced) is a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and supersedes several features in Airsonic.
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/airsonic-advanced/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-airsonic
 ```
 
-### 2. URL
+## Usage
 
-- To access Airsonic, visit <https://airsonic.iYOUR_DOMAIN_NAMEi>
+Visit <https://airsonic.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

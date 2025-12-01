@@ -12,26 +12,36 @@ tags:
 
 ## Overview
 
-[Unifi Network Application](https://www.ui.com/download/unifi/) software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+[linuxserver/unifi-network-application](https://docs.linuxserver.io/images/docker-unifi-network-application) is a Docker container image for Unifi Network Application.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.ui.com/download/unifi/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-unifi-network-application){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/unifi-network-application){: .header-icons }|
+> [Unifi Network Application](https://www.ui.com/download/unifi/) software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. [:material-bookshelf:](https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/unifi-network-application/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 !!! warning
     This role is a replacement for the previous Unifi Controller role. This is not an in-place replacement. In order to migrate, you must perform a full backup from the Unifi web interface, and restore from that backup when running the setup wizard in a fresh instance of the Unifi Network Application. You must rename/remove the previous appdata from `/opt/unifi` before deploying the Unifi Network Application role.
 
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-unifi-network-application
 ```
 
-### 2. URL
+## Usage
 
-- To access Unifi Network Application, visit <https://unifi.iYOUR_DOMAIN_NAMEi>
+Visit <https://unifi.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
   1. Visit the Unifi Network Application site at <https://unifi.iYOUR_DOMAIN_NAMEi>
 

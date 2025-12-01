@@ -14,31 +14,35 @@ tags:
 
 [Guacamole](https://guacamole.apache.org/) is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
 
-We call it clientless because no plugins or client software are required.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.
+[:material-bookshelf:**Manual**](https://guacamole.apache.org/doc/gug){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://guacamole.apache.org/){: .header-icons } | [:octicons-link-16: Docs](https://guacamole.apache.org/doc/gug/){: .header-icons } | [:octicons-mark-github-16: Github](https://www.github.com/jason-bean/docker-guacamole){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jasonbean/guacamole){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jasonbean/guacamole/tags){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-guacamole
 ```
 
-### 2. URL
+## Usage
 
-- To access Guacamole, visit <https://guacamole.iYOUR_DOMAIN_NAMEi>
+Visit <https://guacamole.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Log in with user and password `guacadmin`. Change the default user and password immediately.
 
-- [:octicons-link-16: Documentation: Guacamole Docs](https://guacamole.apache.org/doc/gug/){: .header-icons }
+- [:octicons-link-16: Documentation: Guacamole Docs](https://guacamole.apache.org/doc/gug){: .header-icons }
 
-### 4. Enable Extensions (Optional)
+### Enable Extensions (Optional)
 
 Guacamole supports various authentication extensions that can be enabled through your [Inventory](https://docs.saltbox.dev/saltbox/inventory/). Add any of the following options to enable specific extensions:
 

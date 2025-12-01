@@ -14,33 +14,29 @@ tags:
 
 [Homarr](https://www.homarr.dev/) is a simple and modern homepage for your server that helps you access all of your services in one place. It integrates with the services you use to display useful information or control them. It's easy to install and supports many different devices.
 
-- Integrates with services you use.
-- Search the web directly from your homepage.
-- Search overseerr directly from your homepage.
-- Real-time status indicator for every service.
-- Automatically finds icons while you type the name of a service.
-- Widgets that can display all types of information.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:material-bookshelf:**Manual**](https://homarr.dev/docs/getting-started){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://homarr.dev/){: .header-icons } | [:octicons-link-16: Docs](https://homarr.dev/docs/getting-started/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/ajnart/homarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/ajnart/homarr/){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/ajnart/homarr/tags){ .md-button .md-button--stretch }
 
-Recommended install types: Saltbox, Core
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-homarr
 ```
 
-### 2. URL
+## Usage
 
-- To access homarr, visit <https://homarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://homarr.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 
@@ -48,7 +44,7 @@ sb install sandbox-homarr
   Password: your_normal_password
   ```
 
-- [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/getting-started/){: .header-icons }
+- [:octicons-link-16: Documentation: Homarr Docs](https://homarr.dev/docs/getting-started){: .header-icons }
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

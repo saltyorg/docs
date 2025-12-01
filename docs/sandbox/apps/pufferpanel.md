@@ -14,22 +14,27 @@ tags:
 
 [PufferPanel](https://pufferpanel.com/) is an open-source web-based game server management system designed for both small networks and personal use. It supports Minecraft, Source Dedicated Servers, BungeeCord, and many other game servers.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://pufferpanel.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pufferpanel/pufferpanel){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/pufferpanel/pufferpanel){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/pufferpanel/pufferpanel/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-pufferpanel
 ```
 
-### 2. URL
+## Usage
 
-- To access PufferPanel, visit <https://pufferpanel.iYOUR_DOMAIN_NAMEi>
+Visit <https://pufferpanel.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

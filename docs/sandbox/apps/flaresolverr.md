@@ -12,26 +12,34 @@ tags:
 
 ## Overview
 
-[FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) is a proxy server to bypass Cloudflare protection.
+[FlareSolverr](https://flaresolverr.com) is a proxy server to bypass Cloudflare protection.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/FlareSolverr/FlareSolverr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/flaresolverr/flaresolverr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/FlareSolverr/FlareSolverr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/flaresolverr/flaresolverr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](https://github.com/FlareSolverr/FlareSolverr/discussions){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-flaresolverr
 ```
 
-### 2. Setup
+## Usage
 
-#### Jackett
+### Jackett
 
 - Locate the _FlareSolverr API URL_ field in the main page.
 - Input `http://flaresolverr:8191` and apply the settings.
 
-#### Prowlarr
+### Prowlarr
 
 - In the settings, add an Indexer Proxy and select FlareSolverr.
 - _Host_ should be `http://flaresolverr:8191`.

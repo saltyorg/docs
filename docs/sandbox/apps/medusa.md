@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[Medusa](https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
+[linuxserver/medusa](https://docs.linuxserver.io/images/docker-medusa) is a Docker container image for Medusa.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://pymedusa.com/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/pymedusa/Medusa/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pymedusa/Medusa){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/medusa){: .header-icons }|
+> [Medusa](https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic. [:material-bookshelf:](https://github.com/pymedusa/Medusa/wiki)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/medusa/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-medusa
 ```
 
-### 2. URL
+## Usage
 
-- To access Medusa, visit <https://medusa.iYOUR_DOMAIN_NAMEi>
+Visit <https://medusa.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

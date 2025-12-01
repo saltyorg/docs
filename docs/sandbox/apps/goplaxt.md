@@ -14,21 +14,29 @@ tags:
 
 [Goplaxt](https://github.com/XanderStrike/goplaxt) scrobbles Plex plays to Trakt with ease!
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:octicons-link-16: Docs](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/XanderStrike/goplaxt){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/xanderstrike/goplaxt){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/XanderStrike/goplaxt){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/xanderstrike/goplaxt/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-goplaxt
 ```
 
-### 2. URL
+## Usage
 
-- To access Goplaxt, visit <https://goplaxt.iYOUR_DOMAIN_NAMEi>
+Visit <https://goplaxt.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Configuration
 
 1. Create an API application through Trakt [here](https://trakt.tv/oauth/applications). The Redirect URI should be your goplaxt.domain + `/authorize`, so it reads as: `https://goplaxt.domain.com/authorize`.
 

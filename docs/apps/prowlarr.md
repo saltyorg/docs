@@ -10,21 +10,31 @@ tags:
 
 ## Overview
 
-[Prowlarr](https://prowlarr.com/) is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+[hotio/prowlarr](https://hotio.dev/containers/prowlarr) is a Docker container image for Prowlarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://prowlarr.com/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/prowlarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Prowlarr/Prowlarr/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/prowlarr){: .header-icons }|
+> [Prowlarr](https://prowlarr.com/) is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/prowlarr/pkgs/container/prowlarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install prowlarr
 ```
 
-### 2. URL
+## Usage
 
-- To access Prowlarr, visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

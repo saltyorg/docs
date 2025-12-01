@@ -14,22 +14,27 @@ tags:
 
 [Jellystat](https://github.com/CyferShepard/Jellystat) is a free and open source statistics web application for Jellyfin that provides a dashboard with information about the server, libraries, users, and playback activity. Still in development with some expected functionality gaps.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/CyferShepard/Jellystat){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cyfershepard/jellystat){: .header-icons } | [:octicons-law-16: MIT](https://github.com/CyferShepard/Jellystat/blob/main/LICENSE){: .header-icons } |
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/cyfershepard/jellystat/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/9SMBj2RyEe){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-jellystat
 ```
 
-### 2. URL
+## Usage
 
-- To access Jellystat, visit <https://jellystat.iYOUR_DOMAIN_NAMEi>
+Visit <https://jellystat.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

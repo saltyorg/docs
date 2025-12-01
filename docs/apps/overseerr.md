@@ -12,9 +12,15 @@ tags:
 
 [Overseerr](https://overseerr.dev/) is a free and open-source request management and media discovery tool designed to work with the Plex ecosystem.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://overseerr.dev/){: .header-icons } | [:octicons-link-16: Docs](https://docs.overseerr.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sct/overseerr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/sctx/overseerr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.overseerr.dev){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/sctx/overseerr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](https://discord.gg/seerr){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -41,13 +47,13 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install overseerr
 ```
 
 ## Usage
 
-To access Overseerr, visit <https://overseerr.iYOUR_DOMAIN_NAMEi>
+Visit <https://overseerr.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

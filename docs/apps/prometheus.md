@@ -15,21 +15,29 @@ tags:
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It collects and stores metrics as time series data, providing a powerful query language (PromQL) for analyzing system behavior and setting up alerts.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://prometheus.io/){: .header-icons } | [:octicons-link-16: Docs](https://prometheus.io/docs/introduction/overview/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/prometheus/prometheus){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/prom/prometheus){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://prometheus.io/docs/introduction/overview){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/prom/prometheus/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install prometheus
 ```
 
-### 2. URL
+## Usage
 
-- To access Prometheus, visit <https://prometheus.iYOUR_DOMAIN_NAMEi>
+Visit <https://prometheus.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Prometheus provides monitoring and alerting with automatic installation of Node Exporter and cAdvisor for system and container metrics. Configuration is at `/opt/prometheus/prometheus.yml`. Data retention defaults to 15 days but can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `prometheus_role_retention` and `prometheus_role_size`.
 

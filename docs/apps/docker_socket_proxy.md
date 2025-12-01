@@ -1,19 +1,31 @@
 ---
 icon: material/docker
-status: wip
+status: draft
 ---
 
 # Docker Socket Proxy
 
 ## Overview
 
-The Socket Proxy is a security-enhanced proxy designed to limit the attack surface when containers like Watchtower or Traefik need access to the Docker socket on a host system.
+[linuxserver/socket-proxy](https://docs.linuxserver.io/images/docker-socket-proxy) is a Docker container image for Docker Socket Proxy.
+
+> [Docker Socket Proxy](https://github.com/Tecnativa/docker-socket-proxy) is a security-enhanced proxy for the Docker socket.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/socket-proxy/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install docker-socket-proxy
 ```
 

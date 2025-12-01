@@ -14,23 +14,29 @@ tags:
 
 [Threadfin](https://github.com/Threadfin/Threadfin) is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
 
-Threadfin emulates a SiliconDust HDHomeRun OTA tuner, which allows it to expose IPTV style channels to software, which would not normally support it. It is based on xTeve.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Threadfin/Threadfin){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Threadfin/Threadfin){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Threadfin/Threadfin){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/fyb3roptik/threadfin){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/Threadfin/Threadfin){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/fyb3roptik/threadfin/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-threadfin
 ```
 
-### 2. URL
+## Usage
 
-- To access Threadfin, visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>
+Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
 
-### 3. Setup
+## Basics
 
 - Access Threadfin web GUI at <https://threadfin.iYOUR_DOMAIN_NAMEi/web>
 

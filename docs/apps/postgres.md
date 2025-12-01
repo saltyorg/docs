@@ -12,17 +12,25 @@ tags:
 
 [PostgreSQL](https://www.postgresql.org/), often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.postgresql.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.postgresql.org/docs/12/index.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/postgres/postgres/tree/REL_12_STABLE){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/postgres){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://www.postgresql.org/docs/12/index.html){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/postgres/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install postgres
 ```
 
-### 2. Setup
+## Usage
 
 !!! info
     The default password for this container is `password4321`

@@ -1,6 +1,6 @@
 ---
 icon: material/cogs
-status: WIP
+status: draft
 ---
 
 # Hetzner VLAN

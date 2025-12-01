@@ -10,17 +10,33 @@ tags:
 
 ## Overview
 
-[NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
+[hotio/nzbget](https://hotio.dev/containers/nzbget) is a Docker container image for NZBGet.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://nzbget.net){: .header-icons } | [:octicons-link-16: Docs](https://nzbget.net/documentation){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nzbget/nzbget){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/nzbget){: .header-icons }|
+> [NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
 
-## 1. Accessing NZBGet
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- To access NZBGet, visit <https://nzbget.iYOUR_DOMAIN_NAMEi>
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-## 2. Settings
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
+
+```shell
+sb install nzbget
+```
+
+## Usage
+
+Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
+
+## Basics
 
 ### Paths
 
@@ -47,7 +63,7 @@ tags:
   - If you are using Google Drive and set up the 300 [service accounts in Rclone](../reference/rclone-manual.md) you can ignore this.
   - Otherwise, if you are using Google Drive, it's recommended you set this to `750000` (i.e. 750GB), to coincide with the Google Drive daily upload limit.
 
-## 3. Extensions
+### Extensions
 
 - Location on server: `/opt/scripts/nzbget`.
 

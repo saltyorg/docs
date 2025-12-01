@@ -14,21 +14,29 @@ tags:
 
 [cAdvisor](https://github.com/google/cadvisor) (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/google/cadvisor){: .header-icons } | [:octicons-link-16: Docs](https://github.com/google/cadvisor/tree/master/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/google/cadvisor){: .header-icons } | [:material-docker: Docker](https://gcr.io/cadvisor/cadvisor){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/google/cadvisor/tree/master/docs){ .md-button .md-button--stretch }
+
+[:simple-googlecloud:**Releases**](https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install cadvisor
 ```
 
-### 2. URL
+## Usage
 
-- To access cAdvisor, visit <https://cadvisor.iYOUR_DOMAIN_NAMEi>
+Visit <https://cadvisor.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 cAdvisor automatically monitors all Docker containers on your system. No additional configuration is required. The web interface provides resource usage, performance metrics, and container information.
 

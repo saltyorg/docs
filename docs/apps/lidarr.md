@@ -10,23 +10,31 @@ tags:
 
 ## Overview
 
-[Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
+[hotio/lidarr](https://hotio.dev/containers/lidarr) is a Docker container image for Lidarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://lidarr.audio){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Lidarr/Lidarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/lidarr){: .header-icons }||
+> [Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/lidarr/pkgs/container/lidarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install lidarr
 ```
 
 ## Usage
 
-To access Lidarr, visit <https://lidarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://lidarr.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

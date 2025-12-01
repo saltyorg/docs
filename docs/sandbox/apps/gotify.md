@@ -14,21 +14,29 @@ tags:
 
 [Gotify](https://gotify.net/) a simple server for sending and receiving messages.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gotify.net/){: .header-icons } | [:octicons-link-16: Docs](https://gotify.github.io/api-docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/gotify/server){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gotify/server){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://gotify.github.io/api-docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gotify/server/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-gotify
 ```
 
-### 2. URL
+## Usage
 
-- To access Gotify, visit <https://gotify.iYOUR_DOMAIN_NAMEi>
+Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

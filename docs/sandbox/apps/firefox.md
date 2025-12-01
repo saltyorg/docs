@@ -11,11 +11,11 @@ tags:
 
 ## Overview
 
-Implements a Docker container for Firefox. The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+[Docker container for Firefox](https://github.com/jlesage/docker-firefox#readme) is a Docker container image that provides the Mozilla Firefox web browser, accessible through a modern web browser or any VNC client.
+
+> [Mozilla Firefox](https://www.firefox.com) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary, Mozilla Corporation.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://jlesage.github.io/docker-apps){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](https://github.com/jlesage/docker-firefox/blob/master/README.md#usage){ .md-button .md-button--stretch }
 

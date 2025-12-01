@@ -14,21 +14,29 @@ tags:
 
 [DelugeVPN](https://deluge-torrent.org/) is a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons } | [:octicons-mark-github-16: Github](https://www.github.com/binhex/arch-delugevpn){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/binhex/arch-delugevpn){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://dev.deluge-torrent.org/wiki/UserGuide){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/binhex/arch-delugevpn/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-delugevpn
 ```
 
-### 2. URL
+## Usage
 
-- To access DelugeVPN, visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>
+Visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 See the parent [Deluge](../../apps/deluge.md) role for app setup.
 

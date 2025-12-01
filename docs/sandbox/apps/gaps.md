@@ -12,26 +12,31 @@ tags:
 
 ## Overview
 
-[Gaps](https://github.com/JasonHHouse/gaps) searches through your Plex Server for all movies, then queries for known movies in the same collection. If those movies don't exist in your library, Gaps will recommend getting those movies, legally of course.
+[Gaps](https://github.com/JasonHHouse/gaps) is an open-source application designed to find missing movies in a user's Plex Server library.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will NOT have to log into the app itself, as basic Auth is disabled by default.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/JasonHHouse/gaps){: .header-icons } | [:octicons-link-16: Docs](https://github.com/JasonHHouse/gaps#-usage-){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/JasonHHouse/gaps){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/housewrecker/gaps){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/JasonHHouse/gaps#-usage-){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/housewrecker/gaps/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-gaps
 ```
 
-### 2. URL
+## Usage
 
-- To access gaps, visit <https://gaps.iYOUR_DOMAIN_NAMEi>
+Visit <https://gaps.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - All you need to get started is a [Plex Auth Token](../../reference/plex_auth_token.md?h=plex+token#saltbox-role), and a TMDB api key.
 

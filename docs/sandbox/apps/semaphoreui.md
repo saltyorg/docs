@@ -12,27 +12,33 @@ tags:
 
 ## Overview
 
-[Semaphore UI](https://github.com/semaphoreui/semaphore) is a modern UI for Ansible, Terraform, OpenTofu and Pulumi. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
+[Semaphore UI](https://github.com/semaphoreui/semaphore) is an open-source, self-hosted web interface designed to simplify and centralize the management of DevOps automation tools like Ansible, Terraform, OpenTofu, PowerShell, Bash, and Python scripts.
 
-If your project has grown and deploying from the terminal is no longer for you then Semaphore UI is what you need.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://semaphoreui.com){: .header-icons } | [:octicons-link-16: Docs](https://docs.semaphoreui.com/user-guide/projects){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/semaphoreui/semaphore?tab=readme-ov-file){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/semaphoreui/semaphore){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.semaphoreui.com/user-guide/projects){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/semaphoreui/semaphore/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-semaphoreui
 ```
 
-### 2. URL
+## Usage
 
-- To access the Semaphore UI dashboard, visit <https://semaphoreui.iYOUR_DOMAIN_NAMEi>
+Visit <https://semaphoreui.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
-### 4. Additional Settings
+### Additional Settings
 
 The default installation utilises a seperate postgres database. There is an option for this package to utilise mariadb / mysql but this isnt what this guide will be based on.
 

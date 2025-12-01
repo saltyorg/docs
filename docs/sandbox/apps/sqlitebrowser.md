@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[SQLite Browser](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
+[linuxserver/sqlitebrowser](https://docs.linuxserver.io/images/docker-sqlitebrowser) is a Docker container image for SQLite Browser.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://sqlitebrowser.org/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/sqlitebrowser/sqlitebrowser/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sqlitebrowser/sqlitebrowser){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/sqlitebrowser){: .header-icons }|
+> [SQLite Browser](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. [:material-bookshelf:](https://github.com/sqlitebrowser/sqlitebrowser/wiki)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/sqlitebrowser/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-sqlitebrowser
 ```
 
-### 2. URL
+## Usage
 
-- To access SQLite Browser, visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>
+Visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>.
 
 - By default, the role is protected behind your Authelia/SSO middleware.
 

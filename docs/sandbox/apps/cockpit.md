@@ -14,22 +14,27 @@ tags:
 
 [Cockpit](https://cockpit-project.org/) is an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser. It provides comprehensive server management capabilities with a modern web interface.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://cockpit-project.org/){: .header-icons } | [:octicons-link-16: Docs](https://cockpit-project.org/documentation.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/cockpit-project/cockpit){: .header-icons }|
+[:material-bookshelf:**Manual**](https://cockpit-project.org/documentation.html){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-cockpit
 ```
 
-### 2. URL
+## Usage
 
-- To access Cockpit, visit <https://cockpit.iYOUR_DOMAIN_NAMEi>
+Visit <https://cockpit.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

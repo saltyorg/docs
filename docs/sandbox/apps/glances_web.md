@@ -14,21 +14,29 @@ tags:
 
 [Glances](http://nicolargo.github.io/glances/) is a cross-platform monitoring tool which aims to present a large amount of monitoring information through a curses or Web based interface. The information dynamically adapts depending on the size of the user interface.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://nicolargo.github.io/glances/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/nicolargo/glances/wiki){: .header-icons } | [:octicons-mark-github-16: Github](http://nicolargo.github.io/glances/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nicolargo/glances){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/nicolargo/glances/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/nicolargo/glances/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-glances-web
 ```
 
-### 2. URL
+## Usage
 
-- To access Glances, visit <https://glances.iYOUR_DOMAIN_NAMEi>
+Visit <https://glances.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

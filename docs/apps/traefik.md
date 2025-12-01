@@ -1,21 +1,31 @@
 ---
 icon: material/docker
-status: wip
+status: draft
 ---
 
-# Traefik
+# Traefik Proxy
 
 ## Overview
 
-Saltbox dependency.
+[Traefik Proxy](https://traefik.io/traefik) is an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
 
-Traefik is an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://doc.traefik.io/traefik){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/traefik/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](https://community.traefik.io){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install traefik
 ```
 

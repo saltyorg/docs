@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-Run a [Factorio](https://www.factorio.com) headless server.
+[Containerized Factorio Headless Server](https://github.com/goofball222/factorio) is a Docker container image designed to run a Factorio headless server on Linux systems.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.factorio.com){: .header-icons } | [:octicons-link-16: Docs](https://wiki.factorio.com/Multiplayer){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/goofball222/factorio){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/goofball222/factorio){: .header-icons }|
+> [Factorio](https://www.factorio.com) is a sandbox video game in which you build and maintain your own factories to produce basic resources. [:material-bookshelf:](https://wiki.factorio.com/Multiplayer)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/goofball222/factorio/blob/main/README.md#usage){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/goofball222/factorio/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
+
+- Set to install the latest Factorio experimental (1.1.x) build. Fix to a certain version using the [inventory system](../../saltbox/inventory/index.md).
+
+## Deployment
 
 ```shell
 sb install sandbox-factorio
 ```
-
-### 2. Setup
-
-- Set to install the latest Factorio experimental (1.1.x) build. Fix to a certain version using the [inventory system](../../saltbox/inventory/index.md).
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

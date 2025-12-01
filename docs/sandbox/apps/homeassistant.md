@@ -12,35 +12,40 @@ tags:
 
 ## Overview
 
-[Homeassistant](https://www.home-assistant.io/) is a tool designed for (open source) home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.
+[linuxserver/homeassistant](https://docs.linuxserver.io/images/docker-homeassistant) is a Docker container image for Homeassistant.
 
-Note that while it will work on a remote server, it takes some doing to get it to interface with a local server or local devices. It is not recommended or supported.
+> [Homeassistant](https://www.home-assistant.io/) is a tool designed for (open source) home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. [:material-bookshelf:](https://www.home-assistant.io/docs/)
 
-!!! warning
-    By default, the role is NOT protected behind your Authelia/SSO middleware. Home Assistant has its own authentication system (with 2FA), and it is recommended to use that.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.home-assistant.io/){: .header-icons } | [:octicons-link-16: Docs](https://www.home-assistant.io/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/home-assistant/core){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/homeassistant/home-assistant/tags){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/homeassistant/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-homeassistant
 ```
 
-### 2. URL
+## Usage
 
-- To access Homeassistant, visit <https://homeassistant.iYOUR_DOMAIN_NAMEi>
+Visit <https://homeassistant.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](mqtt.md) for using Mosquitto to communicate with local and remote devices. We also have [Node Red](node_red.md), which is a platform for multiple types of automations.
 
 ??? Note "Nabu Casa"
     You don't NEED to use Nabu Casa to access Home Assistant remotely. You can use a reverse proxy to access it remotely. However, if you want to use Nabu Casa, you can use the [Nabu Casa](https://www.nabucasa.com/) integration to connect to Home Assistant. It is a paid service, but it is a good way to support the Home Assistant project. That said, the Home Assistant role is set up to work with a reverse proxy, so you can use that instead.
 
-### 4. Addons
+### Addons
 
 You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) to add more functionality to Home Assistant. For instance, adding the Node Red Companion, a "custom" integration for node-red-contrib-home-assistant-websocket. It allows you to integrate Node-RED with Home Assistant. For more information, see the [Node Red](node_red.md) page.
 

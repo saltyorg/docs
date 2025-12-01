@@ -14,22 +14,27 @@ tags:
 
 [Koel](https://koel.dev/) is a simple web-based personal audio streaming service written in Vue and Laravel that embraces modern web technologies. It features transparent FLAC support, cross-device sync, smart playlists, and multi-user support.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://koel.dev/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/koel/koel){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/phanan/koel){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/phanan/koel/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-koel
 ```
 
-### 2. URL
+## Usage
 
-- To access Koel, visit <https://koel.iYOUR_DOMAIN_NAMEi>
+Visit <https://koel.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

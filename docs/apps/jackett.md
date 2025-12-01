@@ -10,11 +10,19 @@ tags:
 
 ## Overview
 
-[Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
+[hotio/jackett](https://hotio.dev/containers/jackett) is a Docker container image for Jackett.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Jackett/Jackett/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Jackett/Jackett){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jackett){: .header-icons }|
+> [Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -40,13 +48,13 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install jackett
 ```
 
 ## Usage
 
-To access Jackett, visit <http://jackett.iYOUR_DOMAIN_NAMEi>
+Visit <http://jackett.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

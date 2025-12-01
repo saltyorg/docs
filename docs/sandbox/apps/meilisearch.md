@@ -14,15 +14,17 @@ tags:
 
 [Meilisearch](https://www.meilisearch.com/) Meilisearch is an AI powered search tool.
 
-<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Project Home**](https://www.meilisearch.com/){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](https://www.meilisearch.com/docs){ .md-button .md-button--stretch }
 
-[:material-git:**GitHub Repo**](https://github.com/meilisearch/meilisearch){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/getmeili/meilisearch/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.meilisearch.com){ .md-button .md-button--stretch }
 
 </div>
 
-This role is not externally exposed by default.
+---
 
 ## Configuration
 

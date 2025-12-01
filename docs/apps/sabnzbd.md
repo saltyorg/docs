@@ -11,11 +11,19 @@ tags:
 
 ## Overview
 
-[SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
+[hotio/sabnzbd](https://hotio.dev/containers/sabnzbd) is a Docker container image for SABnzbd.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://sabnzbd.org/){: .header-icons } | [:octicons-link-16: Docs](https://sabnzbd.org/wiki/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sabnzbd/sabnzbd){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sabnzbd){: .header-icons }|
+> [SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -53,13 +61,13 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install sabnzbd
 ```
 
 ## Usage
 
-To access SABnzbd, visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>
+Visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

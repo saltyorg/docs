@@ -8,25 +8,33 @@ tags:
   - music
 ---
 
-# deemix
+# deemix-docker
 
 ## Overview
 
-[deemix](https://deemix.app/) is a barebone deezer downloader library built from the ashes of Deezloader Remix.
+[deemix-docker](https://gitlab.com/Bockiii/deemix-docker) is a barebone deezer downloader library built from the ashes of Deezloader Remix.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://deemix.app/){: .header-icons } | [:octicons-link-16: Docs](https://gitlab.com/Bockiii/deemix-docker){: .header-icons } | [:octicons-mark-github-16: Github](https://gitlab.com/Bockiii/deemix-docker){: .header-icons } | [:material-docker: Docker](https://gitlab.com/Bockiii/deemix-docker){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://gitlab.com/Bockiii/deemix-docker){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-gitlab:**Releases**](https://gitlab.com/Bockiii/deemix-docker/container_registry){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-deemix
 ```
 
-### 2. URL
+## Usage
 
-- To access deemix, visit <https://deemix.iYOUR_DOMAIN_NAMEi>
+Visit <https://deemix.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -14,21 +14,29 @@ tags:
 
 [Komga](https://komga.org/) is a free and open source comics/mangas server.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://komga.org/){: .header-icons } | [:octicons-link-16: Docs](https://komga.org/installation/docker.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/gotson/komga){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gotson/komga){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://komga.org/installation/docker.html){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gotson/komga/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-komga
 ```
 
-### 2. URL
+## Usage
 
-- To access Komga, visit <https://komga.iYOUR_DOMAIN_NAMEi>
+Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - On first opening you will be asked to create a user account. <br />
   Choose an email and password, then click on Create User Account.

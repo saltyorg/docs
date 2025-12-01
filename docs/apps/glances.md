@@ -1,6 +1,6 @@
 ---
 icon: material/desktop-classic
-status: wip
+status: draft
 ---
 
 # Glances
@@ -9,16 +9,26 @@ status: wip
 
 Glances is an open-source system cross-platform monitoring tool.
 
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install glances
 ```
 
 ## Usage
 
-```sh
+```shell
 glances
 ```

@@ -12,24 +12,29 @@ tags:
 
 ## Overview
 
-[LinkWarden](https://linkwarden.app/) is a self-hosted collaborative bookmark manager designed to collect, read, annotate, and fully preserve web content. It automatically captures screenshots, PDFs, and HTML files of bookmarked pages to prevent link rot.
+[LinkWarden](https://linkwarden.app) is a self-hosted collaborative bookmark manager designed to collect, read, annotate, and fully preserve web content. It automatically captures screenshots, PDFs, and HTML files of bookmarked pages to prevent link rot.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://linkwarden.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linkwarden/linkwarden){: .header-icons } | [:material-docker: Docker](https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.linkwarden.app){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/CtuYV47nuJ){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-linkwarden
 ```
 
-### 2. URL
+## Usage
 
-- To access LinkWarden, visit <https://linkwarden.iYOUR_DOMAIN_NAMEi>
+Visit <https://linkwarden.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

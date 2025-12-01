@@ -15,17 +15,25 @@ tags:
 
 Redis is an open-source, in-memory data structure store used as a database, cache, message broker, and streaming engine. It supports various data structures such as strings, hashes, lists, sets, and sorted sets, making it extremely versatile and fast.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://redis.io/){: .header-icons } | [:octicons-link-16: Docs](https://redis.io/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/redis/redis){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/redis){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://redis.io/docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/redis/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install redis
 ```
 
-### 2. Setup
+## Usage
 
 Redis is deployed using the official Alpine image with data persisting to `/opt/redis/`. Connect from other containers using `redis://redis:6379`. Multiple instances are supported via the `redis_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md).
 

@@ -14,19 +14,27 @@ tags:
 
 [File Browser](https://filebrowser.org/) is is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://filebrowser.org/){: .header-icons } | [:octicons-link-16: Docs](https://filebrowser.org/features){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/filebrowser/filebrowser){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/filebrowser/filebrowser){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://filebrowser.org/features){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/filebrowser/filebrowser/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-filebrowser
 ```
 
-### 2. URL
+## Usage
 
-- To access File Browser, visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>
+Visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>.
 
 !!! info
     The initial `admin` user has a randomly generated password. You may retrieve this password in the container logs via `docker logs filebrowser`. We recommend changing the credentials promptly upon deployment.

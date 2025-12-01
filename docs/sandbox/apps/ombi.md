@@ -12,23 +12,31 @@ tags:
 
 ## Overview
 
-[Ombi](https://ombi.io/) is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves!
+[linuxserver/ombi](https://docs.linuxserver.io/images/docker-ombi) is a Docker container image for Ombi.
 
-Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users.
+> [Ombi](https://ombi.io/) is a self-hosted media request, user management, and media discovery web application designed to simplify the process of requesting movies, TV shows, and music for media servers like Jellyfin, Plex, and Emby.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://ombi.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.ombi.app/guides/installation/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Ombi-app/Ombi){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/ombi){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/ombi/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-ombi
 ```
 
-### 2. URL
+## Usage
 
-- To access Ombi, visit <https://ombi.iYOUR_DOMAIN_NAMEi>
+Visit <https://ombi.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -14,17 +14,19 @@ tags:
 
 [Recyclarr](https://github.com/recyclarr/recyclarr) automatically synchronizes recommended settings from TRaSH guides to your Sonarr/Radarr instances.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/recyclarr/recyclarr){: .header-icons } | [:octicons-link-16: Docs](https://recyclarr.dev/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/recyclarr/recyclarr){: .header-icons } | [:material-docker: Docker](https://ghcr.io/recyclarr/recyclarr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://recyclarr.dev/wiki){ .md-button .md-button--stretch }
 
-```shell
-sb install sandbox-recyclarr
-```
+[:fontawesome-brands-github:**Releases**](https://github.com/recyclarr/recyclarr/pkgs/container/recyclarr){ .md-button .md-button--stretch }
 
-### 2. Setup
+[:fontawesome-brands-discord:**Community**](https://discord.com/invite/Vau8dZ3){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
 
 Edit the Recyclarr section in [sandbox `settings.yml`:](../settings.md) and enter your desired update schedule using standard cron syntax.
 
@@ -57,6 +59,12 @@ If a config file does not exist, a default config is generated but it is not fun
   ```
 
 Follow documentation to complete configuration
+
+## Deployment
+
+```shell
+sb install sandbox-recyclarr
+```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

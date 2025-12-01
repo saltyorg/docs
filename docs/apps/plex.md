@@ -11,11 +11,17 @@ tags:
 
 ## Overview
 
-> [Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location.
+[Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location to various devices.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://plex.tv/){: .header-icons } | [:octicons-link-16: Docs](https://support.plex.tv/articles/){: .header-icons } | :octicons-mark-github-16: Github | [:material-docker: Docker](https://hub.docker.com/r/plexinc/pms-docker){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/plexinc/pms-docker/tags){ .md-button .md-button--stretch }
+
+[:material-plex:**Community**](https://forums.plex.tv){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -288,7 +294,7 @@ Are you Setting Saltbox up for the first time?
 </div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
 !!! info
@@ -1228,7 +1234,7 @@ Are you Setting Saltbox up for the first time?
 
 === "Docker+"
 
-    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+    The following advanced options are available via create_docker_container but are not defined in the role. See: https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
 
     <h5>Resource Limits</h5>
 
@@ -1376,18 +1382,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_memory_swappiness:
         ```
 
-    ??? variable string "`plex_role_docker_shm_size`{ .sb-show-on-unchecked }`plex2_docker_shm_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_shm_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_shm_size:
-        ```
-
     <h5>Security & Devices</h5>
 
     ??? variable list "`plex_role_docker_cap_drop`{ .sb-show-on-unchecked }`plex2_docker_cap_drop`{ .sb-show-on-checked }"
@@ -1400,18 +1394,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         plex2_docker_cap_drop:
-        ```
-
-    ??? variable string "`plex_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`plex2_docker_cgroupns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_cgroupns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_cgroupns_mode:
         ```
 
     ??? variable list "`plex_role_docker_device_cgroup_rules`{ .sb-show-on-unchecked }`plex2_docker_device_cgroup_rules`{ .sb-show-on-checked }"
@@ -1510,18 +1492,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_devices_default:
         ```
 
-    ??? variable list "`plex_role_docker_groups`{ .sb-show-on-unchecked }`plex2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plex_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plex2_docker_groups:
-        ```
-
     ??? variable bool "`plex_role_docker_privileged`{ .sb-show-on-unchecked }`plex2_docker_privileged`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1544,30 +1514,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         plex2_docker_security_opts:
-        ```
-
-    ??? variable string "`plex_role_docker_user`{ .sb-show-on-unchecked }`plex2_docker_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_user:
-        ```
-
-    ??? variable string "`plex_role_docker_userns_mode`{ .sb-show-on-unchecked }`plex2_docker_userns_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_userns_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_userns_mode:
         ```
 
     <h5>Networking</h5>
@@ -1608,64 +1554,16 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_dns_servers:
         ```
 
-    ??? variable string "`plex_role_docker_domainname`{ .sb-show-on-unchecked }`plex2_docker_domainname`{ .sb-show-on-checked }"
+    ??? variable string "`plex_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`plex2_docker_hosts_use_common`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        plex_role_docker_domainname:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_domainname:
-        ```
-
-    ??? variable list "`plex_role_docker_exposed_ports`{ .sb-show-on-unchecked }`plex2_docker_exposed_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plex_role_docker_exposed_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plex2_docker_exposed_ports:
-        ```
-
-    ??? variable bool "`plex_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`plex2_docker_hosts_use_common`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
         plex_role_docker_hosts_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
+        # Type: string
         plex2_docker_hosts_use_common:
-        ```
-
-    ??? variable string "`plex_role_docker_ipc_mode`{ .sb-show-on-unchecked }`plex2_docker_ipc_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_ipc_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_ipc_mode:
-        ```
-
-    ??? variable list "`plex_role_docker_links`{ .sb-show-on-unchecked }`plex2_docker_links`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plex_role_docker_links:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plex2_docker_links:
         ```
 
     ??? variable string "`plex_role_docker_network_mode`{ .sb-show-on-unchecked }`plex2_docker_network_mode`{ .sb-show-on-checked }"
@@ -1680,30 +1578,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_network_mode:
         ```
 
-    ??? variable string "`plex_role_docker_pid_mode`{ .sb-show-on-unchecked }`plex2_docker_pid_mode`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_pid_mode:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_pid_mode:
-        ```
-
-    ??? variable string "`plex_role_docker_uts`{ .sb-show-on-unchecked }`plex2_docker_uts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_uts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_uts:
-        ```
-
     <h5>Storage</h5>
 
     ??? variable bool "`plex_role_docker_keep_volumes`{ .sb-show-on-unchecked }`plex2_docker_keep_volumes`{ .sb-show-on-checked }"
@@ -1716,30 +1590,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_docker_keep_volumes:
-        ```
-
-    ??? variable dict "`plex_role_docker_storage_opts`{ .sb-show-on-unchecked }`plex2_docker_storage_opts`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        plex_role_docker_storage_opts:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        plex2_docker_storage_opts:
-        ```
-
-    ??? variable list "`plex_role_docker_tmpfs`{ .sb-show-on-unchecked }`plex2_docker_tmpfs`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plex_role_docker_tmpfs:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plex2_docker_tmpfs:
         ```
 
     ??? variable string "`plex_role_docker_volume_driver`{ .sb-show-on-unchecked }`plex2_docker_volume_driver`{ .sb-show-on-checked }"
@@ -1766,15 +1616,15 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_volumes_from:
         ```
 
-    ??? variable bool "`plex_role_docker_volumes_global`{ .sb-show-on-unchecked }`plex2_docker_volumes_global`{ .sb-show-on-checked }"
+    ??? variable string "`plex_role_docker_volumes_global`{ .sb-show-on-unchecked }`plex2_docker_volumes_global`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
+        # Type: string
         plex_role_docker_volumes_global:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
+        # Type: string
         plex2_docker_volumes_global:
         ```
 
@@ -1792,42 +1642,6 @@ Are you Setting Saltbox up for the first time?
 
     <h5>Monitoring & Lifecycle</h5>
 
-    ??? variable bool "`plex_role_docker_auto_remove`{ .sb-show-on-unchecked }`plex2_docker_auto_remove`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_docker_auto_remove:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_docker_auto_remove:
-        ```
-
-    ??? variable bool "`plex_role_docker_cleanup`{ .sb-show-on-unchecked }`plex2_docker_cleanup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_docker_cleanup:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_docker_cleanup:
-        ```
-
-    ??? variable string "`plex_role_docker_force_kill`{ .sb-show-on-unchecked }`plex2_docker_force_kill`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_force_kill:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_force_kill:
-        ```
-
     ??? variable dict "`plex_role_docker_healthcheck`{ .sb-show-on-unchecked }`plex2_docker_healthcheck`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1840,18 +1654,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_healthcheck:
         ```
 
-    ??? variable int "`plex_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`plex2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        plex_role_docker_healthy_wait_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        plex2_docker_healthy_wait_timeout:
-        ```
-
     ??? variable bool "`plex_role_docker_init`{ .sb-show-on-unchecked }`plex2_docker_init`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1862,18 +1664,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_docker_init:
-        ```
-
-    ??? variable string "`plex_role_docker_kill_signal`{ .sb-show-on-unchecked }`plex2_docker_kill_signal`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_kill_signal:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_kill_signal:
         ```
 
     ??? variable string "`plex_role_docker_log_driver`{ .sb-show-on-unchecked }`plex2_docker_log_driver`{ .sb-show-on-checked }"
@@ -1900,30 +1690,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_log_options:
         ```
 
-    ??? variable bool "`plex_role_docker_oom_killer`{ .sb-show-on-unchecked }`plex2_docker_oom_killer`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_docker_oom_killer:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_docker_oom_killer:
-        ```
-
-    ??? variable int "`plex_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`plex2_docker_oom_score_adj`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        plex_role_docker_oom_score_adj:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        plex2_docker_oom_score_adj:
-        ```
-
     ??? variable bool "`plex_role_docker_output_logs`{ .sb-show-on-unchecked }`plex2_docker_output_logs`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1936,55 +1702,19 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_output_logs:
         ```
 
-    ??? variable bool "`plex_role_docker_paused`{ .sb-show-on-unchecked }`plex2_docker_paused`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_docker_paused:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_docker_paused:
-        ```
-
-    ??? variable bool "`plex_role_docker_recreate`{ .sb-show-on-unchecked }`plex2_docker_recreate`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_docker_recreate:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_docker_recreate:
-        ```
-
-    ??? variable int "`plex_role_docker_restart_retries`{ .sb-show-on-unchecked }`plex2_docker_restart_retries`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        plex_role_docker_restart_retries:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        plex2_docker_restart_retries:
-        ```
-
-    ??? variable int "`plex_role_docker_stop_timeout`{ .sb-show-on-unchecked }`plex2_docker_stop_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        plex_role_docker_stop_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        plex2_docker_stop_timeout:
-        ```
-
     <h5>Other Options</h5>
+
+    ??? variable bool "`plex_role_docker_auto_remove`{ .sb-show-on-unchecked }`plex2_docker_auto_remove`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_auto_remove:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_auto_remove:
+        ```
 
     ??? variable list "`plex_role_docker_capabilities`{ .sb-show-on-unchecked }`plex2_docker_capabilities`{ .sb-show-on-checked }"
 
@@ -2010,6 +1740,30 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_cgroup_parent:
         ```
 
+    ??? variable string "`plex_role_docker_cgroupns_mode`{ .sb-show-on-unchecked }`plex2_docker_cgroupns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_cgroupns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_cgroupns_mode:
+        ```
+
+    ??? variable bool "`plex_role_docker_cleanup`{ .sb-show-on-unchecked }`plex2_docker_cleanup`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_cleanup:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_cleanup:
+        ```
+
     ??? variable list "`plex_role_docker_commands`{ .sb-show-on-unchecked }`plex2_docker_commands`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2022,16 +1776,28 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_commands:
         ```
 
-    ??? variable int "`plex_role_docker_create_timeout`{ .sb-show-on-unchecked }`plex2_docker_create_timeout`{ .sb-show-on-checked }"
+    ??? variable string "`plex_role_docker_create_timeout`{ .sb-show-on-unchecked }`plex2_docker_create_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: int
+        # Type: string
         plex_role_docker_create_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: int
+        # Type: string
         plex2_docker_create_timeout:
+        ```
+
+    ??? variable string "`plex_role_docker_domainname`{ .sb-show-on-unchecked }`plex2_docker_domainname`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_domainname:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_domainname:
         ```
 
     ??? variable string "`plex_role_docker_entrypoint`{ .sb-show-on-unchecked }`plex2_docker_entrypoint`{ .sb-show-on-checked }"
@@ -2058,16 +1824,148 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_env_file:
         ```
 
-    ??? variable bool "`plex_role_docker_labels_use_common`{ .sb-show-on-unchecked }`plex2_docker_labels_use_common`{ .sb-show-on-checked }"
+    ??? variable list "`plex_role_docker_exposed_ports`{ .sb-show-on-unchecked }`plex2_docker_exposed_ports`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
+        # Type: list
+        plex_role_docker_exposed_ports:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        plex2_docker_exposed_ports:
+        ```
+
+    ??? variable string "`plex_role_docker_force_kill`{ .sb-show-on-unchecked }`plex2_docker_force_kill`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_force_kill:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_force_kill:
+        ```
+
+    ??? variable list "`plex_role_docker_groups`{ .sb-show-on-unchecked }`plex2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        plex_role_docker_groups:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        plex2_docker_groups:
+        ```
+
+    ??? variable int "`plex_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`plex2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_docker_healthy_wait_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable string "`plex_role_docker_ipc_mode`{ .sb-show-on-unchecked }`plex2_docker_ipc_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_ipc_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_ipc_mode:
+        ```
+
+    ??? variable string "`plex_role_docker_kill_signal`{ .sb-show-on-unchecked }`plex2_docker_kill_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_kill_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_kill_signal:
+        ```
+
+    ??? variable string "`plex_role_docker_labels_use_common`{ .sb-show-on-unchecked }`plex2_docker_labels_use_common`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
         plex_role_docker_labels_use_common:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
+        # Type: string
         plex2_docker_labels_use_common:
+        ```
+
+    ??? variable list "`plex_role_docker_links`{ .sb-show-on-unchecked }`plex2_docker_links`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        plex_role_docker_links:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        plex2_docker_links:
+        ```
+
+    ??? variable bool "`plex_role_docker_oom_killer`{ .sb-show-on-unchecked }`plex2_docker_oom_killer`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_oom_killer:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_oom_killer:
+        ```
+
+    ??? variable int "`plex_role_docker_oom_score_adj`{ .sb-show-on-unchecked }`plex2_docker_oom_score_adj`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_docker_oom_score_adj:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`plex_role_docker_paused`{ .sb-show-on-unchecked }`plex2_docker_paused`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_paused:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_paused:
+        ```
+
+    ??? variable string "`plex_role_docker_pid_mode`{ .sb-show-on-unchecked }`plex2_docker_pid_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_pid_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_pid_mode:
         ```
 
     ??? variable bool "`plex_role_docker_read_only`{ .sb-show-on-unchecked }`plex2_docker_read_only`{ .sb-show-on-checked }"
@@ -2082,6 +1980,30 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_read_only:
         ```
 
+    ??? variable bool "`plex_role_docker_recreate`{ .sb-show-on-unchecked }`plex2_docker_recreate`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        plex_role_docker_recreate:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        plex2_docker_recreate:
+        ```
+
+    ??? variable int "`plex_role_docker_restart_retries`{ .sb-show-on-unchecked }`plex2_docker_restart_retries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_docker_restart_retries:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_docker_restart_retries:
+        ```
+
     ??? variable string "`plex_role_docker_runtime`{ .sb-show-on-unchecked }`plex2_docker_runtime`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2092,6 +2014,42 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: string
         plex2_docker_runtime:
+        ```
+
+    ??? variable string "`plex_role_docker_shm_size`{ .sb-show-on-unchecked }`plex2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_shm_size:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_shm_size:
+        ```
+
+    ??? variable int "`plex_role_docker_stop_timeout`{ .sb-show-on-unchecked }`plex2_docker_stop_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_docker_stop_timeout:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_docker_stop_timeout:
+        ```
+
+    ??? variable dict "`plex_role_docker_storage_opts`{ .sb-show-on-unchecked }`plex2_docker_storage_opts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        plex_role_docker_storage_opts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        plex2_docker_storage_opts:
         ```
 
     ??? variable list "`plex_role_docker_sysctls`{ .sb-show-on-unchecked }`plex2_docker_sysctls`{ .sb-show-on-checked }"
@@ -2106,6 +2064,18 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_sysctls:
         ```
 
+    ??? variable list "`plex_role_docker_tmpfs`{ .sb-show-on-unchecked }`plex2_docker_tmpfs`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        plex_role_docker_tmpfs:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        plex2_docker_tmpfs:
+        ```
+
     ??? variable list "`plex_role_docker_ulimits`{ .sb-show-on-unchecked }`plex2_docker_ulimits`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2116,6 +2086,42 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: list
         plex2_docker_ulimits:
+        ```
+
+    ??? variable string "`plex_role_docker_user`{ .sb-show-on-unchecked }`plex2_docker_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_user:
+        ```
+
+    ??? variable string "`plex_role_docker_userns_mode`{ .sb-show-on-unchecked }`plex2_docker_userns_mode`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_userns_mode:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_userns_mode:
+        ```
+
+    ??? variable string "`plex_role_docker_uts`{ .sb-show-on-unchecked }`plex2_docker_uts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_uts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_uts:
         ```
 
 === "Global Override Options"
@@ -2218,54 +2224,6 @@ Are you Setting Saltbox up for the first time?
         plex2_docker_controller: true
         ```
 
-    ??? variable string "`plex_role_docker_envs_advertise_ip`{ .sb-show-on-unchecked }`plex2_docker_envs_advertise_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_envs_advertise_ip:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_envs_advertise_ip:
-        ```
-
-    ??? variable string "`plex_role_docker_envs_advertise_ip_url`{ .sb-show-on-unchecked }`plex2_docker_envs_advertise_ip_url`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_envs_advertise_ip_url:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_envs_advertise_ip_url:
-        ```
-
-    ??? variable string "`plex_role_docker_image_repo`{ .sb-show-on-unchecked }`plex2_docker_image_repo`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_image_repo:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_image_repo:
-        ```
-
-    ??? variable string "`plex_role_docker_image_tag`{ .sb-show-on-unchecked }`plex2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_image_tag:
-        ```
-
     ??? variable bool "`plex_role_docker_volumes_download`{ .sb-show-on-unchecked }`plex2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2276,126 +2234,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_docker_volumes_download:
-        ```
-
-    ??? variable bool "`plex_role_insecure`{ .sb-show-on-unchecked }`plex2_insecure`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_insecure:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_insecure:
-        ```
-
-    ??? variable string "`plex_role_lan_ip`{ .sb-show-on-unchecked }`plex2_lan_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_lan_ip:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_lan_ip:
-        ```
-
-    ??? variable string "`plex_role_open_main_ports`{ .sb-show-on-unchecked }`plex2_open_main_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        plex_role_open_main_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        plex2_open_main_ports:
-        ```
-
-    ??? variable string "`plex_role_themepark_addons`{ .sb-show-on-unchecked }`plex2_themepark_addons`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_themepark_addons:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_themepark_addons:
-        ```
-
-    ??? variable string "`plex_role_themepark_app`{ .sb-show-on-unchecked }`plex2_themepark_app`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_themepark_app:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_themepark_app:
-        ```
-
-    ??? variable bool "`plex_role_themepark_enabled`{ .sb-show-on-unchecked }`plex2_themepark_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        plex_role_themepark_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        plex2_themepark_enabled:
-        ```
-
-    ??? variable string "`plex_role_themepark_theme`{ .sb-show-on-unchecked }`plex2_themepark_theme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_themepark_theme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_themepark_theme:
-        ```
-
-    ??? variable dict/omit "`plex_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`plex2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        plex_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        plex2_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`plex_role_traefik_api_middleware`{ .sb-show-on-unchecked }`plex2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_api_middleware:
-        ```
-
-    ??? variable string "`plex_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`plex2_traefik_api_middleware_http`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_api_middleware_http:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_api_middleware_http:
         ```
 
     ??? variable bool "`plex_role_traefik_autodetect_enabled`{ .sb-show-on-unchecked }`plex2_traefik_autodetect_enabled`{ .sb-show-on-checked }"
@@ -2410,18 +2248,6 @@ Are you Setting Saltbox up for the first time?
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         plex2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`plex_role_traefik_certresolver`{ .sb-show-on-unchecked }`plex2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_certresolver:
         ```
 
     ??? variable bool "`plex_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`plex2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -2466,18 +2292,6 @@ Are you Setting Saltbox up for the first time?
         plex2_traefik_gzip_enabled: false
         ```
 
-    ??? variable string "`plex_role_traefik_middleware_http`{ .sb-show-on-unchecked }`plex2_traefik_middleware_http`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_middleware_http:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_middleware_http:
-        ```
-
     ??? variable bool "`plex_role_traefik_middleware_http_api_insecure`{ .sb-show-on-unchecked }`plex2_traefik_middleware_http_api_insecure`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2500,18 +2314,6 @@ Are you Setting Saltbox up for the first time?
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable string "`plex_role_traefik_priority`{ .sb-show-on-unchecked }`plex2_traefik_priority`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_priority:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_priority:
         ```
 
     ??? variable bool "`plex_role_traefik_robot_enabled`{ .sb-show-on-unchecked }`plex2_traefik_robot_enabled`{ .sb-show-on-checked }"
@@ -2556,18 +2358,6 @@ Are you Setting Saltbox up for the first time?
         plex2_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`plex_role_web_domain`{ .sb-show-on-unchecked }`plex2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_web_domain:
-        ```
-
     ??? variable list "`plex_role_web_fqdn_override`{ .sb-show-on-unchecked }`plex2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2593,7 +2383,6 @@ Are you Setting Saltbox up for the first time?
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
-
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -2604,7 +2393,6 @@ Are you Setting Saltbox up for the first time?
             ```
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
 
     ??? variable string "`plex_role_web_host_override`{ .sb-show-on-unchecked }`plex2_web_host_override`{ .sb-show-on-checked }"
 
@@ -2628,7 +2416,6 @@ Are you Setting Saltbox up for the first time?
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
 
-
         !!! example sb-show-on-checked "Example Override"
 
             ```yaml
@@ -2636,55 +2423,6 @@ Are you Setting Saltbox up for the first time?
             ```
 
             Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-
-    ??? variable string "`plex_role_web_http_port`{ .sb-show-on-unchecked }`plex2_web_http_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        plex_role_web_http_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        plex2_web_http_port:
-        ```
-
-    ??? variable string "`plex_role_web_http_scheme`{ .sb-show-on-unchecked }`plex2_web_http_scheme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string ("http"/"https")
-        plex_role_web_http_scheme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string ("http"/"https")
-        plex2_web_http_scheme:
-        ```
-
-    ??? variable dict/omit "`plex_role_web_http_serverstransport`{ .sb-show-on-unchecked }`plex2_web_http_serverstransport`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        plex_role_web_http_serverstransport:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        plex2_web_http_serverstransport:
-        ```
-
-    ??? variable string "`plex_role_web_insecure_url`{ .sb-show-on-unchecked }`plex2_web_insecure_url`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_web_insecure_url:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_web_insecure_url:
-        ```
 
     ??? variable string "`plex_role_web_scheme`{ .sb-show-on-unchecked }`plex2_web_scheme`{ .sb-show-on-checked }"
 
@@ -2700,39 +2438,4 @@ Are you Setting Saltbox up for the first time?
         plex2_web_scheme:
         ```
 
-    ??? variable dict/omit "`plex_role_web_serverstransport`{ .sb-show-on-unchecked }`plex2_web_serverstransport`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        plex_role_web_serverstransport:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        plex2_web_serverstransport:
-        ```
-
-    ??? variable string "`plex_role_web_subdomain`{ .sb-show-on-unchecked }`plex2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_web_subdomain:
-        ```
-
-    ??? variable string "`plex_role_web_url`{ .sb-show-on-unchecked }`plex2_web_url`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_web_url:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_web_url:
-        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

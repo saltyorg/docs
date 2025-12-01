@@ -10,27 +10,31 @@ tags:
 
 ## Overview
 
-[Autobrr](https://autobrr.com/) is a modern single binary replacement for the autodl-irssi+rutorrent plugin.
-autobrr monitors IRC announce channels and torznab RSS feeds to get releases as soon as they are available, with good filtering, and regex support. Go brr.
+[Autobrr](https://autobrr.com) is a modern download automation tool designed for torrents and Usenet, serving as a comprehensive replacement for older tools like autodl-irssi, trackarr, and flexget.
 
-!!! note
-      📢 Work in progress. Expect bugs and breaking changes. Features may be broken or incomplete.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://autobrr.com/){: .header-icons } | [:octicons-link-16: Docs](https://autobrr.com/configuration/indexers/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/autobrr/autobrr){: .header-icons }|
+[:material-bookshelf:**Manual**](https://autobrr.com/configuration/indexers){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/autobrr/autobrr/pkgs/container/autobrr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.autobrr.com){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install autobrr
 ```
 
-### 2. URL
+## Usage
 
-- To access the Autobrr dashboard, visit <https://autobrr.iYOUR_DOMAIN_NAMEi>
+Visit <https://autobrr.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons }
 

@@ -14,22 +14,27 @@ tags:
 
 [Maybe Finance](https://maybe.co/) is a personal finance app that functions as an operating system for managing finances, with interactive tools and calculators. The open-source version is available under AGPLv3 license but is no longer actively maintained.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://maybe.co/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/maybe-finance/maybe){: .header-icons } | [:material-docker: Docker](https://github.com/maybe-finance/maybe/pkgs/container/maybe){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/maybe-finance/maybe/pkgs/container/maybe){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-maybe-finance
 ```
 
-### 2. URL
+## Usage
 
-- To access Maybe Finance, visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>
+Visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

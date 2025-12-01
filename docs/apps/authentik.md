@@ -10,23 +10,21 @@ tags:
 
 ## Overview
 
-[Authentik](https://goauthentik.io/) is an IdP (Identity Provider) and SSO (single sign on) that is built with security at the forefront of every piece of code, every feature, with an emphasis on flexibility and versatility. It supports all of the major providers, such as OAuth2, SAML, LDAP, and SCIM, so you can pick the protocol that you need for each application.
+[Authentik](https://goauthentik.io/) is an open-source Identity Provider (IdP) and Single Sign-On (SSO) platform designed for self-hosting, enabling organizations to manage user authentication, authorization, and access controls with full control over their identity infrastructure.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://goauthentik.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.goauthentik.io/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/goauthentik/authentik){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/beryju/authentik){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.goauthentik.io/docs){ .md-button .md-button--stretch }
 
-```shell
-sb install authentik
-```
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/beryju/authentik/tags){ .md-button .md-button--stretch }
 
-### 2. URL
+[:fontawesome-brands-discord:**Community**](https://goauthentik.io/discord){ .md-button .md-button--stretch }
 
-- To access Authentik, visit <https://auth.iYOUR_DOMAIN_NAMEi>
+</div>
 
-### 3. Setup
+---
+
+## Configuration
 
 !!! info
 
@@ -70,7 +68,7 @@ You can change these values to anything you want, but for this example, we will 
 
     ![Altered](../images/authentik/authentik-user-auth-updated-screenshot.png)
 
-### 4. Additional Settings
+### Additional Settings
 
 To enable email notifications, set these [inventory](../saltbox/inventory/index.md) entries to your desired values:
 
@@ -94,7 +92,19 @@ authentik_email_from: "authentik@localhost" # (6)!
 
 Redeploy the Authentik role to apply these changes.
 
-### 5. IDP/OIDC Configuration
+## Deployment
+
+```shell
+sb install authentik
+```
+
+## Usage
+
+Visit <https://auth.iYOUR_DOMAIN_NAMEi>.
+
+## Basics
+
+### IDP/OIDC Configuration
 
 To configure Authentik as an IDP (Identity Provider) or OIDC (OpenID Connect) provider, follow these steps:
 
@@ -133,7 +143,7 @@ In the screenshot below, you can see how the [Immich](../sandbox/apps/immich.md)
 
 The only other field you need to concern yourself with is the `Mobile Redirect URI`, which is `https://immich.xYOUR_DOMAIN_NAMEx/api/oauth/mobile-redirect`.
 
-- [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs/){: .header-icons }
+- [:octicons-link-16: Authentik Docs](https://docs.goauthentik.io/docs){: .header-icons }
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

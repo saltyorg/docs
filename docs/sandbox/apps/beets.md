@@ -12,25 +12,33 @@ tags:
 
 ## Overview
 
-[Beets](https://beets.io/) catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.
+[linuxserver/beets](https://docs.linuxserver.io/images/docker-beets) is a Docker container image for Beets.
 
-Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
+> [Beets](https://beets.io/) is a media library management system designed for music enthusiasts and obsessive music geeks, aiming to organize music collections accurately and efficiently. [:material-bookshelf:](http://beets.readthedocs.org/)
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://beets.io/){: .header-icons } | [:octicons-link-16: Docs](http://beets.readthedocs.org/){: .header-icons } | [:octicons-mark-github-16: Github](http://github.com/beetbox/beets){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/beets){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/beets/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-beets
 ```
 
-### 2. URL
+## Usage
 
-- To access Beets, visit <https://beets.iYOUR_DOMAIN_NAMEi>
+Visit <https://beets.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 - When the role is run, a cron job is set to automatically import any music found at `/mnt/local/downloads/music` every hour.<br />

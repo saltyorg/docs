@@ -12,29 +12,33 @@ tags:
 
 ## Overview
 
-[Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that
-will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library
-statistics, and live playback control.
+[Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library statistics, and live playback control.
 
-| Details                                                                                                                         |                                                                                                                                   |
-|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [:material-home: Project home](https://github.com/nwithan8/tauticord){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nwithan8/tauticord){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-Recommended install types: Mediabox, Saltbox
+[:material-bookshelf:**Manual**](https://github.com/nwithan8/tauticord){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-tauticord
 ```
 
-### 2. Setup
+## Basics
 
 Rename `/opt/tauticord/config/config.yml.example` to `/opt/tauticord/config/config.yml` and fill out your configuration details.
 
 See the [Tauticord documentation](https://github.com/nwithan8/tauticord#installation-and-setup) for more information on each setting.
 
-### 3. Usage
+## Usage
 
 Once started, Tauticord will connect to your Tautulli and Discord servers and begin mirroring data.
 

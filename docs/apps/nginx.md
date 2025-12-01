@@ -8,29 +8,39 @@ tags:
   - reverse-proxy
 ---
 
-# Nginx
+# NGINX
 
 ## Overview
 
-Nginx is a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications.
+[linuxserver/nginx](https://docs.linuxserver.io/images/docker-nginx) is a Docker container image for NGINX.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://nginx.org/){: .header-icons } | [:octicons-link-16: Docs](https://nginx.org/en/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nginx/nginx){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/nginx){: .header-icons }|
+> [NGINX](https://nginx.org) is a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications. [:material-bookshelf:](https://nginx.org/en/docs)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/nginx/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
+
+Nginx is deployed with configuration files at `/opt/nginx/`. Place website files in `/opt/nginx/www/` and edit site configs in `/opt/nginx/nginx/site-confs/`. Multiple instances are supported via the `nginx_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md). Restart with `docker restart nginx` to apply changes.
+
+## Deployment
 
 ```shell
 sb install nginx
 ```
 
-### 2. URL
+## Usage
 
-- To access Nginx, visit <https://nginx.iYOUR_DOMAIN_NAMEi>
-
-### 3. Setup
-
-Nginx is deployed using the LinuxServer.io container with configuration files at `/opt/nginx/`. Place website files in `/opt/nginx/www/` and edit site configs in `/opt/nginx/nginx/site-confs/`. Multiple instances are supported via the `nginx_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md). Restart with `docker restart nginx` to apply changes.
+Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

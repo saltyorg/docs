@@ -14,21 +14,29 @@ tags:
 
 [HandBrake](https://handbrake.fr/) is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://handbrake.fr/){: .header-icons } | [:octicons-link-16: Docs](https://handbrake.fr/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/HandBrake/HandBrake){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/handbrake){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://handbrake.fr/docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/handbrake/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-handbrake
 ```
 
-### 2. URL
+## Usage
 
-- To access HandBrake, visit <https://handbrake.iYOUR_DOMAIN_NAMEi>
+Visit <https://handbrake.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 1. Edit the HandBrake section in [sandbox `settings.yml`:](../settings.md) and enter your desired password. Please note that it MUST be less than eight characters.
 

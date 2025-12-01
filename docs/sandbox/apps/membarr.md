@@ -14,20 +14,29 @@ tags:
 
 [Membarr](https://github.com/Yoruio/Membarr) is a fork of Invitarr that invites discord users to Plex and Jellyfin. You can also automate this bot to invite discord users to a media server once a certain role is given to a user or the user can also be added manually.
 
-***Features*** are:
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- Ability to invite users to Plex and Jellyfin from discord
-- Fully automatic invites using roles
-- Ability to kick users from plex if they leave the discord server or if their role is taken away.
-- Ability to view the database in discord and to edit it.
+[:material-bookshelf:**Manual**](https://github.com/Yoruio/Membarr){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Yoruio/Membarr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Yoruio/Membarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Yoruio/Membarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/yoruio/membarr){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/yoruio/membarr/tags){ .md-button .md-button--stretch }
 
-## Setup Membarr
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Create Discord bot
+</div>
+
+---
+
+## Deployment
+
+```shell
+sb install sandbox-membarr
+```
+
+## Usage
+
+## Basics
+
+### Create Discord bot
 
 1. Create the Discord server that your users will get member roles or use an existing discord that you can assign roles from.
 2. Log into the [Discord Developer Portal] and click 'New Application'
@@ -43,13 +52,7 @@ tags:
 
   [Discord Developer Portal]: https://discord.com/developers/applications
 
-### 2. Installation
-
-```shell
-sb install sandbox-membarr
-```
-
-### 3. Set up Plex parameters
+### Set up Plex parameters
 
 When you install the role, it will create 2 files, an `app.db` file and `config.ini`. You will need to edit the `config.ini` file with your preferred editing program. (ie `nano` or `vim` etc) Add your Plex credentials like so:
 

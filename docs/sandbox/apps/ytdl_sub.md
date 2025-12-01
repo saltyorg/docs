@@ -14,24 +14,29 @@ tags:
 
 [ytdl-sub](https://github.com/jmbannon/ytdl-sub) is a lightweight tool to automate downloading and metadata generation with yt-dlp. It uses YAML files to define subscriptions and prepares media for popular media players like Plex, Jellyfin, Kodi, and Emby.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/jmbannon/ytdl-sub){: .header-icons } | [:octicons-link-16: Docs](https://ytdl-sub.readthedocs.io/){: .header-icons } | [:material-docker: Docker](https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub){: .header-icons }|
+[:material-bookshelf:**Manual**](https://ytdl-sub.readthedocs.io){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-ytdl-sub
 ```
 
-### 2. URL
+## Usage
 
-- To access ytdl-sub, visit <https://ytdl-sub.iYOUR_DOMAIN_NAMEi>
+Visit <https://ytdl-sub.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 The role supports two image types configurable via inventory:
 

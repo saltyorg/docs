@@ -1,6 +1,6 @@
 ---
 icon: material/tag
-status: wip
+status: draft
 ---
 
 # Download Clients
@@ -13,7 +13,7 @@ Ansible tag for deploying your download client apps stack.
 
 ## Deployment
 
-```sh
+```shell
 sb install download-clients
 ```
 

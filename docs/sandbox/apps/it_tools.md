@@ -14,22 +14,27 @@ tags:
 
 [IT Tools](https://it-tools.tech/) is a collection of handy online tools for developers with great UX. It provides 71+ developer tools including code conversion, OTP generation, JWT parsing, SQL query building, and password generators.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://it-tools.tech/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/CorentinTh/it-tools){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/corentinth/it-tools){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/corentinth/it-tools/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-it-tools
 ```
 
-### 2. URL
+## Usage
 
-- To access IT Tools, visit <https://it-tools.iYOUR_DOMAIN_NAMEi>
+Visit <https://it-tools.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

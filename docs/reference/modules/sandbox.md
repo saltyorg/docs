@@ -1,6 +1,6 @@
 ---
 icon: material/source-repository
-status: WIP
+status: draft
 hide:
   - tags
 tags:
@@ -15,8 +15,6 @@ tags:
 The Sandbox repository serves as a community-driven space for unofficial Saltbox enhancements.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://github.com/saltyorg/Sandbox){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 

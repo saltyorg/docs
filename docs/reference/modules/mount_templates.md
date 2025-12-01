@@ -1,6 +1,6 @@
 ---
 icon: material/source-repository
-status: WIP
+status: draft
 ---
 
 # Mount Templates

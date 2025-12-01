@@ -12,44 +12,31 @@ tags:
 
 ## Overview
 
-[Tvheadend](https://tvheadend.org/) is a TV streaming server and digital video recorder.
+[linuxserver/tvheadend](https://docs.linuxserver.io/images/docker-tvheadend) is a Docker container image for Tvheadend.
 
-It supports the following inputs:
+> [Tvheadend](https://tvheadend.org/) is a TV streaming server and digital video recorder. [:material-bookshelf:](https://docs.tvheadend.org/documentation)
 
-- DVB-C(2)
-- DVB-T(2)
-- DVB-S(2)
-- ATSC
-- SAT>IP
-- HDHomeRun
-- IPTV
-  - UDP
-  - HTTP
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-It supports the following outputs:
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
-HTTP
-HTSP (own protocol)
-SAT>IP
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/tvheadend/tags){ .md-button .md-button--stretch }
 
-!!! info
-    By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://tvheadend.org/){: .header-icons } | [:octicons-link-16: Docs](https://docs.tvheadend.org/documentation){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/tvheadend/tvheadend){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/thealhu/tvheadend){: .header-icons }|
+</div>
 
-Recommended install types: Saltbox, Core
+---
 
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-tvheadend
 ```
 
-### 2. URL
+## Usage
 
-- To access Tvheadend, visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>
+Visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

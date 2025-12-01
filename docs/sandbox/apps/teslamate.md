@@ -14,27 +14,35 @@ tags:
 
 [Teslamate](https://github.com/teslamate-org/teslamate) is a powerful, self-hosted data logger for your Tesla.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/teslamate-org/teslamate){: .header-icons } | [:octicons-link-16: Docs](https://github.com/teslamate-org/teslamate){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/teslamate-org/teslamate){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/teslamate/teslamate){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/teslamate-org/teslamate){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/teslamate/teslamate/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-teslamate
 ```
 
-### 2. URL
+## Usage
 
-- To access Teslamate, visit <https://teslamate.iYOUR_DOMAIN_NAMEi>
+Visit <https://teslamate.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - [:octicons-link-16: Documentation: Teslamate Docs](https://docs.teslamate.org/docs/installation/docker){: .header-icons }
 
 To use a custom subdomain, add a custom value for `teslamate_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
 
-### 4. Grafana Setup
+### Grafana Setup
 
 Once installation is finished, you will need to add the teslamate data source in grafana under connections.
 

@@ -14,21 +14,27 @@ tags:
 
 [Gitea](https://gitea.io/en-us/) is a community managed lightweight code hosting solution written in Go.
 
-Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab. Gitea is a fork of Gogs.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gitea.io/en-us/){: .header-icons } | [:octicons-link-16: Docs](https://docs.gitea.io/en-us/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/go-gitea/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gitea/gitea){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.gitea.io){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gitea/gitea/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-gitea
 ```
 
-### 2. URL
+## Usage
 
-- To access Gitea, visit <https://gitea.iYOUR_DOMAIN_NAMEi>
+Visit <https://gitea.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -14,21 +14,29 @@ tags:
 
 [JDownloader](https://beta.jdownloader.org/) is a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://beta.jdownloader.org/){: .header-icons } | [:octicons-link-16: Docs](https://beta.jdownloader.org/support){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-jdownloader-2){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/jdownloader-2){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://beta.jdownloader.org/support){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/jdownloader-2/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-jdownloader2
 ```
 
-### 2. URL
+## Usage
 
-- To access JDownloader, visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>
+Visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 1. The configured password is taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

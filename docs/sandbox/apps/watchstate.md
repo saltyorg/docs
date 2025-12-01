@@ -13,11 +13,9 @@ tags:
 
 ## Overview
 
-This tool's primary goal is to sync your backends' play states without relying on third party services. Out of the box, it supports Jellyfin, Plex and Emby media servers.
+[WatchState](https://github.com/arabcoders/watchstate) is a self-hosted, open-source service designed to sync play states, including watch progress and history, across media servers such as Plex, Jellyfin, and Emby without relying on third-party servers or cloud services.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://github.com/arabcoders/watchstate){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](https://github.com/ArabCoders/watchstate/blob/master/FAQ.md){ .md-button .md-button--stretch }
 

@@ -14,37 +14,29 @@ tags:
 
 [Homepage](https://github.com/benphelps/homepage) is a modern (fully static, fast), secure (fully proxied), customizable application dashboard with integrations for more than 25 services and translations for over 15 languages. Easily configured via YAML files (or discovery via docker labels).
 
-### Features
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- Fast! The entire site is statically generated at build time, so you can expect instant load times
-- Full i18n support with automatic language detection
-  - Translations for Catalan, Chinese, Dutch, Finnish, French, German, Hebrew, Hungarian, Malay, Norwegian Bokmål, Polish, Portuguese, Portuguese (Brazil), Romanian, Russian, Spanish, Swedish and Yue
-- Docker integration
-  - Container status (Running / Stopped) & statistics (CPU, Memory, Network)
-  - Automatic service discovery (via labels)
-- Service integration
-  - Sonarr, Radarr, Prowlarr, Bazarr, Lidarr, Emby, Jellyfin, Tautulli, Plex and more
+[:material-bookshelf:**Manual**](https://gethomepage.dev/latest/configs){ .md-button .md-button--stretch }
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://gethomepage.dev/){: .header-icons } | [:octicons-link-16: Docs](https://gethomepage.dev/latest/configs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/benphelps/homepage){: .header-icons }|
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-Recommended install types: Saltbox, Core, Mediabox
+</div>
 
-### 1. Installation
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-homepage
 ```
 
-### 2. URL
+## Usage
 
-- To access Homepage, visit <https://homepage.iYOUR_DOMAIN_NAMEi>
+Visit <https://homepage.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 This role will add both the homepage container, and the homepage-docker-socket-proxy container. To add services and bookmarks etc. you edit your config files found at `/opt/homepage/config/`. There are several example services and widgets included in the role, just uncomment and fill them in appropriately. The webui will reload and it will be visible shortly after. No need to restart the container.
 

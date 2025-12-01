@@ -12,18 +12,25 @@ tags:
 
 ## Overview
 
-[Plex DupeFinder](https://github.com/l3uddz/plex_dupefinder#readme/) Plex DupeFinder is a python script that finds duplicate versions of media (TV episodes and movies) in your Plex Library and tells Plex to remove the lowest rated files/versions (based on user-specified scoring) to leave behind a single file/version.
+[Plex DupeFinder](https://github.com/l3uddz/plex_dupefinder#readme/)    is a python script that finds duplicate versions of media (TV episodes and movies) in your Plex Library and tells Plex to remove the lowest rated files/versions (based on user-specified scoring) to leave behind a single file/version.
 
-- Duplicates can be either in bulk (automatic) or one-by-one (interactively).
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/l3uddz/plex_dupefinder#configuration){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 !!! note
-      📢 You will need to have `allow media deletion: enabled` ticked. See the [Plex configuration instructions](https://github.com/l3uddz/plex_dupefinder#plex)
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/l3uddz/plex_dupefinder#introduction/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/l3uddz/plex_dupefinder#configuration/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/plex_dupefinder/){: .header-icons }|
+    📢 You will need to have `allow media deletion: enabled` ticked. See the [Plex configuration instructions](https://github.com/l3uddz/plex_dupefinder#plex)
 
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-plex-dupefinder

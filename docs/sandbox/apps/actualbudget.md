@@ -13,19 +13,26 @@ tags:
 ## Overview
 
 [Actual Budget](https://actualbudget.org/) is a super fast, privacy-focused app for managing your finances. Its heart is the well-proven and much-loved Envelope Budgeting methodology.
-You own your data and can do whatever you want with it. Featuring multi-device sync, optional end-to-end encryption and so much more.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://actualbudget.org){: .header-icons } | [:octicons-link-16: Docs](https://actualbudget.org/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/actualbudget/actual){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/actualbudget/actual-server){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-## 1. Installation
+[:material-bookshelf:**Manual**](https://actualbudget.org/docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/actualbudget/actual-server/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ``sb install sandbox-actualbudget``
 
-## 2. URL
+## Usage
 
-To access Actual Budget, visit <https://actualbudget.iYOUR_DOMAIN_NAMEi>
+Visit <https://actualbudget.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

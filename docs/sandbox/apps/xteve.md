@@ -14,37 +14,29 @@ tags:
 
 [xTeVe](https://github.com/xteve-project/xTeVe) is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
 
-xTeVe emulates a SiliconDust HDHomeRun OTA tuner, which allows it to expose IPTV style channels to software, which would not normally support it. This Docker image includes the following packages and features:
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- xTeVe v2.1 (Linux) x86 64 bit
+[:material-bookshelf:**Manual**](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){ .md-button .md-button--stretch }
 
-- Latest Guide2go (Linux) x86 64 bit (Schedules Direct XMLTV grabber)
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dnsforge/xteve/tags){ .md-button .md-button--stretch }
 
-- Zap2XML Support (Perl based zap2it / TVguide.com XMLTV grabber)
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-- Bash, Perl & crond Support
+</div>
 
-- VLC & ffmpeg Support
+---
 
-- Automated XMLTV Guide Lineups & Cron’s
-
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/xteve-project/xTeVe){: .header-icons } | [:octicons-link-16: Docs](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/xteve-project/xTeVe){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/dnsforge/xteve){: .header-icons }|
-
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-xteve
 ```
 
-### 2. URL
+## Usage
 
-- To access xTeVe, visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>
+Visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>.
 
-### 3. Setup
-
-- Access xTeVe web GUI, visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>
+## Basics
 
 - Run through the Configuration Wizard.
 

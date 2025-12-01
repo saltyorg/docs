@@ -14,25 +14,29 @@ tags:
 
 [Kitana](https://github.com/pannal/Kitana) is a responsive Plex plugin web frontend.
 
-Running one instance of Kitana can serve infinite amounts of servers and plugins - you can even expose your Kitana instance to your friends, so they can manage their plugins as well, so they don't have to run their own Kitana instance.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-Kitana was built for Sub-Zero originally, but handles other plugins just as well.
+[:material-bookshelf:**Manual**](https://github.com/pannal/Kitana){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/pannal/Kitana){: .header-icons } | [:octicons-link-16: Docs](https://github.com/pannal/Kitana){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pannal/Kitana){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/pannal/kitana){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/pannal/kitana/tags){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-kitana
 ```
 
-### 2. URL
+## Usage
 
-- To access Kitana, visit <https://kitana.iYOUR_DOMAIN_NAMEi>
+Visit <https://kitana.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - pen your browser and visit your Kitana instance <https://kitana.iYOUR_DOMAIN_NAMEi>
 

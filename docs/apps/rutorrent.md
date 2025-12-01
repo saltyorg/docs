@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -10,27 +11,33 @@ tags:
 
 ## Overview
 
-THIS PAGE HAS NOT BEEN FULLY UPDATED FOR SALTBOX
+[kudeta/ru-rtorrent](https://hub.docker.com/r/kudeta/ru-rtorrent) is a Docker container image that combines the rTorrent BitTorrent Client with the ruTorrent web interface.
 
-[ruTorrent](https://github.com/Novik/ruTorrent) (by Novik) is a front-end for the popular, lightweight, and extensible BitTorrent client [rtorrent](https://github.com/rakshasa/rtorrent) (by Jari Sundell aka rakshasa).
+> [ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent. [:material-bookshelf:](https://github.com/Novik/ruTorrent/wiki) [:fontawesome-brands-github:](https://github.com/Novik/ruTorrent/discussions)
 
-_Note: public trackers are disabled by default in the standard install. Refer to the FAQ for [instructions on re-enabling them](../faq/rutorrent.md?h=public#enable-access-to-public-torrent-trackers)._
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |             |
-|-------------|-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/Novik/ruTorrent/wiki){: .header-icons } | [:octicons-mark-github-16: Github ruTorrent](https://github.com/Novik/ruTorrent){: .header-icons } | [:octicons-mark-github-16: Github rTorrent](https://github.com/rakshasa/rtorrent){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/horjulf/rutorrent-autodl){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-## 1. URL
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kudeta/ru-rtorrent/tags){ .md-button .md-button--stretch }
 
-- To access ruTorrent, visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-## 2. Basics
+</div>
+
+---
+
+## Usage
+
+Visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>.
+
+## Basics
 
 ### Setup
 
 The setup for [Sonarr](sonarr.md#__tabbed_4_5), [Radarr](radarr.md#__tabbed_4_5), and [Lidarr](lidarr.md#__tabbed_4_4) are done on their respective wiki pages.
 
-## 3. Enable AutoUnpack
+#### Enable AutoUnpack
 
 AutoUnpack is a plugin that will automatically unrar/unzip torrent data.
 
@@ -56,7 +63,7 @@ To enable AutoUnpack:
 
 6. Click "OK".
 
-## 3. Custom Plugins and Themes
+#### Custom Plugins and Themes
 
 You can have custom plugins and themes imported during Docker container rebuild. Just place them in the following paths:
 

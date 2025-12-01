@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -12,23 +13,31 @@ tags:
 
 ## Overview
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
+[linuxserver/xbackbone](https://docs.linuxserver.io/images/docker-xbackbone) is a Docker container image for xbackbone.
 
-[xbackbone](https://xbackbone.url) is a...
+> [xbackbone](https://xbackbone.url) is a... [:material-bookshelf:](https://xbackbone.docs.url)
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://xbackbone.url){: .header-icons } | [:octicons-link-16: Docs](https://xbackbone.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/xbackbone/xbackbone){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/xbackbone/xbackbone){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/xbackbone/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-xbackbone
 ```
 
-### 2. URL
+## Usage
 
-- To access xbackbone, visit <https://xbackbone.iYOUR_DOMAIN_NAMEi>
+Visit <https://xbackbone.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -10,23 +10,29 @@ tags:
 
 ## Overview
 
-[Portainer](https://portainer.io/) is a lightweight, open-source management UI that provides a graphical interface for managing containerized applications across various environments, including Docker, Kubernetes, Docker Swarm, and Podman.
+[Portainer](https://portainer.io) is a lightweight, open-source management UI that provides a graphical interface for managing containerized applications across various environments, including Docker, Kubernetes, Docker Swarm, and Podman.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://portainer.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.portainer.io//){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/portainer/portainer/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/portainer/portainer-ce){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.portainer.io){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/portainer/portainer-ce/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-slack:**Community**](https://portainer.io/slack){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install portainer
 ```
 
 ## Usage
 
-To access Portainer, visit  <https://portainer.iYOUR_DOMAIN_NAMEi>
+Visit  <https://portainer.iYOUR_DOMAIN_NAMEi>.
 
 ## Next
 

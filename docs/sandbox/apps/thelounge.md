@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[The Lounge](https://thelounge.chat/) is a self hosted web IRC client. In private mode, The Lounge acts like a bouncer and a client combined, in order to offer an experience similar to other modern chat applications outside the IRC world. Users can then access and resume their session without being disconnected from their channels.
+[linuxserver/thelounge](https://docs.linuxserver.io/images/docker-thelounge) is a Docker container image for The Lounge.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: The Lounge](https://thelounge.chat/){: .header-icons } | [:octicons-link-16: Docs](https://thelounge.chat/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/thelounge/thelounge ){: .header-icons } | [:material-docker: Docker:](https://docs.linuxserver.io/images/docker-thelounge){: .header-icons } |
+> [The Lounge](https://thelounge.chat/) is a self hosted web IRC client. In private mode, The Lounge acts like a bouncer and a client combined, in order to offer an experience similar to other modern chat applications outside the IRC world. Users can then access and resume their session without being disconnected from their channels. [:material-bookshelf:](https://thelounge.chat/docs) [:fontawesome-solid-people-group:](https://thelounge.chat/community)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/thelounge/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-thelounge
 ```
 
-### 2. URL
+## Usage
 
-- To access The Lounge, visit <https://thelounge.iYOUR_DOMAIN_NAMEi>
+Visit <https://thelounge.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - When the application first runs, it will populate its /config
 - Stop the container

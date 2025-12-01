@@ -14,21 +14,29 @@ tags:
 
 [OliveTin](https://olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://olivetin.app/){: .header-icons } | [:octicons-link-16: Docs](https://docs.olivetin.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/OliveTin/OliveTin){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jamesread/olivetin){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.olivetin.app){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jamesread/olivetin/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-olivetin
 ```
 
-### 2. URL
+## Usage
 
-- To access OliveTin, visit <https://olivetin.iYOUR_DOMAIN_NAMEi>
+Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Configuration
+## Basics
 
 - A barebones configuration is imported by the role to `/opt/olivetin/config.yaml` provisioning a default "Hello world!" item
 

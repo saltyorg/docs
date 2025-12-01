@@ -14,24 +14,29 @@ tags:
 
 [Homebox](https://homebox.software/en/) is the inventory and organization system built for the Home User! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://homebox.software/en/){: .header-icons } | [:octicons-link-16: Docs](https://homebox.software/en/quick-start.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sysadminsmedia/homebox){: .header-icons } |
+[:material-bookshelf:**Manual**](https://homebox.software/en/quick-start.html){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-homebox
 ```
 
-### 2. URL
+## Usage
 
-- To access Homebox, visit <https://homebox.iYOUR_DOMAIN_NAMEi>
+Visit <https://homebox.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Create a user in the web ui, add your email and password, then log in.
 

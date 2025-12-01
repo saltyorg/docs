@@ -15,21 +15,29 @@ tags:
 
 LLDAP (Light LDAP) is a lightweight, simplified LDAP server for authentication. It provides a user-friendly interface for managing users and groups, with a simplified LDAP implementation that's easier to configure and maintain than traditional LDAP servers like OpenLDAP.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/lldap/lldap){: .header-icons } | [:octicons-link-16: Docs](https://github.com/lldap/lldap/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/lldap/lldap){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nitnelave/lldap){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/lldap/lldap/blob/main/README.md){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/nitnelave/lldap/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 ## Deployment
 
 Opt in via Authelia authentication backend.
 
-```sh
+```shell
 sb install authelia
 ```
 
 ## Usage
 
-Visit <https://lldap.iYOUR_DOMAIN_NAMEi>
+Visit <https://lldap.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

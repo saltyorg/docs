@@ -13,21 +13,29 @@ tags:
 
 [transfer.sh](https://transfer.sh/) is an easy and fast file sharing from the command-line or web gui app.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://transfer.sh/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/dutchcoders/transfer.sh){: .header-icons } | [:octicons-mark-github-16: Github](https://www.github.com/dutchcoders/transfer.sh){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/dutchcoders/transfer.sh){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/dutchcoders/transfer.sh){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dutchcoders/transfer.sh/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install transfer
 ```
 
-### 2. URL
+## Usage
 
-- To access transfer.sh, visit <https://transfer.iYOUR_DOMAIN_NAMEi>
+Visit <https://transfer.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The pre-configured username/password are taken from your Saltbox [`accounts.yml`](../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`.
 

@@ -10,183 +10,185 @@ tags:
 
 ## Overview
 
-[Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices
+[linuxserver/emby](https://docs.linuxserver.io/images/docker-emby) is a Docker container image for Emby.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://emby.media){: .header-icons } | [:octicons-link-16: Docs](https://support.emby.media/support/home){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/MediaBrowser/Emby){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/emby/embyserver){: .header-icons }|
+> [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices. [:material-bookshelf:](https://support.emby.media/support/home) [:fontawesome-solid-people-group:](https://emby.media/community)
 
-## 1. Introduction
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-![Emby media server splash screen and logo](../images/emby/emby-splash.jpg)
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
-## 2. URL
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/emby/tags){ .md-button .md-button--stretch }
 
-- To access Emby, visit <https://emby.iYOUR_DOMAIN_NAMEi>
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
 
-## 3. Initial Setup
+</div>
 
-## i. Domain
+---
 
-- See [Adding a Subdomain](../reference/subdomain.md) on how to add the subdomain `emby` to your DNS provider.
+## Configuration
 
-- _Note: You can skip this step if you are using [Cloudflare](../reference/domain.md#__tabbed_1_3) with Saltbox._
+See [Adding a Subdomain](../reference/subdomain.md) on how to add the subdomain `emby` to your DNS provider.
 
-## ii. Install
+_Note: You can skip this step if you are using [Cloudflare](../reference/domain.md#__tabbed_1_3) with Saltbox._
 
-- Run the following command:
+## Deployment
 
-    ```shell
-    sb install emby
-    ```
+```shell
+sb install emby
+```
 
-## 4. Setup Wizard
+## Usage
 
-1. Visit <https://emby.iYOUR_DOMAIN_NAMEi>.
+Visit <https://emby.iYOUR_DOMAIN_NAMEi>.
 
-1. Select your **preferred display language**. Click **Next**.
+## Basics
 
-   ![](../images/emby/emby-welcome-english.png))
+### Initial Setup
 
-1. **Type** the following and click **Next**:
+1.  Visit <https://emby.iYOUR_DOMAIN_NAMEi>.
 
-    - **Username:** _The username you wwant to use to log into Emby_
+1.  Select your **preferred display language**. Click **Next**.
 
-    - **New Password:** _A strong password you'll use to log into Emby_
+    ![](../images/emby/emby-welcome-english.png)
 
-    - **New Password Confirm:** _That same password again_
+1.  **Type** the following and click **Next**:
 
-    - **Emby connect username or email address**: _your [Emby Connect username](https://emby.media/connect)_ (important)
+    -   **Username:** _The username you wwant to use to log into Emby_
 
-   ![](../images/emby/emby-firstuser.png)
+    -   **New Password:** _A strong password you'll use to log into Emby_
 
-1. Confirm the message by clicking **Got It**.
+    -   **New Password Confirm:** _That same password again_
 
-   ![](../images/emby/emby-added.png)
+    -   **Emby connect username or email address**: _your [Emby Connect username](https://emby.media/connect)_ (important)
 
-1. **Confirm** the link in your email.
+    ![](../images/emby/emby-firstuser.png)
 
-   ![](../images/emby/emby-confirm-link.png)
+1.  Confirm the message by clicking **Got It**.
 
-   ![](../images/emby/emby-link-accepted.png)
+    ![](../images/emby/emby-added.png)
 
-2. Skip the adding of the libraries. Click **Next**.
+1.  **Confirm** the link in your email.
 
-   ![](../images/emby/emby-setup-media-libs.png)
+    ![](../images/emby/emby-confirm-link.png)
 
-3. Select your **Preferred Metadata Language** and **Country** (_`English` and `United States` are recommended_) and click **Next**.
+    ![](../images/emby/emby-link-accepted.png)
 
-   ![](../images/emby/emby-preferred-metadata.png)
+1.  Skip the adding of the libraries. Click **Next**.
 
-4. Uncheck **Enable automatic port mapping**. Click **Next**.
+    ![](../images/emby/emby-setup-media-libs.png)
 
-   ![](../images/emby/emby-config-remote-access.png)
+1.  Select your **Preferred Metadata Language** and **Country** (_`English` and `United States` are recommended_) and click **Next**.
 
-5. **Check** to accept the terms. Click **Next**.
+    ![](../images/emby/emby-preferred-metadata.png)
 
-   ![](../images/emby/emby-terms.png)
+1.  Uncheck **Enable automatic port mapping**. Click **Next**.
 
-6. Click **Finish**.
+    ![](../images/emby/emby-config-remote-access.png)
 
-   ![](../images/emby/emby-done.png)
+1.  **Check** to accept the terms. Click **Next**.
 
-7. You will now be taken to the **Dashboard** view.
+    ![](../images/emby/emby-terms.png)
 
-## 5. Settings
+1.  Click **Finish**.
 
-## i. Transcoding
+    ![](../images/emby/emby-done.png)
+
+1.  You will now be taken to the **Dashboard** view.
+
+### Settings
 
 1. Go to **Settings**.
 
-1. Go to **Transcoding**.
+1.  Go to **Transcoding**.
 
-   ![](../images/emby/emby-transcoding.png)
+    ![](../images/emby/emby-transcoding.png)
 
-1. Under **Enable hardware acceleration when available**, select **Advanced**.
+1.  Under **Enable hardware acceleration when available**, select **Advanced**.
 
-   ![](../images/emby/emby-transcoding-advanced.png)
+    ![](../images/emby/emby-transcoding-advanced.png)
 
-2. Under **Transcoding temporary path**, type in or choose `/transcode`.
+1.  Under **Transcoding temporary path**, type in or choose `/transcode`.
 
-   ![](../images/emby/emby-transcoding-hardware-path.png)
+    ![](../images/emby/emby-transcoding-hardware-path.png)
 
-3. Click **Save**.
+1.  Click **Save**.
 
-## iii. Libraries
+### Libraries
 
 In this section, we will add two libraries: one for Movies and one for TV Shows.
 
-### Add Movie Library
+#### Add Movie Library
 
-1. Go to **Settings**.
+1.  Go to **Settings**.
 
-1. Go to **Library**.
+1.  Go to **Library**.
 
-   ![](../images/emby/emby-setup-media-libs.png)
+    ![](../images/emby/emby-setup-media-libs.png)
 
-1. Click **+ New Library**.
+1.  Click **+ New Library**.
 
-1. Under **Content type**, select **Movies**.
+1.  Under **Content type**, select **Movies**.
 
-   ![](../images/emby/emby-new-library.png)
+    ![](../images/emby/emby-new-library.png)
 
-   ![](../images/emby/emby-new-library-movie-name.png)
+    ![](../images/emby/emby-new-library-movie-name.png)
 
-1. Click **+** next to **Folders**.
+1.  Click **+** next to **Folders**.
 
-1. Type in or choose `/mnt/unionfs/Media/Movies`. Click **OK**.
+1.  Type in or choose `/mnt/unionfs/Media/Movies`. Click **OK**.
 
-   _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
+    _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
 
-   ![](../images/emby/emby-new-library-movie-path.png)
+    ![](../images/emby/emby-new-library-movie-path.png)
 
-2. Click **OK** once more.
+1.  Click **OK** once more.
 
-### Add TV Shows Library
+#### Add TV Shows Library
 
-1. Go to **Settings**.
+1.  Go to **Settings**.
 
-1. Go to **Library**.
+1.  Go to **Library**.
 
-   ![](../images/emby/emby-setup-media-libs.png)
+    ![](../images/emby/emby-setup-media-libs.png)
 
-1. Click **+ New Library**.
+1.  Click **+ New Library**.
 
-1. Under **Content type**, select **TV shows**.
+1.  Under **Content type**, select **TV shows**.
 
-   ![](../images/emby/emby-new-library.png)
+    ![](../images/emby/emby-new-library.png)
 
-   ![](../images/emby/emby-new-library-tv-name.png)
+    ![](../images/emby/emby-new-library-tv-name.png)
 
-1. Click **+** next to **Folders**.
+1.  Click **+** next to **Folders**.
 
-1. Type in or choose `/mnt/unionfs/Media/TV`. Click **OK**.
+1.  Type in or choose `/mnt/unionfs/Media/TV`. Click **OK**.
 
-   _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
+    _Note: These [paths](../saltbox/basics/paths.md) are for the standard library setup. If you have [customized](../reference/customizing-plex-libs.md) it, use those paths instead._
 
-   ![](../images/emby/emby-new-library-tv-path.png)
+    ![](../images/emby/emby-new-library-tv-path.png)
 
-2. Click **OK** once more.
+1.  Click **OK** once more.
 
-## 6. API Key
+### API Key
 
 Instructions below will guide you through creating an API Key for a specific app.
 
-1. Click the **Settings** icon.
+1.  Click the **Settings** icon.
 
-2. Under **Advanced**, click **API Keys**.
+1.  Under **Advanced**, click **API Keys**.
 
-   ![](../images/emby/emby-new-api-key.png)
+    ![](../images/emby/emby-new-api-key.png)
 
-3. Click **+ New API Key**.
+1.  Click **+ New API Key**.
 
-   ![](../images/emby/emby-new-api-key-name.png)
+    ![](../images/emby/emby-new-api-key-name.png)
 
-4. Fill in an **App name** (e.g. Ombi) and click **OK**.
+1.  Fill in an **App name** (e.g. Ombi) and click **OK**.
 
-5. You have now have created an **Api Key** for your app.
+1.  You have now have created an **Api Key** for your app.
 
-   ![](../images/emby/emby-new-api-show.png)
+    ![](../images/emby/emby-new-api-show.png)
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

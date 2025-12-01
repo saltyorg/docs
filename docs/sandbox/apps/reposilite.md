@@ -14,23 +14,28 @@ tags:
 
 [reposilite](https://reposilite.com/) is a...
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://reposilite.com/){: .header-icons } | [:octicons-link-16: Docs](https://reposilite.com/guide/about){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/dzikoysk/reposilite){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/dzikoysk/reposilite){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://reposilite.com/guide/about){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dzikoysk/reposilite/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-reposilite
 ```
 
-### 2. URL
+## Usage
 
-- To access reposilite, visit <https://reposilite.iYOUR_DOMAIN_NAMEi>
+Visit <https://reposilite.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Usage
-
-- Consult [the doc](https://reposilite.com/guide/docker)
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

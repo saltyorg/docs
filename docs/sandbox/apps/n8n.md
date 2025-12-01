@@ -14,30 +14,27 @@ tags:
 
 [n8n - Secure Workflow Automation for Technical Teams](https://n8n.io/) is a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
 
-- **Code When You Need It**: Write JavaScript/Python, add npm packages, or use the visual interface
-- **AI-Native Platform**: Build AI agent workflows based on LangChain with your own data and models
-- **Full Control**: Self-host with our fair-code license or use our [cloud offering](https://app.n8n.cloud/login)
-- **Enterprise-Ready**: Advanced permissions, SSO, and air-gapped deployments
-- **Active Community**: 400+ integrations and 900+ ready-to-use [templates](https://n8n.io/workflows)
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-!!! info
-    By default, the role **IS** protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:material-bookshelf:**Manual**](https://docs.n8n.io){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://n8n.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.n8n.io/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/ajnart/n8n){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/n8nio/n8n){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/n8nio/n8n/tags){ .md-button .md-button--stretch }
 
-Recommended install types: Saltbox, Core
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-n8n
 ```
 
-### 2. URL
+## Usage
 
-- To access n8n, visit <https://n8n.iYOUR_DOMAIN_NAMEi>
+Visit <https://n8n.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -10,25 +11,31 @@ tags:
 
 # tika
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
 ## Overview
 
 [tika](https://tika.url) is a...
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://tika.url){: .header-icons } | [:octicons-link-16: Docs](https://tika.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/tika/tika){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/tika/tika){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://tika.docs.url){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/tika/tika/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-tika
 ```
 
-### 2. URL
+## Usage
 
-- To access tika, visit <https://tika.iYOUR_DOMAIN_NAMEi>
+Visit <https://tika.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

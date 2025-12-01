@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -12,24 +13,33 @@ tags:
 
 ## Overview
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
+[linuxserver/pyload-ng](https://docs.linuxserver.io/images/docker-pyload-ng) is a Docker container image for pyload.
 
-[pyload](https://pyload.net/) is a...
+> [pyload](https://pyload.net) is a... [:material-bookshelf:](https://pyload.docs.url)
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://pyload.url){: .header-icons } | [:octicons-link-16: Docs](https://pyload.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/pyload/pyload){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/pyload/pyload){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/pyload-ng/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-pyload
 ```
 
-### 2. URL
+## Usage
 
-- To access pyload, visit <https://pyload.iYOUR_DOMAIN_NAMEi>
-- Default credentials are - username: pyload - password: pyload
+Visit <https://pyload.iYOUR_DOMAIN_NAMEi>.
+
+Default credentials are - username: pyload - password: pyload
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

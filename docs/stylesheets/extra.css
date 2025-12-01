@@ -138,7 +138,7 @@ label[for="sb-checkbox--var-level"] {
   */
 
   .grid--buttons {
-    grid-template-columns: repeat(auto-fit, minmax(8.8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
     .md-button {
       text-align: center;
@@ -295,5 +295,12 @@ label[for="sb-checkbox--var-level"] {
       right: calc(0.5em + 3%);
       transform: translateY(-50%);
     }
+  }
+
+  .md-button[href=""] {
+    pointer-events: none;
+    color: color-mix(in srgb, currentColor, transparent 50%);
+    border-color: color-mix(in srgb, currentColor, transparent 50%);
+    background-color: transparent;
   }
 }

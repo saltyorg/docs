@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[Syncthing](https://syncthing.net/) is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet.
+[linuxserver/syncthing](https://docs.linuxserver.io/images/docker-syncthing) is a Docker container image for Syncthing.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://syncthing.comnet/){: .header-icons } | [:octicons-link-16: Docs](https://docs.syncthing.net/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/syncthing/syncthing){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/syncthing){: .header-icons }|
+> [Syncthing](https://syncthing.net/) is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet. [:material-bookshelf:](https://docs.syncthing.net/)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/syncthing/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-syncthing
 ```
 
-### 2. URL
+## Usage
 
-- To access the Syncthing dashboard, visit <https://syncthing.iYOUR_DOMAIN_NAMEi>
+Visit <https://syncthing.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

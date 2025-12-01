@@ -14,14 +14,22 @@ tags:
 
 [InfluxDB](https://www.influxdata.com/products/influxdb/) is an open source time series database for recording metrics, events, and analytics.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.influxdata.com/products/influxdb/){: .header-icons } | [:octicons-link-16: Docs](hhttps://docs.influxdata.com/influxdb/v1/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/influxdata/influxdata-docker){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/influxdb){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](hhttps://docs.influxdata.com/influxdb/v1){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/influxdb/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 !!! note
     This role is version locked to version `1.8.4` to support the `varken` role. To utilize InfluxDB version 2.0, utilize the `influxdb2` role.
 
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-influxdb

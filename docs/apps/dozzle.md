@@ -12,21 +12,29 @@ tags:
 
 [Dozzle](https://dozzle.dev/) is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only. Dozzle can only access logs written to stdout or stderr which is the same functionality as the `docker logs` command. See below for more info on that.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://dozzle.dev/){: .header-icons } | [:octicons-link-16: Docs](https://dozzle.dev/guide/what-is-dozzle){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/amir20/dozzle){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/amir20/dozzle){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://dozzle.dev/guide/what-is-dozzle){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/amir20/dozzle/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install dozzle
 ```
 
-### 2. URL
+## Usage
 
-- To access Dozzle, visit <https://dozzle.iYOUR_DOMAIN_NAMEi>
+Visit <https://dozzle.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 To view log files that are NOT written to stdout or stderr, use the following to setup a basic Alpine Linux container via Docker Compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to Dozzle. Adjust as needed for your circumstances.
 
@@ -54,7 +62,7 @@ To view log files that are NOT written to stdout or stderr, use the following to
 ???+ note
     To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#docker-compose).
 
-### 4. Adding Additional Hosts
+### Adding Additional Hosts
 
 You can add additional hosts to Dozzle using the `dozzle_additional_hosts` inventory variable. This will append the additional host(s) to the default entry. You can review the upstream documentation [here](https://dozzle.dev/guide/remote-hosts) for the proper syntax. The initiai `,` will be added after the default entry, you must comma separate the hosts if you are adding multiple entries such as:
 

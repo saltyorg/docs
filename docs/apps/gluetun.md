@@ -12,11 +12,19 @@ tags:
 
 [Gluetun](https://github.com/qdm12/gluetun) is a VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/qdm12/gluetun){: .header-icons } | [:octicons-link-16: Docs](https://github.com/qdm12/gluetun-wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/qdm12/gluetun){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/qmcgaw/gluetun){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Configuration
+[:material-bookshelf:**Manual**](https://github.com/qdm12/gluetun-wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/qmcgaw/gluetun/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
 
 The Gluetun role is configured via the [inventory system](../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
 
@@ -70,13 +78,7 @@ gluetun_firewall_outbound_subnets: ""
 
 Additional Docker envs may be set via `gluetun_docker_envs_custom`.
 
-### 2. Installation
-
-```shell
-sb install gluetun
-```
-
-### 3. Route Plex through Gluetun
+### Route Plex through Gluetun
 
 !!! caution
     It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN. Multiple instances of Plex will need their own unique instance of gluetun due to port conflicts.
@@ -111,7 +113,7 @@ Once you have made these changes to the inventory, run the plex tag to apply the
 
     Additionally the Plex container will become unable to start if you redeploy gluetun (restart is fine) at any point so you must redeploy Plex in that case.
 
-### 4. Route other containers through Gluetun
+### Route other containers through Gluetun
 
 Depending on if the role in question supports instances or not there will be two ways to set the network mode.
 
@@ -137,7 +139,7 @@ Once you have made these changes to the inventory, run the relevant tags to appl
 !!! caution
     While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
 
-### 5. Example Gluetun Configs
+### Example Gluetun Configs
 
 Below are some example inventory entries for some common VPN providers. These are intended as templates only and should not be expected to copy and paste without any edits. For a Wireguard implementation, you will typically generate a config file (wg0.conf) with the provider and grab some of the values from that config to configure Gluetun.
 
@@ -207,6 +209,20 @@ Below are some example inventory entries for some common VPN providers. These ar
     gluetun_vpn_type: "openvpn"
     gluetun_openvpn_custom_config: "/gluetun/custom.ovpn"
     ```
+
+## Deployment
+
+```shell
+sb install gluetun
+```
+
+## Usage
+
+To verify VPN connectivity, inspect the container's IP address:
+
+```shell
+docker exec gluetun curl ifconfig.me
+```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

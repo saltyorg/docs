@@ -14,23 +14,27 @@ tags:
 
 [Wrapperr](https://github.com/aunefyren/wrapperr) is a website-based platform and API for collecting user stats within a set timeframe using Tautulli. The data is displayed as a statistics-summary, sort of like Spotify Wrapped. Yes, you need Tautulli to have been running beforehand and currently for this to work. Note: Wrapperr is not behind authelia.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project Home](https://github.com/aunefyren/wrapperr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/aunefyren/wrapperr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/aunefyren/wrapperr){: .header-icons } | [:material-docker: Docker:](https://hub.docker.com/r/aunefyren/wrapperr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/aunefyren/wrapperr/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/aunefyren/wrapperr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-wrapperr
 ```
 
-### 2. URL
+## Usage
 
-- To access Wrapperr, visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>
-
-### 3. Setup
-
-- The very first thing you should do after installing Wrapperr is visit <https://wrapperr.iYOUR_DOMAIN_NAMEi> and configure an admin username/password. <br /> **Do this NOW.**
+Visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

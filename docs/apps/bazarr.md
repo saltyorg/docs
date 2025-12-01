@@ -10,25 +10,35 @@ tags:
 
 ## Overview
 
-[Bazarr](https://www.bazarr.media/) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+[hotio/bazarr](https://hotio.dev/containers/bazarr) is a Docker container image for Bazarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.bazarr.media/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.bazarr.media/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/hotio/bazarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/bazarr){: .header-icons }|
+> [Bazarr](https://www.bazarr.media/) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install bazarr
 ```
 
-### 2. URL
+## Usage
 
-- To access Bazarr, visit <https://bazarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://bazarr.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
-- [:octicons-link-16: Documentation](https://wiki.bazarr.media/){: .header-icons }
+- [:octicons-link-16: Documentation](https://wiki.bazarr.media){: .header-icons }
 
 - [:octicons-link-16: TraSH Guides](https://trash-guides.info/Bazarr/)
 

@@ -11,17 +11,23 @@ tags:
 
 ## Overview
 
-[Autoscan](https://github.com/Cloudbox/autoscan) is an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
+[Autoscan](https://github.com/saltydk/autoscan) is the official Saltbox continuation of *Cloudbox/autoscan*, an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Cloudbox/autoscan){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Cloudbox/autoscan){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Cloudbox/autoscan){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/autoscan){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/saltydk/autoscan/blob/master/README.md#overview){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/autoscan/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/ugfKXpFND8){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install autoscan
 ```
 
@@ -275,8 +281,6 @@ Further documentation:
 - [A-Train Docker page](https://github.com/users/m-rots/packages/container/package/a-train)
 
 - [A-Train initial documentation](https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612)
-
-- [:octicons-link-16: Documentation](https://github.com/Cloudbox/autoscan){: .header-icons }
 
 ## Next
 

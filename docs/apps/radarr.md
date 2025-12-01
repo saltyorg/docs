@@ -10,23 +10,31 @@ tags:
 
 ## Overview
 
-[Radarr](https://radarr.video/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies.
+[hotio/radarr](https://hotio.dev/containers/radarr) is a Docker container image for Radarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://radarr.video/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/radarr/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Radarr/Radarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/radarr){: .header-icons }||
+> [Radarr](https://radarr.video/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies. [:material-bookshelf:](https://wiki.servarr.com/radarr) [:fontawesome-brands-discord:](https://radarr.video/discord)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/radarr/pkgs/container/radarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install radarr
 ```
 
 ## Usage
 
-To access Radarr, visit <https://radarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://radarr.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

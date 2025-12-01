@@ -14,24 +14,29 @@ tags:
 
 [BarcodeBuddy](https://github.com/Forceu/barcodebuddy) is a barcode system for Grocy that enables barcode scanning and product management. It automatically handles known and unknown barcodes, integrating seamlessly with Grocy's inventory management system.
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will need to configure authentication within the application.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:octicons-mark-github-16: Github](https://github.com/Forceu/barcodebuddy){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/f0rc3/barcodebuddy){: .header-icons } | [:octicons-link-16: Docs](https://barcodebuddy-documentation.readthedocs.io/){: .header-icons }|
+[:material-bookshelf:**Manual**](https://barcodebuddy-documentation.readthedocs.io){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/f0rc3/barcodebuddy/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-barcodebuddy
 ```
 
-### 2. URL
+## Usage
 
-- To access BarcodeBuddy, visit <https://barcodebuddy.iYOUR_DOMAIN_NAMEi>
+Visit <https://barcodebuddy.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Configure the connection to your Grocy instance through the application settings and set up user authentication.
 

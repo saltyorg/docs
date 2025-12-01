@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian) is a program to follow authors and grab metadata for all your digital reading needs.
+[linuxserver/lazylibrarian](https://docs.linuxserver.io/images/docker-lazylibrarian) is a Docker container image for LazyLibrarian.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons } | [:octicons-link-16: Docs](https://lazylibrarian.gitlab.io/){: .header-icons } | [:octicons-mark-github-16: Github](https://gitlab.com/LazyLibrarian/LazyLibrarian){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/lazylibrarian){: .header-icons }|
+> [LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian) is a program to follow authors and grab metadata for all your digital reading needs. [:material-bookshelf:](https://lazylibrarian.gitlab.io/)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/lazylibrarian/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-lazylibrarian
 ```
 
-### 2. URL
+## Usage
 
-- To access LazyLibrarian, visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>
+Visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

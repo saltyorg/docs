@@ -14,24 +14,29 @@ tags:
 
 [OpenObserve](https://openobserve.ai/) is an open-source observability platform for logs, metrics, and traces with 140x lower storage cost than Elasticsearch. Built for petabyte scale with high performance and ~40x compression.
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will need to configure authentication within the application.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://openobserve.ai/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/openobserve/openobserve){: .header-icons } | [:octicons-link-16: Docs](https://openobserve.ai/docs/){: .header-icons }|
+[:material-bookshelf:**Manual**](https://openobserve.ai/docs){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-openobserve
 ```
 
-### 2. URL
+## Usage
 
-- To access OpenObserve, visit <https://openobserve.iYOUR_DOMAIN_NAMEi>
+Visit <https://openobserve.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Default credentials are configured using your user email and password. Root user setup is required for initial access.
 

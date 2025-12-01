@@ -14,19 +14,27 @@ tags:
 
 [Duplicati](https://duplicati.com/) is a free, open-source backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with a variety of storage types, including FTP, SSH, WebDAV, and cloud services like Backblaze B2, Tardigrade, and Amazon S3.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://duplicati.com/){: .header-icons } | [:octicons-link-16: Docs](https://duplicati.readthedocs.io/en/latest/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/duplicati/duplicati){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/duplicati){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://duplicati.readthedocs.io/en/latest){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/duplicati/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-duplicati
 ```
 
-### 2. URL
+## Usage
 
-- To access duplicati, visit <https://duplicati.iYOUR_DOMAIN_NAMEi>
+Visit <https://duplicati.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

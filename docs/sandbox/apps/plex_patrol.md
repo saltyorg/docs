@@ -14,21 +14,27 @@ tags:
 
 [Plex Patrol](https://github.com/l3uddz/plex_patrol) is a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/l3uddz/plex_patrol){: .header-icons } | [:octicons-link-16: Docs](https://github.com/l3uddz/plex_patrol){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/plex_patrol){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/plex_patrol){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/l3uddz/plex_patrol){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/cloudb0x/plex_patrol/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-plex-patrol
 ```
 
-### 2. URL
+## Configuration
 
 Plex Patrol has no UI; it's driven by a config file.
-
-### 3. Usage
 
 The role will fill in the Plex URL and token; aside from that the various settings are described in comments, with the defaults as below.
 

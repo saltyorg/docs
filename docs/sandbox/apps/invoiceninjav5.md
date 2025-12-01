@@ -14,11 +14,19 @@ tags:
 
 [InvoiceNinja](https://www.invoiceninja.com/) is a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.invoiceninja.com/){: .header-icons } | [:octicons-link-16: Docs](https://invoiceninja.github.io/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/invoiceninja/invoiceninja/tree/v5-stable){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/invoiceninja/invoiceninja/){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://invoiceninja.github.io){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/invoiceninja/invoiceninja/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 Ideally you should set a unique app key in settings.yml.
 Generate the key using:
@@ -33,11 +41,11 @@ insert this in the invoiceninja.app_key setting in `/opt/sandbox/settings.yml`
 sb install sandbox-invoiceninja
 ```
 
-### 2. URL
+## Usage
 
-- To access Invoice Ninja, visit <https://invoiceninja.iYOUR_DOMAIN_NAMEi>
+Visit <https://invoiceninja.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Log in
+### Log in
 
 Enter email, and password from accounts.yml setting.
 

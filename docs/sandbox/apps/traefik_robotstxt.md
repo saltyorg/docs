@@ -14,27 +14,25 @@ tags:
 
 [Zig robots.txt](https://github.com/mstroecker/zig-robotstxt) is a lightweight http-server, just serving a disallow-robots.txt file using the Zig programming language([https://ziglang.org/](https://ziglang.org/)).
 
-__Robots.txt__ basically works like a “No Trespassing” sign. It actually, tells robots whether we want them to crawl the website or not. With this role, we are disallowing all robots to crawl and avoid indexing in search engines.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:octicons-link-16: Docs](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/mstroecker/zig-robotstxt){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/mstroecker/zig-robotstxt){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/mstroecker/zig-robotstxt){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/mstroecker/zig-robotstxt/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-traefik-robotstxt
 ```
 
-### 2. Result
-
-```text
-HTTP/1.1 200 OK
-Content-Length: 26
-
-User-agent: *
-Disallow: /
-```
+## Usage
 
 When you want to reach `*.xYOUR_DOMAIN_NAMEx/robots.txt`
 

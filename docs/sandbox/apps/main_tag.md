@@ -1,6 +1,6 @@
 ---
 icon: material/tag
-status: WIP
+status: draft
 ---
 
 # Main Tag
@@ -9,9 +9,11 @@ status: WIP
 
 Ansible tag for deploying your Sandbox apps stack.
 
+---
+
 ## Deployment
 
-```sh
+```shell
 sb install sandbox-roles
 ```
 

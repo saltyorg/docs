@@ -15,20 +15,28 @@ saltbox_automation:
 
 ## Overview
 
-[ctop](https://github.com/bcicen/ctop) provides a concise and condensed overview of real-time metrics for multiple containers, similar to the Unix 'top' command but specifically designed for Docker containers. It offers an interactive interface for monitoring container resource usage.
+[ctop](https://github.com/bcicen/ctop) is a command-line, top-like tool for monitoring Linux containers in real-time.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/bcicen/ctop){: .header-icons } | [:octicons-link-16: Docs](https://github.com/bcicen/ctop#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/bcicen/ctop){: .header-icons } | :material-docker: Docker |
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/bcicen/ctop#readme){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 ## Deployment
 
-```sh
+```shell
 sb install ctop
 ```
 
 ## Usage
 
-```sh
+```shell
 ctop
 ```

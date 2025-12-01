@@ -1,6 +1,6 @@
 ---
 icon: material/tag
-status: wip
+status: draft
 ---
 
 # Main Tags
@@ -13,15 +13,15 @@ Ansible tags for deploying the main role stacks.
 
 ## Deployment
 
-```sh
+```shell
 sb install saltbox
 ```
 
-```sh
+```shell
 sb install mediabox
 ```
 
-```sh
+```shell
 sb install feederbox
 ```
 

@@ -1,6 +1,6 @@
 ---
 icon: material/tag
-status: wip
+status: draft
 ---
 
 # Download Indexers
@@ -13,7 +13,7 @@ Ansible tag for deploying your indexer management apps stack.
 
 ## Deployment
 
-```sh
+```shell
 sb install download-indexers
 ```
 

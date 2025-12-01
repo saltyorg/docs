@@ -14,9 +14,17 @@ tags:
 
 Custom error pages that display when services return HTTP errors (400-599). Deployed automatically with Traefik.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/tarampampam/error-pages){: .header-icons } | [:octicons-link-16: Docs](https://github.com/tarampampam/error-pages){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/tarampampam/error-pages){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/tarampampam/error-pages){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://github.com/tarampampam/error-pages){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/tarampampam/error-pages/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 ## Installation
 

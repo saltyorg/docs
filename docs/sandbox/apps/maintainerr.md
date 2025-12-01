@@ -14,15 +14,23 @@ tags:
 
 [Maintainerr](https://docs.maintainerr.info/) allows you to set a variety of rules and actions mostly around identifying and deleting little-watched media.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://docs.maintainerr.info/){: .header-icons } | [:octicons-link-16: Docs](https://docs.maintainerr.info/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jorenn92/Maintainerr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jorenn92/maintainerr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-## 1. URL
+[:material-bookshelf:**Manual**](https://docs.maintainerr.info){ .md-button .md-button--stretch }
 
-- To access maintainerr, visit <https://maintainerr.iYOUR_DOMAIN_NAMEi>
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jorenn92/maintainerr/tags){ .md-button .md-button--stretch }
 
-## 2. Settings
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Usage
+
+Visit <https://maintainerr.iYOUR_DOMAIN_NAMEi>.
+
+## Basics
 
 This setup needs to take place **AFTER** you've set up Plex, Radarr, and Sonarr, since it involves connections to all three of those.
 

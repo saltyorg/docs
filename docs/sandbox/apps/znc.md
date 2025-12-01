@@ -12,23 +12,31 @@ tags:
 
 ## Overview
 
-[ZNC](https://wiki.znc.in/ZNC) is an an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
+[linuxserver/znc](https://docs.linuxserver.io/images/docker-znc) is a Docker container image for ZNC.
 
-It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.
+> [ZNC](https://wiki.znc.in/ZNC) is an an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-docker: Docker:](https://wiki.znc.in/ZNC){: .header-icons } | [:octicons-link-16: Docs](https://wiki.znc.in/ZNC){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/linuxserver/docker-znc){: .header-icons } | [:material-docker: Docker:](https://hub.docker.com/r/linuxserver/znc){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/images/docker-znc){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/znc/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-znc
 ```
 
-### 2. URL
+## Usage
 
-- To access ZNC, visit <https://znc.iYOUR_DOMAIN_NAMEi>
+Visit <https://znc.iYOUR_DOMAIN_NAMEi>.
 
 Default user/password: admin/admin
 

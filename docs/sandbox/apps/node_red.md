@@ -14,24 +14,29 @@ tags:
 
 [Node Red](https://www.nodered.org/) is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things.
 
-!!! warning
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.nodered.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.nodered.org/docs/user-guide){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/node-red/node-red){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nodered/node-red){: .header-icons }|
+[:material-bookshelf:**Manual**](https://www.nodered.org/docs/user-guide){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/nodered/node-red/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-node-red
 ```
 
-### 2. URL
+## Usage
 
-- To access node-red, visit <https://node-red.iYOUR_DOMAIN_NAMEi>
+Visit <https://node-red.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Addons and/or plugins can be installed to Node Red to add functionality. In Node Red they are called palettes. To install a palette, go to the menu in the upper right corner (the hamburger, 3 little horizontal lines), select `Manage palette`, then `Install`. You can search for a palette by name, or you can install a palette by pasting the URL of the palette into the `Install` tab.
 

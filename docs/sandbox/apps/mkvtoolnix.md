@@ -14,21 +14,27 @@ tags:
 
 [MKVToolNix](https://mkvtoolnix.download) is a set of tools to create, alter and inspect Matroska files.
 
-You can use MKVToolNix to create, split, edit, mux, demux, merge, extract or inspect Matroska files. The program will also work with other video formats (AVI, MPEG, MP4, MPEG, Ogg/OGM, RealVideo, MPEG1/2, h264/AVC, Dirac, VC1) including some video codecs (such as VP9 video codec support - reading from IVF/Matroska/WebM files, extract to IVF files). Audio formats (AAC, FLAC, MP2, MP3, (E)AC3, DTS/DTS-HD, Vorbis, RealAudio) and also most subtitle formats (SRT, PGS/SUP, VobSub, ASS, SSA, etc.).
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://mkvtoolnix.download){: .header-icons } | [:octicons-link-16: Docs](https://mkvtoolnix.download/docs.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-mkvtoolnix){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/mkvtoolnix){: .header-icons }|
+[:material-bookshelf:**Manual**](https://mkvtoolnix.download/docs.html){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/mkvtoolnix/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-mkvtoolnix
 ```
 
-### 2. URL
+## Usage
 
-- To access MKVToolNix, visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>
+Visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -14,24 +14,27 @@ tags:
 
 [Mealie](https://mealie.io/) is aan intuitive and easy to use recipe management app. It's designed to make your life easier by being the best recipes management experience on the web and providing you with an easy to use interface to manage your growing collection of recipes.
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You have to log into the role itself.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://mealie.io/){: .header-icons } | [:octicons-link-16: Docs](https://docs.mealie.io/documentation/getting-started/introduction/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/mealie-recipes/mealie/){: .header-icons } | [:material-docker: Docker](https://ghcr.io/mealie-recipes/mealie){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.mealie.io/documentation/getting-started/introduction){ .md-button .md-button--stretch }
 
-Recommended install types: Saltbox, Core
+[:fontawesome-brands-github:**Releases**](https://github.com/-/mealie-recipes/packages/container/package/mealie){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-mealie
 ```
 
-### 2. URL
+## Usage
 
-- To access Mealie, visit <https://mealie.iYOUR_DOMAIN_NAMEi>
+Visit <https://mealie.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

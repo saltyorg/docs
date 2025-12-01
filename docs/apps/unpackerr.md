@@ -10,19 +10,29 @@ tags:
 
 ## Overview
 
-[Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
+[hotio/unpackerr](https://hotio.dev/containers/unpackerr) is a Docker container image for Unpackerr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/davidnewhall/unpackerr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/davidnewhall/unpackerr/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/davidnewhall/unpackerr/){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/unpackerr){: .header-icons }|
+> [Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/unpackerr/pkgs/container/unpackerr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install unpackerr
 ```
 
-### 2. Setup
+## Basics
 
 - [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons }
 

@@ -14,21 +14,29 @@ tags:
 
 [Yacht](https://yacht.sh/) is a web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://yacht.sh/){: .header-icons } | [:octicons-link-16: Docs](https://yacht.sh/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/SelfhostedPro/Yacht){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/selfhostedpro/yacht){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://yacht.sh/docs){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/selfhostedpro/yacht/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-yacht
 ```
 
-### 2. URL
+## Usage
 
-- To access Yacht, visit <https://yacht.iYOUR_DOMAIN_NAMEi>
+Visit <https://yacht.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The default login is the email accounts.yml and the password is `pass`
 

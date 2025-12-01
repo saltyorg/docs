@@ -14,21 +14,29 @@ tags:
 
 [Funkwhale](https://funkwhale.audio/) is a modern, self-hosted, free and open-source music server.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://funkwhale.audio/){: .header-icons } | [:octicons-link-16: Docs](https://docs.funkwhale.audio/){: .header-icons } | [:octicons-mark-github-16: Github](https://dev.funkwhale.audio/funkwhale){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/funkwhale/all-in-one){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.funkwhale.audio){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/funkwhale/all-in-one/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-funkwhale
 ```
 
-### 2. URL
+## Usage
 
-- To access Funkwhale, visit <https://funkwhale.iYOUR_DOMAIN_NAMEi>
+Visit <https://funkwhale.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - First create the superuser
 

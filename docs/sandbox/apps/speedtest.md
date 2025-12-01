@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[Speedtest](https://github.com/librespeed/speedtest)  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
+[linuxserver/librespeed](https://docs.linuxserver.io/images/docker-librespeed) is a Docker container image for Speedtest.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/librespeed/speedtest){: .header-icons } | [:octicons-link-16: Docs](https://github.com/librespeed/speedtest){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/librespeed/speedtest){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/librespeed){: .header-icons }|
+> [Speedtest](https://github.com/librespeed/speedtest)  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers. [:material-bookshelf:](https://github.com/librespeed/speedtest)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/librespeed/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-speedtest
 ```
 
-### 2. URL
+## Usage
 
-- To access Speedtest, visit <https://speedtest.iYOUR_DOMAIN_NAMEi>
+Visit <https://speedtest.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
 

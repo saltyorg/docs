@@ -17,17 +17,25 @@ saltbox_automation:
 
 [btop](https://github.com/aristocratos/btop) is a resource monitor that shows usage and stats for processor, memory, disks, network and processes. It's a modern replacement for htop/top with a beautiful interface and extensive customization options.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/aristocratos/btop){: .header-icons } | [:octicons-link-16: Docs](https://github.com/aristocratos/btop#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/aristocratos/btop){: .header-icons } | :material-docker: Docker |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/aristocratos/btop#readme){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install btop
 ```
 
-### 2. Usage
+## Usage
 
 After installation, launch btop from the command line:
 

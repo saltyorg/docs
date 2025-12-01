@@ -8,23 +8,27 @@ tags:
   - headless
 ---
 
-# Chrome
+# Alpine Chrome
 
 ## Overview
 
-Headless container running Google Chrome. Useful for testing, filling out forms, web crawling, getting webpage screenshots, etc.
+[Alpine Chrome](https://hub.docker.com/r/zenika/alpine-chrome) is a Docker image repository that provides a headless Chrome/Chromium browser built on the lightweight Alpine Linux base image.
 
-This was created for use with Hoarder which calls for a specific version (123)
+> [Headless Chromes](https://developer.chrome.com/blog/headless-chrome) is a way to run the Chrome browser in a headless environment.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Github Repo**](https://github.com/jlandure/alpine-chrome/blob/master/Dockerfile){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-[:material-git:**Google Artifact**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome/sha256:e38563d4475a3d791e986500a2e4125c9afd13798067138881cf770b1f6f3980){ .md-button .md-button--stretch }
+[:simple-googlecloud:**Releases**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
-This role is not exposed by default.
+---
+
+This was created for use with Hoarder which calls for a specific version (123)
 
 ## Deployment
 

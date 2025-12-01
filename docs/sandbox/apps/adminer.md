@@ -14,24 +14,29 @@ tags:
 
 [Adminer](https://www.adminer.org/) Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Adminer is available for MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and others via plugin.
 
-!!! info "Protected Role"
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.adminer.org/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/vrana/adminer/#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/vrana/adminer){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/adminer/){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/vrana/adminer/#readme){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/adminer//tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-adminer
 ```
 
-### 2. URL
+## Usage
 
-- To access Adminer, visit <https://adminer.iYOUR_DOMAIN_NAMEi>
+Visit <https://adminer.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login for [MariaDB](../../apps/mariadb.md)
 

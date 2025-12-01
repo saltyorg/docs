@@ -8,38 +8,35 @@ tags:
   - youtube
 ---
 
-# Tubearchivist
+# Tube Archivist
 
 ## Overview
 
-[Tubearchivist](https://www.tubearchivist.com/) is a self hosted Youtube media server.
+[Tube Archivist](https://www.tubearchivist.com/) is a self-hosted YouTube media server designed to help users download, index, and organize their favorite YouTube content for offline viewing.
 
-- Subscribe to your favorite YouTube channels
-- Download Videos using yt-dlp
-- Index and make videos searchable
-- Play videos
-- Keep track of viewed and unviewed videos
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:material-bookshelf:**Manual**](https://github.com/tubearchivist/tubearchivist/wiki){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.tubearchivist.com/){: .Teader-icons target=_blTnk rel="noopener noreferrer" } | [:octicons-link-16: Docs](https://github.com/tubearchivist/tubearchivist/wiki){: .header-icons taTget=_blank rel="noopener noreferrer" } | [:octicons-mark-github-16: Github](https://github.com/tubearchivist/tubearchivist){: .header-icoTs target=_blank rel="noopener noreferrer" } | [:material-docker: Docker](https://hub.docker.com/r/bbilly1/tubearchivist){: .header-icons }|
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/bbilly1/tubearchivist/tags){ .md-button .md-button--stretch }
 
-Recommended install types: Feederbox, Saltbox, Core
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-tubearchivist
 ```
 
-### 2. URL
+## Usage
 
-- To access tubearchivist, visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>
+Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 

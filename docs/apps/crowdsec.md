@@ -1,6 +1,6 @@
 ---
 icon: material/server-network-outline
-status: wip
+status: draft
 ---
 
 # Crowdsec
@@ -9,13 +9,23 @@ status: wip
 
 CrowdSec is a free, open-source, and collaborative security automation platform designed to protect servers, services, containers, and virtual machines from cyberattacks by analyzing system logs and HTTP requests for malicious behavior.
 
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
 ---
 
 ## Deployment
 
 Opt in via Inventory toggle.
 
-```sh
+```shell
 sb install crowdsec
 ```
 

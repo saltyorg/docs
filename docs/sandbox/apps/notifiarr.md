@@ -14,11 +14,35 @@ tags:
 
 [Notifiarr Client](https://notifiarr.com/) is the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/)
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://notifiarr.com/){: .header-icons } | [:octicons-link-16: Docs](https://notifiarr.wiki/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Notifiarr/notifiarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/golift/notifiarr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Setup
+[:material-bookshelf:**Manual**](https://notifiarr.wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/golift/notifiarr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
+
+### Snapshot Feature Support
+
+1. Add the following to your Inventory file to enable Privileged mode for Notifiarr and allow it access to system information
+
+     ```yaml
+     notifiarr_privileged: true
+     ```
+
+2. Run the Notifiarr role:
+
+      ```shell
+      sb install sandbox-notifiarr
+      ```
+
+### API Key
 
 You will need a Notifiarr account api key to use Notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/guest/register){: .header-icons }
 
@@ -35,13 +59,13 @@ Add your API key to the **[Sandbox settings file](../../sandbox/settings.md)**
 
 You also need to define a username and password for the Notifiarr client webui in the [Sandbox settings file](../../sandbox/settings.md). You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
 
-### 2. Installation
+## Deployment
 
 ```shell
 sb install sandbox-notifiarr
 ```
 
-### 3. URL
+## Usage
 
 - The Notifiarr url will only display the app status <https://notifiarr.iYOUR_DOMAIN_NAMEi>
 
@@ -51,22 +75,6 @@ Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more informa
 The role will attempt to configure Sonarr, Radarr, Plex, and Tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
 
 A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on the [TRaSH Guides website](https://trash-guides.info/Guide-Sync/).
-
-## Advanced
-
-### Snapshot Feature Support
-
-1. Add the following to your Inventory file to enable Privileged mode for Notifiarr and allow it access to system information
-
-     ```yaml
-     notifiarr_privileged: true
-     ```
-
-2. Run the Notifiarr role:
-
-      ```shell
-      sb install sandbox-notifiarr
-      ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

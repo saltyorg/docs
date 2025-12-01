@@ -12,28 +12,36 @@ tags:
 
 ## Overview
 
-[Calibre-Web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/) database.
+[linuxserver/calibre-web](https://docs.linuxserver.io/images/docker-calibre-web) is a Docker container image for Calibre-Web.
 
-Calibre-Web allows you to add users, and each user can set up a Kindle email address to have ebooks automatically sent to their Kindle reader or Kindle app. Users can also simply download epub, pdf, or whatever files you have. Requires an existing Calibre library database.
+> [Calibre-Web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/) database. [:material-bookshelf:](https://github.com/janeczku/calibre-web/wiki)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/calibre-web/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 !!! info
     Calibre and Calibre-web do NOT need to be on the same server. But you do need to have a local copy of the Calibre `metadata.db` and a path to the books for calibre-web to operate.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/janeczku/calibre-web){: .header-icons } | [:octicons-link-16: Docs](https://github.com/janeczku/calibre-web/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/janeczku/calibre-web){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/calibre-web){: .header-icons }|
-
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-calibre-web
 ```
 
-### 2. URL
+## Usage
 
-- To access Calibre-Web, visit <https://calibre-web.iYOUR_DOMAIN_NAMEi>
+Visit <https://calibre-web.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default admin login:
 
@@ -70,7 +78,7 @@ Useful docker commands
   docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/calibre-web
   ```
 
-### 4. SK's Calibre-Web Usage Tips
+### SK's Calibre-Web Usage Tips
 
 #### SMTP Email Server Setup
 
@@ -108,7 +116,7 @@ If you (or your users) want to have books sent directly to a Kindle from Calibre
 
 Enjoy!
 
-### 5. Advanced Method of Library Storage
+### Advanced Method of Library Storage
 
 Since only the `metadata.db` file has to be local, you can keep the metadata.db file in `/mnt/local/Media/Books` as **RW** and the actual book files in `teamdrive:Books` as **RO** and mergerfs them together. Use the latest rclone `--vfs-cache-mode=full` and related cloud-seeding settings for your teamdrive mount so that it does not get laggy. Have a script that copies the metadata.db file regularly to the local disk, and leave the books in the cloud.
 

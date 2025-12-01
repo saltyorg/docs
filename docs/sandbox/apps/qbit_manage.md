@@ -12,27 +12,47 @@ tags:
 
 ## Overview
 
-[qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
+[hotio/qbitmanage](https://hotio.dev/containers/qbitmanage) is a Docker container image for qBit Manage.
 
-### Features
+> [qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 
-- Tag torrents based on tracker and then set seed goals/limit upload speed by tag
-- Update categories based on save directory
-- Remove unregistered torrents (delete data & torrent if it is not being cross-seeded, otherwise it will just remove the torrent)
-- Automatically add cross-seed torrents in paused state (*Note: cross-seed now allows for torrent injections directly to qBit, making this feature obsolete*)
-- Recheck paused torrents sorted by lowest size and resume if completed
-- Remove orphaned files from your root directory that are not referenced by qBittorrent
-- Tag any torrents that have no hard links and allows optional cleanup to delete these torrents and contents based on maximum ratio and/or time seeded
-- RecycleBin function to move files into a RecycleBin folder instead of deleting the data directly when deleting a torrent
-- Built-in scheduler to run the script every x minutes (Can use --run command to run without the scheduler)
-- Webhook notifications with Notifiarr and Apprise API integration
-- Web interface for monitoring and management
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:octicons-link-16: Docs](https://github.com/StuffAnThings/qbit_manage/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/StuffAnThings/qbit_manage){: .header-icons } | [:material-docker: Docker](https://hotio.dev/containers/qbitmanage/){: .header-icons } |
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
+
+The following variables are available to set in the sandbox settings.yml file. An explanation of [these settings can be found here](https://github.com/StuffAnThings/qbit_manage/wiki/Docker-Installation).
+
+```yaml
+qbit_manage:
+  qbt_run: "false" # Default is "false"
+  qbt_schedule: "30" # Default is "30"
+  qbt_config: "config.yml" # Default is "config.yml"
+  qbt_logfile: "activity.log" # Default is "activity.log"
+  qbt_cross_seed: "false" # Default is "false"
+  qbt_recheck: "false" # Default is "false"
+  qbt_cat_update: "false" # Default is "false"
+  qbt_tag_update: "false" # Default is "false"
+  qbt_rem_unregistered: "false" # Default is "false"
+  qbt_rem_orphaned: "false" # Default is "false"
+  qbt_tag_nohardlinks: "false" # Default is "false"
+  qbt_skip_recycle: "false" # Default is "false"
+  qbt_dry_run: "true" # Default is "false"
+  qbt_log_level: "INFO" # Default is "INFO"
+  qbt_divider: "=" # Default is "="
+  qbt_width: "100" # Default is "100"
+```
+
+## Deployment
 
 Before installing qBit Manage, you should have a **[qBittorrent](../../apps/qbittorrent.md)** instance running on your local machine.
 
@@ -40,11 +60,11 @@ Before installing qBit Manage, you should have a **[qBittorrent](../../apps/qbit
 sb install sandbox-qbit-manage
 ```
 
-### 2. URL
+## Usage
 
-- To access qBit Manage, visit <https://qbit-manage.iYOUR_DOMAIN_NAMEi>
+Visit <https://qbit-manage.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 After installation has finished, stop the qbit-manage docker container and edit the config file that will have been created at `/opt/qbit-manage/config.yml`
 
@@ -82,30 +102,6 @@ Apply the changes to the sandbox settings file with:
 
 ```shell
 sb install sandbox-qbit-manage
-```
-
-### 4. Configuration
-
-The following variables are available to set in the sandbox settings.yml file. An explanation of [these settings can be found here](https://github.com/StuffAnThings/qbit_manage/wiki/Docker-Installation).
-
-```yaml
-qbit_manage:
-  qbt_run: "false" # Default is "false"
-  qbt_schedule: "30" # Default is "30"
-  qbt_config: "config.yml" # Default is "config.yml"
-  qbt_logfile: "activity.log" # Default is "activity.log"
-  qbt_cross_seed: "false" # Default is "false"
-  qbt_recheck: "false" # Default is "false"
-  qbt_cat_update: "false" # Default is "false"
-  qbt_tag_update: "false" # Default is "false"
-  qbt_rem_unregistered: "false" # Default is "false"
-  qbt_rem_orphaned: "false" # Default is "false"
-  qbt_tag_nohardlinks: "false" # Default is "false"
-  qbt_skip_recycle: "false" # Default is "false"
-  qbt_dry_run: "true" # Default is "false"
-  qbt_log_level: "INFO" # Default is "INFO"
-  qbt_divider: "=" # Default is "="
-  qbt_width: "100" # Default is "100"
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

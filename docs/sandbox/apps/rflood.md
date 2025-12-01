@@ -12,25 +12,31 @@ tags:
 
 ## Overview
 
-[rFlood](https://github.com/jesec/flood) docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
+[hotio/rflood](https://hotio.dev/containers/rflood) is a Docker container image for rFlood.
 
-## Project Information
+> [rFlood](https://github.com/jesec/flood) docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
 
-- [:material-home: rFlood](https://github.com/jesec/flood){: .header-icons }
-- [:octicons-link-16: Docs](https://github.com/jesec/flood/wiki){: .header-icons }
-- [:octicons-mark-github-16: Github rTorrent:](https://github.com/jesec/rtorrent){: .header-icons }
-- [:octicons-mark-github-16: Github Flood:](https://github.com/jesec/flood){: .header-icons }
-- [:material-docker: Docker:](https://hub.docker.com/r/hotio/rflood){: .header-icons }
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/rflood/pkgs/container/rflood){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-rflood
 ```
 
-### 2. URL
+## Usage
 
-- To access rFlood, visit <https://rflood.iYOUR_DOMAIN_NAMEi>
+Visit <https://rflood.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

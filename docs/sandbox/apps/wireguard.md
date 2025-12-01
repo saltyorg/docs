@@ -7,31 +7,39 @@ tags:
   - server
 ---
 
-# Wireguard
+# WireGuard Easy
 
 ## Overview
 
-[Wireguard](https://wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
+[WireGuard Easy](https://wg-easy.github.io/wg-easy/edge/) is a web-based administration interface and orchestrator designed to simplify the deployment and management of WireGuard VPNs.
 
-The Wireguard server is deployed using the [WG-Easy](https://github.com/WeeJeWel/wg-easy) image with a simple Web UI for management.
+> [Wireguard](https://www.wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Wireguard](https://www.wireguard.com/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/WeeJeWel/wg-easy){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/wg-easy/wg-easy){: .header-icons } | [:material-docker: Docker:](https://ghcr.io/wg-easy/wg-easy){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://wg-easy.github.io/wg-easy/edge/guides/setup){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](https://github.com/wg-easy/wg-easy/discussions){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-wireguard
 ```
 
-### 2. URL
+## Usage
 
-- To access Wireguard, visit <https://wireguard.iYOUR_DOMAIN_NAMEi>
+Visit <https://wireguard.iYOUR_DOMAIN_NAMEi>.
 
 The password provisioned is your Saltbox password.
 
-### 3. Setup
+## Basics
 
 - Use the Web UI to configure your clients.
 

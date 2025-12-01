@@ -12,33 +12,29 @@ tags:
 
 [ComiXed](https://github.com/comixed/comixed) is an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
 
-It does the following and more:
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- Scrape metadata for comics from various sources, such as ComicVine.
-- Update the ComicInfo.xml file within each comic with the current metadata.
+[:material-bookshelf:**Manual**](https://github.com/comixed/comixed/wiki){ .md-button .md-button--stretch }
 
-It is NOT:
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/comixed/comixed/tags){ .md-button .md-button--stretch }
 
-- A comic reading application.
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-!!!note
-    By default, the role is protected behind your Authelia/SSO middleware.
+</div>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/comixed/comixed){: .header-icons } | [:octicons-link-16: Docs](https://github.com/comixed/comixed/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/comixed/comixed){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/comixed/comixed){: .header-icons }|
+---
 
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-comixed
 ```
 
-### 2. URL
+## Usage
 
-- To access ComiXed, visit <https://comixed.iYOUR_DOMAIN_NAMEi>
+Visit <https://comixed.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 !!! info
     📢 ComiXed has 2 default users created when you run the role. It is a good idea to change the passwords for each account from the default asap.

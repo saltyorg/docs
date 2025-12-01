@@ -13,11 +13,19 @@ saltbox_automation:
 
 ## Overview
 
-[Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
+[Cloudplow](https://github.com/l3uddz/cloudplow) is an automatic rclone remote uploader designed to transfer files from local storage to cloud storage providers, such as Google Drive, with support for multiple remote/folder pairings.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/l3uddz/cloudplow){: .header-icons } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/cloudplow){: .header-icons } | :material-docker: Docker |
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 ## Remote Uploader Function
 
@@ -54,7 +62,7 @@ Note: Config changes require a restart: `sudo systemctl restart saltbox_managed_
 
 ### Editing
 
-Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
+Edit in your favorite code editor (with json highlighting) or even a unix editor like nano.
 
 ```shell
 nano /opt/cloudplow/config.json

@@ -14,19 +14,27 @@ tags:
 
 [Miniflux](https://miniflux.app) is a minimalist and opinionated feed reader.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://miniflux.app){: .header-icons } | [:octicons-link-16: Docs](https://github.com/miniflux/v2){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/miniflux/v2){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/miniflux/miniflux){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/miniflux/v2){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/miniflux/miniflux/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-miniflux
 ```
 
-### 2. URL
+## Usage
 
-- To access miniflux, visit <https://miniflux.iYOUR_DOMAIN_NAMEi>
+Visit <https://miniflux.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

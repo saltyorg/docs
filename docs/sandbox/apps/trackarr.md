@@ -12,35 +12,40 @@ tags:
 
 ## Overview
 
-[Trackarr](https://gitlab.com/cloudb0x/trackarr) monitors tracker announce IRC channel, parses the announcements, and forwards those announcements to ARR PVRs (eg Sonarr/Radarr).
+[Trackarr](https://gitlab.com/cloudb0x/trackarr) is an open-source tool that listens to IRC announce channels from torrent trackers, parses new release announcements, and forwards those announcements to automation apps like Sonarr, Radarr, or Lidarr.
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will have to log into the app itself (basic auth).
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://gitlab.com/cloudb0x/trackarr){: .header-icons } | [:octicons-link-16: Docs](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){: .header-icons } | [:octicons-mark-github-16: Gitlab](https://gitlab.com/cloudb0x/trackarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/cloudb0x/trackarr){: .header-icons }|
+[:material-bookshelf:**Manual**](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/cloudb0x/trackarr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-trackarr
 ```
 
-### 2. Setup
+## Usage
 
-- Default login:
+Visit <https://trackarr.iYOUR_DOMAIN_NAMEi>.
 
-  ```yaml
-  Username: "your user from accounts.yml"
-  Password: your_normal_password
-  ```
+## Basics
+
+Default login:
+
+```yaml
+Username: "your user from accounts.yml"
+Password: your_normal_password
+```
 
 The `trackarr` role will provision a config file with your pvr and server info. After you run the role, you will need to set up your config. [Here](https://gitlab.com/cloudb0x/trackarr/-/wikis/Configuration/Sample) is an example config from the wiki that has a broader example of possible options and tracker configuration.
-
-### 3. URL
-
-- To access Trackarr, visit <https://trackarr.iYOUR_DOMAIN_NAMEi>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

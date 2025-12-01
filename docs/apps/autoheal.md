@@ -12,19 +12,27 @@ tags:
 
 ## Overview
 
-[Autoheal](https://github.com/willfarrell/docker-autoheal) monitors and restarts unhealthy Docker containers. It watches for containers that have a `HEALTHCHECK` defined and automatically restarts them when they become unhealthy, helping maintain service availability without manual intervention.
+[Autoheal](https://github.com/willfarrell/docker-autoheal) is a Docker container designed to monitor and automatically restart unhealthy Docker containers.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/willfarrell/docker-autoheal){: .header-icons } | [:octicons-link-16: Docs](https://github.com/willfarrell/docker-autoheal#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/willfarrell/docker-autoheal){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/willfarrell/autoheal){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/willfarrell/docker-autoheal#readme){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/willfarrell/autoheal/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install autoheal
 ```
 
-### 2. Setup
+## Usage
 
 Autoheal works automatically by monitoring Docker containers with health checks. All Saltbox-deployed containers are configured with the appropriate `autoheal` label, so no additional configuration is required after installation.
 

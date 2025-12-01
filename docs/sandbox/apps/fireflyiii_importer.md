@@ -10,43 +10,34 @@ tags:
 
 # Firefly III Data Importer
 
-[TOC]
-
 ## Overview
 
-[Firefly III](https://www.firefly-iii.org) is a (self-hosted) manager for your personal finances. The data importer is built to help you import transactions into Firefly III. It is separated from Firefly III for security and maintenance reasons.
+[Firefly III Data Importer](https://www.firefly-iii.org) is a tool designed to import financial data into the Firefly III personal finance manager.
 
-The data importer does not connect to your bank directly. Instead, it uses Nordigen and SaltEdge to connect to over 6000 banks worldwide. These services are free for Firefly III users, but require registration. Keep in mind these services have their own privacy and data usage policies.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-The data importer can import CSV files you've downloaded from your bank.
+[:material-bookshelf:**Manual**](https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data){ .md-button .md-button--stretch }
 
-You can run the data importer once, for a bulk import. You can also run it regularly to keep up with new transactions.
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/fireflyiii/data-importer/tags){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://docs.firefly-iii.org/explanation/data-importer/about/introduction/){: .header-icons } | [:octicons-link-16: Docs](https://docs.firefly-iii.org/explanation/data-importer/about/introduction/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/firefly-iii/data-importer){: .header-icons } | [:material-docker: Docker](hhttps://docs.firefly-iii.org/how-to/data-importer/installation/docker/){: .header-icons }|
+[:fontawesome-brands-github:**Community**](https://github.com/orgs/firefly-iii/discussions){ .md-button .md-button--stretch }
 
-## 1. Installation
+</div>
 
-```shell
-sb install sandbox-fireflyiii_importer
-```
+---
 
-## 2. URL
+## Configuration
 
-- To access the Firefly III Data Importer, visit <https://fireflyiii-importer.iYOUR_DOMAIN_NAMEi>
+### Connection To Firefly III
 
-## 3. Setup
-
-### 3.1 Connection To Firefly III
 The Required variables that should be defined in [inventory](../../saltbox/inventory/index.md):
 
 To authenticate the Data Importer to Firefly III you require to use either:
 
-- [Access Token](#311-access-token)
-- [Client ID](#312-client-id)
+- [Access Token](#access-token)
+- [Client ID](#client-id)
 
-#### 3.1.1 Access Token
+#### Access Token
 
 ```yaml title="Firefly III Data Importer Access Token Settings"
 fireflyiii_importer_docker_envs_custom:
@@ -55,7 +46,7 @@ fireflyiii_importer_docker_envs_custom:
 
 1. Your access token from your instance of Firefly III | Options | Profile | OAuth | Personal Access Tokens | Create New Token.
 
-#### 3.1.2 Client ID
+#### Client ID
 
 ```yaml title="Firefly III Data Importer Client ID Settings"
 fireflyiii_importer_docker_envs_custom:
@@ -65,23 +56,23 @@ fireflyiii_importer_docker_envs_custom:
 1. Your client id from your instance of Firefly III | Options | Profile | OAuth | OAuth Clients | Create New Client.
 > Note: Your require to leave Confidential unticked
 
-## 4. Import data
+## Import data
 
 For the following methods, your data need to be formatted in CSV.
 
-### 4.1 Web import
+### Web import
 
 You can refer to the following documentation to execute import from the server: [web import](https://docs.firefly-iii.org/how-to/data-importer/import/csv/)
 
-### 4.2 Server import
+### Server import
 
 You can refer to the following documentation to execute import from the server: [CLI import](https://docs.firefly-iii.org/how-to/data-importer/advanced/cli/)
 
-## 5. Additional Settings
+## Additional Settings
 
 > **Note: For all available settings please refer to the Firefly III Data Importer [example env](https://raw.githubusercontent.com/firefly-iii/docker/main/docker-compose-importer.yml)**
 
-### 5.1 Email Notifications
+### Email Notifications
 To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
 
 ```yaml title="Firefly III Data Importer Email Settings"
@@ -102,7 +93,15 @@ MAIN_ENCRYPTION: ""  # (7)!
 6. Replace `""` with your email password if necessary.
 7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
 
-Redeploy the Firefly III Importer Role role to apply the above changes.
+## Deployment
+
+```shell
+sb install sandbox-fireflyiii_importer
+```
+
+## Usage
+
+Visit <https://fireflyiii-importer.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

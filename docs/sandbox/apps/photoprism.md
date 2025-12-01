@@ -14,24 +14,29 @@ tags:
 
 [Photoprism®](https://photoprism.app/) is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself. Note: This is not a multi-user app.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://photoprism.app/){: .header-icons } | [:octicons-link-16: Docs](https://docs.photoprism.app/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/photoprism/photoprism){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/photoprism/photoprism){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.photoprism.app){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/photoprism/photoprism/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-photoprism
 ```
 
-### 2. URL
+## Usage
 
-- To access Photoprism, visit <https://photoprism.iYOUR_DOMAIN_NAMEi>
+Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 

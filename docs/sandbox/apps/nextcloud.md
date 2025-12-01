@@ -14,19 +14,27 @@ tags:
 
 [Nextcloud](https://nextcloud.com/) is safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://nextcloud.com/){: .header-icons } | [:octicons-link-16: Docs](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nextcloud/docker){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/nextcloud){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.nextcloud.com/server/latest/admin_manual/contents.html){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/nextcloud/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-nextcloud
 ```
 
-### 2. URL
+## Usage
 
-- To access Nextcloud, visit <https://nextcloud.iYOUR_DOMAIN_NAMEi>
+Visit <https://nextcloud.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -14,23 +14,29 @@ tags:
 
 [GoAccess](https://goaccess.io/) is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.
 
-It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://goaccess.io/){: .header-icons } | [:octicons-link-16: Docs](https://goaccess.io/man){: .header-icons } | [:octicons-mark-github-16: Github](https://goaccess.io/github){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gregyankovoy/goaccess){: .header-icons }|
+[:material-bookshelf:**Manual**](https://goaccess.io/man){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gregyankovoy/goaccess/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-goaccess
 ```
 
-### 2. URL
+## Usage
 
-- To access GoAccess, visit <https://goaccess.iYOUR_DOMAIN_NAMEi>
+Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

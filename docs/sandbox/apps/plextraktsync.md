@@ -7,15 +7,13 @@ tags:
   - trakt.tv
 ---
 
-# PlexTraktSync
+# Plex-Trakt-Sync
 
 ## Overview
 
-Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media Server. It requires a trakt.tv account but no Plex premium and no Trakt VIP subscriptions, unlike the Plex app provided by Trakt.
+[Plex-Trakt-Sync](https://github.com/Taxel/PlexTraktSync) is a two-way synchronization tool between trakt.tv and Plex Media Server, allowing users to sync media collections, ratings, watched status, and watchlists without requiring a Plex Pass or Trakt VIP subscription.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://github.com/Taxel/PlexTraktSync){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
@@ -33,42 +31,30 @@ Self-hosted application that adds a two-way-sync between trakt.tv and Plex Media
 sb install sandbox-plextraktsync
 ```
 
-## Configuration
+## Usage
+
+```shell
+docker exec plextraktsync plextraktsync --help
+```
+
+Once linked to a Trakt.tv account, the selected Plex user's streaming activity is automatically scrobbled.
+
+## Basics
 
 Sync preferences are available to customize in `/opt/plextraktsync/config.yml`.
 
-The following command will launch an interactive script prompting you for missing credentials (use this to set up Trakt.tv):
+The following command will launch an interactive script prompting you for missing credentials (use this to link Trakt.tv):
 
 ```shell
 docker exec -it plextraktsync plextraktsync login
 ```
 
-???+ info "Plex"
+### Reset Plex Settings
 
-    The target Plex server is initially set to your main Plex Saltbox instance using the owner account. To reset these credentials:
-
-    ```shell
-    docker exec -it plextraktsync plextraktsync plex-login
-    ```
-
-## Usage
-
-### Daemon
-
-Once configured, the selected Plex user's streaming activity is automatically scrobbled.
-
-### CLI
-
-To perform a one-time sync of the data you have specified in the configuration file:
+The target Plex server is initially set to your main Plex Saltbox instance using the owner account. To reset these credentials:
 
 ```shell
-docker exec plextraktsync plextraktsync sync
-```
-
-To get a list of available commands:
-
-```shell
-docker exec plextraktsync plextraktsync --help
+docker exec -it plextraktsync plextraktsync plex-login
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

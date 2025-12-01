@@ -14,24 +14,29 @@ tags:
 
 [vaultwarden](https://github.com/dani-garcia/vaultwarden) is an alternative implementation of the Bitwarden server API written in Rust and compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.
 
-!!! note
-      📢 This project was known as Bitwarden_RS and has been renamed to separate itself from the official Bitwarden server in the hopes of avoiding confusion and trademark/branding issues.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/dani-garcia/vaultwarden){: .header-icons } | [:octicons-link-16: Docs](https://github.com/dani-garcia/vaultwarden/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/dani-garcia/vaultwarden){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/vaultwarden/server){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/dani-garcia/vaultwarden/wiki){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/vaultwarden/server/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-vaultwarden
 ```
 
-### 2. URL
+## Usage
 
-- To access vaultwarden, visit <https://vaultwarden.iYOUR_DOMAIN_NAMEi>
+Visit <https://vaultwarden.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
   1. Visit the vaultwarden site at <https://vaultwarden.iYOUR_DOMAIN_NAMEi>
 

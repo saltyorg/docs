@@ -14,37 +14,29 @@ tags:
 
 [Immich](https://immich.app/) is a self-hosted photo and video backup tool, similar to google photos and apple photos.
 
-### Features
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- Bulk Upload (Using the CLI)
-- Facial Recognition
-- Hardware Transcoding (Experimental)
-- Oauth and/or password login
-- Libraries
-- Mobile App
-- Partner Sharing
-- Reverse Geocoding
-- Smart Search
-- XMP Sidecars
+[:material-bookshelf:**Manual**](https://immich.app/docs/overview/introduction){ .md-button .md-button--stretch }
 
-!!! info
-    By default, Immich is NOT protected behind your Authelia/SSO middleware. You have to create a user with an email and password for Immich upon start up. Its recommended that you use the email and password you set up upon instalation for consistencies sake.
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://immich.app/){: .header-icons } | [:octicons-link-16: Docs](https://immich.app/docs/overview/introduction){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/immich-app/immich){: .header-icons }|
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-immich
 ```
 
-### 2. URL
+## Usage
 
-- To access Immich, visit <https://immich.iYOUR_DOMAIN_NAMEi>
+Visit <https://immich.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 !!! info
     📢 Again, no default user is configured until you run through the setup screen, so you would ideally run through setup as soon as immich is deployed to secure the site. It is not behind authelia by default.

@@ -10,11 +10,19 @@ tags:
 
 ## Overview
 
-[qBittorrent](https://www.qbittorrent.org/) is a free, open-source, cross-platform BitTorrent client written in C++ and Qt, designed as a reliable and ad-free alternative to other clients like µTorrent.
+[saltydk/docker-qbittorrent](https://github.com/saltydk/docker-qbittorrent) is a Docker container image for qBittorrent.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.qbittorrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/qbittorrent/qBittorrent/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/qbittorrent/qBittorrent){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/saltydk/qbittorrent){: .header-icons }|
+> [qBittorrent](https://www.qbittorrent.org/) is a free, open-source, cross-platform BitTorrent client, designed as a reliable and ad-free alternative to other clients like µTorrent.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/qbittorrent/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/ugfKXpFND8){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -52,13 +60,13 @@ tags:
 
 ## Deployment
 
-```sh
+```shell
 sb install qbittorrent
 ```
 
 ## Usage
 
-To access qBittorrent, visit <https://qbittorrent.iYOUR_DOMAIN_NAMEi>
+Visit <https://qbittorrent.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

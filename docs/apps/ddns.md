@@ -15,17 +15,19 @@ tags:
 
 A Saltbox-specific Dynamic DNS service that automatically manages DNS records with Cloudflare based on Traefik routes. This container monitors Traefik's API for active routes and automatically creates or updates corresponding DNS records in Cloudflare, supporting both IPv4 and IPv6.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/saltyorg/saltbox){: .header-icons } | [:octicons-link-16: Docs](https://docs.saltbox.dev){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/saltyorg/saltbox){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/saltydk/dns){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.saltbox.dev){ .md-button .md-button--stretch }
 
-```shell
-sb install ddns
-```
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/dns/tags){ .md-button .md-button--stretch }
 
-### 2. Setup
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+### Configuration
 
 #### Prerequisites
 
@@ -33,9 +35,6 @@ sb install ddns
 - IPv4 or IPv6 DNS management must be enabled in `adv_settings.yml`
 - Valid Cloudflare API credentials must be configured in `accounts.yml`
 
-#### Configuration
-
-The DDNS container automatically monitors Traefik's API endpoint for active routes and creates or updates corresponding DNS records in Cloudflare based on your configured IP version preferences.
 
 #### Custom URLs
 
@@ -50,6 +49,16 @@ ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 - This service only works with Cloudflare DNS
 - The container requires access to Traefik's API to discover routes
 - DNS records are automatically managed based on active Traefik routes
+
+## Deployment
+
+```shell
+sb install ddns
+```
+
+## Usage
+
+The DDNS container automatically monitors Traefik's API endpoint for active routes and creates or updates corresponding DNS records in Cloudflare based on your configured IP version preferences.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

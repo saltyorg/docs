@@ -10,21 +10,31 @@ tags:
 
 ## Overview
 
-[Deluge](https://deluge-torrent.org/) is a torrent client that can be used as an alternative to qbittorrent.
+[linuxserver/deluge](https://docs.linuxserver.io/images/docker-deluge) is a Docker container image for Deluge.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://deluge-torrent.org/){: .header-icons } | [:octicons-link-16: Docs](https://dev.deluge-torrent.org/wiki/UserGuide){: .header-icons } | [:octicons-mark-github-16: Github](https://git.deluge-torrent.org/deluge){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/linuxserver/deluge){: .header-icons }|
+> [Deluge](https://deluge-torrent.org/) is a torrent client that can be used as an alternative to qbittorrent. [:material-bookshelf:](https://deluge-torrent.org/userguide)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/deluge/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install deluge
 ```
 
-### 2. URL
+## Usage
 
-- To access Deluge, visit <https://deluge.iYOUR_DOMAIN_NAMEi>
+Visit <https://deluge.iYOUR_DOMAIN_NAMEi>.
 
 !!! info
     **default login**
@@ -34,7 +44,7 @@ sb install deluge
     password: deluge
 ```
 
-### 3. Setup
+## Basics
 
 - Change login password.
 
@@ -55,7 +65,7 @@ sb install deluge
       `/mnt/unionfs/downloads/torrents/deluge/completed` <br />
       Also, make sure that the Create torrent name sub-folder setting is checked.
 
-### 4. Adding to Sonarr/Radarr
+### Adding to Sonarr/Radarr
 
 To add Deluge as a download client in Sonarr/Radarr use the following settings. Both are able to remove completed torrents after they have finished seeding.
 

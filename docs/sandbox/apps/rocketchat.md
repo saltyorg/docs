@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -12,23 +13,29 @@ tags:
 
 ## Overview
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
 [rocketchat](https://rocketchat.url) is a...
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://rocketchat.url){: .header-icons } | [:octicons-link-16: Docs](https://rocketchat.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/rocketchat/rocketchat){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/rocketchat/rocketchat){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://rocketchat.docs.url){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/rocketchat/rocketchat/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-rocketchat
 ```
 
-### 2. URL
+## Usage
 
-- To access rocketchat, visit <https://rocketchat.iYOUR_DOMAIN_NAMEi>
+Visit <https://rocketchat.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -15,25 +15,31 @@ saltbox_automation:
 
 ## Overview
 
-[Varken](https://github.com/Boerderij/Varken) is Dutch for **PIG**. PIG is an Acronym for **P**lex/**I**nfluxDB/**G**rafana
+[Varken](https://github.com/thezak48/Varken) is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend.
 
-Varken is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Boerderij/Varken){: .header-icons } | [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Boerderij/Varken){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/boerderij/varken){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/thezak48/Varken/pkgs/container/varken){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-varken
 ```
 
-### 2. URL
+## Usage
 
-- To access the Varken dashboard, visit <https://grafana.iYOUR_DOMAIN_NAMEi>
+Visit <https://grafana.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 1. Run the Saltbox varken role to install varken/influxdb/telegraf/grafana:
 

@@ -12,21 +12,31 @@ tags:
 
 ## Overview
 
-[changedetection](https://github.com/dgtlmoon/changedetection.io) is a tool for tracking changes to websites.
+[linuxserver/changedetection.io](https://docs.linuxserver.io/images/docker-changedetection.io) is a Docker container image for changedetection.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://changedetection.io){: .header-icons } | [:octicons-link-16: Docs](https://github.com/dgtlmoon/changedetection.io){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/dgtlmoon/changedetection.io){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/changedetection.io){: .header-icons }|
+> [changedetection.io](https://github.com/dgtlmoon/changedetection.io) is a tool for tracking changes to websites. [:material-bookshelf:]
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/changedetection.io/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-changedetection
 ```
 
-### 2. URL
+## Usage
 
-- To access changedetection, visit <https://changedetection.iYOUR_DOMAIN_NAMEi>
+Visit <https://changedetection.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

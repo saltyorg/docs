@@ -11,21 +11,33 @@ tags:
 
 ## Overview
 
-[Organizr](https://organizr.app/) (by CauseFX) is a web-based, HTPC server organizer, that allows you to manage various tools and programs within tabs. Also supports user management, allowing for non admin users or guests to access certain web-pages via Organizr, even if it is behind HTTP authentication. This guide is to help you get Organizr setup and running by no means is this a complete guide to Organizr as you'll see the depth of it is pretty vast and there are plenty of customizations available to you at every turn.
+[Organizr](https://organizr.app) is a free, open-source, web-based dashboard designed to organize and manage multiple server services, particularly for home theater PCs (HTPCs) and homelabs.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://organizr.app){: .header-icons } | [:octicons-link-16: Docs](https://organizr.app/howtos/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/causefx/Organizr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/organizr/organizr){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.organizr.app){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/organizr/organizr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://organizr.app/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
+## Deployment
+
+```shell
+sb install organizr
+```
+
 ## Usage
 
-To access Organizr, visit <https://organizr.iYOUR_DOMAIN_NAMEi>
+Visit <https://organizr.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 
-### 3. Initial Setup
+### Initial Setup
 
 1. The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.
 In the `Install Type` section select `Personal`
@@ -57,7 +69,7 @@ Note: it is suggested to enter your `plex username and password`
 
    ![Main Setup-Database](https://i.imgur.com/wbOhf12.png)
 
-### 4. Settings
+### Settings
 
 1. You will now be taken to the main Organizr Page and asked to login with the credentials you created in the previous steps.
 

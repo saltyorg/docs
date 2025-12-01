@@ -12,21 +12,29 @@ tags:
 
 [Grafana](https://grafana.com/grafana/) allows you to query, visualize, alert on, and understand your data no matter where it’s stored. With Grafana you can create, explore and share all of your data through beautiful, flexible dashboards.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://grafana.com/grafana/){: .header-icons } | [:octicons-link-16: Docs](https://grafana.com/docs/grafana/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/grafana/grafana){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/grafana/grafana){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://grafana.com/docs/grafana){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/grafana/grafana/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install grafana
 ```
 
-### 2. URL
+## Usage
 
-- To access Grafana, visit <https://grafana.iYOUR_DOMAIN_NAMEi>
+Visit <https://grafana.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

@@ -14,30 +14,29 @@ tags:
 
 [Cherry](https://cherry.haishan.me/) is a bookmark service that is open source.
 
-- The code of Cherry service and the browser extension are all available on GitHub.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- It's self-hostable. Your data in in your own hands. Using SQLite, management and backup is a breeze.
+[:material-bookshelf:**Manual**](https://cherry.haishan.me/docs/intro){ .md-button .md-button--stretch }
 
-- It has a simple UI. But you got all the features you want for a bookmark service. Tags, groups, full text search and browser extensions.
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://cherry.haishan.me/){: .header-icons } | [:octicons-link-16: Docs](https://cherry.haishan.me/docs/intro){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/haishanh/cherry){: .header-icons } |
+</div>
 
-### 1. Installation
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-cherry
 ```
 
-### 2. URL
+## Usage
 
-- To access Cherry, visit <https://cherry.iYOUR_DOMAIN_NAMEi>
+Visit <https://cherry.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 

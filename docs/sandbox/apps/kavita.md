@@ -14,19 +14,27 @@ tags:
 
 [Kavita](http://www.kavitareader.com/) is a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://www.kavitareader.com/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.kavitareader.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Kareadita/Kavita){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/kizaing/kavita){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://wiki.kavitareader.com){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kizaing/kavita/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-kavita
 ```
 
-### 2. URL
+## Usage
 
-- To access Kavita, visit <https://kavita.iYOUR_DOMAIN_NAMEi>
+Visit <https://kavita.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

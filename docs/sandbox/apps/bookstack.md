@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[BookStack](https://www.bookstackapp.com/) is a simple, self-hosted, easy-to-use platform for organising and storing information.
+[linuxserver/bookstack](https://docs.linuxserver.io/images/docker-bookstack) is a Docker container image for BookStack.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.bookstackapp.com/){: .header-icons } | [:octicons-link-16: Docs](https://www.bookstackapp.com/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/BookStackApp/BookStack){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/bookstack){: .header-icons }|
+> [BookStack](https://www.bookstackapp.com/) is a simple, self-hosted, easy-to-use platform for organising and storing information. [:material-bookshelf:](https://www.bookstackapp.com/docs)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/bookstack/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-bookstack
 ```
 
-### 2. URL
+## Usage
 
-- To access BookStack, visit <https://bookstack.iYOUR_DOMAIN_NAMEi>
+Visit <https://bookstack.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Log in using the default admin details `admin@admin.com` with a password of `password`. You should change these details **immediately** after logging in for the first time.
 

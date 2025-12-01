@@ -10,23 +10,31 @@ tags:
 
 ## Overview
 
-[Tautulli](http://tautulli.com/) is a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
+[hotio/tautulli](https://hotio.dev/containers/tautulli) is a Docker container image for Tautulli.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](http://tautulli.com){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Tautulli/Tautulli/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Tautulli/Tautulli){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/tautulli){: .header-icons }|
+> [Tautulli](http://tautulli.com/) is a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/tautulli/pkgs/container/tautulli){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install tautulli
 ```
 
 ## Usage
 
-To access Tautulli, visit <https://tautulli.iYOUR_DOMAIN_NAMEi>
+Visit <https://tautulli.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

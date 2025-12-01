@@ -14,24 +14,27 @@ tags:
 
 [vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:
 
-- Hourly Statistics Chart (using Google Charts)
-- Daily & Monthly Statistics Overview
-- Top 10 Day Statistics
-- Automatically populated interface selection
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons } | [:octicons-link-16: Docs](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/alexandermarston/vnstat-dashboard){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/amarston/vnstat-dashboard){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/amarston/vnstat-dashboard/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-vnstat
 ```
 
-### 2. URL
+## Usage
 
-- To access vnStat, visit <https://vnstat.iYOUR_DOMAIN_NAMEi>
+Visit <https://vnstat.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

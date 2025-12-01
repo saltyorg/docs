@@ -12,21 +12,27 @@ tags:
 
 ## Overview
 
-[plex_auto_languages](https://github.com/RemiRigal/Plex-Auto-Languages) auto-updates the language of your Plex TV Show episodes based on the current language you are using without messing with your existing language preferences.
+[Plex Auto Languages](https://github.com/RemiRigal/Plex-Auto-Languages) auto-updates the language of your Plex TV Show episodes based on the current language you are using without messing with your existing language preferences.
 
-You
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:octicons-link-16: Docs](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/RemiRigal/Plex-Auto-Languages){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/remirigal/plex-auto-languages){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/RemiRigal/Plex-Auto-Languages){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/remirigal/plex-auto-languages/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-plex-auto-languages
 ```
 
-### 2. URL
+## Usage
 
 PLex-auto-languages has no UI; it is driven by a config file
 

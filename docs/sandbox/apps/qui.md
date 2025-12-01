@@ -8,27 +8,35 @@ tags:
   - qbittorrent
 ---
 
-# Qui
+# qui
 
 ## Overview
 
-[Qui](https://github.com/autobrr/qui) is a fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
+[qui](https://github.com/autobrr/qui) is a fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/autobrr/qui){: .header-icons } | [:octicons-link-16: Docs](https://github.com/autobrr/qui?tab=readme-ov-file#configuration){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/autobrr/qui){: .header-icons } | [:material-docker: Docker](https://github.com/autobrr/qui/blob/main/docker-compose.yml){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/autobrr/qui/blob/main/README.md#configuration){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/autobrr/qui/pkgs/container/qui){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.autobrr.com/qui){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-qui
 ```
 
-### 2. URL
+## Usage
 
-- To access Qui, visit <https://qui.iYOUR_DOMAIN_NAMEi>
+Visit <https://qui.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Configure your qBittorrent instance connections through the web interface.
 

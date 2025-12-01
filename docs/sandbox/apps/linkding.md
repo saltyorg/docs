@@ -14,24 +14,29 @@ tags:
 
 [Linkding](https://github.com/sissbruecker/linkding#introduction) is a simple bookmark service that you can host yourself. It's designed be to be minimal and fast.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/sissbruecker/linkding#introduction){: .header-icons } | [:octicons-link-16: Docs](https://github.com/sissbruecker/linkding#documentation){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/sissbruecker/linkding){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/sissbruecker/linkding){: .header-icons } |
+[:material-bookshelf:**Manual**](https://github.com/sissbruecker/linkding#documentation){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/sissbruecker/linkding/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-linkding
 ```
 
-### 2. URL
+## Usage
 
-- To access linkding, visit <https://linkding.iYOUR_DOMAIN_NAMEi>
+Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 

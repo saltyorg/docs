@@ -14,21 +14,29 @@ tags:
 
 [Uptime Kuma](https://github.com/louislam/uptime-kuma) is a self-hosted monitoring tool like "Uptime Robot".
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/louislam/uptime-kuma){: .header-icons } | [:octicons-link-16: Docs](https://github.com/louislam/uptime-kuma/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/louislam/uptime-kuma){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/louislam/uptime-kuma){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/louislam/uptime-kuma/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/louislam/uptime-kuma/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-uptime-kuma
 ```
 
-### 2. URL
+## Usage
 
-- To access Uptime Kuma, visit <https://uptime.iYOUR_DOMAIN_NAMEi>
+Visit <https://uptime.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptime-docker-socket-proxy:2375`
 

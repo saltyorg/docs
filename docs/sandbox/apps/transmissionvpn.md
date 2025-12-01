@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: draft
 hide:
   - tags
 tags:
@@ -12,23 +13,29 @@ tags:
 
 ## Overview
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
 [transmissionvpn](https://transmissionvpn.url) is a...
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://transmissionvpn.url){: .header-icons } | [:octicons-link-16: Docs](https://transmissionvpn.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/transmissionvpn/transmissionvpn){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/transmissionvpn/transmissionvpn){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://transmissionvpn.docs.url){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/transmissionvpn/transmissionvpn/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-transmissionvpn
 ```
 
-### 2. URL
+## Usage
 
-- To access transmissionvpn, visit <https://transmissionvpn.iYOUR_DOMAIN_NAMEi>
+Visit <https://transmissionvpn.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

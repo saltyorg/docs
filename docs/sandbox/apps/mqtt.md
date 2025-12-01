@@ -14,19 +14,29 @@ tags:
 
 [MQTT](https://mosquitto.org/) (or Eclipse Mosquitto) is a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
 
-Also, MQTT does not have a web interface, so you will need to use a client to interact with it.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://mosquitto.org/){: .header-icons } | [:octicons-link-16: Docs](https://mosquitto.org/man/mosquitto-conf-5.html){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/eclipse/mosquitto){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/_/eclipse-mosquitto){: .header-icons }|
+[:material-bookshelf:**Manual**](https://mosquitto.org/man/mosquitto-conf-5.html){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/eclipse-mosquitto/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-mqtt
 ```
 
-### 2. Setup
+## Usage
+
+MQTT does not have a web interface, so you will need to use a client to interact with it.
+
+## Basics
 
 You can connect MQTT to [Home Assistant](homeassistant.md) and [Node Red](node_red.md) via docker hostname. Add the MQTT integration in Home Assistant and use `mqtt` as the hostname/Broker, and 1883 as the port. In Node Red, you can use the `mqtt` node to connect to the MQTT server.
 

@@ -12,24 +12,34 @@ tags:
 
 ## Overview
 
+[linuxserver/booksonic-air](https://docs.linuxserver.io/images/docker-booksonic-air) is a Docker container image for Booksonic Air.
+
+> [Booksonic Air](http://booksonic.org/) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic. Booksonic App - An DSub based Android app for connection to Booksonic-Air servers. [:material-bookshelf:](https://booksonic.org/how)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/booksonic-air/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
 !!! warning
     The upstream Booksonic Docker image has been deprecated and is no longer receiving updates. This means the image is not receiving regular security package updates. The role may be dropped from Sandbox at some point in the future.
 
-[Booksonic Air](http://booksonic.org/) is a platform for accessing the audibooks you own wherever you are. At the moment the platform consists of Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic. Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
-
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://booksonic.org/){: .header-icons } | [:octicons-link-16: Docs](https://booksonic.org/how){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/popeen/Booksonic-Air){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/booksonic-air){: .header-icons }|
-
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-booksonic
 ```
 
-### 2. URL
+## Usage
 
-- To access Booksonic Air, visit <https://booksonic.iYOUR_DOMAIN_NAMEi>
+Visit <https://booksonic.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

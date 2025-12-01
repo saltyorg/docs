@@ -1,27 +1,37 @@
 ---
 icon: material/server-network-outline
-status: wip
+status: draft
 ---
 
-# Docker
+# Docker CE
 
 ## Overview
 
-Saltbox dependency.
+[Docker Engine Community Edition (CE)](https://www.docker.com/community) is an open-source containerization technology for building and containerizing your applications.
 
-Docker is an open-source platform that enables developers to build, ship, and run applications using containers.
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.docker.com){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](https://docs.docker.com/engine/release-notes){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](https://forums.docker.com){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+Saltbox dependency.
+
+```shell
 sb install docker
 ```
 
 ## Usage
 
-```sh
+```shell
 docker
 ```
 

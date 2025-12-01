@@ -1,6 +1,6 @@
 ---
 icon: material/tag
-status: wip
+status: draft
 ---
 
 # Media Server
@@ -13,7 +13,7 @@ Ansible tag for deploying your media server apps stack.
 
 ## Deployment
 
-```sh
+```shell
 sb install media-server
 ```
 

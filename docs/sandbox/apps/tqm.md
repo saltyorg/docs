@@ -12,17 +12,15 @@ tags:
 
 ## Overview
 
-> [tqm](https://github.com/autobrr/tqm) is a CLI (Command Line Interface) tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
+[tqm](https://github.com/autobrr/tqm) is a CLI (Command Line Interface) tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://autobrr.com/3rd-party-tools/manage-torrents#tqm){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](https://github.com/autobrr/tqm/blob/main/README.md){ .md-button .md-button--stretch }
 
 [:material-tag:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://discord.autobrr.com/){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.autobrr.com){ .md-button .md-button--stretch }
 
 </div>
 
@@ -36,7 +34,7 @@ tags:
 
 1.  Set your download client via the Inventory override.
 
-1.  Edit `/opt/tqm/config.yaml`.  
+1.  Edit `/opt/tqm/config.yaml`.
 
 Use Saltbox paths (`/mnt/unionfs/downloads/...`) for `download_path` as per [Saltbox media paths](../../saltbox/basics/paths.md#media).
 

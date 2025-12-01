@@ -8,59 +8,55 @@ tags:
 
 ## Overview
 
-Run one or multiple minecraft servers with custom subdomains. Utilizes Minecraft server and MC-Router to allow each server to have its own subdomain with the default port.
+[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io) provides a Minecraft Server that will automatically download the latest stable version at startup. Utilizes Minecraft server and MC-Router to allow each server to have its own subdomain with the default port.
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://docker-minecraft-server.readthedocs.io/en/latest/){: .header-icons } | [:octicons-link-16: Docs](https://docker-minecraft-server.readthedocs.io/en/latest/commands/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/itzg/docker-minecraft-server){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docker-minecraft-server.readthedocs.io/en/latest/commands){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
+
+- Set inventory variables for single or multi-server setups:
+  - `minecraft_instances`: List of server instances.
+  - `minecraft_docker_image_tag`: Docker image tag for all servers.
+  - `instanceName_docker_image_tag`: Override tag per instance.
+- Cloudflare users: Disable proxy for subdomains or set `minecraft_dns_proxy: false` in inventory.
+- Resource limits and advanced Docker options can be set via inventory variables.
+
+For multiple servers, list instance names in your inventory:
+
+```yaml
+minecraft_instances: ["mcserver1", "mcserver2"]
+```
+
+## Deployment
+
+Install the Minecraft server and MC-Router:
 
 ```shell
 sb install sandbox-minecraft
 ```
 
-This will install mc-router and the minecraft server. If you have listed multiple minecraft instances, it will install these too. (See below for multi server instructions)
+## Usage
 
-### 2. Join Server
+- Join the server using the Minecraft client:
+  - Single server: `minecraft.xYOUR_DOMAIN_NAMEx`
+  - Multiple servers: `instanceName.xYOUR_DOMAIN_NAMEx`
+- Change server settings by updating inventory variables and redeploying.
 
-!!! warning "Cloudflare CDN"
-    If you are using Cloudflare, you will need to disable the proxy for the subdomain(s) to work correctly. This can be done by clicking the orange cloud next to the subdomain in the DNS settings. Or specify it in the inventory using `minecraft_dns_proxy: false` if you have the global toggle on. Otherwise you won't be able to reach the minecraft server at all.
+## Basics
 
-- By default, a single server will be accesible at  `minecraft.xYOUR_DOMAIN_NAMEx`
-- If you have set up multiple instances, these will be accesible by default at `instanceName.xYOUR_DOMAIN_NAMEx` (See multi server instructions below)
-
-### 3. Multi Server Set Up
-
-To add multiple instances, add the following to the inventory. See the [inventory configuration instructions](../../saltbox/inventory/index.md).
-
-```yaml
-minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
-```
-
-1. This will install two servers, server1 and server2.
-
-These servers will be accesible at `instanceName.xYOUR_DOMAIN_NAMEx`
-
-So for the example above, `mcserver1.xYOUR_DOMAIN_NAMEx` and `mcserver2.xYOUR_DOMAIN_NAMEx`
-
-### 4. Setup
-
-For individual servers, you can change things such as memory using custom docker envs. See the [inventory configuration instructions](../../saltbox/inventory/index.md)
-
-For a single install, the inventory vars will look like this `minecraft_docker_image_tag`.
-
-When you have set up multiple servers, they will all use the `minecraft_docker_image_tag` settings as a default. To override this use the instance name instead. E.g `instanceName_docker_image_tag`.
-
-```yaml title="Inventory"
-minecraft_instances: ["mcserver1", "mcserver2"] # (1)!
-mcserver1_docker_image_tag: "itzg/minecraft-server:latest" # (2)!
-mcserver2_docker_image_tag: "itzg/minecraft-server:1.17.1" # (3)!
-```
-
-1. This will install two servers, mcserver1 and mcserver2.
-2. This will install the latest version of the minecraft server on mcserver1.
-3. This will install version 1.17.1 of the minecraft server on mcserver2.
+- No in-app preferences; all setup is handled via inventory configuration.
+- Default settings run a single server.
+- For multi-server, add instance names to `minecraft_instances`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

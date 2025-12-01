@@ -15,24 +15,29 @@ tags:
 
 [Plex Utills](https://github.com/jkirkcaldy/plex-utills) is a web-based utility collection for managing and maintaining your Plex Media Server. It provides various tools and helpers for common Plex administration tasks.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/jkirkcaldy/plex-utills){: .header-icons } | [:octicons-link-16: Docs](https://github.com/jkirkcaldy/plex-utills#readme){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jkirkcaldy/plex-utills){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jkirkcaldy/plex-utills){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/jkirkcaldy/plex-utills#readme){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jkirkcaldy/plex-utills/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-plex-utills
 ```
 
-### 2. URL
+## Usage
 
-- To access Plex Utills, visit <https://plex-utills.iYOUR_DOMAIN_NAMEi>
+Visit <https://plex-utills.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Configuration files are stored in `/opt/plex-utills`
 - Application logs are stored in `/opt/plex-utills/logs`

@@ -14,19 +14,27 @@ tags:
 
 [EmbyStat](https://github.com/mregni/EmbyStat/) is a personal web server that can calculate all kinds of statistics from your (local) Emby or Jellyfin server. Just install this on your server and let him calculate all kinds of fun stuff.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/mregni/EmbyStat/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/mregni/EmbyStat/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/mregni/EmbyStat/){: .header-icons } | [:material-docker: Docker](https://registry.hub.docker.com/r/uping/embystat){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/mregni/EmbyStat/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/uping/embystat/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-embystat
 ```
 
-### 2. URL
+## Usage
 
-- To access EmbyStat, visit <https://embystat.iYOUR_DOMAIN_NAMEi>
+Visit <https://embystat.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

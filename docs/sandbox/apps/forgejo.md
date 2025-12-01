@@ -12,34 +12,29 @@ tags:
 
 ## Overview
 
-[Forgejo](https://www.Forgejo.dev/) is a self-hosted lightweight software forge.
-Easy to install and low maintenance, it just does the job.
+[Forgejo](https://www.Forgejo.dev/) is a self-hosted, lightweight software forge designed for collaborative software development using the Git version control system.
 
-- **Simple software project management**: Ease of use is important to get things done efficiently. Forgejo’s user experience is designed for collaboration and productivity.
-- **Self-hosted alternative to GitHub**: Liberate your software from proprietary shackles. Forgejo offers a familiar environment to GitHub users, allowing smooth transition to a platform you own.
-- **Easy to install and maintain**: Hosting your own software forge does not require expert skills. With Forgejo you can control your server with minimal effort.
-- **Lightweight and performant**: With a rich feature set, Forgejo still has a low server profile and requires an order of magnitude less resources than other forges.
-- **Guaranteed 100% Free Software**: Forgejo will always be Free and Open Source Software. Furthermore we exclusively use Free Software for our own project development.
-- **Beyond coding, we forge ahead**: An exciting future awaits. We will innovate the Software Forge and enable collaborative software development facilitated by decentralized platforms.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You have to log into the app itself.
+[:material-bookshelf:**Manual**](https://forgejo.org/docs){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://Forgejo.dev/){: .header-icons } | [:octicons-link-16: Docs](https://Forgejo.dev/docs/introduction/manage-services){: .header-icons } | [:octicons-mark-github-16: Codeberg](https://codeberg.org/forgejo/forgejo){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/ajnart/Forgejo/){: .header-icons }|
+[:simple-codeberg:**Releases**](https://codeberg.org/forgejo/-/packages/container/forgejo/versions){ .md-button .md-button--stretch }
 
-Recommended install types: Saltbox, Core
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-forgejo
 ```
 
-### 2. URL
+## Usage
 
-- To access Forgejo, visit <https://forgejo.iYOUR_DOMAIN_NAMEi>
+Visit <https://forgejo.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

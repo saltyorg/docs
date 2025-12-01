@@ -12,13 +12,21 @@ tags:
 
 ## Overview
 
-[Nabarr](https://github.com/l3uddz/nabarr) monitors Newznab/Torznab RSS feeds to find new media to add to Sonarr and or Radarr.
+[Nabarr](https://github.com/saltydk/nabarr) is the official Saltbox continuation of *Cloudbox/nabarr*, a tool that monitors RSS feeds from Newznab or Torznab indexing services and automatically adds newly discovered TV shows and movies to Sonarr and Radarr, respectively.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-docker: Docker:](https://github.com/l3uddz/nabarr){: .header-icons } | [:octicons-link-16: Docs](https://github.com/l3uddz/nabarr){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/l3uddz/nabarr){: .header-icons } | [:material-docker: Docker:](https://hub.docker.com/r/cloudb0x/nabarr){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/saltydk/nabarr/blob/master/README.md#introduction){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/nabarr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/ugfKXpFND8){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-nabarr

@@ -14,21 +14,29 @@ tags:
 
 [Resilio Sync](https://www.resilio.com/) uses peer-to-peer technology to provide fast, private file sharing for teams and individuals. By skipping the cloud, transfers can be significantly faster because files take the shortest path between devices. Sync does not store your information on servers in the cloud, avoiding cloud privacy concerns.
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.resilio.com/){: .header-icons } | [:octicons-link-16: Docs](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/resilio/sync){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/resilio/sync/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-resiliosync
 ```
 
-### 2. URL
+## Usage
 
-- To access Resilio Sync, visit <https://resiliosync.iYOUR_DOMAIN_NAMEi>
+Visit <https://resiliosync.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - [:octicons-link-16: Documentation: Resilio Sync Docs](https://help.resilio.com/hc/en-us/articles/204754939-Comprehensive-guide-to-syncing-Desktop-Desktop-){: .header-icons }
 

@@ -14,24 +14,29 @@ tags:
 
 [Grocy](https://grocy.info/) is a self-hosted ERP system for groceries and household management. It features barcode scanning, shopping lists, expiration tracking, and comprehensive inventory management for home use.
 
-!!! info
-    By default, the role is **NOT** protected behind your Authelia/SSO middleware. You will need to configure authentication within the application.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://grocy.info/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/grocy/grocy){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/grocy){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/grocy/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-grocy
 ```
 
-### 2. URL
+## Usage
 
-- To access Grocy, visit <https://grocy.iYOUR_DOMAIN_NAMEi>
+Visit <https://grocy.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Default login is admin/admin. Configure authentication and users through the application settings.
 

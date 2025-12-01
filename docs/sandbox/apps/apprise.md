@@ -8,30 +8,40 @@ tags:
   - alerts
 ---
 
-# Apprise
+# Apprise API
 
 ## Overview
 
-[Apprise](https://github.com/caronc/apprise) allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
+[linuxserver/apprise-api](https://docs.linuxserver.io/images/docker-apprise-api) is a Docker container image for Apprise.
+
+> [Apprise API](https://github.com/caronc/apprise-api) is an open-source, lightweight REST framework that provides a unified interface to send notifications to over 100 services—such as email, SMS, Slack, Telegram, and Discord—via a single API. [:material-bookshelf:](https://apprise.apps.merit.edu/)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/apprise-api/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
 
 !!! note
     Saltbox has a built-in Apprise client that can be used to send notifications. This container is not only used to provide a web UI for configuring and managing notifications, but it also exposes an API. This API allows for programmatic interaction, enabling other applications or scripts to send notifications through the Apprise service. For more information, see the [Apprise Client Docs](https://github.com/caronc/apprise/wiki).
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/caronc/apprise){: .header-icons } | [:octicons-link-16: Docs](https://github.com/caronc/apprise/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/caronc/apprise){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/caronc/apprise){: .header-icons }|
-
-### 1. Installation
+## Deployment
 
 ```shell
 sb install sandbox-apprise
 ```
 
-### 2. URL
+## Usage
 
-- To access apprise, visit <https://apprise.iYOUR_DOMAIN_NAMEi>
+Visit <https://apprise.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 The instance runs on the Docker network accessible to other saltbox network containers at `http://apprise:8000`
 

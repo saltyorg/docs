@@ -14,19 +14,27 @@ tags:
 
 [Trilium Notes](https://github.com/zadam/trilium) is a hierarchical note taking application with focus on building large personal knowledge bases.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/zadam/trilium){: .header-icons } | [:octicons-link-16: Docs](https://github.com/zadam/trilium/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/zadam/trilium){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/zadam/trilium){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/zadam/trilium/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/zadam/trilium/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-trilium
 ```
 
-### 2. URL
+## Usage
 
-- To access Trilium Notes, visit <https://trilium.iYOUR_DOMAIN_NAMEi>
+Visit <https://trilium.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

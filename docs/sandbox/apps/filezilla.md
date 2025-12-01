@@ -14,19 +14,27 @@ tags:
 
 [FileZilla](https://filezilla-project.org/) is a cross-platform graphical FTP, SFTP, and FTPS file management tool with a vast list of features.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://filezilla-project.org/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.filezilla-project.org/Main_Page){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jlesage/docker-filezilla){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/jlesage/filezilla/){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://wiki.filezilla-project.org/Main_Page){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/filezilla/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-filezilla
 ```
 
-### 2. URL
+## Usage
 
-- To access FileZilla, visit <https://filezilla.iYOUR_DOMAIN_NAMEi>
+Visit <https://filezilla.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

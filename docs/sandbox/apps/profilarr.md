@@ -13,11 +13,9 @@ tags:
 
 ## Overview
 
-Configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
+[Profilarr](https://dictionarry.dev) is a configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-home:**Homepage**](https://dictionarry.dev){ .md-button .md-button--stretch }
 
 [:material-bookshelf:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 

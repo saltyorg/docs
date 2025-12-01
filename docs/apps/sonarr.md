@@ -10,23 +10,31 @@ tags:
 
 ## Overview
 
-[Sonarr](https://sonarr.tv/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
+[hotio/sonarr](https://hotio.dev/containers/sonarr) is a Docker container image for Sonarr.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://sonarr.tv/){: .header-icons } | [:octicons-link-16: Docs](https://wiki.servarr.com/sonarr/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Sonarr/Sonarr){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/sonarr){: .header-icons }|
+> [Sonarr](https://sonarr.tv) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes. [:material-bookshelf:](https://wiki.sonarr.tv) [:fontawesome-brands-discord:](https://discord.sonarr.tv)
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/sonarr/pkgs/container/sonarr){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
 ## Deployment
 
-```sh
+```shell
 sb install sonarr
 ```
 
 ## Usage
 
-To access Sonarr, visit <https://sonarr.iYOUR_DOMAIN_NAMEi>
+Visit <https://sonarr.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 

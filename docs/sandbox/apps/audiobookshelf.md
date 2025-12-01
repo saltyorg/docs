@@ -12,24 +12,29 @@ tags:
 
 ## Overview
 
-[audiobookshelf](https://www.audiobookshelf.org/) is a self-hosted audio book and podcast server.
+[Audiobookshelf](https://www.audiobookshelf.org/) is a free and open-source, self-hosted audiobook and podcast server that allows users to manage, stream, and organize their personal audiobook, podcast, and ebook collections.
 
-!!! info
-    By default, the role is NOT protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://www.audiobookshelf.org/){: .header-icons } | [:octicons-link-16: Docs](https://www.audiobookshelf.org/docs){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/advplyr/audiobookshelf-web){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/advplyr/audiobookshelf){: .header-icons }|
+[:material-bookshelf:**Manual**](https://www.audiobookshelf.org/docs){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/advplyr/audiobookshelf/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-audiobookshelf
 ```
 
-### 2. URL
+## Usage
 
-- To access Audiobookshelf, visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>
+Visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

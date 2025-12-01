@@ -14,21 +14,29 @@ tags:
 
 [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/ArchiveBox/ArchiveBox){: .header-icons } | [:octicons-link-16: Docs](https://github.com/ArchiveBox/ArchiveBox/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/ArchiveBox/ArchiveBox){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/archivebox/archivebox){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/ArchiveBox/ArchiveBox/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/archivebox/archivebox/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-archivebox
 ```
 
-### 2. URL
+## Usage
 
-- To access ArchiveBox, visit <https://archivebox.iYOUR_DOMAIN_NAMEi>
+Visit <https://archivebox.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 Initial setup guide thanks to `erisheaded` on CB discord.
 

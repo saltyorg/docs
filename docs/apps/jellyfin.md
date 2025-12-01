@@ -10,21 +10,31 @@ tags:
 
 ## Overview
 
-[Jellyfin](https://jellyfin.org/) is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
+[hotio/jellyfin](https://hotio.dev/containers/jellyfin) is a Docker container image for Jellyfin.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://jellyfin.org/){: .header-icons } | [:octicons-link-16: Docs](https://docs.jellyfin.org/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/jellyfin/jellyfin){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/jellyfin){: .header-icons }|
+> [Jellyfin](https://jellyfin.org/) is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Releases**](https://github.com/hotio/jellyfin/pkgs/container/jellyfin){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install jellyfin
 ```
 
-### 2. URL
+## Usage
 
-- To access Jellyfin, visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>
+Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

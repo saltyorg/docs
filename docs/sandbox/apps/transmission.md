@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client.
+[linuxserver/transmission](https://docs.linuxserver.io/images/docker-transmission) is a Docker container image for Transmission.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://transmissionbt.com/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/transmission/transmission/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/transmission/transmission){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/transmission){: .header-icons }|
+> [Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client. [:material-bookshelf:](https://github.com/transmission/transmission/wiki)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/transmission/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-transmission
 ```
 
-### 2. URL
+## Usage
 
-- To access Transmission, visit <https://transmission.iYOUR_DOMAIN_NAMEi>
+Visit <https://transmission.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Suggested desktop client is [Transmission Remote GUI](https://github.com/transmission-remote-gui/transgui). It is to be set up with ssl enabled on port 443
 

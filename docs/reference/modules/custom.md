@@ -10,21 +10,13 @@ tags:
 
 ## Overview
 
-The Custom role allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation. This role gives you the flexibility to add tools and dependencies specific to your needs.
+Custom is a role that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation. This role gives you the flexibility to add tools and dependencies specific to your needs.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/saltyorg/Saltbox){: .header-icons } | [:octicons-link-16: Docs](https://docs.saltbox.dev){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/saltyorg/Saltbox){: .header-icons } | :material-docker: Docker |
+---
 
-### 1. Installation
+## Configuration
 
-```shell
-sb install custom
-```
-
-### 2. Setup
-
-Before running the custom role, configure the packages you want to install in your Saltbox inventory:
+Before running the custom tag, configure the packages you want to install in your Saltbox inventory:
 
 **APT packages:**
 
@@ -46,6 +38,12 @@ custom_deb:
 ```yaml
 custom_pip:
   - module_name
+```
+
+## Deployment
+
+```shell
+sb install custom
 ```
 
 !!! info

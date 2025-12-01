@@ -14,15 +14,17 @@ tags:
 
 [Karakeep](https://karakeep.app/) is an open source "Bookmark Everything" app that uses AI for automatically tagging the content you throw at it. The app is built with self-hosting as a first class citizen.
 
-The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(10.5rem,1fr));" markdown>
+[:material-bookshelf:**Manual**](https://docs.karakeep.app){ .md-button .md-button--stretch }
 
-[:material-bookshelf:**Project Docs**](https://docs.karakeep.app/){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/karakeep-app/karakeep/pkgs/container/karakeep){ .md-button .md-button--stretch }
 
-[:material-git:**GitHub Repo**](https://github.com/karakeep-app/karakeep){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/NrgeYywsFh){ .md-button .md-button--stretch }
 
 </div>
+
+---
 
 ## Configuration
 

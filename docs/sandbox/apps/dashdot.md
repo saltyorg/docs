@@ -14,22 +14,27 @@ tags:
 
 [Dashdot](https://getdashdot.com/) is a simple, modern server dashboard designed with glassmorphism aesthetics, primarily intended for smaller VPS and private servers. It provides real-time system monitoring and beautiful visualizations.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://getdashdot.com/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/MauriceNino/dashdot){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/mauricenino/dashdot){: .header-icons } | [:material-eye: Demo](https://dash.mauz.dev/){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/mauricenino/dashdot/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-dashdot
 ```
 
-### 2. URL
+## Usage
 
-- To access Dashdot, visit <https://dashdot.iYOUR_DOMAIN_NAMEi>
+Visit <https://dashdot.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

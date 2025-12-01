@@ -14,27 +14,29 @@ tags:
 
 [MovieMatch](https://github.com/LukeChannings/moviematch) is an app that helps you and your friends pick a movie to watch from a Plex server.
 
-MovieMatch connects to your Plex server and gets a list of movies (from any libraries marked as a movie library).
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-As many people as you want connect to your MovieMatch server and get a list of shuffled movies. Swipe right to +1, swipe left to -1.
+[:material-bookshelf:**Manual**](https://github.com/LukeChannings/moviematch){ .md-button .md-button--stretch }
 
-If two (or more) people swipe right on the same movie, it'll show up in everyone's matches. The movies that the most people swiped right on will show up first.
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/lukechannings/moviematch/tags){ .md-button .md-button--stretch }
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/LukeChannings/moviematch){: .header-icons } | [:octicons-link-16: Docs](https://github.com/LukeChannings/moviematch){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/LukeChannings/moviematch#readme){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/lukechannings/moviematch){: .header-icons }|
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-moviematch
 ```
 
-### 2. URL
+## Usage
 
-- To access MovieMatch, visit <https://moviematch.iYOUR_DOMAIN_NAMEi>
+Visit <https://moviematch.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 #### Via UI
 

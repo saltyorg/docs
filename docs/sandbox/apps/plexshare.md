@@ -14,22 +14,27 @@ tags:
 
 [PlexShare](https://chewbaka69.github.io/PlexShare/) is a standalone web application that provides management of local users and multiple Plex servers with their libraries. It allows users to access libraries from all registered servers through a single interface without requiring plex.tv registration.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://chewbaka69.github.io/PlexShare/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Chewbaka69/PlexShare){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/chewbaka/plexshare){: .header-icons }|
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/chewbaka/plexshare/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-plexshare
 ```
 
-### 2. URL
+## Usage
 
-- To access PlexShare, visit <https://plexshare.iYOUR_DOMAIN_NAMEi>
+Visit <https://plexshare.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

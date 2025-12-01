@@ -14,27 +14,33 @@ tags:
 
 [SABThrottle](https://github.com/8a8al00ey/sabthrottle) Sabthrottle was designed in order to dynamically control the bandwidth allocation when users are actively streaming from Plex to avoid unnecessary buffering while still allowing the user to download at the fastest rate possible. Remember nzbthrottle from daghaian, yes its exactly like that but for SABnzbd with some additional tweaks.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/8a8al00ey/sabthrottle){: .header-icons } | [:octicons-link-16: Docs](https://github.com/8a8al00ey/sabthrottle#installation){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/8a8al00ey/sabthrottle){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/8a8al00ey/sabthrottle){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/8a8al00ey/sabthrottle#installation){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/8a8al00ey/sabthrottle/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-sabthrottle
 ```
 
-### 2. Setup
+## Usage
 
-- See [documentation](https://github.com/8a8al00ey/sabthrottle#installation) for configuration and instructions see the sample configuration and description below it.
+-   Running the role will autopopulate plex token and plex url.
+-   If you require more then 5 stream count just follow the example and add more using proper yml formatting.
+-   You can always check logs via
 
-  - Running the role will autopopulate plex token and plex url.
-  - If you require more then 5 stream count just follow the example and add more using proper yml formatting.
-  - You can always check logs via
-
-        ```shell
-        docker logs -f sabthrottle
-        ```
+    ```shell
+    docker logs -f sabthrottle
+    ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

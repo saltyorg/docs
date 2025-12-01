@@ -14,19 +14,27 @@ tags:
 
 [Unmanic](https://github.com/Unmanic/unmanic) is a simple tool for optimising your file library. You can use it to convert your files into a single, uniform format, manage file movements based on timestamps, or execute custom commands against a file based on its file size.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Unmanic/unmanic){: .header-icons } | [:octicons-link-16: Docs](https://github.com/Unmanic/unmanic/blob/master/docs/configuration/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Unmanic/unmanic){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/josh5/unmanic){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/Unmanic/unmanic/blob/master/docs/configuration/README.md){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/josh5/unmanic/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-unmanic
 ```
 
-### 2. URL
+## Usage
 
-- To access Unmanic, visit <https://unmanic.iYOUR_DOMAIN_NAMEi>
+Visit <https://unmanic.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

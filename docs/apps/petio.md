@@ -10,25 +10,31 @@ tags:
 
 ## Overview
 
-[Petio](https://petio.tv/) is a third party companion app available to Plex server owners to allow their users to request, review and discover content. The app is built to appear instantly familiar and intuitive to even the most tech-agnostic users. Petio will help you manage requests from your users, connect to other third party apps such as Sonarr and Radarr, notify users when content is available and track request progress. Petio also allows users to discover media both on and off your server, quickly and easily find related content and review to leave their opinion for other users.
+[Petio](https://petio.tv) is a third party companion app available to Plex server owners to allow their users to request, review and discover content.
 
-Petio is an ongoing, forever free, always evolving project currently in alpha prototype stage and now available!
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://petio.tv/){: .header-icons } | [:octicons-link-16: Docs](https://docs.petio.tv/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/petio-team/petio){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/petio){: .header-icons }|
+[:material-bookshelf:**Manual**](https://docs.petio.tv){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/petio-team/petio/pkgs/container/petio){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/bseGmrUd3N){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install petio
 ```
 
-### 2. URL
+## Usage
 
-- To access Petio, visit <https://petio.iYOUR_DOMAIN_NAMEi>
+Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Click Login With Plex and follow the steps to log in.
 

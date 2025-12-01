@@ -14,22 +14,27 @@ tags:
 
 [Paperless AI](https://clusterzx.github.io/paperless-ai/) is an AI-enhanced extension for Paperless-ngx that adds automatic classification, smart tagging, and semantic search using OpenAI-compatible APIs. It builds on the community-supported document management system that scans, indexes and archives documents with OCR.
 
-!!! info
-    By default, the role is protected behind your Authelia/SSO middleware.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://clusterzx.github.io/paperless-ai/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/clusterzx/paperless-ai){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/clusterzx/paperless-ai){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/clusterzx/paperless-ai/wiki/1.-Home){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/clusterzx/paperless-ai/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://discord.gg/AvNekAfK38){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-paperless-ai
 ```
 
-### 2. URL
+## Usage
 
-- To access Paperless AI, visit <https://paperless-ai.iYOUR_DOMAIN_NAMEi>
+Visit <https://paperless-ai.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

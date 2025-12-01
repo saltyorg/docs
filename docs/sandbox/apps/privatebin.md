@@ -13,23 +13,30 @@ tags:
 ## Overview
 
 [PrivateBin](https://privatebin.info/) PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.
-It's privacy-preserving and encrypted-by-default.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://privatebin.info/){: .header-icons } | [:octicons-link-16: Docs](https://github.com/PrivateBin/PrivateBin/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/PrivateBin/PrivateBin){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/privatebin/nginx-fpm-alpine){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://github.com/PrivateBin/PrivateBin/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/privatebin/nginx-fpm-alpine/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-privatebin
 ```
 
-### 2. URL
+## Usage
 
-- To access PrivateBin, visit <https://privatebin.iYOUR_DOMAIN_NAMEi>
+Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Edit `/opt/privatebin/conf.php` to customize your instance.
 

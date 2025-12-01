@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+status: draft
 hide:
   - tags
 tags:
@@ -10,26 +11,28 @@ tags:
 
 # python-plexlibrary
 
-## THIS DOCUMENTATION IS NOT YET COMPLETED
-
 ## Overview
 
 [python-plexlibrary](https://github.com/adamgot/python-plexlibrary) is a...
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://python-plexlibrary.url){: .header-icons } | [:octicons-link-16: Docs](https://python-plexlibrary.docs.url){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/python-plexlibrary/python-plexlibrary){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://python-plexlibrary.docs.url){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-python-plexlibrary
 ```
 
-### 2. URL
+## Usage
 
-- To access python-plexlibrary, visit <https://python-plexlibrary.iYOUR_DOMAIN_NAMEi>
-
-### 3. Usage
-
-- Instructions for python-plexlibrary
+Visit <https://python-plexlibrary.iYOUR_DOMAIN_NAMEi>.

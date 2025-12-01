@@ -11,11 +11,19 @@ tags:
 
 ## Overview
 
-[NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
+[linuxserver/nzbhydra2](https://docs.linuxserver.io/images/docker-nzbhydra2) is a Docker container image for NZBHydra2.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| :material-home: Project home | [:octicons-link-16: Docs](https://github.com/theotherp/nzbhydra2/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/theotherp/nzbhydra2){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/nzbhydra2){: .header-icons }|
+> [NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/nzbhydra2/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
 
 ---
 
@@ -39,17 +47,9 @@ tags:
 
     </div>
 
-!!! tip "Three ways to setup NZB indexers with Sonarr/Radarr/Lidarr"
-
-    - Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
-
-    - Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
-
-    - Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
-
 ## Deployment
 
-```sh
+```shell
 sb install nzbydra2
 ```
 
@@ -58,6 +58,14 @@ sb install nzbydra2
 Visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
+
+!!! tip "Three ways to setup NZB indexers with Sonarr/Radarr/Lidarr"
+
+    - Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;
+
+    - Add all your NZB Indexers directly into Sonarr/Radarr/Lidarr, but also add them in NZBHydra2, so it could be used a tool for manual downloads; or
+
+    - Add all your NZB indexers in NZBHydra2 and then just add the one NZBHydra2 "indexer" into Sonarr/Radarr/Lidarr. This is the most popular choice among users.
 
 1.  Enter setup by clicking on "Config" at the top.
 

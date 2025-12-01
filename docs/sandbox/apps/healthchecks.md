@@ -12,23 +12,33 @@ tags:
 
 ## Overview
 
-[Healthchecks](https://healthchecks.io/) is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.
+[linuxserver/healthchecks](https://docs.linuxserver.io/images/docker-healthchecks) is a Docker container image for Healthchecks.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://healthchecks.io/){: .header-icons } | [:octicons-link-16: Docs](https://healthchecks.io/docs/){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/healthchecks/healthchecks){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/linuxserver/healthchecks){: .header-icons }|
+> [Healthchecks](https://healthchecks.io/) is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface. [:material-bookshelf:](https://healthchecks.io/docs/)
 
-### 1. Installation
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/healthchecks/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-healthchecks
 ```
 
-### 2. URL
+## Usage
 
-- To access Healthchecks, visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>
+Visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 

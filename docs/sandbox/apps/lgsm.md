@@ -14,11 +14,19 @@ tags:
 
 [LinuxGSM](https://linuxgsm.com) is a command-line tool for quick and simple deployment and management of Linux dedicated game servers. It aims to make the process of managing game servers hassle-free. With LinuxGSM, we can avoid spending hours trying to configure and manage game servers. It provides a streamlined and efficient solution for setting up and maintaining dedicated game servers on Linux.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://linuxgsm.com){: .header-icons } | [:octicons-link-16: Docs](https://docs.linuxgsm.com){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/GameServerManagers/LinuxGSM){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/gameservermanagers/gameserver){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxgsm.com){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gameservermanagers/gameserver/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Configuration
 
 To add instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 
@@ -36,13 +44,17 @@ lgsm_rust_docker_ports_defaults: ["28015:28015/udp","28017:28017/udp","28082:280
 
 Then run:
 
+## Deployment
+
 ```shell
 sb install sandbox-lgsm
 ```
 
-This will start the installation of LinuxGSM using the specified image tag per instance, which allows for the installation and management of multiple game servers.
+## Usage
 
-### 2. Setup
+Visit <https://lgsm.iYOUR_DOMAIN_NAMEi>.
+
+## Basics
 
 LinuxGSM config files are the configuration files used by the game server to store various game server settings, such as the server name, maximum players, map cycle, etc. These settings can be edited to customise a game server. Different game server configs can use different syntax and work slightly differently, but all do the same basic job of editing a game server settings.
 
@@ -52,8 +64,6 @@ For our valheim example the config would be `/opt/lgsm_valheim/config-lgsm/vhser
 `/opt/lgsm_valheim/config-lgsm/vhserver/common.cfg` works as well. Can read more [here](https://docs.linuxgsm.com/configuration/game-server-config)
 
 Any actual game server configs will be in the `/opt/CONTAINERNAME/serverfiles/` and are all dependant on the game server installed.
-
-### 3. Join Server
 
 In your game, connect to your ip and default ports for the server. Make sure you set the UDP and TCP for the ports correctly. If everything was setup correctly the game should connect to the server.
 

@@ -25,7 +25,9 @@ If any of those operations fail, the backup databases are restored.
 
 The plex containers are stopped for the duration of this process.
 
-### 1. Installation
+---
+
+## Deployment
 
 ```shell
 sb install plex-db

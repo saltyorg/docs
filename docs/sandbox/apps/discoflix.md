@@ -14,21 +14,27 @@ tags:
 
 [DiscoFlix](https://github.com/nickheyer/discoflix) is a user-request-management system for your media server. With Radarr / Sonarr / Discord integration, DiscoFlix facilitates requests by your users for your media server.
 
-Also comes with a [REST-API](https://tinyurl.com/discoflix).
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/nickheyer/discoflix){: .header-icons } | [:octicons-link-16: Docs](https://github.com/nickheyer/discoflix/blob/main/README.md){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/nickheyer/discoflix){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nickheyer/discoflix){: .header-icons }|
+[:material-bookshelf:**Manual**](https://github.com/nickheyer/discoflix/blob/main/README.md){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/nickheyer/discoflix/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-discoflix
 ```
 
-### 2. URL
+## Usage
 
-- To access DiscoFlix, visit <https://discoflix.iYOUR_DOMAIN_NAMEi>
+Visit <https://discoflix.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

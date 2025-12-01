@@ -12,25 +12,33 @@ tags:
 
 ## Overview
 
-[Mylar3](https://github.com/mylar3/mylar3) is an automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents. Also provides an OPDS server distribution.
+[linuxserver/mylar3](https://docs.linuxserver.io/images/docker-mylar3) is a Docker container image for Mylar3.
 
-Mylar allows you to create a watchlist of series that it monitors for various things (new issues, updated information, etc). It will grab, sort, and rename downloaded issues. It will also allow you to monitor weekly pull-lists for items belonging to said watchlisted series to download, as well as being able to monitor and maintain story-arcs.
+> [Mylar3](https://mylarcomics.com) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL. [:material-bookshelf:](https://mylarcomics.com/docs/category/guides) [:fontawesome-solid-comments:](https://forum.mylarcomics.com)
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/mylar3/mylar3){: .header-icons } | [:octicons-link-16: Docs](https://github.com/mylar3/mylar3/wiki){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/mylar3/mylar3){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/hotio/mylar3){: .header-icons }|
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-### 1. Installation
+[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/mylar3/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
+
+## Deployment
 
 ```shell
 sb install sandbox-mylar3
 ```
 
-### 2. URL
+## Usage
 
-- To access Mylar3, visit <https://mylar3.iYOUR_DOMAIN_NAMEi>
+Visit <https://mylar3.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 1. It's highly unlikely your mylar install is up to date. <br />
   Press the Update link on the dialog in the bottom right hand corner. Mylar3 will update and then restart.

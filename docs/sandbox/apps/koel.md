@@ -62,22 +62,6 @@ Visit <https://koel.iYOUR_DOMAIN_NAMEi>.
         koel_name: koel
         ```
 
-=== "Paths"
-
-    ??? variable string "`koel_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        koel_role_paths_folder: "{{ koel_name }}"
-        ```
-
-    ??? variable string "`koel_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        koel_role_paths_location: "{{ server_appdata_path }}/{{ koel_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`koel_role_web_subdomain`"

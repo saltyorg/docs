@@ -74,22 +74,6 @@ Visit <https://bookstack.iYOUR_DOMAIN_NAMEi>.
         bookstack_name: bookstack
         ```
 
-=== "Paths"
-
-    ??? variable string "`bookstack_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_paths_folder: "{{ bookstack_name }}"
-        ```
-
-    ??? variable string "`bookstack_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_paths_location: "{{ server_appdata_path }}/{{ bookstack_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`bookstack_role_web_subdomain`"

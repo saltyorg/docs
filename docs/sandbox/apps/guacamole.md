@@ -204,22 +204,6 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_header_enable: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`guacamole_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_paths_folder: "{{ guacamole_name }}"
-        ```
-
-    ??? variable string "`guacamole_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_paths_location: "{{ server_appdata_path }}/{{ guacamole_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`guacamole_role_web_subdomain`"

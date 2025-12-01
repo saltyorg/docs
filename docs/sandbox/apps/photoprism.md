@@ -71,22 +71,6 @@ Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
         photoprism_name: photoprism
         ```
 
-=== "Paths"
-
-    ??? variable string "`photoprism_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        photoprism_role_paths_folder: "{{ photoprism_name }}"
-        ```
-
-    ??? variable string "`photoprism_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        photoprism_role_paths_location: "{{ server_appdata_path }}/{{ photoprism_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`photoprism_role_web_subdomain`"

@@ -176,22 +176,6 @@ immich_docker_envs_custom:
           POSTGRES_INITDB_ARGS: '--data-checksums'
         ```
 
-=== "Paths"
-
-    ??? variable string "`immich_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        immich_role_paths_folder: "{{ immich_name }}"
-        ```
-
-    ??? variable string "`immich_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        immich_role_paths_location: "{{ server_appdata_path }}/{{ immich_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`immich_role_web_subdomain`"

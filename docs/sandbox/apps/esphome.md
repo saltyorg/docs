@@ -64,29 +64,6 @@ Visit <https://esphome.iYOUR_DOMAIN_NAMEi>.
         esphome_name: esphome
         ```
 
-=== "Paths"
-
-    ??? variable string "`esphome_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        esphome_role_paths_folder: "{{ esphome_name }}"
-        ```
-
-    ??? variable string "`esphome_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        esphome_role_paths_location: "{{ server_appdata_path }}/{{ esphome_role_paths_folder }}"
-        ```
-
-    ??? variable string "`esphome_role_paths_conf`"
-
-        ```yaml
-        # Type: string
-        esphome_role_paths_conf: "{{ esphome_role_paths_location }}/configuration.yaml"
-        ```
-
 === "Web"
 
     ??? variable string "`esphome_role_web_subdomain`"

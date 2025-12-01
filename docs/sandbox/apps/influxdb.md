@@ -61,29 +61,6 @@ sb install sandbox-influxdb
         influxdb_name: influxdb
         ```
 
-=== "Paths"
-
-    ??? variable string "`influxdb_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        influxdb_role_paths_folder: "{{ influxdb_name }}"
-        ```
-
-    ??? variable string "`influxdb_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        influxdb_role_paths_location: "{{ server_appdata_path }}/{{ influxdb_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`influxdb_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        influxdb_role_paths_recursive: true
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

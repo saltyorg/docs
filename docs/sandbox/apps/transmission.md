@@ -89,56 +89,6 @@ Visit <https://transmission.iYOUR_DOMAIN_NAMEi>.
             transmission_instances: ["transmission", "transmission2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`transmission_role_paths_folder`{ .sb-show-on-unchecked }`transmission2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_paths_folder: "{{ transmission_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_paths_folder: "{{ transmission_name }}"
-        ```
-
-    ??? variable string "`transmission_role_paths_location`{ .sb-show-on-unchecked }`transmission2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_paths_location: "{{ server_appdata_path }}/{{ transmission_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_paths_location: "{{ server_appdata_path }}/{{ transmission_role_paths_folder }}"
-        ```
-
-    ??? variable string "`transmission_role_paths_downloads_location`{ .sb-show-on-unchecked }`transmission2_paths_downloads_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ transmission_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_paths_downloads_location: "{{ downloads_torrents_path }}/{{ transmission_role_paths_folder }}"
-        ```
-
-    ??? variable string "`transmission_role_paths_setttings_location`{ .sb-show-on-unchecked }`transmission2_paths_setttings_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_paths_setttings_location: "{{ transmission_role_paths_location }}/settings.json"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_paths_setttings_location: "{{ transmission_role_paths_location }}/settings.json"
-        ```
-
 === "Web"
 
     ??? variable string "`transmission_role_web_subdomain`{ .sb-show-on-unchecked }`transmission2_web_subdomain`{ .sb-show-on-checked }"

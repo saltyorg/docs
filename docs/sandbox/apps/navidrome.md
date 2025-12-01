@@ -76,22 +76,6 @@ Visit <https://navidrome.iYOUR_DOMAIN_NAMEi>.
         navidrome_name: navidrome
         ```
 
-=== "Paths"
-
-    ??? variable string "`navidrome_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        navidrome_role_paths_folder: "{{ navidrome_name }}"
-        ```
-
-    ??? variable string "`navidrome_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        navidrome_role_paths_location: "{{ server_appdata_path }}/{{ navidrome_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`navidrome_role_web_subdomain`"

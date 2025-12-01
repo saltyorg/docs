@@ -139,22 +139,6 @@ Visit <https://linkwarden.iYOUR_DOMAIN_NAMEi>.
         linkwarden_role_postgres_paths_location: "{{ server_appdata_path }}/{{ linkwarden_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`linkwarden_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        linkwarden_role_paths_folder: "{{ linkwarden_name }}"
-        ```
-
-    ??? variable string "`linkwarden_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        linkwarden_role_paths_location: "{{ server_appdata_path }}/{{ linkwarden_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`linkwarden_role_web_subdomain`"

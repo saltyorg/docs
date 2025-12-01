@@ -167,22 +167,6 @@ Visit <https://miniflux.iYOUR_DOMAIN_NAMEi>.
         miniflux_role_postgres_paths_location: "{{ server_appdata_path }}/{{ miniflux_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`miniflux_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_paths_folder: "{{ miniflux_name }}"
-        ```
-
-    ??? variable string "`miniflux_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_paths_location: "{{ server_appdata_path }}/{{ miniflux_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`miniflux_role_web_subdomain`"

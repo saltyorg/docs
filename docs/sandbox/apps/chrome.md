@@ -75,22 +75,6 @@ The docker commands are set to the following by default. Port 9222 is open to th
         chrome_name: chrome
         ```
 
-=== "Paths"
-
-    ??? variable string "`chrome_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        chrome_role_paths_folder: "{{ chrome_name }}"
-        ```
-
-    ??? variable string "`chrome_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        chrome_role_paths_location: "{{ server_appdata_path }}/{{ chrome_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

@@ -82,22 +82,6 @@ Visit <https://yacht.iYOUR_DOMAIN_NAMEi>.
           NETWORKS: "1"
         ```
 
-=== "Paths"
-
-    ??? variable string "`yacht_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        yacht_role_paths_folder: "{{ yacht_name }}"
-        ```
-
-    ??? variable string "`yacht_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        yacht_role_paths_location: "{{ server_appdata_path }}/{{ yacht_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`yacht_role_web_subdomain`"

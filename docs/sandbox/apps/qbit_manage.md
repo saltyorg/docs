@@ -130,22 +130,6 @@ sb install sandbox-qbit-manage
         qbit_manage_name: qbit-manage
         ```
 
-=== "Paths"
-
-    ??? variable string "`qbit_manage_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_paths_folder: "{{ qbit_manage_name }}"
-        ```
-
-    ??? variable string "`qbit_manage_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_paths_location: "{{ server_appdata_path }}/{{ qbit_manage_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`qbit_manage_role_web_subdomain`"

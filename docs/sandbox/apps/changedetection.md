@@ -64,22 +64,6 @@ Visit <https://changedetection.iYOUR_DOMAIN_NAMEi>.
         changedetection_name: changedetection
         ```
 
-=== "Paths"
-
-    ??? variable string "`changedetection_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        changedetection_role_paths_folder: "{{ changedetection_name }}"
-        ```
-
-    ??? variable string "`changedetection_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        changedetection_role_paths_location: "{{ server_appdata_path }}/{{ changedetection_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`changedetection_role_web_subdomain`"

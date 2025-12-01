@@ -74,22 +74,6 @@ Visit <https://cherry.iYOUR_DOMAIN_NAMEi>.
         cherry_name: cherry
         ```
 
-=== "Paths"
-
-    ??? variable string "`cherry_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        cherry_role_paths_folder: "{{ cherry_name }}"
-        ```
-
-    ??? variable string "`cherry_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        cherry_role_paths_location: "{{ server_appdata_path }}/{{ cherry_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`cherry_role_web_subdomain`"

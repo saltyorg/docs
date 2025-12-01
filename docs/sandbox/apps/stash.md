@@ -68,22 +68,6 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_name: stash
         ```
 
-=== "Paths"
-
-    ??? variable string "`stash_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        stash_role_paths_folder: "{{ stash_name }}"
-        ```
-
-    ??? variable string "`stash_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        stash_role_paths_location: "{{ server_appdata_path }}/{{ stash_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`stash_role_web_subdomain`"

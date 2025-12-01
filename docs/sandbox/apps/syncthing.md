@@ -64,22 +64,6 @@ Visit <https://syncthing.iYOUR_DOMAIN_NAMEi>.
         syncthing_name: syncthing
         ```
 
-=== "Paths"
-
-    ??? variable string "`syncthing_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        syncthing_role_paths_folder: "{{ syncthing_name }}"
-        ```
-
-    ??? variable string "`syncthing_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        syncthing_role_paths_location: "{{ server_appdata_path }}/{{ syncthing_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`syncthing_role_web_subdomain`"

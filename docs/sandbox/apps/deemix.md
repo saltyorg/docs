@@ -62,22 +62,6 @@ Visit <https://deemix.iYOUR_DOMAIN_NAMEi>.
         deemix_name: deemix
         ```
 
-=== "Paths"
-
-    ??? variable string "`deemix_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        deemix_role_paths_folder: "{{ deemix_name }}"
-        ```
-
-    ??? variable string "`deemix_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        deemix_role_paths_location: "{{ server_appdata_path }}/{{ deemix_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`deemix_role_web_subdomain`"

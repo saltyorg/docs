@@ -300,22 +300,6 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
           timeout: 5s
         ```
 
-=== "Paths"
-
-    ??? variable string "`authentik_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        authentik_role_paths_folder: "{{ authentik_name }}"
-        ```
-
-    ??? variable string "`authentik_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        authentik_role_paths_location: "{{ server_appdata_path }}/{{ authentik_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`authentik_role_web_subdomain`"

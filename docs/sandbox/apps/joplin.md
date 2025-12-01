@@ -150,22 +150,6 @@ Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encrypt
         joplin_role_postgres_paths_location: "{{ server_appdata_path }}/{{ joplin_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`joplin_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        joplin_role_paths_folder: "{{ joplin_name }}"
-        ```
-
-    ??? variable string "`joplin_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        joplin_role_paths_location: "{{ server_appdata_path }}/{{ joplin_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`joplin_role_web_subdomain`"

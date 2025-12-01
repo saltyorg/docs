@@ -431,56 +431,6 @@ Are you setting Saltbox up for the first time?
         qbittorrent2_service_partof: "docker.service"
         ```
 
-=== "Paths"
-
-    ??? variable string "`qbittorrent_role_paths_folder`{ .sb-show-on-unchecked }`qbittorrent2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_paths_folder: "{{ qbittorrent_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_paths_folder: "{{ qbittorrent_name }}"
-        ```
-
-    ??? variable string "`qbittorrent_role_paths_location`{ .sb-show-on-unchecked }`qbittorrent2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_paths_location: "{{ server_appdata_path }}/{{ qbittorrent_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_paths_location: "{{ server_appdata_path }}/{{ qbittorrent_role_paths_folder }}"
-        ```
-
-    ??? variable string "`qbittorrent_role_paths_downloads_location`{ .sb-show-on-unchecked }`qbittorrent2_paths_downloads_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ qbittorrent_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_paths_downloads_location: "{{ downloads_torrents_path }}/{{ qbittorrent_role_paths_folder }}"
-        ```
-
-    ??? variable string "`qbittorrent_role_paths_conf`{ .sb-show-on-unchecked }`qbittorrent2_paths_conf`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_paths_conf: "{{ qbittorrent_role_paths_location }}/qBittorrent/qBittorrent.conf"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_paths_conf: "{{ qbittorrent_role_paths_location }}/qBittorrent/qBittorrent.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`qbittorrent_role_web_subdomain`{ .sb-show-on-unchecked }`qbittorrent2_web_subdomain`{ .sb-show-on-checked }"

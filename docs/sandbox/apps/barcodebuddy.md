@@ -66,22 +66,6 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_name: barcodebuddy
         ```
 
-=== "Paths"
-
-    ??? variable string "`barcodebuddy_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_paths_folder: "{{ barcodebuddy_name }}"
-        ```
-
-    ??? variable string "`barcodebuddy_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_paths_location: "{{ server_appdata_path }}/{{ barcodebuddy_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`barcodebuddy_role_web_subdomain`"

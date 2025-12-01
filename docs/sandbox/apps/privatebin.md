@@ -66,22 +66,6 @@ Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
         privatebin_name: privatebin
         ```
 
-=== "Paths"
-
-    ??? variable string "`privatebin_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_paths_folder: "{{ privatebin_name }}"
-        ```
-
-    ??? variable string "`privatebin_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_paths_location: "{{ server_appdata_path }}/{{ privatebin_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`privatebin_role_web_subdomain`"

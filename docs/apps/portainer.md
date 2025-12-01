@@ -83,22 +83,6 @@ Are you setting Saltbox up for the first time?
         portainer_role_business_edition: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`portainer_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        portainer_role_paths_folder: "{{ portainer_name }}"
-        ```
-
-    ??? variable string "`portainer_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        portainer_role_paths_location: "{{ server_appdata_path }}/{{ portainer_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`portainer_role_web_subdomain`"

@@ -83,22 +83,6 @@ Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
         petio_role_mongodb_version: "4.4"
         ```
 
-=== "Paths"
-
-    ??? variable string "`petio_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        petio_role_paths_folder: "{{ petio_name }}"
-        ```
-
-    ??? variable string "`petio_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        petio_role_paths_location: "{{ server_appdata_path }}/{{ petio_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`petio_role_web_subdomain`"

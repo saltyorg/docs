@@ -93,32 +93,6 @@ Visit <https://jellyseerr.iYOUR_DOMAIN_NAMEi>.
         jellyseerr2_log_level: "INFO"
         ```
 
-=== "Paths"
-
-    ??? variable string "`jellyseerr_role_paths_folder`{ .sb-show-on-unchecked }`jellyseerr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyseerr_role_paths_folder: "{{ jellyseerr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyseerr2_paths_folder: "{{ jellyseerr_name }}"
-        ```
-
-    ??? variable string "`jellyseerr_role_paths_location`{ .sb-show-on-unchecked }`jellyseerr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyseerr_role_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyseerr2_paths_location: "{{ server_appdata_path }}/{{ jellyseerr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`jellyseerr_role_web_subdomain`{ .sb-show-on-unchecked }`jellyseerr2_web_subdomain`{ .sb-show-on-checked }"

@@ -64,29 +64,6 @@ Visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>.
         tvheadend_name: tvheadend
         ```
 
-=== "Paths"
-
-    ??? variable string "`tvheadend_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tvheadend_role_paths_folder: "{{ tvheadend_name }}"
-        ```
-
-    ??? variable string "`tvheadend_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tvheadend_role_paths_location: "{{ server_appdata_path }}/{{ tvheadend_role_paths_folder }}"
-        ```
-
-    ??? variable string "`tvheadend_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        tvheadend_role_paths_downloads_location: "{{ downloads_root_path }}/{{ tvheadend_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`tvheadend_role_web_subdomain`"

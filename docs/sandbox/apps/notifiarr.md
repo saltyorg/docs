@@ -111,64 +111,6 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_privileged: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`notifiarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_paths_folder: "{{ notifiarr_name }}"
-        ```
-
-    ??? variable string "`notifiarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_paths_location: "{{ server_appdata_path }}/{{ notifiarr_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`notifiarr_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        notifiarr_role_paths_recursive: true
-        ```
-
-    ??? variable string "`notifiarr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_paths_config_location: "{{ notifiarr_role_paths_location }}/notifiarr.conf"
-        ```
-
-    ??? variable string "`notifiarr_role_radarr_config`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_radarr_config: "{{ lookup('role_var', '_paths_location', role='radarr') }}/config.xml"
-        ```
-
-    ??? variable string "`notifiarr_role_sonarr_config`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_sonarr_config: "{{ lookup('role_var', '_paths_location', role='sonarr') }}/config.xml"
-        ```
-
-    ??? variable string "`notifiarr_role_tautulli_config`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_tautulli_config: "{{ lookup('role_var', '_paths_location', role='tautulli') }}/config.ini"
-        ```
-
-    ??? variable string "`notifiarr_role_tautulli_api_key`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_tautulli_api_key: "{{ lookup('ini', 'api_key section=General file=' ~ lookup('role_var', '_tautulli_config', role='notifiarr')) if notifiarr_tautulli_config_stat.stat.exists else '' }}"
-        ```
-
 === "Web"
 
     ??? variable string "`notifiarr_role_web_subdomain`"
@@ -1062,13 +1004,6 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         ```yaml
         # Type: bool (true/false)
         notifiarr_role_privileged:
-        ```
-
-    ??? variable string "`notifiarr_role_tautulli_config`"
-
-        ```yaml
-        # Type: string
-        notifiarr_role_tautulli_config:
         ```
 
     ??? variable string "`notifiarr_role_themepark_addons`"

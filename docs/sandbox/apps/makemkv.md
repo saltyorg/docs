@@ -62,22 +62,6 @@ Visit <https://makemkv.iYOUR_DOMAIN_NAMEi>.
         makemkv_name: makemkv
         ```
 
-=== "Paths"
-
-    ??? variable string "`makemkv_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        makemkv_role_paths_folder: "{{ makemkv_name }}"
-        ```
-
-    ??? variable string "`makemkv_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        makemkv_role_paths_location: "{{ server_appdata_path }}/{{ makemkv_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`makemkv_role_web_subdomain`"

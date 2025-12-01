@@ -138,22 +138,6 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_smtp_reply_to: "Do not reply <noreply@localhost>"
         ```
 
-=== "Paths"
-
-    ??? variable string "`lldap_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        lldap_role_paths_folder: "{{ lldap_name }}"
-        ```
-
-    ??? variable string "`lldap_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        lldap_role_paths_location: "{{ server_appdata_path }}/{{ lldap_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`lldap_role_web_subdomain`"

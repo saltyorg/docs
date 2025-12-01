@@ -74,22 +74,6 @@ Visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>.
         xteve_name: xteve
         ```
 
-=== "Paths"
-
-    ??? variable string "`xteve_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        xteve_role_paths_folder: "{{ xteve_name }}"
-        ```
-
-    ??? variable string "`xteve_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        xteve_role_paths_location: "{{ server_appdata_path }}/{{ xteve_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`xteve_role_web_subdomain`"

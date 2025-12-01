@@ -164,22 +164,6 @@ These settings are up to the user
         mylar3_name: mylar3
         ```
 
-=== "Paths"
-
-    ??? variable string "`mylar3_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        mylar3_role_paths_folder: "{{ mylar3_name }}"
-        ```
-
-    ??? variable string "`mylar3_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        mylar3_role_paths_location: "{{ server_appdata_path }}/{{ mylar3_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`mylar3_role_web_subdomain`"

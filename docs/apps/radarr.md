@@ -589,44 +589,6 @@ Are you setting Saltbox up for the first time?
         radarr2_external_auth: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`radarr_role_paths_folder`{ .sb-show-on-unchecked }`radarr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        radarr_role_paths_folder: "{{ radarr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        radarr2_paths_folder: "{{ radarr_name }}"
-        ```
-
-    ??? variable string "`radarr_role_paths_location`{ .sb-show-on-unchecked }`radarr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        radarr_role_paths_location: "{{ server_appdata_path }}/{{ radarr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        radarr2_paths_location: "{{ server_appdata_path }}/{{ radarr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`radarr_role_paths_config_location`{ .sb-show-on-unchecked }`radarr2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        radarr_role_paths_config_location: "{{ radarr_role_paths_location }}/config.xml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        radarr2_paths_config_location: "{{ radarr_role_paths_location }}/config.xml"
-        ```
-
 === "Web"
 
     ??? variable string "`radarr_role_web_subdomain`{ .sb-show-on-unchecked }`radarr2_web_subdomain`{ .sb-show-on-checked }"

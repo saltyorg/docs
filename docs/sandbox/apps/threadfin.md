@@ -76,22 +76,6 @@ Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
         threadfin_name: threadfin
         ```
 
-=== "Paths"
-
-    ??? variable string "`threadfin_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        threadfin_role_paths_folder: "{{ threadfin_name }}"
-        ```
-
-    ??? variable string "`threadfin_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        threadfin_role_paths_location: "{{ server_appdata_path }}/{{ threadfin_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`threadfin_role_web_subdomain`"

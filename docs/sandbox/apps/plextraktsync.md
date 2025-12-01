@@ -83,36 +83,6 @@ docker exec -it plextraktsync plextraktsync plex-login
         plextraktsync_name: plextraktsync
         ```
 
-=== "Paths"
-
-    ??? variable string "`plextraktsync_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        plextraktsync_role_paths_folder: "{{ plextraktsync_name }}"
-        ```
-
-    ??? variable string "`plextraktsync_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        plextraktsync_role_paths_location: "{{ server_appdata_path }}/{{ plextraktsync_role_paths_folder }}"
-        ```
-
-    ??? variable string "`plextraktsync_role_paths_env`"
-
-        ```yaml
-        # Type: string
-        plextraktsync_role_paths_env: "{{ plextraktsync_role_paths_location }}/.env"
-        ```
-
-    ??? variable string "`plextraktsync_role_paths_log`"
-
-        ```yaml
-        # Type: string
-        plextraktsync_role_paths_log: "{{ plextraktsync_role_paths_location }}/plextraktsync.log"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

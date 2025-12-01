@@ -68,29 +68,6 @@ Visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>.
         healthchecks_name: healthchecks
         ```
 
-=== "Paths"
-
-    ??? variable string "`healthchecks_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_paths_folder: "{{ healthchecks_name }}"
-        ```
-
-    ??? variable string "`healthchecks_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_paths_location: "{{ server_appdata_path }}/{{ healthchecks_role_paths_folder }}"
-        ```
-
-    ??? variable string "`healthchecks_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_paths_config_location: "{{ healthchecks_role_paths_location }}/local_settings.py"
-        ```
-
 === "Web"
 
     ??? variable string "`healthchecks_role_web_subdomain`"

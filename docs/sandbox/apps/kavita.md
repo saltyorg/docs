@@ -62,22 +62,6 @@ Visit <https://kavita.iYOUR_DOMAIN_NAMEi>.
         kavita_name: kavita
         ```
 
-=== "Paths"
-
-    ??? variable string "`kavita_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        kavita_role_paths_folder: "{{ kavita_name }}"
-        ```
-
-    ??? variable string "`kavita_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        kavita_role_paths_location: "{{ server_appdata_path }}/{{ kavita_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`kavita_role_web_subdomain`"

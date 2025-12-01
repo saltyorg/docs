@@ -148,22 +148,6 @@ Visit <https://dashdot.iYOUR_DOMAIN_NAMEi>.
         dashdot_role_gpu_label_list: "brand,model,memory"
         ```
 
-=== "Paths"
-
-    ??? variable string "`dashdot_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_paths_folder: "{{ dashdot_name }}"
-        ```
-
-    ??? variable string "`dashdot_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_paths_location: "{{ server_appdata_path }}/{{ dashdot_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`dashdot_role_web_subdomain`"

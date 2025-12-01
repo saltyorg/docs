@@ -61,22 +61,6 @@ Visit <https://foundry.iYOUR_DOMAIN_NAMEi>.
         foundry_name: foundry
         ```
 
-=== "Paths"
-
-    ??? variable string "`foundry_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        foundry_role_paths_folder: "{{ foundry_name }}"
-        ```
-
-    ??? variable string "`foundry_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        foundry_role_paths_location: "{{ server_appdata_path }}/{{ foundry_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`foundry_role_web_subdomain`"

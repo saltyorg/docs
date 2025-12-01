@@ -67,22 +67,6 @@ Default credentials are - username: pyload - password: pyload
         pyload_name: pyload
         ```
 
-=== "Paths"
-
-    ??? variable string "`pyload_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        pyload_role_paths_folder: "{{ pyload_name }}"
-        ```
-
-    ??? variable string "`pyload_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        pyload_role_paths_location: "{{ server_appdata_path }}/{{ pyload_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`pyload_role_web_subdomain`"

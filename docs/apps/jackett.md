@@ -134,22 +134,6 @@ Are you setting Saltbox up for the first time?
         jackett_name: jackett
         ```
 
-=== "Paths"
-
-    ??? variable string "`jackett_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        jackett_role_paths_folder: "{{ jackett_name }}"
-        ```
-
-    ??? variable string "`jackett_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        jackett_role_paths_location: "{{ server_appdata_path }}/{{ jackett_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`jackett_role_web_subdomain`"

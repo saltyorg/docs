@@ -77,29 +77,6 @@ Visit <https://glances.iYOUR_DOMAIN_NAMEi>.
           IMAGES: "1"
         ```
 
-=== "Paths"
-
-    ??? variable string "`glances_web_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        glances_web_role_paths_folder: "{{ glances_web_name }}"
-        ```
-
-    ??? variable string "`glances_web_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        glances_web_role_paths_location: "{{ server_appdata_path }}/{{ glances_web_role_paths_folder }}"
-        ```
-
-    ??? variable string "`glances_web_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        glances_web_role_paths_config_location: "{{ glances_web_role_paths_location }}/config/glances.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`glances_web_role_web_subdomain`"

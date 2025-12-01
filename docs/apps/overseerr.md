@@ -192,56 +192,6 @@ Are you setting Saltbox up for the first time?
         overseerr2_log_level: "info"
         ```
 
-=== "Paths"
-
-    ??? variable string "`overseerr_role_paths_folder`{ .sb-show-on-unchecked }`overseerr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_paths_folder: "{{ overseerr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_paths_folder: "{{ overseerr_name }}"
-        ```
-
-    ??? variable string "`overseerr_role_paths_location`{ .sb-show-on-unchecked }`overseerr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_paths_location: "{{ server_appdata_path }}/{{ overseerr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_paths_location: "{{ server_appdata_path }}/{{ overseerr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`overseerr_role_paths_cache`{ .sb-show-on-unchecked }`overseerr2_paths_cache`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_paths_cache: "{{ overseerr_role_paths_location }}/cache"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_paths_cache: "{{ overseerr_role_paths_location }}/cache"
-        ```
-
-    ??? variable string "`overseerr_role_paths_config_location`{ .sb-show-on-unchecked }`overseerr2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_paths_config_location: "{{ overseerr_role_paths_location }}/settings.json"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_paths_config_location: "{{ overseerr_role_paths_location }}/settings.json"
-        ```
-
 === "Web"
 
     ??? variable string "`overseerr_role_web_subdomain`{ .sb-show-on-unchecked }`overseerr2_web_subdomain`{ .sb-show-on-checked }"

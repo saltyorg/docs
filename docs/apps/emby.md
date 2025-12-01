@@ -247,68 +247,6 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_config_cache_size: 1024
         ```
 
-=== "Paths"
-
-    ??? variable string "`emby_role_paths_folder`{ .sb-show-on-unchecked }`emby2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_paths_folder: "{{ emby_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_paths_folder: "{{ emby_name }}"
-        ```
-
-    ??? variable string "`emby_role_paths_location`{ .sb-show-on-unchecked }`emby2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_paths_location: "{{ server_appdata_path }}/{{ emby_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_paths_location: "{{ server_appdata_path }}/{{ emby_role_paths_folder }}"
-        ```
-
-    ??? variable string "`emby_role_paths_transcodes_location`{ .sb-show-on-unchecked }`emby2_paths_transcodes_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_paths_transcodes_location: "{{ transcodes_path }}/{{ emby_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_paths_transcodes_location: "{{ transcodes_path }}/{{ emby_role_paths_folder }}"
-        ```
-
-    ??? variable string "`emby_role_paths_config_location`{ .sb-show-on-unchecked }`emby2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_paths_config_location: "{{ emby_role_paths_location }}/config/system.xml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_paths_config_location: "{{ emby_role_paths_location }}/config/system.xml"
-        ```
-
-    ??? variable string "`emby_role_paths_dlna_xml_location`{ .sb-show-on-unchecked }`emby2_paths_dlna_xml_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_paths_dlna_xml_location: "{{ emby_role_paths_location }}/config/dlna.xml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_paths_dlna_xml_location: "{{ emby_role_paths_location }}/config/dlna.xml"
-        ```
-
 === "Web"
 
     ??? variable string "`emby_role_web_subdomain`{ .sb-show-on-unchecked }`emby2_web_subdomain`{ .sb-show-on-checked }"

@@ -85,22 +85,6 @@ The password provisioned is your Saltbox password.
         wireguard_role_dns: "1.1.1.1,8.8.8.8"
         ```
 
-=== "Paths"
-
-    ??? variable string "`wireguard_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_paths_folder: "{{ wireguard_name }}"
-        ```
-
-    ??? variable string "`wireguard_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_paths_location: "{{ server_appdata_path }}/{{ wireguard_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`wireguard_role_web_subdomain`"

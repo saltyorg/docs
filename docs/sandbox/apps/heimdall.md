@@ -68,22 +68,6 @@ Visit <https://heimdall.iYOUR_DOMAIN_NAMEi>.
         heimdall_name: heimdall
         ```
 
-=== "Paths"
-
-    ??? variable string "`heimdall_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        heimdall_role_paths_folder: "{{ heimdall_name }}"
-        ```
-
-    ??? variable string "`heimdall_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        heimdall_role_paths_location: "{{ server_appdata_path }}/{{ heimdall_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`heimdall_role_web_subdomain`"

@@ -95,36 +95,6 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         nzbget_name: nzbget
         ```
 
-=== "Paths"
-
-    ??? variable string "`nzbget_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_paths_folder: "{{ nzbget_name }}"
-        ```
-
-    ??? variable string "`nzbget_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_paths_location: "{{ server_appdata_path }}/{{ nzbget_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nzbget_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_paths_downloads_location: "{{ downloads_usenet_path }}/{{ nzbget_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nzbget_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_paths_config_location: "{{ nzbget_role_paths_location }}/nzbget.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`nzbget_role_web_subdomain`"
@@ -360,6 +330,15 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         # Default nzbget_scripts_paths_location = /opt/scripts/nzbget
         # Type: string
         nzbget_role_scripts_paths_location: "{{ server_appdata_path }}/scripts/{{ nzbget_role_paths_folder }}"
+        ```
+
+    ??? variable list "`nzbget_role_scripts_paths_folders_list`"
+
+        ```yaml
+        # Type: list
+        nzbget_role_scripts_paths_folders_list:
+          - "{{ nzbget_role_scripts_paths_location }}"
+          - "{{ nzbget_role_scripts_paths_location }}/nzbgetpp"
         ```
 
     ??? variable string "`nzbget_role_scripts_paths_rarfile_py_location`"

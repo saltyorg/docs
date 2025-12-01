@@ -100,22 +100,6 @@ Visit <https://goplaxt.iYOUR_DOMAIN_NAMEi>.
         goplaxt_role_trakt_secret: ""
         ```
 
-=== "Paths"
-
-    ??? variable string "`goplaxt_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        goplaxt_role_paths_folder: "{{ goplaxt_name }}"
-        ```
-
-    ??? variable string "`goplaxt_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        goplaxt_role_paths_location: "{{ server_appdata_path }}/{{ goplaxt_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`goplaxt_role_web_subdomain`"

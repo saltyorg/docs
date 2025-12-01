@@ -117,22 +117,6 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_name: funkwhale
         ```
 
-=== "Paths"
-
-    ??? variable string "`funkwhale_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        funkwhale_role_paths_folder: "{{ funkwhale_name }}"
-        ```
-
-    ??? variable string "`funkwhale_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        funkwhale_role_paths_location: "{{ server_appdata_path }}/{{ funkwhale_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`funkwhale_role_web_subdomain`"

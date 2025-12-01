@@ -71,22 +71,6 @@ Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
         gotify_name: gotify
         ```
 
-=== "Paths"
-
-    ??? variable string "`gotify_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        gotify_role_paths_folder: "{{ gotify_name }}"
-        ```
-
-    ??? variable string "`gotify_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        gotify_role_paths_location: "{{ server_appdata_path }}/{{ gotify_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`gotify_role_web_subdomain`"

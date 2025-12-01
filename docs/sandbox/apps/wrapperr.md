@@ -62,22 +62,6 @@ Visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>.
         wrapperr_name: wrapperr
         ```
 
-=== "Paths"
-
-    ??? variable string "`wrapperr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        wrapperr_role_paths_folder: "{{ wrapperr_name }}"
-        ```
-
-    ??? variable string "`wrapperr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        wrapperr_role_paths_location: "{{ server_appdata_path }}/{{ wrapperr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`wrapperr_role_web_subdomain`"

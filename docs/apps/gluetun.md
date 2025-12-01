@@ -585,32 +585,6 @@ docker exec gluetun curl ifconfig.me
         gluetun2_docker_resolver: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`gluetun_role_paths_folder`{ .sb-show-on-unchecked }`gluetun2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_paths_folder: "{{ gluetun_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_paths_folder: "{{ gluetun_name }}"
-        ```
-
-    ??? variable string "`gluetun_role_paths_location`{ .sb-show-on-unchecked }`gluetun2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_paths_location: "{{ server_appdata_path }}/{{ gluetun_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

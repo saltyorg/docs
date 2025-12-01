@@ -66,22 +66,6 @@ Visit <https://gaps.iYOUR_DOMAIN_NAMEi>.
         gaps_name: gaps
         ```
 
-=== "Paths"
-
-    ??? variable string "`gaps_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        gaps_role_paths_folder: "{{ gaps_name }}"
-        ```
-
-    ??? variable string "`gaps_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        gaps_role_paths_location: "{{ server_appdata_path }}/{{ gaps_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`gaps_role_web_subdomain`"

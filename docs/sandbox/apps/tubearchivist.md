@@ -83,29 +83,6 @@ Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
         tubearchivist_role_enable_cast: "false"
         ```
 
-=== "Paths"
-
-    ??? variable string "`tubearchivist_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_paths_folder: "{{ tubearchivist_name }}"
-        ```
-
-    ??? variable string "`tubearchivist_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_paths_location: "{{ server_appdata_path }}/{{ tubearchivist_role_paths_folder }}/app"
-        ```
-
-    ??? variable string "`tubearchivist_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_paths_downloads_location: "{{ downloads_root_path }}/{{ tubearchivist_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`tubearchivist_role_web_subdomain`"

@@ -62,29 +62,6 @@ Visit <https://forgejo.iYOUR_DOMAIN_NAMEi>.
         forgejo_name: forgejo
         ```
 
-=== "Paths"
-
-    ??? variable string "`forgejo_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        forgejo_role_paths_folder: "{{ forgejo_name }}"
-        ```
-
-    ??? variable string "`forgejo_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        forgejo_role_paths_location: "{{ server_appdata_path }}/{{ forgejo_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`forgejo_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        forgejo_role_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`forgejo_role_web_subdomain`"

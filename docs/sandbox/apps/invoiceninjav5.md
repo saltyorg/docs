@@ -84,43 +84,6 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_overwrite_nginx_config: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`invoiceninjav5_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_paths_folder: "{{ invoiceninjav5_name }}"
-        ```
-
-    ??? variable string "`invoiceninjav5_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_paths_location: "{{ server_appdata_path }}/{{ invoiceninjav5_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`invoiceninjav5_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        invoiceninjav5_role_paths_recursive: true
-        ```
-
-    ??? variable string "`invoiceninjav5_role_paths_owner`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_paths_owner: "1500"
-        ```
-
-    ??? variable string "`invoiceninjav5_role_paths_group`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_paths_group: "1500"
-        ```
-
 === "Web"
 
     ??? variable string "`invoiceninjav5_role_nginx_web_subdomain`"

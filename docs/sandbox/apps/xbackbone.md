@@ -65,22 +65,6 @@ Visit <https://xbackbone.iYOUR_DOMAIN_NAMEi>.
         xbackbone_name: xbackbone
         ```
 
-=== "Paths"
-
-    ??? variable string "`xbackbone_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        xbackbone_role_paths_folder: "{{ xbackbone_name }}"
-        ```
-
-    ??? variable string "`xbackbone_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        xbackbone_role_paths_location: "{{ server_appdata_path }}/{{ xbackbone_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`xbackbone_role_web_subdomain`"

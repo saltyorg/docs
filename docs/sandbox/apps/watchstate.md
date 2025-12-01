@@ -118,32 +118,6 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
         watchstate2_secure_api_endpoints: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`watchstate_role_paths_folder`{ .sb-show-on-unchecked }`watchstate2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        watchstate_role_paths_folder: "{{ watchstate_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        watchstate2_paths_folder: "{{ watchstate_name }}"
-        ```
-
-    ??? variable string "`watchstate_role_paths_location`{ .sb-show-on-unchecked }`watchstate2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        watchstate_role_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        watchstate2_paths_location: "{{ server_appdata_path }}/{{ watchstate_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`watchstate_role_web_subdomain`{ .sb-show-on-unchecked }`watchstate2_web_subdomain`{ .sb-show-on-checked }"

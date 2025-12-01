@@ -109,36 +109,6 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_name: firefox
         ```
 
-=== "Paths"
-
-    ??? variable string "`firefox_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_folder: "{{ firefox_name }}"
-        ```
-
-    ??? variable string "`firefox_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_location: "{{ server_appdata_path }}/{{ firefox_role_paths_folder }}"
-        ```
-
-    ??? variable string "`firefox_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_downloads_location: "{{ downloads_root_path }}/{{ firefox_role_paths_folder }}"
-        ```
-
-    ??? variable string "`firefox_role_paths_env_file_location`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_env_file_location: "{{ firefox_role_paths_location }}/.env"
-        ```
-
 === "Web"
 
     ??? variable string "`firefox_role_web_subdomain`"

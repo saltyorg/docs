@@ -62,29 +62,6 @@ Visit <https://gitea.iYOUR_DOMAIN_NAMEi>.
         gitea_name: gitea
         ```
 
-=== "Paths"
-
-    ??? variable string "`gitea_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        gitea_role_paths_folder: "{{ gitea_name }}"
-        ```
-
-    ??? variable string "`gitea_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        gitea_role_paths_location: "{{ server_appdata_path }}/{{ gitea_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`gitea_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        gitea_role_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`gitea_role_web_subdomain`"

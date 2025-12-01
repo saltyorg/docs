@@ -85,22 +85,6 @@ Visit <https://beets.iYOUR_DOMAIN_NAMEi>.
         beets_name: beets
         ```
 
-=== "Paths"
-
-    ??? variable string "`beets_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        beets_role_paths_folder: "{{ beets_name }}"
-        ```
-
-    ??? variable string "`beets_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        beets_role_paths_location: "{{ server_appdata_path }}/{{ beets_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`beets_role_web_subdomain`"

@@ -139,22 +139,6 @@ Visit <https://n8n.iYOUR_DOMAIN_NAMEi>.
         n8n_role_postgres_paths_location: "{{ server_appdata_path }}/{{ n8n_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`n8n_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        n8n_role_paths_folder: "{{ n8n_name }}"
-        ```
-
-    ??? variable string "`n8n_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        n8n_role_paths_location: "{{ server_appdata_path }}/{{ n8n_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`n8n_role_web_subdomain`"

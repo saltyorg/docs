@@ -81,58 +81,6 @@ Visit <https://rflood.iYOUR_DOMAIN_NAMEi>.
             rflood_instances: ["rflood", "rflood2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`rflood_role_paths_folder`{ .sb-show-on-unchecked }`rflood2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_paths_folder: "{{ rflood_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_paths_folder: "{{ rflood_name }}"
-        ```
-
-    ??? variable string "`rflood_role_paths_location`{ .sb-show-on-unchecked }`rflood2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_paths_location: "{{ server_appdata_path }}/{{ rflood_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_paths_location: "{{ server_appdata_path }}/{{ rflood_role_paths_folder }}"
-        ```
-
-    ??? variable string "`rflood_role_paths_downloads_location`{ .sb-show-on-unchecked }`rflood2_paths_downloads_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ rflood_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_paths_downloads_location: "{{ downloads_torrents_path }}/{{ rflood_role_paths_folder }}"
-        ```
-
-    ??? variable string "`rflood_role_paths_rtorrent_rc_location`{ .sb-show-on-unchecked }`rflood2_paths_rtorrent_rc_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Config files
-        # Type: string
-        rflood_role_paths_rtorrent_rc_location: "{{ rflood_role_paths_location }}/rtorrent.rc"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Config files
-        # Type: string
-        rflood2_paths_rtorrent_rc_location: "{{ rflood_role_paths_location }}/rtorrent.rc"
-        ```
-
 === "Web"
 
     ??? variable string "`rflood_role_web_subdomain`{ .sb-show-on-unchecked }`rflood2_web_subdomain`{ .sb-show-on-checked }"

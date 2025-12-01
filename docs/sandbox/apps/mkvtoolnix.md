@@ -62,22 +62,6 @@ Visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>.
         mkvtoolnix_name: mkvtoolnix
         ```
 
-=== "Paths"
-
-    ??? variable string "`mkvtoolnix_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        mkvtoolnix_role_paths_folder: "{{ mkvtoolnix_name }}"
-        ```
-
-    ??? variable string "`mkvtoolnix_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        mkvtoolnix_role_paths_location: "{{ server_appdata_path }}/{{ mkvtoolnix_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`mkvtoolnix_role_web_subdomain`"

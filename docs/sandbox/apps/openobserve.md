@@ -66,22 +66,6 @@ Default credentials are configured using your user email and password. Root user
         openobserve_name: openobserve
         ```
 
-=== "Paths"
-
-    ??? variable string "`openobserve_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        openobserve_role_paths_folder: "{{ openobserve_name }}"
-        ```
-
-    ??? variable string "`openobserve_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        openobserve_role_paths_location: "{{ server_appdata_path }}/{{ openobserve_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`openobserve_role_web_subdomain`"

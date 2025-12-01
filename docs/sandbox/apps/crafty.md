@@ -66,36 +66,6 @@ Default credentials are generated on first run and stored in `default-creds.txt`
         crafty_name: crafty
         ```
 
-=== "Paths"
-
-    ??? variable string "`crafty_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        crafty_role_paths_folder: "{{ crafty_name }}"
-        ```
-
-    ??? variable string "`crafty_role_paths_group`"
-
-        ```yaml
-        # Type: string
-        crafty_role_paths_group: "root"
-        ```
-
-    ??? variable string "`crafty_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        crafty_role_paths_location: "{{ server_appdata_path }}/{{ crafty_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`crafty_role_paths_recurse`"
-
-        ```yaml
-        # Type: bool (true/false)
-        crafty_role_paths_recurse: true
-        ```
-
 === "Web"
 
     ??? variable string "`crafty_role_web_subdomain`"

@@ -62,22 +62,6 @@ Visit <https://filezilla.iYOUR_DOMAIN_NAMEi>.
         filezilla_name: filezilla
         ```
 
-=== "Paths"
-
-    ??? variable string "`filezilla_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        filezilla_role_paths_folder: "{{ filezilla_name }}"
-        ```
-
-    ??? variable string "`filezilla_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        filezilla_role_paths_location: "{{ server_appdata_path }}/{{ filezilla_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`filezilla_role_web_subdomain`"

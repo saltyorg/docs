@@ -71,22 +71,6 @@ Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
         linkding_name: linkding
         ```
 
-=== "Paths"
-
-    ??? variable string "`linkding_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        linkding_role_paths_folder: "{{ linkding_name }}"
-        ```
-
-    ??? variable string "`linkding_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        linkding_role_paths_location: "{{ server_appdata_path }}/{{ linkding_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`linkding_role_web_subdomain`"

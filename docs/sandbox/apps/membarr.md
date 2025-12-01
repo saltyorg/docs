@@ -99,36 +99,6 @@ Now restart the Membarr container `docker restart membarr`.
         membarr_name: membarr
         ```
 
-=== "Paths"
-
-    ??? variable string "`membarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        membarr_role_paths_folder: "{{ membarr_name }}"
-        ```
-
-    ??? variable string "`membarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        membarr_role_paths_location: "{{ server_appdata_path }}/{{ membarr_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`membarr_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        membarr_role_paths_recursive: true
-        ```
-
-    ??? variable string "`membarr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        membarr_role_paths_config_location: "{{ membarr_role_paths_location }}/config.ini"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

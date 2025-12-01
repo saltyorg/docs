@@ -110,44 +110,6 @@ There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wik
         kometa2_time: "03:00"
         ```
 
-=== "Paths"
-
-    ??? variable string "`kometa_role_paths_folder`{ .sb-show-on-unchecked }`kometa2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_paths_folder: "{{ kometa_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_paths_folder: "{{ kometa_name }}"
-        ```
-
-    ??? variable string "`kometa_role_paths_location`{ .sb-show-on-unchecked }`kometa2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_paths_location: "{{ server_appdata_path }}/{{ kometa_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_paths_location: "{{ server_appdata_path }}/{{ kometa_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`kometa_role_paths_recursive`{ .sb-show-on-unchecked }`kometa2_paths_recursive`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        kometa_role_paths_recursive: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        kometa2_paths_recursive: true
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

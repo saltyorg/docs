@@ -85,22 +85,6 @@ Visit <https://nextcloud.iYOUR_DOMAIN_NAMEi>.
         nextcloud_role_php_upload_limit: "512M"
         ```
 
-=== "Paths"
-
-    ??? variable string "`nextcloud_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_paths_folder: "{{ nextcloud_name }}"
-        ```
-
-    ??? variable string "`nextcloud_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_paths_location: "{{ server_appdata_path }}/{{ nextcloud_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`nextcloud_role_web_subdomain`"

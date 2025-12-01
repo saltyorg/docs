@@ -69,22 +69,6 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_name: scrutiny
         ```
 
-=== "Paths"
-
-    ??? variable string "`scrutiny_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_paths_folder: "{{ scrutiny_name }}"
-        ```
-
-    ??? variable string "`scrutiny_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_paths_location: "{{ server_appdata_path }}/{{ scrutiny_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`scrutiny_role_web_subdomain`"

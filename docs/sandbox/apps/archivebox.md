@@ -96,22 +96,6 @@ By default, your new installation has a publicly accessible web index, snapshots
         archivebox_name: archivebox
         ```
 
-=== "Paths"
-
-    ??? variable string "`archivebox_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        archivebox_role_paths_folder: "{{ archivebox_name }}"
-        ```
-
-    ??? variable string "`archivebox_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        archivebox_role_paths_location: "{{ server_appdata_path }}/{{ archivebox_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`archivebox_role_web_subdomain`"

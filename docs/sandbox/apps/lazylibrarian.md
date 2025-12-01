@@ -64,22 +64,6 @@ Visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>.
         lazylibrarian_name: lazylibrarian
         ```
 
-=== "Paths"
-
-    ??? variable string "`lazylibrarian_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        lazylibrarian_role_paths_folder: "{{ lazylibrarian_name }}"
-        ```
-
-    ??? variable string "`lazylibrarian_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        lazylibrarian_role_paths_location: "{{ server_appdata_path }}/{{ lazylibrarian_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`lazylibrarian_role_web_subdomain`"

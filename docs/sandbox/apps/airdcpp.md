@@ -63,22 +63,6 @@ Visit <https://airdcpp.iYOUR_DOMAIN_NAMEi>.
         airdcpp_name: airdcpp
         ```
 
-=== "Paths"
-
-    ??? variable string "`airdcpp_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        airdcpp_role_paths_folder: "{{ airdcpp_name }}"
-        ```
-
-    ??? variable string "`airdcpp_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        airdcpp_role_paths_location: "{{ server_appdata_path }}/{{ airdcpp_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`airdcpp_role_web_subdomain`"

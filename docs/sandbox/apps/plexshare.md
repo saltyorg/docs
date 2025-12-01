@@ -62,22 +62,6 @@ Visit <https://plexshare.iYOUR_DOMAIN_NAMEi>.
         plexshare_name: plexshare
         ```
 
-=== "Paths"
-
-    ??? variable string "`plexshare_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_paths_folder: "{{ plexshare_name }}"
-        ```
-
-    ??? variable string "`plexshare_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_paths_location: "{{ server_appdata_path }}/{{ plexshare_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`plexshare_role_web_subdomain`"

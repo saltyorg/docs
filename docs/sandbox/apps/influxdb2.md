@@ -79,32 +79,6 @@ Visit <https://influxdb2.iYOUR_DOMAIN_NAMEi>.
             influxdb2_instances: ["influxdb2", "influxdb22"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`influxdb2_role_paths_folder`{ .sb-show-on-unchecked }`influxdb22_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        influxdb2_role_paths_folder: "{{ influxdb2_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        influxdb22_paths_folder: "{{ influxdb2_name }}"
-        ```
-
-    ??? variable string "`influxdb2_role_paths_location`{ .sb-show-on-unchecked }`influxdb22_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        influxdb2_role_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        influxdb22_paths_location: "{{ server_appdata_path }}/{{ influxdb2_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`influxdb2_role_web_subdomain`{ .sb-show-on-unchecked }`influxdb22_web_subdomain`{ .sb-show-on-checked }"

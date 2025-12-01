@@ -180,56 +180,6 @@ Visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>.
         qbittorrentvpn2_lan_network: "172.19.0.0/16"
         ```
 
-=== "Paths"
-
-    ??? variable string "`qbittorrentvpn_role_paths_folder`{ .sb-show-on-unchecked }`qbittorrentvpn2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrentvpn_role_paths_folder: "{{ qbittorrentvpn_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrentvpn2_paths_folder: "{{ qbittorrentvpn_name }}"
-        ```
-
-    ??? variable string "`qbittorrentvpn_role_paths_location`{ .sb-show-on-unchecked }`qbittorrentvpn2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrentvpn_role_paths_location: "{{ server_appdata_path }}/{{ qbittorrentvpn_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrentvpn2_paths_location: "{{ server_appdata_path }}/{{ qbittorrentvpn_role_paths_folder }}"
-        ```
-
-    ??? variable string "`qbittorrentvpn_role_paths_downloads_location`{ .sb-show-on-unchecked }`qbittorrentvpn2_paths_downloads_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrentvpn_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ qbittorrentvpn_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrentvpn2_paths_downloads_location: "{{ downloads_torrents_path }}/{{ qbittorrentvpn_role_paths_folder }}"
-        ```
-
-    ??? variable string "`qbittorrentvpn_role_paths_conf`{ .sb-show-on-unchecked }`qbittorrentvpn2_paths_conf`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrentvpn_role_paths_conf: "{{ qbittorrentvpn_role_paths_location }}/qBittorrent/config/qBittorrent.conf"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrentvpn2_paths_conf: "{{ qbittorrentvpn_role_paths_location }}/qBittorrent/config/qBittorrent.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`qbittorrentvpn_role_web_subdomain`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_subdomain`{ .sb-show-on-checked }"

@@ -66,22 +66,6 @@ Visit <https://profilarr.iYOUR_DOMAIN_NAMEi>.
         profilarr_name: profilarr
         ```
 
-=== "Paths"
-
-    ??? variable string "`profilarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        profilarr_role_paths_folder: "{{ profilarr_name }}"
-        ```
-
-    ??? variable string "`profilarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        profilarr_role_paths_location: "{{ server_appdata_path }}/{{ profilarr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`profilarr_role_web_subdomain`"

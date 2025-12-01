@@ -81,32 +81,6 @@ Visit <https://ombi.iYOUR_DOMAIN_NAMEi>.
             ombi_instances: ["ombi", "ombi2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`ombi_role_paths_folder`{ .sb-show-on-unchecked }`ombi2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        ombi_role_paths_folder: "{{ ombi_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        ombi2_paths_folder: "{{ ombi_name }}"
-        ```
-
-    ??? variable string "`ombi_role_paths_location`{ .sb-show-on-unchecked }`ombi2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        ombi_role_paths_location: "{{ server_appdata_path }}/{{ ombi_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        ombi2_paths_location: "{{ server_appdata_path }}/{{ ombi_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`ombi_role_web_subdomain`{ .sb-show-on-unchecked }`ombi2_web_subdomain`{ .sb-show-on-checked }"

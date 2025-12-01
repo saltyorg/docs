@@ -72,29 +72,6 @@ Visit <https://kitana.iYOUR_DOMAIN_NAMEi>.
         kitana_name: kitana
         ```
 
-=== "Paths"
-
-    ??? variable string "`kitana_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        kitana_role_paths_folder: "{{ kitana_name }}"
-        ```
-
-    ??? variable string "`kitana_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        kitana_role_paths_location: "{{ server_appdata_path }}/{{ kitana_role_paths_folder }}"
-        ```
-
-    ??? variable string "`kitana_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        kitana_role_paths_config_location: "{{ kitana_role_paths_location }}/config.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`kitana_role_web_subdomain`"

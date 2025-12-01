@@ -68,29 +68,6 @@ Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for 
         adguardhome_name: adguardhome
         ```
 
-=== "Paths"
-
-    ??? variable string "`adguardhome_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        adguardhome_role_paths_folder: "{{ adguardhome_name }}"
-        ```
-
-    ??? variable string "`adguardhome_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        adguardhome_role_paths_location: "{{ server_appdata_path }}/{{ adguardhome_role_paths_folder }}"
-        ```
-
-    ??? variable string "`adguardhome_role_paths_config_path`"
-
-        ```yaml
-        # Type: string
-        adguardhome_role_paths_config_path: "{{ adguardhome_role_paths_location }}/conf/AdGuardHome.yaml"
-        ```
-
 === "Web"
 
     ??? variable string "`adguardhome_role_web_subdomain`"

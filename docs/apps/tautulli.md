@@ -142,44 +142,6 @@ Are you setting Saltbox up for the first time?
             tautulli_instances: ["tautulli", "tautulli2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`tautulli_role_paths_folder`{ .sb-show-on-unchecked }`tautulli2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_paths_folder: "{{ tautulli_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_paths_folder: "{{ tautulli_name }}"
-        ```
-
-    ??? variable string "`tautulli_role_paths_location`{ .sb-show-on-unchecked }`tautulli2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_paths_location: "{{ server_appdata_path }}/{{ tautulli_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_paths_location: "{{ server_appdata_path }}/{{ tautulli_role_paths_folder }}"
-        ```
-
-    ??? variable string "`tautulli_role_paths_scripts_location`{ .sb-show-on-unchecked }`tautulli2_paths_scripts_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_paths_scripts_location: "{{ server_appdata_path }}/scripts/tautulli"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_paths_scripts_location: "{{ server_appdata_path }}/scripts/tautulli"
-        ```
-
 === "Web"
 
     ??? variable string "`tautulli_role_web_subdomain`{ .sb-show-on-unchecked }`tautulli2_web_subdomain`{ .sb-show-on-checked }"

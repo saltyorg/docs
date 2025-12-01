@@ -103,22 +103,6 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_name: thelounge
         ```
 
-=== "Paths"
-
-    ??? variable string "`thelounge_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        thelounge_role_paths_folder: "{{ thelounge_name }}"
-        ```
-
-    ??? variable string "`thelounge_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        thelounge_role_paths_location: "{{ server_appdata_path }}/{{ thelounge_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`thelounge_role_web_subdomain`"

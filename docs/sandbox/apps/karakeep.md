@@ -98,22 +98,6 @@ Visit `https://karakeep.app/`.
         karakeep_chrome_port: "9222"
         ```
 
-=== "Paths"
-
-    ??? variable string "`karakeep_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        karakeep_role_paths_folder: "{{ karakeep_name }}"
-        ```
-
-    ??? variable string "`karakeep_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        karakeep_role_paths_location: "{{ server_appdata_path }}/{{ karakeep_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`karakeep_role_web_subdomain`"

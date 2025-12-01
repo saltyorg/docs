@@ -58,29 +58,6 @@ sb install sandbox-nabarr
         nabarr_name: nabarr
         ```
 
-=== "Paths"
-
-    ??? variable string "`nabarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        nabarr_role_paths_folder: "{{ nabarr_name }}"
-        ```
-
-    ??? variable string "`nabarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nabarr_role_paths_location: "{{ server_appdata_path }}/{{ nabarr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nabarr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        nabarr_role_paths_config_location: "{{ nabarr_role_paths_location }}/config.yml"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

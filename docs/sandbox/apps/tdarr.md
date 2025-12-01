@@ -89,50 +89,6 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_server_external: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`tdarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_folder: "{{ tdarr_name }}"
-        ```
-
-    ??? variable string "`tdarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_location: "{{ server_appdata_path }}/{{ tdarr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`tdarr_role_paths_server_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_server_location: "{{ tdarr_role_paths_location }}/server"
-        ```
-
-    ??? variable string "`tdarr_role_paths_configs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_configs_location: "{{ tdarr_role_paths_location }}/configs"
-        ```
-
-    ??? variable string "`tdarr_role_paths_logs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_logs_location: "{{ tdarr_role_paths_location }}/logs"
-        ```
-
-    ??? variable string "`tdarr_role_paths_transcodes_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_transcodes_location: "{{ transcodes_path }}/{{ tdarr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`tdarr_role_web_subdomain`"

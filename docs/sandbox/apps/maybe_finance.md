@@ -139,22 +139,6 @@ Visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>.
         maybe_finance_role_postgres_paths_location: "{{ server_appdata_path }}/{{ maybe_finance_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`maybe_finance_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        maybe_finance_role_paths_folder: "{{ maybe_finance_name }}"
-        ```
-
-    ??? variable string "`maybe_finance_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        maybe_finance_role_paths_location: "{{ server_appdata_path }}/{{ maybe_finance_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`maybe_finance_role_web_subdomain`"

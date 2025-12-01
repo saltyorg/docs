@@ -66,22 +66,6 @@ Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
         goaccess_name: goaccess
         ```
 
-=== "Paths"
-
-    ??? variable string "`goaccess_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        goaccess_role_paths_folder: "{{ goaccess_name }}"
-        ```
-
-    ??? variable string "`goaccess_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        goaccess_role_paths_location: "{{ server_appdata_path }}/{{ goaccess_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`goaccess_role_web_subdomain`"

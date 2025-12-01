@@ -66,29 +66,6 @@ Visit <https://sshwifty.iYOUR_DOMAIN_NAMEi>.
         sshwifty_name: sshwifty
         ```
 
-=== "Paths"
-
-    ??? variable string "`sshwifty_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        sshwifty_role_paths_folder: "{{ sshwifty_name }}"
-        ```
-
-    ??? variable string "`sshwifty_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        sshwifty_role_paths_location: "{{ server_appdata_path }}/{{ sshwifty_role_paths_folder }}"
-        ```
-
-    ??? variable string "`sshwifty_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        sshwifty_role_paths_config_location: "{{ sshwifty_role_paths_location }}/config/sshwifty.conf.json"
-        ```
-
 === "Web"
 
     ??? variable string "`sshwifty_role_web_subdomain`"

@@ -64,22 +64,6 @@ Visit <https://medusa.iYOUR_DOMAIN_NAMEi>.
         medusa_name: medusa
         ```
 
-=== "Paths"
-
-    ??? variable string "`medusa_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        medusa_role_paths_folder: "{{ medusa_name }}"
-        ```
-
-    ??? variable string "`medusa_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        medusa_role_paths_location: "{{ server_appdata_path }}/{{ medusa_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`medusa_role_web_subdomain`"

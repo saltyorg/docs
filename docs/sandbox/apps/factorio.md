@@ -64,22 +64,6 @@ sb install sandbox-factorio
         factorio_name: factorio
         ```
 
-=== "Paths"
-
-    ??? variable string "`factorio_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        factorio_role_paths_folder: "{{ factorio_name }}"
-        ```
-
-    ??? variable string "`factorio_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        factorio_role_paths_location: "{{ server_appdata_path }}/{{ factorio_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`factorio_role_web_subdomain`"

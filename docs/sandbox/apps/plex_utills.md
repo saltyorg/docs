@@ -73,22 +73,6 @@ Visit <https://plex-utills.iYOUR_DOMAIN_NAMEi>.
         plex_utills_name: plex-utills
         ```
 
-=== "Paths"
-
-    ??? variable string "`plex_utills_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        plex_utills_role_paths_folder: "{{ plex_utills_name }}"
-        ```
-
-    ??? variable string "`plex_utills_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        plex_utills_role_paths_location: "{{ server_appdata_path }}/{{ plex_utills_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`plex_utills_role_web_subdomain`"

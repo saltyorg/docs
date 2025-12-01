@@ -66,22 +66,6 @@ Visit <https://homebox.iYOUR_DOMAIN_NAMEi>.
         homebox_name: homebox
         ```
 
-=== "Paths"
-
-    ??? variable string "`homebox_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        homebox_role_paths_folder: "{{ homebox_name }}"
-        ```
-
-    ??? variable string "`homebox_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        homebox_role_paths_location: "{{ server_appdata_path }}/{{ homebox_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`homebox_role_web_subdomain`"

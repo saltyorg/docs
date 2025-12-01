@@ -107,57 +107,6 @@ docker restart rutorrent
         rutorrent_name: rutorrent
         ```
 
-=== "Paths"
-
-    ??? variable string "`rutorrent_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_folder: "{{ rutorrent_name }}"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_location: "{{ server_appdata_path }}/{{ rutorrent_role_paths_folder }}"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ rutorrent_role_paths_folder }}"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_config_php_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_config_php_location: "{{ rutorrent_role_paths_location }}/rutorrent/settings/config.php"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_rtorrent_rc_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_rtorrent_rc_location: "{{ rutorrent_role_paths_location }}/rtorrent/rtorrent.rc"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_php_local_ini_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_php_local_ini_location: "{{ rutorrent_role_paths_location }}/php/php-local.ini"
-        ```
-
-    ??? variable string "`rutorrent_role_paths_plugins_ini_location`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_paths_plugins_ini_location: "{{ rutorrent_role_paths_location }}/rutorrent/settings/plugins.ini"
-        ```
-
 === "Web"
 
     ??? variable string "`rutorrent_role_web_subdomain`"

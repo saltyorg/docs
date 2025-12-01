@@ -80,29 +80,6 @@ password <password> # (3)!
         mqtt_name: mqtt
         ```
 
-=== "Paths"
-
-    ??? variable string "`mqtt_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        mqtt_role_paths_folder: "{{ mqtt_name }}"
-        ```
-
-    ??? variable string "`mqtt_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        mqtt_role_paths_location: "{{ server_appdata_path }}/{{ mqtt_role_paths_folder }}"
-        ```
-
-    ??? variable string "`mqtt_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        mqtt_role_paths_config_location: "{{ mqtt_role_paths_location }}/config/mosquitto.conf"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

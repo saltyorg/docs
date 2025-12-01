@@ -82,22 +82,6 @@ resiliosync_data_port: "#####"
         resiliosync_role_data_port: "55555"
         ```
 
-=== "Paths"
-
-    ??? variable string "`resiliosync_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        resiliosync_role_paths_folder: "{{ resiliosync_name }}"
-        ```
-
-    ??? variable string "`resiliosync_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        resiliosync_role_paths_location: "{{ server_appdata_path }}/{{ resiliosync_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`resiliosync_role_web_subdomain`"

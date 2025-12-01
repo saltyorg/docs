@@ -1022,22 +1022,6 @@ To access Authelia, visit <https://login.iYOUR_DOMAIN_NAMEi> or the subdomain se
             authelia_role_password_policy_zxcvbn_min_score: "3"
             ```
 
-=== "Paths"
-
-    ??? variable string "`authelia_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        authelia_role_paths_folder: "{{ authelia_name }}"
-        ```
-
-    ??? variable string "`authelia_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        authelia_role_paths_location: "{{ server_appdata_path }}/{{ authelia_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`authelia_role_web_subdomain`"

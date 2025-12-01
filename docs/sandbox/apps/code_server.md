@@ -73,22 +73,6 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_name: code-server
         ```
 
-=== "Paths"
-
-    ??? variable string "`code_server_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        code_server_role_paths_folder: "{{ code_server_name }}"
-        ```
-
-    ??? variable string "`code_server_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        code_server_role_paths_location: "{{ server_appdata_path }}/{{ code_server_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`code_server_role_web_subdomain`"

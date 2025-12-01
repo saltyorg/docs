@@ -77,22 +77,6 @@ This role will add both the homepage container, and the homepage-docker-socket-p
           POST: "0"
         ```
 
-=== "Paths"
-
-    ??? variable string "`homepage_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        homepage_role_paths_folder: "{{ homepage_name }}"
-        ```
-
-    ??? variable string "`homepage_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        homepage_role_paths_location: "{{ server_appdata_path }}/{{ homepage_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`homepage_role_web_subdomain`"

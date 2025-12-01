@@ -72,29 +72,6 @@ Visit <https://vaultwarden.iYOUR_DOMAIN_NAMEi>.
         vaultwarden_name: vaultwarden
         ```
 
-=== "Paths"
-
-    ??? variable string "`vaultwarden_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        vaultwarden_role_paths_folder: "{{ vaultwarden_name }}"
-        ```
-
-    ??? variable string "`vaultwarden_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        vaultwarden_role_paths_location: "{{ server_appdata_path }}/{{ vaultwarden_role_paths_folder }}"
-        ```
-
-    ??? variable string "`vaultwarden_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        vaultwarden_role_paths_config_location: "{{ vaultwarden_role_paths_location }}/env"
-        ```
-
 === "Web"
 
     ??? variable string "`vaultwarden_role_web_subdomain`"

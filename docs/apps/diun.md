@@ -60,22 +60,6 @@ The config file for diun is located at `/opt/diun/diun.yml`
         diun_name: diun
         ```
 
-=== "Paths"
-
-    ??? variable string "`diun_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        diun_role_paths_folder: "{{ diun_name }}"
-        ```
-
-    ??? variable string "`diun_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        diun_role_paths_location: "{{ server_appdata_path }}/{{ diun_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

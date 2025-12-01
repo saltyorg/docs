@@ -81,32 +81,6 @@ Note: No authentication is configured by default.
             mongodb_instances: ["mongodb", "mongodb2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`mongodb_role_paths_folder`{ .sb-show-on-unchecked }`mongodb2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mongodb_role_paths_folder: "{{ mongodb_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mongodb2_paths_folder: "{{ mongodb_name }}"
-        ```
-
-    ??? variable string "`mongodb_role_paths_location`{ .sb-show-on-unchecked }`mongodb2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mongodb_role_paths_location: "{{ server_appdata_path }}/{{ mongodb_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mongodb2_paths_location: "{{ server_appdata_path }}/{{ mongodb_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

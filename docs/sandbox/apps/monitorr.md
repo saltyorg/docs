@@ -62,22 +62,6 @@ Visit <https://monitorr.iYOUR_DOMAIN_NAMEi>.
         monitorr_name: monitorr
         ```
 
-=== "Paths"
-
-    ??? variable string "`monitorr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        monitorr_role_paths_folder: "{{ monitorr_name }}"
-        ```
-
-    ??? variable string "`monitorr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        monitorr_role_paths_location: "{{ server_appdata_path }}/{{ monitorr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`monitorr_role_web_subdomain`"

@@ -62,22 +62,6 @@ Visit <https://duplicati.iYOUR_DOMAIN_NAMEi>.
         duplicati_name: duplicati
         ```
 
-=== "Paths"
-
-    ??? variable string "`duplicati_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        duplicati_role_paths_folder: "{{ duplicati_name }}"
-        ```
-
-    ??? variable string "`duplicati_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        duplicati_role_paths_location: "{{ server_appdata_path }}/{{ duplicati_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`duplicati_role_web_subdomain`"

@@ -94,29 +94,6 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_image_type: "headless"
         ```
 
-=== "Paths"
-
-    ??? variable string "`ytdl_sub_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        ytdl_sub_role_paths_folder: "{{ ytdl_sub_name }}"
-        ```
-
-    ??? variable string "`ytdl_sub_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        ytdl_sub_role_paths_location: "{{ server_appdata_path }}/{{ ytdl_sub_role_paths_folder }}"
-        ```
-
-    ??? variable string "`ytdl_sub_role_paths_download_folder`"
-
-        ```yaml
-        # Type: string
-        ytdl_sub_role_paths_download_folder: "/mnt/unionfs/Media/Youtube/{{ ytdl_sub_name }}"
-        ```
-
 === "Web"
 
     ??? variable string "`ytdl_sub_role_web_subdomain`"

@@ -106,41 +106,4 @@ tail -f /opt/tqm/activity.log
         # Type: string
         tqm_name: tqm
         ```
-
-=== "Paths"
-
-    ??? variable string "`tqm_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tqm_role_paths_folder: "{{ tqm_name }}"
-        ```
-
-    ??? variable string "`tqm_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tqm_role_paths_location: "{{ server_appdata_path }}/{{ tqm_role_paths_folder }}"
-        ```
-
-    ??? variable string "`tqm_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        tqm_role_paths_config_location: "{{ tqm_role_paths_location }}/config.yaml"
-        ```
-
-    ??? variable string "`tqm_role_paths_service_location`"
-
-        ```yaml
-        # Type: string
-        tqm_role_paths_service_location: "/etc/systemd/system/tqm.service"
-        ```
-
-    ??? variable string "`tqm_role_paths_timer_location`"
-
-        ```yaml
-        # Type: string
-        tqm_role_paths_timer_location: "/etc/systemd/system/tqm.timer"
-        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

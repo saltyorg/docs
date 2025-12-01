@@ -61,22 +61,6 @@ Visit <https://codex.iYOUR_DOMAIN_NAMEi>.
         codex_name: codex
         ```
 
-=== "Paths"
-
-    ??? variable string "`codex_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        codex_role_paths_folder: "{{ codex_name }}"
-        ```
-
-    ??? variable string "`codex_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        codex_role_paths_location: "{{ server_appdata_path }}/{{ codex_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`codex_role_web_subdomain`"

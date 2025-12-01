@@ -130,22 +130,6 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_agent_mode: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`dozzle_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_paths_folder: "{{ dozzle_name }}"
-        ```
-
-    ??? variable string "`dozzle_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_paths_location: "{{ server_appdata_path }}/{{ dozzle_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`dozzle_role_web_subdomain`"

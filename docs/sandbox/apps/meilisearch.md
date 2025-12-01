@@ -70,22 +70,6 @@ Visit `https://www.meilisearch.com/docs`.
         meilisearch_name: meilisearch
         ```
 
-=== "Paths"
-
-    ??? variable string "`meilisearch_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        meilisearch_role_paths_folder: "{{ meilisearch_name }}"
-        ```
-
-    ??? variable string "`meilisearch_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        meilisearch_role_paths_location: "{{ server_appdata_path }}/{{ meilisearch_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

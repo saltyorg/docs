@@ -71,22 +71,6 @@ Visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>.
         prowlarr_role_external_auth: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`prowlarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        prowlarr_role_paths_folder: "{{ prowlarr_name }}"
-        ```
-
-    ??? variable string "`prowlarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        prowlarr_role_paths_location: "{{ server_appdata_path }}/{{ prowlarr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`prowlarr_role_web_subdomain`"

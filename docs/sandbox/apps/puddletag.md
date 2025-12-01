@@ -71,22 +71,6 @@ Visit <https://puddletag.iYOUR_DOMAIN_NAMEi>.
         puddletag_name: puddletag
         ```
 
-=== "Paths"
-
-    ??? variable string "`puddletag_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_paths_folder: "{{ puddletag_name }}"
-        ```
-
-    ??? variable string "`puddletag_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_paths_location: "{{ server_appdata_path }}/{{ puddletag_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`puddletag_role_web_subdomain`"

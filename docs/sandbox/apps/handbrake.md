@@ -85,22 +85,6 @@ Visit <https://handbrake.iYOUR_DOMAIN_NAMEi>.
         handbrake_name: handbrake
         ```
 
-=== "Paths"
-
-    ??? variable string "`handbrake_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        handbrake_role_paths_folder: "{{ handbrake_name }}"
-        ```
-
-    ??? variable string "`handbrake_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        handbrake_role_paths_location: "{{ server_appdata_path }}/{{ handbrake_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`handbrake_role_web_subdomain`"

@@ -66,29 +66,6 @@ Visit <https://filebot.iYOUR_DOMAIN_NAMEi>.
         filebot_name: filebot
         ```
 
-=== "Paths"
-
-    ??? variable string "`filebot_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        filebot_role_paths_folder: "{{ filebot_name }}"
-        ```
-
-    ??? variable string "`filebot_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        filebot_role_paths_location: "{{ server_appdata_path }}/{{ filebot_role_paths_folder }}"
-        ```
-
-    ??? variable string "`filebot_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        filebot_role_paths_config_location: "{{ filebot_role_paths_location }}/config.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`filebot_role_web_subdomain`"

@@ -71,22 +71,6 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         komga_name: komga
         ```
 
-=== "Paths"
-
-    ??? variable string "`komga_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        komga_role_paths_folder: "{{ komga_name }}"
-        ```
-
-    ??? variable string "`komga_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        komga_role_paths_location: "{{ server_appdata_path }}/{{ komga_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`komga_role_web_subdomain`"

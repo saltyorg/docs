@@ -153,29 +153,6 @@ Visit <https://jellystat.iYOUR_DOMAIN_NAMEi>.
         jellystat_emby: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`jellystat_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        jellystat_role_paths_folder: "{{ jellystat_name }}"
-        ```
-
-    ??? variable string "`jellystat_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        jellystat_role_paths_location: "{{ server_appdata_path }}/{{ jellystat_role_paths_folder }}"
-        ```
-
-    ??? variable string "`jellystat_role_paths_jwt_secret_file`"
-
-        ```yaml
-        # Type: string
-        jellystat_role_paths_jwt_secret_file: "{{ jellystat_role_paths_location }}/jwt_secret.txt"
-        ```
-
 === "Web"
 
     ??? variable string "`jellystat_role_web_subdomain`"

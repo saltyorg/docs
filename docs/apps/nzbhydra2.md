@@ -119,36 +119,6 @@ Are you setting Saltbox up for the first time?
         nzbhydra2_name: nzbhydra2
         ```
 
-=== "Paths"
-
-    ??? variable string "`nzbhydra2_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_paths_folder: "{{ nzbhydra2_name }}"
-        ```
-
-    ??? variable string "`nzbhydra2_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_paths_location: "{{ server_appdata_path }}/{{ nzbhydra2_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nzbhydra2_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_paths_downloads_location: "{{ downloads_usenet_path }}/{{ nzbhydra2_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nzbhydra2_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        nzbhydra2_role_paths_config_location: "{{ nzbhydra2_role_paths_location }}/nzbhydra.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`nzbhydra2_role_web_subdomain`"

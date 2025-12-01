@@ -89,32 +89,6 @@ Please refer to the official documentation for an explanation of the settings. S
             bazarr_instances: ["bazarr", "bazarr2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`bazarr_role_paths_folder`{ .sb-show-on-unchecked }`bazarr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        bazarr_role_paths_folder: "{{ bazarr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        bazarr2_paths_folder: "{{ bazarr_name }}"
-        ```
-
-    ??? variable string "`bazarr_role_paths_location`{ .sb-show-on-unchecked }`bazarr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        bazarr_role_paths_location: "{{ server_appdata_path }}/{{ bazarr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        bazarr2_paths_location: "{{ server_appdata_path }}/{{ bazarr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`bazarr_role_web_subdomain`{ .sb-show-on-unchecked }`bazarr2_web_subdomain`{ .sb-show-on-checked }"

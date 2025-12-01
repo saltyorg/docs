@@ -68,22 +68,6 @@ Change that password ASAP.
         znc_name: znc
         ```
 
-=== "Paths"
-
-    ??? variable string "`znc_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        znc_role_paths_folder: "{{ znc_name }}"
-        ```
-
-    ??? variable string "`znc_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        znc_role_paths_location: "{{ server_appdata_path }}/{{ znc_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`znc_role_web_subdomain`"

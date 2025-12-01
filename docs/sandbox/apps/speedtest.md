@@ -68,22 +68,6 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
         speedtest_name: speedtest
         ```
 
-=== "Paths"
-
-    ??? variable string "`speedtest_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_paths_folder: "{{ speedtest_name }}"
-        ```
-
-    ??? variable string "`speedtest_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_paths_location: "{{ server_appdata_path }}/{{ speedtest_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`speedtest_role_web_subdomain`"

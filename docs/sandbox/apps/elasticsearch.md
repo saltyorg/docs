@@ -91,29 +91,6 @@ sb install sandbox-elasticsearch
         elasticsearch_role_sysctl_vm_max_map_count: "262144"
         ```
 
-=== "Paths"
-
-    ??? variable string "`elasticsearch_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        elasticsearch_role_paths_folder: "{{ elasticsearch_name }}"
-        ```
-
-    ??? variable string "`elasticsearch_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        elasticsearch_role_paths_location: "{{ server_appdata_path }}/{{ elasticsearch_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`elasticsearch_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        elasticsearch_role_paths_recursive: true
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

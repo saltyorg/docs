@@ -144,22 +144,6 @@ Visit <https://wikijs.iYOUR_DOMAIN_NAMEi>.
         wikijs_role_postgres_paths_location: "{{ server_appdata_path }}/{{ wikijs_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`wikijs_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        wikijs_role_paths_folder: "{{ wikijs_name }}"
-        ```
-
-    ??? variable string "`wikijs_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        wikijs_role_paths_location: "{{ server_appdata_path }}/{{ wikijs_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`wikijs_role_web_subdomain`"

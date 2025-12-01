@@ -67,22 +67,6 @@ Visit <https://booksonic.iYOUR_DOMAIN_NAMEi>.
         booksonic_name: booksonic
         ```
 
-=== "Paths"
-
-    ??? variable string "`booksonic_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        booksonic_role_paths_folder: "{{ booksonic_name }}"
-        ```
-
-    ??? variable string "`booksonic_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        booksonic_role_paths_location: "{{ server_appdata_path }}/{{ booksonic_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`booksonic_role_web_subdomain`"

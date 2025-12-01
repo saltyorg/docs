@@ -144,22 +144,6 @@ Visit <https://paperless.iYOUR_DOMAIN_NAMEi>.
         paperless_ngx_role_postgres_paths_location: "{{ server_appdata_path }}/{{ paperless_ngx_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`paperless_ngx_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        paperless_ngx_role_paths_folder: "{{ paperless_ngx_name }}"
-        ```
-
-    ??? variable string "`paperless_ngx_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        paperless_ngx_role_paths_location: "{{ server_appdata_path }}/{{ paperless_ngx_role_paths_folder }}/app"
-        ```
-
 === "Web"
 
     ??? variable string "`paperless_ngx_role_web_subdomain`"

@@ -65,15 +65,6 @@ Configure per-version users, databases, and access control using `postgres_host_
         postgres_host_role_versions: ["17"]
         ```
 
-=== "Paths"
-
-    ??? variable string "`postgres_host_role_data_directory`"
-
-        ```yaml
-        # Type: string
-        postgres_host_role_data_directory: "{{ server_appdata_path }}/postgresql"
-        ```
-
 === "Superuser"
 
     ??? variable bool "`postgres_host_role_create_root_superuser`"

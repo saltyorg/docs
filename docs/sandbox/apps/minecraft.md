@@ -115,44 +115,6 @@ sb install sandbox-minecraft
         minecraft2_dynmap_router_enabled: false
         ```
 
-=== "Paths"
-
-    ??? variable string "`minecraft_role_paths_folder`{ .sb-show-on-unchecked }`minecraft2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_paths_folder: "minecraft"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_paths_folder: "minecraft"
-        ```
-
-    ??? variable string "`minecraft_role_paths_location`{ .sb-show-on-unchecked }`minecraft2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_paths_location: "{{ server_appdata_path }}/{{ minecraft_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_paths_location: "{{ server_appdata_path }}/{{ minecraft_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`minecraft_role_paths_recursive`{ .sb-show-on-unchecked }`minecraft2_paths_recursive`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        minecraft_role_paths_recursive: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        minecraft2_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`minecraft_role_web_subdomain`{ .sb-show-on-unchecked }`minecraft2_web_subdomain`{ .sb-show-on-checked }"

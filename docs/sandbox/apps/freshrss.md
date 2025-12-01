@@ -64,22 +64,6 @@ Visit <https://freshrss.iYOUR_DOMAIN_NAMEi>.
         freshrss_name: freshrss
         ```
 
-=== "Paths"
-
-    ??? variable string "`freshrss_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        freshrss_role_paths_folder: "{{ freshrss_name }}"
-        ```
-
-    ??? variable string "`freshrss_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        freshrss_role_paths_location: "{{ server_appdata_path }}/{{ lookup('role_var', '_paths_folder', role='freshrss') }}"
-        ```
-
 === "Web"
 
     ??? variable string "`freshrss_role_web_subdomain`"
@@ -945,13 +929,6 @@ Visit <https://freshrss.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: bool (true/false)
         freshrss_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`freshrss_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        freshrss_role_paths_folder:
         ```
 
     ??? variable string "`freshrss_role_paths_location`"

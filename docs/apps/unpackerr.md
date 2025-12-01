@@ -76,29 +76,6 @@ Same setup is required for radarr and lidarr if you are using them.
         unpackerr_name: unpackerr
         ```
 
-=== "Paths"
-
-    ??? variable string "`unpackerr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_paths_folder: "{{ unpackerr_name }}"
-        ```
-
-    ??? variable string "`unpackerr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_paths_location: "{{ server_appdata_path }}/{{ unpackerr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`unpackerr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        unpackerr_role_paths_config_location: "{{ unpackerr_role_paths_location }}/unpackerr.conf"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

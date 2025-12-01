@@ -62,29 +62,6 @@ Visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>.
         audiobookshelf_name: audiobookshelf
         ```
 
-=== "Paths"
-
-    ??? variable string "`audiobookshelf_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        audiobookshelf_role_paths_folder: "{{ audiobookshelf_name }}"
-        ```
-
-    ??? variable string "`audiobookshelf_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        audiobookshelf_role_paths_location: "{{ server_appdata_path }}/{{ audiobookshelf_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`audiobookshelf_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        audiobookshelf_role_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`audiobookshelf_role_web_subdomain`"

@@ -75,44 +75,6 @@ sb install sandbox-telegraf
             telegraf_instances: ["telegraf", "telegraf2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`telegraf_role_paths_folder`{ .sb-show-on-unchecked }`telegraf2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        telegraf_role_paths_folder: "telegraf"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        telegraf2_paths_folder: "telegraf"
-        ```
-
-    ??? variable string "`telegraf_role_paths_location`{ .sb-show-on-unchecked }`telegraf2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        telegraf_role_paths_location: "{{ server_appdata_path }}/{{ telegraf_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        telegraf2_paths_location: "{{ server_appdata_path }}/{{ telegraf_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`telegraf_role_paths_recursive`{ .sb-show-on-unchecked }`telegraf2_paths_recursive`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        telegraf_role_paths_recursive: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        telegraf2_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`telegraf_role_web_subdomain`{ .sb-show-on-unchecked }`telegraf2_web_subdomain`{ .sb-show-on-checked }"

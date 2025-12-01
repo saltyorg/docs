@@ -67,43 +67,6 @@ sb install sandbox-a-train
         a_train_role_remotes: [""]
         ```
 
-=== "Paths"
-
-    ??? variable string "`a_train_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        a_train_role_paths_folder: "{{ a_train_name }}"
-        ```
-
-    ??? variable string "`a_train_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        a_train_role_paths_location: "{{ server_appdata_path }}/{{ a_train_role_paths_folder }}"
-        ```
-
-    ??? variable string "`a_train_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        a_train_role_paths_config_location: "{{ a_train_role_paths_location }}/a-train.toml"
-        ```
-
-    ??? variable string "`a_train_role_paths_sa_location`"
-
-        ```yaml
-        # Type: string
-        a_train_role_paths_sa_location: "{{ a_train_role_paths_location }}/account.json"
-        ```
-
-    ??? variable string "`a_train_role_paths_rclone_config_location`"
-
-        ```yaml
-        # Type: string
-        a_train_role_paths_rclone_config_location: "/home/{{ user.name }}/.config/rclone/rclone.conf"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

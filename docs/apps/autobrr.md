@@ -64,29 +64,6 @@ Visit <https://autobrr.iYOUR_DOMAIN_NAMEi>.
         autobrr_name: autobrr
         ```
 
-=== "Paths"
-
-    ??? variable string "`autobrr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_paths_folder: "{{ autobrr_name }}"
-        ```
-
-    ??? variable string "`autobrr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_paths_location: "{{ server_appdata_path }}/{{ autobrr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`autobrr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_paths_config_location: "{{ autobrr_role_paths_location }}/config.toml"
-        ```
-
 === "Web"
 
     ??? variable string "`autobrr_role_web_subdomain`"

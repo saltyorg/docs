@@ -66,22 +66,6 @@ Visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>.
         sqlitebrowser_name: sqlitebrowser
         ```
 
-=== "Paths"
-
-    ??? variable string "`sqlitebrowser_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        sqlitebrowser_role_paths_folder: "{{ sqlitebrowser_name }}"
-        ```
-
-    ??? variable string "`sqlitebrowser_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        sqlitebrowser_role_paths_location: "{{ server_appdata_path }}/{{ sqlitebrowser_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`sqlitebrowser_role_web_subdomain`"

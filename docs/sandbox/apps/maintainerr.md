@@ -129,32 +129,6 @@ You will need your API Keys from both Radarr and Sonarr.
             maintainerr_instances: ["maintainerr", "maintainerr2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`maintainerr_role_paths_folder`{ .sb-show-on-unchecked }`maintainerr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        maintainerr_role_paths_folder: "{{ maintainerr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        maintainerr2_paths_folder: "{{ maintainerr_name }}"
-        ```
-
-    ??? variable string "`maintainerr_role_paths_location`{ .sb-show-on-unchecked }`maintainerr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        maintainerr_role_paths_location: "{{ server_appdata_path }}/{{ maintainerr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        maintainerr2_paths_location: "{{ server_appdata_path }}/{{ maintainerr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`maintainerr_role_web_subdomain`{ .sb-show-on-unchecked }`maintainerr2_web_subdomain`{ .sb-show-on-checked }"

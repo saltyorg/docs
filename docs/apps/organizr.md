@@ -229,22 +229,6 @@ You're ready to explore Saltbox! You can start checking out community apps if yo
         organizr_branch: "v2-master"
         ```
 
-=== "Paths"
-
-    ??? variable string "`organizr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        organizr_role_paths_folder: "{{ organizr_name }}"
-        ```
-
-    ??? variable string "`organizr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        organizr_role_paths_location: "{{ server_appdata_path }}/{{ organizr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`organizr_role_web_subdomain`"

@@ -62,29 +62,6 @@ PLex-auto-languages has no UI; it is driven by a config file
         plex_auto_languages_name: plex-auto-languages
         ```
 
-=== "Paths"
-
-    ??? variable string "`plex_auto_languages_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_paths_folder: "{{ plex_auto_languages_name }}"
-        ```
-
-    ??? variable string "`plex_auto_languages_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_paths_location: "{{ server_appdata_path }}/{{ plex_auto_languages_role_paths_folder }}"
-        ```
-
-    ??? variable string "`plex_auto_languages_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_paths_config_location: "{{ plex_auto_languages_role_paths_location }}/config.yaml"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

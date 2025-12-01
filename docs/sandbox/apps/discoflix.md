@@ -62,22 +62,6 @@ Visit <https://discoflix.iYOUR_DOMAIN_NAMEi>.
         discoflix_name: discoflix
         ```
 
-=== "Paths"
-
-    ??? variable string "`discoflix_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        discoflix_role_paths_folder: "{{ discoflix_name }}"
-        ```
-
-    ??? variable string "`discoflix_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        discoflix_role_paths_location: "{{ server_appdata_path }}/{{ discoflix_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`discoflix_role_web_subdomain`"

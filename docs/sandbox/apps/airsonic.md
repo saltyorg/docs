@@ -64,22 +64,6 @@ Visit <https://airsonic.iYOUR_DOMAIN_NAMEi>.
         airsonic_name: airsonic
         ```
 
-=== "Paths"
-
-    ??? variable string "`airsonic_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        airsonic_role_paths_folder: "{{ airsonic_name }}"
-        ```
-
-    ??? variable string "`airsonic_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        airsonic_role_paths_location: "{{ server_appdata_path }}/{{ airsonic_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`airsonic_role_web_subdomain`"

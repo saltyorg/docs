@@ -339,44 +339,6 @@ Are you Setting Saltbox up for the first time?
             autoscan_instances: ["autoscan", "autoscan2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`autoscan_role_paths_folder`{ .sb-show-on-unchecked }`autoscan2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        autoscan_role_paths_folder: "{{ autoscan_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        autoscan2_paths_folder: "{{ autoscan_name }}"
-        ```
-
-    ??? variable string "`autoscan_role_paths_location`{ .sb-show-on-unchecked }`autoscan2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        autoscan_role_paths_location: "{{ server_appdata_path }}/{{ autoscan_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        autoscan2_paths_location: "{{ server_appdata_path }}/{{ autoscan_role_paths_folder }}"
-        ```
-
-    ??? variable string "`autoscan_role_paths_config_location`{ .sb-show-on-unchecked }`autoscan2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        autoscan_role_paths_config_location: "{{ autoscan_role_paths_location }}/config.yml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        autoscan2_paths_config_location: "{{ autoscan_role_paths_location }}/config.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`autoscan_role_web_subdomain`{ .sb-show-on-unchecked }`autoscan2_web_subdomain`{ .sb-show-on-checked }"

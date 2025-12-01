@@ -66,22 +66,6 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_name: grocy
         ```
 
-=== "Paths"
-
-    ??? variable string "`grocy_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        grocy_role_paths_folder: "{{ grocy_name }}"
-        ```
-
-    ??? variable string "`grocy_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        grocy_role_paths_location: "{{ server_appdata_path }}/{{ grocy_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`grocy_role_web_subdomain`"

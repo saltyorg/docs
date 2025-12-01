@@ -136,22 +136,6 @@ Visit <https://fireflyiii.iYOUR_DOMAIN_NAMEi>.
         fireflyiii_role_mariadb_docker_env_db: "{{ fireflyiii_name }}-mariadb"
         ```
 
-=== "Paths"
-
-    ??? variable string "`fireflyiii_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_role_paths_folder: "{{ fireflyiii_name }}"
-        ```
-
-    ??? variable string "`fireflyiii_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_role_paths_location: "{{ server_appdata_path }}/{{ fireflyiii_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`fireflyiii_role_web_subdomain`"

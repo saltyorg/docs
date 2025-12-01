@@ -82,32 +82,6 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
             redis_instances: ["redis", "redis2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`redis_role_paths_folder`{ .sb-show-on-unchecked }`redis2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        redis_role_paths_folder: "{{ redis_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        redis2_paths_folder: "{{ redis_name }}"
-        ```
-
-    ??? variable string "`redis_role_paths_location`{ .sb-show-on-unchecked }`redis2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        redis_role_paths_location: "{{ server_appdata_path }}/{{ redis_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        redis2_paths_location: "{{ server_appdata_path }}/{{ redis_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

@@ -83,32 +83,6 @@ Visit <https://qui.iYOUR_DOMAIN_NAMEi>.
             qui_instances: ["qui", "qui2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`qui_role_paths_folder`{ .sb-show-on-unchecked }`qui2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qui_role_paths_folder: "{{ qui_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qui2_paths_folder: "{{ qui_name }}"
-        ```
-
-    ??? variable string "`qui_role_paths_location`{ .sb-show-on-unchecked }`qui2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qui_role_paths_location: "{{ server_appdata_path }}/{{ qui_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qui2_paths_location: "{{ server_appdata_path }}/{{ qui_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`qui_role_web_subdomain`{ .sb-show-on-unchecked }`qui2_web_subdomain`{ .sb-show-on-checked }"

@@ -129,22 +129,6 @@ Visit <https://fireflyiii-importer.iYOUR_DOMAIN_NAMEi>.
         fireflyiii_importer_name: fireflyiii-importer
         ```
 
-=== "Paths"
-
-    ??? variable string "`fireflyiii_importer_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_importer_role_paths_folder: "{{ fireflyiii_name }}"
-        ```
-
-    ??? variable string "`fireflyiii_importer_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_importer_role_paths_location: "{{ server_appdata_path }}/{{ fireflyiii_importer_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`fireflyiii_importer_role_web_subdomain`"

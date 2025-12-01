@@ -63,22 +63,6 @@ Visit <https://reposilite.iYOUR_DOMAIN_NAMEi>.
         reposilite_name: reposilite
         ```
 
-=== "Paths"
-
-    ??? variable string "`reposilite_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        reposilite_role_paths_folder: "{{ reposilite_name }}"
-        ```
-
-    ??? variable string "`reposilite_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        reposilite_role_paths_location: "{{ server_appdata_path }}/{{ reposilite_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`reposilite_role_web_subdomain`"

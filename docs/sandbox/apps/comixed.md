@@ -75,22 +75,6 @@ Password: comixedreader
         comixed_name: comixed
         ```
 
-=== "Paths"
-
-    ??? variable string "`comixed_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        comixed_role_paths_folder: "{{ comixed_name }}"
-        ```
-
-    ??? variable string "`comixed_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        comixed_role_paths_location: "{{ server_appdata_path }}/{{ comixed_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`comixed_role_web_subdomain`"

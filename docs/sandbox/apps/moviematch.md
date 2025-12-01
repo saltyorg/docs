@@ -84,22 +84,6 @@ MovieMatch will read the config from `/opt/moviematch/config.yaml` by default.
         moviematch_name: moviematch
         ```
 
-=== "Paths"
-
-    ??? variable string "`moviematch_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        moviematch_role_paths_folder: "{{ moviematch_name }}"
-        ```
-
-    ??? variable string "`moviematch_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        moviematch_role_paths_location: "{{ server_appdata_path }}/{{ moviematch_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`moviematch_role_web_subdomain`"

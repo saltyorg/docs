@@ -93,36 +93,6 @@ Visit <https://netdata.iYOUR_DOMAIN_NAMEi>.
           CONTAINERS: "1"
         ```
 
-=== "Paths"
-
-    ??? variable string "`netdata_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        netdata_role_paths_folder: "{{ netdata_name }}"
-        ```
-
-    ??? variable string "`netdata_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        netdata_role_paths_location: "{{ server_appdata_path }}/{{ netdata_role_paths_folder }}"
-        ```
-
-    ??? variable string "`netdata_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        netdata_role_paths_config_location: "{{ netdata_role_paths_location }}/config"
-        ```
-
-    ??? variable string "`netdata_role_paths_config_file_location`"
-
-        ```yaml
-        # Type: string
-        netdata_role_paths_config_file_location: "{{ netdata_role_paths_location }}/config/netdata.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`netdata_role_web_subdomain`"

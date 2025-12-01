@@ -117,32 +117,6 @@ sb install postgres
         postgres2_docker_env_db: "saltbox"
         ```
 
-=== "Paths"
-
-    ??? variable string "`postgres_role_paths_folder`{ .sb-show-on-unchecked }`postgres2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_paths_folder: "{{ postgres_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_paths_folder: "{{ postgres_name }}"
-        ```
-
-    ??? variable string "`postgres_role_paths_location`{ .sb-show-on-unchecked }`postgres2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        postgres_role_paths_location: "{{ server_appdata_path }}/{{ postgres_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        postgres2_paths_location: "{{ server_appdata_path }}/{{ postgres_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

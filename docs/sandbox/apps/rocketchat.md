@@ -95,29 +95,6 @@ Visit <https://rocketchat.iYOUR_DOMAIN_NAMEi>.
         rockatchat_mongodb_role_paths_location: "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/mongo"
         ```
 
-=== "Paths"
-
-    ??? variable string "`rocketchat_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        rocketchat_role_paths_folder: "{{ rocketchat_name }}"
-        ```
-
-    ??? variable string "`rocketchat_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        rocketchat_role_paths_location: "{{ server_appdata_path }}/{{ rocketchat_role_paths_folder }}"
-        ```
-
-    ??? variable string "`rocketchat_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        rocketchat_role_paths_config_location: "{{ rocketchat_role_paths_location }}/env"
-        ```
-
 === "Web"
 
     ??? variable string "`rocketchat_role_web_subdomain`"

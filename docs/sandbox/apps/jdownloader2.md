@@ -72,36 +72,6 @@ Visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>.
         jdownloader2_name: jdownloader2
         ```
 
-=== "Paths"
-
-    ??? variable string "`jdownloader2_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        jdownloader2_role_paths_folder: "{{ jdownloader2_name }}"
-        ```
-
-    ??? variable string "`jdownloader2_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        jdownloader2_role_paths_location: "{{ server_appdata_path }}/{{ jdownloader2_role_paths_folder }}"
-        ```
-
-    ??? variable string "`jdownloader2_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        jdownloader2_role_paths_downloads_location: "/mnt/local/downloads/{{ jdownloader2_name }}/output"
-        ```
-
-    ??? variable string "`jdownloader2_role_paths_tools_location`"
-
-        ```yaml
-        # Type: string
-        jdownloader2_role_paths_tools_location: "{{ jdownloader2_role_paths_location }}/config/libs"
-        ```
-
 === "Web"
 
     ??? variable string "`jdownloader2_role_web_subdomain`"

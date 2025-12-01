@@ -65,29 +65,6 @@ Note: Configuration is file-based with no web interface.
         nzbthrottle_name: nzbthrottle
         ```
 
-=== "Paths"
-
-    ??? variable string "`nzbthrottle_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        nzbthrottle_role_paths_folder: "{{ nzbthrottle_name }}"
-        ```
-
-    ??? variable string "`nzbthrottle_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nzbthrottle_role_paths_location: "{{ server_appdata_path }}/{{ nzbthrottle_role_paths_folder }}"
-        ```
-
-    ??? variable string "`nzbthrottle_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        nzbthrottle_role_paths_config_location: "{{ nzbthrottle_role_paths_location }}/config.json"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

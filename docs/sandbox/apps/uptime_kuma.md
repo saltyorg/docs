@@ -77,29 +77,6 @@ Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptim
           IMAGES: "1"
         ```
 
-=== "Paths"
-
-    ??? variable string "`uptime_kuma_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        uptime_kuma_role_paths_folder: "{{ uptime_kuma_name }}"
-        ```
-
-    ??? variable string "`uptime_kuma_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        uptime_kuma_role_paths_location: "{{ server_appdata_path }}/{{ uptime_kuma_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`uptime_kuma_role_paths_recursive`"
-
-        ```yaml
-        # Type: bool (true/false)
-        uptime_kuma_role_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`uptime_kuma_role_web_subdomain`"

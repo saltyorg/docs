@@ -65,15 +65,6 @@ Visit <https://transfer.iYOUR_DOMAIN_NAMEi>.
         transfer_name: transfer
         ```
 
-=== "Paths"
-
-    ??? variable string "`transfer_role_uploads_location`"
-
-        ```yaml
-        # Type: string
-        transfer_role_uploads_location: "/tmp"
-        ```
-
 === "Web"
 
     ??? variable string "`transfer_role_web_subdomain`"

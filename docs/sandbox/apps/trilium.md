@@ -62,22 +62,6 @@ Visit <https://trilium.iYOUR_DOMAIN_NAMEi>.
         trilium_name: trilium
         ```
 
-=== "Paths"
-
-    ??? variable string "`trilium_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        trilium_role_paths_folder: "{{ trilium_name }}"
-        ```
-
-    ??? variable string "`trilium_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        trilium_role_paths_location: "{{ server_appdata_path }}/{{ trilium_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`trilium_role_web_subdomain`"

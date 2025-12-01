@@ -158,22 +158,6 @@ Save and Test
         teslamate_role_postgres_paths_location: "{{ server_appdata_path }}/{{ teslamate_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`teslamate_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        teslamate_role_paths_folder: "{{ teslamate_name }}"
-        ```
-
-    ??? variable string "`teslamate_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        teslamate_role_paths_location: "{{ server_appdata_path }}/{{ teslamate_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`teslamate_role_web_subdomain`"

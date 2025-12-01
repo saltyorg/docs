@@ -79,32 +79,6 @@ Visit <https://wizarr.iYOUR_DOMAIN_NAMEi>.
             wizarr_instances: ["wizarr", "wizarr2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`wizarr_role_paths_folder`{ .sb-show-on-unchecked }`wizarr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wizarr_role_paths_folder: "{{ wizarr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wizarr2_paths_folder: "{{ wizarr_name }}"
-        ```
-
-    ??? variable string "`wizarr_role_paths_location`{ .sb-show-on-unchecked }`wizarr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wizarr_role_paths_location: "{{ server_appdata_path }}/{{ wizarr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wizarr2_paths_location: "{{ server_appdata_path }}/{{ wizarr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`wizarr_role_web_subdomain`{ .sb-show-on-unchecked }`wizarr2_web_subdomain`{ .sb-show-on-checked }"

@@ -148,22 +148,6 @@ If this paragraph does not make sense to you, then please do not try it.
         calibre_web_role_name: calibre-web
         ```
 
-=== "Paths"
-
-    ??? variable string "`calibre_web_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        calibre_web_role_paths_folder: "{{ calibre_web_role_name }}"
-        ```
-
-    ??? variable string "`calibre_web_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        calibre_web_role_paths_location: "{{ server_appdata_path }}/{{ calibre_web_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`calibre_web_role_web_subdomain`"

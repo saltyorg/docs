@@ -68,29 +68,6 @@ Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
         olivetin_name: olivetin
         ```
 
-=== "Paths"
-
-    ??? variable string "`olivetin_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        olivetin_role_paths_folder: "{{ olivetin_name }}"
-        ```
-
-    ??? variable string "`olivetin_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        olivetin_role_paths_location: "{{ server_appdata_path }}/{{ olivetin_role_paths_folder }}"
-        ```
-
-    ??? variable string "`olivetin_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        olivetin_role_paths_config_location: "{{ olivetin_role_paths_location }}/config.yaml"
-        ```
-
 === "Web"
 
     ??? variable string "`olivetin_role_web_subdomain`"

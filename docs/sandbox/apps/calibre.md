@@ -112,32 +112,6 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
             calibre_instances: ["calibre", "calibre2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`calibre_role_paths_folder`{ .sb-show-on-unchecked }`calibre2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        calibre_role_paths_folder: "{{ calibre_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        calibre2_paths_folder: "{{ calibre_name }}"
-        ```
-
-    ??? variable string "`calibre_role_paths_location`{ .sb-show-on-unchecked }`calibre2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        calibre_role_paths_location: "{{ server_appdata_path }}/{{ calibre_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        calibre2_paths_location: "{{ server_appdata_path }}/{{ calibre_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`calibre_role_web_subdomain`{ .sb-show-on-unchecked }`calibre2_web_subdomain`{ .sb-show-on-checked }"

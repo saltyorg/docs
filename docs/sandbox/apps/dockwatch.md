@@ -96,22 +96,6 @@ Visit <https://dockwatch.iYOUR_DOMAIN_NAMEi>.
           VOLUMES: "1"
         ```
 
-=== "Paths"
-
-    ??? variable string "`dockwatch_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        dockwatch_role_paths_folder: "{{ dockwatch_name }}"
-        ```
-
-    ??? variable string "`dockwatch_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        dockwatch_role_paths_location: "{{ server_appdata_path }}/{{ dockwatch_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`dockwatch_role_web_subdomain`"

@@ -114,56 +114,6 @@ To add Deluge as a download client in Sonarr/Radarr use the following settings. 
             deluge_instances: ["deluge", "deluge2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`deluge_role_paths_folder`{ .sb-show-on-unchecked }`deluge2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_paths_folder: "{{ deluge_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_paths_folder: "{{ deluge_name }}"
-        ```
-
-    ??? variable string "`deluge_role_paths_location`{ .sb-show-on-unchecked }`deluge2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_paths_location: "{{ server_appdata_path }}/{{ deluge_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_paths_location: "{{ server_appdata_path }}/{{ deluge_role_paths_folder }}"
-        ```
-
-    ??? variable string "`deluge_role_paths_conf`{ .sb-show-on-unchecked }`deluge2_paths_conf`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_paths_conf: "{{ deluge_role_paths_location }}/core.conf"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_paths_conf: "{{ deluge_role_paths_location }}/core.conf"
-        ```
-
-    ??? variable string "`deluge_role_paths_downloads_location`{ .sb-show-on-unchecked }`deluge2_paths_downloads_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ deluge_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_paths_downloads_location: "{{ downloads_torrents_path }}/{{ deluge_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`deluge_role_web_subdomain`{ .sb-show-on-unchecked }`deluge2_web_subdomain`{ .sb-show-on-checked }"

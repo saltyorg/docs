@@ -65,50 +65,6 @@ Visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>.
         filebrowser_name: filebrowser
         ```
 
-=== "Paths"
-
-    ??? variable string "`filebrowser_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_folder: "{{ filebrowser_name }}"
-        ```
-
-    ??? variable string "`filebrowser_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_location: "{{ server_appdata_path }}/{{ filebrowser_role_paths_folder }}"
-        ```
-
-    ??? variable string "`filebrowser_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_config_location: "{{ filebrowser_role_paths_location }}/filebrowser.json"
-        ```
-
-    ??? variable string "`filebrowser_role_paths_config_folder`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_config_folder: "{{ filebrowser_role_paths_location }}/config"
-        ```
-
-    ??? variable string "`filebrowser_role_paths_db_location`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_db_location: "{{ filebrowser_role_paths_location }}/filebrowser.db"
-        ```
-
-    ??? variable string "`filebrowser_role_paths_db_folder`"
-
-        ```yaml
-        # Type: string
-        filebrowser_role_paths_db_folder: "{{ filebrowser_role_paths_location }}/database"
-        ```
-
 === "Web"
 
     ??? variable string "`filebrowser_role_web_subdomain`"

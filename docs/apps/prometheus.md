@@ -86,29 +86,6 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_size: "0"
         ```
 
-=== "Paths"
-
-    ??? variable string "`prometheus_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        prometheus_role_paths_folder: "{{ prometheus_name }}"
-        ```
-
-    ??? variable string "`prometheus_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        prometheus_role_paths_location: "{{ server_appdata_path }}/{{ prometheus_role_paths_folder }}"
-        ```
-
-    ??? variable string "`prometheus_role_paths_config_path`"
-
-        ```yaml
-        # Type: string
-        prometheus_role_paths_config_path: "{{ prometheus_role_paths_location }}/prometheus.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`prometheus_role_web_subdomain`"

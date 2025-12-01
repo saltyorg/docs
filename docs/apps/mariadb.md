@@ -128,32 +128,6 @@ To easily manage the db, consider [adminer](../sandbox/apps/adminer.md)
         mariadb2_docker_env_db: "saltbox"
         ```
 
-=== "Paths"
-
-    ??? variable string "`mariadb_role_paths_folder`{ .sb-show-on-unchecked }`mariadb2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_paths_folder: "{{ mariadb_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_paths_folder: "{{ mariadb_name }}"
-        ```
-
-    ??? variable string "`mariadb_role_paths_location`{ .sb-show-on-unchecked }`mariadb2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_paths_location: "{{ server_appdata_path }}/{{ mariadb_role_paths_folder }}"
-        ```
-
 === "Migration Settings"
 
     ??? variable string "`mariadb_role_docker_envs_mysql_root_password`{ .sb-show-on-unchecked }`mariadb2_docker_envs_mysql_root_password`{ .sb-show-on-checked }"

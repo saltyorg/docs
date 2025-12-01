@@ -62,22 +62,6 @@ Visit <https://pufferpanel.iYOUR_DOMAIN_NAMEi>.
         pufferpanel_name: pufferpanel
         ```
 
-=== "Paths"
-
-    ??? variable string "`pufferpanel_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        pufferpanel_role_paths_folder: "{{ pufferpanel_name }}"
-        ```
-
-    ??? variable string "`pufferpanel_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        pufferpanel_role_paths_location: "{{ server_appdata_path }}/{{ pufferpanel_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`pufferpanel_role_web_subdomain`"

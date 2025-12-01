@@ -92,50 +92,6 @@ Visit <https://cockpit.iYOUR_DOMAIN_NAMEi>.
         cockpit_role_put_machines_dpkg_into_hold: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`cockpit_role_paths_socket_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_socket_location: "/etc/systemd/system/cockpit.socket.d/listen.conf"
-        ```
-
-    ??? variable string "`cockpit_role_paths_socket_override_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_socket_override_location: "/etc/systemd/system/cockpit.socket.d/override.conf"
-        ```
-
-    ??? variable string "`cockpit_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_config_location: "/etc/cockpit/cockpit.conf"
-        ```
-
-    ??? variable string "`cockpit_role_paths_traefik_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_traefik_location: "{{ server_appdata_path }}/traefik/cockpit.yml"
-        ```
-
-    ??? variable string "`cockpit_role_paths_service_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_service_location: "/lib/systemd/system/cockpit.service"
-        ```
-
-    ??? variable string "`cockpit_role_paths_override_location`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_paths_override_location: "/etc/systemd/system/cockpit.service.d/override.conf"
-        ```
-
 === "Web"
 
     ??? variable string "`cockpit_role_web_subdomain`"

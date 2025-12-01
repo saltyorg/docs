@@ -62,22 +62,6 @@ Visit <https://embystat.iYOUR_DOMAIN_NAMEi>.
         embystat_name: embystat
         ```
 
-=== "Paths"
-
-    ??? variable string "`embystat_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        embystat_role_paths_folder: "{{ embystat_name }}"
-        ```
-
-    ??? variable string "`embystat_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        embystat_role_paths_location: "{{ server_appdata_path }}/{{ embystat_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`embystat_role_web_subdomain`"

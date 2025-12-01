@@ -74,22 +74,6 @@ Visit <https://grafana.iYOUR_DOMAIN_NAMEi>.
         grafana_role_plugins: ""
         ```
 
-=== "Paths"
-
-    ??? variable string "`grafana_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        grafana_role_paths_folder: "{{ grafana_name }}"
-        ```
-
-    ??? variable string "`grafana_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        grafana_role_paths_location: "{{ server_appdata_path }}/{{ grafana_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`grafana_role_web_subdomain`"

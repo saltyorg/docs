@@ -135,22 +135,6 @@ Visit <https://unifi.iYOUR_DOMAIN_NAMEi>.
         unifi_network_application_mongo_dbname: "unifi"
         ```
 
-=== "Paths"
-
-    ??? variable string "`unifi_network_application_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_paths_folder: "{{ unifi_network_application_name }}"
-        ```
-
-    ??? variable string "`unifi_network_application_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_paths_location: "{{ server_appdata_path }}/{{ unifi_network_application_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`unifi_network_application_role_web_subdomain`"

@@ -70,22 +70,6 @@ By default, library statistics are updated once every hour, and stream data is u
         tauticord_name: tauticord
         ```
 
-=== "Paths"
-
-    ??? variable string "`tauticord_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tauticord_role_paths_folder: "{{ tauticord_name }}"
-        ```
-
-    ??? variable string "`tauticord_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tauticord_role_paths_location: "{{ server_appdata_path }}/{{ tauticord_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

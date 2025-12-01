@@ -75,29 +75,6 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_name: homeassistant
         ```
 
-=== "Paths"
-
-    ??? variable string "`homeassistant_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        homeassistant_role_paths_folder: "{{ homeassistant_name }}"
-        ```
-
-    ??? variable string "`homeassistant_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        homeassistant_role_paths_location: "{{ server_appdata_path }}/{{ homeassistant_role_paths_folder }}"
-        ```
-
-    ??? variable string "`homeassistant_role_paths_conf`"
-
-        ```yaml
-        # Type: string
-        homeassistant_role_paths_conf: "{{ homeassistant_role_paths_location }}/configuration.yaml"
-        ```
-
 === "Web"
 
     ??? variable string "`homeassistant_role_web_subdomain`"

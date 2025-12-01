@@ -73,22 +73,6 @@ sb install sandbox-minecraft-bedrock
         minecraft_bedrock_role_version: "LATEST"
         ```
 
-=== "Paths"
-
-    ??? variable string "`minecraft_bedrock_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_paths_folder: "{{ minecraft_bedrock_name }}"
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_paths_location: "{{ server_appdata_path }}/{{ minecraft_bedrock_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`minecraft_bedrock_role_web_subdomain`"

@@ -73,29 +73,6 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_name: trackarr
         ```
 
-=== "Paths"
-
-    ??? variable string "`trackarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        trackarr_role_paths_folder: "{{ trackarr_name }}"
-        ```
-
-    ??? variable string "`trackarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        trackarr_role_paths_location: "{{ server_appdata_path }}/{{ trackarr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`trackarr_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        trackarr_role_paths_config_location: "{{ trackarr_role_paths_location }}/config.yaml"
-        ```
-
 === "Web"
 
     ??? variable string "`trackarr_role_web_subdomain`"

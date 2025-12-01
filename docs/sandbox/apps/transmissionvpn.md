@@ -86,29 +86,6 @@ Visit <https://transmissionvpn.iYOUR_DOMAIN_NAMEi>.
         transmissionvpn_umask_set: "022"
         ```
 
-=== "Paths"
-
-    ??? variable string "`transmissionvpn_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_paths_folder: "{{ transmissionvpn_name }}"
-        ```
-
-    ??? variable string "`transmissionvpn_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_paths_location: "{{ server_appdata_path }}/{{ transmissionvpn_role_paths_folder }}"
-        ```
-
-    ??? variable string "`transmissionvpn_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_paths_downloads_location: "{{ downloads_torrents_path }}/{{ transmissionvpn_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`transmissionvpn_role_web_subdomain`"

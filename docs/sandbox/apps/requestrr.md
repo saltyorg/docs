@@ -79,32 +79,6 @@ Visit <https://requestrr.iYOUR_DOMAIN_NAMEi>.
             requestrr_instances: ["requestrr", "requestrr2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`requestrr_role_paths_folder`{ .sb-show-on-unchecked }`requestrr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        requestrr_role_paths_folder: "{{ requestrr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        requestrr2_paths_folder: "{{ requestrr_name }}"
-        ```
-
-    ??? variable string "`requestrr_role_paths_location`{ .sb-show-on-unchecked }`requestrr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        requestrr_role_paths_location: "{{ server_appdata_path }}/{{ requestrr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        requestrr2_paths_location: "{{ server_appdata_path }}/{{ requestrr_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`requestrr_role_web_subdomain`{ .sb-show-on-unchecked }`requestrr2_web_subdomain`{ .sb-show-on-checked }"

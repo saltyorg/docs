@@ -85,32 +85,6 @@ Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
             nginx_instances: ["nginx", "nginx2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`nginx_role_paths_folder`{ .sb-show-on-unchecked }`nginx2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        nginx_role_paths_folder: "{{ nginx_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        nginx2_paths_folder: "{{ nginx_name }}"
-        ```
-
-    ??? variable string "`nginx_role_paths_location`{ .sb-show-on-unchecked }`nginx2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        nginx_role_paths_location: "{{ server_appdata_path }}/{{ nginx_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        nginx2_paths_location: "{{ server_appdata_path }}/{{ nginx_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`nginx_role_web_subdomain`{ .sb-show-on-unchecked }`nginx2_web_subdomain`{ .sb-show-on-checked }"

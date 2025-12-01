@@ -77,22 +77,6 @@ A typical apprise URL would look like this:
         apprise_name: apprise
         ```
 
-=== "Paths"
-
-    ??? variable string "`apprise_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        apprise_role_paths_folder: "{{ apprise_name }}"
-        ```
-
-    ??? variable string "`apprise_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        apprise_role_paths_location: "{{ server_appdata_path }}/{{ apprise_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`apprise_role_web_subdomain`"

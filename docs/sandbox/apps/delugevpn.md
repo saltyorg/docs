@@ -241,22 +241,6 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_vpn_client: "wireguard"
         ```
 
-=== "Paths"
-
-    ??? variable string "`delugevpn_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_paths_folder: "{{ delugevpn_name }}"
-        ```
-
-    ??? variable string "`delugevpn_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_paths_location: "{{ server_appdata_path }}/{{ delugevpn_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`delugevpn_role_web_subdomain`"

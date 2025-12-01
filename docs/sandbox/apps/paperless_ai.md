@@ -62,22 +62,6 @@ Visit <https://paperless-ai.iYOUR_DOMAIN_NAMEi>.
         paperless_ai_name: paperless-ai
         ```
 
-=== "Paths"
-
-    ??? variable string "`paperless_ai_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_paths_folder: "{{ paperless_ai_name }}"
-        ```
-
-    ??? variable string "`paperless_ai_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_paths_location: "{{ server_appdata_path }}/{{ paperless_ai_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`paperless_ai_role_web_subdomain`"

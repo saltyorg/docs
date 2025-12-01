@@ -85,32 +85,6 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
             node_red_instances: ["node_red", "node_red2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`node_red_role_paths_folder`{ .sb-show-on-unchecked }`node_red2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        node_red_role_paths_folder: "{{ node_red_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        node_red2_paths_folder: "{{ node_red_name }}"
-        ```
-
-    ??? variable string "`node_red_role_paths_location`{ .sb-show-on-unchecked }`node_red2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        node_red_role_paths_location: "{{ server_appdata_path }}/{{ node_red_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        node_red2_paths_location: "{{ server_appdata_path }}/{{ node_red_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`node_red_role_web_subdomain`{ .sb-show-on-unchecked }`node_red2_web_subdomain`{ .sb-show-on-checked }"

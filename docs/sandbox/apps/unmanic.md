@@ -62,29 +62,6 @@ Visit <https://unmanic.iYOUR_DOMAIN_NAMEi>.
         unmanic_name: unmanic
         ```
 
-=== "Paths"
-
-    ??? variable string "`unmanic_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        unmanic_role_paths_folder: "{{ unmanic_name }}"
-        ```
-
-    ??? variable string "`unmanic_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        unmanic_role_paths_location: "{{ server_appdata_path }}/{{ unmanic_role_paths_folder }}"
-        ```
-
-    ??? variable string "`unmanic_role_paths_transcodes_location`"
-
-        ```yaml
-        # Type: string
-        unmanic_role_paths_transcodes_location: "{{ transcodes_path }}/{{ unmanic_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`unmanic_role_web_subdomain`"

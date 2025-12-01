@@ -79,44 +79,6 @@ Visit <https://wordpress.iYOUR_DOMAIN_NAMEi>.
             wordpress_instances: ["wordpress", "wordpress2"]
             ```
 
-=== "Paths"
-
-    ??? variable string "`wordpress_role_paths_folder`{ .sb-show-on-unchecked }`wordpress2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_paths_folder: "{{ wordpress_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_paths_folder: "{{ wordpress_name }}"
-        ```
-
-    ??? variable string "`wordpress_role_paths_location`{ .sb-show-on-unchecked }`wordpress2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_paths_location: "{{ server_appdata_path }}/{{ wordpress_role_paths_folder }}"
-        ```
-
-    ??? variable bool "`wordpress_role_paths_recursive`{ .sb-show-on-unchecked }`wordpress2_paths_recursive`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        wordpress_role_paths_recursive: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        wordpress2_paths_recursive: true
-        ```
-
 === "Web"
 
     ??? variable string "`wordpress_role_web_subdomain`{ .sb-show-on-unchecked }`wordpress2_web_subdomain`{ .sb-show-on-checked }"

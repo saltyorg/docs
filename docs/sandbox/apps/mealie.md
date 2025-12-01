@@ -62,22 +62,6 @@ Visit <https://mealie.iYOUR_DOMAIN_NAMEi>.
         mealie_name: mealie
         ```
 
-=== "Paths"
-
-    ??? variable string "`mealie_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        mealie_role_paths_folder: "{{ mealie_name }}"
-        ```
-
-    ??? variable string "`mealie_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        mealie_role_paths_location: "{{ server_appdata_path }}/{{ mealie_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`mealie_role_web_subdomain`"

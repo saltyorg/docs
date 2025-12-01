@@ -147,36 +147,6 @@ Are you setting Saltbox up for the first time?
         sabnzbd_name: sabnzbd
         ```
 
-=== "Paths"
-
-    ??? variable string "`sabnzbd_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_paths_folder: "{{ sabnzbd_name }}"
-        ```
-
-    ??? variable string "`sabnzbd_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_paths_location: "{{ server_appdata_path }}/{{ sabnzbd_role_paths_folder }}"
-        ```
-
-    ??? variable string "`sabnzbd_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_paths_downloads_location: "{{ downloads_usenet_path }}/{{ sabnzbd_role_paths_folder }}"
-        ```
-
-    ??? variable string "`sabnzbd_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_paths_config_location: "{{ sabnzbd_role_paths_location }}/sabnzbd.ini"
-        ```
-
 === "Web"
 
     ??? variable string "`sabnzbd_role_web_subdomain`"

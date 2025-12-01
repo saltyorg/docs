@@ -101,22 +101,6 @@ sb install sandbox-recyclarr
         recyclarr_role_cron_schedule: "@daily"
         ```
 
-=== "Paths"
-
-    ??? variable string "`recyclarr_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_paths_folder: "{{ recyclarr_name }}"
-        ```
-
-    ??? variable string "`recyclarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_paths_location: "{{ server_appdata_path }}/{{ recyclarr_role_paths_folder }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

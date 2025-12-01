@@ -501,44 +501,6 @@ Are you setting Saltbox up for the first time?
         lidarr2_external_auth: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`lidarr_role_paths_folder`{ .sb-show-on-unchecked }`lidarr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        lidarr_role_paths_folder: "{{ lidarr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        lidarr2_paths_folder: "{{ lidarr_name }}"
-        ```
-
-    ??? variable string "`lidarr_role_paths_location`{ .sb-show-on-unchecked }`lidarr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        lidarr_role_paths_location: "{{ server_appdata_path }}/{{ lidarr_role_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        lidarr2_paths_location: "{{ server_appdata_path }}/{{ lidarr_role_paths_folder }}"
-        ```
-
-    ??? variable string "`lidarr_role_paths_config_location`{ .sb-show-on-unchecked }`lidarr2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        lidarr_role_paths_config_location: "{{ lidarr_role_paths_location }}/config.xml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        lidarr2_paths_config_location: "{{ lidarr_role_paths_location }}/config.xml"
-        ```
-
 === "Web"
 
     ??? variable string "`lidarr_role_web_subdomain`{ .sb-show-on-unchecked }`lidarr2_web_subdomain`{ .sb-show-on-checked }"

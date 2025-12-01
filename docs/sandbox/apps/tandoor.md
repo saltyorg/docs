@@ -195,22 +195,6 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
         tandoor_role_postgres_paths_location: "{{ server_appdata_path }}/{{ tandoor_role_postgres_paths_folder }}/postgres"
         ```
 
-=== "Paths"
-
-    ??? variable string "`tandoor_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        tandoor_role_paths_folder: "{{ tandoor_name }}"
-        ```
-
-    ??? variable string "`tandoor_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tandoor_role_paths_location: "{{ server_appdata_path }}/{{ tandoor_role_paths_folder }}"
-        ```
-
 === "Web"
 
     ??? variable string "`tandoor_role_web_subdomain`"

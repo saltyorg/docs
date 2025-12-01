@@ -66,29 +66,6 @@ To edit your config, edit the `.yaml` file in dashys appdata folder, which is ty
         dashy_name: dashy
         ```
 
-=== "Paths"
-
-    ??? variable string "`dashy_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        dashy_role_paths_folder: "{{ dashy_name }}"
-        ```
-
-    ??? variable string "`dashy_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        dashy_role_paths_location: "{{ server_appdata_path }}/{{ dashy_role_paths_folder }}"
-        ```
-
-    ??? variable string "`dashy_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        dashy_role_paths_config_location: "{{ dashy_role_paths_location }}/conf.yml"
-        ```
-
 === "Web"
 
     ??? variable string "`dashy_role_web_subdomain`"

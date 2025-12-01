@@ -68,29 +68,6 @@ sb install sandbox-sabthrottle
         sabthrottle_name: sabthrottle
         ```
 
-=== "Paths"
-
-    ??? variable string "`sabthrottle_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_paths_folder: "{{ sabthrottle_name }}"
-        ```
-
-    ??? variable string "`sabthrottle_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_paths_location: "{{ server_appdata_path }}/{{ sabthrottle_role_paths_folder }}"
-        ```
-
-    ??? variable string "`sabthrottle_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_paths_config_location: "{{ sabthrottle_role_paths_location }}/config.json"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

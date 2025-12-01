@@ -93,44 +93,6 @@ Visit <https://whisparr.iYOUR_DOMAIN_NAMEi>.
         whisparr2_external_auth: true
         ```
 
-=== "Paths"
-
-    ??? variable string "`whisparr_paths_folder`{ .sb-show-on-unchecked }`whisparr2_paths_folder`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_paths_folder: "{{ whisparr_name }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_paths_folder: "{{ whisparr_name }}"
-        ```
-
-    ??? variable string "`whisparr_paths_location`{ .sb-show-on-unchecked }`whisparr2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_paths_location: "{{ server_appdata_path }}/{{ whisparr_paths_folder }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_paths_location: "{{ server_appdata_path }}/{{ whisparr_paths_folder }}"
-        ```
-
-    ??? variable string "`whisparr_paths_config_location`{ .sb-show-on-unchecked }`whisparr2_paths_config_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_paths_config_location: "{{ whisparr_paths_location }}/config.xml"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_paths_config_location: "{{ whisparr_paths_location }}/config.xml"
-        ```
-
 === "Web"
 
     ??? variable string "`whisparr_role_web_subdomain`{ .sb-show-on-unchecked }`whisparr2_web_subdomain`{ .sb-show-on-checked }"

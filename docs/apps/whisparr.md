@@ -12,15 +12,15 @@ tags:
 
 [hotio/whisparr](https://hotio.dev/containers/whisparr) is a Docker container image for Whisparr.
 
-> [Whisparr](https://whisparr.com) is an adult movie collection manager for Usenet and BitTorrent users.
+> [Whisparr](https://whisparr.com) is an adult movie collection manager for Usenet and BitTorrent users. [:material-bookshelf:](https://wiki.servarr.com/en/whisparr/quick-start-guide) [:fontawesome-brands-discord:](https://whisparr.com/discord)
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://wiki.servarr.com/en/whisparr/quick-start-guide){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/whisparr/pkgs/container/whisparr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://whisparr.com/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
 
 </div>
 

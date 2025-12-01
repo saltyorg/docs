@@ -230,6 +230,7 @@ tags:
 | [Unpackerr](unpackerr.md)                       |      `unpackerr`       | `feederbox_roles` `saltbox_roles` |
 | [Flaresolverr](../sandbox/apps/flaresolverr.md) | `sandbox-flaresolverr` |          `sandbox_roles`          |
 | [Maintainerr](../sandbox/apps/maintainerr.md)   | `sandbox-maintainerr`  |          `sandbox_roles`          |
+| [Nabarr](../sandbox/apps/nabarr.md)             |    `sandbox-nabarr`    |          `sandbox_roles`          |
 | [Profilarr](../sandbox/apps/profilarr.md)       |  `sandbox-profilarr`   |          `sandbox_roles`          |
 | [Recyclarr](../sandbox/apps/recyclarr.md)       |  `sandbox-recyclarr`   |          `sandbox_roles`          |
 
@@ -485,21 +486,24 @@ tags:
 
 #### Misc
 
-|                                               |                       |                 |
-|-----------------------------------------------|:---------------------:|:---------------:|
-| [Archivebox](../sandbox/apps/archivebox.md)   | `sandbox-archivebox`  | `sandbox_roles` |
-| [Cherry](../sandbox/apps/cherry.md)           |   `sandbox-cherry`    | `sandbox_roles` |
-| [Joplin](../sandbox/apps/joplin.md)           |   `sandbox-joplin`    | `sandbox_roles` |
-| [LinkWarden](../sandbox/apps/linkwarden.md)   | `sandbox-linkwarden`  | `sandbox_roles` |
-| [Linkding](../sandbox/apps/linkding.md)       |  `sandbox-linkding`   | `sandbox_roles` |
-| [Trilium Notes](../sandbox/apps/trilium.md)   |   `sandbox-trilium`   | `sandbox_roles` |
-| [Vaultwarden](../sandbox/apps/vaultwarden.md) | `sandbox-vaultwarden` | `sandbox_roles` |
+|                                                   |                         |                 |
+|---------------------------------------------------|:-----------------------:|:---------------:|
+| [Archivebox](../sandbox/apps/archivebox.md)       |  `sandbox-archivebox`   | `sandbox_roles` |
+| [Cherry](../sandbox/apps/cherry.md)               |    `sandbox-cherry`     | `sandbox_roles` |
+| [Joplin](../sandbox/apps/joplin.md)               |    `sandbox-joplin`     | `sandbox_roles` |
+| [LinkWarden](../sandbox/apps/linkwarden.md)       |  `sandbox-linkwarden`   | `sandbox_roles` |
+| [Linkding](../sandbox/apps/linkding.md)           |   `sandbox-linkding`    | `sandbox_roles` |
+| [Paperless NGX](../sandbox/apps/paperless_ngx.md) | `sandbox-paperless-ngx` | `sandbox_roles` |
+| [Paperless AI](../sandbox/apps/paperless_ai.md)   | `sandbox-paperless-ai`  | `sandbox_roles` |
+| [Trilium Notes](../sandbox/apps/trilium.md)       |    `sandbox-trilium`    | `sandbox_roles` |
+| [Vaultwarden](../sandbox/apps/vaultwarden.md)     |  `sandbox-vaultwarden`  | `sandbox_roles` |
 
 ### Web Publishing
 
 |                                                        |                             |                                                    |
 |--------------------------------------------------------|:---------------------------:|:--------------------------------------------------:|
 | [Nginx](nginx.md)                                      |           `nginx`           | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
+| [BookStack](../sandbox/apps/bookstack.md)              |     `sandbox-bookstack`     |                  `sandbox_roles`                   |
 | [Wikijs](../sandbox/apps/wikijs.md)                    |      `sandbox-wikijs`       |                  `sandbox_roles`                   |
 | [Wordpress](../sandbox/apps/wordpress.md)              |     `sandbox-wordpress`     |                  `sandbox_roles`                   |
 | [Zig robots.txt](../sandbox/apps/traefik_robotstxt.md) | `sandbox-traefik-robotstxt` |                  `sandbox_roles`                   |

@@ -1,5 +1,6 @@
 /.idea/
 /.vscode/
+/.claude
 /mkdocs-serve/
 go.sh
 # Visual Studio

@@ -67,23 +67,23 @@ Saltbox CLI
 
 <div class="grid brands" markdown>
 
-![Traefik](images/brands/traefik.svg#only-light)
+[![Traefik](images/brands/traefik.svg#only-light)](#powered-by)
 
-![Traefik](images/brands/traefik-dark.svg#only-dark)
+[![Traefik](images/brands/traefik-dark.svg#only-dark)](#powered-by)
 
-![Ansible](images/brands/ansible.svg#only-light)
+[![Ansible](images/brands/ansible.svg#only-light)](#powered-by)
 
-![Ansible](images/brands/ansible-dark.svg#only-dark)
+[![Ansible](images/brands/ansible-dark.svg#only-dark)](#powered-by)
 
-![Docker](images/brands/docker.svg)
+[![Docker](images/brands/docker.svg)](#powered-by)
 
-![Go](images/brands/go.svg)
+[![Go](images/brands/go.svg)](#powered-by)
 
-![Python](images/brands/python.svg)
+[![Python](images/brands/python.svg)](#powered-by)
 
-![Ubuntu](images/brands/ubuntu.svg#only-light)
+[![Ubuntu](images/brands/ubuntu.svg#only-light)](#powered-by)
 
-![Ubuntu](images/brands/ubuntu-dark.svg#only-dark)
+[![Ubuntu](images/brands/ubuntu-dark.svg#only-dark)](#powered-by)
 
 </div>
 

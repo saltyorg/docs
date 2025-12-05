@@ -114,7 +114,7 @@
 
   .md-button--primary {
     &:hover, &:focus {
-      filter: brightness(0.77);
+      box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.23);
     }
   }
 
@@ -147,13 +147,11 @@
 [data-md-color-scheme="slate"] .md-typeset {
 
   .md-button--primary {
-    &:hover, &:focus {
-      filter: brightness(1.23);
-    }
-  }
-
-  .md-button--primary {
     color: var(--md-default-bg-color);
+
+    &:hover, &:focus {
+      box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.23);
+    }
   }
 
   p:has(img[src$="#only-light"]) {

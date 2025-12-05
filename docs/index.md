@@ -6,9 +6,9 @@ hide:
   - navigation
 ---
 
-# Saltbox
-
 <section markdown>
+
+# Saltbox
 
 [![GitHub Org's stars](https://img.shields.io/github/stars/saltyorg?style=flat&logo=github)](https://github.com/saltyorg/Saltbox/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/saltyorg/saltbox?style=flat&logo=github)](https://github.com/saltyorg/saltbox/commits)

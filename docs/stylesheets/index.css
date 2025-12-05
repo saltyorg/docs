@@ -43,34 +43,18 @@
 
         &:nth-child(1) {
           background-color: #6366f1;
-
-          &:hover, &:focus {
-            background-color: #818cf8;
-          }
         }
 
         &:nth-child(2) {
           background-color: #8b5cf6;
-
-          &:hover, &:focus {
-            background-color: #a78bfa;
-          }
         }
 
         &:nth-child(3) {
           background-color: #a855f7;
-
-          &:hover, &:focus {
-            background-color: #c084fc;
-          }
         }
 
         &:nth-child(4) {
           background-color: #d946ef;
-
-          &:hover, &:focus {
-            background-color: #e879f9;
-          }
         }
       }
     }
@@ -127,6 +111,13 @@
 }
 
 [data-md-color-scheme="default"] .md-typeset {
+
+  .md-button--primary {
+    &:hover, &:focus {
+      filter: brightness(0.77);
+    }
+  }
+
   p:has(img[src$="#only-dark"]) {
     display: none;
   }
@@ -154,6 +145,12 @@
 
 
 [data-md-color-scheme="slate"] .md-typeset {
+
+  .md-button--primary {
+    &:hover, &:focus {
+      filter: brightness(1.23);
+    }
+  }
 
   .md-button--primary {
     color: var(--md-default-bg-color);

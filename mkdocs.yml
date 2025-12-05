@@ -76,15 +76,21 @@ theme:
         name: Switch to system preference
 
 plugins:
-  - git-authors
+  - git-authors:
+      exclude:
+        - index.md
   - git-committers:
       branch: main
       cache_dir: .cache/plugin/git-committers/
       enabled: !ENV [CI, false]
+      exclude:
+        - index.md
       repository: saltyorg/docs
   - git-revision-date-localized:
       enable_creation_date: true
       enabled: !ENV [CI, false]
+      exclude:
+        - index.md
       fallback_to_build_date: true
       type: date
   - glightbox:

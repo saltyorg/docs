@@ -303,4 +303,70 @@ label[for="sb-checkbox--var-level"] {
     border-color: color-mix(in srgb, currentColor, transparent 50%);
     background-color: transparent;
   }
+
 }
+
+/* Rounded code blocks */
+.md-typeset .highlight > pre,
+.md-typeset .highlight > pre > code,
+.md-typeset pre > code {
+  border-radius: 0.5rem;
+}
+
+/* Code blocks with filename - round top of filename, bottom of code */
+.md-typeset .highlight > .filename {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.md-typeset .highlight > .filename + pre,
+.md-typeset .highlight > .filename + pre > code {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Rounded search bar */
+.md-search__form {
+  border-radius: 0.5rem;
+}
+
+/* Search bar when active - round top, square bottom for results dropdown */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Round bottom of search results */
+.md-search__output {
+  border-end-start-radius: 0.5rem;
+  border-end-end-radius: 0.5rem;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__output {
+  box-shadow: none;
+}
+
+.md-search__scrollwrap {
+  border-end-start-radius: 0.5rem;
+  border-end-end-radius: 0.5rem;
+}
+
+/* Rounded images - opt-out via .no-rounded class */
+.md-typeset img {
+  border-radius: 0.5rem;
+}
+
+.md-typeset img.no-rounded {
+  border-radius: 0;
+}
+
+/* Rounded buttons */
+.md-typeset .md-button {
+  border-radius: 0.5rem;
+}
+
+/* Rounded annotation tooltips */
+/* .md-annotation .md-tooltip__inner {
+  border-radius: 0.5rem;
+} */

@@ -9,9 +9,7 @@ tags:
 
 # Configuration
 
-The configuration file for backup/restore is called `backup_config.yml` and is located in `/srv/git/saltbox`
-
-``` { .yaml .annotate }
+``` yaml title="nano /srv/git/saltbox/backup_config.yml"
 ---
 backup:
   cron:

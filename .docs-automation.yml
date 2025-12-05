@@ -327,7 +327,7 @@ docker_variables:
 
 cli_help:
   binary_path: "sb"
-  docs_file: "docs/saltbox/basics/sb.md"
+  docs_file: "docs/index.md"
 
 # =============================================================================
 # Managed Section Markers

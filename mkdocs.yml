@@ -186,8 +186,8 @@ extra_javascript:
   - javascripts/extra.js
 
 nav:
-  - Home: index.md
-  - Saltbox:
+  - index.md
+  - Getting Started:
       - saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md
       - Install Types: saltbox/basics/install-types.md
@@ -200,7 +200,6 @@ nav:
           - saltbox/inventory/index.md
           - saltbox/inventory/example-overrides.md
           - saltbox/inventory/danger-zone.md
-      - CLI: saltbox/basics/sb.md
       - Backup/Restore:
           - Settings: saltbox/backup/settings.md
           - saltbox/backup/backup.md
@@ -209,7 +208,7 @@ nav:
           - Migrate: saltbox/backup/migrate.md
       - reference/modules/sandbox.md
 
-  - Apps:
+  - Applications:
     - apps/index.md
 
     - Saltbox Selection:
@@ -479,7 +478,6 @@ nav:
       - Plex: faq/plex.md
       - ruTorrent: faq/rutorrent.md
       - Misc: faq/misc.md
-      - sb: faq/sb.md
       - Bazarr: faq/bazarr.md
 
   - Advanced:
@@ -599,6 +597,7 @@ nav:
         - reference/modules/user.md
 
   - Contributing:
+    - contributing/index.md
     - Development:
       - contributing/development/index.md
     - Documentation:

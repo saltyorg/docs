@@ -478,6 +478,7 @@ nav:
       - Plex: faq/plex.md
       - ruTorrent: faq/rutorrent.md
       - Misc: faq/misc.md
+      - sb: faq/sb.md
       - Bazarr: faq/bazarr.md
 
   - Advanced:

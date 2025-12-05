@@ -2,8 +2,6 @@
 extra_stylesheets:
   - stylesheets/index.css
 hide:
-  - edit
-  - view
   - toc
   - navigation
 ---

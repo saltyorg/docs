@@ -254,7 +254,7 @@ Visit <https://airdcpp.iYOUR_DOMAIN_NAMEi>.
         # Type: list
         airdcpp_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='airdcpp') }}:/.airdcpp"
-          - "/mnt/local/downloads/airdcpp:/Downloads"
+          - "/mnt/unionfs/downloads/airdcpp:/Downloads"
         ```
 
     ??? variable list "`airdcpp_role_docker_volumes_custom`"

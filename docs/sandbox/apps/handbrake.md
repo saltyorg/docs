@@ -263,8 +263,8 @@ Visit <https://handbrake.iYOUR_DOMAIN_NAMEi>.
         handbrake_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='handbrake') }}:/config"
           - "/mnt:/storage:ro"
-          - "/mnt/local/downloads/handbrake/watch:/watch"
-          - "/mnt/local/downloads/handbrake/output:/output"
+          - "/mnt/unionfs/downloads/handbrake/watch:/watch"
+          - "/mnt/unionfs/downloads/handbrake/output:/output"
         ```
 
     ??? variable list "`handbrake_role_docker_volumes_custom`"

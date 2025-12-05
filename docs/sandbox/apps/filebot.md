@@ -242,7 +242,7 @@ Visit <https://filebot.iYOUR_DOMAIN_NAMEi>.
         filebot_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='filebot') }}:/config"
           - "/mnt/unionfs/Media/:/storage/Media/"
-          - "/mnt/local/downloads:/storage/downloads"
+          - "/mnt/unionfs/downloads:/storage/downloads"
         ```
 
     ??? variable list "`filebot_role_docker_volumes_custom`"

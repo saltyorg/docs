@@ -54,7 +54,6 @@ Saltbox CLI
     reinstall-facts [--flags]         Reinstall the Rust saltbox.fact file
     reinstall-python [--flags]        Reinstall the Python version used by Saltbox and related Ansible virtual environment using uv
     reinstall-venv [--flags]          Reinstall the Ansible virtual environment
-    self-update [--flags]             Update Saltbox CLI
     update [--flags]                  Update Saltbox & Sandbox
     validate-config [--flags]         Validate Saltbox configuration files
     version                           Print Saltbox CLI version

@@ -22,7 +22,6 @@ hide:
 [Help Out](contributing/index.md){ .md-button .md-button--primary }
 
 ---
-
 <!-- BEGIN SALTBOX MANAGED CLI SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 <!-- termynal -->

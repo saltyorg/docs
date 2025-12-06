@@ -96,13 +96,14 @@
       font-size: 12px;
       max-width: 100%;
       border-radius: 0.5rem;
+      overflow: hidden;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='511' height='487'%3E%3Cg opacity='0.8'%3E%3Ccircle cx='100' cy='200' r='1.5' fill='%23ffffff'/%3E%3Ccircle cx='350' cy='120' r='0.8' fill='%237ee8e3'/%3E%3Ccircle cx='450' cy='380' r='1.8' fill='%23ffffff'/%3E%3Ccircle cx='180' cy='340' r='0.9' fill='%236b5cb7'/%3E%3Ccircle cx='280' cy='80' r='1.2' fill='%235ecbcd'/%3E%3Ccircle cx='420' cy='200' r='0.6' fill='%23ffffff'/%3E%3Ccircle cx='70' cy='400' r='1.1' fill='%237ee8e3'/%3E%3Ccircle cx='250' cy='250' r='0.7' fill='%235ecbcd'/%3E%3Ccircle cx='380' cy='50' r='0.5' fill='%23ffffff'/%3E%3Ccircle cx='150' cy='100' r='1.3' fill='%236b5cb7'/%3E%3Ccircle cx='320' cy='320' r='0.9' fill='%237ee8e3'/%3E%3C/g%3E%3C/svg%3E") repeat left top / 511px 487px,
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='299' height='331'%3E%3Cg opacity='0.5'%3E%3Ccircle cx='60' cy='60' r='0.8' fill='%23ffffff'/%3E%3Ccircle cx='200' cy='180' r='1.1' fill='%237ee8e3'/%3E%3Ccircle cx='250' cy='100' r='0.6' fill='%23ffffff'/%3E%3Ccircle cx='120' cy='280' r='0.9' fill='%235ecbcd'/%3E%3Ccircle cx='180' cy='40' r='0.4' fill='%236b5cb7'/%3E%3Ccircle cx='80' cy='160' r='1.4' fill='%23ffffff'/%3E%3Ccircle cx='240' cy='240' r='0.5' fill='%237ee8e3'/%3E%3Ccircle cx='40' cy='220' r='0.7' fill='%235ecbcd'/%3E%3C/g%3E%3C/svg%3E") repeat right bottom / 299px 331px,
       #281c3d;
+      padding-inline: clamp(15px, 5vw, 45px);
 
       [data-ty] {
-        overflow: clip;
-        text-overflow: ellipsis;
+        overflow-x: auto;
       }
     }
   }

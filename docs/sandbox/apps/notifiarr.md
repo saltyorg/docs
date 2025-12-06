@@ -1027,7 +1027,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`notifiarr_role_traefik_api_endpoint`"
+    ??? variable dict "`notifiarr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1197,7 +1197,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`notifiarr_role_web_http_serverstransport`"
+    ??? variable dict "`notifiarr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1212,7 +1212,7 @@ A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on th
         notifiarr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`notifiarr_role_web_serverstransport`"
+    ??? variable dict "`notifiarr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

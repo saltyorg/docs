@@ -965,7 +965,7 @@ Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
         privatebin_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`privatebin_role_traefik_api_endpoint`"
+    ??? variable dict "`privatebin_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1135,7 +1135,7 @@ Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
         privatebin_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`privatebin_role_web_http_serverstransport`"
+    ??? variable dict "`privatebin_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1150,7 +1150,7 @@ Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
         privatebin_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`privatebin_role_web_serverstransport`"
+    ??? variable dict "`privatebin_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1008,7 +1008,7 @@ Are you setting Saltbox up for the first time?
         portainer_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`portainer_role_traefik_api_endpoint`"
+    ??? variable dict "`portainer_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1178,7 +1178,7 @@ Are you setting Saltbox up for the first time?
         portainer_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`portainer_role_web_http_serverstransport`"
+    ??? variable dict "`portainer_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1193,7 +1193,7 @@ Are you setting Saltbox up for the first time?
         portainer_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`portainer_role_web_serverstransport`"
+    ??? variable dict "`portainer_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -960,7 +960,7 @@ Visit <https://makemkv.iYOUR_DOMAIN_NAMEi>.
         makemkv_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`makemkv_role_traefik_api_endpoint`"
+    ??? variable dict "`makemkv_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1130,7 +1130,7 @@ Visit <https://makemkv.iYOUR_DOMAIN_NAMEi>.
         makemkv_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`makemkv_role_web_http_serverstransport`"
+    ??? variable dict "`makemkv_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1145,7 +1145,7 @@ Visit <https://makemkv.iYOUR_DOMAIN_NAMEi>.
         makemkv_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`makemkv_role_web_serverstransport`"
+    ??? variable dict "`makemkv_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

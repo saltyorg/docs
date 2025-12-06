@@ -1814,7 +1814,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`calibre_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`calibre2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`calibre_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`calibre2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2150,7 +2150,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`calibre_role_web_http_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`calibre_role_web_http_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2176,7 +2176,7 @@ You can access advanced features of the Guacamole remote desktop using ctrl+alt+
         calibre2_web_scheme:
         ```
 
-    ??? variable dict/omit "`calibre_role_web_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`calibre_role_web_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

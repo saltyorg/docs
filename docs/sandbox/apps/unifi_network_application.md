@@ -1077,7 +1077,7 @@ Visit <https://unifi.iYOUR_DOMAIN_NAMEi>.
         unifi_network_application_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`unifi_network_application_role_traefik_api_endpoint`"
+    ??? variable dict "`unifi_network_application_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1247,7 +1247,7 @@ Visit <https://unifi.iYOUR_DOMAIN_NAMEi>.
         unifi_network_application_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`unifi_network_application_role_web_http_serverstransport`"
+    ??? variable dict "`unifi_network_application_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1262,7 +1262,7 @@ Visit <https://unifi.iYOUR_DOMAIN_NAMEi>.
         unifi_network_application_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`unifi_network_application_role_web_serverstransport`"
+    ??? variable dict "`unifi_network_application_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -960,7 +960,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`cadvisor_role_traefik_api_endpoint`"
+    ??? variable dict "`cadvisor_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1130,7 +1130,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`cadvisor_role_web_http_serverstransport`"
+    ??? variable dict "`cadvisor_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1145,7 +1145,7 @@ cAdvisor is often used with Prometheus and Grafana for advanced metrics collecti
         cadvisor_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`cadvisor_role_web_serverstransport`"
+    ??? variable dict "`cadvisor_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

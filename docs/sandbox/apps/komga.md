@@ -957,7 +957,7 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         komga_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`komga_role_traefik_api_endpoint`"
+    ??? variable dict "`komga_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1127,7 +1127,7 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         komga_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`komga_role_web_http_serverstransport`"
+    ??? variable dict "`komga_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1142,7 +1142,7 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         komga_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`komga_role_web_serverstransport`"
+    ??? variable dict "`komga_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

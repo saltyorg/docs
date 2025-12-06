@@ -966,7 +966,7 @@ Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
         threadfin_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`threadfin_role_traefik_api_endpoint`"
+    ??? variable dict "`threadfin_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1136,7 +1136,7 @@ Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
         threadfin_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`threadfin_role_web_http_serverstransport`"
+    ??? variable dict "`threadfin_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1151,7 +1151,7 @@ Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
         threadfin_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`threadfin_role_web_serverstransport`"
+    ??? variable dict "`threadfin_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

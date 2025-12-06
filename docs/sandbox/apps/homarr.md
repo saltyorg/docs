@@ -1004,7 +1004,7 @@ Visit <https://homarr.iYOUR_DOMAIN_NAMEi>.
         homarr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`homarr_role_traefik_api_endpoint`"
+    ??? variable dict "`homarr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1174,7 +1174,7 @@ Visit <https://homarr.iYOUR_DOMAIN_NAMEi>.
         homarr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`homarr_role_web_http_serverstransport`"
+    ??? variable dict "`homarr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1189,7 +1189,7 @@ Visit <https://homarr.iYOUR_DOMAIN_NAMEi>.
         homarr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`homarr_role_web_serverstransport`"
+    ??? variable dict "`homarr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

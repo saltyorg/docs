@@ -1554,7 +1554,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`lgsm_role_web_http_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`lgsm_role_web_http_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1580,7 +1580,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
         lgsm2_web_scheme:
         ```
 
-    ??? variable dict/omit "`lgsm_role_web_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`lgsm_role_web_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

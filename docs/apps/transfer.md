@@ -970,7 +970,7 @@ Visit <https://transfer.iYOUR_DOMAIN_NAMEi>.
         transfer_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`transfer_role_traefik_api_endpoint`"
+    ??? variable dict "`transfer_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1147,7 +1147,7 @@ Visit <https://transfer.iYOUR_DOMAIN_NAMEi>.
         transfer_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`transfer_role_web_http_serverstransport`"
+    ??? variable dict "`transfer_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1169,7 +1169,7 @@ Visit <https://transfer.iYOUR_DOMAIN_NAMEi>.
         transfer_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`transfer_role_web_serverstransport`"
+    ??? variable dict "`transfer_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

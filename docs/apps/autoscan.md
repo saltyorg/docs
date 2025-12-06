@@ -1879,7 +1879,7 @@ Are you Setting Saltbox up for the first time?
         autoscan2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`autoscan_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`autoscan2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`autoscan_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`autoscan2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2179,7 +2179,7 @@ Are you Setting Saltbox up for the first time?
         autoscan2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`autoscan_role_web_http_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`autoscan_role_web_http_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2205,7 +2205,7 @@ Are you Setting Saltbox up for the first time?
         autoscan2_web_scheme:
         ```
 
-    ??? variable dict/omit "`autoscan_role_web_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`autoscan_role_web_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

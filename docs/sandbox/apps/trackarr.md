@@ -993,7 +993,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`trackarr_role_traefik_api_endpoint`"
+    ??? variable dict "`trackarr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1163,7 +1163,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`trackarr_role_web_http_serverstransport`"
+    ??? variable dict "`trackarr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1178,7 +1178,7 @@ The `trackarr` role will provision a config file with your pvr and server info. 
         trackarr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`trackarr_role_web_serverstransport`"
+    ??? variable dict "`trackarr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

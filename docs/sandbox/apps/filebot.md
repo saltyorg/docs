@@ -964,7 +964,7 @@ Visit <https://filebot.iYOUR_DOMAIN_NAMEi>.
         filebot_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`filebot_role_traefik_api_endpoint`"
+    ??? variable dict "`filebot_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1134,7 +1134,7 @@ Visit <https://filebot.iYOUR_DOMAIN_NAMEi>.
         filebot_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`filebot_role_web_http_serverstransport`"
+    ??? variable dict "`filebot_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1149,7 +1149,7 @@ Visit <https://filebot.iYOUR_DOMAIN_NAMEi>.
         filebot_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`filebot_role_web_serverstransport`"
+    ??? variable dict "`filebot_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

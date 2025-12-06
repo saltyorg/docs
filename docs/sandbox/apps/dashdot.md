@@ -1126,7 +1126,7 @@ Visit <https://dashdot.iYOUR_DOMAIN_NAMEi>.
         dashdot_role_title:
         ```
 
-    ??? variable dict/omit "`dashdot_role_traefik_api_endpoint`"
+    ??? variable dict "`dashdot_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1296,7 +1296,7 @@ Visit <https://dashdot.iYOUR_DOMAIN_NAMEi>.
         dashdot_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`dashdot_role_web_http_serverstransport`"
+    ??? variable dict "`dashdot_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1311,7 +1311,7 @@ Visit <https://dashdot.iYOUR_DOMAIN_NAMEi>.
         dashdot_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`dashdot_role_web_serverstransport`"
+    ??? variable dict "`dashdot_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -971,7 +971,7 @@ Visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>.
         healthchecks_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`healthchecks_role_traefik_api_endpoint`"
+    ??? variable dict "`healthchecks_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1141,7 +1141,7 @@ Visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>.
         healthchecks_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`healthchecks_role_web_http_serverstransport`"
+    ??? variable dict "`healthchecks_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1156,7 +1156,7 @@ Visit <https://healthchecks.iYOUR_DOMAIN_NAMEi>.
         healthchecks_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`healthchecks_role_web_serverstransport`"
+    ??? variable dict "`healthchecks_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

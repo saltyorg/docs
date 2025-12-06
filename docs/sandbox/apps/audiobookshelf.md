@@ -946,7 +946,7 @@ Visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>.
         audiobookshelf_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`audiobookshelf_role_traefik_api_endpoint`"
+    ??? variable dict "`audiobookshelf_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1116,7 +1116,7 @@ Visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>.
         audiobookshelf_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`audiobookshelf_role_web_http_serverstransport`"
+    ??? variable dict "`audiobookshelf_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1131,7 +1131,7 @@ Visit <https://audiobookshelf.iYOUR_DOMAIN_NAMEi>.
         audiobookshelf_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`audiobookshelf_role_web_serverstransport`"
+    ??? variable dict "`audiobookshelf_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1032,7 +1032,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`lldap_role_traefik_api_endpoint`"
+    ??? variable dict "`lldap_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1202,7 +1202,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`lldap_role_web_http_serverstransport`"
+    ??? variable dict "`lldap_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1217,7 +1217,7 @@ Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
         lldap_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`lldap_role_web_serverstransport`"
+    ??? variable dict "`lldap_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

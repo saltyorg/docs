@@ -981,7 +981,7 @@ Visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>.
         jdownloader2_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`jdownloader2_role_traefik_api_endpoint`"
+    ??? variable dict "`jdownloader2_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1151,7 +1151,7 @@ Visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>.
         jdownloader2_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`jdownloader2_role_web_http_serverstransport`"
+    ??? variable dict "`jdownloader2_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1166,7 +1166,7 @@ Visit <https://jdownloader2.iYOUR_DOMAIN_NAMEi>.
         jdownloader2_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`jdownloader2_role_web_serverstransport`"
+    ??? variable dict "`jdownloader2_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

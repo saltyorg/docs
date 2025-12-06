@@ -995,7 +995,7 @@ Visit <https://gitea.iYOUR_DOMAIN_NAMEi>.
         gitea_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`gitea_role_traefik_api_endpoint`"
+    ??? variable dict "`gitea_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1165,7 +1165,7 @@ Visit <https://gitea.iYOUR_DOMAIN_NAMEi>.
         gitea_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`gitea_role_web_http_serverstransport`"
+    ??? variable dict "`gitea_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1180,7 +1180,7 @@ Visit <https://gitea.iYOUR_DOMAIN_NAMEi>.
         gitea_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`gitea_role_web_serverstransport`"
+    ??? variable dict "`gitea_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

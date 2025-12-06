@@ -2187,7 +2187,7 @@ Are you setting Saltbox up for the first time?
         sonarr2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`sonarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`sonarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`sonarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`sonarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2487,7 +2487,7 @@ Are you setting Saltbox up for the first time?
         sonarr2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`sonarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`sonarr2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`sonarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`sonarr2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2513,7 +2513,7 @@ Are you setting Saltbox up for the first time?
         sonarr2_web_scheme:
         ```
 
-    ??? variable dict/omit "`sonarr_role_web_serverstransport`{ .sb-show-on-unchecked }`sonarr2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`sonarr_role_web_serverstransport`{ .sb-show-on-unchecked }`sonarr2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

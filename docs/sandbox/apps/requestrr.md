@@ -1589,7 +1589,7 @@ Visit <https://requestrr.iYOUR_DOMAIN_NAMEi>.
         requestrr2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`requestrr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`requestrr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`requestrr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`requestrr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1889,7 +1889,7 @@ Visit <https://requestrr.iYOUR_DOMAIN_NAMEi>.
         requestrr2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`requestrr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`requestrr2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`requestrr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`requestrr2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1915,7 +1915,7 @@ Visit <https://requestrr.iYOUR_DOMAIN_NAMEi>.
         requestrr2_web_scheme:
         ```
 
-    ??? variable dict/omit "`requestrr_role_web_serverstransport`{ .sb-show-on-unchecked }`requestrr2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`requestrr_role_web_serverstransport`{ .sb-show-on-unchecked }`requestrr2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

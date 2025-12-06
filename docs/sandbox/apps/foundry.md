@@ -976,7 +976,7 @@ Visit <https://foundry.iYOUR_DOMAIN_NAMEi>.
         foundry_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`foundry_role_traefik_api_endpoint`"
+    ??? variable dict "`foundry_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1146,7 +1146,7 @@ Visit <https://foundry.iYOUR_DOMAIN_NAMEi>.
         foundry_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`foundry_role_web_http_serverstransport`"
+    ??? variable dict "`foundry_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1168,7 +1168,7 @@ Visit <https://foundry.iYOUR_DOMAIN_NAMEi>.
         foundry_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`foundry_role_web_serverstransport`"
+    ??? variable dict "`foundry_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

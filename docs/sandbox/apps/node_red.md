@@ -1591,7 +1591,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`node_red_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`node_red2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`node_red_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`node_red2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1891,7 +1891,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`node_red_role_web_http_serverstransport`{ .sb-show-on-unchecked }`node_red2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`node_red_role_web_http_serverstransport`{ .sb-show-on-unchecked }`node_red2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1917,7 +1917,7 @@ Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistan
         node_red2_web_scheme:
         ```
 
-    ??? variable dict/omit "`node_red_role_web_serverstransport`{ .sb-show-on-unchecked }`node_red2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`node_red_role_web_serverstransport`{ .sb-show-on-unchecked }`node_red2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

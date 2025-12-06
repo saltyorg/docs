@@ -964,7 +964,7 @@ Visit <https://esphome.iYOUR_DOMAIN_NAMEi>.
         esphome_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`esphome_role_traefik_api_endpoint`"
+    ??? variable dict "`esphome_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1134,7 +1134,7 @@ Visit <https://esphome.iYOUR_DOMAIN_NAMEi>.
         esphome_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`esphome_role_web_http_serverstransport`"
+    ??? variable dict "`esphome_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1149,7 +1149,7 @@ Visit <https://esphome.iYOUR_DOMAIN_NAMEi>.
         esphome_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`esphome_role_web_serverstransport`"
+    ??? variable dict "`esphome_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

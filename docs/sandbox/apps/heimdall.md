@@ -963,7 +963,7 @@ Visit <https://heimdall.iYOUR_DOMAIN_NAMEi>.
         heimdall_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`heimdall_role_traefik_api_endpoint`"
+    ??? variable dict "`heimdall_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1133,7 +1133,7 @@ Visit <https://heimdall.iYOUR_DOMAIN_NAMEi>.
         heimdall_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`heimdall_role_web_http_serverstransport`"
+    ??? variable dict "`heimdall_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1148,7 +1148,7 @@ Visit <https://heimdall.iYOUR_DOMAIN_NAMEi>.
         heimdall_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`heimdall_role_web_serverstransport`"
+    ??? variable dict "`heimdall_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

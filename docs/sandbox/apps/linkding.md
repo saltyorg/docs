@@ -987,7 +987,7 @@ Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
         linkding_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`linkding_role_traefik_api_endpoint`"
+    ??? variable dict "`linkding_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1157,7 +1157,7 @@ Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
         linkding_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`linkding_role_web_http_serverstransport`"
+    ??? variable dict "`linkding_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1172,7 +1172,7 @@ Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
         linkding_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`linkding_role_web_serverstransport`"
+    ??? variable dict "`linkding_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

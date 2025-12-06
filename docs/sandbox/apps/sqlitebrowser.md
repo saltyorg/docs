@@ -968,7 +968,7 @@ Visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>.
         sqlitebrowser_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`sqlitebrowser_role_traefik_api_endpoint`"
+    ??? variable dict "`sqlitebrowser_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1138,7 +1138,7 @@ Visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>.
         sqlitebrowser_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`sqlitebrowser_role_web_http_serverstransport`"
+    ??? variable dict "`sqlitebrowser_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1153,7 +1153,7 @@ Visit <https://sqlitebrowser.iYOUR_DOMAIN_NAMEi>.
         sqlitebrowser_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`sqlitebrowser_role_web_serverstransport`"
+    ??? variable dict "`sqlitebrowser_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

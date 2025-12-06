@@ -959,7 +959,7 @@ Visit <https://filezilla.iYOUR_DOMAIN_NAMEi>.
         filezilla_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`filezilla_role_traefik_api_endpoint`"
+    ??? variable dict "`filezilla_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1129,7 +1129,7 @@ Visit <https://filezilla.iYOUR_DOMAIN_NAMEi>.
         filezilla_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`filezilla_role_web_http_serverstransport`"
+    ??? variable dict "`filezilla_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1144,7 +1144,7 @@ Visit <https://filezilla.iYOUR_DOMAIN_NAMEi>.
         filezilla_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`filezilla_role_web_serverstransport`"
+    ??? variable dict "`filezilla_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -957,7 +957,7 @@ sb install sandbox-minecraft-bedrock
         minecraft_bedrock_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`minecraft_bedrock_role_web_http_serverstransport`"
+    ??? variable dict "`minecraft_bedrock_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -972,7 +972,7 @@ sb install sandbox-minecraft-bedrock
         minecraft_bedrock_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`minecraft_bedrock_role_web_serverstransport`"
+    ??? variable dict "`minecraft_bedrock_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

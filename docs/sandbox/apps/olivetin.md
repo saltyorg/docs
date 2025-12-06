@@ -971,7 +971,7 @@ Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
         olivetin_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`olivetin_role_traefik_api_endpoint`"
+    ??? variable dict "`olivetin_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1141,7 +1141,7 @@ Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
         olivetin_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`olivetin_role_web_http_serverstransport`"
+    ??? variable dict "`olivetin_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1156,7 +1156,7 @@ Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
         olivetin_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`olivetin_role_web_serverstransport`"
+    ??? variable dict "`olivetin_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

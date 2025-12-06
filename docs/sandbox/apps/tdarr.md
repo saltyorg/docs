@@ -1034,7 +1034,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`tdarr_role_traefik_api_endpoint`"
+    ??? variable dict "`tdarr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1204,7 +1204,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`tdarr_role_web_http_serverstransport`"
+    ??? variable dict "`tdarr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1219,7 +1219,7 @@ By switching `tdarr_server_external` to `true` the Tdarr server will be accessib
         tdarr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`tdarr_role_web_serverstransport`"
+    ??? variable dict "`tdarr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

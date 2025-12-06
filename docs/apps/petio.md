@@ -994,7 +994,7 @@ Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
         petio_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`petio_role_traefik_api_endpoint`"
+    ??? variable dict "`petio_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1164,7 +1164,7 @@ Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
         petio_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`petio_role_web_http_serverstransport`"
+    ??? variable dict "`petio_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1179,7 +1179,7 @@ Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
         petio_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`petio_role_web_serverstransport`"
+    ??? variable dict "`petio_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

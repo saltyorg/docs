@@ -1084,7 +1084,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`wireguard_role_traefik_api_endpoint`"
+    ??? variable dict "`wireguard_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1261,7 +1261,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`wireguard_role_web_http_serverstransport`"
+    ??? variable dict "`wireguard_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1276,7 +1276,7 @@ The password provisioned is your Saltbox password.
         wireguard_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`wireguard_role_web_serverstransport`"
+    ??? variable dict "`wireguard_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -966,7 +966,7 @@ Visit <https://unmanic.iYOUR_DOMAIN_NAMEi>.
         unmanic_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`unmanic_role_traefik_api_endpoint`"
+    ??? variable dict "`unmanic_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1136,7 +1136,7 @@ Visit <https://unmanic.iYOUR_DOMAIN_NAMEi>.
         unmanic_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`unmanic_role_web_http_serverstransport`"
+    ??? variable dict "`unmanic_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1151,7 +1151,7 @@ Visit <https://unmanic.iYOUR_DOMAIN_NAMEi>.
         unmanic_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`unmanic_role_web_serverstransport`"
+    ??? variable dict "`unmanic_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

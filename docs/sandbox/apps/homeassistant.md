@@ -975,7 +975,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`homeassistant_role_traefik_api_endpoint`"
+    ??? variable dict "`homeassistant_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1145,7 +1145,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`homeassistant_role_web_http_serverstransport`"
+    ??? variable dict "`homeassistant_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1160,7 +1160,7 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         homeassistant_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`homeassistant_role_web_serverstransport`"
+    ??? variable dict "`homeassistant_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1940,7 +1940,7 @@ To access Authelia, visit <https://login.iYOUR_DOMAIN_NAMEi> or the subdomain se
         authelia_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`authelia_role_traefik_api_endpoint`"
+    ??? variable dict "`authelia_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -2110,7 +2110,7 @@ To access Authelia, visit <https://login.iYOUR_DOMAIN_NAMEi> or the subdomain se
         authelia_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`authelia_role_web_http_serverstransport`"
+    ??? variable dict "`authelia_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -2125,7 +2125,7 @@ To access Authelia, visit <https://login.iYOUR_DOMAIN_NAMEi> or the subdomain se
         authelia_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`authelia_role_web_serverstransport`"
+    ??? variable dict "`authelia_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

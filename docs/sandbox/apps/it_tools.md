@@ -930,7 +930,7 @@ Visit <https://it-tools.iYOUR_DOMAIN_NAMEi>.
         it_tools_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`it_tools_role_traefik_api_endpoint`"
+    ??? variable dict "`it_tools_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1100,7 +1100,7 @@ Visit <https://it-tools.iYOUR_DOMAIN_NAMEi>.
         it_tools_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`it_tools_role_web_http_serverstransport`"
+    ??? variable dict "`it_tools_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1115,7 +1115,7 @@ Visit <https://it-tools.iYOUR_DOMAIN_NAMEi>.
         it_tools_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`it_tools_role_web_serverstransport`"
+    ??? variable dict "`it_tools_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

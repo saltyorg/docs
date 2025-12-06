@@ -1136,7 +1136,7 @@ Visit <https://miniflux.iYOUR_DOMAIN_NAMEi>.
         miniflux_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`miniflux_role_traefik_api_endpoint`"
+    ??? variable dict "`miniflux_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1306,7 +1306,7 @@ Visit <https://miniflux.iYOUR_DOMAIN_NAMEi>.
         miniflux_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`miniflux_role_web_http_serverstransport`"
+    ??? variable dict "`miniflux_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1321,7 +1321,7 @@ Visit <https://miniflux.iYOUR_DOMAIN_NAMEi>.
         miniflux_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`miniflux_role_web_serverstransport`"
+    ??? variable dict "`miniflux_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

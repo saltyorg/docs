@@ -943,7 +943,7 @@ Visit <https://phpmyadmin.iYOUR_DOMAIN_NAMEi>.
         phpmyadmin_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`phpmyadmin_role_traefik_api_endpoint`"
+    ??? variable dict "`phpmyadmin_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1113,7 +1113,7 @@ Visit <https://phpmyadmin.iYOUR_DOMAIN_NAMEi>.
         phpmyadmin_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`phpmyadmin_role_web_http_serverstransport`"
+    ??? variable dict "`phpmyadmin_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1128,7 +1128,7 @@ Visit <https://phpmyadmin.iYOUR_DOMAIN_NAMEi>.
         phpmyadmin_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`phpmyadmin_role_web_serverstransport`"
+    ??? variable dict "`phpmyadmin_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

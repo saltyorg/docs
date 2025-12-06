@@ -1734,7 +1734,7 @@ Visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>.
         qbittorrentvpn2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`qbittorrentvpn_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`qbittorrentvpn_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`qbittorrentvpn2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2034,7 +2034,7 @@ Visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>.
         qbittorrentvpn2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`qbittorrentvpn_role_web_http_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`qbittorrentvpn_role_web_http_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2060,7 +2060,7 @@ Visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>.
         qbittorrentvpn2_web_scheme:
         ```
 
-    ??? variable dict/omit "`qbittorrentvpn_role_web_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`qbittorrentvpn_role_web_serverstransport`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

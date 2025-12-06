@@ -961,7 +961,7 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`grocy_role_traefik_api_endpoint`"
+    ??? variable dict "`grocy_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1131,7 +1131,7 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`grocy_role_web_http_serverstransport`"
+    ??? variable dict "`grocy_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1146,7 +1146,7 @@ Default login is admin/admin. Configure authentication and users through the app
         grocy_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`grocy_role_web_serverstransport`"
+    ??? variable dict "`grocy_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

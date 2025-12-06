@@ -1031,7 +1031,7 @@ Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
         photoprism_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`photoprism_role_traefik_api_endpoint`"
+    ??? variable dict "`photoprism_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1201,7 +1201,7 @@ Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
         photoprism_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`photoprism_role_web_http_serverstransport`"
+    ??? variable dict "`photoprism_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1216,7 +1216,7 @@ Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
         photoprism_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`photoprism_role_web_serverstransport`"
+    ??? variable dict "`photoprism_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

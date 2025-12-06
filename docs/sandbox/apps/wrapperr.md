@@ -945,7 +945,7 @@ Visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>.
         wrapperr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`wrapperr_role_traefik_api_endpoint`"
+    ??? variable dict "`wrapperr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1115,7 +1115,7 @@ Visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>.
         wrapperr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`wrapperr_role_web_http_serverstransport`"
+    ??? variable dict "`wrapperr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1130,7 +1130,7 @@ Visit <https://wrapperr.iYOUR_DOMAIN_NAMEi>.
         wrapperr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`wrapperr_role_web_serverstransport`"
+    ??? variable dict "`wrapperr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

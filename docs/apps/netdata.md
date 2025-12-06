@@ -1069,7 +1069,7 @@ Visit <https://netdata.iYOUR_DOMAIN_NAMEi>.
         netdata_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`netdata_role_traefik_api_endpoint`"
+    ??? variable dict "`netdata_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1239,7 +1239,7 @@ Visit <https://netdata.iYOUR_DOMAIN_NAMEi>.
         netdata_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`netdata_role_web_http_serverstransport`"
+    ??? variable dict "`netdata_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1254,7 +1254,7 @@ Visit <https://netdata.iYOUR_DOMAIN_NAMEi>.
         netdata_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`netdata_role_web_serverstransport`"
+    ??? variable dict "`netdata_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

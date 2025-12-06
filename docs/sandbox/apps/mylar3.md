@@ -1060,7 +1060,7 @@ These settings are up to the user
         mylar3_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`mylar3_role_traefik_api_endpoint`"
+    ??? variable dict "`mylar3_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1230,7 +1230,7 @@ These settings are up to the user
         mylar3_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`mylar3_role_web_http_serverstransport`"
+    ??? variable dict "`mylar3_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1245,7 +1245,7 @@ These settings are up to the user
         mylar3_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`mylar3_role_web_serverstransport`"
+    ??? variable dict "`mylar3_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

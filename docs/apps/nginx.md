@@ -1581,7 +1581,7 @@ Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
         nginx2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`nginx_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`nginx2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`nginx_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`nginx2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1881,7 +1881,7 @@ Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
         nginx2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`nginx_role_web_http_serverstransport`{ .sb-show-on-unchecked }`nginx2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`nginx_role_web_http_serverstransport`{ .sb-show-on-unchecked }`nginx2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1907,7 +1907,7 @@ Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
         nginx2_web_scheme:
         ```
 
-    ??? variable dict/omit "`nginx_role_web_serverstransport`{ .sb-show-on-unchecked }`nginx2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`nginx_role_web_serverstransport`{ .sb-show-on-unchecked }`nginx2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

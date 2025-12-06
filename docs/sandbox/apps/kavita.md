@@ -955,7 +955,7 @@ Visit <https://kavita.iYOUR_DOMAIN_NAMEi>.
         kavita_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`kavita_role_traefik_api_endpoint`"
+    ??? variable dict "`kavita_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1125,7 +1125,7 @@ Visit <https://kavita.iYOUR_DOMAIN_NAMEi>.
         kavita_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`kavita_role_web_http_serverstransport`"
+    ??? variable dict "`kavita_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1140,7 +1140,7 @@ Visit <https://kavita.iYOUR_DOMAIN_NAMEi>.
         kavita_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`kavita_role_web_serverstransport`"
+    ??? variable dict "`kavita_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1163,7 +1163,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_totp_enable:
         ```
 
-    ??? variable dict/omit "`guacamole_role_traefik_api_endpoint`"
+    ??? variable dict "`guacamole_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1333,7 +1333,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`guacamole_role_web_http_serverstransport`"
+    ??? variable dict "`guacamole_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1348,7 +1348,7 @@ After adding any extension options, run `sb install sandbox-guacamole` to apply 
         guacamole_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`guacamole_role_web_serverstransport`"
+    ??? variable dict "`guacamole_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

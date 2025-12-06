@@ -986,7 +986,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`resiliosync_role_traefik_api_endpoint`"
+    ??? variable dict "`resiliosync_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1156,7 +1156,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`resiliosync_role_web_http_serverstransport`"
+    ??? variable dict "`resiliosync_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1171,7 +1171,7 @@ resiliosync_data_port: "#####"
         resiliosync_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`resiliosync_role_web_serverstransport`"
+    ??? variable dict "`resiliosync_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

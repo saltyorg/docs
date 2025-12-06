@@ -1077,7 +1077,7 @@ Visit <https://wikijs.iYOUR_DOMAIN_NAMEi>.
         wikijs_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`wikijs_role_traefik_api_endpoint`"
+    ??? variable dict "`wikijs_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1247,7 +1247,7 @@ Visit <https://wikijs.iYOUR_DOMAIN_NAMEi>.
         wikijs_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`wikijs_role_web_http_serverstransport`"
+    ??? variable dict "`wikijs_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1262,7 +1262,7 @@ Visit <https://wikijs.iYOUR_DOMAIN_NAMEi>.
         wikijs_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`wikijs_role_web_serverstransport`"
+    ??? variable dict "`wikijs_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

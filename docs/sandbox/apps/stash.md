@@ -967,7 +967,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`stash_role_traefik_api_endpoint`"
+    ??? variable dict "`stash_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1137,7 +1137,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`stash_role_web_http_serverstransport`"
+    ??? variable dict "`stash_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1152,7 +1152,7 @@ On a clean installation, Stash only creates its config file when the user has go
         stash_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`stash_role_web_serverstransport`"
+    ??? variable dict "`stash_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

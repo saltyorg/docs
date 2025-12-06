@@ -1195,7 +1195,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`delugevpn_role_traefik_api_endpoint`"
+    ??? variable dict "`delugevpn_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1393,7 +1393,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`delugevpn_role_web_http_serverstransport`"
+    ??? variable dict "`delugevpn_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1408,7 +1408,7 @@ As of July 4, 2020, the PIA servers that allow port forwarding, and DelugeVPN to
         delugevpn_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`delugevpn_role_web_serverstransport`"
+    ??? variable dict "`delugevpn_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

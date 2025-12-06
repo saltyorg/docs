@@ -956,7 +956,7 @@ Visit <https://codex.iYOUR_DOMAIN_NAMEi>.
         codex_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`codex_role_traefik_api_endpoint`"
+    ??? variable dict "`codex_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1126,7 +1126,7 @@ Visit <https://codex.iYOUR_DOMAIN_NAMEi>.
         codex_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`codex_role_web_http_serverstransport`"
+    ??? variable dict "`codex_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1141,7 +1141,7 @@ Visit <https://codex.iYOUR_DOMAIN_NAMEi>.
         codex_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`codex_role_web_serverstransport`"
+    ??? variable dict "`codex_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

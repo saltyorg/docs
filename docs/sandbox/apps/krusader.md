@@ -1001,7 +1001,7 @@ Visit <https://krusader.iYOUR_DOMAIN_NAMEi>.
         krusader_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`krusader_role_traefik_api_endpoint`"
+    ??? variable dict "`krusader_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1171,7 +1171,7 @@ Visit <https://krusader.iYOUR_DOMAIN_NAMEi>.
         krusader_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`krusader_role_web_http_serverstransport`"
+    ??? variable dict "`krusader_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1186,7 +1186,7 @@ Visit <https://krusader.iYOUR_DOMAIN_NAMEi>.
         krusader_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`krusader_role_web_serverstransport`"
+    ??? variable dict "`krusader_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1024,7 +1024,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`ytdl_sub_role_traefik_api_endpoint`"
+    ??? variable dict "`ytdl_sub_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1194,7 +1194,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`ytdl_sub_role_web_http_serverstransport`"
+    ??? variable dict "`ytdl_sub_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1209,7 +1209,7 @@ Configure your subscriptions using YAML files in the config directory.
         ytdl_sub_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`ytdl_sub_role_web_serverstransport`"
+    ??? variable dict "`ytdl_sub_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1591,7 +1591,7 @@ Visit <https://wizarr.iYOUR_DOMAIN_NAMEi>.
         wizarr2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`wizarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`wizarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`wizarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`wizarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1903,7 +1903,7 @@ Visit <https://wizarr.iYOUR_DOMAIN_NAMEi>.
         wizarr2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`wizarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`wizarr2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`wizarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`wizarr2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1929,7 +1929,7 @@ Visit <https://wizarr.iYOUR_DOMAIN_NAMEi>.
         wizarr2_web_scheme:
         ```
 
-    ??? variable dict/omit "`wizarr_role_web_serverstransport`{ .sb-show-on-unchecked }`wizarr2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`wizarr_role_web_serverstransport`{ .sb-show-on-unchecked }`wizarr2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

@@ -1101,7 +1101,7 @@ Visit <https://n8n.iYOUR_DOMAIN_NAMEi>.
         n8n_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`n8n_role_traefik_api_endpoint`"
+    ??? variable dict "`n8n_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1271,7 +1271,7 @@ Visit <https://n8n.iYOUR_DOMAIN_NAMEi>.
         n8n_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`n8n_role_web_http_serverstransport`"
+    ??? variable dict "`n8n_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1286,7 +1286,7 @@ Visit <https://n8n.iYOUR_DOMAIN_NAMEi>.
         n8n_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`n8n_role_web_serverstransport`"
+    ??? variable dict "`n8n_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

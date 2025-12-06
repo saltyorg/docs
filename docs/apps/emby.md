@@ -1979,7 +1979,7 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`emby_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`emby2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`emby_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`emby2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2279,7 +2279,7 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`emby_role_web_http_serverstransport`{ .sb-show-on-unchecked }`emby2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`emby_role_web_http_serverstransport`{ .sb-show-on-unchecked }`emby2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2305,7 +2305,7 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_web_scheme:
         ```
 
-    ??? variable dict/omit "`emby_role_web_serverstransport`{ .sb-show-on-unchecked }`emby2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`emby_role_web_serverstransport`{ .sb-show-on-unchecked }`emby2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

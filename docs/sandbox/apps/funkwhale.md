@@ -1015,7 +1015,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`funkwhale_role_traefik_api_endpoint`"
+    ??? variable dict "`funkwhale_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1185,7 +1185,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`funkwhale_role_web_http_serverstransport`"
+    ??? variable dict "`funkwhale_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1200,7 +1200,7 @@ If everything goes as planned you'll get prompted like this:
         funkwhale_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`funkwhale_role_web_serverstransport`"
+    ??? variable dict "`funkwhale_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

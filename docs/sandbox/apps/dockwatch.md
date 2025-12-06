@@ -1022,7 +1022,7 @@ Visit <https://dockwatch.iYOUR_DOMAIN_NAMEi>.
         dockwatch_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`dockwatch_role_traefik_api_endpoint`"
+    ??? variable dict "`dockwatch_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1192,7 +1192,7 @@ Visit <https://dockwatch.iYOUR_DOMAIN_NAMEi>.
         dockwatch_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`dockwatch_role_web_http_serverstransport`"
+    ??? variable dict "`dockwatch_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1207,7 +1207,7 @@ Visit <https://dockwatch.iYOUR_DOMAIN_NAMEi>.
         dockwatch_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`dockwatch_role_web_serverstransport`"
+    ??? variable dict "`dockwatch_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

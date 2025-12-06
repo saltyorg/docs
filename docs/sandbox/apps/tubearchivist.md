@@ -1050,7 +1050,7 @@ Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
         tubearchivist_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`tubearchivist_role_traefik_api_endpoint`"
+    ??? variable dict "`tubearchivist_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1227,7 +1227,7 @@ Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
         tubearchivist_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`tubearchivist_role_web_http_serverstransport`"
+    ??? variable dict "`tubearchivist_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1242,7 +1242,7 @@ Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
         tubearchivist_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`tubearchivist_role_web_serverstransport`"
+    ??? variable dict "`tubearchivist_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

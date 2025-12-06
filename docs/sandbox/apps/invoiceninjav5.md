@@ -1020,7 +1020,7 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`invoiceninjav5_role_web_http_serverstransport`"
+    ??? variable dict "`invoiceninjav5_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1035,7 +1035,7 @@ Enter email, and password from accounts.yml setting.
         invoiceninjav5_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`invoiceninjav5_role_web_serverstransport`"
+    ??? variable dict "`invoiceninjav5_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

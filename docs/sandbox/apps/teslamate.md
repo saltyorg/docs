@@ -1089,7 +1089,7 @@ Save and Test
         teslamate_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`teslamate_role_traefik_api_endpoint`"
+    ??? variable dict "`teslamate_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1259,7 +1259,7 @@ Save and Test
         teslamate_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`teslamate_role_web_http_serverstransport`"
+    ??? variable dict "`teslamate_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1274,7 +1274,7 @@ Save and Test
         teslamate_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`teslamate_role_web_serverstransport`"
+    ??? variable dict "`teslamate_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

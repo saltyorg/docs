@@ -963,7 +963,7 @@ Default credentials are configured using your user email and password. Root user
         openobserve_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`openobserve_role_traefik_api_endpoint`"
+    ??? variable dict "`openobserve_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1133,7 +1133,7 @@ Default credentials are configured using your user email and password. Root user
         openobserve_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`openobserve_role_web_http_serverstransport`"
+    ??? variable dict "`openobserve_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1148,7 +1148,7 @@ Default credentials are configured using your user email and password. Root user
         openobserve_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`openobserve_role_web_serverstransport`"
+    ??? variable dict "`openobserve_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

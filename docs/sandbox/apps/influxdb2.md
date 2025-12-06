@@ -1569,7 +1569,7 @@ Visit <https://influxdb2.iYOUR_DOMAIN_NAMEi>.
         influxdb22_themepark_theme:
         ```
 
-    ??? variable dict/omit "`influxdb2_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`influxdb22_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`influxdb2_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`influxdb22_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1869,7 +1869,7 @@ Visit <https://influxdb2.iYOUR_DOMAIN_NAMEi>.
         influxdb22_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`influxdb2_role_web_http_serverstransport`{ .sb-show-on-unchecked }`influxdb22_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`influxdb2_role_web_http_serverstransport`{ .sb-show-on-unchecked }`influxdb22_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1895,7 +1895,7 @@ Visit <https://influxdb2.iYOUR_DOMAIN_NAMEi>.
         influxdb22_web_scheme:
         ```
 
-    ??? variable dict/omit "`influxdb2_role_web_serverstransport`{ .sb-show-on-unchecked }`influxdb22_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`influxdb2_role_web_serverstransport`{ .sb-show-on-unchecked }`influxdb22_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

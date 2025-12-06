@@ -1150,7 +1150,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
         tandoor_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`tandoor_role_traefik_api_endpoint`"
+    ??? variable dict "`tandoor_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1320,7 +1320,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
         tandoor_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`tandoor_role_web_http_serverstransport`"
+    ??? variable dict "`tandoor_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1335,7 +1335,7 @@ Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
         tandoor_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`tandoor_role_web_serverstransport`"
+    ??? variable dict "`tandoor_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

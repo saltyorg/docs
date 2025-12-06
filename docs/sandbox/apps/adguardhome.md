@@ -964,7 +964,7 @@ Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for 
         adguardhome_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`adguardhome_role_traefik_api_endpoint`"
+    ??? variable dict "`adguardhome_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1134,7 +1134,7 @@ Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for 
         adguardhome_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`adguardhome_role_web_http_serverstransport`"
+    ??? variable dict "`adguardhome_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1149,7 +1149,7 @@ Make sure you have an application that supports DNS over HTTPS, e.g. [Intra for 
         adguardhome_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`adguardhome_role_web_serverstransport`"
+    ??? variable dict "`adguardhome_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

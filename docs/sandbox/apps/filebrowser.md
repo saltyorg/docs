@@ -969,7 +969,7 @@ Visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>.
         filebrowser_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`filebrowser_role_traefik_api_endpoint`"
+    ??? variable dict "`filebrowser_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1139,7 +1139,7 @@ Visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>.
         filebrowser_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`filebrowser_role_web_http_serverstransport`"
+    ??? variable dict "`filebrowser_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1154,7 +1154,7 @@ Visit <https://filebrowser.iYOUR_DOMAIN_NAMEi>.
         filebrowser_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`filebrowser_role_web_serverstransport`"
+    ??? variable dict "`filebrowser_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

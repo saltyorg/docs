@@ -1054,7 +1054,7 @@ sb install sandbox-qbit-manage
         qbit_manage_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`qbit_manage_role_traefik_api_endpoint`"
+    ??? variable dict "`qbit_manage_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1224,7 +1224,7 @@ sb install sandbox-qbit-manage
         qbit_manage_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`qbit_manage_role_web_http_serverstransport`"
+    ??? variable dict "`qbit_manage_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1239,7 +1239,7 @@ sb install sandbox-qbit-manage
         qbit_manage_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`qbit_manage_role_web_serverstransport`"
+    ??? variable dict "`qbit_manage_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

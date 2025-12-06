@@ -1330,7 +1330,7 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         nzbget_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`nzbget_role_traefik_api_endpoint`"
+    ??? variable dict "`nzbget_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1500,7 +1500,7 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         nzbget_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`nzbget_role_web_http_serverstransport`"
+    ??? variable dict "`nzbget_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1529,7 +1529,7 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         nzbget_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`nzbget_role_web_serverstransport`"
+    ??? variable dict "`nzbget_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

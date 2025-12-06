@@ -222,7 +222,7 @@ Visit <https://cockpit.iYOUR_DOMAIN_NAMEi>.
         cockpit_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`cockpit_role_traefik_api_endpoint`"
+    ??? variable dict "`cockpit_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -392,7 +392,7 @@ Visit <https://cockpit.iYOUR_DOMAIN_NAMEi>.
         cockpit_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`cockpit_role_web_http_serverstransport`"
+    ??? variable dict "`cockpit_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -407,7 +407,7 @@ Visit <https://cockpit.iYOUR_DOMAIN_NAMEi>.
         cockpit_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`cockpit_role_web_serverstransport`"
+    ??? variable dict "`cockpit_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

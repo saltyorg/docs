@@ -1789,7 +1789,7 @@ Visit <https://rflood.iYOUR_DOMAIN_NAMEi>.
         rflood2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`rflood_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`rflood2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`rflood_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`rflood2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2089,7 +2089,7 @@ Visit <https://rflood.iYOUR_DOMAIN_NAMEi>.
         rflood2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`rflood_role_web_http_serverstransport`{ .sb-show-on-unchecked }`rflood2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`rflood_role_web_http_serverstransport`{ .sb-show-on-unchecked }`rflood2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2115,7 +2115,7 @@ Visit <https://rflood.iYOUR_DOMAIN_NAMEi>.
         rflood2_web_scheme:
         ```
 
-    ??? variable dict/omit "`rflood_role_web_serverstransport`{ .sb-show-on-unchecked }`rflood2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`rflood_role_web_serverstransport`{ .sb-show-on-unchecked }`rflood2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

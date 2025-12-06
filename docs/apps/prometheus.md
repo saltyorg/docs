@@ -1012,7 +1012,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`prometheus_role_traefik_api_endpoint`"
+    ??? variable dict "`prometheus_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1182,7 +1182,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`prometheus_role_web_http_serverstransport`"
+    ??? variable dict "`prometheus_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1197,7 +1197,7 @@ Add custom scrape targets to the config file and restart with `docker restart pr
         prometheus_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`prometheus_role_web_serverstransport`"
+    ??? variable dict "`prometheus_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

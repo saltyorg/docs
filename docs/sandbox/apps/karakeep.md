@@ -1000,7 +1000,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`karakeep_role_traefik_api_endpoint`"
+    ??? variable dict "`karakeep_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1170,7 +1170,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`karakeep_role_web_http_serverstransport`"
+    ??? variable dict "`karakeep_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1185,7 +1185,7 @@ Visit `https://karakeep.app/`.
         karakeep_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`karakeep_role_web_serverstransport`"
+    ??? variable dict "`karakeep_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

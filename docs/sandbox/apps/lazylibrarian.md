@@ -960,7 +960,7 @@ Visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>.
         lazylibrarian_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`lazylibrarian_role_traefik_api_endpoint`"
+    ??? variable dict "`lazylibrarian_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1130,7 +1130,7 @@ Visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>.
         lazylibrarian_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`lazylibrarian_role_web_http_serverstransport`"
+    ??? variable dict "`lazylibrarian_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1145,7 +1145,7 @@ Visit <https://lazylibrarian.iYOUR_DOMAIN_NAMEi>.
         lazylibrarian_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`lazylibrarian_role_web_serverstransport`"
+    ??? variable dict "`lazylibrarian_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

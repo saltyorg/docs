@@ -1392,7 +1392,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`authentik_role_traefik_api_endpoint`"
+    ??? variable dict "`authentik_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1562,7 +1562,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`authentik_role_web_http_serverstransport`"
+    ??? variable dict "`authentik_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1584,7 +1584,7 @@ The only other field you need to concern yourself with is the `Mobile Redirect U
         authentik_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`authentik_role_web_serverstransport`"
+    ??? variable dict "`authentik_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

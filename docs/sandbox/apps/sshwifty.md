@@ -968,7 +968,7 @@ Visit <https://sshwifty.iYOUR_DOMAIN_NAMEi>.
         sshwifty_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`sshwifty_role_traefik_api_endpoint`"
+    ??? variable dict "`sshwifty_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1138,7 +1138,7 @@ Visit <https://sshwifty.iYOUR_DOMAIN_NAMEi>.
         sshwifty_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`sshwifty_role_web_http_serverstransport`"
+    ??? variable dict "`sshwifty_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1153,7 +1153,7 @@ Visit <https://sshwifty.iYOUR_DOMAIN_NAMEi>.
         sshwifty_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`sshwifty_role_web_serverstransport`"
+    ??? variable dict "`sshwifty_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

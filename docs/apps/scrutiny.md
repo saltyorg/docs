@@ -952,7 +952,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`scrutiny_role_traefik_api_endpoint`"
+    ??? variable dict "`scrutiny_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1122,7 +1122,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`scrutiny_role_web_http_serverstransport`"
+    ??? variable dict "`scrutiny_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1137,7 +1137,7 @@ The container runs in privileged mode to access hardware S.M.A.R.T. data. Config
         scrutiny_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`scrutiny_role_web_serverstransport`"
+    ??? variable dict "`scrutiny_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1101,7 +1101,7 @@ Visit <https://jellystat.iYOUR_DOMAIN_NAMEi>.
         jellystat_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`jellystat_role_traefik_api_endpoint`"
+    ??? variable dict "`jellystat_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1271,7 +1271,7 @@ Visit <https://jellystat.iYOUR_DOMAIN_NAMEi>.
         jellystat_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`jellystat_role_web_http_serverstransport`"
+    ??? variable dict "`jellystat_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1286,7 +1286,7 @@ Visit <https://jellystat.iYOUR_DOMAIN_NAMEi>.
         jellystat_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`jellystat_role_web_serverstransport`"
+    ??? variable dict "`jellystat_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

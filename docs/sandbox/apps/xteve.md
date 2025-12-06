@@ -973,7 +973,7 @@ Visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>.
         xteve_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`xteve_role_traefik_api_endpoint`"
+    ??? variable dict "`xteve_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1143,7 +1143,7 @@ Visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>.
         xteve_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`xteve_role_web_http_serverstransport`"
+    ??? variable dict "`xteve_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1158,7 +1158,7 @@ Visit <https://ROLENAME.iYOUR_DOMAIN_NAMEi/web>.
         xteve_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`xteve_role_web_serverstransport`"
+    ??? variable dict "`xteve_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

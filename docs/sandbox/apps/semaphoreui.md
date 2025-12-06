@@ -1131,7 +1131,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`semaphoreui_role_traefik_api_endpoint`"
+    ??? variable dict "`semaphoreui_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1301,7 +1301,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`semaphoreui_role_web_http_serverstransport`"
+    ??? variable dict "`semaphoreui_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1316,7 +1316,7 @@ Redeploy the Semaphoreui role to apply any of the above changes.
         semaphoreui_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`semaphoreui_role_web_serverstransport`"
+    ??? variable dict "`semaphoreui_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

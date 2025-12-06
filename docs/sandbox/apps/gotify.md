@@ -968,7 +968,7 @@ Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
         gotify_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`gotify_role_traefik_api_endpoint`"
+    ??? variable dict "`gotify_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1138,7 +1138,7 @@ Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
         gotify_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`gotify_role_web_http_serverstransport`"
+    ??? variable dict "`gotify_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1153,7 +1153,7 @@ Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
         gotify_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`gotify_role_web_serverstransport`"
+    ??? variable dict "`gotify_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

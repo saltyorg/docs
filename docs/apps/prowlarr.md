@@ -1017,7 +1017,7 @@ Visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>.
         prowlarr_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`prowlarr_role_traefik_api_endpoint`"
+    ??? variable dict "`prowlarr_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1187,7 +1187,7 @@ Visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>.
         prowlarr_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`prowlarr_role_web_http_serverstransport`"
+    ??? variable dict "`prowlarr_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1202,7 +1202,7 @@ Visit <https://prowlarr.iYOUR_DOMAIN_NAMEi>.
         prowlarr_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`prowlarr_role_web_serverstransport`"
+    ??? variable dict "`prowlarr_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

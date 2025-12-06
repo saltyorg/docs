@@ -967,7 +967,7 @@ Visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>.
         tvheadend_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`tvheadend_role_traefik_api_endpoint`"
+    ??? variable dict "`tvheadend_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1137,7 +1137,7 @@ Visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>.
         tvheadend_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`tvheadend_role_web_http_serverstransport`"
+    ??? variable dict "`tvheadend_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1152,7 +1152,7 @@ Visit <https://tvheadend.iYOUR_DOMAIN_NAMEi>.
         tvheadend_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`tvheadend_role_web_serverstransport`"
+    ??? variable dict "`tvheadend_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

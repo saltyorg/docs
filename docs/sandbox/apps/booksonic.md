@@ -961,7 +961,7 @@ Visit <https://booksonic.iYOUR_DOMAIN_NAMEi>.
         booksonic_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`booksonic_role_traefik_api_endpoint`"
+    ??? variable dict "`booksonic_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1131,7 +1131,7 @@ Visit <https://booksonic.iYOUR_DOMAIN_NAMEi>.
         booksonic_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`booksonic_role_web_http_serverstransport`"
+    ??? variable dict "`booksonic_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1146,7 +1146,7 @@ Visit <https://booksonic.iYOUR_DOMAIN_NAMEi>.
         booksonic_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`booksonic_role_web_serverstransport`"
+    ??? variable dict "`booksonic_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

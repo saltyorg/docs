@@ -1097,7 +1097,7 @@ Visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>.
         maybe_finance_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`maybe_finance_role_traefik_api_endpoint`"
+    ??? variable dict "`maybe_finance_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1267,7 +1267,7 @@ Visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>.
         maybe_finance_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`maybe_finance_role_web_http_serverstransport`"
+    ??? variable dict "`maybe_finance_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1282,7 +1282,7 @@ Visit <https://maybe-finance.iYOUR_DOMAIN_NAMEi>.
         maybe_finance_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`maybe_finance_role_web_serverstransport`"
+    ??? variable dict "`maybe_finance_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -1123,7 +1123,7 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`dozzle_role_traefik_api_endpoint`"
+    ??? variable dict "`dozzle_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1300,7 +1300,7 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`dozzle_role_web_http_serverstransport`"
+    ??? variable dict "`dozzle_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1315,7 +1315,7 @@ dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2
         dozzle_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`dozzle_role_web_serverstransport`"
+    ??? variable dict "`dozzle_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

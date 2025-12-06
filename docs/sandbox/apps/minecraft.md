@@ -1647,7 +1647,7 @@ sb install sandbox-minecraft
         minecraft2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`minecraft_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`minecraft2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`minecraft_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`minecraft2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1947,7 +1947,7 @@ sb install sandbox-minecraft
         minecraft2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`minecraft_role_web_http_serverstransport`{ .sb-show-on-unchecked }`minecraft2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`minecraft_role_web_http_serverstransport`{ .sb-show-on-unchecked }`minecraft2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1973,7 +1973,7 @@ sb install sandbox-minecraft
         minecraft2_web_scheme:
         ```
 
-    ??? variable dict/omit "`minecraft_role_web_serverstransport`{ .sb-show-on-unchecked }`minecraft2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`minecraft_role_web_serverstransport`{ .sb-show-on-unchecked }`minecraft2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

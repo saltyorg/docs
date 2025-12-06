@@ -1020,7 +1020,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`firefox_role_traefik_api_endpoint`"
+    ??? variable dict "`firefox_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1190,7 +1190,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`firefox_role_web_http_serverstransport`"
+    ??? variable dict "`firefox_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1205,7 +1205,7 @@ While the tunnel is active, you can use a VNC client to access the GUI via the a
         firefox_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`firefox_role_web_serverstransport`"
+    ??? variable dict "`firefox_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

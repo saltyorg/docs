@@ -960,7 +960,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`code_server_role_traefik_api_endpoint`"
+    ??? variable dict "`code_server_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1130,7 +1130,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`code_server_role_web_http_serverstransport`"
+    ??? variable dict "`code_server_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1145,7 +1145,7 @@ The `coder` role is currently deprecated and won't receive any updates, so pleas
         code_server_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`code_server_role_web_serverstransport`"
+    ??? variable dict "`code_server_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

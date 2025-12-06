@@ -963,7 +963,7 @@ Visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>.
         mkvtoolnix_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`mkvtoolnix_role_traefik_api_endpoint`"
+    ??? variable dict "`mkvtoolnix_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1133,7 +1133,7 @@ Visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>.
         mkvtoolnix_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`mkvtoolnix_role_web_http_serverstransport`"
+    ??? variable dict "`mkvtoolnix_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1148,7 +1148,7 @@ Visit <https://mkvtoolnix.iYOUR_DOMAIN_NAMEi>.
         mkvtoolnix_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`mkvtoolnix_role_web_serverstransport`"
+    ??? variable dict "`mkvtoolnix_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

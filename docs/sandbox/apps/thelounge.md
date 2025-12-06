@@ -998,7 +998,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`thelounge_role_traefik_api_endpoint`"
+    ??? variable dict "`thelounge_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1168,7 +1168,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`thelounge_role_web_http_serverstransport`"
+    ??? variable dict "`thelounge_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1183,7 +1183,7 @@ To connect to **[znc](../../sandbox/apps/znc.md)**, you need to have a **[znc](.
         thelounge_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`thelounge_role_web_serverstransport`"
+    ??? variable dict "`thelounge_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

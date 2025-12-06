@@ -964,7 +964,7 @@ Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
         goaccess_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`goaccess_role_traefik_api_endpoint`"
+    ??? variable dict "`goaccess_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1134,7 +1134,7 @@ Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
         goaccess_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`goaccess_role_web_http_serverstransport`"
+    ??? variable dict "`goaccess_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1149,7 +1149,7 @@ Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
         goaccess_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`goaccess_role_web_serverstransport`"
+    ??? variable dict "`goaccess_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

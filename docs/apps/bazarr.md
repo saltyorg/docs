@@ -1701,7 +1701,7 @@ Please refer to the official documentation for an explanation of the settings. S
         bazarr2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`bazarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`bazarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`bazarr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`bazarr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2001,7 +2001,7 @@ Please refer to the official documentation for an explanation of the settings. S
         bazarr2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`bazarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`bazarr2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`bazarr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`bazarr2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2027,7 +2027,7 @@ Please refer to the official documentation for an explanation of the settings. S
         bazarr2_web_scheme:
         ```
 
-    ??? variable dict/omit "`bazarr_role_web_serverstransport`{ .sb-show-on-unchecked }`bazarr2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`bazarr_role_web_serverstransport`{ .sb-show-on-unchecked }`bazarr2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

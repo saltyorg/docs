@@ -947,7 +947,7 @@ sb install sandbox-factorio
         factorio_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`factorio_role_web_http_serverstransport`"
+    ??? variable dict "`factorio_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -962,7 +962,7 @@ sb install sandbox-factorio
         factorio_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`factorio_role_web_serverstransport`"
+    ??? variable dict "`factorio_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

@@ -947,7 +947,7 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`barcodebuddy_role_traefik_api_endpoint`"
+    ??? variable dict "`barcodebuddy_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1117,7 +1117,7 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`barcodebuddy_role_web_http_serverstransport`"
+    ??? variable dict "`barcodebuddy_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1132,7 +1132,7 @@ Configure the connection to your Grocy instance through the application settings
         barcodebuddy_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`barcodebuddy_role_web_serverstransport`"
+    ??? variable dict "`barcodebuddy_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

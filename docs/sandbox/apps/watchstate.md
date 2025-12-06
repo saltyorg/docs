@@ -1666,7 +1666,7 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
         watchstate2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`watchstate_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`watchstate2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`watchstate_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`watchstate2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1978,7 +1978,7 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
         watchstate2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`watchstate_role_web_http_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`watchstate_role_web_http_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -2004,7 +2004,7 @@ Visit <https://watchstate.iYOUR_DOMAIN_NAMEi>.
         watchstate2_web_scheme:
         ```
 
-    ??? variable dict/omit "`watchstate_role_web_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`watchstate_role_web_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

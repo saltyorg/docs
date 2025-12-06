@@ -1641,7 +1641,7 @@ You will need your API Keys from both Radarr and Sonarr.
         maintainerr2_themepark_theme:
         ```
 
-    ??? variable dict/omit "`maintainerr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`maintainerr2_traefik_api_endpoint`{ .sb-show-on-checked }"
+    ??? variable dict "`maintainerr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`maintainerr2_traefik_api_endpoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1941,7 +1941,7 @@ You will need your API Keys from both Radarr and Sonarr.
         maintainerr2_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`maintainerr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`maintainerr2_web_http_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`maintainerr_role_web_http_serverstransport`{ .sb-show-on-unchecked }`maintainerr2_web_http_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit
@@ -1967,7 +1967,7 @@ You will need your API Keys from both Radarr and Sonarr.
         maintainerr2_web_scheme:
         ```
 
-    ??? variable dict/omit "`maintainerr_role_web_serverstransport`{ .sb-show-on-unchecked }`maintainerr2_web_serverstransport`{ .sb-show-on-checked }"
+    ??? variable dict "`maintainerr_role_web_serverstransport`{ .sb-show-on-unchecked }`maintainerr2_web_serverstransport`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: dict/omit

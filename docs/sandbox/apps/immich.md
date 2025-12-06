@@ -1138,7 +1138,7 @@ immich_docker_envs_custom:
         immich_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`immich_role_traefik_api_endpoint`"
+    ??? variable dict "`immich_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1308,7 +1308,7 @@ immich_docker_envs_custom:
         immich_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`immich_role_web_http_serverstransport`"
+    ??? variable dict "`immich_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1323,7 +1323,7 @@ immich_docker_envs_custom:
         immich_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`immich_role_web_serverstransport`"
+    ??? variable dict "`immich_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

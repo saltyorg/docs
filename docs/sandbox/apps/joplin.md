@@ -1094,7 +1094,7 @@ Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encrypt
         joplin_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`joplin_role_traefik_api_endpoint`"
+    ??? variable dict "`joplin_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1264,7 +1264,7 @@ Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encrypt
         joplin_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`joplin_role_web_http_serverstransport`"
+    ??? variable dict "`joplin_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -1279,7 +1279,7 @@ Visit [here](https://joplinapp.org/e2ee/) to learn how to use end to end encrypt
         joplin_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`joplin_role_web_serverstransport`"
+    ??? variable dict "`joplin_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

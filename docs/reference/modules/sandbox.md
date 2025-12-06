@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-The Sandbox repository serves as a community-driven space for unofficial Saltbox enhancements.
+The Sandbox repository serves as a community-driven space for unofficial Saltbox enhancements. It is included in a standard Saltbox deployment.
 
 ---
 
@@ -21,14 +21,6 @@ To pull repository changes, run a standard Saltbox update:
 
 ```shell
 sb update
-```
-
-## Deployment
-
-!!! info inline end "Installed By Default"
-
-```shell
-sb install sandbox
 ```
 
 ## Usage

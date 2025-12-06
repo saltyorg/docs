@@ -27,6 +27,12 @@ tags:
 
 ---
 
+## Deployment
+
+```shell
+sb install rutorrent
+```
+
 ## Usage
 
 Visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>.

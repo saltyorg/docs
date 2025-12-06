@@ -28,7 +28,9 @@ tags:
 
 ## Deployment
 
-``sb install sandbox-actualbudget``
+```shell
+sb install sandbox-actualbudget
+```
 
 ## Usage
 

@@ -224,7 +224,7 @@ To edit any of the following configuration files use the command written in the 
         remote: "my-sftp:/path/to/my/files"
         ```
 
-    7. Toggles whether you wqant this remote mounted into the file system.
+    7. Toggles whether you want this remote mounted into the file system.
 
     8. The name of the template you want to use for the mount.
 

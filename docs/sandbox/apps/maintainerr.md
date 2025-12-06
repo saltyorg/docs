@@ -25,7 +25,11 @@ tags:
 </div>
 
 ---
+## Deployment
 
+```shell
+sb install sandbox-maintainerr
+```
 ## Usage
 
 Visit <https://maintainerr.iYOUR_DOMAIN_NAMEi>.

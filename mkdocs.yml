@@ -158,6 +158,10 @@ extra:
       class: md-social__link
       link: "https://github.com/saltyorg/Saltbox"
       name: GitHub
+  status:
+    deprecated: DEPRECATED!
+    draft: DRAFT — NOT YET FINISHED!
+    outdated: OUTDATED — MAY BE INACCURATE!
 
 markdown_extensions:
   - abbr

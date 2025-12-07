@@ -370,3 +370,23 @@ label[for="sb-checkbox--var-level"] {
 /* .md-annotation .md-tooltip__inner {
   border-radius: 0.5rem;
 } */
+
+/* Content tabs - custom background colors */
+.md-typeset .tabbed-labels > label {
+  background-color: rgba(103, 58, 183, 0.05);
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  background-color: rgba(103, 58, 183, 0.15);
+}
+
+/* Active tab - repeat for each tab position */
+.md-typeset .tabbed-set > input:first-child:checked ~ .tabbed-labels > :first-child,
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2),
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3),
+.md-typeset .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > :nth-child(4),
+.md-typeset .tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > :nth-child(5),
+.md-typeset .tabbed-set > input:nth-child(6):checked ~ .tabbed-labels > :nth-child(6) {
+  background-color: rgba(103, 58, 183, 0.25);
+}

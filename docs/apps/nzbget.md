@@ -118,6 +118,15 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         nzbget_role_web_port: "6789"
         ```
 
+    ??? variable string "`nzbget_role_web_url`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nzbget') + '.' + lookup('role_var', '_web_domain', role='nzbget')
+                              if (lookup('role_var', '_web_subdomain', role='nzbget') | length > 0)
+                              else lookup('role_var', '_web_domain', role='nzbget')) }}"
+        ```
+
     ??? variable string "`nzbget_role_web_login`"
 
         ```yaml
@@ -130,6 +139,13 @@ Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: string
         nzbget_role_web_url_with_login: "{{ 'https://' + lookup('role_var', '_web_login', role='nzbget') + '@' + lookup('role_var', '_web_subdomain', role='nzbget') + '.' + lookup('role_var', '_web_domain', role='nzbget') }}"
+        ```
+
+    ??? variable string "`nzbget_role_web_local_url`"
+
+        ```yaml
+        # Type: string
+        nzbget_role_web_local_url: "{{ 'http://' + nzbget_name + ':' + lookup('role_var', '_web_port', role='nzbget') }}"
         ```
 
     ??? variable string "`nzbget_role_web_local_url_web_login`"

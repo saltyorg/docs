@@ -387,7 +387,7 @@ label[for="sb-checkbox--var-level"] {
 /* Content tabs - custom background colors */
 .md-typeset {
   .tabbed-labels {
-    background: linear-gradient(to top, color-mix(in srgb, var(--md-primary-fg-color), transparent 90%) 0%, transparent 100%);
+    background: linear-gradient(to right, color-mix(in srgb, var(--md-primary-fg-color), transparent 90%) 0%, transparent 100%);
     border-radius: .25rem .25rem 0 0;
 
     > label {

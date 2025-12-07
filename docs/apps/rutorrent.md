@@ -1,27 +1,27 @@
 ---
 icon: material/docker
-status: draft
 hide:
   - tags
 tags:
+  - bittorrent
+  - p2p
   - rutorrent
+  - torrent
 ---
 
 # ruTorrent
 
 ## Overview
 
-[kudeta/ru-rtorrent](https://hub.docker.com/r/kudeta/ru-rtorrent) is a Docker container image that combines the rTorrent BitTorrent Client with the ruTorrent web interface.
-
-> [ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent. [:material-bookshelf:](https://github.com/Novik/ruTorrent/wiki) [:fontawesome-brands-github:](https://github.com/Novik/ruTorrent/discussions)
+[ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent. [:material-bookshelf:](https://github.com/Novik/ruTorrent/wiki) [:fontawesome-brands-github:](https://github.com/Novik/ruTorrent/discussions)
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:material-bookshelf:**Manual**](https://github.com/Novik/ruTorrent/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kudeta/ru-rtorrent/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-people-group:**Community**](https://github.com/Novik/ruTorrent/discussions){ .md-button .md-button--stretch }
 
 </div>
 
@@ -37,55 +37,9 @@ sb install rutorrent
 
 Visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
+### Unpacking
 
-### Setup
-
-The setup for [Sonarr](sonarr.md#__tabbed_4_5), [Radarr](radarr.md#__tabbed_4_5), and [Lidarr](lidarr.md#__tabbed_4_4) are done on their respective wiki pages.
-
-#### Enable AutoUnpack
-
-AutoUnpack is a plugin that will automatically unrar/unzip torrent data.
-
-_This will allow Sonarr/Radarr/Lidarr to import the media files that would otherwise be ignored. After Sonarr and Radarr import the media files, [Torrent Cleanup Script](../reference/saltbox-tools.md#torrent-cleanup-script) will then delete the extracted media files and ruTorrent will continue to seed the torrents (until they are either removed manually or automatically via ruTorrent's Ratio Group rules)._
-
-To enable AutoUnpack:
-
-1. Open "Settings" by clicking the gear icon ![](https://github.com/Novik/ruTorrent/wiki/images/icon06settings.png) at the top
-
-2. Go to "Unpack" on the left.
-
-3. Check "Enable autounpacking if torrents label matches filter" and add the following:
-
-```text
-   /.*(radarr|sonarr|lidarr).*/i
-```
-
-4. Leave the other fields blank.
-
-5. Your settings will now look like this:
-
-   ![](https://i.imgur.com/LqE16E1.png)
-
-6. Click "OK".
-
-#### Custom Plugins and Themes
-
-You can have custom plugins and themes imported during Docker container rebuild. Just place them in the following paths:
-
-```text
-/opt/rutorrent/plugins/
-```
-
-```text
-/opt/rutorrent/themes/
-```
-
-And then restart the Docker container:
-
-```shell
-docker restart rutorrent
-```
+You will most likely want to run [Unpackerr](unpackerr.md) for this purpose. If so, it is recommended to disable ruTorrent's *unpack* plugin (along with other plugins you do not require) to save resources.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

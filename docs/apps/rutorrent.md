@@ -13,7 +13,7 @@ tags:
 
 ## Overview
 
-[ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent. [:material-bookshelf:](https://github.com/Novik/ruTorrent/wiki) [:fontawesome-brands-github:](https://github.com/Novik/ruTorrent/discussions)
+[ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

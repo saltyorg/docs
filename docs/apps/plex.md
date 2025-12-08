@@ -14,8 +14,6 @@ saltbox_automation:
     show_sections: []
     hide_sections: []
     example_overrides: {}
-    hide_default_warning: false
-    hide_instance_toggle: false
   app_links:
     - name: Manual
       url: https://support.plex.tv/articles/categories/plex-media-server

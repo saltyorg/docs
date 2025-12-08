@@ -8,7 +8,7 @@ tags:
 
 # Update
 
-## Updating the Saltbox framework
+## Updating Saltbox
 
 To pull changes, run:
 
@@ -53,12 +53,12 @@ The above updates the Saltbox selection of apps, along with core modules.
 
 ## Quick Reference
 
-| Action         | Command              | Effect                                               |
-|----------------|----------------------|------------------------------------------------------|
-| Update Saltbox | `sb update`          | Updates Saltbox files                                |
-| Upgrade core   | `sb install core`    | Updates dependencies/config                          |
-| Update an app  | `sb install sonarr`  | Updates Sonarr                                       |
-| Upgrade bundle | `sb install saltbox` | Updates dependencies/config & Saltbox apps selection |
+| Action         | Command              | Effect                                        |
+|----------------|----------------------|-----------------------------------------------|
+| Update Saltbox | `sb update`          | Updates Saltbox files                         |
+| Upgrade core   | `sb install core`    | Updates core modules                          |
+| Update an app  | `sb install sonarr`  | Updates Sonarr                                |
+| Upgrade bundle | `sb install saltbox` | Updates core modules & Saltbox apps selection |
 
 ## Next
 

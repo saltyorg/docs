@@ -8,7 +8,7 @@ tags:
 
 # Update
 
-## Updating Saltbox
+## Updating the Saltbox framework
 
 To pull changes, run:
 
@@ -16,38 +16,50 @@ To pull changes, run:
 sb update
 ```
 
-!!! info "Updates the Saltbox files *only*—*does not* update your containers."
+!!! note "Updates the Saltbox files *only*—*does not* update your containers."
 
-    For example, if a new feature is added to Saltbox, `sb update` will get that new feature. If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
+    For example, if a new feature is added to Saltbox, `sb update` will get that new feature. If a new version of Sonarr is available, `sb update` *will not* update your Sonarr to that new version.
 
-This will also update the Saltbox CLI, Ansible, and migrate the configuration files as needed.
+This command also updates the Saltbox CLI, Ansible, Sandbox, and migrates configuration files if required.
 
-## Upgrading Saltbox
+## Upgrading the server
 
-Every `sb update` should be followed by one of the [main tags](../../apps/main_tags.md), or at a minimum:
+A Saltbox update should generally be followed by a run of one of the [main tags](../../apps/main_tags.md), or at
+minimum:
 
 ```shell
 sb install core
 ```
 
-This ensures dependencies and system configuration are up to spec with the latest Saltbox changes.
+This ensures all dependencies and system configuration are current with the last commit.
 
 ## Updating apps
 
-Generally, to update individual applications, run the tag for that application. For example,
+Generally, to update individual applications, run the tag for that application. For example:
 
 ```shell
-sb install radarr
+sb install sonarr
 ```
 
-This will retrieve the current version of the Radarr image and recreate the container, which will update the application version.
+This command pulls the latest Sonarr image and recreates the container, updating the application.
 
-The same thing happens if you run one of the top-level tags:
+Include more applications in that process by running one of the top-level tags, such as:
 
 ```shell
 sb install saltbox
 ```
 
-This will do as above for *all* the containers installed by the `saltbox` tag.
+The above updates the Saltbox selection of apps, along with core modules.
 
-Next, let's discuss how you will [access the applications](accessing-apps.md).
+## Quick Reference
+
+| Action         | Command              | Effect                                               |
+|----------------|----------------------|------------------------------------------------------|
+| Update Saltbox | `sb update`          | Updates Saltbox files                                |
+| Upgrade core   | `sb install core`    | Updates dependencies/config                          |
+| Update an app  | `sb install sonarr`  | Updates Sonarr                                       |
+| Upgrade bundle | `sb install saltbox` | Updates dependencies/config & Saltbox apps selection |
+
+## Next
+
+The following guide addresses [accessing the applications](accessing-apps.md).

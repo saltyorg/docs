@@ -57,7 +57,7 @@ When sharing a command, log, or error message, use a code fence to escape native
 
 -   **Syntax:** The backtick is used for code fences.
 
-    ![Backtick Key](https://www.computerhope.com/cdn/keyboard/tilde.jpg)
+    ![Backtick Key](../../images/support/qwerty-backtick.svg)
 
 -   **Single-line:** For short inline content, wrap with a single backtick ++grave++: `` `your inline content` ``
 -   **Multi-line:** For longer content, wrap with triple backticks ++grave+grave+grave++:

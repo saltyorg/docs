@@ -18,8 +18,8 @@ hide:
 
 [Learn More](saltbox/basics/basics.md){ .md-button .md-button--primary }
 [Install](saltbox/prerequisites/prerequisites.md){ .md-button .md-button--primary }
-[Get Help](contributing/requests/support.md){ .md-button .md-button--primary }
-[Help Out](contributing/index.md){ .md-button .md-button--primary }
+[Get Help](community/requests/support.md){ .md-button .md-button--primary }
+[Help Out](community/index.md){ .md-button .md-button--primary }
 
 ---
 <!-- BEGIN SALTBOX MANAGED CLI SECTION -->

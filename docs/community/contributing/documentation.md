@@ -2,7 +2,7 @@
 status: draft
 ---
 
-# Writing Documentation
+# Documentation
 
 ## How to Contribute
 

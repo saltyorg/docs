@@ -196,7 +196,7 @@ extra_javascript:
   - javascripts/extra.js
 
 nav:
-  - index.md
+  - Saltbox: index.md
   - Getting Started:
       - saltbox/basics/basics.md
       - Prerequisites: saltbox/prerequisites/prerequisites.md
@@ -606,12 +606,11 @@ nav:
         - reference/modules/unionfs.md
         - reference/modules/user.md
 
-  - Contributing:
-    - contributing/index.md
-    - Development:
-      - contributing/development/index.md
-    - Documentation:
-      - contributing/documentation/index.md
-    - Requests:
-      - contributing/requests/features.md
-      - contributing/requests/support.md
+  - Community:
+    - community/index.md
+    - Contributing:
+      - community/contributing/development.md
+      - community/contributing/documentation.md
+    - Requesting:
+      - community/requests/features.md
+      - community/requests/support.md

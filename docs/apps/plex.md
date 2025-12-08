@@ -5,13 +5,44 @@ hide:
 tags:
   - plex
   - pms
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+    hide_default_warning: false
+    hide_instance_toggle: false
+  app_links:
+    - name: Manual
+      url: https://support.plex.tv/articles/categories/plex-media-server
+      type: docs
+    - name: Releases
+      url: https://hub.docker.com/r/plexinc/pms-docker/tags
+      type: releases-docker
+    - name: Community
+      url: https://forums.plex.tv
+      type: community-plex
+  project_description:
+    name: Plex Media Server
+    summary: |
+      is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location to various devices.
+    link: https://www.plex.tv/personal-media-server
+    categories:
+      - Content Delivery Apps > Media Server
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Plex Media Server
 
 ## Overview
 
 [Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location to various devices.
+
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -24,6 +55,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract directions "Saltbox Setup Process"
 

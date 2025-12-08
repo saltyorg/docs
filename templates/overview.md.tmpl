@@ -1,7 +1,36 @@
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-
-| Details     |             |             |
-|-------------|-------------|-------------|
-{{- range .Rows }}
-|{{ range . }} {{ . }} |{{ end }}
+# {{ .Description.Name }}
+{{- /* Icon mapping for link types */ -}}
+{{- define "icon" -}}
+{{- if eq . "manual" -}}:material-bookshelf:
+{{- else if eq . "docs" -}}:material-bookshelf:
+{{- else if eq . "home" -}}:material-home:
+{{- else if eq . "releases" -}}:fontawesome-solid-newspaper:
+{{- else if eq . "releases-docker" -}}:fontawesome-brands-docker:
+{{- else if eq . "releases-github" -}}:fontawesome-brands-github:
+{{- else if eq . "releases-gcloud" -}}:simple-googlecloud:
+{{- else if eq . "community" -}}:fontawesome-solid-people-group:
+{{- else if eq . "community-discord" -}}:fontawesome-brands-discord:
+{{- else if eq . "community-slack" -}}:fontawesome-brands-slack:
+{{- else if eq . "community-plex" -}}:material-plex:
+{{- else if eq . "discord" -}}:fontawesome-brands-discord:
+{{- else if eq . "github" -}}:fontawesome-brands-github:
+{{- else if eq . "docker" -}}:fontawesome-brands-docker:
+{{- end -}}
 {{- end }}
+
+## Overview
+{{- if .Description }}
+
+[{{ .Description.Name }}]({{ .Description.Link }}) {{ .Description.Summary }}
+{{- end }}
+{{- if .Links }}
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+{{ range .Links }}
+[{{ template "icon" .Type }}**{{ .Name }}**]({{ .URL }}){ .md-button .md-button--stretch }
+{{ end }}
+</div>
+{{- end }}
+
+---

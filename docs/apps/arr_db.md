@@ -7,7 +7,7 @@ tags:
   - database
   - postgres
 saltbox_automation:
-  variables:
+  inventory:
     hide_sections:
       - Variables
 ---

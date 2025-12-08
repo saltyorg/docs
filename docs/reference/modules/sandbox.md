@@ -1,5 +1,4 @@
 ---
-status: draft
 hide:
   - tags
 tags:
@@ -25,7 +24,11 @@ sb update
 
 ## Usage
 
-Sandbox roles are listed via the `sb list` command and under [Apps](../../apps/index.md).
+Sandbox roles are listed under [Applications](../../apps/index.md) and by running:
+
+```shell
+sb list
+```
 
 To deploy a Sandbox role, use `sb install`, prepending `sandbox-` to the role tag. For example, to deploy [Kometa](../../sandbox/apps/kometa.md):
 
@@ -35,6 +38,14 @@ sb install sandbox-kometa
 
 Before deploying a Sandbox role, it is recommended to review its documentation for any required configuration.
 
-!!! tip
+!!! info "App Default Login Credentials"
 
-    Where possible the configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml` and used to create a default user a password for logging in.
+    Where possible, the username and password configured in your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) are used to create a default user and password for logging in.
+
+### Custom Roles
+
+Tags are validated against cached data. To bypass validation if developing your own role, use the `--no-cache` flag:
+
+```shell
+sb install sandbox-myapp --no-cache
+```

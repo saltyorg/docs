@@ -391,6 +391,7 @@ nav:
           - Uptime Kuma: sandbox/apps/uptime-kuma.md
           - Vaultwarden: sandbox/apps/vaultwarden.md
           - Varken: sandbox/apps/varken.md
+          - Wishlist: sandbox/apps/wishlist.md
 
   - Apps:
       - Saltbox standard [set up in this order]:

@@ -19,7 +19,7 @@ Wishlist is a self-hosted wishlist application that you can share with your frie
 |-------------|-------------|-------------|-------------|
 | [:material-home: Project home](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-link-16: Docs](https://github.com/cmintey/wishlist){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/cmintey/wishlist){: .header-icons } | [:material-docker: Docker](https://github.com/cmintey/wishlist/pkgs/container/wishlist){: .header-icons }|
 
-!!! warning This is not behind Authelia by default since Wishlist has its own authentication and allows configuration for public lists
+This is behind Authelia by default which will require you to login twice. To disable the Authelia login see the [Inventory Guide](https://docs.saltbox.dev/saltbox/inventory/#authelia-app-bypass)
 
 ### 1. Installation
 
@@ -34,7 +34,7 @@ sb install sandbox-wishlist
 
 ### 3. Usage
 
-Make sure to log in after Installation to configure the admin account.
+Make sure to log in after installation to configure the admin account.
 
 The uploads and database files will be stored in `/opt/wishlist/`
 

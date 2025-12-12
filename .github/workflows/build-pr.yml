@@ -55,7 +55,7 @@ jobs:
 
       - name: Restore cache
         id: cache-docs-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           key: docs-${{ steps.pr_info.outputs.pr_number }}
           path: .cache
@@ -99,7 +99,7 @@ jobs:
 
       - name: Save build cache
         id: cache-docs-save
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: .cache
           key: docs-${{ steps.pr_info.outputs.pr_number }}-${{ github.run_id }}

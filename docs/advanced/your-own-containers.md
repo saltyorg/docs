@@ -49,20 +49,16 @@ Recommended for GUI applications and web services.
 
         ```yaml hl_lines="2"
         environment:
-          # (1)!
+          # Set image-specific environment variables and remove unsupported ones
         ```
-
-        1.  Set image-specific environment variables and remove unsupported ones
 
         ```yaml hl_lines="2-3"
         volumes:
           - /opt/xCUSTOM_APP_NAMEx:/config # (1)!
-          # (2)!
+          # Set other volume mappings the image requires
         ```
 
         1.  Image may use a different path than `/config`
-
-        2.  Set other volume mappings the image requires
 
     ??? info "Cheat Sheet (some content may be outdated)"
 

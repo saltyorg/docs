@@ -41,18 +41,28 @@ Recommended for GUI applications and web services.
 
     - Always needs changing:
 
-        ```yaml
+        ``` { .yaml .no-copy }
         image: your_image:your_tag
         ```
 
     - Often needs changing:
 
-        ```yaml hl_lines="2"
+        ``` { .yaml .no-copy hl_lines="2-4" }
         environment:
-          # Set image-specific environment variables and remove unsupported ones
+          # Remove unsupported environment variables and add image-specific ones, e.g.:
+          SOME_SETTING: "myvalue" # (1)!
+          OTHER_SETTING: "true"
         ```
 
-        ```yaml hl_lines="2-3"
+        1. List syntax is also supported:
+        
+            ```yaml
+            environment:
+              - SOME_SETTING="myvalue"
+              - OTHER_SETTING="true"
+            ```
+
+        ``` { .yaml .no-copy hl_lines="2-3" }
         volumes:
           - /opt/xCUSTOM_APP_NAMEx:/config # (1)!
           # Set other volume mappings the image requires
@@ -70,9 +80,9 @@ Recommended for GUI applications and web services.
             image: DOCKER/IMAGE:TAG # (3)!
             hostname: xCUSTOM_APP_NAMEx # (4)!
             environment: # (5)!
-              - PUID=1000
-              - PGID=1000
-              - TZ=Etc/UTC
+              PUID: "1000"
+              PGID: "1000"
+              TZ: "Etc/UTC"
             networks: # (6)!
               - saltbox
             labels:

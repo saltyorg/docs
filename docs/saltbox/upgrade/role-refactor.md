@@ -61,3 +61,7 @@ bazarr_instances: ["bazarr", "bazarr4k"]
 bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"]
 bazarr4k_themepark_theme: "dracula"
 ```
+
+View all changes here:<br>
+<a href="../../../static/saltbox.html" target="_blank">Saltbox</a><br>
+<a href="../../../static/sandbox.html" target="_blank">Sandbox</a>

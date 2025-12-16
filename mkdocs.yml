@@ -206,6 +206,8 @@ nav:
       - Update: saltbox/basics/update.md
       - Accessing Apps: saltbox/basics/accessing-apps.md
       - Paths: saltbox/basics/paths.md
+      - Major Upgrade Guide:
+          - saltbox/upgrade/role-refactor.md
       - Inventory:
           - saltbox/inventory/index.md
           - saltbox/inventory/example-overrides.md

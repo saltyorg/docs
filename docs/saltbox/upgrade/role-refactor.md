@@ -10,58 +10,117 @@ tags:
 
 # Role Refactor
  
-The merge of the role-refactor branches introduces the following changes:
+The role-refactor branch merge includes the following updates:
 
-- Explicit [override levels](../inventory/index.md/#override-levels)
+-   Enforces explicit Inventory [override levels](../inventory/index.md/#override-levels) :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
 
-    > Variables that previously applied to all instances of a role (e.g., `sonarr_docker_image`) now strictly apply only to the instance with that exact name (e.g., `sonarr`).
-        
-    > To apply a variable to all instances of a role, use the `_role_` infix (e.g., `sonarr_role_docker_image`). 
-        
-    > Docker Network Mode Variables such as `plex_docker_network_mode_default` have been deprecated in favor of direct assignment (e.g., `plex_docker_network_mode`).
+    > Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
+    
+    > **Role-scoped overrides must now include the `_role_` infix**{ style="color: var(--md-typeset-color);" } (e.g. `sonarr_role_docker_image`) **to persist as such.**{ style="color: var(--md-typeset-color);" }
 
-- Sandbox settings.yml deprecation
+-   Deprecates `_docker_network_mode_default` Inventory convention
 
-    > All Sandbox settings.yml overrides must be converted to their inventory format to continue applying.
+    > `_docker_network_mode` is now natively supported across all roles.
 
-- Golang rewrites of Python tools: Docker Controller, DNS Manager
-- Roles removed: jaeger, readarr, sub_zero, webtools, alternatrr, aria2_ng, comicstreamer, docspell, rdtclient, solr, teamspeak, watchtower
-- Docs overhaul
+-   Retires Sandbox `settings.yml` :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
 
-## Inventory Migration Examples
+    > Settings no longer apply and must be migrated to their Inventory form to persist.
+
+-   Removes a number of roles
+
+    <blockquote class="grid" style="grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));" markdown>
+    
+    jaeger
+
+    readarr
+
+    sub_zero
+
+    webtools
+
+    alternatrr
+
+    aria2_ng
+
+    comicstreamer
+
+    docspell
+
+    rdtclient
+
+    solr
+
+    teamspeak
+
+    watchtower
+
+    </blockquote>
+
+-   Python to Golang rewrites of tools: DNS manager, Docker controller
+
+<div class="directions-menu" markdown>
+
+Full changes:
+
+<div markdown>
+
+[:octicons-file-diff-24:**Saltbox diff**](../../static/saltbox.html){ .md-button }
+[:octicons-file-diff-24:**Sandbox diff**](../../static/sandbox.html){ .md-button }
+
+</div>
+
+</div>
+
+----
+
+## Inventory Migration Guide
 
 ### Single-instance overrides
 
 When a role only has a single instance, either variable form will achieve the same outcome. However, to align with the new convention, it is recommended to transition to the `_role_` infix.
 
-```yaml
-plex_dns_proxy: false
-```
+!!! example
 
-Becomes:
-
-```yaml
-plex_role_dns_proxy: false
-```
+    ```yaml
+    plex_dns_proxy: false
+    ```
+    
+    Becomes:
+    
+    ```yaml
+    plex_role_dns_proxy: false
+    ```
 
 ### Multi-instance overrides
 
-Multi-instance role variables must be transitioned to the appropriate override level for existing configuration to persist.
+Multi-instance role variables must be converted to the appropriate override level for existing configuration to persist.
 
-```yaml
-bazarr_instances: ["bazarr", "bazarr4k"]
-bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"]
-bazarr4k_themepark_theme: "dracula"
-```
+!!! example
 
-Becomes:
+    !!! tip "Specificity takes precedence"
+    
+        When determining which variable to use, remember the precedence order: Instance > Role > Global
 
-```yaml
-bazarr_instances: ["bazarr", "bazarr4k"]
-bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"]
-bazarr4k_themepark_theme: "dracula"
-```
-
-View all changes here:<br>
-<a href="../../../static/saltbox.html" target="_blank">Saltbox</a><br>
-<a href="../../../static/sandbox.html" target="_blank">Sandbox</a>
+    ```yaml
+    bazarr_instances: ["bazarr", "bazarr4k"]
+    bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"]
+    bazarr_themepark_theme: "nord"
+    bazarr4k_themepark_theme: "maroon"
+    ```
+    
+    Becomes:
+    
+    ```yaml
+    bazarr_instances: ["bazarr", "bazarr4k"]
+    bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
+    bazarr_role_themepark_theme: "nord" # or bazarr_themepark_theme: "nord" (2)
+    bazarr4k_themepark_theme: "maroon"
+    ```
+    
+    1. Typically, you want all instances to have access to the same external tools.
+    
+    2. This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
+    
+        - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
+        - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if set, or would not be themed.
+  

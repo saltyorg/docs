@@ -1,6 +1,6 @@
 document$.subscribe(function () {
 
-  /* Role Defaults override-level visibility toggle */
+// Role Defaults override-level visibility toggle
   updateToggleDisplay();
 
   document.addEventListener('click', function (event) {
@@ -45,6 +45,17 @@ document$.subscribe(function () {
   document.addEventListener('change', function (event) {
     if (event.target.matches('.md-typeset .tabbed-set > input[type="radio"]')) {
       setActiveTabColor();
+    }
+  });
+
+// Open same-origin link to non-markdown page in a new tab
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#')) {
+      const url = new URL(href, window.location.origin);
+      if (url.origin === window.location.origin && /\.[^/]+$/.test(url.pathname)) {
+        link.setAttribute('target', '_blank');
+      }
     }
   });
 });

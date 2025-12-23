@@ -249,7 +249,8 @@ You can also use the [Home Assistant Community Store (HACS)](https://hacs.xyz/) 
         # Type: list
         homeassistant_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='homeassistant') }}:/config"
-          - /etc/localtime:/etc/localtime:ro
+          - "/etc/localtime:/etc/localtime:ro"
+          - "/run/dbus:/run/dbus:ro"
         ```
 
     ??? variable list "`homeassistant_role_docker_volumes_custom`"

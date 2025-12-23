@@ -43,7 +43,6 @@ Saltbox CLI
     docker [command]                  Manage Docker containers managed by Saltbox
     edit [command]                    Edit Saltbox configuration files
     fact [role] [instance] [--flags]  Manage Saltbox configuration facts
-    help [command]                    Help about any command
     install [tags] [--flags]          Runs Ansible playbooks with specified tags
     list [query] [--flags]            List available Saltbox, Sandbox or Saltbox-mod tags
     logs                              Display logs of managed systemd services
@@ -58,7 +57,6 @@ Saltbox CLI
   FLAGS  
          
     -h --help                         Help for sb
-    -v --version                      Version for sb
 ```
 
 <!-- END SALTBOX MANAGED CLI SECTION -->

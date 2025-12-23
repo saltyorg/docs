@@ -218,6 +218,23 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         komga_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='komga') }}:{{ lookup('role_var', '_docker_image_tag', role='komga') }}"
         ```
 
+    <h5>Envs</h5>
+
+    ??? variable dict "`komga_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        komga_role_docker_envs_default:
+          KOMGA_CORS_ALLOWEDORIGINS: "*"
+        ```
+
+    ??? variable dict "`komga_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        komga_role_docker_envs_custom: {}
+        ```
+
     <h5>Volumes</h5>
 
     ??? variable list "`komga_role_docker_volumes_default`"
@@ -799,13 +816,6 @@ Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: string
         komga_role_docker_env_file:
-        ```
-
-    ??? variable dict "`komga_role_docker_envs`"
-
-        ```yaml
-        # Type: dict
-        komga_role_docker_envs:
         ```
 
     ??? variable dict "`komga_role_docker_labels`"

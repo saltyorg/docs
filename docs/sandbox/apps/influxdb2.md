@@ -330,15 +330,15 @@ Visit <https://influxdb2.iYOUR_DOMAIN_NAMEi>.
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         influxdb2_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
-          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb2"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb2"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         influxdb22_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb22"
-          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb22"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/data:/var/lib/influxdb2"
+          - "{{ lookup('role_var', '_paths_location', role='influxdb2') }}/config:/etc/influxdb2"
         ```
 
     ??? variable list "`influxdb2_role_docker_volumes_custom`{ .sb-show-on-unchecked }`influxdb22_docker_volumes_custom`{ .sb-show-on-checked }"

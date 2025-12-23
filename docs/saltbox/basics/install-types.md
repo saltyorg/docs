@@ -43,7 +43,9 @@ Saltbox consists of a "Core" with various extra components added onto that core.
   [yes]:../../images/check-mark.png
 
 [^1]:
-    Note that the default apps installed by each top-level tag can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that the default apps installed by each top-level tag can be overridden with other Saltbox roles in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+
+    [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
     The relevant variables and their default values are:
     ```
@@ -52,8 +54,13 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
     ```
 
+    There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../sandbox/apps/main_tag.md).
+
+
 [^2]:
-    Note that the default media server(s) can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that the default media server(s) can be overridden with other Saltbox roles in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+
+    [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
     The relevant variables and their default values are:
     ```
@@ -61,7 +68,9 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     ```
 
 [^3]:
-    Note that these default download clients and indexers can be overridden with other Saltbox roles (NOT SANDBOX) in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+    Note that these default download clients and indexers can be overridden with other Saltbox roles in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
+
+    [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
     The relevant variables and their default values are:
     ```

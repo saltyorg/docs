@@ -11,6 +11,8 @@ Ansible tag for deploying your Sandbox apps stack.
 
 ---
 
+Perhaps you have a standard set of sandbox tags that you install.  To avoid installing all these individually, you can define a value for this role to allow you to install/update a set of sandbox roles in a similar manner to `sb install saltbox`
+
 ## Deployment
 
 ```shell

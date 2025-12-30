@@ -65,17 +65,6 @@ gluetun_firewall_outbound_subnets: ""
 
     Generally speaking it's safest to just wrap everything in quotes rather than worrying about what needs to be. Quotes are plentiful and free.
 
-!!! warning
-    The role uses the built-in Docker DNS resolver by default instead of using the DoH/DoT functionality Gluetun normally provides.
-
-    If DNS leaks are a problem for your use case you will want to override this behavior with:
-
-    ```yaml
-    gluetun_docker_resolver: false
-    ```
-
-    Just be aware that this toggle will make any network linked containers unable to resolve docker hostnames.
-
 Additional Docker envs may be set via `gluetun_docker_envs_custom`.
 
 ### Route Plex through Gluetun

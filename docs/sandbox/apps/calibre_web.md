@@ -130,7 +130,7 @@ If this paragraph does not make sense to you, then please do not try it.
     Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
 
     ```yaml title="Example Override"
-    calibre_web_role_name: "custom_value"
+    calibre_web_name: "custom_value"
     ```
 
 ??? warning "Avoid overriding variables ending in `_default`"
@@ -141,11 +141,11 @@ If this paragraph does not make sense to you, then please do not try it.
 
 === "Basics"
 
-    ??? variable string "`calibre_web_role_name`"
+    ??? variable string "`calibre_web_name`"
 
         ```yaml
         # Type: string
-        calibre_web_role_name: calibre-web
+        calibre_web_name: calibre-web
         ```
 
 === "Web"
@@ -154,7 +154,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: string
-        calibre_web_role_web_subdomain: "{{ calibre_web_role_name }}"
+        calibre_web_role_web_subdomain: "{{ calibre_web_name }}"
         ```
 
     ??? variable string "`calibre_web_role_web_domain`"
@@ -272,7 +272,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: string
-        calibre_web_role_docker_container: "{{ calibre_web_role_name }}"
+        calibre_web_role_docker_container: "{{ calibre_web_name }}"
         ```
 
     <h5>Image</h5>
@@ -380,7 +380,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: string
-        calibre_web_role_docker_hostname: "{{ calibre_web_role_name }}"
+        calibre_web_role_docker_hostname: "{{ calibre_web_name }}"
         ```
 
     <h5>Networks</h5>
@@ -389,7 +389,7 @@ If this paragraph does not make sense to you, then please do not try it.
 
         ```yaml
         # Type: string
-        calibre_web_role_docker_networks_alias: "{{ calibre_web_role_name }}"
+        calibre_web_role_docker_networks_alias: "{{ calibre_web_name }}"
         ```
 
     ??? variable list "`calibre_web_role_docker_networks_default`"

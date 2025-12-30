@@ -392,9 +392,9 @@ The password provisioned is your Saltbox password.
         ```yaml
         # Type: string
         wireguard_role_docker_sysctls: "{{ lookup('role_var', '_docker_sysctls_ipv4', role='wireguard')
-                                           + (lookup('role_var', '_docker_sysctls_ipv6', role='wireguard')
-                                             if docker_ipv6
-                                             else []) }}"
+                                           | combine(lookup('role_var', '_docker_sysctls_ipv6', role='wireguard')
+                                                     if docker_ipv6
+                                                     else {}) }}"
         ```
 
     <h5>Restart Policy</h5>

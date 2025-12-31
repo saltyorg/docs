@@ -11,7 +11,7 @@ tags:
 
 Please read through these steps before executing any of them, just to get a grounding in what is going to happen throughout the process. It could be that things in later steps inform your decisions in earlier steps.
 
-Broadly, the base installation consists of six steps:
+Broadly, the base installation consists of these steps:
 
 1. Installing [dependencies](#step-1-dependencies)
 2. Preparing your [configuration file(s)](#step-2-configuration)

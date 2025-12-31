@@ -7,41 +7,35 @@ tags:
   - installer
 ---
 
-# Install
+# Installation
 
-If you're migrating from Cloudbox you probably want the [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
+Please read through these steps before executing any of them, just to get a grounding in what is going to happen throughout the process. It could be that things in later steps inform your decisions in earlier steps.
 
-!!! warning
-    The Saltbox install is expecting a fresh new install of Ubuntu. DO NOT try to install it on your existing Cloudbox, PTS or other system-wide setup.
-
-Please read through these steps prior to executing any of them, just to get a grounding in what is going to happen through out the process. It could be that things in later steps inform your decisions in earlier steps.
-
-Broadly, the base install consists of six steps:
+Broadly, the base installation consists of six steps:
 
 1. Installing [dependencies](#step-1-dependencies)
 2. Preparing your [configuration file(s)](#step-2-configuration)
 3. Running a [pre-install script](#step-3-preinstall)
 4. Configuring your [cloud storage](#step-4-rclone)
-5. Running the [install script](#step-5-saltbox)
-6. Configuring installed [applications](#step-6-app-setup)
+5. Running the [installation script](#step-5-saltbox)
+6. Performing a [reboot](#step-6-reboot)
+7. Configuring installed [applications](#step-7-app-setup)
 
 ALL STEPS ARE REQUIRED
 
-!!! warning
-    There is no "uninstall" available. To uninstall Saltbox entirely, you will need to wipe the machine and reinstall the OS. You can remove all the containers, services, data, and the like, but there is no tracking of applications and packages that are installed in the OS.
-
-However, it is safe to run any saltbox tag(s) (including the install tags) at will. Existing configurations are not overwritten (except for some "reset" tags and the "mounts" tag).
+However, it is safe to run any saltbox tag(s) (including the `install` tags) at will. Existing configurations are not overwritten (except for some "reset" tags and the "mounts" tag).
 
 ## Step 1: Dependencies
 
-!!! info
-    This is assuming you are logged into your freshly installed remote server as `root`.
+The following must be run while logged in as root.
 
 === "curl"
 
     ```shell
-    curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
+    curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox # (1)!
     ```
+
+    1. See [dependencies documentation](../../reference/dependencies.md) for more information about the dependencies.    
 
 === "wget"
 
@@ -61,34 +55,16 @@ However, it is safe to run any saltbox tag(s) (including the install tags) at wi
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v && cd /srv/git/saltbox
     ```
 
-??? info "What will I see in the terminal?"
-
-    Something like this:
-
-    ```
-    ~$ curl -sL https://install.saltbox.dev | sudo -H bash && cd /srv/git/saltbox
-    jammy is currently supported.
-    x86_64 is currently supported.
-    Installing Saltbox Dependencies.
-    /srv/git/saltbox$
-    ```
-
-!!! info
-    See [dependencies documentation](../../reference/dependencies.md) for more information about the dependencies.
-
 ## Step 2: Configuration
 
-Make sure you fill out the following configuration files before proceeding. Each file will be located in `/srv/git/saltbox`
+Make sure you fill out the following configuration files before proceeding. Each file is located in `/srv/git/saltbox`
 
-???+ info
-    The following steps assumes you are still logged in as root or using sudo with the following commands.
-
-To edit any of the following configuration files use the command written in the config title.
+To edit any of the following configuration files, use the command written in the config title while logged in as root.
 
 === "accounts.yml"
 
     ```yaml title="nano /srv/git/saltbox/accounts.yml"
-    ---
+    --- # (11)!
     apprise: # (1)!
     cloudflare:
       email: # (2)!
@@ -139,6 +115,8 @@ To edit any of the following configuration files use the command written in the 
         Required.
 
     10. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+
+    11. See [accounts configuration](../../reference/accounts.md) for more information about these settings.
 
 === "settings.yml"
 
@@ -363,19 +341,15 @@ To edit any of the following configuration files use the command written in the 
 
     15. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
-!!! info
-    See [accounts configuration](../../reference/accounts.md) for more information about these settings.
-
 ## Step 3: Preinstall
-
-!!! warning
-    Make sure that you have set up the configuration correctly before proceeding.
 
 This step will create the user account specified in `accounts.yml`, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed.
 
 ```shell
-sb install preinstall
+sb install preinstall # (1)!
 ```
+
+1. See [preinstall documentation](../../reference/preinstall.md) for more information about `preinstall`.
 
 !!! warning
     From this point you'll want to make sure you run commands as the user specified in the `accounts.yml`
@@ -385,10 +359,7 @@ If the server rebooted due to a kernel update, reconnect via SSH **as the user s
 If your server did not need to reboot, **and the user in `accounts.yml` is different from the user as whom you are currently connected to the server** you can run `su username` to switch user or disconnect and reconnect to SSH as the newly created user. Everything after this point will assume you are running as the user entered in `accounts.yml`
 
 !!! info
-    If you are installing on a machine where you created a user as part of the ubuntu install, you are currently logged in as that user, and you entered that same user into `accounts.yml`, you **do not** have to run `su username` or reconnect to SSH as that user, and probably should not. You are already logged in as the "saltbox user", and you can just move on to the next step. The `su username` or reconnect are typically required only on remote systems where you may be currently connected as `root`.
-
-!!! info
-    See [preinstall documentation](../../reference/preinstall.md) for more information about the preinstall.
+    If you are installing on a machine where you created a user as part of the Ubuntu installation, you are currently logged in as that user, and you entered that same user into `accounts.yml`, you **do not** have to run `su username` or reconnect to SSH as that user, and probably should not. You are already logged in as the "saltbox user" and you can move on to the next step. The `su username` or reconnect are typically required only on remote systems where you may be currently connected as `root`.
 
 ## Step 4: Rclone
 
@@ -406,16 +377,7 @@ If your server did not need to reboot, **and the user in `accounts.yml` is diffe
 
 If you already know how to set up an rclone remote pointing at cloud storage, do so with your usual methods. If not, here are five options.
 
-Note that generally speaking these five options are mutually exclusive.
-
-=== "Cloudbox User"
-    This option is aimed at you if you are migrating your cloudbox setup.
-
-    You already have the required setup complete. You should use your existing Google setup at least to start with.
-
-    Generally, migrating from Cloudbox to Saltbox involves restoring a Cloudbox backup. If you do not have a Cloudbox backup, but *do* have data on Google Drive from Cloudbox, go to the "Media on Google Drive" tab to the right.
-
-    [Cloudbox migration instructions](../../reference/guides/cloudbox.md)
+Note that generally speaking, these five options are mutually exclusive.
 
 === "I have media on cloud storage"
     This option is aimed at you if you are using some other setup with an rclone-based connection to cloud storage.
@@ -429,7 +391,7 @@ Note that generally speaking these five options are mutually exclusive.
     [Other migration notes](../../reference/guides/other.md)
 
 === "Basic setup, please"
-    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP THIS IS PROBABLY NOT WHAT YOU WANT.
+    IF YOU ARE MIGRATING FROM ANY OTHER RCLONE-BASED SETUP, THIS IS PROBABLY NOT WHAT YOU WANT.
 
     === "Google Drive"
 
@@ -519,37 +481,17 @@ You can get a list of available install tags with `sb list`.
     sb install core,plex,sonarr,radarr,jackett,qbittorrent
     ```
 
-!!! info
-    See [here](../../reference/install.md) for more information about the install.
 
-## Reboot
+See [here](../../reference/install.md) for more information about the installation.
+
+## Step 6: Reboot
 
 After rebooting, you're now ready to go through the basic setup for the apps!
 
-## Step 6: App Setup
+## Step 7: App Setup
 
-If you would like to configure cloudplow to use service accounts to exceed Google's 750G daily upload limit, and you went through the scripted rclone setup above, you can do this now. Instructions are [here](../../reference/cloudplow-config.md).
+[Start here](../../apps/plex.md)
 
-Go through these one at a time in order; some of the setups depend on previous setups.
+## Next
 
-!!! info
-    This list is what's installed if you've run the `saltbox` tag. If you ran `core`, none of these are installed; if you ran `feederbox` or `mediabox` you have a subset of these.
-
-1. [SABnzbd](../../apps/sabnzbd.md)
-1. [qBittorrent](../../apps/qbittorrent.md)
-1. [NZBHydra2](../../apps/nzbhydra2.md)
-1. [Jackett](../../apps/jackett.md)
-1. [Plex Media Server](../../apps/plex.md)
-1. [Autoscan](../../apps/autoscan.md)
-1. [Sonarr](../../apps/sonarr.md)
-1. [Radarr](../../apps/radarr.md)
-1. [Lidarr](../../apps/lidarr.md)
-1. [Tautulli](../../apps/tautulli.md)
-1. [Overseerr](../../apps/overseerr.md)
-1. [Portainer](../../apps/portainer.md)
-1. [Organizr](../../apps/organizr.md)
-
-!!! info
-    These are not all the available applications, just the core set that are installed by the `saltbox` tag. Click on the "Apps" header at the top for a full listing of applications available in Saltbox. Click the "Sandbox" heading for a listing of commmunity-supplied applications.
-
-Next, some tasks to perform [after installation is complete](after.md).
+Some tasks to perform [after installation is complete](after.md).

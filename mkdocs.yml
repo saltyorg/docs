@@ -9,7 +9,7 @@ repo_url: https://github.com/saltyorg/docs
 edit_uri: edit/main/docs/
 
 validation:
-  absolute_links: warn
+  absolute_links: relative_to_docs
   anchors: warn
   omitted_files: warn
   unrecognized_links: warn

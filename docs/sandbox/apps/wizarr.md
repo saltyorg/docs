@@ -364,15 +364,13 @@ Visit <https://wizarr.iYOUR_DOMAIN_NAMEi>.
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         wizarr_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/database:/data/database"
-          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/wizard:/data/wizard"
+          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}:/data"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         wizarr2_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/database:/data/database"
-          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}/wizard:/data/wizard"
+          - "{{ lookup('role_var', '_paths_location', role='wizarr') }}:/data"
         ```
 
     ??? variable list "`wizarr_role_docker_volumes_custom`{ .sb-show-on-unchecked }`wizarr2_docker_volumes_custom`{ .sb-show-on-checked }"

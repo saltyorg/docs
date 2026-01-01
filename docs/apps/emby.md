@@ -235,16 +235,100 @@ Instructions below will guide you through creating an API Key for a specific app
 
 === "Settings"
 
-    ??? variable int "`emby_role_config_cache_size`{ .sb-show-on-unchecked }`emby2_config_cache_size`{ .sb-show-on-checked }"
+    ??? variable string "`emby_role_config_settings_is_behind_proxy`{ .sb-show-on-unchecked }`emby2_config_settings_is_behind_proxy`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        emby_role_config_cache_size: 1024
+        # Type: string
+        emby_role_config_settings_is_behind_proxy: "true"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: int
-        emby2_config_cache_size: 1024
+        # Type: string
+        emby2_config_settings_is_behind_proxy: "true"
+        ```
+
+    ??? variable string "`emby_role_config_settings_wan_ddns`{ .sb-show-on-unchecked }`emby2_config_settings_wan_ddns`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_wan_ddns: "{{ lookup('role_var', '_web_subdomain', role='emby') }}.{{ lookup('role_var', '_web_domain', role='emby') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_wan_ddns: "{{ lookup('role_var', '_web_subdomain', role='emby') }}.{{ lookup('role_var', '_web_domain', role='emby') }}"
+        ```
+
+    ??? variable string "`emby_role_config_settings_public_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_public_port: "80"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_public_port: "80"
+        ```
+
+    ??? variable string "`emby_role_config_settings_public_https_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_public_https_port: "443"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_public_https_port: "443"
+        ```
+
+    ??? variable string "`emby_role_config_settings_enable_https`{ .sb-show-on-unchecked }`emby2_config_settings_enable_https`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_enable_https: "true"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_enable_https: "true"
+        ```
+
+    ??? variable string "`emby_role_config_settings_require_https`{ .sb-show-on-unchecked }`emby2_config_settings_require_https`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_require_https: "false"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_require_https: "false"
+        ```
+
+    ??? variable string "`emby_role_config_settings_enable_upnp`{ .sb-show-on-unchecked }`emby2_config_settings_enable_upnp`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_enable_upnp: "false"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_enable_upnp: "false"
+        ```
+
+    ??? variable string "`emby_role_config_settings_database_cache_size_mb`{ .sb-show-on-unchecked }`emby2_config_settings_database_cache_size_mb`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_database_cache_size_mb: "1024"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_database_cache_size_mb: "1024"
         ```
 
 === "Web"
@@ -514,27 +598,43 @@ Instructions below will guide you through creating an API Key for a specific app
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         emby_role_config_settings_default:
-          - { xpath: 'IsBehindProxy', value: 'true' }
-          - { xpath: 'WanDdns', value: '{{ lookup("role_var", "_web_subdomain", role="emby") }}.{{ lookup("role_var", "_web_domain", role="emby") }}' }
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'EnableHttps', value: 'true' }
-          - { xpath: 'RequireHttps', value: 'false' }
-          - { xpath: 'EnableUPnP', value: 'false' }
-          - { xpath: 'DatabaseCacheSizeMB', value: '{{ lookup("role_var", "_config_cache_size", role="emby") | string }}' }
+          - xpath: 'IsBehindProxy'
+            value: "{{ lookup('role_var', '_config_settings_is_behind_proxy', role='emby') }}"
+          - xpath: 'WanDdns'
+            value: "{{ lookup('role_var', '_config_settings_wan_ddns', role='emby') }}"
+          - xpath: 'PublicPort'
+            value: "{{ lookup('role_var', '_config_settings_public_port', role='emby') }}"
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_config_settings_public_https_port', role='emby') }}"
+          - xpath: 'EnableHttps'
+            value: "{{ lookup('role_var', '_config_settings_enable_https', role='emby') }}"
+          - xpath: 'RequireHttps'
+            value: "{{ lookup('role_var', '_config_settings_require_https', role='emby') }}"
+          - xpath: 'EnableUPnP'
+            value: "{{ lookup('role_var', '_config_settings_enable_upnp', role='emby') }}"
+          - xpath: 'DatabaseCacheSizeMB'
+            value: "{{ lookup('role_var', '_config_settings_database_cache_size_mb', role='emby') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         emby2_config_settings_default:
-          - { xpath: 'IsBehindProxy', value: 'true' }
-          - { xpath: 'WanDdns', value: '{{ lookup("role_var", "_web_subdomain", role="emby") }}.{{ lookup("role_var", "_web_domain", role="emby") }}' }
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'EnableHttps', value: 'true' }
-          - { xpath: 'RequireHttps', value: 'false' }
-          - { xpath: 'EnableUPnP', value: 'false' }
-          - { xpath: 'DatabaseCacheSizeMB', value: '{{ lookup("role_var", "_config_cache_size", role="emby") | string }}' }
+          - xpath: 'IsBehindProxy'
+            value: "{{ lookup('role_var', '_config_settings_is_behind_proxy', role='emby') }}"
+          - xpath: 'WanDdns'
+            value: "{{ lookup('role_var', '_config_settings_wan_ddns', role='emby') }}"
+          - xpath: 'PublicPort'
+            value: "{{ lookup('role_var', '_config_settings_public_port', role='emby') }}"
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_config_settings_public_https_port', role='emby') }}"
+          - xpath: 'EnableHttps'
+            value: "{{ lookup('role_var', '_config_settings_enable_https', role='emby') }}"
+          - xpath: 'RequireHttps'
+            value: "{{ lookup('role_var', '_config_settings_require_https', role='emby') }}"
+          - xpath: 'EnableUPnP'
+            value: "{{ lookup('role_var', '_config_settings_enable_upnp', role='emby') }}"
+          - xpath: 'DatabaseCacheSizeMB'
+            value: "{{ lookup('role_var', '_config_settings_database_cache_size_mb', role='emby') }}"
         ```
 
     ??? variable list "`emby_role_config_settings_custom`{ .sb-show-on-unchecked }`emby2_config_settings_custom`{ .sb-show-on-checked }"
@@ -1775,18 +1875,6 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_autoheal_enabled: true
         ```
 
-    ??? variable string "`emby_role_config_cache_size`{ .sb-show-on-unchecked }`emby2_config_cache_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_cache_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_cache_size:
-        ```
-
     ??? variable string "`emby_role_config_settings_custom`{ .sb-show-on-unchecked }`emby2_config_settings_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1799,6 +1887,18 @@ Instructions below will guide you through creating an API Key for a specific app
         emby2_config_settings_custom:
         ```
 
+    ??? variable string "`emby_role_config_settings_database_cache_size_mb`{ .sb-show-on-unchecked }`emby2_config_settings_database_cache_size_mb`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_database_cache_size_mb:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_database_cache_size_mb:
+        ```
+
     ??? variable string "`emby_role_config_settings_default`{ .sb-show-on-unchecked }`emby2_config_settings_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1809,6 +1909,90 @@ Instructions below will guide you through creating an API Key for a specific app
         ```yaml { .sb-show-on-checked }
         # Type: string
         emby2_config_settings_default:
+        ```
+
+    ??? variable string "`emby_role_config_settings_enable_https`{ .sb-show-on-unchecked }`emby2_config_settings_enable_https`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_enable_https:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_enable_https:
+        ```
+
+    ??? variable string "`emby_role_config_settings_enable_upnp`{ .sb-show-on-unchecked }`emby2_config_settings_enable_upnp`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_enable_upnp:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_enable_upnp:
+        ```
+
+    ??? variable bool "`emby_role_config_settings_is_behind_proxy`{ .sb-show-on-unchecked }`emby2_config_settings_is_behind_proxy`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        emby_role_config_settings_is_behind_proxy:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        emby2_config_settings_is_behind_proxy:
+        ```
+
+    ??? variable string "`emby_role_config_settings_public_https_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        emby_role_config_settings_public_https_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        emby2_config_settings_public_https_port:
+        ```
+
+    ??? variable string "`emby_role_config_settings_public_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        emby_role_config_settings_public_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        emby2_config_settings_public_port:
+        ```
+
+    ??? variable string "`emby_role_config_settings_require_https`{ .sb-show-on-unchecked }`emby2_config_settings_require_https`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_require_https:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_require_https:
+        ```
+
+    ??? variable string "`emby_role_config_settings_wan_ddns`{ .sb-show-on-unchecked }`emby2_config_settings_wan_ddns`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        emby_role_config_settings_wan_ddns:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        emby2_config_settings_wan_ddns:
         ```
 
     ??? variable string "`emby_role_depends_on`{ .sb-show-on-unchecked }`emby2_depends_on`{ .sb-show-on-checked }"

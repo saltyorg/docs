@@ -79,6 +79,124 @@ Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
             jellyfin_instances: ["jellyfin", "jellyfin2"]
             ```
 
+=== "Settings"
+
+    ??? variable string "`jellyfin_role_system_settings_public_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # System
+        # Type: string
+        jellyfin_role_system_settings_public_port: "80"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # System
+        # Type: string
+        jellyfin2_system_settings_public_port: "80"
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_public_https_port: "443"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_public_https_port: "443"
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_enable_folder_view`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_folder_view`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_enable_folder_view: "true"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_enable_folder_view: "true"
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_quick_connect_available`{ .sb-show-on-unchecked }`jellyfin2_system_settings_quick_connect_available`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_quick_connect_available: "true"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_quick_connect_available: "true"
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_enable_remote_access`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_remote_access`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_enable_remote_access: "true"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_enable_remote_access: "true"
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_server_name`{ .sb-show-on-unchecked }`jellyfin2_system_settings_server_name`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_server_name: "saltbox"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_server_name: "saltbox"
+        ```
+
+    ??? variable string "`jellyfin_role_network_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_network_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Network
+        # Type: string
+        jellyfin_role_network_settings_public_https_port: "443"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Network
+        # Type: string
+        jellyfin2_network_settings_public_https_port: "443"
+        ```
+
+    ??? variable list "`jellyfin_role_network_settings_known_proxies`{ .sb-show-on-unchecked }`jellyfin2_network_settings_known_proxies`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyfin_role_network_settings_known_proxies:
+          - traefik
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyfin2_network_settings_known_proxies:
+          - traefik
+        ```
+
+    ??? variable list "`jellyfin_role_network_settings_published_server_uri_by_subnet`{ .sb-show-on-unchecked }`jellyfin2_network_settings_published_server_uri_by_subnet`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        jellyfin_role_network_settings_published_server_uri_by_subnet:
+          - "external={{ lookup('role_var', '_web_url', role='jellyfin') }}:443"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        jellyfin2_network_settings_published_server_uri_by_subnet:
+          - "external={{ lookup('role_var', '_web_url', role='jellyfin') }}:443"
+        ```
+
 === "Web"
 
     ??? variable string "`jellyfin_role_web_subdomain`{ .sb-show-on-unchecked }`jellyfin2_web_subdomain`{ .sb-show-on-checked }"
@@ -274,27 +392,37 @@ Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
     ??? variable list "`jellyfin_role_system_settings_default`{ .sb-show-on-unchecked }`jellyfin2_system_settings_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # System
         # Type: list
         jellyfin_role_system_settings_default:
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'EnableFolderView', value: 'true' }
-          - { xpath: 'QuickConnectAvailable', value: 'true' }
-          - { xpath: 'EnableRemoteAccess', value: 'true' }
-          - { xpath: 'ServerName', value: 'saltbox' }
+          - xpath: 'PublicPort'
+            value: "{{ lookup('role_var', '_system_settings_public_port', role='jellyfin') }}"
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_system_settings_public_https_port', role='jellyfin') }}"
+          - xpath: 'EnableFolderView'
+            value: "{{ lookup('role_var', '_system_settings_enable_folder_view', role='jellyfin') }}"
+          - xpath: 'QuickConnectAvailable'
+            value: "{{ lookup('role_var', '_system_settings_quick_connect_available', role='jellyfin') }}"
+          - xpath: 'EnableRemoteAccess'
+            value: "{{ lookup('role_var', '_system_settings_enable_remote_access', role='jellyfin') }}"
+          - xpath: 'ServerName'
+            value: "{{ lookup('role_var', '_system_settings_server_name', role='jellyfin') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # System
         # Type: list
         jellyfin2_system_settings_default:
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'EnableFolderView', value: 'true' }
-          - { xpath: 'QuickConnectAvailable', value: 'true' }
-          - { xpath: 'EnableRemoteAccess', value: 'true' }
-          - { xpath: 'ServerName', value: 'saltbox' }
+          - xpath: 'PublicPort'
+            value: "{{ lookup('role_var', '_system_settings_public_port', role='jellyfin') }}"
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_system_settings_public_https_port', role='jellyfin') }}"
+          - xpath: 'EnableFolderView'
+            value: "{{ lookup('role_var', '_system_settings_enable_folder_view', role='jellyfin') }}"
+          - xpath: 'QuickConnectAvailable'
+            value: "{{ lookup('role_var', '_system_settings_quick_connect_available', role='jellyfin') }}"
+          - xpath: 'EnableRemoteAccess'
+            value: "{{ lookup('role_var', '_system_settings_enable_remote_access', role='jellyfin') }}"
+          - xpath: 'ServerName'
+            value: "{{ lookup('role_var', '_system_settings_server_name', role='jellyfin') }}"
         ```
 
     ??? variable list "`jellyfin_role_system_settings_custom`{ .sb-show-on-unchecked }`jellyfin2_system_settings_custom`{ .sb-show-on-checked }"
@@ -324,23 +452,25 @@ Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
     ??? variable list "`jellyfin_role_network_settings_default`{ .sb-show-on-unchecked }`jellyfin2_network_settings_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Network
         # Type: list
         jellyfin_role_network_settings_default:
-          - { xpath: 'KnownProxies', value: 'traefik' }
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'PublishedServerUriBySubnet/string', value: 'external={{ lookup("role_var", "_web_url", role="jellyfin") }}:443' }
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_network_settings_public_https_port', role='jellyfin') }}"
+          - xpath: 'KnownProxies'
+            set_children: "{{ lookup('role_var', '_network_settings_known_proxies', role='jellyfin') | map('community.general.dict_kv', 'string') | list }}"
+          - xpath: 'PublishedServerUriBySubnet'
+            set_children: "{{ lookup('role_var', '_network_settings_published_server_uri_by_subnet', role='jellyfin') | map('community.general.dict_kv', 'string') | list }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Network
         # Type: list
         jellyfin2_network_settings_default:
-          - { xpath: 'KnownProxies', value: 'traefik' }
-          - { xpath: 'PublicPort', value: '80' }
-          - { xpath: 'PublicHttpsPort', value: '443' }
-          - { xpath: 'PublishedServerUriBySubnet/string', value: 'external={{ lookup("role_var", "_web_url", role="jellyfin") }}:443' }
+          - xpath: 'PublicHttpsPort'
+            value: "{{ lookup('role_var', '_network_settings_public_https_port', role='jellyfin') }}"
+          - xpath: 'KnownProxies'
+            set_children: "{{ lookup('role_var', '_network_settings_known_proxies', role='jellyfin') | map('community.general.dict_kv', 'string') | list }}"
+          - xpath: 'PublishedServerUriBySubnet'
+            set_children: "{{ lookup('role_var', '_network_settings_published_server_uri_by_subnet', role='jellyfin') | map('community.general.dict_kv', 'string') | list }}"
         ```
 
     ??? variable list "`jellyfin_role_network_settings_custom`{ .sb-show-on-unchecked }`jellyfin2_network_settings_custom`{ .sb-show-on-checked }"
@@ -1713,6 +1843,42 @@ Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
         jellyfin2_network_settings_default:
         ```
 
+    ??? variable string "`jellyfin_role_network_settings_known_proxies`{ .sb-show-on-unchecked }`jellyfin2_network_settings_known_proxies`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_network_settings_known_proxies:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_network_settings_known_proxies:
+        ```
+
+    ??? variable string "`jellyfin_role_network_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_network_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        jellyfin_role_network_settings_public_https_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        jellyfin2_network_settings_public_https_port:
+        ```
+
+    ??? variable string "`jellyfin_role_network_settings_published_server_uri_by_subnet`{ .sb-show-on-unchecked }`jellyfin2_network_settings_published_server_uri_by_subnet`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_network_settings_published_server_uri_by_subnet:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_network_settings_published_server_uri_by_subnet:
+        ```
+
     ??? variable string "`jellyfin_role_system_settings_custom`{ .sb-show-on-unchecked }`jellyfin2_system_settings_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1735,6 +1901,78 @@ Visit <https://jellyfin.iYOUR_DOMAIN_NAMEi>.
         ```yaml { .sb-show-on-checked }
         # Type: string
         jellyfin2_system_settings_default:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_enable_folder_view`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_folder_view`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_enable_folder_view:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_enable_folder_view:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_enable_remote_access`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_remote_access`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_enable_remote_access:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_enable_remote_access:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_https_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        jellyfin_role_system_settings_public_https_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        jellyfin2_system_settings_public_https_port:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_public_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        jellyfin_role_system_settings_public_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        jellyfin2_system_settings_public_port:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_quick_connect_available`{ .sb-show-on-unchecked }`jellyfin2_system_settings_quick_connect_available`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_quick_connect_available:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_quick_connect_available:
+        ```
+
+    ??? variable string "`jellyfin_role_system_settings_server_name`{ .sb-show-on-unchecked }`jellyfin2_system_settings_server_name`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_system_settings_server_name:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_system_settings_server_name:
         ```
 
     ??? variable string "`jellyfin_role_themepark_addons`{ .sb-show-on-unchecked }`jellyfin2_themepark_addons`{ .sb-show-on-checked }"

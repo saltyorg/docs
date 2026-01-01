@@ -258,321 +258,1799 @@ docker exec gluetun curl ifconfig.me
 
 === "Settings"
 
-    ??? variable string "`gluetun_role_vpn_service_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_service_provider`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # These variables map to the appropriate Docker ENVs
-        # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
-        # Type: string
-        gluetun_role_vpn_service_provider: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # These variables map to the appropriate Docker ENVs
-        # Review the gluetun wiki (https://github.com/qdm12/gluetun/wiki)
-        # Type: string
-        gluetun2_vpn_service_provider: ""
-        ```
-
-    ??? variable string "`gluetun_role_vpn_type`{ .sb-show-on-unchecked }`gluetun2_vpn_type`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_type: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_type: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_custom_config`{ .sb-show-on-unchecked }`gluetun2_openvpn_custom_config`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_custom_config: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_custom_config: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_endpoint_ip: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_endpoint_ip: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_endpoint_port: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_endpoint_port: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_user: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_user: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_password`{ .sb-show-on-unchecked }`gluetun2_openvpn_password`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_password: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_password: ""
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_key_passphrase`{ .sb-show-on-unchecked }`gluetun2_openvpn_key_passphrase`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_key_passphrase: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_key_passphrase: ""
-        ```
-
-    ??? variable string "`gluetun_role_vpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_endpoint_ip: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_endpoint_ip: ""
-        ```
-
-    ??? variable string "`gluetun_role_vpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_endpoint_port: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_endpoint_port: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_endpoint_ip: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_endpoint_ip: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_endpoint_port: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_endpoint_port: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_mtu`{ .sb-show-on-unchecked }`gluetun2_wireguard_mtu`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_mtu: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_mtu: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_public_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_public_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_public_key: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_public_key: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_private_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_private_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_private_key: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_private_key: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_preshared_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_preshared_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_preshared_key: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_preshared_key: ""
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_addresses`{ .sb-show-on-unchecked }`gluetun2_wireguard_addresses`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_addresses: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_addresses: ""
-        ```
-
-    ??? variable string "`gluetun_role_server_countries`{ .sb-show-on-unchecked }`gluetun2_server_countries`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_countries: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_countries: ""
-        ```
-
-    ??? variable string "`gluetun_role_server_cities`{ .sb-show-on-unchecked }`gluetun2_server_cities`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_cities: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_cities: ""
-        ```
-
-    ??? variable string "`gluetun_role_server_hostnames`{ .sb-show-on-unchecked }`gluetun2_server_hostnames`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_hostnames: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_hostnames: ""
-        ```
-
-    ??? variable string "`gluetun_role_server_names`{ .sb-show-on-unchecked }`gluetun2_server_names`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_names: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_names: ""
-        ```
-
-    ??? variable string "`gluetun_role_server_regions`{ .sb-show-on-unchecked }`gluetun2_server_regions`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_regions: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_regions: ""
-        ```
-
-    ??? variable string "`gluetun_role_firewall_vpn_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_vpn_input_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_firewall_vpn_input_ports: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_firewall_vpn_input_ports: ""
-        ```
-
-    ??? variable string "`gluetun_role_firewall_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_input_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_firewall_input_ports: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_firewall_input_ports: ""
-        ```
-
-    ??? variable string "`gluetun_role_firewall_outbound_subnets`{ .sb-show-on-unchecked }`gluetun2_firewall_outbound_subnets`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_firewall_outbound_subnets: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_firewall_outbound_subnets: ""
-        ```
-
-    ??? variable bool "`gluetun_role_docker_resolver`{ .sb-show-on-unchecked }`gluetun2_docker_resolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        gluetun_role_docker_resolver: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        gluetun2_docker_resolver: true
-        ```
+    This section is organized into multiple subsections
+
+    === "VPN"
+
+        ??? variable string "`gluetun_role_vpn_service_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_service_provider`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN service provider (e.g., mullvad, nordvpn, private internet access, etc.)
+            # Type: string
+            gluetun_role_vpn_service_provider: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN service provider (e.g., mullvad, nordvpn, private internet access, etc.)
+            # Type: string
+            gluetun2_vpn_service_provider: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_type`{ .sb-show-on-unchecked }`gluetun2_vpn_type`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN type: openvpn or wireguard
+            # Type: string
+            gluetun_role_vpn_type: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN type: openvpn or wireguard
+            # Type: string
+            gluetun2_vpn_type: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_interface`{ .sb-show-on-unchecked }`gluetun2_vpn_interface`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Network interface name for the VPN tunnel (e.g., tun0, wg0)
+            # Type: string
+            gluetun_role_vpn_interface: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Network interface name for the VPN tunnel (e.g., tun0, wg0)
+            # Type: string
+            gluetun2_vpn_interface: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_ip`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN server endpoint IP address (optional override)
+            # Type: string
+            gluetun_role_vpn_endpoint_ip: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN server endpoint IP address (optional override)
+            # Type: string
+            gluetun2_vpn_endpoint_ip: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_port`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN server endpoint port (optional override)
+            # Type: string
+            gluetun_role_vpn_endpoint_port: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # VPN server endpoint port (optional override)
+            # Type: string
+            gluetun2_vpn_endpoint_port: ""
+            ```
+
+    === "OpenVPN"
+
+        ??? variable string "`gluetun_role_openvpn_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_user`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN username for authentication
+            # Type: string
+            gluetun_role_openvpn_user: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN username for authentication
+            # Type: string
+            gluetun2_openvpn_user: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_password`{ .sb-show-on-unchecked }`gluetun2_openvpn_password`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN password for authentication
+            # Type: string
+            gluetun_role_openvpn_password: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN password for authentication
+            # Type: string
+            gluetun2_openvpn_password: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_protocol`{ .sb-show-on-unchecked }`gluetun2_openvpn_protocol`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN protocol: udp or tcp
+            # Type: string
+            gluetun_role_openvpn_protocol: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN protocol: udp or tcp
+            # Type: string
+            gluetun2_openvpn_protocol: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_ip`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN server endpoint IP (optional override)
+            # Type: string
+            gluetun_role_openvpn_endpoint_ip: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN server endpoint IP (optional override)
+            # Type: string
+            gluetun2_openvpn_endpoint_ip: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_port`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN server endpoint port (optional override)
+            # Type: string
+            gluetun_role_openvpn_endpoint_port: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN server endpoint port (optional override)
+            # Type: string
+            gluetun2_openvpn_endpoint_port: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_version`{ .sb-show-on-unchecked }`gluetun2_openvpn_version`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN version: 2.5 or 2.6
+            # Type: string
+            gluetun_role_openvpn_version: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN version: 2.5 or 2.6
+            # Type: string
+            gluetun2_openvpn_version: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_verbosity`{ .sb-show-on-unchecked }`gluetun2_openvpn_verbosity`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN verbosity level (0-6)
+            # Type: string
+            gluetun_role_openvpn_verbosity: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN verbosity level (0-6)
+            # Type: string
+            gluetun2_openvpn_verbosity: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_flags`{ .sb-show-on-unchecked }`gluetun2_openvpn_flags`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Additional OpenVPN flags to pass to the openvpn command
+            # Type: string
+            gluetun_role_openvpn_flags: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Additional OpenVPN flags to pass to the openvpn command
+            # Type: string
+            gluetun2_openvpn_flags: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_ciphers`{ .sb-show-on-unchecked }`gluetun2_openvpn_ciphers`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Comma-separated list of ciphers to use
+            # Type: string
+            gluetun_role_openvpn_ciphers: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Comma-separated list of ciphers to use
+            # Type: string
+            gluetun2_openvpn_ciphers: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_auth`{ .sb-show-on-unchecked }`gluetun2_openvpn_auth`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN auth algorithm (e.g., sha256, sha512)
+            # Type: string
+            gluetun_role_openvpn_auth: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN auth algorithm (e.g., sha256, sha512)
+            # Type: string
+            gluetun2_openvpn_auth: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_process_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_process_user`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # User to run OpenVPN process as (e.g., root, nonroot)
+            # Type: string
+            gluetun_role_openvpn_process_user: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # User to run OpenVPN process as (e.g., root, nonroot)
+            # Type: string
+            gluetun2_openvpn_process_user: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_mssfix`{ .sb-show-on-unchecked }`gluetun2_openvpn_mssfix`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN MSS fix value
+            # Type: string
+            gluetun_role_openvpn_mssfix: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN MSS fix value
+            # Type: string
+            gluetun2_openvpn_mssfix: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_custom_config`{ .sb-show-on-unchecked }`gluetun2_openvpn_custom_config`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Path to custom OpenVPN configuration file
+            # Type: string
+            gluetun_role_openvpn_custom_config: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Path to custom OpenVPN configuration file
+            # Type: string
+            gluetun2_openvpn_custom_config: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_cert`{ .sb-show-on-unchecked }`gluetun2_openvpn_cert`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN client certificate (base64 or path)
+            # Type: string
+            gluetun_role_openvpn_cert: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN client certificate (base64 or path)
+            # Type: string
+            gluetun2_openvpn_cert: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_key`{ .sb-show-on-unchecked }`gluetun2_openvpn_key`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN client private key (base64 or path)
+            # Type: string
+            gluetun_role_openvpn_key: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # OpenVPN client private key (base64 or path)
+            # Type: string
+            gluetun2_openvpn_key: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_encrypted_key`{ .sb-show-on-unchecked }`gluetun2_openvpn_encrypted_key`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Set to "yes" if the OpenVPN key is encrypted
+            # Type: string
+            gluetun_role_openvpn_encrypted_key: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Set to "yes" if the OpenVPN key is encrypted
+            # Type: string
+            gluetun2_openvpn_encrypted_key: ""
+            ```
+
+        ??? variable string "`gluetun_role_openvpn_key_passphrase`{ .sb-show-on-unchecked }`gluetun2_openvpn_key_passphrase`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Passphrase to decrypt the OpenVPN key
+            # Type: string
+            gluetun_role_openvpn_key_passphrase: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
+            # Passphrase to decrypt the OpenVPN key
+            # Type: string
+            gluetun2_openvpn_key_passphrase: ""
+            ```
+
+    === "WireGuard"
+
+        ??? variable string "`gluetun_role_wireguard_private_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_private_key`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard client private key
+            # Type: string
+            gluetun_role_wireguard_private_key: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard client private key
+            # Type: string
+            gluetun2_wireguard_private_key: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_preshared_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_preshared_key`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard preshared key for additional security
+            # Type: string
+            gluetun_role_wireguard_preshared_key: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard preshared key for additional security
+            # Type: string
+            gluetun2_wireguard_preshared_key: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_public_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_public_key`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server public key
+            # Type: string
+            gluetun_role_wireguard_public_key: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server public key
+            # Type: string
+            gluetun2_wireguard_public_key: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_addresses`{ .sb-show-on-unchecked }`gluetun2_wireguard_addresses`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # Comma-separated list of IP addresses for the WireGuard interface
+            # Type: string
+            gluetun_role_wireguard_addresses: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # Comma-separated list of IP addresses for the WireGuard interface
+            # Type: string
+            gluetun2_wireguard_addresses: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_allowed_ips`{ .sb-show-on-unchecked }`gluetun2_wireguard_allowed_ips`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # Comma-separated list of allowed IP ranges
+            # Type: string
+            gluetun_role_wireguard_allowed_ips: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # Comma-separated list of allowed IP ranges
+            # Type: string
+            gluetun2_wireguard_allowed_ips: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_ip`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server endpoint IP (optional override)
+            # Type: string
+            gluetun_role_wireguard_endpoint_ip: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server endpoint IP (optional override)
+            # Type: string
+            gluetun2_wireguard_endpoint_ip: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_port`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server endpoint port (optional override)
+            # Type: string
+            gluetun_role_wireguard_endpoint_port: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard server endpoint port (optional override)
+            # Type: string
+            gluetun2_wireguard_endpoint_port: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_mtu`{ .sb-show-on-unchecked }`gluetun2_wireguard_mtu`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard MTU value
+            # Type: string
+            gluetun_role_wireguard_mtu: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard MTU value
+            # Type: string
+            gluetun2_wireguard_mtu: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_implementation`{ .sb-show-on-unchecked }`gluetun2_wireguard_implementation`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard implementation: kernelspace or userspace
+            # Type: string
+            gluetun_role_wireguard_implementation: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard implementation: kernelspace or userspace
+            # Type: string
+            gluetun2_wireguard_implementation: ""
+            ```
+
+        ??? variable string "`gluetun_role_wireguard_persistent_keepalive_interval`{ .sb-show-on-unchecked }`gluetun2_wireguard_persistent_keepalive_interval`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard persistent keepalive interval (e.g., 25s)
+            # Type: string
+            gluetun_role_wireguard_persistent_keepalive_interval: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
+            # WireGuard persistent keepalive interval (e.g., 25s)
+            # Type: string
+            gluetun2_wireguard_persistent_keepalive_interval: ""
+            ```
+
+    === "Server Selection"
+
+        ??? variable string "`gluetun_role_server_regions`{ .sb-show-on-unchecked }`gluetun2_server_regions`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server regions
+            # Type: string
+            gluetun_role_server_regions: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server regions
+            # Type: string
+            gluetun2_server_regions: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_countries`{ .sb-show-on-unchecked }`gluetun2_server_countries`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server countries
+            # Type: string
+            gluetun_role_server_countries: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server countries
+            # Type: string
+            gluetun2_server_countries: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_cities`{ .sb-show-on-unchecked }`gluetun2_server_cities`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server cities
+            # Type: string
+            gluetun_role_server_cities: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server cities
+            # Type: string
+            gluetun2_server_cities: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_hostnames`{ .sb-show-on-unchecked }`gluetun2_server_hostnames`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server hostnames
+            # Type: string
+            gluetun_role_server_hostnames: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server hostnames
+            # Type: string
+            gluetun2_server_hostnames: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_names`{ .sb-show-on-unchecked }`gluetun2_server_names`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server names
+            # Type: string
+            gluetun_role_server_names: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server names
+            # Type: string
+            gluetun2_server_names: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_categories`{ .sb-show-on-unchecked }`gluetun2_server_categories`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server categories
+            # Type: string
+            gluetun_role_server_categories: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Comma-separated list of server categories
+            # Type: string
+            gluetun2_server_categories: ""
+            ```
+
+        ??? variable string "`gluetun_role_server_number`{ .sb-show-on-unchecked }`gluetun2_server_number`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Server number (provider-specific)
+            # Type: string
+            gluetun_role_server_number: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Server number (provider-specific)
+            # Type: string
+            gluetun2_server_number: ""
+            ```
+
+        ??? variable string "`gluetun_role_isp`{ .sb-show-on-unchecked }`gluetun2_isp`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Filter by ISP name
+            # Type: string
+            gluetun_role_isp: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Filter by ISP name
+            # Type: string
+            gluetun2_isp: ""
+            ```
+
+        ??? variable string "`gluetun_role_owned_only`{ .sb-show-on-unchecked }`gluetun2_owned_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers owned by the VPN provider (on/off)
+            # Type: string
+            gluetun_role_owned_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers owned by the VPN provider (on/off)
+            # Type: string
+            gluetun2_owned_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_stream_only`{ .sb-show-on-unchecked }`gluetun2_stream_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers optimized for streaming (on/off)
+            # Type: string
+            gluetun_role_stream_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers optimized for streaming (on/off)
+            # Type: string
+            gluetun2_stream_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_free_only`{ .sb-show-on-unchecked }`gluetun2_free_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use free tier servers (on/off)
+            # Type: string
+            gluetun_role_free_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use free tier servers (on/off)
+            # Type: string
+            gluetun2_free_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_premium_only`{ .sb-show-on-unchecked }`gluetun2_premium_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use premium tier servers (on/off)
+            # Type: string
+            gluetun_role_premium_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use premium tier servers (on/off)
+            # Type: string
+            gluetun2_premium_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_secure_core_only`{ .sb-show-on-unchecked }`gluetun2_secure_core_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use Secure Core servers - ProtonVPN (on/off)
+            # Type: string
+            gluetun_role_secure_core_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use Secure Core servers - ProtonVPN (on/off)
+            # Type: string
+            gluetun2_secure_core_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_tor_only`{ .sb-show-on-unchecked }`gluetun2_tor_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use Tor-enabled servers (on/off)
+            # Type: string
+            gluetun_role_tor_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use Tor-enabled servers (on/off)
+            # Type: string
+            gluetun2_tor_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_multihop_only`{ .sb-show-on-unchecked }`gluetun2_multihop_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use multi-hop servers (on/off)
+            # Type: string
+            gluetun_role_multihop_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use multi-hop servers (on/off)
+            # Type: string
+            gluetun2_multihop_only: ""
+            ```
+
+        ??? variable string "`gluetun_role_port_forward_only`{ .sb-show-on-unchecked }`gluetun2_port_forward_only`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers that support port forwarding (on/off)
+            # Type: string
+            gluetun_role_port_forward_only: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
+            # Only use servers that support port forwarding (on/off)
+            # Type: string
+            gluetun2_port_forward_only: ""
+            ```
+
+    === "Firewall"
+
+        ??? variable string "`gluetun_role_firewall_vpn_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_vpn_input_ports`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of ports to allow through the VPN firewall
+            # Type: string
+            gluetun_role_firewall_vpn_input_ports: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of ports to allow through the VPN firewall
+            # Type: string
+            gluetun2_firewall_vpn_input_ports: ""
+            ```
+
+        ??? variable string "`gluetun_role_firewall_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_input_ports`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of ports to allow on the host side
+            # Type: string
+            gluetun_role_firewall_input_ports: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of ports to allow on the host side
+            # Type: string
+            gluetun2_firewall_input_ports: ""
+            ```
+
+        ??? variable string "`gluetun_role_firewall_outbound_subnets`{ .sb-show-on-unchecked }`gluetun2_firewall_outbound_subnets`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of subnets to allow outbound traffic to
+            # Type: string
+            gluetun_role_firewall_outbound_subnets: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Comma-separated list of subnets to allow outbound traffic to
+            # Type: string
+            gluetun2_firewall_outbound_subnets: ""
+            ```
+
+        ??? variable string "`gluetun_role_firewall_debug`{ .sb-show-on-unchecked }`gluetun2_firewall_debug`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Enable firewall debug logging (on/off)
+            # Type: string
+            gluetun_role_firewall_debug: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md
+            # Enable firewall debug logging (on/off)
+            # Type: string
+            gluetun2_firewall_debug: ""
+            ```
+
+    === "DNS"
+
+        ??? variable string "`gluetun_role_dns_server`{ .sb-show-on-unchecked }`gluetun2_dns_server`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # DNS server type: local or remote
+            # Type: string
+            gluetun_role_dns_server: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # DNS server type: local or remote
+            # Type: string
+            gluetun2_dns_server: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_upstream_resolver_type`{ .sb-show-on-unchecked }`gluetun2_dns_upstream_resolver_type`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Upstream resolver type: dot, doh, or plaintext
+            # Type: string
+            gluetun_role_dns_upstream_resolver_type: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Upstream resolver type: dot, doh, or plaintext
+            # Type: string
+            gluetun2_dns_upstream_resolver_type: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_upstream_resolvers`{ .sb-show-on-unchecked }`gluetun2_dns_upstream_resolvers`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of upstream DNS resolvers
+            # Type: string
+            gluetun_role_dns_upstream_resolvers: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of upstream DNS resolvers
+            # Type: string
+            gluetun2_dns_upstream_resolvers: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_caching`{ .sb-show-on-unchecked }`gluetun2_dns_caching`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Enable DNS caching (on/off)
+            # Type: string
+            gluetun_role_dns_caching: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Enable DNS caching (on/off)
+            # Type: string
+            gluetun2_dns_caching: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_upstream_ipv6`{ .sb-show-on-unchecked }`gluetun2_dns_upstream_ipv6`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Allow IPv6 DNS queries (on/off)
+            # Type: string
+            gluetun_role_dns_upstream_ipv6: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Allow IPv6 DNS queries (on/off)
+            # Type: string
+            gluetun2_dns_upstream_ipv6: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_block_ips`{ .sb-show-on-unchecked }`gluetun2_dns_block_ips`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of IPs to block in DNS responses
+            # Type: string
+            gluetun_role_dns_block_ips: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of IPs to block in DNS responses
+            # Type: string
+            gluetun2_dns_block_ips: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_block_ip_prefixes`{ .sb-show-on-unchecked }`gluetun2_dns_block_ip_prefixes`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of IP prefixes to block in DNS responses
+            # Type: string
+            gluetun_role_dns_block_ip_prefixes: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of IP prefixes to block in DNS responses
+            # Type: string
+            gluetun2_dns_block_ip_prefixes: ""
+            ```
+
+        ??? variable string "`gluetun_role_block_malicious`{ .sb-show-on-unchecked }`gluetun2_block_malicious`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block malicious domains (on/off)
+            # Type: string
+            gluetun_role_block_malicious: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block malicious domains (on/off)
+            # Type: string
+            gluetun2_block_malicious: ""
+            ```
+
+        ??? variable string "`gluetun_role_block_surveillance`{ .sb-show-on-unchecked }`gluetun2_block_surveillance`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block surveillance domains (on/off)
+            # Type: string
+            gluetun_role_block_surveillance: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block surveillance domains (on/off)
+            # Type: string
+            gluetun2_block_surveillance: ""
+            ```
+
+        ??? variable string "`gluetun_role_block_ads`{ .sb-show-on-unchecked }`gluetun2_block_ads`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block ads domains (on/off)
+            # Type: string
+            gluetun_role_block_ads: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Block ads domains (on/off)
+            # Type: string
+            gluetun2_block_ads: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_unblock_hostnames`{ .sb-show-on-unchecked }`gluetun2_dns_unblock_hostnames`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of hostnames to unblock
+            # Type: string
+            gluetun_role_dns_unblock_hostnames: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of hostnames to unblock
+            # Type: string
+            gluetun2_dns_unblock_hostnames: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_rebinding_protection_exempt_hostnames`{ .sb-show-on-unchecked }`gluetun2_dns_rebinding_protection_exempt_hostnames`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of hostnames exempt from DNS rebinding protection
+            # Type: string
+            gluetun_role_dns_rebinding_protection_exempt_hostnames: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of hostnames exempt from DNS rebinding protection
+            # Type: string
+            gluetun2_dns_rebinding_protection_exempt_hostnames: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_private_addresses`{ .sb-show-on-unchecked }`gluetun2_dns_private_addresses`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of private address ranges for DNS
+            # Type: string
+            gluetun_role_dns_private_addresses: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Comma-separated list of private address ranges for DNS
+            # Type: string
+            gluetun2_dns_private_addresses: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_update_period`{ .sb-show-on-unchecked }`gluetun2_dns_update_period`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # DNS blocklists update period (e.g., 24h)
+            # Type: string
+            gluetun_role_dns_update_period: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # DNS blocklists update period (e.g., 24h)
+            # Type: string
+            gluetun2_dns_update_period: ""
+            ```
+
+        ??? variable string "`gluetun_role_dns_address`{ .sb-show-on-unchecked }`gluetun2_dns_address`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Address for DNS server to listen on (e.g., 127.0.0.1:53)
+            # Type: string
+            gluetun_role_dns_address: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Address for DNS server to listen on (e.g., 127.0.0.1:53)
+            # Type: string
+            gluetun2_dns_address: ""
+            ```
+
+        ??? variable bool "`gluetun_role_docker_resolver`{ .sb-show-on-unchecked }`gluetun2_docker_resolver`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Keep original nameserver - deprecated in v3.41+, Saltbox default: false
+            # Type: bool (true/false)
+            gluetun_role_docker_resolver: false
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
+            # Keep original nameserver - deprecated in v3.41+, Saltbox default: false
+            # Type: bool (true/false)
+            gluetun2_docker_resolver: false
+            ```
+
+    === "Health"
+
+        ??? variable string "`gluetun_role_health_server_address`{ .sb-show-on-unchecked }`gluetun2_health_server_address`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Address for the health server to listen on
+            # Type: string
+            gluetun_role_health_server_address: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Address for the health server to listen on
+            # Type: string
+            gluetun2_health_server_address: ""
+            ```
+
+        ??? variable string "`gluetun_role_health_target_addresses`{ .sb-show-on-unchecked }`gluetun2_health_target_addresses`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Comma-separated list of addresses to check for health
+            # Type: string
+            gluetun_role_health_target_addresses: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Comma-separated list of addresses to check for health
+            # Type: string
+            gluetun2_health_target_addresses: ""
+            ```
+
+        ??? variable string "`gluetun_role_health_icmp_target_ips`{ .sb-show-on-unchecked }`gluetun2_health_icmp_target_ips`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Comma-separated list of IP addresses for ICMP health checks
+            # Type: string
+            gluetun_role_health_icmp_target_ips: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Comma-separated list of IP addresses for ICMP health checks
+            # Type: string
+            gluetun2_health_icmp_target_ips: ""
+            ```
+
+        ??? variable string "`gluetun_role_health_small_check_type`{ .sb-show-on-unchecked }`gluetun2_health_small_check_type`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Type of small health check: ping or http
+            # Type: string
+            gluetun_role_health_small_check_type: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Type of small health check: ping or http
+            # Type: string
+            gluetun2_health_small_check_type: ""
+            ```
+
+        ??? variable string "`gluetun_role_health_restart_vpn`{ .sb-show-on-unchecked }`gluetun2_health_restart_vpn`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Restart VPN when unhealthy (on/off)
+            # Type: string
+            gluetun_role_health_restart_vpn: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
+            # Restart VPN when unhealthy (on/off)
+            # Type: string
+            gluetun2_health_restart_vpn: ""
+            ```
+
+    === "HTTP Proxy"
+
+        ??? variable string "`gluetun_role_httpproxy`{ .sb-show-on-unchecked }`gluetun2_httpproxy`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable HTTP proxy (on/off)
+            # Type: string
+            gluetun_role_httpproxy: "on"
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable HTTP proxy (on/off)
+            # Type: string
+            gluetun2_httpproxy: "on"
+            ```
+
+        ??? variable string "`gluetun_role_httpproxy_stealth`{ .sb-show-on-unchecked }`gluetun2_httpproxy_stealth`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable stealth mode for HTTP proxy (on/off)
+            # Type: string
+            gluetun_role_httpproxy_stealth: "on"
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable stealth mode for HTTP proxy (on/off)
+            # Type: string
+            gluetun2_httpproxy_stealth: "on"
+            ```
+
+        ??? variable string "`gluetun_role_httpproxy_log`{ .sb-show-on-unchecked }`gluetun2_httpproxy_log`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable HTTP proxy logging (on/off)
+            # Type: string
+            gluetun_role_httpproxy_log: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Enable HTTP proxy logging (on/off)
+            # Type: string
+            gluetun2_httpproxy_log: ""
+            ```
+
+        ??? variable string "`gluetun_role_httpproxy_listening_address`{ .sb-show-on-unchecked }`gluetun2_httpproxy_listening_address`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Address for HTTP proxy to listen on (e.g., :8888)
+            # Type: string
+            gluetun_role_httpproxy_listening_address: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # Address for HTTP proxy to listen on (e.g., :8888)
+            # Type: string
+            gluetun2_httpproxy_listening_address: ""
+            ```
+
+        ??? variable string "`gluetun_role_httpproxy_user`{ .sb-show-on-unchecked }`gluetun2_httpproxy_user`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # HTTP proxy authentication username
+            # Type: string
+            gluetun_role_httpproxy_user: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # HTTP proxy authentication username
+            # Type: string
+            gluetun2_httpproxy_user: ""
+            ```
+
+        ??? variable string "`gluetun_role_httpproxy_password`{ .sb-show-on-unchecked }`gluetun2_httpproxy_password`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # HTTP proxy authentication password
+            # Type: string
+            gluetun_role_httpproxy_password: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/http-proxy.md
+            # HTTP proxy authentication password
+            # Type: string
+            gluetun2_httpproxy_password: ""
+            ```
+
+    === "Shadowsocks"
+
+        ??? variable string "`gluetun_role_shadowsocks`{ .sb-show-on-unchecked }`gluetun2_shadowsocks`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Enable Shadowsocks server (on/off)
+            # Type: string
+            gluetun_role_shadowsocks: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Enable Shadowsocks server (on/off)
+            # Type: string
+            gluetun2_shadowsocks: ""
+            ```
+
+        ??? variable string "`gluetun_role_shadowsocks_log`{ .sb-show-on-unchecked }`gluetun2_shadowsocks_log`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Enable Shadowsocks logging (on/off)
+            # Type: string
+            gluetun_role_shadowsocks_log: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Enable Shadowsocks logging (on/off)
+            # Type: string
+            gluetun2_shadowsocks_log: ""
+            ```
+
+        ??? variable string "`gluetun_role_shadowsocks_listening_address`{ .sb-show-on-unchecked }`gluetun2_shadowsocks_listening_address`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Address for Shadowsocks to listen on (e.g., :8388)
+            # Type: string
+            gluetun_role_shadowsocks_listening_address: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Address for Shadowsocks to listen on (e.g., :8388)
+            # Type: string
+            gluetun2_shadowsocks_listening_address: ""
+            ```
+
+        ??? variable string "`gluetun_role_shadowsocks_password`{ .sb-show-on-unchecked }`gluetun2_shadowsocks_password`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Shadowsocks password for authentication
+            # Type: string
+            gluetun_role_shadowsocks_password: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Shadowsocks password for authentication
+            # Type: string
+            gluetun2_shadowsocks_password: ""
+            ```
+
+        ??? variable string "`gluetun_role_shadowsocks_cipher`{ .sb-show-on-unchecked }`gluetun2_shadowsocks_cipher`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Shadowsocks cipher (e.g., chacha20-ietf-poly1305)
+            # Type: string
+            gluetun_role_shadowsocks_cipher: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/shadowsocks.md
+            # Shadowsocks cipher (e.g., chacha20-ietf-poly1305)
+            # Type: string
+            gluetun2_shadowsocks_cipher: ""
+            ```
+
+    === "Control Server"
+
+        ??? variable string "`gluetun_role_http_control_server_log`{ .sb-show-on-unchecked }`gluetun2_http_control_server_log`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Enable control server logging (on/off)
+            # Type: string
+            gluetun_role_http_control_server_log: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Enable control server logging (on/off)
+            # Type: string
+            gluetun2_http_control_server_log: ""
+            ```
+
+        ??? variable string "`gluetun_role_http_control_server_address`{ .sb-show-on-unchecked }`gluetun2_http_control_server_address`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Address for control server to listen on (e.g., :8000)
+            # Type: string
+            gluetun_role_http_control_server_address: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Address for control server to listen on (e.g., :8000)
+            # Type: string
+            gluetun2_http_control_server_address: ""
+            ```
+
+        ??? variable string "`gluetun_role_http_control_server_auth_config_filepath`{ .sb-show-on-unchecked }`gluetun2_http_control_server_auth_config_filepath`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Path to auth config file for control server
+            # Type: string
+            gluetun_role_http_control_server_auth_config_filepath: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Path to auth config file for control server
+            # Type: string
+            gluetun2_http_control_server_auth_config_filepath: ""
+            ```
+
+        ??? variable string "`gluetun_role_http_control_server_auth_default_role`{ .sb-show-on-unchecked }`gluetun2_http_control_server_auth_default_role`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Default role for control server auth (admin/viewer/none)
+            # Type: string
+            gluetun_role_http_control_server_auth_default_role: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
+            # Default role for control server auth (admin/viewer/none)
+            # Type: string
+            gluetun2_http_control_server_auth_default_role: ""
+            ```
+
+    === "Port Forwarding"
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Enable VPN port forwarding (on/off)
+            # Type: string
+            gluetun_role_vpn_port_forwarding: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Enable VPN port forwarding (on/off)
+            # Type: string
+            gluetun2_vpn_port_forwarding: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_listening_port`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_listening_port`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Listening port for port forwarding
+            # Type: string
+            gluetun_role_vpn_port_forwarding_listening_port: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Listening port for port forwarding
+            # Type: string
+            gluetun2_vpn_port_forwarding_listening_port: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_provider`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Port forwarding provider (e.g., protonvpn, pia)
+            # Type: string
+            gluetun_role_vpn_port_forwarding_provider: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Port forwarding provider (e.g., protonvpn, pia)
+            # Type: string
+            gluetun2_vpn_port_forwarding_provider: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_status_file`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_status_file`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Path to file for storing port forwarding status
+            # Type: string
+            gluetun_role_vpn_port_forwarding_status_file: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Path to file for storing port forwarding status
+            # Type: string
+            gluetun2_vpn_port_forwarding_status_file: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_username`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_username`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Username for port forwarding authentication
+            # Type: string
+            gluetun_role_vpn_port_forwarding_username: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Username for port forwarding authentication
+            # Type: string
+            gluetun2_vpn_port_forwarding_username: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_password`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_password`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Password for port forwarding authentication
+            # Type: string
+            gluetun_role_vpn_port_forwarding_password: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Password for port forwarding authentication
+            # Type: string
+            gluetun2_vpn_port_forwarding_password: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_up_command`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_up_command`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Command to run when port forwarding is established
+            # Type: string
+            gluetun_role_vpn_port_forwarding_up_command: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Command to run when port forwarding is established
+            # Type: string
+            gluetun2_vpn_port_forwarding_up_command: ""
+            ```
+
+        ??? variable string "`gluetun_role_vpn_port_forwarding_down_command`{ .sb-show-on-unchecked }`gluetun2_vpn_port_forwarding_down_command`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Command to run when port forwarding is terminated
+            # Type: string
+            gluetun_role_vpn_port_forwarding_down_command: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/port-forwarding.md
+            # Command to run when port forwarding is terminated
+            # Type: string
+            gluetun2_vpn_port_forwarding_down_command: ""
+            ```
+
+    === "Updater"
+
+        ??? variable string "`gluetun_role_updater_period`{ .sb-show-on-unchecked }`gluetun2_updater_period`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Server list update period (e.g., 24h, 0 to disable)
+            # Type: string
+            gluetun_role_updater_period: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Server list update period (e.g., 24h, 0 to disable)
+            # Type: string
+            gluetun2_updater_period: ""
+            ```
+
+        ??? variable string "`gluetun_role_updater_min_ratio`{ .sb-show-on-unchecked }`gluetun2_updater_min_ratio`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Minimum ratio of servers to keep when updating
+            # Type: string
+            gluetun_role_updater_min_ratio: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Minimum ratio of servers to keep when updating
+            # Type: string
+            gluetun2_updater_min_ratio: ""
+            ```
+
+        ??? variable string "`gluetun_role_updater_vpn_service_providers`{ .sb-show-on-unchecked }`gluetun2_updater_vpn_service_providers`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Comma-separated list of VPN providers to update servers for
+            # Type: string
+            gluetun_role_updater_vpn_service_providers: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # Comma-separated list of VPN providers to update servers for
+            # Type: string
+            gluetun2_updater_vpn_service_providers: ""
+            ```
+
+        ??? variable string "`gluetun_role_updater_protonvpn_email`{ .sb-show-on-unchecked }`gluetun2_updater_protonvpn_email`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # ProtonVPN account email for server list updates
+            # Type: string
+            gluetun_role_updater_protonvpn_email: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # ProtonVPN account email for server list updates
+            # Type: string
+            gluetun2_updater_protonvpn_email: ""
+            ```
+
+        ??? variable string "`gluetun_role_updater_protonvpn_password`{ .sb-show-on-unchecked }`gluetun2_updater_protonvpn_password`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # ProtonVPN account password for server list updates
+            # Type: string
+            gluetun_role_updater_protonvpn_password: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/updater.md
+            # ProtonVPN account password for server list updates
+            # Type: string
+            gluetun2_updater_protonvpn_password: ""
+            ```
+
+    === "Public IP"
+
+        ??? variable string "`gluetun_role_publicip_enabled`{ .sb-show-on-unchecked }`gluetun2_publicip_enabled`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Enable public IP fetching (on/off)
+            # Type: string
+            gluetun_role_publicip_enabled: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Enable public IP fetching (on/off)
+            # Type: string
+            gluetun2_publicip_enabled: ""
+            ```
+
+        ??? variable string "`gluetun_role_publicip_file`{ .sb-show-on-unchecked }`gluetun2_publicip_file`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Path to file for storing public IP
+            # Type: string
+            gluetun_role_publicip_file: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Path to file for storing public IP
+            # Type: string
+            gluetun2_publicip_file: ""
+            ```
+
+        ??? variable string "`gluetun_role_publicip_api`{ .sb-show-on-unchecked }`gluetun2_publicip_api`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Public IP API to use (e.g., ipinfo, ip2location)
+            # Type: string
+            gluetun_role_publicip_api: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # Public IP API to use (e.g., ipinfo, ip2location)
+            # Type: string
+            gluetun2_publicip_api: ""
+            ```
+
+        ??? variable string "`gluetun_role_publicip_api_token`{ .sb-show-on-unchecked }`gluetun2_publicip_api_token`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # API token for public IP service
+            # Type: string
+            gluetun_role_publicip_api_token: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/public-ip.md
+            # API token for public IP service
+            # Type: string
+            gluetun2_publicip_api_token: ""
+            ```
+
+    === "Logging"
+
+        ??? variable string "`gluetun_role_log_level`{ .sb-show-on-unchecked }`gluetun2_log_level`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Log level: debug, info, warning, error
+            # Type: string
+            gluetun_role_log_level: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Log level: debug, info, warning, error
+            # Type: string
+            gluetun2_log_level: ""
+            ```
+
+    === "Provider Specific"
+
+        ??? variable string "`gluetun_role_private_internet_access_openvpn_encryption_preset`{ .sb-show-on-unchecked }`gluetun2_private_internet_access_openvpn_encryption_preset`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # PIA OpenVPN encryption preset: normal, strong, none
+            # Type: string
+            gluetun_role_private_internet_access_openvpn_encryption_preset: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # PIA OpenVPN encryption preset: normal, strong, none
+            # Type: string
+            gluetun2_private_internet_access_openvpn_encryption_preset: ""
+            ```
+
+    === "Misc"
+
+        ??? variable string "`gluetun_role_version_information`{ .sb-show-on-unchecked }`gluetun2_version_information`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Enable version information logging on startup (on/off)
+            # Type: string
+            gluetun_role_version_information: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Enable version information logging on startup (on/off)
+            # Type: string
+            gluetun2_version_information: ""
+            ```
+
+        ??? variable string "`gluetun_role_storage_filepath`{ .sb-show-on-unchecked }`gluetun2_storage_filepath`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Path to storage file for persisting data
+            # Type: string
+            gluetun_role_storage_filepath: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Path to storage file for persisting data
+            # Type: string
+            gluetun2_storage_filepath: ""
+            ```
+
+        ??? variable string "`gluetun_role_pprof_enabled`{ .sb-show-on-unchecked }`gluetun2_pprof_enabled`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            # Enable pprof profiling server (on/off)
+            # Type: string
+            gluetun_role_pprof_enabled: ""
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            # Enable pprof profiling server (on/off)
+            # Type: string
+            gluetun2_pprof_enabled: ""
+            ```
 
 === "Docker"
 
@@ -620,12 +2098,12 @@ docker exec gluetun curl ifconfig.me
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        gluetun_role_docker_image_tag: "v3"
+        gluetun_role_docker_image_tag: "v3.41"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        gluetun2_docker_image_tag: "v3"
+        gluetun2_docker_image_tag: "v3.41"
         ```
 
     ??? variable string "`gluetun_role_docker_image`{ .sb-show-on-unchecked }`gluetun2_docker_image`{ .sb-show-on-checked }"
@@ -638,82 +2116,6 @@ docker exec gluetun curl ifconfig.me
         ```yaml { .sb-show-on-checked }
         # Type: string
         gluetun2_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='gluetun') }}:{{ lookup('role_var', '_docker_image_tag', role='gluetun') }}"
-        ```
-
-    <h5>Envs</h5>
-
-    ??? variable dict "`gluetun_role_docker_envs_default`{ .sb-show-on-unchecked }`gluetun2_docker_envs_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        gluetun_role_docker_envs_default:
-          DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
-          FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
-          FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
-          FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
-          HTTPPROXY: "on"
-          HTTPPROXY_STEALTH: "on"
-          OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
-          PGID: "{{ gid }}"
-          PUID: "{{ uid }}"
-          SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
-          SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
-          SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
-          SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
-          SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
-          TZ: "{{ tz }}"
-          VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
-          VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        gluetun2_docker_envs_default:
-          DNS_KEEP_NAMESERVER: "{{ 'on' if lookup('role_var', '_docker_resolver', role='gluetun') else 'off' }}"
-          FIREWALL_INPUT_PORTS: "{{ lookup('role_var', '_firewall_input_ports', role='gluetun') if (lookup('role_var', '_firewall_input_ports', role='gluetun') | length > 0) else omit }}"
-          FIREWALL_OUTBOUND_SUBNETS: "{{ lookup('role_var', '_firewall_outbound_subnets', role='gluetun') if (lookup('role_var', '_firewall_outbound_subnets', role='gluetun') | length > 0) else omit }}"
-          FIREWALL_VPN_INPUT_PORTS: "{{ lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') if (lookup('role_var', '_firewall_vpn_input_ports', role='gluetun') | length > 0) else omit }}"
-          HTTPPROXY: "on"
-          HTTPPROXY_STEALTH: "on"
-          OPENVPN_CUSTOM_CONFIG: "{{ lookup('role_var', '_openvpn_custom_config', role='gluetun') if (lookup('role_var', '_openvpn_custom_config', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_ENDPOINT_IP: "{{ lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_ENDPOINT_PORT: "{{ lookup('role_var', '_openvpn_endpoint_port', role='gluetun') if (lookup('role_var', '_openvpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_KEY_PASSPHRASE: "{{ lookup('role_var', '_openvpn_key_passphrase', role='gluetun') if (lookup('role_var', '_openvpn_key_passphrase', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_PASSWORD: "{{ lookup('role_var', '_openvpn_password', role='gluetun') if (lookup('role_var', '_openvpn_password', role='gluetun') | length > 0) else omit }}"
-          OPENVPN_USER: "{{ lookup('role_var', '_openvpn_user', role='gluetun') if (lookup('role_var', '_openvpn_user', role='gluetun') | length > 0) else omit }}"
-          PGID: "{{ gid }}"
-          PUID: "{{ uid }}"
-          SERVER_CITIES: "{{ lookup('role_var', '_server_cities', role='gluetun') if (lookup('role_var', '_server_cities', role='gluetun') | length > 0) else omit }}"
-          SERVER_COUNTRIES: "{{ lookup('role_var', '_server_countries', role='gluetun') if (lookup('role_var', '_server_countries', role='gluetun') | length > 0) else omit }}"
-          SERVER_HOSTNAMES: "{{ lookup('role_var', '_server_hostnames', role='gluetun') if (lookup('role_var', '_server_hostnames', role='gluetun') | length > 0) else omit }}"
-          SERVER_NAMES: "{{ lookup('role_var', '_server_names', role='gluetun') if (lookup('role_var', '_server_names', role='gluetun') | length > 0) else omit }}"
-          SERVER_REGIONS: "{{ lookup('role_var', '_server_regions', role='gluetun') if (lookup('role_var', '_server_regions', role='gluetun') | length > 0) else omit }}"
-          TZ: "{{ tz }}"
-          VPN_ENDPOINT_IP: "{{ lookup('role_var', '_vpn_endpoint_ip', role='gluetun') if (lookup('role_var', '_vpn_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          VPN_ENDPOINT_PORT: "{{ lookup('role_var', '_vpn_endpoint_port', role='gluetun') if (lookup('role_var', '_vpn_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          VPN_SERVICE_PROVIDER: "{{ lookup('role_var', '_vpn_service_provider', role='gluetun') if (lookup('role_var', '_vpn_service_provider', role='gluetun') | length > 0) else omit }}"
-          VPN_TYPE: "{{ lookup('role_var', '_vpn_type', role='gluetun') if (lookup('role_var', '_vpn_type', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ADDRESSES: "{{ lookup('role_var', '_wireguard_addresses', role='gluetun') if (lookup('role_var', '_wireguard_addresses', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ENDPOINT_IP: "{{ lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_ip', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_ENDPOINT_PORT: "{{ lookup('role_var', '_wireguard_endpoint_port', role='gluetun') if (lookup('role_var', '_wireguard_endpoint_port', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_MTU: "{{ lookup('role_var', '_wireguard_mtu', role='gluetun') if (lookup('role_var', '_wireguard_mtu', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PRESHARED_KEY: "{{ lookup('role_var', '_wireguard_preshared_key', role='gluetun') if (lookup('role_var', '_wireguard_preshared_key', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PRIVATE_KEY: "{{ lookup('role_var', '_wireguard_private_key', role='gluetun') if (lookup('role_var', '_wireguard_private_key', role='gluetun') | length > 0) else omit }}"
-          WIREGUARD_PUBLIC_KEY: "{{ lookup('role_var', '_wireguard_public_key', role='gluetun') if (lookup('role_var', '_wireguard_public_key', role='gluetun') | length > 0) else omit }}"
         ```
 
     ??? variable dict "`gluetun_role_docker_envs_custom`{ .sb-show-on-unchecked }`gluetun2_docker_envs_custom`{ .sb-show-on-checked }"
@@ -1918,18 +3320,6 @@ docker exec gluetun curl ifconfig.me
         gluetun2_docker_image_tag:
         ```
 
-    ??? variable string "`gluetun_role_docker_resolver`{ .sb-show-on-unchecked }`gluetun2_docker_resolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_resolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_resolver:
-        ```
-
     ??? variable bool "`gluetun_role_docker_volumes_download`{ .sb-show-on-unchecked }`gluetun2_docker_volumes_download`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1940,305 +3330,5 @@ docker exec gluetun curl ifconfig.me
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         gluetun2_docker_volumes_download:
-        ```
-
-    ??? variable string "`gluetun_role_firewall_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_input_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        gluetun_role_firewall_input_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        gluetun2_firewall_input_ports:
-        ```
-
-    ??? variable string "`gluetun_role_firewall_outbound_subnets`{ .sb-show-on-unchecked }`gluetun2_firewall_outbound_subnets`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_firewall_outbound_subnets:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_firewall_outbound_subnets:
-        ```
-
-    ??? variable string "`gluetun_role_firewall_vpn_input_ports`{ .sb-show-on-unchecked }`gluetun2_firewall_vpn_input_ports`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        gluetun_role_firewall_vpn_input_ports:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        gluetun2_firewall_vpn_input_ports:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_custom_config`{ .sb-show-on-unchecked }`gluetun2_openvpn_custom_config`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_custom_config:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_custom_config:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_endpoint_ip:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_endpoint_ip:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_openvpn_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        gluetun_role_openvpn_endpoint_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        gluetun2_openvpn_endpoint_port:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_key_passphrase`{ .sb-show-on-unchecked }`gluetun2_openvpn_key_passphrase`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_key_passphrase:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_key_passphrase:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_password`{ .sb-show-on-unchecked }`gluetun2_openvpn_password`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_password:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_password:
-        ```
-
-    ??? variable string "`gluetun_role_openvpn_user`{ .sb-show-on-unchecked }`gluetun2_openvpn_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_openvpn_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_openvpn_user:
-        ```
-
-    ??? variable string "`gluetun_role_server_cities`{ .sb-show-on-unchecked }`gluetun2_server_cities`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_cities:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_cities:
-        ```
-
-    ??? variable string "`gluetun_role_server_countries`{ .sb-show-on-unchecked }`gluetun2_server_countries`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_countries:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_countries:
-        ```
-
-    ??? variable string "`gluetun_role_server_hostnames`{ .sb-show-on-unchecked }`gluetun2_server_hostnames`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_hostnames:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_hostnames:
-        ```
-
-    ??? variable string "`gluetun_role_server_names`{ .sb-show-on-unchecked }`gluetun2_server_names`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_names:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_names:
-        ```
-
-    ??? variable string "`gluetun_role_server_regions`{ .sb-show-on-unchecked }`gluetun2_server_regions`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_server_regions:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_server_regions:
-        ```
-
-    ??? variable string "`gluetun_role_vpn_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_endpoint_ip:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_endpoint_ip:
-        ```
-
-    ??? variable string "`gluetun_role_vpn_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_vpn_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        gluetun_role_vpn_endpoint_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        gluetun2_vpn_endpoint_port:
-        ```
-
-    ??? variable string "`gluetun_role_vpn_service_provider`{ .sb-show-on-unchecked }`gluetun2_vpn_service_provider`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_service_provider:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_service_provider:
-        ```
-
-    ??? variable string "`gluetun_role_vpn_type`{ .sb-show-on-unchecked }`gluetun2_vpn_type`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_vpn_type:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_vpn_type:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_addresses`{ .sb-show-on-unchecked }`gluetun2_wireguard_addresses`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_addresses:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_addresses:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_endpoint_ip`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_ip`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_endpoint_ip:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_endpoint_ip:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_endpoint_port`{ .sb-show-on-unchecked }`gluetun2_wireguard_endpoint_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        gluetun_role_wireguard_endpoint_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        gluetun2_wireguard_endpoint_port:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_mtu`{ .sb-show-on-unchecked }`gluetun2_wireguard_mtu`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_mtu:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_mtu:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_preshared_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_preshared_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_preshared_key:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_preshared_key:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_private_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_private_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_private_key:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_private_key:
-        ```
-
-    ??? variable string "`gluetun_role_wireguard_public_key`{ .sb-show-on-unchecked }`gluetun2_wireguard_public_key`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_wireguard_public_key:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_wireguard_public_key:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -19,15 +19,15 @@ The inventory system offers a centralized approach to customizing roles, allowin
 
 Enter your new values in:
 
-!!! tip inline end "Quick Shell Access"
+```
+/srv/git/saltbox/inventories/host_vars/localhost.yml
+```
+
+!!! tip "Quick Shell Access"
 
     ```shell
     sb edit inventory
     ```
-
-```
-/srv/git/saltbox/inventories/host_vars/localhost.yml
-```
 
 Changes take effect after deploying the affected role(s) using `sb install` with the matching role tag(s).
 

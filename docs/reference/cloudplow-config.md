@@ -6,7 +6,7 @@ tags:
   - config
 ---
 
-# Cloudplow Config
+# Shared-Drive Cloudplow Setup
 
 NOTE: Everything here is specific to Google Drive. If you are using Dropbox, there is nothing here that applies to you.
 

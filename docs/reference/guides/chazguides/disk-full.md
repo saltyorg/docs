@@ -194,7 +194,7 @@ cloudplow upload --loglevel=DEBUG
 
 You'll get a great deal of information about what cloudplow is doing and why.
 
-If you find yourself hitting that 750GB cap regularly, ~~you may want to set up [service-account uploading](tip44.md).~~ you need to buy more seats on your google account, or just slow down.
+If you find yourself hitting that 750GB cap regularly, you need to buy more seats on your google account, or just slow down.
 
 ## Rclone cache is out of control
 

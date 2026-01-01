@@ -6,7 +6,7 @@ tags:
   - uninstall
 ---
 
-# App Removal
+# Removing apps
 
 Perhaps you want to remove one of the apps that Saltbox installed for you.
 

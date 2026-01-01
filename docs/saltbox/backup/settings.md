@@ -7,7 +7,7 @@ tags:
   - backup
 ---
 
-# Configuration
+# Settings
 
 ``` yaml title="nano /srv/git/saltbox/backup_config.yml"
 ---

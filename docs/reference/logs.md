@@ -6,7 +6,7 @@ tags:
   - logging
 ---
 
-# Apps
+# Viewing Logs
 
 ## Autoscan
 

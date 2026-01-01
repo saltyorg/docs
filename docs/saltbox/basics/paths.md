@@ -7,7 +7,7 @@ tags:
   - cloud
 ---
 
-# Saltbox Paths
+# Paths
 
 ## General Info
 

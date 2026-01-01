@@ -1,4 +1,4 @@
-# Creating an rclone remote
+# Creating an Rclone remote
 
 This article describes generally how to create an rclone remote for a random cloud storage provider.
 

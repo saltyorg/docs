@@ -6,7 +6,7 @@ tags:
   - faq
 ---
 
-# Install
+# Installation
 
 IT IS QUITE PROBABLE THAT SOME INFORMATION HERE IS OUTDATED
 

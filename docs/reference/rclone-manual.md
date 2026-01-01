@@ -6,7 +6,7 @@ tags:
   - scripted
 ---
 
-# Rclone
+# Rclone Manual
 
 <script>
    document$.subscribe(function() {

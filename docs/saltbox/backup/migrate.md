@@ -11,7 +11,7 @@ tags:
 
 This guide will outline some basic steps to copy/move your Saltbox setup to another server and/or another domain name.
 
-If you are looking to migrate your existing setup *to* Saltbox, there are guides for [Cloudbox](../../reference/guides/cloudbox.md), or [arbitrary](../../reference/guides/other.md) setups.
+If you are looking to migrate your existing setup *to* Saltbox, there are guides for [arbitrary](../../reference/guides/other.md) setups.
 
 This page discusses migrating an existing Saltbox setup.
 

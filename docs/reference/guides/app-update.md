@@ -1,4 +1,4 @@
-# App Update
+# Updating apps
 
 The info below will show you how to update your Saltbox apps, individually.
 

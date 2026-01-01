@@ -11,7 +11,7 @@ tags:
   - Docker
 ---
 
-# After the Install
+# Post-installation
 
 All the apps are installed and configured, but here are some things you want to set up or do that aren't done automatically:
 

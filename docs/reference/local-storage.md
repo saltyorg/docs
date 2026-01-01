@@ -6,7 +6,7 @@ tags:
   - storage
 ---
 
-# Local Storage
+# Using Local Storage
 
 You may want to set saltbox up to use "local storage". This article is assuming you are doing this as part of the initial setup, not switching from cloud to local.
 

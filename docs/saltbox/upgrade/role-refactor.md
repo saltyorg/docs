@@ -12,7 +12,7 @@ tags:
  
 The role-refactor branch merge includes the following updates:
 
--   Enforces explicit Inventory [override levels](../inventory/index.md/#override-levels) :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
+-   Enforces explicit Inventory [override levels](../inventory/index.md#override-levels) :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
 
     > Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
     
@@ -22,7 +22,7 @@ The role-refactor branch merge includes the following updates:
 
     > `_docker_network_mode` is now natively supported across all roles.
 
--   Retires Sandbox `settings.yml` :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
+-   Retires [Sandbox](../../reference/modules/sandbox.md) `settings.yml` :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
 
     > Settings no longer apply and must be migrated to their Inventory form to persist.
 
@@ -117,10 +117,9 @@ Multi-instance role variables must be converted to the appropriate override leve
     bazarr4k_themepark_theme: "maroon"
     ```
     
-    1. Typically, you want all instances to have access to the same external tools.
+    1. Typically, you want external processing tools to be available to all instances, so keep role-scoped.
     
     2. This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
     
         - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
-        - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if set, or would not be themed.
-  
+        - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if enabled, or would not have theming applied.

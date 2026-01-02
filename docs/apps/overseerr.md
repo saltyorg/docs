@@ -24,7 +24,7 @@ tags:
 
 ---
 
-!!! abstract directions "Saltbox Setup Process"
+!!! abstract cta "Saltbox Setup Process"
 
     <div data-search-exclude>
 
@@ -123,7 +123,7 @@ You will need your API Keys from both Radarr and Sonarr.
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you setting Saltbox up for the first time?
 

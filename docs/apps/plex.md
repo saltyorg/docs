@@ -55,7 +55,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-!!! abstract directions "Saltbox Setup Process"
+!!! abstract cta "Saltbox Setup Process"
 
     <div data-search-exclude>
 
@@ -311,7 +311,7 @@ To do so:
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you Setting Saltbox up for the first time?
 

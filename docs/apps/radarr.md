@@ -520,7 +520,7 @@ This is used during the setup of [Overseerr](overseerr.md) and [Organizr](organi
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you setting Saltbox up for the first time?
 

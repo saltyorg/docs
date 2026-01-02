@@ -180,7 +180,7 @@ Any additional question please reach out to the [Organizr](https://organizr.app/
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you setting Saltbox up for the first time?
 

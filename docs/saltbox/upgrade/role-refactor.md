@@ -58,7 +58,7 @@ The role-refactor branch merge includes the following updates:
 
 -   Python to Golang rewrites of tools: DNS manager, Docker controller
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Full changes:
 

@@ -36,7 +36,7 @@ Visit  <https://portainer.iYOUR_DOMAIN_NAMEi>.
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you setting Saltbox up for the first time?
 

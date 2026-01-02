@@ -508,7 +508,7 @@ This is used during the setup of [Overseer](overseerr.md) and [Organizr](organiz
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you setting Saltbox up for the first time?
 

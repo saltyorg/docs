@@ -29,13 +29,13 @@ Enter your new values in:
     sb edit inventory
     ```
 
-Changes take effect after deploying the affected role(s) using `sb install` with the matching role tag(s).
+Changes take effect after deploying the affected role(s) using the `install` command.
 
 ## Finding Available Variables
 
 Variables that can be used for customization within the Inventory are listed under ***Role Defaults*** at the end of role documentations.
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Find a role by using search or browsing the indexes:
 

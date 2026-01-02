@@ -284,7 +284,7 @@ Further documentation:
 
 ## Next
 
-<div class="directions-menu" markdown>
+<div class="sb-cta" markdown>
 
 Are you Setting Saltbox up for the first time?
 

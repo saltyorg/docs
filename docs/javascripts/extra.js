@@ -4,13 +4,13 @@ document$.subscribe(function () {
   updateToggleDisplay();
 
   document.addEventListener('click', function (event) {
-    if (event.target && event.target.id === 'sb-checkbox--var-level') {
+    if (event.target && event.target.matches('.sb-toggle--override-scope input[type="checkbox"]')) {
       updateToggleDisplay();
     }
   });
 
   function updateToggleDisplay() {
-    const toggleCheckbox = document.getElementById('sb-checkbox--var-level');
+    const toggleCheckbox = document.querySelector('.sb-toggle--override-scope input[type="checkbox"]');
     if (!toggleCheckbox) return;
 
     const isChecked = toggleCheckbox.checked;

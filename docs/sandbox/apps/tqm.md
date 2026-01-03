@@ -91,12 +91,14 @@ tail -f /opt/tqm/activity.log
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    tqm_name: "custom_value"
-    ```
+1.  !!! example "Example override"
+
+        ```yaml
+        tqm_name: "custom_value"
+        ```
 
 === "Basics"
 

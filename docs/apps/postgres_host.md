@@ -47,12 +47,14 @@ Configure per-version users, databases, and access control using `postgres_host_
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    postgres_host_role_versions: ["item1", "item2"]
-    ```
+1.  !!! example "Example override"
+
+        ```yaml
+        postgres_host_role_versions: ["item1", "item2"]
+        ```
 
 === "Basics"
 

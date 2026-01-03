@@ -130,30 +130,42 @@ Are you setting Saltbox up for the first time?
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-## Role Defaults
+## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    This role supports multiple instances via `qbittorrent_instances`.
+1.  **This role supports multiple instances via `qbittorrent_instances`.**
 
-    ```yaml { .sb-show-on-unchecked title="Applies to all instances of qbittorrent:" }
-    qbittorrent_role_web_subdomain: "custom"
-    ```
+    !!! example sb-show-on-unchecked "Example override"
 
-    ```yaml { .sb-show-on-checked title="Applies to a specific instance (e.g., `qbittorrent2`):" }
-    qbittorrent2_web_subdomain: "custom2"
-    ```
+        ```yaml
+        qbittorrent_role_web_subdomain: "custom"
+        ```
 
-<label class="md-button md-button--stretch" for="sb-checkbox--var-level">
-   <input type="checkbox" id="sb-checkbox--var-level"><span class="sb-show-on-unchecked">Show instance-level variables</span><span class="sb-show-on-checked">Show role-level variables</span>
-</label>
+        <div class="result" markdown>
 
-??? warning "Avoid overriding variables ending in `_default`"
+        Applies to all instances of qbittorrent.
 
-    When overriding variables that end in `_default` (like `qbittorrent_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+        </div>
 
-    Instead, use the corresponding `_custom` variable (like `qbittorrent_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+    !!! example sb-show-on-checked "Example override"
+
+        ```yaml
+        qbittorrent2_web_subdomain: "custom2"
+        ```
+
+        <div class="result" markdown>
+
+        Applies to the instance named `qbittorrent2`.
+
+        </div>
+
+    !!! warning "Avoid overriding variables ending in `_default`"
+
+        When overriding variables that end in `_default` (like `qbittorrent_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `qbittorrent_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 

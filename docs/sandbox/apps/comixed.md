@@ -53,18 +53,20 @@ Password: comixedreader
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    comixed_name: "custom_value"
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        comixed_name: "custom_value"
+        ```
 
-    When overriding variables that end in `_default` (like `comixed_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `comixed_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `comixed_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `comixed_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 

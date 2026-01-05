@@ -45,11 +45,11 @@ tags:
 
 1. Select your **preferred display language**. Click **Next**.
 
-   ![](../images/emby/emby-welcome-english.png))
+   ![](../images/emby/emby-welcome-english.png)
 
 1. **Type** the following and click **Next**:
 
-    - **Username:** _The username you wwant to use to log into Emby_
+    - **Username:** _The username you want to use to log into Emby_
 
     - **New Password:** _A strong password you'll use to log into Emby_
 

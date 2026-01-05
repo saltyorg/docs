@@ -24,7 +24,7 @@ Enter your new values in:
 /srv/git/saltbox/inventories/host_vars/localhost.yml
 ```
 
-For convenient shell access, you can use the `sb inventory` command.
+For convenient shell access, you can use the `sb edit inventory` command.
 
 Changes take effect after running the affected tag(s) using the `sb install` command prefix.
 

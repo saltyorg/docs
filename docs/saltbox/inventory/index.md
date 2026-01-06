@@ -69,7 +69,7 @@ When a role supports [multiple instances](../../reference/multiple-instances.md)
 
 <div markdown>
 
-:material-rhombus: **Role-level** (default)
+:material-cards-playing: **Role-level** (default)
 
 ```yaml
 xROLE_NAMEx_role_setting_enabled: false # (1)!
@@ -83,7 +83,7 @@ xROLE_NAMEx_role_setting_enabled: false # (1)!
 
 <div markdown>
 
-:material-rhombus-split: **Instance-level**
+:material-cards-playing-diamond: **Instance-level**
 
 ```yaml
 dROLE_NAMEdxINSTANCE_SUFFIXx_setting_enabled: true # (1)!

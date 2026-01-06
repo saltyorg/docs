@@ -5,35 +5,29 @@
 <label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
 {{- end }}
 
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
 {{- if .HasInstances }}
 
 1.  **This role supports multiple instances via `{{ .InstancesVar }}`.**
 
-    !!! example sb-show-on-unchecked "Example override"
+    !!! example "Example override"
 
-        ```yaml
-        {{ .RoleName }}_role_web_subdomain: "custom"
-        ```
+        === "Role-level"
 
-        <div class="result" markdown>
+            ```yaml
+            {{ .RoleName }}_role_web_subdomain: "custom"
+            ```
 
-        Applies to all instances of {{ .RoleName }}.
+            :material-arrow-right-bottom-bold: Applies to all instances of {{ .RoleName }}
 
-        </div>
+        === "Instance-level"
 
-    !!! example sb-show-on-checked "Example override"
+            ```yaml
+            {{ .InstanceName }}_web_subdomain: "custom2"
+            ```
 
-        ```yaml
-        {{ .InstanceName }}_web_subdomain: "custom2"
-        ```
-
-        <div class="result" markdown>
-
-        Applies to the instance named `{{ .InstanceName }}`.
-
-        </div>
+            :material-arrow-right-bottom-bold: Applies to the instance named {{ .InstanceName }}
 {{- else }}
 
 1.  !!! example "Example override"

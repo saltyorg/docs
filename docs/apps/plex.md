@@ -41,7 +41,6 @@ saltbox_automation:
 
 [Plex Media Server](https://www.plex.tv/personal-media-server) is a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location to various devices.
 
-
 <div class="grid grid--buttons" markdown data-search-exclude>
 
 [:material-bookshelf:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
@@ -327,34 +326,28 @@ Are you Setting Saltbox up for the first time?
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
 
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
 
 1.  **This role supports multiple instances via `plex_instances`.**
 
-    !!! example sb-show-on-unchecked "Example override"
+    !!! example "Example override"
 
-        ```yaml
-        plex_role_web_subdomain: "custom"
-        ```
+        === "Role-level"
 
-        <div class="result" markdown>
+            ```yaml
+            plex_role_web_subdomain: "custom"
+            ```
 
-        Applies to all instances of plex.
+            :material-arrow-right-bottom-bold: Applies to all instances of plex
 
-        </div>
+        === "Instance-level"
 
-    !!! example sb-show-on-checked "Example override"
+            ```yaml
+            plex2_web_subdomain: "custom2"
+            ```
 
-        ```yaml
-        plex2_web_subdomain: "custom2"
-        ```
-
-        <div class="result" markdown>
-
-        Applies to the instance named `plex2`.
-
-        </div>
+            :material-arrow-right-bottom-bold: Applies to the instance named plex2
 
     !!! warning "Avoid overriding variables ending in `_default`"
 

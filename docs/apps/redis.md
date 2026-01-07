@@ -43,34 +43,28 @@ For custom configuration, create `redis.conf` in `/opt/redis/` and configure cus
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
 
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
 
 1.  **This role supports multiple instances via `redis_instances`.**
 
-    !!! example sb-show-on-unchecked "Example override"
+    !!! example "Example override"
 
-        ```yaml
-        redis_role_web_subdomain: "custom"
-        ```
+        === "Role-level"
 
-        <div class="result" markdown>
+            ```yaml
+            redis_role_web_subdomain: "custom"
+            ```
 
-        Applies to all instances of redis.
+            :material-arrow-right-bottom-bold: Applies to all instances of redis
 
-        </div>
+        === "Instance-level"
 
-    !!! example sb-show-on-checked "Example override"
+            ```yaml
+            redis2_web_subdomain: "custom2"
+            ```
 
-        ```yaml
-        redis2_web_subdomain: "custom2"
-        ```
-
-        <div class="result" markdown>
-
-        Applies to the instance named `redis2`.
-
-        </div>
+            :material-arrow-right-bottom-bold: Applies to the instance named redis2
 
     !!! warning "Avoid overriding variables ending in `_default`"
 

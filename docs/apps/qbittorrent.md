@@ -132,34 +132,28 @@ Are you setting Saltbox up for the first time?
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
 
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables.<span title="View override details for this role" markdown>(1)</span>
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
 
 1.  **This role supports multiple instances via `qbittorrent_instances`.**
 
-    !!! example sb-show-on-unchecked "Example override"
+    !!! example "Example override"
 
-        ```yaml
-        qbittorrent_role_web_subdomain: "custom"
-        ```
+        === "Role-level"
 
-        <div class="result" markdown>
+            ```yaml
+            qbittorrent_role_web_subdomain: "custom"
+            ```
 
-        Applies to all instances of qbittorrent.
+            :material-arrow-right-bottom-bold: Applies to all instances of qbittorrent
 
-        </div>
+        === "Instance-level"
 
-    !!! example sb-show-on-checked "Example override"
+            ```yaml
+            qbittorrent2_web_subdomain: "custom2"
+            ```
 
-        ```yaml
-        qbittorrent2_web_subdomain: "custom2"
-        ```
-
-        <div class="result" markdown>
-
-        Applies to the instance named `qbittorrent2`.
-
-        </div>
+            :material-arrow-right-bottom-bold: Applies to the instance named qbittorrent2
 
     !!! warning "Avoid overriding variables ending in `_default`"
 

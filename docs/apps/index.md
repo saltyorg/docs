@@ -40,7 +40,6 @@ tags:
 |-------------------------------------------------------------|:----------------------------:|:--------------------------------:|
 | [Autoscan](autoscan.md)                                     |          `autoscan`          | `mediabox_roles` `saltbox_roles` |
 | [A-Train](../sandbox/apps/a_train.md)                       |      `sandbox-a-train`       |         `sandbox_roles`          |
-| [Goplaxt](../sandbox/apps/goplaxt.md)                       |      `sandbox-goplaxt`       |         `sandbox_roles`          |
 | [Kometa](../sandbox/apps/kometa.md)                         |       `sandbox-kometa`       |         `sandbox_roles`          |
 | [PlexTraktSync](../sandbox/apps/plextraktsync.md)           |   `sandbox-plextraktsync`    |         `sandbox_roles`          |
 | [Python-plexlibrary](../sandbox/apps/python_plexlibrary.md) | `sandbox-python-plexlibrary` |         `sandbox_roles`          |

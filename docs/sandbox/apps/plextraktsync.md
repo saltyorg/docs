@@ -5,8 +5,34 @@ hide:
 tags:
   - plextraktsync
   - trakt.tv
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup
+      type: documentation
+    - name: Releases
+      url: https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync
+      type: github
+    - name: Community
+      url: https://github.com/Taxel/PlexTraktSync/discussions
+      type: github
+  project_description:
+    name: Plex-Trakt-Sync
+    summary: |
+      a two-way synchronization tool between trakt.tv and Plex Media Server, allowing users to sync media collections, ratings, watched status, and watchlists without requiring a Plex Pass or Trakt VIP subscription.
+    link: https://github.com/Taxel/PlexTraktSync
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Plex-Trakt-Sync
 
 ## Overview
@@ -15,15 +41,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
-[:octicons-container-16:**Releases**](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

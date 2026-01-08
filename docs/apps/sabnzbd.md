@@ -5,19 +5,43 @@ hide:
 tags:
   - sab
   - sabnzbd
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: SABnzbd
+    summary: |
+      a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
+    link: https://github.com/sabnzbd/sabnzbd
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # SABnzbd
 
 ## Overview
 
-[hotio/sabnzbd](https://hotio.dev/containers/sabnzbd) is a Docker container image for SABnzbd.
-
-> [SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
+[SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd){ .md-button .md-button--stretch }
 
@@ -26,6 +50,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract cta "Saltbox Setup Process"
 

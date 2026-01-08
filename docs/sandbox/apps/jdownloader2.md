@@ -6,25 +6,52 @@ tags:
   - jdownloader2
   - download
   - tools
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://beta.jdownloader.org/support
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jlesage/jdownloader-2/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: JDownloader
+    summary: |
+      a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!.
+    link: https://beta.jdownloader.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # JDownloader
 
 ## Overview
 
-[JDownloader](https://beta.jdownloader.org/) is a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!
+[JDownloader](https://beta.jdownloader.org/) is a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://beta.jdownloader.org/support){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://beta.jdownloader.org/support){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/jdownloader-2/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

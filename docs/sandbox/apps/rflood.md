@@ -6,19 +6,43 @@ tags:
   - rflood
   - torrent
   - frontend
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/rflood/pkgs/container/rflood
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: rFlood
+    summary: |
+      a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
+    link: https://github.com/jesec/flood
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # rFlood
 
 ## Overview
 
-[hotio/rflood](https://hotio.dev/containers/rflood) is a Docker container image for rFlood.
-
-> [rFlood](https://github.com/jesec/flood) docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
+[rFlood](https://github.com/jesec/flood) is a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/rflood/pkgs/container/rflood){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,8 +6,34 @@ tags:
   - forgejo
   - development
   - git
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://forgejo.org/docs
+      type: documentation
+    - name: Releases
+      url: https://codeberg.org/forgejo/-/packages/container/forgejo/versions
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Forgejo
+    summary: |
+      a self-hosted, lightweight software forge designed for collaborative software development using the Git version control system.
+    link: https://www.Forgejo.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Forgejo
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://forgejo.org/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://forgejo.org/docs){ .md-button .md-button--stretch }
 
-[:simple-codeberg:**Releases**](https://codeberg.org/forgejo/-/packages/container/forgejo/versions){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://codeberg.org/forgejo/-/packages/container/forgejo/versions){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

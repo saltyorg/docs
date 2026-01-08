@@ -6,9 +6,35 @@ tags:
   - miniflux
   - media
   - rss
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/miniflux/v2
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/miniflux/miniflux/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Miniflux
+    summary: |
+      a minimalist and opinionated feed reader.
+    link: https://miniflux.app
 ---
 
-# miniflux
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Miniflux
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/miniflux/v2){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/miniflux/v2){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/miniflux/miniflux/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

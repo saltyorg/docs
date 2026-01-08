@@ -6,8 +6,34 @@ tags:
   - yacht
   - docker
   - management
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://yacht.sh/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/selfhostedpro/yacht/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Yacht
+    summary: |
+      a web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
+    link: https://yacht.sh/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Yacht
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://yacht.sh/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://yacht.sh/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/selfhostedpro/yacht/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

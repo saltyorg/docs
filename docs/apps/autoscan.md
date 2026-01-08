@@ -5,8 +5,34 @@ hide:
   - tags
 tags:
   - autoscan
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/saltydk/autoscan/blob/master/README.md#overview
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/saltydk/autoscan/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/ugfKXpFND8
+      type: discord
+  project_description:
+    name: Autoscan
+    summary: |
+      the official Saltbox continuation of *Cloudbox/autoscan*, an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
+    link: https://github.com/saltydk/autoscan
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Autoscan
 
 ## Overview
@@ -15,7 +41,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/saltydk/autoscan/blob/master/README.md#overview){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/saltydk/autoscan/blob/master/README.md#overview){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/autoscan/tags){ .md-button .md-button--stretch }
 
@@ -24,6 +50,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

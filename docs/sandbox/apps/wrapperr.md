@@ -6,8 +6,34 @@ tags:
   - wrapperr
   - statistics
   - analytics
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/aunefyren/wrapperr/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/aunefyren/wrapperr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Wrapperr
+    summary: |
+      a website-based platform and API for collecting user stats within a set timeframe using Tautulli. The data is displayed as a statistics-summary, sort of like Spotify Wrapped. Yes, you need Tautulli to have been running beforehand and currently for this to work. Note: Wrapperr is not behind authelia.
+    link: https://github.com/aunefyren/wrapperr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Wrapperr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/aunefyren/wrapperr/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/aunefyren/wrapperr/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/aunefyren/wrapperr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

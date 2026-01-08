@@ -6,8 +6,34 @@ tags:
   - actualbudget
   - budget
   - finance
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://actualbudget.org/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/actualbudget/actual-server/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Actual Budget
+    summary: |
+      a super fast, privacy-focused app for managing your finances. Its heart is the well-proven and much-loved Envelope Budgeting methodology.
+    link: https://actualbudget.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Actual Budget
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://actualbudget.org/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://actualbudget.org/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/actualbudget/actual-server/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,8 +6,34 @@ tags:
   - puddletag
   - media
   - tagging
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.puddletag.net/docs.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/chewbaka/plexshare/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Puddletag
+    summary: |
+      an audio tag editor (primarily created) for GNU/Linux similar to the Windows program, Mp3tag. Unlike most taggers for GNU/Linux, it uses a spreadsheet-like layout so that all the tags you want to edit by hand are visible and easily editable.
+    link: https://docs.puddletag.net/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Puddletag
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.puddletag.net/docs.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.puddletag.net/docs.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/chewbaka/plexshare/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

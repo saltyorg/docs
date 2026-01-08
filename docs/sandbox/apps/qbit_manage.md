@@ -6,19 +6,43 @@ tags:
   - qbit-manage
   - torrent
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: qBit Manage
+    summary: |
+      a program used to manage your qBittorrent instance.
+    link: https://github.com/StuffAnThings/qbit_manage
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # qBit Manage
 
 ## Overview
 
-[hotio/qbitmanage](https://hotio.dev/containers/qbitmanage) is a Docker container image for qBit Manage.
-
-> [qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
+[qBit Manage](https://github.com/StuffAnThings/qbit_manage) is a program used to manage your qBittorrent instance.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

@@ -6,25 +6,52 @@ tags:
   - plex-auto-languages
   - plex
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/RemiRigal/Plex-Auto-Languages
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/remirigal/plex-auto-languages/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Plex Auto Languages
+    summary: |
+      a tool designed to automate the selection of audio and subtitle languages for TV shows in Plex Media Server.
+    link: https://github.com/RemiRigal/Plex-Auto-Languages
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Plex Auto Languages
 
 ## Overview
 
-[Plex Auto Languages](https://github.com/RemiRigal/Plex-Auto-Languages) auto-updates the language of your Plex TV Show episodes based on the current language you are using without messing with your existing language preferences.
+[Plex Auto Languages](https://github.com/RemiRigal/Plex-Auto-Languages) is a tool designed to automate the selection of audio and subtitle languages for TV shows in Plex Media Server.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/RemiRigal/Plex-Auto-Languages){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/RemiRigal/Plex-Auto-Languages){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/remirigal/plex-auto-languages/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

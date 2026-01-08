@@ -6,8 +6,34 @@ tags:
   - immich
   - photos
   - backup
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://immich.app/docs/overview/introduction
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Immich
+    summary: |
+      a self-hosted photo and video backup tool, similar to google photos and apple photos.
+    link: https://immich.app/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Immich
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://immich.app/docs/overview/introduction){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://immich.app/docs/overview/introduction){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

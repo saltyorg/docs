@@ -6,8 +6,34 @@ tags:
   - deemix
   - media
   - music
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://gitlab.com/Bockiii/deemix-docker
+      type: documentation
+    - name: Releases
+      url: https://gitlab.com/Bockiii/deemix-docker/container_registry
+      type: gitlab
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: deemix-docker
+    summary: |
+      a barebone deezer downloader library built from the ashes of Deezloader Remix.
+    link: https://gitlab.com/Bockiii/deemix-docker
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # deemix-docker
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://gitlab.com/Bockiii/deemix-docker){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://gitlab.com/Bockiii/deemix-docker){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-gitlab:**Releases**](https://gitlab.com/Bockiii/deemix-docker/container_registry){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

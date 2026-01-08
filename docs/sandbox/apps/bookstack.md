@@ -6,19 +6,43 @@ tags:
   - bookstack
   - wiki
   - documentation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.bookstackapp.com/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/bookstack/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: BookStack
+    summary: |
+      a simple, self-hosted, easy-to-use platform for organising and storing information.
+    link: https://www.bookstackapp.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # BookStack
 
 ## Overview
 
-[linuxserver/bookstack](https://docs.linuxserver.io/images/docker-bookstack) is a Docker container image for BookStack.
-
-> [BookStack](https://www.bookstackapp.com/) is a simple, self-hosted, easy-to-use platform for organising and storing information. [:material-bookshelf:](https://www.bookstackapp.com/docs)
+[BookStack](https://www.bookstackapp.com) is a simple, self-hosted, easy-to-use platform for organising and storing information.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.bookstackapp.com/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/bookstack/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

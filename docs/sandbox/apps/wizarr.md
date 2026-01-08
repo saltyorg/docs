@@ -6,17 +6,43 @@ tags:
   - wizarr
   - automation
   - invitations
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.wizarr.dev
+      type: documentation
+    - name: Releases
+      url: https://github.com/-/wizarrrr/packages/container/package/wizarr
+      type: github
+    - name: Community
+      url: https://discord.gg/wsSTsHGsqu
+      type: discord
+  project_description:
+    name: Wizarr
+    summary: |
+      a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!.
+    link: https://github.com/Wizarrrr/wizarr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Wizarr
 
 ## Overview
 
-[Wizarr](https://github.com/Wizarrrr/wizarr)  is a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!
+[Wizarr](https://github.com/Wizarrrr/wizarr) is a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.wizarr.dev){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.wizarr.dev){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/-/wizarrrr/packages/container/package/wizarr){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

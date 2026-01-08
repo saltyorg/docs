@@ -6,19 +6,43 @@ tags:
   - healthchecks
   - monitoring
   - cron
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://healthchecks.io/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/healthchecks/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Healthchecks
+    summary: |
+      a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.
+    link: https://healthchecks.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Healthchecks
 
 ## Overview
 
-[linuxserver/healthchecks](https://docs.linuxserver.io/images/docker-healthchecks) is a Docker container image for Healthchecks.
-
-> [Healthchecks](https://healthchecks.io/) is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface. [:material-bookshelf:](https://healthchecks.io/docs/)
+[Healthchecks](https://healthchecks.io) is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://healthchecks.io/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/healthchecks/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

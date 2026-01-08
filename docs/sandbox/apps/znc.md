@@ -6,19 +6,43 @@ tags:
   - znc
   - irc
   - bouncer
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/images/docker-znc
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/znc/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: ZNC
+    summary: |
+      an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
+    link: https://wiki.znc.in/ZNC
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # ZNC
 
 ## Overview
 
-[linuxserver/znc](https://docs.linuxserver.io/images/docker-znc) is a Docker container image for ZNC.
-
-> [ZNC](https://wiki.znc.in/ZNC) is an an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
+[ZNC](https://wiki.znc.in/ZNC) is an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/images/docker-znc){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/images/docker-znc){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/znc/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,25 +6,52 @@ tags:
   - sabthrottle
   - automation
   - bandwidth
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/8a8al00ey/sabthrottle#installation
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/8a8al00ey/sabthrottle/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: SABThrottle
+    summary: |
+      a tool designed to dynamically control bandwidth allocation for SABnzbd, based on active streaming sessions from a Plex Media Server.
+    link: https://github.com/8a8al00ey/sabthrottle
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # SABThrottle
 
 ## Overview
 
-[SABThrottle](https://github.com/8a8al00ey/sabthrottle) Sabthrottle was designed in order to dynamically control the bandwidth allocation when users are actively streaming from Plex to avoid unnecessary buffering while still allowing the user to download at the fastest rate possible. Remember nzbthrottle from daghaian, yes its exactly like that but for SABnzbd with some additional tweaks.
+[SABThrottle](https://github.com/8a8al00ey/sabthrottle) is a tool designed to dynamically control bandwidth allocation for SABnzbd, based on active streaming sessions from a Plex Media Server.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/8a8al00ey/sabthrottle#installation){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/8a8al00ey/sabthrottle#installation){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/8a8al00ey/sabthrottle/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

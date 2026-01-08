@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - gluetun
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/qdm12/gluetun-wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/qmcgaw/gluetun/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Gluetun
+    summary: |
+      a VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.
+    link: https://github.com/qdm12/gluetun
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Gluetun
 
 ## Overview
@@ -14,15 +40,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/qdm12/gluetun-wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/qdm12/gluetun-wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/qmcgaw/gluetun/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

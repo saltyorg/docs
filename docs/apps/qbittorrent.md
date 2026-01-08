@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - qbittorrent
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/saltydk/qbittorrent/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/ugfKXpFND8
+      type: discord
+  project_description:
+    name: qBittorrent
+    summary: |
+      a free, open-source, cross-platform BitTorrent client, designed as a reliable and ad-free alternative to other clients like µTorrent.
+    link: https://www.qbittorrent.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # qBittorrent
 
 ## Overview
 
-[saltydk/docker-qbittorrent](https://github.com/saltydk/docker-qbittorrent) is a Docker container image for qBittorrent.
-
-> [qBittorrent](https://www.qbittorrent.org/) is a free, open-source, cross-platform BitTorrent client, designed as a reliable and ad-free alternative to other clients like µTorrent.
+[qBittorrent](https://www.qbittorrent.org) is a free, open-source, cross-platform BitTorrent client, designed as a reliable and ad-free alternative to other clients like µTorrent.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/qbittorrent/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract cta "Saltbox Setup Process"
 

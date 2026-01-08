@@ -2,20 +2,21 @@
 # {{ .Description.Name }}
 {{- /* Icon mapping for link types */ -}}
 {{- define "icon" -}}
-{{- if eq . "manual" -}}:material-bookshelf:
-{{- else if eq . "docs" -}}:material-bookshelf:
-{{- else if eq . "home" -}}:material-home:
+{{- if eq . "manual" -}}:fontawesome-solid-book-open:
+{{- else if eq . "documentation" -}}:fontawesome-solid-book-open:
+{{- else if eq . "home" -}}:fontawesome-solid-home:
 {{- else if eq . "releases" -}}:fontawesome-solid-newspaper:
 {{- else if eq . "releases-docker" -}}:fontawesome-brands-docker:
 {{- else if eq . "releases-github" -}}:fontawesome-brands-github:
 {{- else if eq . "releases-gcloud" -}}:simple-googlecloud:
-{{- else if eq . "community" -}}:fontawesome-solid-people-group:
+{{- else if eq . "community" -}}:fontawesome-solid-comments:
 {{- else if eq . "community-discord" -}}:fontawesome-brands-discord:
 {{- else if eq . "community-slack" -}}:fontawesome-brands-slack:
 {{- else if eq . "community-plex" -}}:material-plex:
-{{- else if eq . "discord" -}}:fontawesome-brands-discord:
-{{- else if eq . "github" -}}:fontawesome-brands-github:
 {{- else if eq . "docker" -}}:fontawesome-brands-docker:
+{{- else if eq . "github" -}}:fontawesome-brands-github:
+{{- else if eq . "gitlab" -}}:fontawesome-brands-gitlab:
+{{- else if eq . "discord" -}}:fontawesome-brands-discord:
 {{- end -}}
 {{- end }}
 

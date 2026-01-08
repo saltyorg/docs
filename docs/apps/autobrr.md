@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - autobrr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://autobrr.com/configuration/indexers
+      type: documentation
+    - name: Releases
+      url: https://github.com/autobrr/autobrr/pkgs/container/autobrr
+      type: github
+    - name: Community
+      url: https://discord.autobrr.com
+      type: discord
+  project_description:
+    name: Autobrr
+    summary: |
+      a modern download automation tool designed for torrents and Usenet, serving as a comprehensive replacement for older tools like autodl-irssi, trackarr, and flexget.
+    link: https://autobrr.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Autobrr
 
 ## Overview
@@ -14,7 +40,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://autobrr.com/configuration/indexers){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://autobrr.com/configuration/indexers){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/autobrr/autobrr/pkgs/container/autobrr){ .md-button .md-button--stretch }
 
@@ -23,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

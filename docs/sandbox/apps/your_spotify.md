@@ -6,19 +6,43 @@ tags:
   - yourspotify
   - spotify
   - analytics
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/your_spotify/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Your Spotify
+    summary: |
+      a self-hosted application that tracks your Spotify listening activity and provides a dashboard to explore detailed statistics about your music habits.
+    link: https://github.com/Yooooomi/your_spotify
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Your Spotify
 
 ## Overview
 
-[linuxserver/your_spotify](https://docs.linuxserver.io/images/docker-your_spotify) is a Docker container image for Yourspotify.
-
-> [Yourspotify](https://github.com/Yooooomi/your_spotify) is a self-hosted application that tracks what you listen and offers you a dashboard to explore statistics about it! It's composed of a web server which polls the Spotify API every now and then and a web application on which you can explore your statistics. [:material-bookshelf:](https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents)
+[Your Spotify](https://github.com/Yooooomi/your_spotify) is a self-hosted application that tracks your Spotify listening activity and provides a dashboard to explore detailed statistics about your music habits.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/your_spotify/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

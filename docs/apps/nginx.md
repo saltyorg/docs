@@ -6,19 +6,43 @@ tags:
   - nginx
   - web-server
   - reverse-proxy
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://nginx.org/en/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/nginx/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: NGINX
+    summary: |
+      a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications.
+    link: https://nginx.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # NGINX
 
 ## Overview
 
-[linuxserver/nginx](https://docs.linuxserver.io/images/docker-nginx) is a Docker container image for NGINX.
-
-> [NGINX](https://nginx.org) is a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications. [:material-bookshelf:](https://nginx.org/en/docs)
+[NGINX](https://nginx.org) is a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://nginx.org/en/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/nginx/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

@@ -6,8 +6,34 @@ tags:
   - koel
   - music
   - streaming
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/phanan/koel/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Koel
+    summary: |
+      a simple web-based personal audio streaming service written in Vue and Laravel that embraces modern web technologies. It features transparent FLAC support, cross-device sync, smart playlists, and multi-user support.
+    link: https://koel.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Koel
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/phanan/koel/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

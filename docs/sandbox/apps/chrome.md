@@ -6,27 +6,52 @@ tags:
   - chrome
   - browser
   - headless
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: manual
+    - name: Releases
+      url: https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Headless Chromes
+    summary: |
+      a way to run the Chrome browser in a headless environment.
+    link: https://developer.chrome.com/blog/headless-chrome
 ---
 
-# Alpine Chrome
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Headless Chromes
 
 ## Overview
 
-[Alpine Chrome](https://hub.docker.com/r/zenika/alpine-chrome) is a Docker image repository that provides a headless Chrome/Chromium browser built on the lightweight Alpine Linux base image.
-
-> [Headless Chromes](https://developer.chrome.com/blog/headless-chrome) is a way to run the Chrome browser in a headless environment.
+[Headless Chromes](https://developer.chrome.com/blog/headless-chrome) is a way to run the Chrome browser in a headless environment.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:simple-googlecloud:**Releases**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 This was created for use with Hoarder which calls for a specific version (123)
 

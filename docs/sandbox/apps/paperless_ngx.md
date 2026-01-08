@@ -6,8 +6,34 @@ tags:
   - paperless-ngx
   - productivity
   - documents
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://paperless-ngx.readthedocs.io/en/latest/index.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/paperlessngx/paperless-ngx/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Paperless NGX
+    summary: |
+      a simple Django application running in two parts: a Consumer (the thing that does the indexing) and the Web server (the part that lets you search & download already-indexed documents).
+    link: https://github.com/paperless-ngx/paperless-ngx#paperless-ngx
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Paperless NGX
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://paperless-ngx.readthedocs.io/en/latest/index.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://paperless-ngx.readthedocs.io/en/latest/index.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/paperlessngx/paperless-ngx/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

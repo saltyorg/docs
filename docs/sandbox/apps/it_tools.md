@@ -6,8 +6,34 @@ tags:
   - it-tools
   - development
   - utilities
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: manual
+    - name: Releases
+      url: https://hub.docker.com/r/corentinth/it-tools/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: IT Tools
+    summary: |
+      a collection of handy online tools for developers with great UX. It provides 71+ developer tools including code conversion, OTP generation, JWT parsing, SQL query building, and password generators.
+    link: https://it-tools.tech/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # IT Tools
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/corentinth/it-tools/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

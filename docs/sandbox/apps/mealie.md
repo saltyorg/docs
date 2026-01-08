@@ -6,8 +6,34 @@ tags:
   - mealie
   - recipes
   - cooking
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.mealie.io/documentation/getting-started/introduction
+      type: documentation
+    - name: Releases
+      url: https://github.com/-/mealie-recipes/packages/container/package/mealie
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Mealie
+    summary: |
+      aan intuitive and easy to use recipe management app. It's designed to make your life easier by being the best recipes management experience on the web and providing you with an easy to use interface to manage your growing collection of recipes.
+    link: https://mealie.io/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Mealie
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.mealie.io/documentation/getting-started/introduction){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.mealie.io/documentation/getting-started/introduction){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/-/mealie-recipes/packages/container/package/mealie){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

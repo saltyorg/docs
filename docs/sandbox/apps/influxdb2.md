@@ -6,8 +6,34 @@ tags:
   - influxdb2
   - database
   - timeseries
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.influxdata.com/influxdb/latest
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/influxdb/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: InfluxDB2
+    summary: |
+      an open source time series database for recording metrics, events, and analytics.
+    link: https://www.influxdata.com/products/influxdb/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # InfluxDB2
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.influxdata.com/influxdb/latest){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.influxdata.com/influxdb/latest){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/influxdb/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

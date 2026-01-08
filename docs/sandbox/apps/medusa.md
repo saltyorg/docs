@@ -6,19 +6,43 @@ tags:
   - medusa
   - media
   - tv
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/pymedusa/Medusa/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/medusa/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Medusa
+    summary: |
+      an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
+    link: https://pymedusa.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Medusa
 
 ## Overview
 
-[linuxserver/medusa](https://docs.linuxserver.io/images/docker-medusa) is a Docker container image for Medusa.
-
-> [Medusa](https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic. [:material-bookshelf:](https://github.com/pymedusa/Medusa/wiki)
+[Medusa](https://pymedusa.com) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/pymedusa/Medusa/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/medusa/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

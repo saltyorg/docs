@@ -6,8 +6,34 @@ tags:
   - fireflyiii-importer
   - finance
   - tools
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/fireflyiii/data-importer/tags
+      type: docker
+    - name: Community
+      url: https://github.com/orgs/firefly-iii/discussions
+      type: github
+  project_description:
+    name: Firefly III Data Importer
+    summary: |
+      a tool designed to import financial data into the Firefly III personal finance manager.
+    link: https://www.firefly-iii.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Firefly III Data Importer
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/fireflyiii/data-importer/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

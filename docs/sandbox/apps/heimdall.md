@@ -6,19 +6,43 @@ tags:
   - heimdall
   - dashboard
   - homepage
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/linuxserver/Heimdall-Apps
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/heimdall/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Heimdall
+    summary: |
+      an open-source web application dashboard designed to centralize access to web applications, services, and links in a single, customizable interface.
+    link: https://heimdall.site
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Heimdall
 
 ## Overview
 
-[linuxserver/heimdall](https://docs.linuxserver.io/images/docker-heimdall) is a Docker container image for Heimdall.
-
-> [Heimdall](https://heimdall.site/) is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo. [:material-bookshelf:](https://github.com/linuxserver/Heimdall-Apps)
+[Heimdall](https://heimdall.site) is an open-source web application dashboard designed to centralize access to web applications, services, and links in a single, customizable interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/linuxserver/Heimdall-Apps){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/heimdall/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

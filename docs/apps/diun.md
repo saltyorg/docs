@@ -4,25 +4,52 @@ hide:
   - tags
 tags:
   - diun
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://crazymax.dev/diun/notif/discord
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/crazymax/diun/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Diun
+    summary: |
+      a CLI application designed to receive notifications when a Docker image is updated on a Docker registry.
+    link: https://crazymax.dev/diun
 ---
 
-# diun
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Diun
 
 ## Overview
 
-[diun](https://crazymax.dev/diun/) Docker Image Update Notifier is a CLI application written in Go and delivered as a single executable (and a Docker image) to receive notifications when a Docker image is updated on a Docker registry.
+[Diun](https://crazymax.dev/diun) is a CLI application designed to receive notifications when a Docker image is updated on a Docker registry.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://crazymax.dev/diun/notif/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://crazymax.dev/diun/notif/discord){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/crazymax/diun/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

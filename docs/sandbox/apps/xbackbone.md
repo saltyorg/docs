@@ -7,27 +7,52 @@ tags:
   - xbackbone
   - file-sharing
   - upload
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://xbackbone.app/clients.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/xbackbone/tags
+      type: docker
+    - name: Community
+      url: https://github.com/sergix44/XBackBone/discussions
+      type: github
+  project_description:
+    name: XBackBone
+    summary: |
+      a simple, self-hosted, lightweight PHP file manager designed to integrate with instant sharing tools like ShareX and *NIX systems.
+    link: https://xbackbone.app
 ---
 
-# xbackbone
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# XBackBone
 
 ## Overview
 
-[linuxserver/xbackbone](https://docs.linuxserver.io/images/docker-xbackbone) is a Docker container image for xbackbone.
-
-> [xbackbone](https://xbackbone.url) is a... [:material-bookshelf:](https://xbackbone.docs.url)
+[XBackBone](https://xbackbone.app) is a simple, self-hosted, lightweight PHP file manager designed to integrate with instant sharing tools like ShareX and *NIX systems.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://xbackbone.app/clients.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/xbackbone/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/sergix44/XBackBone/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

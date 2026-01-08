@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - dozzle
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://dozzle.dev/guide/what-is-dozzle
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/amir20/dozzle/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Dozzle
+    summary: |
+      a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only. Dozzle can only access logs written to stdout or stderr which is the same functionality as the `docker logs` command. See below for more info on that.
+    link: https://dozzle.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Dozzle
 
 ## Overview
@@ -14,15 +40,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://dozzle.dev/guide/what-is-dozzle){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://dozzle.dev/guide/what-is-dozzle){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/amir20/dozzle/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

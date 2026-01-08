@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - bazarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/bazarr/pkgs/container/bazarr
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Bazarr
+    summary: |
+      a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+    link: https://www.bazarr.media
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Bazarr
 
 ## Overview
 
-[hotio/bazarr](https://hotio.dev/containers/bazarr) is a Docker container image for Bazarr.
-
-> [Bazarr](https://www.bazarr.media/) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+[Bazarr](https://www.bazarr.media) is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

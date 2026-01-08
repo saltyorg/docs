@@ -6,8 +6,34 @@ tags:
   - linkwarden
   - bookmarks
   - collaboration
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linkwarden.app
+      type: documentation
+    - name: Releases
+      url: https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden
+      type: github
+    - name: Community
+      url: https://discord.gg/CtuYV47nuJ
+      type: discord
+  project_description:
+    name: LinkWarden
+    summary: |
+      a self-hosted collaborative bookmark manager designed to collect, read, annotate, and fully preserve web content. It automatically captures screenshots, PDFs, and HTML files of bookmarked pages to prevent link rot.
+    link: https://linkwarden.app
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # LinkWarden
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linkwarden.app){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linkwarden.app){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

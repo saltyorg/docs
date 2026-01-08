@@ -6,19 +6,43 @@ tags:
   - homeassistant
   - automation
   - iot
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.home-assistant.io/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/homeassistant/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Home Assistant
+    summary: |
+      a localized, open-source home automation server system that operates independently of external cloud services, though it can optionally use them.
+    link: https://www.home-assistant.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Home Assistant
 
 ## Overview
 
-[linuxserver/homeassistant](https://docs.linuxserver.io/images/docker-homeassistant) is a Docker container image for Homeassistant.
-
-> [Homeassistant](https://www.home-assistant.io/) is a tool designed for (open source) home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. [:material-bookshelf:](https://www.home-assistant.io/docs/)
+[Home Assistant](https://www.home-assistant.io) is a localized, open-source home automation server system that operates independently of external cloud services, though it can optionally use them.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.home-assistant.io/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/homeassistant/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

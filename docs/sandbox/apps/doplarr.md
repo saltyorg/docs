@@ -6,19 +6,43 @@ tags:
   - doplarr
   - media
   - discord
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://kiranshila.github.io/Doplarr/#/configuration
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/doplarr/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Doplarr
+    summary: |
+      a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
+    link: https://kiranshila.github.io/Doplarr/#
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Doplarr
 
 ## Overview
 
-[linuxserver/doplarr](https://docs.linuxserver.io/images/docker-doplarr) is a Docker container image for Doplarr.
-
-> [Doplarr](https://kiranshila.github.io/Doplarr/#/) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only. [:material-bookshelf:](https://kiranshila.github.io/Doplarr/#/configuration)
+[Doplarr](https://kiranshila.github.io/Doplarr/#) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://kiranshila.github.io/Doplarr/#/configuration){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/doplarr/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

@@ -6,19 +6,43 @@ tags:
   - lazylibrarian
   - media
   - books
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://lazylibrarian.gitlab.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/lazylibrarian/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: LazyLibrarian
+    summary: |
+      a program to follow authors and grab metadata for all your digital reading needs.
+    link: https://gitlab.com/LazyLibrarian/LazyLibrarian
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # LazyLibrarian
 
 ## Overview
 
-[linuxserver/lazylibrarian](https://docs.linuxserver.io/images/docker-lazylibrarian) is a Docker container image for LazyLibrarian.
-
-> [LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian) is a program to follow authors and grab metadata for all your digital reading needs. [:material-bookshelf:](https://lazylibrarian.gitlab.io/)
+[LazyLibrarian](https://gitlab.com/LazyLibrarian/LazyLibrarian) is a program to follow authors and grab metadata for all your digital reading needs.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://lazylibrarian.gitlab.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/lazylibrarian/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

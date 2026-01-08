@@ -6,25 +6,52 @@ tags:
   - vnstat
   - monitoring
   - network
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/amarston/vnstat-dashboard/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: vnStat dashboard
+    summary: |
+      a user-friendly web dashboard for viewing the following:.
+    link: https://github.com/alexandermarston/vnstat-dashboard
 ---
 
-# vnStat
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# vnStat dashboard
 
 ## Overview
 
-[vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:
+[vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/amarston/vnstat-dashboard/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -4,17 +4,43 @@ hide:
   - tags
 tags:
   - authelia
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.authelia.com/configuration/prologue/introduction
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/authelia/authelia/tags
+      type: docker
+    - name: Community
+      url: https://discord.authelia.com
+      type: discord
+  project_description:
+    name: Authelia
+    summary: |
+      an open-source authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal.
+    link: https://www.authelia.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Authelia
 
 ## Overview
 
-[Authelia](https://www.authelia.com) (Authelia) is an open-source authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal.
+[Authelia](https://www.authelia.com) is an open-source authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.authelia.com/configuration/prologue/introduction){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.authelia.com/configuration/prologue/introduction){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/authelia/authelia/tags){ .md-button .md-button--stretch }
 
@@ -23,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

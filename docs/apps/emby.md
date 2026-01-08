@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - emby
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://support.emby.media/support/home
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/emby/tags
+      type: docker
+    - name: Community
+      url: https://emby.media/community
+      type: community
+  project_description:
+    name: Emby
+    summary: |
+      a media server designed to organize, play, and stream audio and video to a variety of devices.
+    link: https://emby.media
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Emby
 
 ## Overview
 
-[linuxserver/emby](https://docs.linuxserver.io/images/docker-emby) is a Docker container image for Emby.
-
-> [Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices. [:material-bookshelf:](https://support.emby.media/support/home) [:fontawesome-solid-people-group:](https://emby.media/community)
+[Emby](https://emby.media) is a media server designed to organize, play, and stream audio and video to a variety of devices.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://support.emby.media/support/home){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/emby/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://emby.media/community){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

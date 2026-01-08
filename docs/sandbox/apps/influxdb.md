@@ -6,8 +6,34 @@ tags:
   - influxdb
   - database
   - timeseries
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: hhttps://docs.influxdata.com/influxdb/v1
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/influxdb/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: InfluxDB
+    summary: |
+      an open source time series database for recording metrics, events, and analytics.
+    link: https://www.influxdata.com/products/influxdb/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # InfluxDB
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](hhttps://docs.influxdata.com/influxdb/v1){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](hhttps://docs.influxdata.com/influxdb/v1){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/influxdb/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! note
     This role is version locked to version `1.8.4` to support the `varken` role. To utilize InfluxDB version 2.0, utilize the `influxdb2` role.

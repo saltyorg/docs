@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - overseerr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.overseerr.dev
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/sctx/overseerr/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/seerr
+      type: discord
+  project_description:
+    name: Overseerr
+    summary: |
+      a free and open-source request management and media discovery tool designed to work with the Plex ecosystem.
+    link: https://overseerr.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Overseerr
 
 ## Overview
@@ -14,15 +40,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.overseerr.dev){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.overseerr.dev){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/sctx/overseerr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](https://discord.gg/seerr){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/seerr){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract cta "Saltbox Setup Process"
 

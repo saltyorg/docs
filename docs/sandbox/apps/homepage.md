@@ -6,8 +6,34 @@ tags:
   - homepage
   - dashboard
   - static
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://gethomepage.dev/latest/configs
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Homepage
+    summary: |
+      a modern (fully static, fast), secure (fully proxied), customizable application dashboard with integrations for more than 25 services and translations for over 15 languages. Easily configured via YAML files (or discovery via docker labels).
+    link: https://github.com/benphelps/homepage
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Homepage
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://gethomepage.dev/latest/configs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://gethomepage.dev/latest/configs){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

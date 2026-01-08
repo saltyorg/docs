@@ -6,9 +6,35 @@ tags:
   - n8n
   - automation
   - workflow
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.n8n.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/n8nio/n8n/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: n8n - Secure Workflow Automation for Technical Teams
+    summary: |
+      a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
+    link: https://n8n.io/
 ---
 
-# n8n
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# n8n - Secure Workflow Automation for Technical Teams
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.n8n.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.n8n.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/n8nio/n8n/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

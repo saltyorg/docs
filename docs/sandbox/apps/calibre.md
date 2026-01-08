@@ -6,19 +6,43 @@ tags:
   - calibre
   - ebooks
   - management
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://manual.calibre-ebook.com
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/calibre/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Calibre
+    summary: |
+      a cross-platform, free, and open-source suite of e-book software designed for managing digital book collections.
+    link: https://calibre-ebook.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Calibre
 
 ## Overview
 
-[linuxserver/calibre](https://docs.linuxserver.io/images/docker-calibre) is a Docker container image for Calibre.
-
-> [Calibre](https://calibre-ebook.com/) is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts. [:material-bookshelf:](https://manual.calibre-ebook.com/)
+[Calibre](https://calibre-ebook.com) is a cross-platform, free, and open-source suite of e-book software designed for managing digital book collections.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://manual.calibre-ebook.com){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/calibre/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

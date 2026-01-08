@@ -6,8 +6,34 @@ tags:
   - jellystat
   - jellyfin
   - statistics
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/cyfershepard/jellystat/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/9SMBj2RyEe
+      type: discord
+  project_description:
+    name: Jellystat
+    summary: |
+      a free and open source statistics web application for Jellyfin that provides a dashboard with information about the server, libraries, users, and playback activity. Still in development with some expected functionality gaps.
+    link: https://github.com/CyferShepard/Jellystat
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Jellystat
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/cyfershepard/jellystat/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

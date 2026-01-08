@@ -5,19 +5,43 @@ hide:
 tags:
   - firefox
   - browser
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://support.plex.tv/articles/categories/plex-media-server
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jlesage/firefox/tags
+      type: docker
+    - name: Community
+      url: https://github.com/jlesage/docker-firefox/discussions
+      type: github
+  project_description:
+    name: Docker container for Firefox
+    summary: |
+      a Docker container image that provides the Mozilla Firefox web browser, accessible through a modern web browser or any VNC client.
+    link: https://github.com/jlesage/docker-firefox#readme
 ---
 
-# Firefox
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Docker container for Firefox
 
 ## Overview
 
 [Docker container for Firefox](https://github.com/jlesage/docker-firefox#readme) is a Docker container image that provides the Mozilla Firefox web browser, accessible through a modern web browser or any VNC client.
 
-> [Mozilla Firefox](https://www.firefox.com) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary, Mozilla Corporation.
-
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/jlesage/docker-firefox/blob/master/README.md#usage){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/firefox/tags){ .md-button .md-button--stretch }
 
@@ -26,6 +50,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

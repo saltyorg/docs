@@ -17,7 +17,7 @@ saltbox_automation:
   app_links:
     - name: Manual
       url: https://support.plex.tv/articles/categories/plex-media-server
-      type: docs
+      type: documentation
     - name: Releases
       url: https://hub.docker.com/r/plexinc/pms-docker/tags
       type: releases-docker
@@ -43,7 +43,7 @@ saltbox_automation:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/plexinc/pms-docker/tags){ .md-button .md-button--stretch }
 

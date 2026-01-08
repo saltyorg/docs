@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - petio
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.petio.tv
+      type: documentation
+    - name: Releases
+      url: https://github.com/petio-team/petio/pkgs/container/petio
+      type: github
+    - name: Community
+      url: https://discord.gg/bseGmrUd3N
+      type: discord
+  project_description:
+    name: Petio
+    summary: |
+      a third party companion app available to Plex server owners to allow their users to request, review and discover content.
+    link: https://petio.tv
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Petio
 
 ## Overview
@@ -14,7 +40,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.petio.tv){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.petio.tv){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/petio-team/petio/pkgs/container/petio){ .md-button .md-button--stretch }
 
@@ -23,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

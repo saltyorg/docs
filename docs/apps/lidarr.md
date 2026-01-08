@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - lidarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/lidarr/pkgs/container/lidarr
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Lidarr
+    summary: |
+      a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
+    link: https://lidarr.audio
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Lidarr
 
 ## Overview
 
-[hotio/lidarr](https://hotio.dev/containers/lidarr) is a Docker container image for Lidarr.
-
-> [Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
+[Lidarr](https://lidarr.audio) is a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/lidarr/pkgs/container/lidarr){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

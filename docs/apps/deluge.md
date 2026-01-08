@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - deluge
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/general/container-customization
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/deluge/tags
+      type: docker
+    - name: Community
+      url: https://forum.deluge-torrent.org
+      type: community
+  project_description:
+    name: Deluge
+    summary: |
+      a full-featured BitTorrent client for Linux, OS X, Unix and Windows.
+    link: https://deluge-torrent.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Deluge
 
 ## Overview
 
-[linuxserver/deluge](https://docs.linuxserver.io/images/docker-deluge) is a Docker container image for Deluge.
-
-> [Deluge](https://deluge-torrent.org/) is a torrent client that can be used as an alternative to qbittorrent. [:material-bookshelf:](https://deluge-torrent.org/userguide)
+[Deluge](https://deluge-torrent.org) is a full-featured BitTorrent client for Linux, OS X, Unix and Windows.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/deluge/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://forum.deluge-torrent.org){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

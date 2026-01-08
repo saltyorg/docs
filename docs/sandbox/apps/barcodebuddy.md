@@ -6,8 +6,34 @@ tags:
   - barcodebuddy
   - grocy
   - inventory
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://barcodebuddy-documentation.readthedocs.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/f0rc3/barcodebuddy/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: BarcodeBuddy
+    summary: |
+      a barcode system for Grocy that enables barcode scanning and product management. It automatically handles known and unknown barcodes, integrating seamlessly with Grocy's inventory management system.
+    link: https://github.com/Forceu/barcodebuddy
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # BarcodeBuddy
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://barcodebuddy-documentation.readthedocs.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://barcodebuddy-documentation.readthedocs.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/f0rc3/barcodebuddy/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

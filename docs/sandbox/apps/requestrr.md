@@ -6,8 +6,34 @@ tags:
   - requestrr
   - discord
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/thomst08/requestrr/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/thomst08/requestrr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Requestrr
+    summary: |
+      a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms.
+    link: https://github.com/thomst08/requestrr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Requestrr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/thomst08/requestrr/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/thomst08/requestrr/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/thomst08/requestrr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

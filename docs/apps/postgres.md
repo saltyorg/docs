@@ -4,25 +4,52 @@ hide:
   - tags
 tags:
   - postgres
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.postgresql.org/docs/12/index.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/postgres/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: PostgreSQL
+    summary: |
+      an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+    link: https://www.postgresql.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # PostgreSQL
 
 ## Overview
 
-[PostgreSQL](https://www.postgresql.org/), often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+[PostgreSQL](https://www.postgresql.org) is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.postgresql.org/docs/12/index.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.postgresql.org/docs/12/index.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/postgres/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

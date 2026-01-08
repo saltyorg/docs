@@ -5,8 +5,34 @@ hide:
   - tags
 tags:
   - organizr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.organizr.app
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/organizr/organizr/tags
+      type: docker
+    - name: Community
+      url: https://organizr.app/discord
+      type: discord
+  project_description:
+    name: Organizr
+    summary: |
+      a free, open-source, web-based dashboard designed to organize and manage multiple server services, particularly for home theater PCs (HTPCs) and homelabs.
+    link: https://organizr.app
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Organizr
 
 ## Overview
@@ -15,7 +41,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.organizr.app){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.organizr.app){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/organizr/organizr/tags){ .md-button .md-button--stretch }
 
@@ -24,6 +50,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

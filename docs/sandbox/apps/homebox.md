@@ -6,8 +6,34 @@ tags:
   - homebox
   - productivity
   - inventory
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://homebox.software/en/quick-start.html
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Homebox
+    summary: |
+      the inventory and organization system built for the Home User! With a focus on simplicity and ease of use, Homebox is the perfect solution for your home inventory, organization, and management needs.
+    link: https://homebox.software/en/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Homebox
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://homebox.software/en/quick-start.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://homebox.software/en/quick-start.html){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

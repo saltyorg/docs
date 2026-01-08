@@ -6,25 +6,24 @@ tags:
   - a-train
   - train
   - google
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  project_description:
+    name: A-Train
+    summary: |
+      the official Autoscan trigger that listens for changes within Google Drive. It is the successor of Autoscan's Bernard trigger, which unfortunately contains enough logic errors to prompt a rewrite.
+    link: https://github.com/m-rots/a-train
 ---
 
-# A-Train
-
-## Overview
-
-[A-Train](https://github.com/m-rots/a-train) is the official Autoscan trigger that listens for changes within Google Drive. It is the successor of Autoscan's Bernard trigger, which unfortunately contains enough logic errors to prompt a rewrite.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

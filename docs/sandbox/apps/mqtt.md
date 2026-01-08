@@ -6,25 +6,52 @@ tags:
   - mqtt
   - automation
   - messaging
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://mosquitto.org/man/mosquitto-conf-5.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/eclipse-mosquitto/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: MQTT
+    summary: |
+      a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
+    link: https://mosquitto.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # MQTT
 
 ## Overview
 
-[MQTT](https://mosquitto.org/) (or Eclipse Mosquitto) is a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
+[MQTT](https://mosquitto.org/) is a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://mosquitto.org/man/mosquitto-conf-5.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://mosquitto.org/man/mosquitto-conf-5.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/eclipse-mosquitto/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

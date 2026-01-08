@@ -6,8 +6,34 @@ tags:
   - flaresolverr
   - networking
   - proxy
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/FlareSolverr/FlareSolverr
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/flaresolverr/flaresolverr/tags
+      type: docker
+    - name: Community
+      url: https://github.com/FlareSolverr/FlareSolverr/discussions
+      type: github
+  project_description:
+    name: FlareSolverr
+    summary: |
+      a proxy server to bypass Cloudflare protection.
+    link: https://flaresolverr.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # FlareSolverr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/FlareSolverr/FlareSolverr){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/FlareSolverr/FlareSolverr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/flaresolverr/flaresolverr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](https://github.com/FlareSolverr/FlareSolverr/discussions){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/FlareSolverr/FlareSolverr/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

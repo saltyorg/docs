@@ -6,19 +6,43 @@ tags:
   - unifi
   - networking
   - wireless
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/unifi-network-application/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Unifi Network Application
+    summary: |
+      a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+    link: https://www.ui.com/download/unifi
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Unifi Network Application
 
 ## Overview
 
-[linuxserver/unifi-network-application](https://docs.linuxserver.io/images/docker-unifi-network-application) is a Docker container image for Unifi Network Application.
-
-> [Unifi Network Application](https://www.ui.com/download/unifi/) software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. [:material-bookshelf:](https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md)
+[Unifi Network Application](https://www.ui.com/download/unifi) is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/unifi-network-application/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! warning
     This role is a replacement for the previous Unifi Controller role. This is not an in-place replacement. In order to migrate, you must perform a full backup from the Unifi web interface, and restore from that backup when running the setup wizard in a fresh instance of the Unifi Network Application. You must rename/remove the previous appdata from `/opt/unifi` before deploying the Unifi Network Application role.

@@ -6,19 +6,43 @@ tags:
   - freshrss
   - media
   - rss
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://freshrss.github.io/FreshRSS
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/freshrss/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: FreshRSS
+    summary: |
+      a self-hosted RSS and Atom feed aggregator.
+    link: https://freshrss.org
 ---
 
-# Freshrss
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# FreshRSS
 
 ## Overview
 
-[linuxserver/freshrss](https://docs.linuxserver.io/images/docker-freshrss) is a Docker container image for Freshrss.
-
-> [Freshrss](https://freshrss.org/) is a self-hosted RSS and Atom feed aggregator. [:material-bookshelf:](https://freshrss.github.io/FreshRSS/)
+[FreshRSS](https://freshrss.org) is a self-hosted RSS and Atom feed aggregator.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://freshrss.github.io/FreshRSS){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/freshrss/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

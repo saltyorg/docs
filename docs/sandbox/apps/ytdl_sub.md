@@ -6,8 +6,34 @@ tags:
   - ytdl-sub
   - youtube
   - downloads
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://ytdl-sub.readthedocs.io
+      type: documentation
+    - name: Releases
+      url: https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: ytdl-sub
+    summary: |
+      a lightweight tool to automate downloading and metadata generation with yt-dlp. It uses YAML files to define subscriptions and prepares media for popular media players like Plex, Jellyfin, Kodi, and Emby.
+    link: https://github.com/jmbannon/ytdl-sub
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # ytdl-sub
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://ytdl-sub.readthedocs.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://ytdl-sub.readthedocs.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

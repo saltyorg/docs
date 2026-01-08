@@ -6,8 +6,34 @@ tags:
   - adguard
   - dns
   - adblock
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://kb.adguard.com/en/home/overview
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/adguard/adguardhome/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: AdGuard Home
+    summary: |
+      a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network. After you set it up, it'll cover ALL devices in your home Wi-Fi network, and you won't need any client-side software for that. At the same time, it provides a user-friendly web interface that allows you to easily manage the traffic, even from a mobile device.
+    link: https://hub.docker.com/r/adguard/adguardhome
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # AdGuard Home
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://kb.adguard.com/en/home/overview){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://kb.adguard.com/en/home/overview){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/adguard/adguardhome/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! info
     AdGuard Home is a latency sensitive DNS server, so it's discouraged to use it when your server is far away from you.

@@ -6,27 +6,52 @@ tags:
   - changedetection
   - monitoring
   - websites
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/general/container-customization
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/changedetection.io/tags
+      type: docker
+    - name: Community
+      url: https://github.com/dgtlmoon/changedetection.io/discussions
+      type: github
+  project_description:
+    name: changedetection.io
+    summary: |
+      a tool for tracking changes to websites.
+    link: https://github.com/dgtlmoon/changedetection.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # changedetection.io
 
 ## Overview
 
-[linuxserver/changedetection.io](https://docs.linuxserver.io/images/docker-changedetection.io) is a Docker container image for changedetection.
-
-> [changedetection.io](https://github.com/dgtlmoon/changedetection.io) is a tool for tracking changes to websites. [:material-bookshelf:]
+[changedetection.io](https://github.com/dgtlmoon/changedetection.io) is a tool for tracking changes to websites.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/changedetection.io/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/dgtlmoon/changedetection.io/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,25 +6,52 @@ tags:
   - cadvisor
   - monitoring
   - docker
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/google/cadvisor/tree/master/docs
+      type: documentation
+    - name: Releases
+      url: https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: cAdvisor
+    summary: |
+      an open-source monitoring tool to collect, aggregate, process, and export resource usage and performance characteristics of running containers.
+    link: https://github.com/google/cadvisor
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # cAdvisor
 
 ## Overview
 
-[cAdvisor](https://github.com/google/cadvisor) (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers.
+[cAdvisor](https://github.com/google/cadvisor) is an open-source monitoring tool to collect, aggregate, process, and export resource usage and performance characteristics of running containers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/google/cadvisor/tree/master/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/google/cadvisor/tree/master/docs){ .md-button .md-button--stretch }
 
-[:simple-googlecloud:**Releases**](https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

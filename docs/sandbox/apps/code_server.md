@@ -6,8 +6,34 @@ tags:
   - code-server
   - vscode
   - development
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://code.visualstudio.com/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/codercom/code-server/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: code-server
+    summary: |
+      an open-source platform that enables developers to run Microsoft Visual Studio Code (VS Code) on a remote server and access it through a web browser, transforming VS Code into a cloud-based integrated development environment (IDE).
+    link: https://github.com/coder/code-server
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # code-server
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://code.visualstudio.com/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://code.visualstudio.com/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/codercom/code-server/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

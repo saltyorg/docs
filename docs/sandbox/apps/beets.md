@@ -6,19 +6,43 @@ tags:
   - beets
   - music
   - metadata
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: http://beets.readthedocs.org
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/beets/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Beets
+    summary: |
+      a media library management system designed for music enthusiasts and obsessive music geeks, aiming to organize music collections accurately and efficiently.
+    link: https://beets.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Beets
 
 ## Overview
 
-[linuxserver/beets](https://docs.linuxserver.io/images/docker-beets) is a Docker container image for Beets.
-
-> [Beets](https://beets.io/) is a media library management system designed for music enthusiasts and obsessive music geeks, aiming to organize music collections accurately and efficiently. [:material-bookshelf:](http://beets.readthedocs.org/)
+[Beets](https://beets.io) is a media library management system designed for music enthusiasts and obsessive music geeks, aiming to organize music collections accurately and efficiently.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](http://beets.readthedocs.org){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/beets/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

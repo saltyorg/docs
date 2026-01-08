@@ -6,8 +6,34 @@ tags:
   - duplicati
   - backup
   - sync
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://duplicati.readthedocs.io/en/latest
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/duplicati/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Duplicati
+    summary: |
+      a free, open-source backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with a variety of storage types, including FTP, SSH, WebDAV, and cloud services like Backblaze B2, Tardigrade, and Amazon S3.
+    link: https://duplicati.com/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Duplicati
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://duplicati.readthedocs.io/en/latest){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://duplicati.readthedocs.io/en/latest){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/duplicati/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

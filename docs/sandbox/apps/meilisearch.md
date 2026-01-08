@@ -6,17 +6,43 @@ tags:
   - meilisearch
   - search
   - database
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.meilisearch.com/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/getmeili/meilisearch/tags
+      type: docker
+    - name: Community
+      url: https://discord.meilisearch.com
+      type: discord
+  project_description:
+    name: Meilisearch
+    summary: |
+      an AI powered search tool.
+    link: https://www.meilisearch.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Meilisearch
 
 ## Overview
 
-[Meilisearch](https://www.meilisearch.com/) Meilisearch is an AI powered search tool.
+[Meilisearch](https://www.meilisearch.com) is an AI powered search tool.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.meilisearch.com/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.meilisearch.com/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/getmeili/meilisearch/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

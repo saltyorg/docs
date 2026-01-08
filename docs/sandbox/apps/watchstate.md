@@ -7,8 +7,34 @@ tags:
   - emby
   - jellyfin
   - plex
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/ArabCoders/watchstate/blob/master/FAQ.md
+      type: documentation
+    - name: Releases
+      url: https://github.com/arabcoders/watchstate/pkgs/container/watchstate
+      type: github
+    - name: Community
+      url: https://discord.gg/haUXHJyj6Y
+      type: discord
+  project_description:
+    name: WatchState
+    summary: |
+      a self-hosted, open-source service designed to sync play states, including watch progress and history, across media servers such as Plex, Jellyfin, and Emby without relying on third-party servers or cloud services.
+    link: https://github.com/arabcoders/watchstate
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # WatchState
 
 ## Overview
@@ -17,15 +43,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/ArabCoders/watchstate/blob/master/FAQ.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/ArabCoders/watchstate/blob/master/FAQ.md){ .md-button .md-button--stretch }
 
-[:octicons-container-16:**Releases**](https://github.com/arabcoders/watchstate/pkgs/container/watchstate){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/arabcoders/watchstate/pkgs/container/watchstate){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/haUXHJyj6Y){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - prowlarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/prowlarr/pkgs/container/prowlarr
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Prowlarr
+    summary: |
+      an open-source indexer manager and proxy, designed to integrate with various PVR applications such as Sonarr, Radarr, Lidarr and Mylar3.
+    link: https://prowlarr.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Prowlarr
 
 ## Overview
 
-[hotio/prowlarr](https://hotio.dev/containers/prowlarr) is a Docker container image for Prowlarr.
-
-> [Prowlarr](https://prowlarr.com/) is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+[Prowlarr](https://prowlarr.com) is an open-source indexer manager and proxy, designed to integrate with various PVR applications such as Sonarr, Radarr, Lidarr and Mylar3.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/prowlarr/pkgs/container/prowlarr){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

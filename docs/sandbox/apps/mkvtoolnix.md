@@ -6,8 +6,34 @@ tags:
   - mkvtoolnix
   - media
   - tools
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://mkvtoolnix.download/docs.html
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jlesage/mkvtoolnix/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: MKVToolNix
+    summary: |
+      a set of tools to create, alter and inspect Matroska files.
+    link: https://mkvtoolnix.download
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # MKVToolNix
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://mkvtoolnix.download/docs.html){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://mkvtoolnix.download/docs.html){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/mkvtoolnix/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

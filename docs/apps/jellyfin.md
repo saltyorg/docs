@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - jellyfin
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/jellyfin/pkgs/container/jellyfin
+      type: github
+    - name: Community
+      url: https://forum.jellyfin.org
+      type: community
+  project_description:
+    name: Jellyfin
+    summary: |
+      a free and open-source media server and suite of multimedia applications designed to organize, manage, and share digital media files across networked devices.
+    link: https://jellyfin.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Jellyfin
 
 ## Overview
 
-[hotio/jellyfin](https://hotio.dev/containers/jellyfin) is a Docker container image for Jellyfin.
-
-> [Jellyfin](https://jellyfin.org/) is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
+[Jellyfin](https://jellyfin.org) is a free and open-source media server and suite of multimedia applications designed to organize, manage, and share digital media files across networked devices.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/jellyfin/pkgs/container/jellyfin){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://forum.jellyfin.org){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,9 +6,35 @@ tags:
   - airdcpp
   - p2p
   - downloading
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://airdcpp-web.github.io/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/gangefors/airdcpp-webclient/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: AirDC++
+    summary: |
+      an easy to use client for [Advanced Direct Connect](http://en.wikipedia.org/wiki/Advanced_Direct_Connect) and [Direct Connect](http://en.wikipedia.org/wiki/Direct_Connect_(file_sharing)) networks. You are able to join "hubs" with other users, and chat, perform searches and browse the share of each user. It allows you to share files with friends and other people.
+    link: https://www.airdcpp.net/
 ---
 
-# AirDC++ {#airdcpp}
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# AirDC++
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://airdcpp-web.github.io/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://airdcpp-web.github.io/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gangefors/airdcpp-webclient/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

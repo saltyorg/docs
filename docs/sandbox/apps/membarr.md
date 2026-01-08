@@ -6,8 +6,34 @@ tags:
   - membarr
   - discord
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/Yoruio/Membarr
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/yoruio/membarr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Membarr
+    summary: |
+      a fork of Invitarr that invites discord users to Plex and Jellyfin. You can also automate this bot to invite discord users to a media server once a certain role is given to a user or the user can also be added manually.
+    link: https://github.com/Yoruio/Membarr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Membarr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/Yoruio/Membarr){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/Yoruio/Membarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/yoruio/membarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

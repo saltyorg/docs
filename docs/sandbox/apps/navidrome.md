@@ -6,25 +6,52 @@ tags:
   - navidrome
   - media
   - music
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.navidrome.org/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/deluan/navidrome/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Navidrome
+    summary: |
+      an open source music server and streamer that allows users to listen to their personal music collection from any browser or mobile device, functioning similarly to commercial services like Spotify or Apple Music.
+    link: https://www.navidrome.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Navidrome
 
 ## Overview
 
-[Navidrome](https://www.navidrome.org/) allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.
+[Navidrome](https://www.navidrome.org) is an open source music server and streamer that allows users to listen to their personal music collection from any browser or mobile device, functioning similarly to commercial services like Spotify or Apple Music.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.navidrome.org/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.navidrome.org/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/deluan/navidrome/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

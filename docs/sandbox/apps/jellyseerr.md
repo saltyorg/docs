@@ -6,8 +6,34 @@ tags:
   - jellyseerr
   - media
   - requests
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.jellyseerr.dev
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/fallenbagel/jellyseerr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Jellyseerr
+    summary: |
+      a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
+    link: https://docs.jellyseerr.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Jellyseerr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.jellyseerr.dev){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.jellyseerr.dev){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/fallenbagel/jellyseerr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

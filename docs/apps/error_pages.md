@@ -6,25 +6,52 @@ tags:
   - error-pages
   - traefik
   - error-handling
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/tarampampam/error-pages/blob/master/README.md#-usage-scenarios
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/tarampampam/error-pages/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Error Pages
+    summary: |
+      a GitHub repository that provides visually appealing, customizable error pages for HTTP servers, Kubernetes clusters, and other systems like Traefik and Nginx.
+    link: https://github.com/tarampampam/error-pages
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Error Pages
 
 ## Overview
 
-Custom error pages that display when services return HTTP errors (400-599). Deployed automatically with Traefik.
+[Error Pages](https://github.com/tarampampam/error-pages) is a GitHub repository that provides visually appealing, customizable error pages for HTTP servers, Kubernetes clusters, and other systems like Traefik and Nginx.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/tarampampam/error-pages){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/tarampampam/error-pages/blob/master/README.md#-usage-scenarios){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/tarampampam/error-pages/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Installation
 

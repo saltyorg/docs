@@ -6,19 +6,43 @@ tags:
   - speedtest
   - monitoring
   - network
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/librespeed/speedtest/blob/master/doc.md
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/librespeed/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Speedtest
+    summary: |
+      a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
+    link: https://github.com/librespeed/speedtest
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Speedtest
 
 ## Overview
 
-[linuxserver/librespeed](https://docs.linuxserver.io/images/docker-librespeed) is a Docker container image for Speedtest.
-
-> [Speedtest](https://github.com/librespeed/speedtest)  is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers. [:material-bookshelf:](https://github.com/librespeed/speedtest)
+[Speedtest](https://github.com/librespeed/speedtest) is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/librespeed/speedtest/blob/master/doc.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/librespeed/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

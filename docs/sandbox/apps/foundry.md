@@ -5,8 +5,34 @@ hide:
 tags:
   - table top
   - gaming
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://foundryvtt.com/kb
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/ajnart/Foundry/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Foundry
+    summary: |
+      a modern, feature-rich "virtual tabletop" (a "VTT"). Foundry VTT serves as a digital "tabletop" so that you can gather your friends and party members and have an excellent role-playing game experience together digitally.
+    link: https://foundryvtt.com/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Foundry
 
 ## Overview
@@ -15,15 +41,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://foundryvtt.com/kb){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://foundryvtt.com/kb){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/ajnart/Foundry/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -7,25 +7,34 @@ tags:
   - p2p
   - rutorrent
   - torrent
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/Novik/ruTorrent/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/kudeta/ru-rtorrent/tags
+      type: docker
+    - name: Community
+      url: https://github.com/Novik/ruTorrent/discussions
+      type: github
+  project_description:
+    name: ruTorrent
+    summary: |
+      a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent.
+    link: https://github.com/Novik/ruTorrent
 ---
 
-# ruTorrent
-
-## Overview
-
-[ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://github.com/Novik/ruTorrent/wiki){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kudeta/ru-rtorrent/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](https://github.com/Novik/ruTorrent/discussions){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

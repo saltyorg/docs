@@ -6,8 +6,34 @@ tags:
   - xteve
   - iptv
   - streaming
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/dnsforge/xteve/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: xTeVe
+    summary: |
+      a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
+    link: https://github.com/xteve-project/xTeVe
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # xTeVe
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dnsforge/xteve/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

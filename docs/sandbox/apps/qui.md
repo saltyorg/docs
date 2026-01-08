@@ -6,8 +6,34 @@ tags:
   - qui
   - torrent
   - qbittorrent
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/autobrr/qui/blob/main/README.md#configuration
+      type: documentation
+    - name: Releases
+      url: https://github.com/autobrr/qui/pkgs/container/qui
+      type: github
+    - name: Community
+      url: https://discord.autobrr.com/qui
+      type: discord
+  project_description:
+    name: qui
+    summary: |
+      a fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
+    link: https://github.com/autobrr/qui
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # qui
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/autobrr/qui/blob/main/README.md#configuration){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/autobrr/qui/blob/main/README.md#configuration){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/autobrr/qui/pkgs/container/qui){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

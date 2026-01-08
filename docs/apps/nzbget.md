@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - nzbget
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/nzbget/pkgs/container/nzbget
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: NZBGet
+    summary: |
+      a very efficient, cross-platform usenet downloader.
+    link: https://nzbget.net
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # NZBGet
 
 ## Overview
 
-[hotio/nzbget](https://hotio.dev/containers/nzbget) is a Docker container image for NZBGet.
-
-> [NZBGet](https://nzbget.net/) (by Andrey Prygunkov aka hugbug) is a very efficient, cross-platform usenet downloader.
+[NZBGet](https://nzbget.net) is a very efficient, cross-platform usenet downloader.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

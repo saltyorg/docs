@@ -6,27 +6,52 @@ tags:
   - mylar3
   - media
   - comics
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://mylarcomics.com/docs/category/guides
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/mylar3/tags
+      type: docker
+    - name: Community
+      url: https://forum.mylarcomics.com
+      type: community
+  project_description:
+    name: Mylar3
+    summary: |
+      an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
+    link: https://mylarcomics.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Mylar3
 
 ## Overview
 
-[linuxserver/mylar3](https://docs.linuxserver.io/images/docker-mylar3) is a Docker container image for Mylar3.
-
-> [Mylar3](https://mylarcomics.com) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL. [:material-bookshelf:](https://mylarcomics.com/docs/category/guides) [:fontawesome-solid-comments:](https://forum.mylarcomics.com)
+[Mylar3](https://mylarcomics.com) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://mylarcomics.com/docs/category/guides){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/mylar3/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://forum.mylarcomics.com){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -11,23 +11,8 @@ saltbox_automation:
     inventory: false
 ---
 
-# Varken
-
-## Overview
-
-[Varken](https://github.com/thezak48/Varken) is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-github:**Releases**](https://github.com/thezak48/Varken/pkgs/container/varken){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

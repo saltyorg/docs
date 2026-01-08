@@ -6,8 +6,34 @@ tags:
   - delugevpn
   - download
   - vpn
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://dev.deluge-torrent.org/wiki/UserGuide
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/binhex/arch-delugevpn/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: DelugeVPN
+    summary: |
+      a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
+    link: https://deluge-torrent.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # DelugeVPN
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://dev.deluge-torrent.org/wiki/UserGuide){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://dev.deluge-torrent.org/wiki/UserGuide){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/binhex/arch-delugevpn/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

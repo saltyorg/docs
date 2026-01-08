@@ -6,8 +6,34 @@ tags:
   - uptime-kuma
   - monitoring
   - uptime
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/louislam/uptime-kuma/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/louislam/uptime-kuma/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Uptime Kuma
+    summary: |
+      a self-hosted monitoring tool like "Uptime Robot".
+    link: https://github.com/louislam/uptime-kuma
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Uptime Kuma
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/louislam/uptime-kuma/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/louislam/uptime-kuma/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/louislam/uptime-kuma/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

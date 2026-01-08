@@ -6,25 +6,52 @@ tags:
   - filebrowser
   - file-management
   - admin
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://filebrowser.org/features
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/filebrowser/filebrowser/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: File Browser
+    summary: |
+      is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!.
+    link: https://filebrowser.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # File Browser
 
 ## Overview
 
-[File Browser](https://filebrowser.org/) is is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!
+[File Browser](https://filebrowser.org/) is is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface. You have many available features!.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://filebrowser.org/features){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://filebrowser.org/features){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/filebrowser/filebrowser/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

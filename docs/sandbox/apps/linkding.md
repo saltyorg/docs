@@ -6,8 +6,34 @@ tags:
   - linkding
   - productivity
   - bookmarks
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/sissbruecker/linkding#documentation
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/sissbruecker/linkding/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Linkding
+    summary: |
+      a simple bookmark service that you can host yourself. It's designed be to be minimal and fast.
+    link: https://github.com/sissbruecker/linkding#introduction
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Linkding
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/sissbruecker/linkding#documentation){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/sissbruecker/linkding#documentation){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/sissbruecker/linkding/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

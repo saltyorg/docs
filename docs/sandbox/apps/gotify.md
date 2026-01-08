@@ -6,25 +6,52 @@ tags:
   - gotify
   - notifications
   - messaging
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://gotify.github.io/api-docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/gotify/server/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Gotify
+    summary: |
+      a simple server for sending and receiving messages.
+    link: https://gotify.net
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Gotify
 
 ## Overview
 
-[Gotify](https://gotify.net/) a simple server for sending and receiving messages.
+[Gotify](https://gotify.net) is a simple server for sending and receiving messages.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://gotify.github.io/api-docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://gotify.github.io/api-docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gotify/server/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

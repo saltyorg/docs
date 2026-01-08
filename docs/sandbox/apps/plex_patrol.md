@@ -6,25 +6,34 @@ tags:
   - plex-patrol
   - plex
   - monitoring
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/l3uddz/plex_patrol
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/cloudb0x/plex_patrol/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Plex Patrol
+    summary: |
+      a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
+    link: https://github.com/l3uddz/plex_patrol
 ---
 
-# Plex Patrol
-
-## Overview
-
-[Plex Patrol](https://github.com/l3uddz/plex_patrol) is a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://github.com/l3uddz/plex_patrol){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/cloudb0x/plex_patrol/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

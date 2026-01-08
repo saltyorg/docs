@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - comic
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/comixed/comixed/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/comixed/comixed/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: ComiXed
+    summary: |
+      an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
+    link: https://github.com/comixed/comixed
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # ComiXed
 
 ## Overview
@@ -14,15 +40,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/comixed/comixed/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/comixed/comixed/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/comixed/comixed/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -7,8 +7,34 @@ tags:
   - plex
   - utilities
   - management
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/jkirkcaldy/plex-utills#readme
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jkirkcaldy/plex-utills/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Plex Utills
+    summary: |
+      a web-based utility collection for managing and maintaining your Plex Media Server. It provides various tools and helpers for common Plex administration tasks.
+    link: https://github.com/jkirkcaldy/plex-utills
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Plex Utills
 
 ## Overview
@@ -17,15 +43,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/jkirkcaldy/plex-utills#readme){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/jkirkcaldy/plex-utills#readme){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jkirkcaldy/plex-utills/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

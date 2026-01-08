@@ -6,8 +6,34 @@ tags:
   - audiobookshelf
   - audiobooks
   - podcasts
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.audiobookshelf.org/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/advplyr/audiobookshelf/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Audiobookshelf
+    summary: |
+      a free and open-source, self-hosted audiobook and podcast server that allows users to manage, stream, and organize their personal audiobook, podcast, and ebook collections.
+    link: https://www.audiobookshelf.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Audiobookshelf
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.audiobookshelf.org/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.audiobookshelf.org/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/advplyr/audiobookshelf/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

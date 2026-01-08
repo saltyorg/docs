@@ -6,8 +6,34 @@ tags:
   - phpmyadmin
   - database
   - admin
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.phpmyadmin.net/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/phpmyadmin/phpmyadmin/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: phpMyAdmin
+    summary: |
+      a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement.
+    link: https://www.phpmyadmin.net/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # phpMyAdmin
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.phpmyadmin.net/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.phpmyadmin.net/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/phpmyadmin/phpmyadmin/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

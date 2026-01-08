@@ -7,27 +7,52 @@ tags:
   - pyload
   - download
   - tools
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/pyload/pyload/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/pyload-ng/tags
+      type: docker
+    - name: Community
+      url: https://github.com/pyload/pyload/discussions
+      type: github
+  project_description:
+    name: linuxserver/pyload-ng
+    summary: |
+      a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
+    link: https://pyload.net
 ---
 
-# pyload
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# linuxserver/pyload-ng
 
 ## Overview
 
-[linuxserver/pyload-ng](https://docs.linuxserver.io/images/docker-pyload-ng) is a Docker container image for pyload.
-
-> [pyload](https://pyload.net) is a... [:material-bookshelf:](https://pyload.docs.url)
+[linuxserver/pyload-ng](https://pyload.net) is a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/pyload/pyload/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/pyload-ng/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/pyload/pyload/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

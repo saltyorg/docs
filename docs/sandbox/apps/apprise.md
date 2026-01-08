@@ -6,19 +6,43 @@ tags:
   - apprise
   - notifications
   - alerts
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://apprise.apps.merit.edu
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/apprise-api/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Apprise API
+    summary: |
+      an open-source, lightweight REST framework that provides a unified interface to send notifications to over 100 services—such as email, SMS, Slack, Telegram, and Discord—via a single API.
+    link: https://github.com/caronc/apprise-api
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Apprise API
 
 ## Overview
 
-[linuxserver/apprise-api](https://docs.linuxserver.io/images/docker-apprise-api) is a Docker container image for Apprise.
-
-> [Apprise API](https://github.com/caronc/apprise-api) is an open-source, lightweight REST framework that provides a unified interface to send notifications to over 100 services—such as email, SMS, Slack, Telegram, and Discord—via a single API. [:material-bookshelf:](https://apprise.apps.merit.edu/)
+[Apprise API](https://github.com/caronc/apprise-api) is an open-source, lightweight REST framework that provides a unified interface to send notifications to over 100 services—such as email, SMS, Slack, Telegram, and Discord—via a single API.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://apprise.apps.merit.edu){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/apprise-api/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! note
     Saltbox has a built-in Apprise client that can be used to send notifications. This container is not only used to provide a web UI for configuring and managing notifications, but it also exposes an API. This API allows for programmatic interaction, enabling other applications or scripts to send notifications through the Apprise service. For more information, see the [Apprise Client Docs](https://github.com/caronc/apprise/wiki).

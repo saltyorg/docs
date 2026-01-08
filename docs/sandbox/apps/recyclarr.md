@@ -6,17 +6,43 @@ tags:
   - recyclarr
   - sonarr
   - radarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://recyclarr.dev/wiki
+      type: documentation
+    - name: Releases
+      url: https://github.com/recyclarr/recyclarr/pkgs/container/recyclarr
+      type: github
+    - name: Community
+      url: https://discord.com/invite/Vau8dZ3
+      type: discord
+  project_description:
+    name: Recyclarr
+    summary: |
+      a command-line application designed to automatically synchronize recommended settings from the TRaSH Guides to Sonarr and Radarr instances.
+    link: https://recyclarr.dev
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Recyclarr
 
 ## Overview
 
-[Recyclarr](https://github.com/recyclarr/recyclarr) automatically synchronizes recommended settings from TRaSH guides to your Sonarr/Radarr instances.
+[Recyclarr](https://recyclarr.dev) is a command-line application designed to automatically synchronize recommended settings from the TRaSH Guides to Sonarr and Radarr instances.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://recyclarr.dev/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://recyclarr.dev/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/recyclarr/recyclarr/pkgs/container/recyclarr){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

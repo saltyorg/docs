@@ -6,19 +6,43 @@ tags:
   - syncthing
   - backup
   - sync
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.syncthing.net
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/syncthing/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Syncthing
+    summary: |
+      a free, open-source, peer-to-peer file synchronization utility designed to sync files between devices on a local network or over the Internet.
+    link: https://syncthing.net
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Syncthing
 
 ## Overview
 
-[linuxserver/syncthing](https://docs.linuxserver.io/images/docker-syncthing) is a Docker container image for Syncthing.
-
-> [Syncthing](https://syncthing.net/) is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet. [:material-bookshelf:](https://docs.syncthing.net/)
+[Syncthing](https://syncthing.net) is a free, open-source, peer-to-peer file synchronization utility designed to sync files between devices on a local network or over the Internet.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.syncthing.net){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/syncthing/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

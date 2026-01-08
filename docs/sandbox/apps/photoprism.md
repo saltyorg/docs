@@ -6,9 +6,35 @@ tags:
   - photoprism
   - photos
   - ai
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.photoprism.app
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/photoprism/photoprism/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Photoprism®
+    summary: |
+      an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
+    link: https://photoprism.app/
 ---
 
-# Photoprism
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Photoprism®
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.photoprism.app){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.photoprism.app){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/photoprism/photoprism/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

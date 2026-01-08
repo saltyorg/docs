@@ -6,25 +6,52 @@ tags:
   - tqm
   - torrent
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+  - name: Manual
+    url: https://autobrr.com/3rd-party-tools/manage-torrents#tqm
+    type: documentation
+  - name: Releases
+    url: https://github.com/autobrr/tqm/tags
+    type: github
+  - name: Community
+    url: https://discord.autobrr.com
+    type: discord
+  project_description:
+    name: tqm
+    summary: |
+      a command-line tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
+    link: https://github.com/autobrr/tqm
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # tqm
 
 ## Overview
 
-[tqm](https://github.com/autobrr/tqm) is a CLI (Command Line Interface) tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
+[tqm](https://github.com/autobrr/tqm) is a command-line tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/autobrr/tqm/blob/main/README.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://autobrr.com/3rd-party-tools/manage-torrents#tqm){ .md-button .md-button--stretch }
 
-[:material-tag:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.autobrr.com){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ???+ warning "Sandbox `settings.yml` Deprecation"
 

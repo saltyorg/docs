@@ -5,27 +5,52 @@ hide:
 tags:
   - VPN
   - server
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wg-easy.github.io/wg-easy/edge/guides/setup
+      type: documentation
+    - name: Releases
+      url: https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy
+      type: github
+    - name: Community
+      url: https://github.com/wg-easy/wg-easy/discussions
+      type: github
+  project_description:
+    name: Wireguard
+    summary: |
+      an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
+    link: https://www.wireguard.com
 ---
 
-# WireGuard Easy
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Wireguard
 
 ## Overview
 
-[WireGuard Easy](https://wg-easy.github.io/wg-easy/edge/) is a web-based administration interface and orchestrator designed to simplify the deployment and management of WireGuard VPNs.
-
-> [Wireguard](https://www.wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
+[Wireguard](https://www.wireguard.com) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://wg-easy.github.io/wg-easy/edge/guides/setup){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wg-easy.github.io/wg-easy/edge/guides/setup){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](https://github.com/wg-easy/wg-easy/discussions){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/wg-easy/wg-easy/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

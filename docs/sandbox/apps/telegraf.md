@@ -6,8 +6,34 @@ tags:
   - telegraf
   - monitoring
   - metrics
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.influxdata.com/telegraf/v1.20
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/telegraf/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Telegraf
+    summary: |
+      a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
+    link: https://www.influxdata.com/time-series-platform/telegraf/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Telegraf
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.influxdata.com/telegraf/v1.20){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.influxdata.com/telegraf/v1.20){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/telegraf/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

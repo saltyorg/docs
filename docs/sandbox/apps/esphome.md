@@ -6,27 +6,52 @@ tags:
   - esphome
   - automation
   - iot
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://esphome.io/components
+      type: documentation
+    - name: Releases
+      url: https://github.com/imagegenius/docker-esphome/pkgs/container/esphome
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: ESPHome
+    summary: |
+      an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers.
+    link: https://esphome.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # ESPHome
 
 ## Overview
 
-[imagegenius/esphome](https://github.com/imagegenius/docker-esphome) is a Docker container image for ESPHome.
-
-> [ESPHome](https://esphome.io) is an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers. [:material-bookshelf:](https://esphome.io/components)
+[ESPHome](https://esphome.io) is an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/imagegenius/docker-esphome/blob/main/README.md#application-setup){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://esphome.io/components){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/imagegenius/docker-esphome/pkgs/container/esphome){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

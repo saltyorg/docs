@@ -6,27 +6,52 @@ tags:
   - factorio
   - gaming
   - server
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.factorio.com/Multiplayer
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/goofball222/factorio/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Factorio
+    summary: |
+      a sandbox video game in which you build and maintain your own factories to produce basic resources.
+    link: https://www.factorio.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Factorio
 
 ## Overview
 
-[Containerized Factorio Headless Server](https://github.com/goofball222/factorio) is a Docker container image designed to run a Factorio headless server on Linux systems.
-
-> [Factorio](https://www.factorio.com) is a sandbox video game in which you build and maintain your own factories to produce basic resources. [:material-bookshelf:](https://wiki.factorio.com/Multiplayer)
+[Factorio](https://www.factorio.com) is a sandbox video game in which you build and maintain your own factories to produce basic resources.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/goofball222/factorio/blob/main/README.md#usage){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.factorio.com/Multiplayer){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/goofball222/factorio/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

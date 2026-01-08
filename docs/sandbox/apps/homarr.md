@@ -6,8 +6,34 @@ tags:
   - homarr
   - dashboard
   - homepage
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://homarr.dev/docs/getting-started
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/ajnart/homarr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Homarr
+    summary: |
+      a simple and modern homepage for your server that helps you access all of your services in one place. It integrates with the services you use to display useful information or control them. It's easy to install and supports many different devices.
+    link: https://www.homarr.dev/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Homarr
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://homarr.dev/docs/getting-started){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://homarr.dev/docs/getting-started){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/ajnart/homarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -7,25 +7,52 @@ tags:
   - smart
   - disk-monitoring
   - hardware-monitoring
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/AnalogJ/scrutiny/blob/master/README.md
+      type: documentation
+    - name: Releases
+      url: https://github.com/analogj/scrutiny/pkgs/container/scrutiny
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Scrutiny
+    summary: |
+      a hard drive health monitoring tool that tracks S.M.A.R.T. metrics for your drives.
+    link: https://github.com/AnalogJ/scrutiny
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Scrutiny
 
 ## Overview
 
-Scrutiny is a hard drive health monitoring tool that tracks S.M.A.R.T. metrics for your drives. It provides a WebUI with historical data tracking, alerting, and beautiful visualizations to help you monitor drive health and predict failures before they happen.
+[Scrutiny](https://github.com/AnalogJ/scrutiny) is a hard drive health monitoring tool that tracks S.M.A.R.T. metrics for your drives.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/AnalogJ/scrutiny/blob/master/README.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/AnalogJ/scrutiny/blob/master/README.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/analogj/scrutiny/pkgs/container/scrutiny){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

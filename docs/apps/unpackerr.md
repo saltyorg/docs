@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - unpackerr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/unpackerr/pkgs/container/unpackerr
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Unpackerr
+    summary: |
+      a lightweight, cross-platform application designed to automatically extract compressed files (like RAR, ZIP, 7Z, TAR, and ISO) from download folders, primarily for use with media management tools such as Radarr, Sonarr, Lidarr.
+    link: https://github.com/davidnewhall/unpackerr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Unpackerr
 
 ## Overview
 
-[hotio/unpackerr](https://hotio.dev/containers/unpackerr) is a Docker container image for Unpackerr.
-
-> [Unpackerr](https://github.com/davidnewhall/unpackerr) checks for completed downloads and extracts them so Lidarr, Radarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them.
+[Unpackerr](https://github.com/davidnewhall/unpackerr) is a lightweight, cross-platform application designed to automatically extract compressed files (like RAR, ZIP, 7Z, TAR, and ISO) from download folders, primarily for use with media management tools such as Radarr, Sonarr, Lidarr.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/unpackerr/pkgs/container/unpackerr){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

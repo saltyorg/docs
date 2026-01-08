@@ -6,25 +6,52 @@ tags:
   - adminer
   - database
   - mysql
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/vrana/adminer/#readme
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/adminer//tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Adminer
+    summary: |
+      a full-featured, web-based database management tool, originally developed as a lightweight alternative to phpMyAdmin.
+    link: https://www.adminer.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Adminer
 
 ## Overview
 
-[Adminer](https://www.adminer.org/) Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Adminer is available for MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and others via plugin.
+[Adminer](https://www.adminer.org) is a full-featured, web-based database management tool, originally developed as a lightweight alternative to phpMyAdmin.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/vrana/adminer/#readme){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/vrana/adminer/#readme){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/adminer//tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

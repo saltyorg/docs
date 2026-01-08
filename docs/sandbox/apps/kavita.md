@@ -6,25 +6,52 @@ tags:
   - kavita
   - media
   - books
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.kavitareader.com
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/kizaing/kavita/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Kavita
+    summary: |
+      a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!.
+    link: http://www.kavitareader.com/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Kavita
 
 ## Overview
 
-[Kavita](http://www.kavitareader.com/) is a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!
+[Kavita](http://www.kavitareader.com/) is a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://wiki.kavitareader.com){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.kavitareader.com){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kizaing/kavita/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - radarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.servarr.com/radarr
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/radarr/pkgs/container/radarr
+      type: github
+    - name: Community
+      url: https://radarr.video/discord
+      type: discord
+  project_description:
+    name: Radarr
+    summary: |
+      a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies.
+    link: https://radarr.video
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Radarr
 
 ## Overview
 
-[hotio/radarr](https://hotio.dev/containers/radarr) is a Docker container image for Radarr.
-
-> [Radarr](https://radarr.video/) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies. [:material-bookshelf:](https://wiki.servarr.com/radarr) [:fontawesome-brands-discord:](https://radarr.video/discord)
+[Radarr](https://radarr.video) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/radarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/radarr/pkgs/container/radarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://radarr.video/discord){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

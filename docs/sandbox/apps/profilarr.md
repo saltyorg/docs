@@ -7,8 +7,34 @@ tags:
   - sonarr
   - radarr
   - recyclarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://dictionarry.dev/profilarr-setup/101
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/santiagosayshey/profilarr/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/XGdTJP5G8a
+      type: discord
+  project_description:
+    name: Profilarr
+    summary: |
+      a configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
+    link: https://dictionarry.dev
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Profilarr
 
 ## Overview
@@ -17,7 +43,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
 
@@ -26,6 +52,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! warning "Beta software / Modifies PVR configuration"
     Although core features are expected to work, this application is in early stages of development. It's recommended to back up your Radarr and Sonarr databases before running import or sync operations.

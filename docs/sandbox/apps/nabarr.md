@@ -6,8 +6,34 @@ tags:
   - nabarr
   - automation
   - rss
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/saltydk/nabarr/blob/master/README.md#introduction
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/saltydk/nabarr/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/ugfKXpFND8
+      type: discord
+  project_description:
+    name: Nabarr
+    summary: |
+      the official Saltbox continuation of *Cloudbox/nabarr*, a tool that monitors RSS feeds from Newznab or Torznab indexing services and automatically adds newly discovered TV shows and movies to Sonarr and Radarr, respectively.
+    link: https://github.com/saltydk/nabarr
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Nabarr
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/saltydk/nabarr/blob/master/README.md#introduction){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/saltydk/nabarr/blob/master/README.md#introduction){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/nabarr/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

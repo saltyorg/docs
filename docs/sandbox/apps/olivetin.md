@@ -6,25 +6,52 @@ tags:
   - olivetin
   - automation
   - admin
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.olivetin.app
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jamesread/olivetin/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: OliveTin
+    summary: |
+      an open-source web interface that provides safe and simple access to predefined Linux shell commands through a user-friendly web browser.
+    link: https://olivetin.app
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # OliveTin
 
 ## Overview
 
-[OliveTin](https://olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.
+[OliveTin](https://olivetin.app) is an open-source web interface that provides safe and simple access to predefined Linux shell commands through a user-friendly web browser.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.olivetin.app){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.olivetin.app){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jamesread/olivetin/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

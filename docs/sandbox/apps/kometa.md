@@ -6,25 +6,52 @@ tags:
   - kometa
   - pmm
   - plex meta manager
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://kometa.wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/kometateam/kometa/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Kometa
+    summary: |
+      a powerful tool designed to give you complete control over your media libraries.
+    link: https://kometa.wiki
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Kometa
 
 ## Overview
 
-[Kometa](https://github.com/Kometa-Team/Kometa) can update many metadata fields for movies, shows, collections, seasons, and episodes and can act as a backup if your plex DB goes down. It can even update metadata the plex UI can't like Season Names. If the time is put into the metadata configuration file you can have a way to recreate your library and all its metadata changes with the click of a button.
+[Kometa](https://kometa.wiki) is a powerful tool designed to give you complete control over your media libraries.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://kometa.wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://kometa.wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kometateam/kometa/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! info
     Kometa is the replacement for Plex Meta Manager. A simple migration for your appdata is available by running `sb install sandbox-pmm-kometa-migration`.

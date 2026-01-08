@@ -6,25 +6,34 @@ tags:
   - tdarr-node
   - media
   - encoding
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.tdarr.io/docs/installation/getting-started
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/haveagitgat/tdarr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Tdarr Node
+    summary: |
+      a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
+    link: https://tdarr.io/
 ---
 
-# Tdarr Node
-
-## Overview
-
-[Tdarr Node](https://tdarr.io/) is a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://docs.tdarr.io/docs/installation/getting-started){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/haveagitgat/tdarr/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

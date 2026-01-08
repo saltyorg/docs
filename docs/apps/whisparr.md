@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - whisparr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.servarr.com/en/whisparr/quick-start-guide
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/whisparr/pkgs/container/whisparr
+      type: github
+    - name: Community
+      url: https://whisparr.com/discord
+      type: discord
+  project_description:
+    name: Whisparr
+    summary: |
+      an adult movie collection manager for Usenet and BitTorrent users.
+    link: https://whisparr.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Whisparr
 
 ## Overview
 
-[hotio/whisparr](https://hotio.dev/containers/whisparr) is a Docker container image for Whisparr.
-
-> [Whisparr](https://whisparr.com) is an adult movie collection manager for Usenet and BitTorrent users. [:material-bookshelf:](https://wiki.servarr.com/en/whisparr/quick-start-guide) [:fontawesome-brands-discord:](https://whisparr.com/discord)
+[Whisparr](https://whisparr.com) is an adult movie collection manager for Usenet and BitTorrent users.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/en/whisparr/quick-start-guide){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/whisparr/pkgs/container/whisparr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://whisparr.com/discord){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,8 +6,34 @@ tags:
   - dockwatch
   - monitoring
   - docker
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/Notifiarr/dockwatch#environment-variables
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Dockwatch
+    summary: |
+      a web-based tool developed by Notifiarr that provides a user-friendly interface for managing Docker container updates and notifications.
+    link: https://github.com/Notifiarr/dockwatch
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Dockwatch
 
 ## Overview
@@ -16,16 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/Notifiarr/dockwatch#environment-variables){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/Notifiarr/dockwatch#environment-variables){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
-
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! warning
 

@@ -6,8 +6,34 @@ tags:
   - karakeep
   - media
   - music
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.karakeep.app
+      type: documentation
+    - name: Releases
+      url: https://github.com/karakeep-app/karakeep/pkgs/container/karakeep
+      type: github
+    - name: Community
+      url: https://discord.gg/NrgeYywsFh
+      type: discord
+  project_description:
+    name: Karakeep
+    summary: |
+      an open source "Bookmark Everything" app that uses AI for automatically tagging the content you throw at it. The app is built with self-hosting as a first class citizen.
+    link: https://karakeep.app/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Karakeep
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.karakeep.app){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.karakeep.app){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/karakeep-app/karakeep/pkgs/container/karakeep){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

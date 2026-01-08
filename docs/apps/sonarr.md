@@ -4,27 +4,52 @@ hide:
   - tags
 tags:
   - sonarr
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.sonarr.tv
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/sonarr/pkgs/container/sonarr
+      type: github
+    - name: Community
+      url: https://discord.sonarr.tv
+      type: discord
+  project_description:
+    name: Sonarr
+    summary: |
+      a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
+    link: https://sonarr.tv
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Sonarr
 
 ## Overview
 
-[hotio/sonarr](https://hotio.dev/containers/sonarr) is a Docker container image for Sonarr.
-
-> [Sonarr](https://sonarr.tv) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes. [:material-bookshelf:](https://wiki.sonarr.tv) [:fontawesome-brands-discord:](https://discord.sonarr.tv)
+[Sonarr](https://sonarr.tv) is a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.sonarr.tv){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/sonarr/pkgs/container/sonarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.sonarr.tv){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

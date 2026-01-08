@@ -7,25 +7,52 @@ tags:
   - monitoring
   - metrics
   - observability
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://prometheus.io/docs/introduction/overview
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/prom/prometheus/tags
+      type: docker
+    - name: Community
+      url: https://prometheus.io/community
+      type: community
+  project_description:
+    name: Prometheus
+    summary: |
+      an open-source systems monitoring and alerting toolkit.
+    link: https://prometheus.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Prometheus
 
 ## Overview
 
-Prometheus is an open-source systems monitoring and alerting toolkit. It collects and stores metrics as time series data, providing a powerful query language (PromQL) for analyzing system behavior and setting up alerts.
+[Prometheus](https://prometheus.io) is an open-source systems monitoring and alerting toolkit.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://prometheus.io/docs/introduction/overview){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://prometheus.io/docs/introduction/overview){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/prom/prometheus/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://prometheus.io/community){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

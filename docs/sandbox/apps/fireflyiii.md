@@ -6,8 +6,34 @@ tags:
   - fireflyiii
   - finance
   - budgeting
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.firefly-iii.org
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/fireflyiii/core/tags
+      type: docker
+    - name: Community
+      url: https://github.com/orgs/firefly-iii/discussions
+      type: github
+  project_description:
+    name: Firefly III
+    summary: |
+      a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
+    link: https://www.firefly-iii.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Firefly III
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.firefly-iii.org){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.firefly-iii.org){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/fireflyiii/core/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

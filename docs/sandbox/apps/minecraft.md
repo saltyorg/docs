@@ -2,25 +2,52 @@
 icon: material/docker
 tags:
   - Minecraft
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docker-minecraft-server.readthedocs.io/en/latest/commands
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Minecraft Server on Docker
+    summary: |
+      a containerized solution that allows users to run a Minecraft server.
+    link: https://docker-minecraft-server.readthedocs.io
 ---
 
-# Minecraft
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Minecraft Server on Docker
 
 ## Overview
 
-[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io) provides a Minecraft Server that will automatically download the latest stable version at startup. Utilizes Minecraft server and MC-Router to allow each server to have its own subdomain with the default port.
+[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io) is a containerized solution that allows users to run a Minecraft server.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docker-minecraft-server.readthedocs.io/en/latest/commands){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docker-minecraft-server.readthedocs.io/en/latest/commands){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 

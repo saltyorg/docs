@@ -6,25 +6,34 @@ tags:
   - kcptun-server
   - tunnel
   - networking
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/xtaci/kcptun
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/horjulf/kcptun/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: kcptun Server
+    summary: |
+      a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
+    link: https://github.com/xtaci/kcptun
 ---
 
-# kcptun server
-
-## Overview
-
-[kcptun Server](https://github.com/xtaci/kcptun) is a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://github.com/xtaci/kcptun){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/horjulf/kcptun/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

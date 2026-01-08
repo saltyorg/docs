@@ -6,9 +6,35 @@ tags:
   - invoiceninja
   - finance
   - invoicing
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://invoiceninja.github.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/invoiceninja/invoiceninja/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: InvoiceNinja
+    summary: |
+      a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
+    link: https://www.invoiceninja.com/
 ---
 
-# Invoice Ninja
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# InvoiceNinja
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://invoiceninja.github.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://invoiceninja.github.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/invoiceninja/invoiceninja/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

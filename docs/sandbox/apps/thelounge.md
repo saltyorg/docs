@@ -6,27 +6,52 @@ tags:
   - thelounge
   - irc
   - chat
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://thelounge.chat/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/thelounge/tags
+      type: docker
+    - name: Community
+      url: https://thelounge.chat/community
+      type: community
+  project_description:
+    name: The Lounge
+    summary: |
+      a self-hosted web IRC client for the modern world.
+    link: https://thelounge.chat
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # The Lounge
 
 ## Overview
 
-[linuxserver/thelounge](https://docs.linuxserver.io/images/docker-thelounge) is a Docker container image for The Lounge.
-
-> [The Lounge](https://thelounge.chat/) is a self hosted web IRC client. In private mode, The Lounge acts like a bouncer and a client combined, in order to offer an experience similar to other modern chat applications outside the IRC world. Users can then access and resume their session without being disconnected from their channels. [:material-bookshelf:](https://thelounge.chat/docs) [:fontawesome-solid-people-group:](https://thelounge.chat/community)
+[The Lounge](https://thelounge.chat) is a self-hosted web IRC client for the modern world.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://thelounge.chat/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/thelounge/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://thelounge.chat/community){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

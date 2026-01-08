@@ -6,25 +6,52 @@ tags:
   - mongodb
   - database
   - nosql
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://www.mongodb.com/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/mongo/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: MongoDB
+    summary: |
+      a free and open-source cross-platform document-oriented database program.
+    link: https://www.mongodb.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # MongoDB
 
 ## Overview
 
-MongoDB is a popular NoSQL document database that stores data in flexible, JSON-like documents. It's designed for scalability and developer productivity, and is used by many applications for data persistence.
+[MongoDB](https://www.mongodb.com) is a free and open-source cross-platform document-oriented database program.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://www.mongodb.com/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://www.mongodb.com/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/mongo/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

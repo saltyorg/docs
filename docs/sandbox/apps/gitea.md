@@ -6,8 +6,34 @@ tags:
   - gitea
   - development
   - git
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.gitea.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/gitea/gitea/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Gitea
+    summary: |
+      a community managed lightweight code hosting solution written in Go.
+    link: https://gitea.io/en-us/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Gitea
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.gitea.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.gitea.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/gitea/gitea/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

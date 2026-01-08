@@ -6,8 +6,34 @@ tags:
   - reposilite
   - development
   - repository
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://reposilite.com/guide/about
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/dzikoysk/reposilite/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: reposilite
+    summary: |
+      a...
+    link: https://reposilite.com/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # reposilite
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://reposilite.com/guide/about){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://reposilite.com/guide/about){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dzikoysk/reposilite/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

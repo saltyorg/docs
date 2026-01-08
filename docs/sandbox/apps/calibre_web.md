@@ -6,19 +6,43 @@ tags:
   - calibre
   - ebooks
   - reading
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/janeczku/calibre-web/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/calibre-web/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Calibre-Web
+    summary: |
+      a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
+    link: https://github.com/janeczku/calibre-web
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Calibre-Web
 
 ## Overview
 
-[linuxserver/calibre-web](https://docs.linuxserver.io/images/docker-calibre-web) is a Docker container image for Calibre-Web.
-
-> [Calibre-Web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing [Calibre](https://calibre-ebook.com/) database. [:material-bookshelf:](https://github.com/janeczku/calibre-web/wiki)
+[Calibre-Web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/janeczku/calibre-web/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/calibre-web/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! info
     Calibre and Calibre-web do NOT need to be on the same server. But you do need to have a local copy of the Calibre `metadata.db` and a path to the books for calibre-web to operate.

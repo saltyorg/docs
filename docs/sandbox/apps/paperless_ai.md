@@ -6,8 +6,34 @@ tags:
   - paperless-ai
   - documents
   - ai
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/clusterzx/paperless-ai/wiki/1.-Home
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/clusterzx/paperless-ai/tags
+      type: docker
+    - name: Community
+      url: https://discord.gg/AvNekAfK38
+      type: discord
+  project_description:
+    name: Paperless AI
+    summary: |
+      an AI-enhanced extension for Paperless-ngx that adds automatic classification, smart tagging, and semantic search using OpenAI-compatible APIs. It builds on the community-supported document management system that scans, indexes and archives documents with OCR.
+    link: https://clusterzx.github.io/paperless-ai/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Paperless AI
 
 ## Overview
@@ -16,7 +42,7 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/clusterzx/paperless-ai/wiki/1.-Home){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/clusterzx/paperless-ai/wiki/1.-Home){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/clusterzx/paperless-ai/tags){ .md-button .md-button--stretch }
 
@@ -25,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

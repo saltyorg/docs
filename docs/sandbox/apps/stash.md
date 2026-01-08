@@ -6,19 +6,43 @@ tags:
   - stash
   - media
   - organizer
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/stash/pkgs/container/stash
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Stash
+    summary: |
+      a web-based app that allows you to organize and view your own collection of adult video and image files.
+    link: https://stashapp.cc
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Stash
 
 ## Overview
 
-[hotio/stash](https://hotio.dev/containers/stash) is a Docker container image for Stash.
-
-> [Stash](https://stashapp.cc) is a web-based app that allows you to organize and view your own collection of adult video and image files.
+[Stash](https://stashapp.cc) is a web-based app that allows you to organize and view your own collection of adult video and image files.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/stash/pkgs/container/stash){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,19 +6,43 @@ tags:
   - sqlitebrowser
   - database
   - utility
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/sqlitebrowser/sqlitebrowser/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/sqlitebrowser/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: SQLite Browser
+    summary: |
+      a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
+    link: https://sqlitebrowser.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # SQLite Browser
 
 ## Overview
 
-[linuxserver/sqlitebrowser](https://docs.linuxserver.io/images/docker-sqlitebrowser) is a Docker container image for SQLite Browser.
-
-> [SQLite Browser](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. [:material-bookshelf:](https://github.com/sqlitebrowser/sqlitebrowser/wiki)
+[SQLite Browser](https://sqlitebrowser.org) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/sqlitebrowser/sqlitebrowser/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/sqlitebrowser/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -4,8 +4,34 @@ hide:
   - tags
 tags:
   - portainer
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.portainer.io
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/portainer/portainer-ce/tags
+      type: docker
+    - name: Community
+      url: https://portainer.io/slack
+      type: community
+  project_description:
+    name: Portainer
+    summary: |
+      a lightweight, open-source management UI that provides a graphical interface for managing containerized applications across various environments, including Docker, Kubernetes, Docker Swarm, and Podman.
+    link: https://portainer.io
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Portainer
 
 ## Overview
@@ -14,15 +40,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.portainer.io){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.portainer.io){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/portainer/portainer-ce/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-slack:**Community**](https://portainer.io/slack){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://portainer.io/slack){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -4,25 +4,52 @@ hide:
   - tags
 tags:
   - grafana
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://grafana.com/docs/grafana
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/grafana/grafana/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Grafana
+    summary: |
+      an open-source analytics and interactive visualization web application designed to query, visualize, alert on, and understand data from various sources.
+    link: https://grafana.com/grafana
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Grafana
 
 ## Overview
 
-[Grafana](https://grafana.com/grafana/) allows you to query, visualize, alert on, and understand your data no matter where it’s stored. With Grafana you can create, explore and share all of your data through beautiful, flexible dashboards.
+[Grafana](https://grafana.com/grafana) is an open-source analytics and interactive visualization web application designed to query, visualize, alert on, and understand data from various sources.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://grafana.com/docs/grafana){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://grafana.com/docs/grafana){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/grafana/grafana/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

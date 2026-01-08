@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - tautulli
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/tautulli/pkgs/container/tautulli
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Tautulli
+    summary: |
+      a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
+    link: https://tautulli.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Tautulli
 
 ## Overview
 
-[hotio/tautulli](https://hotio.dev/containers/tautulli) is a Docker container image for Tautulli.
-
-> [Tautulli](http://tautulli.com/) is a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
+[Tautulli](https://tautulli.com) is a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/tautulli/pkgs/container/tautulli){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

@@ -6,19 +6,43 @@ tags:
   - tvheadend
   - tv
   - streaming
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.tvheadend.org/documentation
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/tvheadend/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Tvheadend
+    summary: |
+      a TV streaming server and digital video recorder.
+    link: https://tvheadend.org
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Tvheadend
 
 ## Overview
 
-[linuxserver/tvheadend](https://docs.linuxserver.io/images/docker-tvheadend) is a Docker container image for Tvheadend.
-
-> [Tvheadend](https://tvheadend.org/) is a TV streaming server and digital video recorder. [:material-bookshelf:](https://docs.tvheadend.org/documentation)
+[Tvheadend](https://tvheadend.org) is a TV streaming server and digital video recorder.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.tvheadend.org/documentation){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/tvheadend/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

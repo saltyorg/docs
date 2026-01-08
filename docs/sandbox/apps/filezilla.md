@@ -6,8 +6,34 @@ tags:
   - filezilla
   - file-management
   - ftp
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://wiki.filezilla-project.org/Main_Page
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jlesage/filezilla/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: FileZilla
+    summary: |
+      a cross-platform graphical FTP, SFTP, and FTPS file management tool with a vast list of features.
+    link: https://filezilla-project.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # FileZilla
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://wiki.filezilla-project.org/Main_Page){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.filezilla-project.org/Main_Page){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/filezilla/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

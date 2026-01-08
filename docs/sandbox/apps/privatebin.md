@@ -6,25 +6,52 @@ tags:
   - privatebin
   - pastebin
   - privacy
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/PrivateBin/PrivateBin/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/privatebin/nginx-fpm-alpine/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: PrivateBin
+    summary: |
+      a minimalist, open source online pastebin where the server has zero knowledge of pasted data.
+    link: https://privatebin.info
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # PrivateBin
 
 ## Overview
 
-[PrivateBin](https://privatebin.info/) PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.
+[PrivateBin](https://privatebin.info) is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/PrivateBin/PrivateBin/wiki){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/PrivateBin/PrivateBin/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/privatebin/nginx-fpm-alpine/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

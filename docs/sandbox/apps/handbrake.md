@@ -6,8 +6,34 @@ tags:
   - handbrake
   - media
   - encoding
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://handbrake.fr/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jlesage/handbrake/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: HandBrake
+    summary: |
+      a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
+    link: https://handbrake.fr/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # HandBrake
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://handbrake.fr/docs){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://handbrake.fr/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jlesage/handbrake/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

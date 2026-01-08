@@ -4,25 +4,52 @@ hide:
   - tags
 tags:
   - mariadb
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://mariadb.com/docs
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/mariadb/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: MariaDB Server
+    summary: |
+      a community-developed, open-source relational database management system (RDBMS) that serves as a drop-in replacement for MySQL.
+    link: https://mariadb.org
 ---
 
-# MariaDB
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# MariaDB Server
 
 ## Overview
 
-[MariaDB](https://mariadb.org/) MariaDB Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source.
+[MariaDB Server](https://mariadb.org) is a community-developed, open-source relational database management system (RDBMS) that serves as a drop-in replacement for MySQL.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://mariadb.org/documentation/#getting-started){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://mariadb.com/docs){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/mariadb/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ???+warning "Migration Notes"
 

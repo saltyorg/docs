@@ -1,25 +1,34 @@
 ---
 icon: material/docker
 status: draft
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://doc.traefik.io/traefik
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/_/traefik/tags
+      type: docker
+    - name: Community
+      url: https://community.traefik.io
+      type: community
+  project_description:
+    name: Traefik Proxy
+    summary: |
+      an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
+    link: https://traefik.io/traefik
 ---
 
-# Traefik Proxy
-
-## Overview
-
-[Traefik Proxy](https://traefik.io/traefik) is an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://doc.traefik.io/traefik){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/traefik/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](https://community.traefik.io){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

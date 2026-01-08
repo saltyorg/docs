@@ -1,27 +1,34 @@
 ---
 icon: material/docker
 status: draft
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/general/container-customization
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/socket-proxy/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Docker Socket Proxy
+    summary: |
+      a security-enhanced proxy for the Docker socket.
+    link: https://github.com/Tecnativa/docker-socket-proxy
 ---
 
-# Docker Socket Proxy
-
-## Overview
-
-[linuxserver/socket-proxy](https://docs.linuxserver.io/images/docker-socket-proxy) is a Docker container image for Docker Socket Proxy.
-
-> [Docker Socket Proxy](https://github.com/Tecnativa/docker-socket-proxy) is a security-enhanced proxy for the Docker socket.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/socket-proxy/tags){ .md-button .md-button--stretch }
-
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

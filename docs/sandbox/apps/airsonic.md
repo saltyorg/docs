@@ -6,19 +6,43 @@ tags:
   - airsonic
   - music
   - streaming
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/general/container-customization
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/airsonic-advanced/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Airsonic-Advanced
+    summary: |
+      a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and supersedes several features in Airsonic.
+    link: https://github.com/kagemomiji/airsonic-advanced
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Airsonic-Advanced
 
 ## Overview
 
-[linuxserver/airsonic-advanced](https://docs.linuxserver.io/images/docker-airsonic-advanced) is a Docker container image for Airsonic.
-
-> [Airsonic-Advanced](https://github.com/kagemomiji/airsonic-advanced) is a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and supersedes several features in Airsonic.
+[Airsonic-Advanced](https://github.com/kagemomiji/airsonic-advanced) is a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and supersedes several features in Airsonic.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/airsonic-advanced/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

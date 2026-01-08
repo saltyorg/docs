@@ -6,19 +6,43 @@ tags:
   - transmission
   - download
   - torrent
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/transmission/transmission/wiki
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/transmission/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: Transmission
+    summary: |
+      a fast, easy, and free BitTorrent client.
+    link: https://transmissionbt.com
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Transmission
 
 ## Overview
 
-[linuxserver/transmission](https://docs.linuxserver.io/images/docker-transmission) is a Docker container image for Transmission.
-
-> [Transmission](https://transmissionbt.com/) is a fast, easy, and free BitTorrent client. [:material-bookshelf:](https://github.com/transmission/transmission/wiki)
+[Transmission](https://transmissionbt.com) is a fast, easy, and free BitTorrent client.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/transmission/transmission/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/transmission/tags){ .md-button .md-button--stretch }
 
@@ -27,6 +51,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

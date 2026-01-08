@@ -5,19 +5,43 @@ hide:
 tags:
   - nzbhydra
   - nzbhydra2
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.linuxserver.io/general/container-customization
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/nzbhydra2/tags
+      type: docker
+    - name: Community
+      url: https://linuxserver.io/discord
+      type: discord
+  project_description:
+    name: NZBHydra2
+    summary: |
+      a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
+    link: https://github.com/theotherp/nzbhydra2
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # NZBHydra2
 
 ## Overview
 
-[linuxserver/nzbhydra2](https://docs.linuxserver.io/images/docker-nzbhydra2) is a Docker container image for NZBHydra2.
-
-> [NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
+[NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/nzbhydra2/tags){ .md-button .md-button--stretch }
 
@@ -26,6 +50,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract cta "Saltbox Setup Process"
 

@@ -6,25 +6,52 @@ tags:
   - maintainerr
   - maintenance
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.maintainerr.info
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/jorenn92/maintainerr/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Maintainerr
+    summary: |
+      an automated media management tool designed to help users free up storage space on their media servers by identifying and removing unwatched or unwanted content.
+    link: https://maintainerr.info
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Maintainerr
 
 ## Overview
 
-[Maintainerr](https://docs.maintainerr.info/) allows you to set a variety of rules and actions mostly around identifying and deleting little-watched media.
+[Maintainerr](https://maintainerr.info) is an automated media management tool designed to help users free up storage space on their media servers by identifying and removing unwatched or unwanted content.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.maintainerr.info){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.maintainerr.info){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jorenn92/maintainerr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

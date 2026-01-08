@@ -6,25 +6,52 @@ tags:
   - tandoor
   - recipes
   - planning
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.tandoor.dev
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/vabene1111/recipes/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Tandoor Recipes
+    summary: |
+      an application for managing recipes, planning meals, building shopping lists and much, much more!.
+    link: https://github.com/TandoorRecipes/recipes
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Tandoor Recipes
 
 ## Overview
 
-[Tandoor Recipes](https://github.com/TandoorRecipes/recipes) is an application for managing recipes, planning meals, building shopping lists and much, much more!
+[Tandoor Recipes](https://github.com/TandoorRecipes/recipes) is an application for managing recipes, planning meals, building shopping lists and much, much more!.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.tandoor.dev){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.tandoor.dev){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/vabene1111/recipes/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ???+ warning "Migration Required for Existing Users"
 

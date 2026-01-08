@@ -6,25 +6,52 @@ tags:
   - resiliosync
   - backup
   - sync
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/resilio/sync/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Resilio Sync
+    summary: |
+      a proprietary peer-to-peer file synchronization tool that enables users to sync files directly between devices using a modified version of the BitTorrent protocol, without relying on centralized cloud storage.
+    link: https://www.resilio.com/sync
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Resilio Sync
 
 ## Overview
 
-[Resilio Sync](https://www.resilio.com/) uses peer-to-peer technology to provide fast, private file sharing for teams and individuals. By skipping the cloud, transfers can be significantly faster because files take the shortest path between devices. Sync does not store your information on servers in the cloud, avoiding cloud privacy concerns.
+[Resilio Sync](https://www.resilio.com/sync) is a proprietary peer-to-peer file synchronization tool that enables users to sync files directly between devices using a modified version of the BitTorrent protocol, without relying on centralized cloud storage.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/resilio/sync/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

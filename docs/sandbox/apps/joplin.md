@@ -6,8 +6,34 @@ tags:
   - joplin
   - productivity
   - notes
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://joplinapp.org/desktop
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/florider89/joplin-server/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Joplin
+    summary: |
+      an open source note-taking app. Capture your thoughts and securely access them from any device.
+    link: https://joplinapp.org/
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Joplin
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://joplinapp.org/desktop){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://joplinapp.org/desktop){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/florider89/joplin-server/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

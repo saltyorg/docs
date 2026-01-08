@@ -4,19 +4,43 @@ hide:
   - tags
 tags:
   - jackett
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/hotio/bazarr/pkgs/container/bazarr
+      type: github
+    - name: Community
+      url: https://hotio.dev/discord
+      type: discord
+  project_description:
+    name: Jackett
+    summary: |
+      a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
+    link: https://github.com/Jackett/Jackett
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Jackett
 
 ## Overview
 
-[hotio/jackett](https://hotio.dev/containers/jackett) is a Docker container image for Jackett.
-
-> [Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
+[Jackett](https://github.com/Jackett/Jackett) is a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
 
@@ -25,6 +49,7 @@ tags:
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! abstract cta "Saltbox Setup Process"
 

@@ -6,8 +6,34 @@ tags:
   - sshwifty
   - networking
   - ssh
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/nirui/sshwifty
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/niruix/sshwifty/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Sshwifty
+    summary: |
+      an SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.
+    link: https://github.com/nirui/sshwifty
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Sshwifty
 
 ## Overview
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/nirui/sshwifty){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/nirui/sshwifty){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/niruix/sshwifty/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

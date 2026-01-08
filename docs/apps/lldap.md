@@ -7,25 +7,52 @@ tags:
   - ldap
   - authentication
   - user-management
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://github.com/lldap/lldap/blob/main/README.md
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/nitnelave/lldap/tags
+      type: docker
+    - name: Community
+      url: https://github.com/lldap/lldap/discussions
+      type: github
+  project_description:
+    name: LLDAP
+    summary: |
+      a small, lightweight LDAP server designed for directory services with minimal overhead compared to full-featured implementations like OpenLDAP.
+    link: https://github.com/lldap/lldap
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # LLDAP
 
 ## Overview
 
-LLDAP (Light LDAP) is a lightweight, simplified LDAP server for authentication. It provides a user-friendly interface for managing users and groups, with a simplified LDAP implementation that's easier to configure and maintain than traditional LDAP servers like OpenLDAP.
+[LLDAP](https://github.com/lldap/lldap) is a small, lightweight LDAP server designed for directory services with minimal overhead compared to full-featured implementations like OpenLDAP.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://github.com/lldap/lldap/blob/main/README.md){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/lldap/lldap/blob/main/README.md){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/nitnelave/lldap/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/lldap/lldap/discussions){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

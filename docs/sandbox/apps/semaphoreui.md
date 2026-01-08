@@ -6,9 +6,35 @@ tags:
   - semaphoreui
   - ansible
   - automation
+saltbox_automation:
+  disabled: false
+  sections:
+    inventory: true
+    overview: true
+  inventory:
+    show_sections: []
+    hide_sections: []
+    example_overrides: {}
+  app_links:
+    - name: Manual
+      url: https://docs.semaphoreui.com/user-guide/projects
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/semaphoreui/semaphore/tags
+      type: docker
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Semaphore UI
+    summary: |
+      an open-source, self-hosted web interface designed to simplify and centralize the management of DevOps automation tools like Ansible, Terraform, OpenTofu, PowerShell, Bash, and Python scripts.
+    link: https://github.com/semaphoreui/semaphore
 ---
 
-# SemaphoreUI
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Semaphore UI
 
 ## Overview
 
@@ -16,15 +42,16 @@ tags:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.semaphoreui.com/user-guide/projects){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://docs.semaphoreui.com/user-guide/projects){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/semaphoreui/semaphore/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

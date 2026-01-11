@@ -39,7 +39,7 @@ saltbox_automation:
 
 ## Overview
 
-[rocketchat]() is a...
+rocketchat is a...
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

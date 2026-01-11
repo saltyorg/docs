@@ -39,7 +39,7 @@ saltbox_automation:
 
 ## Overview
 
-[tika]() is a...
+tika is a...
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

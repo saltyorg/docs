@@ -28,6 +28,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Traefik Proxy
+
+## Overview
+
+[Traefik Proxy](https://traefik.io/traefik) is an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://doc.traefik.io/traefik){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/traefik/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](https://community.traefik.io){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
@@ -46,18 +64,20 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    traefik_name: "custom_value"
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        traefik_name: "custom_value"
+        ```
 
-    When overriding variables that end in `_default` (like `traefik_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `traefik_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `traefik_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `traefik_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 
@@ -236,9 +256,67 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
     ??? variable string "`traefik_crowdsec_ban_filepath`"
 
         ```yaml
-        # Path is internal to the container, so a host path of /opt/traefik/file.html becomes /etc/traefik/file.html
+        # Path is internal to the container, so a host path of /opt/traefik/ban.html becomes /etc/traefik/ban.html
         # Type: string
         traefik_crowdsec_ban_filepath: "/etc/traefik/ban.html"
+        ```
+
+    ??? variable bool "`traefik_sanitize_path`"
+
+        ```yaml
+        # Entrypoint Path Sanitization Settings
+        # Type: bool (true/false)
+        traefik_sanitize_path: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_slash`"
+
+        ```yaml
+        # Entrypoint Encoded characters settings (applied to all entrypoints)
+        # Type: bool (true/false)
+        traefik_encoded_allow_slash: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_backslash`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_backslash: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_null`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_null: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_semicolon`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_semicolon: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_percent`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_percent: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_question_mark`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_question_mark: true
+        ```
+
+    ??? variable bool "`traefik_encoded_allow_hash`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_encoded_allow_hash: true
         ```
 
 === "Templates"
@@ -294,6 +372,21 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
           - "{{ item.value.port }}:{{ item.value.port }}/udp"
         ```
 
+    ??? variable list "`traefik_entrypoint_http_settings_template`"
+
+        ```yaml
+        # Type: list
+        traefik_entrypoint_http_settings_template:
+          - "--entrypoints.{{ item.key }}.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.{{ item.key }}.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
+        ```
+
     ??? variable string "`traefik_trusted_ips_template`"
 
         ```yaml
@@ -333,29 +426,6 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         ```yaml
         # Type: string
         traefik_role_metrics_enabled: "{{ traefik.metrics | bool }}"
-        ```
-
-=== "Paths"
-
-    ??? variable string "`traefik_role_paths_folder`"
-
-        ```yaml
-        # Type: string
-        traefik_role_paths_folder: "{{ traefik_name }}"
-        ```
-
-    ??? variable string "`traefik_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        traefik_role_paths_location: "{{ server_appdata_path }}/{{ traefik_role_paths_folder }}"
-        ```
-
-    ??? variable string "`traefik_role_paths_acme_config_location`"
-
-        ```yaml
-        # Type: string
-        traefik_role_paths_acme_config_location: "{{ traefik_role_paths_location }}/acme.json"
         ```
 
 === "Web"
@@ -754,6 +824,14 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
           - "--providers.docker=true"
           - "--providers.docker.exposedbydefault=false"
           - "--entrypoints.internal.address=:8080"
+          - "--entrypoints.internal.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.internal.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
           - "--entrypoints.web.address=:{{ traefik_entrypoint_web_port }}"
           - "{{ ('--entrypoints.web.forwardedheaders.trustedIPs=' + traefik_trusted_ips_template) if (traefik_trusted_ips_template | length > 0) else omit }}"
           - "{{ ('--entrypoints.web.proxyprotocol.trustedIPs=' + traefik_trusted_ips_template) if (traefik_trusted_ips_template | length > 0) else omit }}"
@@ -761,6 +839,14 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
           - "--entrypoints.web.transport.respondingTimeouts.writeTimeout={{ traefik_entrypoint_web_writetimeout }}"
           - "--entrypoints.web.transport.respondingTimeouts.idleTimeout={{ traefik_entrypoint_web_idletimeout }}"
           - "--entrypoints.web.http.maxheaderbytes={{ traefik_entrypoint_web_request_maxheaderbytes }}"
+          - "--entrypoints.web.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.web.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
           - "--entrypoints.websecure.address=:{{ traefik_entrypoint_websecure_port }}"
           - "{{ ('--entrypoints.websecure.forwardedheaders.trustedIPs=' + traefik_trusted_ips_template) if (traefik_trusted_ips_template | length > 0) else omit }}"
           - "{{ ('--entrypoints.websecure.proxyprotocol.trustedIPs=' + traefik_trusted_ips_template) if (traefik_trusted_ips_template | length > 0) else omit }}"
@@ -768,6 +854,14 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
           - "--entrypoints.websecure.transport.respondingTimeouts.writeTimeout={{ traefik_entrypoint_websecure_writetimeout }}"
           - "--entrypoints.websecure.transport.respondingTimeouts.idleTimeout={{ traefik_entrypoint_websecure_idletimeout }}"
           - "--entrypoints.websecure.http.maxheaderbytes={{ traefik_entrypoint_websecure_request_maxheaderbytes }}"
+          - "--entrypoints.websecure.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.websecure.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
           - "--entrypoints.websecure.http.tls.certResolver={{ traefik_default_certresolver }}"
           - "--api.dashboard=true"
           - "--api=true"
@@ -904,7 +998,23 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         # Type: list
         traefik_role_docker_commands_tailscale:
           - "--entrypoints.tailscale-web.address=:81"
+          - "--entrypoints.tailscale-web.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.tailscale-web.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
           - "--entrypoints.tailscale-websecure.address=:444"
+          - "--entrypoints.tailscale-websecure.http.sanitizePath={{ traefik_sanitize_path | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedSlash={{ traefik_encoded_allow_slash | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedBackSlash={{ traefik_encoded_allow_backslash | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedNullCharacter={{ traefik_encoded_allow_null | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedSemicolon={{ traefik_encoded_allow_semicolon | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedPercent={{ traefik_encoded_allow_percent | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedQuestionMark={{ traefik_encoded_allow_question_mark | string | lower }}"
+          - "--entrypoints.tailscale-websecure.http.encodedCharacters.allowEncodedHash={{ traefik_encoded_allow_hash | string | lower }}"
         ```
 
     ??? variable list "`traefik_role_docker_commands_crowdsec`"
@@ -1821,7 +1931,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_themepark_theme:
         ```
 
-    ??? variable dict/omit "`traefik_role_traefik_api_endpoint`"
+    ??? variable dict "`traefik_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: dict/omit
@@ -1991,7 +2101,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_web_http_scheme:
         ```
 
-    ??? variable dict/omit "`traefik_role_web_http_serverstransport`"
+    ??? variable dict "`traefik_role_web_http_serverstransport`"
 
         ```yaml
         # Type: dict/omit
@@ -2006,7 +2116,7 @@ Visit <https://dash.iYOUR_DOMAIN_NAMEi>.
         traefik_role_web_scheme:
         ```
 
-    ??? variable dict/omit "`traefik_role_web_serverstransport`"
+    ??? variable dict "`traefik_role_web_serverstransport`"
 
         ```yaml
         # Type: dict/omit

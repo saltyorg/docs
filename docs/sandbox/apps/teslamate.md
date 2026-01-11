@@ -151,7 +151,7 @@ Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-prev
 
         ```yaml
         # Type: string
-        teslamate_role_postgres_docker_image_tag: "16"
+        teslamate_role_postgres_docker_image_tag: "18"
         ```
 
     ??? variable string "`teslamate_role_postgres_docker_image_repo`"

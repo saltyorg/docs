@@ -39,7 +39,7 @@ saltbox_automation:
 
 ## Overview
 
-[OpenVPN and Transmission with WebUI]() is a...
+OpenVPN and Transmission with WebUI is a...
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

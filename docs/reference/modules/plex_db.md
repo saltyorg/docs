@@ -88,14 +88,4 @@ Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-prev
         # Type: bool (true/false)
         plex_db_failed_optimization: false
         ```
-
-    ??? variable list "`plex_db_files`"
-
-        ```yaml
-        # Do not enable globally if deploying multiple instances
-        # Type: list
-        plex_db_files:
-          - "com.plexapp.plugins.library.db"
-          - "com.plexapp.plugins.library.blobs.db"
-        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

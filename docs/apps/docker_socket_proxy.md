@@ -28,6 +28,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Docker Socket Proxy
+
+## Overview
+
+[Docker Socket Proxy](https://github.com/Tecnativa/docker-socket-proxy) is a security-enhanced proxy for the Docker socket.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/socket-proxy/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
@@ -40,18 +58,20 @@ sb install docker-socket-proxy
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    docker_socket_proxy_name: "custom_value"
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        docker_socket_proxy_name: "custom_value"
+        ```
 
-    When overriding variables that end in `_default` (like `docker_socket_proxy_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `docker_socket_proxy_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `docker_socket_proxy_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `docker_socket_proxy_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 

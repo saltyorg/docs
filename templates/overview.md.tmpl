@@ -22,8 +22,11 @@
 
 ## Overview
 {{- if .Description }}
-
+{{ if .Description.Link }}
 [{{ .Description.Name }}]({{ .Description.Link }}) is {{ .Description.Summary }}
+{{- else }}
+{{ .Description.Name }} is {{ .Description.Summary }}
+{{- end }}
 {{- end }}
 {{- if .Links }}
 <div class="grid grid--buttons" markdown data-search-exclude>

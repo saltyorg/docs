@@ -32,55 +32,36 @@ blacklist:
   docs_coverage:
     saltbox:
       - "authentik_worker"
-      - "backup"
-      - "backup2"
       - "cloudflare"
       - "cloudplow_disable"
       - "common"
-      - "custom" # moved to modules
-      - "crowdsec"
-      - "diag" # moved to modules
-      - "docker"
-      - "docker_socket_proxy"
-      - "download_clients"
-      - "download_indexers"
-      - "glances"
       - "hetzner"
       - "hetzner_nfs" # moved to modules
-      - "hetzner_vlan"  # covered by hetzner_nfs documentation
+      - "hetzner_vlan" # covered by hetzner_nfs documentation
       - "index"
       - "kernel"
-      - "main_tags"
-      - "media_server"
-      - "mount_templates"
       - "motd"
+      - "mount_templates"
       - "notify"
       - "nvidia"
       - "permissions"
       - "plex_auth_token"
       - "plex_extra_tasks"
-      - "plex_fix_futures"
       - "pre_tasks"
-      - "python"
-      - "rclone"
       - "reboot"
       - "remote"
-      - "restore"
       - "saltbox_mod"
       - "sandbox"
       - "sanity_check"
       - "scripts"
       - "shell"
       - "system"
-      - "traefik"
       - "traefik_file_template"
       - "traefik_template"
       - "unionfs"
       - "user"
       - "user_check"
-      - "yyq"
     sandbox:
-      - "main_tag"
       - "maybe_finance_worker"
       - "sanity_check"
       - "tdarr_node"
@@ -100,12 +81,21 @@ blacklist:
 #   sandbox role "bar" -> docs/sandbox/apps/bar.md
 
 path_overrides:
-  saltbox: {}
-    # Example:
-    # plex: "docs/media-servers/plex.md"
-  sandbox: {}
-    # Example:
-    # custom_role: "docs/special/custom_role.md"
+  saltbox:
+    arr_db: "docs/reference/modules/arr_db.md"
+    backup2: "docs/saltbox/backup/backup2.md"
+    backup: "docs/saltbox/backup/backup.md"
+    custom: "docs/reference/modules/custom.md"
+    diag: "docs/reference/modules/diag.md"
+    download_clients: "docs/reference/modules/download_clients.md"
+    download_indexers: "docs/reference/modules/download_indexers.md"
+    main_tags: "docs/reference/modules/main_tags.md"
+    media_server: "docs/reference/modules/media_server.md"
+    plex_db: "docs/reference/modules/plex_db.md"
+    plex_fix_futures: "docs/reference/modules/plex_fix_futures.md"
+    restore: "docs/saltbox/backup/restore.md"
+  sandbox:
+    main_tag: "docs/reference/modules/main_tag.md"
 
 # =============================================================================
 # Global Override Options

@@ -8,6 +8,7 @@ on:
       - 'docs/apps/**'
       - 'docs/sandbox/apps/**'
       - '.docs-automation.yml'
+      - 'templates/**'
 
   schedule:
     # Run daily at 5 AM UTC

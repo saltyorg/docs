@@ -7,8 +7,25 @@ tags:
 saltbox_automation:
   sections:
     inventory: false
+  app_links:
+  - name: Manual
+    url:
+    type: documentation
+  - name: Releases
+    url:
+    type: releases
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: Cloudplow
+    summary: |
+      an automatic rclone remote uploader designed to transfer files from local storage to cloud storage providers, such as Google Drive, with support for multiple remote/folder pairings.
+    link: https://github.com/l3uddz/cloudplow
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Cloudplow
 
 ## Overview
@@ -17,15 +34,22 @@ saltbox_automation:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
+sb install cloudplow
+```
 
 ## Remote Uploader Function
 

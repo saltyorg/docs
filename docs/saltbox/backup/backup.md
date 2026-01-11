@@ -3,9 +3,23 @@ hide:
   - tags
 tags:
   - backup
+saltbox_automation:
+  project_description:
+    name: Standard Backup
+    summary: |
+      a Saltbox module that performs a backup of your Saltbox managed data.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Standard Backup
+
+## Overview
+
+Standard Backup is a Saltbox module that performs a backup of your Saltbox managed data.
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 With Saltbox you can either run a backup task manually or schedule it to run automatically.
 
@@ -113,4 +127,140 @@ This backup will take some time, likely hours, and all your containers may be do
     Save and close the file and the schedule will be applied going forward.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        backup_size_exclude_folders: ["item1", "item2"]
+        ```
+
+=== "Size Check"
+
+    ??? variable list "`backup_size_exclude_folders`"
+
+        ```yaml
+        # Type: list
+        backup_size_exclude_folders:
+          - "{{ server_appdata_path }}/plex/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder"
+          - "{{ server_appdata_path }}/plex/Library/Application Support/Plex Media Server/Cache/Transcode"
+        ```
+
+=== "Notifications"
+
+    ??? variable bool "`backup_notify_stop_docker_containers`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_notify_stop_docker_containers: true
+        ```
+
+    ??? variable bool "`backup_notify_start_docker_containers`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_notify_start_docker_containers: true
+        ```
+
+    ??? variable bool "`backup_notify_size`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_notify_size: true
+        ```
+
+    ??? variable bool "`backup_notify_rclone_complete`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_notify_rclone_complete: true
+        ```
+
+    ??? variable bool "`backup_notify_rsync_complete`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_notify_rsync_complete: true
+        ```
+
+=== "Templates"
+
+    ??? variable string "`backup_google_template`"
+
+        ```yaml
+        # Type: string
+        backup_google_template: '--drive-chunk-size="{{ backup_rclone_drive_chunk_size }}"'
+        ```
+
+    ??? variable string "`backup_dropbox_template`"
+
+        ```yaml
+        # Type: string
+        backup_dropbox_template: '--dropbox-chunk-size="{{ backup_rclone_dropbox_chunk_size }}" --disable-http2 --dropbox-pacer-min-sleep=250ms'
+        ```
+
+    ??? variable string "`backup_sftp_template`"
+
+        ```yaml
+        # Type: string
+        backup_sftp_template: ""
+        ```
+
+    ??? variable string "`backup_user_agent`"
+
+        ```yaml
+        # Type: string
+        backup_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' if backup.rclone.template != 'sftp' else '' }}"
+        ```
+
+=== "Cleanup"
+
+    ??? variable int "`backup_cleanup_number`"
+
+        ```yaml
+        # Defines how many of the archived backups to keep, so current backup is not counted in this
+        # Type: int
+        backup_cleanup_number: 99
+        ```
+
+    ??? variable bool "`backup_cleanup_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        backup_cleanup_enabled: false
+        ```
+
+    ??? variable string "`backup_cleanup_custom_rclone_flags`"
+
+        ```yaml
+        # Type: string
+        backup_cleanup_custom_rclone_flags: ""
+        ```
+
+=== "Snapshot Defaults"
+
+    ??? variable string "`snapshot_type`"
+
+        ```yaml
+        # Type: string
+        snapshot_type: ""
+        ```
+
+    ??? variable string "`backup_opt_path`"
+
+        ```yaml
+        # Type: string
+        backup_opt_path: "{{ server_appdata_path }}/"
+        ```
+
+    ??? variable bool "`use_snapshot`"
+
+        ```yaml
+        # Type: bool (true/false)
+        use_snapshot: false
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

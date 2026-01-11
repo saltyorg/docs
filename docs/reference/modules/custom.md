@@ -4,15 +4,23 @@ hide:
   - tags
 tags:
   - custom
+saltbox_automation:
+  project_description:
+    name: Custom
+    summary: |
+      a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Custom
 
 ## Overview
 
-Custom is a role that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation. This role gives you the flexibility to add tools and dependencies specific to your needs.
+Custom is a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Configuration
 
@@ -51,3 +59,40 @@ sb install custom
 
 !!! warning
     pip installation via this role is only available on Ubuntu 22.04 and earlier.
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        custom_apt: ["item1", "item2"]
+        ```
+
+=== "General"
+
+    ??? variable list "`custom_apt`"
+
+        ```yaml
+        # Type: list
+        custom_apt: []
+        ```
+
+    ??? variable list "`custom_deb`"
+
+        ```yaml
+        # Type: list
+        custom_deb: []
+        ```
+
+    ??? variable list "`custom_pip`"
+
+        ```yaml
+        # Type: list
+        custom_pip: []
+        ```
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -1,25 +1,48 @@
 ---
 icon: material/server-network-outline
 status: draft
+saltbox_automation:
+  inventory:
+    show_sections:
+    - Toggle
+    - Configuration
+  app_links:
+  - name: Manual
+    url:
+    type: documentation
+  - name: Releases
+    url:
+    type: releases
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: CrowdSec Security Engine
+    summary: |
+      a powerful, open source solution for detecting and blocking malicious IPs, safeguarding both infrastructure and application security.
+    link: https://www.crowdsec.net/security-engine
 ---
 
-# Crowdsec
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# CrowdSec Security Engine
 
 ## Overview
 
-CrowdSec is a free, open-source, and collaborative security automation platform designed to protect servers, services, containers, and virtual machines from cyberattacks by analyzing system logs and HTTP requests for malicious behavior.
+[CrowdSec Security Engine](https://www.crowdsec.net/security-engine) is a powerful, open source solution for detecting and blocking malicious IPs, safeguarding both infrastructure and application security.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 
@@ -33,18 +56,20 @@ sb install crowdsec
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    crowdsec_enabled: true
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        crowdsec_enabled: true
+        ```
 
-    When overriding variables that end in `_default` (like `crowdsec_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `crowdsec_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `crowdsec_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `crowdsec_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Toggle"
 
@@ -238,32 +263,5 @@ sb install crowdsec
         # Takes list of CIDR notation IP ranges
         # Type: list
         crowdsec_whitelisted_cidrs: []
-        ```
-
-=== "Lookups"
-
-    ??? variable string "`crowdsec_ports_8080`"
-
-        ```yaml
-        # Type: string
-        crowdsec_ports_8080: "{{ port_lookup_8080.meta.port
-                              if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
-                              else '8080' }}"
-        ```
-
-=== "Bouncers"
-
-    ??? variable string "`crowdsec_bouncer_traefik_path`"
-
-        ```yaml
-        # Type: string
-        crowdsec_bouncer_traefik_path: "/etc/crowdsec/bouncers/traefik.txt"
-        ```
-
-    ??? variable string "`crowdsec_bouncer_traefik_name`"
-
-        ```yaml
-        # Type: string
-        crowdsec_bouncer_traefik_name: "traefik"
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

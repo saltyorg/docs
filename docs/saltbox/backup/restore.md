@@ -3,14 +3,30 @@ hide:
   - tags
 tags:
   - restore
+saltbox_automation:
+  project_description:
+    name: Restore
+    summary: |
+      a Saltbox module that restores a backup performed with one of the Saltbox backup modules.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Restore
+
+## Overview
+
+Restore is a Saltbox module that restores a backup performed with one of the Saltbox backup modules.
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Prerequisite Configuration
 
 ???+ info
     Just like the initial install, these instructions are assuming you are running as `root` until told otherwise below.
 
-## Dependencies
+### Dependencies
 
 Start by installing dependencies.
 
@@ -38,7 +54,7 @@ Start by installing dependencies.
     wget -qO- https://install.saltbox.dev | sudo -H bash -s -- -v; cd /srv/git/saltbox
     ```
 
-## Configuration files
+### Configuration files
 
 Next retrieve the configuration files from a backup by following the instructions below. Note that the instructions are different if you used the restore service or not.
 
@@ -99,8 +115,9 @@ Next retrieve the configuration files from a backup by following the instruction
     !!! info
         Don't copy any other files; they will be dealt with in a couple minutes.
 
-## Settings
-To insure that your configuration files are up to date run:
+### Settings
+
+To ensure that your configuration files are up to date run:
 
 ```shell
 sb install settings
@@ -108,7 +125,7 @@ sb install settings
 
 This will migrate any changes that may have been made to the current settings format if needed. Look over the files after this and adapt anything you want to change.
 
-## Preinstall
+### Preinstall
 
 Next run `preinstall` which will setup the user account and a few other dependencies for the restore.
 
@@ -122,7 +139,7 @@ This is important and should not be ignored:
 
 **Now log out of the `root` account and log in as the user defined in `accounts.yml`**
 
-## Backup files
+### Backup files
 
 The restore process expects that the backup tar archives will be accessible in either the rclone destination or the local destination as defined in `backup_config.yml`:
 
@@ -210,7 +227,7 @@ backup:
 
     Copy your backup tar files from wherever they are now to that location. Once you have done this and the backup tar archives are present in `/mnt/local/Backups/Saltbox/opt` (or whatever path *you* set that to), you are clear to continue.
 
-## Restore
+## Deployment
 
 ???+ info
     From this point you'll want to **make sure** you run commands as the user specified in the `accounts.yml`; this means you should log out and log back in as `seed` (or the user in `accounts.yml` if you changed it)
@@ -230,3 +247,40 @@ Once successfully completed you can now continue:
 If you are migrating from one server to another, return to the [migration guide](migrate.md)
 
 If you are restoring to the same server, you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        restore_google_template: "custom_value"
+        ```
+
+=== "General"
+
+    ??? variable string "`restore_google_template`"
+
+        ```yaml
+        # Type: string
+        restore_google_template: '--drive-chunk-size=128M --drive-acknowledge-abuse'
+        ```
+
+    ??? variable string "`restore_dropbox_template`"
+
+        ```yaml
+        # Type: string
+        restore_dropbox_template: '--dropbox-chunk-size=128M --disable-http2 --dropbox-pacer-min-sleep=85ms'
+        ```
+
+    ??? variable string "`restore_user_agent`"
+
+        ```yaml
+        # Type: string
+        restore_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' if backup.rclone.template != 'sftp' else '' }}"
+        ```
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

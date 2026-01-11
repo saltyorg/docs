@@ -7,27 +7,46 @@ tags:
   - dynamic-dns
   - cloudflare
   - dns
+saltbox_automation:
+  sections:
+    inventory: false
+  app_links:
+  - name: Manual
+    url: https://ddclient.net/general
+    type: documentation
+  - name: Releases
+    url: https://hub.docker.com/r/linuxserver/ddclient/tags
+    type: releases
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: DDClient
+    summary: |
+      a dynamic DNS client that automatically updates DNS records when your public IP address changes.
+    link: https://ddclient.net
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # DDClient
 
 ## Overview
 
-[linuxserver/ddclient](https://docs.linuxserver.io/images/docker-ddclient) is a Docker container image for DDClient.
-
-> [DDClient](https://ddclient.net) is a dynamic DNS client that automatically updates DNS records when your public IP address changes. [:material-bookshelf:](https://ddclient.net/general)
+[DDClient](https://ddclient.net) is a dynamic DNS client that automatically updates DNS records when your public IP address changes.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://docs.linuxserver.io/general/container-customization){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://ddclient.net/general){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/ddclient/tags){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://hub.docker.com/r/linuxserver/ddclient/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

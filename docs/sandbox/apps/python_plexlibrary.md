@@ -7,25 +7,44 @@ tags:
   - python-plexlibrary
   - plex
   - library
+saltbox_automation:
+  app_links:
+  - name: Manual
+    url:
+    type: documentation
+  - name: Releases
+    url: https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags
+    type: releases
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: Python-PlexLibrary
+    summary: |
+      ...
+    link: https://github.com/adamgot/python-plexlibrary
 ---
 
-# python-plexlibrary
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Python-PlexLibrary
 
 ## Overview
 
-[python-plexlibrary](https://github.com/adamgot/python-plexlibrary) is a...
+[Python-PlexLibrary](https://github.com/adamgot/python-plexlibrary) is ...
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:material-bookshelf:**Manual**](https://python-plexlibrary.docs.url){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
 </div>
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

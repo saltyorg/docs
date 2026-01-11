@@ -1,5 +1,6 @@
 ---
 icon: material/server-network-outline
+title: PostgreSQL (Host Install)
 hide:
   - tags
 tags:
@@ -7,25 +8,28 @@ tags:
   - postgres
   - database
   - sql
+saltbox_automation:
+  app_links:
+  - name: Manual
+    url: https://www.postgresql.org/docs/12/index.html
+    type: documentation
+  - name: Releases
+    url: https://www.postgresql.org/ftp/source
+    type: docker
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: PostgreSQL (Host Install)
+    summary: |
+      an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+    link: https://www.postgresql.org
 ---
 
-# PostgreSQL (Host Install)
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Overview
-
-A host-based PostgreSQL installation role that deploys PostgreSQL directly on your server (not in Docker). This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://www.postgresql.org/docs){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-newspaper:**Releases**](https://www.postgresql.org/ftp/source){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](https://www.postgresql.org/community){ .md-button .md-button--stretch }
-
-</div>
-
----
+This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
 
 !!! warning "Advanced Users Only"
 

@@ -6,25 +6,26 @@ tags:
   - cockpit
   - server
   - administration
+saltbox_automation:
+  app_links:
+  - name: Manual
+    url: https://cockpit-project.org/documentation.html
+    type: documentation
+  - name: Releases
+    url:
+    type: releases
+  - name: Community
+    url:
+    type: community
+  project_description:
+    name: Cockpit
+    summary: |
+      an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser, providing comprehensive server management capabilities with a modern web interface.
+    link: https://cockpit-project.org
 ---
 
-# Cockpit
-
-## Overview
-
-[Cockpit](https://cockpit-project.org/) is an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser. It provides comprehensive server management capabilities with a modern web interface.
-
-<div class="grid grid--buttons" markdown data-search-exclude>
-
-[:material-bookshelf:**Manual**](https://cockpit-project.org/documentation.html){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
-
-[:fontawesome-solid-people-group:**Community**](){ .md-button .md-button--stretch }
-
-</div>
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 

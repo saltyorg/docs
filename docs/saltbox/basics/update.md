@@ -24,7 +24,7 @@ This command also updates the Saltbox CLI, Ansible, Sandbox, and migrates config
 
 ## Upgrading the server
 
-A Saltbox update should generally be followed by a run of one of the [main tags](../../apps/main_tags.md), or at
+A Saltbox update should generally be followed by a run of one of the [main tags](../../reference/modules/main_tags.md), or at
 minimum:
 
 ```shell

@@ -9,14 +9,29 @@ tags:
 saltbox_automation:
   inventory:
     hide_sections:
-      - Variables
+    - Variables
+  project_description:
+    name: Arr DB
+    summary: |
+      a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Arr DB
 
 ## Overview
 
-Arr DB is a Saltbox maintenance role that performs database optimization tasks on SQLite databases used by *arr applications (Sonarr, Radarr, Lidarr, Whisparr, Prowlarr) and Tautulli. The role performs integrity checks, vacuuming, and reindexing operations to maintain database health and performance.
+Arr DB is a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+!!! warning
+
+    This role is only for instances that use SQLite databases. If you have migrated your *arr applications to PostgreSQL, do not use this role.
+
+## Tasks
 
 The arr_db role performs the following operations for each enabled application:
 
@@ -26,22 +41,9 @@ The arr_db role performs the following operations for each enabled application:
 4. **Reindex**: Rebuilds database indexes for improved query performance
 5. **Cleanup**: Removes temporary backup files after successful completion
 
----
-
-!!! warning
-
-    This role is only for instances that use SQLite databases. If you have migrated your *arr applications to PostgreSQL, do not use this role.
-
 ## Configuration
 
-Before running the arr_db role, you must enable at least one application in your Saltbox inventory by setting the appropriate variable to `true`:
-
-- `arr_db_sonarr_enabled`
-- `arr_db_radarr_enabled`
-- `arr_db_lidarr_enabled`
-- `arr_db_whisparr_enabled`
-- `arr_db_prowlarr_enabled`
-- `arr_db_tautulli_enabled`
+Before running the arr_db role, you must enable at least one application in your Saltbox inventory by setting [the appropriate variable](#role-defaults) to `true`.
 
 ## Deployment
 

@@ -239,7 +239,6 @@ nav:
     - apps/iperf3.md
 
   - Saltbox Expanded:
-    - apps/arr_db.md
     - apps/asshama.md
     - apps/authelia.md
     - apps/authentik.md
@@ -257,8 +256,6 @@ nav:
     - apps/diun.md
     - apps/docker.md
     - apps/docker_socket_proxy.md
-    - apps/download_clients.md
-    - apps/download_indexers.md
     - apps/dozzle.md
     - apps/emby.md
     - apps/error_pages.md
@@ -266,10 +263,8 @@ nav:
     - apps/grafana.md
     - apps/jellyfin.md
     - apps/lldap.md
-    - apps/main_tags.md
     - apps/mainline.md
     - apps/mariadb.md
-    - apps/media_server.md
     - apps/mongodb.md
     - apps/netdata.md
     - apps/nginx.md
@@ -277,7 +272,6 @@ nav:
     - apps/nzbget.md
     - apps/nzbthrottle.md
     - apps/petio.md
-    - apps/plex_db.md
     - apps/postgres.md
     - apps/postgres_host.md
     - apps/prometheus.md
@@ -378,7 +372,6 @@ nav:
     - sandbox/apps/lgsm.md
     - sandbox/apps/linkding.md
     - sandbox/apps/linkwarden.md
-    - sandbox/apps/main_tag.md
     - sandbox/apps/maintainerr.md
     - sandbox/apps/makemkv.md
     - sandbox/apps/maybe_finance.md
@@ -573,16 +566,23 @@ nav:
 
   - Saltbox Modules:
     - reference/modules/index.md
+    - reference/modules/arr_db.md
     - reference/modules/common.md
     - reference/modules/custom.md
     - reference/modules/diag.md
+    - reference/modules/download_clients.md
+    - reference/modules/download_indexers.md
     - reference/modules/hetzner_nfs.md
     - reference/modules/hetzner_vlan.md
     - reference/modules/kernel.md
+    - reference/modules/main_tag.md
+    - reference/modules/main_tags.md
+    - reference/modules/media_server.md
     - reference/modules/motd.md
     - reference/modules/mount_templates.md
     - reference/modules/permissions.md
     - reference/modules/plex_auth_token.md
+    - reference/modules/plex_db.md
     - reference/modules/plex_fix_futures.md
     - reference/modules/reboot.md
     - reference/modules/remote.md

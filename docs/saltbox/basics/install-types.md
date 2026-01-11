@@ -54,7 +54,7 @@ Saltbox consists of a "Core" with various extra components added onto that core.
     feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
     ```
 
-    There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../sandbox/apps/main_tag.md).
+    There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../reference/modules/main_tag.md).
 
 
 [^2]:

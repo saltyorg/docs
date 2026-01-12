@@ -406,6 +406,526 @@ Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-prev
         traefik_role_access_buffer: 100
         ```
 
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`traefik_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`traefik_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`traefik_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`traefik_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`traefik_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cpus:
+        ```
+
+    ??? variable string "`traefik_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`traefik_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`traefik_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`traefik_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_memory:
+        ```
+
+    ??? variable string "`traefik_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`traefik_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`traefik_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`traefik_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`traefik_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`traefik_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_requests:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`traefik_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`traefik_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_devices:
+        ```
+
+    ??? variable string "`traefik_role_docker_devices_default`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_devices_default:
+        ```
+
+    ??? variable list "`traefik_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_groups:
+        ```
+
+    ??? variable bool "`traefik_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_privileged:
+        ```
+
+    ??? variable list "`traefik_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_security_opts:
+        ```
+
+    ??? variable string "`traefik_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_user:
+        ```
+
+    ??? variable string "`traefik_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`traefik_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`traefik_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`traefik_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`traefik_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_domainname:
+        ```
+
+    ??? variable list "`traefik_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_exposed_ports:
+        ```
+
+    ??? variable bool "`traefik_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`traefik_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`traefik_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_links:
+        ```
+
+    ??? variable string "`traefik_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_network_mode:
+        ```
+
+    ??? variable string "`traefik_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_pid_mode:
+        ```
+
+    ??? variable string "`traefik_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`traefik_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`traefik_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_mounts:
+        ```
+
+    ??? variable dict "`traefik_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        traefik_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`traefik_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`traefik_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`traefik_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`traefik_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`traefik_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`traefik_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`traefik_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_cleanup:
+        ```
+
+    ??? variable string "`traefik_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`traefik_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        traefik_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`traefik_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`traefik_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_init:
+        ```
+
+    ??? variable string "`traefik_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`traefik_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`traefik_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        traefik_role_docker_log_options:
+        ```
+
+    ??? variable bool "`traefik_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`traefik_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`traefik_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`traefik_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_paused:
+        ```
+
+    ??? variable bool "`traefik_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_recreate:
+        ```
+
+    ??? variable int "`traefik_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_restart_retries:
+        ```
+
+    ??? variable int "`traefik_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`traefik_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_capabilities:
+        ```
+
+    ??? variable string "`traefik_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_cgroup_parent:
+        ```
+
+    ??? variable int "`traefik_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        traefik_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`traefik_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`traefik_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_env_file:
+        ```
+
+    ??? variable bool "`traefik_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        traefik_role_docker_read_only:
+        ```
+
+    ??? variable string "`traefik_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        traefik_role_docker_runtime:
+        ```
+
+    ??? variable list "`traefik_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_sysctls:
+        ```
+
+    ??? variable list "`traefik_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        traefik_role_docker_ulimits:
+        ```
+
 === "Global Override Options"
 
     ??? variable bool "`traefik_role_autoheal_enabled`"

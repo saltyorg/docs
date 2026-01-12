@@ -88,10 +88,6 @@ plex_enabled = True
 
 Now restart the Membarr container `docker restart membarr`.
 
-???+ Success "Plex Token"
-    To get the Plex token, you will run the following command: `sb install plex-auth-token`
-    Look for the **Display Plex Auth Token** task in the log.
-
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

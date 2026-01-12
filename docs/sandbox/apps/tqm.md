@@ -128,4 +128,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         tqm_name: tqm
         ```
+
+=== "Settings"
+
+    ??? variable string "`tqm_role_download_client`"
+
+        ```yaml
+        # Type: string
+        tqm_role_download_client: "qbt"
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -106,6 +106,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_overwrite_nginx_config: true
         ```
 
+    ??? variable string "`invoiceninjav5_role_app_key`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_app_key: "base64:O1S3kAJEDgo92gPkXtxfdCJpoGShgKloUSdcaHMXmoY="
+        ```
+
 === "Web"
 
     ??? variable string "`invoiceninjav5_role_nginx_web_subdomain`"
@@ -211,7 +218,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_role_docker_envs_default:
           TZ: "{{ tz }}"
           APP_URL: "{{ lookup('role_var', '_nginx_web_url', role='invoiceninjav5') }}"
-          APP_KEY: "{{ invoiceninja.app_key | default('base64:O1S3kAJEDgo92gPkXtxfdCJpoGShgKloUSdcaHMXmoY=', true) }}"
+          APP_KEY: "{{ lookup('role_var', '_app_key', role='invoiceninjav5') }}"
           APP_ENV: "production"
           APP_DEBUG: "false"
           TRUSTED_PROXIES: "*"
@@ -885,6 +892,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```
 
 === "Global Override Options"
+
+    ??? variable string "`invoiceninjav5_role_app_key`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_app_key:
+        ```
 
     ??? variable bool "`invoiceninjav5_role_autoheal_enabled`"
 

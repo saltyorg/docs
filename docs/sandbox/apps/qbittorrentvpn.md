@@ -206,6 +206,54 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrentvpn2_lan_network: "172.19.0.0/16"
         ```
 
+    ??? variable string "`qbittorrentvpn_role_vpn_user`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_user: "your_vpn_username"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_user: "your_vpn_username"
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_pass`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_pass`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_pass: "your_vpn_password"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_pass: "your_vpn_password"
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_prov`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_prov`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_prov: "pia"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_prov: "pia"
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_client`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_client`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_client: "wireguard"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_client: "wireguard"
+        ```
+
 === "Web"
 
     ??? variable string "`qbittorrentvpn_role_web_subdomain`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_subdomain`{ .sb-show-on-checked }"
@@ -462,10 +510,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           UMASK_SET: "002"
           VPN_ENABLED: "yes"
-          VPN_USER: "{{ qbittorrentvpn.vpn_user | default('username', true) }}"
-          VPN_PASS: "{{ qbittorrentvpn.vpn_pass | default('password', true) }}"
-          VPN_PROV: "{{ qbittorrentvpn.vpn_prov | default('pia', true) }}"
-          VPN_CLIENT: "{{ qbittorrentvpn.vpn_client | default('wireguard', true) }}"
+          VPN_USER: "{{ lookup('role_var', '_vpn_user', role='qbittorrentvpn') }}"
+          VPN_PASS: "{{ lookup('role_var', '_vpn_pass', role='qbittorrentvpn') }}"
+          VPN_PROV: "{{ lookup('role_var', '_vpn_prov', role='qbittorrentvpn') }}"
+          VPN_CLIENT: "{{ lookup('role_var', '_vpn_client', role='qbittorrentvpn') }}"
           STRICT_PORT_FORWARD: "yes"
           ENABLE_PRIVOXY: "no"
           LAN_NETWORK: "{{ qbittorrentvpn_lan_network }}"
@@ -480,10 +528,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           UMASK_SET: "002"
           VPN_ENABLED: "yes"
-          VPN_USER: "{{ qbittorrentvpn.vpn_user | default('username', true) }}"
-          VPN_PASS: "{{ qbittorrentvpn.vpn_pass | default('password', true) }}"
-          VPN_PROV: "{{ qbittorrentvpn.vpn_prov | default('pia', true) }}"
-          VPN_CLIENT: "{{ qbittorrentvpn.vpn_client | default('wireguard', true) }}"
+          VPN_USER: "{{ lookup('role_var', '_vpn_user', role='qbittorrentvpn') }}"
+          VPN_PASS: "{{ lookup('role_var', '_vpn_pass', role='qbittorrentvpn') }}"
+          VPN_PROV: "{{ lookup('role_var', '_vpn_prov', role='qbittorrentvpn') }}"
+          VPN_CLIENT: "{{ lookup('role_var', '_vpn_client', role='qbittorrentvpn') }}"
           STRICT_PORT_FORWARD: "yes"
           ENABLE_PRIVOXY: "no"
           LAN_NETWORK: "{{ qbittorrentvpn_lan_network }}"
@@ -1952,6 +2000,54 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable wildcard certificate for containers
         # Type: bool (true/false)
         qbittorrentvpn2_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_client`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_client`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_client:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_client:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_pass`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_pass`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_pass:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_pass:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_prov`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_prov`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_prov:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_prov:
+        ```
+
+    ??? variable string "`qbittorrentvpn_role_vpn_user`{ .sb-show-on-unchecked }`qbittorrentvpn2_vpn_user`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_vpn_user:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_vpn_user:
         ```
 
     ??? variable string "`qbittorrentvpn_role_web_domain`{ .sb-show-on-unchecked }`qbittorrentvpn2_web_domain`{ .sb-show-on-checked }"

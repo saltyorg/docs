@@ -133,6 +133,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         notifiarr_role_privileged: false
         ```
 
+    ??? variable string "`notifiarr_role_api_key`"
+
+        ```yaml
+        # Type: string
+        notifiarr_role_api_key: "api-key-from-notifiarr.com"
+        ```
+
 === "Web"
 
     ??? variable string "`notifiarr_role_web_subdomain`"

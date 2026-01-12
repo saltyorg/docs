@@ -82,6 +82,29 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_name: foundry
         ```
 
+=== "Settings"
+
+    ??? variable string "`foundry_role_user`"
+
+        ```yaml
+        # Type: string
+        foundry_role_user: "your_foundryvtt_username"
+        ```
+
+    ??? variable string "`foundry_role_pass`"
+
+        ```yaml
+        # Type: string
+        foundry_role_pass: "your_foundryvtt_password"
+        ```
+
+    ??? variable string "`foundry_role_app_key`"
+
+        ```yaml
+        # Type: string
+        foundry_role_app_key: "your_foundryvtt_license"
+        ```
+
 === "Web"
 
     ??? variable string "`foundry_role_web_subdomain`"
@@ -242,10 +265,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           FOUNDRY_UID: "{{ uid }}"
           CONTAINER_PRESERVE_CONFIG: "true"
           CONTAINER_VERBOSE: "false"
-          FOUNDRY_LICENSE_KEY: "{{ foundry.app_key }}"
+          FOUNDRY_LICENSE_KEY: "{{ lookup('role_var', '_app_key', role='foundry') }}"
           FOUNDRY_PROXY_SSL: "true"
-          FOUNDRY_USERNAME: "{{ foundry.user }}"
-          FOUNDRY_PASSWORD: "{{ foundry.pass }}"
+          FOUNDRY_USERNAME: "{{ lookup('role_var', '_user', role='foundry') }}"
+          FOUNDRY_PASSWORD: "{{ lookup('role_var', '_pass', role='foundry') }}"
           TIMEZONE: "{{ tz }}"
         ```
 
@@ -892,6 +915,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
+    ??? variable string "`foundry_role_app_key`"
+
+        ```yaml
+        # Type: string
+        foundry_role_app_key:
+        ```
+
     ??? variable bool "`foundry_role_autoheal_enabled`"
 
         ```yaml
@@ -967,6 +997,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         foundry_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`foundry_role_pass`"
+
+        ```yaml
+        # Type: string
+        foundry_role_pass:
         ```
 
     ??? variable string "`foundry_role_paths_location`"
@@ -1107,6 +1144,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable wildcard certificate for the container
         # Type: bool (true/false)
         foundry_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`foundry_role_user`"
+
+        ```yaml
+        # Type: string
+        foundry_role_user:
         ```
 
     ??? variable string "`foundry_role_web_domain`"

@@ -137,18 +137,33 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 1.  !!! example "Example override"
 
         ```yaml
-        backup_size_exclude_folders: ["item1", "item2"]
+        backup_size_exclude_folders: "custom_value"
         ```
 
 === "Size Check"
 
-    ??? variable list "`backup_size_exclude_folders`"
+    ??? variable string "`backup_size_exclude_folders`"
+
+        ```yaml
+        # Type: string
+        backup_size_exclude_folders: >-
+          {{ (plex_instances | default(['plex'])
+              | map('regex_replace', '^', server_appdata_path ~ '/')
+              | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder')
+              | list)
+             + (plex_instances | default(['plex'])
+              | map('regex_replace', '^', server_appdata_path ~ '/')
+              | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/Transcode')
+              | list) }}
+        ```
+
+=== "Backup Excludes"
+
+    ??? variable list "`backup_excludes_list_extra`"
 
         ```yaml
         # Type: list
-        backup_size_exclude_folders:
-          - "{{ server_appdata_path }}/plex/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder"
-          - "{{ server_appdata_path }}/plex/Library/Application Support/Plex Media Server/Cache/Transcode"
+        backup_excludes_list_extra: []
         ```
 
 === "Notifications"

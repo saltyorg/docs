@@ -150,6 +150,134 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_name: qbit-manage
         ```
 
+=== "Settings"
+
+    ??? variable string "`qbit_manage_role_qbt_run`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_run: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_schedule`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_schedule: "30"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_config`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_config: "config.yml"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_logfile`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_logfile: "activity.log"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_cross_seed`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_cross_seed: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_recheck`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_recheck: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_cat_update`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_cat_update: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_tag_update`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_tag_update: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_rem_unregistered`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_rem_unregistered: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_rem_orphaned`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_rem_orphaned: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_tag_nohardlinks`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_tag_nohardlinks: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_skip_recycle`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_skip_recycle: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_dry_run`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_dry_run: "true"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_log_level`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_log_level: "INFO"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_divider`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_divider: "="
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_width`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_width: "100"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_debug`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_debug: "false"
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_trace`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_trace: "false"
+        ```
+
 === "Web"
 
     ??? variable string "`qbit_manage_role_web_subdomain`"
@@ -325,24 +453,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           UMASK: "002"
           TZ: "{{ tz }}"
           QBT_WEB_SERVER: "true"
-          QBT_RUN: "{{ qbit_manage.qbt_run }}"
-          QBT_SCHEDULE: "{{ qbit_manage.qbt_schedule }}"
-          QBT_CONFIG: "{{ qbit_manage.qbt_config }}"
-          QBT_LOGFILE: "{{ qbit_manage.qbt_logfile }}"
-          QBT_CROSS_SEED: "{{ qbit_manage.qbt_cross_seed }}"
-          QBT_RECHECK: "{{ qbit_manage.qbt_recheck }}"
-          QBT_CAT_UPDATE: "{{ qbit_manage.qbt_cat_update }}"
-          QBT_TAG_UPDATE: "{{ qbit_manage.qbt_tag_update }}"
-          QBT_REM_UNREGISTERED: "{{ qbit_manage.qbt_rem_unregistered }}"
-          QBT_REM_ORPHANED: "{{ qbit_manage.qbt_rem_orphaned }}"
-          QBT_TAG_NOHARDLINKS: "{{ qbit_manage.qbt_tag_nohardlinks }}"
-          QBT_SKIP_RECYCLE: "{{ qbit_manage.qbt_skip_recycle }}"
-          QBT_DRY_RUN: "{{ qbit_manage.qbt_dry_run }}"
-          QBT_LOG_LEVEL: "{{ qbit_manage.qbt_log_level }}"
-          QBT_DIVIDER: "{{ qbit_manage.qbt_divider }}"
-          QBT_WIDTH: "{{ qbit_manage.qbt_width }}"
-          QBT_DEBUG: "{{ qbit_manage.qbt_debug }}"
-          QBT_TRACE: "{{ qbit_manage.qbt_trace }}"
+          QBT_RUN: "{{ lookup('role_var', '_qbt_run', role='qbit_manage') }}"
+          QBT_SCHEDULE: "{{ lookup('role_var', '_qbt_schedule', role='qbit_manage') }}"
+          QBT_CONFIG: "{{ lookup('role_var', '_qbt_config', role='qbit_manage') }}"
+          QBT_LOGFILE: "{{ lookup('role_var', '_qbt_logfile', role='qbit_manage') }}"
+          QBT_CROSS_SEED: "{{ lookup('role_var', '_qbt_cross_seed', role='qbit_manage') }}"
+          QBT_RECHECK: "{{ lookup('role_var', '_qbt_recheck', role='qbit_manage') }}"
+          QBT_CAT_UPDATE: "{{ lookup('role_var', '_qbt_cat_update', role='qbit_manage') }}"
+          QBT_TAG_UPDATE: "{{ lookup('role_var', '_qbt_tag_update', role='qbit_manage') }}"
+          QBT_REM_UNREGISTERED: "{{ lookup('role_var', '_qbt_rem_unregistered', role='qbit_manage') }}"
+          QBT_REM_ORPHANED: "{{ lookup('role_var', '_qbt_rem_orphaned', role='qbit_manage') }}"
+          QBT_TAG_NOHARDLINKS: "{{ lookup('role_var', '_qbt_tag_nohardlinks', role='qbit_manage') }}"
+          QBT_SKIP_RECYCLE: "{{ lookup('role_var', '_qbt_skip_recycle', role='qbit_manage') }}"
+          QBT_DRY_RUN: "{{ lookup('role_var', '_qbt_dry_run', role='qbit_manage') }}"
+          QBT_LOG_LEVEL: "{{ lookup('role_var', '_qbt_log_level', role='qbit_manage') }}"
+          QBT_DIVIDER: "{{ lookup('role_var', '_qbt_divider', role='qbit_manage') }}"
+          QBT_WIDTH: "{{ lookup('role_var', '_qbt_width', role='qbit_manage') }}"
+          QBT_DEBUG: "{{ lookup('role_var', '_qbt_debug', role='qbit_manage') }}"
+          QBT_TRACE: "{{ lookup('role_var', '_qbt_trace', role='qbit_manage') }}"
         ```
 
     ??? variable dict "`qbit_manage_role_docker_envs_custom`"
@@ -1051,6 +1179,132 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         qbit_manage_role_paths_location:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_cat_update`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_cat_update:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_config`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_config:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_cross_seed`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_cross_seed:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_debug`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_debug:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_divider`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_divider:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_dry_run`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_dry_run:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_log_level`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_log_level:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_logfile`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_logfile:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_recheck`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_recheck:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_rem_orphaned`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_rem_orphaned:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_rem_unregistered`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_rem_unregistered:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_run`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_run:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_schedule`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_schedule:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_skip_recycle`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_skip_recycle:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_tag_nohardlinks`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_tag_nohardlinks:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_tag_update`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_tag_update:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_trace`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_trace:
+        ```
+
+    ??? variable string "`qbit_manage_role_qbt_width`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_qbt_width:
         ```
 
     ??? variable string "`qbit_manage_role_themepark_addons`"

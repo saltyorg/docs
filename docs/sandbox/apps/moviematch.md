@@ -106,6 +106,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         moviematch_name: moviematch
         ```
 
+=== "Settings"
+
+    ??? variable string "`moviematch_role_plex_url`"
+
+        ```yaml
+        # Type: string
+        moviematch_role_plex_url: "http://plex:32400"
+        ```
+
+    ??? variable string "`moviematch_role_libraries`"
+
+        ```yaml
+        # Type: string
+        moviematch_role_libraries: "Movies"
+        ```
+
 === "Web"
 
     ??? variable string "`moviematch_role_web_subdomain`"
@@ -263,10 +279,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
-          PLEX_URL: "{{ moviematch.plex_url }}"
+          PLEX_URL: "{{ lookup('role_var', '_plex_url', role='moviematch') }}"
           PLEX_TOKEN: "{{ plex_auth_token }}"
           LOG_LEVEL: DEBUG
-          LIBRARY_FILTER: "{{ moviematch.libraries }}"
+          LIBRARY_FILTER: "{{ lookup('role_var', '_libraries', role='moviematch') }}"
         ```
 
     ??? variable dict "`moviematch_role_docker_envs_custom`"
@@ -965,6 +981,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         moviematch_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`moviematch_role_libraries`"
+
+        ```yaml
+        # Type: string
+        moviematch_role_libraries:
+        ```
+
+    ??? variable string "`moviematch_role_plex_url`"
+
+        ```yaml
+        # Type: string
+        moviematch_role_plex_url:
         ```
 
     ??? variable string "`moviematch_role_themepark_addons`"

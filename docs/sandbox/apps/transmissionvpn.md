@@ -108,6 +108,27 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmissionvpn_umask_set: "022"
         ```
 
+    ??? variable string "`transmissionvpn_role_vpn_user`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_user: ""
+        ```
+
+    ??? variable string "`transmissionvpn_role_vpn_pass`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_pass: ""
+        ```
+
+    ??? variable string "`transmissionvpn_role_vpn_prov`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_prov: ""
+        ```
+
 === "Web"
 
     ??? variable string "`transmissionvpn_role_web_subdomain`"
@@ -265,9 +286,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
-          OPENVPN_PROVIDER: "{{ transmissionvpn.vpn_prov | default('pia', true) }}"
-          OPENVPN_USERNAME: "{{ transmissionvpn.vpn_user | default('username', true) }}"
-          OPENVPN_PASSWORD: "{{ transmissionvpn.vpn_pass | default('password', true) }}"
+          OPENVPN_PROVIDER: "{{ lookup('role_var', '_vpn_prov', role='transmissionvpn') }}"
+          OPENVPN_USERNAME: "{{ lookup('role_var', '_vpn_user', role='transmissionvpn') }}"
+          OPENVPN_PASSWORD: "{{ lookup('role_var', '_vpn_pass', role='transmissionvpn') }}"
           UMASK_SET: "{{ transmissionvpn_umask_set }}"
           CREATE_TUN_DEVICE: "{{ transmissionvpn_create_tun_device }}"
           TRANSMISSION_HOME: "{{ transmissionvpn_transmission_home }}"
@@ -1145,6 +1166,27 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable wildcard certificate for the container
         # Type: bool (true/false)
         transmissionvpn_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`transmissionvpn_role_vpn_pass`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_pass:
+        ```
+
+    ??? variable string "`transmissionvpn_role_vpn_prov`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_prov:
+        ```
+
+    ??? variable string "`transmissionvpn_role_vpn_user`"
+
+        ```yaml
+        # Type: string
+        transmissionvpn_role_vpn_user:
         ```
 
     ??? variable string "`transmissionvpn_role_web_domain`"

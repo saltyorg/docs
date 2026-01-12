@@ -107,6 +107,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         handbrake_name: handbrake
         ```
 
+=== "Settings"
+
+    ??? variable string "`handbrake_role_handbrake_pass`"
+
+        ```yaml
+        # Type: string
+        handbrake_role_handbrake_pass: "saltbox"
+        ```
+
 === "Web"
 
     ??? variable string "`handbrake_role_web_subdomain`"
@@ -266,7 +275,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           CLEAN_TMP_DIR: "1"
           ENABLE_CJK_FONT: "1"
-          VNC_PASSWORD: "{{ handbrake.handbrake_pass | default('saltbox', true) }}"
+          VNC_PASSWORD: "{{ lookup('role_var', '_handbrake_pass', role='handbrake') }}"
         ```
 
     ??? variable dict "`handbrake_role_docker_envs_custom`"
@@ -978,6 +987,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         handbrake_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`handbrake_role_handbrake_pass`"
+
+        ```yaml
+        # Type: string
+        handbrake_role_handbrake_pass:
         ```
 
     ??? variable string "`handbrake_role_paths_location`"

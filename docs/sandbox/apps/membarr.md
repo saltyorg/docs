@@ -116,6 +116,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         membarr_name: membarr
         ```
 
+=== "Settings"
+
+    ??? variable string "`membarr_role_discord_token`"
+
+        ```yaml
+        # Type: string
+        membarr_role_discord_token: "your_discord_bot_token"
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -165,7 +174,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         membarr_role_docker_envs_default:
           TZ: "{{ tz }}"
-          token: "{{ membarr.discord_token }}"
+          token: "{{ lookup('role_var', '_discord_token', role='membarr') }}"
         ```
 
     ??? variable dict "`membarr_role_docker_envs_custom`"
@@ -831,6 +840,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable healthcheck waiting for container dependencies
         # Type: string ("true"/"false")
         membarr_role_depends_on_healthchecks:
+        ```
+
+    ??? variable string "`membarr_role_discord_token`"
+
+        ```yaml
+        # Type: string
+        membarr_role_discord_token:
         ```
 
     ??? variable bool "`membarr_role_diun_enabled`"

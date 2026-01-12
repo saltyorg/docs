@@ -1,4 +1,6 @@
 ---
+extra_stylesheets:
+- stylesheets/upgrade.css
 status: draft
 hide:
   - tags
@@ -9,13 +11,13 @@ tags:
 ---
 
 # Role Refactor
- 
+
 The role-refactor branch merge includes the following updates:
 
 -   Enforces explicit Inventory [override levels](../inventory/index.md#override-levels) :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
 
     > Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
-    
+
     > **Role-scoped overrides must now include the `_role_` infix**{ style="color: var(--md-typeset-color);" } (e.g. `sonarr_role_docker_image`) **to persist as such.**{ style="color: var(--md-typeset-color);" }
 
 -   Deprecates `_docker_network_mode_default` Inventory convention
@@ -29,7 +31,7 @@ The role-refactor branch merge includes the following updates:
 -   Removes a number of roles
 
     <blockquote class="grid" style="grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));" markdown>
-    
+
     jaeger
 
     readarr
@@ -84,9 +86,9 @@ When a role only has a single instance, either variable form will achieve the sa
     ```yaml
     plex_dns_proxy: false
     ```
-    
+
     Becomes:
-    
+
     ```yaml
     plex_role_dns_proxy: false
     ```
@@ -98,28 +100,34 @@ Multi-instance role variables must be converted to the appropriate override leve
 !!! example
 
     !!! tip "Specificity takes precedence"
-    
+
         When determining which variable to use, remember the precedence order: Instance > Role > Global
 
     ```yaml
     bazarr_instances: ["bazarr", "bazarr4k"]
-    bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"]
-    bazarr_themepark_theme: "nord"
+    bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
+    bazarr_themepark_theme: "nord" # (2)!
     bazarr4k_themepark_theme: "maroon"
     ```
-    
+
+    1. Reminder: variables in this form were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
+
+    2. Same here.
+
     Becomes:
-    
+
     ```yaml
     bazarr_instances: ["bazarr", "bazarr4k"]
     bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
     bazarr_role_themepark_theme: "nord" # or bazarr_themepark_theme: "nord" (2)
-    bazarr4k_themepark_theme: "maroon"
+    bazarr4k_themepark_theme: "maroon" # (3)!
     ```
-    
+
     1. Typically, you want external processing tools to be available to all instances, so keep role-scoped.
-    
+
     2. This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
-    
+
         - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
         - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if enabled, or would not have theming applied.
+
+    3. No change needed here, as variables in this form were already considered instance-scoped and remain so.

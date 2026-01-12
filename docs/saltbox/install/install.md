@@ -341,6 +341,16 @@ To edit any of the following configuration files, use the command written in the
 
     15. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
+### Validate
+
+At this point you can check your configuration files for issues by running:
+
+```shell
+sb validate-config
+```
+
+Later commands will fail if the files do not pass validation, so make sure to review and fix any reported errors before proceeding. [Further reading](../../reference/accounts.md#validation)
+
 ## Step 3: Preinstall
 
 This step will create the user account specified in `accounts.yml`, add it to sudoers, update the kernel, edit GRUB configuration, install Rclone, and reboot the server if needed.

@@ -5,7 +5,7 @@ hide:
 tags:
   - jellyseerr
   - media
-  - requests 
+  - requests
 saltbox_automation:
   app_links:
     - name: Manual

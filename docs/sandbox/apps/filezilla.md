@@ -6,7 +6,7 @@ hide:
 tags:
   - filezilla
   - file-management
-  - ftp 
+  - ftp
 saltbox_automation:
   app_links:
     - name: Manual

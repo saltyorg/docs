@@ -6,7 +6,7 @@ hide:
 tags:
   - bookstack
   - wiki
-  - documentation 
+  - documentation
 saltbox_automation:
   app_links:
     - name: Manual

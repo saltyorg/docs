@@ -5,7 +5,7 @@ hide:
 tags:
   - wikijs
   - documentation
-  - wiki 
+  - wiki
 saltbox_automation:
   app_links:
     - name: Manual

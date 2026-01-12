@@ -5,7 +5,7 @@ hide:
   - tags
 tags:
   - firefox
-  - browser 
+  - browser
 saltbox_automation:
   app_links:
     - name: Manual

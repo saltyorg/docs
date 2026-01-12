@@ -5,7 +5,7 @@ hide:
 tags:
   - gitea
   - development
-  - git 
+  - git
 saltbox_automation:
   app_links:
     - name: Manual

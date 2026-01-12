@@ -6,7 +6,7 @@ hide:
 tags:
   - plex-auto-languages
   - plex
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

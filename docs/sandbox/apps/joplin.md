@@ -5,7 +5,7 @@ hide:
 tags:
   - joplin
   - productivity
-  - notes 
+  - notes
 saltbox_automation:
   app_links:
     - name: Manual

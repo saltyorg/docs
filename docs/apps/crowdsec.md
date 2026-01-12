@@ -8,15 +8,15 @@ saltbox_automation:
     - Toggle
     - Configuration
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url:
-    type: releases
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: CrowdSec Security Engine
     summary: |

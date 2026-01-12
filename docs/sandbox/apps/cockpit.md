@@ -8,15 +8,15 @@ tags:
   - administration
 saltbox_automation:
   app_links:
-  - name: Manual
-    url: https://cockpit-project.org/documentation.html
-    type: documentation
-  - name: Releases
-    url:
-    type: releases
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url: https://cockpit-project.org/documentation.html
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: Cockpit
     summary: |

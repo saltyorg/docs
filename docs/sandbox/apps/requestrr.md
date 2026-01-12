@@ -5,7 +5,7 @@ hide:
 tags:
   - requestrr
   - discord
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

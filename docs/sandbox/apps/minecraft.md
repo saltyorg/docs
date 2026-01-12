@@ -2,7 +2,7 @@
 icon: material/docker
 title: Minecraft
 tags:
-  - Minecraft 
+  - Minecraft
 saltbox_automation:
   app_links:
     - name: Manual

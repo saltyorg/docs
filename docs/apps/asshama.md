@@ -7,15 +7,15 @@ tags:
   - asshama
 saltbox_automation:
   app_links:
-  - name: Manual
-    url: https://github.com/ZeroQI/Absolute-Series-Scanner/wiki
-    type: documentation
-  - name: Releases
-    url:
-    type: github
-  - name: Community
-    url: https://github.com/ZeroQI/Absolute-Series-Scanner/discussions
-    type: github
+    - name: Manual
+      url: https://github.com/ZeroQI/Absolute-Series-Scanner/wiki
+      type: documentation
+    - name: Releases
+      url:
+      type: github
+    - name: Community
+      url: https://github.com/ZeroQI/Absolute-Series-Scanner/discussions
+      type: github
   project_description:
     name: ASSHAMA
     summary: |

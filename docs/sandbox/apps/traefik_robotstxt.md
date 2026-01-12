@@ -6,7 +6,7 @@ hide:
 tags:
   - traefik-robotstxt
   - networking
-  - seo 
+  - seo
 saltbox_automation:
   app_links:
     - name: Manual

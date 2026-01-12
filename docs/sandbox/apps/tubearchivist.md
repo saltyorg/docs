@@ -6,7 +6,7 @@ hide:
 tags:
   - tubearchivist
   - media
-  - youtube 
+  - youtube
 saltbox_automation:
   app_links:
     - name: Manual

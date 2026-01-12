@@ -7,7 +7,7 @@ hide:
 tags:
   - xbackbone
   - file-sharing
-  - upload 
+  - upload
 saltbox_automation:
   app_links:
     - name: Manual

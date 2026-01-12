@@ -6,7 +6,7 @@ hide:
 tags:
   - node-red
   - automation
-  - iot 
+  - iot
 saltbox_automation:
   app_links:
     - name: Manual

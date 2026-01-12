@@ -11,15 +11,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url: https://github.com/bcicen/ctop/blob/master/README.md#usage
-    type: documentation
-  - name: Releases
-    url: https://github.com/bcicen/ctop/tags
-    type: github
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url: https://github.com/bcicen/ctop/blob/master/README.md#usage
+      type: documentation
+    - name: Releases
+      url: https://github.com/bcicen/ctop/tags
+      type: github
+    - name: Community
+      url:
+      type: community
   project_description:
     name: ctop
     summary: |

@@ -5,7 +5,7 @@ hide:
 tags:
   - audiobookshelf
   - audiobooks
-  - podcasts 
+  - podcasts
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - telegraf
   - monitoring
-  - metrics 
+  - metrics
 saltbox_automation:
   app_links:
     - name: Manual

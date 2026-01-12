@@ -5,7 +5,7 @@ hide:
 tags:
   - immich
   - photos
-  - backup 
+  - backup
 saltbox_automation:
   app_links:
     - name: Manual

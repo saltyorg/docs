@@ -6,7 +6,7 @@ hide:
 tags:
   - adguard
   - dns
-  - adblock 
+  - adblock
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - lazylibrarian
   - media
-  - books 
+  - books
 saltbox_automation:
   app_links:
     - name: Manual

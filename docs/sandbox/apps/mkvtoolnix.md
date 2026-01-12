@@ -6,7 +6,7 @@ hide:
 tags:
   - mkvtoolnix
   - media
-  - tools 
+  - tools
 saltbox_automation:
   app_links:
     - name: Manual

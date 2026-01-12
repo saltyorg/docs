@@ -6,7 +6,7 @@ hide:
 tags:
   - olivetin
   - automation
-  - admin 
+  - admin
 saltbox_automation:
   app_links:
     - name: Manual

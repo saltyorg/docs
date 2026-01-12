@@ -5,7 +5,7 @@ hide:
 tags:
   - medusa
   - media
-  - tv 
+  - tv
 saltbox_automation:
   app_links:
     - name: Manual

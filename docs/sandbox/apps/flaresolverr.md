@@ -6,7 +6,7 @@ hide:
 tags:
   - flaresolverr
   - networking
-  - proxy 
+  - proxy
 saltbox_automation:
   app_links:
     - name: Manual

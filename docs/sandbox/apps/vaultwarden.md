@@ -6,7 +6,7 @@ hide:
 tags:
   - vaultwarden
   - passwords
-  - security 
+  - security
 saltbox_automation:
   app_links:
     - name: Manual

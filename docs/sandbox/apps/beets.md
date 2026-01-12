@@ -5,7 +5,7 @@ hide:
 tags:
   - beets
   - music
-  - metadata 
+  - metadata
 saltbox_automation:
   app_links:
     - name: Manual

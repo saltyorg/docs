@@ -5,7 +5,7 @@ hide:
 tags:
   - trackarr
   - automation
-  - tracker 
+  - tracker
 saltbox_automation:
   app_links:
     - name: Manual

@@ -10,15 +10,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url: https://github.com/thezak48/Varken/pkgs/container/varken
-    type: github
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/thezak48/Varken/pkgs/container/varken
+      type: github
+    - name: Community
+      url:
+      type: community
   project_description:
      name: Varken
      summary: |

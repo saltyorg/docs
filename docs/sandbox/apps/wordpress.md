@@ -6,7 +6,7 @@ hide:
 tags:
   - wordpress
   - cms
-  - web 
+  - web
 saltbox_automation:
   app_links:
     - name: Manual

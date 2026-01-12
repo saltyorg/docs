@@ -6,7 +6,7 @@ hide:
 tags:
   - znc
   - irc
-  - bouncer 
+  - bouncer
 saltbox_automation:
   app_links:
     - name: Manual

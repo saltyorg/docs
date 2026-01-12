@@ -6,7 +6,7 @@ hide:
 tags:
   - jdownloader2
   - download
-  - tools 
+  - tools
 saltbox_automation:
   app_links:
     - name: Manual

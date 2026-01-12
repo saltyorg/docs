@@ -6,7 +6,7 @@ hide:
 tags:
   - fireflyiii
   - finance
-  - budgeting 
+  - budgeting
 saltbox_automation:
   app_links:
     - name: Manual

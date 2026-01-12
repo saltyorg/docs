@@ -5,7 +5,7 @@ hide:
 tags:
   - dashdot
   - dashboard
-  - monitoring 
+  - monitoring
 saltbox_automation:
   app_links:
     - name: Manual

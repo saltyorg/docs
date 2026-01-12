@@ -6,7 +6,7 @@ hide:
 tags:
   - reposilite
   - development
-  - repository 
+  - repository
 saltbox_automation:
   app_links:
     - name: Manual

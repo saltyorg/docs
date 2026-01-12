@@ -12,15 +12,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url: https://prometheus.io/docs/guides/node-exporter
-    type: documentation
-  - name: Releases
-    url: https://github.com/prometheus/node_exporter/releases
-    type: github
-  - name: Community
-    url: https://prometheus.io/community
-    type: community
+    - name: Manual
+      url: https://prometheus.io/docs/guides/node-exporter
+      type: documentation
+    - name: Releases
+      url: https://github.com/prometheus/node_exporter/releases
+      type: github
+    - name: Community
+      url: https://prometheus.io/community
+      type: community
   project_description:
     name: Node Exporter
     summary: |

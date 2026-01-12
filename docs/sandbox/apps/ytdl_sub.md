@@ -6,7 +6,7 @@ hide:
 tags:
   - ytdl-sub
   - youtube
-  - downloads 
+  - downloads
 saltbox_automation:
   app_links:
     - name: Manual

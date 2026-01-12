@@ -4,7 +4,7 @@ hide:
   - tags
 tags:
   - VPN
-  - server 
+  - server
 saltbox_automation:
   app_links:
     - name: Manual

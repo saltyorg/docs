@@ -6,7 +6,7 @@ hide:
 tags:
   - qbit-manage
   - torrent
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

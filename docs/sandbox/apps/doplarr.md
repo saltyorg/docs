@@ -5,7 +5,7 @@ hide:
 tags:
   - doplarr
   - media
-  - discord 
+  - discord
 saltbox_automation:
   app_links:
     - name: Manual

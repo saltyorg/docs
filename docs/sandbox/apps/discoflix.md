@@ -6,7 +6,7 @@ hide:
 tags:
   - discoflix
   - requests
-  - discord 
+  - discord
 saltbox_automation:
   app_links:
     - name: Manual

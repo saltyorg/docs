@@ -6,7 +6,7 @@ tags:
   - profilarr
   - sonarr
   - radarr
-  - recyclarr 
+  - recyclarr
 saltbox_automation:
   app_links:
     - name: Manual

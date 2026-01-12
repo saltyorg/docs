@@ -5,15 +5,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url: https://www.python.org/doc
-    type: documentation
-  - name: Releases
-    url:
-    type: releases
-  - name: Community
-    url: https://www.python.org/community
-    type: community
+    - name: Manual
+      url: https://www.python.org/doc
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url: https://www.python.org/community
+      type: community
   project_description:
     name: Python
     summary: |

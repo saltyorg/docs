@@ -5,7 +5,7 @@ hide:
 tags:
   - meilisearch
   - search
-  - database 
+  - database
 saltbox_automation:
   app_links:
     - name: Manual

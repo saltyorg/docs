@@ -6,7 +6,7 @@ hide:
 tags:
   - handbrake
   - media
-  - encoding 
+  - encoding
 saltbox_automation:
   app_links:
     - name: Manual

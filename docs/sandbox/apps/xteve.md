@@ -6,7 +6,7 @@ hide:
 tags:
   - xteve
   - iptv
-  - streaming 
+  - streaming
 saltbox_automation:
   app_links:
     - name: Manual

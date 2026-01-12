@@ -6,7 +6,7 @@ hide:
 tags:
   - semaphoreui
   - ansible
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

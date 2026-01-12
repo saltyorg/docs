@@ -5,7 +5,7 @@ hide:
 tags:
   - navidrome
   - media
-  - music 
+  - music
 saltbox_automation:
   app_links:
     - name: Manual

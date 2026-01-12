@@ -10,15 +10,15 @@ tags:
   - sql
 saltbox_automation:
   app_links:
-  - name: Manual
-    url: https://www.postgresql.org/docs/12/index.html
-    type: documentation
-  - name: Releases
-    url: https://www.postgresql.org/ftp/source
-    type: docker
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url: https://www.postgresql.org/docs/12/index.html
+      type: documentation
+    - name: Releases
+      url: https://www.postgresql.org/ftp/source
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: PostgreSQL (Host Install)
     summary: |
@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://www.postgresql.org/docs/12/index.html){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://www.postgresql.org/ftp/source){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://www.postgresql.org/ftp/source){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

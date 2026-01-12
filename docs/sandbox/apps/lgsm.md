@@ -6,7 +6,7 @@ hide:
 tags:
   - lgsm
   - gaming
-  - server 
+  - server
 saltbox_automation:
   app_links:
     - name: Manual

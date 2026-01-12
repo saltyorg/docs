@@ -6,7 +6,7 @@ hide:
 tags:
   - code-server
   - vscode
-  - development 
+  - development
 saltbox_automation:
   app_links:
     - name: Manual

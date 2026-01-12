@@ -6,7 +6,7 @@ hide:
 tags:
   - mylar3
   - media
-  - comics 
+  - comics
 saltbox_automation:
   app_links:
     - name: Manual

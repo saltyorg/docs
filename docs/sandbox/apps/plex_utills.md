@@ -7,7 +7,7 @@ tags:
   - plex_utills
   - plex
   - utilities
-  - management 
+  - management
 saltbox_automation:
   app_links:
     - name: Manual

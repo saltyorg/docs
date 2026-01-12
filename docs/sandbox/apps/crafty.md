@@ -6,7 +6,7 @@ hide:
 tags:
   - crafty
   - minecraft
-  - gaming 
+  - gaming
 saltbox_automation:
   app_links:
     - name: Manual

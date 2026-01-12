@@ -5,7 +5,7 @@ hide:
 tags:
   - karakeep
   - media
-  - music 
+  - music
 saltbox_automation:
   app_links:
     - name: Manual

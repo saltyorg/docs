@@ -5,15 +5,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url: https://rclone.org/docs
-    type: documentation
-  - name: Releases
-    url:
-    type: releases
-  - name: Community
-    url: https://forum.rclone.org
-    type: community
+    - name: Manual
+      url: https://rclone.org/docs
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url: https://forum.rclone.org
+      type: community
   project_description:
     name: Rclone
     summary: |

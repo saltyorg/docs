@@ -6,7 +6,7 @@ hide:
 tags:
   - maybe-finance
   - finance
-  - budgeting 
+  - budgeting
 saltbox_automation:
   app_links:
     - name: Manual

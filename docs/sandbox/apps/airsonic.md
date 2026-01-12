@@ -6,7 +6,7 @@ hide:
 tags:
   - airsonic
   - music
-  - streaming 
+  - streaming
 saltbox_automation:
   app_links:
     - name: Manual

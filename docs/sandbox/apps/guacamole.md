@@ -5,7 +5,7 @@ hide:
 tags:
   - guacamole
   - networking
-  - remote-access 
+  - remote-access
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - heimdall
   - dashboard
-  - homepage 
+  - homepage
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - homarr
   - dashboard
-  - homepage 
+  - homepage
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - sqlitebrowser
   - database
-  - utility 
+  - utility
 saltbox_automation:
   app_links:
     - name: Manual

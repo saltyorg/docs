@@ -5,7 +5,7 @@ hide:
 tags:
   - kometa
   - pmm
-  - plex meta manager 
+  - plex meta manager
 saltbox_automation:
   app_links:
     - name: Manual

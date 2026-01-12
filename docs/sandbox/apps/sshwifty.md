@@ -5,7 +5,7 @@ hide:
 tags:
   - sshwifty
   - networking
-  - ssh 
+  - ssh
 saltbox_automation:
   app_links:
     - name: Manual

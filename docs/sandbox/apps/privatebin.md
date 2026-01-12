@@ -6,7 +6,7 @@ hide:
 tags:
   - privatebin
   - pastebin
-  - privacy 
+  - privacy
 saltbox_automation:
   app_links:
     - name: Manual

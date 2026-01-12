@@ -5,7 +5,7 @@ hide:
 tags:
   - linkding
   - productivity
-  - bookmarks 
+  - bookmarks
 saltbox_automation:
   app_links:
     - name: Manual

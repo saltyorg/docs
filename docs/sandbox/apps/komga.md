@@ -5,7 +5,7 @@ hide:
 tags:
   - komga
   - media
-  - comics 
+  - comics
 saltbox_automation:
   app_links:
     - name: Manual

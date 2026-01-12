@@ -6,7 +6,7 @@ hide:
 tags:
   - influxdb2
   - database
-  - timeseries 
+  - timeseries
 saltbox_automation:
   app_links:
     - name: Manual

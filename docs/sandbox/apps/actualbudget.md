@@ -6,7 +6,7 @@ hide:
 tags:
   - actualbudget
   - budget
-  - finance 
+  - finance
 saltbox_automation:
   app_links:
     - name: Manual

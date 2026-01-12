@@ -5,7 +5,7 @@ hide:
 tags:
   - koel
   - music
-  - streaming 
+  - streaming
 saltbox_automation:
   app_links:
     - name: Manual

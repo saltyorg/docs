@@ -8,15 +8,15 @@ tags:
   - media
 saltbox_automation:
   app_links:
-  - name: Manual
-    url: https://subliminal.readthedocs.io
-    type: documentation
-  - name: Releases
-    url:
-    type: github
-  - name: Community
-    url: https://discord.gg/kXW6sWte9N
-    type: discord
+    - name: Manual
+      url: https://subliminal.readthedocs.io
+      type: documentation
+    - name: Releases
+      url:
+      type: github
+    - name: Community
+      url: https://discord.gg/kXW6sWte9N
+      type: discord
   project_description:
     name: Subliminal
     summary: |

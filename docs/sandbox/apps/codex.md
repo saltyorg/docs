@@ -4,7 +4,7 @@ hide:
   - tags
 tags:
   - comic
-  - manga 
+  - manga
 saltbox_automation:
   app_links:
     - name: Manual

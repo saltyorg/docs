@@ -5,7 +5,7 @@ hide:
   - tags
 tags:
   - plextraktsync
-  - trakt.tv 
+  - trakt
 saltbox_automation:
   app_links:
     - name: Manual

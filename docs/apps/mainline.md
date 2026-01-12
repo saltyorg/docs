@@ -9,15 +9,15 @@ tags:
   - system
 saltbox_automation:
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url: https://github.com/bkw777/mainline/tags
-    type: releases
-  - name: Community
-    url: https://github.com/bkw777/mainline/discussions
-    type: github
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/bkw777/mainline/tags
+      type: releases
+    - name: Community
+      url: https://github.com/bkw777/mainline/discussions
+      type: github
   project_description:
     name: Mainline
     summary: |

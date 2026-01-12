@@ -5,7 +5,7 @@ hide:
 tags:
   - nextcloud
   - productivity
-  - cloud 
+  - cloud
 saltbox_automation:
   app_links:
     - name: Manual

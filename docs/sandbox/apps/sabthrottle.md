@@ -6,7 +6,7 @@ hide:
 tags:
   - sabthrottle
   - automation
-  - bandwidth 
+  - bandwidth
 saltbox_automation:
   app_links:
     - name: Manual

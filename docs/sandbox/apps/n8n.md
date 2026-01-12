@@ -6,7 +6,7 @@ hide:
 tags:
   - n8n
   - automation
-  - workflow 
+  - workflow
 saltbox_automation:
   app_links:
     - name: Manual

@@ -7,7 +7,7 @@ tags:
   - watchstate
   - emby
   - jellyfin
-  - plex 
+  - plex
 saltbox_automation:
   app_links:
     - name: Manual

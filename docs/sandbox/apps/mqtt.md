@@ -6,7 +6,7 @@ hide:
 tags:
   - mqtt
   - automation
-  - messaging 
+  - messaging
 saltbox_automation:
   app_links:
     - name: Manual

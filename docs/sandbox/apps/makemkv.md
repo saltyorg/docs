@@ -6,7 +6,7 @@ hide:
 tags:
   - makemkv
   - media
-  - ripping 
+  - ripping
 saltbox_automation:
   app_links:
     - name: Manual

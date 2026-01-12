@@ -5,7 +5,7 @@ hide:
 tags:
   - kavita
   - media
-  - books 
+  - books
 saltbox_automation:
   app_links:
     - name: Manual

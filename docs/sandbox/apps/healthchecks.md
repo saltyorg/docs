@@ -5,7 +5,7 @@ hide:
 tags:
   - healthchecks
   - monitoring
-  - cron 
+  - cron
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - pufferpanel
   - gaming
-  - servers 
+  - servers
 saltbox_automation:
   app_links:
     - name: Manual

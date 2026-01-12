@@ -5,7 +5,7 @@ hide:
 tags:
   - membarr
   - discord
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - airdcpp
   - p2p
-  - downloading 
+  - downloading
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - pgadmin
   - database
-  - admin 
+  - admin
 saltbox_automation:
   app_links:
     - name: Manual

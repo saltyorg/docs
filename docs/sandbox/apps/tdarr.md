@@ -5,7 +5,7 @@ hide:
 tags:
   - tdarr
   - media
-  - encoding 
+  - encoding
 saltbox_automation:
   app_links:
     - name: Manual

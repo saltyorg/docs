@@ -7,15 +7,15 @@ saltbox_automation:
     show_sections:
       - Settings
   app_links:
-  - name: Manual
-    url: https://docs.docker.com
-    type: documentation
-  - name: Releases
-    url: https://docs.docker.com/engine/release-notes
-    type: releases
-  - name: Community
-    url: https://forums.docker.com
-    type: community
+    - name: Manual
+      url: https://docs.docker.com
+      type: documentation
+    - name: Releases
+      url: https://docs.docker.com/engine/release-notes
+      type: releases
+    - name: Community
+      url: https://forums.docker.com
+      type: community
   project_description:
     name: Docker CE
     summary: |

@@ -6,7 +6,7 @@ hide:
 tags:
   - photoprism
   - photos
-  - ai 
+  - ai
 saltbox_automation:
   app_links:
     - name: Manual

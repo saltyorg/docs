@@ -5,7 +5,7 @@ hide:
 tags:
   - speedtest
   - monitoring
-  - network 
+  - network
 saltbox_automation:
   app_links:
     - name: Manual

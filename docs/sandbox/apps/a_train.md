@@ -9,15 +9,15 @@ tags:
   - google
 saltbox_automation:
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url:
-    type: releases
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: A-Train
     summary: |

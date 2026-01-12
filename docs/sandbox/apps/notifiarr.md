@@ -6,7 +6,7 @@ hide:
 tags:
   - notifiarr
   - discord
-  - notifications 
+  - notifications
 saltbox_automation:
   app_links:
     - name: Manual

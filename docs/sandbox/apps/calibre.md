@@ -5,7 +5,7 @@ hide:
 tags:
   - calibre
   - ebooks
-  - management 
+  - management
 saltbox_automation:
   app_links:
     - name: Manual

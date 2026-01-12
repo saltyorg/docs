@@ -6,7 +6,7 @@ hide:
 tags:
   - archivebox
   - archiving
-  - web 
+  - web
 saltbox_automation:
   app_links:
     - name: Manual

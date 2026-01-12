@@ -6,7 +6,7 @@ hide:
 tags:
   - paperless-ngx
   - productivity
-  - documents 
+  - documents
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - recyclarr
   - sonarr
-  - radarr 
+  - radarr
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - glances
   - monitoring
-  - system 
+  - system
 saltbox_automation:
   app_links:
     - name: Manual

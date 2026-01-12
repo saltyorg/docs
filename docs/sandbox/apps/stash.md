@@ -5,7 +5,7 @@ hide:
 tags:
   - stash
   - media
-  - organizer 
+  - organizer
 saltbox_automation:
   app_links:
     - name: Manual

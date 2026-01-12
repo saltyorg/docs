@@ -5,7 +5,7 @@ hide:
 tags:
   - dockwatch
   - monitoring
-  - docker 
+  - docker
 saltbox_automation:
   app_links:
     - name: Manual

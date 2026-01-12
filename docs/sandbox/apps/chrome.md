@@ -6,7 +6,7 @@ hide:
 tags:
   - chrome
   - browser
-  - headless 
+  - headless
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - calibre
   - ebooks
-  - reading 
+  - reading
 saltbox_automation:
   app_links:
     - name: Manual

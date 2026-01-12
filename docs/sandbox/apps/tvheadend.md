@@ -5,7 +5,7 @@ hide:
 tags:
   - tvheadend
   - tv
-  - streaming 
+  - streaming
 saltbox_automation:
   app_links:
     - name: Manual

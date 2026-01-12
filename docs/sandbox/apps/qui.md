@@ -6,7 +6,7 @@ hide:
 tags:
   - qui
   - torrent
-  - qbittorrent 
+  - qbittorrent
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,18 +6,18 @@ hide:
 tags:
   - tqm
   - torrent
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
-  - name: Manual
-    url: https://autobrr.com/3rd-party-tools/manage-torrents#tqm
-    type: documentation
-  - name: Releases
-    url: https://github.com/autobrr/tqm/tags
-    type: github
-  - name: Community
-    url: https://discord.autobrr.com
-    type: discord
+    - name: Manual
+      url: https://autobrr.com/3rd-party-tools/manage-torrents#tqm
+      type: documentation
+    - name: Releases
+      url: https://github.com/autobrr/tqm/tags
+      type: github
+    - name: Community
+      url: https://discord.autobrr.com
+      type: discord
   project_description:
     name: tqm
     summary: |

@@ -6,7 +6,7 @@ hide:
 tags:
   - tandoor
   - recipes
-  - planning 
+  - planning
 saltbox_automation:
   app_links:
     - name: Manual

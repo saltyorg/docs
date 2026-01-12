@@ -5,7 +5,7 @@ hide:
 tags:
   - grocy
   - inventory
-  - household 
+  - household
 saltbox_automation:
   app_links:
     - name: Manual

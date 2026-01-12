@@ -5,7 +5,7 @@ hide:
 tags:
   - gaps
   - media
-  - plex 
+  - plex
 saltbox_automation:
   app_links:
     - name: Manual

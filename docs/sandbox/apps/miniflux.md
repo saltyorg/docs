@@ -5,7 +5,7 @@ hide:
 tags:
   - miniflux
   - media
-  - rss 
+  - rss
 saltbox_automation:
   app_links:
     - name: Manual

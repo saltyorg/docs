@@ -5,7 +5,7 @@ hide:
 tags:
   - forgejo
   - development
-  - git 
+  - git
 saltbox_automation:
   app_links:
     - name: Manual

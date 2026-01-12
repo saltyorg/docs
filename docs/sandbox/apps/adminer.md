@@ -5,7 +5,7 @@ hide:
 tags:
   - adminer
   - database
-  - mysql 
+  - mysql
 saltbox_automation:
   app_links:
     - name: Manual

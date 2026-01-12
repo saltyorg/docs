@@ -6,7 +6,7 @@ hide:
 tags:
   - filebot
   - media
-  - tools 
+  - tools
 saltbox_automation:
   app_links:
     - name: Manual

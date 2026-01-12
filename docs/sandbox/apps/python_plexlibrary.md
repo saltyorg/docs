@@ -10,15 +10,15 @@ tags:
   - library
 saltbox_automation:
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url: https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags
-    type: releases
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/python-plexlibrary/python-plexlibrary/tags
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: Python-PlexLibrary
     summary: |

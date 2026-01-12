@@ -5,7 +5,7 @@ hide:
 tags:
   - factorio
   - gaming
-  - server 
+  - server
 saltbox_automation:
   app_links:
     - name: Manual

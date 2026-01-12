@@ -5,7 +5,7 @@ hide:
 tags:
   - transmission
   - download
-  - torrent 
+  - torrent
 saltbox_automation:
   app_links:
     - name: Manual

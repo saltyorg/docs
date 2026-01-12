@@ -5,7 +5,7 @@ hide:
 tags:
   - wrapperr
   - statistics
-  - analytics 
+  - analytics
 saltbox_automation:
   app_links:
     - name: Manual

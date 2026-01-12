@@ -5,7 +5,7 @@ hide:
 tags:
   - jellystat
   - jellyfin
-  - statistics 
+  - statistics
 saltbox_automation:
   app_links:
     - name: Manual

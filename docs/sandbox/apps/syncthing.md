@@ -5,7 +5,7 @@ hide:
 tags:
   - syncthing
   - backup
-  - sync 
+  - sync
 saltbox_automation:
   app_links:
     - name: Manual

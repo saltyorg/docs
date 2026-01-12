@@ -6,7 +6,7 @@ hide:
 tags:
   - invoiceninja
   - finance
-  - invoicing 
+  - invoicing
 saltbox_automation:
   app_links:
     - name: Manual

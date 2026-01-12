@@ -6,7 +6,7 @@ hide:
 tags:
   - plexshare
   - plex
-  - sharing 
+  - sharing
 saltbox_automation:
   app_links:
     - name: Manual

@@ -4,7 +4,7 @@ title: ComiXed
 hide:
   - tags
 tags:
-  - comic 
+  - comic
 saltbox_automation:
   app_links:
     - name: Manual

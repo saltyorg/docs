@@ -6,7 +6,7 @@ hide:
 tags:
   - it-tools
   - development
-  - utilities 
+  - utilities
 saltbox_automation:
   app_links:
     - name: Manual

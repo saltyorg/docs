@@ -5,7 +5,7 @@ hide:
 tags:
   - puddletag
   - media
-  - tagging 
+  - tagging
 saltbox_automation:
   app_links:
     - name: Manual

@@ -7,7 +7,7 @@ hide:
 tags:
   - gotenberg
   - tools
-  - pdf 
+  - pdf
 saltbox_automation:
   app_links:
     - name: Manual

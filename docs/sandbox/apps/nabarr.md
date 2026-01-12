@@ -5,7 +5,7 @@ hide:
 tags:
   - nabarr
   - automation
-  - rss 
+  - rss
 saltbox_automation:
   app_links:
     - name: Manual

@@ -12,15 +12,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url: https://ddclient.net/general
-    type: documentation
-  - name: Releases
-    url: https://hub.docker.com/r/linuxserver/ddclient/tags
-    type: releases
-  - name: Community
-    url:
-    type: community
+    - name: Manual
+      url: https://ddclient.net/general
+      type: documentation
+    - name: Releases
+      url: https://hub.docker.com/r/linuxserver/ddclient/tags
+      type: releases
+    - name: Community
+      url:
+      type: community
   project_description:
     name: DDClient
     summary: |

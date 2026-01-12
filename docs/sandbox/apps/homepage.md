@@ -5,7 +5,7 @@ hide:
 tags:
   - homepage
   - dashboard
-  - static 
+  - static
 saltbox_automation:
   app_links:
     - name: Manual

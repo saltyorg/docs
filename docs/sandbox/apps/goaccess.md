@@ -6,7 +6,7 @@ hide:
 tags:
   - goaccess
   - monitoring
-  - analytics 
+  - analytics
 saltbox_automation:
   app_links:
     - name: Manual

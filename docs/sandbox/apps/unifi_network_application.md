@@ -6,7 +6,7 @@ hide:
 tags:
   - unifi
   - networking
-  - wireless 
+  - wireless
 saltbox_automation:
   app_links:
     - name: Manual

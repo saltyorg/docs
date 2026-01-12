@@ -6,7 +6,7 @@ hide:
 tags:
   - vnstat
   - monitoring
-  - network 
+  - network
 saltbox_automation:
   app_links:
     - name: Manual

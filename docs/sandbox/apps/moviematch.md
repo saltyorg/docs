@@ -6,7 +6,7 @@ hide:
 tags:
   - moviematch
   - plex
-  - recommendations 
+  - recommendations
 saltbox_automation:
   app_links:
     - name: Manual

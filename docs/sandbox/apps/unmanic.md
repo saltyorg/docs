@@ -5,7 +5,7 @@ hide:
 tags:
   - unmanic
   - media
-  - encoding 
+  - encoding
 saltbox_automation:
   app_links:
     - name: Manual

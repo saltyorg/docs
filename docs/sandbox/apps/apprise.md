@@ -6,7 +6,7 @@ hide:
 tags:
   - apprise
   - notifications
-  - alerts 
+  - alerts
 saltbox_automation:
   app_links:
     - name: Manual

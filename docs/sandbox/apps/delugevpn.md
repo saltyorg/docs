@@ -6,7 +6,7 @@ hide:
 tags:
   - delugevpn
   - download
-  - vpn 
+  - vpn
 saltbox_automation:
   app_links:
     - name: Manual

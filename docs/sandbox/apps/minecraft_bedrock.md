@@ -2,7 +2,7 @@
 icon: material/docker
 title: Minecraft Bedrock
 tags:
-  - Minecraft 
+  - minecraft
 saltbox_automation:
   app_links:
     - name: Manual

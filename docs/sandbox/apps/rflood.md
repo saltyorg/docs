@@ -6,7 +6,7 @@ hide:
 tags:
   - rflood
   - torrent
-  - frontend 
+  - frontend
 saltbox_automation:
   app_links:
     - name: Manual

@@ -5,7 +5,7 @@ hide:
 tags:
   - homebox
   - productivity
-  - inventory 
+  - inventory
 saltbox_automation:
   app_links:
     - name: Manual

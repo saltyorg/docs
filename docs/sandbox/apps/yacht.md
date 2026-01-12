@@ -5,7 +5,7 @@ hide:
 tags:
   - yacht
   - docker
-  - management 
+  - management
 saltbox_automation:
   app_links:
     - name: Manual

@@ -6,7 +6,7 @@ hide:
 tags:
   - fireflyiii-importer
   - finance
-  - tools 
+  - tools
 saltbox_automation:
   app_links:
     - name: Manual

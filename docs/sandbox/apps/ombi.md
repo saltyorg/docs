@@ -5,7 +5,7 @@ hide:
 tags:
   - ombi
   - requests
-  - automation 
+  - automation
 saltbox_automation:
   app_links:
     - name: Manual

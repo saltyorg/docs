@@ -6,7 +6,7 @@ hide:
 tags:
   - openobserve
   - observability
-  - logs 
+  - logs
 saltbox_automation:
   app_links:
     - name: Manual

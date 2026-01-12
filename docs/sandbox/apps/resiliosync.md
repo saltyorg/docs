@@ -6,7 +6,7 @@ hide:
 tags:
   - resiliosync
   - backup
-  - sync 
+  - sync
 saltbox_automation:
   app_links:
     - name: Manual

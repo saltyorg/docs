@@ -5,7 +5,7 @@ hide:
 tags:
   - monitorr
   - monitoring
-  - uptime 
+  - uptime
 saltbox_automation:
   app_links:
     - name: Manual

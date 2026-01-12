@@ -6,7 +6,7 @@ hide:
 tags:
   - uptime-kuma
   - monitoring
-  - uptime 
+  - uptime
 saltbox_automation:
   app_links:
     - name: Manual

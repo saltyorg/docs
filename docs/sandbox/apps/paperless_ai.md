@@ -6,7 +6,7 @@ hide:
 tags:
   - paperless-ai
   - documents
-  - ai 
+  - ai
 saltbox_automation:
   app_links:
     - name: Manual

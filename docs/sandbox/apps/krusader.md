@@ -5,7 +5,7 @@ hide:
 tags:
   - krusader
   - file-management
-  - admin 
+  - admin
 saltbox_automation:
   app_links:
     - name: Manual

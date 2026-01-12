@@ -5,7 +5,7 @@ hide:
 tags:
   - cherry
   - bookmarks
-  - organization 
+  - organization
 saltbox_automation:
   app_links:
     - name: Manual

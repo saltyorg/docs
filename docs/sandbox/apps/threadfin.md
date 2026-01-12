@@ -5,7 +5,7 @@ hide:
 tags:
   - threadfin
   - iptv
-  - streaming 
+  - streaming
 saltbox_automation:
   app_links:
     - name: Manual

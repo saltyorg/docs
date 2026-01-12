@@ -6,7 +6,7 @@ hide:
 tags:
   - freshrss
   - media
-  - rss 
+  - rss
 saltbox_automation:
   app_links:
     - name: Manual

@@ -4,7 +4,7 @@ hide:
   - tags
 tags:
   - table top
-  - gaming 
+  - gaming
 saltbox_automation:
   app_links:
     - name: Manual

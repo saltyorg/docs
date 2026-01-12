@@ -5,7 +5,7 @@ hide:
 tags:
   - wizarr
   - automation
-  - invitations 
+  - invitations
 saltbox_automation:
   app_links:
     - name: Manual

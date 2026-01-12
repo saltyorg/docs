@@ -7,7 +7,7 @@ hide:
 tags:
   - pyload
   - download
-  - tools 
+  - tools
 saltbox_automation:
   app_links:
     - name: Manual

@@ -11,15 +11,15 @@ saltbox_automation:
   sections:
     inventory: false
   app_links:
-  - name: Manual
-    url:
-    type: documentation
-  - name: Releases
-    url: https://github.com/aristocratos/btop/tags
-    type: github
-  - name: Community
-    url: https://github.com/aristocratos/btop/discussions
-    type: github
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/aristocratos/btop/tags
+      type: github
+    - name: Community
+      url: https://github.com/aristocratos/btop/discussions
+      type: github
   project_description:
     name: btop
     summary: |

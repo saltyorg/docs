@@ -6,7 +6,7 @@ hide:
 tags:
   - thelounge
   - irc
-  - chat 
+  - chat
 saltbox_automation:
   app_links:
     - name: Manual

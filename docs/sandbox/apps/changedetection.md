@@ -6,7 +6,7 @@ hide:
 tags:
   - changedetection
   - monitoring
-  - websites 
+  - websites
 saltbox_automation:
   app_links:
     - name: Manual

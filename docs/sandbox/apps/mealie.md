@@ -5,7 +5,7 @@ hide:
 tags:
   - mealie
   - recipes
-  - cooking 
+  - cooking
 saltbox_automation:
   app_links:
     - name: Manual

@@ -63,7 +63,7 @@ To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in t
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
 
 1.  !!! example "Example override"

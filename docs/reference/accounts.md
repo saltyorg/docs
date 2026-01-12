@@ -21,6 +21,20 @@ On this page, we break down the options available in the following files:
 
 IMPORTANT: If you make changes to values in these files, you will have to run the relevant role(s) to make them take effect. For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect. The only thing that looks at these settings files is the Ansible script.
 
+## Validation
+
+As of the Go-rewritten `sb` CLI introduced in late 2025, configuration files are checked for compliance and must pass for commands such as `sb update` to execute. You can also run this on demand with `sb validate-config`. The validation checks include:
+
+- Required files exist
+- Valid YAML syntax
+- No duplicate settings
+- Correct value formats (emails, passwords, paths, etc.)
+- All required fields filled in
+- API credentials work (Cloudflare, Docker Hub, etc.)
+- Settings are logically consistent
+
+If validation fails, the error messages will indicate which file and setting have the problem. You'll need to review the error output, understand what needs to be corrected, and edit the configuration files accordingly before trying again.
+
 ## Options in accounts.yml
 
 **Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`

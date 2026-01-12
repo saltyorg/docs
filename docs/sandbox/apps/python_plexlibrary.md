@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+title: Python-PlexLibrary
 status: draft
 hide:
   - tags

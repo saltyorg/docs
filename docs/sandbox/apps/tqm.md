@@ -1,20 +1,13 @@
 ---
 icon: material/server-network-outline
+title: tqm
 hide:
   - tags
 tags:
   - tqm
   - torrent
-  - automation
+  - automation 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
   - name: Manual
     url: https://autobrr.com/3rd-party-tools/manage-torrents#tqm

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: InvoiceNinja
 hide:
   - tags
 tags:
   - invoiceninja
   - finance
-  - invoicing
+  - invoicing 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://invoiceninja.github.io

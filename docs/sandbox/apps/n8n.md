@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: n8n
 hide:
   - tags
 tags:
   - n8n
   - automation
-  - workflow
+  - workflow 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.n8n.io
@@ -26,7 +19,7 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: n8n - Secure Workflow Automation for Technical Teams
+    name: n8n
     summary: |
       a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
     link: https://n8n.io/
@@ -34,11 +27,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# n8n - Secure Workflow Automation for Technical Teams
+# n8n
 
 ## Overview
 
-[n8n - Secure Workflow Automation for Technical Teams](https://n8n.io/) is a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
+[n8n](https://n8n.io/) is a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

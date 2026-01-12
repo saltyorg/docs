@@ -5,14 +5,6 @@ hide:
 tags:
   - authelia
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://www.authelia.com/configuration/prologue/introduction

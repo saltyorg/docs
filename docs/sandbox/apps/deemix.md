@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Deemix
 hide:
   - tags
 tags:
   - deemix
   - media
-  - music
+  - music 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://gitlab.com/Bockiii/deemix-docker

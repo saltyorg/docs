@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Paperless NGX
 hide:
   - tags
 tags:
   - paperless-ngx
   - productivity
-  - documents
+  - documents 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://paperless-ngx.readthedocs.io/en/latest/index.html

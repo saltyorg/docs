@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: MQTT
 hide:
   - tags
 tags:
   - mqtt
   - automation
-  - messaging
+  - messaging 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://mosquitto.org/man/mosquitto-conf-5.html

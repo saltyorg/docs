@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: kcptun Server
 hide:
   - tags
 tags:
@@ -7,14 +8,8 @@ tags:
   - tunnel
   - networking
 saltbox_automation:
-  disabled: false
   sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
+    inventory: false
   app_links:
     - name: Manual
       url: https://github.com/xtaci/kcptun
@@ -58,5 +53,3 @@ saltbox_automation:
 ```shell
 sb install sandbox-kcptun-server
 ```
-
-## Usage

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: DiscoFlix
 hide:
   - tags
 tags:
   - discoflix
   - requests
-  - discord
+  - discord 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/nickheyer/discoflix/blob/main/README.md

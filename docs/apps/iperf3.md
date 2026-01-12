@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+title: iPerf3
 hide:
   - tags
 tags:

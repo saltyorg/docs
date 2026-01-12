@@ -1,5 +1,6 @@
 ---
 icon: material/server-network-outline
+title: Docker CE
 status: draft
 saltbox_automation:
   inventory:

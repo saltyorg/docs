@@ -1,5 +1,6 @@
 ---
 icon: material/tag
+title: Media Server
 status: draft
 saltbox_automation:
   project_description:

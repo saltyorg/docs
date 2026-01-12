@@ -1,18 +1,11 @@
 ---
 icon: material/docker
+title: qBittorrent
 hide:
   - tags
 tags:
   - qbittorrent
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url:

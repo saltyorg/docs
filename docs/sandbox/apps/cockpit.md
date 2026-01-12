@@ -25,6 +25,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Cockpit
+
+## Overview
+
+[Cockpit](https://cockpit-project.org) is an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser, providing comprehensive server management capabilities with a modern web interface.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://cockpit-project.org/documentation.html){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment

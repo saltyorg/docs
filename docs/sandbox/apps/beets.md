@@ -5,16 +5,8 @@ hide:
 tags:
   - beets
   - music
-  - metadata
+  - metadata 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: http://beets.readthedocs.org

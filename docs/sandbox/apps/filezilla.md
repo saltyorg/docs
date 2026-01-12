@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: FileZilla
 hide:
   - tags
 tags:
   - filezilla
   - file-management
-  - ftp
+  - ftp 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://wiki.filezilla-project.org/Main_Page

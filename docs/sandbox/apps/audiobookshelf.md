@@ -5,16 +5,8 @@ hide:
 tags:
   - audiobookshelf
   - audiobooks
-  - podcasts
+  - podcasts 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://www.audiobookshelf.org/docs

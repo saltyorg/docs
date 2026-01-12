@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Paperless AI
 hide:
   - tags
 tags:
   - paperless-ai
   - documents
-  - ai
+  - ai 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/clusterzx/paperless-ai/wiki/1.-Home

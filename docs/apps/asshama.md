@@ -1,5 +1,6 @@
 ---
 icon: material/power-plug
+title: ASSHAMA
 hide:
   - tags
 tags:

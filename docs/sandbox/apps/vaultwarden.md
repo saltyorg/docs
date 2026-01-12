@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: vaultwarden
 hide:
   - tags
 tags:
   - vaultwarden
   - passwords
-  - security
+  - security 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/dani-garcia/vaultwarden/wiki

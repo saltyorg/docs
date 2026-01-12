@@ -1,5 +1,6 @@
 ---
 icon: material/play
+title: Plex DB
 status: outdated
 hide:
   - tags

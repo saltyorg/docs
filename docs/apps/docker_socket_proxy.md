@@ -1,15 +1,8 @@
 ---
 icon: material/docker
+title: Docker Socket Proxy
 status: draft
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.linuxserver.io/general/container-customization
@@ -49,6 +42,10 @@ saltbox_automation:
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
+
+!!! note "Advanced | Usually not deployed standalone"
+
+    A number of roles include this role to deploy their dedicated Socket Proxy container and do not require this tag to be run manually. It is provided in the unlikely event that you run your own containers that need their access to the Docker socket proxied.
 
 ```shell
 sb install docker-socket-proxy

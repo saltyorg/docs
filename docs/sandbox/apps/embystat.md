@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: EmbyStat
 hide:
   - tags
 tags:
   - embystat
   - statistics
-  - monitoring
+  - monitoring 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/mregni/EmbyStat/wiki

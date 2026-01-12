@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: Plex Media Server
 hide:
   - tags
 tags:

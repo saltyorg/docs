@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: PrivateBin
 hide:
   - tags
 tags:
   - privatebin
   - pastebin
-  - privacy
+  - privacy 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/PrivateBin/PrivateBin/wiki

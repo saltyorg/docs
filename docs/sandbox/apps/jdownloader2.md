@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: JDownloader
 hide:
   - tags
 tags:
   - jdownloader2
   - download
-  - tools
+  - tools 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://beta.jdownloader.org/support

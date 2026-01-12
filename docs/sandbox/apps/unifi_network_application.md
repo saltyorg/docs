@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: UniFi
 hide:
   - tags
 tags:
   - unifi
   - networking
-  - wireless
+  - wireless 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md
@@ -26,7 +19,7 @@ saltbox_automation:
       url: https://linuxserver.io/discord
       type: discord
   project_description:
-    name: Unifi Network Application
+    name: UniFi Network Application
     summary: |
       a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
     link: https://www.ui.com/download/unifi
@@ -34,11 +27,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Unifi Network Application
+# UniFi Network Application
 
 ## Overview
 
-[Unifi Network Application](https://www.ui.com/download/unifi) is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+[UniFi Network Application](https://www.ui.com/download/unifi) is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

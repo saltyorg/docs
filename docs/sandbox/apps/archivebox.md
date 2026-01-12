@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: ArchiveBox
 hide:
   - tags
 tags:
   - archivebox
   - archiving
-  - web
+  - web 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/ArchiveBox/ArchiveBox/wiki

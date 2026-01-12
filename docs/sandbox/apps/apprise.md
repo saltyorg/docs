@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Apprise API
 hide:
   - tags
 tags:
   - apprise
   - notifications
-  - alerts
+  - alerts 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://apprise.apps.merit.edu

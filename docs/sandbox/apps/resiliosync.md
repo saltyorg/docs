@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Resilio Sync
 hide:
   - tags
 tags:
   - resiliosync
   - backup
-  - sync
+  - sync 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync

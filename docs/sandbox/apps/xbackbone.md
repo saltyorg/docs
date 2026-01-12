@@ -1,21 +1,14 @@
 ---
 icon: material/docker
+title: XBackBone
 status: draft
 hide:
   - tags
 tags:
   - xbackbone
   - file-sharing
-  - upload
+  - upload 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://xbackbone.app/clients.html

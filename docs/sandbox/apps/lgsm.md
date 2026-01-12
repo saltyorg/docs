@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: LinuxGSM
 hide:
   - tags
 tags:
   - lgsm
   - gaming
-  - server
+  - server 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.linuxgsm.com

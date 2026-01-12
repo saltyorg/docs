@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: qui
 hide:
   - tags
 tags:
   - qui
   - torrent
-  - qbittorrent
+  - qbittorrent 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/autobrr/qui/blob/main/README.md#configuration

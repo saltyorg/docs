@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Tandoor Recipes
 hide:
   - tags
 tags:
   - tandoor
   - recipes
-  - planning
+  - planning 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.tandoor.dev

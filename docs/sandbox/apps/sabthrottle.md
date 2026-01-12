@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: SABThrottle
 hide:
   - tags
 tags:
   - sabthrottle
   - automation
-  - bandwidth
+  - bandwidth 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/8a8al00ey/sabthrottle#installation

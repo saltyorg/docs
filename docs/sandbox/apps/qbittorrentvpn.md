@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: arch-qbittorrentvpn
 hide:
   - tags
 tags:
   - qbittorrentvpn
   - download
-  - vpn
+  - vpn 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/binhex/arch-qbittorrentvpn
@@ -26,7 +19,7 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: qbittorrentvpn
+    name: arch-qbittorrentvpn
     summary: |
       a qbittorrent container which includes OpenVPN and WireGuard to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites.
     link: https://github.com/binhex/arch-qbittorrentvpn
@@ -34,11 +27,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# qbittorrentvpn
+# arch-qbittorrentvpn
 
 ## Overview
 
-[qbittorrentvpn](https://github.com/binhex/arch-qbittorrentvpn) is a qbittorrent container which includes OpenVPN and WireGuard to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites.
+[arch-qbittorrentvpn](https://github.com/binhex/arch-qbittorrentvpn) is a qbittorrent container which includes OpenVPN and WireGuard to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

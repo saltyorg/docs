@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Home Assistant
 hide:
   - tags
 tags:
   - homeassistant
   - automation
-  - iot
+  - iot 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://www.home-assistant.io/docs

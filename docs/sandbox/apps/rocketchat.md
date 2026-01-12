@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: Rocket.Chat
 status: draft
 hide:
   - tags
@@ -8,14 +9,6 @@ tags:
   - communication
   - chat
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url:
@@ -27,19 +20,19 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: rocketchat
+    name: Rocket.Chat
     summary: |
-      a...
-    link:
+      an open-source, secure communications platform designed for real-time messaging, voice, video conferencing, and collaboration.
+    link: https://rocket.chat
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# rocketchat
+# Rocket.Chat
 
 ## Overview
 
-rocketchat is a...
+[Rocket.Chat](https://rocket.chat) is an open-source, secure communications platform designed for real-time messaging, voice, video conferencing, and collaboration.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

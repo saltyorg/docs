@@ -1,5 +1,6 @@
 ---
 icon: material/power-plug
+title: EPMS
 hide:
   - tags
 tags:

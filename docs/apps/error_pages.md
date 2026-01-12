@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: Error Pages
 hide:
   - tags
 tags:
@@ -7,14 +8,6 @@ tags:
   - traefik
   - error-handling
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/tarampampam/error-pages/blob/master/README.md#-usage-scenarios

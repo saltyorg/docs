@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: ZNC
 hide:
   - tags
 tags:
   - znc
   - irc
-  - bouncer
+  - bouncer 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.linuxserver.io/images/docker-znc

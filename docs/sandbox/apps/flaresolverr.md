@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: FlareSolverr
 hide:
   - tags
 tags:
   - flaresolverr
   - networking
-  - proxy
+  - proxy 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/FlareSolverr/FlareSolverr

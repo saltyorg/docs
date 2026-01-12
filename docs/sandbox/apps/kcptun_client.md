@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: kcptun Client
 hide:
   - tags
 tags:
@@ -7,14 +8,8 @@ tags:
   - tunnel
   - networking
 saltbox_automation:
-  disabled: false
   sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
+    inventory: false
   app_links:
     - name: Manual
       url: https://github.com/xtaci/kcptun
@@ -26,7 +21,7 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: kcptun client
+    name: kcptun Client
     summary: |
       a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
     link: https://github.com/xtaci/kcptun
@@ -34,11 +29,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# kcptun client
+# kcptun Client
 
 ## Overview
 
-[kcptun client](https://github.com/xtaci/kcptun) is a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
+[kcptun Client](https://github.com/xtaci/kcptun) is a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -58,5 +53,3 @@ saltbox_automation:
 ```shell
 sb install sandbox-kcptun-client
 ```
-
-## Usage

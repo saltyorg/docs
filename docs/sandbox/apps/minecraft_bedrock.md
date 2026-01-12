@@ -1,16 +1,9 @@
 ---
 icon: material/docker
+title: Minecraft Bedrock
 tags:
-  - Minecraft
+  - Minecraft 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/itzg/docker-minecraft-bedrock-server

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: DelugeVPN
 hide:
   - tags
 tags:
   - delugevpn
   - download
-  - vpn
+  - vpn 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://dev.deluge-torrent.org/wiki/UserGuide

@@ -1,19 +1,12 @@
 ---
 icon: material/docker
+title: Plex-Trakt-Sync
 hide:
   - tags
 tags:
   - plextraktsync
-  - trakt.tv
+  - trakt.tv 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup

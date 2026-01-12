@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+title: Plex DupeFinder
 hide:
   - tags
 tags:

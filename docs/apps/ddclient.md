@@ -1,5 +1,6 @@
 ---
 icon: material/server-network-outline
+title: DDClient
 hide:
   - tags
 tags:

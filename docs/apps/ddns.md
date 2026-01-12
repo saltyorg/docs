@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: DDNS
 hide:
   - tags
 tags:
@@ -8,14 +9,6 @@ tags:
   - dns
   - dynamic-dns
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.saltbox.dev

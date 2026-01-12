@@ -1,19 +1,12 @@
 ---
 icon: material/docker
+title: Firefox
 hide:
   - tags
 tags:
   - firefox
-  - browser
+  - browser 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://support.plex.tv/articles/categories/plex-media-server

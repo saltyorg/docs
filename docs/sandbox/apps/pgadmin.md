@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: pgAdmin
 hide:
   - tags
 tags:
   - pgadmin
   - database
-  - admin
+  - admin 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html

@@ -5,14 +5,6 @@ hide:
 tags:
   - grafana
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://grafana.com/docs/grafana

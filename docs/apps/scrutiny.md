@@ -8,14 +8,6 @@ tags:
   - disk-monitoring
   - hardware-monitoring
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/AnalogJ/scrutiny/blob/master/README.md

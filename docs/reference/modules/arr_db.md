@@ -1,5 +1,6 @@
 ---
 icon: material/play
+title: Arr DB
 hide:
   - tags
 tags:

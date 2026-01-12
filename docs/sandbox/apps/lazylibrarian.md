@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: LazyLibrarian
 hide:
   - tags
 tags:
   - lazylibrarian
   - media
-  - books
+  - books 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://lazylibrarian.gitlab.io

@@ -4,16 +4,8 @@ hide:
   - tags
 tags:
   - comic
-  - manga
+  - manga 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/ajslater/codex#%EF%B8%8F-configuration

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Your Spotify
 hide:
   - tags
 tags:
   - yourspotify
   - spotify
-  - analytics
+  - analytics 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents

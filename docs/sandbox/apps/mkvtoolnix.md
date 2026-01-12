@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: MKVToolNix
 hide:
   - tags
 tags:
   - mkvtoolnix
   - media
-  - tools
+  - tools 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://mkvtoolnix.download/docs.html

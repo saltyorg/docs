@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+title: yq
 status: draft
 saltbox_automation:
   sections:

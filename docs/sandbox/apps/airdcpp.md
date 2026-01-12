@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: AirDC++
 hide:
   - tags
 tags:
   - airdcpp
   - p2p
-  - downloading
+  - downloading 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://airdcpp-web.github.io/docs

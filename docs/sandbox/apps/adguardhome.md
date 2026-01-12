@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: AdGuard Home
 hide:
   - tags
 tags:
   - adguard
   - dns
-  - adblock
+  - adblock 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://kb.adguard.com/en/home/overview

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Firefly III
 hide:
   - tags
 tags:
   - fireflyiii
   - finance
-  - budgeting
+  - budgeting 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.firefly-iii.org

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: InfluxDB2
 hide:
   - tags
 tags:
   - influxdb2
   - database
-  - timeseries
+  - timeseries 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.influxdata.com/influxdb/latest

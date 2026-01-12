@@ -1,6 +1,6 @@
 ---
 icon: material/server-network-outline
-title: PostgreSQL (Host Install)
+title: PostgreSQL Host
 hide:
   - tags
 tags:
@@ -27,6 +27,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# PostgreSQL (Host Install)
+
+## Overview
+
+[PostgreSQL (Host Install)](https://www.postgresql.org) is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://www.postgresql.org/docs/12/index.html){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://www.postgresql.org/ftp/source){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.

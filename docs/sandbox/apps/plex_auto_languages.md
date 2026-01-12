@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Plex Auto Languages
 hide:
   - tags
 tags:
   - plex-auto-languages
   - plex
-  - automation
+  - automation 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/RemiRigal/Plex-Auto-Languages

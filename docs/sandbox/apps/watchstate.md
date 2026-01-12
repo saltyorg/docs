@@ -1,21 +1,14 @@
 ---
 icon: material/docker
+title: WatchState
 hide:
   - tags
 tags:
   - watchstate
   - emby
   - jellyfin
-  - plex
+  - plex 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/ArabCoders/watchstate/blob/master/FAQ.md

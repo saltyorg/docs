@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+title: Plex Patrol
 hide:
   - tags
 tags:
@@ -7,14 +8,8 @@ tags:
   - plex
   - monitoring
 saltbox_automation:
-  disabled: false
   sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
+    inventory: false
   app_links:
     - name: Manual
       url: https://github.com/l3uddz/plex_patrol

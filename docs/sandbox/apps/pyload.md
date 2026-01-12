@@ -1,21 +1,14 @@
 ---
 icon: material/docker
+title: pyload-ng
 status: draft
 hide:
   - tags
 tags:
   - pyload
   - download
-  - tools
+  - tools 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/pyload/pyload/wiki
@@ -27,7 +20,7 @@ saltbox_automation:
       url: https://github.com/pyload/pyload/discussions
       type: github
   project_description:
-    name: linuxserver/pyload-ng
+    name: pyload-ng
     summary: |
       a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
     link: https://pyload.net
@@ -35,11 +28,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# linuxserver/pyload-ng
+# pyload-ng
 
 ## Overview
 
-[linuxserver/pyload-ng](https://pyload.net) is a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
+[pyload-ng](https://pyload.net) is a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

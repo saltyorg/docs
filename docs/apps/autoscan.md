@@ -6,14 +6,6 @@ hide:
 tags:
   - autoscan
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/saltydk/autoscan/blob/master/README.md#overview

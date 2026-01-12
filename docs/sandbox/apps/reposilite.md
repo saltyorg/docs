@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: reposilite
 hide:
   - tags
 tags:
   - reposilite
   - development
-  - repository
+  - repository 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://reposilite.com/guide/about

@@ -1,19 +1,12 @@
 ---
 icon: material/docker
+title: NZBHydra2
 hide:
   - tags
 tags:
   - nzbhydra
   - nzbhydra2
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.linuxserver.io/general/container-customization

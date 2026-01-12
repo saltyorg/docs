@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: xTeVe
 hide:
   - tags
 tags:
   - xteve
   - iptv
-  - streaming
+  - streaming 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/xteve-project/xTeVe-Documentation/blob/master/en/configuration.md

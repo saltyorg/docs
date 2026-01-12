@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: vnStat Dashboard
 hide:
   - tags
 tags:
   - vnstat
   - monitoring
-  - network
+  - network 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md
@@ -26,7 +19,7 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: vnStat dashboard
+    name: vnStat Dashboard
     summary: |
       a user-friendly web dashboard for viewing the following:.
     link: https://github.com/alexandermarston/vnstat-dashboard
@@ -34,11 +27,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# vnStat dashboard
+# vnStat Dashboard
 
 ## Overview
 
-[vnStat dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:.
+[vnStat Dashboard](https://github.com/alexandermarston/vnstat-dashboard) is a user-friendly web dashboard for viewing the following:.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: code-server
 hide:
   - tags
 tags:
   - code-server
   - vscode
-  - development
+  - development 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://code.visualstudio.com/docs

@@ -1,20 +1,13 @@
 ---
 icon: material/docker
+title: Firefly III Importer
 hide:
   - tags
 tags:
   - fireflyiii-importer
   - finance
-  - tools
+  - tools 
 saltbox_automation:
-  disabled: false
-  sections:
-    inventory: true
-    overview: true
-  inventory:
-    show_sections: []
-    hide_sections: []
-    example_overrides: {}
   app_links:
     - name: Manual
       url: https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data

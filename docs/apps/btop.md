@@ -1,5 +1,6 @@
 ---
 icon: material/desktop-classic
+title: btop
 hide:
   - tags
 tags:

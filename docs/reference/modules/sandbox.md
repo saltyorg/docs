@@ -5,16 +5,43 @@ tags:
   - sandbox
   - community
 saltbox_automation:
+  app_links:
+  - name: Manual
+    url:
+    type: documentation
+  - name: Releases
+    url:
+    type: releases
+  - name: Community
+    url:
+    type: community
   sections:
     inventory: false
   project_description:
     name: Sandbox
-    summary: |
+    summary: |-
       a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
     link: https://github.com/saltyorg/Sandbox
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Sandbox
+
+## Overview
+
+[Sandbox](https://github.com/saltyorg/Sandbox) is a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Update

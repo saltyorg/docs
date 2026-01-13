@@ -6,6 +6,7 @@ hide:
 tags:
 - module
 - role
+- tags
 ---
 
 # Modules by Category
@@ -14,11 +15,11 @@ tags:
 
 |                                           | :material-monitor-arrow-down:{ .xl } | :material-format-list-group-plus:{ .xl } |
 |-------------------------------------------|:------------------------------------:|:----------------------------------------:|
-| [Main Roles](main_tags.md)                |   `saltbox` `mediabox` `feederbox`   |           :material-set-none:            |
+| [Main Tags](main_tags.md)                 |   `saltbox` `mediabox` `feederbox`   |           :material-set-none:            |
 | [Media Servers](media_server.md)          |            `media-server`            |     `mediabox_roles` `saltbox_roles`     |
 | [Download Clients](download_clients.md)   |          `download-clients`          |    `feederbox_roles` `saltbox_roles`     |
 | [Download Indexers](download_indexers.md) |         `download-indexers`          |    `feederbox_roles` `saltbox_roles`     |
-| [Sandbox Roles](main_tag.md)              |           `sandbox-roles`            |           :material-set-none:            |
+| [Sandbox Tag](main_tag.md)                |           `sandbox-roles`            |           :material-set-none:            |
 
 ## Backup
 

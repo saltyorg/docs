@@ -1,10 +1,9 @@
 ---
 icon: material/tag
-title: Main Tag
-status: draft
+title: Sandbox Tag
 saltbox_automation:
   project_description:
-    name: Main Tag
+    name: Sandbox Tag
     summary: |
       a Sandbox module that deploys your assigned Sandbox apps stack.
 ---

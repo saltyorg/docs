@@ -1,6 +1,7 @@
 ---
 icon: material/docker
 title: Tdarr Node
+status: outdated
 hide:
   - tags
 tags:

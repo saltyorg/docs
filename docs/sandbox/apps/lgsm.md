@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: outdated
 title: LinuxGSM
 hide:
   - tags

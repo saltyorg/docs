@@ -156,9 +156,10 @@ extra:
     link: "https://github.com/saltyorg/Saltbox"
     name: GitHub
   status:
-    deprecated: DEPRECATED!
-    draft: DRAFT — NOT YET FINISHED!
-    outdated: OUTDATED — MAY BE INACCURATE!
+    deprecated: Deprecated documentation that is unlikely to be of use
+    draft: Work in progress documentation
+    draft2: Unfinished documentation (help wanted)
+    outdated: Outdated documentation needing work (help wanted)
 
 markdown_extensions:
 - abbr

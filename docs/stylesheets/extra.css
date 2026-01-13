@@ -21,7 +21,8 @@
   -webkit-mask-image: var(--md-status--outdated);
 }
 
-.md-status--draft::after {
+.md-status--draft::after,
+.md-status--draft2::after {
   mask-image: var(--md-status--draft);
   -webkit-mask-image: var(--md-status--draft);
 }

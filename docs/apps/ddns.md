@@ -32,6 +32,7 @@ saltbox_automation:
 ## Overview
 
 DDNS is a Saltbox-specific Dynamic DNS service that automatically manages DNS records with Cloudflare based on Traefik routes. This container monitors Traefik's API for active routes and automatically creates or updates corresponding DNS records in Cloudflare, supporting both IPv4 and IPv6.
+
 <div class="grid grid--buttons" markdown data-search-exclude>
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.saltbox.dev){ .md-button .md-button--stretch }

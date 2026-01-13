@@ -11,7 +11,7 @@ Saltbox support is provided exclusively via our [Discord server](https://discord
 -   For officially supported Saltbox topics, create a thread in [#support-saltbox](https://discord.com/channels/853755447970758686/1020063740936335451).
 -   For topics not directly related to Saltbox, create a thread in [#support-non-saltbox](https://discord.com/channels/853755447970758686/1108457911530819654).
 
-    Hardware and home networking considerations typically go here. Specific software issues are more likely to be resolved through their official support platforms and outside Saltbox.
+    Hardware and home networking considerations typically go here. Specific software issues are more likely to be addressed through their official support channels and outside Saltbox.
 
 -   Please avoid posting support requests in other channels.
 
@@ -45,22 +45,37 @@ Please do not cherry-pick snippets that you believe are more relevant than other
 
 ## Best Practices
 
--   **Check Announcements:** Always review [#announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent developments. Broad issues requiring user intervention are usually covered there.
--   **Threads:** Always create a dedicated thread for your support request to keep discussions organized.
--   **Beware the [XY problem](https://xyproblem.info)**: Present the core problem and mention everything you tried to overcome it, but leave out the self-diagnosis.
--   **No Screenshots of Text:** Please do not use screenshots for terminal output—copy and paste the text instead, inside a [code fence](#code-fences) if appropriate.
--   **Error Screens:** For issues like HTTP errors (404, 500, SSL certificate...), please avoid posting a screenshot of your web browser. Instead, paste the output of a command-line HTTP client such as `curl` with the problem URL. Screenshots in general are not welcome in support requests.
+### Check announcements
+
+Always review [#announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent developments. New incidents requiring user intervention are usually covered there.
+
+### Follow the rules
+
+Please make sure you're well acquainted with the [channel rules](https://discord.com/channels/853755447970758686/908049920731279360/1234438785442381896) and formulate your request accordingly.
+
+### Threads 
+
+Always create a dedicated thread for your support request to keep discussions organized.
+
+### Beware the [XY problem](https://xyproblem.info)
+
+Present the core problem and mention everything you tried to overcome it, but leave out the self-diagnosis.
+
+### No screenshots of text
+
+Please do not use screenshots for terminal output—copy and paste the text instead, inside a [code fence](#code-fences) if appropriate.
+
+### Error screens
+
+For issues like HTTP errors (404, 500, SSL certificate...), please avoid posting a screenshot of your web browser. Instead, paste the output of a command-line HTTP client such as `curl` with the problem URL. Screenshots in general are not welcome in support requests.
 
 ## Code Fences
 
 When sharing a command, log, or error message, use a code fence to escape native Discord formatting.
 
--   **Syntax:** The backtick is used for code fences.
-
-    ![Backtick Key](../images/support/qwerty-backtick.svg)
-
--   **Single-line:** For short inline content, wrap with a single backtick ++grave++: `` `your inline content` ``
--   **Multi-line:** For longer content, wrap with triple backticks ++grave+grave+grave++:
+-   The [backtick](../images/support/qwerty-backtick.svg), also known as the grave accent or backquote, is used for code fences.
+-   For short inline content, wrap with a single backtick ++grave++: `` `your inline content` ``
+-   For longer content, wrap with triple backticks ++grave+grave+grave++:
 
     ````markdown
     ```
@@ -70,7 +85,7 @@ When sharing a command, log, or error message, use a code fence to escape native
     ```
     ````
 
--   **Language:** For syntax highlighting, add a language identifier by the opening triple backticks.
+-   For syntax highlighting, add a language identifier by the opening triple backticks.
 
     ````markdown title="YAML example"
     ```yaml

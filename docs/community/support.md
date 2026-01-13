@@ -8,20 +8,20 @@ Saltbox support is provided exclusively via our [Discord server](https://discord
 
 ## Where to Post
 
--   For officially supported Saltbox matters, create a thread in [:fontawesome-brands-discord: #support-saltbox](https://discord.com/channels/853755447970758686/1020063740936335451).
--   For topics not directly related to Saltbox, create a thread in [:fontawesome-brands-discord: #support-non-saltbox](https://discord.com/channels/853755447970758686/1108457911530819654).
+-   For officially supported Saltbox topics, create a thread in [#support-saltbox](https://discord.com/channels/853755447970758686/1020063740936335451).
+-   For topics not directly related to Saltbox, create a thread in [#support-non-saltbox](https://discord.com/channels/853755447970758686/1108457911530819654).
 
-    Hardware and home networking considerations typically go here. For specific software issues, you are more likely to receive efficient help by contacting the software's support team through their official platform (Discord, forums, GitHub, etc.)
+    Hardware and home networking considerations typically go here. Specific software issues are more likely to be resolved through their official support platforms and outside Saltbox.
 
 -   Please avoid posting support requests in other channels.
 
 ## Sharing Information
 
-Always provide detailed context and relevant logs. This can include but is not limited to:
-
 !!! warning "Do not share sensitive information!"
        
-    Carefully review any output for personal information (such as domain names, IPs, or credentials) and sanitize it before sharing.
+    Carefully review any output for personal information (domain names, public IP addresses, credentials...) and sanitize it before sharing.
+
+Always provide detailed context and relevant logs. This can include but is not limited to:
 
 -   Your hosting specifics:
 
@@ -32,7 +32,7 @@ Always provide detailed context and relevant logs. This can include but is not l
 -   What you have tried: `sb update`, `sb install ...`, `docker restart ...`, etc.
 -   Saltbox logs in `/srv/git/Saltbox/`, Traefik logs in `/opt/traefik`
 -   Output of `sb docker ps`, `sb docker logs`, `docker inspect ...`, `sb logs`
--   Your [Inventory](../../saltbox/inventory/index.md) content, output of `sb diag`
+-   Your [Inventory](../saltbox/inventory/index.md) content, output of `sb diag`
 -   Output of `curl http://traefik:8080/api/http/routers/xROLE_NAMEx@docker` with the problem app
 -   Output of `dig`, `curl`, `ping` with the problem FQDN
 -   Output of `lsblk`, `lspci`, `free -h`, `df -h`, `sudo lshw`, `uname -a`, `history | tail -100`
@@ -45,7 +45,7 @@ Please do not cherry-pick snippets that you believe are more relevant than other
 
 ## Best Practices
 
--   **Check Announcements:** Always review [:fontawesome-brands-discord: #announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent developments. Broad issues requiring user intervention are usually covered there.
+-   **Check Announcements:** Always review [#announcements](https://discord.com/channels/853755447970758686/905480112949051402) for recent developments. Broad issues requiring user intervention are usually covered there.
 -   **Threads:** Always create a dedicated thread for your support request to keep discussions organized.
 -   **Beware the [XY problem](https://xyproblem.info)**: Present the core problem and mention everything you tried to overcome it, but leave out the self-diagnosis.
 -   **No Screenshots of Text:** Please do not use screenshots for terminal output—copy and paste the text instead, inside a [code fence](#code-fences) if appropriate.
@@ -57,7 +57,7 @@ When sharing a command, log, or error message, use a code fence to escape native
 
 -   **Syntax:** The backtick is used for code fences.
 
-    ![Backtick Key](../../images/support/qwerty-backtick.svg)
+    ![Backtick Key](../images/support/qwerty-backtick.svg)
 
 -   **Single-line:** For short inline content, wrap with a single backtick ++grave++: `` `your inline content` ``
 -   **Multi-line:** For longer content, wrap with triple backticks ++grave+grave+grave++:

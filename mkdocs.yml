@@ -596,9 +596,4 @@ nav:
 
 - Community:
   - community/index.md
-  - Contributing:
-    - community/contributing/development.md
-    - community/contributing/documentation.md
-  - Requesting:
-    - community/requests/features.md
-    - community/support.md
+  - community/support.md

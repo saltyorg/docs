@@ -4,4 +4,8 @@ status: draft
 
 # Community
 
-This section provides resources and guidelines for joining our community, whether you need help with the Saltbox project or wish to contribute to it.
+Find support, report issues, request features, and contribute to the project.
+
+!!! info "Under Construction"
+
+    Pages for contributing guidelines, role development, and feature request processes are coming soon.

@@ -6,7 +6,7 @@ tags:
   - community
 saltbox_automation:
   sections:
-    - inventory: false
+    inventory: false
   project_description:
     name: Sandbox
     summary: |

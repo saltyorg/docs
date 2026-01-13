@@ -10,11 +10,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Main Tag
+# Sandbox Tag
 
 ## Overview
 
-Main Tag is a Sandbox module that deploys your assigned Sandbox apps stack.
+Sandbox Tag is a Sandbox module that deploys your assigned Sandbox apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

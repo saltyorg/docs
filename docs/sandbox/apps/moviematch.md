@@ -280,7 +280,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           PLEX_URL: "{{ lookup('role_var', '_plex_url', role='moviematch') }}"
-          PLEX_TOKEN: "{{ plex_auth_token }}"
+          PLEX_TOKEN: "{{ plex_auth_token | default('failed getting token') }}"
           LOG_LEVEL: DEBUG
           LIBRARY_FILTER: "{{ lookup('role_var', '_libraries', role='moviematch') }}"
         ```

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: ArchiveBox
-    summary: |
+    summary: |-
       a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
     link: https://github.com/ArchiveBox/ArchiveBox
 ---

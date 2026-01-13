@@ -18,7 +18,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Autoscan
-    summary: |
+    summary: |-
       the official Saltbox continuation of *Cloudbox/autoscan*, an open-source tool designed to automatically trigger media scans in media servers like Plex, Emby, and Jellyfin when new content is added.
     link: https://github.com/saltydk/autoscan
 ---

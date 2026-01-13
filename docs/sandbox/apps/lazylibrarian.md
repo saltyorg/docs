@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: LazyLibrarian
-    summary: |
+    summary: |-
       a program to follow authors and grab metadata for all your digital reading needs.
     link: https://gitlab.com/LazyLibrarian/LazyLibrarian
 ---

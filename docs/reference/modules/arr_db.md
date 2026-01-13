@@ -13,7 +13,7 @@ saltbox_automation:
     - Variables
   project_description:
     name: Arr DB
-    summary: |
+    summary: |-
       a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
 ---
 

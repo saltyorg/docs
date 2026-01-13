@@ -20,7 +20,7 @@ saltbox_automation:
       type: github
   project_description:
     name: changedetection.io
-    summary: |
+    summary: |-
       a tool for tracking changes to websites.
     link: https://github.com/dgtlmoon/changedetection.io
 ---

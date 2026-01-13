@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Bazarr
-    summary: |
+    summary: |-
       a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
     link: https://www.bazarr.media
 ---

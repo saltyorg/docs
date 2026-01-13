@@ -7,7 +7,7 @@ tags:
 saltbox_automation:
   project_description:
     name: Custom
-    summary: |
+    summary: |-
       a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
 ---
 

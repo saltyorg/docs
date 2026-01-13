@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: MKVToolNix
-    summary: |
+    summary: |-
       a set of tools to create, alter and inspect Matroska files.
     link: https://mkvtoolnix.download
 ---

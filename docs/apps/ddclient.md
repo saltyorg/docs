@@ -23,7 +23,7 @@ saltbox_automation:
       type: community
   project_description:
     name: DDClient
-    summary: |
+    summary: |-
       a dynamic DNS client that automatically updates DNS records when your public IP address changes.
     link: https://ddclient.net
 ---

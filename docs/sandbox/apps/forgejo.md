@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Forgejo
-    summary: |
+    summary: |-
       a self-hosted, lightweight software forge designed for collaborative software development using the Git version control system.
     link: https://www.Forgejo.dev/
 ---

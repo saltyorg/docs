@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Jellyfin
-    summary: |
+    summary: |-
       a free and open-source media server and suite of multimedia applications designed to organize, manage, and share digital media files across networked devices.
     link: https://jellyfin.org
 ---

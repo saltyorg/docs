@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: qBit Manage
-    summary: |
+    summary: |-
       a program used to manage your qBittorrent instance.
     link: https://github.com/StuffAnThings/qbit_manage
 ---

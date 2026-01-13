@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Ombi
-    summary: |
+    summary: |-
       a self-hosted media request, user management, and media discovery web application designed to simplify the process of requesting movies, TV shows, and music for media servers like Jellyfin, Plex, and Emby.
     link: https://ombi.io
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Gotify
-    summary: |
+    summary: |-
       a simple server for sending and receiving messages.
     link: https://gotify.net
 ---

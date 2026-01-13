@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Kitana
-    summary: |
+    summary: |-
       a responsive Plex plugin web frontend.
     link: https://github.com/pannal/Kitana
 ---

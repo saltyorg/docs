@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Semaphore UI
-    summary: |
+    summary: |-
       an open-source, self-hosted web interface designed to simplify and centralize the management of DevOps automation tools like Ansible, Terraform, OpenTofu, PowerShell, Bash, and Python scripts.
     link: https://github.com/semaphoreui/semaphore
 ---

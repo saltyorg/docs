@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: LinuxGSM
-    summary: |
+    summary: |-
       a command-line tool for quick and simple deployment and management of Linux dedicated game servers. It aims to make the process of managing game servers hassle-free. With LinuxGSM, we can avoid spending hours trying to configure and manage game servers. It provides a streamlined and efficient solution for setting up and maintaining dedicated game servers on Linux.
     link: https://linuxgsm.com
 ---

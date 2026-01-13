@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: FileZilla
-    summary: |
+    summary: |-
       a cross-platform graphical FTP, SFTP, and FTPS file management tool with a vast list of features.
     link: https://filezilla-project.org/
 ---

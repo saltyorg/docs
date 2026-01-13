@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Deluge
-    summary: |
+    summary: |-
       a full-featured BitTorrent client for Linux, OS X, Unix and Windows.
     link: https://deluge-torrent.org
 ---

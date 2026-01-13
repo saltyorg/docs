@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Membarr
-    summary: |
+    summary: |-
       a fork of Invitarr that invites discord users to Plex and Jellyfin. You can also automate this bot to invite discord users to a media server once a certain role is given to a user or the user can also be added manually.
     link: https://github.com/Yoruio/Membarr
 ---

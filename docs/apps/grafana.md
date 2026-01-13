@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Grafana
-    summary: |
+    summary: |-
       an open-source analytics and interactive visualization web application designed to query, visualize, alert on, and understand data from various sources.
     link: https://grafana.com/grafana
 ---

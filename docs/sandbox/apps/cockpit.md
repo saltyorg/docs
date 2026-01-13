@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Cockpit
-    summary: |
+    summary: |-
       an interactive server admin interface that makes Linux servers discoverable and manageable through a web browser, providing comprehensive server management capabilities with a modern web interface.
     link: https://cockpit-project.org
 ---

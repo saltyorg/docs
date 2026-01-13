@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Komga
-    summary: |
+    summary: |-
       a free and open source comics/mangas server.
     link: https://komga.org/
 ---

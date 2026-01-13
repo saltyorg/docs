@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Puddletag
-    summary: |
+    summary: |-
       an audio tag editor (primarily created) for GNU/Linux similar to the Windows program, Mp3tag. Unlike most taggers for GNU/Linux, it uses a spreadsheet-like layout so that all the tags you want to edit by hand are visible and easily editable.
     link: https://docs.puddletag.net/
 ---

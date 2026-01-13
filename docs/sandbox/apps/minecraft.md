@@ -16,7 +16,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Minecraft Server on Docker
-    summary: |
+    summary: |-
       a containerized solution that allows users to run a Minecraft server.
     link: https://docker-minecraft-server.readthedocs.io
 ---

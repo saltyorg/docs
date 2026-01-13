@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Autoheal
-    summary: |
+    summary: |-
       a Docker container designed to monitor and automatically restart unhealthy Docker containers.
     link: https://github.com/willfarrell/docker-autoheal
 ---

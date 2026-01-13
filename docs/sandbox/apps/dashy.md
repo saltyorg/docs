@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Dashy
-    summary: |
+    summary: |-
       the "Ultimate homepage for your homelab".
     link: https://dashy.to/
 ---

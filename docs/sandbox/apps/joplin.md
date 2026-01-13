@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Joplin
-    summary: |
+    summary: |-
       an open source note-taking app. Capture your thoughts and securely access them from any device.
     link: https://joplinapp.org/
 ---

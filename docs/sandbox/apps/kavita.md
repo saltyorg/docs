@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Kavita
-    summary: |
+    summary: |-
       a fast, feature rich, cross platform reading server. Built with a focus for manga, and the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family!.
     link: http://www.kavitareader.com/
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Cherry
-    summary: |
+    summary: |-
       a bookmark service that is open source.
     link: https://cherry.haishan.me/
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Unmanic
-    summary: |
+    summary: |-
       a simple tool for optimising your file library. You can use it to convert your files into a single, uniform format, manage file movements based on timestamps, or execute custom commands against a file based on its file size.
     link: https://github.com/Unmanic/unmanic
 ---

@@ -23,7 +23,7 @@ saltbox_automation:
       type: github
   project_description:
     name: iPerf3
-    summary: |
+    summary: |-
       a tool for active measurements of the maximum achievable bandwidth on IP networks, supporting TCP, UDP, and SCTP protocols over both IPv4 and IPv6.
     link: https://software.es.net/iperf
 ---

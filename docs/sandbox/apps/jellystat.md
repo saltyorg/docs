@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Jellystat
-    summary: |
+    summary: |-
       a free and open source statistics web application for Jellyfin that provides a dashboard with information about the server, libraries, users, and playback activity. Still in development with some expected functionality gaps.
     link: https://github.com/CyferShepard/Jellystat
 ---

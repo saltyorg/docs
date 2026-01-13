@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Traefik Proxy
-    summary: |
+    summary: |-
       an open-source, dynamic reverse proxy and load balancer designed for modern, distributed, and microservices architectures.
     link: https://traefik.io/traefik
 ---

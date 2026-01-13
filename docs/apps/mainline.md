@@ -20,7 +20,7 @@ saltbox_automation:
       type: github
   project_description:
     name: Mainline
-    summary: |
+    summary: |-
       a free and open-source graphical tool designed to install and manage the latest mainline Linux kernels on Debian-based distributions.
     link: https://github.com/bkw777/mainline
 ---

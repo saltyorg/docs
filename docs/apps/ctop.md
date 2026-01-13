@@ -22,7 +22,7 @@ saltbox_automation:
       type: community
   project_description:
     name: ctop
-    summary: |
+    summary: |-
       a command-line, top-like tool for monitoring Linux containers in real-time.
     link: https://ctop.sh
 ---

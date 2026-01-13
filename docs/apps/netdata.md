@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Netdata
-    summary: |
+    summary: |-
       distributed, real-time, performance and health monitoring for systems and applications.
     link: https://github.com/netdata/netdata/
 ---

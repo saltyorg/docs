@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: BookStack
-    summary: |
+    summary: |-
       a simple, self-hosted, easy-to-use platform for organising and storing information.
     link: https://www.bookstackapp.com
 ---

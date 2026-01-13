@@ -18,7 +18,7 @@ saltbox_automation:
       type: community
   project_description:
     name: ComiXed
-    summary: |
+    summary: |-
       an application for managing digital comics. It seeks to be the ultimate management tool for digital comic books.
     link: https://github.com/comixed/comixed
 ---

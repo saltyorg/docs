@@ -18,7 +18,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Organizr
-    summary: |
+    summary: |-
       a free, open-source, web-based dashboard designed to organize and manage multiple server services, particularly for home theater PCs (HTPCs) and homelabs.
     link: https://organizr.app
 ---

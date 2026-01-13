@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Docker CE
-    summary: |
+    summary: |-
       an open-source containerization technology for building and containerizing your applications.
     link: https://www.docker.com/community
 ---

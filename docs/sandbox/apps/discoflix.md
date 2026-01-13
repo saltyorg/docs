@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: DiscoFlix
-    summary: |
+    summary: |-
       a user-request-management system for your media server. With Radarr / Sonarr / Discord integration, DiscoFlix facilitates requests by your users for your media server.
     link: https://github.com/nickheyer/discoflix
 ---

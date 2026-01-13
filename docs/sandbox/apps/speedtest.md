@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Speedtest
-    summary: |
+    summary: |-
       a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
     link: https://github.com/librespeed/speedtest
 ---

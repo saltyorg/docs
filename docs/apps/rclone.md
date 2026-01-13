@@ -16,7 +16,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Rclone
-    summary: |
+    summary: |-
       an open-source, command-line program designed to manage files on remote storage.
     link: https://rclone.org
 ---

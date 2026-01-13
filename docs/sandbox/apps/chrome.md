@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Headless Chromes
-    summary: |
+    summary: |-
       a way to run the Chrome browser in a headless environment.
     link: https://developer.chrome.com/blog/headless-chrome
 ---

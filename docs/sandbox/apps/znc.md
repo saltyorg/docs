@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: ZNC
-    summary: |
+    summary: |-
       an advanced IRC bouncer that is left connected so an IRC client can disconnect/reconnect without losing the chat session.
     link: https://wiki.znc.in/ZNC
 ---

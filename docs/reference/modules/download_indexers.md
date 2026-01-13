@@ -4,7 +4,7 @@ title: Download Indexers
 saltbox_automation:
   project_description:
     name: Download Indexers
-    summary: |
+    summary: |-
       a Saltbox module that deploys your assigned download indexer apps stack.
 ---
 

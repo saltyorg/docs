@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: NZBThrottle
-    summary: |
+    summary: |-
       a utility that automatically throttles Usenet download speeds based on custom schedules and conditions.
     link: https://github.com/daghaian/nzbthrottle
 ---

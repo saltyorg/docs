@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Portainer
-    summary: |
+    summary: |-
       a lightweight, open-source management UI that provides a graphical interface for managing containerized applications across various environments, including Docker, Kubernetes, Docker Swarm, and Podman.
     link: https://portainer.io
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Scrutiny
-    summary: |
+    summary: |-
       a hard drive health monitoring tool that tracks S.M.A.R.T. metrics for your drives.
     link: https://github.com/AnalogJ/scrutiny
 ---

@@ -21,7 +21,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: WatchState
-    summary: |
+    summary: |-
       a self-hosted, open-source service designed to sync play states, including watch progress and history, across media servers such as Plex, Jellyfin, and Emby without relying on third-party servers or cloud services.
     link: https://github.com/arabcoders/watchstate
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Immich
-    summary: |
+    summary: |-
       a self-hosted photo and video backup tool, similar to google photos and apple photos.
     link: https://immich.app/
 ---

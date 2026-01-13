@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Karakeep
-    summary: |
+    summary: |-
       an open source "Bookmark Everything" app that uses AI for automatically tagging the content you throw at it. The app is built with self-hosting as a first class citizen.
     link: https://karakeep.app/
 ---

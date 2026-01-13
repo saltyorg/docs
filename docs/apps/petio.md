@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Petio
-    summary: |
+    summary: |-
       a third party companion app available to Plex server owners to allow their users to request, review and discover content.
     link: https://petio.tv
 ---

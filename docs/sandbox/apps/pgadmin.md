@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: pgAdmin
-    summary: |
+    summary: |-
       a popular and feature rich Open Source administration and development platform for PostgreSQL.
     link: https://www.pgadmin.org/
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Maintainerr
-    summary: |
+    summary: |-
       an automated media management tool designed to help users free up storage space on their media servers by identifying and removing unwatched or unwanted content.
     link: https://maintainerr.info
 ---

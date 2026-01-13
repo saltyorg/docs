@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Your Spotify
-    summary: |
+    summary: |-
       a self-hosted application that tracks your Spotify listening activity and provides a dashboard to explore detailed statistics about your music habits.
     link: https://github.com/Yooooomi/your_spotify
 ---

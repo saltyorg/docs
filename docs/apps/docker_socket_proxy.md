@@ -14,7 +14,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Docker Socket Proxy
-    summary: |
+    summary: |-
       a security-enhanced proxy for the Docker socket.
     link: https://github.com/Tecnativa/docker-socket-proxy
 ---

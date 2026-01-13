@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: tika
-    summary: |
+    summary: |-
       a...
     link:
 ---

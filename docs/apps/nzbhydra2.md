@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: NZBHydra2
-    summary: |
+    summary: |-
       a meta search tool designed to aggregate results from various Usenet indexers and torrent trackers into a single, unified interface.
     link: https://github.com/theotherp/nzbhydra2
 ---

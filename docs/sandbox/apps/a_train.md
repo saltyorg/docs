@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: A-Train
-    summary: |
+    summary: |-
       the official Autoscan trigger that listens for changes within Google Drive. It is the successor of Autoscan's Bernard trigger, which unfortunately contains enough logic errors to prompt a rewrite.
     link: https://github.com/m-rots/a-train
 ---

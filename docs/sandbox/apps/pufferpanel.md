@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: PufferPanel
-    summary: |
+    summary: |-
       an open-source web-based game server management system designed for both small networks and personal use. It supports Minecraft, Source Dedicated Servers, BungeeCord, and many other game servers.
     link: https://pufferpanel.com/
 ---

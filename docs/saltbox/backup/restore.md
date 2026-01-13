@@ -6,7 +6,7 @@ tags:
 saltbox_automation:
   project_description:
     name: Restore
-    summary: |
+    summary: |-
       a Saltbox module that restores a backup performed with one of the Saltbox backup modules.
 ---
 

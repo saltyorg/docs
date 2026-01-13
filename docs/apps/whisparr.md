@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Whisparr
-    summary: |
+    summary: |-
       an adult movie collection manager for Usenet and BitTorrent users.
     link: https://whisparr.com
 ---

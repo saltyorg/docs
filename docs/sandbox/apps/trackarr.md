@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Trackarr
-    summary: |
+    summary: |-
       an open-source tool that listens to IRC announce channels from torrent trackers, parses new release announcements, and forwards those announcements to automation apps like Sonarr, Radarr, or Lidarr.
     link: https://gitlab.com/cloudb0x/trackarr
 ---

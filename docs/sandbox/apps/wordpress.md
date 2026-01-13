@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: WordPress
-    summary: |
+    summary: |-
       open source software you can use to create a beautiful website, blog, or app.
     link: https://wordpress.org/
 ---

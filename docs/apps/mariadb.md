@@ -18,7 +18,7 @@ saltbox_automation:
       type: community
   project_description:
     name: MariaDB Server
-    summary: |
+    summary: |-
       a community-developed, open-source relational database management system (RDBMS) that serves as a drop-in replacement for MySQL.
     link: https://mariadb.org
 ---

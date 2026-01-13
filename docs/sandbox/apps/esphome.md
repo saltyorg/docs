@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: ESPHome
-    summary: |
+    summary: |-
       an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers.
     link: https://esphome.io
 ---

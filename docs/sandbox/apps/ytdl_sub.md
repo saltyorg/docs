@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: ytdl-sub
-    summary: |
+    summary: |-
       a lightweight tool to automate downloading and metadata generation with yt-dlp. It uses YAML files to define subscriptions and prepares media for popular media players like Plex, Jellyfin, Kodi, and Emby.
     link: https://github.com/jmbannon/ytdl-sub
 ---

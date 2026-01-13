@@ -27,7 +27,7 @@ saltbox_automation:
       type: community-plex
   project_description:
     name: Plex Media Server
-    summary: |
+    summary: |-
       a software application that allows you to organize and stream your collection of movies, TV shows, music, and photos, from a central location to various devices.
     link: https://www.plex.tv/personal-media-server
     categories:

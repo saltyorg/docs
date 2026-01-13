@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Wrapperr
-    summary: |
+    summary: |-
       a website-based platform and API for collecting user stats within a set timeframe using Tautulli. The data is displayed as a statistics-summary, sort of like Spotify Wrapped. Yes, you need Tautulli to have been running beforehand and currently for this to work. Note: Wrapperr is not behind authelia.
     link: https://github.com/aunefyren/wrapperr
 ---

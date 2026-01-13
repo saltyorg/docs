@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Requestrr
-    summary: |
+    summary: |-
       a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms.
     link: https://github.com/thomst08/requestrr
 ---

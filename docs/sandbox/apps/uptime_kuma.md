@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Uptime Kuma
-    summary: |
+    summary: |-
       a self-hosted monitoring tool like "Uptime Robot".
     link: https://github.com/louislam/uptime-kuma
 ---

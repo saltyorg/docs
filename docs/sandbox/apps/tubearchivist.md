@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Tube Archivist
-    summary: |
+    summary: |-
       a self-hosted YouTube media server designed to help users download, index, and organize their favorite YouTube content for offline viewing.
     link: https://www.tubearchivist.com/
 ---

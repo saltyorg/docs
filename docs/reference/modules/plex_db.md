@@ -9,7 +9,7 @@ tags:
 saltbox_automation:
   project_description:
     name: Plex DB
-    summary: |
+    summary: |-
       a Saltbox module that performs maintenance operations on SQLite databases used by Plex Media Server instances.
 ---
 

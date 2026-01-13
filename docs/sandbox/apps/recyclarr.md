@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Recyclarr
-    summary: |
+    summary: |-
       a command-line application designed to automatically synchronize recommended settings from the TRaSH Guides to Sonarr and Radarr instances.
     link: https://recyclarr.dev
 ---

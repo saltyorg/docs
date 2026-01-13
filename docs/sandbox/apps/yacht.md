@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Yacht
-    summary: |
+    summary: |-
       a web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
     link: https://yacht.sh/
 ---

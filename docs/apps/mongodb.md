@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: MongoDB
-    summary: |
+    summary: |-
       a free and open-source cross-platform document-oriented database program.
     link: https://www.mongodb.com
 ---

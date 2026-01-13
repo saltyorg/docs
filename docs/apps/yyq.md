@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: yq
-    summary: |
+    summary: |-
       a lightweight, portable command-line tool designed to process YAML, JSON, XML, INI, properties, CSV, and TSV files using a syntax similar to jq, which is used for JSON processing.
     link: https://mikefarah.gitbook.io/yq
 ---

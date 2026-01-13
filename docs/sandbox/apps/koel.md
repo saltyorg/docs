@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Koel
-    summary: |
+    summary: |-
       a simple web-based personal audio streaming service written in Vue and Laravel that embraces modern web technologies. It features transparent FLAC support, cross-device sync, smart playlists, and multi-user support.
     link: https://koel.dev/
 ---

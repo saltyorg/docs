@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Paperless NGX
-    summary: |
+    summary: |-
       a simple Django application running in two parts: a Consumer (the thing that does the indexing) and the Web server (the part that lets you search & download already-indexed documents).
     link: https://github.com/paperless-ngx/paperless-ngx#paperless-ngx
 ---

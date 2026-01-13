@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Funkwhale
-    summary: |
+    summary: |-
       a modern, self-hosted, free and open-source music server.
     link: https://funkwhale.audio/
 ---

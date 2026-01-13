@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Node Red
-    summary: |
+    summary: |-
       a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things.
     link: https://www.nodered.org/
 ---

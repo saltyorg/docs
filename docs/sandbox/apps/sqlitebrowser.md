@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: SQLite Browser
-    summary: |
+    summary: |-
       a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
     link: https://sqlitebrowser.org
 ---

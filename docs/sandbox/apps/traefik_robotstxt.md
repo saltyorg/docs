@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Zig robots.txt
-    summary: |
+    summary: |-
       a lightweight http-server, just serving a disallow-robots.txt file using the Zig programming language.
     link: https://github.com/mstroecker/zig-robotstxt
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: The Lounge
-    summary: |
+    summary: |-
       a self-hosted web IRC client for the modern world.
     link: https://thelounge.chat
 ---

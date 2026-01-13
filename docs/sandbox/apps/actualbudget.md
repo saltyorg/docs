@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Actual Budget
-    summary: |
+    summary: |-
       a super fast, privacy-focused app for managing your finances. Its heart is the well-proven and much-loved Envelope Budgeting methodology.
     link: https://actualbudget.org/
 ---

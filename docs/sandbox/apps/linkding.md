@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Linkding
-    summary: |
+    summary: |-
       a simple bookmark service that you can host yourself. It's designed be to be minimal and fast.
     link: https://github.com/sissbruecker/linkding#introduction
 ---

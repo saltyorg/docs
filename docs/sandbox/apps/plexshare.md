@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: PlexShare
-    summary: |
+    summary: |-
       a standalone web application that provides management of local users and multiple Plex servers with their libraries. It allows users to access libraries from all registered servers through a single interface without requiring plex.tv registration.
     link: https://chewbaka69.github.io/PlexShare/
 ---

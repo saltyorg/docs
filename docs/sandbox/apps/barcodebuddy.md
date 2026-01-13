@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: BarcodeBuddy
-    summary: |
+    summary: |-
       a barcode system for Grocy that enables barcode scanning and product management. It automatically handles known and unknown barcodes, integrating seamlessly with Grocy's inventory management system.
     link: https://github.com/Forceu/barcodebuddy
 ---

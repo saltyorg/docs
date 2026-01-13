@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Navidrome
-    summary: |
+    summary: |-
       an open source music server and streamer that allows users to listen to their personal music collection from any browser or mobile device, functioning similarly to commercial services like Spotify or Apple Music.
     link: https://www.navidrome.org
 ---

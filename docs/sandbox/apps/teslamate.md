@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Teslamate
-    summary: |
+    summary: |-
       a powerful, self-hosted data logger for your Tesla.
     link: https://github.com/teslamate-org/teslamate
 ---

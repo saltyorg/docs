@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Home Assistant
-    summary: |
+    summary: |-
       a localized, open-source home automation server system that operates independently of external cloud services, though it can optionally use them.
     link: https://www.home-assistant.io
 ---

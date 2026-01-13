@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: FreshRSS
-    summary: |
+    summary: |-
       a self-hosted RSS and Atom feed aggregator.
     link: https://freshrss.org
 ---

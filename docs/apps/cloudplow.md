@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Cloudplow
-    summary: |
+    summary: |-
       an automatic rclone remote uploader designed to transfer files from local storage to cloud storage providers, such as Google Drive, with support for multiple remote/folder pairings.
     link: https://github.com/l3uddz/cloudplow
 ---

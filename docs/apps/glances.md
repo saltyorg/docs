@@ -15,7 +15,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Glances
-    summary: |
+    summary: |-
       an open-source system cross-platform monitoring tool.
     link: https://nicolargo.github.io/glances
 ---

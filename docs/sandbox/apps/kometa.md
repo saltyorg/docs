@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Kometa
-    summary: |
+    summary: |-
       a powerful tool designed to give you complete control over your media libraries.
     link: https://kometa.wiki
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: SABThrottle
-    summary: |
+    summary: |-
       a tool designed to dynamically control bandwidth allocation for SABnzbd, based on active streaming sessions from a Plex Media Server.
     link: https://github.com/8a8al00ey/sabthrottle
 ---

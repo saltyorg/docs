@@ -23,7 +23,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Node Exporter
-    summary: |
+    summary: |-
       a specialized monitoring agent designed for Prometheus that collects and exposes detailed system-level metrics from host machines in Kubernetes environments.
     link: https://github.com/prometheus/node_exporter
 ---

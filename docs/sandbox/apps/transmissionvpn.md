@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: OpenVPN and Transmission with WebUI
-    summary: |
+    summary: |-
       a...
     link:
 ---

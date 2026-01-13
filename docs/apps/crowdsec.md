@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: CrowdSec Security Engine
-    summary: |
+    summary: |-
       a powerful, open source solution for detecting and blocking malicious IPs, safeguarding both infrastructure and application security.
     link: https://www.crowdsec.net/security-engine
 ---

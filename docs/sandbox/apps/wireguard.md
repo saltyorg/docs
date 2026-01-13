@@ -18,7 +18,7 @@ saltbox_automation:
       type: github
   project_description:
     name: Wireguard
-    summary: |
+    summary: |-
       an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
     link: https://www.wireguard.com
 ---

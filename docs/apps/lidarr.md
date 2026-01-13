@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Lidarr
-    summary: |
+    summary: |-
       a music collection manager designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing albums and tracks.
     link: https://lidarr.audio
 ---

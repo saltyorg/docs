@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Tauticord
-    summary: |
+    summary: |-
       a Discord bot that will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library statistics, and live playback control.
     link: https://github.com/nwithan8/tauticord
 ---

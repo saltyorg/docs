@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: DDNS
-    summary: |
+    summary: |-
       a Saltbox-specific Dynamic DNS service that automatically manages DNS records with Cloudflare based on Traefik routes. This container monitors Traefik's API for active routes and automatically creates or updates corresponding DNS records in Cloudflare, supporting both IPv4 and IPv6.
 ---
 

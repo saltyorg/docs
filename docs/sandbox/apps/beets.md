@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Beets
-    summary: |
+    summary: |-
       a media library management system designed for music enthusiasts and obsessive music geeks, aiming to organize music collections accurately and efficiently.
     link: https://beets.io
 ---

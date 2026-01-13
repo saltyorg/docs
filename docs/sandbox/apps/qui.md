@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: qui
-    summary: |
+    summary: |-
       a fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
     link: https://github.com/autobrr/qui
 ---

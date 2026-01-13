@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Tautulli
-    summary: |
+    summary: |-
       a third-party, Python-based web application designed to monitor, analyze, and provide notifications for Plex Media Server activity.
     link: https://tautulli.com
 ---

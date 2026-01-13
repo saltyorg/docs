@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Stash
-    summary: |
+    summary: |-
       a web-based app that allows you to organize and view your own collection of adult video and image files.
     link: https://stashapp.cc
 ---

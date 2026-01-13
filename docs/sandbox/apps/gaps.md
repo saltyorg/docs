@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Gaps
-    summary: |
+    summary: |-
       an open-source application designed to find missing movies in a user's Plex Server library.
     link: https://github.com/JasonHHouse/gaps
 ---

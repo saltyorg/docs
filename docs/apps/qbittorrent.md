@@ -18,7 +18,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: qBittorrent
-    summary: |
+    summary: |-
       a free, open-source, cross-platform BitTorrent client, designed as a reliable and ad-free alternative to other clients like µTorrent.
     link: https://www.qbittorrent.org
 ---

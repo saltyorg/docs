@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Authentik
-    summary: |
+    summary: |-
       an open-source Identity Provider (IdP) and Single Sign-On (SSO) platform designed for self-hosting, enabling organizations to manage user authentication, authorization, and access controls with full control over their identity infrastructure.
     link: https://goauthentik.io/
 ---

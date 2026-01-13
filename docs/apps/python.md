@@ -15,7 +15,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Python
-    summary: |
+    summary: |-
       a command-line application that executes scripts written in the Python programming language.
     link: https://www.python.org
 ---

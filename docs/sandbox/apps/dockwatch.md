@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Dockwatch
-    summary: |
+    summary: |-
       a web-based tool developed by Notifiarr that provides a user-friendly interface for managing Docker container updates and notifications.
     link: https://github.com/Notifiarr/dockwatch
 ---

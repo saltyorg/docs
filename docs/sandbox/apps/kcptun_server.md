@@ -22,7 +22,7 @@ saltbox_automation:
       type: community
   project_description:
     name: kcptun Server
-    summary: |
+    summary: |-
       a Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.
     link: https://github.com/xtaci/kcptun
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Tdarr Node
-    summary: |
+    summary: |-
       a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
     link: https://tdarr.io/
 ---

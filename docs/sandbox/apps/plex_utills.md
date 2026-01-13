@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Plex Utills
-    summary: |
+    summary: |-
       a web-based utility collection for managing and maintaining your Plex Media Server. It provides various tools and helpers for common Plex administration tasks.
     link: https://github.com/jkirkcaldy/plex-utills
 ---

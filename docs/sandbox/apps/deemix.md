@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: deemix-docker
-    summary: |
+    summary: |-
       a barebone deezer downloader library built from the ashes of Deezloader Remix.
     link: https://gitlab.com/Bockiii/deemix-docker
 ---

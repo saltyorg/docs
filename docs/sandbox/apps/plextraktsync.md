@@ -19,7 +19,7 @@ saltbox_automation:
       type: github
   project_description:
     name: Plex-Trakt-Sync
-    summary: |
+    summary: |-
       a two-way synchronization tool between trakt.tv and Plex Media Server, allowing users to sync media collections, ratings, watched status, and watchlists without requiring a Plex Pass or Trakt VIP subscription.
     link: https://github.com/Taxel/PlexTraktSync
 ---

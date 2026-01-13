@@ -18,7 +18,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: NZBGet
-    summary: |
+    summary: |-
       a very efficient, cross-platform usenet downloader.
     link: https://nzbget.net
 ---

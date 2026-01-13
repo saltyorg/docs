@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: OliveTin
-    summary: |
+    summary: |-
       an open-source web interface that provides safe and simple access to predefined Linux shell commands through a user-friendly web browser.
     link: https://olivetin.app
 ---

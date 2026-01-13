@@ -4,7 +4,7 @@ title: Download Clients
 saltbox_automation:
   project_description:
     name: Download Clients
-    summary: |
+    summary: |-
       a Saltbox module that deploys your assigned download client apps stack.
 ---
 

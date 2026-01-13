@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Autobrr
-    summary: |
+    summary: |-
       a modern download automation tool designed for torrents and Usenet, serving as a comprehensive replacement for older tools like autodl-irssi, trackarr, and flexget.
     link: https://autobrr.com
 ---

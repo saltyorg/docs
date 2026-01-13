@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: n8n
-    summary: |
+    summary: |-
       a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code. With 400+ integrations, native AI capabilities, and a fair-code license, n8n lets you build powerful automations while maintaining full control over your data and deployments.
     link: https://n8n.io/
 ---

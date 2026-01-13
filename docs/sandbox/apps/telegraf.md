@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Telegraf
-    summary: |
+    summary: |-
       a plugin-driven server agent for collecting and sending metrics and events from databases, systems, and IoT sensors.
     link: https://www.influxdata.com/time-series-platform/telegraf/
 ---

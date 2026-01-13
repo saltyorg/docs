@@ -4,7 +4,7 @@ title: Sandbox Tag
 saltbox_automation:
   project_description:
     name: Sandbox Tag
-    summary: |
+    summary: |-
       a Sandbox module that deploys your assigned Sandbox apps stack.
 ---
 

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: AdGuard Home
-    summary: |
+    summary: |-
       a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network. After you set it up, it'll cover ALL devices in your home Wi-Fi network, and you won't need any client-side software for that. At the same time, it provides a user-friendly web interface that allows you to easily manage the traffic, even from a mobile device.
     link: https://hub.docker.com/r/adguard/adguardhome
 ---

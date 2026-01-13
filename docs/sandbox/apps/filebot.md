@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: FileBot
-    summary: |
+    summary: |-
       the ultimate tool for organizing and renaming your movies, tv shows or anime, and music well as downloading subtitles and artwork. It's smart and just works.
     link: http://www.filebot.net/
 ---

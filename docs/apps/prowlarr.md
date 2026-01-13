@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Prowlarr
-    summary: |
+    summary: |-
       an open-source indexer manager and proxy, designed to integrate with various PVR applications such as Sonarr, Radarr, Lidarr and Mylar3.
     link: https://prowlarr.com
 ---

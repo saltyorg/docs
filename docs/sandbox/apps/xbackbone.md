@@ -21,7 +21,7 @@ saltbox_automation:
       type: github
   project_description:
     name: XBackBone
-    summary: |
+    summary: |-
       a simple, self-hosted, lightweight PHP file manager designed to integrate with instant sharing tools like ShareX and *NIX systems.
     link: https://xbackbone.app
 ---

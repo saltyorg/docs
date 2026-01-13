@@ -20,7 +20,7 @@ saltbox_automation:
       type: github
   project_description:
     name: FlareSolverr
-    summary: |
+    summary: |-
       a proxy server to bypass Cloudflare protection.
     link: https://flaresolverr.com
 ---

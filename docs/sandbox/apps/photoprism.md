@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Photoprism®
-    summary: |
+    summary: |-
       an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
     link: https://photoprism.app/
 ---

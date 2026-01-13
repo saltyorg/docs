@@ -4,7 +4,7 @@ title: Media Server
 saltbox_automation:
   project_description:
     name: Media Server
-    summary: |
+    summary: |-
       a Saltbox module that deploys your assigned media server apps stack.
 ---
 

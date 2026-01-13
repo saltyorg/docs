@@ -18,7 +18,7 @@ saltbox_automation:
       type: github
   project_description:
     name: ASSHAMA
-    summary: |
+    summary: |-
       the combined setup of Absolute Series Scanner (ASS) and Hama.bundle (HAMA), used together for optimal anime library management in Plex.
     link: https://github.com/ZeroQI/Absolute-Series-Scanner
 ---

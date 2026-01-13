@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: PrivateBin
-    summary: |
+    summary: |-
       a minimalist, open source online pastebin where the server has zero knowledge of pasted data.
     link: https://privatebin.info
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Prometheus
-    summary: |
+    summary: |-
       an open-source systems monitoring and alerting toolkit.
     link: https://prometheus.io
 ---

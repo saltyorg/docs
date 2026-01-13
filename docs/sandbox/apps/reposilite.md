@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: reposilite
-    summary: |
+    summary: |-
       a...
     link: https://reposilite.com/
 ---

@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Overseerr
-    summary: |
+    summary: |-
       a free and open-source request management and media discovery tool designed to work with the Plex ecosystem.
     link: https://overseerr.dev/
 ---

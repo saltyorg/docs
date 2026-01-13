@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Wizarr
-    summary: |
+    summary: |-
       a automatic user invitation system for Plex, Jellyfin and Emby. Create a unique link and share it to a user and they will automatically be invited to your media Server! They will even be guided to download the client and instructions on how to use your requests software!.
     link: https://github.com/Wizarrrr/wizarr
 ---

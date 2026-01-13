@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Resilio Sync
-    summary: |
+    summary: |-
       a proprietary peer-to-peer file synchronization tool that enables users to sync files directly between devices using a modified version of the BitTorrent protocol, without relying on centralized cloud storage.
     link: https://www.resilio.com/sync
 ---

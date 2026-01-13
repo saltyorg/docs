@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Diun
-    summary: |
+    summary: |-
       a CLI application designed to receive notifications when a Docker image is updated on a Docker registry.
     link: https://crazymax.dev/diun
 ---

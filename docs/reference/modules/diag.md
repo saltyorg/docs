@@ -11,7 +11,7 @@ saltbox_automation:
     inventory: false
   project_description:
     name: Diag
-    summary: |
+    summary: |-
       a diagnostic role that displays important Saltbox configuration information and system state.
 ---
 

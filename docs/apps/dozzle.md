@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Dozzle
-    summary: |
+    summary: |-
       a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only. Dozzle can only access logs written to stdout or stderr which is the same functionality as the `docker logs` command. See below for more info on that.
     link: https://dozzle.dev/
 ---

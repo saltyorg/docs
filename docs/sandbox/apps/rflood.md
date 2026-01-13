@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: rFlood
-    summary: |
+    summary: |-
       a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
     link: https://github.com/jesec/flood
 ---

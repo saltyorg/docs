@@ -22,7 +22,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Plex DupeFinder
-    summary: |
+    summary: |-
       a Python script designed to identify duplicate versions of media—such as TV episodes and movies—within a Plex library and remove the lowest-rated versions based on a customizable scoring system, leaving only a single, high-quality file.
     link: https://github.com/l3uddz/plex_dupefinder
 ---

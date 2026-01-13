@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: vnStat Dashboard
-    summary: |
+    summary: |-
       a user-friendly web dashboard for viewing the following:.
     link: https://github.com/alexandermarston/vnstat-dashboard
 ---

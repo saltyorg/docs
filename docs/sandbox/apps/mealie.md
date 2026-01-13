@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Mealie
-    summary: |
+    summary: |-
       aan intuitive and easy to use recipe management app. It's designed to make your life easier by being the best recipes management experience on the web and providing you with an easy to use interface to manage your growing collection of recipes.
     link: https://mealie.io/
 ---

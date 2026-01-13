@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Subliminal
-    summary: |
+    summary: |-
       a Python library and command-line tool to search and download subtitles for your videos.
     link: https://github.com/Diaoul/subliminal
 ---

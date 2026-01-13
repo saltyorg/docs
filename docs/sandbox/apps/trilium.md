@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Trilium Notes
-    summary: |
+    summary: |-
       a hierarchical note taking application with focus on building large personal knowledge bases.
     link: https://github.com/zadam/trilium
 ---

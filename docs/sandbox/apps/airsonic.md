@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Airsonic-Advanced
-    summary: |
+    summary: |-
       a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and supersedes several features in Airsonic.
     link: https://github.com/kagemomiji/airsonic-advanced
 ---

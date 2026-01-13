@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: PostgreSQL (Host Install)
-    summary: |
+    summary: |-
       an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
     link: https://www.postgresql.org
 ---

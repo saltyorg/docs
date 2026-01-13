@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Plex Auto Languages
-    summary: |
+    summary: |-
       a tool designed to automate the selection of audio and subtitle languages for TV shows in Plex Media Server.
     link: https://github.com/RemiRigal/Plex-Auto-Languages
 ---

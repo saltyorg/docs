@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Tandoor Recipes
-    summary: |
+    summary: |-
       an application for managing recipes, planning meals, building shopping lists and much, much more!.
     link: https://github.com/TandoorRecipes/recipes
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: MovieMatch
-    summary: |
+    summary: |-
       an app that helps you and your friends pick a movie to watch from a Plex server.
     link: https://github.com/LukeChannings/moviematch
 ---

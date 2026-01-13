@@ -22,7 +22,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Extended Personal Media Shows
-    summary: |
+    summary: |-
       a metadata agent designed for personal media files, specifically intended to work in conjunction with the Extended Personal Media Scanner.
     link: https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master
 ---

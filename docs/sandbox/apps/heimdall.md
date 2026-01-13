@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Heimdall
-    summary: |
+    summary: |-
       an open-source web application dashboard designed to centralize access to web applications, services, and links in a single, customizable interface.
     link: https://heimdall.site
 ---

@@ -4,7 +4,7 @@ title: Main Tags
 saltbox_automation:
   project_description:
     name: Main Tags
-    summary: |
+    summary: |-
       a Saltbox module that deploys core roles and your assigned saltbox, mediabox and feederbox apps stacks.
 ---
 

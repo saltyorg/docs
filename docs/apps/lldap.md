@@ -21,7 +21,7 @@ saltbox_automation:
       type: github
   project_description:
     name: LLDAP
-    summary: |
+    summary: |-
       a small, lightweight LDAP server designed for directory services with minimal overhead compared to full-featured implementations like OpenLDAP.
     link: https://github.com/lldap/lldap
 ---

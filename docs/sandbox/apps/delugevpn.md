@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: DelugeVPN
-    summary: |
+    summary: |-
       a VPN version of [Deluge](../../apps/deluge.md) with OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down.
     link: https://deluge-torrent.org/
 ---

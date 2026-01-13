@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Dashdot
-    summary: |
+    summary: |-
       a simple, modern server dashboard designed with glassmorphism aesthetics, primarily intended for smaller VPS and private servers. It provides real-time system monitoring and beautiful visualizations.
     link: https://getdashdot.com/
 ---

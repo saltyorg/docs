@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: AirDC++
-    summary: |
+    summary: |-
       an easy to use client for [Advanced Direct Connect](http://en.wikipedia.org/wiki/Advanced_Direct_Connect) and [Direct Connect](http://en.wikipedia.org/wiki/Direct_Connect_(file_sharing)) networks. You are able to join "hubs" with other users, and chat, perform searches and browse the share of each user. It allows you to share files with friends and other people.
     link: https://www.airdcpp.net/
 ---

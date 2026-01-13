@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Guacamole
-    summary: |
+    summary: |-
       a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
     link: https://guacamole.apache.org/
 ---

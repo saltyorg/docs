@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Factorio
-    summary: |
+    summary: |-
       a sandbox video game in which you build and maintain your own factories to produce basic resources.
     link: https://www.factorio.com
 ---

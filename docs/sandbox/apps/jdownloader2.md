@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: JDownloader
-    summary: |
+    summary: |-
       a free download-manager that makes downloading as easy, fast and automated as it should be. It's like your personal internet robot that does all the work for you. He will download whole photo albums, playlists or just about anything else with just one click. Go ahead and try it!.
     link: https://beta.jdownloader.org/
 ---

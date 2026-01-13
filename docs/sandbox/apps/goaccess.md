@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: GoAccess
-    summary: |
+    summary: |-
       an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.
     link: https://goaccess.io/
 ---

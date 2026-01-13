@@ -19,7 +19,7 @@ saltbox_automation:
       type: github
   project_description:
     name: Docker container for Firefox
-    summary: |
+    summary: |-
       a Docker container image that provides the Mozilla Firefox web browser, accessible through a modern web browser or any VNC client.
     link: https://github.com/jlesage/docker-firefox#readme
 ---

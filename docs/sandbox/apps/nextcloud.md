@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Nextcloud
-    summary: |
+    summary: |-
       safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
     link: https://nextcloud.com/
 ---

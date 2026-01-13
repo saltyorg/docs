@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Doplarr
-    summary: |
+    summary: |-
       a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
     link: https://kiranshila.github.io/Doplarr/#
 ---

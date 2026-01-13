@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Error Pages
-    summary: |
+    summary: |-
       a GitHub repository that provides visually appealing, customizable error pages for HTTP servers, Kubernetes clusters, and other systems like Traefik and Nginx.
     link: https://github.com/tarampampam/error-pages
 ---

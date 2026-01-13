@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Jackett
-    summary: |
+    summary: |-
       a free, open-source, self-hosted indexer proxy server that acts as an intermediary between torrent indexing applications like Sonarr, Radarr, and qBittorrent, and various torrent trackers.
     link: https://github.com/Jackett/Jackett
 ---

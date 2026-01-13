@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Grocy
-    summary: |
+    summary: |-
       a self-hosted ERP system for groceries and household management. It features barcode scanning, shopping lists, expiration tracking, and comprehensive inventory management for home use.
     link: https://grocy.info/
 ---

@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Radarr
-    summary: |
+    summary: |-
       a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing movies.
     link: https://radarr.video
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Threadfin
-    summary: |
+    summary: |-
       a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
     link: https://github.com/Threadfin/Threadfin
 ---

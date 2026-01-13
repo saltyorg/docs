@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Mylar3
-    summary: |
+    summary: |-
       an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
     link: https://mylarcomics.com
 ---

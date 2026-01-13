@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Meilisearch
-    summary: |
+    summary: |-
       an AI powered search tool.
     link: https://www.meilisearch.com
 ---

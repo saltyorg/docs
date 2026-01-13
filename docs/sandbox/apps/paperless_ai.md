@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Paperless AI
-    summary: |
+    summary: |-
       an AI-enhanced extension for Paperless-ngx that adds automatic classification, smart tagging, and semantic search using OpenAI-compatible APIs. It builds on the community-supported document management system that scans, indexes and archives documents with OCR.
     link: https://clusterzx.github.io/paperless-ai/
 ---

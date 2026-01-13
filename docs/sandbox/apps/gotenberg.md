@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: gotenberg
-    summary: |
+    summary: |-
       a...
     link: https://gotenberg.dev/
 ---

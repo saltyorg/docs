@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Adminer
-    summary: |
+    summary: |-
       a full-featured, web-based database management tool, originally developed as a lightweight alternative to phpMyAdmin.
     link: https://www.adminer.org
 ---

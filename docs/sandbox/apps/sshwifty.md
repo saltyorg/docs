@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Sshwifty
-    summary: |
+    summary: |-
       an SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.
     link: https://github.com/nirui/sshwifty
 ---

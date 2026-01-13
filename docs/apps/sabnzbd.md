@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: SABnzbd
-    summary: |
+    summary: |-
       a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
     link: https://github.com/sabnzbd/sabnzbd
 ---

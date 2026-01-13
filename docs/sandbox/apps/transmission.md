@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Transmission
-    summary: |
+    summary: |-
       a fast, easy, and free BitTorrent client.
     link: https://transmissionbt.com
 ---

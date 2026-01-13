@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Rocket.Chat
-    summary: |
+    summary: |-
       an open-source, secure communications platform designed for real-time messaging, voice, video conferencing, and collaboration.
     link: https://rocket.chat
 ---

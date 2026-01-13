@@ -16,7 +16,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Minecraft Bedrock
-    summary: |
+    summary: |-
       a server for the multi-platform version of Minecraft.
     link: https://github.com/itzg/docker-minecraft-bedrock-server
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: transfer.sh
-    summary: |
+    summary: |-
       an easy and fast file sharing from the command-line or web gui app.
     link: https://transfer.sh/
 ---

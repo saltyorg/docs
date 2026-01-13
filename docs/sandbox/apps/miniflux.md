@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Miniflux
-    summary: |
+    summary: |-
       a minimalist and opinionated feed reader.
     link: https://miniflux.app
 ---

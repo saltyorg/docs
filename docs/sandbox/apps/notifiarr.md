@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Notifiarr Client
-    summary: |
+    summary: |-
       the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/).
     link: https://notifiarr.com/
 ---

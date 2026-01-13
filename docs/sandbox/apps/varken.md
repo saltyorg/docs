@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
      name: Varken
-     summary: |
+     summary: |-
         a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend.
      link: https://github.com/thezak48/Varken
 ---

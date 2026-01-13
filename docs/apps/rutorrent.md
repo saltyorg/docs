@@ -21,7 +21,7 @@ saltbox_automation:
       type: github
   project_description:
     name: ruTorrent
-    summary: |
+    summary: |-
       a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent.
     link: https://github.com/Novik/ruTorrent
 ---

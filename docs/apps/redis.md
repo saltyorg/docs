@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Redis
-    summary: |
+    summary: |-
       an open-source, in-memory data structure store used as a database, cache, message broker, and streaming engine. It supports various data structures such as strings, hashes, lists, sets, and sorted sets, making it extremely versatile and fast.
     link: https://redis.io/open-source
 ---

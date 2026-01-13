@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Tvheadend
-    summary: |
+    summary: |-
       a TV streaming server and digital video recorder.
     link: https://tvheadend.org
 ---

@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Unpackerr
-    summary: |
+    summary: |-
       a lightweight, cross-platform application designed to automatically extract compressed files (like RAR, ZIP, 7Z, TAR, and ISO) from download folders, primarily for use with media management tools such as Radarr, Sonarr, Lidarr.
     link: https://github.com/davidnewhall/unpackerr
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Jellyseerr
-    summary: |
+    summary: |-
       a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
     link: https://docs.jellyseerr.dev/
 ---

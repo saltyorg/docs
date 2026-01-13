@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Apprise API
-    summary: |
+    summary: |-
       an open-source, lightweight REST framework that provides a unified interface to send notifications to over 100 services—such as email, SMS, Slack, Telegram, and Discord—via a single API.
     link: https://github.com/caronc/apprise-api
 ---

@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Gluetun
-    summary: |
+    summary: |-
       a VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.
     link: https://github.com/qdm12/gluetun
 ---

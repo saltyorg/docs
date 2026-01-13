@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: code-server
-    summary: |
+    summary: |-
       an open-source platform that enables developers to run Microsoft Visual Studio Code (VS Code) on a remote server and access it through a web browser, transforming VS Code into a cloud-based integrated development environment (IDE).
     link: https://github.com/coder/code-server
 ---

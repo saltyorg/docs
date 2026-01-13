@@ -22,7 +22,7 @@ saltbox_automation:
       type: github
   project_description:
     name: btop
-    summary: |
+    summary: |-
       a modern, real-time system monitoring tool for Linux that provides a visually appealing and interactive interface to monitor system resources such as CPU usage, memory consumption, disk activity, network bandwidth, and running processes.
     link: https://github.com/aristocratos/btop
 ---

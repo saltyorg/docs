@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Audiobookshelf
-    summary: |
+    summary: |-
       a free and open-source, self-hosted audiobook and podcast server that allows users to manage, stream, and organize their personal audiobook, podcast, and ebook collections.
     link: https://www.audiobookshelf.org/
 ---

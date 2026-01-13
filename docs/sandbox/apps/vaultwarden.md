@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: vaultwarden
-    summary: |
+    summary: |-
       an alternative implementation of the Bitwarden server API written in Rust and compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.
     link: https://github.com/dani-garcia/vaultwarden
 ---

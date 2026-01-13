@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: tqm
-    summary: |
+    summary: |-
       a command-line tool designed to manage torrent client queues, with a primary focus on automatically removing torrents that meet specific user-defined criteria.
     link: https://github.com/autobrr/tqm
 ---

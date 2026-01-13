@@ -6,7 +6,7 @@ saltbox_automation:
     inventory: false
   project_description:
     name: Plex Fix Futures
-    summary: |
+    summary: |-
       a Saltbox module that Sets Plex items stuck in the future back to the past.
 ---
 

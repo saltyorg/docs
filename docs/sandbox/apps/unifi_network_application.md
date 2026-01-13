@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: UniFi Network Application
-    summary: |
+    summary: |-
       a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
     link: https://www.ui.com/download/unifi
 ---

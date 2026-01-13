@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Calibre
-    summary: |
+    summary: |-
       a cross-platform, free, and open-source suite of e-book software designed for managing digital book collections.
     link: https://calibre-ebook.com
 ---

@@ -22,7 +22,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Plex Patrol
-    summary: |
+    summary: |-
       a tool which can monitor a plex server to kick transcodes (audio or video or both), kick paused streams if not resumed within X minutes, kick specific players, e.g. Plex Web, etc.
     link: https://github.com/l3uddz/plex_patrol
 ---

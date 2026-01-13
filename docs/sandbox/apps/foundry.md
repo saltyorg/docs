@@ -18,7 +18,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Foundry
-    summary: |
+    summary: |-
       a modern, feature-rich "virtual tabletop" (a "VTT"). Foundry VTT serves as a digital "tabletop" so that you can gather your friends and party members and have an excellent role-playing game experience together digitally.
     link: https://foundryvtt.com/
 ---

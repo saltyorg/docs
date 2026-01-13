@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: InvoiceNinja
-    summary: |
+    summary: |-
       a self-hosted accounting system with ability to Quote & Invoice Clients, Time Billable-Tasks, Track Expenses, Get Paid.
     link: https://www.invoiceninja.com/
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: github
   project_description:
     name: Firefly III Data Importer
-    summary: |
+    summary: |-
       a tool designed to import financial data into the Firefly III personal finance manager.
     link: https://www.firefly-iii.org
 ---

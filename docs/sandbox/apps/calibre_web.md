@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Calibre-Web
-    summary: |
+    summary: |-
       a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
     link: https://github.com/janeczku/calibre-web
 ---

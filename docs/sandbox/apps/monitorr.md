@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Monitorr
-    summary: |
+    summary: |-
       a self-hosted PHP web app that monitors the status of local and remote network services, websites, and applications.
     link: https://github.com/Monitorr/Monitorr
 ---

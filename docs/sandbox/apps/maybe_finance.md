@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Maybe Finance
-    summary: |
+    summary: |-
       a personal finance app that functions as an operating system for managing finances, with interactive tools and calculators. The open-source version is available under AGPLv3 license but is no longer actively maintained.
     link: https://maybe.co/
 ---

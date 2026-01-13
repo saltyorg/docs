@@ -17,7 +17,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Sonarr
-    summary: |
+    summary: |-
       a smart Personal Video Recorder (PVR) designed for Usenet and BitTorrent users, automating the process of finding, downloading, and managing TV show episodes.
     link: https://sonarr.tv
 ---

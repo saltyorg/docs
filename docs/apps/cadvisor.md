@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: cAdvisor
-    summary: |
+    summary: |-
       an open-source monitoring tool to collect, aggregate, process, and export resource usage and performance characteristics of running containers.
     link: https://github.com/google/cadvisor
 ---

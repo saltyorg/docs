@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: BTRFS Maintenance
-    summary: |
+    summary: |-
       a set of scripts designed to automate key maintenance tasks for the BTRFS filesystem, including scrubbing, balancing, trimming, and defragmentation.
     link: https://github.com/kdave/btrfsmaintenance
 ---

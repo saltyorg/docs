@@ -17,7 +17,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Emby
-    summary: |
+    summary: |-
       a media server designed to organize, play, and stream audio and video to a variety of devices.
     link: https://emby.media
 ---

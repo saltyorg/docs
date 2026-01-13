@@ -21,7 +21,7 @@ saltbox_automation:
       type: github
   project_description:
     name: pyload-ng
-    summary: |
+    summary: |-
       a free and open-source download manager written in Python, designed to be lightweight, easily extensible, and fully manageable via a web interface.
     link: https://pyload.net
 ---

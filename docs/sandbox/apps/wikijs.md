@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Wikijs
-    summary: |
+    summary: |-
       a modern, lightweight and powerful wiki app built on NodeJS.
     link: https://js.wiki/
 ---

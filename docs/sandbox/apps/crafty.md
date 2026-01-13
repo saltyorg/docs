@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Crafty Controller
-    summary: |
+    summary: |-
       a cross-platform Minecraft server control panel with web-based interface. It features server scheduling, interactive console, and support for multiple server types including vanilla, modded, and plugin-based servers.
     link: https://craftycontrol.com/
 ---

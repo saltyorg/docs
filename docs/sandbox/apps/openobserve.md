@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: OpenObserve
-    summary: |
+    summary: |-
       an open-source observability platform for logs, metrics, and traces with 140x lower storage cost than Elasticsearch. Built for petabyte scale with high performance and ~40x compression.
     link: https://openobserve.ai/
 ---

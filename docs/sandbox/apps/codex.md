@@ -18,7 +18,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Codex
-    summary: |
+    summary: |-
       a web based comic archive browser and reader.
     link: https://github.com/ajslater/codex
 ---

@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Nabarr
-    summary: |
+    summary: |-
       the official Saltbox continuation of *Cloudbox/nabarr*, a tool that monitors RSS feeds from Newznab or Torznab indexing services and automatically adds newly discovered TV shows and movies to Sonarr and Radarr, respectively.
     link: https://github.com/saltydk/nabarr
 ---

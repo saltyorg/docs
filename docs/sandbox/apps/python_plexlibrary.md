@@ -21,7 +21,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Python-PlexLibrary
-    summary: |
+    summary: |-
       ...
     link: https://github.com/adamgot/python-plexlibrary
 ---

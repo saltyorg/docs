@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: HandBrake
-    summary: |
+    summary: |-
       a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
     link: https://handbrake.fr/
 ---

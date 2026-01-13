@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: NGINX
-    summary: |
+    summary: |-
       a high-performance web server, reverse proxy, and load balancer. This role deploys Nginx using the LinuxServer.io container, providing a simple way to host static websites or act as a reverse proxy for your applications.
     link: https://nginx.org
 ---

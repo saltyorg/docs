@@ -19,7 +19,7 @@ saltbox_automation:
       type: community
   project_description:
     name: Gitea
-    summary: |
+    summary: |-
       a community managed lightweight code hosting solution written in Go.
     link: https://gitea.io/en-us/
 ---

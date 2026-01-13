@@ -20,7 +20,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Profilarr
-    summary: |
+    summary: |-
       a configuration management and auto-import tool for Radarr/Sonarr custom formats and profiles.
     link: https://dictionarry.dev
 ---

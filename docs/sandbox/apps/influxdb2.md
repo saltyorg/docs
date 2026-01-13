@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: InfluxDB2
-    summary: |
+    summary: |-
       an open source time series database for recording metrics, events, and analytics.
     link: https://www.influxdata.com/products/influxdb/
 ---

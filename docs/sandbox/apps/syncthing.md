@@ -19,7 +19,7 @@ saltbox_automation:
       type: discord
   project_description:
     name: Syncthing
-    summary: |
+    summary: |-
       a free, open-source, peer-to-peer file synchronization utility designed to sync files between devices on a local network or over the Internet.
     link: https://syncthing.net
 ---

@@ -20,7 +20,7 @@ saltbox_automation:
       type: community
   project_description:
     name: MQTT
-    summary: |
+    summary: |-
       a lightweight messaging protocol that is designed for use in constrained devices and low-bandwidth, high-latency, or unreliable networks. It is commonly used in Internet of Things (IoT) devices/applications for efficient and reliable communication between devices.
     link: https://mosquitto.org/
 ---

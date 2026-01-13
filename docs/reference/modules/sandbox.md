@@ -4,15 +4,18 @@ hide:
 tags:
   - sandbox
   - community
+saltbox_automation:
+  sections:
+    - inventory: false
+  project_description:
+    name: Sandbox
+    summary: |
+      a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
+    link: https://github.com/saltyorg/Sandbox
 ---
 
-# Sandbox
-
-## Overview
-
-The Sandbox repository serves as a community-driven space for unofficial Saltbox enhancements. It is included in a standard Saltbox deployment.
-
----
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Update
 

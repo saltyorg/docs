@@ -51,7 +51,6 @@ blacklist:
       - "reboot"
       - "remote"
       - "saltbox_mod"
-      - "sandbox"
       - "sanity_check"
       - "scripts"
       - "shell"
@@ -94,6 +93,7 @@ path_overrides:
     plex_db: "docs/reference/modules/plex_db.md"
     plex_fix_futures: "docs/reference/modules/plex_fix_futures.md"
     restore: "docs/saltbox/backup/restore.md"
+    sandbox: "docs/reference/modules/sandbox.md"
   sandbox:
     main_tag: "docs/reference/modules/main_tag.md"
 

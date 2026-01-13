@@ -1,7 +1,6 @@
 ---
 icon: material/tag
 title: Main Tags
-status: draft
 saltbox_automation:
   project_description:
     name: Main Tags

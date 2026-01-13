@@ -1,7 +1,7 @@
 ---
 icon: material/docker
 title: pyload-ng
-status: draft
+status: draft2
 hide:
   - tags
 tags:

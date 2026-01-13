@@ -1,6 +1,5 @@
 ---
 icon: material/desktop-classic
-status: draft
 saltbox_automation:
   sections:
     inventory: false

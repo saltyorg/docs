@@ -1,7 +1,6 @@
 ---
 icon: material/tag
 title: Download Clients
-status: draft
 saltbox_automation:
   project_description:
     name: Download Clients

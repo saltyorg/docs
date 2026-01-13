@@ -1,7 +1,6 @@
 ---
 icon: material/play
 title: Plex Fix Futures
-status: draft
 saltbox_automation:
   sections:
     inventory: false

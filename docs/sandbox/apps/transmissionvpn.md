@@ -1,7 +1,7 @@
 ---
 icon: material/docker
 title: Transmission VPN
-status: draft
+status: draft2
 hide:
   - tags
 tags:

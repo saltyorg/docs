@@ -1,7 +1,6 @@
 ---
 icon: material/docker
 title: Docker Socket Proxy
-status: draft
 saltbox_automation:
   app_links:
     - name: Manual

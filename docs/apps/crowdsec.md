@@ -1,7 +1,7 @@
 ---
 icon: material/server-network-outline
 title: CrowdSec
-status: draft
+status: draft2
 saltbox_automation:
   inventory:
     show_sections:

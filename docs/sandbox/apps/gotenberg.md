@@ -1,7 +1,7 @@
 ---
 icon: material/docker
 title: gotenberg
-status: draft
+status: draft2
 hide:
   - tags
 tags:

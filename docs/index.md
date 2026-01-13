@@ -16,10 +16,10 @@ hide:
 [![Discord](https://img.shields.io/discord/853755447970758686?style=flat&logo=discord&logoColor=white)](https://discord.gg/ugfKXpFND8)
 { style="text-align:center;" }
 
-[Learn More](saltbox/basics/basics.md){ .md-button .md-button--primary }
+[Learn more](saltbox/basics/basics.md){ .md-button .md-button--primary }
 [Install](saltbox/prerequisites/prerequisites.md){ .md-button .md-button--primary }
-[Get Help](community/support.md){ .md-button .md-button--primary }
-[Help Out](community/index.md){ .md-button .md-button--primary }
+[Get help](community/support.md){ .md-button .md-button--primary }
+[Help out](community/index.md){ .md-button .md-button--primary }
 
 ---
 <!-- BEGIN SALTBOX MANAGED CLI SECTION -->

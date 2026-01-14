@@ -23,11 +23,11 @@ tags:
 
 ## Backup
 
-|                                            |                                   :material-monitor-arrow-down:{.xl}                                    |
-|--------------------------------------------|:-------------------------------------------------------------------------------------------------------:|
-| [Backup](../../saltbox/backup/backup.md)   | `backup` `restore-service` `saltbox-restore-service` `set-backup` `unset-backup` `wipe-restore-service` |
-| [Backup2](../../saltbox/backup/backup2.md) |          `backup2` `restore-service2` `saltbox-restore-service2` `set-backup2` `unset-backup2`          |
-| [Restore](../../saltbox/backup/restore.md) |                                    `restore` `opt-permissions-reset`                                    |
+|                       |                                   :material-monitor-arrow-down:{.xl}                                    |
+|-----------------------|:-------------------------------------------------------------------------------------------------------:|
+| [Backup](backup.md)   | `backup` `restore-service` `saltbox-restore-service` `set-backup` `unset-backup` `wipe-restore-service` |
+| [Backup2](backup2.md) |          `backup2` `restore-service2` `saltbox-restore-service2` `set-backup2` `unset-backup2`          |
+| [Restore](restore.md) |                                    `restore` `opt-permissions-reset`                                    |
 
 ## Custom Deployment
 

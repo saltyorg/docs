@@ -21,11 +21,11 @@ Listed below are some common scenarios and their migration instructions.
 
 ### Current Server
 
-1. [Back up](backup.md) your current Saltbox server.
+1. [Back up](../../reference/modules/backup.md) your current Saltbox server.
 
 ### New Server
 
-1. [Restore](restore.md) Saltbox to the new server.
+1. [Restore](../../reference/modules/restore.md) Saltbox to the new server.
 
 2. If you are not using Cloudflare:
 
@@ -39,11 +39,11 @@ Listed below are some common scenarios and their migration instructions.
 
 ### Current Server
 
-1. [Back up](backup.md) your current Saltbox server.
+1. [Back up](../../reference/modules/backup.md) your current Saltbox server.
 
 ### New Server
 
-1. [Restore](restore.md) Saltbox to the new server.
+1. [Restore](../../reference/modules/restore.md) Saltbox to the new server.
 
 2. Add your new domain name into [Accounts](../install/install.md#step-2-configuration).
 
@@ -77,7 +77,7 @@ Listed below are some common scenarios and their migration instructions.
 
 ## Keep Saltbox on the Same Server but Change the Domain Name
 
-1. [Back up](backup.md) your current Saltbox server.
+1. [Back up](../../reference/modules/backup.md) your current Saltbox server.
 
 2. Add your new domain name into [Accounts](../install/install.md#step-2-configuration).
 

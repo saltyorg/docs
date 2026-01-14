@@ -244,7 +244,7 @@ Saltbox will retrieve and extract the tar archives.
 
 Once successfully completed you can now continue:
 
-If you are migrating from one server to another, return to the [migration guide](migrate.md)
+If you are migrating from one server to another, return to the [migration guide](../../saltbox/backup/migrate.md)
 
 If you are restoring to the same server, you can now follow the installation guide from this [step](../../saltbox/install/install.md#step-5-saltbox).
 

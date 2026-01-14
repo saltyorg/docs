@@ -82,8 +82,8 @@ blacklist:
 path_overrides:
   saltbox:
     arr_db: "docs/reference/modules/arr_db.md"
-    backup2: "docs/saltbox/backup/backup2.md"
-    backup: "docs/saltbox/backup/backup.md"
+    backup2: "docs/reference/modules/backup2.md"
+    backup: "docs/reference/modules/backup.md"
     custom: "docs/reference/modules/custom.md"
     diag: "docs/reference/modules/diag.md"
     download_clients: "docs/reference/modules/download_clients.md"
@@ -92,7 +92,7 @@ path_overrides:
     media_server: "docs/reference/modules/media_server.md"
     plex_db: "docs/reference/modules/plex_db.md"
     plex_fix_futures: "docs/reference/modules/plex_fix_futures.md"
-    restore: "docs/saltbox/backup/restore.md"
+    restore: "docs/reference/modules/restore.md"
     sandbox: "docs/reference/modules/sandbox.md"
   sandbox:
     main_tag: "docs/reference/modules/main_tag.md"

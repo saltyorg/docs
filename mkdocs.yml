@@ -212,9 +212,9 @@ nav:
     - saltbox/inventory/danger-zone.md
   - Backup/Restore:
     - saltbox/backup/settings.md
-    - saltbox/backup/backup.md
-    - saltbox/backup/backup2.md
-    - saltbox/backup/restore.md
+    - reference/modules/backup.md
+    - reference/modules/backup2.md
+    - reference/modules/restore.md
     - saltbox/backup/migrate.md
   - reference/modules/sandbox.md
 

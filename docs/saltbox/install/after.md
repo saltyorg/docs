@@ -31,13 +31,13 @@ All the apps are installed and configured, but here are some things you want to 
 
    Disable root login.
 
-3. Set up [scheduled backups](../backup/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
+3. Set up [scheduled backups](../../reference/modules/backup.md). **There is no backup enabled automatically**, so unless you explicitly set them up, you will be disappointed to find that you don't have a backup when something goes wrong.
 
 4. Take some time to verify disk space usage for the apps.
 
     You need local disk space for stuff between download completion and cloudplow moving things into the cloud. If you don't, for example, set cloudplow's upload thresholds and Nzbget's "stop downloading" disk space threshold to meaningful values for your situation, you can get into a situation where cloudplow's not uploading because that threshold hasn't been met and nzbget has stopped because its threshold has been met and everything grinds to a halt. Alternatively, nzbget just keeps going and runs your disk out of space.
 
-    You also need a bunch of disk space for the [scheduled backups](../backup/backup.md) that you just set up to succeed, so be sure to take that into account.
+    You also need a bunch of disk space for the [scheduled backups](../../reference/modules/backup.md) that you just set up to succeed, so be sure to take that into account.
 
     Another common "hidden" disk space consumer is unfinished or unimported downloads. If NZBGet downloads something and Radarr can't tell what movie it is, it will just sit consuming disk space. There is a script you can set up to keep this stuff cleaned up in the [user crontab examples](../../advanced/user-crontab-examples.md).
 

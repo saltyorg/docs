@@ -368,7 +368,7 @@ article.md-typeset ul ul {
 }
 
 /* Rounded images - opt-out via .no-rounded class */
-.md-typeset img {
+.md-typeset img:not(.twemoji) {
   border-radius: 0.5rem;
 }
 

@@ -127,7 +127,16 @@ label.sb-toggle--override-scope {
   }
 }
 
+article.md-typeset ul ul {
+  list-style-type: square;
+
+  ul {
+    list-style-type: "‣  ";
+  }
+}
+
 .md-typeset {
+
   table:not([class]) {
     display: table;
   }

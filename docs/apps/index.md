@@ -460,7 +460,6 @@ tags:
 | [Firefly III](../sandbox/apps/fireflyiii.md)                        |        `sandbox-fireflyiii`        |             `sandbox_roles`              |
 | [Firefly III Data Importer](../sandbox/apps/fireflyiii_importer.md) |   `sandbox-fireflyiii_importer`    |             `sandbox_roles`              |
 | [Invoice Ninja](../sandbox/apps/invoiceninjav5.md)                  |       `sandbox-invoiceninja`       |             `sandbox_roles`              |
-| [Maybe Finance](../sandbox/apps/maybe_finance.md)                   |      `sandbox-maybe-finance`       |             `sandbox_roles`              |
 
 #### Home
 

@@ -52,6 +52,8 @@ The role-refactor branch merge includes the following updates:
 
     goplaxt
 
+    maybe_finance
+
     rdtclient
 
     solr

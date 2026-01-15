@@ -14,23 +14,23 @@ tags:
 
 The role-refactor branch merge includes the following updates:
 
--   Enforces explicit Inventory [override levels](../inventory/index.md#override-levels) :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
+-   Refactors app role variables as follows ([breaking](#inventory-migration-guide "Manual migration required"){ .alert-link }):
 
-    > Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
+    -  [Override levels](../inventory/index.md#override-levels) are now clearly differentiated using the following naming conventions:
 
-    > **Role-scoped overrides must now include the `_role_` infix**{ style="color: var(--md-typeset-color);" } (e.g. `sonarr_role_docker_image`) **to persist as such.**{ style="color: var(--md-typeset-color);" }
+        -   Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`)
 
--   Deprecates `_docker_network_mode_default` Inventory convention
+        -   Role-scoped overrides must now include the `_role_` infix** (e.g. `sonarr_role_docker_image`) **to persist as such
 
-    > `_docker_network_mode` is now natively supported across all roles.
+    -   Some `_default` + `_custom` variable pairs assigned an empty value by default were replaced with a single unsuffixed variable
 
--   Retires [Sandbox](../../reference/modules/sandbox.md) `settings.yml` :warning:{ title="Breaking change — migration required" style="border-radius:unset;" }
+-   Removes [Sandbox](../../reference/modules/sandbox.md) `settings.yml` ([breaking](#sandbox-app-settings-migration-guide "Manual migration required"){ .alert-link })
 
-    > Settings no longer apply and must be migrated to their Inventory form to persist.
+    -   Settings no longer apply and must be migrated to their Inventory equivalent to persist
 
 -   Removes a number of roles
 
-    <blockquote class="grid" style="grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));" markdown>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(8rem, 1fr))" markdown>
 
     jaeger
 
@@ -44,9 +44,13 @@ The role-refactor branch merge includes the following updates:
 
     aria2_ng
 
+    booksonic
+
     comicstreamer
 
     docspell
+
+    goplaxt
 
     rdtclient
 
@@ -56,9 +60,9 @@ The role-refactor branch merge includes the following updates:
 
     watchtower
 
-    </blockquote>
+    </div>
 
--   Python to Golang rewrites of tools: DNS manager, Docker controller
+-   Replaces Python tools rewritten in Go: DNS manager, Docker controller
 
 <div class="sb-cta" markdown>
 
@@ -67,6 +71,7 @@ Full changes:
 <div markdown>
 
 [:octicons-file-diff-24:**Saltbox diff**](../../static/saltbox.html){ .md-button }
+
 [:octicons-file-diff-24:**Sandbox diff**](../../static/sandbox.html){ .md-button }
 
 </div>
@@ -79,7 +84,7 @@ Full changes:
 
 ### Single-instance overrides
 
-When a role only has a single instance, either variable form will achieve the same outcome. However, to align with the new convention, it is recommended to transition to the `_role_` infix.
+When a role only has a single instance, either variable name pattern will achieve the same outcome. However, to align with the new convention, it is recommended to transition to the `_role_` infix.
 
 !!! example
 
@@ -110,9 +115,9 @@ Multi-instance role variables must be converted to the appropriate override leve
     bazarr4k_themepark_theme: "maroon"
     ```
 
-    1. Reminder: variables in this form were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
+    1.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
 
-    2. Same here.
+    2.  Same here.
 
     Becomes:
 
@@ -123,11 +128,60 @@ Multi-instance role variables must be converted to the appropriate override leve
     bazarr4k_themepark_theme: "maroon" # (3)!
     ```
 
-    1. Typically, you want external processing tools to be available to all instances, so keep role-scoped.
+    1.  Typically, you want external processing tools to be available to all instances, so keep role-scoped.
 
-    2. This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
+    2.  This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
 
         - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
         - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if enabled, or would not have theming applied.
 
-    3. No change needed here, as variables in this form were already considered instance-scoped and remain so.
+    3.  No change needed here, as variables in this pattern were already considered instance-scoped and remain so.
+
+### `default` / `custom` overrides { data-toc-label="“Default” / “Custom” overrides" }
+
+1.  Determine whether your override is affected by the change by looking up the variable in the app's documentation under _Role Defaults_.
+
+1.  If you find the corresponding variable unsuffixed, match it by removing `_default`/`_custom` from the variable name in your inventory.
+
+1.  If you find the corresponding variable pair still exists and your override has `_default`, change it to `_custom`.
+
+!!! example
+
+    ```yaml
+    plex_docker_network_mode_default: "container:gluetun"
+
+    someapp_suffix_removed_setting_custom: "myvalue"
+
+    otherapp_still_suffixed_setting_default: "myvalue"
+    ```
+
+    Becomes:
+
+    ```yaml
+    plex_docker_network_mode: "container:gluetun"
+
+    someapp_suffix_removed_setting: "myvalue"
+
+    otherapp_still_suffixed_setting_custom: "myvalue"
+    ```
+
+## Sandbox App Settings Migration Guide
+
+For convenience, Sandbox roles that previously read settings from `/opt/sandbox/settings.yml` were updated to expose those settings as scalar Inventory variables instead. If you encounter a role missing this update, please report it on Discord or open an issue in the Sandbox repository.
+
+As always, determine how the settings you use are represented in the role by looking up the variables in the app's documentation under _Role Defaults_ and transfer the values accordingly.
+
+!!! example
+
+    ```yaml title="sandbox/settings.yml"
+    your_spotify:
+      public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
+      secret_key: "0593b2fec4867575d741e93a6cff3580"
+    ```
+
+    Becomes:
+
+    ```yaml title="Inventory"
+    your_spotify_role_public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
+    your_spotify_role_secret_key: "0593b2fec4867575d741e93a6cff3580"
+    ```

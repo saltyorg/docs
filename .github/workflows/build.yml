@@ -10,6 +10,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
   add-contributors:

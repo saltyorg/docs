@@ -61,7 +61,6 @@ blacklist:
       - "user"
       - "user_check"
     sandbox:
-      - "maybe_finance_worker"
       - "sanity_check"
       - "tdarr_node"
       # Deprecated roles

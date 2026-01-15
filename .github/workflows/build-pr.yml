@@ -43,7 +43,7 @@ jobs:
           echo "pr_sha=$(cat ${{ github.workspace }}/pr_info/PR_SHA)" >> $GITHUB_OUTPUT
 
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ steps.pr_info.outputs.pr_sha }}
           fetch-depth: 0
@@ -110,7 +110,7 @@ jobs:
     if: always() && github.event.repository.fork == false
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Comment PR
         run: |

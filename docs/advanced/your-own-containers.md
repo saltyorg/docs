@@ -13,7 +13,7 @@ tags:
 
 Use this guide to extend your setup beyond the stock catalog. While arbitrary deployments fall outside our support scope, we offer resources to facilitate their integration with the Saltbox ecosystem.
 
-## [Docker Compose:octicons-link-external-16:{ .md-icon--sm }](https://docs.docker.com/reference/cli/docker/compose)
+## [Docker Compose](https://docs.docker.com/reference/cli/docker/compose)
 
 Recommended for GUI applications and web services.
 
@@ -259,7 +259,7 @@ Recommended for GUI applications and web services.
 
 1.  Access your application at <https://iCUSTOM_APP_FQDNi>.
 
-## [Docker CLI:octicons-link-external-16:{ .md-icon--sm }](https://docs.docker.com/reference/cli/docker/container/run)
+## [Docker CLI](https://docs.docker.com/reference/cli/docker/container/run)
 
 Recommended for command‑line utilities where a container is invoked ad hoc or on a schedule.
 
@@ -360,7 +360,7 @@ Then call from your regular shell with a command such as `xCUSTOM_APP_NAMEx --he
 
     Call using `yt-dlp` and `speedtest` commands.
 
-## [Ansible Roles:octicons-link-external-16:{ .md-icon--sm }](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
+## [Ansible Roles](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
 
 Recommended when you need more automation and are comfortable working with [YAML:octicons-link-external-16:{ .md-icon--sm }](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) and [Jinja2:octicons-link-external-16:{ .md-icon--sm }](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating.html).
 

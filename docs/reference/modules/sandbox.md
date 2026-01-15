@@ -53,10 +53,14 @@ Before deploying a Sandbox role, it is recommended to review its documentation f
 
     Where possible, the username and password configured in your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) are used to create a default user and password for logging in.
 
-### Custom Roles
+### Custom roles
 
 Tags are validated against cached data. To bypass validation if developing your own role, use the `--no-cache` flag:
 
 ```shell
 sb install sandbox-myapp --no-cache
 ```
+
+### Deprecated roles
+
+Apps are occasionally pruned from the repository when the upstream project is archived or no longer complies with Saltbox standards. If an app you still use had its role pruned, your app data is left intact, but you can no longer manage it via Saltbox. You may choose to manage it independently by migrating to [your own containers](../../advanced/your-own-containers.md).

@@ -510,7 +510,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authentik_role_docker_image_tag: "2025.10"
+        authentik_role_docker_image_tag: "2025.12"
         ```
 
     ??? variable string "`authentik_role_docker_image`"
@@ -575,7 +575,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         authentik_role_docker_volumes_default:
-          - "{{ authentik_role_paths_location }}/media:/media"
+          - "{{ authentik_role_paths_location }}/data:/data"
           - "{{ authentik_role_paths_location }}/custom-templates:/templates"
         ```
 

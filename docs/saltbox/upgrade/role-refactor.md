@@ -36,6 +36,8 @@ The role-refactor branch merge includes the following updates:
 
     readarr
 
+    [rutorrent](javascript:;"Replacement role coming soon to Sandbox"){ style="cursor:help;" }
+
     sub_zero
 
     webtools
@@ -64,7 +66,7 @@ The role-refactor branch merge includes the following updates:
 
     </div>
 
--   Replaces Python tools rewritten in Go: DNS manager, Docker controller
+-   Replaces Python tools with Go rewrites: DNS manager, Docker controller
 
 <div class="sb-cta" markdown>
 
@@ -84,11 +86,13 @@ Full changes:
 
 ## Inventory Migration Guide
 
+The following sections must be followed sequentially.
+
 ### Single-instance overrides
 
-When a role only has a single instance, either variable name pattern will achieve the same outcome. However, to align with the new convention, it is recommended to transition to the `_role_` infix.
+When a role only has a single instance, either variable name pattern will achieve the same outcome. However, to align with the new convention, it is recommended to switch to the `_role_` infix.
 
-!!! example
+???+example
 
     ```yaml
     plex_dns_proxy: false
@@ -102,13 +106,13 @@ When a role only has a single instance, either variable name pattern will achiev
 
 ### Multi-instance overrides
 
-Multi-instance role variables must be converted to the appropriate override level for existing configuration to persist.
+Multi-instance role variables must be changed to the appropriate override level for existing configuration to persist.
 
-!!! example
+???+example
 
     !!! tip "Specificity takes precedence"
 
-        When determining which variable to use, remember the precedence order: Instance > Role > Global
+        When choosing which variable to use, remember the precedence order: Instance > Role > Global
 
     ```yaml
     bazarr_instances: ["bazarr", "bazarr4k"]
@@ -119,7 +123,7 @@ Multi-instance role variables must be converted to the appropriate override leve
 
     1.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
 
-    2.  Same here.
+    2.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
 
     Becomes:
 
@@ -141,39 +145,53 @@ Multi-instance role variables must be converted to the appropriate override leve
 
 ### `default` / `custom` overrides { data-toc-label="“Default” / “Custom” overrides" }
 
-1.  Determine whether your override is affected by the change by looking up the variable in the app's documentation under _Role Defaults_.
+!!! info "This section assumes you have already completed the override level migration steps above"
+
+Variables affected by this change are typically moved to the *Docker+* Role Defaults category.
+
+1.  Check whether your override is affected by looking up the variable name in the app's documentation.
 
 1.  If you find the corresponding variable unsuffixed, match it by removing `_default`/`_custom` from the variable name in your inventory.
 
 1.  If you find the corresponding variable pair still exists and your override has `_default`, change it to `_custom`.
 
-!!! example
+???+example
 
     ```yaml
-    plex_docker_network_mode_default: "container:gluetun"
+    plex_docker_network_mode_default: "container:gluetun" # (1)!
 
-    someapp_suffix_removed_setting_custom: "myvalue"
+    firefox_role_docker_commands_custom:
+      - "/usr/lib/firefox/firefox"
+      - "--headless"
 
-    otherapp_still_suffixed_setting_default: "myvalue"
+    wireguard_role_docker_ports_default:
+      - "1234:1234"
     ```
+
+    1.  Not to be confused with the similarly named list variable `plex_docker_networks_default`, which is still available as such (assuming an instance named `plex`).
 
     Becomes:
 
     ```yaml
     plex_docker_network_mode: "container:gluetun"
 
-    someapp_suffix_removed_setting: "myvalue"
+    firefox_role_docker_commands:
+      - "/usr/lib/firefox/firefox"
+      - "--headless"
 
-    otherapp_still_suffixed_setting_custom: "myvalue"
+    wireguard_role_docker_ports_custom:
+      - "1234:1234"
     ```
 
 ## Sandbox App Settings Migration Guide
 
-For convenience, Sandbox roles that previously read settings from `/opt/sandbox/settings.yml` were updated to expose those settings as scalar Inventory variables instead. If you encounter a role missing this update, please report it on Discord or open an issue in the Sandbox repository.
+!!! note ""
 
-As always, determine how the settings you use are represented in the role by looking up the variables in the app's documentation under _Role Defaults_ and transfer the values accordingly.
+    For convenience, Sandbox roles that previously read settings from `/opt/sandbox/settings.yml` were updated to expose those settings as scalar Inventory variables instead. If you encounter a role missing this update, please report it on Discord or open an issue in the Sandbox repository.
 
-!!! example
+As always, check how the settings you use are represented in the role by looking up the variables in the app's documentation under _Role Defaults_ and transfer the values accordingly.
+
+???+example
 
     ```yaml title="sandbox/settings.yml"
     your_spotify:

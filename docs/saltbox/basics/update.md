@@ -31,7 +31,7 @@ minimum:
 sb install core
 ```
 
-This ensures all dependencies and system configuration are current with the last commit.
+This ensures essential packages, containers and host configuration are current with the last commit.
 
 ## Updating apps
 
@@ -50,15 +50,6 @@ sb install saltbox
 ```
 
 The above updates the Saltbox selection of apps, along with core modules.
-
-## Quick Reference
-
-| Action         | Command              | Effect                                        |
-|----------------|----------------------|-----------------------------------------------|
-| Update Saltbox | `sb update`          | Updates Saltbox files                         |
-| Upgrade core   | `sb install core`    | Updates core modules                          |
-| Update an app  | `sb install sonarr`  | Updates Sonarr                                |
-| Upgrade bundle | `sb install saltbox` | Updates core modules & Saltbox apps selection |
 
 ## Next
 

@@ -23,7 +23,7 @@ Main Tags is a Saltbox module that deploys your assigned saltbox (all-in-one), m
 
 !!! info "Includes Core Roles"
 
-    Main tags deploy [Core](../../../saltbox/basics/install-types) roles implicitly. You do not need to list core roles in the Inventory override or run the `core` tag alongside a main tag.
+    Main tags deploy [Core](../../saltbox/basics/install-types.md) roles implicitly. You do not need to list core roles in the Inventory override or run the `core` tag alongside a main tag.
 
 ```shell
 sb install saltbox

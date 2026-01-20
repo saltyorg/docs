@@ -1092,6 +1092,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         changedetection_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`changedetection_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        changedetection_role_web_api_http_port:
+        ```
+
+    ??? variable string "`changedetection_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        changedetection_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`changedetection_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        changedetection_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`changedetection_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        changedetection_role_web_api_port:
+        ```
+
+    ??? variable string "`changedetection_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        changedetection_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`changedetection_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        changedetection_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`changedetection_role_web_domain`"
 
         ```yaml

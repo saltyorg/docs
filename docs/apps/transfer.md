@@ -1111,6 +1111,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_uploads_location:
         ```
 
+    ??? variable string "`transfer_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        transfer_role_web_api_http_port:
+        ```
+
+    ??? variable string "`transfer_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        transfer_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`transfer_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        transfer_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`transfer_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        transfer_role_web_api_port:
+        ```
+
+    ??? variable string "`transfer_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        transfer_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`transfer_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        transfer_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`transfer_role_web_domain`"
 
         ```yaml

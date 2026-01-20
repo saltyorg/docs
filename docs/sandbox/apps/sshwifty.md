@@ -1101,6 +1101,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sshwifty_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`sshwifty_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        sshwifty_role_web_api_http_port:
+        ```
+
+    ??? variable string "`sshwifty_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        sshwifty_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`sshwifty_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        sshwifty_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`sshwifty_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        sshwifty_role_web_api_port:
+        ```
+
+    ??? variable string "`sshwifty_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        sshwifty_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`sshwifty_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        sshwifty_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`sshwifty_role_web_domain`"
 
         ```yaml

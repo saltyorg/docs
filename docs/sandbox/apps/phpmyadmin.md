@@ -1077,6 +1077,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         phpmyadmin_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`phpmyadmin_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        phpmyadmin_role_web_api_http_port:
+        ```
+
+    ??? variable string "`phpmyadmin_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        phpmyadmin_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`phpmyadmin_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        phpmyadmin_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`phpmyadmin_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        phpmyadmin_role_web_api_port:
+        ```
+
+    ??? variable string "`phpmyadmin_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        phpmyadmin_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`phpmyadmin_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        phpmyadmin_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`phpmyadmin_role_web_domain`"
 
         ```yaml

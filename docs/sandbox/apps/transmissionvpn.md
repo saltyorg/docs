@@ -1189,6 +1189,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmissionvpn_role_vpn_user:
         ```
 
+    ??? variable string "`transmissionvpn_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        transmissionvpn_role_web_api_http_port:
+        ```
+
+    ??? variable string "`transmissionvpn_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        transmissionvpn_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`transmissionvpn_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        transmissionvpn_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`transmissionvpn_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        transmissionvpn_role_web_api_port:
+        ```
+
+    ??? variable string "`transmissionvpn_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        transmissionvpn_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`transmissionvpn_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        transmissionvpn_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`transmissionvpn_role_web_domain`"
 
         ```yaml

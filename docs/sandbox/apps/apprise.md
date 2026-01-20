@@ -1090,6 +1090,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         apprise_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`apprise_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        apprise_role_web_api_http_port:
+        ```
+
+    ??? variable string "`apprise_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        apprise_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`apprise_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        apprise_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`apprise_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        apprise_role_web_api_port:
+        ```
+
+    ??? variable string "`apprise_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        apprise_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`apprise_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        apprise_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`apprise_role_web_domain`"
 
         ```yaml

@@ -1222,6 +1222,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkwarden_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`linkwarden_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        linkwarden_role_web_api_http_port:
+        ```
+
+    ??? variable string "`linkwarden_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        linkwarden_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`linkwarden_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        linkwarden_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`linkwarden_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        linkwarden_role_web_api_port:
+        ```
+
+    ??? variable string "`linkwarden_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        linkwarden_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`linkwarden_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        linkwarden_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`linkwarden_role_web_domain`"
 
         ```yaml

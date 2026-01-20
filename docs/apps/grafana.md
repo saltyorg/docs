@@ -1108,6 +1108,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grafana_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`grafana_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        grafana_role_web_api_http_port:
+        ```
+
+    ??? variable string "`grafana_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        grafana_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`grafana_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        grafana_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`grafana_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        grafana_role_web_api_port:
+        ```
+
+    ??? variable string "`grafana_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        grafana_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`grafana_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        grafana_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`grafana_role_web_domain`"
 
         ```yaml

@@ -1103,6 +1103,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         filebrowser_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`filebrowser_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        filebrowser_role_web_api_http_port:
+        ```
+
+    ??? variable string "`filebrowser_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        filebrowser_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`filebrowser_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        filebrowser_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`filebrowser_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        filebrowser_role_web_api_port:
+        ```
+
+    ??? variable string "`filebrowser_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        filebrowser_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`filebrowser_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        filebrowser_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`filebrowser_role_web_domain`"
 
         ```yaml

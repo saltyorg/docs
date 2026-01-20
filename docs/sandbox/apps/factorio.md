@@ -908,6 +908,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         factorio_role_paths_location:
         ```
 
+    ??? variable string "`factorio_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        factorio_role_web_api_http_port:
+        ```
+
+    ??? variable string "`factorio_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        factorio_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`factorio_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        factorio_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`factorio_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        factorio_role_web_api_port:
+        ```
+
+    ??? variable string "`factorio_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        factorio_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`factorio_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        factorio_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`factorio_role_web_domain`"
 
         ```yaml

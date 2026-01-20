@@ -1101,6 +1101,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         gotify_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`gotify_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        gotify_role_web_api_http_port:
+        ```
+
+    ??? variable string "`gotify_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        gotify_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`gotify_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        gotify_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`gotify_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        gotify_role_web_api_port:
+        ```
+
+    ??? variable string "`gotify_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        gotify_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`gotify_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        gotify_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`gotify_role_web_domain`"
 
         ```yaml

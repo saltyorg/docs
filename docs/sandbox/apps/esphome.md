@@ -1096,6 +1096,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         esphome_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`esphome_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        esphome_role_web_api_http_port:
+        ```
+
+    ??? variable string "`esphome_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        esphome_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`esphome_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        esphome_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`esphome_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        esphome_role_web_api_port:
+        ```
+
+    ??? variable string "`esphome_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        esphome_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`esphome_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        esphome_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`esphome_role_web_domain`"
 
         ```yaml

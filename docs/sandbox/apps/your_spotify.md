@@ -1132,6 +1132,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`your_spotify_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        your_spotify_role_web_api_http_port:
+        ```
+
+    ??? variable string "`your_spotify_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        your_spotify_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`your_spotify_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        your_spotify_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`your_spotify_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        your_spotify_role_web_api_port:
+        ```
+
+    ??? variable string "`your_spotify_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        your_spotify_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`your_spotify_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        your_spotify_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`your_spotify_role_web_domain`"
 
         ```yaml

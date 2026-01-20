@@ -1898,6 +1898,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         watchstate2_trust_proxy:
         ```
 
+    ??? variable string "`watchstate_role_web_api_http_port`{ .sb-show-on-unchecked }`watchstate2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        watchstate_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        watchstate2_web_api_http_port:
+        ```
+
+    ??? variable string "`watchstate_role_web_api_http_scheme`{ .sb-show-on-unchecked }`watchstate2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        watchstate_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        watchstate2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`watchstate_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        watchstate_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        watchstate2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`watchstate_role_web_api_port`{ .sb-show-on-unchecked }`watchstate2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        watchstate_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        watchstate2_web_api_port:
+        ```
+
+    ??? variable string "`watchstate_role_web_api_scheme`{ .sb-show-on-unchecked }`watchstate2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        watchstate_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        watchstate2_web_api_scheme:
+        ```
+
+    ??? variable dict "`watchstate_role_web_api_serverstransport`{ .sb-show-on-unchecked }`watchstate2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        watchstate_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        watchstate2_web_api_serverstransport:
+        ```
+
     ??? variable string "`watchstate_role_web_domain`{ .sb-show-on-unchecked }`watchstate2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

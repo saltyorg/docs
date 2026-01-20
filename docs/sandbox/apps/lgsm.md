@@ -1475,6 +1475,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lgsm2_paths_location:
         ```
 
+    ??? variable string "`lgsm_role_web_api_http_port`{ .sb-show-on-unchecked }`lgsm2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        lgsm_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        lgsm2_web_api_http_port:
+        ```
+
+    ??? variable string "`lgsm_role_web_api_http_scheme`{ .sb-show-on-unchecked }`lgsm2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        lgsm_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        lgsm2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`lgsm_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        lgsm_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        lgsm2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`lgsm_role_web_api_port`{ .sb-show-on-unchecked }`lgsm2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        lgsm_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        lgsm2_web_api_port:
+        ```
+
+    ??? variable string "`lgsm_role_web_api_scheme`{ .sb-show-on-unchecked }`lgsm2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        lgsm_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        lgsm2_web_api_scheme:
+        ```
+
+    ??? variable dict "`lgsm_role_web_api_serverstransport`{ .sb-show-on-unchecked }`lgsm2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        lgsm_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        lgsm2_web_api_serverstransport:
+        ```
+
     ??? variable string "`lgsm_role_web_domain`{ .sb-show-on-unchecked }`lgsm2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

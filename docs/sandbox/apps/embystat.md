@@ -1079,6 +1079,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         embystat_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`embystat_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        embystat_role_web_api_http_port:
+        ```
+
+    ??? variable string "`embystat_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        embystat_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`embystat_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        embystat_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`embystat_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        embystat_role_web_api_port:
+        ```
+
+    ??? variable string "`embystat_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        embystat_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`embystat_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        embystat_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`embystat_role_web_domain`"
 
         ```yaml

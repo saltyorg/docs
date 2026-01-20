@@ -1129,6 +1129,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         uptime_kuma_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`uptime_kuma_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        uptime_kuma_role_web_api_http_port:
+        ```
+
+    ??? variable string "`uptime_kuma_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        uptime_kuma_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`uptime_kuma_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        uptime_kuma_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`uptime_kuma_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        uptime_kuma_role_web_api_port:
+        ```
+
+    ??? variable string "`uptime_kuma_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        uptime_kuma_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`uptime_kuma_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        uptime_kuma_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`uptime_kuma_role_web_domain`"
 
         ```yaml

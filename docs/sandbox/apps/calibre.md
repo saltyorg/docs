@@ -2067,6 +2067,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_web2_subdomain:
         ```
 
+    ??? variable string "`calibre_role_web_api_http_port`{ .sb-show-on-unchecked }`calibre2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        calibre_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        calibre2_web_api_http_port:
+        ```
+
+    ??? variable string "`calibre_role_web_api_http_scheme`{ .sb-show-on-unchecked }`calibre2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        calibre_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        calibre2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`calibre_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        calibre_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        calibre2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`calibre_role_web_api_port`{ .sb-show-on-unchecked }`calibre2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        calibre_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        calibre2_web_api_port:
+        ```
+
+    ??? variable string "`calibre_role_web_api_scheme`{ .sb-show-on-unchecked }`calibre2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        calibre_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        calibre2_web_api_scheme:
+        ```
+
+    ??? variable dict "`calibre_role_web_api_serverstransport`{ .sb-show-on-unchecked }`calibre2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        calibre_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        calibre2_web_api_serverstransport:
+        ```
+
     ??? variable string "`calibre_role_web_domain`{ .sb-show-on-unchecked }`calibre2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

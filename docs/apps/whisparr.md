@@ -1906,6 +1906,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`whisparr_role_web_api_http_port`{ .sb-show-on-unchecked }`whisparr2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        whisparr_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        whisparr2_web_api_http_port:
+        ```
+
+    ??? variable string "`whisparr_role_web_api_http_scheme`{ .sb-show-on-unchecked }`whisparr2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        whisparr_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        whisparr2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`whisparr_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`whisparr2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        whisparr_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        whisparr2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`whisparr_role_web_api_port`{ .sb-show-on-unchecked }`whisparr2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        whisparr_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        whisparr2_web_api_port:
+        ```
+
+    ??? variable string "`whisparr_role_web_api_scheme`{ .sb-show-on-unchecked }`whisparr2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        whisparr_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        whisparr2_web_api_scheme:
+        ```
+
+    ??? variable dict "`whisparr_role_web_api_serverstransport`{ .sb-show-on-unchecked }`whisparr2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        whisparr_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        whisparr2_web_api_serverstransport:
+        ```
+
     ??? variable string "`whisparr_role_web_domain`{ .sb-show-on-unchecked }`whisparr2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -1265,6 +1265,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         semaphoreui_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`semaphoreui_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        semaphoreui_role_web_api_http_port:
+        ```
+
+    ??? variable string "`semaphoreui_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        semaphoreui_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`semaphoreui_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        semaphoreui_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`semaphoreui_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        semaphoreui_role_web_api_port:
+        ```
+
+    ??? variable string "`semaphoreui_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        semaphoreui_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`semaphoreui_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        semaphoreui_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`semaphoreui_role_web_domain`"
 
         ```yaml

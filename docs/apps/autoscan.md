@@ -2098,6 +2098,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoscan2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`autoscan_role_web_api_http_port`{ .sb-show-on-unchecked }`autoscan2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        autoscan_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        autoscan2_web_api_http_port:
+        ```
+
+    ??? variable string "`autoscan_role_web_api_http_scheme`{ .sb-show-on-unchecked }`autoscan2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        autoscan_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        autoscan2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`autoscan_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        autoscan_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        autoscan2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`autoscan_role_web_api_port`{ .sb-show-on-unchecked }`autoscan2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        autoscan_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        autoscan2_web_api_port:
+        ```
+
+    ??? variable string "`autoscan_role_web_api_scheme`{ .sb-show-on-unchecked }`autoscan2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        autoscan_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        autoscan2_web_api_scheme:
+        ```
+
+    ??? variable dict "`autoscan_role_web_api_serverstransport`{ .sb-show-on-unchecked }`autoscan2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        autoscan_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        autoscan2_web_api_serverstransport:
+        ```
+
     ??? variable string "`autoscan_role_web_domain`{ .sb-show-on-unchecked }`autoscan2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

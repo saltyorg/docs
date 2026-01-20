@@ -1141,6 +1141,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`portainer_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        portainer_role_web_api_http_port:
+        ```
+
+    ??? variable string "`portainer_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        portainer_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`portainer_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        portainer_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`portainer_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        portainer_role_web_api_port:
+        ```
+
+    ??? variable string "`portainer_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        portainer_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`portainer_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        portainer_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`portainer_role_web_domain`"
 
         ```yaml

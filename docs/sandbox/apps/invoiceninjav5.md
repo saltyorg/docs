@@ -1005,6 +1005,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_role_paths_location:
         ```
 
+    ??? variable string "`invoiceninjav5_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        invoiceninjav5_role_web_api_http_port:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        invoiceninjav5_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`invoiceninjav5_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        invoiceninjav5_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        invoiceninjav5_role_web_api_port:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        invoiceninjav5_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`invoiceninjav5_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        invoiceninjav5_role_web_api_serverstransport:
+        ```
+
     ??? variable list "`invoiceninjav5_role_web_fqdn_override`"
 
         ```yaml

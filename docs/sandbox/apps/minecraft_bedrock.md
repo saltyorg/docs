@@ -921,6 +921,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft_bedrock_role_version:
         ```
 
+    ??? variable string "`minecraft_bedrock_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        minecraft_bedrock_role_web_api_http_port:
+        ```
+
+    ??? variable string "`minecraft_bedrock_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        minecraft_bedrock_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`minecraft_bedrock_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        minecraft_bedrock_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`minecraft_bedrock_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        minecraft_bedrock_role_web_api_port:
+        ```
+
+    ??? variable string "`minecraft_bedrock_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        minecraft_bedrock_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`minecraft_bedrock_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        minecraft_bedrock_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`minecraft_bedrock_role_web_domain`"
 
         ```yaml

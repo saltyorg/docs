@@ -1108,6 +1108,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homeassistant_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`homeassistant_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        homeassistant_role_web_api_http_port:
+        ```
+
+    ??? variable string "`homeassistant_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        homeassistant_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`homeassistant_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homeassistant_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`homeassistant_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        homeassistant_role_web_api_port:
+        ```
+
+    ??? variable string "`homeassistant_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        homeassistant_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`homeassistant_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homeassistant_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`homeassistant_role_web_domain`"
 
         ```yaml

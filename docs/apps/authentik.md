@@ -254,8 +254,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`authentik_role_access_token_validity`"
 
         ```yaml
+        # Hours, only fresh installs use this
         # Type: string
-        authentik_role_access_token_validity: "24" # Hours, only fresh installs use this
+        authentik_role_access_token_validity: "24"
         ```
 
 === "Postgres"
@@ -1524,6 +1525,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable wildcard certificate for the container
         # Type: bool (true/false)
         authentik_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`authentik_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_web_api_http_port:
+        ```
+
+    ??? variable string "`authentik_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        authentik_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`authentik_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authentik_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`authentik_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        authentik_role_web_api_port:
+        ```
+
+    ??? variable string "`authentik_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        authentik_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`authentik_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        authentik_role_web_api_serverstransport:
         ```
 
     ??? variable string "`authentik_role_web_domain`"

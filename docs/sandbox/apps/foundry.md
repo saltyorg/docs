@@ -1153,6 +1153,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_user:
         ```
 
+    ??? variable string "`foundry_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        foundry_role_web_api_http_port:
+        ```
+
+    ??? variable string "`foundry_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        foundry_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`foundry_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        foundry_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`foundry_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        foundry_role_web_api_port:
+        ```
+
+    ??? variable string "`foundry_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        foundry_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`foundry_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        foundry_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`foundry_role_web_domain`"
 
         ```yaml

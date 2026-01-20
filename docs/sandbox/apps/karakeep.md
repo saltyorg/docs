@@ -1133,6 +1133,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         karakeep_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`karakeep_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        karakeep_role_web_api_http_port:
+        ```
+
+    ??? variable string "`karakeep_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        karakeep_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`karakeep_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        karakeep_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`karakeep_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        karakeep_role_web_api_port:
+        ```
+
+    ??? variable string "`karakeep_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        karakeep_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`karakeep_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        karakeep_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`karakeep_role_web_domain`"
 
         ```yaml

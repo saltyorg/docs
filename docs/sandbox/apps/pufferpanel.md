@@ -1089,6 +1089,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         pufferpanel_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`pufferpanel_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        pufferpanel_role_web_api_http_port:
+        ```
+
+    ??? variable string "`pufferpanel_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        pufferpanel_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`pufferpanel_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        pufferpanel_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`pufferpanel_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        pufferpanel_role_web_api_port:
+        ```
+
+    ??? variable string "`pufferpanel_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        pufferpanel_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`pufferpanel_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        pufferpanel_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`pufferpanel_role_web_domain`"
 
         ```yaml

@@ -1137,6 +1137,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         yacht_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`yacht_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        yacht_role_web_api_http_port:
+        ```
+
+    ??? variable string "`yacht_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        yacht_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`yacht_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        yacht_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`yacht_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        yacht_role_web_api_port:
+        ```
+
+    ??? variable string "`yacht_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        yacht_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`yacht_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        yacht_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`yacht_role_web_domain`"
 
         ```yaml

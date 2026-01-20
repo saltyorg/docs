@@ -1137,6 +1137,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homarr_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`homarr_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        homarr_role_web_api_http_port:
+        ```
+
+    ??? variable string "`homarr_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        homarr_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`homarr_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homarr_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`homarr_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        homarr_role_web_api_port:
+        ```
+
+    ??? variable string "`homarr_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        homarr_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`homarr_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        homarr_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`homarr_role_web_domain`"
 
         ```yaml

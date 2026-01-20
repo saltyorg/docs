@@ -355,6 +355,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cockpit_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`cockpit_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cockpit_role_web_api_http_port:
+        ```
+
+    ??? variable string "`cockpit_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cockpit_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`cockpit_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cockpit_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`cockpit_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cockpit_role_web_api_port:
+        ```
+
+    ??? variable string "`cockpit_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cockpit_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`cockpit_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cockpit_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`cockpit_role_web_domain`"
 
         ```yaml

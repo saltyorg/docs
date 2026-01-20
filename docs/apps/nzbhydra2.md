@@ -1274,6 +1274,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`nzbhydra2_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbhydra2_role_web_api_http_port:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        nzbhydra2_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`nzbhydra2_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbhydra2_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        nzbhydra2_role_web_api_port:
+        ```
+
+    ??? variable string "`nzbhydra2_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        nzbhydra2_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`nzbhydra2_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        nzbhydra2_role_web_api_serverstransport:
+        ```
+
     ??? variable string "`nzbhydra2_role_web_domain`"
 
         ```yaml

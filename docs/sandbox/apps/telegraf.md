@@ -1776,6 +1776,78 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         telegraf2_traefik_wildcard_enabled: true
         ```
 
+    ??? variable string "`telegraf_role_web_api_http_port`{ .sb-show-on-unchecked }`telegraf2_web_api_http_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        telegraf_role_web_api_http_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        telegraf2_web_api_http_port:
+        ```
+
+    ??? variable string "`telegraf_role_web_api_http_scheme`{ .sb-show-on-unchecked }`telegraf2_web_api_http_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        telegraf_role_web_api_http_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        telegraf2_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`telegraf_role_web_api_http_serverstransport`{ .sb-show-on-unchecked }`telegraf2_web_api_http_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        telegraf_role_web_api_http_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        telegraf2_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`telegraf_role_web_api_port`{ .sb-show-on-unchecked }`telegraf2_web_api_port`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string (quoted number)
+        telegraf_role_web_api_port:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string (quoted number)
+        telegraf2_web_api_port:
+        ```
+
+    ??? variable string "`telegraf_role_web_api_scheme`{ .sb-show-on-unchecked }`telegraf2_web_api_scheme`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string ("http"/"https")
+        telegraf_role_web_api_scheme:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string ("http"/"https")
+        telegraf2_web_api_scheme:
+        ```
+
+    ??? variable dict "`telegraf_role_web_api_serverstransport`{ .sb-show-on-unchecked }`telegraf2_web_api_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict/omit
+        telegraf_role_web_api_serverstransport:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict/omit
+        telegraf2_web_api_serverstransport:
+        ```
+
     ??? variable string "`telegraf_role_web_domain`{ .sb-show-on-unchecked }`telegraf2_web_domain`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

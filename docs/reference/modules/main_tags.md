@@ -5,7 +5,7 @@ saltbox_automation:
   project_description:
     name: Main Tags
     summary: |-
-      a Saltbox module that deploys core roles and your assigned saltbox, mediabox and feederbox apps stacks.
+      a Saltbox module that deploys your assigned saltbox (all-in-one), mediabox or feederbox app stack.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
@@ -14,12 +14,16 @@ saltbox_automation:
 
 ## Overview
 
-Main Tags is a Saltbox module that deploys core roles and your assigned saltbox, mediabox and feederbox apps stacks.
+Main Tags is a Saltbox module that deploys your assigned saltbox (all-in-one), mediabox or feederbox app stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
+
+!!! info "Includes Core Roles"
+
+    Main tags deploy [Core](../../../saltbox/basics/install-types) roles implicitly. You do not need to list core roles in the Inventory override or run the `core` tag alongside a main tag.
 
 ```shell
 sb install saltbox

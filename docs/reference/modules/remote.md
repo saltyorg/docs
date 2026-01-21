@@ -1,34 +1,44 @@
 ---
 icon: material/server-network-outline
 status: draft
+saltbox_automation:
+  project_description:
+    name: Remote
+    summary: |-
+      a Saltbox module that manages remote storage mounts.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Remote
 
 ## Overview
 
-Manages remote storage mounts.
+Remote is a Saltbox module that manages remote storage mounts.
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 
-Saltbox dependency.
+Core Saltbox role.
 
 ```shell
 sb install mounts
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by saltbox/test.py - DO NOT EDIT MANUALLY -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    user_agent: "custom_value"
-    ```
+1.  !!! example "Example override"
+
+        ```yaml
+        user_agent: "custom_value"
+        ```
 
 === "Global"
 
@@ -126,25 +136,25 @@ sb install mounts
                              else '5572' }}"
         ```
 
-    ??? variable string "`rclone_remort_port`"
+    ??? variable string "`rclone_remote_port`"
 
         ```yaml
         # Type: string
-        rclone_remort_port: "{{ lookup('vars', 'rclone_remote_' + rclone_remote_name + '_port', default=rclone_port_lookup) }}"
+        rclone_remote_port: "{{ lookup('vars', 'rclone_remote_' + rclone_remote_name + '_port', default=rclone_port_lookup) }}"
         ```
 
-    ??? variable int "`rclone_remort_port_low_bound`"
+    ??? variable int "`rclone_remote_port_low_bound`"
 
         ```yaml
         # Type: int
-        rclone_remort_port_low_bound: 5572
+        rclone_remote_port_low_bound: 5572
         ```
 
-    ??? variable int "`rclone_remort_port_high_bound`"
+    ??? variable int "`rclone_remote_port_high_bound`"
 
         ```yaml
         # Type: int
-        rclone_remort_port_high_bound: 6072
+        rclone_remote_port_high_bound: 6072
         ```
 
     ??? variable string "`rclone_remote_name`"
@@ -185,6 +195,7 @@ sb install mounts
     ??? variable bool "`rclone_enable_metrics`"
 
         ```yaml
+        # Enforces the use of auth (your accounts.yml credentials) on rclone rc when enabled
         # Type: bool (true/false)
         rclone_enable_metrics: false
         ```
@@ -198,12 +209,19 @@ sb install mounts
         rclone_vfs_refresh_interval: 10800
         ```
 
+    ??? variable string "`rclone_vfs_refresh_auth_args`"
+
+        ```yaml
+        # Type: string
+        rclone_vfs_refresh_auth_args: " --user='{{ user.name }}' --pass='{{ user.pass }}'"
+        ```
+
     ??? variable string "`rclone_vfs_refresh_command`"
 
         ```yaml
         # Type: string
         rclone_vfs_refresh_command: |-
-          /usr/bin/rclone rc vfs/refresh recursive=true --url http://localhost:{{ rclone_remort_port }} _async=true
+          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_remote_port }}{{ rclone_vfs_refresh_auth_args if (rclone_enable_metrics | bool) else '' }} _async=true
         ```
 
 === "NFS"
@@ -214,176 +232,4 @@ sb install mounts
         # Type: string
         nfs_opts: "nofail,noatime,nolock,intr,tcp,actimeo=1800"
         ```
-
-=== "Global Override Options"
-
-    ??? variable bool "`remote_role_autoheal_enabled`"
-
-        ```yaml
-        # Enable or disable Autoheal monitoring for the container created when deploying
-        # Type: bool (true/false)
-        remote_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`remote_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        remote_role_depends_on: ""
-        ```
-
-    ??? variable string "`remote_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        remote_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`remote_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        remote_role_depends_on_healthchecks:
-        ```
-
-    ??? variable bool "`remote_role_diun_enabled`"
-
-        ```yaml
-        # Enable or disable Diun update notifications for the container created when deploying
-        # Type: bool (true/false)
-        remote_role_diun_enabled: true
-        ```
-
-    ??? variable bool "`remote_role_dns_enabled`"
-
-        ```yaml
-        # Enable or disable automatic DNS record creation for the container
-        # Type: bool (true/false)
-        remote_role_dns_enabled: true
-        ```
-
-    ??? variable bool "`remote_role_docker_controller`"
-
-        ```yaml
-        # Enable or disable Saltbox Docker Controller management for the container
-        # Type: bool (true/false)
-        remote_role_docker_controller: true
-        ```
-
-    ??? variable bool "`remote_role_traefik_autodetect_enabled`"
-
-        ```yaml
-        # Enable Traefik autodetect middleware for the container
-        # Type: bool (true/false)
-        remote_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable bool "`remote_role_traefik_crowdsec_enabled`"
-
-        ```yaml
-        # Enable CrowdSec middleware for the container
-        # Type: bool (true/false)
-        remote_role_traefik_crowdsec_enabled: false
-        ```
-
-    ??? variable bool "`remote_role_traefik_error_pages_enabled`"
-
-        ```yaml
-        # Enable custom error pages middleware for the container
-        # Type: bool (true/false)
-        remote_role_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`remote_role_traefik_gzip_enabled`"
-
-        ```yaml
-        # Enable gzip compression middleware for the container
-        # Type: bool (true/false)
-        remote_role_traefik_gzip_enabled: false
-        ```
-
-    ??? variable bool "`remote_role_traefik_middleware_http_api_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        remote_role_traefik_middleware_http_api_insecure:
-        ```
-
-    ??? variable bool "`remote_role_traefik_middleware_http_insecure`"
-
-        ```yaml
-        # Type: bool (true/false)
-        remote_role_traefik_middleware_http_insecure:
-        ```
-
-    ??? variable bool "`remote_role_traefik_robot_enabled`"
-
-        ```yaml
-        # Enable robots.txt middleware for the container
-        # Type: bool (true/false)
-        remote_role_traefik_robot_enabled: true
-        ```
-
-    ??? variable bool "`remote_role_traefik_tailscale_enabled`"
-
-        ```yaml
-        # Enable Tailscale-specific Traefik configuration for the container
-        # Type: bool (true/false)
-        remote_role_traefik_tailscale_enabled: false
-        ```
-
-    ??? variable bool "`remote_role_traefik_wildcard_enabled`"
-
-        ```yaml
-        # Enable wildcard certificate for the container
-        # Type: bool (true/false)
-        remote_role_traefik_wildcard_enabled: true
-        ```
-
-    ??? variable list "`remote_role_web_fqdn_override`"
-
-        ```yaml
-        # Override the Traefik fully qualified domain name (FQDN) for the container
-        # Type: list
-        remote_role_web_fqdn_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            remote_role_web_fqdn_override:
-              - "{{ traefik_host }}"
-              - "remote2.{{ user.domain }}"
-              - "remote.otherdomain.tld"
-            ```
-
-            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
-
-    ??? variable string "`remote_role_web_host_override`"
-
-        ```yaml
-        # Override the Traefik web host configuration for the container
-        # Type: string
-        remote_role_web_host_override:
-        ```
-
-        !!! example "Example Override"
-
-            ```yaml
-            remote_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'remote2.' + user.domain }}`)"
-            ```
-
-            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
-
-    ??? variable string "`remote_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        remote_role_web_scheme:
-        ```
-
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

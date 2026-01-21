@@ -1,20 +1,33 @@
 ---
 icon: material/cogs
 status: draft
+saltbox_automation:
+  sections:
+    inventory: false
+  project_description:
+    name: Kernel
+    summary: |-
+      a Saltbox module that manages the Linux kernel.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Kernel
 
 ## Overview
 
-Manages the Linux kernel.
+Kernel is a Saltbox module that manages the Linux kernel.
 
 ---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
 
-Saltbox dependency.
+Core Saltbox role.
 
 ```shell
 sb install kernel
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

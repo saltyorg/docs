@@ -5,19 +5,29 @@ hide:
   - tags
 tags:
   - nfs
+saltbox_automation:
+  project_description:
+    name: Hetzner NFS VLAN
+    summary: |-
+      a Saltbox module that connects 2+ Hetzner servers using NFS and VLAN.
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Hetzner NFS VLAN
+
+## Overview
+
+Hetzner NFS VLAN is a Saltbox module that connects 2+ Hetzner servers using NFS and VLAN.
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 !!! warning "Role Currently Disabled"
 
     **THIS INFORMATION IS OUTDATED AND DOES NOT WORK AS DOCUMENTED**
 
     **DO NOT FOLLOW THESE INSTRUCTIONS IF YOU DO NOT KNOW HOW TO ADAPT THEM TO RECENT CHANGES IN BOTH SALTBOX AND HETZNER**
-
-## Overview
-
-Connect 2+ servers hosted on Hetzner using NFS and VLAN.
 
 _Note 1: This comes with no support other than the instructions provided here._
 
@@ -112,3 +122,33 @@ sb install hetzner-nfs-server-uninstall
 ```shell
 sb install hetzner-nfs-client-unmount
 ```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        hetzner_nfs_init_overwrite_client: true
+        ```
+
+=== "General"
+
+    ??? variable bool "`hetzner_nfs_init_overwrite_client`"
+
+        ```yaml
+        # Type: bool (true/false)
+        hetzner_nfs_init_overwrite_client: true
+        ```
+
+    ??? variable bool "`hetzner_nfs_init_overwrite_server`"
+
+        ```yaml
+        # Type: bool (true/false)
+        hetzner_nfs_init_overwrite_server: true
+        ```
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

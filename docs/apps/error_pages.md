@@ -880,18 +880,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         error_pages_role_docker_controller: true
         ```
 
-    ??? variable string "`error_pages_role_docker_image_repo`"
+    ??? variable list "`error_pages_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        error_pages_role_docker_image_repo:
-        ```
-
-    ??? variable string "`error_pages_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        error_pages_role_docker_image_tag:
+        # Type: list
+        error_pages_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`error_pages_role_docker_volumes_download`"
@@ -899,12 +892,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         error_pages_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`error_pages_role_template`"
-
-        ```yaml
-        # Type: string
-        error_pages_role_template:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

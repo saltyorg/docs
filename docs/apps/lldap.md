@@ -1012,18 +1012,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lldap_role_docker_controller: true
         ```
 
-    ??? variable string "`lldap_role_docker_image_repo`"
+    ??? variable list "`lldap_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        lldap_role_docker_image_repo:
-        ```
-
-    ??? variable string "`lldap_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_image_tag:
+        # Type: list
+        lldap_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`lldap_role_docker_volumes_download`"
@@ -1054,13 +1047,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lldap_role_themepark_theme:
         ```
 
-    ??? variable dict "`lldap_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        lldap_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`lldap_role_traefik_api_middleware`"
 
         ```yaml
@@ -1081,13 +1067,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         lldap_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`lldap_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        lldap_role_traefik_certresolver:
         ```
 
     ??? variable bool "`lldap_role_traefik_crowdsec_enabled`"
@@ -1208,13 +1187,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lldap_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`lldap_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        lldap_role_web_domain:
-        ```
-
     ??? variable list "`lldap_role_web_fqdn_override`"
 
         ```yaml
@@ -1286,12 +1258,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         lldap_role_web_serverstransport:
-        ```
-
-    ??? variable string "`lldap_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        lldap_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

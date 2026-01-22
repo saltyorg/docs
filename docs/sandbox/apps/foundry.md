@@ -915,13 +915,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`foundry_role_app_key`"
-
-        ```yaml
-        # Type: string
-        foundry_role_app_key:
-        ```
-
     ??? variable bool "`foundry_role_autoheal_enabled`"
 
         ```yaml
@@ -978,18 +971,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_docker_controller: true
         ```
 
-    ??? variable string "`foundry_role_docker_image_repo`"
+    ??? variable list "`foundry_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        foundry_role_docker_image_repo:
-        ```
-
-    ??? variable string "`foundry_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        foundry_role_docker_image_tag:
+        # Type: list
+        foundry_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`foundry_role_docker_volumes_download`"
@@ -997,20 +983,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         foundry_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`foundry_role_pass`"
-
-        ```yaml
-        # Type: string
-        foundry_role_pass:
-        ```
-
-    ??? variable string "`foundry_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        foundry_role_paths_location:
         ```
 
     ??? variable string "`foundry_role_themepark_addons`"
@@ -1034,13 +1006,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_themepark_theme:
         ```
 
-    ??? variable dict "`foundry_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        foundry_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`foundry_role_traefik_api_middleware`"
 
         ```yaml
@@ -1061,13 +1026,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         foundry_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`foundry_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        foundry_role_traefik_certresolver:
         ```
 
     ??? variable bool "`foundry_role_traefik_crowdsec_enabled`"
@@ -1146,13 +1104,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`foundry_role_user`"
-
-        ```yaml
-        # Type: string
-        foundry_role_user:
-        ```
-
     ??? variable string "`foundry_role_web_api_http_port`"
 
         ```yaml
@@ -1193,13 +1144,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         foundry_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`foundry_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        foundry_role_web_domain:
         ```
 
     ??? variable list "`foundry_role_web_fqdn_override`"
@@ -1260,13 +1204,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`foundry_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        foundry_role_web_port:
-        ```
-
     ??? variable string "`foundry_role_web_scheme`"
 
         ```yaml
@@ -1280,12 +1217,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         foundry_role_web_serverstransport:
-        ```
-
-    ??? variable string "`foundry_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        foundry_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

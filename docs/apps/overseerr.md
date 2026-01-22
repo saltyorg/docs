@@ -1727,28 +1727,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         overseerr2_docker_controller: true
         ```
 
-    ??? variable string "`overseerr_role_docker_image_repo`{ .sb-show-on-unchecked }`overseerr2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`overseerr_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`overseerr2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_docker_image_repo:
+        # Type: list
+        overseerr_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_docker_image_repo:
-        ```
-
-    ??? variable string "`overseerr_role_docker_image_tag`{ .sb-show-on-unchecked }`overseerr2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_docker_image_tag:
+        # Type: list
+        overseerr2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`overseerr_role_docker_volumes_download`{ .sb-show-on-unchecked }`overseerr2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1761,78 +1749,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         overseerr2_docker_volumes_download:
-        ```
-
-    ??? variable string "`overseerr_role_log_level`{ .sb-show-on-unchecked }`overseerr2_log_level`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_log_level:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_log_level:
-        ```
-
-    ??? variable string "`overseerr_role_themepark_addons`{ .sb-show-on-unchecked }`overseerr2_themepark_addons`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_themepark_addons:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_themepark_addons:
-        ```
-
-    ??? variable string "`overseerr_role_themepark_app`{ .sb-show-on-unchecked }`overseerr2_themepark_app`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_themepark_app:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_themepark_app:
-        ```
-
-    ??? variable bool "`overseerr_role_themepark_enabled`{ .sb-show-on-unchecked }`overseerr2_themepark_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        overseerr_role_themepark_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        overseerr2_themepark_enabled:
-        ```
-
-    ??? variable string "`overseerr_role_themepark_theme`{ .sb-show-on-unchecked }`overseerr2_themepark_theme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_themepark_theme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_themepark_theme:
-        ```
-
-    ??? variable dict "`overseerr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`overseerr2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        overseerr_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        overseerr2_traefik_api_endpoint:
         ```
 
     ??? variable string "`overseerr_role_traefik_api_middleware`{ .sb-show-on-unchecked }`overseerr2_traefik_api_middleware`{ .sb-show-on-checked }"
@@ -1871,18 +1787,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         overseerr2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`overseerr_role_traefik_certresolver`{ .sb-show-on-unchecked }`overseerr2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_traefik_certresolver:
         ```
 
     ??? variable bool "`overseerr_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`overseerr2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -2089,18 +1993,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         overseerr2_web_api_serverstransport:
         ```
 
-    ??? variable string "`overseerr_role_web_domain`{ .sb-show-on-unchecked }`overseerr2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_web_domain:
-        ```
-
     ??? variable list "`overseerr_role_web_fqdn_override`{ .sb-show-on-unchecked }`overseerr2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2231,17 +2123,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         overseerr2_web_serverstransport:
-        ```
-
-    ??? variable string "`overseerr_role_web_subdomain`{ .sb-show-on-unchecked }`overseerr2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

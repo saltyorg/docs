@@ -837,18 +837,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mqtt_role_docker_controller: true
         ```
 
-    ??? variable string "`mqtt_role_docker_image_repo`"
+    ??? variable list "`mqtt_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        mqtt_role_docker_image_repo:
-        ```
-
-    ??? variable string "`mqtt_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        mqtt_role_docker_image_tag:
+        # Type: list
+        mqtt_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`mqtt_role_docker_volumes_download`"
@@ -856,12 +849,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         mqtt_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`mqtt_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        mqtt_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

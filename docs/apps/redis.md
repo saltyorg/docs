@@ -1337,28 +1337,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         redis2_docker_controller: true
         ```
 
-    ??? variable string "`redis_role_docker_image_repo`{ .sb-show-on-unchecked }`redis2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`redis_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`redis2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        redis_role_docker_image_repo:
+        # Type: list
+        redis_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        redis2_docker_image_repo:
-        ```
-
-    ??? variable string "`redis_role_docker_image_tag`{ .sb-show-on-unchecked }`redis2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        redis_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        redis2_docker_image_tag:
+        # Type: list
+        redis2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`redis_role_docker_volumes_download`{ .sb-show-on-unchecked }`redis2_docker_volumes_download`{ .sb-show-on-checked }"

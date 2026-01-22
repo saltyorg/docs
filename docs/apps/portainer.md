@@ -925,13 +925,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`portainer_role_business_edition`"
-
-        ```yaml
-        # Type: string
-        portainer_role_business_edition:
-        ```
-
     ??? variable string "`portainer_role_depends_on`"
 
         ```yaml
@@ -980,18 +973,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_docker_controller: true
         ```
 
-    ??? variable string "`portainer_role_docker_image_repo`"
+    ??? variable list "`portainer_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        portainer_role_docker_image_repo:
-        ```
-
-    ??? variable string "`portainer_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        portainer_role_docker_image_tag:
+        # Type: list
+        portainer_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`portainer_role_docker_volumes_download`"
@@ -1015,27 +1001,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_themepark_app:
         ```
 
-    ??? variable bool "`portainer_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        portainer_role_themepark_enabled:
-        ```
-
-    ??? variable string "`portainer_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        portainer_role_themepark_theme:
-        ```
-
-    ??? variable dict "`portainer_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        portainer_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`portainer_role_traefik_api_middleware`"
 
         ```yaml
@@ -1056,13 +1021,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         portainer_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`portainer_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        portainer_role_traefik_certresolver:
         ```
 
     ??? variable bool "`portainer_role_traefik_crowdsec_enabled`"
@@ -1183,13 +1141,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`portainer_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        portainer_role_web_domain:
-        ```
-
     ??? variable list "`portainer_role_web_fqdn_override`"
 
         ```yaml
@@ -1261,12 +1212,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         portainer_role_web_serverstransport:
-        ```
-
-    ??? variable string "`portainer_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        portainer_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -998,30 +998,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`n8n_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        n8n_role_depends_on: ""
-        ```
-
-    ??? variable string "`n8n_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        n8n_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`n8n_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        n8n_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`n8n_role_diun_enabled`"
 
         ```yaml
@@ -1046,18 +1022,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_docker_controller: true
         ```
 
-    ??? variable string "`n8n_role_docker_image_repo`"
+    ??? variable list "`n8n_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        n8n_role_docker_image_repo:
-        ```
-
-    ??? variable string "`n8n_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        n8n_role_docker_image_tag:
+        # Type: list
+        n8n_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`n8n_role_docker_volumes_download`"
@@ -1065,41 +1034,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         n8n_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`n8n_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        n8n_role_paths_location:
-        ```
-
-    ??? variable string "`n8n_role_postgres_docker_env_db`"
-
-        ```yaml
-        # Type: string
-        n8n_role_postgres_docker_env_db:
-        ```
-
-    ??? variable string "`n8n_role_postgres_name`"
-
-        ```yaml
-        # Type: string
-        n8n_role_postgres_name:
-        ```
-
-    ??? variable string "`n8n_role_postgres_password`"
-
-        ```yaml
-        # Type: string
-        n8n_role_postgres_password:
-        ```
-
-    ??? variable string "`n8n_role_postgres_user`"
-
-        ```yaml
-        # Type: string
-        n8n_role_postgres_user:
         ```
 
     ??? variable string "`n8n_role_themepark_addons`"
@@ -1123,13 +1057,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_themepark_theme:
         ```
 
-    ??? variable dict "`n8n_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        n8n_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`n8n_role_traefik_api_middleware`"
 
         ```yaml
@@ -1150,13 +1077,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         n8n_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`n8n_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        n8n_role_traefik_certresolver:
         ```
 
     ??? variable bool "`n8n_role_traefik_crowdsec_enabled`"
@@ -1277,13 +1197,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`n8n_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        n8n_role_web_domain:
-        ```
-
     ??? variable list "`n8n_role_web_fqdn_override`"
 
         ```yaml
@@ -1355,19 +1268,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         n8n_role_web_serverstransport:
-        ```
-
-    ??? variable string "`n8n_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        n8n_role_web_subdomain:
-        ```
-
-    ??? variable string "`n8n_role_web_url`"
-
-        ```yaml
-        # Type: string
-        n8n_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

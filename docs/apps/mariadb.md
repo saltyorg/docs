@@ -1434,64 +1434,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mariadb2_docker_controller: true
         ```
 
-    ??? variable string "`mariadb_role_docker_env_db`{ .sb-show-on-unchecked }`mariadb2_docker_env_db`{ .sb-show-on-checked }"
+    ??? variable list "`mariadb_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`mariadb2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_env_db:
+        # Type: list
+        mariadb_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_env_db:
-        ```
-
-    ??? variable string "`mariadb_role_docker_env_password`{ .sb-show-on-unchecked }`mariadb2_docker_env_password`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_env_password:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_env_password:
-        ```
-
-    ??? variable string "`mariadb_role_docker_env_user`{ .sb-show-on-unchecked }`mariadb2_docker_env_user`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_env_user:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_env_user:
-        ```
-
-    ??? variable string "`mariadb_role_docker_image_repo`{ .sb-show-on-unchecked }`mariadb2_docker_image_repo`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_image_repo:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_image_repo:
-        ```
-
-    ??? variable string "`mariadb_role_docker_image_tag`{ .sb-show-on-unchecked }`mariadb2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_image_tag:
+        # Type: list
+        mariadb2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`mariadb_role_docker_volumes_download`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_download`{ .sb-show-on-checked }"

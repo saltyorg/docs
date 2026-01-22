@@ -959,18 +959,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkding_role_docker_controller: true
         ```
 
-    ??? variable string "`linkding_role_docker_image_repo`"
+    ??? variable list "`linkding_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        linkding_role_docker_image_repo:
-        ```
-
-    ??? variable string "`linkding_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        linkding_role_docker_image_tag:
+        # Type: list
+        linkding_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`linkding_role_docker_volumes_download`"
@@ -978,13 +971,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         linkding_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`linkding_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        linkding_role_paths_location:
         ```
 
     ??? variable string "`linkding_role_themepark_addons`"
@@ -1008,40 +994,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkding_role_themepark_theme:
         ```
 
-    ??? variable dict "`linkding_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        linkding_role_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`linkding_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        linkding_role_traefik_api_middleware:
-        ```
-
-    ??? variable string "`linkding_role_traefik_api_middleware_http`"
-
-        ```yaml
-        # Type: string
-        linkding_role_traefik_api_middleware_http:
-        ```
-
     ??? variable bool "`linkding_role_traefik_autodetect_enabled`"
 
         ```yaml
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         linkding_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`linkding_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        linkding_role_traefik_certresolver:
         ```
 
     ??? variable bool "`linkding_role_traefik_crowdsec_enabled`"
@@ -1162,13 +1120,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkding_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`linkding_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        linkding_role_web_domain:
-        ```
-
     ??? variable list "`linkding_role_web_fqdn_override`"
 
         ```yaml
@@ -1240,19 +1191,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         linkding_role_web_serverstransport:
-        ```
-
-    ??? variable string "`linkding_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        linkding_role_web_subdomain:
-        ```
-
-    ??? variable string "`linkding_role_web_url`"
-
-        ```yaml
-        # Type: string
-        linkding_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

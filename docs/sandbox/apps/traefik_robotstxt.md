@@ -809,18 +809,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_robotstxt_role_docker_controller: true
         ```
 
-    ??? variable string "`traefik_robotstxt_role_docker_image_repo`"
+    ??? variable list "`traefik_robotstxt_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        traefik_robotstxt_role_docker_image_repo:
-        ```
-
-    ??? variable string "`traefik_robotstxt_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        traefik_robotstxt_role_docker_image_tag:
+        # Type: list
+        traefik_robotstxt_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`traefik_robotstxt_role_docker_volumes_download`"

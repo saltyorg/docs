@@ -933,18 +933,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grocy_role_docker_controller: true
         ```
 
-    ??? variable string "`grocy_role_docker_image_repo`"
+    ??? variable list "`grocy_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        grocy_role_docker_image_repo:
-        ```
-
-    ??? variable string "`grocy_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        grocy_role_docker_image_tag:
+        # Type: list
+        grocy_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`grocy_role_docker_volumes_download`"
@@ -952,13 +945,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         grocy_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`grocy_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        grocy_role_paths_location:
         ```
 
     ??? variable string "`grocy_role_themepark_addons`"
@@ -982,13 +968,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grocy_role_themepark_theme:
         ```
 
-    ??? variable dict "`grocy_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        grocy_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`grocy_role_traefik_api_middleware`"
 
         ```yaml
@@ -1009,13 +988,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         grocy_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`grocy_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        grocy_role_traefik_certresolver:
         ```
 
     ??? variable bool "`grocy_role_traefik_crowdsec_enabled`"
@@ -1136,13 +1108,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grocy_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`grocy_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        grocy_role_web_domain:
-        ```
-
     ??? variable list "`grocy_role_web_fqdn_override`"
 
         ```yaml
@@ -1214,12 +1179,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         grocy_role_web_serverstransport:
-        ```
-
-    ??? variable string "`grocy_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        grocy_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -272,13 +272,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cockpit_role_traefik_autodetect_enabled: false
         ```
 
-    ??? variable string "`cockpit_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_traefik_certresolver:
-        ```
-
     ??? variable bool "`cockpit_role_traefik_crowdsec_enabled`"
 
         ```yaml
@@ -397,13 +390,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cockpit_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`cockpit_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_web_domain:
-        ```
-
     ??? variable list "`cockpit_role_web_fqdn_override`"
 
         ```yaml
@@ -475,12 +461,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         cockpit_role_web_serverstransport:
-        ```
-
-    ??? variable string "`cockpit_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        cockpit_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

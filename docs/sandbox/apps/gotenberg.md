@@ -805,18 +805,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         gotenberg_role_docker_controller: true
         ```
 
-    ??? variable string "`gotenberg_role_docker_image_repo`"
+    ??? variable list "`gotenberg_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        gotenberg_role_docker_image_repo:
-        ```
-
-    ??? variable string "`gotenberg_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        gotenberg_role_docker_image_tag:
+        # Type: list
+        gotenberg_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`gotenberg_role_docker_volumes_download`"

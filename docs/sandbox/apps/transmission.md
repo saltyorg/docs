@@ -1586,40 +1586,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmission2_docker_controller: true
         ```
 
-    ??? variable string "`transmission_role_docker_image_repo`{ .sb-show-on-unchecked }`transmission2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`transmission_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`transmission2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_docker_image_repo:
+        # Type: list
+        transmission_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_docker_image_repo:
-        ```
-
-    ??? variable string "`transmission_role_docker_image_tag`{ .sb-show-on-unchecked }`transmission2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_docker_image_tag:
-        ```
-
-    ??? variable string "`transmission_role_docker_ports_51413`{ .sb-show-on-unchecked }`transmission2_docker_ports_51413`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        transmission_role_docker_ports_51413:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        transmission2_docker_ports_51413:
+        # Type: list
+        transmission2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`transmission_role_docker_volumes_download`{ .sb-show-on-unchecked }`transmission2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1670,18 +1646,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmission2_themepark_theme:
         ```
 
-    ??? variable dict "`transmission_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`transmission2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        transmission_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        transmission2_traefik_api_endpoint:
-        ```
-
     ??? variable string "`transmission_role_traefik_api_middleware`{ .sb-show-on-unchecked }`transmission2_traefik_api_middleware`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1718,18 +1682,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         transmission2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`transmission_role_traefik_certresolver`{ .sb-show-on-unchecked }`transmission2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_traefik_certresolver:
         ```
 
     ??? variable bool "`transmission_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`transmission2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -1936,18 +1888,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmission2_web_api_serverstransport:
         ```
 
-    ??? variable string "`transmission_role_web_domain`{ .sb-show-on-unchecked }`transmission2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_web_domain:
-        ```
-
     ??? variable list "`transmission_role_web_fqdn_override`{ .sb-show-on-unchecked }`transmission2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2078,17 +2018,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         transmission2_web_serverstransport:
-        ```
-
-    ??? variable string "`transmission_role_web_subdomain`{ .sb-show-on-unchecked }`transmission2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        transmission_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        transmission2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

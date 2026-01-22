@@ -1585,42 +1585,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rflood2_autoheal_enabled: true
         ```
 
-    ??? variable string "`rflood_role_config_public_trackers`{ .sb-show-on-unchecked }`rflood2_config_public_trackers`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_config_public_trackers:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_config_public_trackers:
-        ```
-
-    ??? variable string "`rflood_role_config_rflood_rc_settings_custom`{ .sb-show-on-unchecked }`rflood2_config_rflood_rc_settings_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_config_rflood_rc_settings_custom:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_config_rflood_rc_settings_custom:
-        ```
-
-    ??? variable string "`rflood_role_config_rflood_rc_settings_default`{ .sb-show-on-unchecked }`rflood2_config_rflood_rc_settings_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_config_rflood_rc_settings_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_config_rflood_rc_settings_default:
-        ```
-
     ??? variable string "`rflood_role_depends_on`{ .sb-show-on-unchecked }`rflood2_depends_on`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1705,52 +1669,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rflood2_docker_controller: true
         ```
 
-    ??? variable string "`rflood_role_docker_image_repo`{ .sb-show-on-unchecked }`rflood2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`rflood_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`rflood2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_docker_image_repo:
+        # Type: list
+        rflood_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_docker_image_repo:
-        ```
-
-    ??? variable string "`rflood_role_docker_image_tag`{ .sb-show-on-unchecked }`rflood2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_docker_image_tag:
-        ```
-
-    ??? variable string "`rflood_role_docker_ports_50000`{ .sb-show-on-unchecked }`rflood2_docker_ports_50000`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        rflood_role_docker_ports_50000:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        rflood2_docker_ports_50000:
-        ```
-
-    ??? variable string "`rflood_role_docker_ports_6881`{ .sb-show-on-unchecked }`rflood2_docker_ports_6881`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        rflood_role_docker_ports_6881:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        rflood2_docker_ports_6881:
+        # Type: list
+        rflood2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`rflood_role_docker_volumes_download`{ .sb-show-on-unchecked }`rflood2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1763,18 +1691,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         rflood2_docker_volumes_download:
-        ```
-
-    ??? variable string "`rflood_role_paths_location`{ .sb-show-on-unchecked }`rflood2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_paths_location:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_paths_location:
         ```
 
     ??? variable string "`rflood_role_themepark_addons`{ .sb-show-on-unchecked }`rflood2_themepark_addons`{ .sb-show-on-checked }"
@@ -1813,18 +1729,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rflood2_themepark_theme:
         ```
 
-    ??? variable dict "`rflood_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`rflood2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        rflood_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        rflood2_traefik_api_endpoint:
-        ```
-
     ??? variable string "`rflood_role_traefik_api_middleware`{ .sb-show-on-unchecked }`rflood2_traefik_api_middleware`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1861,18 +1765,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         rflood2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`rflood_role_traefik_certresolver`{ .sb-show-on-unchecked }`rflood2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_traefik_certresolver:
         ```
 
     ??? variable bool "`rflood_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`rflood2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -2079,18 +1971,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rflood2_web_api_serverstransport:
         ```
 
-    ??? variable string "`rflood_role_web_domain`{ .sb-show-on-unchecked }`rflood2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_web_domain:
-        ```
-
     ??? variable list "`rflood_role_web_fqdn_override`{ .sb-show-on-unchecked }`rflood2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2221,17 +2101,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         rflood2_web_serverstransport:
-        ```
-
-    ??? variable string "`rflood_role_web_subdomain`{ .sb-show-on-unchecked }`rflood2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

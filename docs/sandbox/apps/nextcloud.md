@@ -952,37 +952,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nextcloud_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`nextcloud_role_data_directory`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_data_directory:
-        ```
-
-    ??? variable string "`nextcloud_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        nextcloud_role_depends_on: ""
-        ```
-
-    ??? variable string "`nextcloud_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        nextcloud_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`nextcloud_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        nextcloud_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`nextcloud_role_diun_enabled`"
 
         ```yaml
@@ -1007,25 +976,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nextcloud_role_docker_controller: true
         ```
 
-    ??? variable string "`nextcloud_role_docker_env_password`"
+    ??? variable list "`nextcloud_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        nextcloud_role_docker_env_password:
-        ```
-
-    ??? variable string "`nextcloud_role_docker_image_repo`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_docker_image_repo:
-        ```
-
-    ??? variable string "`nextcloud_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_docker_image_tag:
+        # Type: list
+        nextcloud_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`nextcloud_role_docker_volumes_download`"
@@ -1033,27 +988,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         nextcloud_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`nextcloud_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_paths_location:
-        ```
-
-    ??? variable string "`nextcloud_role_php_memory_limit`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_php_memory_limit:
-        ```
-
-    ??? variable string "`nextcloud_role_php_upload_limit`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_php_upload_limit:
         ```
 
     ??? variable string "`nextcloud_role_themepark_addons`"
@@ -1077,13 +1011,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nextcloud_role_themepark_theme:
         ```
 
-    ??? variable dict "`nextcloud_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        nextcloud_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`nextcloud_role_traefik_api_middleware`"
 
         ```yaml
@@ -1104,13 +1031,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         nextcloud_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`nextcloud_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_traefik_certresolver:
         ```
 
     ??? variable bool "`nextcloud_role_traefik_crowdsec_enabled`"
@@ -1231,13 +1151,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nextcloud_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`nextcloud_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_web_domain:
-        ```
-
     ??? variable list "`nextcloud_role_web_fqdn_override`"
 
         ```yaml
@@ -1309,19 +1222,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         nextcloud_role_web_serverstransport:
-        ```
-
-    ??? variable string "`nextcloud_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_web_subdomain:
-        ```
-
-    ??? variable string "`nextcloud_role_web_url`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

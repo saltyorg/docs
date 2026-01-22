@@ -932,18 +932,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autobrr_role_docker_controller: true
         ```
 
-    ??? variable string "`autobrr_role_docker_image_repo`"
+    ??? variable list "`autobrr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        autobrr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`autobrr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_docker_image_tag:
+        # Type: list
+        autobrr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`autobrr_role_docker_volumes_download`"
@@ -974,13 +967,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autobrr_role_themepark_theme:
         ```
 
-    ??? variable dict "`autobrr_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        autobrr_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`autobrr_role_traefik_api_middleware`"
 
         ```yaml
@@ -1001,13 +987,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         autobrr_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`autobrr_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_traefik_certresolver:
         ```
 
     ??? variable bool "`autobrr_role_traefik_crowdsec_enabled`"
@@ -1128,13 +1107,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autobrr_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`autobrr_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_web_domain:
-        ```
-
     ??? variable list "`autobrr_role_web_fqdn_override`"
 
         ```yaml
@@ -1206,12 +1178,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         autobrr_role_web_serverstransport:
-        ```
-
-    ??? variable string "`autobrr_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

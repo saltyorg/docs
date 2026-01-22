@@ -1241,30 +1241,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`authentik_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        authentik_role_depends_on: ""
-        ```
-
-    ??? variable string "`authentik_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        authentik_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`authentik_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        authentik_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`authentik_role_diun_enabled`"
 
         ```yaml
@@ -1289,18 +1265,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_controller: true
         ```
 
-    ??? variable string "`authentik_role_docker_image_repo`"
+    ??? variable list "`authentik_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        authentik_role_docker_image_repo:
-        ```
-
-    ??? variable string "`authentik_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_image_tag:
+        # Type: list
+        authentik_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`authentik_role_docker_volumes_download`"
@@ -1308,90 +1277,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         authentik_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`authentik_role_email_from`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_from:
-        ```
-
-    ??? variable string "`authentik_role_email_host`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_host:
-        ```
-
-    ??? variable string "`authentik_role_email_password`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_password:
-        ```
-
-    ??? variable string "`authentik_role_email_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        authentik_role_email_port:
-        ```
-
-    ??? variable string "`authentik_role_email_ssl`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_ssl:
-        ```
-
-    ??? variable string "`authentik_role_email_timeout`"
-
-        ```yaml
-        # Type: string (quoted number)
-        authentik_role_email_timeout:
-        ```
-
-    ??? variable string "`authentik_role_email_tls`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_tls:
-        ```
-
-    ??? variable string "`authentik_role_email_username`"
-
-        ```yaml
-        # Type: string
-        authentik_role_email_username:
-        ```
-
-    ??? variable string "`authentik_role_postgres_docker_env_db`"
-
-        ```yaml
-        # Type: string
-        authentik_role_postgres_docker_env_db:
-        ```
-
-    ??? variable string "`authentik_role_postgres_name`"
-
-        ```yaml
-        # Type: string
-        authentik_role_postgres_name:
-        ```
-
-    ??? variable string "`authentik_role_postgres_password`"
-
-        ```yaml
-        # Type: string
-        authentik_role_postgres_password:
-        ```
-
-    ??? variable string "`authentik_role_postgres_user`"
-
-        ```yaml
-        # Type: string
-        authentik_role_postgres_user:
         ```
 
     ??? variable string "`authentik_role_themepark_addons`"
@@ -1415,13 +1300,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_themepark_theme:
         ```
 
-    ??? variable dict "`authentik_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        authentik_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`authentik_role_traefik_api_middleware`"
 
         ```yaml
@@ -1442,13 +1320,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         authentik_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`authentik_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        authentik_role_traefik_certresolver:
         ```
 
     ??? variable bool "`authentik_role_traefik_crowdsec_enabled`"
@@ -1569,13 +1440,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`authentik_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        authentik_role_web_domain:
-        ```
-
     ??? variable list "`authentik_role_web_fqdn_override`"
 
         ```yaml
@@ -1634,13 +1498,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`authentik_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        authentik_role_web_port:
-        ```
-
     ??? variable string "`authentik_role_web_scheme`"
 
         ```yaml
@@ -1654,12 +1511,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         authentik_role_web_serverstransport:
-        ```
-
-    ??? variable string "`authentik_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        authentik_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

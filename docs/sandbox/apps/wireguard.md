@@ -1010,13 +1010,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_diun_enabled: true
         ```
 
-    ??? variable string "`wireguard_role_dns`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_dns:
-        ```
-
     ??? variable bool "`wireguard_role_dns_enabled`"
 
         ```yaml
@@ -1033,32 +1026,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_docker_controller: true
         ```
 
-    ??? variable string "`wireguard_role_docker_image_repo`"
+    ??? variable list "`wireguard_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        wireguard_role_docker_image_repo:
-        ```
-
-    ??? variable string "`wireguard_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_docker_image_tag:
-        ```
-
-    ??? variable string "`wireguard_role_docker_sysctls_ipv4`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_docker_sysctls_ipv4:
-        ```
-
-    ??? variable string "`wireguard_role_docker_sysctls_ipv6`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_docker_sysctls_ipv6:
+        # Type: list
+        wireguard_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`wireguard_role_docker_volumes_download`"
@@ -1066,20 +1038,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         wireguard_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`wireguard_role_listen_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        wireguard_role_listen_port:
-        ```
-
-    ??? variable string "`wireguard_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_paths_location:
         ```
 
     ??? variable string "`wireguard_role_themepark_addons`"
@@ -1103,13 +1061,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_themepark_theme:
         ```
 
-    ??? variable dict "`wireguard_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        wireguard_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`wireguard_role_traefik_api_middleware`"
 
         ```yaml
@@ -1130,13 +1081,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         wireguard_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`wireguard_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_traefik_certresolver:
         ```
 
     ??? variable bool "`wireguard_role_traefik_crowdsec_enabled`"
@@ -1257,13 +1201,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`wireguard_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_web_domain:
-        ```
-
     ??? variable list "`wireguard_role_web_fqdn_override`"
 
         ```yaml
@@ -1283,13 +1220,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
 
-
-    ??? variable string "`wireguard_role_web_host`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_web_host:
-        ```
 
     ??? variable string "`wireguard_role_web_host_override`"
 
@@ -1342,12 +1272,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         wireguard_role_web_serverstransport:
-        ```
-
-    ??? variable string "`wireguard_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -972,33 +972,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`dashdot_role_always_show_percentages`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_always_show_percentages:
-        ```
-
     ??? variable bool "`dashdot_role_autoheal_enabled`"
 
         ```yaml
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         dashdot_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`dashdot_role_cpu_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_cpu_label_list:
-        ```
-
-    ??? variable string "`dashdot_role_cpu_temps`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_cpu_temps:
         ```
 
     ??? variable string "`dashdot_role_depends_on`"
@@ -1049,18 +1028,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dashdot_role_docker_controller: true
         ```
 
-    ??? variable string "`dashdot_role_docker_image_repo`"
+    ??? variable list "`dashdot_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        dashdot_role_docker_image_repo:
-        ```
-
-    ??? variable string "`dashdot_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_docker_image_tag:
+        # Type: list
+        dashdot_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`dashdot_role_docker_volumes_download`"
@@ -1068,55 +1040,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         dashdot_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`dashdot_role_gpu_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_gpu_label_list:
-        ```
-
-    ??? variable string "`dashdot_role_imperial`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_imperial:
-        ```
-
-    ??? variable string "`dashdot_role_network_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_network_label_list:
-        ```
-
-    ??? variable string "`dashdot_role_os_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_os_label_list:
-        ```
-
-    ??? variable string "`dashdot_role_ram_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_ram_label_list:
-        ```
-
-    ??? variable string "`dashdot_role_show_host`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_show_host:
-        ```
-
-    ??? variable string "`dashdot_role_storage_label_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_storage_label_list:
         ```
 
     ??? variable string "`dashdot_role_themepark_addons`"
@@ -1140,20 +1063,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dashdot_role_themepark_theme:
         ```
 
-    ??? variable string "`dashdot_role_title`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_title:
-        ```
-
-    ??? variable dict "`dashdot_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        dashdot_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`dashdot_role_traefik_api_middleware`"
 
         ```yaml
@@ -1174,13 +1083,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         dashdot_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`dashdot_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_traefik_certresolver:
         ```
 
     ??? variable bool "`dashdot_role_traefik_crowdsec_enabled`"
@@ -1301,13 +1203,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dashdot_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`dashdot_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_web_domain:
-        ```
-
     ??? variable list "`dashdot_role_web_fqdn_override`"
 
         ```yaml
@@ -1379,19 +1274,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         dashdot_role_web_serverstransport:
-        ```
-
-    ??? variable string "`dashdot_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_web_subdomain:
-        ```
-
-    ??? variable string "`dashdot_role_widget_list`"
-
-        ```yaml
-        # Type: string
-        dashdot_role_widget_list:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

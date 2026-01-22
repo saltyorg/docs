@@ -886,18 +886,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft_bedrock_role_docker_controller: true
         ```
 
-    ??? variable string "`minecraft_bedrock_role_docker_image_repo`"
+    ??? variable list "`minecraft_bedrock_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        minecraft_bedrock_role_docker_image_repo:
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_docker_image_tag:
+        # Type: list
+        minecraft_bedrock_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`minecraft_bedrock_role_docker_volumes_download`"
@@ -905,20 +898,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         minecraft_bedrock_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_paths_location:
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_version`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_version:
         ```
 
     ??? variable string "`minecraft_bedrock_role_web_api_http_port`"
@@ -961,13 +940,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         minecraft_bedrock_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_web_domain:
         ```
 
     ??? variable list "`minecraft_bedrock_role_web_fqdn_override`"
@@ -1041,12 +1013,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         minecraft_bedrock_role_web_serverstransport:
-        ```
-
-    ??? variable string "`minecraft_bedrock_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        minecraft_bedrock_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

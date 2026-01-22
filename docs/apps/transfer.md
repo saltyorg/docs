@@ -950,18 +950,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_docker_controller: true
         ```
 
-    ??? variable string "`transfer_role_docker_image_repo`"
+    ??? variable list "`transfer_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        transfer_role_docker_image_repo:
-        ```
-
-    ??? variable string "`transfer_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        transfer_role_docker_image_tag:
+        # Type: list
+        transfer_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`transfer_role_docker_volumes_download`"
@@ -992,13 +985,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_themepark_theme:
         ```
 
-    ??? variable dict "`transfer_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        transfer_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`transfer_role_traefik_api_middleware`"
 
         ```yaml
@@ -1019,13 +1005,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         transfer_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`transfer_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        transfer_role_traefik_certresolver:
         ```
 
     ??? variable bool "`transfer_role_traefik_crowdsec_enabled`"
@@ -1104,13 +1083,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`transfer_role_uploads_location`"
-
-        ```yaml
-        # Type: string
-        transfer_role_uploads_location:
-        ```
-
     ??? variable string "`transfer_role_web_api_http_port`"
 
         ```yaml
@@ -1151,13 +1123,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         transfer_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`transfer_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        transfer_role_web_domain:
         ```
 
     ??? variable list "`transfer_role_web_fqdn_override`"
@@ -1218,13 +1183,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`transfer_role_web_pass`"
-
-        ```yaml
-        # Type: string
-        transfer_role_web_pass:
-        ```
-
     ??? variable string "`transfer_role_web_scheme`"
 
         ```yaml
@@ -1238,19 +1196,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         transfer_role_web_serverstransport:
-        ```
-
-    ??? variable string "`transfer_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        transfer_role_web_subdomain:
-        ```
-
-    ??? variable string "`transfer_role_web_user`"
-
-        ```yaml
-        # Type: string
-        transfer_role_web_user:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

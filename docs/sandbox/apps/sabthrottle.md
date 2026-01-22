@@ -820,18 +820,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabthrottle_role_docker_controller: true
         ```
 
-    ??? variable string "`sabthrottle_role_docker_image_repo`"
+    ??? variable list "`sabthrottle_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        sabthrottle_role_docker_image_repo:
-        ```
-
-    ??? variable string "`sabthrottle_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_docker_image_tag:
+        # Type: list
+        sabthrottle_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`sabthrottle_role_docker_volumes_download`"
@@ -839,12 +832,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         sabthrottle_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`sabthrottle_role_paths_config_location`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_paths_config_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

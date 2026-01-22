@@ -1628,28 +1628,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_docker_controller: true
         ```
 
-    ??? variable string "`whisparr_role_docker_image_repo`{ .sb-show-on-unchecked }`whisparr2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`whisparr_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`whisparr2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_image_repo:
+        # Type: list
+        whisparr_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_image_repo:
-        ```
-
-    ??? variable string "`whisparr_role_docker_image_tag`{ .sb-show-on-unchecked }`whisparr2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_image_tag:
+        # Type: list
+        whisparr2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`whisparr_role_docker_volumes_download`{ .sb-show-on-unchecked }`whisparr2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1662,66 +1650,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         whisparr2_docker_volumes_download:
-        ```
-
-    ??? variable string "`whisparr_role_themepark_addons`{ .sb-show-on-unchecked }`whisparr2_themepark_addons`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_themepark_addons:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_themepark_addons:
-        ```
-
-    ??? variable string "`whisparr_role_themepark_app`{ .sb-show-on-unchecked }`whisparr2_themepark_app`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_themepark_app:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_themepark_app:
-        ```
-
-    ??? variable bool "`whisparr_role_themepark_enabled`{ .sb-show-on-unchecked }`whisparr2_themepark_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        whisparr_role_themepark_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        whisparr2_themepark_enabled:
-        ```
-
-    ??? variable string "`whisparr_role_themepark_theme`{ .sb-show-on-unchecked }`whisparr2_themepark_theme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_themepark_theme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_themepark_theme:
-        ```
-
-    ??? variable dict "`whisparr_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`whisparr2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        whisparr_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        whisparr2_traefik_api_endpoint:
         ```
 
     ??? variable string "`whisparr_role_traefik_api_middleware`{ .sb-show-on-unchecked }`whisparr2_traefik_api_middleware`{ .sb-show-on-checked }"
@@ -1760,18 +1688,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         whisparr2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`whisparr_role_traefik_certresolver`{ .sb-show-on-unchecked }`whisparr2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_traefik_certresolver:
         ```
 
     ??? variable bool "`whisparr_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`whisparr2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -1978,18 +1894,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_web_api_serverstransport:
         ```
 
-    ??? variable string "`whisparr_role_web_domain`{ .sb-show-on-unchecked }`whisparr2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_web_domain:
-        ```
-
     ??? variable list "`whisparr_role_web_fqdn_override`{ .sb-show-on-unchecked }`whisparr2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2120,17 +2024,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         whisparr2_web_serverstransport:
-        ```
-
-    ??? variable string "`whisparr_role_web_subdomain`{ .sb-show-on-unchecked }`whisparr2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

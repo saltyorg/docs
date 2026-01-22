@@ -1822,28 +1822,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyfin2_docker_controller: true
         ```
 
-    ??? variable string "`jellyfin_role_docker_image_repo`{ .sb-show-on-unchecked }`jellyfin2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`jellyfin_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`jellyfin2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_docker_image_repo:
+        # Type: list
+        jellyfin_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_docker_image_repo:
-        ```
-
-    ??? variable string "`jellyfin_role_docker_image_tag`{ .sb-show-on-unchecked }`jellyfin2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_docker_image_tag:
+        # Type: list
+        jellyfin2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`jellyfin_role_docker_volumes_download`{ .sb-show-on-unchecked }`jellyfin2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1856,174 +1844,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         jellyfin2_docker_volumes_download:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_custom`{ .sb-show-on-unchecked }`jellyfin2_network_settings_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_network_settings_custom:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_network_settings_custom:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_default`{ .sb-show-on-unchecked }`jellyfin2_network_settings_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_network_settings_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_network_settings_default:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_known_proxies`{ .sb-show-on-unchecked }`jellyfin2_network_settings_known_proxies`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_network_settings_known_proxies:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_network_settings_known_proxies:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_public_http_port`{ .sb-show-on-unchecked }`jellyfin2_network_settings_public_http_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        jellyfin_role_network_settings_public_http_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        jellyfin2_network_settings_public_http_port:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_network_settings_public_https_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        jellyfin_role_network_settings_public_https_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        jellyfin2_network_settings_public_https_port:
-        ```
-
-    ??? variable string "`jellyfin_role_network_settings_published_server_uri_by_subnet`{ .sb-show-on-unchecked }`jellyfin2_network_settings_published_server_uri_by_subnet`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_network_settings_published_server_uri_by_subnet:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_network_settings_published_server_uri_by_subnet:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_custom`{ .sb-show-on-unchecked }`jellyfin2_system_settings_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_custom:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_custom:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_default`{ .sb-show-on-unchecked }`jellyfin2_system_settings_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_default:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_enable_folder_view`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_folder_view`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_enable_folder_view:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_enable_folder_view:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_enable_remote_access`{ .sb-show-on-unchecked }`jellyfin2_system_settings_enable_remote_access`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_enable_remote_access:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_enable_remote_access:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_public_https_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_https_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        jellyfin_role_system_settings_public_https_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        jellyfin2_system_settings_public_https_port:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_public_port`{ .sb-show-on-unchecked }`jellyfin2_system_settings_public_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        jellyfin_role_system_settings_public_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        jellyfin2_system_settings_public_port:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_quick_connect_available`{ .sb-show-on-unchecked }`jellyfin2_system_settings_quick_connect_available`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_quick_connect_available:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_quick_connect_available:
-        ```
-
-    ??? variable string "`jellyfin_role_system_settings_server_name`{ .sb-show-on-unchecked }`jellyfin2_system_settings_server_name`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_system_settings_server_name:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_system_settings_server_name:
         ```
 
     ??? variable string "`jellyfin_role_themepark_addons`{ .sb-show-on-unchecked }`jellyfin2_themepark_addons`{ .sb-show-on-checked }"
@@ -2060,18 +1880,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         jellyfin2_themepark_theme:
-        ```
-
-    ??? variable dict "`jellyfin_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`jellyfin2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        jellyfin_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        jellyfin2_traefik_api_endpoint:
         ```
 
     ??? variable string "`jellyfin_role_traefik_api_middleware`{ .sb-show-on-unchecked }`jellyfin2_traefik_api_middleware`{ .sb-show-on-checked }"
@@ -2112,18 +1920,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyfin2_traefik_autodetect_enabled: false
         ```
 
-    ??? variable string "`jellyfin_role_traefik_certresolver`{ .sb-show-on-unchecked }`jellyfin2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_traefik_certresolver:
-        ```
-
     ??? variable bool "`jellyfin_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`jellyfin2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2150,20 +1946,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable custom error pages middleware for containers
         # Type: bool (true/false)
         jellyfin2_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`jellyfin_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`jellyfin2_traefik_gzip_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        jellyfin_role_traefik_gzip_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        jellyfin2_traefik_gzip_enabled: false
         ```
 
     ??? variable string "`jellyfin_role_traefik_middleware_http`{ .sb-show-on-unchecked }`jellyfin2_traefik_middleware_http`{ .sb-show-on-checked }"
@@ -2328,18 +2110,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyfin2_web_api_serverstransport:
         ```
 
-    ??? variable string "`jellyfin_role_web_domain`{ .sb-show-on-unchecked }`jellyfin2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_web_domain:
-        ```
-
     ??? variable list "`jellyfin_role_web_fqdn_override`{ .sb-show-on-unchecked }`jellyfin2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2470,29 +2240,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         jellyfin2_web_serverstransport:
-        ```
-
-    ??? variable string "`jellyfin_role_web_subdomain`{ .sb-show-on-unchecked }`jellyfin2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_web_subdomain:
-        ```
-
-    ??? variable string "`jellyfin_role_web_url`{ .sb-show-on-unchecked }`jellyfin2_web_url`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyfin_role_web_url:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyfin2_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

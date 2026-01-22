@@ -816,13 +816,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`recyclarr_role_cron_schedule`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_cron_schedule:
-        ```
-
     ??? variable string "`recyclarr_role_depends_on`"
 
         ```yaml
@@ -863,18 +856,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_controller: true
         ```
 
-    ??? variable string "`recyclarr_role_docker_image_repo`"
+    ??? variable list "`recyclarr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        recyclarr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`recyclarr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_docker_image_tag:
+        # Type: list
+        recyclarr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`recyclarr_role_docker_volumes_download`"
@@ -882,12 +868,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         recyclarr_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`recyclarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

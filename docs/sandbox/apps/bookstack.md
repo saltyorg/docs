@@ -908,30 +908,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bookstack_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`bookstack_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        bookstack_role_depends_on: ""
-        ```
-
-    ??? variable string "`bookstack_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        bookstack_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`bookstack_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        bookstack_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`bookstack_role_diun_enabled`"
 
         ```yaml
@@ -956,25 +932,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bookstack_role_docker_controller: true
         ```
 
-    ??? variable string "`bookstack_role_docker_env_password`"
+    ??? variable list "`bookstack_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        bookstack_role_docker_env_password:
-        ```
-
-    ??? variable string "`bookstack_role_docker_image_repo`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_docker_image_repo:
-        ```
-
-    ??? variable string "`bookstack_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_docker_image_tag:
+        # Type: list
+        bookstack_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`bookstack_role_docker_volumes_download`"
@@ -982,13 +944,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         bookstack_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`bookstack_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_paths_location:
         ```
 
     ??? variable string "`bookstack_role_themepark_addons`"
@@ -1039,13 +994,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         bookstack_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`bookstack_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_traefik_certresolver:
         ```
 
     ??? variable bool "`bookstack_role_traefik_crowdsec_enabled`"
@@ -1166,13 +1114,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bookstack_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`bookstack_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_web_domain:
-        ```
-
     ??? variable list "`bookstack_role_web_fqdn_override`"
 
         ```yaml
@@ -1244,19 +1185,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         bookstack_role_web_serverstransport:
-        ```
-
-    ??? variable string "`bookstack_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_web_subdomain:
-        ```
-
-    ??? variable string "`bookstack_role_web_url`"
-
-        ```yaml
-        # Type: string
-        bookstack_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

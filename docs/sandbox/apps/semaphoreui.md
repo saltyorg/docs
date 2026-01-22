@@ -1028,30 +1028,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         semaphoreui_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`semaphoreui_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        semaphoreui_role_depends_on: ""
-        ```
-
-    ??? variable string "`semaphoreui_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        semaphoreui_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`semaphoreui_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        semaphoreui_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`semaphoreui_role_diun_enabled`"
 
         ```yaml
@@ -1076,18 +1052,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         semaphoreui_role_docker_controller: true
         ```
 
-    ??? variable string "`semaphoreui_role_docker_image_repo`"
+    ??? variable list "`semaphoreui_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        semaphoreui_role_docker_image_repo:
-        ```
-
-    ??? variable string "`semaphoreui_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_docker_image_tag:
+        # Type: list
+        semaphoreui_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`semaphoreui_role_docker_volumes_download`"
@@ -1095,41 +1064,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         semaphoreui_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`semaphoreui_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_paths_location:
-        ```
-
-    ??? variable string "`semaphoreui_role_postgres_docker_env_db`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_postgres_docker_env_db:
-        ```
-
-    ??? variable string "`semaphoreui_role_postgres_name`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_postgres_name:
-        ```
-
-    ??? variable string "`semaphoreui_role_postgres_password`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_postgres_password:
-        ```
-
-    ??? variable string "`semaphoreui_role_postgres_user`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_postgres_user:
         ```
 
     ??? variable string "`semaphoreui_role_themepark_addons`"
@@ -1153,13 +1087,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         semaphoreui_role_themepark_theme:
         ```
 
-    ??? variable dict "`semaphoreui_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        semaphoreui_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`semaphoreui_role_traefik_api_middleware`"
 
         ```yaml
@@ -1180,13 +1107,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         semaphoreui_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`semaphoreui_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_traefik_certresolver:
         ```
 
     ??? variable bool "`semaphoreui_role_traefik_crowdsec_enabled`"
@@ -1307,13 +1227,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         semaphoreui_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`semaphoreui_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_web_domain:
-        ```
-
     ??? variable list "`semaphoreui_role_web_fqdn_override`"
 
         ```yaml
@@ -1385,12 +1298,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         semaphoreui_role_web_serverstransport:
-        ```
-
-    ??? variable string "`semaphoreui_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        semaphoreui_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

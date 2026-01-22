@@ -1003,33 +1003,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`miniflux_role_admin_password`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_admin_password:
-        ```
-
-    ??? variable string "`miniflux_role_admin_username`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_admin_username:
-        ```
-
     ??? variable bool "`miniflux_role_autoheal_enabled`"
 
         ```yaml
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         miniflux_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`miniflux_role_create_admin`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_create_admin:
         ```
 
     ??? variable string "`miniflux_role_depends_on`"
@@ -1080,18 +1059,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         miniflux_role_docker_controller: true
         ```
 
-    ??? variable string "`miniflux_role_docker_image_repo`"
+    ??? variable list "`miniflux_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        miniflux_role_docker_image_repo:
-        ```
-
-    ??? variable string "`miniflux_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_docker_image_tag:
+        # Type: list
+        miniflux_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`miniflux_role_docker_volumes_download`"
@@ -1099,41 +1071,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         miniflux_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`miniflux_role_postgres_docker_env_db`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_postgres_docker_env_db:
-        ```
-
-    ??? variable string "`miniflux_role_postgres_name`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_postgres_name:
-        ```
-
-    ??? variable string "`miniflux_role_postgres_password`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_postgres_password:
-        ```
-
-    ??? variable string "`miniflux_role_postgres_user`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_postgres_user:
-        ```
-
-    ??? variable string "`miniflux_role_run_migrations`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_run_migrations:
         ```
 
     ??? variable string "`miniflux_role_themepark_addons`"
@@ -1157,13 +1094,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         miniflux_role_themepark_theme:
         ```
 
-    ??? variable dict "`miniflux_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        miniflux_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`miniflux_role_traefik_api_middleware`"
 
         ```yaml
@@ -1184,13 +1114,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         miniflux_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`miniflux_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_traefik_certresolver:
         ```
 
     ??? variable bool "`miniflux_role_traefik_crowdsec_enabled`"
@@ -1311,13 +1234,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         miniflux_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`miniflux_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_web_domain:
-        ```
-
     ??? variable list "`miniflux_role_web_fqdn_override`"
 
         ```yaml
@@ -1389,12 +1305,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         miniflux_role_web_serverstransport:
-        ```
-
-    ??? variable string "`miniflux_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        miniflux_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

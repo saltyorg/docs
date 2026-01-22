@@ -945,18 +945,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         znc_role_docker_controller: true
         ```
 
-    ??? variable string "`znc_role_docker_image_repo`"
+    ??? variable list "`znc_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        znc_role_docker_image_repo:
-        ```
-
-    ??? variable string "`znc_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        znc_role_docker_image_tag:
+        # Type: list
+        znc_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`znc_role_docker_volumes_download`"
@@ -964,13 +957,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         znc_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`znc_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        znc_role_paths_location:
         ```
 
     ??? variable string "`znc_role_themepark_addons`"
@@ -994,13 +980,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         znc_role_themepark_theme:
         ```
 
-    ??? variable dict "`znc_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        znc_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`znc_role_traefik_api_middleware`"
 
         ```yaml
@@ -1021,13 +1000,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         znc_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`znc_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        znc_role_traefik_certresolver:
         ```
 
     ??? variable bool "`znc_role_traefik_crowdsec_enabled`"
@@ -1148,13 +1120,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         znc_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`znc_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        znc_role_web_domain:
-        ```
-
     ??? variable list "`znc_role_web_fqdn_override`"
 
         ```yaml
@@ -1213,13 +1178,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         znc_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`znc_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        znc_role_web_port:
-        ```
-
     ??? variable string "`znc_role_web_scheme`"
 
         ```yaml
@@ -1233,12 +1191,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         znc_role_web_serverstransport:
-        ```
-
-    ??? variable string "`znc_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        znc_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

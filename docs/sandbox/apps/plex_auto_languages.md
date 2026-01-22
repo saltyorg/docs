@@ -818,18 +818,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex_auto_languages_role_docker_controller: true
         ```
 
-    ??? variable string "`plex_auto_languages_role_docker_image_repo`"
+    ??? variable list "`plex_auto_languages_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        plex_auto_languages_role_docker_image_repo:
-        ```
-
-    ??? variable string "`plex_auto_languages_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_docker_image_tag:
+        # Type: list
+        plex_auto_languages_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`plex_auto_languages_role_docker_volumes_download`"
@@ -837,12 +830,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         plex_auto_languages_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`plex_auto_languages_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -947,30 +947,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`tubearchivist_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        tubearchivist_role_depends_on: ""
-        ```
-
-    ??? variable string "`tubearchivist_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        tubearchivist_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`tubearchivist_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        tubearchivist_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`tubearchivist_role_diun_enabled`"
 
         ```yaml
@@ -995,32 +971,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_controller: true
         ```
 
-    ??? variable string "`tubearchivist_role_docker_env_password`"
+    ??? variable list "`tubearchivist_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        tubearchivist_role_docker_env_password:
-        ```
-
-    ??? variable string "`tubearchivist_role_docker_envs_http_header`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_docker_envs_http_header:
-        ```
-
-    ??? variable string "`tubearchivist_role_docker_image_repo`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_docker_image_repo:
-        ```
-
-    ??? variable string "`tubearchivist_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_docker_image_tag:
+        # Type: list
+        tubearchivist_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tubearchivist_role_docker_volumes_download`"
@@ -1028,27 +983,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         tubearchivist_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`tubearchivist_role_enable_cast`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_enable_cast:
-        ```
-
-    ??? variable string "`tubearchivist_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_paths_downloads_location:
-        ```
-
-    ??? variable string "`tubearchivist_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_paths_location:
         ```
 
     ??? variable string "`tubearchivist_role_themepark_addons`"
@@ -1072,13 +1006,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_themepark_theme:
         ```
 
-    ??? variable dict "`tubearchivist_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        tubearchivist_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`tubearchivist_role_traefik_api_middleware`"
 
         ```yaml
@@ -1099,13 +1026,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         tubearchivist_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`tubearchivist_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_traefik_certresolver:
         ```
 
     ??? variable bool "`tubearchivist_role_traefik_crowdsec_enabled`"
@@ -1168,13 +1088,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_traefik_robot_enabled: true
         ```
 
-    ??? variable string "`tubearchivist_role_traefik_sso_middleware`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_traefik_sso_middleware:
-        ```
-
     ??? variable bool "`tubearchivist_role_traefik_tailscale_enabled`"
 
         ```yaml
@@ -1231,13 +1144,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         tubearchivist_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`tubearchivist_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_web_domain:
         ```
 
     ??? variable list "`tubearchivist_role_web_fqdn_override`"
@@ -1311,19 +1217,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         tubearchivist_role_web_serverstransport:
-        ```
-
-    ??? variable string "`tubearchivist_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_web_subdomain:
-        ```
-
-    ??? variable string "`tubearchivist_role_web_url`"
-
-        ```yaml
-        # Type: string
-        tubearchivist_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -1140,18 +1140,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         delugevpn_role_docker_controller: true
         ```
 
-    ??? variable string "`delugevpn_role_docker_image_repo`"
+    ??? variable list "`delugevpn_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        delugevpn_role_docker_image_repo:
-        ```
-
-    ??? variable string "`delugevpn_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_docker_image_tag:
+        # Type: list
+        delugevpn_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`delugevpn_role_docker_volumes_download`"
@@ -1159,41 +1152,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         delugevpn_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`delugevpn_role_lan_network`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_lan_network:
-        ```
-
-    ??? variable string "`delugevpn_role_log_level_daemon`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_log_level_daemon:
-        ```
-
-    ??? variable string "`delugevpn_role_log_level_web`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_log_level_web:
-        ```
-
-    ??? variable string "`delugevpn_role_name_servers`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_name_servers:
-        ```
-
-    ??? variable string "`delugevpn_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_paths_location:
         ```
 
     ??? variable string "`delugevpn_role_themepark_addons`"
@@ -1217,13 +1175,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         delugevpn_role_themepark_theme:
         ```
 
-    ??? variable dict "`delugevpn_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        delugevpn_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`delugevpn_role_traefik_api_middleware`"
 
         ```yaml
@@ -1244,13 +1195,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         delugevpn_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`delugevpn_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_traefik_certresolver:
         ```
 
     ??? variable bool "`delugevpn_role_traefik_crowdsec_enabled`"
@@ -1329,34 +1273,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         delugevpn_role_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`delugevpn_role_vpn_client`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_vpn_client:
-        ```
-
-    ??? variable string "`delugevpn_role_vpn_pass`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_vpn_pass:
-        ```
-
-    ??? variable string "`delugevpn_role_vpn_prov`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_vpn_prov:
-        ```
-
-    ??? variable string "`delugevpn_role_vpn_user`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_vpn_user:
-        ```
-
     ??? variable string "`delugevpn_role_web_api_http_port`"
 
         ```yaml
@@ -1397,13 +1313,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         delugevpn_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`delugevpn_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_web_domain:
         ```
 
     ??? variable list "`delugevpn_role_web_fqdn_override`"
@@ -1477,12 +1386,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         delugevpn_role_web_serverstransport:
-        ```
-
-    ??? variable string "`delugevpn_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        delugevpn_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

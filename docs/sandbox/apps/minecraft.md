@@ -1565,40 +1565,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft2_docker_controller: true
         ```
 
-    ??? variable string "`minecraft_role_docker_image_repo`{ .sb-show-on-unchecked }`minecraft2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`minecraft_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`minecraft2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_docker_image_repo:
+        # Type: list
+        minecraft_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_docker_image_repo:
-        ```
-
-    ??? variable string "`minecraft_role_docker_image_tag`{ .sb-show-on-unchecked }`minecraft2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_docker_image_tag:
-        ```
-
-    ??? variable string "`minecraft_role_docker_ports_25565`{ .sb-show-on-unchecked }`minecraft2_docker_ports_25565`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        minecraft_role_docker_ports_25565:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        minecraft2_docker_ports_25565:
+        # Type: list
+        minecraft2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`minecraft_role_docker_volumes_download`{ .sb-show-on-unchecked }`minecraft2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1611,30 +1587,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         minecraft2_docker_volumes_download:
-        ```
-
-    ??? variable bool "`minecraft_role_dynmap_router_enabled`{ .sb-show-on-unchecked }`minecraft2_dynmap_router_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        minecraft_role_dynmap_router_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        minecraft2_dynmap_router_enabled:
-        ```
-
-    ??? variable string "`minecraft_role_paths_location`{ .sb-show-on-unchecked }`minecraft2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_paths_location:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_paths_location:
         ```
 
     ??? variable string "`minecraft_role_themepark_addons`{ .sb-show-on-unchecked }`minecraft2_themepark_addons`{ .sb-show-on-checked }"
@@ -1721,18 +1673,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         minecraft2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`minecraft_role_traefik_certresolver`{ .sb-show-on-unchecked }`minecraft2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_traefik_certresolver:
         ```
 
     ??? variable bool "`minecraft_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`minecraft2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -1939,18 +1879,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft2_web_api_serverstransport:
         ```
 
-    ??? variable string "`minecraft_role_web_domain`{ .sb-show-on-unchecked }`minecraft2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_web_domain:
-        ```
-
     ??? variable list "`minecraft_role_web_fqdn_override`{ .sb-show-on-unchecked }`minecraft2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2081,17 +2009,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         minecraft2_web_serverstransport:
-        ```
-
-    ??? variable string "`minecraft_role_web_subdomain`{ .sb-show-on-unchecked }`minecraft2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -978,18 +978,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tdarr_role_docker_controller: true
         ```
 
-    ??? variable string "`tdarr_role_docker_image_repo`"
+    ??? variable list "`tdarr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        tdarr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`tdarr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_docker_image_tag:
+        # Type: list
+        tdarr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tdarr_role_docker_volumes_download`"
@@ -997,41 +990,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         tdarr_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`tdarr_role_paths_configs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_configs_location:
-        ```
-
-    ??? variable string "`tdarr_role_paths_logs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_logs_location:
-        ```
-
-    ??? variable string "`tdarr_role_paths_server_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_server_location:
-        ```
-
-    ??? variable string "`tdarr_role_paths_transcodes_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_paths_transcodes_location:
-        ```
-
-    ??? variable string "`tdarr_role_server_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        tdarr_role_server_port:
         ```
 
     ??? variable string "`tdarr_role_themepark_addons`"
@@ -1055,13 +1013,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tdarr_role_themepark_theme:
         ```
 
-    ??? variable dict "`tdarr_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        tdarr_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`tdarr_role_traefik_api_middleware`"
 
         ```yaml
@@ -1082,13 +1033,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         tdarr_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`tdarr_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_traefik_certresolver:
         ```
 
     ??? variable bool "`tdarr_role_traefik_crowdsec_enabled`"
@@ -1209,13 +1153,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tdarr_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`tdarr_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_web_domain:
-        ```
-
     ??? variable list "`tdarr_role_web_fqdn_override`"
 
         ```yaml
@@ -1287,12 +1224,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         tdarr_role_web_serverstransport:
-        ```
-
-    ??? variable string "`tdarr_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        tdarr_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

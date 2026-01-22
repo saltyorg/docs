@@ -941,18 +941,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         healthchecks_role_docker_controller: true
         ```
 
-    ??? variable string "`healthchecks_role_docker_image_repo`"
+    ??? variable list "`healthchecks_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        healthchecks_role_docker_image_repo:
-        ```
-
-    ??? variable string "`healthchecks_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_docker_image_tag:
+        # Type: list
+        healthchecks_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`healthchecks_role_docker_volumes_download`"
@@ -960,13 +953,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         healthchecks_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`healthchecks_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_paths_location:
         ```
 
     ??? variable string "`healthchecks_role_themepark_addons`"
@@ -990,13 +976,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         healthchecks_role_themepark_theme:
         ```
 
-    ??? variable dict "`healthchecks_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        healthchecks_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`healthchecks_role_traefik_api_middleware`"
 
         ```yaml
@@ -1017,13 +996,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         healthchecks_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`healthchecks_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_traefik_certresolver:
         ```
 
     ??? variable bool "`healthchecks_role_traefik_crowdsec_enabled`"
@@ -1144,13 +1116,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         healthchecks_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`healthchecks_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_web_domain:
-        ```
-
     ??? variable list "`healthchecks_role_web_fqdn_override`"
 
         ```yaml
@@ -1222,19 +1187,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         healthchecks_role_web_serverstransport:
-        ```
-
-    ??? variable string "`healthchecks_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_web_subdomain:
-        ```
-
-    ??? variable string "`healthchecks_role_web_url`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

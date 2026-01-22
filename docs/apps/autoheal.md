@@ -813,6 +813,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoheal_role_docker_controller: true
         ```
 
+    ??? variable list "`autoheal_role_docker_networks_alias_custom`"
+
+        ```yaml
+        # Type: list
+        autoheal_role_docker_networks_alias_custom:
+        ```
+
     ??? variable bool "`autoheal_role_docker_volumes_download`"
 
         ```yaml

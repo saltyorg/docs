@@ -920,18 +920,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         barcodebuddy_role_docker_controller: true
         ```
 
-    ??? variable string "`barcodebuddy_role_docker_image_repo`"
+    ??? variable list "`barcodebuddy_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        barcodebuddy_role_docker_image_repo:
-        ```
-
-    ??? variable string "`barcodebuddy_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_docker_image_tag:
+        # Type: list
+        barcodebuddy_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`barcodebuddy_role_docker_volumes_download`"
@@ -939,13 +932,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         barcodebuddy_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`barcodebuddy_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_paths_location:
         ```
 
     ??? variable string "`barcodebuddy_role_themepark_addons`"
@@ -996,13 +982,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         barcodebuddy_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`barcodebuddy_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_traefik_certresolver:
         ```
 
     ??? variable bool "`barcodebuddy_role_traefik_crowdsec_enabled`"
@@ -1123,13 +1102,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         barcodebuddy_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`barcodebuddy_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_web_domain:
-        ```
-
     ??? variable list "`barcodebuddy_role_web_fqdn_override`"
 
         ```yaml
@@ -1201,12 +1173,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         barcodebuddy_role_web_serverstransport:
-        ```
-
-    ??? variable string "`barcodebuddy_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        barcodebuddy_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

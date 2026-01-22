@@ -815,18 +815,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         flaresolverr_role_docker_controller: true
         ```
 
-    ??? variable string "`flaresolverr_role_docker_image_repo`"
+    ??? variable list "`flaresolverr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        flaresolverr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`flaresolverr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        flaresolverr_role_docker_image_tag:
+        # Type: list
+        flaresolverr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`flaresolverr_role_docker_volumes_download`"

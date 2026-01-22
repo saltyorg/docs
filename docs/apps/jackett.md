@@ -1050,18 +1050,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jackett_role_docker_controller: true
         ```
 
-    ??? variable string "`jackett_role_docker_image_repo`"
+    ??? variable list "`jackett_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        jackett_role_docker_image_repo:
-        ```
-
-    ??? variable string "`jackett_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        jackett_role_docker_image_tag:
+        # Type: list
+        jackett_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`jackett_role_docker_volumes_download`"
@@ -1069,41 +1062,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         jackett_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`jackett_role_themepark_addons`"
-
-        ```yaml
-        # Type: string
-        jackett_role_themepark_addons:
-        ```
-
-    ??? variable string "`jackett_role_themepark_app`"
-
-        ```yaml
-        # Type: string
-        jackett_role_themepark_app:
-        ```
-
-    ??? variable bool "`jackett_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        jackett_role_themepark_enabled:
-        ```
-
-    ??? variable string "`jackett_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        jackett_role_themepark_theme:
-        ```
-
-    ??? variable dict "`jackett_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        jackett_role_traefik_api_endpoint:
         ```
 
     ??? variable string "`jackett_role_traefik_api_middleware`"
@@ -1126,13 +1084,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         jackett_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`jackett_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        jackett_role_traefik_certresolver:
         ```
 
     ??? variable bool "`jackett_role_traefik_crowdsec_enabled`"
@@ -1253,13 +1204,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jackett_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`jackett_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        jackett_role_web_domain:
-        ```
-
     ??? variable list "`jackett_role_web_fqdn_override`"
 
         ```yaml
@@ -1331,12 +1275,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         jackett_role_web_serverstransport:
-        ```
-
-    ??? variable string "`jackett_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        jackett_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

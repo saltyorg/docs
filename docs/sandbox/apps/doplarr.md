@@ -974,34 +974,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         doplarr_role_depends_on_healthchecks:
         ```
 
-    ??? variable string "`doplarr_role_discord_max_results`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_discord_max_results:
-        ```
-
-    ??? variable string "`doplarr_role_discord_requested_msg_style`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_discord_requested_msg_style:
-        ```
-
-    ??? variable string "`doplarr_role_discord_role_id`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_discord_role_id:
-        ```
-
-    ??? variable string "`doplarr_role_discord_token`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_discord_token:
-        ```
-
     ??? variable bool "`doplarr_role_diun_enabled`"
 
         ```yaml
@@ -1018,18 +990,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         doplarr_role_docker_controller: true
         ```
 
-    ??? variable string "`doplarr_role_docker_image_repo`"
+    ??? variable list "`doplarr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        doplarr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`doplarr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_docker_image_tag:
+        # Type: list
+        doplarr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`doplarr_role_docker_volumes_download`"
@@ -1037,89 +1002,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         doplarr_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`doplarr_role_log_level`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_log_level:
-        ```
-
-    ??? variable string "`doplarr_role_overseer_default_id`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_overseer_default_id:
-        ```
-
-    ??? variable string "`doplarr_role_overseerr_api`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_overseerr_api:
-        ```
-
-    ??? variable string "`doplarr_role_overseerr_url`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_overseerr_url:
-        ```
-
-    ??? variable string "`doplarr_role_partial_seasons`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_partial_seasons:
-        ```
-
-    ??? variable string "`doplarr_role_radarr_api`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_radarr_api:
-        ```
-
-    ??? variable string "`doplarr_role_radarr_quality_profile`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_radarr_quality_profile:
-        ```
-
-    ??? variable string "`doplarr_role_radarr_url`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_radarr_url:
-        ```
-
-    ??? variable string "`doplarr_role_sonarr_api`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_sonarr_api:
-        ```
-
-    ??? variable string "`doplarr_role_sonarr_language_profile`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_sonarr_language_profile:
-        ```
-
-    ??? variable string "`doplarr_role_sonarr_quality_profile`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_sonarr_quality_profile:
-        ```
-
-    ??? variable string "`doplarr_role_sonarr_url`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_sonarr_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -1199,34 +1199,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`nzbget_role_config_existing_installs_settings_custom`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_config_existing_installs_settings_custom:
-        ```
-
-    ??? variable string "`nzbget_role_config_existing_installs_settings_default`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_config_existing_installs_settings_default:
-        ```
-
-    ??? variable string "`nzbget_role_config_new_installs_settings_custom`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_config_new_installs_settings_custom:
-        ```
-
-    ??? variable string "`nzbget_role_config_new_installs_settings_default`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_config_new_installs_settings_default:
-        ```
-
     ??? variable string "`nzbget_role_depends_on`"
 
         ```yaml
@@ -1275,18 +1247,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_docker_controller: true
         ```
 
-    ??? variable string "`nzbget_role_docker_image_repo`"
+    ??? variable list "`nzbget_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        nzbget_role_docker_image_repo:
-        ```
-
-    ??? variable string "`nzbget_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_docker_image_tag:
+        # Type: list
+        nzbget_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`nzbget_role_docker_volumes_download`"
@@ -1294,83 +1259,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         nzbget_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_direct_downloads_custom`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_direct_downloads_custom:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_direct_downloads_default`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_direct_downloads_default:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_local_copy_custom`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_local_copy_custom:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_local_copy_default`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_local_copy_default:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_repos_custom`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_repos_custom:
-        ```
-
-    ??? variable string "`nzbget_role_scripts_repos_default`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_scripts_repos_default:
-        ```
-
-    ??? variable string "`nzbget_role_themepark_addons`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_themepark_addons:
-        ```
-
-    ??? variable string "`nzbget_role_themepark_app`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_themepark_app:
-        ```
-
-    ??? variable bool "`nzbget_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        nzbget_role_themepark_enabled:
-        ```
-
-    ??? variable string "`nzbget_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_themepark_theme:
-        ```
-
-    ??? variable dict "`nzbget_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        nzbget_role_traefik_api_endpoint:
         ```
 
     ??? variable string "`nzbget_role_traefik_api_middleware`"
@@ -1393,13 +1281,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         nzbget_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`nzbget_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_traefik_certresolver:
         ```
 
     ??? variable bool "`nzbget_role_traefik_crowdsec_enabled`"
@@ -1520,13 +1401,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`nzbget_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_web_domain:
-        ```
-
     ??? variable list "`nzbget_role_web_fqdn_override`"
 
         ```yaml
@@ -1585,20 +1459,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`nzbget_role_web_login`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_web_login:
-        ```
-
-    ??? variable string "`nzbget_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        nzbget_role_web_port:
-        ```
-
     ??? variable string "`nzbget_role_web_scheme`"
 
         ```yaml
@@ -1612,12 +1472,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         nzbget_role_web_serverstransport:
-        ```
-
-    ??? variable string "`nzbget_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        nzbget_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -805,18 +805,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tika_role_docker_controller: true
         ```
 
-    ??? variable string "`tika_role_docker_image_repo`"
+    ??? variable list "`tika_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        tika_role_docker_image_repo:
-        ```
-
-    ??? variable string "`tika_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        tika_role_docker_image_tag:
+        # Type: list
+        tika_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tika_role_docker_volumes_download`"

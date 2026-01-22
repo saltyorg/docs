@@ -964,18 +964,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         speedtest_role_docker_controller: true
         ```
 
-    ??? variable string "`speedtest_role_docker_image_repo`"
+    ??? variable list "`speedtest_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        speedtest_role_docker_image_repo:
-        ```
-
-    ??? variable string "`speedtest_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_docker_image_tag:
+        # Type: list
+        speedtest_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`speedtest_role_docker_volumes_download`"
@@ -983,13 +976,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         speedtest_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`speedtest_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_paths_location:
         ```
 
     ??? variable string "`speedtest_role_themepark_addons`"
@@ -1004,34 +990,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         speedtest_role_themepark_app:
-        ```
-
-    ??? variable string "`speedtest_role_themepark_domain`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_themepark_domain:
-        ```
-
-    ??? variable bool "`speedtest_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        speedtest_role_themepark_enabled:
-        ```
-
-    ??? variable string "`speedtest_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_themepark_theme:
-        ```
-
-    ??? variable dict "`speedtest_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        speedtest_role_traefik_api_endpoint:
         ```
 
     ??? variable string "`speedtest_role_traefik_api_middleware`"
@@ -1054,13 +1012,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         speedtest_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`speedtest_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_traefik_certresolver:
         ```
 
     ??? variable bool "`speedtest_role_traefik_crowdsec_enabled`"
@@ -1181,13 +1132,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         speedtest_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`speedtest_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_web_domain:
-        ```
-
     ??? variable list "`speedtest_role_web_fqdn_override`"
 
         ```yaml
@@ -1259,12 +1203,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         speedtest_role_web_serverstransport:
-        ```
-
-    ??? variable string "`speedtest_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

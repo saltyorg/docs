@@ -817,18 +817,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbthrottle_role_docker_controller: true
         ```
 
-    ??? variable string "`nzbthrottle_role_docker_image_repo`"
+    ??? variable list "`nzbthrottle_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        nzbthrottle_role_docker_image_repo:
-        ```
-
-    ??? variable string "`nzbthrottle_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        nzbthrottle_role_docker_image_tag:
+        # Type: list
+        nzbthrottle_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`nzbthrottle_role_docker_volumes_download`"

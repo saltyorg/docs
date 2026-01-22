@@ -924,18 +924,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         scrutiny_role_docker_controller: true
         ```
 
-    ??? variable string "`scrutiny_role_docker_image_repo`"
+    ??? variable list "`scrutiny_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        scrutiny_role_docker_image_repo:
-        ```
-
-    ??? variable string "`scrutiny_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_docker_image_tag:
+        # Type: list
+        scrutiny_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`scrutiny_role_docker_volumes_download`"
@@ -943,13 +936,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         scrutiny_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`scrutiny_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_paths_location:
         ```
 
     ??? variable string "`scrutiny_role_themepark_addons`"
@@ -1000,13 +986,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         scrutiny_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`scrutiny_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_traefik_certresolver:
         ```
 
     ??? variable bool "`scrutiny_role_traefik_crowdsec_enabled`"
@@ -1127,13 +1106,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         scrutiny_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`scrutiny_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_web_domain:
-        ```
-
     ??? variable list "`scrutiny_role_web_fqdn_override`"
 
         ```yaml
@@ -1205,12 +1177,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         scrutiny_role_web_serverstransport:
-        ```
-
-    ??? variable string "`scrutiny_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        scrutiny_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

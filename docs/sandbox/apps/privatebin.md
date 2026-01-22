@@ -945,11 +945,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         privatebin_role_docker_controller: true
         ```
 
-    ??? variable string "`privatebin_role_docker_image_tag`"
+    ??? variable list "`privatebin_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        privatebin_role_docker_image_tag:
+        # Type: list
+        privatebin_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`privatebin_role_docker_volumes_download`"
@@ -957,13 +957,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         privatebin_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`privatebin_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_paths_location:
         ```
 
     ??? variable string "`privatebin_role_themepark_addons`"
@@ -987,13 +980,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         privatebin_role_themepark_theme:
         ```
 
-    ??? variable dict "`privatebin_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        privatebin_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`privatebin_role_traefik_api_middleware`"
 
         ```yaml
@@ -1014,13 +1000,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         privatebin_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`privatebin_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_traefik_certresolver:
         ```
 
     ??? variable bool "`privatebin_role_traefik_crowdsec_enabled`"
@@ -1141,13 +1120,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         privatebin_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`privatebin_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_web_domain:
-        ```
-
     ??? variable list "`privatebin_role_web_fqdn_override`"
 
         ```yaml
@@ -1219,12 +1191,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         privatebin_role_web_serverstransport:
-        ```
-
-    ??? variable string "`privatebin_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

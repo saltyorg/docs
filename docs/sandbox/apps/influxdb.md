@@ -803,18 +803,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         influxdb_role_docker_controller: true
         ```
 
-    ??? variable string "`influxdb_role_docker_image_repo`"
+    ??? variable list "`influxdb_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        influxdb_role_docker_image_repo:
-        ```
-
-    ??? variable string "`influxdb_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        influxdb_role_docker_image_tag:
+        # Type: list
+        influxdb_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`influxdb_role_docker_volumes_download`"
@@ -822,12 +815,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         influxdb_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`influxdb_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        influxdb_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

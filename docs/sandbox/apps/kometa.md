@@ -1369,28 +1369,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kometa2_docker_controller: true
         ```
 
-    ??? variable string "`kometa_role_docker_image_repo`{ .sb-show-on-unchecked }`kometa2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`kometa_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`kometa2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_docker_image_repo:
+        # Type: list
+        kometa_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_docker_image_repo:
-        ```
-
-    ??? variable string "`kometa_role_docker_image_tag`{ .sb-show-on-unchecked }`kometa2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_docker_image_tag:
+        # Type: list
+        kometa2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`kometa_role_docker_volumes_download`{ .sb-show-on-unchecked }`kometa2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1403,29 +1391,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         kometa2_docker_volumes_download:
-        ```
-
-    ??? variable string "`kometa_role_paths_location`{ .sb-show-on-unchecked }`kometa2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_paths_location:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_paths_location:
-        ```
-
-    ??? variable string "`kometa_role_time`{ .sb-show-on-unchecked }`kometa2_time`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_time:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_time:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

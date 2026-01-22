@@ -1856,43 +1856,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`authelia_role_authentication_backend`"
-
-        ```yaml
-        # Type: string
-        authelia_role_authentication_backend:
-        ```
-
     ??? variable bool "`authelia_role_autoheal_enabled`"
 
         ```yaml
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         authelia_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`authelia_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        authelia_role_depends_on: ""
-        ```
-
-    ??? variable string "`authelia_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        authelia_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`authelia_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        authelia_role_depends_on_healthchecks:
         ```
 
     ??? variable bool "`authelia_role_diun_enabled`"
@@ -1919,18 +1888,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authelia_role_docker_controller: true
         ```
 
-    ??? variable string "`authelia_role_docker_image_repo`"
+    ??? variable list "`authelia_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        authelia_role_docker_image_repo:
-        ```
-
-    ??? variable string "`authelia_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_image_tag:
+        # Type: list
+        authelia_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`authelia_role_docker_volumes_download`"
@@ -1961,13 +1923,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authelia_role_themepark_theme:
         ```
 
-    ??? variable dict "`authelia_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        authelia_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`authelia_role_traefik_api_middleware`"
 
         ```yaml
@@ -1988,13 +1943,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         authelia_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`authelia_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        authelia_role_traefik_certresolver:
         ```
 
     ??? variable bool "`authelia_role_traefik_crowdsec_enabled`"
@@ -2115,13 +2063,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authelia_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`authelia_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        authelia_role_web_domain:
-        ```
-
     ??? variable list "`authelia_role_web_fqdn_override`"
 
         ```yaml
@@ -2193,12 +2134,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         authelia_role_web_serverstransport:
-        ```
-
-    ??? variable string "`authelia_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        authelia_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

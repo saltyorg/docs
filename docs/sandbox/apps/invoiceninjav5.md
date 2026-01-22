@@ -893,43 +893,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`invoiceninjav5_role_app_key`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_app_key:
-        ```
-
     ??? variable bool "`invoiceninjav5_role_autoheal_enabled`"
 
         ```yaml
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         invoiceninjav5_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`invoiceninjav5_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        invoiceninjav5_role_depends_on: ""
-        ```
-
-    ??? variable string "`invoiceninjav5_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        invoiceninjav5_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`invoiceninjav5_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        invoiceninjav5_role_depends_on_healthchecks:
         ```
 
     ??? variable bool "`invoiceninjav5_role_diun_enabled`"
@@ -956,18 +925,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_role_docker_controller: true
         ```
 
-    ??? variable string "`invoiceninjav5_role_docker_image_repo`"
+    ??? variable list "`invoiceninjav5_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        invoiceninjav5_role_docker_image_repo:
-        ```
-
-    ??? variable string "`invoiceninjav5_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_docker_image_tag:
+        # Type: list
+        invoiceninjav5_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`invoiceninjav5_role_docker_volumes_download`"
@@ -975,34 +937,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         invoiceninjav5_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`invoiceninjav5_role_nginx_web_domain`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_nginx_web_domain:
-        ```
-
-    ??? variable string "`invoiceninjav5_role_nginx_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_nginx_web_subdomain:
-        ```
-
-    ??? variable string "`invoiceninjav5_role_nginx_web_url`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_nginx_web_url:
-        ```
-
-    ??? variable string "`invoiceninjav5_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_paths_location:
         ```
 
     ??? variable string "`invoiceninjav5_role_web_api_http_port`"

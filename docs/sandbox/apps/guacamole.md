@@ -1031,13 +1031,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         guacamole_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`guacamole_role_cas_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_cas_enable:
-        ```
-
     ??? variable string "`guacamole_role_depends_on`"
 
         ```yaml
@@ -1086,18 +1079,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         guacamole_role_docker_controller: true
         ```
 
-    ??? variable string "`guacamole_role_docker_image_repo`"
+    ??? variable list "`guacamole_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        guacamole_role_docker_image_repo:
-        ```
-
-    ??? variable string "`guacamole_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_docker_image_tag:
+        # Type: list
+        guacamole_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`guacamole_role_docker_volumes_download`"
@@ -1105,55 +1091,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         guacamole_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`guacamole_role_duo_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_duo_enable:
-        ```
-
-    ??? variable string "`guacamole_role_header_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_header_enable:
-        ```
-
-    ??? variable string "`guacamole_role_ldap_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_ldap_enable:
-        ```
-
-    ??? variable string "`guacamole_role_openid_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_openid_enable:
-        ```
-
-    ??? variable string "`guacamole_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_paths_location:
-        ```
-
-    ??? variable string "`guacamole_role_radius_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_radius_enable:
-        ```
-
-    ??? variable string "`guacamole_role_saml_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_saml_enable:
         ```
 
     ??? variable string "`guacamole_role_themepark_addons`"
@@ -1177,20 +1114,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         guacamole_role_themepark_theme:
         ```
 
-    ??? variable string "`guacamole_role_totp_enable`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_totp_enable:
-        ```
-
-    ??? variable dict "`guacamole_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        guacamole_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`guacamole_role_traefik_api_middleware`"
 
         ```yaml
@@ -1211,13 +1134,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         guacamole_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`guacamole_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_traefik_certresolver:
         ```
 
     ??? variable bool "`guacamole_role_traefik_crowdsec_enabled`"
@@ -1338,13 +1254,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         guacamole_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`guacamole_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_web_domain:
-        ```
-
     ??? variable list "`guacamole_role_web_fqdn_override`"
 
         ```yaml
@@ -1416,12 +1325,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         guacamole_role_web_serverstransport:
-        ```
-
-    ??? variable string "`guacamole_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        guacamole_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

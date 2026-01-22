@@ -925,30 +925,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         krusader_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`krusader_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        krusader_role_depends_on: ""
-        ```
-
-    ??? variable string "`krusader_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        krusader_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`krusader_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        krusader_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`krusader_role_diun_enabled`"
 
         ```yaml
@@ -973,18 +949,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         krusader_role_docker_controller: true
         ```
 
-    ??? variable string "`krusader_role_docker_image_repo`"
+    ??? variable list "`krusader_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        krusader_role_docker_image_repo:
-        ```
-
-    ??? variable string "`krusader_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        krusader_role_docker_image_tag:
+        # Type: list
+        krusader_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`krusader_role_docker_volumes_download`"
@@ -992,13 +961,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         krusader_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`krusader_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        krusader_role_paths_location:
         ```
 
     ??? variable string "`krusader_role_themepark_addons`"
@@ -1022,13 +984,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         krusader_role_themepark_theme:
         ```
 
-    ??? variable dict "`krusader_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        krusader_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`krusader_role_traefik_api_middleware`"
 
         ```yaml
@@ -1049,13 +1004,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         krusader_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`krusader_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        krusader_role_traefik_certresolver:
         ```
 
     ??? variable bool "`krusader_role_traefik_crowdsec_enabled`"
@@ -1176,13 +1124,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         krusader_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`krusader_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        krusader_role_web_domain:
-        ```
-
     ??? variable list "`krusader_role_web_fqdn_override`"
 
         ```yaml
@@ -1254,12 +1195,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         krusader_role_web_serverstransport:
-        ```
-
-    ??? variable string "`krusader_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        krusader_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

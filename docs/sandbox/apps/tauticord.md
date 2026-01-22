@@ -825,18 +825,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tauticord_role_docker_controller: true
         ```
 
-    ??? variable string "`tauticord_role_docker_image_repo`"
+    ??? variable list "`tauticord_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        tauticord_role_docker_image_repo:
-        ```
-
-    ??? variable string "`tauticord_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        tauticord_role_docker_image_tag:
+        # Type: list
+        tauticord_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tauticord_role_docker_volumes_download`"
@@ -844,12 +837,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         tauticord_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`tauticord_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        tauticord_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

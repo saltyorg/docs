@@ -850,44 +850,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ddns_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`ddns_role_custom_urls`"
-
-        ```yaml
-        # Type: string
-        ddns_role_custom_urls:
-        ```
-
-    ??? variable string "`ddns_role_delay`"
-
-        ```yaml
-        # Type: string
-        ddns_role_delay:
-        ```
-
-    ??? variable string "`ddns_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        ddns_role_depends_on: ""
-        ```
-
-    ??? variable string "`ddns_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        ddns_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`ddns_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        ddns_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`ddns_role_diun_enabled`"
 
         ```yaml
@@ -904,18 +866,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ddns_role_docker_controller: true
         ```
 
-    ??? variable string "`ddns_role_docker_image_repo`"
+    ??? variable list "`ddns_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        ddns_role_docker_image_repo:
-        ```
-
-    ??? variable string "`ddns_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        ddns_role_docker_image_tag:
+        # Type: list
+        ddns_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`ddns_role_docker_volumes_download`"

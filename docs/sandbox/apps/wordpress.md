@@ -1489,48 +1489,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_autoheal_enabled: true
         ```
 
-    ??? variable string "`wordpress_role_depends_on`{ .sb-show-on-unchecked }`wordpress2_depends_on`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # List of container dependencies that must be running before containers start
-        # Type: string
-        wordpress_role_depends_on: ""
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # List of container dependencies that must be running before containers start
-        # Type: string
-        wordpress2_depends_on: ""
-        ```
-
-    ??? variable string "`wordpress_role_depends_on_delay`{ .sb-show-on-unchecked }`wordpress2_depends_on_delay`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Delay in seconds before starting containers after dependencies are ready
-        # Type: string (quoted number)
-        wordpress_role_depends_on_delay: "0"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Delay in seconds before starting containers after dependencies are ready
-        # Type: string (quoted number)
-        wordpress2_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`wordpress_role_depends_on_healthchecks`{ .sb-show-on-unchecked }`wordpress2_depends_on_healthchecks`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        wordpress_role_depends_on_healthchecks:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        wordpress2_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`wordpress_role_diun_enabled`{ .sb-show-on-unchecked }`wordpress2_diun_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1573,28 +1531,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_docker_controller: true
         ```
 
-    ??? variable string "`wordpress_role_docker_image_repo`{ .sb-show-on-unchecked }`wordpress2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`wordpress_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`wordpress2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_docker_image_repo:
+        # Type: list
+        wordpress_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_docker_image_repo:
-        ```
-
-    ??? variable string "`wordpress_role_docker_image_tag`{ .sb-show-on-unchecked }`wordpress2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_docker_image_tag:
+        # Type: list
+        wordpress2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`wordpress_role_docker_volumes_download`{ .sb-show-on-unchecked }`wordpress2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1607,18 +1553,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         wordpress2_docker_volumes_download:
-        ```
-
-    ??? variable string "`wordpress_role_paths_location`{ .sb-show-on-unchecked }`wordpress2_paths_location`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_paths_location:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_paths_location:
         ```
 
     ??? variable string "`wordpress_role_themepark_addons`{ .sb-show-on-unchecked }`wordpress2_themepark_addons`{ .sb-show-on-checked }"
@@ -1657,18 +1591,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_themepark_theme:
         ```
 
-    ??? variable dict "`wordpress_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`wordpress2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        wordpress_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        wordpress2_traefik_api_endpoint:
-        ```
-
     ??? variable string "`wordpress_role_traefik_api_middleware`{ .sb-show-on-unchecked }`wordpress2_traefik_api_middleware`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1705,18 +1627,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for containers
         # Type: bool (true/false)
         wordpress2_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`wordpress_role_traefik_certresolver`{ .sb-show-on-unchecked }`wordpress2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_traefik_certresolver:
         ```
 
     ??? variable bool "`wordpress_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`wordpress2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
@@ -1923,18 +1833,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_web_api_serverstransport:
         ```
 
-    ??? variable string "`wordpress_role_web_domain`{ .sb-show-on-unchecked }`wordpress2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_web_domain:
-        ```
-
     ??? variable list "`wordpress_role_web_fqdn_override`{ .sb-show-on-unchecked }`wordpress2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2065,17 +1963,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         wordpress2_web_serverstransport:
-        ```
-
-    ??? variable string "`wordpress_role_web_subdomain`{ .sb-show-on-unchecked }`wordpress2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wordpress_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wordpress2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

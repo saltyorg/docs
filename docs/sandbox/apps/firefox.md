@@ -984,18 +984,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         firefox_role_docker_controller: true
         ```
 
-    ??? variable string "`firefox_role_docker_image_repo`"
+    ??? variable list "`firefox_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        firefox_role_docker_image_repo:
-        ```
-
-    ??? variable string "`firefox_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        firefox_role_docker_image_tag:
+        # Type: list
+        firefox_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`firefox_role_docker_volumes_download`"
@@ -1003,20 +996,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         firefox_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`firefox_role_paths_env_file_location`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_env_file_location:
-        ```
-
-    ??? variable string "`firefox_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        firefox_role_paths_location:
         ```
 
     ??? variable string "`firefox_role_themepark_addons`"
@@ -1040,13 +1019,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         firefox_role_themepark_theme:
         ```
 
-    ??? variable dict "`firefox_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        firefox_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`firefox_role_traefik_api_middleware`"
 
         ```yaml
@@ -1067,13 +1039,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         firefox_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`firefox_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        firefox_role_traefik_certresolver:
         ```
 
     ??? variable bool "`firefox_role_traefik_crowdsec_enabled`"
@@ -1194,13 +1159,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         firefox_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`firefox_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        firefox_role_web_domain:
-        ```
-
     ??? variable list "`firefox_role_web_fqdn_override`"
 
         ```yaml
@@ -1272,12 +1230,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         firefox_role_web_serverstransport:
-        ```
-
-    ??? variable string "`firefox_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        firefox_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

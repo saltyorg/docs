@@ -941,18 +941,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         puddletag_role_docker_controller: true
         ```
 
-    ??? variable string "`puddletag_role_docker_image_repo`"
+    ??? variable list "`puddletag_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        puddletag_role_docker_image_repo:
-        ```
-
-    ??? variable string "`puddletag_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_docker_image_tag:
+        # Type: list
+        puddletag_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`puddletag_role_docker_volumes_download`"
@@ -960,13 +953,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         puddletag_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`puddletag_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_paths_location:
         ```
 
     ??? variable string "`puddletag_role_themepark_addons`"
@@ -990,13 +976,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         puddletag_role_themepark_theme:
         ```
 
-    ??? variable dict "`puddletag_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        puddletag_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`puddletag_role_traefik_api_middleware`"
 
         ```yaml
@@ -1017,13 +996,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         puddletag_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`puddletag_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_traefik_certresolver:
         ```
 
     ??? variable bool "`puddletag_role_traefik_crowdsec_enabled`"
@@ -1144,13 +1116,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         puddletag_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`puddletag_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_web_domain:
-        ```
-
     ??? variable list "`puddletag_role_web_fqdn_override`"
 
         ```yaml
@@ -1222,12 +1187,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         puddletag_role_web_serverstransport:
-        ```
-
-    ??? variable string "`puddletag_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        puddletag_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -924,30 +924,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homepage_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`homepage_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        homepage_role_depends_on: ""
-        ```
-
-    ??? variable string "`homepage_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        homepage_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`homepage_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        homepage_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`homepage_role_diun_enabled`"
 
         ```yaml
@@ -972,18 +948,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homepage_role_docker_controller: true
         ```
 
-    ??? variable string "`homepage_role_docker_image_repo`"
+    ??? variable list "`homepage_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        homepage_role_docker_image_repo:
-        ```
-
-    ??? variable string "`homepage_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        homepage_role_docker_image_tag:
+        # Type: list
+        homepage_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`homepage_role_docker_volumes_download`"
@@ -991,13 +960,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         homepage_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`homepage_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        homepage_role_paths_location:
         ```
 
     ??? variable string "`homepage_role_themepark_addons`"
@@ -1021,13 +983,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homepage_role_themepark_theme:
         ```
 
-    ??? variable dict "`homepage_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        homepage_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`homepage_role_traefik_api_middleware`"
 
         ```yaml
@@ -1048,13 +1003,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         homepage_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`homepage_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        homepage_role_traefik_certresolver:
         ```
 
     ??? variable bool "`homepage_role_traefik_crowdsec_enabled`"
@@ -1175,13 +1123,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homepage_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`homepage_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        homepage_role_web_domain:
-        ```
-
     ??? variable list "`homepage_role_web_fqdn_override`"
 
         ```yaml
@@ -1240,13 +1181,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homepage_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`homepage_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        homepage_role_web_port:
-        ```
-
     ??? variable string "`homepage_role_web_scheme`"
 
         ```yaml
@@ -1260,12 +1194,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         homepage_role_web_serverstransport:
-        ```
-
-    ??? variable string "`homepage_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        homepage_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

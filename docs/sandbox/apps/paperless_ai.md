@@ -939,18 +939,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         paperless_ai_role_docker_controller: true
         ```
 
-    ??? variable string "`paperless_ai_role_docker_image_repo`"
+    ??? variable list "`paperless_ai_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        paperless_ai_role_docker_image_repo:
-        ```
-
-    ??? variable string "`paperless_ai_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_docker_image_tag:
+        # Type: list
+        paperless_ai_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`paperless_ai_role_docker_volumes_download`"
@@ -958,13 +951,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         paperless_ai_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`paperless_ai_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_paths_location:
         ```
 
     ??? variable string "`paperless_ai_role_themepark_addons`"
@@ -988,13 +974,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         paperless_ai_role_themepark_theme:
         ```
 
-    ??? variable dict "`paperless_ai_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        paperless_ai_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`paperless_ai_role_traefik_api_middleware`"
 
         ```yaml
@@ -1015,13 +994,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         paperless_ai_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`paperless_ai_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_traefik_certresolver:
         ```
 
     ??? variable bool "`paperless_ai_role_traefik_crowdsec_enabled`"
@@ -1142,13 +1114,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         paperless_ai_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`paperless_ai_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_web_domain:
-        ```
-
     ??? variable list "`paperless_ai_role_web_fqdn_override`"
 
         ```yaml
@@ -1220,12 +1185,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         paperless_ai_role_web_serverstransport:
-        ```
-
-    ??? variable string "`paperless_ai_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

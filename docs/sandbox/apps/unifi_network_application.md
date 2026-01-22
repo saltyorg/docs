@@ -1007,30 +1007,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`unifi_network_application_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        unifi_network_application_role_depends_on: ""
-        ```
-
-    ??? variable string "`unifi_network_application_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        unifi_network_application_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`unifi_network_application_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        unifi_network_application_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`unifi_network_application_role_diun_enabled`"
 
         ```yaml
@@ -1055,18 +1031,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_docker_controller: true
         ```
 
-    ??? variable string "`unifi_network_application_role_docker_image_repo`"
+    ??? variable list "`unifi_network_application_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        unifi_network_application_role_docker_image_repo:
-        ```
-
-    ??? variable string "`unifi_network_application_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_docker_image_tag:
+        # Type: list
+        unifi_network_application_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`unifi_network_application_role_docker_volumes_download`"
@@ -1097,13 +1066,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_themepark_theme:
         ```
 
-    ??? variable dict "`unifi_network_application_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        unifi_network_application_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`unifi_network_application_role_traefik_api_middleware`"
 
         ```yaml
@@ -1124,13 +1086,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         unifi_network_application_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`unifi_network_application_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_traefik_certresolver:
         ```
 
     ??? variable bool "`unifi_network_application_role_traefik_crowdsec_enabled`"
@@ -1251,13 +1206,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`unifi_network_application_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_web_domain:
-        ```
-
     ??? variable list "`unifi_network_application_role_web_fqdn_override`"
 
         ```yaml
@@ -1314,27 +1262,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         unifi_network_application_role_web_http_serverstransport:
-        ```
-
-    ??? variable string "`unifi_network_application_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        unifi_network_application_role_web_scheme:
-        ```
-
-    ??? variable dict "`unifi_network_application_role_web_serverstransport`"
-
-        ```yaml
-        # Type: dict/omit
-        unifi_network_application_role_web_serverstransport:
-        ```
-
-    ??? variable string "`unifi_network_application_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        unifi_network_application_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

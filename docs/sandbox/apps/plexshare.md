@@ -903,30 +903,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plexshare_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`plexshare_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        plexshare_role_depends_on: ""
-        ```
-
-    ??? variable string "`plexshare_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        plexshare_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`plexshare_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        plexshare_role_depends_on_healthchecks:
-        ```
-
     ??? variable bool "`plexshare_role_diun_enabled`"
 
         ```yaml
@@ -951,18 +927,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plexshare_role_docker_controller: true
         ```
 
-    ??? variable string "`plexshare_role_docker_image_repo`"
+    ??? variable list "`plexshare_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        plexshare_role_docker_image_repo:
-        ```
-
-    ??? variable string "`plexshare_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_docker_image_tag:
+        # Type: list
+        plexshare_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`plexshare_role_docker_volumes_download`"
@@ -993,13 +962,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plexshare_role_themepark_theme:
         ```
 
-    ??? variable dict "`plexshare_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        plexshare_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`plexshare_role_traefik_api_middleware`"
 
         ```yaml
@@ -1020,13 +982,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         plexshare_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`plexshare_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_traefik_certresolver:
         ```
 
     ??? variable bool "`plexshare_role_traefik_crowdsec_enabled`"
@@ -1147,13 +1102,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plexshare_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`plexshare_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_web_domain:
-        ```
-
     ??? variable list "`plexshare_role_web_fqdn_override`"
 
         ```yaml
@@ -1225,19 +1173,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         plexshare_role_web_serverstransport:
-        ```
-
-    ??? variable string "`plexshare_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_web_subdomain:
-        ```
-
-    ??? variable string "`plexshare_role_web_url`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_web_url:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

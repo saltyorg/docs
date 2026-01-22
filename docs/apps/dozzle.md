@@ -1025,50 +1025,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Global Override Options"
 
-    ??? variable string "`dozzle_role_additional_hosts`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_additional_hosts:
-        ```
-
-    ??? variable string "`dozzle_role_agent_hosts`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_agent_hosts:
-        ```
-
     ??? variable bool "`dozzle_role_autoheal_enabled`"
 
         ```yaml
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         dozzle_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`dozzle_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        dozzle_role_depends_on: ""
-        ```
-
-    ??? variable string "`dozzle_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        dozzle_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`dozzle_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        dozzle_role_depends_on_healthchecks:
         ```
 
     ??? variable bool "`dozzle_role_diun_enabled`"
@@ -1095,18 +1057,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_role_docker_controller: true
         ```
 
-    ??? variable string "`dozzle_role_docker_image_repo`"
+    ??? variable list "`dozzle_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        dozzle_role_docker_image_repo:
-        ```
-
-    ??? variable string "`dozzle_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_docker_image_tag:
+        # Type: list
+        dozzle_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`dozzle_role_docker_volumes_download`"
@@ -1114,41 +1069,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         dozzle_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`dozzle_role_themepark_addons`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_themepark_addons:
-        ```
-
-    ??? variable string "`dozzle_role_themepark_app`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_themepark_app:
-        ```
-
-    ??? variable bool "`dozzle_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        dozzle_role_themepark_enabled:
-        ```
-
-    ??? variable string "`dozzle_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_themepark_theme:
-        ```
-
-    ??? variable dict "`dozzle_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        dozzle_role_traefik_api_endpoint:
         ```
 
     ??? variable string "`dozzle_role_traefik_api_middleware`"
@@ -1171,13 +1091,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         dozzle_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`dozzle_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_traefik_certresolver:
         ```
 
     ??? variable bool "`dozzle_role_traefik_crowdsec_enabled`"
@@ -1240,13 +1153,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_role_traefik_robot_enabled: true
         ```
 
-    ??? variable string "`dozzle_role_traefik_sso_middleware`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_traefik_sso_middleware:
-        ```
-
     ??? variable bool "`dozzle_role_traefik_tailscale_enabled`"
 
         ```yaml
@@ -1303,13 +1209,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         dozzle_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`dozzle_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_web_domain:
         ```
 
     ??? variable list "`dozzle_role_web_fqdn_override`"
@@ -1383,12 +1282,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         dozzle_role_web_serverstransport:
-        ```
-
-    ??? variable string "`dozzle_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

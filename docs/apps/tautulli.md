@@ -1689,28 +1689,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_docker_controller: true
         ```
 
-    ??? variable string "`tautulli_role_docker_image_repo`{ .sb-show-on-unchecked }`tautulli2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`tautulli_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`tautulli2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_docker_image_repo:
+        # Type: list
+        tautulli_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_docker_image_repo:
-        ```
-
-    ??? variable string "`tautulli_role_docker_image_tag`{ .sb-show-on-unchecked }`tautulli2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_docker_image_tag:
+        # Type: list
+        tautulli2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tautulli_role_docker_volumes_download`{ .sb-show-on-unchecked }`tautulli2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -1723,66 +1711,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         tautulli2_docker_volumes_download:
-        ```
-
-    ??? variable string "`tautulli_role_themepark_addons`{ .sb-show-on-unchecked }`tautulli2_themepark_addons`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_themepark_addons:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_themepark_addons:
-        ```
-
-    ??? variable string "`tautulli_role_themepark_app`{ .sb-show-on-unchecked }`tautulli2_themepark_app`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_themepark_app:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_themepark_app:
-        ```
-
-    ??? variable bool "`tautulli_role_themepark_enabled`{ .sb-show-on-unchecked }`tautulli2_themepark_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        tautulli_role_themepark_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        tautulli2_themepark_enabled:
-        ```
-
-    ??? variable string "`tautulli_role_themepark_theme`{ .sb-show-on-unchecked }`tautulli2_themepark_theme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_themepark_theme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_themepark_theme:
-        ```
-
-    ??? variable dict "`tautulli_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`tautulli2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        tautulli_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        tautulli2_traefik_api_endpoint:
         ```
 
     ??? variable string "`tautulli_role_traefik_api_middleware`{ .sb-show-on-unchecked }`tautulli2_traefik_api_middleware`{ .sb-show-on-checked }"
@@ -1823,18 +1751,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_traefik_autodetect_enabled: false
         ```
 
-    ??? variable string "`tautulli_role_traefik_certresolver`{ .sb-show-on-unchecked }`tautulli2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_traefik_certresolver:
-        ```
-
     ??? variable bool "`tautulli_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`tautulli2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1861,20 +1777,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable custom error pages middleware for containers
         # Type: bool (true/false)
         tautulli2_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`tautulli_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`tautulli2_traefik_gzip_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        tautulli_role_traefik_gzip_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        tautulli2_traefik_gzip_enabled: false
         ```
 
     ??? variable string "`tautulli_role_traefik_middleware_http`{ .sb-show-on-unchecked }`tautulli2_traefik_middleware_http`{ .sb-show-on-checked }"
@@ -2039,18 +1941,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_web_api_serverstransport:
         ```
 
-    ??? variable string "`tautulli_role_web_domain`{ .sb-show-on-unchecked }`tautulli2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_web_domain:
-        ```
-
     ??? variable list "`tautulli_role_web_fqdn_override`{ .sb-show-on-unchecked }`tautulli2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2181,17 +2071,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         tautulli2_web_serverstransport:
-        ```
-
-    ??? variable string "`tautulli_role_web_subdomain`{ .sb-show-on-unchecked }`tautulli2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

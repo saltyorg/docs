@@ -822,18 +822,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         docker_socket_proxy_role_docker_controller: true
         ```
 
-    ??? variable string "`docker_socket_proxy_role_docker_image_repo`"
+    ??? variable list "`docker_socket_proxy_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        docker_socket_proxy_role_docker_image_repo:
-        ```
-
-    ??? variable string "`docker_socket_proxy_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        docker_socket_proxy_role_docker_image_tag:
+        # Type: list
+        docker_socket_proxy_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`docker_socket_proxy_role_docker_volumes_download`"

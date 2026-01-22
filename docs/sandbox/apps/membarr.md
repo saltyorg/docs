@@ -842,13 +842,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         membarr_role_depends_on_healthchecks:
         ```
 
-    ??? variable string "`membarr_role_discord_token`"
-
-        ```yaml
-        # Type: string
-        membarr_role_discord_token:
-        ```
-
     ??? variable bool "`membarr_role_diun_enabled`"
 
         ```yaml
@@ -865,18 +858,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         membarr_role_docker_controller: true
         ```
 
-    ??? variable string "`membarr_role_docker_image_repo`"
+    ??? variable list "`membarr_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        membarr_role_docker_image_repo:
-        ```
-
-    ??? variable string "`membarr_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        membarr_role_docker_image_tag:
+        # Type: list
+        membarr_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`membarr_role_docker_volumes_download`"
@@ -884,12 +870,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         membarr_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`membarr_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        membarr_role_paths_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

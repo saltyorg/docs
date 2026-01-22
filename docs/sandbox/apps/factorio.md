@@ -880,18 +880,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         factorio_role_docker_controller: true
         ```
 
-    ??? variable string "`factorio_role_docker_image_repo`"
+    ??? variable list "`factorio_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        factorio_role_docker_image_repo:
-        ```
-
-    ??? variable string "`factorio_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        factorio_role_docker_image_tag:
+        # Type: list
+        factorio_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`factorio_role_docker_volumes_download`"
@@ -899,13 +892,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         factorio_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`factorio_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        factorio_role_paths_location:
         ```
 
     ??? variable string "`factorio_role_web_api_http_port`"
@@ -948,13 +934,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         factorio_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`factorio_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        factorio_role_web_domain:
         ```
 
     ??? variable list "`factorio_role_web_fqdn_override`"
@@ -1028,12 +1007,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         factorio_role_web_serverstransport:
-        ```
-
-    ??? variable string "`factorio_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        factorio_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

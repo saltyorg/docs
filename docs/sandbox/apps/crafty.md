@@ -1021,18 +1021,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_controller: true
         ```
 
-    ??? variable string "`crafty_role_docker_image_repo`"
+    ??? variable list "`crafty_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        crafty_role_docker_image_repo:
-        ```
-
-    ??? variable string "`crafty_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        crafty_role_docker_image_tag:
+        # Type: list
+        crafty_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`crafty_role_docker_volumes_download`"
@@ -1040,41 +1033,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         crafty_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`crafty_role_dynmap_host`"
-
-        ```yaml
-        # Type: string
-        crafty_role_dynmap_host:
-        ```
-
-    ??? variable string "`crafty_role_dynmap_web_domain`"
-
-        ```yaml
-        # Type: string
-        crafty_role_dynmap_web_domain:
-        ```
-
-    ??? variable string "`crafty_role_dynmap_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        crafty_role_dynmap_web_port:
-        ```
-
-    ??? variable string "`crafty_role_dynmap_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        crafty_role_dynmap_web_subdomain:
-        ```
-
-    ??? variable string "`crafty_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        crafty_role_paths_location:
         ```
 
     ??? variable string "`crafty_role_themepark_addons`"
@@ -1125,13 +1083,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         crafty_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`crafty_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        crafty_role_traefik_certresolver:
         ```
 
     ??? variable bool "`crafty_role_traefik_crowdsec_enabled`"
@@ -1252,13 +1203,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`crafty_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        crafty_role_web_domain:
-        ```
-
     ??? variable list "`crafty_role_web_fqdn_override`"
 
         ```yaml
@@ -1315,27 +1259,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         crafty_role_web_http_serverstransport:
-        ```
-
-    ??? variable string "`crafty_role_web_scheme`"
-
-        ```yaml
-        # URL scheme to use for web access to the container
-        # Type: string ("http"/"https")
-        crafty_role_web_scheme:
-        ```
-
-    ??? variable dict "`crafty_role_web_serverstransport`"
-
-        ```yaml
-        # Type: dict/omit
-        crafty_role_web_serverstransport:
-        ```
-
-    ??? variable string "`crafty_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        crafty_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

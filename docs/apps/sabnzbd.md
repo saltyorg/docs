@@ -1067,20 +1067,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`sabnzbd_role_config_settings_custom`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_config_settings_custom:
-        ```
-
-    ??? variable string "`sabnzbd_role_config_settings_default`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_config_settings_default:
-        ```
-
     ??? variable string "`sabnzbd_role_depends_on`"
 
         ```yaml
@@ -1129,18 +1115,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_role_docker_controller: true
         ```
 
-    ??? variable string "`sabnzbd_role_docker_image_repo`"
+    ??? variable list "`sabnzbd_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        sabnzbd_role_docker_image_repo:
-        ```
-
-    ??? variable string "`sabnzbd_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_docker_image_tag:
+        # Type: list
+        sabnzbd_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`sabnzbd_role_docker_volumes_download`"
@@ -1148,48 +1127,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         sabnzbd_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`sabnzbd_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_paths_downloads_location:
-        ```
-
-    ??? variable string "`sabnzbd_role_themepark_addons`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_themepark_addons:
-        ```
-
-    ??? variable string "`sabnzbd_role_themepark_app`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_themepark_app:
-        ```
-
-    ??? variable bool "`sabnzbd_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        sabnzbd_role_themepark_enabled:
-        ```
-
-    ??? variable string "`sabnzbd_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_themepark_theme:
-        ```
-
-    ??? variable dict "`sabnzbd_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        sabnzbd_role_traefik_api_endpoint:
         ```
 
     ??? variable string "`sabnzbd_role_traefik_api_middleware`"
@@ -1212,13 +1149,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         sabnzbd_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`sabnzbd_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_traefik_certresolver:
         ```
 
     ??? variable bool "`sabnzbd_role_traefik_crowdsec_enabled`"
@@ -1339,13 +1269,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`sabnzbd_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_web_domain:
-        ```
-
     ??? variable list "`sabnzbd_role_web_fqdn_override`"
 
         ```yaml
@@ -1404,13 +1327,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_role_web_http_serverstransport:
         ```
 
-    ??? variable string "`sabnzbd_role_web_port`"
-
-        ```yaml
-        # Type: string (quoted number)
-        sabnzbd_role_web_port:
-        ```
-
     ??? variable string "`sabnzbd_role_web_scheme`"
 
         ```yaml
@@ -1424,12 +1340,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         sabnzbd_role_web_serverstransport:
-        ```
-
-    ??? variable string "`sabnzbd_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        sabnzbd_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

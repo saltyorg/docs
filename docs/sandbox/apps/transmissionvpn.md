@@ -1000,18 +1000,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmissionvpn_role_docker_controller: true
         ```
 
-    ??? variable string "`transmissionvpn_role_docker_image_repo`"
+    ??? variable list "`transmissionvpn_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        transmissionvpn_role_docker_image_repo:
-        ```
-
-    ??? variable string "`transmissionvpn_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_docker_image_tag:
+        # Type: list
+        transmissionvpn_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`transmissionvpn_role_docker_volumes_download`"
@@ -1019,20 +1012,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         transmissionvpn_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`transmissionvpn_role_paths_downloads_location`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_paths_downloads_location:
-        ```
-
-    ??? variable string "`transmissionvpn_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_paths_location:
         ```
 
     ??? variable string "`transmissionvpn_role_themepark_addons`"
@@ -1056,13 +1035,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmissionvpn_role_themepark_theme:
         ```
 
-    ??? variable dict "`transmissionvpn_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        transmissionvpn_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`transmissionvpn_role_traefik_api_middleware`"
 
         ```yaml
@@ -1083,13 +1055,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         transmissionvpn_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`transmissionvpn_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_traefik_certresolver:
         ```
 
     ??? variable bool "`transmissionvpn_role_traefik_crowdsec_enabled`"
@@ -1168,27 +1133,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmissionvpn_role_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`transmissionvpn_role_vpn_pass`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_vpn_pass:
-        ```
-
-    ??? variable string "`transmissionvpn_role_vpn_prov`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_vpn_prov:
-        ```
-
-    ??? variable string "`transmissionvpn_role_vpn_user`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_vpn_user:
-        ```
-
     ??? variable string "`transmissionvpn_role_web_api_http_port`"
 
         ```yaml
@@ -1229,13 +1173,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         transmissionvpn_role_web_api_serverstransport:
-        ```
-
-    ??? variable string "`transmissionvpn_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_web_domain:
         ```
 
     ??? variable list "`transmissionvpn_role_web_fqdn_override`"
@@ -1309,12 +1246,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         transmissionvpn_role_web_serverstransport:
-        ```
-
-    ??? variable string "`transmissionvpn_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -825,18 +825,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         diun_role_docker_controller: true
         ```
 
-    ??? variable string "`diun_role_docker_image_repo`"
+    ??? variable list "`diun_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        diun_role_docker_image_repo:
-        ```
-
-    ??? variable string "`diun_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_image_tag:
+        # Type: list
+        diun_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`diun_role_docker_volumes_download`"

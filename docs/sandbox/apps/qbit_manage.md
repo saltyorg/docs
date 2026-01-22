@@ -1153,18 +1153,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_docker_controller: true
         ```
 
-    ??? variable string "`qbit_manage_role_docker_image_repo`"
+    ??? variable list "`qbit_manage_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        qbit_manage_role_docker_image_repo:
-        ```
-
-    ??? variable string "`qbit_manage_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_docker_image_tag:
+        # Type: list
+        qbit_manage_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`qbit_manage_role_docker_volumes_download`"
@@ -1172,139 +1165,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         qbit_manage_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`qbit_manage_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_paths_location:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_cat_update`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_cat_update:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_config`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_config:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_cross_seed`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_cross_seed:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_debug`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_debug:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_divider`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_divider:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_dry_run`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_dry_run:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_log_level`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_log_level:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_logfile`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_logfile:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_recheck`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_recheck:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_rem_orphaned`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_rem_orphaned:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_rem_unregistered`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_rem_unregistered:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_run`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_run:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_schedule`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_schedule:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_skip_recycle`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_skip_recycle:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_tag_nohardlinks`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_tag_nohardlinks:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_tag_update`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_tag_update:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_trace`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_trace:
-        ```
-
-    ??? variable string "`qbit_manage_role_qbt_width`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_qbt_width:
         ```
 
     ??? variable string "`qbit_manage_role_themepark_addons`"
@@ -1328,13 +1188,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_themepark_theme:
         ```
 
-    ??? variable dict "`qbit_manage_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        qbit_manage_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`qbit_manage_role_traefik_api_middleware`"
 
         ```yaml
@@ -1355,13 +1208,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         qbit_manage_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`qbit_manage_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_traefik_certresolver:
         ```
 
     ??? variable bool "`qbit_manage_role_traefik_crowdsec_enabled`"
@@ -1482,13 +1328,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`qbit_manage_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_web_domain:
-        ```
-
     ??? variable list "`qbit_manage_role_web_fqdn_override`"
 
         ```yaml
@@ -1560,12 +1399,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         qbit_manage_role_web_serverstransport:
-        ```
-
-    ??? variable string "`qbit_manage_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        qbit_manage_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

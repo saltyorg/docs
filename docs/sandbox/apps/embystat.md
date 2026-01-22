@@ -918,18 +918,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         embystat_role_docker_controller: true
         ```
 
-    ??? variable string "`embystat_role_docker_image_repo`"
+    ??? variable list "`embystat_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        embystat_role_docker_image_repo:
-        ```
-
-    ??? variable string "`embystat_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        embystat_role_docker_image_tag:
+        # Type: list
+        embystat_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`embystat_role_docker_volumes_download`"
@@ -937,13 +930,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         embystat_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`embystat_role_paths_location`"
-
-        ```yaml
-        # Type: string
-        embystat_role_paths_location:
         ```
 
     ??? variable string "`embystat_role_themepark_addons`"
@@ -967,13 +953,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         embystat_role_themepark_theme:
         ```
 
-    ??? variable dict "`embystat_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        embystat_role_traefik_api_endpoint:
-        ```
-
     ??? variable string "`embystat_role_traefik_api_middleware`"
 
         ```yaml
@@ -994,13 +973,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         embystat_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`embystat_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        embystat_role_traefik_certresolver:
         ```
 
     ??? variable bool "`embystat_role_traefik_crowdsec_enabled`"
@@ -1121,13 +1093,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         embystat_role_web_api_serverstransport:
         ```
 
-    ??? variable string "`embystat_role_web_domain`"
-
-        ```yaml
-        # Type: string
-        embystat_role_web_domain:
-        ```
-
     ??? variable list "`embystat_role_web_fqdn_override`"
 
         ```yaml
@@ -1199,12 +1164,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict/omit
         embystat_role_web_serverstransport:
-        ```
-
-    ??? variable string "`embystat_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        embystat_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

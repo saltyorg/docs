@@ -832,18 +832,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         chrome_role_docker_controller: true
         ```
 
-    ??? variable string "`chrome_role_docker_image_repo`"
+    ??? variable list "`chrome_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        chrome_role_docker_image_repo:
-        ```
-
-    ??? variable string "`chrome_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        chrome_role_docker_image_tag:
+        # Type: list
+        chrome_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`chrome_role_docker_volumes_download`"

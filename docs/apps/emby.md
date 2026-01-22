@@ -1898,126 +1898,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         emby2_autoheal_enabled: true
         ```
 
-    ??? variable string "`emby_role_config_settings_custom`{ .sb-show-on-unchecked }`emby2_config_settings_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_custom:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_custom:
-        ```
-
-    ??? variable string "`emby_role_config_settings_database_cache_size_mb`{ .sb-show-on-unchecked }`emby2_config_settings_database_cache_size_mb`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_database_cache_size_mb:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_database_cache_size_mb:
-        ```
-
-    ??? variable string "`emby_role_config_settings_default`{ .sb-show-on-unchecked }`emby2_config_settings_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_default:
-        ```
-
-    ??? variable string "`emby_role_config_settings_enable_https`{ .sb-show-on-unchecked }`emby2_config_settings_enable_https`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_enable_https:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_enable_https:
-        ```
-
-    ??? variable string "`emby_role_config_settings_enable_upnp`{ .sb-show-on-unchecked }`emby2_config_settings_enable_upnp`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_enable_upnp:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_enable_upnp:
-        ```
-
-    ??? variable bool "`emby_role_config_settings_is_behind_proxy`{ .sb-show-on-unchecked }`emby2_config_settings_is_behind_proxy`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        emby_role_config_settings_is_behind_proxy:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        emby2_config_settings_is_behind_proxy:
-        ```
-
-    ??? variable string "`emby_role_config_settings_public_https_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_https_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        emby_role_config_settings_public_https_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        emby2_config_settings_public_https_port:
-        ```
-
-    ??? variable string "`emby_role_config_settings_public_port`{ .sb-show-on-unchecked }`emby2_config_settings_public_port`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string (quoted number)
-        emby_role_config_settings_public_port:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string (quoted number)
-        emby2_config_settings_public_port:
-        ```
-
-    ??? variable string "`emby_role_config_settings_require_https`{ .sb-show-on-unchecked }`emby2_config_settings_require_https`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_require_https:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_require_https:
-        ```
-
-    ??? variable string "`emby_role_config_settings_wan_ddns`{ .sb-show-on-unchecked }`emby2_config_settings_wan_ddns`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_config_settings_wan_ddns:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_config_settings_wan_ddns:
-        ```
-
     ??? variable string "`emby_role_depends_on`{ .sb-show-on-unchecked }`emby2_depends_on`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2102,28 +1982,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         emby2_docker_controller: true
         ```
 
-    ??? variable string "`emby_role_docker_image_repo`{ .sb-show-on-unchecked }`emby2_docker_image_repo`{ .sb-show-on-checked }"
+    ??? variable list "`emby_role_docker_networks_alias_custom`{ .sb-show-on-unchecked }`emby2_docker_networks_alias_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_docker_image_repo:
+        # Type: list
+        emby_role_docker_networks_alias_custom:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_docker_image_repo:
-        ```
-
-    ??? variable string "`emby_role_docker_image_tag`{ .sb-show-on-unchecked }`emby2_docker_image_tag`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_docker_image_tag:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_docker_image_tag:
+        # Type: list
+        emby2_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`emby_role_docker_volumes_download`{ .sb-show-on-unchecked }`emby2_docker_volumes_download`{ .sb-show-on-checked }"
@@ -2136,66 +2004,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         emby2_docker_volumes_download:
-        ```
-
-    ??? variable string "`emby_role_themepark_addons`{ .sb-show-on-unchecked }`emby2_themepark_addons`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_themepark_addons:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_themepark_addons:
-        ```
-
-    ??? variable string "`emby_role_themepark_app`{ .sb-show-on-unchecked }`emby2_themepark_app`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_themepark_app:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_themepark_app:
-        ```
-
-    ??? variable bool "`emby_role_themepark_enabled`{ .sb-show-on-unchecked }`emby2_themepark_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        emby_role_themepark_enabled:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        emby2_themepark_enabled:
-        ```
-
-    ??? variable string "`emby_role_themepark_theme`{ .sb-show-on-unchecked }`emby2_themepark_theme`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_themepark_theme:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_themepark_theme:
-        ```
-
-    ??? variable dict "`emby_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`emby2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        emby_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        emby2_traefik_api_endpoint:
         ```
 
     ??? variable string "`emby_role_traefik_api_middleware`{ .sb-show-on-unchecked }`emby2_traefik_api_middleware`{ .sb-show-on-checked }"
@@ -2236,18 +2044,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         emby2_traefik_autodetect_enabled: false
         ```
 
-    ??? variable string "`emby_role_traefik_certresolver`{ .sb-show-on-unchecked }`emby2_traefik_certresolver`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_traefik_certresolver:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_traefik_certresolver:
-        ```
-
     ??? variable bool "`emby_role_traefik_crowdsec_enabled`{ .sb-show-on-unchecked }`emby2_traefik_crowdsec_enabled`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2274,20 +2070,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable custom error pages middleware for containers
         # Type: bool (true/false)
         emby2_traefik_error_pages_enabled: false
-        ```
-
-    ??? variable bool "`emby_role_traefik_gzip_enabled`{ .sb-show-on-unchecked }`emby2_traefik_gzip_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        emby_role_traefik_gzip_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Enable gzip compression middleware for containers
-        # Type: bool (true/false)
-        emby2_traefik_gzip_enabled: false
         ```
 
     ??? variable string "`emby_role_traefik_middleware_http`{ .sb-show-on-unchecked }`emby2_traefik_middleware_http`{ .sb-show-on-checked }"
@@ -2452,18 +2234,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         emby2_web_api_serverstransport:
         ```
 
-    ??? variable string "`emby_role_web_domain`{ .sb-show-on-unchecked }`emby2_web_domain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_web_domain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_web_domain:
-        ```
-
     ??? variable list "`emby_role_web_fqdn_override`{ .sb-show-on-unchecked }`emby2_web_fqdn_override`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2594,17 +2364,5 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict/omit
         emby2_web_serverstransport:
-        ```
-
-    ??? variable string "`emby_role_web_subdomain`{ .sb-show-on-unchecked }`emby2_web_subdomain`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        emby_role_web_subdomain:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        emby2_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

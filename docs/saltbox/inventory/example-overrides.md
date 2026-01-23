@@ -103,7 +103,7 @@ sandbox_roles: ["jellyseerr", "jellystat"]
 xROLE_NAMEx_dns_proxy: false
 ```
 
-## Docker Global
+## Docker Common
 
 ```yaml
 ##### Container overrides ####

@@ -67,7 +67,7 @@ sandbox_roles: ["jellyseerr", "jellystat"]
     seerr_role_web_domain: "example.com" # (1)!
     ```
 
-    1.  Combined with the above subdomain override, this sets all Seerr instances without instance-level domain or subdomain overrides to `xCUSTOM_SUBDOMAIN_NAMEx.example.com`.
+    1.  Combined with the above subdomain override, this sets all Seerr instances without instance-scoped domain or subdomain overrides to `xCUSTOM_SUBDOMAIN_NAMEx.example.com`.
 
         Be aware that multiple instances cannot have the same FQDN.
 
@@ -76,7 +76,7 @@ sandbox_roles: ["jellyseerr", "jellystat"]
     seerrxINSTANCE_SUFFIXx_web_domain: "bing.com" # (1)!
     ```
 
-    1. Combined with the above subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-level domain value.
+    1. Combined with the above subdomain override, this sets this specific Seerr instance to `xCUSTOM_SUBDOMAIN_NAMEx.bing.com`, always superseding the role-scoped domain value.
 
 === "Extension"
 

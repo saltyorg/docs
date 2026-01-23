@@ -69,7 +69,7 @@ When deploying [multiple instances](../../reference/multiple-instances.md), you 
 
 <div markdown>
 
-:material-cards-playing: **Role-level** (default)
+:material-cards-playing: **Role-scoped** (default)
 
 ```yaml
 xROLE_NAMEx_role_setting_enabled: false # (1)!
@@ -83,7 +83,7 @@ xROLE_NAMEx_role_setting_enabled: false # (1)!
 
 <div markdown>
 
-:material-cards-playing-diamond: **Instance-level**
+:material-cards-playing-diamond: **Instance-scoped**
 
 ```yaml
 dROLE_NAMEdxINSTANCE_SUFFIXx_setting_enabled: true # (1)!
@@ -98,7 +98,7 @@ dROLE_NAMEdxINSTANCE_SUFFIXx_setting_enabled: true # (1)!
 
 </div>
 
-When both forms of the variable are used in the Inventory, the instance-level value takes precedence.
+When both forms of the variable are used in the Inventory, the instance-scoped value takes precedence.
 
 ## Demo
 
@@ -110,14 +110,14 @@ A common use for overrides will be specifying the version of the Docker image to
 
 ???+ variable string "`sonarr_role_docker_image_tag`"
 
-    === "Role-level"
+    === "Role-scoped"
 
         ```yaml
         # Type: string
         sonarr_role_docker_image_tag: "release"
         ```
 
-    === "Instance-level"
+    === "Instance-scoped"
 
         ```yaml
         # Type: string

@@ -167,3 +167,96 @@ code_server_role_docker_volumes_custom:
 ```
 
 The container will then be created with the new volumes included, and the target locations will be accessible to code-server at `/host_srv` and `/host_home`.
+
+## Global Defaults
+
+??? variable bool "`use_cloudplow`"
+
+    ```yaml
+    # Type: bool (true/false)
+    use_cloudplow: "{{ rclone_remote_is_defined and use_remote }}"
+    ```
+
+??? variable string "`ip_address_public`"
+
+    ```yaml
+    # Type: string
+    ip_address_public: "{{ ansible_facts['ansible_local']['saltbox']['ip']['public_ip'] }}"
+    ```
+
+??? variable string "`ipv6_address_public`"
+
+    ```yaml
+    # Type: string
+    ipv6_address_public: "{{ ansible_facts['ansible_local']['saltbox']['ip']['public_ipv6'] }}"
+    ```
+
+??? variable string "`global_themepark_theme`"
+
+    ```yaml
+    # Type: string
+    global_themepark_theme: organizr
+    ```
+
+??? variable string "`global_themepark_domain`"
+
+    ```yaml
+    # Type: string
+    global_themepark_domain: theme-park.dev
+    ```
+
+??? variable bool "`global_themepark_plugin_enabled`"
+
+    ```yaml
+    # Type: bool (true/false)
+    global_themepark_plugin_enabled: false
+    ```
+
+??? variable string "`traefik_default_middleware_custom`"
+
+    ```yaml
+    # Type: string
+    traefik_default_middleware_custom: ""
+    ```
+
+??? variable string "`traefik_default_middleware_custom_http`"
+
+    ```yaml
+    # Type: string
+    traefik_default_middleware_custom_http: ""
+    ```
+
+??? variable string "`traefik_default_middleware_custom_api`"
+
+    ```yaml
+    # Type: string
+    traefik_default_middleware_custom_api: ""
+    ```
+
+??? variable string "`traefik_default_middleware_custom_http_api`"
+
+    ```yaml
+    # Type: string
+    traefik_default_middleware_custom_http_api: ""
+    ```
+
+??? variable dict "`docker_hosts_common`"
+
+    ```yaml
+    # Type: dict
+    docker_hosts_common: {}
+    ```
+
+??? variable dict "`docker_labels_custom_common`"
+
+    ```yaml
+    # Type: dict
+    docker_labels_custom_common: {}
+    ```
+
+??? variable bool "`docker_legacy_volume`"
+
+    ```yaml
+    # Type: bool (true/false)
+    docker_legacy_volume: false
+    ```

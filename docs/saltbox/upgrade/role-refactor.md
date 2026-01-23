@@ -24,11 +24,11 @@ The role-refactor branch merge includes the following updates:
 
     -   Some `_default` + `_custom` variable pairs assigned an empty value by default were replaced with a single unsuffixed variable
 
--   Removes [Sandbox](../../reference/modules/sandbox.md) `settings.yml` ([breaking](#sandbox-app-settings-migration-guide "Manual migration required"){ .alert-link })
+-   **Sandbox**: `settings.yml` removed ([breaking](#sandbox-app-settings-migration-guide "Manual migration required"){ .alert-link })
 
     -   Settings no longer apply and must be migrated to their Inventory equivalent to persist
 
--   Removes a number of roles
+-   Removes roles:
 
     <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(8rem, 1fr))" markdown>
 
@@ -67,6 +67,8 @@ The role-refactor branch merge includes the following updates:
     </div>
 
 -   Replaces Python tools with Go rewrites: DNS manager, Docker controller
+
+-   **Tandoor Recipes**: updated to use a dedicated database container ([breaking](../../sandbox/apps/tandoor.md#overview "Manual migration required"){ .alert-link }):
 
 <div class="sb-cta" markdown>
 

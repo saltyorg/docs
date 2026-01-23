@@ -61,9 +61,9 @@ Inventory syntax follows [YAML specifications](https://docs.ansible.com/ansible/
 | <br/>list       | <br/>`[]`      | <pre><code>list_key:<br/>  - item0<br/>  - "item1"</code></pre>                  | <pre><code>gluetun_docker_networks_alias_custom:<br/>  - "plex"<br/>  - "plex2"</code></pre>                                      |
 | <br/>dictionary | <br/>`{}`      | <pre><code>dict_key:<br/>  STR_KEY: "value"<br/>  BOOL_KEY: "false"</code></pre> | <pre><code>kometasw_docker_envs_custom:<br/>  KOMETA_RUN_COLLECTIONS: "Star Wars"<br/>  KOMETA_DELETE_LABELS: "true"</code></pre> |
 
-## Override Levels
+## Override Scope
 
-When a role supports [multiple instances](../../reference/multiple-instances.md), you can apply a configuration across all instances or to a specified instance. This is achieved by shaping the variable name as follows:
+When deploying [multiple instances](../../reference/multiple-instances.md), you can apply a configuration across all instances or to a specified instance. This is achieved by shaping the variable name as follows:
 
 <div class="grid" markdown>
 

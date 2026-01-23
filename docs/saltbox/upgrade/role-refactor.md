@@ -14,9 +14,9 @@ tags:
 
 The role-refactor branch merge includes the following updates:
 
--   Refactors app role variables as follows ([breaking](#inventory-migration-guide "Manual migration required"){ .alert-link }):
+-   Refactors application role variables as follows ([breaking](#inventory-migration-guide "Manual migration required"){ .alert-link }):
 
-    -  [Override levels](../inventory/index.md#override-levels) are now clearly differentiated using the following naming conventions:
+    -  [Override scope](../inventory/index.md#override-scope) is now clearly differentiated using the following naming conventions:
 
         -   Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`)
 
@@ -106,7 +106,7 @@ When a role only has a single instance, either variable name pattern will achiev
 
 ### Multi-instance overrides
 
-Multi-instance role variables must be changed to the appropriate override level for existing configuration to persist.
+Multi-instance role variables must be changed to the appropriate override scope for existing configuration to persist.
 
 ???+example
 
@@ -145,7 +145,7 @@ Multi-instance role variables must be changed to the appropriate override level 
 
 ### `default` / `custom` overrides { data-toc-label="“Default” / “Custom” overrides" }
 
-!!! info "This section assumes you have already completed the override level migration steps above"
+!!! info "This section assumes you have already completed the override scope migration steps above"
 
 Variables affected by this change are typically moved to the *Docker+* Role Defaults category.
 

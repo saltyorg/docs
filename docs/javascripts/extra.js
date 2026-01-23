@@ -1,6 +1,6 @@
 document$.subscribe(function () {
 
-// Role Defaults override-level visibility toggle
+// Role Defaults override- scope toggle
   updateToggleDisplay();
 
   document.addEventListener('click', function (event) {

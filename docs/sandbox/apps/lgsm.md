@@ -90,7 +90,7 @@ In your game, connect to your ip and default ports for the server. Make sure you
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override level"><input type="checkbox" name="scope" hidden/></label>
+## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override scope"><input type="checkbox" name="scope" hidden/></label>
 
 Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
 { .annotate .sb-annotated }
@@ -99,7 +99,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     !!! example "Example override"
 
-        === "Role-level"
+        === "Role-scoped"
 
             ```yaml
             lgsm_role_web_subdomain: "custom"
@@ -107,7 +107,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             :material-arrow-right-bottom-bold: Applies to all instances of lgsm
 
-        === "Instance-level"
+        === "Instance-scoped"
 
             ```yaml
             lgsm2_web_subdomain: "custom2"

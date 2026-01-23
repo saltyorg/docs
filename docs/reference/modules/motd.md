@@ -37,7 +37,39 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 1.  !!! example "Example override"
 
         ```yaml
-        motd_services: ["item1", "item2"]
+        motd_install: true
+        ```
+
+=== "Basics"
+
+    ??? variable bool "`motd_install`"
+
+        ```yaml
+        # Type: bool (true/false)
+        motd_install: true
+        ```
+
+    ??? variable bool "`motd_use_python`"
+
+        ```yaml
+        # Requires the new golang CLI to be installed and in the location set below
+        # if you set motd_use_python to false.
+        # Type: bool (true/false)
+        motd_use_python: true
+        ```
+
+    ??? variable string "`motd_cli_path`"
+
+        ```yaml
+        # Type: string
+        motd_cli_path: "/usr/local/bin/sb"
+        ```
+
+    ??? variable string "`motd_cli_flags`"
+
+        ```yaml
+        # Type: string
+        motd_cli_flags: "--all --title 'Saltbox' --font ivrit --type parchment"
         ```
 
 === "Service Definitions"

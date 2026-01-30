@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://booklore.org/docs/getting-started
       type: documentation
     - name: Releases
-      url: https://github.com/booklore-app/booklore/releases
+      url: https://hub.docker.com/r/booklore/booklore/tags
       type: docker
     - name: Community
       url: https://discord.gg/Ee5hd458Uz

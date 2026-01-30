@@ -799,6 +799,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_restart_retries:
         ```
 
+    ??? variable string "`archivebox_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        archivebox_role_docker_stop_signal:
+        ```
+
     ??? variable int "`archivebox_role_docker_stop_timeout`"
 
         ```yaml

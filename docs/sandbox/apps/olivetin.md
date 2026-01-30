@@ -793,6 +793,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         olivetin_role_docker_restart_retries:
         ```
 
+    ??? variable string "`olivetin_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        olivetin_role_docker_stop_signal:
+        ```
+
     ??? variable int "`olivetin_role_docker_stop_timeout`"
 
         ```yaml

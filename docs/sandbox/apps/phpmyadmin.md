@@ -772,6 +772,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         phpmyadmin_role_docker_restart_retries:
         ```
 
+    ??? variable string "`phpmyadmin_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        phpmyadmin_role_docker_stop_signal:
+        ```
+
     ??? variable int "`phpmyadmin_role_docker_stop_timeout`"
 
         ```yaml

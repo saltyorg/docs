@@ -789,6 +789,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sshwifty_role_docker_restart_retries:
         ```
 
+    ??? variable string "`sshwifty_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        sshwifty_role_docker_stop_signal:
+        ```
+
     ??? variable int "`sshwifty_role_docker_stop_timeout`"
 
         ```yaml

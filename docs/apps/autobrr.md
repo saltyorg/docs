@@ -239,9 +239,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         autobrr_role_docker_envs_default:
-          AUTOBRR__LOG_PATH: "/config/logs"
-          PUID: "{{ uid }}"
-          PGID: "{{ gid }}"
+          AUTOBRR__LOG_PATH: "/config/autobrr.log"
           TZ: "{{ tz }}"
         ```
 
@@ -317,6 +315,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         autobrr_role_docker_state: started
+        ```
+
+    <h5>User</h5>
+
+    ??? variable string "`autobrr_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        autobrr_role_docker_user: "{{ uid }}:{{ gid }}"
         ```
 
 === "Docker+"
@@ -507,13 +514,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         autobrr_role_docker_security_opts:
-        ```
-
-    ??? variable string "`autobrr_role_docker_user`"
-
-        ```yaml
-        # Type: string
-        autobrr_role_docker_user:
         ```
 
     ??? variable string "`autobrr_role_docker_userns_mode`"
@@ -779,6 +779,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         autobrr_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`autobrr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        autobrr_role_docker_stop_signal:
         ```
 
     ??? variable int "`autobrr_role_docker_stop_timeout`"

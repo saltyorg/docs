@@ -1340,6 +1340,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transmission2_docker_restart_retries:
         ```
 
+    ??? variable string "`transmission_role_docker_stop_signal`{ .sb-show-on-unchecked }`transmission2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        transmission_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        transmission2_docker_stop_signal:
+        ```
+
     <h5>Other Options</h5>
 
     ??? variable list "`transmission_role_docker_capabilities`{ .sb-show-on-unchecked }`transmission2_docker_capabilities`{ .sb-show-on-checked }"

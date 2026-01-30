@@ -836,6 +836,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         funkwhale_role_docker_restart_retries:
         ```
 
+    ??? variable string "`funkwhale_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        funkwhale_role_docker_stop_signal:
+        ```
+
     ??? variable int "`funkwhale_role_docker_stop_timeout`"
 
         ```yaml

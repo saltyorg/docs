@@ -153,6 +153,23 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         flaresolverr_role_docker_envs_custom: {}
         ```
 
+    <h5>Volumes</h5>
+
+    ??? variable list "`flaresolverr_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        flaresolverr_role_docker_volumes_default:
+          - "{{ lookup('role_var', '_paths_location', role='flaresolverr') }}:/config"
+        ```
+
+    ??? variable list "`flaresolverr_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        flaresolverr_role_docker_volumes_custom: []
+        ```
+
     <h5>Hostname</h5>
 
     ??? variable string "`flaresolverr_role_docker_hostname`"
@@ -537,13 +554,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         flaresolverr_role_docker_volume_driver:
         ```
 
-    ??? variable list "`flaresolverr_role_docker_volumes`"
-
-        ```yaml
-        # Type: list
-        flaresolverr_role_docker_volumes:
-        ```
-
     ??? variable list "`flaresolverr_role_docker_volumes_from`"
 
         ```yaml
@@ -670,6 +680,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         flaresolverr_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`flaresolverr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        flaresolverr_role_docker_stop_signal:
         ```
 
     ??? variable int "`flaresolverr_role_docker_stop_timeout`"

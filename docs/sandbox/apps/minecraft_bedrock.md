@@ -735,6 +735,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft_bedrock_role_docker_restart_retries:
         ```
 
+    ??? variable string "`minecraft_bedrock_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        minecraft_bedrock_role_docker_stop_signal:
+        ```
+
     ??? variable int "`minecraft_bedrock_role_docker_stop_timeout`"
 
         ```yaml

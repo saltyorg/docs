@@ -776,6 +776,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kavita_role_docker_restart_retries:
         ```
 
+    ??? variable string "`kavita_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        kavita_role_docker_stop_signal:
+        ```
+
     ??? variable int "`kavita_role_docker_stop_timeout`"
 
         ```yaml

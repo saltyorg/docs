@@ -795,6 +795,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         xteve_role_docker_restart_retries:
         ```
 
+    ??? variable string "`xteve_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        xteve_role_docker_stop_signal:
+        ```
+
     ??? variable int "`xteve_role_docker_stop_timeout`"
 
         ```yaml

@@ -807,6 +807,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         trackarr_role_docker_restart_retries:
         ```
 
+    ??? variable string "`trackarr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        trackarr_role_docker_stop_signal:
+        ```
+
     ??? variable int "`trackarr_role_docker_stop_timeout`"
 
         ```yaml

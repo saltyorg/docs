@@ -107,15 +107,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`wikijs_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        wikijs_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        wikijs_role_postgres_user: ""
         ```
 
     ??? variable string "`wikijs_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        wikijs_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        wikijs_role_postgres_password: ""
         ```
 
     ??? variable string "`wikijs_role_postgres_docker_env_db`"
@@ -144,7 +146,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         wikijs_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }} -U {{ lookup('role_var', '_postgres_user', role='wikijs') if (lookup('role_var', '_postgres_user', role='wikijs') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -323,8 +325,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_TYPE: "postgres"
           DB_HOST: "{{ lookup('role_var', '_postgres_name', role='wikijs') }}"
           DB_PORT: "5432"
-          DB_USER: "{{ lookup('role_var', '_postgres_user', role='wikijs') }}"
-          DB_PASS: "{{ lookup('role_var', '_postgres_password', role='wikijs') }}"
+          DB_USER: "{{ lookup('role_var', '_postgres_user', role='wikijs')
+                    if (lookup('role_var', '_postgres_user', role='wikijs') | length > 0)
+                    else lookup('role_var', '_docker_env_user', role='postgres') }}"
+          DB_PASS: "{{ lookup('role_var', '_postgres_password', role='wikijs')
+                    if (lookup('role_var', '_postgres_password', role='wikijs') | length > 0)
+                    else lookup('role_var', '_docker_env_password', role='postgres') }}"
           DB_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }}"
         ```
 
@@ -875,6 +881,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         wikijs_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`wikijs_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        wikijs_role_docker_stop_signal:
         ```
 
     ??? variable int "`wikijs_role_docker_stop_timeout`"

@@ -1241,6 +1241,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         influxdb22_docker_restart_retries:
         ```
 
+    ??? variable string "`influxdb2_role_docker_stop_signal`{ .sb-show-on-unchecked }`influxdb22_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        influxdb2_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        influxdb22_docker_stop_signal:
+        ```
+
     ??? variable int "`influxdb2_role_docker_stop_timeout`{ .sb-show-on-unchecked }`influxdb22_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

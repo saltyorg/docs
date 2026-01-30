@@ -821,6 +821,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         karakeep_role_docker_restart_retries:
         ```
 
+    ??? variable string "`karakeep_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        karakeep_role_docker_stop_signal:
+        ```
+
     ??? variable int "`karakeep_role_docker_stop_timeout`"
 
         ```yaml

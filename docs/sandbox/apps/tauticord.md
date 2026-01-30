@@ -682,6 +682,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tauticord_role_docker_restart_retries:
         ```
 
+    ??? variable string "`tauticord_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_stop_signal:
+        ```
+
     ??? variable int "`tauticord_role_docker_stop_timeout`"
 
         ```yaml

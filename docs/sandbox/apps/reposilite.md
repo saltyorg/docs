@@ -781,6 +781,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         reposilite_role_docker_restart_retries:
         ```
 
+    ??? variable string "`reposilite_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        reposilite_role_docker_stop_signal:
+        ```
+
     ??? variable int "`reposilite_role_docker_stop_timeout`"
 
         ```yaml

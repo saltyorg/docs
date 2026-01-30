@@ -1892,6 +1892,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         radarr2_docker_restart_retries:
         ```
 
+    ??? variable string "`radarr_role_docker_stop_signal`{ .sb-show-on-unchecked }`radarr2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        radarr_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        radarr2_docker_stop_signal:
+        ```
+
     ??? variable int "`radarr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`radarr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

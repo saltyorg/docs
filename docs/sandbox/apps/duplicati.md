@@ -780,6 +780,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         duplicati_role_docker_restart_retries:
         ```
 
+    ??? variable string "`duplicati_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        duplicati_role_docker_stop_signal:
+        ```
+
     ??? variable int "`duplicati_role_docker_stop_timeout`"
 
         ```yaml

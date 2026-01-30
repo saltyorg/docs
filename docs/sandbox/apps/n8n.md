@@ -103,15 +103,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`n8n_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        n8n_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        n8n_role_postgres_user: ""
         ```
 
     ??? variable string "`n8n_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        n8n_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        n8n_role_postgres_password: ""
         ```
 
     ??? variable string "`n8n_role_postgres_docker_env_db`"
@@ -140,7 +142,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         n8n_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }} -U {{ lookup('role_var', '_postgres_user', role='n8n') if (lookup('role_var', '_postgres_user', role='n8n') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -321,8 +323,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_POSTGRESDB_DATABASE: "{{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }}"
           DB_POSTGRESDB_HOST: "{{ lookup('role_var', '_postgres_name', role='n8n') }}"
           DB_POSTGRESDB_PORT: "5432"
-          DB_POSTGRESDB_USER: "{{ lookup('role_var', '_postgres_user', role='n8n') }}"
-          DB_POSTGRESDB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='n8n') }}"
+          DB_POSTGRESDB_USER: "{{ lookup('role_var', '_postgres_user', role='n8n')
+                               if (lookup('role_var', '_postgres_user', role='n8n') | length > 0)
+                               else lookup('role_var', '_docker_env_user', role='postgres') }}"
+          DB_POSTGRESDB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='n8n')
+                                   if (lookup('role_var', '_postgres_password', role='n8n') | length > 0)
+                                   else lookup('role_var', '_docker_env_password', role='postgres') }}"
           N8N_EDITOR_BASE_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}"
           N8N_DIAGNOSTICS_ENABLED: "false"
           N8N_HIRING_BANNER_ENABLED: "false"
@@ -893,6 +899,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         n8n_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`n8n_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        n8n_role_docker_stop_signal:
         ```
 
     ??? variable int "`n8n_role_docker_stop_timeout`"

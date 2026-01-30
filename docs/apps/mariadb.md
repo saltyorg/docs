@@ -1190,6 +1190,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mariadb2_docker_restart_retries:
         ```
 
+    ??? variable string "`mariadb_role_docker_stop_signal`{ .sb-show-on-unchecked }`mariadb2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mariadb_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mariadb2_docker_stop_signal:
+        ```
+
     ??? variable int "`mariadb_role_docker_stop_timeout`{ .sb-show-on-unchecked }`mariadb2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

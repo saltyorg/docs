@@ -696,6 +696,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         chrome_role_docker_restart_retries:
         ```
 
+    ??? variable string "`chrome_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        chrome_role_docker_stop_signal:
+        ```
+
     ??? variable int "`chrome_role_docker_stop_timeout`"
 
         ```yaml

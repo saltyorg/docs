@@ -767,6 +767,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         audiobookshelf_role_docker_restart_retries:
         ```
 
+    ??? variable string "`audiobookshelf_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        audiobookshelf_role_docker_stop_signal:
+        ```
+
     ??? variable int "`audiobookshelf_role_docker_stop_timeout`"
 
         ```yaml

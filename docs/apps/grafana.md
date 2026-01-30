@@ -796,6 +796,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grafana_role_docker_restart_retries:
         ```
 
+    ??? variable string "`grafana_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        grafana_role_docker_stop_signal:
+        ```
+
     ??? variable int "`grafana_role_docker_stop_timeout`"
 
         ```yaml

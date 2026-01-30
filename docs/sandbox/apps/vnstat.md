@@ -799,6 +799,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         vnstat_role_docker_restart_retries:
         ```
 
+    ??? variable string "`vnstat_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        vnstat_role_docker_stop_signal:
+        ```
+
     ??? variable int "`vnstat_role_docker_stop_timeout`"
 
         ```yaml

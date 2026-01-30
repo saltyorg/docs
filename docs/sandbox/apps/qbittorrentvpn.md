@@ -1502,6 +1502,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrentvpn2_docker_restart_retries:
         ```
 
+    ??? variable string "`qbittorrentvpn_role_docker_stop_signal`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qbittorrentvpn_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qbittorrentvpn2_docker_stop_signal:
+        ```
+
     <h5>Other Options</h5>
 
     ??? variable string "`qbittorrentvpn_role_docker_cgroup_parent`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_cgroup_parent`{ .sb-show-on-checked }"

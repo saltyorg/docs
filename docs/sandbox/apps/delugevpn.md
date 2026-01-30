@@ -996,6 +996,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         delugevpn_role_docker_restart_retries:
         ```
 
+    ??? variable string "`delugevpn_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        delugevpn_role_docker_stop_signal:
+        ```
+
     ??? variable int "`delugevpn_role_docker_stop_timeout`"
 
         ```yaml

@@ -273,6 +273,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         threadfin_role_docker_volumes_custom: []
         ```
 
+    <h5>Mounts</h5>
+
+    ??? variable list "`threadfin_role_docker_mounts_default`"
+
+        ```yaml
+        # Type: list
+        threadfin_role_docker_mounts_default:
+          - target: /tmp/threadfin
+            type: tmpfs
+        ```
+
+    ??? variable list "`threadfin_role_docker_mounts_custom`"
+
+        ```yaml
+        # Type: list
+        threadfin_role_docker_mounts_custom: []
+        ```
+
     <h5>Hostname</h5>
 
     ??? variable string "`threadfin_role_docker_hostname`"
@@ -321,6 +339,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         threadfin_role_docker_state: started
+        ```
+
+    <h5>Init</h5>
+
+    ??? variable bool "`threadfin_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        threadfin_role_docker_init: true
         ```
 
     <h5>User</h5>
@@ -631,13 +658,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         threadfin_role_docker_keep_volumes:
         ```
 
-    ??? variable list "`threadfin_role_docker_mounts`"
-
-        ```yaml
-        # Type: list
-        threadfin_role_docker_mounts:
-        ```
-
     ??? variable dict "`threadfin_role_docker_storage_opts`"
 
         ```yaml
@@ -717,13 +737,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         threadfin_role_docker_healthy_wait_timeout:
         ```
 
-    ??? variable bool "`threadfin_role_docker_init`"
-
-        ```yaml
-        # Type: bool (true/false)
-        threadfin_role_docker_init:
-        ```
-
     ??? variable string "`threadfin_role_docker_kill_signal`"
 
         ```yaml
@@ -785,6 +798,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         threadfin_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`threadfin_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        threadfin_role_docker_stop_signal:
         ```
 
     ??? variable int "`threadfin_role_docker_stop_timeout`"

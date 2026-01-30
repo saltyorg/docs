@@ -121,8 +121,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`teslamate_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        teslamate_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        teslamate_role_postgres_user: ""
         ```
 
     ??? variable string "`teslamate_role_postgres_password`"
@@ -158,7 +159,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         teslamate_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }} -U {{ lookup('role_var', '_postgres_user', role='teslamate') if (lookup('role_var', '_postgres_user', role='teslamate') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -333,8 +334,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         teslamate_role_docker_envs_default:
-          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='teslamate') }}"
-          DATABASE_PASS: "{{ lookup('role_var', '_postgres_password', role='teslamate') }}"
+          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='teslamate')
+                          if (lookup('role_var', '_postgres_user', role='teslamate') | length > 0)
+                          else lookup('role_var', '_docker_env_user', role='postgres') }}"
+          DATABASE_PASS: "{{ lookup('role_var', '_postgres_password', role='teslamate')
+                          if (lookup('role_var', '_postgres_password', role='teslamate') | length > 0)
+                          else lookup('role_var', '_docker_env_password', role='postgres') }}"
           DATABASE_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }}"
           ENCRYPTION_KEY: "{{ teslamate_secret_key }}"
           DATABASE_HOST: "{{ lookup('role_var', '_postgres_name', role='teslamate') }}"
@@ -880,6 +885,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         teslamate_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`teslamate_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_stop_signal:
         ```
 
     ??? variable int "`teslamate_role_docker_stop_timeout`"

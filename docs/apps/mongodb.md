@@ -1099,6 +1099,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mongodb2_docker_restart_retries:
         ```
 
+    ??? variable string "`mongodb_role_docker_stop_signal`{ .sb-show-on-unchecked }`mongodb2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        mongodb_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        mongodb2_docker_stop_signal:
+        ```
+
     ??? variable int "`mongodb_role_docker_stop_timeout`{ .sb-show-on-unchecked }`mongodb2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

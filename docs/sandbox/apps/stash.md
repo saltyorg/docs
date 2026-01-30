@@ -786,6 +786,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         stash_role_docker_restart_retries:
         ```
 
+    ??? variable string "`stash_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        stash_role_docker_stop_signal:
+        ```
+
     ??? variable int "`stash_role_docker_stop_timeout`"
 
         ```yaml

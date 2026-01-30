@@ -971,6 +971,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_role_docker_restart_retries:
         ```
 
+    ??? variable string "`sabnzbd_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        sabnzbd_role_docker_stop_signal:
+        ```
+
     ??? variable int "`sabnzbd_role_docker_stop_timeout`"
 
         ```yaml

@@ -682,6 +682,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex_auto_languages_role_docker_restart_retries:
         ```
 
+    ??? variable string "`plex_auto_languages_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        plex_auto_languages_role_docker_stop_signal:
+        ```
+
     <h5>Other Options</h5>
 
     ??? variable list "`plex_auto_languages_role_docker_capabilities`"

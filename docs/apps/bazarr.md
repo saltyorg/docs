@@ -1394,6 +1394,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bazarr2_docker_restart_retries:
         ```
 
+    ??? variable string "`bazarr_role_docker_stop_signal`{ .sb-show-on-unchecked }`bazarr2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        bazarr_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        bazarr2_docker_stop_signal:
+        ```
+
     ??? variable int "`bazarr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`bazarr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

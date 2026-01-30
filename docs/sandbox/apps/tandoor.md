@@ -159,15 +159,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`tandoor_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        tandoor_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        tandoor_role_postgres_user: ""
         ```
 
     ??? variable string "`tandoor_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        tandoor_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        tandoor_role_postgres_password: ""
         ```
 
     ??? variable string "`tandoor_role_postgres_docker_env_db`"
@@ -196,7 +198,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         tandoor_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }} -U {{ lookup('role_var', '_postgres_user', role='tandoor') if (lookup('role_var', '_postgres_user', role='tandoor') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -376,8 +378,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_ENGINE: "django.db.backends.postgresql"
           POSTGRES_HOST: "{{ lookup('role_var', '_postgres_name', role='tandoor') }}"
           POSTGRES_PORT: "5432"
-          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='tandoor') }}"
-          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='tandoor') }}"
+          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='tandoor')
+                           if (lookup('role_var', '_postgres_user', role='tandoor') | length > 0)
+                           else lookup('role_var', '_docker_env_user', role='postgres') }}"
+          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='tandoor')
+                               if (lookup('role_var', '_postgres_password', role='tandoor') | length > 0)
+                               else lookup('role_var', '_docker_env_password', role='postgres') }}"
           POSTGRES_DB: "{{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }}"
           DEBUG: "0"
           GUNICORN_MEDIA: "1"
@@ -942,6 +948,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         tandoor_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`tandoor_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        tandoor_role_docker_stop_signal:
         ```
 
     ??? variable int "`tandoor_role_docker_stop_timeout`"

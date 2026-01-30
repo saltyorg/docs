@@ -254,7 +254,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        portainer_role_docker_image_tag: "latest"
+        portainer_role_docker_image_tag: "alpine"
         ```
 
     ??? variable string "`portainer_role_docker_image_repo`"
@@ -827,6 +827,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         portainer_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`portainer_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        portainer_role_docker_stop_signal:
         ```
 
     ??? variable int "`portainer_role_docker_stop_timeout`"

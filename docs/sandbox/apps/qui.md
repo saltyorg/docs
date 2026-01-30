@@ -1287,6 +1287,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qui2_docker_restart_retries:
         ```
 
+    ??? variable string "`qui_role_docker_stop_signal`{ .sb-show-on-unchecked }`qui2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qui_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qui2_docker_stop_signal:
+        ```
+
     ??? variable int "`qui_role_docker_stop_timeout`{ .sb-show-on-unchecked }`qui2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

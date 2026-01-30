@@ -790,6 +790,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         healthchecks_role_docker_restart_retries:
         ```
 
+    ??? variable string "`healthchecks_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        healthchecks_role_docker_stop_signal:
+        ```
+
     ??? variable int "`healthchecks_role_docker_stop_timeout`"
 
         ```yaml

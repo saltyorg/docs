@@ -218,8 +218,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres_role_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/data"
-          POSTGRES_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='postgres') }}"
-          POSTGRES_USER: "{{ lookup('role_var', '_docker_env_user', role='postgres') }}"
+          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_effective }}"
+          POSTGRES_USER: "{{ postgres_role_docker_env_user_effective }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
         ```
 
@@ -228,8 +228,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/data"
-          POSTGRES_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='postgres') }}"
-          POSTGRES_USER: "{{ lookup('role_var', '_docker_env_user', role='postgres') }}"
+          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_effective }}"
+          POSTGRES_USER: "{{ postgres_role_docker_env_user_effective }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
         ```
 
@@ -253,6 +253,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         postgres_role_docker_volumes_default:
           - "{{ postgres_role_paths_location }}:/data"
+          - "{{ postgres_role_paths_location }}:/var/lib/postgresql/data"
           - "/etc/passwd:/etc/passwd:ro"
         ```
 
@@ -260,6 +261,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         postgres2_docker_volumes_default:
           - "{{ postgres_role_paths_location }}:/data"
+          - "{{ postgres_role_paths_location }}:/var/lib/postgresql/data"
           - "/etc/passwd:/etc/passwd:ro"
         ```
 
@@ -1139,6 +1141,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         postgres2_docker_restart_retries:
+        ```
+
+    ??? variable string "`postgres_role_docker_stop_signal`{ .sb-show-on-unchecked }`postgres2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        postgres_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        postgres2_docker_stop_signal:
         ```
 
     ??? variable int "`postgres_role_docker_stop_timeout`{ .sb-show-on-unchecked }`postgres2_docker_stop_timeout`{ .sb-show-on-checked }"

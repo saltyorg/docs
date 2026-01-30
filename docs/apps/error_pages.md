@@ -744,6 +744,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         error_pages_role_docker_restart_retries:
         ```
 
+    ??? variable string "`error_pages_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        error_pages_role_docker_stop_signal:
+        ```
+
     ??? variable int "`error_pages_role_docker_stop_timeout`"
 
         ```yaml

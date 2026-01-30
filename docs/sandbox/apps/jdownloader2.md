@@ -796,6 +796,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jdownloader2_role_docker_restart_retries:
         ```
 
+    ??? variable string "`jdownloader2_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        jdownloader2_role_docker_stop_signal:
+        ```
+
     ??? variable int "`jdownloader2_role_docker_stop_timeout`"
 
         ```yaml

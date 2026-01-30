@@ -780,6 +780,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         airsonic_role_docker_restart_retries:
         ```
 
+    ??? variable string "`airsonic_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        airsonic_role_docker_stop_signal:
+        ```
+
     ??? variable int "`airsonic_role_docker_stop_timeout`"
 
         ```yaml

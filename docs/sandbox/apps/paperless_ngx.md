@@ -108,15 +108,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`paperless_ngx_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        paperless_ngx_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        paperless_ngx_role_postgres_user: ""
         ```
 
     ??? variable string "`paperless_ngx_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        paperless_ngx_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        paperless_ngx_role_postgres_password: ""
         ```
 
     ??? variable string "`paperless_ngx_role_postgres_docker_env_db`"
@@ -145,7 +147,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         paperless_ngx_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }} -U {{ lookup('role_var', '_postgres_user', role='paperless_ngx') if (lookup('role_var', '_postgres_user', role='paperless_ngx') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -327,8 +329,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PAPERLESS_DBHOST: "{{ lookup('role_var', '_postgres_name', role='paperless_ngx') }}"
           PAPERLESS_DBPORT: "5432"
           PAPERLESS_DBNAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }}"
-          PAPERLESS_DBPASS: "{{ lookup('role_var', '_postgres_password', role='paperless_ngx') }}"
-          PAPERLESS_DBUSER: "{{ lookup('role_var', '_postgres_user', role='paperless_ngx') }}"
+          PAPERLESS_DBPASS: "{{ lookup('role_var', '_postgres_password', role='paperless_ngx')
+                             if (lookup('role_var', '_postgres_password', role='paperless_ngx') | length > 0)
+                             else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          PAPERLESS_DBUSER: "{{ lookup('role_var', '_postgres_user', role='paperless_ngx')
+                             if (lookup('role_var', '_postgres_user', role='paperless_ngx') | length > 0)
+                             else lookup('role_var', '_docker_env_user', role='postgres') }}"
           PAPERLESS_URL: "{{ lookup('role_var', '_web_url', role='paperless_ngx') }}"
           PAPERLESS_ENABLE_UPDATE_CHECK: "true"
           PAPERLESS_TRASH_DIR: "../trash/"
@@ -914,6 +920,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         paperless_ngx_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`paperless_ngx_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        paperless_ngx_role_docker_stop_signal:
         ```
 
     ??? variable int "`paperless_ngx_role_docker_stop_timeout`"

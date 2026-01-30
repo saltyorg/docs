@@ -1564,6 +1564,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyfin2_docker_restart_retries:
         ```
 
+    ??? variable string "`jellyfin_role_docker_stop_signal`{ .sb-show-on-unchecked }`jellyfin2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyfin_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyfin2_docker_stop_signal:
+        ```
+
     ??? variable int "`jellyfin_role_docker_stop_timeout`{ .sb-show-on-unchecked }`jellyfin2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

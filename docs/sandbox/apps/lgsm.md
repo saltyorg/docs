@@ -1157,6 +1157,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lgsm2_docker_restart_retries:
         ```
 
+    ??? variable string "`lgsm_role_docker_stop_signal`{ .sb-show-on-unchecked }`lgsm2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        lgsm_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        lgsm2_docker_stop_signal:
+        ```
+
     ??? variable int "`lgsm_role_docker_stop_timeout`{ .sb-show-on-unchecked }`lgsm2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

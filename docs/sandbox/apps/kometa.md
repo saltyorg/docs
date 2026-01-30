@@ -1125,6 +1125,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kometa2_docker_restart_retries:
         ```
 
+    ??? variable string "`kometa_role_docker_stop_signal`{ .sb-show-on-unchecked }`kometa2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        kometa_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        kometa2_docker_stop_signal:
+        ```
+
     ??? variable int "`kometa_role_docker_stop_timeout`{ .sb-show-on-unchecked }`kometa2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

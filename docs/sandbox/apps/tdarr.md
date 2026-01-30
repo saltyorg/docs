@@ -827,6 +827,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tdarr_role_docker_restart_retries:
         ```
 
+    ??? variable string "`tdarr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        tdarr_role_docker_stop_signal:
+        ```
+
     ??? variable int "`tdarr_role_docker_stop_timeout`"
 
         ```yaml

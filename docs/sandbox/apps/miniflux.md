@@ -130,15 +130,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`miniflux_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        miniflux_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        miniflux_role_postgres_user: ""
         ```
 
     ??? variable string "`miniflux_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        miniflux_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        miniflux_role_postgres_password: ""
         ```
 
     ??? variable string "`miniflux_role_postgres_docker_env_db`"
@@ -167,7 +169,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         miniflux_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }} -U {{ lookup('role_var', '_postgres_user', role='miniflux') if (lookup('role_var', '_postgres_user', role='miniflux') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -342,7 +344,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         miniflux_role_docker_envs_default:
-          DATABASE_URL: "postgres://{{ lookup('role_var', '_postgres_user', role='miniflux') }}:{{ lookup('role_var', '_postgres_password', role='miniflux') }}@{{ lookup('role_var', '_postgres_name', role='miniflux') }}/{{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }}?sslmode=disable"
+          DATABASE_URL: "postgres://{{ lookup('role_var', '_postgres_user', role='miniflux')
+                                if (lookup('role_var', '_postgres_user', role='miniflux') | length > 0)
+                                else lookup('role_var', '_docker_env_user', role='postgres') }}:{{ lookup('role_var', '_postgres_password', role='miniflux')
+                                if (lookup('role_var', '_postgres_password', role='miniflux') | length > 0)
+                                else lookup('role_var', '_docker_env_password', role='postgres') }}@{{ lookup('role_var', '_postgres_name', role='miniflux') }}/{{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }}?sslmode=disable"
           RUN_MIGRATIONS: "{{ lookup('role_var', '_run_migrations', role='miniflux') }}"
           CREATE_ADMIN: "{{ lookup('role_var', '_create_admin', role='miniflux') }}"
           ADMIN_USERNAME: "{{ lookup('role_var', '_admin_username', role='miniflux') }}"
@@ -906,6 +912,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         miniflux_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`miniflux_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        miniflux_role_docker_stop_signal:
         ```
 
     ??? variable int "`miniflux_role_docker_stop_timeout`"

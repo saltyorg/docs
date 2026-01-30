@@ -234,7 +234,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        homarr_role_docker_image_repo: "ghcr.io/ajnart/homarr"
+        homarr_role_docker_image_repo: "ghcr.io/homarr-labs/homarr"
         ```
 
     ??? variable string "`homarr_role_docker_image_tag`"
@@ -259,10 +259,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         homarr_role_docker_envs_default:
           TZ: "{{ tz }}"
-          BASE_URL: "{{ lookup('role_var', '_web_subdomain', role='homarr') + '.' + lookup('role_var', '_web_domain', role='homarr') }}"
-          PASSWORD: "{{ user.pass }}"
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
+          SECRET_ENCRYPTION_KEY: "{{ homarr_saltbox_facts.facts.secret_key }}"
           DOCKER_HOST: "tcp://{{ homarr_name }}-docker-socket-proxy:2375"
-          NODE_TLS_REJECT_UNAUTHORIZED: "0"
         ```
 
     ??? variable dict "`homarr_role_docker_envs_custom`"
@@ -279,8 +279,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         homarr_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='homarr') }}:/app/data/configs"
-          - "{{ lookup('role_var', '_paths_location', role='homarr') }}/icons:/app/public/icons"
+          - "{{ lookup('role_var', '_paths_location', role='homarr') }}:/appdata"
         ```
 
     ??? variable list "`homarr_role_docker_volumes_custom`"
@@ -338,6 +337,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         homarr_role_docker_state: started
+        ```
+
+    <h5>Init</h5>
+
+    ??? variable bool "`homarr_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        homarr_role_docker_init: true
         ```
 
     <h5>Dependencies</h5>
@@ -755,13 +763,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homarr_role_docker_healthy_wait_timeout:
         ```
 
-    ??? variable bool "`homarr_role_docker_init`"
-
-        ```yaml
-        # Type: bool (true/false)
-        homarr_role_docker_init:
-        ```
-
     ??? variable string "`homarr_role_docker_kill_signal`"
 
         ```yaml
@@ -823,6 +824,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         homarr_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`homarr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        homarr_role_docker_stop_signal:
         ```
 
     ??? variable int "`homarr_role_docker_stop_timeout`"

@@ -780,6 +780,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         xbackbone_role_docker_restart_retries:
         ```
 
+    ??? variable string "`xbackbone_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        xbackbone_role_docker_stop_signal:
+        ```
+
     ??? variable int "`xbackbone_role_docker_stop_timeout`"
 
         ```yaml

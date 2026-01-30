@@ -882,6 +882,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkwarden_role_docker_restart_retries:
         ```
 
+    ??? variable string "`linkwarden_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        linkwarden_role_docker_stop_signal:
+        ```
+
     ??? variable int "`linkwarden_role_docker_stop_timeout`"
 
         ```yaml

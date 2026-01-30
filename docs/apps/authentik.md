@@ -279,15 +279,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`authentik_role_postgres_user`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        authentik_role_postgres_user: "{{ postgres_role_docker_env_user }}"
+        authentik_role_postgres_user: ""
         ```
 
     ??? variable string "`authentik_role_postgres_password`"
 
         ```yaml
+        # If empty it will fallback to postgres role default
         # Type: string
-        authentik_role_postgres_password: "{{ postgres_role_docker_env_password }}"
+        authentik_role_postgres_password: ""
         ```
 
     ??? variable string "`authentik_role_postgres_docker_env_db`"
@@ -316,7 +318,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         authentik_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }} -U {{ postgres_role_docker_env_user }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }} -U {{ lookup('role_var', '_postgres_user', role='authentik') if (lookup('role_var', '_postgres_user', role='authentik') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -529,11 +531,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         authentik_role_docker_envs_default:
           AUTHENTIK_POSTGRESQL__HOST: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
-          AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik') }}"
+          AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik')
+                                       if (lookup('role_var', '_postgres_user', role='authentik') | length > 0)
+                                       else lookup('role_var', '_docker_env_user', role='postgres') }}"
           AUTHENTIK_POSTGRESQL__NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }}"
-          AUTHENTIK_POSTGRESQL__PASSWORD: "{{ lookup('role_var', '_postgres_password', role='authentik') }}"
+          AUTHENTIK_POSTGRESQL__PASSWORD: "{{ lookup('role_var', '_postgres_password', role='authentik')
+                                           if (lookup('role_var', '_postgres_password', role='authentik') | length > 0)
+                                           else lookup('role_var', '_docker_env_password', role='postgres') }}"
           AUTHENTIK_SECRET_KEY: "{{ authentik_saltbox_facts.facts.secret_key }}"
-          AUTHENTIK_BOOTSTRAP_TOKEN: "{{ omit if authentik_data_folder.stat.exists else authentik_bootstrap_token }}"
+          AUTHENTIK_BOOTSTRAP_TOKEN: "{{ omit
+                                      if authentik_data_folder.stat.exists
+                                      else authentik_bootstrap_token }}"
           AUTHENTIK_EMAIL__HOST: "{{ lookup('role_var', '_email_host', role='authentik') }}"
           AUTHENTIK_EMAIL__PORT: "{{ lookup('role_var', '_email_port', role='authentik') }}"
           AUTHENTIK_EMAIL__USERNAME: "{{ lookup('role_var', '_email_username', role='authentik') }}"
@@ -1150,6 +1158,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         authentik_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`authentik_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_stop_signal:
         ```
 
     ??? variable int "`authentik_role_docker_stop_timeout`"

@@ -805,6 +805,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bookstack_role_docker_restart_retries:
         ```
 
+    ??? variable string "`bookstack_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        bookstack_role_docker_stop_signal:
+        ```
+
     ??? variable int "`bookstack_role_docker_stop_timeout`"
 
         ```yaml

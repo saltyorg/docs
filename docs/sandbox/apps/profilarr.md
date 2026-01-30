@@ -782,6 +782,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_restart_retries:
         ```
 
+    ??? variable string "`profilarr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        profilarr_role_docker_stop_signal:
+        ```
+
     ??? variable int "`profilarr_role_docker_stop_timeout`"
 
         ```yaml

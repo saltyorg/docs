@@ -835,6 +835,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dockwatch_role_docker_restart_retries:
         ```
 
+    ??? variable string "`dockwatch_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        dockwatch_role_docker_stop_signal:
+        ```
+
     ??? variable int "`dockwatch_role_docker_stop_timeout`"
 
         ```yaml

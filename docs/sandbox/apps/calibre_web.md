@@ -906,6 +906,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre_web_role_docker_restart_retries:
         ```
 
+    ??? variable string "`calibre_web_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        calibre_web_role_docker_stop_signal:
+        ```
+
     ??? variable int "`calibre_web_role_docker_stop_timeout`"
 
         ```yaml

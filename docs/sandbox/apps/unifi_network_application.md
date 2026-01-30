@@ -904,6 +904,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_docker_restart_retries:
         ```
 
+    ??? variable string "`unifi_network_application_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        unifi_network_application_role_docker_stop_signal:
+        ```
+
     ??? variable int "`unifi_network_application_role_docker_stop_timeout`"
 
         ```yaml

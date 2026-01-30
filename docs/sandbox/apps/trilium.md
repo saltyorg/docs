@@ -780,6 +780,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         trilium_role_docker_restart_retries:
         ```
 
+    ??? variable string "`trilium_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        trilium_role_docker_stop_signal:
+        ```
+
     ??? variable int "`trilium_role_docker_stop_timeout`"
 
         ```yaml

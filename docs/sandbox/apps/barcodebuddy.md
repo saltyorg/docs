@@ -769,6 +769,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         barcodebuddy_role_docker_restart_retries:
         ```
 
+    ??? variable string "`barcodebuddy_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        barcodebuddy_role_docker_stop_signal:
+        ```
+
     ??? variable int "`barcodebuddy_role_docker_stop_timeout`"
 
         ```yaml

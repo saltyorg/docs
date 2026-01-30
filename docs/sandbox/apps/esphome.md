@@ -784,6 +784,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         esphome_role_docker_restart_retries:
         ```
 
+    ??? variable string "`esphome_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        esphome_role_docker_stop_signal:
+        ```
+
     ??? variable int "`esphome_role_docker_stop_timeout`"
 
         ```yaml

@@ -1804,6 +1804,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lidarr2_docker_restart_retries:
         ```
 
+    ??? variable string "`lidarr_role_docker_stop_signal`{ .sb-show-on-unchecked }`lidarr2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        lidarr_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        lidarr2_docker_stop_signal:
+        ```
+
     ??? variable int "`lidarr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`lidarr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

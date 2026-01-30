@@ -840,6 +840,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         firefox_role_docker_restart_retries:
         ```
 
+    ??? variable string "`firefox_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_stop_signal:
+        ```
+
     ??? variable int "`firefox_role_docker_stop_timeout`"
 
         ```yaml

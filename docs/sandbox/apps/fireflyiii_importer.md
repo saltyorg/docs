@@ -873,6 +873,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         fireflyiii_importer_role_docker_restart_retries:
         ```
 
+    ??? variable string "`fireflyiii_importer_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_importer_role_docker_stop_signal:
+        ```
+
     ??? variable int "`fireflyiii_importer_role_docker_stop_timeout`"
 
         ```yaml

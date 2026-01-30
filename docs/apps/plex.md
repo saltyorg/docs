@@ -1892,6 +1892,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex2_docker_restart_retries:
         ```
 
+    ??? variable string "`plex_role_docker_stop_signal`{ .sb-show-on-unchecked }`plex2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_stop_signal:
+        ```
+
     ??? variable int "`plex_role_docker_stop_timeout`{ .sb-show-on-unchecked }`plex2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

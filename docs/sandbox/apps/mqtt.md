@@ -694,6 +694,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mqtt_role_docker_restart_retries:
         ```
 
+    ??? variable string "`mqtt_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        mqtt_role_docker_stop_signal:
+        ```
+
     ??? variable int "`mqtt_role_docker_stop_timeout`"
 
         ```yaml

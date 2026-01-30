@@ -1286,6 +1286,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyseerr2_docker_restart_retries:
         ```
 
+    ??? variable string "`jellyseerr_role_docker_stop_signal`{ .sb-show-on-unchecked }`jellyseerr2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        jellyseerr_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        jellyseerr2_docker_stop_signal:
+        ```
+
     ??? variable int "`jellyseerr_role_docker_stop_timeout`{ .sb-show-on-unchecked }`jellyseerr2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

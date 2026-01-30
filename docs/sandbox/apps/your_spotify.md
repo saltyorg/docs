@@ -813,6 +813,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_restart_retries:
         ```
 
+    ??? variable string "`your_spotify_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        your_spotify_role_docker_stop_signal:
+        ```
+
     ??? variable int "`your_spotify_role_docker_stop_timeout`"
 
         ```yaml

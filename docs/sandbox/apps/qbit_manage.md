@@ -1002,6 +1002,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_docker_recreate:
         ```
 
+    ??? variable string "`qbit_manage_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_stop_signal:
+        ```
+
     ??? variable int "`qbit_manage_role_docker_stop_timeout`"
 
         ```yaml

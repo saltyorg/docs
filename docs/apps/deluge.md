@@ -1451,6 +1451,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_restart_retries:
         ```
 
+    ??? variable string "`deluge_role_docker_stop_signal`{ .sb-show-on-unchecked }`deluge2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        deluge_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        deluge2_docker_stop_signal:
+        ```
+
     <h5>Other Options</h5>
 
     ??? variable list "`deluge_role_docker_capabilities`{ .sb-show-on-unchecked }`deluge2_docker_capabilities`{ .sb-show-on-checked }"

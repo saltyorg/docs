@@ -685,6 +685,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unpackerr_role_docker_restart_retries:
         ```
 
+    ??? variable string "`unpackerr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_stop_signal:
+        ```
+
     ??? variable int "`unpackerr_role_docker_stop_timeout`"
 
         ```yaml

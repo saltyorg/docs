@@ -944,6 +944,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_role_docker_restart_retries:
         ```
 
+    ??? variable string "`dozzle_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        dozzle_role_docker_stop_signal:
+        ```
+
     ??? variable int "`dozzle_role_docker_stop_timeout`"
 
         ```yaml

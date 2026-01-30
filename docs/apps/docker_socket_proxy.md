@@ -686,6 +686,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         docker_socket_proxy_role_docker_restart_retries:
         ```
 
+    ??? variable string "`docker_socket_proxy_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        docker_socket_proxy_role_docker_stop_signal:
+        ```
+
     ??? variable int "`docker_socket_proxy_role_docker_stop_timeout`"
 
         ```yaml

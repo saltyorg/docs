@@ -788,6 +788,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sqlitebrowser_role_docker_restart_retries:
         ```
 
+    ??? variable string "`sqlitebrowser_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        sqlitebrowser_role_docker_stop_signal:
+        ```
+
     ??? variable int "`sqlitebrowser_role_docker_stop_timeout`"
 
         ```yaml

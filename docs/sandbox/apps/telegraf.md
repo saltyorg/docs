@@ -1252,6 +1252,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         telegraf2_docker_restart_retries:
         ```
 
+    ??? variable string "`telegraf_role_docker_stop_signal`{ .sb-show-on-unchecked }`telegraf2_docker_stop_signal`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        telegraf_role_docker_stop_signal:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        telegraf2_docker_stop_signal:
+        ```
+
     ??? variable int "`telegraf_role_docker_stop_timeout`{ .sb-show-on-unchecked }`telegraf2_docker_stop_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

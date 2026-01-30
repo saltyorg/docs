@@ -843,6 +843,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         prowlarr_role_docker_restart_retries:
         ```
 
+    ??? variable string "`prowlarr_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        prowlarr_role_docker_stop_signal:
+        ```
+
     ??? variable int "`prowlarr_role_docker_stop_timeout`"
 
         ```yaml

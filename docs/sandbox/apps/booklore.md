@@ -22,6 +22,8 @@ saltbox_automation:
     summary: |-
       a powerful, self-hosted web application designed to organize and manage your personal book collection with elegance and ease. Build your dream library with an intuitive interface, robust metadata management, and seamless multi-user support.
     link: https://booklore.org
+    categories:
+      - Content Delivery Apps > Reader
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

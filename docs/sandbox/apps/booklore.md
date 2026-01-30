@@ -16,12 +16,12 @@ saltbox_automation:
       type: docker
     - name: Community
       url: https://discord.gg/Ee5hd458Uz
-      type: community
+      type: discord
   project_description:
-    name: BookLore
+    name: Booklore
     summary: |-
       a powerful, self-hosted web application designed to organize and manage your personal book collection with elegance and ease. Build your dream library with an intuitive interface, robust metadata management, and seamless multi-user support.
-    link: https://booklore.org/
+    link: https://booklore.org
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

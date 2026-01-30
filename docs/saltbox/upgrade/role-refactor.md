@@ -36,8 +36,6 @@ The role-refactor branch merge includes the following updates:
 
     readarr
 
-    [rutorrent](javascript:;"Replacement role coming soon to Sandbox"){ style="cursor:help;" }
-
     sub_zero
 
     webtools

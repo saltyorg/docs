@@ -1,11 +1,19 @@
 ---
 icon: material/cogs
 status: draft
+hide:
+  - tags
+tags:
+  - bash
+  - ohmyposh
+  - ohmyzsh
+  - shell
+  - zsh
 saltbox_automation:
   project_description:
     name: Shell
     summary: |-
-      a Saltbox module that installs and configures a user's shell (Bash or Zsh) with tools like z for directory jumping, argcomplete for tab completion, Oh My Zsh and optional Oh My Posh theming.
+      a Saltbox module that installs and configures a user's shell (Bash or Zsh).
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
@@ -14,7 +22,7 @@ saltbox_automation:
 
 ## Overview
 
-Shell is a Saltbox module that installs and configures a user's shell (Bash or Zsh) with tools like z for directory jumping, argcomplete for tab completion, Oh My Zsh and optional Oh My Posh theming.
+Shell is a Saltbox module that installs and configures a user's shell (Bash or Zsh).
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
@@ -26,6 +34,38 @@ Core Saltbox role.
 ```shell
 sb install shell
 ```
+
+## Extras
+
+### Oh My Zsh
+
+<div class="sb-cta" markdown>
+
+If you have selected `zsh` as your shell type, [Oh My Zsh](https://ohmyz.sh), a framework for managing your Zsh configuration, is included.
+
+<div markdown>
+
+[:fontawesome-solid-book-open:**Settings**](https://github.com/ohmyzsh/ohmyzsh/wiki/Settings){ .md-button }
+
+[:fontawesome-brands-github:**Docker aliases**](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker#aliases){ .md-button }
+
+</div>
+
+</div>
+
+### Oh My Posh
+
+<div class="sb-cta" markdown>
+
+If enabled via its Inventory toggle, [Oh My Posh](https://ohmyposh.dev), a prompt theme engine, is included on top of Oh My Zsh.
+
+<div markdown>
+
+[:fontawesome-solid-book-open:**Configuration**](https://ohmyposh.dev/docs){ .md-button }
+
+</div>
+
+</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

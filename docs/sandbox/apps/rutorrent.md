@@ -32,7 +32,7 @@ saltbox_automation:
 ## Deployment
 
 ```shell
-sb install rutorrent
+sb install sandbox-rutorrent
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ Visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>.
 
 ### Unpacking
 
-You will most likely want to run [Unpackerr](unpackerr.md) for this purpose. If so, it is recommended to disable ruTorrent's *unpack* plugin (along with other plugins you do not require) to save resources.
+You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this purpose. If so, it is recommended to disable ruTorrent's *unpack* plugin (along with other plugins you do not require) to save resources.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -342,9 +342,9 @@ Make changes in the following sections:
 
                 Use SSL: `No`
 
-                Username: [Your ruTorrent Username](../apps/rutorrent.md)
+                Username: [Your ruTorrent Username](../sandbox/apps/rutorrent.md)
 
-                Password: [Your ruTorrent Password](../apps/rutorrent.md)
+                Password: [Your ruTorrent Password](../sandbox/apps/rutorrent.md)
 
                 Category: `radarr`
 

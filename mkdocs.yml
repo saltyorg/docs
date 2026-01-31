@@ -280,7 +280,6 @@ nav:
     - apps/python.md
     - apps/rclone.md
     - apps/redis.md
-    - apps/rutorrent.md
     - apps/scrutiny.md
     - apps/subliminal.md
     - apps/traefik.md
@@ -422,6 +421,7 @@ nav:
     - sandbox/apps/resiliosync.md
     - sandbox/apps/rflood.md
     - sandbox/apps/rocketchat.md
+    - sandbox/apps/rutorrent.md
     - sandbox/apps/sabthrottle.md
     - sandbox/apps/semaphoreui.md
     - sandbox/apps/speedtest.md

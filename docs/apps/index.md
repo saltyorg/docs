@@ -150,8 +150,8 @@ tags:
 | [SABnzbd](sabnzbd.md)                           |             `sabnzbd`              |        `download_clients_enabled`        |
 | [Deluge](deluge.md)                             |              `deluge`              |        `download_clients_enabled`        |
 | [NZBGet](nzbget.md)                             |              `nzbget`              |        `download_clients_enabled`        |
-| [ruTorrent](rutorrent.md)                       |            `rutorrent`             |        `download_clients_enabled`        |
 | [rFlood](../sandbox/apps/rflood.md)             |          `sandbox-rflood`          |             `sandbox_roles`              |
+| [ruTorrent](../sandbox/apps/rutorrent.md)       |        `sandbox-rutorrent`         |              sandbox_roles`              |
 | [Transmission](../sandbox/apps/transmission.md) |       `sandbox-transmission`       |             `sandbox_roles`              |
 
 ### Download Client Accessory

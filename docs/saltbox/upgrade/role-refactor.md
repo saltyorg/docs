@@ -68,6 +68,8 @@ The role-refactor branch merge includes the following updates:
 
 -   **Tandoor Recipes**: updated to use a dedicated database container ([breaking](../../sandbox/apps/tandoor.md#overview "Manual migration required"){ .alert-link }):
 
+-   **ruTorrent**: role preserved but moved to Sandbox
+
 <div class="sb-cta" markdown>
 
 Full changes:

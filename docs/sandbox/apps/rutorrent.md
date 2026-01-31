@@ -27,6 +27,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# ruTorrent
+
+## Overview
+
+[ruTorrent](https://github.com/Novik/ruTorrent) is a front-end for the popular, lightweight, and extensible BitTorrent client rTorrent.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://github.com/Novik/ruTorrent/wiki){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kudeta/ru-rtorrent/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**Community**](https://github.com/Novik/ruTorrent/discussions){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
@@ -47,18 +65,20 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    rutorrent_name: "custom_value"
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        rutorrent_name: "custom_value"
+        ```
 
-    When overriding variables that end in `_default` (like `rutorrent_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `rutorrent_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `rutorrent_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `rutorrent_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 
@@ -997,6 +1017,13 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         rutorrent_role_docker_restart_retries:
         ```
 
+    ??? variable string "`rutorrent_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        rutorrent_role_docker_stop_signal:
+        ```
+
     <h5>Other Options</h5>
 
     ??? variable list "`rutorrent_role_docker_capabilities`"
@@ -1086,55 +1113,6 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         rutorrent_role_autoheal_enabled: true
         ```
 
-    ??? variable string "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_custom`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_existing_installs_rutorrent_rc_settings_custom:
-        ```
-
-    ??? variable string "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_default`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_existing_installs_rutorrent_rc_settings_default:
-        ```
-
-    ??? variable string "`rutorrent_role_config_new_installs_php_local_ini_settings_custom`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_new_installs_php_local_ini_settings_custom:
-        ```
-
-    ??? variable string "`rutorrent_role_config_new_installs_php_local_ini_settings_default`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_new_installs_php_local_ini_settings_default:
-        ```
-
-    ??? variable string "`rutorrent_role_config_new_installs_rutorrent_rc_settings_custom`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_new_installs_rutorrent_rc_settings_custom:
-        ```
-
-    ??? variable string "`rutorrent_role_config_new_installs_rutorrent_rc_settings_default`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_new_installs_rutorrent_rc_settings_default:
-        ```
-
-    ??? variable string "`rutorrent_role_config_public_trackers`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_config_public_trackers:
-        ```
-
     ??? variable string "`rutorrent_role_depends_on`"
 
         ```yaml
@@ -1183,32 +1161,11 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         rutorrent_role_docker_controller: true
         ```
 
-    ??? variable string "`rutorrent_role_docker_image_repo`"
+    ??? variable list "`rutorrent_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        rutorrent_role_docker_image_repo:
-        ```
-
-    ??? variable string "`rutorrent_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_docker_image_tag:
-        ```
-
-    ??? variable string "`rutorrent_role_docker_ports_51413`"
-
-        ```yaml
-        # Type: string (quoted number)
-        rutorrent_role_docker_ports_51413:
-        ```
-
-    ??? variable string "`rutorrent_role_docker_ports_6881`"
-
-        ```yaml
-        # Type: string (quoted number)
-        rutorrent_role_docker_ports_6881:
+        # Type: list
+        rutorrent_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`rutorrent_role_docker_volumes_download`"
@@ -1216,48 +1173,6 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         ```yaml
         # Type: bool (true/false)
         rutorrent_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`rutorrent_role_themepark_addons`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_themepark_addons:
-        ```
-
-    ??? variable string "`rutorrent_role_themepark_app`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_themepark_app:
-        ```
-
-    ??? variable bool "`rutorrent_role_themepark_enabled`"
-
-        ```yaml
-        # Type: bool (true/false)
-        rutorrent_role_themepark_enabled:
-        ```
-
-    ??? variable string "`rutorrent_role_themepark_theme`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_themepark_theme:
-        ```
-
-    ??? variable dict "`rutorrent_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        rutorrent_role_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`rutorrent_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_traefik_api_middleware:
         ```
 
     ??? variable string "`rutorrent_role_traefik_api_middleware_http`"
@@ -1273,13 +1188,6 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         # Enable Traefik autodetect middleware for the container
         # Type: bool (true/false)
         rutorrent_role_traefik_autodetect_enabled: false
-        ```
-
-    ??? variable string "`rutorrent_role_traefik_certresolver`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_traefik_certresolver:
         ```
 
     ??? variable bool "`rutorrent_role_traefik_crowdsec_enabled`"
@@ -1358,11 +1266,46 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         rutorrent_role_traefik_wildcard_enabled: true
         ```
 
-    ??? variable string "`rutorrent_role_web_domain`"
+    ??? variable string "`rutorrent_role_web_api_http_port`"
 
         ```yaml
-        # Type: string
-        rutorrent_role_web_domain:
+        # Type: string (quoted number)
+        rutorrent_role_web_api_http_port:
+        ```
+
+    ??? variable string "`rutorrent_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        rutorrent_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`rutorrent_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        rutorrent_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`rutorrent_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        rutorrent_role_web_api_port:
+        ```
+
+    ??? variable string "`rutorrent_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        rutorrent_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`rutorrent_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        rutorrent_role_web_api_serverstransport:
         ```
 
     ??? variable list "`rutorrent_role_web_fqdn_override`"
@@ -1436,12 +1379,5 @@ You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this p
         ```yaml
         # Type: dict/omit
         rutorrent_role_web_serverstransport:
-        ```
-
-    ??? variable string "`rutorrent_role_web_subdomain`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_web_subdomain:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

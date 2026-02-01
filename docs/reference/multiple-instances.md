@@ -65,7 +65,7 @@ Define a list of all the instances of the container you want to create; if you d
 Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git/saltbox/inventories/host_vars/localhost.yml`, formatted as so:
 
 ```yaml
-sonarr_instances: ["sonarr", "sonarr4k", "sonarranime", "sonarrkids"]
+sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
 ```
 
 Run the standard app tag (in this case `sb install sonarr`) to set up all the instances you've defined. If you attempt to run any of your new instance names as tags, the install will fail with an error. Run ONLY the standard app tag. If one or more of the instances already exist, their existing configurations *TYPICALLY* will not be touched or overwritten, though this is dependent on the specific role. If the standard role overwrites or modifies the configuration, then so will this, since it's calling the standard role for each instance.
@@ -88,14 +88,14 @@ Run the standard app tag (in this case `sb install sonarr`) to set up all the in
 
     would shift the primary instance to `sonarr4k` and create only those three instances.
 
-Given the first example, `sb install sonarr` would install:
+Given the example above, `sb install sonarr` would install:
 
 | List entry  | Container Name | Config Directory   | Subdomain                      |
 |-------------|----------------|--------------------|--------------------------------|
 | sonarr      | sonarr         | `/opt/sonarr`      | sonarr.xYOUR_DOMAIN_NAMEx      |
-| sonarr4k    | sonarr4k       | `/opt/sonarr4k`    | sonarr4k.xYOUR_DOMAIN_NAMEx    |
-| sonarranime | sonarranime    | `/opt/sonarranime` | sonarranime.xYOUR_DOMAIN_NAMEx |
-| sonarrkids  | sonarrkids     | `/opt/sonarrkids`  | sonarrkids.xYOUR_DOMAIN_NAMEx  |
+| sonarrbing  | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.xYOUR_DOMAIN_NAMEx  |
+| sonarrbang  | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.xYOUR_DOMAIN_NAMEx  |
+| sonarrboing | sonarrboing    | `/opt/sonarrboing` | sonarrboing.xYOUR_DOMAIN_NAMEx |
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 
@@ -104,7 +104,7 @@ Those names have to be unique across all of your containers, so it is suggested 
 You can edit the following set of variables on a per instance basis in `localhost.yml`:
 
 !!! note
-    Replacing "instance" with the actual **instance name**, of course, i.e. `sonarr4k_web_subdomain`, etc.
+    Replacing "instance" with the actual **instance name**, of course, i.e. `sonarrbing_web_subdomain`, etc.
 
 ```text
 instance_web_subdomain

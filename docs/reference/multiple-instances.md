@@ -80,13 +80,13 @@ Run the standard app tag (in this case `sb install sonarr`) to set up all the in
     sonarr_instances: ["sonarrhd", "sonarr4k", "sonarranime", "sonarrkids"]
     ```
 
-    is valid if you want `sonarrhd` to be your primary instance instead of `sonarr`, but
+    is valid if you want `sonarrhd` to be your primary instance instead of `sonarr`.
 
     ```yaml
     sonarr_instances: ["sonarr4k", "sonarranime", "sonarrkids"]
     ```
 
-    will make your primary instance `sonarr4k`, skipping the standard `sonarr` instance entirely.
+    would shift the primary instance to `sonarr4k` and create only those three instances.
 
 Given the first example, `sb install sonarr` would install:
 

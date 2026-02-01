@@ -86,7 +86,7 @@ Run the standard app tag (in this case `sb install sonarr`) to set up all the in
     sonarr_instances: ["sonarr4k", "sonarranime", "sonarrkids"]
     ```
 
-    would shift the primary instance to `sonarr4k` and create only those three instances.
+    would shift the primary instance to `sonarr4k` and result in only those three instances being deployed, which is typically not what you want.
 
 Given the example above, `sb install sonarr` would install:
 

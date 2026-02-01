@@ -65,34 +65,37 @@ Define a list of all the instances of the container you want to create; if you d
 Add the list to the [inventory file](../saltbox/inventory/index.md) at `/srv/git/saltbox/inventories/host_vars/localhost.yml`, formatted as so:
 
 ```yaml
-sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
+sonarr_instances: ["sonarr", "sonarr4k", "sonarranime", "sonarrkids"]
 ```
 
 Run the standard app tag (in this case `sb install sonarr`) to set up all the instances you've defined. If you attempt to run any of your new instance names as tags, the install will fail with an error. Run ONLY the standard app tag. If one or more of the instances already exist, their existing configurations *TYPICALLY* will not be touched or overwritten, though this is dependent on the specific role. If the standard role overwrites or modifies the configuration, then so will this, since it's calling the standard role for each instance.
 
 !!! info
-    Note that the first entry in the list is `sonarr`, the standard instance of the app. You probably want to follow this pattern, since other tags might iterate through this list of "sonarr"s to take some action and if an instance is not listed here it will be skipped in that case.
 
-    This list should include *all* instances of the app that you want to end up with, *including* the stock one if you are retaining it.
+    While the first entry in the list is `sonarr` in the above example, you are not required to include an instance named `sonarr`. The list should include *all* instances of the app you want to end up with, regardless of their names. If an instance is not listed here, it will be skipped by actions that iterate through this list.
 
-    ```yaml
-    sonarr_instances: ["sonarr", "sonarrbing", "sonarrbang", "sonarrboing"]
-    ```
-
-    not
+    For example:
 
     ```yaml
-    sonarr_instances: ["sonarrbing", "sonarrbang", "sonarrboing"]
+    sonarr_instances: ["sonarrhd", "sonarr4k", "sonarranime", "sonarrkids"]
     ```
 
-Given the example above, `sb install sonarr` would install:
+    is valid if you want `sonarrhd` to be your primary instance instead of `sonarr`, but
+
+    ```yaml
+    sonarr_instances: ["sonarr4k", "sonarranime", "sonarrkids"]
+    ```
+
+    will make your primary instance `sonarr4k`, skipping the standard `sonarr` instance entirely.
+
+Given the first example, `sb install sonarr` would install:
 
 | List entry  | Container Name | Config Directory   | Subdomain                      |
 |-------------|----------------|--------------------|--------------------------------|
 | sonarr      | sonarr         | `/opt/sonarr`      | sonarr.xYOUR_DOMAIN_NAMEx      |
-| sonarrbing  | sonarrbing     | `/opt/sonarrbing`  | sonarrbing.xYOUR_DOMAIN_NAMEx  |
-| sonarrbang  | sonarrbang     | `/opt/sonarrbang`  | sonarrbang.xYOUR_DOMAIN_NAMEx  |
-| sonarrboing | sonarrboing    | `/opt/sonarrboing` | sonarrboing.xYOUR_DOMAIN_NAMEx |
+| sonarr4k    | sonarr4k       | `/opt/sonarr4k`    | sonarr4k.xYOUR_DOMAIN_NAMEx    |
+| sonarranime | sonarranime    | `/opt/sonarranime` | sonarranime.xYOUR_DOMAIN_NAMEx |
+| sonarrkids  | sonarrkids     | `/opt/sonarrkids`  | sonarrkids.xYOUR_DOMAIN_NAMEx  |
 
 Those names have to be unique across all of your containers, so it is suggested that you keep with the `rolename+suffix` pattern for these additional instances.
 
@@ -101,7 +104,7 @@ Those names have to be unique across all of your containers, so it is suggested 
 You can edit the following set of variables on a per instance basis in `localhost.yml`:
 
 !!! note
-    Replacing "instance" with the actual **instance name**, of course, i.e. `sonarrbing_web_subdomain`, etc.
+    Replacing "instance" with the actual **instance name**, of course, i.e. `sonarr4k_web_subdomain`, etc.
 
 ```text
 instance_web_subdomain

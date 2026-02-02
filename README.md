@@ -71,13 +71,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/BeansIsFat>
-            <img src=https://avatars.githubusercontent.com/u/24848012?v=4 width="100;"  alt=Beans Baxter/>
-            <br />
-            <sub style="font-size:14px"><b>Beans Baxter</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/thatsnasty>
             <img src=https://avatars.githubusercontent.com/u/17760366?v=4 width="100;"  alt=thatsnasty/>
             <br />
@@ -85,10 +78,10 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/maindust>
-            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
+        <a href=https://github.com/BeansIsFat>
+            <img src=https://avatars.githubusercontent.com/u/24848012?v=4 width="100;"  alt=Beans Baxter/>
             <br />
-            <sub style="font-size:14px"><b>maindust</b></sub>
+            <sub style="font-size:14px"><b>Beans Baxter</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -96,6 +89,13 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <img src=https://avatars.githubusercontent.com/u/8098897?v=4 width="100;"  alt=skeeve42/>
             <br />
             <sub style="font-size:14px"><b>skeeve42</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/maindust>
+            <img src=https://avatars.githubusercontent.com/u/180442845?v=4 width="100;"  alt=maindust/>
+            <br />
+            <sub style="font-size:14px"><b>maindust</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

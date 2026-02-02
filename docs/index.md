@@ -10,7 +10,7 @@ hide:
 
 # Saltbox
 
-[![GitHub Org's stars](https://img.shields.io/github/stars/saltyorg?style=flat&logo=github)](https://github.com/saltyorg/Saltbox/stargazers)
+[![GitHub Org's stars](https://img.shields.io/github/stars/saltyorg/Saltbox?style=flat&logo=github)](https://github.com/saltyorg/Saltbox/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/saltyorg/saltbox?style=flat&logo=github)](https://github.com/saltyorg/saltbox/commits)
 [![License](https://img.shields.io/github/license/saltyorg/saltbox?style=flat&logo=github)](https://github.com/saltyorg/Saltbox/blob/master/LICENSE.md)
 [![Discord](https://img.shields.io/discord/853755447970758686?style=flat&logo=discord&logoColor=white)](https://discord.gg/ugfKXpFND8)

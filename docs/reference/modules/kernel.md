@@ -3,7 +3,7 @@ icon: material/cogs
 status: draft
 saltbox_automation:
   sections:
-    inventory: false
+    inventory: true
   project_description:
     name: Kernel
     summary: |-

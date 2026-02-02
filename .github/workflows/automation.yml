@@ -3,7 +3,7 @@ name: Documentation Automation
 on:
   push:
     branches:
-      - role-refactor
+      - main
     paths:
       - 'docs/apps/**'
       - 'docs/sandbox/apps/**'
@@ -20,11 +20,11 @@ on:
       saltbox_branch:
         description: 'Saltbox branch to use'
         required: false
-        default: 'role-refactor'
+        default: 'main'
       sandbox_branch:
         description: 'Sandbox branch to use'
         required: false
-        default: 'role-refactor'
+        default: 'main'
 
 jobs:
   docs-automation:
@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: saltyorg/Saltbox
-          ref: ${{ github.event.inputs.saltbox_branch || 'role-refactor' }}
+          ref: ${{ github.event.inputs.saltbox_branch || 'main' }}
           path: saltbox
           fetch-depth: 1
 
@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: saltyorg/Sandbox
-          ref: ${{ github.event.inputs.sandbox_branch || 'role-refactor' }}
+          ref: ${{ github.event.inputs.sandbox_branch || 'main' }}
           path: sandbox
           fetch-depth: 1
 

@@ -274,6 +274,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
           DOCKER_HOST: "{{ dockwatch_name }}-docker-socket-proxy:2375"
+          DOCKER_API_VERSION: "{{ dockwatch_docker_api_min_version[0]
+                               if (dockwatch_docker_api_min_version is not none)
+                               else omit }}"
         ```
 
     ??? variable dict "`dockwatch_role_docker_envs_custom`"

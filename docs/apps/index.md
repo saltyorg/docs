@@ -136,7 +136,7 @@ tags:
 
 |                                         | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-----------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Booklore](../sandbox/apps/booklore.md) |         `sandbox-booklore`         |             `sandbox_roles`              |   |
+| [Booklore](../sandbox/apps/booklore.md) |         `sandbox-booklore`         |             `sandbox_roles`              |
 | [Codex](../sandbox/apps/codex.md)       |          `sandbox-codex`           |             `sandbox_roles`              |
 | [Kavita](../sandbox/apps/kavita.md)     |          `sandbox-kavita`          |             `sandbox_roles`              |
 | [Komga](../sandbox/apps/komga.md)       |          `sandbox-komga`           |             `sandbox_roles`              |

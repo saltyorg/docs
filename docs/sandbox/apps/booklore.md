@@ -42,12 +42,13 @@ Visit <https://booklore.iYOUR_DOMAIN_NAMEi>.
 
 ## Basics
 
-- On your first visit you must create an admin user account.
+-   On your first visit you must create an admin user account.
 
-- After logging back in with the admin user account, create your first library.
+-   After logging back in with the admin user account, create your first library.
 
-- Create a directory for your book files (e.g. `/mnt/unionfs/Media/Books`) or use an existing directory. <br />
-  Select that path when creating your library.
+-   Create a directory for your book files (e.g. `/mnt/unionfs/Media/Books`) or use an existing directory.
+
+    Select that path when creating your library.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

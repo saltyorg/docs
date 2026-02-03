@@ -134,11 +134,12 @@ tags:
 
 ### Reader
 
-|                                     | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Codex](../sandbox/apps/codex.md)   |          `sandbox-codex`           |             `sandbox_roles`              |
-| [Kavita](../sandbox/apps/kavita.md) |          `sandbox-kavita`          |             `sandbox_roles`              |
-| [Komga](../sandbox/apps/komga.md)   |          `sandbox-komga`           |             `sandbox_roles`              |
+|                                         | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-----------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Booklore](../sandbox/apps/booklore.md) |         `sandbox-booklore`         |             `sandbox_roles`              |   |
+| [Codex](../sandbox/apps/codex.md)       |          `sandbox-codex`           |             `sandbox_roles`              |
+| [Kavita](../sandbox/apps/kavita.md)     |          `sandbox-kavita`          |             `sandbox_roles`              |
+| [Komga](../sandbox/apps/komga.md)       |          `sandbox-komga`           |             `sandbox_roles`              |
 
 ## :ocean: Content Acquisition Apps
 
@@ -151,7 +152,7 @@ tags:
 | [Deluge](deluge.md)                             |              `deluge`              |        `download_clients_enabled`        |
 | [NZBGet](nzbget.md)                             |              `nzbget`              |        `download_clients_enabled`        |
 | [rFlood](../sandbox/apps/rflood.md)             |          `sandbox-rflood`          |             `sandbox_roles`              |
-| [ruTorrent](../sandbox/apps/rutorrent.md)       |        `sandbox-rutorrent`         |              sandbox_roles`              |
+| [ruTorrent](../sandbox/apps/rutorrent.md)       |        `sandbox-rutorrent`         |             `sandbox_roles`              |
 | [Transmission](../sandbox/apps/transmission.md) |       `sandbox-transmission`       |             `sandbox_roles`              |
 
 ### Download Client Accessory

@@ -104,12 +104,12 @@ gluetun_docker_networks_alias_custom:
   - "plex"
 
 plex_auth_token_proxy: "http://gluetun:8888"
-plex_docker_network_mode_default: "container:gluetun"
+plex_docker_network_mode: "container:gluetun"
 
 # If using multiple instances.
 gluetun2_docker_networks_alias_custom:
   - "plex2"
-plex2_docker_network_mode_default: "container:gluetun2"
+plex2_docker_network_mode: "container:gluetun2"
 plex2_auth_token_proxy: "http://gluetun2:8888"
 ```
 
@@ -128,11 +128,11 @@ Depending on if the role in question supports instances or not there will be two
 
 === "With instances"
 
-    To route a Saltbox-configured container through Gluetun, you must set `<rolename_instance>_docker_network_mode_default: "container:gluetun"` via the inventory system.
+    To route a Saltbox-configured container through Gluetun, you must set `<rolename_instance>_docker_network_mode: "container:gluetun"` via the inventory system.
 
-    For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode_default: "container:gluetun"`.
+    For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode: "container:gluetun"`.
 
-    For example, to route `qbittorrent2` through Gluetun, the entry would be `qbittorrent2_docker_network_mode_default: "container:gluetun2"`.
+    For example, to route `qbittorrent2` through Gluetun, the entry would be `qbittorrent2_docker_network_mode: "container:gluetun2"`.
 
     !!! important
         The caveat with instances is that each instance will need a unique Gluetun instance to avoid port collision.

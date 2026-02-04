@@ -16,17 +16,11 @@ The role-refactor branch merge includes the following updates:
 
 -   Refactors application role variables as follows ([breaking](#inventory-migration-guide "Manual migration required"){ .alert-link }):
 
-    -  [Override scope](../inventory/index.md#override-scope) is now clearly differentiated using the following naming conventions:
-
-        -   Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`)
-
-        -   Role-scoped overrides must now include the `_role_` infix** (e.g. `sonarr_role_docker_image`) **to persist as such
+    -   [Override scope](../inventory/index.md#override-scope) is now clearly differentiated using explicit variable naming conventions
 
     -   Some `_default` + `_custom` variable pairs assigned an empty value by default were replaced with a single unsuffixed variable
 
 -   **Sandbox**: `settings.yml` removed ([breaking](#sandbox-app-settings-migration-guide "Manual migration required"){ .alert-link })
-
-    -   Settings no longer apply and must be migrated to their Inventory equivalent to persist
 
 -   Removes roles:
 
@@ -90,6 +84,14 @@ Full changes:
 
 ## Inventory Migration Guide
 
+???+ abstract "Summary for people who don't like reading a lot of text"
+
+    -   Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
+
+    -   To apply to all instances of a role, variables must now include the `_role_` infix (e.g. `sonarr_role_docker_image`).
+
+    -   `rolename_docker_network_mode_default` variables no longer exist and will have no effect when assigned in the Inventory.
+
 The following sections must be followed sequentially.
 
 ### Single-instance overrides
@@ -98,15 +100,19 @@ When a role only has a single instance, either variable name pattern will achiev
 
 ???+example
 
-    ```yaml
-    plex_dns_proxy: false
-    ```
+    !!! warning ""
 
-    Becomes:
+        ```yaml
+        plex_dns_proxy: false
+        ```
 
-    ```yaml
-    plex_role_dns_proxy: false
-    ```
+    :material-arrow-down-bold: changes to :material-arrow-down-bold:
+
+    !!! success ""
+
+        ```yaml
+        plex_role_dns_proxy: false
+        ```
 
 ### Multi-instance overrides
 
@@ -114,38 +120,40 @@ Multi-instance role variables must be changed to the appropriate override scope 
 
 ???+example
 
-    !!! tip "Specificity takes precedence"
+    Note: When choosing which variable to use, remember the precedence order: Instance > Role > Global (specificity takes precedence)
 
-        When choosing which variable to use, remember the precedence order: Instance > Role > Global
+    !!! bug ""
 
-    ```yaml
-    bazarr_instances: ["bazarr", "bazarr4k"]
-    bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
-    bazarr_themepark_theme: "nord" # (2)!
-    bazarr4k_themepark_theme: "maroon"
-    ```
+        ```yaml
+        bazarr_instances: ["bazarr", "bazarr4k"]
+        bazarr_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
+        bazarr_themepark_theme: "nord" # (2)!
+        bazarr4k_themepark_theme: "maroon"
+        ```
 
-    1.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
+        1.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
 
-    2.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
+        2.  Reminder: variables in this pattern were considered role-scoped prior to Role Refactor, since the prefix matches the role name.
 
-    Becomes:
+    :material-arrow-down-bold: changes to :material-arrow-down-bold:
 
-    ```yaml
-    bazarr_instances: ["bazarr", "bazarr4k"]
-    bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
-    bazarr_role_themepark_theme: "nord" # or bazarr_themepark_theme: "nord" (2)
-    bazarr4k_themepark_theme: "maroon" # (3)!
-    ```
+    !!! success ""
 
-    1.  Typically, you want external processing tools to be available to all instances, so keep role-scoped.
+        ```yaml
+        bazarr_instances: ["bazarr", "bazarr4k"]
+        bazarr_role_docker_volumes_custom: ["/opt/subcleaner:/subcleaner"] # (1)!
+        bazarr_role_themepark_theme: "nord" # or bazarr_themepark_theme: "nord" (2)
+        bazarr4k_themepark_theme: "maroon" # (3)!
+        ```
 
-    2.  This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
+        1.  Typically, you want external processing tools to be available to all instances, so keep role-scoped.
 
-        - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
-        - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if enabled, or would not have theming applied.
+        2.  This can go both ways depending on your goal. Previously, this override was role-scoped, but with only two instances defined and the `4k` instance individually overridden, the same outcome would be achieved.
 
-    3.  No change needed here, as variables in this pattern were already considered instance-scoped and remain so.
+            - `bazarr_role_themepark_theme: "nord"`: additional instances added later would inherit the `nord` theme unless individually overridden
+            - `bazarr_themepark_theme: "nord"`: additional instances would inherit the `global_themepark_theme` value if enabled, or would not have theming applied.
+
+        3.  No change needed here, as variables in this pattern were already considered instance-scoped and remain so.
 
 ### `default` / `custom` overrides { data-toc-label="“Default” / “Custom” overrides" }
 
@@ -161,33 +169,39 @@ Variables affected by this change are typically moved to the *Docker+* Role Defa
 
 ???+example
 
-    ```yaml
-    plex_docker_network_mode_default: "container:gluetun" # (1)!
+    !!! bug ""
 
-    firefox_role_docker_commands_custom:
-      - "/usr/lib/firefox/firefox"
-      - "--headless"
+        ```yaml
+        plex_docker_network_mode_default: "container:gluetun" # (1)!
 
-    wireguard_role_docker_ports_default:
-      - "1234:1234"
-    ```
+        firefox_role_docker_commands_custom:
+          - "/usr/lib/firefox/firefox"
+          - "--headless"
 
-    1.  Not to be confused with the similarly named list variable `plex_docker_networks_default`, which is still available as such (assuming an instance named `plex`).
+        wireguard_role_docker_ports_default:
+          - "1234:1234"
+        ```
 
-    Becomes:
+        1.  Not to be confused with the similarly named list variable `plex_docker_networks_default`, which is still available as such (assuming an instance named `plex`).
 
-    ```yaml
-    plex_docker_network_mode: "container:gluetun"
+    :material-arrow-down-bold: changes to :material-arrow-down-bold:
 
-    firefox_role_docker_commands:
-      - "/usr/lib/firefox/firefox"
-      - "--headless"
+    !!! success ""
 
-    wireguard_role_docker_ports_custom:
-      - "1234:1234"
-    ```
+        ```yaml
+        plex_docker_network_mode: "container:gluetun"
+
+        firefox_role_docker_commands:
+          - "/usr/lib/firefox/firefox"
+          - "--headless"
+
+        wireguard_role_docker_ports_custom:
+          - "1234:1234"
+        ```
 
 ## Sandbox App Settings Migration Guide
+
+Settings in `/opt/sandbox/settings.yml` no longer apply and must be migrated to their Inventory equivalent to persist.
 
 !!! note ""
 
@@ -197,15 +211,19 @@ As always, check how the settings you use are represented in the role by looking
 
 ???+example
 
-    ```yaml title="sandbox/settings.yml"
-    your_spotify:
-      public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
-      secret_key: "0593b2fec4867575d741e93a6cff3580"
-    ```
+    !!! bug ""
 
-    Becomes:
+        ```yaml title="/opt/sandbox/settings.yml"
+        your_spotify:
+          public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
+          secret_key: "0593b2fec4867575d741e93a6cff3580"
+        ```
 
-    ```yaml title="Inventory"
-    your_spotify_role_public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
-    your_spotify_role_secret_key: "0593b2fec4867575d741e93a6cff3580"
-    ```
+    :material-arrow-down-bold: changes to :material-arrow-down-bold:
+
+    !!! success ""
+
+        ```yaml title="Inventory"
+        your_spotify_role_public_key: "3e3ce6e568f6e9a8894c835b34f1701a"
+        your_spotify_role_secret_key: "0593b2fec4867575d741e93a6cff3580"
+        ```

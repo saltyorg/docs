@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: outdated
 title: arch-qbittorrentvpn
 hide:
   - tags
@@ -46,7 +47,11 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Deployment
+## Configuration
+
+???+warning "Outdated guide"
+
+    The configuration instructions no longer apply, but are kept for reference pending an update by a user of this role.
 
 === "PIA VPN"
 
@@ -60,11 +65,7 @@ saltbox_automation:
       vpn_client: wireguard
     ```
 
-    As described in the github readme linked above, then run the role:
-
-    ```shell
-    sb install sandbox-qbittorrentvpn
-    ```
+    As described in the github readme linked above, then run the role.
 
 === "Proton VPN (Wireguard)"
 
@@ -91,17 +92,19 @@ saltbox_automation:
       vpn_user: "zuqWGtyy7SMGQM8C+pmp"
       vpn_client: "wireguard"
     ```
-    As described in the github readme linked above, then run the role:
-
-    ```shell
-    sb install sandbox-qbittorrentvpn
-    ```
+    As described in the github readme linked above, then run the role.
 
     While the above command runs, go to this directory `/opt/qbittorrentvpn/wireguard` (Use FTP file manager like WinSCP)
     if you don't see this directory wait for few seconds, while the previous command creates this.
 
     Now copy & paste your `wg0.conf' file (Refer Step 05) in this directory & Wait for the command line to complete.
     If everything went well, you should see `Playbook /opt/sandbox/sandbox.yml executed successfully.`
+
+## Deployment
+
+```shell
+sb install sandbox-qbittorrentvpn
+```
 
 ## Usage
 

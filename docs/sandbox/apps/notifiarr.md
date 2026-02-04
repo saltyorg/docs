@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/golift/notifiarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://notifiarr.com/discord){ .md-button .md-button--stretch }
 
 </div>
 

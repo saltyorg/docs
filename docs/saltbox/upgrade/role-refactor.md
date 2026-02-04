@@ -1,6 +1,4 @@
 ---
-extra_stylesheets:
-- stylesheets/upgrade.css
 status: draft
 hide:
   - tags

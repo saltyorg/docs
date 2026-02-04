@@ -1,7 +1,0 @@
-[dir=ltr] .md-typeset li > blockquote {
-  border-color: transparent;
-}
-
-.md-typeset .alert-link:is(:hover, :focus, :visited, :link) {
-  color: light-dark(#866607, #FFD700);
-}

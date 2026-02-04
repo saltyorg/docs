@@ -16,12 +16,12 @@ saltbox_automation:
       url: https://hub.docker.com/r/golift/notifiarr/tags
       type: docker
     - name: Community
-      url:
-      type: community
+      url: https://notifiarr.com/discord
+      type: discord
   project_description:
     name: Notifiarr Client
     summary: |-
-      the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/).
+      the unified local application that connects your media server stack to the Notifiarr.com web service, enabling secure, bidirectional communication for notifications, monitoring, and automation.
     link: https://notifiarr.com/
 ---
 
@@ -31,7 +31,7 @@ saltbox_automation:
 
 ## Overview
 
-[Notifiarr Client](https://notifiarr.com/) is the unified client for Notifiarr.com. The client enables content requests from Media Bot in your Discord Server. It also provides reports for Plex usage and system health. Other features can be [configured on the Notifiarr website.](https://notifiarr.com/).
+[Notifiarr Client](https://notifiarr.com/) is the unified local application that connects your media server stack to the Notifiarr.com web service, enabling secure, bidirectional communication for notifications, monitoring, and automation.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -46,39 +46,6 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
-
-### Snapshot Feature Support
-
-1. Add the following to your Inventory file to enable Privileged mode for Notifiarr and allow it access to system information
-
-     ```yaml
-     notifiarr_privileged: true
-     ```
-
-2. Run the Notifiarr role:
-
-      ```shell
-      sb install sandbox-notifiarr
-      ```
-
-### API Key
-
-You will need a Notifiarr account api key to use Notifiarr. You can get one by [signing up for a free account.](https://notifiarr.com/guest/register){: .header-icons }
-
-After logging in, you should be redirected to your profile screen.
-
-- Click on Generate API Key (This needs to be done)
-- Select your Country
-- Select your Timezone
-- Change your Time Format to your liking
-- Select your Notification Language
-- **Don't forget to Save your changes**
-
-Add your API key to the **Sandbox settings file**
-
-You also need to define a username and password for the Notifiarr client webui in the Sandbox settings file. You can review the password requirements [here](https://github.com/Notifiarr/notifiarr#webui).
-
 ## Deployment
 
 ```shell
@@ -87,14 +54,11 @@ sb install sandbox-notifiarr
 
 ## Usage
 
-- The Notifiarr url will only display the app status <https://notifiarr.iYOUR_DOMAIN_NAMEi>
-
-Now go to the Notifiarr website and configure your integrations and discord server.
-Refer to the [Notifiarr documentation](https://notifiarr.wiki/) for more information.
+Visit <https://notifiarr.iYOUR_DOMAIN_NAMEi>.
 
 The role will attempt to configure Sonarr, Radarr, Plex, and Tautulli. Other apps can be edited in the config file which can be found at `"/opt/notifiarr/notifiarr.conf"` in a standard install. From time to time new options will be added and an [example config file can be found here.](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
 
-A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on the [TRaSH Guides website](https://trash-guides.info/Guide-Sync/).
+A guide to setup and sync TRaSH guides with Radarr and Sonarr can be found on the [TRaSH Guides website](https://trash-guides.info/Guide-Sync).
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

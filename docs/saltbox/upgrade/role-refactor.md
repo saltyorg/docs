@@ -36,6 +36,8 @@ The role-refactor branch merge includes the following updates:
 
     readarr
 
+    settings
+
     sub_zero
 
     webtools

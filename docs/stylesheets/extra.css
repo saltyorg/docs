@@ -264,7 +264,7 @@ article.md-typeset ul ul {
     flex-wrap: wrap;
     gap: 1em;
 
-    & > div {
+    & > * {
       display: flex;
       flex-wrap: wrap;
       gap: .6rem;

@@ -41,7 +41,11 @@ sb install shell
 
 <div class="sb-cta" markdown>
 
+<div markdown>
+
 If you have selected `zsh` as your shell type, [Oh My Zsh](https://ohmyz.sh), a framework for managing your Zsh configuration, is included.
+
+</div>
 
 <div markdown>
 
@@ -57,7 +61,11 @@ If you have selected `zsh` as your shell type, [Oh My Zsh](https://ohmyz.sh), a 
 
 <div class="sb-cta" markdown>
 
+<div markdown>
+
 If enabled via its Inventory toggle, [Oh My Posh](https://ohmyposh.dev), a prompt theme engine, is included on top of Oh My Zsh.
+
+</div>
 
 <div markdown>
 

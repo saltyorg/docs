@@ -136,7 +136,6 @@ article.md-typeset ul ul {
 }
 
 .md-typeset {
-
   table:not([class]) {
     display: table;
   }
@@ -154,7 +153,6 @@ article.md-typeset ul ul {
     Overrides for button grids
     Usage: wrap a 4 button block in a div with this class
   */
-
   .grid--buttons {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
@@ -167,89 +165,85 @@ article.md-typeset ul ul {
   }
 
   /* Dodge inline admonition scrollbars */
-
   .inline-fit-content {
     width: fit-content;
   }
 
-  /*
-    Custom admonitions for variables.
+/*
+Custom admonitions for variables.
 
-    Usage:
-      !!! variable "`var_name`"
-          Content for a generic variable.
+  Usage:
+???+variable "`var_name`"
+    Content for a generic variable.
 
-    For specific types, add the type name after "variable":
-      !!! variable string "`string_var_name`"
-          Content for a string variable.
+  For specific types, add the type name after "variable":
+???+variable string "`string_var_name`"
+    Content for a string variable.
 
-      !!! variable int "`int_var_name`"
-          Content for an integer variable.
+???+variable int "`int_var_name`"
+    Content for an integer variable.
 
-      !!! variable bool "`bool_var_name`"
-          Content for a boolean variable.
+???+variable bool "`bool_var_name`"
+    Content for a boolean variable.
 
-      !!! variable list "`list_var_name`"
-          Content for a list variable.
+???+variable list "`list_var_name`"
+    Content for a list variable.
 
-      !!! variable dict "`dict_var_name`"
-          Content for a dictionary variable.
-  */
-
+???+variable dict "`dict_var_name`"
+    Content for a dictionary variable.
+*/
   .admonition.variable,
   details.variable {
     border-color: rgb(84, 109, 120);
-  }
 
-  .variable > .admonition-title,
-  .variable > summary {
-    background-color: rgba(84, 109, 120, 0.1);
+    > .admonition-title,
+    > summary {
+      background-color: rgba(84, 109, 120, 0.1);
 
-    code {
-      background: none;
-      box-shadow: none;
+      code {
+        background: none;
+        box-shadow: none;
+      }
+
+      &::before {
+        background-color: rgb(84, 109, 120);
+        -webkit-mask-image: var(--md-admonition-icon--variable);
+        mask-image: var(--md-admonition-icon--variable);
+      }
+    }
+
+    &.string > .admonition-title::before,
+    &.string > summary::before {
+      -webkit-mask-image: var(--md-admonition-icon--string);
+      mask-image: var(--md-admonition-icon--string);
+    }
+
+    &.int > .admonition-title::before,
+    &.int > summary::before {
+      -webkit-mask-image: var(--md-admonition-icon--int);
+      mask-image: var(--md-admonition-icon--int);
+    }
+
+    &.bool > .admonition-title::before,
+    &.bool > summary::before {
+      -webkit-mask-image: var(--md-admonition-icon--bool);
+      mask-image: var(--md-admonition-icon--bool);
+    }
+
+    &.list > .admonition-title::before,
+    &.list > summary::before {
+      -webkit-mask-image: var(--md-admonition-icon--list);
+      mask-image: var(--md-admonition-icon--list);
+    }
+
+    &.dict > .admonition-title::before,
+    &.dict > summary::before {
+      -webkit-mask-image: var(--md-admonition-icon--dict);
+      mask-image: var(--md-admonition-icon--dict);
     }
   }
 
-  .variable > .admonition-title::before,
-  .variable > summary::before {
-    background-color: rgb(84, 109, 120);
-    -webkit-mask-image: var(--md-admonition-icon--variable);
-    mask-image: var(--md-admonition-icon--variable);
-  }
-
-  .variable.string > .admonition-title::before,
-  .variable.string > summary::before {
-    -webkit-mask-image: var(--md-admonition-icon--string);
-    mask-image: var(--md-admonition-icon--string);
-  }
-
-  .variable.int > .admonition-title::before,
-  .variable.int > summary::before {
-    -webkit-mask-image: var(--md-admonition-icon--int);
-    mask-image: var(--md-admonition-icon--int);
-  }
-
-  .variable.bool > .admonition-title::before,
-  .variable.bool > summary::before {
-    -webkit-mask-image: var(--md-admonition-icon--bool);
-    mask-image: var(--md-admonition-icon--bool);
-  }
-
-  .variable.list > .admonition-title::before,
-  .variable.list > summary::before {
-    -webkit-mask-image: var(--md-admonition-icon--list);
-    mask-image: var(--md-admonition-icon--list);
-  }
-
-  .variable.dict > .admonition-title::before,
-  .variable.dict > summary::before {
-    -webkit-mask-image: var(--md-admonition-icon--dict);
-    mask-image: var(--md-admonition-icon--dict);
-  }
-
-  /* Traffic direction signs with buttons */
-
+  /* Call to action signs with buttons */
   .admonition.cta > div {
     display: flex;
     gap: 1em;
@@ -257,7 +251,7 @@ article.md-typeset ul ul {
     margin-top: .6rem;
   }
 
-  .admonition.cta > div > div,
+  .admonition.cta > * > div,
   .sb-cta {
     display: flex;
     align-items: center;
@@ -296,7 +290,6 @@ article.md-typeset ul ul {
     Requires **bold** link text and an :icon: on one side or both
     Ex: [**Go Home**:material-home:](index.md){ .md-button }
   */
-
   .md-button:has(> strong) {
     position: relative;
 
@@ -322,72 +315,30 @@ article.md-typeset ul ul {
     background-color: transparent;
   }
 
-}
+  /* Rounded code blocks */
+  .highlight {
+    > pre,
+    > pre > code {
+      border-radius: 0.5rem;
+    }
 
-/* Rounded code blocks */
-.md-typeset .highlight > pre,
-.md-typeset .highlight > pre > code,
-.md-typeset pre > code {
-  border-radius: 0.5rem;
-}
+    /* Code blocks with filename - round top of filename, bottom of code */
+    > .filename {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
 
-/* Code blocks with filename - round top of filename, bottom of code */
-.md-typeset .highlight > .filename {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
+      + pre,
+      + pre > code {
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+    }
+  }
 
-.md-typeset .highlight > .filename + pre,
-.md-typeset .highlight > .filename + pre > code {
-  border-radius: 0 0 0.5rem 0.5rem;
-}
+  pre > code {
+    border-radius: 0.5rem;
+  }
 
-/* Rounded search bar */
-.md-search__form {
-  border-radius: 0.5rem;
-}
-
-/* Search bar when active - round top, square bottom for results dropdown */
-[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-/* Round bottom of search results */
-.md-search__output {
-  border-end-start-radius: 0.5rem;
-  border-end-end-radius: 0.5rem;
-}
-
-[data-md-toggle="search"]:checked ~ .md-header .md-search__output {
-  box-shadow: none;
-}
-
-.md-search__scrollwrap {
-  border-end-start-radius: 0.5rem;
-  border-end-end-radius: 0.5rem;
-}
-
-/* Rounded images - opt-out via .no-rounded class */
-.md-typeset img:not(.twemoji) {
-  border-radius: 0.5rem;
-}
-
-.md-typeset img.no-rounded {
-  border-radius: 0;
-}
-
-/* Rounded buttons */
-.md-typeset .md-button {
-  border-radius: 0.5rem;
-}
-
-/* Rounded annotation tooltips */
-/* .md-annotation .md-tooltip__inner {
-  border-radius: 0.5rem;
-} */
-
-/* Content tabs - custom background colors */
-.md-typeset {
+  /* Content tabs - custom background colors */
   .tabbed-labels {
     background: linear-gradient(to right, color-mix(in srgb, var(--md-primary-fg-color), transparent 90%) 0%, transparent 100%);
     border-radius: .25rem .25rem 0 0;
@@ -400,6 +351,43 @@ article.md-typeset ul ul {
       }
     }
   }
+
+  /* Rounded images - opt-out via .no-rounded class */
+  img:not(.twemoji) {
+    border-radius: 0.5rem;
+
+    &.no-rounded {
+      border-radius: 0;
+    }
+  }
+
+  /* Rounded buttons */
+  .md-button {
+    border-radius: 0.5rem;
+  }
+}
+
+/* Rounded search bar */
+.md-search__form {
+  border-radius: 0.5rem;
+}
+
+/* Search bar when active - round top, square bottom for results dropdown */
+[data-md-toggle="search"]:checked ~ .md-header {
+  .md-search__form {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .md-search__output {
+    box-shadow: none;
+  }
+}
+
+/* Round bottom of search results */
+.md-search__output,
+.md-search__scrollwrap {
+  border-end-start-radius: 0.5rem;
+  border-end-end-radius: 0.5rem;
 }
 
 /* Hide hover tooltip when annotation popup is open */
@@ -410,7 +398,6 @@ body:has(.md-tooltip.md-tooltip--active) .md-tooltip2.md-tooltip2--active {
 .md-tooltip2 {
   top: calc(var(--md-tooltip-host-y) - 2rem);
 }
-
 
 .sb-annotated {
   .md-annotation__index::after {

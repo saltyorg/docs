@@ -406,3 +406,14 @@ body:has(.md-tooltip.md-tooltip--active) .md-tooltip2.md-tooltip2--active {
     top: .1ch;
   }
 }
+
+/* Hide content tabs bar when there's only one tab */
+.tabbed-set[data-tabs="1:1"] {
+  & > input,
+  .tabbed-labels {
+    display: none;
+  }
+  .tabbed-content {
+    margin-top: -1em;
+  }
+}

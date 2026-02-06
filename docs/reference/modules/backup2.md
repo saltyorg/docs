@@ -6,7 +6,7 @@ tags:
   - backup2
 saltbox_automation:
   project_description:
-    name: Streamed Backup
+    name: Streamed Backup (backup2)
     summary: |-
       a Saltbox module that performs a backup of your Saltbox managed data, backing up directly to the remote destination.
 ---
@@ -29,6 +29,12 @@ Perhaps you are on a system that is space-constrained and does not allow this.
 `backup2` supports only rclone targets, and will do the tar operation straight to the rclone destination, directory by directory, without requiring the intermediate step of writing the archive to the local disk.
 
 It will be far less performant than writing the tar archives to a local disk, but exists for use in the event that doing so is not possible.
+
+## Deployment
+
+```shell
+sb install backup2
+```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

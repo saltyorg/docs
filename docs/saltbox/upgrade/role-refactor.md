@@ -1,5 +1,4 @@
 ---
-status: draft
 hide:
   - tags
 tags:

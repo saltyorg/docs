@@ -848,13 +848,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         moviematch_role_docker_create_timeout:
         ```
 
-    ??? variable string "`moviematch_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        moviematch_role_docker_dev_dri:
-        ```
-
     ??? variable string "`moviematch_role_docker_entrypoint`"
 
         ```yaml

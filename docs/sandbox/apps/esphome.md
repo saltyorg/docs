@@ -821,13 +821,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         esphome_role_docker_create_timeout:
         ```
 
-    ??? variable string "`esphome_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        esphome_role_docker_dev_dri:
-        ```
-
     ??? variable string "`esphome_role_docker_entrypoint`"
 
         ```yaml

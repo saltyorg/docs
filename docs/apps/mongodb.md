@@ -1161,18 +1161,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mongodb2_docker_create_timeout:
         ```
 
-    ??? variable string "`mongodb_role_docker_dev_dri`{ .sb-show-on-unchecked }`mongodb2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mongodb_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mongodb2_docker_dev_dri:
-        ```
-
     ??? variable string "`mongodb_role_docker_entrypoint`{ .sb-show-on-unchecked }`mongodb2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -822,13 +822,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         openobserve_role_docker_create_timeout:
         ```
 
-    ??? variable string "`openobserve_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        openobserve_role_docker_dev_dri:
-        ```
-
     ??? variable string "`openobserve_role_docker_entrypoint`"
 
         ```yaml

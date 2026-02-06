@@ -943,13 +943,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jackett_role_docker_create_timeout:
         ```
 
-    ??? variable string "`jackett_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        jackett_role_docker_dev_dri:
-        ```
-
     ??? variable string "`jackett_role_docker_entrypoint`"
 
         ```yaml

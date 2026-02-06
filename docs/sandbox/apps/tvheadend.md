@@ -816,13 +816,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tvheadend_role_docker_create_timeout:
         ```
 
-    ??? variable string "`tvheadend_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        tvheadend_role_docker_dev_dri:
-        ```
-
     ??? variable string "`tvheadend_role_docker_entrypoint`"
 
         ```yaml

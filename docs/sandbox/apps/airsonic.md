@@ -817,13 +817,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         airsonic_role_docker_create_timeout:
         ```
 
-    ??? variable string "`airsonic_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        airsonic_role_docker_dev_dri:
-        ```
-
     ??? variable string "`airsonic_role_docker_entrypoint`"
 
         ```yaml

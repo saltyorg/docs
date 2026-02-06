@@ -714,13 +714,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabthrottle_role_docker_create_timeout:
         ```
 
-    ??? variable string "`sabthrottle_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        sabthrottle_role_docker_dev_dri:
-        ```
-
     ??? variable string "`sabthrottle_role_docker_entrypoint`"
 
         ```yaml

@@ -1545,18 +1545,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_create_timeout:
         ```
 
-    ??? variable string "`calibre_role_docker_dev_dri`{ .sb-show-on-unchecked }`calibre2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        calibre_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        calibre2_docker_dev_dri:
-        ```
-
     ??? variable string "`calibre_role_docker_entrypoint`{ .sb-show-on-unchecked }`calibre2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

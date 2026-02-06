@@ -3152,18 +3152,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         gluetun2_docker_create_timeout:
         ```
 
-    ??? variable string "`gluetun_role_docker_dev_dri`{ .sb-show-on-unchecked }`gluetun2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_dev_dri:
-        ```
-
     ??? variable string "`gluetun_role_docker_entrypoint`{ .sb-show-on-unchecked }`gluetun2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

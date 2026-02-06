@@ -833,13 +833,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homeassistant_role_docker_create_timeout:
         ```
 
-    ??? variable string "`homeassistant_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        homeassistant_role_docker_dev_dri:
-        ```
-
     ??? variable string "`homeassistant_role_docker_entrypoint`"
 
         ```yaml

@@ -813,13 +813,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kavita_role_docker_create_timeout:
         ```
 
-    ??? variable string "`kavita_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        kavita_role_docker_dev_dri:
-        ```
-
     ??? variable string "`kavita_role_docker_entrypoint`"
 
         ```yaml

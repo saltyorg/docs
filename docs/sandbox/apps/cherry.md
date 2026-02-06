@@ -832,13 +832,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cherry_role_docker_create_timeout:
         ```
 
-    ??? variable string "`cherry_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        cherry_role_docker_dev_dri:
-        ```
-
     ??? variable string "`cherry_role_docker_entrypoint`"
 
         ```yaml

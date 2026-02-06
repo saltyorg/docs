@@ -1866,18 +1866,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lidarr2_docker_create_timeout:
         ```
 
-    ??? variable string "`lidarr_role_docker_dev_dri`{ .sb-show-on-unchecked }`lidarr2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        lidarr_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        lidarr2_docker_dev_dri:
-        ```
-
     ??? variable string "`lidarr_role_docker_entrypoint`{ .sb-show-on-unchecked }`lidarr2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

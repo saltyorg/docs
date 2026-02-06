@@ -1348,18 +1348,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellyseerr2_docker_create_timeout:
         ```
 
-    ??? variable string "`jellyseerr_role_docker_dev_dri`{ .sb-show-on-unchecked }`jellyseerr2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        jellyseerr_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        jellyseerr2_docker_dev_dri:
-        ```
-
     ??? variable string "`jellyseerr_role_docker_entrypoint`{ .sb-show-on-unchecked }`jellyseerr2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

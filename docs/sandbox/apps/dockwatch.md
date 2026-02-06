@@ -875,13 +875,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dockwatch_role_docker_create_timeout:
         ```
 
-    ??? variable string "`dockwatch_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        dockwatch_role_docker_dev_dri:
-        ```
-
     ??? variable string "`dockwatch_role_docker_entrypoint`"
 
         ```yaml

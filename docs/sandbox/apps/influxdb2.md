@@ -1303,18 +1303,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         influxdb22_docker_create_timeout:
         ```
 
-    ??? variable string "`influxdb2_role_docker_dev_dri`{ .sb-show-on-unchecked }`influxdb22_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        influxdb2_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        influxdb22_docker_dev_dri:
-        ```
-
     ??? variable string "`influxdb2_role_docker_entrypoint`{ .sb-show-on-unchecked }`influxdb22_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -1505,18 +1505,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_docker_create_timeout:
         ```
 
-    ??? variable string "`tautulli_role_docker_dev_dri`{ .sb-show-on-unchecked }`tautulli2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_docker_dev_dri:
-        ```
-
     ??? variable string "`tautulli_role_docker_entrypoint`{ .sb-show-on-unchecked }`tautulli2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

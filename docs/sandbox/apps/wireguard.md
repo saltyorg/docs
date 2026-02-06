@@ -919,13 +919,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_docker_create_timeout:
         ```
 
-    ??? variable string "`wireguard_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        wireguard_role_docker_dev_dri:
-        ```
-
     ??? variable string "`wireguard_role_docker_entrypoint`"
 
         ```yaml

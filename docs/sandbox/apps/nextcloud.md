@@ -893,13 +893,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nextcloud_role_docker_create_timeout:
         ```
 
-    ??? variable string "`nextcloud_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        nextcloud_role_docker_dev_dri:
-        ```
-
     ??? variable string "`nextcloud_role_docker_entrypoint`"
 
         ```yaml

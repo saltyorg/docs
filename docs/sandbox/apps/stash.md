@@ -823,13 +823,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         stash_role_docker_create_timeout:
         ```
 
-    ??? variable string "`stash_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        stash_role_docker_dev_dri:
-        ```
-
     ??? variable string "`stash_role_docker_entrypoint`"
 
         ```yaml

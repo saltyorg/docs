@@ -1187,18 +1187,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kometa2_docker_create_timeout:
         ```
 
-    ??? variable string "`kometa_role_docker_dev_dri`{ .sb-show-on-unchecked }`kometa2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_docker_dev_dri:
-        ```
-
     ??? variable string "`kometa_role_docker_entrypoint`{ .sb-show-on-unchecked }`kometa2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

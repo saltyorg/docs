@@ -719,13 +719,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         flaresolverr_role_docker_create_timeout:
         ```
 
-    ??? variable string "`flaresolverr_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        flaresolverr_role_docker_dev_dri:
-        ```
-
     ??? variable string "`flaresolverr_role_docker_entrypoint`"
 
         ```yaml

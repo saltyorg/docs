@@ -914,13 +914,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_create_timeout:
         ```
 
-    ??? variable string "`crafty_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        crafty_role_docker_dev_dri:
-        ```
-
     ??? variable string "`crafty_role_docker_entrypoint`"
 
         ```yaml

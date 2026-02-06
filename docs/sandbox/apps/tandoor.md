@@ -987,13 +987,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tandoor_role_docker_create_timeout:
         ```
 
-    ??? variable string "`tandoor_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        tandoor_role_docker_dev_dri:
-        ```
-
     ??? variable string "`tandoor_role_docker_entrypoint`"
 
         ```yaml

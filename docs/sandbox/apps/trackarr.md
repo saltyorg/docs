@@ -844,13 +844,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         trackarr_role_docker_create_timeout:
         ```
 
-    ??? variable string "`trackarr_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        trackarr_role_docker_dev_dri:
-        ```
-
     ??? variable string "`trackarr_role_docker_entrypoint`"
 
         ```yaml

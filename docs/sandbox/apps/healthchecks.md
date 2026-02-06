@@ -827,13 +827,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         healthchecks_role_docker_create_timeout:
         ```
 
-    ??? variable string "`healthchecks_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        healthchecks_role_docker_dev_dri:
-        ```
-
     ??? variable string "`healthchecks_role_docker_entrypoint`"
 
         ```yaml

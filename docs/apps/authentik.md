@@ -1190,13 +1190,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_create_timeout:
         ```
 
-    ??? variable string "`authentik_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_dev_dri:
-        ```
-
     ??? variable string "`authentik_role_docker_entrypoint`"
 
         ```yaml

@@ -796,13 +796,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wrapperr_role_docker_create_timeout:
         ```
 
-    ??? variable string "`wrapperr_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        wrapperr_role_docker_dev_dri:
-        ```
-
     ??? variable string "`wrapperr_role_docker_entrypoint`"
 
         ```yaml

@@ -699,13 +699,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tika_role_docker_create_timeout:
         ```
 
-    ??? variable string "`tika_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        tika_role_docker_dev_dri:
-        ```
-
     ??? variable string "`tika_role_docker_entrypoint`"
 
         ```yaml

@@ -858,13 +858,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         karakeep_role_docker_create_timeout:
         ```
 
-    ??? variable string "`karakeep_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        karakeep_role_docker_dev_dri:
-        ```
-
     ??? variable string "`karakeep_role_docker_entrypoint`"
 
         ```yaml

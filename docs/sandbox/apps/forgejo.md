@@ -846,13 +846,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         forgejo_role_docker_create_timeout:
         ```
 
-    ??? variable string "`forgejo_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        forgejo_role_docker_dev_dri:
-        ```
-
     ??? variable string "`forgejo_role_docker_entrypoint`"
 
         ```yaml

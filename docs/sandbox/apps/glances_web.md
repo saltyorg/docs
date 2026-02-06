@@ -845,13 +845,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         glances_web_role_docker_create_timeout:
         ```
 
-    ??? variable string "`glances_web_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        glances_web_role_docker_dev_dri:
-        ```
-
     ??? variable string "`glances_web_role_docker_entrypoint`"
 
         ```yaml

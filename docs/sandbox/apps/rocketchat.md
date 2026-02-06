@@ -885,13 +885,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rocketchat_role_docker_create_timeout:
         ```
 
-    ??? variable string "`rocketchat_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        rocketchat_role_docker_dev_dri:
-        ```
-
     ??? variable string "`rocketchat_role_docker_entrypoint`"
 
         ```yaml

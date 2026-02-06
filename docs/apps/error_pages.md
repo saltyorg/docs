@@ -781,13 +781,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         error_pages_role_docker_create_timeout:
         ```
 
-    ??? variable string "`error_pages_role_docker_dev_dri`"
-
-        ```yaml
-        # Type: string
-        error_pages_role_docker_dev_dri:
-        ```
-
     ??? variable string "`error_pages_role_docker_entrypoint`"
 
         ```yaml

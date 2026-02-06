@@ -1861,18 +1861,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_docker_create_timeout:
         ```
 
-    ??? variable string "`qbittorrent_role_docker_dev_dri`{ .sb-show-on-unchecked }`qbittorrent2_docker_dev_dri`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_dev_dri:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_dev_dri:
-        ```
-
     ??? variable string "`qbittorrent_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrent2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

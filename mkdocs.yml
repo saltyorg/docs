@@ -26,140 +26,140 @@ theme:
     code: Roboto Mono
   custom_dir: overrides
   features:
-  - content.action.edit
-  - content.action.view
-  - content.code.annotate
-  - content.code.copy
-  - content.tabs.link
-  - content.tooltips
-  - header.autohide
-  - navigation.footer
-  - navigation.indexes
-  - navigation.instant
-  - navigation.instant.prefetch
-  - navigation.instant.progress
-  - navigation.sections
-  - navigation.tabs
-  - navigation.tabs.sticky
-  - navigation.top
-  - navigation.tracking
-  - search.highlight
-  - search.share
-  - search.suggest
-  - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
   language: en
   palette:
-  # Palette toggle for automatic mode
-  - media: "(prefers-color-scheme)"
-    primary: deep purple
-    accent: deep purple
-    toggle:
-      icon: material/brightness-auto
-      name: Switch to light mode
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
-  # Palette toggle for light mode
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    primary: deep purple
-    accent: deep purple
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
-  # Palette toggle for dark mode
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: deep purple
-    accent: deep purple
-    toggle:
-      icon: material/brightness-4
-      name: Switch to system preference
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 plugins:
-- git-authors:
-    exclude:
-    - index.md
-    ignore_authors:
-    - github-actions[bot]@users.noreply.github.com
-- git-committers:
-    branch: main
-    cache_dir: .cache/plugin/git-committers/
-    enabled: !ENV [ CI, false ]
-    exclude:
-    - index.md
-    exclude_committers:
-    - github-actions[bot]
-    - web-flow
-    repository: saltyorg/docs
-- git-revision-date-localized:
-    enable_creation_date: true
-    enabled: !ENV [ CI, false ]
-    exclude:
-    - index.md
-    fallback_to_build_date: true
-    type: date
-- glightbox:
-    touchNavigation: true
-    loop: false
-    effect: zoom
-    slide_effect: slide
-    width: 100%
-    height: auto
-    zoomable: true
-    draggable: true
-    skip_classes: [ ]
-    auto_themed: true
-    auto_caption: false
-    caption_position: bottom
-    background: none
-    shadow: true
-    manual: false
-- meta
-- optimize:
-    cache: true
-    cache_dir: .cache/plugin/optimize
-    enabled: !ENV [ CI, false ]
-    optimize_jpg: false
-    optimize_jpg_progressive: true
-    optimize_jpg_quality: 75
-    optimize_png: true
-    optimize_png_speed: 1
-    optimize_png_strip: true
-- privacy:
-    assets: true
-    assets_fetch: true
-    cache: true
-    cache_dir: .cache/plugin/privacy
-    enabled: !ENV [ CI, false ]
-    links_attr_map:
-      target: _blank
-    links_noopener: true
-- placeholder
-- search:
-    lang: en
-- termynal:
-    title: "shell"
-    buttons: "macos"
-    prompt_literal_start:
-    - "$"
-    - ">"
-    - ">>>"
+  - git-authors:
+      exclude:
+        - index.md
+      ignore_authors:
+        - github-actions[bot]@users.noreply.github.com
+  - git-committers:
+      branch: main
+      cache_dir: .cache/plugin/git-committers/
+      enabled: !ENV [ CI, false ]
+      exclude:
+        - index.md
+      exclude_committers:
+        - github-actions[bot]
+        - web-flow
+      repository: saltyorg/docs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enabled: !ENV [ CI, false ]
+      exclude:
+        - index.md
+      fallback_to_build_date: true
+      type: date
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes: [ ]
+      auto_themed: true
+      auto_caption: false
+      caption_position: bottom
+      background: none
+      shadow: true
+      manual: false
+  - meta
+  - optimize:
+      cache: true
+      cache_dir: .cache/plugin/optimize
+      enabled: !ENV [ CI, false ]
+      optimize_jpg: false
+      optimize_jpg_progressive: true
+      optimize_jpg_quality: 75
+      optimize_png: true
+      optimize_png_speed: 1
+      optimize_png_strip: true
+  - privacy:
+      assets: true
+      assets_fetch: true
+      cache: true
+      cache_dir: .cache/plugin/privacy
+      enabled: !ENV [ CI, false ]
+      links_attr_map:
+        target: _blank
+      links_noopener: true
+  - placeholder
+  - search:
+      lang: en
+  - termynal:
+      title: "shell"
+      buttons: "macos"
+      prompt_literal_start:
+        - "$"
+        - ">"
+        - ">>>"
 
 extra:
   generator: false
   social:
-  - icon: fontawesome/solid/heart
-    class: md-social__link heart
-    link: "https://github.com/sponsors/saltydk"
-    name: Donate
-  - icon: fontawesome/brands/discord
-    class: md-social__link
-    link: "https://discord.gg/ugfKXpFND8"
-    name: Discord
-  - icon: fontawesome/brands/github
-    class: md-social__link
-    link: "https://github.com/saltyorg/Saltbox"
-    name: GitHub
+    - icon: fontawesome/solid/heart
+      class: md-social__link heart
+      link: "https://github.com/sponsors/saltydk"
+      name: Donate
+    - icon: fontawesome/brands/discord
+      class: md-social__link
+      link: "https://discord.gg/ugfKXpFND8"
+      name: Discord
+    - icon: fontawesome/brands/github
+      class: md-social__link
+      link: "https://github.com/saltyorg/Saltbox"
+      name: GitHub
   status:
     deprecated: Deprecated documentation that is unlikely to be of use
     draft: Work in progress documentation
@@ -167,439 +167,439 @@ extra:
     outdated: Outdated documentation needing work (help wanted)
 
 markdown_extensions:
-- abbr
-- admonition
-- attr_list
-- footnotes
-- md_in_html
-- meta
-- pymdownx.details
-- pymdownx.emoji:
-    emoji_index: !!python/name:material.extensions.emoji.twemoji
-    emoji_generator: !!python/name:material.extensions.emoji.to_svg
-- pymdownx.highlight
-- pymdownx.keys
-- pymdownx.snippets
-- pymdownx.superfences:
-    custom_fences:
-    - name: mermaid
-      class: mermaid
-      format: !!python/name:pymdownx.superfences.fence_code_format
-- pymdownx.tabbed:
-    alternate_style: true
-- pymdownx.tilde
-- toc:
-    permalink: true
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - meta
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
 
 extra_css:
-- stylesheets/extra.css
+  - stylesheets/extra.css
 
 extra_javascript:
-- https://code.jquery.com/jquery-3.7.1.min.js
-- javascripts/extra.js
+  - https://code.jquery.com/jquery-3.7.1.min.js
+  - javascripts/extra.js
 
 nav:
-- Saltbox: index.md
-- Getting Started:
-  - saltbox/basics/basics.md
-  - saltbox/prerequisites/prerequisites.md
-  - saltbox/basics/install-types.md
-  - saltbox/install/install.md
-  - saltbox/install/after.md
-  - saltbox/basics/update.md
-  - saltbox/basics/accessing-apps.md
-  - saltbox/basics/paths.md
-  - Major Upgrade Guide:
-    - saltbox/upgrade/role-refactor.md
-  - Inventory:
-    - saltbox/inventory/index.md
-    - saltbox/inventory/example-overrides.md
-    - saltbox/inventory/danger-zone.md
-  - Backup/Restore:
-    - saltbox/backup/settings.md
-    - reference/modules/backup.md
-    - reference/modules/backup2.md
-    - reference/modules/restore.md
-    - saltbox/backup/migrate.md
-  - reference/modules/sandbox.md
+  - Saltbox: index.md
+  - Getting Started:
+      - saltbox/basics/basics.md
+      - saltbox/prerequisites/prerequisites.md
+      - saltbox/basics/install-types.md
+      - saltbox/install/install.md
+      - saltbox/install/after.md
+      - saltbox/basics/update.md
+      - saltbox/basics/accessing-apps.md
+      - saltbox/basics/paths.md
+      - Major Upgrade Guide:
+          - saltbox/upgrade/role-refactor.md
+      - Inventory:
+          - saltbox/inventory/index.md
+          - saltbox/inventory/example-overrides.md
+          - saltbox/inventory/danger-zone.md
+      - Backup/Restore:
+          - saltbox/backup/settings.md
+          - reference/modules/backup.md
+          - reference/modules/backup2.md
+          - reference/modules/restore.md
+          - saltbox/backup/migrate.md
+      - reference/modules/sandbox.md
 
-- Applications:
-  - apps/index.md
+  - Applications:
+      - apps/index.md
 
-  - Saltbox Selection:
-    - apps/plex.md
-    - apps/tautulli.md
-    - apps/autoscan.md
-    - apps/sabnzbd.md
-    - apps/nzbhydra2.md
-    - apps/qbittorrent.md
-    - apps/jackett.md
-    - apps/sonarr.md
-    - apps/radarr.md
-    - apps/lidarr.md
-    - apps/overseerr.md
-    - apps/portainer.md
-    - apps/organizr.md
-    - apps/btop.md
-    - apps/glances.md
-    - apps/iperf3.md
+      - Saltbox Selection:
+          - apps/plex.md
+          - apps/tautulli.md
+          - apps/autoscan.md
+          - apps/sabnzbd.md
+          - apps/nzbhydra2.md
+          - apps/qbittorrent.md
+          - apps/jackett.md
+          - apps/sonarr.md
+          - apps/radarr.md
+          - apps/lidarr.md
+          - apps/overseerr.md
+          - apps/portainer.md
+          - apps/organizr.md
+          - apps/btop.md
+          - apps/glances.md
+          - apps/iperf3.md
 
-  - Saltbox Expanded:
-    - apps/asshama.md
-    - apps/authelia.md
-    - apps/authentik.md
-    - apps/autobrr.md
-    - apps/autoheal.md
-    - apps/bazarr.md
-    - apps/btrfsmaintenance.md
-    - apps/cadvisor.md
-    - apps/cloudplow.md
-    - apps/crowdsec.md
-    - apps/ctop.md
-    - apps/ddclient.md
-    - apps/ddns.md
-    - apps/deluge.md
-    - apps/diun.md
-    - apps/docker.md
-    - apps/docker_socket_proxy.md
-    - apps/dozzle.md
-    - apps/emby.md
-    - apps/error_pages.md
-    - apps/gluetun.md
-    - apps/grafana.md
-    - apps/jellyfin.md
-    - apps/lldap.md
-    - apps/mainline.md
-    - apps/mariadb.md
-    - apps/mongodb.md
-    - apps/netdata.md
-    - apps/nginx.md
-    - apps/node_exporter.md
-    - apps/nzbget.md
-    - apps/nzbthrottle.md
-    - apps/petio.md
-    - apps/postgres.md
-    - apps/postgres_host.md
-    - apps/prometheus.md
-    - apps/prowlarr.md
-    - apps/python.md
-    - apps/rclone.md
-    - apps/redis.md
-    - apps/scrutiny.md
-    - apps/subliminal.md
-    - apps/traefik.md
-    - apps/transfer.md
-    - apps/unpackerr.md
-    - apps/whisparr.md
-    - apps/yyq.md
+      - Saltbox Expanded:
+          - apps/asshama.md
+          - apps/authelia.md
+          - apps/authentik.md
+          - apps/autobrr.md
+          - apps/autoheal.md
+          - apps/bazarr.md
+          - apps/btrfsmaintenance.md
+          - apps/cadvisor.md
+          - apps/cloudplow.md
+          - apps/crowdsec.md
+          - apps/ctop.md
+          - apps/ddclient.md
+          - apps/ddns.md
+          - apps/deluge.md
+          - apps/diun.md
+          - apps/docker.md
+          - apps/docker_socket_proxy.md
+          - apps/dozzle.md
+          - apps/emby.md
+          - apps/error_pages.md
+          - apps/gluetun.md
+          - apps/grafana.md
+          - apps/jellyfin.md
+          - apps/lldap.md
+          - apps/mainline.md
+          - apps/mariadb.md
+          - apps/mongodb.md
+          - apps/netdata.md
+          - apps/nginx.md
+          - apps/node_exporter.md
+          - apps/nzbget.md
+          - apps/nzbthrottle.md
+          - apps/petio.md
+          - apps/postgres.md
+          - apps/postgres_host.md
+          - apps/prometheus.md
+          - apps/prowlarr.md
+          - apps/python.md
+          - apps/rclone.md
+          - apps/redis.md
+          - apps/scrutiny.md
+          - apps/subliminal.md
+          - apps/traefik.md
+          - apps/transfer.md
+          - apps/unpackerr.md
+          - apps/whisparr.md
+          - apps/yyq.md
 
-  - Sandbox (community):
-    - sandbox/apps/a_train.md
-    - sandbox/apps/actualbudget.md
-    - sandbox/apps/adguardhome.md
-    - sandbox/apps/adminer.md
-    - sandbox/apps/airdcpp.md
-    - sandbox/apps/airsonic.md
-    - sandbox/apps/apprise.md
-    - sandbox/apps/archivebox.md
-    - sandbox/apps/audiobookshelf.md
-    - sandbox/apps/barcodebuddy.md
-    - sandbox/apps/beets.md
-    - sandbox/apps/booklore.md
-    - sandbox/apps/bookstack.md
-    - sandbox/apps/calibre.md
-    - sandbox/apps/calibre_web.md
-    - sandbox/apps/changedetection.md
-    - sandbox/apps/cherry.md
-    - sandbox/apps/chrome.md
-    - sandbox/apps/cockpit.md
-    - sandbox/apps/code_server.md
-    - sandbox/apps/codex.md
-    - sandbox/apps/comixed.md
-    - sandbox/apps/crafty.md
-    - sandbox/apps/dashdot.md
-    - sandbox/apps/dashy.md
-    - sandbox/apps/deemix.md
-    - sandbox/apps/delugevpn.md
-    - sandbox/apps/discoflix.md
-    - sandbox/apps/dockwatch.md
-    - sandbox/apps/doplarr.md
-    - sandbox/apps/duplicati.md
-    - sandbox/apps/elasticsearch.md
-    - sandbox/apps/embystat.md
-    - sandbox/apps/epms.md
-    - sandbox/apps/esphome.md
-    - sandbox/apps/factorio.md
-    - sandbox/apps/filebot.md
-    - sandbox/apps/filebrowser.md
-    - sandbox/apps/filezilla.md
-    - sandbox/apps/fireflyiii.md
-    - sandbox/apps/fireflyiii_importer.md
-    - sandbox/apps/firefox.md
-    - sandbox/apps/flaresolverr.md
-    - sandbox/apps/forgejo.md
-    - sandbox/apps/foundry.md
-    - sandbox/apps/freshrss.md
-    - sandbox/apps/funkwhale.md
-    - sandbox/apps/gaps.md
-    - sandbox/apps/gitea.md
-    - sandbox/apps/glances_web.md
-    - sandbox/apps/goaccess.md
-    - sandbox/apps/gotenberg.md
-    - sandbox/apps/gotify.md
-    - sandbox/apps/grocy.md
-    - sandbox/apps/guacamole.md
-    - sandbox/apps/handbrake.md
-    - sandbox/apps/healthchecks.md
-    - sandbox/apps/heimdall.md
-    - sandbox/apps/homarr.md
-    - sandbox/apps/homeassistant.md
-    - sandbox/apps/homebox.md
-    - sandbox/apps/homepage.md
-    - sandbox/apps/immich.md
-    - sandbox/apps/influxdb.md
-    - sandbox/apps/influxdb2.md
-    - sandbox/apps/invoiceninjav5.md
-    - sandbox/apps/it_tools.md
-    - sandbox/apps/jdownloader2.md
-    - sandbox/apps/jellyseerr.md
-    - sandbox/apps/jellystat.md
-    - sandbox/apps/joplin.md
-    - sandbox/apps/karakeep.md
-    - sandbox/apps/kavita.md
-    - sandbox/apps/kcptun_client.md
-    - sandbox/apps/kcptun_server.md
-    - sandbox/apps/kitana.md
-    - sandbox/apps/koel.md
-    - sandbox/apps/kometa.md
-    - sandbox/apps/komga.md
-    - sandbox/apps/krusader.md
-    - sandbox/apps/lazylibrarian.md
-    - sandbox/apps/lgsm.md
-    - sandbox/apps/linkding.md
-    - sandbox/apps/linkwarden.md
-    - sandbox/apps/maintainerr.md
-    - sandbox/apps/makemkv.md
-    - sandbox/apps/mealie.md
-    - sandbox/apps/medusa.md
-    - sandbox/apps/meilisearch.md
-    - sandbox/apps/membarr.md
-    - sandbox/apps/minecraft.md
-    - sandbox/apps/minecraft_bedrock.md
-    - sandbox/apps/miniflux.md
-    - sandbox/apps/mkvtoolnix.md
-    - sandbox/apps/monitorr.md
-    - sandbox/apps/moviematch.md
-    - sandbox/apps/mqtt.md
-    - sandbox/apps/mylar3.md
-    - sandbox/apps/n8n.md
-    - sandbox/apps/nabarr.md
-    - sandbox/apps/navidrome.md
-    - sandbox/apps/nextcloud.md
-    - sandbox/apps/node_red.md
-    - sandbox/apps/notifiarr.md
-    - sandbox/apps/olivetin.md
-    - sandbox/apps/ombi.md
-    - sandbox/apps/openobserve.md
-    - sandbox/apps/paperless_ai.md
-    - sandbox/apps/paperless_ngx.md
-    - sandbox/apps/pgadmin.md
-    - sandbox/apps/photoprism.md
-    - sandbox/apps/phpmyadmin.md
-    - sandbox/apps/plex_auto_languages.md
-    - sandbox/apps/plex_dupefinder.md
-    - sandbox/apps/plex_patrol.md
-    - sandbox/apps/plex_utills.md
-    - sandbox/apps/plexshare.md
-    - sandbox/apps/plextraktsync.md
-    - sandbox/apps/privatebin.md
-    - sandbox/apps/profilarr.md
-    - sandbox/apps/puddletag.md
-    - sandbox/apps/pufferpanel.md
-    - sandbox/apps/pyload.md
-    - sandbox/apps/python_plexlibrary.md
-    - sandbox/apps/qbit_manage.md
-    - sandbox/apps/qbittorrentvpn.md
-    - sandbox/apps/qui.md
-    - sandbox/apps/recyclarr.md
-    - sandbox/apps/reposilite.md
-    - sandbox/apps/requestrr.md
-    - sandbox/apps/resiliosync.md
-    - sandbox/apps/rflood.md
-    - sandbox/apps/rocketchat.md
-    - sandbox/apps/rutorrent.md
-    - sandbox/apps/sabthrottle.md
-    - sandbox/apps/semaphoreui.md
-    - sandbox/apps/speedtest.md
-    - sandbox/apps/sqlitebrowser.md
-    - sandbox/apps/sshwifty.md
-    - sandbox/apps/stash.md
-    - sandbox/apps/syncthing.md
-    - sandbox/apps/tandoor.md
-    - sandbox/apps/tauticord.md
-    - sandbox/apps/tdarr.md
-    - sandbox/apps/tdarr_node.md
-    - sandbox/apps/telegraf.md
-    - sandbox/apps/teslamate.md
-    - sandbox/apps/thelounge.md
-    - sandbox/apps/threadfin.md
-    - sandbox/apps/tika.md
-    - sandbox/apps/tqm.md
-    - sandbox/apps/trackarr.md
-    - sandbox/apps/traefik_robotstxt.md
-    - sandbox/apps/transmission.md
-    - sandbox/apps/transmissionvpn.md
-    - sandbox/apps/trilium.md
-    - sandbox/apps/tubearchivist.md
-    - sandbox/apps/tvheadend.md
-    - sandbox/apps/unifi_network_application.md
-    - sandbox/apps/unmanic.md
-    - sandbox/apps/uptime_kuma.md
-    - sandbox/apps/varken.md
-    - sandbox/apps/vaultwarden.md
-    - sandbox/apps/vnstat.md
-    - sandbox/apps/watchstate.md
-    - sandbox/apps/wikijs.md
-    - sandbox/apps/wireguard.md
-    - sandbox/apps/wizarr.md
-    - sandbox/apps/wordpress.md
-    - sandbox/apps/wrapperr.md
-    - sandbox/apps/xbackbone.md
-    - sandbox/apps/xteve.md
-    - sandbox/apps/yacht.md
-    - sandbox/apps/your_spotify.md
-    - sandbox/apps/ytdl_sub.md
-    - sandbox/apps/znc.md
+      - Sandbox (community):
+          - sandbox/apps/a_train.md
+          - sandbox/apps/actualbudget.md
+          - sandbox/apps/adguardhome.md
+          - sandbox/apps/adminer.md
+          - sandbox/apps/airdcpp.md
+          - sandbox/apps/airsonic.md
+          - sandbox/apps/apprise.md
+          - sandbox/apps/archivebox.md
+          - sandbox/apps/audiobookshelf.md
+          - sandbox/apps/barcodebuddy.md
+          - sandbox/apps/beets.md
+          - sandbox/apps/booklore.md
+          - sandbox/apps/bookstack.md
+          - sandbox/apps/calibre.md
+          - sandbox/apps/calibre_web.md
+          - sandbox/apps/changedetection.md
+          - sandbox/apps/cherry.md
+          - sandbox/apps/chrome.md
+          - sandbox/apps/cockpit.md
+          - sandbox/apps/code_server.md
+          - sandbox/apps/codex.md
+          - sandbox/apps/comixed.md
+          - sandbox/apps/crafty.md
+          - sandbox/apps/dashdot.md
+          - sandbox/apps/dashy.md
+          - sandbox/apps/deemix.md
+          - sandbox/apps/delugevpn.md
+          - sandbox/apps/discoflix.md
+          - sandbox/apps/dockwatch.md
+          - sandbox/apps/doplarr.md
+          - sandbox/apps/duplicati.md
+          - sandbox/apps/elasticsearch.md
+          - sandbox/apps/embystat.md
+          - sandbox/apps/epms.md
+          - sandbox/apps/esphome.md
+          - sandbox/apps/factorio.md
+          - sandbox/apps/filebot.md
+          - sandbox/apps/filebrowser.md
+          - sandbox/apps/filezilla.md
+          - sandbox/apps/fireflyiii.md
+          - sandbox/apps/fireflyiii_importer.md
+          - sandbox/apps/firefox.md
+          - sandbox/apps/flaresolverr.md
+          - sandbox/apps/forgejo.md
+          - sandbox/apps/foundry.md
+          - sandbox/apps/freshrss.md
+          - sandbox/apps/funkwhale.md
+          - sandbox/apps/gaps.md
+          - sandbox/apps/gitea.md
+          - sandbox/apps/glances_web.md
+          - sandbox/apps/goaccess.md
+          - sandbox/apps/gotenberg.md
+          - sandbox/apps/gotify.md
+          - sandbox/apps/grocy.md
+          - sandbox/apps/guacamole.md
+          - sandbox/apps/handbrake.md
+          - sandbox/apps/healthchecks.md
+          - sandbox/apps/heimdall.md
+          - sandbox/apps/homarr.md
+          - sandbox/apps/homeassistant.md
+          - sandbox/apps/homebox.md
+          - sandbox/apps/homepage.md
+          - sandbox/apps/immich.md
+          - sandbox/apps/influxdb.md
+          - sandbox/apps/influxdb2.md
+          - sandbox/apps/invoiceninjav5.md
+          - sandbox/apps/it_tools.md
+          - sandbox/apps/jdownloader2.md
+          - sandbox/apps/jellyseerr.md
+          - sandbox/apps/jellystat.md
+          - sandbox/apps/joplin.md
+          - sandbox/apps/karakeep.md
+          - sandbox/apps/kavita.md
+          - sandbox/apps/kcptun_client.md
+          - sandbox/apps/kcptun_server.md
+          - sandbox/apps/kitana.md
+          - sandbox/apps/koel.md
+          - sandbox/apps/kometa.md
+          - sandbox/apps/komga.md
+          - sandbox/apps/krusader.md
+          - sandbox/apps/lazylibrarian.md
+          - sandbox/apps/lgsm.md
+          - sandbox/apps/linkding.md
+          - sandbox/apps/linkwarden.md
+          - sandbox/apps/maintainerr.md
+          - sandbox/apps/makemkv.md
+          - sandbox/apps/mealie.md
+          - sandbox/apps/medusa.md
+          - sandbox/apps/meilisearch.md
+          - sandbox/apps/membarr.md
+          - sandbox/apps/minecraft.md
+          - sandbox/apps/minecraft_bedrock.md
+          - sandbox/apps/miniflux.md
+          - sandbox/apps/mkvtoolnix.md
+          - sandbox/apps/monitorr.md
+          - sandbox/apps/moviematch.md
+          - sandbox/apps/mqtt.md
+          - sandbox/apps/mylar3.md
+          - sandbox/apps/n8n.md
+          - sandbox/apps/nabarr.md
+          - sandbox/apps/navidrome.md
+          - sandbox/apps/nextcloud.md
+          - sandbox/apps/node_red.md
+          - sandbox/apps/notifiarr.md
+          - sandbox/apps/olivetin.md
+          - sandbox/apps/ombi.md
+          - sandbox/apps/openobserve.md
+          - sandbox/apps/paperless_ai.md
+          - sandbox/apps/paperless_ngx.md
+          - sandbox/apps/pgadmin.md
+          - sandbox/apps/photoprism.md
+          - sandbox/apps/phpmyadmin.md
+          - sandbox/apps/plex_auto_languages.md
+          - sandbox/apps/plex_dupefinder.md
+          - sandbox/apps/plex_patrol.md
+          - sandbox/apps/plex_utills.md
+          - sandbox/apps/plexshare.md
+          - sandbox/apps/plextraktsync.md
+          - sandbox/apps/privatebin.md
+          - sandbox/apps/profilarr.md
+          - sandbox/apps/puddletag.md
+          - sandbox/apps/pufferpanel.md
+          - sandbox/apps/pyload.md
+          - sandbox/apps/python_plexlibrary.md
+          - sandbox/apps/qbit_manage.md
+          - sandbox/apps/qbittorrentvpn.md
+          - sandbox/apps/qui.md
+          - sandbox/apps/recyclarr.md
+          - sandbox/apps/reposilite.md
+          - sandbox/apps/requestrr.md
+          - sandbox/apps/resiliosync.md
+          - sandbox/apps/rflood.md
+          - sandbox/apps/rocketchat.md
+          - sandbox/apps/rutorrent.md
+          - sandbox/apps/sabthrottle.md
+          - sandbox/apps/semaphoreui.md
+          - sandbox/apps/speedtest.md
+          - sandbox/apps/sqlitebrowser.md
+          - sandbox/apps/sshwifty.md
+          - sandbox/apps/stash.md
+          - sandbox/apps/syncthing.md
+          - sandbox/apps/tandoor.md
+          - sandbox/apps/tauticord.md
+          - sandbox/apps/tdarr.md
+          - sandbox/apps/tdarr_node.md
+          - sandbox/apps/telegraf.md
+          - sandbox/apps/teslamate.md
+          - sandbox/apps/thelounge.md
+          - sandbox/apps/threadfin.md
+          - sandbox/apps/tika.md
+          - sandbox/apps/tqm.md
+          - sandbox/apps/trackarr.md
+          - sandbox/apps/traefik_robotstxt.md
+          - sandbox/apps/transmission.md
+          - sandbox/apps/transmissionvpn.md
+          - sandbox/apps/trilium.md
+          - sandbox/apps/tubearchivist.md
+          - sandbox/apps/tvheadend.md
+          - sandbox/apps/unifi_network_application.md
+          - sandbox/apps/unmanic.md
+          - sandbox/apps/uptime_kuma.md
+          - sandbox/apps/varken.md
+          - sandbox/apps/vaultwarden.md
+          - sandbox/apps/vnstat.md
+          - sandbox/apps/watchstate.md
+          - sandbox/apps/wikijs.md
+          - sandbox/apps/wireguard.md
+          - sandbox/apps/wizarr.md
+          - sandbox/apps/wordpress.md
+          - sandbox/apps/wrapperr.md
+          - sandbox/apps/xbackbone.md
+          - sandbox/apps/xteve.md
+          - sandbox/apps/yacht.md
+          - sandbox/apps/your_spotify.md
+          - sandbox/apps/ytdl_sub.md
+          - sandbox/apps/znc.md
 
-- FAQ:
-  - faq/system.md
-  - faq/cloud-storage.md
-  - faq/cloudflare.md
-  - faq/cloudplow.md
-  - faq/docker.md
-  - faq/hetzner.md
-  - faq/install.md
-  - faq/backup-and-restore.md
-  - faq/rclone.md
-  - faq/plex.md
-  - faq/rutorrent.md
-  - faq/misc.md
-  - faq/bazarr.md
+  - FAQ:
+      - faq/system.md
+      - faq/cloud-storage.md
+      - faq/cloudflare.md
+      - faq/cloudplow.md
+      - faq/docker.md
+      - faq/hetzner.md
+      - faq/install.md
+      - faq/backup-and-restore.md
+      - faq/rclone.md
+      - faq/plex.md
+      - faq/rutorrent.md
+      - faq/misc.md
+      - faq/bazarr.md
 
-- Advanced:
-  - advanced/index.md
-  - advanced/your-own-containers.md
-  - advanced/healthchecks.md
-  - advanced/styled-error-pages.md
-  - advanced/tailscale.md
-  - advanced/themepark.md
-  - advanced/user-crontab-examples.md
-  - advanced/feeder.md
-  - advanced/nvidia.md
-  - advanced/crowdsec.md
+  - Advanced:
+      - advanced/index.md
+      - advanced/your-own-containers.md
+      - advanced/healthchecks.md
+      - advanced/styled-error-pages.md
+      - advanced/tailscale.md
+      - advanced/themepark.md
+      - advanced/user-crontab-examples.md
+      - advanced/feeder.md
+      - advanced/nvidia.md
+      - advanced/crowdsec.md
 
-- Reference:
-  - Guides:
-    - General:
-      - Chazlarson Guides:
-        - reference/guides/chazguides/server.md
-        - reference/guides/chazguides/success.md
-        - reference/guides/chazguides/teamdrive.md
-        - reference/guides/chazguides/no-media.md
-        - reference/guides/chazguides/disk-full.md
-        - reference/guides/chazguides/home-server.md
-    - Linux:
-      - reference/guides/aliases.md
-    - Plex:
-      - reference/guides/tautuliscripts.md
-    - Downloading:
-      - reference/guides/hardlinking.md
-    - Google:
-      - reference/guides/google-shared-drive.md
-    - Dropbox:
-      - reference/guides/dropbox-general.md
-    - Rclone:
-      - reference/guides/rclone-remote-generic.md
-      - reference/guides/rclone-remote-dropbox.md
-      - reference/guides/rclone-remote.md
-      - reference/guides/rclone-remote-encrypted.md
-    - Migration:
-      - reference/guides/cloudtocloud.md
-    - Further Reading and Links:
-      - reference/guides/suggested_reading.md
-      - reference/guides/links.md
-      - reference/guides/other.md
+  - Reference:
+      - Guides:
+          - General:
+              - Chazlarson Guides:
+                  - reference/guides/chazguides/server.md
+                  - reference/guides/chazguides/success.md
+                  - reference/guides/chazguides/teamdrive.md
+                  - reference/guides/chazguides/no-media.md
+                  - reference/guides/chazguides/disk-full.md
+                  - reference/guides/chazguides/home-server.md
+          - Linux:
+              - reference/guides/aliases.md
+          - Plex:
+              - reference/guides/tautuliscripts.md
+          - Downloading:
+              - reference/guides/hardlinking.md
+          - Google:
+              - reference/guides/google-shared-drive.md
+          - Dropbox:
+              - reference/guides/dropbox-general.md
+          - Rclone:
+              - reference/guides/rclone-remote-generic.md
+              - reference/guides/rclone-remote-dropbox.md
+              - reference/guides/rclone-remote.md
+              - reference/guides/rclone-remote-encrypted.md
+          - Migration:
+              - reference/guides/cloudtocloud.md
+          - Further Reading and Links:
+              - reference/guides/suggested_reading.md
+              - reference/guides/links.md
+              - reference/guides/other.md
 
-  - Topics:
-    - Prerequisite References:
-      - reference/server.md
-      - reference/domain.md
-      - reference/cloud.md
-      - reference/plex.md
-      - reference/usenet-torrent.md
-    - Install References:
-      - reference/dependencies.md
-      - reference/accounts.md
-      - reference/preinstall.md
-      - reference/rclone.md
-      - reference/rclone-manual.md
-      - reference/install.md
-    - Google References:
-      - reference/google-account-perms.md
-      - reference/google-project-setup.md
-      - reference/google-group-setup.md
-      - reference/google-gcloud-tools-install.md
-      - reference/google-service-accounts.md
-      - reference/google-shared-drives.md
-    - Application References:
-      - reference/guides/app-remove.md
-      - reference/guides/app-reset.md
-      - reference/guides/app-update.md
-    - Other References:
-      - reference/guides/autoscan-rewrites.md
-      - reference/cloudplow.md
-      - reference/customizing-plex-libs.md
-      - reference/logs.md
-      - reference/multiple-instances.md
-      - reference/cloudplow-config.md
-      - reference/plex_auth_token.md
-      - reference/ports.md
-      - reference/saltbox-tools.md
-      - reference/subdomain.md
-      - reference/local-storage.md
-      - reference/guides/mount.md
-      - reference/ovh.md
+      - Topics:
+          - Prerequisite References:
+              - reference/server.md
+              - reference/domain.md
+              - reference/cloud.md
+              - reference/plex.md
+              - reference/usenet-torrent.md
+          - Install References:
+              - reference/dependencies.md
+              - reference/accounts.md
+              - reference/preinstall.md
+              - reference/rclone.md
+              - reference/rclone-manual.md
+              - reference/install.md
+          - Google References:
+              - reference/google-account-perms.md
+              - reference/google-project-setup.md
+              - reference/google-group-setup.md
+              - reference/google-gcloud-tools-install.md
+              - reference/google-service-accounts.md
+              - reference/google-shared-drives.md
+          - Application References:
+              - reference/guides/app-remove.md
+              - reference/guides/app-reset.md
+              - reference/guides/app-update.md
+          - Other References:
+              - reference/guides/autoscan-rewrites.md
+              - reference/cloudplow.md
+              - reference/customizing-plex-libs.md
+              - reference/logs.md
+              - reference/multiple-instances.md
+              - reference/cloudplow-config.md
+              - reference/plex_auth_token.md
+              - reference/ports.md
+              - reference/saltbox-tools.md
+              - reference/subdomain.md
+              - reference/local-storage.md
+              - reference/guides/mount.md
+              - reference/ovh.md
 
-  - Saltbox Modules:
-    - reference/modules/index.md
-    - reference/modules/arr_db.md
-    - reference/modules/common.md
-    - reference/modules/custom.md
-    - reference/modules/diag.md
-    - reference/modules/download_clients.md
-    - reference/modules/download_indexers.md
-    - reference/modules/hetzner_nfs.md
-    - reference/modules/hetzner_vlan.md
-    - reference/modules/kernel.md
-    - reference/modules/main_tag.md
-    - reference/modules/main_tags.md
-    - reference/modules/media_server.md
-    - reference/modules/motd.md
-    - reference/modules/mount_templates.md
-    - reference/modules/permissions.md
-    - reference/modules/plex_auth_token.md
-    - reference/modules/plex_db.md
-    - reference/modules/plex_fix_futures.md
-    - reference/modules/reboot.md
-    - reference/modules/remote.md
-    - reference/modules/saltbox_mod.md
-    - reference/modules/shell.md
-    - reference/modules/system.md
-    - reference/modules/traefik_file_template.md
-    - reference/modules/traefik_template.md
-    - reference/modules/unionfs.md
-    - reference/modules/user.md
+      - Saltbox Modules:
+          - reference/modules/index.md
+          - reference/modules/arr_db.md
+          - reference/modules/common.md
+          - reference/modules/custom.md
+          - reference/modules/diag.md
+          - reference/modules/download_clients.md
+          - reference/modules/download_indexers.md
+          - reference/modules/hetzner_nfs.md
+          - reference/modules/hetzner_vlan.md
+          - reference/modules/kernel.md
+          - reference/modules/main_tag.md
+          - reference/modules/main_tags.md
+          - reference/modules/media_server.md
+          - reference/modules/motd.md
+          - reference/modules/mount_templates.md
+          - reference/modules/permissions.md
+          - reference/modules/plex_auth_token.md
+          - reference/modules/plex_db.md
+          - reference/modules/plex_fix_futures.md
+          - reference/modules/reboot.md
+          - reference/modules/remote.md
+          - reference/modules/saltbox_mod.md
+          - reference/modules/shell.md
+          - reference/modules/system.md
+          - reference/modules/traefik_file_template.md
+          - reference/modules/traefik_template.md
+          - reference/modules/unionfs.md
+          - reference/modules/user.md
 
-- Community:
-  - community/index.md
-  - community/support.md
+  - Community:
+      - community/index.md
+      - community/support.md

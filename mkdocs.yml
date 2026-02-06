@@ -77,10 +77,12 @@ theme:
 
 plugins:
   - git-authors:
-      exclude:
-        - index.md
+      show_email_address: false
+      sort_authors_by: contribution
       ignore_authors:
         - github-actions[bot]@users.noreply.github.com
+      exclude:
+        - index.md
   - git-committers:
       branch: main
       cache_dir: .cache/plugin/git-committers/

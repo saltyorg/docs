@@ -89,7 +89,7 @@ plugins:
         - index.md
       exclude_committers:
         - github-actions[bot]
-        - web-flow
+        - webflow
       repository: saltyorg/docs
   - git-revision-date-localized:
       enable_creation_date: true

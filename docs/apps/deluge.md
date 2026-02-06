@@ -953,18 +953,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_devices:
         ```
 
-    ??? variable string "`deluge_role_docker_devices_default`{ .sb-show-on-unchecked }`deluge2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_docker_devices_default:
-        ```
-
     ??? variable list "`deluge_role_docker_groups`{ .sb-show-on-unchecked }`deluge2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1511,6 +1499,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         deluge2_docker_create_timeout:
+        ```
+
+    ??? variable string "`deluge_role_docker_dev_dri`{ .sb-show-on-unchecked }`deluge2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        deluge_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        deluge2_docker_dev_dri:
         ```
 
     ??? variable string "`deluge_role_docker_entrypoint`{ .sb-show-on-unchecked }`deluge2_docker_entrypoint`{ .sb-show-on-checked }"

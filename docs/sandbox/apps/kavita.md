@@ -476,13 +476,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kavita_role_docker_devices:
         ```
 
-    ??? variable string "`kavita_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        kavita_role_docker_devices_default:
-        ```
-
     ??? variable list "`kavita_role_docker_groups`"
 
         ```yaml
@@ -818,6 +811,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         kavita_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`kavita_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        kavita_role_docker_dev_dri:
         ```
 
     ??? variable string "`kavita_role_docker_entrypoint`"

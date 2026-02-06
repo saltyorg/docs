@@ -420,13 +420,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_devices:
         ```
 
-    ??? variable string "`recyclarr_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        recyclarr_role_docker_devices_default:
-        ```
-
     ??? variable list "`recyclarr_role_docker_groups`"
 
         ```yaml
@@ -755,6 +748,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         recyclarr_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`recyclarr_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        recyclarr_role_docker_dev_dri:
         ```
 
     ??? variable string "`recyclarr_role_docker_entrypoint`"

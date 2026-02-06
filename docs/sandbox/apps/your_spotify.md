@@ -506,13 +506,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_devices:
         ```
 
-    ??? variable string "`your_spotify_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        your_spotify_role_docker_devices_default:
-        ```
-
     ??? variable list "`your_spotify_role_docker_groups`"
 
         ```yaml
@@ -855,6 +848,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         your_spotify_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`your_spotify_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        your_spotify_role_docker_dev_dri:
         ```
 
     ??? variable string "`your_spotify_role_docker_entrypoint`"

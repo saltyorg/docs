@@ -496,13 +496,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sshwifty_role_docker_devices:
         ```
 
-    ??? variable string "`sshwifty_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        sshwifty_role_docker_devices_default:
-        ```
-
     ??? variable list "`sshwifty_role_docker_groups`"
 
         ```yaml
@@ -831,6 +824,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         sshwifty_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`sshwifty_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        sshwifty_role_docker_dev_dri:
         ```
 
     ??? variable string "`sshwifty_role_docker_entrypoint`"

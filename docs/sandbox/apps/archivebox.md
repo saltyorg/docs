@@ -499,13 +499,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_devices:
         ```
 
-    ??? variable string "`archivebox_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        archivebox_role_docker_devices_default:
-        ```
-
     ??? variable list "`archivebox_role_docker_groups`"
 
         ```yaml
@@ -841,6 +834,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         archivebox_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`archivebox_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        archivebox_role_docker_dev_dri:
         ```
 
     ??? variable string "`archivebox_role_docker_entrypoint`"

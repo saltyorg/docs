@@ -389,13 +389,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         diun_role_docker_devices:
         ```
 
-    ??? variable string "`diun_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        diun_role_docker_devices_default:
-        ```
-
     ??? variable list "`diun_role_docker_groups`"
 
         ```yaml
@@ -731,6 +724,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         diun_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`diun_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        diun_role_docker_dev_dri:
         ```
 
     ??? variable string "`diun_role_docker_entrypoint`"

@@ -801,18 +801,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qui2_docker_devices:
         ```
 
-    ??? variable string "`qui_role_docker_devices_default`{ .sb-show-on-unchecked }`qui2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qui_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qui2_docker_devices_default:
-        ```
-
     ??? variable list "`qui_role_docker_groups`{ .sb-show-on-unchecked }`qui2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1359,6 +1347,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         qui2_docker_create_timeout:
+        ```
+
+    ??? variable string "`qui_role_docker_dev_dri`{ .sb-show-on-unchecked }`qui2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        qui_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        qui2_docker_dev_dri:
         ```
 
     ??? variable string "`qui_role_docker_entrypoint`{ .sb-show-on-unchecked }`qui2_docker_entrypoint`{ .sb-show-on-checked }"

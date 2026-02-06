@@ -482,13 +482,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_devices:
         ```
 
-    ??? variable string "`profilarr_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        profilarr_role_docker_devices_default:
-        ```
-
     ??? variable list "`profilarr_role_docker_groups`"
 
         ```yaml
@@ -824,6 +817,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         profilarr_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`profilarr_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        profilarr_role_docker_dev_dri:
         ```
 
     ??? variable string "`profilarr_role_docker_entrypoint`"

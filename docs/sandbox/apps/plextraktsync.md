@@ -409,13 +409,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plextraktsync_role_docker_devices:
         ```
 
-    ??? variable string "`plextraktsync_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        plextraktsync_role_docker_devices_default:
-        ```
-
     ??? variable list "`plextraktsync_role_docker_groups`"
 
         ```yaml
@@ -744,6 +737,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         plextraktsync_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`plextraktsync_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        plextraktsync_role_docker_dev_dri:
         ```
 
     ??? variable string "`plextraktsync_role_docker_entrypoint`"

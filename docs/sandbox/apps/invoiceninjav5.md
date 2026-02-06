@@ -498,13 +498,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_role_docker_devices:
         ```
 
-    ??? variable string "`invoiceninjav5_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        invoiceninjav5_role_docker_devices_default:
-        ```
-
     ??? variable list "`invoiceninjav5_role_docker_groups`"
 
         ```yaml
@@ -840,6 +833,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         invoiceninjav5_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_docker_dev_dri:
         ```
 
     ??? variable string "`invoiceninjav5_role_docker_entrypoint`"

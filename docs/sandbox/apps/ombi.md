@@ -762,18 +762,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ombi2_docker_devices:
         ```
 
-    ??? variable string "`ombi_role_docker_devices_default`{ .sb-show-on-unchecked }`ombi2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        ombi_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        ombi2_docker_devices_default:
-        ```
-
     ??? variable list "`ombi_role_docker_groups`{ .sb-show-on-unchecked }`ombi2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1344,6 +1332,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         ombi2_docker_create_timeout:
+        ```
+
+    ??? variable string "`ombi_role_docker_dev_dri`{ .sb-show-on-unchecked }`ombi2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        ombi_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        ombi2_docker_dev_dri:
         ```
 
     ??? variable string "`ombi_role_docker_entrypoint`{ .sb-show-on-unchecked }`ombi2_docker_entrypoint`{ .sb-show-on-checked }"

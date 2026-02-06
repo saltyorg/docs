@@ -484,13 +484,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         pufferpanel_role_docker_devices:
         ```
 
-    ??? variable string "`pufferpanel_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        pufferpanel_role_docker_devices_default:
-        ```
-
     ??? variable list "`pufferpanel_role_docker_groups`"
 
         ```yaml
@@ -819,6 +812,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         pufferpanel_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`pufferpanel_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        pufferpanel_role_docker_dev_dri:
         ```
 
     ??? variable string "`pufferpanel_role_docker_entrypoint`"

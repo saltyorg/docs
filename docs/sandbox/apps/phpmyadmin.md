@@ -465,13 +465,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         phpmyadmin_role_docker_devices:
         ```
 
-    ??? variable string "`phpmyadmin_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        phpmyadmin_role_docker_devices_default:
-        ```
-
     ??? variable list "`phpmyadmin_role_docker_groups`"
 
         ```yaml
@@ -814,6 +807,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         phpmyadmin_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`phpmyadmin_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        phpmyadmin_role_docker_dev_dri:
         ```
 
     ??? variable string "`phpmyadmin_role_docker_entrypoint`"

@@ -477,13 +477,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dashy_role_docker_devices:
         ```
 
-    ??? variable string "`dashy_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        dashy_role_docker_devices_default:
-        ```
-
     ??? variable list "`dashy_role_docker_groups`"
 
         ```yaml
@@ -812,6 +805,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         dashy_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`dashy_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        dashy_role_docker_dev_dri:
         ```
 
     ??? variable string "`dashy_role_docker_entrypoint`"

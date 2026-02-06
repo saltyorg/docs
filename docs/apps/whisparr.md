@@ -872,18 +872,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_docker_devices:
         ```
 
-    ??? variable string "`whisparr_role_docker_devices_default`{ .sb-show-on-unchecked }`whisparr2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        whisparr_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        whisparr2_docker_devices_default:
-        ```
-
     ??? variable list "`whisparr_role_docker_groups`{ .sb-show-on-unchecked }`whisparr2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1454,6 +1442,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         whisparr2_docker_create_timeout:
+        ```
+
+    ??? variable string "`whisparr_role_docker_dev_dri`{ .sb-show-on-unchecked }`whisparr2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_dev_dri:
         ```
 
     ??? variable string "`whisparr_role_docker_entrypoint`{ .sb-show-on-unchecked }`whisparr2_docker_entrypoint`{ .sb-show-on-checked }"

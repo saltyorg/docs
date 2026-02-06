@@ -983,18 +983,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         overseerr2_docker_devices:
         ```
 
-    ??? variable string "`overseerr_role_docker_devices_default`{ .sb-show-on-unchecked }`overseerr2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        overseerr_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        overseerr2_docker_devices_default:
-        ```
-
     ??? variable list "`overseerr_role_docker_groups`{ .sb-show-on-unchecked }`overseerr2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1553,6 +1541,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         overseerr2_docker_create_timeout:
+        ```
+
+    ??? variable string "`overseerr_role_docker_dev_dri`{ .sb-show-on-unchecked }`overseerr2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        overseerr_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        overseerr2_docker_dev_dri:
         ```
 
     ??? variable string "`overseerr_role_docker_entrypoint`{ .sb-show-on-unchecked }`overseerr2_docker_entrypoint`{ .sb-show-on-checked }"

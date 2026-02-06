@@ -525,13 +525,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         yacht_role_docker_devices:
         ```
 
-    ??? variable string "`yacht_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        yacht_role_docker_devices_default:
-        ```
-
     ??? variable list "`yacht_role_docker_groups`"
 
         ```yaml
@@ -867,6 +860,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         yacht_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`yacht_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        yacht_role_docker_dev_dri:
         ```
 
     ??? variable string "`yacht_role_docker_entrypoint`"

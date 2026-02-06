@@ -470,13 +470,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         discoflix_role_docker_devices:
         ```
 
-    ??? variable string "`discoflix_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        discoflix_role_docker_devices_default:
-        ```
-
     ??? variable list "`discoflix_role_docker_groups`"
 
         ```yaml
@@ -812,6 +805,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         discoflix_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`discoflix_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        discoflix_role_docker_dev_dri:
         ```
 
     ??? variable string "`discoflix_role_docker_entrypoint`"

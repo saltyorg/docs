@@ -503,13 +503,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kitana_role_docker_devices:
         ```
 
-    ??? variable string "`kitana_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        kitana_role_docker_devices_default:
-        ```
-
     ??? variable list "`kitana_role_docker_groups`"
 
         ```yaml
@@ -838,6 +831,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         kitana_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`kitana_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        kitana_role_docker_dev_dri:
         ```
 
     ??? variable string "`kitana_role_docker_entrypoint`"

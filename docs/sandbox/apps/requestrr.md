@@ -762,18 +762,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         requestrr2_docker_devices:
         ```
 
-    ??? variable string "`requestrr_role_docker_devices_default`{ .sb-show-on-unchecked }`requestrr2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        requestrr_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        requestrr2_docker_devices_default:
-        ```
-
     ??? variable list "`requestrr_role_docker_groups`{ .sb-show-on-unchecked }`requestrr2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1344,6 +1332,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         requestrr2_docker_create_timeout:
+        ```
+
+    ??? variable string "`requestrr_role_docker_dev_dri`{ .sb-show-on-unchecked }`requestrr2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        requestrr_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        requestrr2_docker_dev_dri:
         ```
 
     ??? variable string "`requestrr_role_docker_entrypoint`{ .sb-show-on-unchecked }`requestrr2_docker_entrypoint`{ .sb-show-on-checked }"

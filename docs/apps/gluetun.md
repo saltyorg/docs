@@ -2604,18 +2604,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         gluetun2_docker_devices:
         ```
 
-    ??? variable string "`gluetun_role_docker_devices_default`{ .sb-show-on-unchecked }`gluetun2_docker_devices_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        gluetun_role_docker_devices_default:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        gluetun2_docker_devices_default:
-        ```
-
     ??? variable list "`gluetun_role_docker_groups`{ .sb-show-on-unchecked }`gluetun2_docker_groups`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -3162,6 +3150,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         gluetun2_docker_create_timeout:
+        ```
+
+    ??? variable string "`gluetun_role_docker_dev_dri`{ .sb-show-on-unchecked }`gluetun2_docker_dev_dri`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        gluetun_role_docker_dev_dri:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        gluetun2_docker_dev_dri:
         ```
 
     ??? variable string "`gluetun_role_docker_entrypoint`{ .sb-show-on-unchecked }`gluetun2_docker_entrypoint`{ .sb-show-on-checked }"

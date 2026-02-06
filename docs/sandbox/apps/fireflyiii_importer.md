@@ -573,13 +573,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         fireflyiii_importer_role_docker_devices:
         ```
 
-    ??? variable string "`fireflyiii_importer_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_importer_role_docker_devices_default:
-        ```
-
     ??? variable list "`fireflyiii_importer_role_docker_groups`"
 
         ```yaml
@@ -915,6 +908,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         fireflyiii_importer_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`fireflyiii_importer_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        fireflyiii_importer_role_docker_dev_dri:
         ```
 
     ??? variable string "`fireflyiii_importer_role_docker_entrypoint`"

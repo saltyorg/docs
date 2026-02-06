@@ -495,13 +495,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         komga_role_docker_devices:
         ```
 
-    ??? variable string "`komga_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        komga_role_docker_devices_default:
-        ```
-
     ??? variable list "`komga_role_docker_groups`"
 
         ```yaml
@@ -830,6 +823,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         komga_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`komga_role_docker_dev_dri`"
+
+        ```yaml
+        # Type: string
+        komga_role_docker_dev_dri:
         ```
 
     ??? variable string "`komga_role_docker_entrypoint`"

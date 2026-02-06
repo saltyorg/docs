@@ -79,12 +79,17 @@ plugins:
 - git-authors:
     exclude:
     - index.md
+    ignore_authors:
+    - github-actions[bot]@users.noreply.github.com
 - git-committers:
     branch: main
     cache_dir: .cache/plugin/git-committers/
     enabled: !ENV [ CI, false ]
     exclude:
     - index.md
+    exclude_committers:
+    - github-actions[bot]
+    - web-flow
     repository: saltyorg/docs
 - git-revision-date-localized:
     enable_creation_date: true

@@ -105,6 +105,7 @@ path_overrides:
 global_overrides:
   ignore_suffixes:
     - "_dns_proxy"
+    - "_docker_dev_dri"
     - "_docker_network_mode"
     - "_docker_networks_alias"
     - "_docker_stop_timeout"

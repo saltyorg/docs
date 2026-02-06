@@ -105,7 +105,6 @@ path_overrides:
 global_overrides:
   ignore_suffixes:
     - "_dns_proxy"
-    - "_docker_dev_dri"
     - "_docker_network_mode"
     - "_docker_networks_alias"
     - "_docker_stop_timeout"
@@ -219,6 +218,13 @@ global_overrides:
       description: "URL scheme to use for web access to containers"
       default: null
       type: "string (http/https)"
+
+# =============================================================================
+# Docker+ Overrides
+# =============================================================================
+docker_overrides:
+  ignore_suffixes:
+    - "_docker_dev_dri"
 
 # =============================================================================
 # Type Inference Rules

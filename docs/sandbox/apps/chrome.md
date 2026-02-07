@@ -1,6 +1,6 @@
 ---
 icon: material/docker
-title: Headless Chromes
+title: Headless Chrome
 hide:
   - tags
 tags:
@@ -19,7 +19,7 @@ saltbox_automation:
       url:
       type: community
   project_description:
-    name: Headless Chromes
+    name: Headless Chrome
     summary: |-
       a way to run the Chrome browser in a headless environment.
     link: https://developer.chrome.com/blog/headless-chrome
@@ -27,11 +27,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Headless Chromes
+# Headless Chrome
 
 ## Overview
 
-[Headless Chromes](https://developer.chrome.com/blog/headless-chrome) is a way to run the Chrome browser in a headless environment.
+[Headless Chrome](https://developer.chrome.com/blog/headless-chrome) is a way to run the Chrome browser in a headless environment.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-This was created for use with Hoarder which calls for a specific version (123)
+!!! note "This was created for use with Hoarder which calls for a specific version (124)"
 
 ## Deployment
 
@@ -56,16 +56,7 @@ sb install sandbox-chrome
 
 ## Usage
 
-The docker commands are set to the following by default. Port 9222 is open to the container by default.
-
-```yaml
-  - --no-sandbox
-  - --disable-gpu
-  - --disable-dev-shm-usage
-  - --remote-debugging-address=0.0.0.0
-  - --remote-debugging-port=9222
-  - --hide-scrollbars
-```
+Call as a backend from automation tools like Hoarder and Puppeteer.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

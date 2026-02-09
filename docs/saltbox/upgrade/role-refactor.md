@@ -87,13 +87,13 @@ Full changes:
 
     -   To apply to all instances of a role, variables must now include the `_role_` infix (e.g. `sonarr_role_docker_image`).
 
-    -   `rolename_docker_network_mode_default` variables no longer exist and will have no effect when assigned in the Inventory.
+    -   If a role you've customized with a `_default` or `_custom` variable isn't working as expected following the upgrade, the solution is typically to remove that suffix from the variable name.
 
 The following sections must be followed sequentially.
 
 ### Single-instance overrides
 
-When a role only has a single instance, either variable name pattern will achieve the same outcome. However, to align with the new convention, it is recommended to switch to the `_role_` infix.
+When a role only has a single instance, either variable name pattern will achieve the same outcome. However, to align with the new convention, it is recommended to switch to the `_role_` infix, which is now the default pattern.
 
 ???+example
 

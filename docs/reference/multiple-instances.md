@@ -101,49 +101,11 @@ Those names have to be unique across all of your containers, so it is suggested 
 
 ### Per-instance customization
 
-You can edit the following set of variables on a per instance basis in `localhost.yml`:
-
-!!! note
-    Replacing "instance" with the actual **instance name**, of course, i.e. `sonarrbing_web_subdomain`, etc.
-
-```text
-instance_web_subdomain
-instance_web_domain
-instance_web_port
-instance_traefik_sso_middleware
-instance_docker_image_repo
-instance_docker_image_tag
-instance_docker_ports_defaults
-instance_docker_ports_ui
-instance_docker_ports_custom
-instance_themepark_enabled
-instance_themepark_domain
-instance_themepark_theme
-instance_docker_envs_default
-instance_docker_envs_custom
-instance_docker_commands_default
-instance_docker_commands_custom
-instance_docker_volumes_default
-instance_docker_volumes_custom
-instance_docker_volumes_theme
-instance_docker_devices_default
-instance_docker_devices_custom
-instance_docker_hosts_default
-instance_docker_hosts_custom
-instance_docker_labels_default
-instance_docker_labels_custom
-instance_docker_network_mode
-instance_docker_networks_default
-instance_docker_networks_custom
-instance_docker_capabilities_default
-instance_docker_capabilities_custom
-instance_docker_security_opts_default
-instance_docker_security_opts_custom
-```
+See [Override scope](../saltbox/inventory/index.md#override-scope).
 
 ### Getting an updated list of supported roles
 
-You can find roles that support this new method with the following command:
+You can find roles that support this method with the following command:
 
 ```shell
 grep -Ril "_instances:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{RS="roles/"; FS="/defaults"}NF>1{print $1}' | sort -u
@@ -151,7 +113,11 @@ grep -Ril "_instances:" /srv/git/saltbox/roles /opt/sandbox/roles | awk 'BEGIN{R
 
 ### What about roles that aren't listed here?
 
-You can create multiple instances of nearly any role with an environment variable:
+???+warning "The following method is not officially supported"
+
+    Roles are mostly untested with this method. Deploying them in this way may lead to unexpected behavior, so proceed with caution and be prepared for some troubleshooting.
+
+You can create an additional instance of nearly any role by passing a custom instance name at the command line using the `--extra-vars` (or `-e`) argument.
 
 For example, this will install a single standard instance of photoprism:
 
@@ -162,5 +128,5 @@ sb install sandbox-photoprism
 Then if you wanted a second at `photoprism_again.xYOUR_DOMAIN_NAMEx`:
 
 ```shell
-sb install sandbox-photoprism  -e photoprism_name=photoprism_again
+sb install sandbox-photoprism -e photoprism_name=photoprism_again
 ```

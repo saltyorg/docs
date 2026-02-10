@@ -84,6 +84,7 @@ plugins:
         - github-actions[bot]@users.noreply.github.com
       exclude:
         - index.md
+      ignore_commits: .git-blame-ignore-revs
   - git-revision-date-localized:
       enable_creation_date: true
       enabled: !ENV [ CI, false ]

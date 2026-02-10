@@ -7,6 +7,7 @@ tags:
   - container
   - custom
   - docker
+  - generate
 ---
 
 # Adding your own containers to Saltbox

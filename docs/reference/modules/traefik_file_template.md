@@ -2,6 +2,14 @@
 icon: material/play
 title: Traefik File Template
 status: draft
+hide:
+  - tags
+tags:
+  - custom
+  - file
+  - generate
+  - template
+  - traefik
 saltbox_automation:
   inventory:
     hide_sections:

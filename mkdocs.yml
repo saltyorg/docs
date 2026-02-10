@@ -1,7 +1,8 @@
-site_name: docs.saltbox.dev
+site_name: Saltbox Docs
 site_url: https://docs.saltbox.dev/
 site_author: salty
-site_description: Saltbox is an Ansible-based solution for rapidly deploying a Docker containerized cloud media server.
+site_description: >-
+  Explore comprehensive guides and support for Saltbox: an Ansible-based solution for self-hosting a containerized media delivery and acquisition system
 
 repo_name: docs
 repo_url: https://github.com/saltyorg/docs

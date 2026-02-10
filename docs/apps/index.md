@@ -185,6 +185,7 @@ tags:
 | [Deemix](../sandbox/apps/deemix.md)            |          `sandbox-deemix`          |             `sandbox_roles`              |
 | [JDownloader](../sandbox/apps/jdownloader2.md) |       `sandbox-jdownloader2`       |             `sandbox_roles`              |
 | [PyLoad](../sandbox/apps/pyload.md)            |          `sandbox-pyload`          |             `sandbox_roles`              |
+| [Shelfmark](../sandbox/apps/shelfmark.md)      |        `sandbox-shelfmark`         |             `sandbox_roles`              |
 | [YTDL-Sub](../sandbox/apps/ytdl_sub.md)        |         `sandbox-ytdl-sub`         |             `sandbox_roles`              |
 
 ## :man_mage: Media Management Apps

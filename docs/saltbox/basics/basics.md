@@ -13,9 +13,9 @@ tags:
 
 ## What is Saltbox?
 
-- [Saltbox](https://github.com/saltyorg/Saltbox) is an [Ansible](https://www.ansible.com/how-ansible-works) and [Docker](https://www.docker.com/what-container) based solution for rapidly deploying a cloud media server using LTS releases of Ubuntu Server 22.04 or 24.04, running on AMD64.  Non-LTS releases of Ubuntu or Desktop installs are not supported. Linux distributions other than Ubuntu are not supported. ARM processors, Raspberry Pi notably, are not supported.
+- [Saltbox](https://github.com/saltyorg/Saltbox) is an [Ansible](https://www.ansible.com/how-ansible-works) and [Docker](https://www.docker.com/what-container) based solution for rapidly deploying a media server using LTS releases of Ubuntu Server 22.04 or 24.04, running on AMD64. Non-LTS releases of Ubuntu or Desktop installations are not supported. Linux distributions other than Ubuntu are not supported. ARM processors, Raspberry Pi notably, are not supported.
 
-- Primary functions are: the automatic acquisition of media, being able to play it back from anywhere and from any device, and, to a lesser extent, storing that media on the cloud.
+- Primary functions are: the automatic acquisition of media, being able to play it back from anywhere and from any device, and, to a lesser extent, storing that media in a remote storage location.
 
 - NOTE: Saltbox does not have a dashboard or GUI of its own. All Saltbox-specific setup and commands are done on the linux command-line.
 
@@ -23,7 +23,7 @@ tags:
 
 ### Custom Domains
 
-- Have your server set up behind your own domain, securely (e.g. <https://apps.iYOUR_DOMAIN_NAMEi>).
+- Have your server set up behind your own domain name, securely (e.g. <https://apps.iYOUR_DOMAIN_NAMEi>).
 
 ### Fast Deployment
 
@@ -31,9 +31,9 @@ tags:
 
 ### Docker-Based Applications
 
-- Docker containers keep your apps isolated from each other - no more conflicts between apps.
+- Docker containers keep your apps isolated from each other—no more conflicts between apps.
 
-- Docker containers keep your system tidy since none of the apps' files (executables and dependencies) are stored outside of the container.
+- Docker containers keep your system tidy since none of the apps' files (executables and dependencies) are stored outside the container.
 
 - Quickly install and uninstall apps.
 
@@ -108,7 +108,7 @@ flowchart TB
     UnionfsMedia <-->|"R/W (Metadata)"| Plex
 ```
 
-\* The remote mount is R/W for existing files but new files will be written to /mnt/local/Media
+\* The remote mount is R/W for existing files, but new files will be written to /mnt/local/Media
 
 ***
 
@@ -116,12 +116,12 @@ flowchart TB
 
 [^2]: If you want to use torrents, it is recommended to be a member of a private tracker as opposed to using public ones. If you want to use Usenet, you will need to purchase Usenet provider service (or multiple services) and also be a member of one or more Usenet indexers.
 
-[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however, `/mnt/local` is the only _writeable_ part of the Mergerfs (for the purpose of creating new files), so the newly-written files will be placed in `/mnt/local`.
+[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however, `/mnt/local` is the only _writeable_ part of the Mergerfs (for the purpose of creating new files), so the newly written files will be placed in `/mnt/local`.
 
 [^4]: This ten-minute delay can be changed in the Autoscan config file. It's here for two reasons; it ensures that the file is completely copied into the media directory before the media server scans it, and it allows a season of TV to be collected and sent to the media server as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to the media server ten minutes after the last episode completed downloading.
 
-[^5]: By default, Cloudplow will check every half hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive. This threshold can be adjusted as needed in the Cloudplow config.
+[^5]: By default, Cloudplow will check every half-hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive. This threshold can be adjusted as needed in the Cloudplow config.
 
-[^6]: **Note:** Due to changes in Google Drive this doesn't really apply any more. Limits are much tighter and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads (750 GB/day/service account).~~
+[^6]: **Note:** Due to changes in Google Drive this doesn't really apply anymore. Limits are much tighter, and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads (750 GB/day/service account).~~
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

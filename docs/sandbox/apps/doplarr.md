@@ -30,7 +30,7 @@ saltbox_automation:
 
 ## Overview
 
-[Doplarr](https://kiranshila.github.io/Doplarr/#) is a chatbot used to simplify using services like Sonarr/Radarr/Overseer via the use of chat. Current platform is Discord only.
+[Doplarr](https://kiranshila.github.io/Doplarr) is a Discord bot designed to simplify media requests for self-hosted media servers like Radarr, Sonarr, and Overseerr.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/doplarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/884mGq2fV6){ .md-button .md-button--stretch }
 
 </div>
 

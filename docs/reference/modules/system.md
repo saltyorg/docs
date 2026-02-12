@@ -1,6 +1,14 @@
 ---
 icon: material/cogs
 status: draft
+hide:
+  - tags
+tags:
+  - cpu
+  - pam_limits
+  - sysctl
+  - system
+  - tuning
 saltbox_automation:
   project_description:
     name: System

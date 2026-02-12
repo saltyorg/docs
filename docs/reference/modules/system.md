@@ -52,6 +52,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`cpu_performance_mode`"
 
         ```yaml
+        # Performance mode sets the CPU to run at its maximum frequency
+        # Set to false to enable dynamic CPU frequency scaling instead
         # Type: bool (true/false)
         cpu_performance_mode: true
         ```
@@ -110,44 +112,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         saltbox_max_log_size: 2M
-        ```
-
-    ??? variable dict "`sysctl_settings`"
-
-        ```yaml
-        # Type: dict
-        sysctl_settings:
-          fs.inotify.max_user_watches: "{{ system_inotify }}"
-          net.core.default_qdisc: fq
-          net.core.netdev_budget: 50000
-          net.core.netdev_max_backlog: 100000
-          net.core.rmem_max: 67108864
-          net.core.somaxconn: 4096
-          net.core.wmem_max: 67108864
-          net.ipv4.conf.all.accept_redirects: 0
-          net.ipv4.conf.all.accept_source_route: 0
-          net.ipv4.conf.all.secure_redirects: 0
-          net.ipv4.tcp_adv_win_scale: 2
-          net.ipv4.tcp_congestion_control: bbr
-          net.ipv4.tcp_fin_timeout: 10
-          net.ipv4.tcp_max_syn_backlog: 30000
-          net.ipv4.tcp_max_tw_buckets: 2000000
-          net.ipv4.tcp_mtu_probing: 1
-          net.ipv4.tcp_rfc1337: 1
-          net.ipv4.tcp_rmem: "4096 87380 33554432"
-          net.ipv4.tcp_sack: 1
-          net.ipv4.tcp_slow_start_after_idle: 0
-          net.ipv4.tcp_tw_reuse: 1
-          net.ipv4.tcp_window_scaling: 1
-          net.ipv4.tcp_wmem: "4096 87380 33554432"
-          net.ipv4.udp_rmem_min: 8192
-          net.ipv4.udp_wmem_min: 8192
-          vm.dirty_background_ratio: 10
-          vm.dirty_ratio: 15
-          vm.swappiness: 10
-          net.ipv4.neigh.default.gc_thresh1: 1024
-          net.ipv4.neigh.default.gc_thresh2: 2048
-          net.ipv4.neigh.default.gc_thresh3: 4096
         ```
 
     ??? variable string "`sysctl_netdev_budget_usecs`"

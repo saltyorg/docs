@@ -3,7 +3,11 @@ icon: material/tag
 hide:
   - tags
 tags:
+  - apt
   - custom
+  - deb
+  - package
+  - pip
 saltbox_automation:
   project_description:
     name: Custom

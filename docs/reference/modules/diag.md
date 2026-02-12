@@ -5,6 +5,7 @@ hide:
 tags:
   - diag
   - diagnostics
+  - support
   - troubleshooting
 saltbox_automation:
   sections:

@@ -1,6 +1,11 @@
 ---
 icon: material/cogs
 status: draft
+hide:
+  - tags
+tags:
+  - hwe
+  - kernel
 saltbox_automation:
   sections:
     inventory: true

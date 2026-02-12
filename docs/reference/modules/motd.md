@@ -2,6 +2,10 @@
 icon: material/cogs
 title: MOTD
 status: draft
+hide:
+  - tags
+tags:
+  - motd
 saltbox_automation:
   project_description:
     name: MOTD

@@ -2,6 +2,14 @@
 icon: material/play
 title: Fix Permissions
 status: draft
+hide:
+  - tags
+tags:
+  - chmod
+  - chown
+  - fix
+  - ownership
+  - permissions
 saltbox_automation:
   project_description:
     name: Fix Permissions

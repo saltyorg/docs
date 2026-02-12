@@ -1,6 +1,15 @@
 ---
 icon: material/server-network-outline
 status: draft
+hide:
+  - tags
+tags:
+  - cloud
+  - nfs
+  - rclone
+  - remote
+  - sftp
+  - storage
 saltbox_automation:
   project_description:
     name: Remote

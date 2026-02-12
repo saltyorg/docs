@@ -2,6 +2,13 @@
 icon: material/server-network-outline
 title: UnionFS
 status: draft
+hide:
+  - tags
+tags:
+  - mergerfs
+  - mount
+  - storage
+  - unionfs
 saltbox_automation:
   inventory:
     hide_sections:

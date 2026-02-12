@@ -1,10 +1,6 @@
 ---
 icon: material/server-network-outline
 status: deprecated
-hide:
-  - tags
-tags:
-  - nfs
 saltbox_automation:
   project_description:
     name: Hetzner NFS VLAN

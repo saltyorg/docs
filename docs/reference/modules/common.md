@@ -1,6 +1,12 @@
 ---
 icon: material/cogs
 status: draft
+hide:
+  - tags
+tags:
+  - common
+  - media
+  - nano
 saltbox_automation:
   project_description:
     name: Common

@@ -2,6 +2,11 @@
 icon: material/cogs
 title: Hetzner VLAN
 status: draft2
+hide:
+  - tags
+tags:
+  - hetzner
+  - vlan
 saltbox_automation:
   project_description:
     name: Hetzner VLAN

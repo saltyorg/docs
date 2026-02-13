@@ -3,11 +3,11 @@
 First, a quick refresher on how the system works:
 
 1. Your downloader puts files in `/mnt/local/downloads`.
-    
+
 2. Sonarr/Radarr move (usenet) or copy (torrents) these files to `/mnt/local/Media`. [They’re actually moving files to `/mnt/unionfs/Media`, but the mergerfs config routes them to `/mnt/local/Media`]
-   
+
 3. Once `/mnt/local/Media` hits 200GB, cloudplow uploads the contents to your cloud drive.
-  
+
 4. Once that’s complete they will show up in `/mnt/remote/Media` as well as `/mnt/unionfs/Media`.
 
 Chances are, if your disk is full, the cause is one of two things:
@@ -30,7 +30,7 @@ I am of course leaving out things like:
 
 The first step below should help you identify the issue, but the assumption is that if you are doing something outside the norm like that on *your* server you are aware of it.
 
-Also, this is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered.  Again, that's a "the user chose to do this thing" situation.  You can use these tools to find out if that's the issue, though.
+Also, this is written assuming Usenet downloads, so filling your disks with seeding torrents isn't covered. Again, that's a "the user chose to do this thing" situation. You can use these tools to find out if that's the issue, though.
 
 ## Where is the space going?
 
@@ -74,9 +74,9 @@ ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help
     3.7 GiB [          ] /transcodes
 ```
 
-Here, I have 473 GB of unimported downloads [`/downloads`] and 44 GB waiting to be uploaded by Cloudplow [`/Media`].
+Here, I have 473 GB of unimported downloads (`/downloads`) and 44 GB waiting to be uploaded by Cloudplow (`/Media`).
 
-Rclone vfs cache is more install-dependent.  I’m going to assume that if you’re reading this you didn’t change things from the defaults, and chances are you’ll see something like this:
+Rclone vfs cache is more install-dependent. I’m going to assume that if you’re reading this you didn’t change things from the defaults, and chances are you’ll see something like this:
 
 ```text
 ncdu 1.12 ~ Use the arrow keys to navigate, press ? for help ------------------------------------------------------------
@@ -112,7 +112,7 @@ That’s your VFS cache.
 
 ## Radarr/Sonarr didn’t import stuff
 
-Drill into downloads to examine what's there in more detail.  Chances are you’ll find /mnt/local/nzbs/nzbget/downloads/completed is where all the files are.  Those are downloads that Radarr/Sonarr didn’t import.
+Drill into downloads to examine what's there in more detail. Chances are you’ll find /mnt/local/nzbs/nzbget/downloads/completed is where all the files are. Those are downloads that Radarr/Sonarr didn’t import.
 
 Use Wanted -> Manual Import to find out why particular things weren't imported.
 
@@ -155,7 +155,7 @@ You should see something like:
 Uploader: google. Local folder size is currently 44 GB. Still have 156 GB remaining before its eligible to begin uploading...
 ```
 
-If you do, cloudplow is working as expected.  If you want cloudplow to start uploading stuff sooner, you can adjust those thresholds in your cloudplow config file.  At the bottom of `/opt/cloudplow/config.json`, you’ll find something like this:
+If you do, cloudplow is working as expected. If you want cloudplow to start uploading stuff sooner, you can adjust those thresholds in your cloudplow config file. At the bottom of `/opt/cloudplow/config.json`, you’ll find something like this:
 
 ```json
 "google": {
@@ -172,19 +172,19 @@ If you do, cloudplow is working as expected.  If you want cloudplow to start upl
 }
 ```
 
-That’s going to check every 30 minutes [`"check_interval": 30,`], and start uploading when the folder reaches 200GB [`"max_size_gb": 200,`].  Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
+That’s going to check every 30 minutes (`"check_interval": 30,`), and start uploading when the folder reaches 200GB (`"max_size_gb": 200,`). Adjust those values to suit your use case. Restart the cloudplow service if you make changes here.
 
 In the default setup, you can upload 750GB per day.
 
-To see if you’ve hit that quota, run a cloudplow upload manually.  At a command prompt, type:
+To see if you’ve hit that quota, run a cloudplow upload manually. At a command prompt, type:
 
 ```shell
 cloudplow upload
 ```
 
-This will kick off an upload without regard for the threshold.  You can run this anytime you want to upload whatever’s pending right this very minute.
+This will kick off an upload without regard for the threshold. You can run this anytime you want to upload whatever’s pending right this very minute.
 
-PAY ATTENTION TO WHAT THE LOG SAYS.  The errors should let you know what’s going on.
+PAY ATTENTION TO WHAT THE LOG SAYS. The errors should let you know what’s going on.
 
 If you want more detail:
 
@@ -194,15 +194,15 @@ cloudplow upload --loglevel=DEBUG
 
 You'll get a great deal of information about what cloudplow is doing and why.
 
-If you find yourself hitting that 750GB cap regularly, ~~you may want to set up [service-account uploading](tip44.md).~~ you need to buy more seats on your google account, or just slow down.
+If you find yourself hitting that 750GB cap regularly, you need to buy more seats on your google account, or just slow down.
 
 ## Rclone cache is out of control
 
 If the bulk of the space is in your rclone VFS cache, you’ll want to check the vfs_cache configuration for all your mounts to control this.
 
-Perhaps you used a copy-pasted config that is setting the max cache to 200G or so, and applied that to four mounts.  That means your rclone cache might grow to 800GB, so adjust the configs on the mounts you're caching.
+Perhaps you used a copy-pasted config that is setting the max cache to 200G or so, and applied that to four mounts. That means your rclone cache might grow to 800GB, so adjust the configs on the mounts you're caching.
 
-Don’t just delete the existing cached files.  You’ll need to stop the mounts first before you adjust the cache sizes.
+Don’t just delete the existing cached files. You’ll need to stop the mounts first before you adjust the cache sizes.
 
 1. change mount service files
 2. stop all containers

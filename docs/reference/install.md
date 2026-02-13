@@ -9,33 +9,33 @@ tags:
 # Installation
 
 !!! warning
-    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#install).
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#installation).
     If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
 
 ## Install Saltbox
 
 === "Saltbox"
+
     ```shell
     sb install saltbox
-
     ```
 
 === "Mediabox"
+
     ```shell
     sb install mediabox
-
     ```
 
 === "Feederbox"
+
     ```shell
     sb install feederbox
-
     ```
 
 === "Core"
+
     ```shell
     sb install core
-
     ```
 
 A lot of logging information will scroll by.
@@ -51,4 +51,4 @@ Note the `failed=0`.
 
 If you don't see that, scroll up and the actual error should not be far away.
 
-As with any tag, it is safe to run the install tag[s] at will.
+As with any tag, it is safe to run the install tag(s) at will.

@@ -10,40 +10,47 @@ tags:
 
 ## Updating Saltbox
 
-To update Saltbox run:
+To pull changes, run:
 
-``` shell
-
+```shell
 sb update
-
 ```
 
-This will also upgrade Ansible as needed and migrate the configuration files as options are added, removed or changed over time.
+!!! note "Updates the Saltbox files *only*—*does not* update your containers."
 
-This updates the Saltbox files *only*;  It *does not* update your containers.
+    For example, if a new feature is added to Saltbox, `sb update` will get that new feature. If a new version of Sonarr is available, `sb update` *will not* update your Sonarr to that new version.
 
-For example, if a new feature is added to Saltbox, `sb update` will get that new feature.  If a new version of Radarr is available, `sb update` *will not* update your Radarr to that new version.
+This command also updates the Saltbox CLI, Ansible, Sandbox, and migrates configuration files if required.
+
+## Upgrading the server
+
+A Saltbox update should generally be followed by a run of one of the [main tags](../../reference/modules/main_tags.md), or at
+minimum:
+
+```shell
+sb install core
+```
+
+This ensures essential packages, containers and host configuration are current with the last commit.
 
 ## Updating apps
 
-Generally, to update individual applications, run the tag for that application.  For example,
+Generally, to update individual applications, run the tag for that application. For example:
 
-``` shell
-
-sb install radarr
-
+```shell
+sb install sonarr
 ```
 
-This will retrieve the current version of the Radarr image and recreate the container, which will update the application version.
+This command pulls the latest Sonarr image and recreates the container, updating the application.
 
-The same thing happens if you run one of the top-level tags:
+Include more applications in that process by running one of the top-level tags, such as:
 
-``` shell
-
+```shell
 sb install saltbox
-
 ```
 
-This will do as above for *all* the containers installed by the `saltbox` tag.
+The above updates the Saltbox selection of apps, along with core modules.
 
-Next, let's discuss how you will [access the applications](accessing_apps.md).
+## Next
+
+The following guide addresses [accessing the applications](accessing-apps.md).

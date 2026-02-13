@@ -51,13 +51,6 @@ lidarr_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-readarr_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ readarr_web_port }}/login"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
 whisparr_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:{{ whisparr_web_port }}/login"]
   interval: 10s
@@ -72,20 +65,6 @@ postgres_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-aria2_ng_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:8080"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
-docspell_docker_healthcheck:
-  test: ["CMD", "wget", "--spider", "http://localhost:{{ docspell_web_port }}/api/info/version"]
-  interval: 1m
-  timeout: 10s
-  retries: 2
-  start_period: 30s
-
 duplicati_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:{{ duplicati_web_port }}"]
   interval: 10s
@@ -99,7 +78,7 @@ elasticsearch_docker_healthcheck:
   timeout: 5s
   retries: 10
   start_period: 10s
-  
+
 firefox_docker_healthcheck:
   test: ["CMD", "wget", "--spider", "http://localhost:{{ firefox_web_port }}"]
   interval: 10s
@@ -130,20 +109,6 @@ homeassistant_docker_healthcheck:
 
 koel_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
-lunasea_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
-omegabrr_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ omegabrr_web_port }}/api/webhook/trigger"]
   interval: 10s
   timeout: 5s
   retries: 10

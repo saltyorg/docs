@@ -22,16 +22,16 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 ---
 
-1. Install the Google CLI tools.  Enter these commands in your terminal:
+1. Install the Google CLI tools. Enter these commands in your terminal:
 
     ```shell
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    echo "deb (signed-by=/usr/share/keyrings/cloud.google.gpg) https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
     ```
-       
+
     ```shell
     curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
     ```
-       
+
     ```shell
     sudo apt-get update && sudo apt-get install google-cloud-cli
     ```
@@ -58,7 +58,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
 2. Log into your Google account and approve the access request:
 
-    ![](../images/gcloud-sdk/02-sdk-approve.png)
+    ![Google OAuth consent screen showing gcloud CLI access request approval dialog](../images/gcloud-sdk/02-sdk-approve.png)
 
     Copy the verification code.
 
@@ -69,7 +69,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
     You are logged in as: [YOUR_GOOGLE_ACCOUNT].
     ```
 
-    You will now be asked to choose a default project.  Choose the one you created earlier.
+    You will now be asked to choose a default project. Choose the one you created earlier.
 
     ```text
     Pick cloud project to use:
@@ -80,7 +80,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
     Your current project has been set to: [THE_PROJECT_YOUR_CREATED_FOR_SALTBOX].
     ```
 
-    You may be asked to choose a default zone/region.  If so, you can choose the closest to you.
+    You may be asked to choose a default zone/region. If so, you can choose the closest to you.
 
 4. Run the following command:
 
@@ -92,7 +92,7 @@ It's assuming you're working through the steps from [here](rclone-manual.md) and
 
     ```text
     DISPLAY_NAME            ID  DIRECTORY_CUSTOMER_ID
-    YOUR-DOMAIN   123456789098              XXXXXXXXX
+    xYOUR_DOMAIN_NAMEx   123456789098              XXXXXXXXX
                   ^^^ HERE ^^^
     ```
 

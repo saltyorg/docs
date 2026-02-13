@@ -1,2 +1,7 @@
-lightgallery
-mkdocs-git-committers-plugin-2
+mkdocs-git-authors-plugin==0.10.0
+mkdocs-glightbox==0.5.2
+mkdocs-material==9.7.1
+mkdocs-material[recommended,git,imaging]==9.7.1
+mkdocs-placeholder-plugin==0.5.1
+mkdocs-redirects==1.2.2
+termynal==0.13.1

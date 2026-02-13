@@ -9,14 +9,14 @@ tags:
 # Customizing Plex Libraries
 
 !!! important
-    This guide was written before Dropbox was a popular choice; all the concepts here apply to Dropbox as well.  Nothing here is Google-specific, though all the examples use Google Drive.
+    This guide was written before Dropbox was a popular choice; all the concepts here apply to Dropbox as well. Nothing here is Google-specific, though all the examples use Google Drive.
 
 !!! info
     This guide was written before the default shared drive setup started adding different shared drives for more media types, so chances are you may not need to do much here as the default system already looks like Scenario 2.
 
     As of this writing the default shared drives setup creates 7 shared drives, each with its own media type directory already in place.
 
-    Current default directory structure [each on its own shared drive]
+    Current default directory structure (each on its own shared drive)
 
     ```text
     Media
@@ -28,7 +28,7 @@ tags:
     ├── TV
     └── TV-4K
     ```
-    
+
     You can point Plex libraries at those existing directories, and use those directories as root dirs in the *arrs, whether you create multiple instances or not.
 
     If you ran the optional cloudplow script as part of that process, the cloudplow mods discussed below are done for you.
@@ -141,9 +141,9 @@ Screenshots:
 
 ### 2. Add Libraries to Plex
 
-You will add each of these folders as separate libraries within Plex (see [[example|Install: Plex-Media-Server#adding-the-movie-library]]). You may name these libraries as whatever you want.
+You will add each of these folders as separate libraries within Plex (see [example|Install: Plex-Media-Server#adding-the-movie-library]). You may name these libraries as whatever you want.
 
-The folders will be located under `/mnt/unionfs/Media/Movies` folder within Plex (see [[Paths|Basics: Saltbox Paths#plex]]).
+The folders will be located under `/mnt/unionfs/Media/Movies` folder within Plex (see [Paths|Basics: Saltbox Paths#plex]).
 
 In our example, this will be:
 
@@ -179,7 +179,7 @@ _Note 2: This is the default setting and may be skipped if you haven't changed i
 
 ### 4. Change Root Paths in Radarr
 
-Set your Movie Paths in [[Radarr|Install: Radarr#8-adding-the-movies-path]] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies/3D`).
+Set your Movie Paths in [Radarr|Install: Radarr#8-adding-the-movies-path] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies/3D`).
 
 ### 6. Misc
 
@@ -202,7 +202,6 @@ Media
 ├── Movies-Kids
 ├── Music
 └── TV
-
 ```
 
 ### 1. Create Folders in Google Drive
@@ -237,9 +236,9 @@ Screenshot:
 
 ## 2. Add Libraries to Plex
 
-You will add each of these folders as separate libraries within Plex (see [[example|Install: Plex-Media-Server#adding-the-movie-library]]). You may name these libraries as whatever you want.
+You will add each of these folders as separate libraries within Plex (see [example|Install: Plex-Media-Server#adding-the-movie-library]). You may name these libraries as whatever you want.
 
-The folders will be located under `/mnt/unionfs/Media` folder within Plex (see [[Paths|Basics: Saltbox Paths#plex]]).
+The folders will be located under `/mnt/unionfs/Media` folder within Plex (see [Paths|Basics: Saltbox Paths#plex]).
 
 In our example, this will be:
 
@@ -313,7 +312,7 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Mediabox._
         },
         ```
 
-        Note: There may be paths such as `"My Drive/Media/Movies/"` filled in for [[Google Drive monitoring|Plex Autoscan Extras#google-drive-monitoring]]. If you are not planning on using this feature of Plex Autoscan, you can simply ignore them. If you do want to use it, you will then need to tweak the folders to match your Google Drive folder paths. See [[Plex Autoscan Extras|Plex Autoscan Extras#google-drive-monitoring]] for more info.
+        Note: There may be paths such as `"My Drive/Media/Movies/"` filled in for [Google Drive monitoring|Plex Autoscan Extras#google-drive-monitoring]. If you are not planning on using this feature of Plex Autoscan, you can simply ignore them. If you do want to use it, you will then need to tweak the folders to match your Google Drive folder paths. See [Plex Autoscan Extras|Plex Autoscan Extras#google-drive-monitoring] for more info.
 
 1. <kbd class="platform-all">Ctrl + X</kbd> <kbd class="platform-all">Y</kbd> <kbd class="platform-all">Enter</kbd> to save.
 
@@ -341,4 +340,4 @@ _Note: For Mediabox / Feederbox setups, this will be done on the Feederbox._
 
 ## 5. Change Root Paths in Radarr
 
-Set your Movie Paths in [[Radarr|Install: Radarr#8-adding-the-movies-path]] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies-3D`).
+Set your Movie Paths in [Radarr|Install: Radarr#8-adding-the-movies-path] to reflect the new sub-dirs (e.g. `/mnt/unionfs/Media/Movies-3D`).

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.extra_stylesheets %}
+    {% for path in page.meta.extra_stylesheets %}
+      <link rel="stylesheet" href="{{ path | url }}">
+    {% endfor %}
+  {% endif %}
+{% endblock %}

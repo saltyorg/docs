@@ -5,18 +5,18 @@ tags:
   - pre-install
 ---
 
-!!! warning
-    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#preinstall).
-    If you are looking for the steps to follow to install, they are [here](../saltbox/install/install.md).
+# Preinstall
 
-## Preinstall
+!!! warning
+    This is a reference discussing an aspect of the [install process](../saltbox/install/install.md#step-3-preinstall).
+    If you are looking for the steps to follow to install, they are in the [installation guide](../saltbox/install/install.md).
 
 !!! warning
     Make sure that you have setup the configuration correctly before proceeding.
 
 This step will create the specified user account, add it to sudoers, update the kernel, edit GRUB configuration and install Rclone and reboot the server if needed.
 
-``` shell
+```shell
 sb install preinstall
 ```
 

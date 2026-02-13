@@ -1,31 +1,54 @@
 ---
+icon: material/play
+title: BTRFS Maintenance
 hide:
   - tags
 tags:
   - btrfs
   - btrfsmaintenance
+saltbox_automation:
+  sections:
+    inventory: false
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/kdave/btrfsmaintenance/tags
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: BTRFS Maintenance
+    summary: |-
+      a set of scripts designed to automate key maintenance tasks for the BTRFS filesystem, including scrubbing, balancing, trimming, and defragmentation.
+    link: https://github.com/kdave/btrfsmaintenance
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # BTRFS Maintenance
 
-## What is it?
+## Overview
 
-[BTRFS Maintenance](https://github.com/kdave/btrfsmaintenance) is a set of scripts supplementing the btrfs filesystem and aims to automate a few maintenance tasks. This means the scrub, balance, trim or defragmentation.
+[BTRFS Maintenance](https://github.com/kdave/btrfsmaintenance) is a set of scripts designed to automate key maintenance tasks for the BTRFS filesystem, including scrubbing, balancing, trimming, and defragmentation.
 
-Each of the tasks can be turned on/off and configured independently. The default config values were selected to fit the default installation profile with btrfs on the root filesystem.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/kdave/btrfsmaintenance){: .header-icons } | [:octicons-link-16: Docs](https://github.com/kdave/btrfsmaintenance){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/kdave/btrfsmaintenance){: .header-icons } | :material-docker: Docker |
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/kdave/btrfsmaintenance/tags){ .md-button .md-button--stretch }
 
-``` shell
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
+</div>
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
 sb install btrfsmaintenance
-
 ```
-
-### 2. Setup
-
-- [:octicons-link-16: Documentation](https://github.com/kdave/btrfsmaintenance){: .header-icons }

@@ -1,0 +1,345 @@
+# =============================================================================
+# Docs Automation Configuration
+# =============================================================================
+# This file should be placed at the root of the docs repository as:
+#   .docs-automation.yml
+#
+# The sb-docs binary will read this configuration to know where to find
+# the various repositories and how to process documentation.
+# =============================================================================
+
+# =============================================================================
+# Repository Paths
+# =============================================================================
+# These paths are relative to the workflow working directory.
+# In a typical GitHub Actions setup:
+#   - docs repo is checked out to ./docs
+#   - saltbox repo is checked out to ./saltbox
+#   - sandbox repo is checked out to ./sandbox
+
+repositories:
+  saltbox: "saltbox"
+  sandbox: "sandbox"
+  docs: "docs"
+
+# =============================================================================
+# Blacklist Configuration
+# =============================================================================
+# Roles to exclude from documentation coverage checks
+# (these roles intentionally don't have dedicated documentation)
+
+blacklist:
+  docs_coverage:
+    saltbox:
+      - "authentik_worker"
+      - "cloudflare"
+      - "cloudplow_disable"
+      - "hetzner"
+      - "index"
+      - "notify"
+      - "nvidia"
+      - "plex_extra_tasks"
+      - "pre_tasks"
+      - "sanity_check"
+      - "scripts"
+      - "user_check"
+    sandbox:
+      - "sanity_check"
+      - "tdarr_node"
+      # Deprecated roles
+      - "unifi"  # deprecated
+      - "hoarder"  # deprecated
+      - "plex_meta_manager"  # deprecated
+
+# =============================================================================
+# Path Overrides
+# =============================================================================
+# Override default documentation paths for specific roles.
+# Format: repo_type -> role_name -> custom_path (relative to docs root)
+#
+# Use this when a role's documentation doesn't follow the standard naming:
+#   saltbox role "foo" -> docs/apps/foo.md
+#   sandbox role "bar" -> docs/sandbox/apps/bar.md
+
+path_overrides:
+  saltbox:
+    arr_db: "docs/reference/modules/arr_db.md"
+    backup2: "docs/reference/modules/backup2.md"
+    backup: "docs/reference/modules/backup.md"
+    common: "docs/reference/modules/common.md"
+    custom: "docs/reference/modules/custom.md"
+    diag: "docs/reference/modules/diag.md"
+    download_clients: "docs/reference/modules/download_clients.md"
+    download_indexers: "docs/reference/modules/download_indexers.md"
+    hetzner_nfs: "docs/reference/modules/hetzner_nfs.md"
+    hetzner_vlan: "docs/reference/modules/hetzner_vlan.md"
+    kernel: "docs/reference/modules/kernel.md"
+    main_tags: "docs/reference/modules/main_tags.md"
+    media_server: "docs/reference/modules/media_server.md"
+    motd: "docs/reference/modules/motd.md"
+    mount_templates: "docs/reference/modules/mount_templates.md"
+    permissions: "docs/reference/modules/permissions.md"
+    plex_auth_token: "docs/reference/modules/plex_auth_token.md"
+    plex_db: "docs/reference/modules/plex_db.md"
+    plex_fix_futures: "docs/reference/modules/plex_fix_futures.md"
+    reboot: "docs/reference/modules/reboot.md"
+    remote: "docs/reference/modules/remote.md"
+    restore: "docs/reference/modules/restore.md"
+    saltbox_mod: "docs/reference/modules/saltbox_mod.md"
+    sandbox: "docs/reference/modules/sandbox.md"
+    shell: "docs/reference/modules/shell.md"
+    system: "docs/reference/modules/system.md"
+    traefik_file_template: "docs/reference/modules/traefik_file_template.md"
+    traefik_template: "docs/reference/modules/traefik_template.md"
+    unionfs: "docs/reference/modules/unionfs.md"
+    user: "docs/reference/modules/user.md"
+  sandbox:
+    main_tag: "docs/reference/modules/main_tag.md"
+
+# =============================================================================
+# Global Override Options
+# =============================================================================
+# Variables with these suffixes are handled globally and not documented per-role.
+# The 'variables' section defines documentation for global override variables.
+
+global_overrides:
+  ignore_suffixes:
+    - "_dns_proxy"
+    - "_docker_network_mode"
+    - "_docker_networks_alias"
+    - "_docker_stop_timeout"
+    - "_traefik_api_enabled"
+    - "_traefik_enabled"
+    - "_traefik_entrypoint_web"
+    - "_traefik_entrypoint_websecure"
+    - "_traefik_middleware_custom"
+    - "_traefik_middleware_default"
+    - "_traefik_sso_middleware"
+    - "_web_domain"
+    - "_web_subdomain"
+    - "_web_port"
+  variables:
+    _autoheal_enabled:
+      description: "Enable or disable Autoheal monitoring for containers created when deploying"
+      default: "true"
+      type: "bool"
+
+    _depends_on:
+      description: "List of container dependencies that must be running before containers start"
+      default: ""
+      type: "string"
+
+    _depends_on_delay:
+      description: "Delay in seconds before starting containers after dependencies are ready"
+      default: "0"
+      type: "string (number)"
+
+    _depends_on_healthchecks:
+      description: "Enable healthcheck waiting for container dependencies"
+      default: null
+      type: "string (true/false)"
+
+    _diun_enabled:
+      description: "Enable or disable Diun update notifications for containers created when deploying"
+      default: "true"
+      type: "bool"
+
+    _dns_enabled:
+      description: "Enable or disable automatic DNS record creation for containers"
+      default: "true"
+      type: "bool"
+
+    _docker_controller:
+      description: "Enable or disable Saltbox Docker Controller management for containers"
+      default: "true"
+      type: "bool"
+
+    _traefik_autodetect_enabled:
+      description: "Enable Traefik autodetect middleware for containers"
+      default: "false"
+      type: "bool"
+
+    _traefik_crowdsec_enabled:
+      description: "Enable CrowdSec middleware for containers"
+      default: "false"
+      type: "bool"
+
+    _traefik_error_pages_enabled:
+      description: "Enable custom error pages middleware for containers"
+      default: "false"
+      type: "bool"
+
+    _traefik_gzip_enabled:
+      description: "Enable gzip compression middleware for containers"
+      default: "false"
+      type: "bool"
+
+    _traefik_robot_enabled:
+      description: "Enable robots.txt middleware for containers"
+      default: "true"
+      type: "bool"
+
+    _traefik_tailscale_enabled:
+      description: "Enable Tailscale-specific Traefik configuration for containers"
+      default: "false"
+      type: "bool"
+
+    _traefik_wildcard_enabled:
+      description: "Enable wildcard certificate for containers"
+      default: "true"
+      type: "bool"
+
+    _web_fqdn_override:
+      description: "Override the Traefik fully qualified domain name (FQDN) for containers"
+      default: null
+      type: "list"
+      example: |
+        ```yaml
+        {variable}:
+          - "{{ traefik_host }}"
+          - "{role}2.{{ user.domain }}"
+          - "{role}.otherdomain.tld"
+        ```
+
+        Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+    _web_host_override:
+      description: "Override the Traefik web host configuration for containers"
+      default: null
+      type: "string"
+      example: |
+        ```yaml
+        {variable}: "Host(`{{ traefik_host }}`) || Host(`{{ '{role}2.' + user.domain }}`)"
+        ```
+
+        Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+    _web_scheme:
+      description: "URL scheme to use for web access to containers"
+      default: null
+      type: "string (http/https)"
+
+# =============================================================================
+# Docker+ Overrides
+# =============================================================================
+docker_overrides:
+  ignore_suffixes:
+    - "_docker_dev_dri"
+
+# =============================================================================
+# Type Inference Rules
+# =============================================================================
+# Rules for inferring variable types from their names.
+
+type_inference:
+  exact:
+    "_depends_on_healthchecks": "string (true/false)"
+    "_depends_on_delay": "string (number)"
+    "_depends_on": "string"
+  patterns:
+    - suffix_contains: "_scheme"
+      type: "string (http/https)"
+    - suffix_contains: "_enabled"
+      type: "bool (true/false)"
+    - suffix_contains: "_proxy"
+      type: "bool (true/false)"
+    - suffix_contains: "_domain"
+      type: "string"
+    - suffix_contains: "_subdomain"
+      type: "string"
+    - suffix_contains: "_url"
+      type: "string"
+    - suffix_contains: "_port"
+      type: "string (number)"
+    - suffix_contains: "_timeout"
+      type: "string (number)"
+  overrides:
+    "_dns_proxy": "bool"
+    "_dns_record": "string"
+    "_dns_zone": "string"
+
+# =============================================================================
+# Docker Variable Categories
+# =============================================================================
+# Categorization of Docker container module variables by type.
+
+docker_variables:
+  bool:
+    - "auto_remove"
+    - "cleanup"
+    - "detach"
+    - "init"
+    - "keep_volumes"
+    - "oom_killer"
+    - "output_logs"
+    - "paused"
+    - "privileged"
+    - "read_only"
+    - "recreate"
+  int:
+    - "blkio_weight"
+    - "cpu_period"
+    - "cpu_quota"
+    - "cpu_shares"
+    - "healthy_wait_timeout"
+    - "memory_swappiness"
+    - "oom_score_adj"
+    - "restart_retries"
+    - "stop_timeout"
+  list:
+    - "capabilities"
+    - "cap_drop"
+    - "commands"
+    - "device_cgroup_rules"
+    - "devices"
+    - "dns_opts"
+    - "dns_search_domains"
+    - "dns_servers"
+    - "exposed_ports"
+    - "groups"
+    - "links"
+    - "mounts"
+    - "networks"
+    - "ports"
+    - "security_opts"
+    - "sysctls"
+    - "tmpfs"
+    - "ulimits"
+    - "volumes"
+    - "volumes_from"
+  dict:
+    - "envs"
+    - "healthcheck"
+    - "hosts"
+    - "labels"
+    - "log_options"
+    - "storage_opts"
+
+# =============================================================================
+# CLI Help Configuration
+# =============================================================================
+# Configuration for the `sb-docs cli` command that updates CLI documentation.
+
+cli_help:
+  binary_path: "sb"
+  docs_file: "docs/index.md"
+
+# =============================================================================
+# Managed Section Markers
+# =============================================================================
+# HTML comment markers used to identify managed sections in documentation.
+
+markers:
+  variables: "SALTBOX MANAGED VARIABLES SECTION"
+  cli: "SALTBOX MANAGED CLI SECTION"
+  overview: "SALTBOX MANAGED OVERVIEW SECTION"
+
+# =============================================================================
+# Scaffold Configuration
+# =============================================================================
+# Output paths for scaffolding new app documentation.
+
+scaffold:
+  output_paths:
+    saltbox: "docs/apps/{role}.md"
+    sandbox: "docs/sandbox/apps/{role}.md"

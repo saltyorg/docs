@@ -1,5 +1,6 @@
 /.idea/
 /.vscode/
+/.claude
 /mkdocs-serve/
 go.sh
 # Visual Studio
@@ -8,3 +9,7 @@ go.sh
 .direnv/**
 /venv
 .cache
+.ansible
+# Python
+/scripts/__pycache__/
+.envrc

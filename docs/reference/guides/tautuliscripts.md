@@ -1,4 +1,4 @@
-# Introduction
+# Tautulli Custom Scripts
 
 This is a quick guide to installing and configuring a Tautulli custom script. It will teach you how to download and configure a Tautulli custom script that drops Plex video streams transcoding from a 4K source.
 
@@ -72,4 +72,4 @@ There is a list of when a notification agent is triggered in the **Notification 
 
 ### Credit goes to blacktwin
 
-* [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS)
+- [https://github.com/blacktwin/JBOPS](https://github.com/blacktwin/JBOPS)

@@ -1,56 +1,85 @@
+---
+icon: material/docker
+hide:
+  - tags
+tags:
+  - varken
+  - monitoring
+  - analytics
+saltbox_automation:
+  sections:
+    inventory: false
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url: https://github.com/thezak48/Varken/pkgs/container/varken
+      type: github
+    - name: Community
+      url:
+      type: community
+  project_description:
+     name: Varken
+     summary: |-
+        a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend.
+     link: https://github.com/thezak48/Varken
+---
+
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Varken
 
-## What is it?
+## Overview
 
-[Varken](https://github.com/Boerderij/Varken) is Dutch for **PIG**. PIG is an Acronym for **P**lex/**I**nfluxDB/**G**rafana
+[Varken](https://github.com/thezak48/Varken) is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend.
 
-Varken is a standalone application to aggregate data from the Plex ecosystem into InfluxDB using Grafana for a frontend
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/Boerderij/Varken){: .header-icons } | [:octicons-link-16: Docs](https://wiki.cajun.pro/books/varken){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/Boerderij/Varken){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/boerderij/varken){: .header-icons }|
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-brands-github:**Releases**](https://github.com/thezak48/Varken/pkgs/container/varken){ .md-button .md-button--stretch }
 
-``` shell
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
+</div>
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
 sb install sandbox-varken
-
 ```
 
-### 2. URL
+## Usage
 
-- To access the Varken dashboard, visit `https://grafana._yourdomain.com_`
+Visit <https://grafana.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 1. Run the Saltbox varken role to install varken/influxdb/telegraf/grafana:
 
-    ``` { .shell }
-
-        sb install sandbox-varken
-
+    ```shell
+    sb install sandbox-varken
     ```
 
 2. Add your Maxmind API key to varken.ini:
 
-    ``` { .shell }
-
-        nano /opt/varken/varken.ini
-
+    ```shell
+    nano /opt/varken/varken.ini
     ```
 
 3. Restart Varken:
 
-    ``` { .shell }
-
-        docker restart varken
-
+    ```shell
+    docker restart varken
     ```
 
-4. Visit grafana `https://grafana._yourdomain.com_`
+4. Visit grafana <https://grafana.iYOUR_DOMAIN_NAMEi>
 
-      - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#configuration) file located in `/srv/git/saltbox/accounts.yml`
+      - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 5. Add data source InfluxDB named InfluxDB:
 
@@ -70,4 +99,4 @@ sb install sandbox-varken
 
 7. You can find an example dashboard [here](https://raw.githubusercontent.com/thezak48/Varken/develop/dashboard_overseerr.json) which can be uploaded or pasted into Grafana to import.
 
-- For app specific instructions refer to the [grafana role](../../apps/grafana.md) and the upstream documentation [:octicons-link-16: Documentation](https://wiki.cajun.pro/books/varken){: .header-icons }
+- For app specific instructions refer to the [grafana role](../../apps/grafana.md) and the upstream documentation

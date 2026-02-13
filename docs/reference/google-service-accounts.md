@@ -23,15 +23,15 @@ NOTE: This guide is assuming a Google Gsuite Business/Workspace account.
 
 IF YOU HAVE DONE THIS BEFORE, THERE IS NO REASON TO REPEAT IT. USE THE SAME 300 SERVICE ACCOUNTS CREATED THE FIRST TIME.
 
-IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT [CLOUDBOX, PTS, ETC.]  YOU CAN USE THOSE.  THERE IS NO REQUIREMENT TO CREATE MORE.
+IF YOU HAVE SERVICE ACCOUNTS CREATED IN ANOTHER CONTEXT (CLOUDBOX, PTS, ETC.)  YOU CAN USE THOSE. THERE IS NO REQUIREMENT TO CREATE MORE.
 
-`sa-gen` has recently [May 2023] changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
+`sa-gen` has recently (May 2023) changed; these instructions are assuming the older version, and the paths and commands below have been updated to reflect that.
 
-IMPORTANT: Google has made changes to the service account infrastructure on their side.  When running this script you may see a message like:
+IMPORTANT: Google has made changes to the service account infrastructure on their side. When running this script you may see a message like:
 ```
 A quota has been reached for project number PROJECT_NUMBER: Service accounts created per minute per project.
 ```
-This is due to a change on Google's side, and there's not a simnple way around it.  The simplest solution is to just ignore tha error, then after the script has run delete the empty files that got created.  The final step is going to try to use service account file `150.json`; if that one is empty either copy another one to that name or change the config in the final step to use a file that is present.
+This is due to a change on Google's side, and there's not a simple way around it. The simplest solution is to just ignore tha error, then after the script has run delete the empty files that got created. The final step is going to try to use service account file `150.json`; if that one is empty either copy another one to that name or change the config in the final step to use a file that is present.
 
 1. Create /opt/sa and make sure it's writable by you.
 
@@ -66,7 +66,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 1. Verify that the google project has the right APIs enabled:
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     gcloud services list --enabled
@@ -102,7 +102,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 2. Retrieve the `sa-gen` code
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     cd /opt && git clone https://github.com/88lex/sa-gen && cd sa-gen/old
@@ -110,7 +110,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
 3. Edit the `sa-gen` script:
 
-    [copy-paste this into your terminal window]
+    (copy-paste this into your terminal window)
 
     ```shell
     nano sa-gen_2022
@@ -120,14 +120,14 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     For these edits, you will need: the "Organization ID" from gcloud SDK step, the full email address of the group you created a couple steps ago, and the prefix you generated earlier.
 
-    ```bash
+    ```shell
     #!/bin/bash
     # Running this script requires gcloud command line tools. To install go to https://cloud.google.com/sdk/docs/quickstarts
     # See readme.md to understand the variables used in this script
 
     KEYS_DIR=/opt/sa/all
     ORGANIZATION_ID="123456789098"     <<<< organization ID from gcloud SDK step
-    GROUP_NAME="mygroup@mydomain.com"  <<<< the group [full email address as shown] you created previously
+    GROUP_NAME="mygroup@xYOUR_DOMAIN_NAMEx"  <<<< the group [full email address as shown] you created previously
     PROJECT_BASE_NAME="mgbtbnfkkt"     <<<< the prefix you generated previously
     FIRST_PROJECT_NUM=1
     LAST_PROJECT_NUM=3
@@ -166,7 +166,7 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     ![](../images/google-service-account/01-all-members.png)
 
-6. Open the Google Admin site: <https://admin.google.com/> and login with your Google account.  Click on the groups heading:
+6. Open the Google Admin site: <https://admin.google.com/> and login with your Google account. Click on the groups heading:
 
     ![](../images/google-service-account/02-admin-top-level.png)
 
@@ -182,13 +182,13 @@ uid=1000(marco) gid=1000(marco) groups=1000(marco),...
 
     ![](../images/google-service-account/05-select-CSV.png)
 
-10. Click "UPLOAD".  Status will appear in the upper right:
+10. Click "UPLOAD". Status will appear in the upper right:
 
     ![](../images/google-service-account/06-choose-csv.png)
 
 11. You're done.
 
 !!! warning
-    If you see errors that leave some of the service account JSON files empty, the simplest thing to do is to jsut delete those empty files and carry on.  300 was overkill even when this was a useful setup, so 240 or so will be more than sufficient now.
+    If you see errors that leave some of the service account JSON files empty, the simplest thing to do is to jsut delete those empty files and carry on. 300 was overkill even when this was a useful setup, so 240 or so will be more than sufficient now.
 
-If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-7-create-some-shared-drives-and-related-infrastructure)
+If you are going through the manual rclone instructions, [continue with the next step](rclone-manual.md#step-7-create-shared-drives-and-related-infrastructure)

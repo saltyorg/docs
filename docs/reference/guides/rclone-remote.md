@@ -2,7 +2,7 @@
 
 This article describes how to create an rclone remote for Google Drive
 
-This article walks through creating a Google Drive remote, but basically the same process is followed for any type of remote; dropbox, sftp, whatever.  Choose the desired type of remote in step 4 and follow the prompts.
+This article walks through creating a Google Drive remote, but basically the same process is followed for any type of remote; dropbox, sftp, whatever. Choose the desired type of remote in step 4 and follow the prompts.
 
 ## Prerequisites
 
@@ -14,10 +14,9 @@ To go through this process, you will need the following:
 
       b. Service Account JSON file(s)
 
-   2. The project associated with these needs to be set to "external".  See step 9 on [this page](../google-project-setup.md).
+   2. The project associated with these needs to be set to "external". See step 9 on [this page](../google-project-setup.md).
    3. rclone installed on your saltbox machine [which means the preinstall has been run]
-   4. rclone [same or higher version as on the saltbox machine] and a web browser installed on a machine local to you [this machine needs a GUI].  NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
-
+   4. rclone (same or higher version as on the saltbox machine) and a web browser installed on a machine local to you (this machine needs a GUI). NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
 
 ## Walkthrough
 
@@ -46,7 +45,7 @@ To go through this process, you will need the following:
     name> google
     ```
 
-4. For "Type of storage", type in `drive`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>.  Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here.  **Read what's on the screen.**
+4. For "Type of storage", type in `drive`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>. Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here. **Read what's on the screen.**
 
     ```shell
     Option Storage.
@@ -269,7 +268,8 @@ To go through this process, you will need the following:
         n) No (default)
         y/n> y
         ```
-        You'll be presented with a list of shared drives you have access to.  Enter a number and press <kbd class="platform-all">Enter</kbd>.
+
+        You'll be presented with a list of shared drives you have access to. Enter a number and press <kbd class="platform-all">Enter</kbd>.
 
         ```shell
         Option config_team_drive.
@@ -326,6 +326,6 @@ To go through this process, you will need the following:
     e/n/d/r/c/s/q> q
     ```
 
-The name of this remote [`google` in this case] is what you should enter in the rclone settings as you proceed with the install.
+The name of this remote (`google` in this case) is what you should enter in the rclone settings as you proceed with the install.
 
 If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md)

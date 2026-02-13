@@ -1,4 +1,4 @@
-# Creating an rclone remote
+# Creating an Rclone remote
 
 This article describes generally how to create an rclone remote for a random cloud storage provider.
 
@@ -8,9 +8,9 @@ There are also specific instructions for [Dropbox](rclone-remote-dropbox.md) and
 
 To go through this process, you will need the following:
 
-   1. Whatever access details are required by your cloud storage; typically this is an appID/secret pair, or a token of some kind.  Details can be found at the [rclone site](https://rclone.org/overview/), or you can just work through the config process and go get the things you are asked for.
+   1. Whatever access details are required by your cloud storage; typically this is an appID/secret pair, or a token of some kind. Details can be found at the [rclone site](https://rclone.org/overview/), or you can just work through the config process and go get the things you are asked for.
    2. `rclone` installed on your saltbox machine [which means the preinstall has been run]
-   3. `rclone` [same or higher version as on the saltbox machine] and a web browser installed on a machine local to you [this machine needs a GUI].  NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
+   3. `rclone` (same or higher version as on the saltbox machine) and a web browser installed on a machine local to you (this machine needs a GUI). NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
 
 ## Walkthrough
 
@@ -39,9 +39,9 @@ To go through this process, you will need the following:
     name> cloudstorage
     ```
 
-4. For "Type of storage", find your preovider in the list, then enter the name or number and press <kbd class="platform-all">Enter</kbd>.  Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here.  **Read what's on the screen.**
+4. For "Type of storage", find your preovider in the list, then enter the name or number and press <kbd class="platform-all">Enter</kbd>. Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here. **Read what's on the screen.**
 
-    For this example, we'll use some S3-compatible storage.  S3 storage requires an Access Key and a Secret Key, which I have already retrieved from my provider's website.
+    For this example, we'll use some S3-compatible storage. S3 storage requires an Access Key and a Secret Key, which I have already retrieved from my provider's website.
 
     ```shell
     Option Storage.
@@ -67,10 +67,10 @@ To go through this process, you will need the following:
 
 5. Follow the prompts
 
-    Each storage type will then produce a different set of questions as you go through the setup process.  **Read what's on the screen and follow the prompts**
+    Each storage type will then produce a different set of questions as you go through the setup process. **Read what's on the screen and follow the prompts**
 
     Eventually, you will get to the advanced config:
-    
+
     ```shell
     Edit advanced config?
     y) Yes
@@ -79,8 +79,8 @@ To go through this process, you will need the following:
     ```
 
     type `n` and press <kbd class="platform-all">Enter</kbd>.
-    
-    Depending on your cloud provider, you may be asked to complete a signin process at this point.  **Read what's on the screen and follow the prompts**
+
+    Depending on your cloud provider, you may be asked to complete a signin process at this point. **Read what's on the screen and follow the prompts**
 
 6. Eventually, `rclone` will tell you the process is complete, and show you the configuration:
 
@@ -121,6 +121,6 @@ To go through this process, you will need the following:
     e/n/d/r/c/s/q> q
     ```
 
-If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md).  That page is written with dropbox in mind, but the concepts apply to any cloud storage provider.
+If you wish to encrypt this remote, proceed with [creating a crypt remote](rclone-remote-encrypted.md). That page is written with dropbox in mind, but the concepts apply to any cloud storage provider.
 
-If you are doing this as part of the initial install, you will need the name of the remote you created [`cloudstorage` in this example] to enter into the settings file.
+If you are doing this as part of the initial install, you will need the name of the remote you created (`cloudstorage` in this example) to enter into the settings file.

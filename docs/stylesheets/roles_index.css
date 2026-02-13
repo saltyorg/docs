@@ -1,0 +1,46 @@
+:root {
+  --md-tooltip-width: 31.4rem;
+}
+
+.md-typeset {
+  h2:has(+ .md-typeset__scrollwrap),
+  h3:has(+ .md-typeset__scrollwrap),
+  h4:has(+ .md-typeset__scrollwrap),
+  h5:has(+ .md-typeset__scrollwrap),
+  h6:has(+ .md-typeset__scrollwrap) {
+    margin-bottom: -6.7%;
+  }
+
+  & > .md-typeset__scrollwrap:first-of-type table {
+    thead {
+      display: table-header-group;
+    }
+  }
+}
+
+.md-tooltip2__inner > h3 {
+  margin-bottom: -6.7%;
+}
+
+.md-typeset .md-typeset__table > table,
+.md-tooltip2__inner > table:not([class]) {
+  table-layout: fixed;
+  background-color: inherit;
+  border: none;
+
+  > thead {
+    /*display: none;*/
+
+    > th {
+      text-align: center;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+
+    code {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+name: Documentation Automation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/apps/**'
+      - 'docs/sandbox/apps/**'
+      - 'docs/reference/modules/**'
+      - '.docs-automation.yml'
+      - 'templates/**'
+
+  schedule:
+    # Run daily at 5 AM UTC
+    - cron: '0 5 * * *'
+
+  workflow_dispatch:
+    inputs:
+      saltbox_branch:
+        description: 'Saltbox branch to use'
+        required: false
+        default: 'master'
+      sandbox_branch:
+        description: 'Sandbox branch to use'
+        required: false
+        default: 'master'
+
+jobs:
+  docs-automation:
+    name: Documentation Automation
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout docs repository
+        uses: actions/checkout@v6
+        with:
+          path: docs
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Checkout Saltbox repository
+        uses: actions/checkout@v6
+        with:
+          repository: saltyorg/Saltbox
+          ref: ${{ github.event.inputs.saltbox_branch || 'master' }}
+          path: saltbox
+          fetch-depth: 1
+
+      - name: Checkout Sandbox repository
+        uses: actions/checkout@v6
+        with:
+          repository: saltyorg/Sandbox
+          ref: ${{ github.event.inputs.sandbox_branch || 'master' }}
+          path: sandbox
+          fetch-depth: 1
+
+      - name: Install sb-docs
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        with:
+          repo: saltyorg/docs-automation
+          tag: latest
+          extension-matching: disable
+          platform: linux
+          arch: amd64
+          rename-to: sb-docs
+          chmod: "0755"
+
+      - name: Install sb binary (for CLI help generation)
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        with:
+          repo: saltyorg/sb-go
+          tag: latest
+          extension-matching: disable
+          platform: linux
+          arch: amd64
+          rename-to: sb
+          chmod: "0755"
+
+      - name: Verify installations
+        run: |
+          sb-docs version
+          sb version
+
+      - name: Update documentation and run checks
+        run: |
+          sb-docs update --config docs/.docs-automation.yml --check --manage-issue
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        continue-on-error: true
+
+      - name: Check for changes
+        id: check_changes
+        working-directory: docs
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            git diff --stat
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        working-directory: docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "docs: automated documentation update" \
+            -m "Updated by sb-docs automation" \
+            -m "🤖 Generated with sb-docs"
+          git push

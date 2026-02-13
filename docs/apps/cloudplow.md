@@ -1,19 +1,55 @@
 ---
+icon: material/server-network-outline
 hide:
   - tags
 tags:
   - cloudplow
+saltbox_automation:
+  sections:
+    inventory: false
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Cloudplow
+    summary: |-
+      an automatic rclone remote uploader designed to transfer files from local storage to cloud storage providers, such as Google Drive, with support for multiple remote/folder pairings.
+    link: https://github.com/l3uddz/cloudplow
 ---
 
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Cloudplow
 
-# What is it?
+## Overview
 
-[Cloudplow](https://github.com/l3uddz/cloudplow) (CP) is a script created by [l3uddz](https://github.com/l3uddz) that has one main component as relates to Saltbox: it's an uploader to Rclone remote. Files are moved off local storage. With support for multiple uploaders (i.e. remote/folder pairings).
+[Cloudplow](https://github.com/l3uddz/cloudplow) is an automatic rclone remote uploader designed to transfer files from local storage to cloud storage providers, such as Google Drive, with support for multiple remote/folder pairings.
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://github.com/l3uddz/cloudplow){: .header-icons } | :octicons-link-16: Docs | [:octicons-mark-github-16: Github](https://github.com/l3uddz/cloudplow){: .header-icons } | :material-docker: Docker |
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
+sb install cloudplow
+```
 
 ## Remote Uploader Function
 
@@ -34,7 +70,7 @@ Cloudplow can also use service accounts to upload and work around this limitatio
 
 ## Config
 
-Note that this is an extract from the cloudplow docs and does not cover everything that cloudplow can do.  Please refer to the Cloudplow github for complete details on available options.
+Note that this is an extract from the cloudplow docs and does not cover everything that cloudplow can do. Please refer to the Cloudplow github for complete details on available options.
 
 ### Default config.json file
 
@@ -46,17 +82,17 @@ See [Example Cloudplow configs](../reference/cloudplow.md).
 /opt/cloudplow/config.json
 ```
 
-Note: Config changes require a restart: `sudo systemctl restart cloudplow`.
+Note: Config changes require a restart: `sudo systemctl restart saltbox_managed_cloudplow.service`.
 
 ### Editing
 
-Edit in your favorite code editor  (with json highlighting) or even a unix editor like nano.
+Edit in your favorite code editor (with json highlighting) or even a unix editor like nano.
 
-```bash
+```shell
 nano /opt/cloudplow/config.json
 ```
 
-Note: The cloudplow config file is a JSON file.  JSON files have a particular format and syntax.  If you are unfamiliar with JSON formatting and syntax, don't edit this file until you have gained that familiarity.  Here's a [random YouTube video](https://www.youtube.com/watch?v=GpOO5iKzOmY) that will give you a ten-minute overview.
+Note: The cloudplow config file is a JSON file. JSON files have a particular format and syntax. If you are unfamiliar with JSON formatting and syntax, don't edit this file until you have gained that familiarity. Here's a [random YouTube video](https://www.youtube.com/watch?v=GpOO5iKzOmY) that will give you a ten-minute overview.
 
 ### Modify Upload Threshold and Interval
 
@@ -85,7 +121,7 @@ Note: The cloudplow config file is a JSON file.  JSON files have a particular fo
 
     - Setting this to `2GB` will trigger on a little more than 1GB of data in the upload directory, since there needs to be more than 1G there for the value to get rounded up to 2G and trigger the upload.
 
-    - THIS IS ONLY A SIGNIFICANT ISSUE WITH THESE SMALL NUMBERS.  It's not a general "Cloudplow triggers at half the threshold".  This rounding means that the default 200G threshold will actually trigger at 199+G, since 199.2G would get rounded up to 200G.
+    - THIS IS ONLY A SIGNIFICANT ISSUE WITH THESE SMALL NUMBERS. It's not a general "Cloudplow triggers at half the threshold". This rounding means that the default 200G threshold will actually trigger at 199+G, since 199.2G would get rounded up to 200G.
 
 ### Plex Integration
 
@@ -163,7 +199,7 @@ Cloudplow can pause the Sabnzbd download queue when an upload starts; and then r
 
 ### Service account uploading
 
-You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit.  Details are available [here](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
+You can tell cloudplow to use a set of service accounts when uploading to Google Drive to go past the daily 750G upload limit. Details are available in the [cloudplow uploader documentation](https://github.com/l3uddz/cloudplow#uploader), but in a nutshell you will add the `service_account_path` to the uploader:
 
 ```json
 "uploader": {
@@ -182,14 +218,14 @@ You can tell cloudplow to use a set of service accounts when uploading to Google
 }
 ```
 
-If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described [here](../reference/cloudplow-config.md).
+If you used the saltbox scripted rclone setup, there is a script that will make these changes for you described in the [cloudplow configuration guide](../reference/cloudplow-config.md).
 
 ### Restart
 
 Restart Cloudplow to apply the changes to the config.
 
-```bash
-sudo systemctl restart cloudplow
+```shell
+sudo systemctl restart saltbox_managed_cloudplow.service
 ```
 
 ## Logs and status
@@ -204,6 +240,6 @@ You can run a manual Cloudplow task from anywhere by just using the `cloudplow` 
 
 To start uploading right away, regardless of what the folder size is:
 
-```bash
+```shell
 cloudplow upload
 ```

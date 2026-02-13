@@ -1,33 +1,841 @@
+---
+icon: material/docker
+hide:
+  - tags
+tags:
+  - tauticord
+  - discord
+  - monitoring
+saltbox_automation:
+  app_links:
+    - name: Manual
+      url: https://github.com/nwithan8/tauticord
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Tauticord
+    summary: |-
+      a Discord bot that will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library statistics, and live playback control.
+    link: https://github.com/nwithan8/tauticord
+---
+
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Tauticord
 
-## What is it?
+## Overview
 
-[Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that
-will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library
-statistics, and live playback control.
+[Tauticord](https://github.com/nwithan8/tauticord) is a Discord bot that will mirror live Tautulli data into a Discord server, including current stream and bandwidth information, library statistics, and live playback control.
 
-| Details                                                                                                                         |                                                                                                                                   |
-|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [:material-home: Project home](https://github.com/nwithan8/tauticord){: .header-icons } | [:material-docker: Docker](https://hub.docker.com/r/nwithan8/tauticord){: .header-icons } |
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-Recommended install types: Mediabox, Saltbox
+[:fontawesome-solid-book-open:**Manual**](https://github.com/nwithan8/tauticord){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-``` shell
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
 sb install sandbox-tauticord
 ```
 
-### 2. Setup
+## Basics
 
 Rename `/opt/tauticord/config/config.yml.example` to `/opt/tauticord/config/config.yml` and fill out your configuration details.
 
 See the [Tauticord documentation](https://github.com/nwithan8/tauticord#installation-and-setup) for more information on each setting.
 
-### 3. Usage
+## Usage
 
 Once started, Tauticord will connect to your Tautulli and Discord servers and begin mirroring data.
 
 By default, library statistics are updated once every hour, and stream data is updated once every 15 seconds.
 
-- [:octicons-link-16: Documentation: Tauticord Docs](https://github.com/nwithan8/tauticord){: .header-icons }
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        tauticord_name: "custom_value"
+        ```
+
+    !!! warning "Avoid overriding variables ending in `_default`"
+
+        When overriding variables that end in `_default` (like `tauticord_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `tauticord_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`tauticord_name`"
+
+        ```yaml
+        # Type: string
+        tauticord_name: tauticord
+        ```
+
+=== "Docker"
+
+    <h5>Container</h5>
+
+    ??? variable string "`tauticord_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_container: "{{ tauticord_name }}"
+        ```
+
+    <h5>Image</h5>
+
+    ??? variable bool "`tauticord_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`tauticord_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_image_repo: "nwithan8/tauticord"
+        ```
+
+    ??? variable string "`tauticord_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`tauticord_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='tauticord') }}:{{ lookup('role_var', '_docker_image_tag', role='tauticord') }}"
+        ```
+
+    <h5>Envs</h5>
+
+    ??? variable dict "`tauticord_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_envs_default:
+          TZ: "{{ tz }}"
+          USER_ID: "{{ uid }}"
+          GROUP_ID: "{{ gid }}"
+          UMASK: "022"
+        ```
+
+    ??? variable dict "`tauticord_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_envs_custom: {}
+        ```
+
+    <h5>Volumes</h5>
+
+    ??? variable list "`tauticord_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_volumes_default:
+          - "{{ lookup('role_var', '_paths_location', role='tauticord') }}/config:/config"
+          - "{{ lookup('role_var', '_paths_location', role='tauticord') }}/logs:/logs"
+        ```
+
+    ??? variable list "`tauticord_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_volumes_custom: []
+        ```
+
+    <h5>Hostname</h5>
+
+    ??? variable string "`tauticord_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_hostname: "{{ tauticord_name }}"
+        ```
+
+    <h5>Networks</h5>
+
+    ??? variable string "`tauticord_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_networks_alias: "{{ tauticord_name }}"
+        ```
+
+    ??? variable list "`tauticord_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`tauticord_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_networks_custom: []
+        ```
+
+    <h5>Restart Policy</h5>
+
+    ??? variable string "`tauticord_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_restart_policy: unless-stopped
+        ```
+
+    <h5>State</h5>
+
+    ??? variable string "`tauticord_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_state: started
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`tauticord_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`tauticord_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`tauticord_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`tauticord_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`tauticord_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_cpus:
+        ```
+
+    ??? variable string "`tauticord_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`tauticord_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`tauticord_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`tauticord_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_memory:
+        ```
+
+    ??? variable string "`tauticord_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`tauticord_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`tauticord_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`tauticord_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`tauticord_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`tauticord_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_requests:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`tauticord_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`tauticord_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_devices:
+        ```
+
+    ??? variable list "`tauticord_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_groups:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_privileged:
+        ```
+
+    ??? variable list "`tauticord_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_security_opts:
+        ```
+
+    ??? variable string "`tauticord_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_user:
+        ```
+
+    ??? variable string "`tauticord_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`tauticord_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`tauticord_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`tauticord_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`tauticord_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_domainname:
+        ```
+
+    ??? variable list "`tauticord_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`tauticord_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_hosts:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`tauticord_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`tauticord_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_links:
+        ```
+
+    ??? variable string "`tauticord_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_network_mode:
+        ```
+
+    ??? variable string "`tauticord_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`tauticord_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_ports:
+        ```
+
+    ??? variable string "`tauticord_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`tauticord_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`tauticord_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_mounts:
+        ```
+
+    ??? variable dict "`tauticord_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`tauticord_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`tauticord_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`tauticord_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`tauticord_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`tauticord_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_cleanup:
+        ```
+
+    ??? variable string "`tauticord_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`tauticord_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_healthcheck:
+        ```
+
+    ??? variable int "`tauticord_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_init:
+        ```
+
+    ??? variable string "`tauticord_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`tauticord_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`tauticord_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_log_options:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`tauticord_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_paused:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_recreate:
+        ```
+
+    ??? variable int "`tauticord_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`tauticord_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_stop_signal:
+        ```
+
+    ??? variable int "`tauticord_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`tauticord_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_capabilities:
+        ```
+
+    ??? variable string "`tauticord_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`tauticord_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_commands:
+        ```
+
+    ??? variable int "`tauticord_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        tauticord_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`tauticord_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`tauticord_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_env_file:
+        ```
+
+    ??? variable dict "`tauticord_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        tauticord_role_docker_labels:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_read_only:
+        ```
+
+    ??? variable string "`tauticord_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        tauticord_role_docker_runtime:
+        ```
+
+    ??? variable list "`tauticord_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_sysctls:
+        ```
+
+    ??? variable list "`tauticord_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_ulimits:
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`tauticord_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        tauticord_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`tauticord_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        tauticord_role_depends_on: ""
+        ```
+
+    ??? variable string "`tauticord_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        tauticord_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`tauticord_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        tauticord_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`tauticord_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        tauticord_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`tauticord_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        tauticord_role_docker_controller: true
+        ```
+
+    ??? variable list "`tauticord_role_docker_networks_alias_custom`"
+
+        ```yaml
+        # Type: list
+        tauticord_role_docker_networks_alias_custom:
+        ```
+
+    ??? variable bool "`tauticord_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        tauticord_role_docker_volumes_download:
+        ```
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

@@ -5,7 +5,7 @@ tags:
   - subdomain
 ---
 
-# Subdomain Config
+# Adding a Subdomain
 
 Setup instructions are separated based on the DNS Provider you use and the type of install.
 

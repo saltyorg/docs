@@ -9,17 +9,17 @@ tags:
 
 ## Note that these are just some examples, not a list of things that any particular user should have in their crontab
 
-Nothing in here is a specific recommendation.  DO NOT copy and paste this with the idea that saltbox team is suggesting that you *should* do all these things.  They may not work as shown here, depending on your setup.
+Nothing in here is a specific recommendation. DO NOT copy and paste this with the idea that saltbox team is suggesting that you *should* do all these things. They may not work as shown here, depending on your setup.
 
 It's just a catalog of examples to demonstrate how one might set this sort of thing up.
 
-There are scripts in here that DELETE files.  DO NOT enable such things without understanding WHAT files will be deleted, WHY, and WHEN.
+There are scripts in here that DELETE files. DO NOT enable such things without understanding WHAT files will be deleted, WHY, and WHEN.
 
 If you are unfamiliar with the syntax shown below, [crontab generator](https://crontab-generator.org/) can be useful, but you should be familiar with what cron does before blindly enabling things in this way.
 
 To edit your crontab, enter `crontab -e`
 
-```bash
+```shell
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 @daily cd /opt/plex-meta-manager && python plex-meta-manager.py -r
 0 7 * * 7 sudo PATH='/usr/bin:/bin:/usr/local/bin' env ANSIBLE_CONFIG='/srv/git/saltbox/ansible.cfg' 'sb install backup' -v  >> '/home/seed/logs/saltbox_backup.log' 2>&1
@@ -31,18 +31,18 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 **Line 1** `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin` sets the PATH environment variable. - REQUIRED to use `sb` commands in cronjobs. e.g `sb update`
 
-**Line 2:** `plex-meta-manager` script to make Plex collections. - [Runs midnight daily **server time**]
+**Line 2:** `plex-meta-manager` script to make Plex collections. - (Runs midnight daily **server time**)
 
-**Line 3:** Saltbox backup. - [Runs every Sunday @ 7AM **server time**] [This requires line 1]
+**Line 3:** Saltbox backup. - (Runs every Sunday @ 7AM **server time**) (This requires line 1)
 
-**Line 4:** optimize the plex database using the `plex-db` tag. - [Runs daily @ 4AM **server time**] [This requires line 1]
+**Line 4:** optimize the plex database using the `plex-db` tag. - (Runs daily @ 4AM **server time**) (This requires line 1)
 
-**Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - [Runs every minute] `Note: Scroll down for a couple ideas for this script.`
+**Line 5:** cleanup script to remove left over junk in /downloads/nzbs/nzbget/completed/sonarr/* etc. - (Runs every minute) `Note: Scroll down for a couple ideas for this script.`
 
-**Line 6:** Different script to optimize the Plex database. - [Runs daily @ 10AM **server time**]
+**Line 6:** Different script to optimize the Plex database. - (Runs daily @ 10AM **server time**)
 `Note: Scroll down for script.`
 
-**Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - [Runs hourly]
+**Line 7:** [Enormoz's SonarrSync](https://github.com/EnorMOZ/SonarrSync) (based on Sperryfreak's RadarrSync) - (Runs hourly)
 
 ***
 
@@ -50,12 +50,12 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 This script deletes
 
-* everything under a size of 100M
-* every unwanted file immediately
-* everything but the wanted files after 10 hours
-* every empty folder
+- everything under a size of 100M
+- every unwanted file immediately
+- everything but the wanted files after 10 hours
+- every empty folder
 
-```bash
+```shell
 #!/bin/bash
 #####################################################
 # script by pho
@@ -128,14 +128,13 @@ eval "${command}"
 command="${FIND} ${TARGET_FOLDER} -mindepth 1 -type d -empty ${FIND_ACTION}"
 #echo "Executing ${command}"
 eval "${command}"
-
 ```
 
 ### RXWatcher's cleanup.sh
 
-Note that this script is specific to its author's setup when it was written.  It probably won't work for you as-is.  You'll need to edit the paths to match your situation.
+Note that this script is specific to its author's setup when it was written. It probably won't work for you as-is. You'll need to edit the paths to match your situation.
 
-```Bash
+```shell
 #!/bin/bash
 find /mnt/local/downloads/nzbget/completed/sonarr/* -type d -mmin +60 -ls -exec rm -rf {} + 2>/dev/null
 find /mnt/local/downloads/nzbget/completed/radarr/* -type d -mmin +60 -ls -exec rm -rf {} + 2>/dev/null
@@ -149,9 +148,9 @@ find /mnt/local/downloads/nzbget/completed/anime/* -type d -mmin +60 -ls -exec r
 
 ### RXWatcher's optimize.sh
 
-```bash
+```shell
 #!/bin/sh
-# Get the contents of the Preferences file, keep only what we need,  push to a temp, then use it in the curl command
+# Get the contents of the Preferences file, keep only what we need, push to a temp, then use it in the curl command
 
 cat "/opt/plex/Library/Application Support/Plex Media Server/Preferences.xml" |  \
 sed -e 's;^.* PlexOnlineToken=";;' | sed -e 's;".*$;;' | tail -1 > /tmp/plex.tmp

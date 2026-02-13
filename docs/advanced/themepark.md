@@ -1,4 +1,5 @@
 ---
+status: outdated
 hide:
   - tags
 tags:
@@ -15,15 +16,15 @@ For example:
 
 NZBGet default appearance:
 
-![](images/nzbget-before.png)
+![NZBGet interface showing default appearance before theme application](images/nzbget-before.png)
 
 NZBGet with the "nord" theme:
 
-![](images/nzbget-nord.png)
+![NZBGet interface with nord theme applied showing dark color scheme](images/nzbget-nord.png)
 
 Sonarr with the "hotline" theme:
 
-![](images/sonarr-hotline.png)
+![Sonarr interface with hotline theme showing bright pink and dark styling](images/sonarr-hotline.png)
 
 Choose the theme and apply it to containers in in inventory:
 
@@ -40,6 +41,9 @@ container_name_themepark_enabled: true
 # different theme for an app:
 container_name_themepark_theme: hotline
 container_name_themepark_enabled: true
+
+# addons for compatible apps
+container_name_themepark_addons: ["addon1", "addon2"]
 ```
 
 for example, in `/srv/git/saltbox/inventories/host_vars/localhost.yml`:
@@ -57,6 +61,9 @@ nzbget_themepark_enabled: true
 sonarr_themepark_theme: "hotline"
 sonarr_themepark_enabled: true
 
+# sonarr 4k logo for `sonarr4k` instance
+sonarr4k_themepark_addons: ["sonarr-4k-logo"]
+
 # enable Traefik plugin
 global_themepark_plugin_enabled: true
 
@@ -65,7 +72,7 @@ plex_themepark_enabled: true
 nzbhydra2_themepark_enabled: true
 ```
 
-Available themes can be found [here](https://docs.theme-park.dev/theme-options/).  Refer to them in the inventory file by name:
+Available themes can be found in the [Theme Park documentation](https://docs.theme-park.dev/theme-options/) and [Community](https://docs.theme-park.dev/community-themes/). Refer to them in the inventory file by name:
 
 ```text
 organizr

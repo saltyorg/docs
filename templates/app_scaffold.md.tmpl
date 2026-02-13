@@ -1,0 +1,26 @@
+---
+saltbox_automation:
+  app_links:
+    - name: Project home
+      url: "https://{{.RoleName}}.com"
+      icon: ":material-home:"
+  project_description:
+    name: "{{.RoleTitle}}"
+    summary: "TODO: Add description"
+    link: "https://{{.RoleName}}.com"
+---
+
+# {{.RoleTitle}}
+
+## Overview
+
+TODO: Add overview
+
+## Deployment
+
+```shell
+sb install {{.TagPrefix}}{{.RoleTag}}
+```
+
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

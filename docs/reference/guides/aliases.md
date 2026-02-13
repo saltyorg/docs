@@ -8,10 +8,8 @@ Handy guide to Saltbox Command line aliases.
 
 - Usage:
 
-    ``` { .shell }
-
-        sb update
-
+    ```shell
+    sb update
     ```
 
 ## sb list
@@ -20,10 +18,8 @@ Handy guide to Saltbox Command line aliases.
 
 - Usage:
 
-    ``` { .shell }
-
-        sb list
-
+    ```shell
+    sb list
     ```
 
 ## sb install `<package>`
@@ -32,10 +28,8 @@ Handy guide to Saltbox Command line aliases.
 
 - Usage:
 
-    ``` { .shell }
-
-        sb install plex
-
+    ```shell
+    sb install plex
     ```
 
 ## sb install sandbox-`<package>`
@@ -44,8 +38,16 @@ Handy guide to Saltbox Command line aliases.
 
 - Usage:
 
-    ``` { .shell }
+    ```shell
+    sb install sandbox-dozzle
+    ```
 
-        sb install sandbox-dozzle
+## sb --help
 
+- List sb commands
+
+- Usage:
+
+    ```shell
+    sb --help
     ```

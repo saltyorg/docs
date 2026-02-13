@@ -6,9 +6,9 @@ This article describes how to create an rclone remote for Dropbox
 
 To go through this process, you will need the following:
 
-   1. App Key/App Secret from two applications you create at Dropbox. The process is described [here](https://rclone.org/dropbox/#get-your-own-dropbox-app-id).  Two are suggested here because you **may** want separate apps for mount and upload, and you may as well create both while you're there.  Using two is not required.
+   1. App Key/App Secret from two applications you create at Dropbox. The process is described [here](https://rclone.org/dropbox/#get-your-own-dropbox-app-id). Two are suggested here because you **may** want separate apps for mount and upload, and you may as well create both while you're there. Using two is not required.
    2. rclone installed on your saltbox machine [which means the preinstall has been run]
-   3. rclone [same or higher version as on the saltbox machine] and a web browser installed on a machine local to you [this machine needs a GUI].  NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
+   3. rclone (same or higher version as on the saltbox machine) and a web browser installed on a machine local to you (this machine needs a GUI). NOTE: this should be the same machine on which you are sshed to the saltbox server, as you will have to copy-paste a very long token a bit later.
 
 ## Walkthrough
 
@@ -37,7 +37,7 @@ To go through this process, you will need the following:
     name> dropbox
     ```
 
-4. For "Type of storage", type in `dropbox`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>.  Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here.  **Read what's on the screen.**
+4. For "Type of storage", type in `dropbox`, or the corresponding number, and press <kbd class="platform-all">Enter</kbd>. Note that this list is constantly changing, will be much longer, and the numbers won't match what's shown here. **Read what's on the screen.**
 
     ```shell
     Option Storage.
@@ -164,7 +164,7 @@ To go through this process, you will need the following:
     y/e/d> y
     ```
 
-15. repeat steps 2-14 with your second App ID/App Secret, if you have one, which again is a totally optional thing that you may not want to do.  Give this one an appropriate name like `dropbox-upload`.  Letters are free, don't be stingy with them.
+15. repeat steps 2-14 with your second App ID/App Secret, if you have one, which again is a totally optional thing that you may not want to do. Give this one an appropriate name like `dropbox-upload`. Letters are free, don't be stingy with them.
 
 16. To exit, type `q` and press <kbd class="platform-all">Enter</kbd>.
 
@@ -194,11 +194,11 @@ https://developers.dropbox.com/dbx-performance-guide
 
 ### rclone remote in settings:
 
-Under `remotes` copy and paste [one of] the existing remotes you find there and edit it to suit this new remote.  Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created.  THis will be the encrypted remote if you created one.
+Under `remotes` copy and paste (one of) the existing remotes you find there and edit it to suit this new remote. Notably, change `NAME_OF_THE_REMOTE_YOU_JUST_CREATED` to the name of the remote you just created. THis will be the encrypted remote if you created one.
 
 If you are targeting a team folder or something with your dropbox remote, put that entire path here.
 
-Edit the other settings [`upload` and so forth] to suit your requirements.
+Edit the other settings (`upload` and so forth) to suit your requirements.
 
 ```yaml
 rclone:
@@ -237,8 +237,6 @@ sb install cloudplow-reset
 ```
 
 If you have custom requirements for cloudplow you can of course configure it yourself.
-
-
 
 ### Some notes about encryption and pathing as they relate to rcolne remotes.
 

@@ -1,0 +1,468 @@
+{{- /* Role Variables Section Template for Material for MkDocs */ -}}
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+{{- if .HasInstances -}}
+<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override scope"><input type="checkbox" name="scope" hidden/></label>
+{{- end }}
+
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+{{- if .HasInstances }}
+
+1.  **This role supports multiple instances via `{{ .InstancesVar }}`.**
+
+    !!! example "Example override"
+
+        === "Role-scoped"
+
+            ```yaml
+            {{ .RoleName }}_role_web_subdomain: "custom"
+            ```
+
+            :material-arrow-right-bottom-bold: Applies to all instances of {{ .RoleName }}
+
+        === "Instance-scoped"
+
+            ```yaml
+            {{ .InstanceName }}_web_subdomain: "custom2"
+            ```
+
+            :material-arrow-right-bottom-bold: Applies to the instance named {{ .InstanceName }}
+{{- else }}
+
+1.  !!! example "Example override"
+
+        ```yaml
+        {{ .ExampleVar }}: {{ .ExampleValue }}
+        ```
+{{- end }}
+{{- if .HasDefaultVars }}
+
+    !!! warning "Avoid overriding variables ending in `_default`"
+
+        When overriding variables that end in `_default` (like `{{ .RoleName }}_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `{{ .RoleName }}_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+{{- end }}
+{{- range $sectionName := .SectionOrder }}
+{{- $section := index $.Sections $sectionName }}
+{{- if and $section $section.HasContent }}
+
+=== "{{ $sectionName }}"
+{{- if $section.HasSubsections }}
+
+    This section is organized into multiple subsections
+{{- range $subName := $section.SubsectionOrder }}
+{{- $subVars := index $section.Subsections $subName }}
+{{- if $subVars }}
+
+    === "{{ $subName }}"
+{{- if $.HasInstances }}
+{{- if eq $sectionName "Basics" }}
+{{- /* Basics section for multi-instance: show example override */}}
+{{- range $var := $subVars }}
+
+        ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+            ```yaml
+{{- range $line := $var.CommentLines }}
+            # {{ $line }}
+{{- end }}
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+
+            !!! example "Example Override"
+
+                ```yaml
+{{- range $line := $var.CommentLines }}
+                # {{ $line }}
+{{- end }}
+                {{ formatTypeComment $var.Type }}
+{{- if eq $var.Name $.InstancesVar }}
+                {{ $var.Name }}: ["{{ $.RoleName }}", "{{ $.InstanceName }}"]
+{{- else if $var.IsMultiline }}
+                {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+                {{ $line }}
+{{- end }}
+{{- else }}
+                {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+                ```
+{{- end }}
+{{- else if eq $sectionName "Docker" }}
+{{- /* Docker section for multi-instance: show toggle */}}
+{{- range $var := $subVars }}
+{{- if $var.Comment }}
+{{- range $line := $var.CommentLines }}
+
+        <h5>{{ $line }}</h5>
+{{- end }}
+{{- end }}
+
+        ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`{ .sb-show-on-unchecked }`{{ $var.InstanceName }}`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+
+            ```yaml { .sb-show-on-checked }
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.InstanceName }}:{{ if index $var.ValueLines 0 }} {{ end }}{{ renderMultilineValueAdjusted $var.Name $var.InstanceName $var.ValueLines }}
+{{- else }}
+            {{ $var.InstanceName }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+{{- end }}
+{{- else }}
+{{- /* Other sections for multi-instance: show toggle */}}
+{{- range $var := $subVars }}
+
+        ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`{ .sb-show-on-unchecked }`{{ $var.InstanceName }}`{ .sb-show-on-checked }"
+
+            ```yaml { .sb-show-on-unchecked }
+{{- range $line := $var.CommentLines }}
+            # {{ $line }}
+{{- end }}
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+
+            ```yaml { .sb-show-on-checked }
+{{- range $line := $var.CommentLines }}
+            # {{ $line }}
+{{- end }}
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.InstanceName }}:{{ if index $var.ValueLines 0 }} {{ end }}{{ renderMultilineValueAdjusted $var.Name $var.InstanceName $var.ValueLines }}
+{{- else }}
+            {{ $var.InstanceName }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+{{- end }}
+{{- end }}
+{{- else }}
+{{- /* No instances: simpler output */}}
+{{- if eq $sectionName "Docker" }}
+{{- range $var := $subVars }}
+{{- if $var.Comment }}
+{{- range $line := $var.CommentLines }}
+
+        <h5>{{ $line }}</h5>
+{{- end }}
+{{- end }}
+
+        ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+            ```yaml
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+{{- end }}
+{{- else }}
+{{- range $var := $subVars }}
+
+        ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+            ```yaml
+{{- range $line := $var.CommentLines }}
+            # {{ $line }}
+{{- end }}
+            {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- else }}
+{{- /* No subsections - render variables directly */}}
+{{- if $.HasInstances }}
+{{- if eq $sectionName "Basics" }}
+{{- range $var := $section.Variables }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+        ```yaml
+{{- range $line := $var.CommentLines }}
+        # {{ $line }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+        {{ $line }}
+{{- end }}
+{{- else }}
+        {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+
+        !!! example "Example Override"
+
+            ```yaml
+{{- range $line := $var.CommentLines }}
+            # {{ $line }}
+{{- end }}
+            {{ formatTypeComment $var.Type }}
+{{- if eq $var.Name $.InstancesVar }}
+            {{ $var.Name }}: ["{{ $.RoleName }}", "{{ $.InstanceName }}"]
+{{- else if $var.IsMultiline }}
+            {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+            {{ $line }}
+{{- end }}
+{{- else }}
+            {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+            ```
+{{- end }}
+{{- else if eq $sectionName "Docker" }}
+{{- range $var := $section.Variables }}
+{{- if $var.Comment }}
+{{- range $line := $var.CommentLines }}
+
+    <h5>{{ $line }}</h5>
+{{- end }}
+{{- end }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`{ .sb-show-on-unchecked }`{{ $var.InstanceName }}`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+        {{ $line }}
+{{- end }}
+{{- else }}
+        {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.InstanceName }}:{{ if index $var.ValueLines 0 }} {{ end }}{{ renderMultilineValueAdjusted $var.Name $var.InstanceName $var.ValueLines }}
+{{- else }}
+        {{ $var.InstanceName }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+{{- end }}
+{{- else }}
+{{- range $var := $section.Variables }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`{ .sb-show-on-unchecked }`{{ $var.InstanceName }}`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+{{- range $line := $var.CommentLines }}
+        # {{ $line }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+        {{ $line }}
+{{- end }}
+{{- else }}
+        {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+{{- range $line := $var.CommentLines }}
+        # {{ $line }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.InstanceName }}:{{ if index $var.ValueLines 0 }} {{ end }}{{ renderMultilineValueAdjusted $var.Name $var.InstanceName $var.ValueLines }}
+{{- else }}
+        {{ $var.InstanceName }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+{{- end }}
+{{- end }}
+{{- else }}
+{{- /* No instances - simpler output */}}
+{{- if eq $sectionName "Docker" }}
+{{- range $var := $section.Variables }}
+{{- if $var.Comment }}
+{{- range $line := $var.CommentLines }}
+
+    <h5>{{ $line }}</h5>
+{{- end }}
+{{- end }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+        ```yaml
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+        {{ $line }}
+{{- end }}
+{{- else }}
+        {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+{{- end }}
+{{- else }}
+{{- range $var := $section.Variables }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $var.Name }}`"
+
+        ```yaml
+{{- range $line := $var.CommentLines }}
+        # {{ $line }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+{{- if $var.IsMultiline }}
+        {{ $var.Name }}:{{ if index $var.ValueLines 0 }} {{ index $var.ValueLines 0 }}{{ end }}
+{{- range $line := getValueLines $var.ValueLines }}
+        {{ $line }}
+{{- end }}
+{{- else }}
+        {{ $var.Name }}: {{ $var.RawValue }}
+{{- end }}
+        ```
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- if .DockerInfo }}
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+{{- range $category := .DockerInfo.CategoryOrder }}
+{{- $vars := index $.DockerInfo.Categories $category }}
+{{- if $vars }}
+
+    <h5>{{ $category }}</h5>
+{{- range $suffix := $vars }}
+{{- if $.HasInstances }}
+
+    ??? variable {{ getDockerVarType $suffix | typeKeyword }} "`{{ $.RoleName }}_role_docker_{{ $suffix }}`{ .sb-show-on-unchecked }`{{ $.InstanceName }}_docker_{{ $suffix }}`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        {{ getDockerVarTypeComment $suffix }}
+        {{ $.RoleName }}_role_docker_{{ $suffix }}:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        {{ getDockerVarTypeComment $suffix }}
+        {{ $.InstanceName }}_docker_{{ $suffix }}:
+        ```
+{{- else }}
+
+    ??? variable {{ getDockerVarType $suffix | typeKeyword }} "`{{ $.RoleName }}_role_docker_{{ $suffix }}`"
+
+        ```yaml
+        {{ getDockerVarTypeComment $suffix }}
+        {{ $.RoleName }}_role_docker_{{ $suffix }}:
+        ```
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- if .RoleVarLookups }}
+
+=== "Global Override Options"
+{{- if .HasInstances }}
+{{- range $suffix, $var := .RoleVarLookups }}
+{{- $roleVarName := printf "%s_role%s" $.RoleName $suffix }}
+{{- $instanceVarName := printf "%s2%s" $.RoleName $suffix }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $roleVarName }}`{ .sb-show-on-unchecked }`{{ $instanceVarName }}`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+{{- if $var.Description }}
+        # {{ $var.Description }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+        {{ $roleVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
+        ```
+
+        ```yaml { .sb-show-on-checked }
+{{- if $var.Description }}
+        # {{ $var.Description }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+        {{ $instanceVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
+        ```
+{{- if $var.Example }}
+
+        !!! example sb-show-on-unchecked "Example Override"
+
+{{ $var.Example | replaceVariable $roleVarName | replaceRole $.RoleName | indent 12 }}
+
+        !!! example sb-show-on-checked "Example Override"
+
+{{ $var.Example | replaceVariable $instanceVarName | replaceRole $.RoleName | indent 12 }}
+{{- end }}
+{{- end }}
+{{- else }}
+{{- range $suffix, $var := .RoleVarLookups }}
+{{- $roleVarName := printf "%s_role%s" $.RoleName $suffix }}
+
+    ??? variable {{ $var.Type | typeKeyword }} "`{{ $roleVarName }}`"
+
+        ```yaml
+{{- if $var.Description }}
+        # {{ $var.Description | replacePlural }}
+{{- end }}
+        {{ formatTypeComment $var.Type }}
+        {{ $roleVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
+        ```
+{{- if $var.Example }}
+
+        !!! example "Example Override"
+
+{{ $var.Example | replaceVariable $roleVarName | replaceRole $.RoleName | indent 12 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}

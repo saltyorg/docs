@@ -9,6 +9,16 @@ tags:
 
 Saltbox provides support for Nvidia GPUs, allowing you to leverage hardware acceleration for various tasks. This guide will walk you through the process of enabling Nvidia support by modifying specific variables in your [inventory](../saltbox/inventory/index.md).
 
+## Overview
+
+This process has, broadly, three steps:
+
+1. get the Nvidia driver installed
+2. enable Nvidia support in Saltbox
+3. recreate containers to enable that Nvidia support once the driver is installed
+
+These three steps may require separate actions or they may all happen in one action, depending on the specifics of your setup.
+
 ## Configuration Variables
 
 To enable Nvidia support, you need to modify at least one of the following variables in your [inventory](../saltbox/inventory/index.md) file:
@@ -66,6 +76,8 @@ This tag will:
 1. Install the specified driver version (or the latest if set to "latest").
 2. Upgrade or downgrade the driver if a different version is already installed.
 3. Install and configure the Nvidia Docker toolkit.
+
+**If you run this tag to install the driver**, you also need to run a tag to reinstall any containers in which you want to use the Nvidia card, like `saltbox`, or `plex`, or the like. Merely installing the driver does not configure Plex (for example) to use the card.
 
 ## Important Notes
 

@@ -32,6 +32,7 @@ sudo blkid
 ```
 
 That will display something like:
+
 ```shell
 /srv/git/saltbox$ sudo blkid
 [sudo] password for seed:
@@ -45,8 +46,8 @@ That will display something like:
 We can see the UUID and filesystem of that device in the table:
 
 ```
-/dev/sda1: 
-UUID="9d4c3257-8e05-4228-b970-15ddbc99e86f" 
+/dev/sda1:
+UUID="9d4c3257-8e05-4228-b970-15ddbc99e86f"
 ...
 TYPE="ext4"
 ...
@@ -121,9 +122,11 @@ Now go create the directory and set the ownership:
 /srv/git/saltbox$ sudo mkdir /mnt/hdd
 /srv/git/saltbox$ sudo chown -R seed:seed /mnt/hdd
 ```
+
 [assuming you are using the saltbox default `seed` user]
 
 Then mount the partition:
+
 ```shell
 /srv/git/saltbox$ sudo mount -a
 ```

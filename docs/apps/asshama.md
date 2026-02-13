@@ -1,46 +1,51 @@
 ---
+icon: material/power-plug
+title: ASSHAMA
 hide:
   - tags
 tags:
   - asshama
+saltbox_automation:
+  app_links:
+    - name: Manual
+      url: https://github.com/ZeroQI/Absolute-Series-Scanner/wiki
+      type: documentation
+    - name: Releases
+      url:
+      type: github
+    - name: Community
+      url: https://github.com/ZeroQI/Absolute-Series-Scanner/discussions
+      type: github
+  project_description:
+    name: ASSHAMA
+    summary: |-
+      the combined setup of Absolute Series Scanner (ASS) and Hama.bundle (HAMA), used together for optimal anime library management in Plex.
+    link: https://github.com/ZeroQI/Absolute-Series-Scanner
 ---
 
-# Absolute Series Scanner and HAMA role for anime
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# ASSHAMA
 
-## What is it?
+## Overview
 
-[asshama](https://github.com/ZeroQI/Absolute-Series-Scanner) will install the [Absolute Series Scanner (ASS)](https://github.com/ZeroQI/Absolute-Series-Scanner) and the [HTTP AniDB Metadata Agent (HAMA)](https://github.com/ZeroQI/Hama.bundle).
+[ASSHAMA](https://github.com/ZeroQI/Absolute-Series-Scanner) is the combined setup of Absolute Series Scanner (ASS) and Hama.bundle (HAMA), used together for optimal anime library management in Plex.
 
-HAMA is a plex agent specifically for anime and its various challenges. It is recommended to use the HAMA agent with the Absolute Series Scanner (ASS). Hama agent features include: -
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-* Both Movies and Series Agent
-* AniDB ID to TVDB/TMDB ID matching (with studio and episode mapping list) with ScudLee's xml mapping file
-* Posters from TVDB (assign a poster to each AniDB id in AniDB to TVDB mapping file to avoid poster duplicates)
-* TVDB episode screenshots
-* Episode summary (in English only) courtesy of TVDB through ScudLee's XML episode mappings
-* Uses studio from mapping file then AniDB (as often missing from AniDB)
-* Search part entirely local through AniDB HTML API database file anime-titles.xml
-* Separate language order selection for the series name and episode titles in Agent Settings (Supports Kanji characters in folders, filenames, titles)
-* Warnings in html report files (no poster available, episode summary empty, TVDB id not in mapping file) to allow the community to update more easily the mapping XML or TVDB, list of missing episodes
-* Collection mapping from ScudLee's movie collection amended with AniDB RelatedAnime field
-* Unique posters by using the AniDB id rank in the mapping to rotate the posters
-* When a series is not found in AniDB, search TVDB and TMDB automatically
-* Trakt scrobbling supports Hama guids
+[:fontawesome-solid-book-open:**Manual**](https://github.com/ZeroQI/Absolute-Series-Scanner/wiki){ .md-button .md-button--stretch }
 
-## Project Information
+[:fontawesome-brands-github:**Releases**](){ .md-button .md-button--stretch }
 
-* [:material-home: Absolute Series Scanner (A.S.S.)](https://github.com/ZeroQI/Absolute-Series-Scanner)
+[:fontawesome-brands-github:**Community**](https://github.com/ZeroQI/Absolute-Series-Scanner/discussions){ .md-button .md-button--stretch }
 
-* [:material-home: HTTP Anidb Metadata Agent (HAMA)](https://github.com/ZeroQI/Hama.bundle)
+</div>
 
-### 1. Installation
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-``` shell
+## Deployment
 
+```shell
 sb install asshama
-
 ```
-
-### 3. Setup
-
-* [:octicons-link-16: Documentation](https://github.com/ZeroQI/Hama.bundle){: .header-icons }

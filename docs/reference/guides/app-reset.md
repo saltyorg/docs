@@ -1,4 +1,4 @@
-# App Reset
+# Resetting apps
 
 Perhaps you want to reset an application to a fresh start.
 

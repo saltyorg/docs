@@ -1,39 +1,65 @@
+---
+icon: material/docker
+hide:
+  - tags
+tags:
+  - cherry
+  - bookmarks
+  - organization
+saltbox_automation:
+  app_links:
+    - name: Manual
+      url: https://cherry.haishan.me/docs/intro
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Cherry
+    summary: |-
+      a bookmark service that is open source.
+    link: https://cherry.haishan.me/
+---
+
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 # Cherry
 
-## What is it?
+## Overview
 
 [Cherry](https://cherry.haishan.me/) is a bookmark service that is open source.
 
-- The code of Cherry service and the browser extension are all available on GitHub.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-- It's self-hostable. Your data in in your own hands. Using SQLite, management and backup is a breeze.
+[:fontawesome-solid-book-open:**Manual**](https://cherry.haishan.me/docs/intro){ .md-button .md-button--stretch }
 
-- It has a simple UI. But you got all the features you want for a bookmark service. Tags, groups, full text search and browser extensions.
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-!!!info
-    By default, the role is protected behind your Authelia/SSO middleware. You will also have to log into the app itself.
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
-| Details     |             |             |
-|-------------|-------------|-------------|
-| [:material-home: Project home](https://cherry.haishan.me/){: .header-icons } | [:octicons-link-16: Docs](https://cherry.haishan.me/docs/intro){: .header-icons } | [:octicons-mark-github-16: Github](https://github.com/haishanh/cherry){: .header-icons } |
+</div>
 
-### 1. Installation
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-``` shell
+## Deployment
 
+```shell
 sb install sandbox-cherry
-
 ```
 
-### 2. URL
+## Usage
 
-- To access Cherry, visit `https://cherry._yourdomain.com_`
+Visit <https://cherry.iYOUR_DOMAIN_NAMEi>.
 
-### 3. Setup
+## Basics
 
 - Default login:
 
-  ``` { .yaml}
+  ```yaml
   Username: "your user from accounts.yml"
   Password: your_normal_password
   ```
@@ -41,4 +67,1130 @@ sb install sandbox-cherry
 !!!note
     To create an additional user, use Cherry cli: `docker exec cherry cherry create-user <email> <password>`
 
-- [:octicons-link-16: Documentation: Cherry Docs](https://cherry.haishan.me/docs/intro){: .header-icons }
+<!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+## Role Defaults
+
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
+
+1.  !!! example "Example override"
+
+        ```yaml
+        cherry_name: "custom_value"
+        ```
+
+    !!! warning "Avoid overriding variables ending in `_default`"
+
+        When overriding variables that end in `_default` (like `cherry_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `cherry_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+
+=== "Basics"
+
+    ??? variable string "`cherry_name`"
+
+        ```yaml
+        # Type: string
+        cherry_name: cherry
+        ```
+
+=== "Web"
+
+    ??? variable string "`cherry_role_web_subdomain`"
+
+        ```yaml
+        # Type: string
+        cherry_role_web_subdomain: "{{ cherry_name }}"
+        ```
+
+    ??? variable string "`cherry_role_web_domain`"
+
+        ```yaml
+        # Type: string
+        cherry_role_web_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`cherry_role_web_port`"
+
+        ```yaml
+        # Type: string
+        cherry_role_web_port: "8000"
+        ```
+
+    ??? variable string "`cherry_role_web_url`"
+
+        ```yaml
+        # Type: string
+        cherry_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='cherry') + '.' + lookup('role_var', '_web_domain', role='cherry')
+                              if (lookup('role_var', '_web_subdomain', role='cherry') | length > 0)
+                              else lookup('role_var', '_web_domain', role='cherry')) }}"
+        ```
+
+=== "DNS"
+
+    ??? variable string "`cherry_role_dns_record`"
+
+        ```yaml
+        # Type: string
+        cherry_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='cherry') }}"
+        ```
+
+    ??? variable string "`cherry_role_dns_zone`"
+
+        ```yaml
+        # Type: string
+        cherry_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='cherry') }}"
+        ```
+
+    ??? variable bool "`cherry_role_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+=== "Traefik"
+
+    ??? variable string "`cherry_role_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_sso_middleware: "{{ traefik_default_sso_middleware }}"
+        ```
+
+    ??? variable string "`cherry_role_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`cherry_role_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`cherry_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`cherry_role_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`cherry_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_traefik_api_enabled: true
+        ```
+
+    ??? variable string "`cherry_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_api_endpoint: "PathPrefix(`/api`)"
+        ```
+
+=== "Docker"
+
+    <h5>Container</h5>
+
+    ??? variable string "`cherry_role_docker_container`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_container: "{{ cherry_name }}"
+        ```
+
+    <h5>Image</h5>
+
+    ??? variable bool "`cherry_role_docker_image_pull`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_image_pull: true
+        ```
+
+    ??? variable string "`cherry_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_image_repo: "haishanh/cherry"
+        ```
+
+    ??? variable string "`cherry_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_image_tag: "latest"
+        ```
+
+    ??? variable string "`cherry_role_docker_image`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='cherry') }}:{{ lookup('role_var', '_docker_image_tag', role='cherry') }}"
+        ```
+
+    <h5>Envs</h5>
+
+    ??? variable dict "`cherry_role_docker_envs_default`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_envs_default:
+          TZ: "{{ tz }}"
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
+          JWT_SECRET: "{{ cherry_secret_key.stdout }}"
+          ENABLE_HTTP_REMOTE_USER: "1"
+        ```
+
+    ??? variable dict "`cherry_role_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_envs_custom: {}
+        ```
+
+    <h5>Volumes</h5>
+
+    ??? variable list "`cherry_role_docker_volumes_default`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_volumes_default:
+          - "{{ lookup('role_var', '_paths_location', role='cherry') }}:/data"
+        ```
+
+    ??? variable list "`cherry_role_docker_volumes_custom`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_volumes_custom: []
+        ```
+
+    <h5>Hostname</h5>
+
+    ??? variable string "`cherry_role_docker_hostname`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_hostname: "{{ cherry_name }}"
+        ```
+
+    <h5>Networks</h5>
+
+    ??? variable string "`cherry_role_docker_networks_alias`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_networks_alias: "{{ cherry_name }}"
+        ```
+
+    ??? variable list "`cherry_role_docker_networks_default`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_networks_default: []
+        ```
+
+    ??? variable list "`cherry_role_docker_networks_custom`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_networks_custom: []
+        ```
+
+    <h5>Restart Policy</h5>
+
+    ??? variable string "`cherry_role_docker_restart_policy`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_restart_policy: unless-stopped
+        ```
+
+    <h5>State</h5>
+
+    ??? variable string "`cherry_role_docker_state`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_state: started
+        ```
+
+    <h5>Healthcheck</h5>
+
+    ??? variable dict "`cherry_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_healthcheck:
+          test: ["NONE"]
+        ```
+
+=== "Docker+"
+
+    The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    <h5>Resource Limits</h5>
+
+    ??? variable int "`cherry_role_docker_blkio_weight`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_blkio_weight:
+        ```
+
+    ??? variable int "`cherry_role_docker_cpu_period`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_cpu_period:
+        ```
+
+    ??? variable int "`cherry_role_docker_cpu_quota`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_cpu_quota:
+        ```
+
+    ??? variable int "`cherry_role_docker_cpu_shares`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_cpu_shares:
+        ```
+
+    ??? variable string "`cherry_role_docker_cpus`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_cpus:
+        ```
+
+    ??? variable string "`cherry_role_docker_cpuset_cpus`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_cpuset_cpus:
+        ```
+
+    ??? variable string "`cherry_role_docker_cpuset_mems`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_cpuset_mems:
+        ```
+
+    ??? variable string "`cherry_role_docker_kernel_memory`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_kernel_memory:
+        ```
+
+    ??? variable string "`cherry_role_docker_memory`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_memory:
+        ```
+
+    ??? variable string "`cherry_role_docker_memory_reservation`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_memory_reservation:
+        ```
+
+    ??? variable string "`cherry_role_docker_memory_swap`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_memory_swap:
+        ```
+
+    ??? variable int "`cherry_role_docker_memory_swappiness`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_memory_swappiness:
+        ```
+
+    ??? variable string "`cherry_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_shm_size:
+        ```
+
+    <h5>Security & Devices</h5>
+
+    ??? variable list "`cherry_role_docker_cap_drop`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_cap_drop:
+        ```
+
+    ??? variable string "`cherry_role_docker_cgroupns_mode`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_cgroupns_mode:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_cgroup_rules`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_cgroup_rules:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_read_bps`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_read_bps:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_read_iops`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_read_iops:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_requests`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_requests:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_write_bps`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_write_bps:
+        ```
+
+    ??? variable list "`cherry_role_docker_device_write_iops`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_device_write_iops:
+        ```
+
+    ??? variable list "`cherry_role_docker_devices`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_devices:
+        ```
+
+    ??? variable list "`cherry_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_groups:
+        ```
+
+    ??? variable bool "`cherry_role_docker_privileged`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_privileged:
+        ```
+
+    ??? variable list "`cherry_role_docker_security_opts`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_security_opts:
+        ```
+
+    ??? variable string "`cherry_role_docker_user`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_user:
+        ```
+
+    ??? variable string "`cherry_role_docker_userns_mode`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_userns_mode:
+        ```
+
+    <h5>Networking</h5>
+
+    ??? variable list "`cherry_role_docker_dns_opts`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_dns_opts:
+        ```
+
+    ??? variable list "`cherry_role_docker_dns_search_domains`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_dns_search_domains:
+        ```
+
+    ??? variable list "`cherry_role_docker_dns_servers`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_dns_servers:
+        ```
+
+    ??? variable string "`cherry_role_docker_domainname`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_domainname:
+        ```
+
+    ??? variable list "`cherry_role_docker_exposed_ports`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`cherry_role_docker_hosts`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_hosts:
+        ```
+
+    ??? variable bool "`cherry_role_docker_hosts_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_hosts_use_common:
+        ```
+
+    ??? variable string "`cherry_role_docker_ipc_mode`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_ipc_mode:
+        ```
+
+    ??? variable list "`cherry_role_docker_links`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_links:
+        ```
+
+    ??? variable string "`cherry_role_docker_network_mode`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_network_mode:
+        ```
+
+    ??? variable string "`cherry_role_docker_pid_mode`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`cherry_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_ports:
+        ```
+
+    ??? variable string "`cherry_role_docker_uts`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_uts:
+        ```
+
+    <h5>Storage</h5>
+
+    ??? variable bool "`cherry_role_docker_keep_volumes`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_keep_volumes:
+        ```
+
+    ??? variable list "`cherry_role_docker_mounts`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_mounts:
+        ```
+
+    ??? variable dict "`cherry_role_docker_storage_opts`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_storage_opts:
+        ```
+
+    ??? variable list "`cherry_role_docker_tmpfs`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_tmpfs:
+        ```
+
+    ??? variable string "`cherry_role_docker_volume_driver`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_volume_driver:
+        ```
+
+    ??? variable list "`cherry_role_docker_volumes_from`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_volumes_from:
+        ```
+
+    ??? variable bool "`cherry_role_docker_volumes_global`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_volumes_global:
+        ```
+
+    ??? variable string "`cherry_role_docker_working_dir`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_working_dir:
+        ```
+
+    <h5>Monitoring & Lifecycle</h5>
+
+    ??? variable bool "`cherry_role_docker_auto_remove`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_auto_remove:
+        ```
+
+    ??? variable bool "`cherry_role_docker_cleanup`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_cleanup:
+        ```
+
+    ??? variable string "`cherry_role_docker_force_kill`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_force_kill:
+        ```
+
+    ??? variable int "`cherry_role_docker_healthy_wait_timeout`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_healthy_wait_timeout:
+        ```
+
+    ??? variable bool "`cherry_role_docker_init`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_init:
+        ```
+
+    ??? variable string "`cherry_role_docker_kill_signal`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_kill_signal:
+        ```
+
+    ??? variable string "`cherry_role_docker_log_driver`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_log_driver:
+        ```
+
+    ??? variable dict "`cherry_role_docker_log_options`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_log_options:
+        ```
+
+    ??? variable bool "`cherry_role_docker_oom_killer`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_oom_killer:
+        ```
+
+    ??? variable int "`cherry_role_docker_oom_score_adj`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_oom_score_adj:
+        ```
+
+    ??? variable bool "`cherry_role_docker_output_logs`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_output_logs:
+        ```
+
+    ??? variable bool "`cherry_role_docker_paused`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_paused:
+        ```
+
+    ??? variable bool "`cherry_role_docker_recreate`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_recreate:
+        ```
+
+    ??? variable int "`cherry_role_docker_restart_retries`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_restart_retries:
+        ```
+
+    ??? variable string "`cherry_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_stop_signal:
+        ```
+
+    ??? variable int "`cherry_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_stop_timeout:
+        ```
+
+    <h5>Other Options</h5>
+
+    ??? variable list "`cherry_role_docker_capabilities`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_capabilities:
+        ```
+
+    ??? variable string "`cherry_role_docker_cgroup_parent`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`cherry_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_commands:
+        ```
+
+    ??? variable int "`cherry_role_docker_create_timeout`"
+
+        ```yaml
+        # Type: int
+        cherry_role_docker_create_timeout:
+        ```
+
+    ??? variable string "`cherry_role_docker_entrypoint`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_entrypoint:
+        ```
+
+    ??? variable string "`cherry_role_docker_env_file`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_env_file:
+        ```
+
+    ??? variable dict "`cherry_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        cherry_role_docker_labels:
+        ```
+
+    ??? variable bool "`cherry_role_docker_labels_use_common`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`cherry_role_docker_read_only`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_read_only:
+        ```
+
+    ??? variable string "`cherry_role_docker_runtime`"
+
+        ```yaml
+        # Type: string
+        cherry_role_docker_runtime:
+        ```
+
+    ??? variable list "`cherry_role_docker_sysctls`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_sysctls:
+        ```
+
+    ??? variable list "`cherry_role_docker_ulimits`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_ulimits:
+        ```
+
+=== "Global Override Options"
+
+    ??? variable bool "`cherry_role_autoheal_enabled`"
+
+        ```yaml
+        # Enable or disable Autoheal monitoring for the container created when deploying
+        # Type: bool (true/false)
+        cherry_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`cherry_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        cherry_role_depends_on: ""
+        ```
+
+    ??? variable string "`cherry_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        cherry_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`cherry_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        cherry_role_depends_on_healthchecks:
+        ```
+
+    ??? variable bool "`cherry_role_diun_enabled`"
+
+        ```yaml
+        # Enable or disable Diun update notifications for the container created when deploying
+        # Type: bool (true/false)
+        cherry_role_diun_enabled: true
+        ```
+
+    ??? variable bool "`cherry_role_dns_enabled`"
+
+        ```yaml
+        # Enable or disable automatic DNS record creation for the container
+        # Type: bool (true/false)
+        cherry_role_dns_enabled: true
+        ```
+
+    ??? variable bool "`cherry_role_docker_controller`"
+
+        ```yaml
+        # Enable or disable Saltbox Docker Controller management for the container
+        # Type: bool (true/false)
+        cherry_role_docker_controller: true
+        ```
+
+    ??? variable list "`cherry_role_docker_networks_alias_custom`"
+
+        ```yaml
+        # Type: list
+        cherry_role_docker_networks_alias_custom:
+        ```
+
+    ??? variable bool "`cherry_role_docker_volumes_download`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`cherry_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        cherry_role_themepark_addons:
+        ```
+
+    ??? variable string "`cherry_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        cherry_role_themepark_app:
+        ```
+
+    ??? variable string "`cherry_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        cherry_role_themepark_theme:
+        ```
+
+    ??? variable string "`cherry_role_traefik_api_middleware`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_api_middleware:
+        ```
+
+    ??? variable string "`cherry_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_api_middleware_http:
+        ```
+
+    ??? variable bool "`cherry_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable bool "`cherry_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`cherry_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`cherry_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable string "`cherry_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_middleware_http:
+        ```
+
+    ??? variable bool "`cherry_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`cherry_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        cherry_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`cherry_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        cherry_role_traefik_priority:
+        ```
+
+    ??? variable bool "`cherry_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`cherry_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`cherry_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        cherry_role_traefik_wildcard_enabled: true
+        ```
+
+    ??? variable string "`cherry_role_web_api_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cherry_role_web_api_http_port:
+        ```
+
+    ??? variable string "`cherry_role_web_api_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cherry_role_web_api_http_scheme:
+        ```
+
+    ??? variable dict "`cherry_role_web_api_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cherry_role_web_api_http_serverstransport:
+        ```
+
+    ??? variable string "`cherry_role_web_api_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cherry_role_web_api_port:
+        ```
+
+    ??? variable string "`cherry_role_web_api_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cherry_role_web_api_scheme:
+        ```
+
+    ??? variable dict "`cherry_role_web_api_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cherry_role_web_api_serverstransport:
+        ```
+
+    ??? variable list "`cherry_role_web_fqdn_override`"
+
+        ```yaml
+        # Override the Traefik fully qualified domain name (FQDN) for the container
+        # Type: list
+        cherry_role_web_fqdn_override:
+        ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            cherry_role_web_fqdn_override:
+              - "{{ traefik_host }}"
+              - "cherry2.{{ user.domain }}"
+              - "cherry.otherdomain.tld"
+            ```
+
+            Note: Include `{{ traefik_host }}` to preserve the default FQDN alongside your custom entries
+
+
+    ??? variable string "`cherry_role_web_host_override`"
+
+        ```yaml
+        # Override the Traefik web host configuration for the container
+        # Type: string
+        cherry_role_web_host_override:
+        ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            cherry_role_web_host_override: "Host(`{{ traefik_host }}`) || Host(`{{ 'cherry2.' + user.domain }}`)"
+            ```
+
+            Note: Use `{{ traefik_host }}` to include the default host configuration in your custom rule
+
+
+    ??? variable string "`cherry_role_web_http_port`"
+
+        ```yaml
+        # Type: string (quoted number)
+        cherry_role_web_http_port:
+        ```
+
+    ??? variable string "`cherry_role_web_http_scheme`"
+
+        ```yaml
+        # Type: string ("http"/"https")
+        cherry_role_web_http_scheme:
+        ```
+
+    ??? variable dict "`cherry_role_web_http_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cherry_role_web_http_serverstransport:
+        ```
+
+    ??? variable string "`cherry_role_web_scheme`"
+
+        ```yaml
+        # URL scheme to use for web access to the container
+        # Type: string ("http"/"https")
+        cherry_role_web_scheme:
+        ```
+
+    ??? variable dict "`cherry_role_web_serverstransport`"
+
+        ```yaml
+        # Type: dict/omit
+        cherry_role_web_serverstransport:
+        ```
+<!-- END SALTBOX MANAGED VARIABLES SECTION -->

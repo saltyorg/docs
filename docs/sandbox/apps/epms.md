@@ -1,25 +1,55 @@
-# Extended Personal Media Shows Agent and Scanner
+---
+icon: material/power-plug
+title: EPMS
+hide:
+  - tags
+tags:
+  - epms
+  - plex
+  - metadata
+saltbox_automation:
+  sections:
+    inventory: false
+  app_links:
+    - name: Manual
+      url:
+      type: documentation
+    - name: Releases
+      url:
+      type: releases
+    - name: Community
+      url:
+      type: community
+  project_description:
+    name: Extended Personal Media Shows
+    summary: |-
+      a metadata agent designed for personal media files, specifically intended to work in conjunction with the Extended Personal Media Scanner.
+    link: https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master
+---
 
-## What is it?
+<!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Extended Personal Media Shows
 
-[EPMS](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/) is very useful for sports or things that do not have a DB to scrape against, creates episode numbers for date-based media and sorts correctly in Plex interface.
+## Overview
 
-The Extended Personal Media Shows Agent is a Metadata Agent for personal media files. It works in conjunction with the Extended Personal Media Scanner to scan personal media shows. The meta data agent sets the summary details on the episode. The agent expects the files to follow the naming conventions for personal media that are outlined in the Plex documentation.
+[Extended Personal Media Shows](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master) is a metadata agent designed for personal media files, specifically intended to work in conjunction with the Extended Personal Media Scanner.
 
-This scanner is not meant to be full replacement of the Plex Media Scanner. Requests for functionality will be considered but may be limited by what Plex currently allows in the TV Show sections.
+<div class="grid grid--buttons" markdown data-search-exclude>
 
-| Details     |             |             |             |
-|-------------|-------------|-------------|-------------|
-| [:material-home: Project home](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons } | [:octicons-link-16: Docs](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons } | [:octicons-mark-github-16: Github](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons } | :material-docker: Docker |
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-### 1. Installation
+[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
 
-``` shell
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
+</div>
+
+---
+<!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+## Deployment
+
+```shell
 sb install sandbox-epms
-
 ```
-
-### 2. Setup
-
-- [:octicons-link-16: Documentation](https://bitbucket.org/mjarends/extendedpersonalmedia-agent.bundle/src/master/){: .header-icons }

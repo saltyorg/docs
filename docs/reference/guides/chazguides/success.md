@@ -1,4 +1,4 @@
-NOTE: THIS ARTICLE STARTED AS A CLOUDBOX GUIDE AND SOME OUTPUT STILL REFLECTS THAT.  CONCEPTS ARE THE SAME, HOWEVER.
+NOTE: THIS ARTICLE STARTED AS A CLOUDBOX GUIDE AND SOME OUTPUT STILL REFLECTS THAT. CONCEPTS ARE THE SAME, HOWEVER.
 
 # Did my Saltbox install succeed?
 
@@ -6,11 +6,11 @@ If you started with the first install [step](../../../saltbox/install/install.md
 
 And went through the first five steps, completely and without seeing any errors, it should be.
 
-Perhaps you skipped some of those 5 required steps.  If so, why?  Go back to the beginning and start again.
+Perhaps you skipped some of those 5 required steps. If so, why? Go back to the beginning and start again.
 
-Perhaps you ignored some errors.  If so, why?  Go back to the beginning and start again.
+Perhaps you ignored some errors. If so, why? Go back to the beginning and start again.
 
-The install is complete when you get to the end of [this step](../../../saltbox/install/install.md#install-saltbox) with no errors.
+The install is complete when you get to the end of [this step](../../../saltbox/install/install.md#step-5-saltbox) with no errors.
 
 It’s not complete until then.
 
@@ -25,7 +25,6 @@ After running the Saltbox install command:
 A lot of logging information will scroll by.
 
 Eventually, it will stop, and if successful, will display something like this:
-
 
 ```text
 PLAY RECAP ************************************************************************************
@@ -55,11 +54,14 @@ sonarr : Create and start container --------------------------------------------
 lidarr : Create and start container -----------------------------------------------...- 4.88s
 chaz@oberon:~/saltbox$
 ```
+
 Note this part: it’s even color-coded:
+
 ```
 PLAY RECAP ************************************************************************************
 localhost               : ok=713  changed=180  unreachable=0 failed=0
 ```
+
 There should be no red there.
 
 If you are not left at a prompt like this after running the saltbox install, chances are an error occurred during the install, and typically that error is shown at the end here.
@@ -115,12 +117,13 @@ cloudflare:
   api: REDACTED
 ...
 ```
+
 We get:
 
 ```
-TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'DOMAIN.TLD'] ********************************************************************************************
+TASK [pre_tasks : Add Subdomain | Cloudflare: Add 'saltbox' subdomain to 'xYOUR_DOMAIN_NAMEx'] ********************************************************************************************
 Tuesday 14 April 2020  11:56:54 -0500 (0:00:00.224)    0:00:52.892 *********
-fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=DOMAIN.TLD; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "API request not authenticated; Status: 403; Method: GET: Call: /zones?name=xYOUR_DOMAIN_NAMEx; Error details: code: 9103, error: Unknown X-Auth-Key or X-Auth-Email; "}
 
 PLAY RECAP *********************************************************************************
 localhost               : ok=131  changed=2 unreachable=0 failed=1
@@ -163,21 +166,21 @@ You can verify this with the ping utility:
 You should see something like:
 
 ```
-chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
-PING ombi.YOURDOMAIN.TLD (111.222.333.444): 56 data bytes
+chaz@oberon:~/saltbox$ ping ombi.xYOUR_DOMAIN_NAMEx
+PING ombi.xYOUR_DOMAIN_NAMEx (111.222.333.444): 56 data bytes
 64 bytes from 111.222.333.444: icmp_seq=0 ttl=48 time=114.425 ms
 ```
 
-That IP address should be the IP address of the server.  If this is a home server, it should be your external IP.
+That IP address should be the IP address of the server. If this is a home server, it should be your external IP.
 
 If instead you should see something like:
 
 ```
-chaz@oberon:~/saltbox$ ping ombi.YOURDOMAIN.TLD
-ping: cannot resolve ombi.YOURDOMAIN.TLD: Unknown host
+chaz@oberon:~/saltbox$ ping ombi.xYOUR_DOMAIN_NAMEx
+ping: cannot resolve ombi.xYOUR_DOMAIN_NAMEx: Unknown host
 ```
 
-...then you need to fix your DNS setup.  Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
+...then you need to fix your DNS setup. Either enter valid Cloudflare credentials in the settings, OR, if you are not using Cloudflare, go set up the required subdomains manually at your DNS provider.
 
 Are the containers running?
 
@@ -216,7 +219,7 @@ You can verify the proxy with curl:
 (nothing special about my choice of ombi here)
 
 ```text
-chaz@oberon:~/saltbox$ curl http://ombi.DOMAIN.TLD | head -n 20
+chaz@oberon:~/saltbox$ curl http://ombi.xYOUR_DOMAIN_NAMEx | head -n 20
   % Total % Received % Xferd  Average Speed   Time Time  Time  Current
                               Dload  Upload   Total   Spent Left  Speed
 100   169  100   169 0  0  12071   0 --:--:-- --:--:-- --:--:-- 12071

@@ -2,13 +2,13 @@
 
 This article discusses adding a new cloud provider into your setup.
 
-A typical scenario is moving from Google to Dropbox.  However, this article will cover this in a generalized manner, since the concepts are universal.  Maybe you're transitioning from Google to Dropbox.  Maybe you're adding Box but keeping Dropbox.  Conceptually that part doesn't matter.  You need to do basically the same things either way.
+A typical scenario is moving from Google to Dropbox. However, this article will cover this in a generalized manner, since the concepts are universal. Maybe you're transitioning from Google to Dropbox. Maybe you're adding Box but keeping Dropbox. Conceptually that part doesn't matter. You need to do basically the same things either way.
 
 Throughout, I will refer to "Cloud A" and "Cloud B", where "A" is your current provider and "B" is the new one.
 
 In the basic case, you need to:
 
-1. create remote[s] for Cloud B
+1. create remote(s) for Cloud B
    [this might be just one, or base + encrypted, or base + encrypted + chunker, depending on what *you* want to do.]
 2. create mount service for that last remote in the chain.
    [this mounts it in the file system]
@@ -33,7 +33,7 @@ _Optionally_, if you want to abandon Cloud A:
 
 === "Add Cloud B but keep uploading to Cloud A"
 
-    1. create remote[s] for cloud storage
+    1. create remote(s) for cloud storage
     2. create mount service for cloud storage
     3. add that mount point to the mergerfs
 
@@ -41,12 +41,12 @@ _Optionally_, if you want to abandon Cloud A:
 
 === "Add Cloud B and upload to it"
 
-    1. create remote[s] for cloud storage
+    1. create remote(s) for cloud storage
     2. create mount service for cloud storage
     3. add that mount point to the mergerfs
 
     Steps 1-3 are covered [here](chazguides/teamdrive.md).
-    
+
     4. point cloudplow at remote from step 1 instead of the original.
 
     Basically, this involves changing the target remote in your cloudplow `config.json`.
@@ -60,8 +60,8 @@ _Optionally_, if you want to abandon Cloud A:
         "upload_remote": "google:/Media"
     ```
     `google` is the name of the rclone remote that points to Cloud A.
-    
-    change that to: 
+
+    change that to:
     ```
         "sync_remote": "cloud_b_remote:/Media",
         "upload_remote": "cloud_b_remote:/Media"
@@ -74,8 +74,8 @@ _Optionally_, if you want to abandon Cloud A:
     OPTIONAL:
 
     Change `google` to `cloud_b_remote` wherever else it appears in the file
-    
-    Aside from the two instances mentioned above, THAT NAME IS TOTALLY INTERNAL TO CLOUDPLOW.  YOU DO NOT NEED TO CHANGE IT.
+
+    Aside from the two instances mentioned above, THAT NAME IS TOTALLY INTERNAL TO CLOUDPLOW. YOU DO NOT NEED TO CHANGE IT.
 
     If you want, change these:
     ```
@@ -99,7 +99,7 @@ _Optionally_, if you want to abandon Cloud A:
                 }
             },
     ```
-    to something that will tell Cloudplow to cool it on uploading to Cloud B, whatever those triggers might be [assuming that's needed].
+    to something that will tell Cloudplow to cool it on uploading to Cloud B, whatever those triggers might be (assuming that's needed).
 
     If you have multiple remotes defined or some other more complicated setup, you'll need to look into the cloudplow docs, but basically you will be replacing whatever remote or remotes you currntly have targeting Cloud A with one or more targeting Cloud B.
 

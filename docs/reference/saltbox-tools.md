@@ -1,4 +1,5 @@
 ---
+status: deprecated
 hide:
   - tags
 tags:

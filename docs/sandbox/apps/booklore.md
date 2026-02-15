@@ -296,7 +296,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DATABASE_URL: "jdbc:mariadb://{{ booklore_name }}-mariadb:3306/{{ lookup('role_var', '_mariadb_docker_env_db', role='booklore') }}"
           DATABASE_USERNAME: "root"
           DATABASE_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-          APP_BOOKDROP_FOLDER: "{{ booklore_role_paths_bookdrop_location }}"
+          APP_BOOKDROP_FOLDER: "{{ lookup('role_var', '_paths_bookdrop_location', role='booklore') }}"
         ```
 
     ??? variable dict "`booklore_role_docker_envs_custom`"
@@ -313,7 +313,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         booklore_role_docker_volumes_default:
-          - "{{ booklore_role_paths_location }}/data:/app/data"
+          - "{{ lookup('role_var', '_paths_location', role='booklore') }}/data:/app/data"
         ```
 
     ??? variable list "`booklore_role_docker_volumes_custom`"

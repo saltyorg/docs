@@ -56,14 +56,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "overseerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
+        saltbox_roles: ["media_server", "download_clients", "download_indexers", "autoscan", "tautulli", "seerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
         ```
 
     ??? variable list "`mediabox_roles`"
 
         ```yaml
         # Type: list
-        mediabox_roles: ["media_server", "autoscan", "tautulli", "overseerr", "iperf3", "glances", "btop"]
+        mediabox_roles: ["media_server", "autoscan", "tautulli", "seerr", "iperf3", "glances", "btop"]
         ```
 
     ??? variable list "`feederbox_roles`"

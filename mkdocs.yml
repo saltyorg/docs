@@ -231,7 +231,6 @@ nav:
           - apps/sonarr.md
           - apps/radarr.md
           - apps/lidarr.md
-          - apps/overseerr.md
           - apps/portainer.md
           - apps/organizr.md
           - apps/btop.md
@@ -271,6 +270,7 @@ nav:
           - apps/node_exporter.md
           - apps/nzbget.md
           - apps/nzbthrottle.md
+          - apps/overseerr.md
           - apps/petio.md
           - apps/postgres.md
           - apps/postgres_host.md

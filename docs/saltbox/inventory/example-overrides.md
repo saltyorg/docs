@@ -45,7 +45,7 @@ feederbox_roles: ["download_clients", "download_indexers", "portainer", "organiz
 
 ```yaml
 #### Customize the sandbox-roles tag (sb install sandbox-roles)
-sandbox_roles: ["jellyseerr", "jellystat"]
+sandbox_roles: ["kometa", "jellystat"]
 ```
 
 ## Routing

@@ -43,26 +43,9 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-!!! abstract cta "Saltbox Setup Process"
+???+ warning "Deprecation notice"
 
-    <div data-search-exclude>
-
-    <div>
-
-    Opting out of Plex Media Server?  
-    Opting for another requests manager?
-
-    <div>
-
-    [**Explore alternatives**:material-shuffle-variant:](index.md#request){ .md-button }
-
-    [**Skip to Portainer**:material-fast-forward:](portainer.md){ .md-button }
-
-    </div>
-
-    </div>
-
-    </div>
+    Overseerr is being phased out in favor of [Seerr](seerr.md). The role and documentation remain for a limited time.
 
 ## Deployment
 
@@ -139,20 +122,6 @@ You will need your API Keys from both Radarr and Sonarr.
 1. Setup is complete.
 
 ![](../images/overseerr/12-overseerr.png)
-
-## Next
-
-<div class="sb-cta" markdown>
-
-Are you setting Saltbox up for the first time?
-
-<div markdown>
-
-[**Continue to Portainer**:material-forward:](portainer.md){ .md-button }
-
-</div>
-
-</div>
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -455,7 +455,7 @@ Are you setting Saltbox up for the first time?
 
 <div markdown>
 
-[**Continue to Overseerr**:material-forward:](overseerr.md){ .md-button }
+[**Continue to Seerr**:material-forward:](seerr.md){ .md-button }
 
 </div>
 

@@ -54,6 +54,7 @@ tags:
 |---------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Overseerr](overseerr.md)                   |            `overseerr`             |     `mediabox_roles` `saltbox_roles`     |
 | [Petio](petio.md)                           |              `petio`               |     `mediabox_roles` `saltbox_roles`     |
+| [Seerr](seerr.md)                           |              `seerr`               |     `mediabox_roles` `saltbox_roles`     |
 | [Jellyseerr](../sandbox/apps/jellyseerr.md) |        `sandbox-jellyseerr`        |             `sandbox_roles`              |
 | [Ombi](../sandbox/apps/ombi.md)             |           `sandbox-ombi`           |             `sandbox_roles`              |
 

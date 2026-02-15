@@ -45,6 +45,10 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+???+ warning "Deprecation notice"
+
+    Jellyseerr is being phased out in favor of [Seerr](../../apps/seerr.md). The role and documentation remain for a limited time.
+
 ## Deployment
 
 ```shell

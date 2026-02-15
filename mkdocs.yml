@@ -231,6 +231,7 @@ nav:
           - apps/sonarr.md
           - apps/radarr.md
           - apps/lidarr.md
+          - apps/seerr.md
           - apps/portainer.md
           - apps/organizr.md
           - apps/btop.md

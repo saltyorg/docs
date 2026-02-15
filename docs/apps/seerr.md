@@ -20,7 +20,7 @@ saltbox_automation:
       url: https://discord.gg/seerr
       type: discord
   project_description:
-    name: Overseerr
+    name: Seerr
     summary: |-
       a request management and media discovery tool built to work with your existing Plex/Jellyseerr ecosystem.
     link: https://seerr.dev

@@ -97,6 +97,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Settings"
 
+    ??? variable string "`booklore_role_media_subfolder`"
+
+        ```yaml
+        # Name of a subdirectory to be created in /mnt/unionfs/Media/
+        # Opt out with a falsy value (e.g. "")
+        # Type: string
+        booklore_role_media_subfolder: "Books"
+        ```
+
+    ??? variable string "`booklore_role_bookdrop_subfolder`"
+
+        ```yaml
+        # Name of the Bookdrop subdirectory
+        # Will be placed in the downloads root: usually /mnt/unionfs/downloads/
+        # Type: string
+        booklore_role_bookdrop_subfolder: "bookdrop"
+        ```
+
     ??? variable string "`booklore_role_mariadb_name`"
 
         ```yaml
@@ -273,11 +291,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         booklore_role_docker_envs_default:
           TZ: "{{ tz }}"
+          USER_ID: "{{ uid }}"
+          GROUP_ID: "{{ gid }}"
           DATABASE_URL: "jdbc:mariadb://{{ booklore_name }}-mariadb:3306/{{ lookup('role_var', '_mariadb_docker_env_db', role='booklore') }}"
           DATABASE_USERNAME: "root"
           DATABASE_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
-          USER_ID: "{{ uid }}"
-          GROUP_ID: "{{ gid }}"
+          APP_BOOKDROP_FOLDER: "{{ booklore_role_paths_bookdrop_location }}"
         ```
 
     ??? variable dict "`booklore_role_docker_envs_custom`"
@@ -294,8 +313,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         booklore_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='booklore') }}/data:/app/data"
-          - "{{ lookup('role_var', '_paths_location', role='booklore') }}/bookdrop:/bookdrop"
+          - "{{ booklore_role_paths_location }}/data:/app/data"
         ```
 
     ??? variable list "`booklore_role_docker_volumes_custom`"
@@ -361,6 +379,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         booklore_role_docker_restart_policy: unless-stopped
+        ```
+
+    <h5>Stop Timeout</h5>
+
+    ??? variable int "`booklore_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        booklore_role_docker_stop_timeout: 10
         ```
 
     <h5>State</h5>
@@ -862,13 +889,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         booklore_role_docker_stop_signal:
-        ```
-
-    ??? variable int "`booklore_role_docker_stop_timeout`"
-
-        ```yaml
-        # Type: int
-        booklore_role_docker_stop_timeout:
         ```
 
     <h5>Other Options</h5>

@@ -30,11 +30,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Overseerr
+# Seerr
 
 ## Overview
 
-[Overseerr](https://seerr.dev) is a request management and media discovery tool built to work with your existing Plex/Jellyseerr ecosystem.
+[Seerr](https://seerr.dev) is a request management and media discovery tool built to work with your existing Plex/Jellyseerr ecosystem.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

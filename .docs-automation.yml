@@ -44,6 +44,7 @@ blacklist:
       - "scripts"
       - "user_check"
     sandbox:
+      - "homarr_legacy"
       - "sanity_check"
       - "tdarr_node"
       # Deprecated roles

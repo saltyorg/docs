@@ -1,20 +1,20 @@
 ---
 icon: material/tag
-title: Sandbox Tag
+title: Sandbox Main Tag
 saltbox_automation:
   project_description:
-    name: Sandbox Tag
+    name: Sandbox Main Tag
     summary: |-
       a Sandbox module that deploys your assigned Sandbox apps stack.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Sandbox Tag
+# Sandbox Main Tag
 
 ## Overview
 
-Sandbox Tag is a Sandbox module that deploys your assigned Sandbox apps stack.
+Sandbox Main Tag is a Sandbox module that deploys your assigned Sandbox apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

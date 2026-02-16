@@ -19,7 +19,7 @@ tags:
 | [Media Server](media_server.md)           |            `media-server`            |     `mediabox_roles` `saltbox_roles`     |
 | [Download Clients](download_clients.md)   |          `download-clients`          |    `feederbox_roles` `saltbox_roles`     |
 | [Download Indexers](download_indexers.md) |         `download-indexers`          |    `feederbox_roles` `saltbox_roles`     |
-| [Sandbox Tag](main_tag.md)                |           `sandbox-roles`            |           :material-set-none:            |
+| [Sandbox Main Tag](main_tag.md)                |           `sandbox-roles`            |           :material-set-none:            |
 
 ## Backup
 

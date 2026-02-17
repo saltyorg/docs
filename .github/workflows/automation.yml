@@ -31,6 +31,8 @@ jobs:
     name: Documentation Automation
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
+    env:
+      GH_TOKEN: ${{ github.token }}
     permissions:
       contents: write
       issues: write
@@ -41,7 +43,7 @@ jobs:
         with:
           path: docs
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}
 
       - name: Checkout Saltbox repository
         uses: actions/checkout@v6
@@ -89,8 +91,6 @@ jobs:
       - name: Update documentation and run checks
         run: |
           sb-docs update --config docs/.docs-automation.yml --check --manage-issue
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         continue-on-error: true
 
       - name: Check for changes

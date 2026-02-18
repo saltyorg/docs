@@ -47,6 +47,12 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+## Configuration
+
+The *Bookdrop* location is managed by the role and defaults to `/mnt/unionfs/downloads/bookdrop` (based on your [downloads root](../../reference/accounts.md#__tabbed_2_2)), where other apps have access to place downloads in.
+
+To rename the subdirectory, you can use `booklore_role_bookdrop_subfolder`, detailed in the Settings tab below.
+
 ## Deployment
 
 ```shell
@@ -56,8 +62,6 @@ sb install sandbox-booklore
 ## Usage
 
 Visit <https://booklore.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 -   On your first visit you must create an admin user account.
 

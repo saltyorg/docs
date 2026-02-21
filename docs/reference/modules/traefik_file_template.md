@@ -1,7 +1,6 @@
 ---
 icon: material/play
 title: Traefik File Template
-status: draft
 hide:
   - tags
 tags:
@@ -43,6 +42,8 @@ sb install generate-traefik-file-template
 1.  Edit the file as appropriate for your application.
 
 1.  Deploy the file by moving it into `/opt/traefik`—Traefik will pick it up automatically.
+
+1.  Ensure a DNS A record exists that points to the application (e.g., `xCUSTOM_APP_FQDNx`). This can be achieved by creating it manually, by running [DDNS](../../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
 
 1.  Assuming you have configured everything correctly, your application is now published at <https://iCUSTOM_APP_FQDNi>.
 

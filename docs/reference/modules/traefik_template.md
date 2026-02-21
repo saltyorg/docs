@@ -1,7 +1,6 @@
 ---
 icon: material/play
 title: Traefik Template
-status: draft
 hide:
   - tags
 tags:
@@ -262,7 +261,7 @@ sb install generate-traefik-template
 
         35. This section tells Docker Compose that the network is managed outside of this compose file.
 
-1.  Ensure a DNS A record exists that points to the application (e.g., `xCUSTOM_APP_FQDNx`). This can be achieved by creating it manually, by running [DDNS](../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
+1.  Ensure a DNS A record exists that points to the application (e.g., `xCUSTOM_APP_FQDNx`). This can be achieved by creating it manually, by running [DDNS](../../apps/ddns.md) (Cloudflare only), or through a wildcard DNS record.
 
 1.  Deploy and start the container:
 

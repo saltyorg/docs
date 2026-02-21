@@ -36,5 +36,15 @@ Traefik File Template is a Saltbox module that generates a Traefik file template
 sb install generate-traefik-file-template
 ```
 
+## Usage
+
+1.  Run the tag and answer the prompts. The file will be saved as `/tmp/traefik-app.yml` by default.
+
+1.  Edit the file as appropriate for your application.
+
+1.  Deploy the file by moving it into `/opt/traefik`—Traefik will pick it up automatically.
+
+1.  Assuming you have configured everything correctly, your application is now published at <https://iCUSTOM_APP_FQDNi>.
+
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

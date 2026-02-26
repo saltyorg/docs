@@ -156,13 +156,6 @@ tubearchivist_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-tvheadend_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ tvheadend_web_port }}"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
 wikijs_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:3000"]
   interval: 10s

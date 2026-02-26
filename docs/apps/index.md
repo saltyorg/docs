@@ -435,7 +435,6 @@ tags:
 
 |                                                                           | :material-monitor-arrow-down:{.xl}  | :material-format-list-group-plus:{ .xl } |
 |---------------------------------------------------------------------------|:-----------------------------------:|:----------------------------------------:|
-| [ESPHome](../sandbox/apps/esphome.md)                                     |          `sandbox-esphome`          |             `sandbox_roles`              |
 | [Home Assistant](../sandbox/apps/homeassistant.md)                        |       `sandbox-homeassistant`       |             `sandbox_roles`              |
 | [MQTT](../sandbox/apps/mqtt.md)                                           |           `sandbox-mqtt`            |             `sandbox_roles`              |
 | [Teslamate](../sandbox/apps/teslamate.md)                                 |         `sandbox-teslamate`         |             `sandbox_roles`              |

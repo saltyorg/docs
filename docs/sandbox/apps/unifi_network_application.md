@@ -350,6 +350,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           MONGO_HOST: "{{ unifi_network_application_name }}-mongo"
           MONGO_PORT: "{{ unifi_network_application_mongo_port }}"
           MONGO_DBNAME: "{{ unifi_network_application_mongo_dbname }}"
+          MONGO_AUTHSOURCE: "admin"
         ```
 
     ??? variable dict "`unifi_network_application_role_docker_envs_custom`"

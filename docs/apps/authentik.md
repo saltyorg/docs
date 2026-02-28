@@ -513,7 +513,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authentik_role_docker_image_tag: "2025.12"
+        authentik_role_docker_image_tag: "2026.2"
         ```
 
     ??? variable string "`authentik_role_docker_image`"

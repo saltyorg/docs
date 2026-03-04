@@ -84,10 +84,10 @@ services:
 
 ### Adding Additional Hosts
 
-You can add additional hosts to Dozzle using the `dozzle_additional_hosts` inventory variable. This will append the additional host(s) to the default entry. You can review the upstream documentation [here](https://dozzle.dev/guide/remote-hosts) for the proper syntax. The initiai `,` will be added after the default entry, you must comma separate the hosts if you are adding multiple entries such as:
+You can add additional hosts to Dozzle using the below inventory variable. This will append the additional host(s) to the default entry. You can review the upstream documentation [here](https://dozzle.dev/guide/remote-hosts) for the proper syntax. The initiai `,` will be added after the default entry, you must comma separate the hosts if you are adding multiple entries such as:
 
 ```yaml
-dozzle_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2375|thirdserver"
+dozzle_role_additional_hosts: "tcp://otherserver:2375|otherserver,tcp://thirdserver:2375|thirdserver"
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

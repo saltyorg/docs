@@ -68,7 +68,7 @@ saltbox_automation:
 ## Deployment
 
 ```shell
-sb install nzbydra2
+sb install nzbhydra2
 ```
 
 ## Usage

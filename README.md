@@ -173,6 +173,13 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/mrfret>
+            <img src=https://avatars.githubusercontent.com/u/72273384?v=4 width="100;"  alt=mrfret/>
+            <br />
+            <sub style="font-size:14px"><b>mrfret</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/markschrik>
             <img src=https://avatars.githubusercontent.com/u/56775030?v=4 width="100;"  alt=Mark de Ruiter/>
             <br />
@@ -193,6 +200,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Zuke97</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/After-Shock>
             <img src=https://avatars.githubusercontent.com/u/17056047?v=4 width="100;"  alt=Sully/>
@@ -200,8 +209,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Sully</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/rsimplicio>
             <img src=https://avatars.githubusercontent.com/u/12079?v=4 width="100;"  alt=Robert Simplicio/>
@@ -237,6 +244,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Elbulus</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/DiscDuck>
             <img src=https://avatars.githubusercontent.com/u/77843475?v=4 width="100;"  alt=DiscDuck/>
@@ -244,8 +253,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>DiscDuck</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/hereisderek>
             <img src=https://avatars.githubusercontent.com/u/839795?v=4 width="100;"  alt=Derek Zhu/>
@@ -258,13 +265,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <img src=https://avatars.githubusercontent.com/u/6383356?v=4 width="100;"  alt=Cameron Stephen/>
             <br />
             <sub style="font-size:14px"><b>Cameron Stephen</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/cyr1l0u>
-            <img src=https://avatars.githubusercontent.com/u/164659715?v=4 width="100;"  alt=cyr1l0u/>
-            <br />
-            <sub style="font-size:14px"><b>cyr1l0u</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -342,10 +342,17 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/8a8al00ey>
-            <img src=https://avatars.githubusercontent.com/u/109389709?v=4 width="100;"  alt=8a8al00ey/>
+        <a href=https://github.com/nickstarkloff>
+            <img src=https://avatars.githubusercontent.com/u/51816213?v=4 width="100;"  alt=Nick/>
             <br />
-            <sub style="font-size:14px"><b>8a8al00ey</b></sub>
+            <sub style="font-size:14px"><b>Nick</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/cyr1l0u>
+            <img src=https://avatars.githubusercontent.com/u/164659715?v=4 width="100;"  alt=cyr1l0u/>
+            <br />
+            <sub style="font-size:14px"><b>cyr1l0u</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -360,13 +367,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <img src=https://avatars.githubusercontent.com/u/6556434?v=4 width="100;"  alt=iDoMnCi/>
             <br />
             <sub style="font-size:14px"><b>iDoMnCi</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/mrfret>
-            <img src=https://avatars.githubusercontent.com/u/72273384?v=4 width="100;"  alt=mrfret/>
-            <br />
-            <sub style="font-size:14px"><b>mrfret</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -430,6 +430,13 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/8a8al00ey>
+            <img src=https://avatars.githubusercontent.com/u/109389709?v=4 width="100;"  alt=8a8al00ey/>
+            <br />
+            <sub style="font-size:14px"><b>8a8al00ey</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Aethenn>
             <img src=https://avatars.githubusercontent.com/u/58144688?v=4 width="100;"  alt=Aethenn/>
             <br />
@@ -457,6 +464,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>CGH</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/CarterMcAlister>
             <img src=https://avatars.githubusercontent.com/u/5679378?v=4 width="100;"  alt=Carter/>
@@ -464,8 +473,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Carter</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Cephalostrum>
             <img src=https://avatars.githubusercontent.com/u/313706?v=4 width="100;"  alt=Cephalostrum/>
@@ -501,6 +508,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Deadly-Bytes</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/EvilHidden>
             <img src=https://avatars.githubusercontent.com/u/14209422?v=4 width="100;"  alt=EvilHidden/>
@@ -508,8 +517,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>EvilHidden</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/f4bio>
             <img src=https://avatars.githubusercontent.com/u/4854092?v=4 width="100;"  alt=Fabio Tea/>
@@ -545,6 +552,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Jordan</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kieron>
             <img src=https://avatars.githubusercontent.com/u/8655212?v=4 width="100;"  alt=Kieron/>
@@ -552,8 +561,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Kieron</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kylefmohr>
             <img src=https://avatars.githubusercontent.com/u/6644803?v=4 width="100;"  alt=Kyle Mohr/>
@@ -580,13 +587,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <img src=https://avatars.githubusercontent.com/u/60236014?v=4 width="100;"  alt=Nicholas W. Heyer/>
             <br />
             <sub style="font-size:14px"><b>Nicholas W. Heyer</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/nickstarkloff>
-            <img src=https://avatars.githubusercontent.com/u/51816213?v=4 width="100;"  alt=Nick/>
-            <br />
-            <sub style="font-size:14px"><b>Nick</b></sub>
         </a>
     </td>
 </tr>

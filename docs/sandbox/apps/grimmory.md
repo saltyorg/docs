@@ -19,7 +19,7 @@ saltbox_automation:
       url: https://discord.gg/FwqHeFWk
       type: discord
   project_description:
-    name: Booklore
+    name: Grimmory
     summary: |-
       a self-hosted application designed to manage your entire book collection in one place.
     link: https://grimmory.org

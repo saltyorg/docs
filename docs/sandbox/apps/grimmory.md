@@ -53,8 +53,14 @@ saltbox_automation:
     1. Remove the existing container and rename the existing directory.
 
         ```shell
-        docker rm -f booklore
+        docker rm -f booklore booklore-mariadb
         mv /opt/booklore /opt/grimmory
+        ```
+
+    1. Add the following to your inventory to reuse the existing database.
+
+        ```yaml
+        grimmory_role_mariadb_docker_env_db: "booklore-mariadb"
         ```
 
     1.  [Deploy Grimmory :material-arrow-down-bold:](#deployment)

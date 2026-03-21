@@ -300,7 +300,6 @@ nav:
           - sandbox/apps/audiobookshelf.md
           - sandbox/apps/barcodebuddy.md
           - sandbox/apps/beets.md
-          - sandbox/apps/booklore.md
           - sandbox/apps/bookstack.md
           - sandbox/apps/calibre.md
           - sandbox/apps/calibre_web.md
@@ -341,6 +340,7 @@ nav:
           - sandbox/apps/goaccess.md
           - sandbox/apps/gotenberg.md
           - sandbox/apps/gotify.md
+          - sandbox/apps/grimmory.md
           - sandbox/apps/grocy.md
           - sandbox/apps/guacamole.md
           - sandbox/apps/handbrake.md

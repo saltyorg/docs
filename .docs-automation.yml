@@ -48,6 +48,7 @@ blacklist:
       - "sanity_check"
       - "tdarr_node"
       # Deprecated roles
+      - "booklore"  # deprecated
       - "unifi"  # deprecated
       - "hoarder"  # deprecated
       - "plex_meta_manager"  # deprecated

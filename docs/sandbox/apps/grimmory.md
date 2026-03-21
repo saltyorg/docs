@@ -29,11 +29,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Booklore
+# Grimmory
 
 ## Overview
 
-[Booklore](https://grimmory.org) is a self-hosted application designed to manage your entire book collection in one place.
+[Grimmory](https://grimmory.org) is a self-hosted application designed to manage your entire book collection in one place.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

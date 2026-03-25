@@ -266,13 +266,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
         # Type: string
-        qbittorrent_role_host_branch: libtorrent1
+        qbittorrent_role_host_branch: libtorrent2
         ```
 
         ```yaml { .sb-show-on-checked }
         # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
         # Type: string
-        qbittorrent2_host_branch: libtorrent1
+        qbittorrent2_host_branch: libtorrent2
         ```
 
     ??? variable string "`qbittorrent_role_host_specific_version`{ .sb-show-on-unchecked }`qbittorrent2_host_specific_version`{ .sb-show-on-checked }"

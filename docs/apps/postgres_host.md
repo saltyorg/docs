@@ -152,6 +152,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres_host_role_config: {}
         ```
 
+=== "Networking"
+
+    ??? variable string "`postgres_host_role_listen_addresses`"
+
+        ```yaml
+        # Type: string
+        postgres_host_role_listen_addresses: "localhost,172.19.0.1"
+        ```
+
 === "Access Control"
 
     ??? variable list "`postgres_host_role_allowed_hosts`"

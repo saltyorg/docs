@@ -89,4 +89,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: bool (true/false)
         plex_db_failed_optimization: false
         ```
+
+    ??? variable bool "`plex_db_run_vacuum`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_db_run_vacuum: true
+        ```
+
+    ??? variable bool "`plex_db_run_reindex`"
+
+        ```yaml
+        # Type: bool (true/false)
+        plex_db_run_reindex: false
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

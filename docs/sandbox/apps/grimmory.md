@@ -16,7 +16,7 @@ saltbox_automation:
       url: https://hub.docker.com/r/grimmory/grimmory/tags
       type: docker
     - name: Community
-      url: https://discord.gg/FwqHeFWk
+      url: https://discord.gg/9YJ7HB4n8T
       type: discord
   project_description:
     name: Grimmory

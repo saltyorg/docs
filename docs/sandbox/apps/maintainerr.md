@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.maintainerr.info
       type: documentation
     - name: Releases
-      url: https://hub.docker.com/r/jorenn92/maintainerr/tags
+      url: https://hub.docker.com/r/maintainerr/maintainerr/tags
       type: docker
     - name: Community
       url:

@@ -36,7 +36,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.maintainerr.info){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/jorenn92/maintainerr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/maintainerr/maintainerr/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
@@ -372,12 +372,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        maintainerr_role_docker_image_repo: "jorenn92/maintainerr"
+        maintainerr_role_docker_image_repo: "maintainerr/maintainerr"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        maintainerr2_docker_image_repo: "jorenn92/maintainerr"
+        maintainerr2_docker_image_repo: "maintainerr/maintainerr"
         ```
 
     ??? variable string "`maintainerr_role_docker_image_tag`{ .sb-show-on-unchecked }`maintainerr2_docker_image_tag`{ .sb-show-on-checked }"

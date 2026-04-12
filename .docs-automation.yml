@@ -46,7 +46,6 @@ blacklist:
     sandbox:
       - "homarr_legacy"
       - "sanity_check"
-      - "tdarr_node"
       # Deprecated roles
       - "booklore"  # deprecated
       - "unifi"  # deprecated

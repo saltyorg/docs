@@ -251,6 +251,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                else lookup('role_var', '_web_domain', role='tandoor')) }}"
         ```
 
+    ??? variable string "`tandoor_role_web_host`"
+
+        ```yaml
+        # Type: string
+        tandoor_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='tandoor') + '.' + lookup('role_var', '_web_domain', role='tandoor')
+                                if (lookup('role_var', '_web_subdomain', role='tandoor') | length > 0)
+                                else lookup('role_var', '_web_domain', role='tandoor')) }}"
+        ```
+
 === "DNS"
 
     ??? variable string "`tandoor_role_dns_record`"
@@ -388,6 +397,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DEBUG: "0"
           GUNICORN_MEDIA: "1"
           REMOTE_USER_AUTH: "1"
+          ALLOWED_HOSTS: "{{ tandoor_name }},{{ lookup('role_var', '_web_host', role='tandoor') }}"
         ```
 
     ??? variable dict "`tandoor_role_docker_envs_custom`"

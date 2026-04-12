@@ -27,6 +27,24 @@ saltbox_automation:
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
+<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
+# Tdarr Node
+
+## Overview
+
+[Tdarr Node](https://tdarr.io/) is a cross-platform conditional based transcoding application for automating media library transcode/remux management in order to process your media files as required.
+
+<div class="grid grid--buttons" markdown data-search-exclude>
+
+[:fontawesome-solid-book-open:**Manual**](https://docs.tdarr.io/docs/installation/getting-started){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/haveagitgat/tdarr/tags){ .md-button .md-button--stretch }
+
+[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+
+</div>
+
+---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
@@ -55,18 +73,20 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults
 
-!!! info
-    Variables can be overridden in `/srv/git/saltbox/inventories/host_vars/localhost.yml`.
+Variables can be customized using the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview }. <span title="View override specifics for this role" markdown>(1)</span>
+{ .annotate .sb-annotated }
 
-    ```yaml title="Example Override"
-    tdarr_node_name: "custom_value"
-    ```
+1.  !!! example "Example override"
 
-??? warning "Avoid overriding variables ending in `_default`"
+        ```yaml
+        tdarr_node_name: "custom_value"
+        ```
 
-    When overriding variables that end in `_default` (like `tdarr_node_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+    !!! warning "Avoid overriding variables ending in `_default`"
 
-    Instead, use the corresponding `_custom` variable (like `tdarr_node_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
+        When overriding variables that end in `_default` (like `tdarr_node_docker_envs_default`), you replace the entire default configuration. Future updates that add new default values will not be applied to your setup, potentially breaking functionality.
+
+        Instead, use the corresponding `_custom` variable (like `tdarr_node_docker_envs_custom`) to add your changes. Custom values are merged with defaults, ensuring you receive updates.
 
 === "Basics"
 
@@ -430,13 +450,6 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_devices:
         ```
 
-    ??? variable string "`tdarr_node_role_docker_devices_default`"
-
-        ```yaml
-        # Type: string
-        tdarr_node_role_docker_devices_default:
-        ```
-
     ??? variable list "`tdarr_node_role_docker_groups`"
 
         ```yaml
@@ -723,6 +736,13 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_restart_retries:
         ```
 
+    ??? variable string "`tdarr_node_role_docker_stop_signal`"
+
+        ```yaml
+        # Type: string
+        tdarr_node_role_docker_stop_signal:
+        ```
+
     ??? variable int "`tdarr_node_role_docker_stop_timeout`"
 
         ```yaml
@@ -866,18 +886,11 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         tdarr_node_role_docker_controller: true
         ```
 
-    ??? variable string "`tdarr_node_role_docker_image_repo`"
+    ??? variable list "`tdarr_node_role_docker_networks_alias_custom`"
 
         ```yaml
-        # Type: string
-        tdarr_node_role_docker_image_repo:
-        ```
-
-    ??? variable string "`tdarr_node_role_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        tdarr_node_role_docker_image_tag:
+        # Type: list
+        tdarr_node_role_docker_networks_alias_custom:
         ```
 
     ??? variable bool "`tdarr_node_role_docker_volumes_download`"
@@ -885,26 +898,5 @@ To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tda
         ```yaml
         # Type: bool (true/false)
         tdarr_node_role_docker_volumes_download:
-        ```
-
-    ??? variable string "`tdarr_node_role_paths_configs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_node_role_paths_configs_location:
-        ```
-
-    ??? variable string "`tdarr_node_role_paths_logs_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_node_role_paths_logs_location:
-        ```
-
-    ??? variable string "`tdarr_node_role_paths_transcodes_location`"
-
-        ```yaml
-        # Type: string
-        tdarr_node_role_paths_transcodes_location:
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

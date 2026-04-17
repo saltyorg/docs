@@ -116,4 +116,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: bool (true/false)
         arr_db_tautulli_enabled: false
         ```
+
+    ??? variable bool "`arr_db_run_vacuum`"
+
+        ```yaml
+        # Type: bool (true/false)
+        arr_db_run_vacuum: true
+        ```
+
+    ??? variable bool "`arr_db_run_reindex`"
+
+        ```yaml
+        # Type: bool (true/false)
+        arr_db_run_reindex: false
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

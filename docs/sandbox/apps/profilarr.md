@@ -46,9 +46,6 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-!!! warning "Beta software / Modifies PVR configuration"
-    Although core features are expected to work, this application is in early stages of development. It's recommended to back up your Radarr and Sonarr databases before running import or sync operations.
-
 ## Deployment
 
 ```shell

@@ -62,7 +62,7 @@ jobs:
           fetch-depth: 1
 
       - name: Install sb-docs
-        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        uses: jaxxstorm/action-install-gh-release@v3.0.0
         with:
           repo: saltyorg/docs-automation
           tag: latest
@@ -73,7 +73,7 @@ jobs:
           chmod: "0755"
 
       - name: Install sb binary (for CLI help generation)
-        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        uses: jaxxstorm/action-install-gh-release@v3.0.0
         with:
           repo: saltyorg/sb-go
           tag: latest

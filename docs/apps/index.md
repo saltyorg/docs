@@ -127,10 +127,11 @@ tags:
 
 ### IPTV Proxy
 
-|                                           | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Threadfin](../sandbox/apps/threadfin.md) |        `sandbox-threadfin`         |             `sandbox_roles`              |
-| [Xteve](../sandbox/apps/xteve.md)         |          `sandbox-xteve`           |             `sandbox_roles`              |
+|                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-----------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Dispatcharr](../sandbox/apps/dispatcharr.md) |       `sandbox-dispatcharr`        |             `sandbox_roles`              |
+| [Threadfin](../sandbox/apps/threadfin.md)     |        `sandbox-threadfin`         |             `sandbox_roles`              |
+| [Xteve](../sandbox/apps/xteve.md)             |          `sandbox-xteve`           |             `sandbox_roles`              |
 
 ### Reader
 

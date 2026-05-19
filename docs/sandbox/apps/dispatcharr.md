@@ -24,7 +24,7 @@ saltbox_automation:
       an open-source IPTV and stream management application with EPG handling, M3U/Xtream Codes import, HDHomeRun emulation, and a stream proxy for Plex, Emby, and Jellyfin.
     link: https://github.com/Dispatcharr/Dispatcharr
     categories:
-      - Content Delivery Apps > Media Server Accessory > IPTV
+      - Content Delivery Apps > IPTV Proxy
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

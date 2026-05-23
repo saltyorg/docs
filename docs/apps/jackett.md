@@ -10,7 +10,7 @@ saltbox_automation:
       url: https://github.com/Jackett/Jackett/wiki
       type: documentation
     - name: Releases
-      url: https://github.com/hotio/bazarr/pkgs/container/bazarr
+      url: https://github.com/hotio/jackett/pkgs/container/jackett
       type: github
     - name: Community
       url:

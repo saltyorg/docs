@@ -31,15 +31,15 @@ saltbox_automation:
 
 ## Overview
 
-[SABnzbd](https://github.com/sabnzbd/sabnzbd) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
+[SABnzbd](https://sabnzbd.org) is a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://sabnzbd.org/wiki){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://forums.sabnzbd.org){ .md-button .md-button--stretch }
 
 </div>
 

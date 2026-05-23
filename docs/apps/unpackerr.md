@@ -28,15 +28,15 @@ saltbox_automation:
 
 ## Overview
 
-[Unpackerr](https://github.com/davidnewhall/unpackerr) is a lightweight, cross-platform application designed to automatically extract compressed files (like RAR, ZIP, 7Z, TAR, and ISO) from download folders, primarily for use with media management tools such as Radarr, Sonarr, Lidarr.
+[Unpackerr](https://unpackerr.zip) is a lightweight, cross-platform application designed to automatically extract compressed files (like RAR, ZIP, 7Z, TAR, and ISO) from download folders, primarily for use with media management tools such as Radarr, Sonarr, Lidarr.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://unpackerr.zip/docs/introduction){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/unpackerr/pkgs/container/unpackerr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://golift.io/discord){ .md-button .md-button--stretch }
 
 </div>
 

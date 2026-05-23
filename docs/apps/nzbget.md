@@ -29,15 +29,15 @@ saltbox_automation:
 
 ## Overview
 
-[NZBGet](https://nzbget.net) is a very efficient, cross-platform usenet downloader.
+[NZBGet](https://nzbget.com) is a very efficient, cross-platform usenet downloader.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://nzbget.com/documentation){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://nzbget.com/contact){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://nzbget.com/contact){ .md-button .md-button--stretch }
 
 </div>
 

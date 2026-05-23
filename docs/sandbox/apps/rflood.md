@@ -25,11 +25,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# rFlood
+# rflood
 
 ## Overview
 
-[rFlood](https://github.com/jesec/flood) is a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
+[rflood](https://hotio.dev/containers/rflood) is a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

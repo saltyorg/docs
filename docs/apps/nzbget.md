@@ -8,19 +8,19 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://nzbget.com/documentation
       type: documentation
     - name: Releases
       url: https://github.com/hotio/nzbget/pkgs/container/nzbget
       type: github
     - name: Community
-      url: https://hotio.dev/discord
-      type: discord
+      url: https://nzbget.com/contact
+      type: community
   project_description:
     name: NZBGet
     summary: |-
       a very efficient, cross-platform usenet downloader.
-    link: https://nzbget.net
+    link: https://nzbget.com
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://nzbget.com/contact){ .md-button .md-button--stretch }
 
 </div>
 

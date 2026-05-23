@@ -15,8 +15,8 @@ saltbox_automation:
       url: https://hub.docker.com/r/linuxserver/healthchecks/tags
       type: docker
     - name: Community
-      url: https://linuxserver.io/discord
-      type: discord
+      url: https://github.com/healthchecks/healthchecks/discussions
+      type: github
   project_description:
     name: Healthchecks
     summary: |-

@@ -9,14 +9,14 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://docs.stashapp.cc
       type: documentation
     - name: Releases
       url: https://github.com/hotio/stash/pkgs/container/stash
       type: github
     - name: Community
-      url: https://hotio.dev/discord
-      type: discord
+      url: https://docs.stashapp.cc/#support
+      type: community
   project_description:
     name: Stash
     summary: |-

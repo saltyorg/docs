@@ -7,13 +7,13 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://wiki.servarr.com/en/prowlarr
       type: documentation
     - name: Releases
       url: https://github.com/hotio/prowlarr/pkgs/container/prowlarr
       type: github
     - name: Community
-      url: https://hotio.dev/discord
+      url: https://prowlarr.com/discord
       type: discord
   project_description:
     name: Prowlarr
@@ -32,11 +32,11 @@ saltbox_automation:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/en/prowlarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/prowlarr/pkgs/container/prowlarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://prowlarr.com/discord){ .md-button .md-button--stretch }
 
 </div>
 

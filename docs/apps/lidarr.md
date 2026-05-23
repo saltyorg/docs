@@ -7,13 +7,13 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://wiki.servarr.com/en/lidarr
       type: documentation
     - name: Releases
       url: https://github.com/hotio/lidarr/pkgs/container/lidarr
       type: github
     - name: Community
-      url: https://hotio.dev/discord
+      url: https://lidarr.audio/discord
       type: discord
   project_description:
     name: Lidarr

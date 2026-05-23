@@ -6,22 +6,23 @@ hide:
 tags:
   - sab
   - sabnzbd
+  - usenet
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://sabnzbd.org/wiki
       type: documentation
     - name: Releases
       url: https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd
       type: github
     - name: Community
-      url: https://hotio.dev/discord
-      type: discord
+      url: https://forums.sabnzbd.org
+      type: community
   project_description:
     name: SABnzbd
     summary: |-
       a free, open-source Usenet client designed to simplify downloading files from Usenet by automating the entire process using NZB files, which act as blueprints for locating content on Usenet servers.
-    link: https://github.com/sabnzbd/sabnzbd
+    link: https://sabnzbd.org
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

@@ -7,14 +7,14 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://github.com/Jackett/Jackett/wiki
       type: documentation
     - name: Releases
       url: https://github.com/hotio/bazarr/pkgs/container/bazarr
       type: github
     - name: Community
-      url: https://hotio.dev/discord
-      type: discord
+      url:
+      type: community
   project_description:
     name: Jackett
     summary: |-

@@ -7,13 +7,13 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://github.com/Tautulli/Tautulli/wiki
       type: documentation
     - name: Releases
       url: https://github.com/hotio/tautulli/pkgs/container/tautulli
       type: github
     - name: Community
-      url: https://hotio.dev/discord
+      url: https://tautulli.com/discord
       type: discord
   project_description:
     name: Tautulli
@@ -36,7 +36,7 @@ saltbox_automation:
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/tautulli/pkgs/container/tautulli){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://tautulli.com/discord){ .md-button .md-button--stretch }
 
 </div>
 

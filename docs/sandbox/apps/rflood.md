@@ -1,12 +1,10 @@
 ---
 icon: material/docker
-title: rFlood
 hide:
   - tags
 tags:
   - rflood
   - torrent
-  - frontend
 saltbox_automation:
   app_links:
     - name: Manual
@@ -19,10 +17,10 @@ saltbox_automation:
       url: https://hotio.dev/discord
       type: discord
   project_description:
-    name: rFlood
+    name: rflood
     summary: |-
       a Docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
-    link: https://github.com/jesec/flood
+    link: https://hotio.dev/containers/rflood
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

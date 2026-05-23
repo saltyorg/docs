@@ -10,13 +10,13 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://github.com/StuffAnThings/qbit_manage/wiki
       type: documentation
     - name: Releases
       url: https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage
       type: github
     - name: Community
-      url: https://hotio.dev/discord
+      url: https://notifiarr.com/discord
       type: discord
   project_description:
     name: qBit Manage

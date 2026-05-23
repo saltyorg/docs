@@ -16,7 +16,7 @@ saltbox_automation:
       url: https://hub.docker.com/r/linuxserver/calibre-web/tags
       type: docker
     - name: Community
-      url: https://linuxserver.io/discord
+      url: https://discord.gg/h2VsJ2NEfB
       type: discord
   project_description:
     name: Calibre-Web

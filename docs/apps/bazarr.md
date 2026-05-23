@@ -7,13 +7,13 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://wiki.bazarr.media
       type: documentation
     - name: Releases
       url: https://github.com/hotio/bazarr/pkgs/container/bazarr
       type: github
     - name: Community
-      url: https://hotio.dev/discord
+      url: https://discord.gg/MH2e2eb
       type: discord
   project_description:
     name: Bazarr
@@ -36,7 +36,7 @@ saltbox_automation:
 
 [:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/MH2e2eb){ .md-button .md-button--stretch }
 
 </div>
 

@@ -4,14 +4,14 @@ title: Docker Socket Proxy
 saltbox_automation:
   app_links:
     - name: Manual
-      url: https://docs.linuxserver.io/general/container-customization
+      url:
       type: documentation
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/socket-proxy/tags
       type: docker
     - name: Community
-      url: https://linuxserver.io/discord
-      type: discord
+      url: https://github.com/Tecnativa/docker-socket-proxy/discussions
+      type: github
   project_description:
     name: Docker Socket Proxy
     summary: |-

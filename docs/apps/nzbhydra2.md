@@ -5,17 +5,17 @@ hide:
   - tags
 tags:
   - nzbhydra
-  - nzbhydra2
+  - usenet
 saltbox_automation:
   app_links:
     - name: Manual
-      url: https://docs.linuxserver.io/general/container-customization
+      url: https://github.com/theotherp/nzbhydra2/wiki
       type: documentation
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/nzbhydra2/tags
       type: docker
     - name: Community
-      url: https://linuxserver.io/discord
+      url: https://discord.gg/uh9W3rd
       type: discord
   project_description:
     name: NZBHydra2

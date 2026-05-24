@@ -79,7 +79,23 @@ The WireGuard configuration is generated in:
 /opt/delugevpn/wireguard/wg0.conf
 ```
 
-To check or change the selected endpoint, inspect or edit `wg0.conf`.
+For PIA WireGuard users, the generated `wg0.conf` file persists across normal Saltbox redeploys and updates unless the appdata directory or the `wg0.conf` file is removed.
+
+To check or change the selected endpoint, inspect or edit the `Endpoint =` line in `wg0.conf`, then restart the container.
+
+Example:
+
+```ini
+Endpoint = france.pvt.site:1337
+```
+
+PIA changes its available endpoints and port-forwarding support over time. To see the current list of available PIA WireGuard endpoints, check the container logs after startup:
+
+```shell
+docker logs delugevpn | grep ".pvt.site"
+```
+
+Choose a listed endpoint that supports port forwarding, then set it in `wg0.conf`.
 
 The underlying Binhex image supports OpenVPN and WireGuard and uses iptables to prevent IP leakage when the VPN tunnel is down.
 

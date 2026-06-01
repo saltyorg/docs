@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 
@@ -45,6 +45,12 @@ saltbox_automation:
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
+
+???+ warning "Upgrading from Profilarr v1"
+
+    The role now deploys Profilarr v2, which is incompatible with v1. There is no migration path—v2 requires a clean install.
+
+    Before deploying, back up and remove the application directory (`/opt/profilarr` by default). The role will abort if v1 data is present.
 
 ## Deployment
 

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://dictionarry.dev/profilarr-setup/101
       type: documentation
     - name: Releases
-      url: https://hub.docker.com/r/santiagosayshey/profilarr/tags
+      url: https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr
       type: docker
     - name: Community
       url: https://discord.gg/XGdTJP5G8a
@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 

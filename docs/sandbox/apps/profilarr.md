@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/santiagosayshey/profilarr/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 
@@ -220,7 +220,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        profilarr_role_docker_image_repo: "santiagosayshey/profilarr"
+        profilarr_role_docker_image_repo: "ghcr.io/dictionarry-hub/profilarr"
         ```
 
     ??? variable string "`profilarr_role_docker_image_tag`"
@@ -247,6 +247,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
+          ORIGIN: "{{ lookup('role_var', '_web_url', role='profilarr') }}"
         ```
 
     ??? variable dict "`profilarr_role_docker_envs_custom`"

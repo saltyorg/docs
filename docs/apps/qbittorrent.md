@@ -8,14 +8,14 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url:
+      url: https://wiki.qbittorrent.org
       type: documentation
     - name: Releases
       url: https://hub.docker.com/r/saltydk/qbittorrent/tags
       type: docker
     - name: Community
-      url: https://discord.gg/ugfKXpFND8
-      type: discord
+      url: https://forum.qbittorrent.org
+      type: community
   project_description:
     name: qBittorrent
     summary: |-

@@ -5,13 +5,13 @@ saltbox_automation:
     inventory: false
   app_links:
     - name: Manual
-      url:
+      url: https://nicolargo.github.io/glances/#documentation
       type: documentation
     - name: Releases
-      url:
+      url: https://github.com/nicolargo/glances/tags
       type: releases
     - name: Community
-      url:
+      url: https://nicolargo.github.io/glances/#community
       type: community
   project_description:
     name: Glances

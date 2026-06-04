@@ -33,11 +33,11 @@ saltbox_automation:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://wiki.qbittorrent.org){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/saltydk/qbittorrent/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-discord:**Community**](https://discord.gg/ugfKXpFND8){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://forum.qbittorrent.org){ .md-button .md-button--stretch }
 
 </div>
 

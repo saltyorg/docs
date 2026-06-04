@@ -30,11 +30,11 @@ saltbox_automation:
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://nicolargo.github.io/glances/#documentation){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://github.com/nicolargo/glances/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://nicolargo.github.io/glances/#community){ .md-button .md-button--stretch }
 
 </div>
 

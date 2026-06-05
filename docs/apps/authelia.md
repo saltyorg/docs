@@ -45,13 +45,13 @@ saltbox_automation:
 
 ## Configuration
 
-Saltbox offers several options to customize the `configuration.yml` via the inventory system. We recommend reviewing the [configuration template](https://github.com/saltyorg/Saltbox/blob/master/roles/authelia/templates/configuration.yml.j2) and the [default variables](https://github.com/saltyorg/Saltbox/blob/master/roles/authelia/defaults/main.yml). It is highly recommended to review the upstream documentation for configuration options.
+Saltbox offers several options to customize the `configuration.yml` via the inventory system. We recommend reviewing the [role's defaults](#role-defaults) for available settings. It is highly recommended to review the upstream documentation for configuration options.
 
 Some of the features that can be enabled are Two-Factor Authentication, Duo notifications and SMTP notifications.
 
 ### LDAP Authentication
 
-Saltbox offers an optional LDAP authentication backend for Authelia. This can be enabled by setting `authelia_authentication_backend: "ldap"` in your inventory file. The LDAP is provisioned via OpenLDAP and includes phpLDAPadmin.
+Saltbox offers an optional LDAP authentication backend for Authelia. This can be enabled by setting `authelia_role_authentication_backend: "ldap"` in your inventory file. The LDAP is provisioned via [LLDAP](lldap.md).
 
 ## Deployment
 

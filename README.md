@@ -305,10 +305,10 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/RocketRammer>
-            <img src=https://avatars.githubusercontent.com/u/26411043?v=4 width="100;"  alt=RocketRammer/>
+        <a href=https://github.com/MawdleCode>
+            <img src=https://avatars.githubusercontent.com/u/26411043?v=4 width="100;"  alt=MawdleCode/>
             <br />
-            <sub style="font-size:14px"><b>RocketRammer</b></sub>
+            <sub style="font-size:14px"><b>MawdleCode</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

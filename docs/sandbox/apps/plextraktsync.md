@@ -36,7 +36,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/taxel/PlexTraktSync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/linuxserver-labs/docker-plextraktsync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
 
@@ -136,7 +136,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        plextraktsync_role_docker_image_repo: "ghcr.io/taxel/plextraktsync"
+        plextraktsync_role_docker_image_repo: "lscr.io/linuxserver-labs/plextraktsync"
         ```
 
     ??? variable string "`plextraktsync_role_docker_image`"
@@ -153,6 +153,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         plextraktsync_role_docker_envs_default:
+          PUID: "{{ uid }}"
+          PGID: "{{ gid }}"
           TZ: "{{ tz }}"
         ```
 
@@ -169,8 +171,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        plextraktsync_role_docker_commands_default:
-          - watch
+        plextraktsync_role_docker_commands_default: []
         ```
 
     ??? variable list "`plextraktsync_role_docker_commands_custom`"
@@ -187,7 +188,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         plextraktsync_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location', role='plextraktsync') }}:/app/config"
+          - "{{ lookup('role_var', '_paths_location', role='plextraktsync') }}:/config"
         ```
 
     ??? variable list "`plextraktsync_role_docker_volumes_custom`"

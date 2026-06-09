@@ -366,6 +366,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                   else lookup('role_var', '_web_domain', role='authentik')) }}"
         ```
 
+    ??? variable string "`authentik_role_web_outpost_rule`"
+
+        ```yaml
+        # Type: string
+        authentik_role_web_outpost_rule: "Host(`{{ lookup('role_var', '_web_host', role='authentik') }}`) && PathPrefix(`/outpost.goauthentik.io/`)"
+        ```
+
 === "DNS"
 
     ??? variable string "`authentik_role_dns_record`"
@@ -604,12 +611,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_labels_default:
           traefik.http.routers.authentik-outpost-http.entrypoints: "web"
           traefik.http.routers.authentik-outpost-http.service: "authentik-outpost-http"
-          traefik.http.routers.authentik-outpost-http.rule: "PathPrefix(`/outpost.goauthentik.io/`)"
+          traefik.http.routers.authentik-outpost-http.rule: "{{ lookup('role_var', '_web_outpost_rule', role='authentik') }}"
           traefik.http.routers.authentik-outpost-http.middlewares: "{{ traefik_default_middleware_http }}"
           traefik.http.routers.authentik-outpost-http.priority: "99"
           traefik.http.routers.authentik-outpost.entrypoints: "websecure"
           traefik.http.routers.authentik-outpost.service: "authentik-outpost"
-          traefik.http.routers.authentik-outpost.rule: "PathPrefix(`/outpost.goauthentik.io/`)"
+          traefik.http.routers.authentik-outpost.rule: "{{ lookup('role_var', '_web_outpost_rule', role='authentik') }}"
           traefik.http.routers.authentik-outpost.tls.options: "securetls@file"
           traefik.http.routers.authentik-outpost.tls.certresolver: "{{ authentik_role_traefik_certresolver }}"
           traefik.http.routers.authentik-outpost.middlewares: "{{ traefik_default_middleware }}"

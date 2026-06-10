@@ -4,11 +4,12 @@ title: Traefik Proxy
 status: draft
 saltbox_automation:
   inventory:
-    show_sections:
-      - Basics
-      - Config
-      - Web
-      - Logging
+    hide_sections:
+      - Templates
+      - Lookups
+      - Booleans
+      - DNS Provider
+      - Traefik
   app_links:
     - name: Manual
       url: https://doc.traefik.io/traefik

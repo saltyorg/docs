@@ -57,6 +57,13 @@ sb install docker
 docker
 ```
 
+## FAQ
+
+???+ question "Why does Saltbox use the Docker network "saltbox" instead of bridge?"
+
+    1. This keeps all Saltbox containers organized under one network
+    2. the docker bridge network does not allow network aliases.
+
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

@@ -56,5 +56,16 @@ sb install rclone
 rclone
 ```
 
+## Troubleshooting
+
+???+ question "Rclone error: `Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied`"
+
+    Replace `user` and `group` to match yours (see [here](https://www.cyberciti.biz/faq/unix-linux-id-command-examples-usage-syntax/#3)).
+
+    ```shell
+    sudo chown -R user:group ~/.config/rclone/
+    sudo chmod -R 0755 ~/.config/rclone/
+    ```
+
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

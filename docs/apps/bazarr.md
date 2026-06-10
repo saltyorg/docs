@@ -53,15 +53,13 @@ sb install bazarr
 
 Visit <https://bazarr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
+???+ warning "Cloud Storage Performance"
 
-- [:octicons-link-16: Documentation](https://wiki.bazarr.media){: .header-icons }
+    If your media is stored in the cloud, several Bazarr settings can trigger excessive API calls.  
+    See the official [Performance Tuning](https://wiki.bazarr.media/Additional-Configuration/Performance-Tuning/) page for full details, but the most impactful settings to review:
 
-- [:octicons-link-16: TraSH Guides](https://trash-guides.info/Bazarr/)
-
-There are some settings that - depending on your specific setup - should be adapted to reduce API calls down to a managable level.
-
-Please refer to the official documentation for an explanation of the settings. Some - potentially out of date(!) - settings are documented in the [FAQs](../faq/bazarr.md).
+    - **`Settings` → `Subtitles` → `Performance / Optimization`** — Disable `Use Embedded Subtitles` (requires reading inside video containers) and `Automatic Subtitles Synchronization` (triggers heavy reads when downloading subtitles in bulk).
+    - **`Settings` → `Languages`** — Disable `Deep analyze media file to get audio tracks language`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -466,7 +466,6 @@ nav:
           - sandbox/apps/znc.md
 
   - FAQ:
-      - faq/system.md
       - faq/cloud-storage.md
       - faq/cloudflare.md
       - faq/cloudplow.md
@@ -475,8 +474,6 @@ nav:
       - faq/install.md
       - faq/backup-and-restore.md
       - faq/rclone.md
-      - faq/plex.md
-      - faq/rutorrent.md
       - faq/misc.md
       - faq/bazarr.md
 

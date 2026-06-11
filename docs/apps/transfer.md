@@ -9,7 +9,7 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url: https://github.com/dutchcoders/transfer.sh
+      url:
       type: documentation
     - name: Releases
       url: https://hub.docker.com/r/dutchcoders/transfer.sh/tags
@@ -21,7 +21,7 @@ saltbox_automation:
     name: transfer.sh
     summary: |-
       an easy and fast file sharing from the command-line or web gui app.
-    link: https://transfer.sh/
+    link: https://github.com/dutchcoders/transfer.sh
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

@@ -30,11 +30,11 @@ saltbox_automation:
 
 ## Overview
 
-[transfer.sh](https://transfer.sh/) is an easy and fast file sharing from the command-line or web gui app.
+[transfer.sh](https://github.com/dutchcoders/transfer.sh) is an easy and fast file sharing from the command-line or web gui app.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](https://github.com/dutchcoders/transfer.sh){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/dutchcoders/transfer.sh/tags){ .md-button .md-button--stretch }
 

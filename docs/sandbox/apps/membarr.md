@@ -15,8 +15,8 @@ saltbox_automation:
       url: https://hub.docker.com/r/yoruio/membarr/tags
       type: docker
     - name: Community
-      url:
-      type: community
+      url: https://discord.gg/7hAUKKTyTd
+      type: discord
   project_description:
     name: Membarr
     summary: |-

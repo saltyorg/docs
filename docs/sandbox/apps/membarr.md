@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/yoruio/membarr/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/7hAUKKTyTd){ .md-button .md-button--stretch }
 
 </div>
 

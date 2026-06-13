@@ -85,7 +85,6 @@ tags:
 |---------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Gaps](../sandbox/apps/gaps.md)             |           `sandbox-gaps`           |             `sandbox_roles`              |
 | [Kitana](../sandbox/apps/kitana.md)         |          `sandbox-kitana`          |             `sandbox_roles`              |
-| [Moviematch](../sandbox/apps/moviematch.md) |        `sandbox-moviematch`        |             `sandbox_roles`              |
 | [PlexShare](../sandbox/apps/plexshare.md)   |        `sandbox-plexshare`         |             `sandbox_roles`              |
 | [Wizarr](../sandbox/apps/wizarr.md)         |          `sandbox-wizarr`          |             `sandbox_roles`              |
 

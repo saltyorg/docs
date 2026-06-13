@@ -90,7 +90,6 @@ tags:
 |-----------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Airsonic](../sandbox/apps/airsonic.md)             |         `sandbox-airsonic`         |             `sandbox_roles`              |
 | [Audiobookshelf](../sandbox/apps/audiobookshelf.md) |      `sandbox-audiobookshelf`      |             `sandbox_roles`              |
-| [Funkwhale](../sandbox/apps/funkwhale.md)           |        `sandbox-funkwhale`         |             `sandbox_roles`              |
 | [Koel](../sandbox/apps/koel.md)                     |           `sandbox-koel`           |             `sandbox_roles`              |
 | [Navidrome](../sandbox/apps/navidrome.md)           |        `sandbox-navidrome`         |             `sandbox_roles`              |
 

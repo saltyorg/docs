@@ -331,7 +331,6 @@ nav:
           - sandbox/apps/forgejo.md
           - sandbox/apps/foundry.md
           - sandbox/apps/freshrss.md
-          - sandbox/apps/funkwhale.md
           - sandbox/apps/gitea.md
           - sandbox/apps/glances_web.md
           - sandbox/apps/goaccess.md

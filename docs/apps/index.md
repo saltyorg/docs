@@ -78,7 +78,6 @@ tags:
 | [Extended Personal Media Shows](../sandbox/apps/epms.md)      |           `sandbox-epms`           |             `sandbox_roles`              |
 | [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) |   `sandbox-plex-auto-languages`    |             `sandbox_roles`              |
 | [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |     `sandbox-plex-dupefinder`      |             `sandbox_roles`              |
-| [Plex Patrol](../sandbox/apps/plex_patrol.md)                 |       `sandbox-plex-patrol`        |             `sandbox_roles`              |
 
 ##### Frontend
 

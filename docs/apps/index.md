@@ -266,7 +266,6 @@ tags:
 | [Portainer](portainer.md)                 |                                      `portainer`                                       |    `feederbox_roles` `saltbox_roles`     |
 | [Docker CE](docker.md)                    | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |        :octicons-shield-lock-24:         |
 | [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |             `sandbox_roles`              |
-| [Yacht](../sandbox/apps/yacht.md)         |                                    `sandbox-yacht`                                     |             `sandbox_roles`              |
 
 #### Misc
 

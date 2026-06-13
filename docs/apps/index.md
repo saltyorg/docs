@@ -83,7 +83,6 @@ tags:
 
 |                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |---------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Gaps](../sandbox/apps/gaps.md)             |           `sandbox-gaps`           |             `sandbox_roles`              |
 | [Kitana](../sandbox/apps/kitana.md)         |          `sandbox-kitana`          |             `sandbox_roles`              |
 | [PlexShare](../sandbox/apps/plexshare.md)   |        `sandbox-plexshare`         |             `sandbox_roles`              |
 | [Wizarr](../sandbox/apps/wizarr.md)         |          `sandbox-wizarr`          |             `sandbox_roles`              |

@@ -335,7 +335,6 @@ tags:
 | [Grafana](grafana.md)                           |             `grafana`              | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Netdata](netdata.md)                           |             `netdata`              | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
 | [Glances (web)](../sandbox/apps/glances_web.md) |       `sandbox-glances-web`        |                  `sandbox_roles`                   |
-| [Monitorr](../sandbox/apps/monitorr.md)         |         `sandbox-monitorr`         |                  `sandbox_roles`                   |
 | [OpenObserve](../sandbox/apps/openobserve.md)   |       `sandbox-openobserve`        |                  `sandbox_roles`                   |
 | [Uptime Kuma](../sandbox/apps/uptime_kuma.md)   |       `sandbox-uptime-kuma`        |                  `sandbox_roles`                   |
 

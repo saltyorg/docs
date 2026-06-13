@@ -163,7 +163,6 @@ tags:
 | [Qui](../sandbox/apps/qui.md)                 |           `sandbox-qui`            |             `sandbox_roles`              |
 | [Sabthrottle](../sandbox/apps/sabthrottle.md) |       `sandbox-sabthrottle`        |             `sandbox_roles`              |
 | [tqm](../sandbox/apps/tqm.md)                 |           `sandbox-tqm`            |             `sandbox_roles`              |
-| [Trackarr](../sandbox/apps/trackarr.md)       |         `sandbox-trackarr`         |             `sandbox_roles`              |
 | [ZNC](../sandbox/apps/znc.md)                 |           `sandbox-znc`            |             `sandbox_roles`              |
 
 ### Bundle Client

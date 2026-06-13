@@ -385,7 +385,6 @@ tags:
 | [Chrome](../sandbox/apps/chrome.md)       |          `sandbox-chrome`          |             `sandbox_roles`              |
 | [Cockpit](../sandbox/apps/cockpit.md)     |         `sandbox-cockpit`          |             `sandbox_roles`              |
 | [Firefox](../sandbox/apps/firefox.md)     |         `sandbox-firefox`          |             `sandbox_roles`              |
-| [Guacamole](../sandbox/apps/guacamole.md) |        `sandbox-guacamole`         |             `sandbox_roles`              |
 | [Sshwifty](../sandbox/apps/sshwifty.md)   |         `sandbox-sshwifty`         |             `sandbox_roles`              |
 
 ### Misc

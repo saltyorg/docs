@@ -75,7 +75,6 @@ tags:
 |                                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |---------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [ASSHAMA](asshama.md)                                         |             `asshama`              |     `mediabox_roles` `saltbox_roles`     |
-| [Extended Personal Media Shows](../sandbox/apps/epms.md)      |           `sandbox-epms`           |             `sandbox_roles`              |
 | [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) |   `sandbox-plex-auto-languages`    |             `sandbox_roles`              |
 | [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |     `sandbox-plex-dupefinder`      |             `sandbox_roles`              |
 

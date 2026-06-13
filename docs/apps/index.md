@@ -453,7 +453,6 @@ tags:
 
 |                                                 | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [BarcodeBuddy](../sandbox/apps/barcodebuddy.md) |       `sandbox-barcodebuddy`       |             `sandbox_roles`              |
 | [Grocy](../sandbox/apps/grocy.md)               |          `sandbox-grocy`           |             `sandbox_roles`              |
 | [Homebox](../sandbox/apps/homebox.md)           |         `sandbox-homebox`          |             `sandbox_roles`              |
 | [Mealie](../sandbox/apps/mealie.md)             |          `sandbox-mealie`          |             `sandbox_roles`              |

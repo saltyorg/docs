@@ -42,7 +42,6 @@ tags:
 |                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Tautulli](tautulli.md)                        |             `tautulli`             |     `mediabox_roles` `saltbox_roles`     |
-| [Embystat](../sandbox/apps/embystat.md)        |         `sandbox-embystat`         |             `sandbox_roles`              |
 | [Jellystat](../sandbox/apps/jellystat.md)      |        `sandbox-jellystat`         |             `sandbox_roles`              |
 | [Varken](../sandbox/apps/varken.md)            |          `sandbox-varken`          |             `sandbox_roles`              |
 | [Wrapperr](../sandbox/apps/wrapperr.md)        |         `sandbox-wrapperr`         |             `sandbox_roles`              |

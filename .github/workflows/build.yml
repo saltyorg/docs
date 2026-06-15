@@ -17,7 +17,7 @@ jobs:
     if: github.event.repository.fork == false && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -40,7 +40,7 @@ jobs:
       url: ${{ steps.cloudflare.outputs.deployment-url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -52,7 +52,7 @@ jobs:
 
       - name: Restore cache
         id: cache-docs-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           key: docs-
           path: .cache
@@ -74,7 +74,6 @@ jobs:
           mkdocs --version
         env:
           CI: true
-          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GH_TOKEN }}
 
       - name: Publish to Cloudflare Pages
         if: github.event.repository.fork == false
@@ -92,7 +91,7 @@ jobs:
 
       - name: Save build cache
         id: cache-docs-save
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: .cache
           key: docs-${{ github.run_id }}

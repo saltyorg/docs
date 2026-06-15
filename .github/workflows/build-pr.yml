@@ -16,68 +16,28 @@ permissions:
   actions: read
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
+    if: github.event.workflow_run.conclusion == 'success' && github.event.repository.fork == false
     outputs:
       url: ${{ steps.cloudflare.outputs.deployment-url }}
       branch_url: ${{ steps.cloudflare.outputs.pages-deployment-alias-url }}
       pr_number: ${{ steps.pr_info.outputs.pr_number }}
       pr_sha: ${{ steps.pr_info.outputs.pr_sha }}
     steps:
-      - name: 'Download artifact'
+      - name: Download Build Artifacts
         uses: actions/download-artifact@v7
         with:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
-          name: pr_info
-          path: ${{ github.workspace }}/pr_info
+          name: pr_build_artifacts
+          path: ${{ github.workspace }}/pr_bundle
 
-      - name: Display structure of downloaded files
-        run: tree ${{ github.workspace }}
-
-      - name: Read PR info
+      - name: Read PR metadata
         id: pr_info
         run: |
-          echo "pr_number=$(cat ${{ github.workspace }}/pr_info/PR_NUMBER)" >> $GITHUB_OUTPUT
-          echo "pr_sha=$(cat ${{ github.workspace }}/pr_info/PR_SHA)" >> $GITHUB_OUTPUT
-
-      - name: Checkout repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ steps.pr_info.outputs.pr_sha }}
-          fetch-depth: 0
-
-      - name: Setup Python 3
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.x'
-
-      - name: Restore cache
-        id: cache-docs-restore
-        uses: actions/cache/restore@v4
-        with:
-          key: docs-${{ steps.pr_info.outputs.pr_number }}
-          path: .cache
-          restore-keys: |
-            docs-${{ steps.pr_info.outputs.pr_number }}
-
-      - name: Install dependencies
-        run: sudo apt-get install pngquant
-
-      - name: Install wheel
-        run: pip install wheel
-
-      - name: Install requirements.txt
-        run: pip install -r requirements.txt
-
-      - name: Build mkdocs
-        run: |
-          mkdocs build --clean
-          mkdocs --version
-        env:
-          CI: true
-          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GH_TOKEN }}
+          echo "pr_number=$(cat ${{ github.workspace }}/pr_bundle/PR_NUMBER)" >> $GITHUB_OUTPUT
+          echo "pr_sha=$(cat ${{ github.workspace }}/pr_bundle/PR_SHA)" >> $GITHUB_OUTPUT
 
       - name: Publish to Cloudflare Pages
         id: cloudflare
@@ -86,32 +46,22 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: >
-            pages deploy site
+            pages deploy ${{ github.workspace }}/pr_bundle/site
             --project-name=docs
             --branch=pr-${{ steps.pr_info.outputs.pr_number }}
             --commit-hash=${{ steps.pr_info.outputs.pr_sha }}
             --commit-dirty=true
 
-      - name: Save build cache
-        id: cache-docs-save
-        uses: actions/cache/save@v4
-        with:
-          path: .cache
-          key: docs-${{ steps.pr_info.outputs.pr_number }}-${{ github.run_id }}
-
   comment:
-    needs: build
+    needs: deploy
     runs-on: ubuntu-latest
     if: always() && github.event.repository.fork == false
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v5
-
       - name: Comment PR
         run: |
-          PREVIEW_URL=${{ needs.build.outputs.url }}
-          BRANCH_PREVIEW_URL=${{ needs.build.outputs.branch_url }}
-          BUILD_STATUS=${{ needs.build.result }}
+          PREVIEW_URL="${{ needs.deploy.outputs.url }}"
+          BRANCH_PREVIEW_URL="${{ needs.deploy.outputs.branch_url }}"
+          BUILD_STATUS="${{ needs.deploy.result }}"
           BUILD_LOGS_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           if [ "$BUILD_STATUS" == "success" ]; then
@@ -122,10 +72,10 @@ jobs:
             STATUS_MESSAGE="Build failed!"
           fi
 
-          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>${{ needs.build.outputs.pr_sha }}</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr><tr><td><strong>Build logs:</strong></td><td><a href='$BUILD_LOGS_URL'>View build logs</a></td></tr></table>"
+          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>${{ needs.deploy.outputs.pr_sha }}</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr><tr><td><strong>Build logs:</strong></td><td><a href='$BUILD_LOGS_URL'>View build logs</a></td></tr></table>"
 
           ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
-          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ needs.build.outputs.pr_number }}/comments"
+          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ needs.deploy.outputs.pr_number }}/comments"
 
           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github+json" \

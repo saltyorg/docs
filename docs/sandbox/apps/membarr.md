@@ -242,15 +242,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         membarr_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`membarr_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        membarr_role_docker_state: started
-        ```
-
     <h5>User</h5>
 
     ??? variable string "`membarr_role_docker_user`"

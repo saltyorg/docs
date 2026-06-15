@@ -310,15 +310,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         glances_web_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`glances_web_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        glances_web_role_docker_state: started
-        ```
-
     <h5>Force Kill</h5>
 
     ??? variable bool "`glances_web_role_docker_force_kill`"

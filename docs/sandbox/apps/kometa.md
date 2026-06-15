@@ -327,20 +327,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kometa2_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`kometa_role_docker_state`{ .sb-show-on-unchecked }`kometa2_docker_state`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_docker_state: started
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_docker_state: started
-        ```
-
     <h5>User</h5>
 
     ??? variable string "`kometa_role_docker_user`{ .sb-show-on-unchecked }`kometa2_docker_user`{ .sb-show-on-checked }"

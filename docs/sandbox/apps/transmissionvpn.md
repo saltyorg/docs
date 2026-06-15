@@ -32,7 +32,7 @@ saltbox_automation:
 
 ## Overview
 
-OpenVPN and Transmission with WebUI is a...
+OpenVPN and Transmission with WebUI is a Docker container configuration that runs the Transmission BitTorrent client securely through an OpenVPN tunnel
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
@@ -40,7 +40,7 @@ OpenVPN and Transmission with WebUI is a...
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/haugene/transmission-openvpn/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/haugene/docker-transmission-openvpn/discussions){ .md-button .md-button--stretch }
 
 </div>
 
@@ -378,15 +378,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         transmissionvpn_role_docker_restart_policy: unless-stopped
-        ```
-
-    <h5>State</h5>
-
-    ??? variable string "`transmissionvpn_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        transmissionvpn_role_docker_state: started
         ```
 
     <h5>Sysctls</h5>

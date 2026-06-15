@@ -205,15 +205,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         a_train_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`a_train_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        a_train_role_docker_state: started
-        ```
-
     <h5>User</h5>
 
     ??? variable string "`a_train_role_docker_user`"

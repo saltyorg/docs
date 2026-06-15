@@ -412,15 +412,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grimmory_role_docker_stop_timeout: 10
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`grimmory_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        grimmory_role_docker_state: started
-        ```
-
     <h5>Healthcheck</h5>
 
     ??? variable dict "`grimmory_role_docker_healthcheck`"

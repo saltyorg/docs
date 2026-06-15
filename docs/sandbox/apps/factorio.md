@@ -265,15 +265,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         factorio_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`factorio_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        factorio_role_docker_state: started
-        ```
-
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)

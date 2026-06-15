@@ -699,20 +699,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`calibre_role_docker_state`{ .sb-show-on-unchecked }`calibre2_docker_state`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        calibre_role_docker_state: started
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        calibre2_docker_state: started
-        ```
-
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)

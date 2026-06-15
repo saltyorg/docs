@@ -707,20 +707,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrentvpn2_docker_stop_timeout: 900
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`qbittorrentvpn_role_docker_state`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_state`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrentvpn_role_docker_state: started
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrentvpn2_docker_state: started
-        ```
-
     <h5>Privileged</h5>
 
     ??? variable bool "`qbittorrentvpn_role_docker_privileged`{ .sb-show-on-unchecked }`qbittorrentvpn2_docker_privileged`{ .sb-show-on-checked }"

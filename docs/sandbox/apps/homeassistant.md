@@ -330,15 +330,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homeassistant_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`homeassistant_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        homeassistant_role_docker_state: started
-        ```
-
     <h5>Privileged</h5>
 
     ??? variable bool "`homeassistant_role_docker_privileged`"

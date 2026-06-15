@@ -313,15 +313,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         goaccess_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`goaccess_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        goaccess_role_docker_state: started
-        ```
-
     <h5>Force Kill</h5>
 
     ??? variable bool "`goaccess_role_docker_force_kill`"

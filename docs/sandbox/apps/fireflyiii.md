@@ -400,15 +400,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         fireflyiii_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`fireflyiii_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        fireflyiii_role_docker_state: started
-        ```
-
     <h5>Dependencies</h5>
 
     ??? variable string "`fireflyiii_role_depends_on`"

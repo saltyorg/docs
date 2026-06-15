@@ -308,15 +308,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         paperless_ai_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`paperless_ai_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        paperless_ai_role_docker_state: started
-        ```
-
     <h5>Create Docker Container Timeout</h5>
 
     ??? variable int "`paperless_ai_docker_create_timeout`"

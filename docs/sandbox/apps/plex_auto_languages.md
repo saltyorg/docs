@@ -200,15 +200,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex_auto_languages_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`plex_auto_languages_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        plex_auto_languages_role_docker_state: started
-        ```
-
     <h5>Stop Timeout</h5>
 
     ??? variable int "`plex_auto_languages_role_docker_stop_timeout`"

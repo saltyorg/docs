@@ -17,8 +17,8 @@ saltbox_automation:
       url: https://hub.docker.com/r/haugene/transmission-openvpn/tags
       type: docker
     - name: Community
-      url:
-      type: community
+      url: https://github.com/haugene/docker-transmission-openvpn/discussions
+      type: github
   project_description:
     name: OpenVPN and Transmission with WebUI
     summary: |-

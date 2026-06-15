@@ -22,7 +22,7 @@ saltbox_automation:
   project_description:
     name: OpenVPN and Transmission with WebUI
     summary: |-
-      a...
+      a Docker container configuration that runs the Transmission BitTorrent client securely through an OpenVPN tunnel.
     link:
 ---
 

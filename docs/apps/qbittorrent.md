@@ -66,7 +66,7 @@ saltbox_automation:
 
     <div>
 
-    [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#bittorrent-client){ .md-button }
 
     [**Skip to Jackett**:material-fast-forward:](jackett.md){ .md-button }
 

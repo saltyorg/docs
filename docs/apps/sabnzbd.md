@@ -68,7 +68,7 @@ saltbox_automation:
 
     <div>
 
-    [**Explore alternatives**:material-shuffle-variant:](index.md#download-client){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#usenet-client){ .md-button }
 
     [**Skip to NZBHydra2**:material-fast-forward:](nzbhydra2.md){ .md-button }
 

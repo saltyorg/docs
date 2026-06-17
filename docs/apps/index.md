@@ -24,66 +24,7 @@ tags:
 | [Emby](emby.md)              |                  `emby`                   |         `media_servers_enabled`          |
 | [Jellyfin](jellyfin.md)      |                `jellyfin`                 |         `media_servers_enabled`          |
 
-### Media Server Accessory
-
-#### Integration
-
-|                                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Autoscan](autoscan.md)                                     |             `autoscan`             |     `mediabox_roles` `saltbox_roles`     |
-| [A-Train](../sandbox/apps/a_train.md)                       |         `sandbox-a-train`          |             `sandbox_roles`              |
-| [Kometa](../sandbox/apps/kometa.md)                         |          `sandbox-kometa`          |             `sandbox_roles`              |
-| [PlexTraktSync](../sandbox/apps/plextraktsync.md)           |      `sandbox-plextraktsync`       |             `sandbox_roles`              |
-| [WatchState](../sandbox/apps/watchstate.md)                 |        `sandbox-watchstate`        |             `sandbox_roles`              |
-
-#### Monitoring
-
-|                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Tautulli](tautulli.md)                        |             `tautulli`             |     `mediabox_roles` `saltbox_roles`     |
-| [Jellystat](../sandbox/apps/jellystat.md)      |        `sandbox-jellystat`         |             `sandbox_roles`              |
-| [Varken](../sandbox/apps/varken.md)            |          `sandbox-varken`          |             `sandbox_roles`              |
-| [Wrapperr](../sandbox/apps/wrapperr.md)        |         `sandbox-wrapperr`         |             `sandbox_roles`              |
-| [YourSpotify](../sandbox/apps/your_spotify.md) |       `sandbox-your-spotify`       |             `sandbox_roles`              |
-
-#### Request
-
-|                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|---------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Overseerr](overseerr.md)                   |            `overseerr`             |     `mediabox_roles` `saltbox_roles`     |
-| [Petio](petio.md)                           |              `petio`               |     `mediabox_roles` `saltbox_roles`     |
-| [Seerr](seerr.md)                           |              `seerr`               |     `mediabox_roles` `saltbox_roles`     |
-| [Jellyseerr](../sandbox/apps/jellyseerr.md) |        `sandbox-jellyseerr`        |             `sandbox_roles`              |
-| [Ombi](../sandbox/apps/ombi.md)             |           `sandbox-ombi`           |             `sandbox_roles`              |
-
-#### Chat Bot
-
-|                                           | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [DiscoFlix](../sandbox/apps/discoflix.md) |        `sandbox-discoflix`         |             `sandbox_roles`              |
-| [Doplarr](../sandbox/apps/doplarr.md)     |         `sandbox-doplarr`          |             `sandbox_roles`              |
-| [Membarr](../sandbox/apps/membarr.md)     |         `sandbox-membarr`          |             `sandbox_roles`              |
-| [Requestrr](../sandbox/apps/requestrr.md) |        `sandbox-requestrr`         |             `sandbox_roles`              |
-| [Tauticord](../sandbox/apps/tauticord.md) |        `sandbox-tauticord`         |             `sandbox_roles`              |
-
-#### Misc
-
-##### Backend
-
-|                                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|---------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [ASSHAMA](asshama.md)                                         |             `asshama`              |     `mediabox_roles` `saltbox_roles`     |
-| [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) |   `sandbox-plex-auto-languages`    |             `sandbox_roles`              |
-| [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |     `sandbox-plex-dupefinder`      |             `sandbox_roles`              |
-
-##### Frontend
-
-|                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|---------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [PlexShare](../sandbox/apps/plexshare.md)   |        `sandbox-plexshare`         |             `sandbox_roles`              |
-| [Wizarr](../sandbox/apps/wizarr.md)         |          `sandbox-wizarr`          |             `sandbox_roles`              |
-
-### Audio Stream
+### Audio Server
 
 |                                                     | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-----------------------------------------------------|:----------------------------------:|:----------------------------------------:|
@@ -133,31 +74,29 @@ tags:
 
 ## :ocean: Content Acquisition Apps
 
-### Download Client
+### Collection Manager
+
+|                                                   | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|---------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Sonarr](sonarr.md)                               |              `sonarr`              |    `feederbox_roles` `saltbox_roles`     |
+| [Radarr](radarr.md)                               |              `radarr`              |    `feederbox_roles` `saltbox_roles`     |
+| [Lidarr](lidarr.md)                               |              `lidarr`              |    `feederbox_roles` `saltbox_roles`     |
+| [Whisparr](whisparr.md)                           |             `whisparr`             |    `feederbox_roles` `saltbox_roles`     |
+| [Lazylibrarian](../sandbox/apps/lazylibrarian.md) |      `sandbox-lazylibrarian`       |             `sandbox_roles`              |
+| [Medusa](../sandbox/apps/medusa.md)               |          `sandbox-medusa`          |             `sandbox_roles`              |
+| [Mylar](../sandbox/apps/mylar3.md)                |          `sandbox-mylar3`          |             `sandbox_roles`              |
+
+### BitTorrent Client
 
 |                                                 | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [qBittorrent](qbittorrent.md)                   |           `qbittorrent`            |        `download_clients_enabled`        |
-| [SABnzbd](sabnzbd.md)                           |             `sabnzbd`              |        `download_clients_enabled`        |
 | [Deluge](deluge.md)                             |              `deluge`              |        `download_clients_enabled`        |
-| [NZBGet](nzbget.md)                             |              `nzbget`              |        `download_clients_enabled`        |
 | [rFlood](../sandbox/apps/rflood.md)             |          `sandbox-rflood`          |             `sandbox_roles`              |
 | [ruTorrent](../sandbox/apps/rutorrent.md)       |        `sandbox-rutorrent`         |             `sandbox_roles`              |
 | [Transmission](../sandbox/apps/transmission.md) |       `sandbox-transmission`       |             `sandbox_roles`              |
 
-### Download Client Accessory
-
-|                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-----------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Autobrr](autobrr.md)                         |             `autobrr`              |    `feederbox_roles` `saltbox_roles`     |
-| [NZBThrottle](nzbthrottle.md)                 |           `nzbthrottle`            |    `feederbox_roles` `saltbox_roles`     |
-| [qBit Manage](../sandbox/apps/qbit_manage.md) |       `sandbox-qbit-manage`        |             `sandbox_roles`              |
-| [Qui](../sandbox/apps/qui.md)                 |           `sandbox-qui`            |             `sandbox_roles`              |
-| [Sabthrottle](../sandbox/apps/sabthrottle.md) |       `sandbox-sabthrottle`        |             `sandbox_roles`              |
-| [tqm](../sandbox/apps/tqm.md)                 |           `sandbox-tqm`            |             `sandbox_roles`              |
-| [ZNC](../sandbox/apps/znc.md)                 |           `sandbox-znc`            |             `sandbox_roles`              |
-
-### Bundle Client
+#### With VPN
 
 |                                                        | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |--------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
@@ -165,36 +104,14 @@ tags:
 | [QBittorrentVPN](../sandbox/apps/qbittorrentvpn.md)    |      `sandbox-qbittorrentvpn`      |             `sandbox_roles`              |
 | [Transmission VPN](../sandbox/apps/transmissionvpn.md) |     `sandbox-transmissionvpn`      |             `sandbox_roles`              |
 
-### Misc
+### Usenet Client
 
-|                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Subliminal](subliminal.md)                    |            `subliminal`            |    `feederbox_roles` `saltbox_roles`     |
-| [AirDC++](../sandbox/apps/airdcpp.md)          |         `sandbox-airdcpp`          |             `sandbox_roles`              |
-| [Deemix](../sandbox/apps/deemix.md)            |          `sandbox-deemix`          |             `sandbox_roles`              |
-| [JDownloader](../sandbox/apps/jdownloader2.md) |       `sandbox-jdownloader2`       |             `sandbox_roles`              |
-| [PyLoad](../sandbox/apps/pyload.md)            |          `sandbox-pyload`          |             `sandbox_roles`              |
-| [Shelfmark](../sandbox/apps/shelfmark.md)      |        `sandbox-shelfmark`         |             `sandbox_roles`              |
-| [YTDL-Sub](../sandbox/apps/ytdl_sub.md)        |         `sandbox-ytdl-sub`         |             `sandbox_roles`              |
+|                                                 | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [SABnzbd](sabnzbd.md)                           |             `sabnzbd`              |        `download_clients_enabled`        |
+| [NZBGet](nzbget.md)                             |              `nzbget`              |        `download_clients_enabled`        |
 
-## :man_mage: Media Management Apps
-
-### Collector
-
-|                                                   | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|---------------------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Sonarr](sonarr.md)                               |              `sonarr`              |    `feederbox_roles` `saltbox_roles`     |
-| [Radarr](radarr.md)                               |              `radarr`              |    `feederbox_roles` `saltbox_roles`     |
-| [Lidarr](lidarr.md)                               |              `lidarr`              |    `feederbox_roles` `saltbox_roles`     |
-| [Bazarr](bazarr.md)                               |              `bazarr`              |    `feederbox_roles` `saltbox_roles`     |
-| [Whisparr](whisparr.md)                           |             `whisparr`             |    `feederbox_roles` `saltbox_roles`     |
-| [Lazylibrarian](../sandbox/apps/lazylibrarian.md) |      `sandbox-lazylibrarian`       |             `sandbox_roles`              |
-| [Medusa](../sandbox/apps/medusa.md)               |          `sandbox-medusa`          |             `sandbox_roles`              |
-| [Mylar](../sandbox/apps/mylar3.md)                |          `sandbox-mylar3`          |             `sandbox_roles`              |
-
-### Collector Accessory
-
-#### Indexer Management
+### Indexer Manager
 
 |                           | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |---------------------------|:----------------------------------:|:----------------------------------------:|
@@ -202,7 +119,80 @@ tags:
 | [NZBHydra2](nzbhydra2.md) |            `nzbhydra2`             |       `download_indexers_enabled`        |
 | [Prowlarr](prowlarr.md)   |             `prowlarr`             |       `download_indexers_enabled`        |
 
+### Download Manager
+
+|                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [AirDC++](../sandbox/apps/airdcpp.md)          |         `sandbox-airdcpp`          |             `sandbox_roles`              |
+| [Deemix](../sandbox/apps/deemix.md)            |          `sandbox-deemix`          |             `sandbox_roles`              |
+| [JDownloader](../sandbox/apps/jdownloader2.md) |       `sandbox-jdownloader2`       |             `sandbox_roles`              |
+| [PyLoad](../sandbox/apps/pyload.md)            |          `sandbox-pyload`          |             `sandbox_roles`              |
+| [YTDL-Sub](../sandbox/apps/ytdl_sub.md)        |         `sandbox-ytdl-sub`         |             `sandbox_roles`              |
+
+### Misc
+
+|                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Autobrr](autobrr.md)                          |             `autobrr`              |    `feederbox_roles` `saltbox_roles`     |
+| [Bazarr](bazarr.md)                            |              `bazarr`              |    `feederbox_roles` `saltbox_roles`     |
+| [Subliminal](subliminal.md)                    |            `subliminal`            |    `feederbox_roles` `saltbox_roles`     |
+| [Shelfmark](../sandbox/apps/shelfmark.md)      |        `sandbox-shelfmark`         |             `sandbox_roles`              |
+
+## :man_mage: Accessories
+
+### For Media Server
+
+#### Integration
+
+|                                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Autoscan](autoscan.md)                                     |             `autoscan`             |     `mediabox_roles` `saltbox_roles`     |
+| [A-Train](../sandbox/apps/a_train.md)                       |         `sandbox-a-train`          |             `sandbox_roles`              |
+| [Kometa](../sandbox/apps/kometa.md)                         |          `sandbox-kometa`          |             `sandbox_roles`              |
+| [PlexTraktSync](../sandbox/apps/plextraktsync.md)           |      `sandbox-plextraktsync`       |             `sandbox_roles`              |
+| [WatchState](../sandbox/apps/watchstate.md)                 |        `sandbox-watchstate`        |             `sandbox_roles`              |
+
+#### Monitoring
+
+|                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Tautulli](tautulli.md)                        |             `tautulli`             |     `mediabox_roles` `saltbox_roles`     |
+| [Jellystat](../sandbox/apps/jellystat.md)      |        `sandbox-jellystat`         |             `sandbox_roles`              |
+| [Varken](../sandbox/apps/varken.md)            |          `sandbox-varken`          |             `sandbox_roles`              |
+| [Wrapperr](../sandbox/apps/wrapperr.md)        |         `sandbox-wrapperr`         |             `sandbox_roles`              |
+| [YourSpotify](../sandbox/apps/your_spotify.md) |       `sandbox-your-spotify`       |             `sandbox_roles`              |
+
+#### Request
+
+|                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|---------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [Overseerr](overseerr.md)                   |            `overseerr`             |     `mediabox_roles` `saltbox_roles`     |
+| [Petio](petio.md)                           |              `petio`               |     `mediabox_roles` `saltbox_roles`     |
+| [Seerr](seerr.md)                           |              `seerr`               |     `mediabox_roles` `saltbox_roles`     |
+| [Jellyseerr](../sandbox/apps/jellyseerr.md) |        `sandbox-jellyseerr`        |             `sandbox_roles`              |
+| [Ombi](../sandbox/apps/ombi.md)             |           `sandbox-ombi`           |             `sandbox_roles`              |
+
+#### Chat Bot
+
+|                                           | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [DiscoFlix](../sandbox/apps/discoflix.md) |        `sandbox-discoflix`         |             `sandbox_roles`              |
+| [Doplarr](../sandbox/apps/doplarr.md)     |         `sandbox-doplarr`          |             `sandbox_roles`              |
+| [Membarr](../sandbox/apps/membarr.md)     |         `sandbox-membarr`          |             `sandbox_roles`              |
+| [Requestrr](../sandbox/apps/requestrr.md) |        `sandbox-requestrr`         |             `sandbox_roles`              |
+| [Tauticord](../sandbox/apps/tauticord.md) |        `sandbox-tauticord`         |             `sandbox_roles`              |
+
 #### Misc
+
+|                                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|---------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [ASSHAMA](asshama.md)                                         |             `asshama`              |     `mediabox_roles` `saltbox_roles`     |
+| [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) |   `sandbox-plex-auto-languages`    |             `sandbox_roles`              |
+| [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |     `sandbox-plex-dupefinder`      |             `sandbox_roles`              |
+| [PlexShare](../sandbox/apps/plexshare.md)                     |        `sandbox-plexshare`         |             `sandbox_roles`              |
+| [Wizarr](../sandbox/apps/wizarr.md)                           |          `sandbox-wizarr`          |             `sandbox_roles`              |
+
+### For Collection Manager
 
 |                                                 | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-------------------------------------------------|:----------------------------------:|:----------------------------------------:|
@@ -212,6 +202,17 @@ tags:
 | [Nabarr](../sandbox/apps/nabarr.md)             |          `sandbox-nabarr`          |             `sandbox_roles`              |
 | [Profilarr](../sandbox/apps/profilarr.md)       |        `sandbox-profilarr`         |             `sandbox_roles`              |
 | [Recyclarr](../sandbox/apps/recyclarr.md)       |        `sandbox-recyclarr`         |             `sandbox_roles`              |
+
+### For Download Client
+
+|                                               | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-----------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [NZBThrottle](nzbthrottle.md)                 |           `nzbthrottle`            |    `feederbox_roles` `saltbox_roles`     |
+| [qBit Manage](../sandbox/apps/qbit_manage.md) |       `sandbox-qbit-manage`        |             `sandbox_roles`              |
+| [Qui](../sandbox/apps/qui.md)                 |           `sandbox-qui`            |             `sandbox_roles`              |
+| [Sabthrottle](../sandbox/apps/sabthrottle.md) |       `sandbox-sabthrottle`        |             `sandbox_roles`              |
+| [tqm](../sandbox/apps/tqm.md)                 |           `sandbox-tqm`            |             `sandbox_roles`              |
+| [ZNC](../sandbox/apps/znc.md)                 |           `sandbox-znc`            |             `sandbox_roles`              |
 
 ### File Processing
 

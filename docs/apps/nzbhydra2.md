@@ -55,7 +55,7 @@ saltbox_automation:
 
     <div>
 
-    [**Explore alternatives**:material-shuffle-variant:](index.md#indexer-management){ .md-button }
+    [**Explore alternatives**:material-shuffle-variant:](index.md#indexer-manager){ .md-button }
 
     [**Skip to qBittorrent**:material-fast-forward:](qbittorrent.md){ .md-button }
 

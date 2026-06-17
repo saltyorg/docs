@@ -25,7 +25,7 @@ saltbox_automation:
       a request management and media discovery tool built to work with your existing Plex/Jellyseerr ecosystem.
     link: https://seerr.dev
     categories:
-      - Content Delivery Apps > Media Server Accessory > Request
+      - Accessories > For Media Server > Request
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

@@ -282,6 +282,7 @@ nav:
           - apps/redis.md
           - apps/scrutiny.md
           - apps/subliminal.md
+          - apps/timescaledb.md
           - apps/traefik.md
           - apps/transfer.md
           - apps/unpackerr.md
@@ -305,6 +306,7 @@ nav:
           - sandbox/apps/changedetection.md
           - sandbox/apps/cherry.md
           - sandbox/apps/chrome.md
+          - sandbox/apps/cleanuparr.md
           - sandbox/apps/cockpit.md
           - sandbox/apps/code_server.md
           - sandbox/apps/codex.md
@@ -353,11 +355,13 @@ nav:
           - sandbox/apps/jellyseerr.md
           - sandbox/apps/jellystat.md
           - sandbox/apps/joplin.md
+          - sandbox/apps/kapowarr.md
           - sandbox/apps/karakeep.md
           - sandbox/apps/kavita.md
           - sandbox/apps/kcptun_client.md
           - sandbox/apps/kcptun_server.md
           - sandbox/apps/koel.md
+          - sandbox/apps/koito.md
           - sandbox/apps/kometa.md
           - sandbox/apps/komga.md
           - sandbox/apps/krusader.md
@@ -371,6 +375,7 @@ nav:
           - sandbox/apps/medusa.md
           - sandbox/apps/meilisearch.md
           - sandbox/apps/membarr.md
+          - sandbox/apps/metube.md
           - sandbox/apps/minecraft.md
           - sandbox/apps/minecraft_bedrock.md
           - sandbox/apps/miniflux.md
@@ -413,10 +418,13 @@ nav:
           - sandbox/apps/sabthrottle.md
           - sandbox/apps/semaphoreui.md
           - sandbox/apps/shelfmark.md
+          - sandbox/apps/slskd.md
           - sandbox/apps/speedtest.md
           - sandbox/apps/sqlitebrowser.md
           - sandbox/apps/sshwifty.md
           - sandbox/apps/stash.md
+          - sandbox/apps/sure.md
+          - sandbox/apps/suwayomi.md
           - sandbox/apps/syncthing.md
           - sandbox/apps/tandoor.md
           - sandbox/apps/tauticord.md
@@ -428,6 +436,7 @@ nav:
           - sandbox/apps/threadfin.md
           - sandbox/apps/tika.md
           - sandbox/apps/tqm.md
+          - sandbox/apps/traccar.md
           - sandbox/apps/traefik_robotstxt.md
           - sandbox/apps/transmission.md
           - sandbox/apps/transmissionvpn.md

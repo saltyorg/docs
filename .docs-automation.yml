@@ -32,6 +32,7 @@ blacklist:
   docs_coverage:
     saltbox:
       - "authentik_worker"
+      - "autoplow"  # alpha (0.0.x), gated behind acceptance prompt, no upstream description yet
       - "cloudflare"
       - "cloudplow_disable"
       - "hetzner"
@@ -46,6 +47,7 @@ blacklist:
     sandbox:
       - "homarr_legacy"
       - "sanity_check"
+      - "sure_worker"  # non-user-facing worker for the sure role
       # Deprecated roles
       - "booklore"  # deprecated
       - "unifi"  # deprecated

@@ -168,6 +168,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sabnzbd_name: sabnzbd
         ```
 
+=== "Settings"
+
+    ??? variable string "`sabnzbd_role_inet_exposure`"
+
+        ```yaml
+        # Type: string
+        sabnzbd_role_inet_exposure: "{{ '4'
+                                     if (lookup('role_var', '_traefik_sso_middleware', role='sabnzbd') | length > 0)
+                                     else '0' }}"
+        ```
+
 === "Web"
 
     ??? variable string "`sabnzbd_role_web_subdomain`"
@@ -295,6 +306,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - { option: "host_whitelist", value: "{{ lookup('role_var', '_web_subdomain', role='sabnzbd') }}.{{ lookup('role_var', '_web_domain', role='sabnzbd') }}, {{ sabnzbd_name }}" }
           - { option: "url_base", value: "" }
           - { option: "log_dir", value: "/config/logs" }
+          - { option: "inet_exposure", value: "{{ lookup('role_var', '_inet_exposure', role='sabnzbd') }}" }
         ```
 
     ??? variable string "`sabnzbd_role_config_settings_default`"

@@ -281,6 +281,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         portainer_role_docker_envs_default:
           TZ: "{{ tz }}"
+          PORTAINER_SETUP_TOKEN: "{{ portainer_init_setup_token
+                                  if (not portainer_config_stat.stat.exists)
+                                  else omit }}"
         ```
 
     ??? variable dict "`portainer_role_docker_envs_custom`"

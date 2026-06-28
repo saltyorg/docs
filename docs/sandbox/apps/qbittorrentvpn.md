@@ -49,56 +49,104 @@ saltbox_automation:
 
 ## Configuration
 
-???+warning "Outdated guide"
+Configuration for this role is set through the Saltbox inventory.
 
-    The configuration instructions no longer apply, but are kept for reference pending an update by a user of this role.
+See: https://docs.saltbox.dev/saltbox/inventory/
 
-=== "PIA VPN"
+Edit the inventory:
 
-    In `/opt/sandbox/settings.yml`, adjust the following:
+```shell
+sb edit inventory
+```
 
-    ```
-    qbittorrentvpn:
-      vpn_pass: your_vpn_password
-      vpn_prov: pia
-      vpn_user: your_vpn_username
-      vpn_client: wireguard
-    ```
+### PIA VPN
 
-    As described in the github readme linked above, then run the role.
+Add or update the following variables:
 
-=== "Proton VPN (Wireguard)"
+```yaml
+qbittorrentvpn_role_vpn_prov: "pia"
+qbittorrentvpn_role_vpn_client: "wireguard"
+qbittorrentvpn_role_vpn_user: "your_vpn_username"
+qbittorrentvpn_role_vpn_pass: "your_vpn_password"
+```
 
-    Step 01 - Please login in to [ProtonVPN-Account](https://account.protonvpn.com/account)
-    Step 02 - Under "OpenVPN / IKEv2 username" section —> Copy this OpenVPN / IKEv2 username [Yeah, somehow this username is required for Wireguard]
-    Step 03 - Go to [ProtonVPN-Downloads](https://account.protonvpn.com/downloads)
-    Step 04 - Scroll down to "WireGuard configuration" - Please fill/select your desired settings for the configuration.
-    Step 05 - Under "3. Select VPN options" —> Turn on "NAT-PMP (Port Forwarding)" —> Now download the config file and rename it to `wg0.conf`
+Then deploy the role.
 
-    Now, In `/opt/sandbox/settings.yml`, adjust the following:
+The WireGuard configuration is generated in:
 
-    ```
-    qbittorrentvpn:
-      vpn_pass: "protonvpn-account-password"
-      vpn_prov: "protonvpn"
-      vpn_user: "<OpenVPN / IKEv2 username>+pmp" #which we've copied from Step 02
-      vpn_client: "wireguard"
-    ```
-    Example for reference
-    ```
-    qbittorrentvpn:
-      vpn_pass: "xdfasdicmb"
-      vpn_prov: "protonvpn"
-      vpn_user: "zuqWGtyy7SMGQM8C+pmp"
-      vpn_client: "wireguard"
-    ```
-    As described in the github readme linked above, then run the role.
+```shell
+/opt/qbittorrentvpn/wireguard/wg0.conf
+```
 
-    While the above command runs, go to this directory `/opt/qbittorrentvpn/wireguard` (Use FTP file manager like WinSCP)
-    if you don't see this directory wait for few seconds, while the previous command creates this.
+For PIA WireGuard users, the generated `wg0.conf` file persists across normal Saltbox redeploys and updates unless the appdata directory or the `wg0.conf` file is removed.
 
-    Now copy & paste your `wg0.conf' file (Refer Step 05) in this directory & Wait for the command line to complete.
-    If everything went well, you should see `Playbook /opt/sandbox/sandbox.yml executed successfully.`
+To check or change the selected endpoint, inspect or edit the `Endpoint =` line in `wg0.conf`, then restart the container.
+
+Example:
+
+```ini
+Endpoint = france.pvt.site:1337
+```
+
+PIA changes its available endpoints and port-forwarding support over time. To see the current list of available PIA WireGuard endpoints, check the container logs after startup:
+
+```shell
+docker logs qbittorrentvpn | grep ".pvt.site"
+```
+
+Choose a listed endpoint that supports port forwarding, then set it in `wg0.conf`.
+
+### Proton VPN WireGuard
+
+Step 01 - Log in to [Proton VPN Account](https://account.protonvpn.com/account)
+
+Step 02 - Under the "OpenVPN / IKEv2 username" section, copy the OpenVPN / IKEv2 username. This username is also used for WireGuard.
+
+Step 03 - Go to [Proton VPN Downloads](https://account.protonvpn.com/downloads)
+
+Step 04 - Scroll down to "WireGuard configuration" and select your desired configuration options.
+
+Step 05 - Under "3. Select VPN options", enable "NAT-PMP (Port Forwarding)", then download the configuration file and rename it to `wg0.conf`.
+
+Edit the Saltbox inventory:
+
+```shell
+sb edit inventory
+```
+
+Add or update the following variables:
+
+```yaml
+qbittorrentvpn_role_vpn_prov: "protonvpn"
+qbittorrentvpn_role_vpn_client: "wireguard"
+qbittorrentvpn_role_vpn_user: "<OpenVPN / IKEv2 username>+pmp"
+qbittorrentvpn_role_vpn_pass: "protonvpn-account-password"
+```
+
+Example:
+
+```yaml
+qbittorrentvpn_role_vpn_prov: "protonvpn"
+qbittorrentvpn_role_vpn_client: "wireguard"
+qbittorrentvpn_role_vpn_user: "zuqWGtyy7SMGQM8C+pmp"
+qbittorrentvpn_role_vpn_pass: "xdfasdicmb"
+```
+
+Deploy the role.
+
+While the role is running, copy your downloaded `wg0.conf` file to:
+
+```shell
+/opt/qbittorrentvpn/wireguard/wg0.conf
+```
+
+If the directory does not exist yet, wait a few seconds for the role to create it.
+
+If everything completes successfully, you should see:
+
+```text
+Playbook /opt/sandbox/sandbox.yml executed successfully.
+```
 
 ## Deployment
 
@@ -108,7 +156,7 @@ sb install sandbox-qbittorrentvpn
 
 ## Usage
 
-Visit <https://qbittorrentvpn.iYOUR_DOMAIN_NAMEi>.
+Visit <https://qbittorrentvpn.YOUR_DOMAIN_NAME>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

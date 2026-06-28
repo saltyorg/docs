@@ -26,7 +26,7 @@ There are, broadly, 4 prerequisites to installing Saltbox:
 
 - [A Server](#server)
 - [A Domain Name](#domain)
-- [Cloud Storage (optional)](#cloud-storage)
+- [Remote Storage (optional)](#remote-storage)
 - [A Plex Account (optional)](#plex-account)
 - [Usenet or Bittorrent sources](#usenet-or-bittorrent-sources)
 
@@ -76,13 +76,18 @@ Ports are (for the most part) bound only to the internal `saltbox` docker networ
 
 If you use Cloudflare for DNS (which is free and doesn't require that you register your domain through Cloudflare), the Saltbox setup can make the required DNS settings for you. If you aren't using Cloudflare, you will have to set this up at your DNS provider yourself. See [here](../../reference/domain.md) for more information about setting up a domain and DNS settings for use with Saltbox.
 
-## Cloud Storage
+## Remote Storage
 
-The default assumption in Saltbox is that you are storing your media on cloud storage. Saltbox can be set up to use any cloud storage provider that [Rclone](https://rclone.org/) supports. Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) has historically been the preferred choice among users, but with recent changes to the Google offering [Dropbox](https://www.dropbox.com/) was a primary choice for a while, but they have followed Google's lead in tightening restrictions. Both work well as long as you stay within their restrictions, but the days of storing thousands of media files on cloud storage for pennies are past.
+???- tip "Remote storage is optional; Saltbox can also be run entirely with locally hosted media."
 
-Some of the components are designed expressly for Google Drive, like the A-Train Google Drive monitoring in autoscan and the service-account rotation in cloudplow. Recent Google changes have also rendered service accounts of little value with regard to increasing data transfer volume.
+    With no remotes configured or with [Cloudplow](../../apps/cloudplow.md) disabled, media remains in `/mnt/local` where it is accessible to the apps through `/mnt/unionfs`.
 
-THAT SAID, cloud storage is not a requirement; you can run saltbox without it, storing your media locally in a variety of ways.
+The default assumption in Saltbox is that you are hosting your media on remote storage. Saltbox can be set up to use any storage system that [Rclone](https://rclone.org/) supports.
+
+Google Drive via [G-Suite Business](https://gsuite.google.com/pricing.html) has historically been the preferred choice among users (1). However, with recent changes to the Google offering, many users have flocked to other cloud providers or to self-hosted alternatives such as a storage box or a NAS device.
+{ .annotate }
+
+1.  Some components are designed expressly for Google Drive, like the A-Train Google Drive monitoring in autoscan and the service-account rotation in cloudplow. Recent Google changes have also rendered service accounts of little value with regard to increasing data transfer volume.
 
 See [here](../../reference/cloud.md) for more details about Cloud Storage requirements and running Saltbox without it.
 

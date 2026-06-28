@@ -39,15 +39,13 @@ tags:
 
 - Built-in config-driven method to deploy multiple instances of many apps [multiple radarr, sonarr, plex, etc.]
 
-### Cloud Storage
+### Remote Storage
 
-- Store media on cloud storage to save on local drive space.
-
-- As cloud storage providers reduce available space in their offerings, this aspect is getting less important.
+- Store media in the cloud such as Google Drive, on a NAS, and more...
 
 ### Can Choose Your Preferred Media Server Application
 
-- You can decide whether to use Plex, Emby or Jellyfin.
+- You can decide whether to use Plex, Emby, or Jellyfin.
 
 ### Custom Server Deployment
 
@@ -82,13 +80,13 @@ The original seeding torrents will remain in the download directory (they never 
 
 In the default config, this scan occurs **ten minutes**[^4] after Radarr/Sonarr sent the notification.
 
-[Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually move everything from `/mnt/local/Media/` to a folder named `Media` on the remote cloud storage,[^5] [^6] thereby reducing storage used on the (local) server.
+[Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually move everything from `/mnt/local/Media/` to a folder named `Media` on the remote storage,[^5] [^6] thereby reducing storage used on the (local) server.
 
-During this migration, the media files will continue to be accessible to media servers (e.g. Plex) because the remote cloud storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the cloud storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
+During this migration, the media files will continue to be accessible to media servers (e.g. Plex) because the remote storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the remote storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
 
 ```mermaid
 flowchart TB
-    Cloud@{ shape: cloud, label: "Cloud Storage"}
+    Cloud@{ shape: cloud, label: "Remote Storage"}
     Cloudplow@{ shape: trapezoid-top, label: "Cloudplow"}
     LocalMedia@{ shape: disk, label: "/mnt/local/Media"}
     RemoteMedia@{ shape: disk, label: "/mnt/remote/*/Media"}

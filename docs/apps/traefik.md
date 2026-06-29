@@ -766,7 +766,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         traefik_role_docker_commands_crowdsec:
           - "--experimental.plugins.bouncer.modulename=github.com/maxlerebourg/crowdsec-bouncer-traefik-plugin"
-          - "--experimental.plugins.bouncer.version=v1.5.1"
+          - "--experimental.plugins.bouncer.version=v1.6.0"
         ```
 
     ??? variable list "`traefik_role_docker_commands_custom`"

@@ -57,7 +57,7 @@ Visit <https://stash.iYOUR_DOMAIN_NAMEi>.
 
 ## Troubleshooting
 
-!!! question "Public access errors appear on later visits following a clean install"
+??? question "Public access errors appear on later visits following a clean install"
 
     Stash only creates its config file after the initial setup wizard is completed. Re-run `sb install sandbox-stash` to apply the config edits that disable these warnings.
 

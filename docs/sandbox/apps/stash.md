@@ -55,9 +55,11 @@ sb install sandbox-stash
 
 Visit <https://stash.iYOUR_DOMAIN_NAMEi>.
 
-## Configuration
+## Troubleshooting
 
-On a clean installation, Stash only creates its config file when the user has gone through the setup wizard. If you receive errors on future visits to Stash regarding public access, re-run `sb install sandbox-stash` to apply the appropriate config edits to disable these warnings.
+!!! question "Public access errors appear on later visits following a clean install"
+
+    Stash only creates its config file after the initial setup wizard is completed. Re-run `sb install sandbox-stash` to apply the config edits that disable these warnings.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

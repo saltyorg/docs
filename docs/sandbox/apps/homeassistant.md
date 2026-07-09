@@ -56,8 +56,6 @@ sb install sandbox-homeassistant
 
 Visit <https://homeassistant.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Home Assistant is pretty versatile and works with a lot of different apps/containers, some of which we have roles for. See [MQTT](mqtt.md) for using Mosquitto to communicate with local and remote devices. We also have [Node Red](node_red.md), which is a platform for multiple types of automations.
 
 ??? Note "Nabu Casa"

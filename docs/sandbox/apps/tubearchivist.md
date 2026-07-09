@@ -56,8 +56,6 @@ sb install sandbox-tubearchivist
 
 Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml
@@ -65,8 +63,9 @@ Visit <https://tubearchivist.iYOUR_DOMAIN_NAMEi>.
   Password: your_normal_password
   ```
 
-!!!note
-   Tubearchivist adds the downloaded media to `/mnt/unionfs/downloads/tubearchivist/YT_CHANNEL_NAME`
+!!! info
+
+    Tubearchivist adds the downloaded media to `/mnt/unionfs/downloads/tubearchivist/YT_CHANNEL_NAME`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

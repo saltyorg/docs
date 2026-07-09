@@ -55,10 +55,6 @@ sb install sandbox-speedtest
 
 Visit <https://speedtest.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
-To use a custom subdomain, add a custom value for `speedtest_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
-
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

@@ -55,17 +55,6 @@ sb install sandbox-tdarr
 
 Visit <https://tdarr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
-Tdarr is configured with the following defaults which can be modified via the inventory system.
-
-```yaml
-tdarr_server_port: "8266"
-tdarr_server_external: false
-```
-
-By switching `tdarr_server_external` to `true` the Tdarr server will be accessible externally via the specified `tdarr_server_port` on any hostname or IP address pointing directly to the server.
-
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

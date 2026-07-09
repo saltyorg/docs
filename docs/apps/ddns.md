@@ -46,28 +46,27 @@ DDNS is a Saltbox-specific Dynamic DNS service that automatically manages DNS re
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-### Configuration
+???+ info
 
-#### Prerequisites
+    - This service only works with Cloudflare DNS
+    - The container requires access to Traefik's API to discover routes
+    - DNS records are automatically managed based on active Traefik routes
+
+## Preconfiguration
+
+### Prerequisites
 
 - Cloudflare must be enabled in your Saltbox configuration
 - IPv4 or IPv6 DNS management must be enabled in `adv_settings.yml`
 - Valid Cloudflare API credentials must be configured in `accounts.yml`
 
-
-#### Custom URLs
+### Custom URLs
 
 You can manage additional custom URLs by setting the `ddns_custom_urls` variable in your [Saltbox inventory](../saltbox/inventory/index.md):
 
 ```yaml
 ddns_custom_urls: "subdomain1.domain.com,subdomain2.domain.com"
 ```
-
-#### Notes
-
-- This service only works with Cloudflare DNS
-- The container requires access to Traefik's API to discover routes
-- DNS records are automatically managed based on active Traefik routes
 
 ## Deployment
 

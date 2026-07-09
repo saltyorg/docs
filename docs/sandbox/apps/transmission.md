@@ -55,8 +55,6 @@ sb install sandbox-transmission
 
 Visit <https://transmission.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Suggested desktop client is [Transmission Remote GUI](https://github.com/transmission-remote-gui/transgui). It is to be set up with ssl enabled on port 443
 
 - `/watch` is hard-coded in the software and not editable from the settings.json, see related issue. To get around this the folder is mounted to `/mnt/local/downloads/torrents/transmission{{ rolename }}/watch`

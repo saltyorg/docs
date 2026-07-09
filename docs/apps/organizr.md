@@ -54,8 +54,6 @@ sb install organizr
 
 Visit <https://organizr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Initial Setup
 
 1. The first time you go to the Organizr page, you will be presented with `Install Type`, `Admin Info`, `Security`, `Database` and `Verify` sections.

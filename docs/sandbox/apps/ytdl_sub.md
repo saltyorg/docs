@@ -46,6 +46,13 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+# Configuration
+
+The role supports two image types configurable via inventory:
+
+- **GUI Mode** (`ytdl_sub_image_type: "gui"`): Web-based VS Code interface for full management
+- **Headless Mode** (`ytdl_sub_image_type: "headless"`): Command-line focused, lightweight deployment (default)
+
 ## Deployment
 
 ```shell
@@ -55,13 +62,6 @@ sb install sandbox-ytdl-sub
 ## Usage
 
 Visit <https://ytdl-sub.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
-
-The role supports two image types configurable via inventory:
-
-- **GUI Mode** (`ytdl_sub_image_type: "gui"`): Web-based VS Code interface for full management
-- **Headless Mode** (`ytdl_sub_image_type: "headless"`): Command-line focused, lightweight deployment (default)
 
 Configure your subscriptions using YAML files in the config directory.
 

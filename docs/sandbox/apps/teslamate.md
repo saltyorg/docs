@@ -55,15 +55,9 @@ sb install sandbox-teslamate
 
 Visit <https://teslamate.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
-- [:octicons-link-16: Documentation: Teslamate Docs](https://docs.teslamate.org/docs/installation/docker){: .header-icons }
-
-To use a custom subdomain, add a custom value for `teslamate_web_subdomain` in the `/srv/git/saltbox/inventories/host_vars/localhost.yml` file. More info can be found [here](../../saltbox/inventory/index.md).
-
 ### Grafana Setup
 
-Once installation is finished, you will need to add the teslamate data source in grafana under connections.
+You will need to add the teslamate data source in grafana under connections.
 
 Host URL: This is based upon the `{{ teslamate_name }}-postgres` variable. Default is `teslamate-postgres:5432`
 Table: `teslamate`

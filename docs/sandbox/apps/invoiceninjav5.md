@@ -46,16 +46,19 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Deployment
+## Preconfiguration
 
 Ideally you should set a unique app key in settings.yml.
+
 Generate the key using:
 
 ```shell
 docker run --rm -it invoiceninja/invoiceninja php artisan key:generate --show
 ```
 
-insert this in the invoiceninja.app_key setting in `/opt/sandbox/settings.yml`
+In your inventory, assign `invoiceninjav5_role_app_key` to the generated key.
+
+## Deployment
 
 ```shell
 sb install sandbox-invoiceninja

@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ warning "Migration Required for Existing Users"
+??? warning "Migration Required for Existing Users"
 
     As of _role-refactor_, this role has been updated to use its own dedicated PostgreSQL database container instead of the shared `postgres` container. Once upgraded to role-refactor, existing users must follow the migration steps below to preserve their data.
 
@@ -93,8 +93,6 @@ sb install sandbox-tandoor
 ## Usage
 
 Visit <https://tandoor.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 ### Adding An Admin User
 

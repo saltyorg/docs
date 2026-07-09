@@ -57,8 +57,6 @@ sb install sandbox-varken
 
 Visit <https://grafana.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 1. Run the Saltbox varken role to install varken/influxdb/telegraf/grafana:
 
     ```shell

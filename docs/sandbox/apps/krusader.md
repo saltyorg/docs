@@ -56,8 +56,6 @@ sb install sandbox-krusader
 Visit <https://krusader.iYOUR_DOMAIN_NAMEi>.
 - Now you can click on vnc.html or vnc_lite.html
 
-## Basics
-
 - The configured password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 - /mnt is already mounted to /mnt
 

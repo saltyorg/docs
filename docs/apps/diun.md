@@ -49,7 +49,7 @@ saltbox_automation:
 sb install diun
 ```
 
-## Basics
+## Usage
 
 The config file for diun is located at `/opt/diun/diun.yml`
 

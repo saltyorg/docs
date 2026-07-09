@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: outdated
 hide:
   - tags
 tags:
@@ -45,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Edit the Recyclarr section in Sandbox `settings.yml` and enter your desired update schedule using standard cron syntax.
 

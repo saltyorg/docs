@@ -56,8 +56,6 @@ sb install cadvisor
 
 Visit <https://cadvisor.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 cAdvisor automatically monitors all Docker containers on your system. No additional configuration is required. The web interface provides resource usage, performance metrics, and container information.
 
 cAdvisor is often used with Prometheus and Grafana for advanced metrics collection and visualization.

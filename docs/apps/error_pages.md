@@ -46,22 +46,21 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Installation
+???+ info
 
-Enable in `adv_settings.yml`:
+    - Error pages stored in `/opt/error-pages/`
+    - Pre-generated at install time from selected template
+    - Applied globally via Traefik middleware
+    - Manual edits overwritten on rebuild
+
+## Preconfiguration
+
+Opt in via `adv_settings.yml` toggle:
 
 ```yaml
 traefik:
   error_pages: yes
 ```
-
-Then install/update Traefik:
-
-```shell
-sb install traefik
-```
-
-## Configuration
 
 ### Change Template
 
@@ -73,12 +72,6 @@ error_pages_role_template: "ghost"
 
 Available templates: `l7` (default), `ghost`, `noise`, `hacker-terminal`, `shuffle`, `lost-in-space`, `app-down`, `connection`, and [more](https://github.com/tarampampam/error-pages).
 
-Rebuild after changing:
-
-```shell
-sb install traefik
-```
-
 ### Disable for Specific Apps
 
 Disable error pages for specific apps in your [inventory](../saltbox/inventory/index.md):
@@ -87,12 +80,11 @@ Disable error pages for specific apps in your [inventory](../saltbox/inventory/i
 plex_role_traefik_error_pages_enabled: false
 ```
 
-## Notes
+## Deployment
 
-- Error pages stored in `/opt/error-pages/`
-- Pre-generated at install time from selected template
-- Applied globally via Traefik middleware
-- Manual edits overwritten on rebuild
+```shell
+sb install traefik
+```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

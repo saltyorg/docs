@@ -75,8 +75,6 @@ sb install nzbhydra2
 
 Visit <https://nzbhydra2.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 !!! tip "Three ways to setup NZB indexers with Sonarr/Radarr/Lidarr"
 
     - Skip this page and add all your NZB Indexers directly into Sonarr/Radarr/Lidarr. Benefit from the seeing indexer sources during manual lookups in Sonarr/Radarr/Lidarr. This method is also useful when diagnosing issues with indexers during failed searches;

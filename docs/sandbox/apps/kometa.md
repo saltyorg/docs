@@ -48,9 +48,15 @@ saltbox_automation:
 !!! info
     Kometa is the replacement for Plex Meta Manager. A simple migration for your appdata is available by running `sb install sandbox-pmm-kometa-migration`.
 
-## Configuration
+## Preconfiguration
 
 To configure the time that Kometa should run, you may override the `kometa_time` variable via the [inventory system](../../saltbox/inventory/index.md). The default is `"03:00"` or 3:00 AM in the server's time zone.
+
+You will need to create a config file prior to running the tag:
+
+`/opt/kometa/config.yml`
+
+There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wiki/en/latest/kometa/install/docker/) that you can use to learn how to create this file. Once you've created it, move the file into `/opt/kometa/` and then run the tag.
 
 ## Deployment
 
@@ -63,14 +69,6 @@ sb install sandbox-kometa
 ```shell
 docker exec kometa python kometa.py
 ```
-
-## Basics
-
-You will need to create a config file prior to running the tag:
-
-`/opt/kometa/config.yml`
-
-There is a Docker-based walkthrough on the Kometa wiki [here](https://kometa.wiki/en/latest/kometa/install/docker/) that you can use to learn how to create this file. Once you've created it, move the file into `/opt/kometa/` and then run the tag.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

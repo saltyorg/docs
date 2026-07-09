@@ -43,12 +43,6 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
-
-See [Adding a Subdomain](../reference/subdomain.md) on how to add the subdomain `emby` to your DNS provider.
-
-_Note: You can skip this step if you are using [Cloudflare](../reference/domain.md#__tabbed_1_3) with Saltbox._
-
 ## Deployment
 
 ```shell
@@ -58,8 +52,6 @@ sb install emby
 ## Usage
 
 Visit <https://emby.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 ### Initial Setup
 

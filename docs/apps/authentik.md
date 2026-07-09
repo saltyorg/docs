@@ -44,7 +44,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 !!! info
 
@@ -121,8 +121,6 @@ sb install authentik
 ## Usage
 
 Visit <https://auth.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 ### IDP/OIDC Configuration
 

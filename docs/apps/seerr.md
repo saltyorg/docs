@@ -70,7 +70,7 @@ saltbox_automation:
 
     </div>
 
-???+ warning "Migration notice for Overseerr and Jellyseerr users"
+??? warning "Migration notice for Overseerr and Jellyseerr users"
 
     Overseerr/Jellyseerr data must be present in Seerr's directory for its backend to perform automatic migration.
 

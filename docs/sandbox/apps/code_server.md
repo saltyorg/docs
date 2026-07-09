@@ -1,6 +1,7 @@
 ---
 icon: material/docker
 title: code-server
+status: outdated
 hide:
   - tags
 tags:

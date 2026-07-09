@@ -55,8 +55,6 @@ sb install sandbox-komga
 
 Visit <https://komga.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - On first opening you will be asked to create a user account. <br />
   Choose an email and password, then click on Create User Account.
 

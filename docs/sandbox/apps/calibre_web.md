@@ -59,8 +59,6 @@ sb install sandbox-calibre-web
 
 Visit <https://calibre-web.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default admin login:
 
   ```yaml

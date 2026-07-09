@@ -53,8 +53,6 @@ sb install sonarr
 
 Visit <https://sonarr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Settings
 
 Click on "Settings" in the sidebar. Click "Show Advanced" at the top of the Settings pane.

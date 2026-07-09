@@ -56,10 +56,6 @@ sb install sandbox-qui
 
 Visit <https://qui.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
-- Configure your qBittorrent instance connections through the web interface.
-
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override scope"><input type="checkbox" name="scope" hidden/></label>

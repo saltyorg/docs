@@ -56,8 +56,6 @@ sb install sandbox-photoprism
 
 Visit <https://photoprism.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

@@ -55,8 +55,6 @@ sb install sandbox-grocy
 
 Visit <https://grocy.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Default login is admin/admin. Configure authentication and users through the application settings.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

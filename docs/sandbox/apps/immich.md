@@ -56,12 +56,12 @@ sb install sandbox-immich
 
 Visit <https://immich.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 !!! info
+
     📢 Again, no default user is configured until you run through the setup screen, so you would ideally run through setup as soon as immich is deployed to secure the site. It is not behind authelia by default.
 
-???tip
+??? tip
+
     In Administration > Settings is a button to copy the current admin configuration to your clipboard. So you can just grab it from there, and paste it into a file.
 
 If you would like to have the config file available, create a new config file (e.g. immich.config, and the config format is `.json`) and map it in inventory; just keep in mind that this disallows you from configuring Immich admin settings from the web ui.

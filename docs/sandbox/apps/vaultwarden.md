@@ -56,8 +56,6 @@ sb install sandbox-vaultwarden
 
 Visit <https://vaultwarden.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
   1. Visit the vaultwarden site at <https://vaultwarden.iYOUR_DOMAIN_NAMEi>
 
   2. Sign up with any email address and password.

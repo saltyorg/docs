@@ -48,7 +48,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ warning "Migration notice for Booklore users"
+??? warning "Migration notice for Booklore users"
 
     1. Remove the existing container and rename the existing directory.
 
@@ -65,7 +65,7 @@ saltbox_automation:
 
     1.  [Deploy Grimmory :material-arrow-down-bold:](#deployment)
 
-## Configuration
+## Preconfiguration
 
 The [Bookdrop](https://grimmory.org/docs/bookdrop) location is managed by the role and defaults to `/mnt/unionfs/downloads/bookdrop` (based on your [downloads root](../../reference/accounts.md#__tabbed_2_2)), where other apps have access to place downloads in.
 

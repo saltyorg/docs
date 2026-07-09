@@ -57,8 +57,6 @@ sb install overseerr
 
 Visit <https://overseerr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Settings
 
 This setup needs to take place **AFTER** you've set up Plex, Radarr, and Sonarr, since it involves connections to all three of those.

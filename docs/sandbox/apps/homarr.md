@@ -55,8 +55,6 @@ sb install sandbox-homarr
 
 Visit <https://homarr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

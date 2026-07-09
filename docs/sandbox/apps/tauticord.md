@@ -1,5 +1,6 @@
 ---
 icon: material/docker
+status: outdated
 hide:
   - tags
 tags:
@@ -50,12 +51,6 @@ saltbox_automation:
 ```shell
 sb install sandbox-tauticord
 ```
-
-## Basics
-
-Rename `/opt/tauticord/config/config.yml.example` to `/opt/tauticord/config/config.yml` and fill out your configuration details.
-
-See the [Tauticord documentation](https://github.com/nwithan8/tauticord#installation-and-setup) for more information on each setting.
 
 ## Usage
 

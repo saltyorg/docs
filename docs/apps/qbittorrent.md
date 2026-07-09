@@ -86,8 +86,6 @@ sb install qbittorrent
 
 Visit <https://qbittorrent.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 1.  Log in using the username/password you specified in `accounts.yml`
 
 1.  **OPTIONALLY** go to `Options` -> `Web UI` and set a new username and a strong password.

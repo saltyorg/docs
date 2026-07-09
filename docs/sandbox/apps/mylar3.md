@@ -56,8 +56,6 @@ sb install sandbox-mylar3
 
 Visit <https://mylar3.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 1. It's highly unlikely your mylar install is up to date. <br />
   Press the Update link on the dialog in the bottom right hand corner. Mylar3 will update and then restart.
 

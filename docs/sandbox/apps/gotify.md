@@ -55,8 +55,6 @@ sb install sandbox-gotify
 
 Visit <https://gotify.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 !!! info

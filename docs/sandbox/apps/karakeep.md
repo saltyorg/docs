@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Use the `sb inventory` system to set any environment variables that are desired such as OpenAI API keys, downloading videos, document size limits, etc
 

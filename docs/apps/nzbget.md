@@ -54,8 +54,6 @@ sb install nzbget
 
 Visit <https://nzbget.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Paths
 
 - Download paths have already been specified, no need to change those.

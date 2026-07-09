@@ -53,8 +53,6 @@ sb install dozzle
 
 Visit <https://dozzle.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 To view log files that are NOT written to stdout or stderr, use the following to setup a basic Alpine Linux container via Docker Compose that just tails a mounted log file (in this case, Cloudplow) which then exposes it to Dozzle. Adjust as needed for your circumstances.
 
 ```yaml

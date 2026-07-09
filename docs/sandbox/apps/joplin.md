@@ -55,8 +55,6 @@ sb install sandbox-joplin
 
 Visit <https://joplin.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 !!! info
     Default login for joplin is
     `email: admin@localhost`

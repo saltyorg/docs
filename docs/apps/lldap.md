@@ -59,8 +59,6 @@ sb install authelia
 
 Visit <https://lldap.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 LLDAP provides a lightweight LDAP server with a user-friendly web interface for managing users and groups. The configuration file is at `/opt/lldap/lldap_config.toml`. Optional SMTP settings for password resets can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `lldap_role_smtp_*` variables.
 
 Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI). To reset LLDAP, run `sb install lldap-reset`.

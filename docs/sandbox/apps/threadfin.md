@@ -55,10 +55,6 @@ sb install sandbox-threadfin
 
 Visit <https://threadfin.iYOUR_DOMAIN_NAMEi/web>.
 
-## Basics
-
-- Access Threadfin web GUI at <https://threadfin.iYOUR_DOMAIN_NAMEi/web>
-
 - Run through the Configuration Wizard.
 
 - Use the following URLs when configuring your media server (e.g. Plex, Emby, Jellyfin)

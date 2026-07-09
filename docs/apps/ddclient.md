@@ -49,14 +49,16 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+## Preconfiguration
+
+Requires Cloudflare to be enabled in your Saltbox configuration with valid API credentials in `accounts.yml`.
+
 ## Deployment
 
 ```shell
 sb install ddclient
 ```
 
-## Basics
+## Usage
 
 DDClient is automatically configured for Cloudflare with common Saltbox subdomains. Configuration file is created at `/opt/ddclient/ddclient.conf` - edit this file to customize subdomains.
-
-Requires Cloudflare to be enabled in your Saltbox configuration with valid API credentials in `accounts.yml`.

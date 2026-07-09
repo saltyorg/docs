@@ -1,6 +1,7 @@
 ---
 icon: material/docker
 title: Minecraft
+status: outdated
 tags:
   - Minecraft
 saltbox_automation:
@@ -42,7 +43,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 - Set inventory variables for single or multi-server setups:
   - `minecraft_instances`: List of server instances.
@@ -56,6 +57,10 @@ For multiple servers, list instance names in your inventory:
 ```yaml
 minecraft_instances: ["mcserver1", "mcserver2"]
 ```
+
+- No in-app preferences; all setup is handled via inventory configuration.
+- Default settings run a single server.
+- For multi-server, add instance names to `minecraft_instances`.
 
 ## Deployment
 
@@ -71,12 +76,6 @@ sb install sandbox-minecraft
   - Single server: `minecraft.xYOUR_DOMAIN_NAMEx`
   - Multiple servers: `instanceName.xYOUR_DOMAIN_NAMEx`
 - Change server settings by updating inventory variables and redeploying.
-
-## Basics
-
-- No in-app preferences; all setup is handled via inventory configuration.
-- Default settings run a single server.
-- For multi-server, add instance names to `minecraft_instances`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

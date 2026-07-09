@@ -56,8 +56,6 @@ sb install sandbox-pgadmin
 
 Visit <https://pgadmin.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

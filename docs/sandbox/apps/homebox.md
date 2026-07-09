@@ -55,8 +55,6 @@ sb install sandbox-homebox
 
 Visit <https://homebox.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Create a user in the web ui, add your email and password, then log in.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

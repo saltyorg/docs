@@ -1,7 +1,6 @@
 ---
 icon: material/docker
 title: Tdarr Node
-status: outdated
 hide:
   - tags
 tags:
@@ -47,6 +46,10 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+## Preconfiguration
+
+To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tdarr_node_server_port` to the IP/hostname and port of the exposed Tdarr server.
+
 ## Deployment
 
 ```shell
@@ -55,19 +58,7 @@ sb install sandbox-tdarr-node
 
 ## Usage
 
-The Tdarr Node is configured with the following defaults which can be modified via the inventory system.
-
-```yaml
-tdarr_node_server_ip: "tdarr"
-tdarr_node_server_port: "8266"
-tdarr_node_node_id: "MainNode"
-tdarr_node_node_port: "8267"
-tdarr_node_external: false
-```
-
-By switching `tdarr_node_external` to `true` the node will be accessible externally via the specified `tdarr_node_node_port` on any hostname or IP address pointing directly to the server.
-
-To connect the Tdarr node to a Tdarr server, set `tdarr_node_server_ip` and `tdarr_node_server_port` to the IP/hostname and port of the exposed Tdarr server.
+Visit <https://tdarr.iYOUR_DOMAIN_NAMEi>.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

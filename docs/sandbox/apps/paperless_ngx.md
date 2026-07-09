@@ -56,8 +56,6 @@ sb install sandbox-paperless-ngx
 
 Visit <https://paperless.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 !!! info
     Please refer to [this](https://github.com/saltyorg/docs/issues/116#issuecomment-1278733921) comment on the initial PR for questions about google storage!
 

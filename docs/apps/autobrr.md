@@ -53,10 +53,6 @@ sb install autobrr
 
 Visit <https://autobrr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
-- [:octicons-link-16: Documentation](https://autobrr.com/configuration/indexers){: .header-icons }
-
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

@@ -55,8 +55,6 @@ sb install sandbox-adminer
 
 Visit <https://adminer.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login for [MariaDB](../../apps/mariadb.md)
 
 ```yaml title="Adminer Mariadb Login"

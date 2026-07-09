@@ -46,6 +46,15 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+## Preconfiguration
+
+- Note: The default data port for this container is 55555. Sync will try to use this port for data transfer, if the port is not open Sync will automatically use a [relay server](https://help.resilio.com/hc/en-us/articles/204754779-What-is-a-Relay-Server-) to make your connection. For best performance, please ensure this port is opened in your firewall.
+- Sync's data port can be customized by changing the [Sync settings](https://help.resilio.com/hc/en-us/articles/204762669-Sync-Preferences) as well as adding the following to `/srv/git/saltbox/inventories/host_vars/localhost.yml` and rerunning the installation tag:
+
+```yaml
+resiliosync_role_data_port: "#####"
+```
+
 ## Deployment
 
 ```shell
@@ -55,17 +64,6 @@ sb install sandbox-resiliosync
 ## Usage
 
 Visit <https://resiliosync.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
-
-- [:octicons-link-16: Documentation: Resilio Sync Docs](https://help.resilio.com/hc/en-us/articles/204754939-Comprehensive-guide-to-syncing-Desktop-Desktop-){: .header-icons }
-
-- Note: The default data port for this container is 55555. Sync will try to use this port for data transfer, if the port is not open Sync will automatically use a [relay server](https://help.resilio.com/hc/en-us/articles/204754779-What-is-a-Relay-Server-) to make your connection. For best performance, please ensure this port is opened in your firewall.
-- Sync's data port can be customized by changing the [Sync settings](https://help.resilio.com/hc/en-us/articles/204762669-Sync-Preferences) as well as adding the following to `/srv/git/saltbox/inventories/host_vars/localhost.yml` and rerunning the installation tag:
-
-```yaml
-resiliosync_data_port: "#####"
-```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

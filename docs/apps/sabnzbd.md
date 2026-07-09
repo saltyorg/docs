@@ -88,8 +88,6 @@ sb install sabnzbd
 
 Visit <https://sabnzbd.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Go through the setup wizard. You will need to enter server details:
 
 ![](../images/sabnzbd/02-sabnzbd.png)

@@ -56,37 +56,31 @@ sb install sandbox-archivebox
 
 Visit <https://archivebox.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Initial setup guide thanks to `erisheaded` on CB discord.
 
-1. Run tag:
-
-    ```shell
-    sb install sandbox-archivebox
-    ```
-
-2. Connect to container:
+1.  Connect to container:
 
    ```shell
    docker exec -it archivebox /bin/bash
    ```
 
-   - NOTE: (This drops you in the /data folder. DO NOT switch to /data/archive directory)
-3. Switch to `archivebox` user for config:
+   NOTE: (This drops you in the /data folder. DO NOT switch to /data/archive directory)
+
+1.  Switch to `archivebox` user for config:
 
    ```shell
    su archivebox
    ```
 
-4. Initialize with setup to create a web admin:
+1.  Initialize with setup to create a web admin:
 
    ```shell
    archivebox init --setup
    ```
 
-5. Enter username, email, and password
-6. Load URL and test login
+1.  Enter username, email, and password
+
+1.  Load URL and test login
 
 By default, your new installation has a publicly accessible web index, snapshots, and archive addition access. You may not want this for a host of security reasons, so it's recommended to review the [ArchiveBox Security Overview](https://docs.archivebox.io/en/latest/Security-Overview.html){: .header-icons } and tailoring these settings to your preference when setting up.
 

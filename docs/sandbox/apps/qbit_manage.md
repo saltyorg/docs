@@ -1,6 +1,7 @@
 ---
 icon: material/docker
 title: qBit Manage
+status: outdated
 hide:
   - tags
 tags:
@@ -46,7 +47,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 The following variables are available to set in the sandbox settings.yml file. An explanation of [these settings can be found here](https://github.com/StuffAnThings/qbit_manage/wiki/Docker-Installation).
 
@@ -81,8 +82,6 @@ sb install sandbox-qbit-manage
 ## Usage
 
 Visit <https://qbit-manage.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 After installation has finished, stop the qbit-manage docker container and edit the config file that will have been created at `/opt/qbit-manage/config.yml`
 

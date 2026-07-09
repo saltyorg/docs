@@ -46,10 +46,6 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
-
-Nginx is deployed with configuration files at `/opt/nginx/`. Place website files in `/opt/nginx/www/` and edit site configs in `/opt/nginx/nginx/site-confs/`. Multiple instances are supported via the `nginx_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md). Restart with `docker restart nginx` to apply changes.
-
 ## Deployment
 
 ```shell
@@ -59,6 +55,8 @@ sb install nginx
 ## Usage
 
 Visit <https://nginx.iYOUR_DOMAIN_NAMEi>.
+
+Nginx is deployed with configuration files at `/opt/nginx/`. Place website files in `/opt/nginx/www/` and edit site configs in `/opt/nginx/nginx/site-confs/`. Restart with `docker restart nginx` to apply changes.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

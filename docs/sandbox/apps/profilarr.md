@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ warning "Upgrading from Profilarr v1"
+??? warning "Upgrading from Profilarr v1"
 
     The role now deploys Profilarr v2, which is incompatible with v1. There is no migration path—v2 requires a clean install.
 

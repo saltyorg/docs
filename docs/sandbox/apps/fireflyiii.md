@@ -46,35 +46,16 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+???+ info
 
-- The default installation utilises a seperate postgres database.
-- This will install the fireflyiii core container and install the mariadb database
-  - > **Note: It can be installed using postgresql and mysql**
-- It will by default enable webhooks
+    -   The default installation utilises a seperate postgres database.
+    -   This will install the fireflyiii core container and install the mariadb database
+        Note: It can be installed using postgresql and mysql**
+    -   It will by default enable webhooks
 
-> **Note: For all available settings please refer to the Firefly III [example env](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example)**
+## Preconfiguration
 
-### Email Notifications
-To enable email notifications, set the following [inventory](../../saltbox/inventory/index.md) entries to your desired values:
-
-```yaml title="Firefly III Email Settings"
-MAIL_MAILER: "log"  # (1)!
-MAIL_HOST: "localhost"  # (2)!
-MAIL_PORT: "25"  # (3)!
-MAIL_FROM: "fireflyiii@domain.com"  # (4)!
-MAIL_USERNAME: ""  # (5)!
-MAIL_PASSWORD: ""  # (6)!
-MAIN_ENCRYPTION: ""  # (7)!
-```
-
-1. The MAIL_MAILER-setting indicates the system that is used for mailing. Firefly III supports the following mail systems: smtp, sendmail, mailgun, mandrill, sparkpost and log. [Here](https://docs.firefly-iii.org/how-to/firefly-iii/advanced/notifications/#email) is an explanation about each MAIL_MAILER option
-2. Replace `localhost` with your email host. IE: `smtp-relay.gmail.com`
-4. Replace `25` with your email port. IE: `587`
-3. The email address you want to send to. Replace `""` with the email address you want to send to
-5. Replace `""` with your email username if necessary.
-6. Replace `""` with your email password if necessary.
-7. Use `SSL` or `TLS` for communication with the SMTP server. Can be `true` or '`false`.
+Settings are available as Docker environment variables. See [example env](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example).
 
 ## Deployment
 

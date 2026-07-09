@@ -49,13 +49,11 @@ saltbox_automation:
 sb install unpackerr
 ```
 
-## Basics
-
-- [:octicons-link-16: Documentation](https://github.com/davidnewhall/unpackerr){: .header-icons }
+## Usage
 
 The important part of the setup is the setup for the applications. You'll need to change these three settings for each:
 
-```text
+```ini title="unpackerr.conf"
 [[sonarr]]
   url = "http://sonarr:8989"
   api_key = "YOUR_API_KEY"

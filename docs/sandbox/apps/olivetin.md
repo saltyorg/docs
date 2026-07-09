@@ -56,8 +56,6 @@ sb install sandbox-olivetin
 
 Visit <https://olivetin.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - A barebones configuration is imported by the role to `/opt/olivetin/config.yaml` provisioning a default "Hello world!" item
 
 - Check out [the configuration section of the documentation](https://docs.olivetin.app/config.html) to start building your actions.

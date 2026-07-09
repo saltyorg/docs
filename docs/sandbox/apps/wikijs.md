@@ -55,8 +55,6 @@ sb install sandbox-wikijs
 
 Visit <https://wikijs.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 !!! info
     📢 No default user is configured until you run through the setup screen, so you should ideally run through setup as soon as the container is deployed to secure the site. It is not behind authelia by default.
 

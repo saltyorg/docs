@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Cloudplow is configured through `/opt/cloudplow/config.json`.
 
@@ -235,7 +235,7 @@ This will cleanly remove the Cloudplow service and related systemd configuration
 
 ## Troubleshooting
 
-???+ question "Stuck on `Waiting for running upload to finish before proceeding...`"
+??? question "Stuck on `Waiting for running upload to finish before proceeding...`"
 
     If the activity log is stuck on:
 

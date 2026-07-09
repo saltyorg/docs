@@ -56,8 +56,6 @@ sb install sandbox-privatebin
 
 Visit <https://privatebin.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Edit `/opt/privatebin/conf.php` to customize your instance.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

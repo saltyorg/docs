@@ -58,7 +58,7 @@ rclone
 
 ## Troubleshooting
 
-???+ question "Rclone error: `Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied`"
+??? question "Rclone error: `Failed to save config file: open /home/\<user\>/.config/rclone/rclone.conf: permission denied`"
 
     Replace `user` and `group` to match yours (see [here](https://www.cyberciti.biz/faq/unix-linux-id-command-examples-usage-syntax/#3)).
 

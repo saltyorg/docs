@@ -53,8 +53,6 @@ sb install petio
 
 Visit <https://petio.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Click Login With Plex and follow the steps to log in.
 
 - After you log in with Plex you will need to specify your Petio specific admin credentials, by default it uses your Plex username and email but you still need to specify your own password.

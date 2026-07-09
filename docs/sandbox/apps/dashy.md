@@ -55,8 +55,6 @@ sb install sandbox-dashy
 
 Visit <https://dashy.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 To edit your config, edit the `.yaml` file in dashys appdata folder, which is typically located at `/opt/dashy/`. You can also edit the config directly through the UI.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

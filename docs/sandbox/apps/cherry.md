@@ -55,8 +55,6 @@ sb install sandbox-cherry
 
 Visit <https://cherry.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

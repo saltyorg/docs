@@ -56,8 +56,6 @@ sb install sandbox-node-red
 
 Visit <https://node-red.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Addons and/or plugins can be installed to Node Red to add functionality. In Node Red they are called palettes. To install a palette, go to the menu in the upper right corner (the hamburger, 3 little horizontal lines), select `Manage palette`, then `Install`. You can search for a palette by name, or you can install a palette by pasting the URL of the palette into the `Install` tab.
 
 Add this [palette](https://flows.nodered.org/node/node-red-contrib-home-assistant-websocket) to connect to [Home Assistant](../apps/homeassistant.md). (Requires Home Assistant to be installed and running, and HACS to be installed in Home Assistant.) For more information, see the Home Assistant page.

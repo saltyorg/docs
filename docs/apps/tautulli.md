@@ -53,8 +53,6 @@ sb install tautulli
 
 Visit <https://tautulli.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Setup Wizard
 
 1.  First time you go to the Tautulli site, you will be presented with the "Tautulli Setup Wizard". Click `Next`.

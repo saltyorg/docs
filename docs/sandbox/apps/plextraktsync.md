@@ -59,8 +59,6 @@ docker exec plextraktsync plextraktsync --help
 
 Once linked to a Trakt.tv account, the selected Plex user's streaming activity is automatically scrobbled.
 
-## Basics
-
 Sync preferences are available to customize in `/opt/plextraktsync/config.yml`.
 
 The following command will launch an interactive script prompting you for missing credentials (use this to link Trakt.tv):

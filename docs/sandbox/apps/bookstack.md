@@ -56,8 +56,6 @@ sb install sandbox-bookstack
 
 Visit <https://bookstack.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Log in using the default admin details `admin@admin.com` with a password of `password`. You should change these details **immediately** after logging in for the first time.
 
 - Optional configuration such as SMTP can be done by editing the `.env` file located at:

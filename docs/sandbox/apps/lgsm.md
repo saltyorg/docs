@@ -47,7 +47,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 To add instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 
@@ -74,8 +74,6 @@ sb install sandbox-lgsm
 ## Usage
 
 Visit <https://lgsm.iYOUR_DOMAIN_NAMEi>.
-
-## Basics
 
 LinuxGSM config files are the configuration files used by the game server to store various game server settings, such as the server name, maximum players, map cycle, etc. These settings can be edited to customise a game server. Different game server configs can use different syntax and work slightly differently, but all do the same basic job of editing a game server settings.
 

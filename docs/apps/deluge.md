@@ -54,14 +54,13 @@ sb install deluge
 Visit <https://deluge.iYOUR_DOMAIN_NAMEi>.
 
 !!! info
+
     **default login**
 
-```yaml
-        user: admin
+    ```yaml
+    user: admin
     password: deluge
-```
-
-## Basics
+    ```
 
 - Change login password.
 

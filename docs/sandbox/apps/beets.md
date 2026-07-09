@@ -55,8 +55,6 @@ sb install sandbox-beets
 
 Visit <https://beets.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 - When the role is run, a cron job is set to automatically import any music found at `/mnt/local/downloads/music` every hour.<br />
   If a match is under 95% beets will skip the file and it will need manual importing.

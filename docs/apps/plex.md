@@ -89,8 +89,6 @@ Visit <https://plex.iYOUR_DOMAIN_NAMEi>.
 
     ![](../images/plex-media-server/plex-01-signin.png)
 
-## Basics
-
 ### Setup Wizard
 
 1.  First time you log in, you will be presented with a welcome screen. Click "GOT IT!" to continue.

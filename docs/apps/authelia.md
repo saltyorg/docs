@@ -43,7 +43,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Saltbox offers several options to customize the `configuration.yml` via the inventory system. We recommend reviewing the [role's defaults](#role-defaults) for available settings. It is highly recommended to review the upstream documentation for configuration options.
 

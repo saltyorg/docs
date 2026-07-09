@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Use the `sb inventory` system to set any environment variables that are desired.
 
@@ -59,9 +59,7 @@ sb install sandbox-meilisearch
 
 ## Usage
 
-Port 7700 is open to the container by default. Also analytics are disabled by default.
-
-Visit `https://www.meilisearch.com/docs`.
+The API listens on port 7700 by default and is intended to be accessed by other services on the same host via `http://meilisearch:7700`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

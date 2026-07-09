@@ -45,9 +45,17 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Preconfiguration
 
 Settings are available as [environment variables:octicons-link-external-16:{ .md-icon--sm }](https://github.com/jlesage/docker-firefox#environment-variables) in `/opt/firefox/.env`.
+
+## Deployment
+
+```shell
+sb install sandbox-firefox
+```
+
+## Usage
 
 ??? tip "Access Control"
 
@@ -63,14 +71,6 @@ Settings are available as [environment variables:octicons-link-external-16:{ .md
 
     3. At a minimum, a container restart is required for changes to take effect.
 
-## Deployment
-
-```shell
-sb install sandbox-firefox
-```
-
-## Usage
-
 !!! info inline end inline-fit-content "Downloads Save Location"
 
     ```
@@ -85,7 +85,7 @@ Visit <https://firefox.iYOUR_DOMAIN_NAMEi>.
 
 The role supports VNC access over an SSH tunnel (local port forwarding) to Saltbox.
 
-???+ example "Example Command on Local Machine"
+??? example "Example Command on Local Machine"
 
     !!! tip ""
 

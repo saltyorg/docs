@@ -55,8 +55,6 @@ sb install sandbox-maintainerr
 
 Visit <https://maintainerr.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 This setup needs to take place **AFTER** you've set up Plex, Radarr, and Sonarr, since it involves connections to all three of those.
 
 You will need your API Keys from both Radarr and Sonarr.

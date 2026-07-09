@@ -56,8 +56,6 @@ sb install sandbox-goaccess
 
 Visit <https://goaccess.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - The configured username/password are taken from your Saltbox [`accounts.yml`](../../saltbox/install/install.md#step-2-configuration) file located in `/srv/git/saltbox/accounts.yml`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

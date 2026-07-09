@@ -50,11 +50,19 @@ saltbox_automation:
 
     As of ***role-refactor***, `settings.yml` is no longer used to configure Sandbox roles. Values currently set in `/opt/sandbox/settings.yml` must be migrated to their Inventory form. See [Role Defaults](#role-defaults) for the expected syntax.
 
-## Configuration
+## Preconfiguration
 
-1.  Set your download client via the Inventory override.
+Set your download client via the Inventory override.
 
-1.  Edit `/opt/tqm/config.yaml`.
+## Deployment
+
+```shell
+sb install sandbox-tqm
+```
+
+## Usage
+
+Edit `/opt/tqm/config.yaml`.
 
 Use Saltbox paths (`/mnt/unionfs/downloads/...`) for `download_path` as per [Saltbox media paths](../../saltbox/basics/paths.md#media).
 
@@ -86,14 +94,6 @@ qbt:
 ```
 
 See the [main documentation](https://github.com/autobrr/tqm#example-configuration) for full configuration and filter options.
-
-## Deployment
-
-```shell
-sb install sandbox-tqm
-```
-
-## Usage
 
 Check service status:
 

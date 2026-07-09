@@ -56,9 +56,7 @@ Visit <https://wireguard.iYOUR_DOMAIN_NAMEi>.
 
 The password provisioned is your Saltbox password.
 
-## Basics
-
-- Use the Web UI to configure your clients.
+Use the Web UI to configure your clients.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

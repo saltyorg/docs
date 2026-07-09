@@ -47,11 +47,17 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
+???+ info
+
+    This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
 
 !!! warning "Advanced Users Only"
 
     This role is intended for advanced users who are comfortable running a database server directly on the host system and are aware of the security implications and maintenance considerations involved. Most users should use the [PostgreSQL](postgres.md) Docker container instead.
+
+## Preconfiguration
+
+PostgreSQL is installed directly on the host with data stored in `/opt/postgresql/`. The default version is 17 (port 5432), with multiple versions supported via `postgres_host_role_versions` in your [Saltbox inventory](../saltbox/inventory/index.md). Each version runs on sequential ports (5432, 5433, etc.) as separate systemd services.
 
 ## Deployment
 
@@ -61,9 +67,7 @@ sb install postgres-host
 
 ## Usage
 
-PostgreSQL is installed directly on the host with data stored in `/opt/postgresql/`. The default version is 17 (port 5432), with multiple versions supported via `postgres_host_role_versions` in your [Saltbox inventory](../saltbox/inventory/index.md). Each version runs on sequential ports (5432, 5433, etc.) as separate systemd services.
-
-Configure per-version users, databases, and access control using `postgres_host_role_config` in your inventory. Default root superuser is `root`/`password4321` (change this!). Connect from Docker using `host.docker.internal:5432`.
+The default root superuser is `root`/`password4321` (change this!). Connect from Docker using `host.docker.internal:5432`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

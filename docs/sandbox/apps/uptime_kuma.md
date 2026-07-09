@@ -56,8 +56,6 @@ sb install sandbox-uptime-kuma
 
 Visit <https://uptime.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Docker Monitoring: Use TCP/HTTP connection type with this address: `http://uptime-docker-socket-proxy:2375`
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

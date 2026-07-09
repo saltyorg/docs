@@ -73,8 +73,6 @@ sb install jackett
 
 Visit <http://jackett.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 ### Settings
 
    ![](../images/jackett-settings.png)
@@ -90,26 +88,6 @@ Under "Jackett Configuration":
 1. Click "Apply server settings".
 
 1. The page will now reload.
-
-### Adding Indexers to Sonarr/Radarr
-
-Under "Configured Indexers":
-
-1. Click "Add Indexer" to add your favorite indexers (i.e. [torrent trackers](../reference/usenet-torrent.md)).
-
-2. When adding indexers into [Sonarr](../apps/sonarr.md#__tabbed_3_2)/[Radarr](../apps/radarr.md#__tabbed_3_2), you will need:
-
-    1. Indexer's Torznab Feed
-
-         - Copy this by clicking on "Copy Torznab Feed" button next to the Indexer.
-
-         - You will need to replace...
-
-           - `https` with `http`
-
-           - `jackett.xYOUR_DOMAIN_NAMEx` with `jackett:9117`
-
-    2. Jacket API Key
 
 ## Next
 

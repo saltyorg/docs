@@ -55,8 +55,6 @@ sb install sandbox-puddletag
 
 Visit <https://puddletag.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

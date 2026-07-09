@@ -55,8 +55,6 @@ sb install sandbox-linkding
 
 Visit <https://linkding.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 - Default login:
 
   ```yaml

@@ -56,8 +56,6 @@ sb install sandbox-delugevpn
 
 Visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 See the parent [Deluge](../../apps/deluge.md) role for app setup.
 
 - Edit the DelugeVPN settings in the delugevpn section in Sandbox `settings.yml` as shown below.
@@ -120,7 +118,7 @@ Now you can restart the docker
 docker start delugevpn
 ```
 
-## Configuration
+## Preconfiguration
 
 ### FOR PIA
 

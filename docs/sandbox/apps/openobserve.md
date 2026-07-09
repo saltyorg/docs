@@ -56,8 +56,6 @@ sb install sandbox-openobserve
 
 Visit <https://openobserve.iYOUR_DOMAIN_NAMEi>.
 
-## Basics
-
 Default credentials are configured using your user email and password. Root user setup is required for initial access.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->

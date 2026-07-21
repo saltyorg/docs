@@ -10,25 +10,24 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url: https://github.com/Silo-Server/silo-server/tree/main/docs
+      url: https://siloserver.org/docs
       type: documentation
     - name: Releases
       url: https://github.com/Silo-Server/silo-server/pkgs/container/silo-server
-      type: docker
+      type: github
     - name: Community
       url: https://discord.gg/4RxuUQAEnW
-      type: community
+      type: discord
   project_description:
     name: Silo
     summary: |-
       a self-hosted media server for movies, shows, music, and books with direct play, transcoding, and optional Jellyfin-compatible client support.
-    link: https://github.com/Silo-Server/silo-server
+    link: https://siloserver.org
     categories:
       - Content Delivery Apps > Media Server
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
-# Silo
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
 ## Deployment
@@ -37,27 +36,11 @@ saltbox_automation:
 sb install sandbox-silo
 ```
 
-The role also deploys PostgreSQL with pgvector and Redis.
-
-Silo runs as the Saltbox UID:GID rather than the image's root default. The
-role sets `HOME` to `/tmp` and adds the video and render GIDs for hardware
-access.
-
 ## Usage
 
 Visit <https://silo.iYOUR_DOMAIN_NAMEi>.
 
 Configure libraries against the usual `/mnt/unionfs/...` paths in the admin UI.
-
-Transient transcodes use the configured Saltbox transcodes path and are
-mounted at `/tmp/silo-transcode`. Hardware transcoding uses Saltbox's standard
-Intel or NVIDIA device configuration.
-
-## Compatible Clients
-
-Silo's Jellyfin-compatible API is disabled by default and listens on a
-separate port when enabled. The Sandbox role currently exposes only Silo's
-main web service through Traefik.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

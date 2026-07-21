@@ -418,6 +418,7 @@ nav:
           - sandbox/apps/sabthrottle.md
           - sandbox/apps/semaphoreui.md
           - sandbox/apps/shelfmark.md
+          - sandbox/apps/silo.md
           - sandbox/apps/slskd.md
           - sandbox/apps/speedtest.md
           - sandbox/apps/sqlitebrowser.md

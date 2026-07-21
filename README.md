@@ -129,6 +129,13 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/After-Shock>
+            <img src=https://avatars.githubusercontent.com/u/17056047?v=4 width="100;"  alt=Sully/>
+            <br />
+            <sub style="font-size:14px"><b>Sully</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Nypheena>
             <img src=https://avatars.githubusercontent.com/u/16083155?v=4 width="100;"  alt=Sapphire/>
             <br />
@@ -149,6 +156,8 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Kevin2kkelly</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Barrow1990>
             <img src=https://avatars.githubusercontent.com/u/42769333?v=4 width="100;"  alt=Barrow1990/>
@@ -156,8 +165,6 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>Barrow1990</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kbgvirus>
             <img src=https://avatars.githubusercontent.com/u/20810766?v=4 width="100;"  alt=Alon Nitzan/>
@@ -193,20 +200,13 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
             <sub style="font-size:14px"><b>kzndotsh</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Zuke97>
             <img src=https://avatars.githubusercontent.com/u/17680409?v=4 width="100;"  alt=Zuke97/>
             <br />
             <sub style="font-size:14px"><b>Zuke97</b></sub>
-        </a>
-    </td>
-</tr>
-<tr>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/After-Shock>
-            <img src=https://avatars.githubusercontent.com/u/17056047?v=4 width="100;"  alt=Sully/>
-            <br />
-            <sub style="font-size:14px"><b>Sully</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">

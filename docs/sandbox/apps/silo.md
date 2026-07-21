@@ -39,6 +39,10 @@ sb install sandbox-silo
 
 The role also deploys PostgreSQL with pgvector and Redis.
 
+Silo runs as the Saltbox UID:GID rather than the image's root default. The
+role sets `HOME` to `/tmp` and adds the video and render GIDs for hardware
+access.
+
 ## Usage
 
 Visit <https://silo.iYOUR_DOMAIN_NAMEi>.

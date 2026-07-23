@@ -1,6 +1,7 @@
 ---
 icon: material/docker
 title: DelugeVPN
+status: outdated
 hide:
   - tags
 tags:
@@ -55,6 +56,8 @@ sb install sandbox-delugevpn
 ## Usage
 
 Visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>.
+
+???+ warning "Outdated guide — settings.yml was removed in favor of Inventory usage"
 
 See the parent [Deluge](../../apps/deluge.md) role for app setup.
 

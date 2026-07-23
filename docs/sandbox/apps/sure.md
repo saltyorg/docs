@@ -625,7 +625,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sure_role_docker_restart_policy: unless-stopped
         ```
 
-=== "Dependencies"
+    <h5>Dependencies</h5>
 
     ??? variable string "`sure_role_depends_on`"
 

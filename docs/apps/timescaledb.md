@@ -376,6 +376,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         timescaledb2_docker_shm_size: "128M"
         ```
 
+    <h5>CI</h5>
+
+    ??? variable int "`timescaledb_role_docker_create_timeout`{ .sb-show-on-unchecked }`timescaledb2_docker_create_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        timescaledb_role_docker_create_timeout: 300
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        timescaledb2_docker_create_timeout: 300
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
@@ -1182,18 +1196,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: list
         timescaledb2_docker_commands:
-        ```
-
-    ??? variable int "`timescaledb_role_docker_create_timeout`{ .sb-show-on-unchecked }`timescaledb2_docker_create_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        timescaledb_role_docker_create_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        timescaledb2_docker_create_timeout:
         ```
 
     ??? variable string "`timescaledb_role_docker_entrypoint`{ .sb-show-on-unchecked }`timescaledb2_docker_entrypoint`{ .sb-show-on-checked }"

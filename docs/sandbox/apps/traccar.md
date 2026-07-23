@@ -455,11 +455,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>CI</h5>
 
-    ??? variable int "`traccar_docker_create_timeout`"
+    ??? variable int "`traccar_role_docker_create_timeout`"
 
         ```yaml
         # Type: int
-        traccar_docker_create_timeout: 300
+        traccar_role_docker_create_timeout: 300
         ```
 
 === "Docker+"
@@ -938,13 +938,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         traccar_role_docker_commands:
-        ```
-
-    ??? variable int "`traccar_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: int
-        traccar_role_docker_create_timeout:
         ```
 
     ??? variable string "`traccar_role_docker_entrypoint`"

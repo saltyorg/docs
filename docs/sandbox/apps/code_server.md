@@ -47,6 +47,18 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+??? warning "Migration from the old `coder` role"
+
+    The old `coder` role was renamed to `code-server` on Dec 19th 2022.
+    
+    To migrate to the new role, if you aren't using a custom folder for `coder`, rename the inventory variables if you have any, then run:
+
+    ```shell
+    sb install sandbox-code-server -e 'code_server_migrate_coder=true'
+    ```
+
+    The `coder` role is currently deprecated and won't receive any updates, so please run the migration to the new role as soon as possible.
+
 ## Deployment
 
 ```shell
@@ -56,19 +68,6 @@ sb install sandbox-code-server
 ## Usage
 
 Visit <https://code-server.iYOUR_DOMAIN_NAMEi>.
-
-## Migration from the old `coder` role
-
-The old `coder` role was renamed to `code-server` on Dec 19th 2022.
-In order to migrate to the new role, if you aren't using a custom folder for `coder`, rename the inventory variables if you have any, then run:
-
-```shell
-sb install sandbox-code-server -e 'code_server_migrate_coder=true'
-```
-
-The `coder` role is currently deprecated and won't receive any updates, so please run the migration to the new role as soon as possible.
-
-## Basics
 
 ??? abstract "Guide (possibly outdated)"
 

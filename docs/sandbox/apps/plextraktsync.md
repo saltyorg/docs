@@ -45,6 +45,14 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+## Pre-Deployment
+
+If you need more than one Plex-Trakt account pair processed, that can be achieved through multiple instances, e.g.:
+
+```yaml
+plextraktsync_instances: ['plextraktsync-seed', 'plextraktsync-alice', 'plextraktsync-charlie']
+```
+
 ## Deployment
 
 ```shell
@@ -57,19 +65,15 @@ sb install sandbox-plextraktsync
 docker exec plextraktsync plextraktsync --help
 ```
 
-Once linked to a Trakt.tv account, the selected Plex user's streaming activity is automatically scrobbled.
+### Finishing the setup
 
-Sync preferences are available to customize in `/opt/plextraktsync/config.yml`.
-
-The following command will launch an interactive script prompting you for missing credentials (use this to link Trakt.tv):
+The role sets the target Plex server to your Saltbox Plex instance if deployed. To add the missing Trakt.tv credentials, you can run:
 
 ```shell
 docker exec -it plextraktsync plextraktsync login
 ```
 
-### Reset Plex Settings
-
-The target Plex server is initially set to your main Plex Saltbox instance using the owner account. To reset these credentials:
+### Resetting Plex credentials
 
 ```shell
 docker exec -it plextraktsync plextraktsync plex-login

@@ -766,7 +766,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         traefik_role_docker_commands_crowdsec:
           - "--experimental.plugins.bouncer.modulename=github.com/maxlerebourg/crowdsec-bouncer-traefik-plugin"
-          - "--experimental.plugins.bouncer.version=v1.6.0"
+          - "--experimental.plugins.bouncer.version=v1.7.0"
         ```
 
     ??? variable list "`traefik_role_docker_commands_custom`"
@@ -917,7 +917,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapischeme: "http"
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapihost: "172.19.0.1:{{ traefik_crowdsec_port }}"
           traefik.http.middlewares.crowdsec.plugin.bouncer.forwardedheaderstrustedips: "{{ traefik_trusted_ips_template if (traefik_trusted_ips_template | length > 0) else omit }}"
-          traefik.http.middlewares.crowdsec.plugin.bouncer.banhtmlfilepath: "{{ traefik_crowdsec_ban_filepath }}"
+          traefik.http.middlewares.crowdsec.plugin.bouncer.banfilepath: "{{ traefik_crowdsec_ban_filepath }}"
         ```
 
     ??? variable dict "`traefik_role_docker_labels_custom`"

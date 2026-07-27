@@ -52,7 +52,7 @@ DDNS is a Saltbox-specific Dynamic DNS service that automatically manages DNS re
     - The container requires access to Traefik's API to discover routes
     - DNS records are automatically managed based on active Traefik routes
 
-## Preconfiguration
+## Pre-deployment
 
 ### Prerequisites
 

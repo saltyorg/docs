@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 - Set to install the latest Factorio experimental (1.1.x) build. Fix to a certain version using the [inventory system](../../saltbox/inventory/index.md).
 

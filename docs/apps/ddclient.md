@@ -49,7 +49,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 Requires Cloudflare to be enabled in your Saltbox configuration with valid API credentials in `accounts.yml`.
 

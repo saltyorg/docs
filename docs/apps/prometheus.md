@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 Data retention defaults to 15 days but can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `prometheus_role_retention` and `prometheus_role_size`.
 

@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 Settings are available as [environment variables:octicons-link-external-16:{ .md-icon--sm }](https://github.com/jlesage/docker-firefox#environment-variables) in `/opt/firefox/.env`.
 

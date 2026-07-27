@@ -43,7 +43,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 - Set inventory variables for single or multi-server setups:
   - `minecraft_instances`: List of server instances.

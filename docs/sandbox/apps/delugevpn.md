@@ -121,7 +121,7 @@ Now you can restart the docker
 docker start delugevpn
 ```
 
-## Preconfiguration
+## Pre-deployment
 
 ### FOR PIA
 

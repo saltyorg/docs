@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 Edit the Recyclarr section in Sandbox `settings.yml` and enter your desired update schedule using standard cron syntax.
 

@@ -48,7 +48,7 @@ saltbox_automation:
 !!! info
     Kometa is the replacement for Plex Meta Manager. A simple migration for your appdata is available by running `sb install sandbox-pmm-kometa-migration`.
 
-## Preconfiguration
+## Pre-deployment
 
 To configure the time that Kometa should run, you may override the `kometa_time` variable via the [inventory system](../../saltbox/inventory/index.md). The default is `"03:00"` or 3:00 AM in the server's time zone.
 

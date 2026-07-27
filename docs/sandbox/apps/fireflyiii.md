@@ -53,7 +53,7 @@ saltbox_automation:
         Note: It can be installed using postgresql and mysql**
     -   It will by default enable webhooks
 
-## Preconfiguration
+## Pre-deployment
 
 Settings are available as Docker environment variables. See [example env](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example).
 

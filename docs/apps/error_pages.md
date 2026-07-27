@@ -53,7 +53,7 @@ saltbox_automation:
     - Applied globally via Traefik middleware
     - Manual edits overwritten on rebuild
 
-## Preconfiguration
+## Pre-deployment
 
 Opt in via `adv_settings.yml` toggle:
 

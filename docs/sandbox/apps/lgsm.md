@@ -47,7 +47,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 To add instances, add the following to the inventory. See these instructions on inventory [here](../../saltbox/inventory/index.md).
 

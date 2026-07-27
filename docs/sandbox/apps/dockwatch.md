@@ -45,7 +45,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Preconfiguration
+## Pre-deployment
 
 Dockwatch is likely unable to take action on containers due to the security posture of the Docker socket proxy. You can override this behavior to allow Dockwatch to take actions by adding `dockwatch_post_enable: true` to your inventory file.
 

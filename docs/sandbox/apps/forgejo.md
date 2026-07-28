@@ -220,7 +220,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        forgejo_role_docker_image_tag: "13" # the Codeberg container registry does not provide a "latest" tag
+        forgejo_role_docker_image_tag: "16" # the Codeberg container registry does not provide a "latest" tag
         ```
 
     ??? variable string "`forgejo_role_docker_image`"
@@ -239,13 +239,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         forgejo_role_docker_envs_default:
           USER_UID: "{{ uid }}"
           USER_GID: "{{ gid }}"
-          DB_TYPE: "mysql"
-          DB_HOST: "mariadb:3306"
-          DB_USER: "root"
-          DB_PASS: "password321"
-          DB_DATABASE: "forgejo"
-          DISABLE_SSH: "true"
-          ROOT_URL: "{{ lookup('role_var', '_web_url', role='forgejo') }}/"
+          FORGEJO__database__DB_TYPE: "mysql"
+          FORGEJO__database__HOST: "mariadb:3306"
+          FORGEJO__database__USER: "root"
+          FORGEJO__database__PASSWD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
+          FORGEJO__database__NAME: "forgejo"
+          FORGEJO__server__DISABLE_SSH: "true"
+          FORGEJO__server__ROOT_URL: "{{ lookup('role_var', '_web_url', role='forgejo') }}/"
+          FORGEJO__security__REVERSE_PROXY_TRUSTED_PROXIES: "172.19.0.0/16"
         ```
 
     ??? variable dict "`forgejo_role_docker_envs_custom`"

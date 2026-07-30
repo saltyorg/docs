@@ -143,6 +143,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_env_db: "saltbox"
         ```
 
+    ??? variable int "`postgres_role_ready_retries`{ .sb-show-on-unchecked }`postgres2_ready_retries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        postgres_role_ready_retries: 60
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        postgres2_ready_retries: 60
+        ```
+
+    ??? variable int "`postgres_role_ready_delay`{ .sb-show-on-unchecked }`postgres2_ready_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        postgres_role_ready_delay: 5
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        postgres2_ready_delay: 5
+        ```
+
 === "Docker"
 
     <h5>Container</h5>

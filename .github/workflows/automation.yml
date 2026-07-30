@@ -39,14 +39,14 @@ jobs:
 
     steps:
       - name: Checkout docs repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           path: docs
           fetch-depth: 0
           token: ${{ github.token }}
 
       - name: Checkout Saltbox repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: saltyorg/Saltbox
           ref: ${{ github.event.inputs.saltbox_branch || 'master' }}
@@ -54,7 +54,7 @@ jobs:
           fetch-depth: 1
 
       - name: Checkout Sandbox repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: saltyorg/Sandbox
           ref: ${{ github.event.inputs.sandbox_branch || 'master' }}

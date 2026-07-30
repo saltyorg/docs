@@ -136,7 +136,6 @@ tags:
 |------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Autobrr](autobrr.md)                          |             `autobrr`              |    `feederbox_roles` `saltbox_roles`     |
 | [Bazarr](bazarr.md)                            |              `bazarr`              |    `feederbox_roles` `saltbox_roles`     |
-| [Subliminal](subliminal.md)                    |            `subliminal`            |    `feederbox_roles` `saltbox_roles`     |
 | [Shelfmark](../sandbox/apps/shelfmark.md)      |        `sandbox-shelfmark`         |             `sandbox_roles`              |
 
 ## :man_mage: Accessories

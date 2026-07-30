@@ -281,7 +281,6 @@ nav:
           - apps/rclone.md
           - apps/redis.md
           - apps/scrutiny.md
-          - apps/subliminal.md
           - apps/timescaledb.md
           - apps/traefik.md
           - apps/transfer.md

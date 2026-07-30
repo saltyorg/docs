@@ -60,6 +60,10 @@ sb install generate-traefik-template
 
     - Often needs changing:
 
+        ???+info "Check upstream"
+
+            The project usually provides a Docker Compose sample in its repository or documentation. Make sure to validate the settings you use against theirs!
+
         ``` { .yaml .no-copy hl_lines="2-4" }
         environment:
           # Remove unsupported environment variables and add image-specific ones, e.g.:
@@ -75,15 +79,15 @@ sb install generate-traefik-template
               - OTHER_SETTING="true"
             ```
 
+            Caution: it's either one format or the other—you cannot mix and match.
+
         ``` { .yaml .no-copy hl_lines="2-3" }
         volumes:
-          - /opt/xCUSTOM_APP_NAMEx:/config # (1)!
+          - /opt/xCUSTOM_APP_NAMEx:/config # Image may use a different path than `/config`!
           # Set other volume mappings the image requires
         ```
 
-        1.  Image may use a different path than `/config`
-
-    ??? info "Cheat Sheet (some content may be outdated)"
+    ??? abstract "Cheat Sheet (some content may be outdated)"
 
         ```yaml
         services:

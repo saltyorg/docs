@@ -81,7 +81,7 @@ Full changes:
 
 ## Inventory Migration Guide
 
-???+ abstract "Summary for people who don't like reading a lot of text"
+???+abstract "Summary for people who don't like reading a lot of text"
 
     -   Variables that previously applied to all instances of a role (e.g. `sonarr_docker_image`) now only apply to the instance with the exact name (e.g. `sonarr`).
 

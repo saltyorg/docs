@@ -46,7 +46,7 @@ DDNS is a Saltbox-specific Dynamic DNS service that automatically manages DNS re
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ info
+???+info
 
     - This service only works with Cloudflare DNS
     - The container requires access to Traefik's API to discover routes

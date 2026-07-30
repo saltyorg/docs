@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ info
+???+info
 
     -   The default installation utilises a seperate postgres database.
     -   This will install the fireflyiii core container and install the mariadb database

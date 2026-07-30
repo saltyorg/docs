@@ -108,7 +108,7 @@ Let's explore two example use cases for customizing roles using variables in the
 
 A common use for overrides will be specifying the version of the Docker image to be used. Let's see how that's done by navigating to [Sonarr: Role Defaults](../../apps/sonarr.md#role-defaults) and in the ***Docker*** tab, scrolling down to:
 
-???+ variable string "`sonarr_role_docker_image_tag`"
+???+variable string "`sonarr_role_docker_image_tag`"
 
     === "Role-scoped"
 

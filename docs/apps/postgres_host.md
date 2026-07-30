@@ -47,7 +47,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ info
+???+info
 
     This role supports multiple PostgreSQL versions running simultaneously, each on different ports, with full user and database management capabilities.
 

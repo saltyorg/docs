@@ -23,7 +23,7 @@ Restore is a Saltbox module that restores a backup performed with one of the Sal
 
 ## Prerequisite Configuration
 
-???+ info
+???+info
     Just like the initial install, these instructions are assuming you are running as `root` until told otherwise below.
 
 ### Dependencies
@@ -177,7 +177,7 @@ backup:
 
     Then you are authenticating with a service account and will have to copy that service account file onto this machine to the location shown in the error.
 
-    ???+ info
+    ???+info
         If you are restoring from an rclone backup and you are using a service account to authenticate the rclone remote that holds the backup, you will need to put that SA JSON file in place manually so that the restore process can authenticate the remote to download the rest of the backup.
 
     ??? note "What's this about service accounts?"
@@ -219,7 +219,7 @@ backup:
 
 ## Deployment
 
-???+ info
+???+info
     From this point you'll want to **make sure** you run commands as the user specified in the `accounts.yml`; this means you should log out and log back in as `seed` (or the user in `accounts.yml` if you changed it)
 
 Start the restore process.

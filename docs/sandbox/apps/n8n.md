@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ warning "Outdated role marked for deprecation"
+???+warning "Outdated role marked for deprecation"
 
     This role is no longer aligned with upstream changes and may not work as expected.
     

@@ -43,7 +43,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ warning "Deprecation notice"
+???+warning "Deprecation notice"
 
     Overseerr is being phased out in favor of [Seerr](seerr.md). The role and documentation remain for a limited time.
 

@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ info
+???+info
 
     - Error pages stored in `/opt/error-pages/`
     - Pre-generated at install time from selected template

@@ -77,7 +77,7 @@ services:
 4. The path inside of the container where the log file is accessible. This must be the same in the `volumes` section above and this `command` section. Matching the annotation example, this would be `/container/path/to.log`.
 5. Provide your `uid:gid` if they are different. You can check these values by running the `id` command.
 
-???+ note
+???+note
     To get the container running, follow our docs on starting a docker container here; [Your Own Containers](../advanced/your-own-containers.md#docker-compose).
 
 ### Adding Additional Hosts

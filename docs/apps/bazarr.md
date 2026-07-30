@@ -53,7 +53,7 @@ sb install bazarr
 
 Visit <https://bazarr.iYOUR_DOMAIN_NAMEi>.
 
-???+ warning "Cloud Storage Performance"
+???+warning "Cloud Storage Performance"
 
     If your media is stored in the cloud, several Bazarr settings can trigger excessive API calls.  
     See the official [Performance Tuning](https://wiki.bazarr.media/Additional-Configuration/Performance-Tuning/) page for full details, but the most impactful settings to review:

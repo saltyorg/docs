@@ -46,7 +46,7 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+ info
+???+info
 
     Scrutiny monitors hard drive health using S.M.A.R.T. metrics. The omnibus container includes WebUI, Collector, and InfluxDB. It automatically detects drives, collects metrics, and displays health status with historical tracking. Data persists in `/opt/scrutiny/`.
     

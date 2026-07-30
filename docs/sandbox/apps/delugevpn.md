@@ -57,7 +57,7 @@ sb install sandbox-delugevpn
 
 Visit <https://delugevpn.iYOUR_DOMAIN_NAMEi>.
 
-???+ warning "Outdated guide — settings.yml was removed in favor of Inventory usage"
+???+warning "Outdated guide — settings.yml was removed in favor of Inventory usage"
 
 See the parent [Deluge](../../apps/deluge.md) role for app setup.
 

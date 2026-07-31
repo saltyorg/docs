@@ -395,7 +395,7 @@ body:has(.md-tooltip.md-tooltip--active) .md-tooltip2.md-tooltip2--active {
   display: none;
 }
 
-.md-tooltip2 {
+.md-tooltip2:not([role="dialog"]) {
   top: calc(var(--md-tooltip-host-y) - 2rem);
 }
 

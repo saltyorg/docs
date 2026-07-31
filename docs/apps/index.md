@@ -19,11 +19,11 @@ tags:
 ### Media Server
 
 |                                 |   :material-monitor-arrow-down:{ .xl }    | :material-format-list-group-plus:{ .xl } |
-|---------------------------------|:------------------------------------------:|:----------------------------------------:|
-| [Plex Media Server](plex.md)    | `plex` `plex-reset-codecs` `plex-reclaim`  |         `media_servers_enabled`          |
-| [Emby](emby.md)                 |                   `emby`                   |         `media_servers_enabled`          |
-| [Jellyfin](jellyfin.md)         |                 `jellyfin`                 |         `media_servers_enabled`          |
-| [Silo](../sandbox/apps/silo.md) |               `sandbox-silo`               |             `sandbox_roles`              |
+|---------------------------------|:-----------------------------------------:|:----------------------------------------:|
+| [Plex Media Server](plex.md)    | `plex` `plex-reset-codecs` `plex-reclaim` |         `media_servers_enabled`          |
+| [Emby](emby.md)                 |                  `emby`                   |         `media_servers_enabled`          |
+| [Jellyfin](jellyfin.md)         |                `jellyfin`                 |         `media_servers_enabled`          |
+| [Silo](../sandbox/apps/silo.md) |              `sandbox-silo`               |             `sandbox_roles`              |
 
 ### Audio Server
 
@@ -127,6 +127,7 @@ tags:
 | [AirDC++](../sandbox/apps/airdcpp.md)          |         `sandbox-airdcpp`          |             `sandbox_roles`              |
 | [Deemix](../sandbox/apps/deemix.md)            |          `sandbox-deemix`          |             `sandbox_roles`              |
 | [JDownloader](../sandbox/apps/jdownloader2.md) |       `sandbox-jdownloader2`       |             `sandbox_roles`              |
+| [MeTube](../sandbox/apps/metube.md)            |          `sandbox-metube`          |             `sandbox_roles`              |
 | [PyLoad](../sandbox/apps/pyload.md)            |          `sandbox-pyload`          |             `sandbox_roles`              |
 | [YTDL-Sub](../sandbox/apps/ytdl_sub.md)        |         `sandbox-ytdl-sub`         |             `sandbox_roles`              |
 

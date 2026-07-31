@@ -1,6 +1,5 @@
 ---
 icon: material/docker
-status: draft2
 title: MeTube
 hide:
   - tags

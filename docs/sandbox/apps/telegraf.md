@@ -456,6 +456,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         telegraf2_docker_restart_policy: unless-stopped
         ```
 
+    <h5>Groups</h5>
+
+    ??? variable list "`telegraf_role_docker_groups`{ .sb-show-on-unchecked }`telegraf2_docker_groups`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        telegraf_role_docker_groups:
+          - "{{ dockergid }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        telegraf2_docker_groups:
+          - "{{ dockergid }}"
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
@@ -726,18 +742,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: list
         telegraf2_docker_devices:
-        ```
-
-    ??? variable list "`telegraf_role_docker_groups`{ .sb-show-on-unchecked }`telegraf2_docker_groups`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        telegraf_role_docker_groups:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        telegraf2_docker_groups:
         ```
 
     ??? variable bool "`telegraf_role_docker_privileged`{ .sb-show-on-unchecked }`telegraf2_docker_privileged`{ .sb-show-on-checked }"

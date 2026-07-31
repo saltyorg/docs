@@ -79,83 +79,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Settings"
 
-    ??? variable bool "`koito_role_postgres_deploy`"
-
-        ```yaml
-        # Type: bool (true/false)
-        koito_role_postgres_deploy: true
-        ```
-
-    ??? variable string "`koito_role_postgres_name`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_name: "{{ koito_name }}-postgres"
-        ```
-
-    ??? variable string "`koito_role_postgres_user`"
-
-        ```yaml
-        # If empty it will fallback to postgres role default
-        # Type: string
-        koito_role_postgres_user: ""
-        ```
-
-    ??? variable string "`koito_role_postgres_password`"
-
-        ```yaml
-        # If empty it will fallback to postgres role default
-        # Type: string
-        koito_role_postgres_password: ""
-        ```
-
-    ??? variable string "`koito_role_postgres_docker_env_db`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_docker_env_db: "koitodb"
-        ```
-
-    ??? variable string "`koito_role_postgres_docker_image_tag`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_docker_image_tag: "16"
-        ```
-
-    ??? variable string "`koito_role_postgres_docker_image_repo`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_docker_image_repo: "postgres"
-        ```
-
-    ??? variable dict "`koito_role_postgres_docker_healthcheck`"
-
-        ```yaml
-        # Type: dict
-        koito_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='koito') }} -U {{ lookup('role_var', '_postgres_user', role='koito') if (lookup('role_var', '_postgres_user', role='koito') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
-          start_period: 20s
-          interval: 30s
-          retries: 5
-          timeout: 5s
-        ```
-
-    ??? variable string "`koito_role_postgres_paths_folder`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_paths_folder: "{{ koito_name }}"
-        ```
-
-    ??? variable string "`koito_role_postgres_paths_location`"
-
-        ```yaml
-        # Type: string
-        koito_role_postgres_paths_location: "{{ server_appdata_path }}/{{ koito_role_postgres_paths_folder }}/postgres"
-        ```
-
     ??? variable string "`koito_role_default_username`"
 
         ```yaml
@@ -168,13 +91,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         koito_role_default_password: "{{ user.pass }}"
-        ```
-
-    ??? variable string "`koito_role_database_url`"
-
-        ```yaml
-        # Type: string
-        koito_role_database_url: ""
         ```
 
     ??? variable string "`koito_role_default_theme`"
@@ -393,13 +309,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                else lookup('role_var', '_web_domain', role='koito')) }}"
         ```
 
-    ??? variable string "`koito_role_allowed_hosts`"
-
-        ```yaml
-        # Type: string
-        koito_role_allowed_hosts: "{{ lookup('role_var', '_web_host', role='koito') }}"
-        ```
-
 === "DNS"
 
     ??? variable string "`koito_role_dns_record`"
@@ -523,14 +432,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         koito_role_docker_envs_default:
           TZ: "{{ tz }}"
-          KOITO_DATABASE_URL: "{{ lookup('role_var', '_database_url', role='koito')
-                               if (lookup('role_var', '_database_url', role='koito') | length > 0)
-                               else 'postgres://' + (lookup('role_var', '_postgres_user', role='koito')
-                               if (lookup('role_var', '_postgres_user', role='koito') | length > 0)
-                               else lookup('role_var', '_docker_env_user', role='postgres')) + ':' + (lookup('role_var', '_postgres_password', role='koito')
-                               if (lookup('role_var', '_postgres_password', role='koito') | length > 0)
-                               else lookup('role_var', '_docker_env_password', role='postgres')) + '@' + lookup('role_var', '_postgres_name', role='koito') + ':5432/' + lookup('role_var', '_postgres_docker_env_db', role='koito') }}"
-          KOITO_ALLOWED_HOSTS: "{{ lookup('role_var', '_allowed_hosts', role='koito') }}"
           KOITO_DEFAULT_USERNAME: "{{ lookup('role_var', '_default_username', role='koito') }}"
           KOITO_DEFAULT_PASSWORD: "{{ lookup('role_var', '_default_password', role='koito') }}"
           KOITO_DEFAULT_THEME: "{{ lookup('role_var', '_default_theme', role='koito') }}"
@@ -653,31 +554,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         koito_role_docker_user: "{{ uid }}:{{ gid }}"
-        ```
-
-    <h5>Dependencies</h5>
-
-    ??? variable string "`koito_role_depends_on`"
-
-        ```yaml
-        # Type: string
-        koito_role_depends_on: "{{ lookup('role_var', '_postgres_name', role='koito')
-                                if lookup('role_var', '_postgres_deploy', role='koito')
-                                else '' }}"
-        ```
-
-    ??? variable string "`koito_role_depends_on_delay`"
-
-        ```yaml
-        # Type: string (quoted number)
-        koito_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`koito_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Type: string ("true"/"false")
-        koito_role_depends_on_healthchecks: "false"
         ```
 
 === "Docker+"
@@ -1236,6 +1112,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         koito_role_autoheal_enabled: true
+        ```
+
+    ??? variable string "`koito_role_depends_on`"
+
+        ```yaml
+        # List of container dependencies that must be running before the container start
+        # Type: string
+        koito_role_depends_on: ""
+        ```
+
+    ??? variable string "`koito_role_depends_on_delay`"
+
+        ```yaml
+        # Delay in seconds before starting the container after dependencies are ready
+        # Type: string (quoted number)
+        koito_role_depends_on_delay: "0"
+        ```
+
+    ??? variable string "`koito_role_depends_on_healthchecks`"
+
+        ```yaml
+        # Enable healthcheck waiting for container dependencies
+        # Type: string ("true"/"false")
+        koito_role_depends_on_healthchecks:
         ```
 
     ??? variable bool "`koito_role_diun_enabled`"

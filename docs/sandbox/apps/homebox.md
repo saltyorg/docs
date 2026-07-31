@@ -85,6 +85,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         homebox_name: homebox
         ```
 
+=== "Settings"
+
+    ??? variable string "`homebox_role_auth_api_key_pepper`"
+
+        ```yaml
+        # Type: string
+        homebox_role_auth_api_key_pepper: "{{ homebox_saltbox_facts.facts.api_key_pepper }}"
+        ```
+
 === "Web"
 
     ??? variable string "`homebox_role_web_subdomain`"
@@ -244,6 +253,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PGID: "{{ gid }}"
           HBOX_LOG_LEVEL: "info"
           HBOX_SWAGGER_SCHEMA: "https"
+          HBOX_AUTH_API_KEY_PEPPER: "{{ lookup('role_var', '_auth_api_key_pepper', role='homebox') }}"
         ```
 
     ??? variable dict "`homebox_role_docker_envs_custom`"

@@ -85,6 +85,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         xbackbone_name: xbackbone
         ```
 
+=== "Settings"
+
+    ??? variable string "`xbackbone_role_admin_email`"
+
+        ```yaml
+        # Type: string
+        xbackbone_role_admin_email: "{{ user.email }}"
+        ```
+
+    ??? variable string "`xbackbone_role_admin_password`"
+
+        ```yaml
+        # Type: string
+        xbackbone_role_admin_password: "{{ user.pass }}"
+        ```
+
 === "Web"
 
     ??? variable string "`xbackbone_role_web_subdomain`"

@@ -86,6 +86,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         openobserve_name: openobserve
         ```
 
+=== "Settings"
+
+    ??? variable string "`openobserve_role_root_user_email`"
+
+        ```yaml
+        # Type: string
+        openobserve_role_root_user_email: "{{ user.email }}"
+        ```
+
+    ??? variable string "`openobserve_role_root_user_password`"
+
+        ```yaml
+        # Type: string
+        openobserve_role_root_user_password: "{{ user.pass }}"
+        ```
+
 === "Web"
 
     ??? variable string "`openobserve_role_web_subdomain`"
@@ -243,8 +259,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
-          ZO_ROOT_USER_EMAIL: "{{ user.email }}"
-          ZO_ROOT_USER_PASSWORD: "{{ user.pass }}"
+          ZO_DATA_DIR: "/data"
+          ZO_ROOT_USER_EMAIL: "{{ lookup('role_var', '_root_user_email', role='openobserve') }}"
+          ZO_ROOT_USER_PASSWORD: "{{ lookup('role_var', '_root_user_password', role='openobserve') }}"
         ```
 
     ??? variable dict "`openobserve_role_docker_envs_custom`"

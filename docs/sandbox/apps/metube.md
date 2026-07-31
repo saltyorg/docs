@@ -26,19 +26,19 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# 
+# MeTube
 
 ## Overview
 
- is 
+[MeTube](https://github.com/alexta69/metube) is a self-hosted web UI for `yt-dlp`, for downloading media from YouTube and dozens of other sites.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/alexta69/metube/pkgs/container/metube){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-comments:**Community**](https://github.com/alexta69/metube/discussions){ .md-button .md-button--stretch }
 
 </div>
 

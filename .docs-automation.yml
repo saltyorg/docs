@@ -45,6 +45,7 @@ blacklist:
       - "user_check"
     sandbox:
       - "homarr_legacy"
+      - "koito_migrate"
       - "sanity_check"
       # Deprecated roles
       - "booklore"  # deprecated

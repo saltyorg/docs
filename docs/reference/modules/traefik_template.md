@@ -75,8 +75,8 @@ sb install generate-traefik-template
 
             ```yaml
             environment:
-              - SOME_SETTING="myvalue"
-              - OTHER_SETTING="true"
+              - "SOME_SETTING=myvalue"
+              - "OTHER_SETTING=true"
             ```
 
             Caution: it's either one format or the other—you cannot mix and match.

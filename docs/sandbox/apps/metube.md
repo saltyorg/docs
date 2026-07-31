@@ -28,13 +28,13 @@ saltbox_automation:
 
 ## Overview
 
- is 
+MeTube is a self-hosted web UI for `yt-dlp`, for downloading media from YouTube and dozens of other sites.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://github.com/alexta69/metube/blob/master/README.md){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/alexta69/metube){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

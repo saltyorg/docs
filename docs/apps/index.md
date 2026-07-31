@@ -147,7 +147,6 @@ tags:
 |                                                             | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |-------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Autoscan](autoscan.md)                                     |             `autoscan`             |     `mediabox_roles` `saltbox_roles`     |
-| [A-Train](../sandbox/apps/a_train.md)                       |         `sandbox-a-train`          |             `sandbox_roles`              |
 | [Kometa](../sandbox/apps/kometa.md)                         |          `sandbox-kometa`          |             `sandbox_roles`              |
 | [PlexTraktSync](../sandbox/apps/plextraktsync.md)           |      `sandbox-plextraktsync`       |             `sandbox_roles`              |
 | [WatchState](../sandbox/apps/watchstate.md)                 |        `sandbox-watchstate`        |             `sandbox_roles`              |

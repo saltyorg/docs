@@ -56,7 +56,7 @@ Manual scan URL: <https://autoscan.iYOUR_DOMAIN_NAMEi/triggers/manual>.
 
 The Plex API is known to have trouble when scanning items into empty libraries. You should add at least one item to each Plex library and perform a manual scan as a first step. If you don't do this, things may not get scanned into Plex in response to autoscan's requests.
 
-The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal. [a-train](https://github.com/m-rots/a-train/pkgs/container/a-train) is now replacing the bernard trigger.
+The Saltbox Autoscan role will attempt to partially configure your autoscan config file located at `/opt/autoscan/config.yml`. You should refer to the documentation and adjust this file as suits your own needs. The config generated is very minimal.
 
 The generated config file will look something like this:
 
@@ -84,12 +84,6 @@ authentication:
 port: 3030
 
 triggers:
-  a-train:
-      priority: 5
-      rewrite: # Global rewrites
-        - from: ^/Media/
-          to: /mnt/unionfs/Media/
-
   inotify:
     - priority: 0
 
@@ -209,95 +203,6 @@ No. These files can be named whatever you want. If you don't like `mounted.bin` 
 </details>
 
 You will set up the webhooks for radarr/sonarr/lidarr as part of their setup, so they aren't discussed here
-
-### A-Train
-
-Autoscan can monitor **Google Drive** changes via a trigger called "Bernard". The code behind Bernard can sometimes get out of sync with the state of Google Drive and miss things, so now we are using A-Train.
-
-**IMPORTANT**:
-You only need to set this up if you are planning to add media to **Google Drive** directly, *outside* the usual Radarr/Sonarr channels, or if you are monitoring a Shared Drive where new media appears outside those channels. If you are not planning to do that, you can skip this portion of the setup.
-
-**IMPORTANT**:
-A-Train does not support anything other than **Google Drive**, as it uses the Google Drive API to do its work.
-
-"A-Train" is a rewrite of the Bernard concepts, and is currently available as a second docker image as part of Sandbox. It will likely be integrated into autoscan at some point in the future.
-
-!!! warning
-    A-Train supports **only** *unencrypted* Google Shared Drives authenticated via Service Accounts. It *does not* support encrypted drives, My Drive, or authentication via Client ID/Secret or other means.
-
-Enter the names of the remotes you want to monitor in the Inventory. The Remotes can be either drive remotes or union remotes. You may use `rclone listremotes` to get your drive remotes.
-
-Example:
-
-```yaml
-a_train:
-  remotes: ["bvoiwepopz-Movies", "bvoiwepopz-TV"]
-```
-
-or
-
-```yaml
-a_train:
-  remotes: ["google"]
-```
-
-Run the a-train tag to create the container:
-
-```shell
-sb install sandbox-a-train
-```
-
-Copy one of your service account files from its current location to `/opt/a-train/account.json`. Remember to rename your service account file to "`account.json`".
-
-Example:
-
-```shell
-cp /opt/sa/all/160.json /opt/a-train/account.json
-```
-
-Run the autoscan tag to rebuild the container:
-
-```shell
-sb install autoscan
-```
-
-Run the a-train tag to rebuild the container:
-
-```shell
-sb install sandbox-a-train
-```
-
-### Bernard
-
-**IMPORTANT**:
-Bernard does not support anything other than **Google Drive**, as it uses the Google Drive API to do its work.
-
-If for some reason you still wanted to use Bernard, it would look like this:
-
-```yaml
-triggers:
-  bernard:
-    - account: /config/sa.json # Path inside the container where your SA is located
-      cron: "*/5 * * * *" # every five minutes (the "" are important)
-      priority: 0
-      drives:
-        - id: drive_id #Friendly title
-      # Rewrite gdrive to the local filesystem
-      rewrite:
-        - from: ^/Media/
-          to: /mnt/unionfs/Media/
-      # Filter with regular expressions
-      include:
-        - ^/mnt/unionfs/Media/
-      exclude:
-        - '\.srt$'
-```
-
-Further documentation:
-
-- [A-Train Docker page](https://github.com/users/m-rots/packages/container/package/a-train)
-
-- [A-Train initial documentation](https://gist.github.com/m-rots/f345fd2cfc44585266b620feb9fbd612)
 
 ## Next
 

@@ -289,7 +289,6 @@ nav:
           - apps/yyq.md
 
       - Sandbox (community):
-          - sandbox/apps/a_train.md
           - sandbox/apps/actualbudget.md
           - sandbox/apps/adguardhome.md
           - sandbox/apps/adminer.md

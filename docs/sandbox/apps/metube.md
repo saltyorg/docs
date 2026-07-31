@@ -1,25 +1,27 @@
 ---
 icon: material/docker
 status: draft2
+title: MeTube
 hide:
   - tags
 tags:
   - metube
+  - youtube
 saltbox_automation:
   app_links:
     - name: Manual
       url:
       type: documentation
     - name: Releases
-      url:
+      url: https://github.com/alexta69/metube/pkgs/container/metube
       type: github
     - name: Community
-      url:
+      url: https://github.com/alexta69/metube/discussions
       type: community
   project_description:
-    name:
-    summary:
-    link:
+    name: MeTube
+    summary: a self-hosted web UI for `yt-dlp`, for downloading media from YouTube and dozens of other sites.
+    link: https://github.com/alexta69/metube
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

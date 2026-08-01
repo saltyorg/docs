@@ -133,7 +133,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        joplin_role_postgres_docker_image_tag: "13"
+        joplin_role_postgres_docker_image_tag: "16"
         ```
 
     ??? variable string "`joplin_role_postgres_docker_image_repo`"
@@ -407,11 +407,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Create Docker Container Timeout</h5>
 
-    ??? variable int "`joplin_docker_create_timeout`"
+    ??? variable int "`joplin_role_docker_create_timeout`"
 
         ```yaml
         # Type: int
-        joplin_docker_create_timeout: 300
+        joplin_role_docker_create_timeout: 600
         ```
 
 === "Docker+"
@@ -911,13 +911,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         joplin_role_docker_commands:
-        ```
-
-    ??? variable int "`joplin_role_docker_create_timeout`"
-
-        ```yaml
-        # Type: int
-        joplin_role_docker_create_timeout:
         ```
 
     ??? variable string "`joplin_role_docker_entrypoint`"

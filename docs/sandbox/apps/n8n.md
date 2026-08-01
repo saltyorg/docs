@@ -133,7 +133,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        n8n_role_postgres_docker_image_tag: "14-alpine"
+        n8n_role_postgres_docker_image_tag: "16-alpine"
         ```
 
     ??? variable string "`n8n_role_postgres_docker_image_repo`"

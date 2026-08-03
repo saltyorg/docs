@@ -42,7 +42,7 @@ The arr_db role performs the following operations for each enabled application:
 4. **Reindex**: Rebuilds database indexes for improved query performance
 5. **Cleanup**: Removes temporary backup files after successful completion
 
-## Configuration
+## Pre-deployment
 
 Before running the arr_db role, you must enable at least one application in your Saltbox inventory by setting [the appropriate variable](#role-defaults) to `true`.
 

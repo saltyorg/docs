@@ -26,7 +26,7 @@ Custom is a Saltbox module that allows you to install additional software packag
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Configuration
+## Pre-deployment
 
 Before running the custom tag, configure the packages you want to install in your Saltbox inventory:
 

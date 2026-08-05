@@ -482,7 +482,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        traefik_role_docker_image_tag: "v3.6"
+        traefik_role_docker_image_tag: "v3.7"
         ```
 
     ??? variable string "`traefik_role_docker_image`"

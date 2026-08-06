@@ -151,16 +151,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        node_red_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
-                                if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
-                                else lookup('role_var', '_web_domain', role='node_red')) }}"
+        node_red_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
+                                        if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='node_red') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        node_red2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
-                            if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
-                            else lookup('role_var', '_web_domain', role='node_red')) }}"
+        node_red2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='node_red') + '.' + lookup('role_var', '_web_domain', role='node_red')
+                                    if (lookup('role_var', '_web_subdomain', role='node_red') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='node_red') }}"
         ```
 
 === "DNS"

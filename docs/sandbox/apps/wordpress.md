@@ -147,16 +147,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        wordpress_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
-                                 if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='wordpress')) }}"
+        wordpress_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
+                                         if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='wordpress') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        wordpress2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
-                             if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
-                             else lookup('role_var', '_web_domain', role='wordpress')) }}"
+        wordpress2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='wordpress') + '.' + lookup('role_var', '_web_domain', role='wordpress')
+                                     if (lookup('role_var', '_web_subdomain', role='wordpress') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='wordpress') }}"
         ```
 
 === "DNS"

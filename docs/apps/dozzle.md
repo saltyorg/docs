@@ -177,9 +177,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        dozzle_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='dozzle') + '.' + lookup('role_var', '_web_domain', role='dozzle')
-                              if (lookup('role_var', '_web_subdomain', role='dozzle') | length > 0)
-                              else lookup('role_var', '_web_domain', role='dozzle')) }}"
+        dozzle_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='dozzle') + '.' + lookup('role_var', '_web_domain', role='dozzle')
+                                      if (lookup('role_var', '_web_subdomain', role='dozzle') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='dozzle') }}"
         ```
 
 === "DNS"
@@ -220,8 +220,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         dozzle_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',dropsecurityheaders@file,themepark-' + dozzle_name
-                                                      if (lookup('role_var', '_themepark_enabled', role='dozzle') and global_themepark_plugin_enabled)
-                                                      else '') }}"
+                                                       if (lookup('role_var', '_themepark_enabled', role='dozzle') and global_themepark_plugin_enabled)
+                                                       else '') }}"
         ```
 
     ??? variable string "`dozzle_role_traefik_middleware_custom`"

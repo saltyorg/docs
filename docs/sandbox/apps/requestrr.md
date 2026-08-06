@@ -146,16 +146,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        requestrr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
-                                 if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='requestrr')) }}"
+        requestrr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
+                                         if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='requestrr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        requestrr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
-                             if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
-                             else lookup('role_var', '_web_domain', role='requestrr')) }}"
+        requestrr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='requestrr') + '.' + lookup('role_var', '_web_domain', role='requestrr')
+                                     if (lookup('role_var', '_web_subdomain', role='requestrr') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='requestrr') }}"
         ```
 
 === "DNS"

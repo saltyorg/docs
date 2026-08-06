@@ -133,9 +133,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        nextcloud_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nextcloud') + '.' + lookup('role_var', '_web_domain', role='nextcloud')
-                                 if (lookup('role_var', '_web_subdomain', role='nextcloud') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='nextcloud')) }}"
+        nextcloud_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='nextcloud') + '.' + lookup('role_var', '_web_domain', role='nextcloud')
+                                         if (lookup('role_var', '_web_subdomain', role='nextcloud') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='nextcloud') }}"
         ```
 
 === "DNS"

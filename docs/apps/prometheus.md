@@ -136,9 +136,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        prometheus_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='prometheus') + '.' + lookup('role_var', '_web_domain', role='prometheus')
-                                  if (lookup('role_var', '_web_subdomain', role='prometheus') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='prometheus')) }}"
+        prometheus_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='prometheus') + '.' + lookup('role_var', '_web_domain', role='prometheus')
+                                          if (lookup('role_var', '_web_subdomain', role='prometheus') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='prometheus') }}"
         ```
 
 === "DNS"

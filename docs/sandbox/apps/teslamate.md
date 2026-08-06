@@ -201,9 +201,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        teslamate_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='teslamate') + '.' + lookup('role_var', '_web_domain', role='teslamate')
-                                 if (lookup('role_var', '_web_subdomain', role='teslamate') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='teslamate')) }}"
+        teslamate_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='teslamate') + '.' + lookup('role_var', '_web_domain', role='teslamate')
+                                         if (lookup('role_var', '_web_subdomain', role='teslamate') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='teslamate') }}"
         ```
 
 === "DNS"

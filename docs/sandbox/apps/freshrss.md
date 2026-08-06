@@ -111,9 +111,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        freshrss_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='freshrss') + '.' + lookup('role_var', '_web_domain', role='freshrss')
-                                if (lookup('role_var', '_web_subdomain', role='freshrss') | length > 0)
-                                else lookup('role_var', '_web_domain', role='freshrss')) }}"
+        freshrss_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='freshrss') + '.' + lookup('role_var', '_web_domain', role='freshrss')
+                                        if (lookup('role_var', '_web_subdomain', role='freshrss') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='freshrss') }}"
         ```
 
 === "DNS"

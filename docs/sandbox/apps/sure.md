@@ -361,9 +361,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        sure_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sure') + '.' + lookup('role_var', '_web_domain', role='sure')
-                            if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
-                            else lookup('role_var', '_web_domain', role='sure')) }}"
+        sure_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='sure') + '.' + lookup('role_var', '_web_domain', role='sure')
+                                    if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='sure') }}"
         ```
 
     ??? variable string "`sure_role_web_host`"
@@ -371,8 +371,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         sure_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='sure') + '.' + lookup('role_var', '_web_domain', role='sure')
-                             if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
-                             else lookup('role_var', '_web_domain', role='sure')) }}"
+                                 if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='sure')) }}"
         ```
 
 === "DNS"

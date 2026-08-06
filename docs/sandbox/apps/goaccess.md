@@ -113,9 +113,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        goaccess_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='goaccess') + '.' + lookup('role_var', '_web_domain', role='goaccess')
-                                if (lookup('role_var', '_web_subdomain', role='goaccess') | length > 0)
-                                else lookup('role_var', '_web_domain', role='goaccess')) }}"
+        goaccess_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='goaccess') + '.' + lookup('role_var', '_web_domain', role='goaccess')
+                                        if (lookup('role_var', '_web_subdomain', role='goaccess') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='goaccess') }}"
         ```
 
 === "DNS"

@@ -110,9 +110,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        forgejo_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='forgejo') + '.' + lookup('role_var', '_web_domain', role='forgejo')
-                               if (lookup('role_var', '_web_subdomain', role='forgejo') | length > 0)
-                               else lookup('role_var', '_web_domain', role='forgejo')) }}"
+        forgejo_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='forgejo') + '.' + lookup('role_var', '_web_domain', role='forgejo')
+                                       if (lookup('role_var', '_web_subdomain', role='forgejo') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='forgejo') }}"
         ```
 
 === "DNS"

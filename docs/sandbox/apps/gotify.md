@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        gotify_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='gotify') + '.' + lookup('role_var', '_web_domain', role='gotify')
-                              if (lookup('role_var', '_web_subdomain', role='gotify') | length > 0)
-                              else lookup('role_var', '_web_domain', role='gotify')) }}"
+        gotify_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='gotify') + '.' + lookup('role_var', '_web_domain', role='gotify')
+                                      if (lookup('role_var', '_web_subdomain', role='gotify') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='gotify') }}"
         ```
 
 === "DNS"

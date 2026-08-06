@@ -111,9 +111,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        discoflix_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='discoflix') + '.' + lookup('role_var', '_web_domain', role='discoflix')
-                                 if (lookup('role_var', '_web_subdomain', role='discoflix') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='discoflix')) }}"
+        discoflix_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='discoflix') + '.' + lookup('role_var', '_web_domain', role='discoflix')
+                                         if (lookup('role_var', '_web_subdomain', role='discoflix') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='discoflix') }}"
         ```
 
 === "DNS"

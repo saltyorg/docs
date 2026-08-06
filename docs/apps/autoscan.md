@@ -309,16 +309,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        autoscan_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
-                                if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
-                                else lookup('role_var', '_web_domain', role='autoscan')) }}"
+        autoscan_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
+                                        if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='autoscan') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        autoscan2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
-                            if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
-                            else lookup('role_var', '_web_domain', role='autoscan')) }}"
+        autoscan2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='autoscan') + '.' + lookup('role_var', '_web_domain', role='autoscan')
+                                    if (lookup('role_var', '_web_subdomain', role='autoscan') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='autoscan') }}"
         ```
 
 === "DNS"

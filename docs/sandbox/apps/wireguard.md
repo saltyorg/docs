@@ -129,9 +129,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        wireguard_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wireguard') + '.' + lookup('role_var', '_web_domain', role='wireguard')
-                                 if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='wireguard')) }}"
+        wireguard_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='wireguard') + '.' + lookup('role_var', '_web_domain', role='wireguard')
+                                         if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='wireguard') }}"
         ```
 
     ??? variable string "`wireguard_role_web_host`"
@@ -139,8 +139,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         wireguard_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='wireguard') + '.' + lookup('role_var', '_web_domain', role='wireguard')
-                                  if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='wireguard')) }}"
+                                      if (lookup('role_var', '_web_subdomain', role='wireguard') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='wireguard')) }}"
         ```
 
 === "DNS"

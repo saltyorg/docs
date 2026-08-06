@@ -166,12 +166,19 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_postgres_docker_shm_size: "8G"
         ```
 
+    ??? variable string "`silo_role_database_url`"
+
+        ```yaml
+        # Type: string
+        silo_role_database_url: "postgres://{{ lookup('role_var', '_postgres_credentials_lookup', role='silo') }}@{{ lookup('role_var', '_postgres_name', role='silo') }}:5432/{{ lookup('role_var', '_postgres_docker_env_db', role='silo') }}?sslmode=disable"
+        ```
+
     ??? variable dict "`silo_role_postgres_docker_healthcheck`"
 
         ```yaml
         # Type: dict
         silo_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='silo') }} -U {{ lookup('role_var', '_postgres_user', role='silo') if (lookup('role_var', '_postgres_user', role='silo') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='silo') }} -U {{ lookup('role_var', '_postgres_user_lookup', role='silo') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -249,9 +256,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        silo_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='silo') + '.' + lookup('role_var', '_web_domain', role='silo')
-                            if (lookup('role_var', '_web_subdomain', role='silo') | length > 0)
-                            else lookup('role_var', '_web_domain', role='silo')) }}"
+        silo_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='silo') + '.' + lookup('role_var', '_web_domain', role='silo')
+                                    if (lookup('role_var', '_web_subdomain', role='silo') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='silo') }}"
         ```
 
     ??? variable string "`silo_role_web_jf_subdomain`"
@@ -503,11 +510,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           SILO_PUBLIC_URL: "{{ lookup('role_var', '_web_url', role='silo') }}"
           MODE: "integrated"
           SECRET_KEY: "{{ silo_saltbox_facts.facts.secret_key }}"
-          DATABASE_URL: "postgres://{{ lookup('role_var', '_postgres_user', role='silo')
-                                if (lookup('role_var', '_postgres_user', role='silo') | length > 0)
-                                else lookup('role_var', '_docker_env_user', role='postgres') }}:{{ lookup('role_var', '_postgres_password', role='silo')
-                                if (lookup('role_var', '_postgres_password', role='silo') | length > 0)
-                                else lookup('role_var', '_docker_env_password', role='postgres') }}@{{ lookup('role_var', '_postgres_name', role='silo') }}:5432/{{ lookup('role_var', '_postgres_docker_env_db', role='silo') }}?sslmode=disable"
+          DATABASE_URL: "{{ lookup('role_var', '_database_url', role='silo') }}"
           REDIS_URL: "redis://{{ lookup('role_var', '_redis_name', role='silo') }}:6379"
           SILO_PLUGIN_CACHE_DIR: "/var/lib/silo/plugins"
           POSTGRES_TUNE: "auto"

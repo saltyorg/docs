@@ -144,8 +144,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         invoiceninjav5_role_nginx_web_url: "{{ 'https://' + (lookup('role_var', '_nginx_web_subdomain', role='invoiceninjav5') + '.' + lookup('role_var', '_nginx_web_domain', role='invoiceninjav5')
-                                            if (lookup('role_var', '_nginx_web_subdomain', role='invoiceninjav5') | length > 0)
-                                            else lookup('role_var', '_nginx_web_domain', role='invoiceninjav5')) }}"
+                                                             if (lookup('role_var', '_nginx_web_subdomain', role='invoiceninjav5') | length > 0)
+                                                             else lookup('role_var', '_nginx_web_domain', role='invoiceninjav5')) }}"
         ```
 
 === "DNS"

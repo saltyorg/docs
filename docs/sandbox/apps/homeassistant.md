@@ -120,9 +120,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        homeassistant_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='homeassistant') + '.' + lookup('role_var', '_web_domain', role='homeassistant')
-                                     if (lookup('role_var', '_web_subdomain', role='homeassistant') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='homeassistant')) }}"
+        homeassistant_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='homeassistant') + '.' + lookup('role_var', '_web_domain', role='homeassistant')
+                                             if (lookup('role_var', '_web_subdomain', role='homeassistant') | length > 0)
+                                             else lookup('role_var', '_web_domain', role='homeassistant') }}"
         ```
 
 === "DNS"

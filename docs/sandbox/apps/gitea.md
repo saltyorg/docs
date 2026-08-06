@@ -110,9 +110,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        gitea_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='gitea') + '.' + lookup('role_var', '_web_domain', role='gitea')
-                             if (lookup('role_var', '_web_subdomain', role='gitea') | length > 0)
-                             else lookup('role_var', '_web_domain', role='gitea')) }}"
+        gitea_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='gitea') + '.' + lookup('role_var', '_web_domain', role='gitea')
+                                     if (lookup('role_var', '_web_subdomain', role='gitea') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='gitea') }}"
         ```
 
 === "DNS"

@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        komga_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='komga') + '.' + lookup('role_var', '_web_domain', role='komga')
-                             if (lookup('role_var', '_web_subdomain', role='komga') | length > 0)
-                             else lookup('role_var', '_web_domain', role='komga')) }}"
+        komga_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='komga') + '.' + lookup('role_var', '_web_domain', role='komga')
+                                     if (lookup('role_var', '_web_subdomain', role='komga') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='komga') }}"
         ```
 
 === "DNS"

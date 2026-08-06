@@ -129,9 +129,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        resiliosync_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='resiliosync') + '.' + lookup('role_var', '_web_domain', role='resiliosync')
-                                   if (lookup('role_var', '_web_subdomain', role='resiliosync') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='resiliosync')) }}"
+        resiliosync_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='resiliosync') + '.' + lookup('role_var', '_web_domain', role='resiliosync')
+                                           if (lookup('role_var', '_web_subdomain', role='resiliosync') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='resiliosync') }}"
         ```
 
 === "DNS"

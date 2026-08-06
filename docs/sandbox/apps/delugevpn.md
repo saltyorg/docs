@@ -291,9 +291,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        delugevpn_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='delugevpn') + '.' + lookup('role_var', '_web_domain', role='delugevpn')
-                                 if (lookup('role_var', '_web_subdomain', role='delugevpn') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='delugevpn')) }}"
+        delugevpn_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='delugevpn') + '.' + lookup('role_var', '_web_domain', role='delugevpn')
+                                         if (lookup('role_var', '_web_subdomain', role='delugevpn') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='delugevpn') }}"
         ```
 
 === "DNS"

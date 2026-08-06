@@ -188,9 +188,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        semaphoreui_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='semaphoreui') + '.' + lookup('role_var', '_web_domain', role='semaphoreui')
-                                   if (lookup('role_var', '_web_subdomain', role='semaphoreui') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='semaphoreui')) }}"
+        semaphoreui_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='semaphoreui') + '.' + lookup('role_var', '_web_domain', role='semaphoreui')
+                                           if (lookup('role_var', '_web_subdomain', role='semaphoreui') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='semaphoreui') }}"
         ```
 
 === "DNS"

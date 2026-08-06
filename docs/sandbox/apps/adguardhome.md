@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        adguardhome_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='adguardhome') + '.' + lookup('role_var', '_web_domain', role='adguardhome')
-                                   if (lookup('role_var', '_web_subdomain', role='adguardhome') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='adguardhome')) }}"
+        adguardhome_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='adguardhome') + '.' + lookup('role_var', '_web_domain', role='adguardhome')
+                                           if (lookup('role_var', '_web_subdomain', role='adguardhome') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='adguardhome') }}"
         ```
 
 === "DNS"

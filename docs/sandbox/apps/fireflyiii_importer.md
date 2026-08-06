@@ -111,9 +111,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        fireflyiii_importer_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='fireflyiii_importer') + '.' + lookup('role_var', '_web_domain', role='fireflyiii_importer')
-                                           if (lookup('role_var', '_web_subdomain', role='fireflyiii_importer') | length > 0)
-                                           else lookup('role_var', '_web_domain', role='fireflyiii_importer')) }}"
+        fireflyiii_importer_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='fireflyiii_importer') + '.' + lookup('role_var', '_web_domain', role='fireflyiii_importer')
+                                                   if (lookup('role_var', '_web_subdomain', role='fireflyiii_importer') | length > 0)
+                                                   else lookup('role_var', '_web_domain', role='fireflyiii_importer') }}"
         ```
 
 === "DNS"

@@ -204,9 +204,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        sabnzbd_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sabnzbd') + '.' + lookup('role_var', '_web_domain', role='sabnzbd')
-                               if (lookup('role_var', '_web_subdomain', role='sabnzbd') | length > 0)
-                               else lookup('role_var', '_web_domain', role='sabnzbd')) }}"
+        sabnzbd_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='sabnzbd') + '.' + lookup('role_var', '_web_domain', role='sabnzbd')
+                                       if (lookup('role_var', '_web_subdomain', role='sabnzbd') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='sabnzbd') }}"
         ```
 
     ??? variable string "`sabnzbd_role_web_local_url`"
@@ -254,8 +254,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         sabnzbd_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                      + (',themepark-' + sabnzbd_name
-                                                       if (lookup('role_var', '_themepark_enabled', role='sabnzbd') and global_themepark_plugin_enabled)
-                                                       else '') }}"
+                                                        if (lookup('role_var', '_themepark_enabled', role='sabnzbd') and global_themepark_plugin_enabled)
+                                                        else '') }}"
         ```
 
     ??? variable string "`sabnzbd_role_traefik_middleware_custom`"

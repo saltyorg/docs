@@ -120,9 +120,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        threadfin_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='threadfin') + '.' + lookup('role_var', '_web_domain', role='threadfin')
-                                 if (lookup('role_var', '_web_subdomain', role='threadfin') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='threadfin')) }}"
+        threadfin_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='threadfin') + '.' + lookup('role_var', '_web_domain', role='threadfin')
+                                         if (lookup('role_var', '_web_subdomain', role='threadfin') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='threadfin') }}"
         ```
 
 === "DNS"

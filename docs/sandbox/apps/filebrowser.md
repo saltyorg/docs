@@ -114,9 +114,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        filebrowser_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='filebrowser') + '.' + lookup('role_var', '_web_domain', role='filebrowser')
-                                   if (lookup('role_var', '_web_subdomain', role='filebrowser') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='filebrowser')) }}"
+        filebrowser_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='filebrowser') + '.' + lookup('role_var', '_web_domain', role='filebrowser')
+                                           if (lookup('role_var', '_web_subdomain', role='filebrowser') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='filebrowser') }}"
         ```
 
 === "DNS"

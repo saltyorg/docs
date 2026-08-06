@@ -295,9 +295,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        koito_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                             if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                             else lookup('role_var', '_web_domain', role='koito')) }}"
+        koito_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
+                                     if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='koito') }}"
         ```
 
     ??? variable string "`koito_role_web_host`"
@@ -305,8 +305,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         koito_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                              if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                              else lookup('role_var', '_web_domain', role='koito')) }}"
+                                  if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='koito')) }}"
         ```
 
 === "DNS"

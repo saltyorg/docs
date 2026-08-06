@@ -147,16 +147,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        shelfmark_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='shelfmark') + '.' + lookup('role_var', '_web_domain', role='shelfmark')
-                                 if (lookup('role_var', '_web_subdomain', role='shelfmark') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='shelfmark')) }}"
+        shelfmark_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='shelfmark') + '.' + lookup('role_var', '_web_domain', role='shelfmark')
+                                         if (lookup('role_var', '_web_subdomain', role='shelfmark') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='shelfmark') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        shelfmark2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='shelfmark') + '.' + lookup('role_var', '_web_domain', role='shelfmark')
-                             if (lookup('role_var', '_web_subdomain', role='shelfmark') | length > 0)
-                             else lookup('role_var', '_web_domain', role='shelfmark')) }}"
+        shelfmark2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='shelfmark') + '.' + lookup('role_var', '_web_domain', role='shelfmark')
+                                     if (lookup('role_var', '_web_subdomain', role='shelfmark') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='shelfmark') }}"
         ```
 
 === "DNS"

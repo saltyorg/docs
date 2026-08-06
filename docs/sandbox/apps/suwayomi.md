@@ -104,9 +104,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        suwayomi_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain') + '.' + lookup('role_var', '_web_domain')
-                                if (lookup('role_var', '_web_subdomain') | length > 0)
-                                else lookup('role_var', '_web_domain')) }}"
+        suwayomi_role_web_url: "https://{{ lookup('role_var', '_web_subdomain') + '.' + lookup('role_var', '_web_domain')
+                                        if (lookup('role_var', '_web_subdomain') | length > 0)
+                                        else lookup('role_var', '_web_domain') }}"
         ```
 
 === "DNS"

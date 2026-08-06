@@ -131,9 +131,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        notifiarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='notifiarr') + '.' + lookup('role_var', '_web_domain', role='notifiarr')
-                                 if (lookup('role_var', '_web_subdomain', role='notifiarr') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='notifiarr')) }}"
+        notifiarr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='notifiarr') + '.' + lookup('role_var', '_web_domain', role='notifiarr')
+                                         if (lookup('role_var', '_web_subdomain', role='notifiarr') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='notifiarr') }}"
         ```
 
 === "DNS"

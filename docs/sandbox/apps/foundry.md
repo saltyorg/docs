@@ -132,9 +132,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        foundry_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='foundry') + '.' + lookup('role_var', '_web_domain', role='foundry')
-                               if (lookup('role_var', '_web_subdomain', role='foundry') | length > 0)
-                               else lookup('role_var', '_web_domain', role='foundry')) }}"
+        foundry_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='foundry') + '.' + lookup('role_var', '_web_domain', role='foundry')
+                                       if (lookup('role_var', '_web_subdomain', role='foundry') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='foundry') }}"
         ```
 
 === "DNS"

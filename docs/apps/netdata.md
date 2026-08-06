@@ -141,9 +141,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        netdata_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='netdata') + '.' + lookup('role_var', '_web_domain', role='netdata')
-                               if (lookup('role_var', '_web_subdomain', role='netdata') | length > 0)
-                               else lookup('role_var', '_web_domain', role='netdata')) }}"
+        netdata_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='netdata') + '.' + lookup('role_var', '_web_domain', role='netdata')
+                                       if (lookup('role_var', '_web_subdomain', role='netdata') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='netdata') }}"
         ```
 
 === "DNS"

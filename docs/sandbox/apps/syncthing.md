@@ -110,9 +110,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        syncthing_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='syncthing') + '.' + lookup('role_var', '_web_domain', role='syncthing')
-                                 if (lookup('role_var', '_web_subdomain', role='syncthing') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='syncthing')) }}"
+        syncthing_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='syncthing') + '.' + lookup('role_var', '_web_domain', role='syncthing')
+                                         if (lookup('role_var', '_web_subdomain', role='syncthing') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='syncthing') }}"
         ```
 
 === "DNS"

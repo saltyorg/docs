@@ -200,16 +200,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        maintainerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
-                                   if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='maintainerr')) }}"
+        maintainerr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
+                                           if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='maintainerr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        maintainerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
-                               if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
-                               else lookup('role_var', '_web_domain', role='maintainerr')) }}"
+        maintainerr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='maintainerr') + '.' + lookup('role_var', '_web_domain', role='maintainerr')
+                                       if (lookup('role_var', '_web_subdomain', role='maintainerr') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='maintainerr') }}"
         ```
 
 === "DNS"

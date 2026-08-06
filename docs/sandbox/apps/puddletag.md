@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        puddletag_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='puddletag') + '.' + lookup('role_var', '_web_domain', role='puddletag')
-                                 if (lookup('role_var', '_web_subdomain', role='puddletag') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='puddletag')) }}"
+        puddletag_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='puddletag') + '.' + lookup('role_var', '_web_domain', role='puddletag')
+                                         if (lookup('role_var', '_web_subdomain', role='puddletag') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='puddletag') }}"
         ```
 
 === "DNS"

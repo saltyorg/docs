@@ -119,9 +119,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        jdownloader2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jdownloader2') + '.' + lookup('role_var', '_web_domain', role='jdownloader2')
-                                    if (lookup('role_var', '_web_subdomain', role='jdownloader2') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='jdownloader2')) }}"
+        jdownloader2_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jdownloader2') + '.' + lookup('role_var', '_web_domain', role='jdownloader2')
+                                            if (lookup('role_var', '_web_subdomain', role='jdownloader2') | length > 0)
+                                            else lookup('role_var', '_web_domain', role='jdownloader2') }}"
         ```
 
 === "DNS"

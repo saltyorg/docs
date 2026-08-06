@@ -211,8 +211,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         timescaledb_role_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/pgdata"
-          POSTGRES_PASSWORD: "{{ timescaledb_role_docker_env_password_effective }}"
-          POSTGRES_USER: "{{ timescaledb_role_docker_env_user_effective }}"
+          POSTGRES_PASSWORD: "{{ timescaledb_role_docker_env_password_lookup }}"
+          POSTGRES_USER: "{{ timescaledb_role_docker_env_user_lookup }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='timescaledb', default=timescaledb_role_docker_env_db) }}"
         ```
 
@@ -221,8 +221,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         timescaledb2_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/pgdata"
-          POSTGRES_PASSWORD: "{{ timescaledb_role_docker_env_password_effective }}"
-          POSTGRES_USER: "{{ timescaledb_role_docker_env_user_effective }}"
+          POSTGRES_PASSWORD: "{{ timescaledb_role_docker_env_password_lookup }}"
+          POSTGRES_USER: "{{ timescaledb_role_docker_env_user_lookup }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='timescaledb', default=timescaledb_role_docker_env_db) }}"
         ```
 

@@ -185,9 +185,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        lldap_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='lldap') + '.' + lookup('role_var', '_web_domain', role='lldap')
-                             if (lookup('role_var', '_web_subdomain', role='lldap') | length > 0)
-                             else lookup('role_var', '_web_domain', role='lldap')) }}"
+        lldap_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='lldap') + '.' + lookup('role_var', '_web_domain', role='lldap')
+                                     if (lookup('role_var', '_web_subdomain', role='lldap') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='lldap') }}"
         ```
 
 === "DNS"

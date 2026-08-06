@@ -110,11 +110,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro"
         ```
 
-    ??? variable string "`rockatchat_mongodb_role_paths_location`"
+    ??? variable string "`rocketchat_mongodb_role_paths_location`"
 
         ```yaml
         # Type: string
-        rockatchat_mongodb_role_paths_location: "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/mongo"
+        rocketchat_mongodb_role_paths_location: "{{ lookup('role_var', '_paths_location', role='rocketchat') }}/mongo"
         ```
 
 === "Web"
@@ -144,9 +144,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        rocketchat_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rocketchat') + '.' + lookup('role_var', '_web_domain', role='rocketchat')
-                                  if (lookup('role_var', '_web_subdomain', role='rocketchat') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='rocketchat')) }}"
+        rocketchat_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='rocketchat') + '.' + lookup('role_var', '_web_domain', role='rocketchat')
+                                          if (lookup('role_var', '_web_subdomain', role='rocketchat') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='rocketchat') }}"
         ```
 
 === "DNS"

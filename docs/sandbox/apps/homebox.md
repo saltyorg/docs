@@ -121,9 +121,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        homebox_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='homebox') + '.' + lookup('role_var', '_web_domain', role='homebox')
-                               if (lookup('role_var', '_web_subdomain', role='homebox') | length > 0)
-                               else lookup('role_var', '_web_domain', role='homebox')) }}"
+        homebox_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='homebox') + '.' + lookup('role_var', '_web_domain', role='homebox')
+                                       if (lookup('role_var', '_web_subdomain', role='homebox') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='homebox') }}"
         ```
 
 === "DNS"

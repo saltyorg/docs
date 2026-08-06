@@ -140,9 +140,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        nzbget_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nzbget') + '.' + lookup('role_var', '_web_domain', role='nzbget')
-                              if (lookup('role_var', '_web_subdomain', role='nzbget') | length > 0)
-                              else lookup('role_var', '_web_domain', role='nzbget')) }}"
+        nzbget_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='nzbget') + '.' + lookup('role_var', '_web_domain', role='nzbget')
+                                      if (lookup('role_var', '_web_subdomain', role='nzbget') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='nzbget') }}"
         ```
 
     ??? variable string "`nzbget_role_web_login`"
@@ -211,8 +211,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         nzbget_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',themepark-' + nzbget_name
-                                                      if (lookup('role_var', '_themepark_enabled', role='nzbget') and global_themepark_plugin_enabled)
-                                                      else '') }}"
+                                                       if (lookup('role_var', '_themepark_enabled', role='nzbget') and global_themepark_plugin_enabled)
+                                                       else '') }}"
         ```
 
     ??? variable string "`nzbget_role_traefik_middleware_custom`"

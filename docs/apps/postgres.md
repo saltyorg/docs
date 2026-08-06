@@ -242,8 +242,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres_role_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/data"
-          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_effective }}"
-          POSTGRES_USER: "{{ postgres_role_docker_env_user_effective }}"
+          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_lookup }}"
+          POSTGRES_USER: "{{ postgres_role_docker_env_user_lookup }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
         ```
 
@@ -252,8 +252,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_envs_default:
           TZ: "{{ tz }}"
           PGDATA: "/data"
-          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_effective }}"
-          POSTGRES_USER: "{{ postgres_role_docker_env_user_effective }}"
+          POSTGRES_PASSWORD: "{{ postgres_role_docker_env_password_lookup }}"
+          POSTGRES_USER: "{{ postgres_role_docker_env_user_lookup }}"
           POSTGRES_DB: "{{ lookup('role_var', '_docker_env_db', role='postgres') }}"
         ```
 

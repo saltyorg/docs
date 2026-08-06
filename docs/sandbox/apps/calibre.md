@@ -175,16 +175,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        calibre_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
-                               if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
-                               else lookup('role_var', '_web_domain', role='calibre')) }}"
+        calibre_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
+                                       if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='calibre') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        calibre2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
-                           if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
-                           else lookup('role_var', '_web_domain', role='calibre')) }}"
+        calibre2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='calibre') + '.' + lookup('role_var', '_web_domain', role='calibre')
+                                   if (lookup('role_var', '_web_subdomain', role='calibre') | length > 0)
+                                   else lookup('role_var', '_web_domain', role='calibre') }}"
         ```
 
     ??? variable string "`calibre_role_web2_subdomain`{ .sb-show-on-unchecked }`calibre2_web2_subdomain`{ .sb-show-on-checked }"
@@ -227,16 +227,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        calibre_role_web2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
-                                         if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
-                                         else lookup('role_var', '_web2_domain', role='calibre')) }}"
+        calibre_role_web2_role_web_url: "https://{{ lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
+                                                 if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
+                                                 else lookup('role_var', '_web2_domain', role='calibre') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        calibre2_web2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
-                                     if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
-                                     else lookup('role_var', '_web2_domain', role='calibre')) }}"
+        calibre2_web2_role_web_url: "https://{{ lookup('role_var', '_web2_subdomain', role='calibre') + '.' + lookup('role_var', '_web2_domain', role='calibre')
+                                             if (lookup('role_var', '_web2_subdomain', role='calibre') | length > 0)
+                                             else lookup('role_var', '_web2_domain', role='calibre') }}"
         ```
 
 === "DNS"
@@ -393,16 +393,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         calibre_role_books_traefik_middleware_default: "{{ traefik_default_middleware
                                                            + (',' + lookup('role_var', '_books_traefik_sso_middleware', role='calibre')
-                                                             if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
-                                                             else '') }}"
+                                                              if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
+                                                              else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         calibre2_books_traefik_middleware_default: "{{ traefik_default_middleware
                                                        + (',' + lookup('role_var', '_books_traefik_sso_middleware', role='calibre')
-                                                         if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
-                                                         else '') }}"
+                                                          if (lookup('role_var', '_books_traefik_sso_middleware', role='calibre') | length > 0)
+                                                          else '') }}"
         ```
 
     ??? variable string "`calibre_role_books_traefik_middleware_custom`{ .sb-show-on-unchecked }`calibre2_books_traefik_middleware_custom`{ .sb-show-on-checked }"

@@ -118,9 +118,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        photoprism_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='photoprism') + '.' + lookup('role_var', '_web_domain', role='photoprism')
-                                  if (lookup('role_var', '_web_subdomain', role='photoprism') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='photoprism')) }}"
+        photoprism_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='photoprism') + '.' + lookup('role_var', '_web_domain', role='photoprism')
+                                          if (lookup('role_var', '_web_subdomain', role='photoprism') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='photoprism') }}"
         ```
 
 === "DNS"

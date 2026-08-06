@@ -87,11 +87,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Docker Socket Proxy"
 
-    ??? variable dict "`glances_role_docker_socket_proxy_envs`"
+    ??? variable dict "`glances_web_role_docker_socket_proxy_envs`"
 
         ```yaml
         # Type: dict
-        glances_role_docker_socket_proxy_envs:
+        glances_web_role_docker_socket_proxy_envs:
           CONTAINERS: "1"
           IMAGES: "1"
         ```
@@ -123,9 +123,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        glances_web_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='glances_web') + '.' + lookup('role_var', '_web_domain', role='glances_web')
-                                   if (lookup('role_var', '_web_subdomain', role='glances_web') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='glances_web')) }}"
+        glances_web_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='glances_web') + '.' + lookup('role_var', '_web_domain', role='glances_web')
+                                           if (lookup('role_var', '_web_subdomain', role='glances_web') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='glances_web') }}"
         ```
 
 === "DNS"

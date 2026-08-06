@@ -640,16 +640,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        sonarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
-                              if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
-                              else lookup('role_var', '_web_domain', role='sonarr')) }}"
+        sonarr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
+                                      if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='sonarr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        sonarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
-                          if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
-                          else lookup('role_var', '_web_domain', role='sonarr')) }}"
+        sonarr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='sonarr') + '.' + lookup('role_var', '_web_domain', role='sonarr')
+                                  if (lookup('role_var', '_web_subdomain', role='sonarr') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='sonarr') }}"
         ```
 
 === "DNS"
@@ -710,16 +710,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         sonarr_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',themepark-' + sonarr_name
-                                                      if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
-                                                      else '') }}"
+                                                       if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
+                                                       else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         sonarr2_traefik_middleware_default: "{{ traefik_default_middleware
                                                 + (',themepark-' + sonarr_name
-                                                  if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
-                                                  else '') }}"
+                                                   if (lookup('role_var', '_themepark_enabled', role='sonarr') and global_themepark_plugin_enabled)
+                                                   else '') }}"
         ```
 
     ??? variable string "`sonarr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`sonarr2_traefik_middleware_custom`{ .sb-show-on-checked }"

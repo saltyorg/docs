@@ -131,9 +131,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        tubearchivist_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='tubearchivist') + '.' + lookup('role_var', '_web_domain', role='tubearchivist')
-                                     if (lookup('role_var', '_web_subdomain', role='tubearchivist') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='tubearchivist')) }}"
+        tubearchivist_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='tubearchivist') + '.' + lookup('role_var', '_web_domain', role='tubearchivist')
+                                             if (lookup('role_var', '_web_subdomain', role='tubearchivist') | length > 0)
+                                             else lookup('role_var', '_web_domain', role='tubearchivist') }}"
         ```
 
 === "DNS"
@@ -260,8 +260,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_envs_http_header: "{{ 'HTTP_REMOTE_USER'
                                                      if ('authelia' in lookup('role_var', '_traefik_sso_middleware', role='tubearchivist'))
                                                      else ('HTTP_X_AUTHENTIK_USERNAME'
-                                                          if ('authentik' in lookup('role_var', '_traefik_sso_middleware', role='tubearchivist'))
-                                                          else '') }}"
+                                                           if ('authentik' in lookup('role_var', '_traefik_sso_middleware', role='tubearchivist'))
+                                                           else '') }}"
         ```
 
     ??? variable dict "`tubearchivist_role_docker_envs_default`"

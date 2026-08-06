@@ -126,9 +126,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        transfer_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='transfer') + '.' + lookup('role_var', '_web_domain', role='transfer')
-                                if (lookup('role_var', '_web_subdomain', role='transfer') | length > 0)
-                                else lookup('role_var', '_web_domain', role='transfer')) }}"
+        transfer_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='transfer') + '.' + lookup('role_var', '_web_domain', role='transfer')
+                                        if (lookup('role_var', '_web_subdomain', role='transfer') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='transfer') }}"
         ```
 
 === "DNS"

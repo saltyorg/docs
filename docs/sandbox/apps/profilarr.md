@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        profilarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='profilarr') + '.' + lookup('role_var', '_web_domain', role='profilarr')
-                                 if (lookup('role_var', '_web_subdomain', role='profilarr') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='profilarr')) }}"
+        profilarr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='profilarr') + '.' + lookup('role_var', '_web_domain', role='profilarr')
+                                         if (lookup('role_var', '_web_subdomain', role='profilarr') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='profilarr') }}"
         ```
 
 === "DNS"

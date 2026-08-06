@@ -223,16 +223,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        seerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='seerr') + '.' + lookup('role_var', '_web_domain', role='seerr')
-                             if (lookup('role_var', '_web_subdomain', role='seerr') | length > 0)
-                             else lookup('role_var', '_web_domain', role='seerr')) }}"
+        seerr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='seerr') + '.' + lookup('role_var', '_web_domain', role='seerr')
+                                     if (lookup('role_var', '_web_subdomain', role='seerr') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='seerr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        seerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='seerr') + '.' + lookup('role_var', '_web_domain', role='seerr')
-                         if (lookup('role_var', '_web_subdomain', role='seerr') | length > 0)
-                         else lookup('role_var', '_web_domain', role='seerr')) }}"
+        seerr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='seerr') + '.' + lookup('role_var', '_web_domain', role='seerr')
+                                 if (lookup('role_var', '_web_subdomain', role='seerr') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='seerr') }}"
         ```
 
 === "DNS"

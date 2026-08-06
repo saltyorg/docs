@@ -500,16 +500,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        plex_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                            if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                            else lookup('role_var', '_web_domain', role='plex')) }}"
+        plex_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                                    if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='plex') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        plex2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                        if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                        else lookup('role_var', '_web_domain', role='plex')) }}"
+        plex2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
+                                if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                else lookup('role_var', '_web_domain', role='plex') }}"
         ```
 
     ??? variable string "`plex_role_web_insecure_url`{ .sb-show-on-unchecked }`plex2_web_insecure_url`{ .sb-show-on-checked }"
@@ -517,15 +517,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: string
         plex_role_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                     if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='plex')) }}"
+                                                     if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                                     else lookup('role_var', '_web_domain', role='plex')) }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         plex2_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                 if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='plex')) }}"
+                                                 if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
+                                                 else lookup('role_var', '_web_domain', role='plex')) }}"
         ```
 
 === "DNS"
@@ -586,16 +586,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         plex_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                   + (',themepark-' + plex_name
-                                                    if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
-                                                    else '') }}"
+                                                     if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
+                                                     else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         plex2_traefik_middleware_default: "{{ traefik_default_middleware
                                               + (',themepark-' + plex_name
-                                                if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
-                                                else '') }}"
+                                                 if (lookup('role_var', '_themepark_enabled', role='plex') and global_themepark_plugin_enabled)
+                                                 else '') }}"
         ```
 
     ??? variable string "`plex_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`plex2_traefik_middleware_custom`{ .sb-show-on-checked }"

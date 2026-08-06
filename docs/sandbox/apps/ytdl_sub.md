@@ -143,9 +143,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        ytdl_sub_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='ytdl_sub') + '.' + lookup('role_var', '_web_domain', role='ytdl_sub')
-                                if (lookup('role_var', '_web_subdomain', role='ytdl_sub') | length > 0)
-                                else lookup('role_var', '_web_domain', role='ytdl_sub')) }}"
+        ytdl_sub_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='ytdl_sub') + '.' + lookup('role_var', '_web_domain', role='ytdl_sub')
+                                        if (lookup('role_var', '_web_subdomain', role='ytdl_sub') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='ytdl_sub') }}"
         ```
 
 === "DNS"

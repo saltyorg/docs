@@ -226,16 +226,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        overseerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
-                                 if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='overseerr')) }}"
+        overseerr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
+                                         if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='overseerr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        overseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
-                             if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
-                             else lookup('role_var', '_web_domain', role='overseerr')) }}"
+        overseerr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='overseerr') + '.' + lookup('role_var', '_web_domain', role='overseerr')
+                                     if (lookup('role_var', '_web_subdomain', role='overseerr') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='overseerr') }}"
         ```
 
 === "DNS"
@@ -296,16 +296,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         overseerr_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                        + (',themepark-' + overseerr_name
-                                                         if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
-                                                         else '') }}"
+                                                          if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
+                                                          else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         overseerr2_traefik_middleware_default: "{{ traefik_default_middleware
                                                    + (',themepark-' + overseerr_name
-                                                     if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
-                                                     else '') }}"
+                                                      if (lookup('role_var', '_themepark_enabled', role='overseerr') and global_themepark_plugin_enabled)
+                                                      else '') }}"
         ```
 
     ??? variable string "`overseerr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`overseerr2_traefik_middleware_custom`{ .sb-show-on-checked }"

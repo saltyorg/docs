@@ -205,16 +205,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        tautulli_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
-                                if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
-                                else lookup('role_var', '_web_domain', role='tautulli')) }}"
+        tautulli_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
+                                        if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='tautulli') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        tautulli2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
-                            if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
-                            else lookup('role_var', '_web_domain', role='tautulli')) }}"
+        tautulli2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='tautulli') + '.' + lookup('role_var', '_web_domain', role='tautulli')
+                                    if (lookup('role_var', '_web_subdomain', role='tautulli') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='tautulli') }}"
         ```
 
 === "DNS"
@@ -275,16 +275,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         tautulli_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                       + (',themepark-' + tautulli_name
-                                                        if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
-                                                        else '') }}"
+                                                         if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
+                                                         else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         tautulli2_traefik_middleware_default: "{{ traefik_default_middleware
                                                   + (',themepark-' + tautulli_name
-                                                    if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
-                                                    else '') }}"
+                                                     if (lookup('role_var', '_themepark_enabled', role='tautulli') and global_themepark_plugin_enabled)
+                                                     else '') }}"
         ```
 
     ??? variable string "`tautulli_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`tautulli2_traefik_middleware_custom`{ .sb-show-on-checked }"

@@ -111,9 +111,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        trilium_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='trilium') + '.' + lookup('role_var', '_web_domain', role='trilium')
-                               if (lookup('role_var', '_web_subdomain', role='trilium') | length > 0)
-                               else lookup('role_var', '_web_domain', role='trilium')) }}"
+        trilium_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='trilium') + '.' + lookup('role_var', '_web_domain', role='trilium')
+                                       if (lookup('role_var', '_web_subdomain', role='trilium') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='trilium') }}"
         ```
 
 === "DNS"

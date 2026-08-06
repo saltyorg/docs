@@ -147,16 +147,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qui_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
-                           if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
-                           else lookup('role_var', '_web_domain', role='qui')) }}"
+        qui_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
+                                   if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
+                                   else lookup('role_var', '_web_domain', role='qui') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qui2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
-                       if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
-                       else lookup('role_var', '_web_domain', role='qui')) }}"
+        qui2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='qui') + '.' + lookup('role_var', '_web_domain', role='qui')
+                               if (lookup('role_var', '_web_subdomain', role='qui') | length > 0)
+                               else lookup('role_var', '_web_domain', role='qui') }}"
         ```
 
 === "DNS"

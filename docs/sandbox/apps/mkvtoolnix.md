@@ -111,9 +111,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        mkvtoolnix_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='mkvtoolnix') + '.' + lookup('role_var', '_web_domain', role='mkvtoolnix')
-                                  if (lookup('role_var', '_web_subdomain', role='mkvtoolnix') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='mkvtoolnix')) }}"
+        mkvtoolnix_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='mkvtoolnix') + '.' + lookup('role_var', '_web_domain', role='mkvtoolnix')
+                                          if (lookup('role_var', '_web_subdomain', role='mkvtoolnix') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='mkvtoolnix') }}"
         ```
 
 === "DNS"

@@ -158,9 +158,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        jackett_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jackett') + '.' + lookup('role_var', '_web_domain', role='jackett')
-                               if (lookup('role_var', '_web_subdomain', role='jackett') | length > 0)
-                               else lookup('role_var', '_web_domain', role='jackett')) }}"
+        jackett_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jackett') + '.' + lookup('role_var', '_web_domain', role='jackett')
+                                       if (lookup('role_var', '_web_subdomain', role='jackett') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='jackett') }}"
         ```
 
 === "DNS"
@@ -201,8 +201,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         jackett_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                      + (',themepark-' + jackett_name
-                                                       if (lookup('role_var', '_themepark_enabled', role='jackett') and global_themepark_plugin_enabled)
-                                                       else '') }}"
+                                                        if (lookup('role_var', '_themepark_enabled', role='jackett') and global_themepark_plugin_enabled)
+                                                        else '') }}"
         ```
 
     ??? variable string "`jackett_role_traefik_middleware_custom`"

@@ -143,9 +143,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        dockwatch_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='dockwatch') + '.' + lookup('role_var', '_web_domain', role='dockwatch')
-                                 if (lookup('role_var', '_web_subdomain', role='dockwatch') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='dockwatch')) }}"
+        dockwatch_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='dockwatch') + '.' + lookup('role_var', '_web_domain', role='dockwatch')
+                                         if (lookup('role_var', '_web_subdomain', role='dockwatch') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='dockwatch') }}"
         ```
 
 === "DNS"

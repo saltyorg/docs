@@ -388,16 +388,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        emby_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
-                            if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
-                            else lookup('role_var', '_web_domain', role='emby')) }}"
+        emby_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
+                                    if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='emby') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        emby2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
-                        if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
-                        else lookup('role_var', '_web_domain', role='emby')) }}"
+        emby2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='emby') + '.' + lookup('role_var', '_web_domain', role='emby')
+                                if (lookup('role_var', '_web_subdomain', role='emby') | length > 0)
+                                else lookup('role_var', '_web_domain', role='emby') }}"
         ```
 
 === "DNS"
@@ -458,16 +458,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         emby_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                   + (',themepark-' + emby_name
-                                                    if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
-                                                    else '') }}"
+                                                     if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
+                                                     else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         emby2_traefik_middleware_default: "{{ traefik_default_middleware
                                               + (',themepark-' + emby_name
-                                                if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
-                                                else '') }}"
+                                                 if (lookup('role_var', '_themepark_enabled', role='emby') and global_themepark_plugin_enabled)
+                                                 else '') }}"
         ```
 
     ??? variable string "`emby_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`emby2_traefik_middleware_custom`{ .sb-show-on-checked }"

@@ -113,6 +113,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         miniflux_role_run_migrations: "1"
         ```
 
+=== "Postgres"
+
     ??? variable bool "`miniflux_role_postgres_deploy`"
 
         ```yaml
@@ -164,12 +166,19 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         miniflux_role_postgres_docker_image_repo: "postgres"
         ```
 
+    ??? variable string "`miniflux_role_database_url`"
+
+        ```yaml
+        # Type: string
+        miniflux_role_database_url: "postgres://{{ lookup('role_var', '_postgres_credentials_lookup', role='miniflux') }}@{{ lookup('role_var', '_postgres_name', role='miniflux') }}/{{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }}?sslmode=disable"
+        ```
+
     ??? variable dict "`miniflux_role_postgres_docker_healthcheck`"
 
         ```yaml
         # Type: dict
         miniflux_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }} -U {{ lookup('role_var', '_postgres_user', role='miniflux') if (lookup('role_var', '_postgres_user', role='miniflux') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }} -U {{ lookup('role_var', '_postgres_user_lookup', role='miniflux') }}"]
           start_period: 20s
           interval: 30s
           retries: 5
@@ -217,9 +226,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        miniflux_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='miniflux') + '.' + lookup('role_var', '_web_domain', role='miniflux')
-                                if (lookup('role_var', '_web_subdomain', role='miniflux') | length > 0)
-                                else lookup('role_var', '_web_domain', role='miniflux')) }}"
+        miniflux_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='miniflux') + '.' + lookup('role_var', '_web_domain', role='miniflux')
+                                        if (lookup('role_var', '_web_subdomain', role='miniflux') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='miniflux') }}"
         ```
 
 === "DNS"
@@ -344,11 +353,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         miniflux_role_docker_envs_default:
-          DATABASE_URL: "postgres://{{ lookup('role_var', '_postgres_user', role='miniflux')
-                                if (lookup('role_var', '_postgres_user', role='miniflux') | length > 0)
-                                else lookup('role_var', '_docker_env_user', role='postgres') }}:{{ lookup('role_var', '_postgres_password', role='miniflux')
-                                if (lookup('role_var', '_postgres_password', role='miniflux') | length > 0)
-                                else lookup('role_var', '_docker_env_password', role='postgres') }}@{{ lookup('role_var', '_postgres_name', role='miniflux') }}/{{ lookup('role_var', '_postgres_docker_env_db', role='miniflux') }}?sslmode=disable"
+          DATABASE_URL: "{{ lookup('role_var', '_database_url', role='miniflux') }}"
           RUN_MIGRATIONS: "{{ lookup('role_var', '_run_migrations', role='miniflux') }}"
           CREATE_ADMIN: "{{ lookup('role_var', '_create_admin', role='miniflux') }}"
           ADMIN_USERNAME: "{{ lookup('role_var', '_admin_username', role='miniflux') }}"
@@ -422,25 +427,25 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Dependencies</h5>
 
-    ??? variable string "`minuflux_role_depends_on`"
+    ??? variable string "`miniflux_role_depends_on`"
 
         ```yaml
         # Type: string
-        minuflux_role_depends_on: "{{ minuflux_role_postgres_name }}"
+        miniflux_role_depends_on: "{{ miniflux_role_postgres_name }}"
         ```
 
-    ??? variable string "`minuflux_role_depends_on_delay`"
+    ??? variable string "`miniflux_role_depends_on_delay`"
 
         ```yaml
         # Type: string (quoted number)
-        minuflux_role_depends_on_delay: "0"
+        miniflux_role_depends_on_delay: "0"
         ```
 
-    ??? variable string "`minuflux_role_depends_on_healthchecks`"
+    ??? variable string "`miniflux_role_depends_on_healthchecks`"
 
         ```yaml
         # Type: string ("true"/"false")
-        minuflux_role_depends_on_healthchecks: "false"
+        miniflux_role_depends_on_healthchecks: "false"
         ```
 
 === "Docker+"
@@ -1006,30 +1011,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable or disable Autoheal monitoring for the container created when deploying
         # Type: bool (true/false)
         miniflux_role_autoheal_enabled: true
-        ```
-
-    ??? variable string "`miniflux_role_depends_on`"
-
-        ```yaml
-        # List of container dependencies that must be running before the container start
-        # Type: string
-        miniflux_role_depends_on: ""
-        ```
-
-    ??? variable string "`miniflux_role_depends_on_delay`"
-
-        ```yaml
-        # Delay in seconds before starting the container after dependencies are ready
-        # Type: string (quoted number)
-        miniflux_role_depends_on_delay: "0"
-        ```
-
-    ??? variable string "`miniflux_role_depends_on_healthchecks`"
-
-        ```yaml
-        # Enable healthcheck waiting for container dependencies
-        # Type: string ("true"/"false")
-        miniflux_role_depends_on_healthchecks:
         ```
 
     ??? variable bool "`miniflux_role_diun_enabled`"

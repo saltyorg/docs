@@ -495,16 +495,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
-                                   if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='qbittorrent')) }}"
+        qbittorrent_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
+                                           if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='qbittorrent') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
-                               if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
-                               else lookup('role_var', '_web_domain', role='qbittorrent')) }}"
+        qbittorrent2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='qbittorrent') + '.' + lookup('role_var', '_web_domain', role='qbittorrent')
+                                       if (lookup('role_var', '_web_subdomain', role='qbittorrent') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='qbittorrent') }}"
         ```
 
 === "DNS"
@@ -565,16 +565,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         qbittorrent_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                          + (',themepark-' + qbittorrent_name
-                                                           if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
-                                                           else '') }}"
+                                                            if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
+                                                            else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         qbittorrent2_traefik_middleware_default: "{{ traefik_default_middleware
                                                      + (',themepark-' + qbittorrent_name
-                                                       if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
-                                                       else '') }}"
+                                                        if (lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled)
+                                                        else '') }}"
         ```
 
     ??? variable string "`qbittorrent_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`qbittorrent2_traefik_middleware_custom`{ .sb-show-on-checked }"

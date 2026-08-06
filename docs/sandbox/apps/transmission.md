@@ -152,16 +152,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        transmission_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
-                                    if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='transmission')) }}"
+        transmission_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
+                                            if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
+                                            else lookup('role_var', '_web_domain', role='transmission') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        transmission2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
-                                if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
-                                else lookup('role_var', '_web_domain', role='transmission')) }}"
+        transmission2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='transmission') + '.' + lookup('role_var', '_web_domain', role='transmission')
+                                        if (lookup('role_var', '_web_subdomain', role='transmission') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='transmission') }}"
         ```
 
 === "DNS"

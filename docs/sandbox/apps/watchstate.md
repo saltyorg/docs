@@ -186,16 +186,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        watchstate_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
-                                  if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='watchstate')) }}"
+        watchstate_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
+                                          if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='watchstate') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        watchstate2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
-                              if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
-                              else lookup('role_var', '_web_domain', role='watchstate')) }}"
+        watchstate2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='watchstate') + '.' + lookup('role_var', '_web_domain', role='watchstate')
+                                      if (lookup('role_var', '_web_subdomain', role='watchstate') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='watchstate') }}"
         ```
 
 === "DNS"

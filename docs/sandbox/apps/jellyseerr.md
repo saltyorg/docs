@@ -164,16 +164,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        jellyseerr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
-                                  if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
+        jellyseerr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
+                                          if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
+                                          else lookup('role_var', '_web_domain', role='jellyseerr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        jellyseerr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
-                              if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
-                              else lookup('role_var', '_web_domain', role='jellyseerr')) }}"
+        jellyseerr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jellyseerr') + '.' + lookup('role_var', '_web_domain', role='jellyseerr')
+                                      if (lookup('role_var', '_web_subdomain', role='jellyseerr') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='jellyseerr') }}"
         ```
 
 === "DNS"

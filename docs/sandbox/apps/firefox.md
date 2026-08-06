@@ -156,9 +156,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        firefox_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='firefox') + '.' + lookup('role_var', '_web_domain', role='firefox')
-                               if (lookup('role_var', '_web_subdomain', role='firefox') | length > 0)
-                               else lookup('role_var', '_web_domain', role='firefox')) }}"
+        firefox_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='firefox') + '.' + lookup('role_var', '_web_domain', role='firefox')
+                                       if (lookup('role_var', '_web_subdomain', role='firefox') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='firefox') }}"
         ```
 
 === "VNC"

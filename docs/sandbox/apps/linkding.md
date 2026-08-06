@@ -117,9 +117,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        linkding_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='linkding') + '.' + lookup('role_var', '_web_domain', role='linkding')
-                                if (lookup('role_var', '_web_subdomain', role='linkding') | length > 0)
-                                else lookup('role_var', '_web_domain', role='linkding')) }}"
+        linkding_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='linkding') + '.' + lookup('role_var', '_web_domain', role='linkding')
+                                        if (lookup('role_var', '_web_subdomain', role='linkding') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='linkding') }}"
         ```
 
 === "DNS"

@@ -196,9 +196,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        joplin_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='joplin') + '.' + lookup('role_var', '_web_domain', role='joplin')
-                              if (lookup('role_var', '_web_subdomain', role='joplin') | length > 0)
-                              else lookup('role_var', '_web_domain', role='joplin')) }}"
+        joplin_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='joplin') + '.' + lookup('role_var', '_web_domain', role='joplin')
+                                      if (lookup('role_var', '_web_subdomain', role='joplin') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='joplin') }}"
         ```
 
 === "DNS"

@@ -304,9 +304,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        qbit_manage_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='qbit_manage') + '.' + lookup('role_var', '_web_domain', role='qbit_manage')
-                                   if (lookup('role_var', '_web_subdomain', role='qbit_manage') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='qbit_manage')) }}"
+        qbit_manage_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='qbit_manage') + '.' + lookup('role_var', '_web_domain', role='qbit_manage')
+                                           if (lookup('role_var', '_web_subdomain', role='qbit_manage') | length > 0)
+                                           else lookup('role_var', '_web_domain', role='qbit_manage') }}"
         ```
 
 === "DNS"

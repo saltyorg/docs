@@ -146,16 +146,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        ombi_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
-                            if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
-                            else lookup('role_var', '_web_domain', role='ombi')) }}"
+        ombi_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
+                                    if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='ombi') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        ombi2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
-                        if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
-                        else lookup('role_var', '_web_domain', role='ombi')) }}"
+        ombi2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='ombi') + '.' + lookup('role_var', '_web_domain', role='ombi')
+                                if (lookup('role_var', '_web_subdomain', role='ombi') | length > 0)
+                                else lookup('role_var', '_web_domain', role='ombi') }}"
         ```
 
 === "DNS"

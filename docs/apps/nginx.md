@@ -149,16 +149,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        nginx_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
-                             if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
-                             else lookup('role_var', '_web_domain', role='nginx')) }}"
+        nginx_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
+                                     if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='nginx') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        nginx2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
-                         if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
-                         else lookup('role_var', '_web_domain', role='nginx')) }}"
+        nginx2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='nginx') + '.' + lookup('role_var', '_web_domain', role='nginx')
+                                 if (lookup('role_var', '_web_subdomain', role='nginx') | length > 0)
+                                 else lookup('role_var', '_web_domain', role='nginx') }}"
         ```
 
 === "DNS"

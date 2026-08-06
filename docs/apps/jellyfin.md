@@ -274,16 +274,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        jellyfin_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
-                                if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
-                                else lookup('role_var', '_web_domain', role='jellyfin')) }}"
+        jellyfin_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
+                                        if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='jellyfin') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        jellyfin2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
-                            if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
-                            else lookup('role_var', '_web_domain', role='jellyfin')) }}"
+        jellyfin2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='jellyfin') + '.' + lookup('role_var', '_web_domain', role='jellyfin')
+                                    if (lookup('role_var', '_web_subdomain', role='jellyfin') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='jellyfin') }}"
         ```
 
 === "DNS"

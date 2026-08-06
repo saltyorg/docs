@@ -158,16 +158,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        whisparr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
-                                if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
-                                else lookup('role_var', '_web_domain', role='whisparr')) }}"
+        whisparr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
+                                        if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='whisparr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        whisparr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
-                            if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
-                            else lookup('role_var', '_web_domain', role='whisparr')) }}"
+        whisparr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='whisparr') + '.' + lookup('role_var', '_web_domain', role='whisparr')
+                                    if (lookup('role_var', '_web_subdomain', role='whisparr') | length > 0)
+                                    else lookup('role_var', '_web_domain', role='whisparr') }}"
         ```
 
 === "DNS"
@@ -228,16 +228,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         whisparr_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                       + (',themepark-' + whisparr_name
-                                                        if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
-                                                        else '') }}"
+                                                         if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
+                                                         else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         whisparr2_traefik_middleware_default: "{{ traefik_default_middleware
                                                   + (',themepark-' + whisparr_name
-                                                    if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
-                                                    else '') }}"
+                                                     if (lookup('role_var', '_themepark_enabled', role='whisparr') and global_themepark_plugin_enabled)
+                                                     else '') }}"
         ```
 
     ??? variable string "`whisparr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`whisparr2_traefik_middleware_custom`{ .sb-show-on-checked }"

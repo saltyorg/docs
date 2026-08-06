@@ -192,9 +192,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        wikijs_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='wikijs') + '.' + lookup('role_var', '_web_domain', role='wikijs')
-                              if (lookup('role_var', '_web_subdomain', role='wikijs') | length > 0)
-                              else lookup('role_var', '_web_domain', role='wikijs')) }}"
+        wikijs_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='wikijs') + '.' + lookup('role_var', '_web_domain', role='wikijs')
+                                      if (lookup('role_var', '_web_subdomain', role='wikijs') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='wikijs') }}"
         ```
 
 === "DNS"

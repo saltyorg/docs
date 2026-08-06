@@ -178,16 +178,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        deluge_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
-                              if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
-                              else lookup('role_var', '_web_domain', role='deluge')) }}"
+        deluge_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
+                                      if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='deluge') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        deluge2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
-                          if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
-                          else lookup('role_var', '_web_domain', role='deluge')) }}"
+        deluge2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='deluge') + '.' + lookup('role_var', '_web_domain', role='deluge')
+                                  if (lookup('role_var', '_web_subdomain', role='deluge') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='deluge') }}"
         ```
 
 === "DNS"
@@ -248,16 +248,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         deluge_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',themepark-' + deluge_name
-                                                      if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
-                                                      else '') }}"
+                                                       if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
+                                                       else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         deluge2_traefik_middleware_default: "{{ traefik_default_middleware
                                                 + (',themepark-' + deluge_name
-                                                  if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
-                                                  else '') }}"
+                                                   if (lookup('role_var', '_themepark_enabled', role='deluge') and global_themepark_plugin_enabled)
+                                                   else '') }}"
         ```
 
     ??? variable string "`deluge_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`deluge2_traefik_middleware_custom`{ .sb-show-on-checked }"

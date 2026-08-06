@@ -113,9 +113,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        filebot_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='filebot') + '.' + lookup('role_var', '_web_domain', role='filebot')
-                               if (lookup('role_var', '_web_subdomain', role='filebot') | length > 0)
-                               else lookup('role_var', '_web_domain', role='filebot')) }}"
+        filebot_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='filebot') + '.' + lookup('role_var', '_web_domain', role='filebot')
+                                       if (lookup('role_var', '_web_subdomain', role='filebot') | length > 0)
+                                       else lookup('role_var', '_web_domain', role='filebot') }}"
         ```
 
 === "DNS"

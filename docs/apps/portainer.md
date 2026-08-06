@@ -131,9 +131,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        portainer_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='portainer') + '.' + lookup('role_var', '_web_domain', role='portainer')
-                                 if (lookup('role_var', '_web_subdomain', role='portainer') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='portainer')) }}"
+        portainer_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='portainer') + '.' + lookup('role_var', '_web_domain', role='portainer')
+                                         if (lookup('role_var', '_web_subdomain', role='portainer') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='portainer') }}"
         ```
 
 === "DNS"
@@ -174,8 +174,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         portainer_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                        + (',themepark-' + portainer_name
-                                                         if (lookup('role_var', '_themepark_enabled', role='portainer') and global_themepark_plugin_enabled)
-                                                         else '') }}"
+                                                          if (lookup('role_var', '_themepark_enabled', role='portainer') and global_themepark_plugin_enabled)
+                                                          else '') }}"
         ```
 
     ??? variable string "`portainer_role_traefik_middleware_custom`"

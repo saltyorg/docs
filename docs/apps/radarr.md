@@ -652,16 +652,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        radarr_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='radarr') + '.' + lookup('role_var', '_web_domain', role='radarr')
-                              if (lookup('role_var', '_web_subdomain', role='radarr') | length > 0)
-                              else lookup('role_var', '_web_domain', role='radarr')) }}"
+        radarr_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='radarr') + '.' + lookup('role_var', '_web_domain', role='radarr')
+                                      if (lookup('role_var', '_web_subdomain', role='radarr') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='radarr') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        radarr2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='radarr') + '.' + lookup('role_var', '_web_domain', role='radarr')
-                          if (lookup('role_var', '_web_subdomain', role='radarr') | length > 0)
-                          else lookup('role_var', '_web_domain', role='radarr')) }}"
+        radarr2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='radarr') + '.' + lookup('role_var', '_web_domain', role='radarr')
+                                  if (lookup('role_var', '_web_subdomain', role='radarr') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='radarr') }}"
         ```
 
 === "DNS"
@@ -722,16 +722,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         radarr_role_traefik_middleware_default: "{{ traefik_default_middleware
                                                     + (',themepark-' + radarr_name
-                                                      if (lookup('role_var', '_themepark_enabled', role='radarr') and global_themepark_plugin_enabled)
-                                                      else '') }}"
+                                                       if (lookup('role_var', '_themepark_enabled', role='radarr') and global_themepark_plugin_enabled)
+                                                       else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         radarr2_traefik_middleware_default: "{{ traefik_default_middleware
                                                 + (',themepark-' + radarr_name
-                                                  if (lookup('role_var', '_themepark_enabled', role='radarr') and global_themepark_plugin_enabled)
-                                                  else '') }}"
+                                                   if (lookup('role_var', '_themepark_enabled', role='radarr') and global_themepark_plugin_enabled)
+                                                   else '') }}"
         ```
 
     ??? variable string "`radarr_role_traefik_middleware_custom`{ .sb-show-on-unchecked }`radarr2_traefik_middleware_custom`{ .sb-show-on-checked }"

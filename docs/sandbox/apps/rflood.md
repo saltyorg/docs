@@ -145,16 +145,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        rflood_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
-                              if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
-                              else lookup('role_var', '_web_domain', role='rflood')) }}"
+        rflood_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
+                                      if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
+                                      else lookup('role_var', '_web_domain', role='rflood') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        rflood2_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
-                          if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
-                          else lookup('role_var', '_web_domain', role='rflood')) }}"
+        rflood2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='rflood') + '.' + lookup('role_var', '_web_domain', role='rflood')
+                                  if (lookup('role_var', '_web_subdomain', role='rflood') | length > 0)
+                                  else lookup('role_var', '_web_domain', role='rflood') }}"
         ```
 
 === "DNS"

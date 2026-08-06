@@ -193,9 +193,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        paperless_ngx_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='paperless_ngx') + '.' + lookup('role_var', '_web_domain', role='paperless_ngx')
-                                     if (lookup('role_var', '_web_subdomain', role='paperless_ngx') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='paperless_ngx')) }}"
+        paperless_ngx_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='paperless_ngx') + '.' + lookup('role_var', '_web_domain', role='paperless_ngx')
+                                             if (lookup('role_var', '_web_subdomain', role='paperless_ngx') | length > 0)
+                                             else lookup('role_var', '_web_domain', role='paperless_ngx') }}"
         ```
 
 === "DNS"

@@ -147,16 +147,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        influxdb2_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
-                                 if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='influxdb2')) }}"
+        influxdb2_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
+                                         if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
+                                         else lookup('role_var', '_web_domain', role='influxdb2') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        influxdb22_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
-                             if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
-                             else lookup('role_var', '_web_domain', role='influxdb2')) }}"
+        influxdb22_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='influxdb2') + '.' + lookup('role_var', '_web_domain', role='influxdb2')
+                                     if (lookup('role_var', '_web_subdomain', role='influxdb2') | length > 0)
+                                     else lookup('role_var', '_web_domain', role='influxdb2') }}"
         ```
 
 === "DNS"

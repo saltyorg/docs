@@ -99,6 +99,50 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_postgres_deploy: true
         ```
 
+    ??? variable bool "`n8n_role_runners_deploy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        n8n_role_runners_deploy: true
+        ```
+
+    ??? variable string "`n8n_role_runners_name`"
+
+        ```yaml
+        # Type: string
+        n8n_role_runners_name: "{{ n8n_name }}-runner"
+        ```
+
+    ??? variable string "`n8n_role_runners_auth_token`"
+
+        ```yaml
+        # Type: string
+        n8n_role_runners_auth_token: "{{ n8n_saltbox_facts.facts.runners_auth_token }}"
+        ```
+
+    ??? variable string "`n8n_role_runners_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        n8n_role_runners_docker_image_repo: "n8nio/runners"
+        ```
+
+    ??? variable string "`n8n_role_runners_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        n8n_role_runners_docker_image_tag: "{{ lookup('role_var', '_docker_image_tag', role='n8n') }}"
+        ```
+
+    ??? variable dict "`n8n_role_runners_docker_envs_custom`"
+
+        ```yaml
+        # Type: dict
+        n8n_role_runners_docker_envs_custom: {}
+        ```
+
+=== "Postgres"
+
     ??? variable string "`n8n_role_postgres_name`"
 
         ```yaml
@@ -199,6 +243,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='n8n') + '.' + lookup('role_var', '_web_domain', role='n8n')
                                    if (lookup('role_var', '_web_subdomain', role='n8n') | length > 0)
                                    else lookup('role_var', '_web_domain', role='n8n') }}"
+        ```
+
+    ??? variable string "`n8n_role_web_host`"
+
+        ```yaml
+        # Type: string
+        n8n_role_web_host: "{{ lookup('role_var', '_web_subdomain', role='n8n') + '.' + lookup('role_var', '_web_domain', role='n8n')
+                            if (lookup('role_var', '_web_subdomain', role='n8n') | length > 0)
+                            else lookup('role_var', '_web_domain', role='n8n') }}"
         ```
 
 === "DNS"
@@ -306,7 +359,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        n8n_role_docker_image_repo: "n8nio/n8n"
+        n8n_role_docker_image_repo: "docker.n8n.io/n8nio/n8n"
         ```
 
     ??? variable string "`n8n_role_docker_image`"
@@ -336,13 +389,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                    if (lookup('role_var', '_postgres_password', role='n8n') | length > 0)
                                    else lookup('role_var', '_docker_env_password', role='postgres') }}"
           N8N_EDITOR_BASE_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}"
+          N8N_HOST: "{{ lookup('role_var', '_web_host', role='n8n') }}"
+          N8N_PORT: "{{ lookup('role_var', '_web_port', role='n8n') }}"
+          N8N_PROTOCOL: "https"
+          NODE_ENV: "production"
           N8N_DIAGNOSTICS_ENABLED: "false"
           N8N_HIRING_BANNER_ENABLED: "false"
-          N8N_USER_MANAGEMENT_DISABLED: "true"
           N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
-          WEBHOOK_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}/"
+          N8N_WEBHOOK_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}/"
           N8N_PROXY_HOPS: "1"
-          N8N_RUNNERS_ENABLED: "true"
+          N8N_RUNNERS_MODE: "{{ 'external' if lookup('role_var', '_runners_deploy', role='n8n') else 'internal' }}"
+          N8N_RUNNERS_AUTH_TOKEN: "{{ lookup('role_var', '_runners_auth_token', role='n8n')
+                                   if lookup('role_var', '_runners_deploy', role='n8n')
+                                   else omit }}"
+          N8N_RUNNERS_BROKER_LISTEN_ADDRESS: "{{ '0.0.0.0' if lookup('role_var', '_runners_deploy', role='n8n') else omit }}"
           N8N_USER_FOLDER: "/data"
         ```
 

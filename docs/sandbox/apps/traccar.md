@@ -86,6 +86,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traccar_role_postgres_deploy: true
         ```
 
+=== "Postgres"
+
     ??? variable string "`traccar_role_postgres_name`"
 
         ```yaml

@@ -93,6 +93,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkwarden_role_postgres_deploy: true
         ```
 
+=== "Postgres"
+
     ??? variable string "`linkwarden_role_postgres_name`"
 
         ```yaml

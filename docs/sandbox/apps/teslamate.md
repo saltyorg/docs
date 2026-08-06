@@ -105,6 +105,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         teslamate_role_postgres_deploy: true
         ```
 
+=== "Postgres"
+
     ??? variable string "`teslamate_role_postgres_name`"
 
         ```yaml

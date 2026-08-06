@@ -92,6 +92,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jellystat_role_postgres_deploy: true
         ```
 
+    ??? variable string "`jellystat_log_level`"
+
+        ```yaml
+        # Type: string
+        jellystat_log_level: "INFO"
+        ```
+
+    ??? variable bool "`jellystat_emby`"
+
+        ```yaml
+        # Type: bool (true/false)
+        jellystat_emby: false
+        ```
+
+=== "Postgres"
+
     ??? variable string "`jellystat_role_postgres_name`"
 
         ```yaml
@@ -160,20 +176,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         jellystat_role_postgres_paths_location: "{{ server_appdata_path }}/{{ jellystat_role_postgres_paths_folder }}/postgres"
-        ```
-
-    ??? variable string "`jellystat_log_level`"
-
-        ```yaml
-        # Type: string
-        jellystat_log_level: "INFO"
-        ```
-
-    ??? variable bool "`jellystat_emby`"
-
-        ```yaml
-        # Type: bool (true/false)
-        jellystat_emby: false
         ```
 
 === "Web"

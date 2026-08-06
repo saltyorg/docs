@@ -95,6 +95,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wikijs_role_postgres_deploy: true
         ```
 
+=== "Postgres"
+
     ??? variable string "`wikijs_role_postgres_name`"
 
         ```yaml

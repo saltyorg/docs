@@ -1282,7 +1282,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authelia_role_depends_on: "{{ 'authelia-redis,lldap' if (lookup('role_var', '_authentication_backend', role='authelia') == 'ldap') else 'authelia-redis' }}"
+        authelia_role_depends_on: "{{ 'authelia-redis,lldap'
+                                   if (lookup('role_var', '_authentication_backend', role='authelia') == 'ldap')
+                                   else 'authelia-redis' }}"
         ```
 
     ??? variable string "`authelia_role_depends_on_delay`"
@@ -1296,7 +1298,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string ("true"/"false")
-        authelia_role_depends_on_healthchecks: "{{ 'true' if (lookup('role_var', '_authentication_backend', role='authelia') == 'ldap') else 'false' }}"
+        authelia_role_depends_on_healthchecks: "{{ 'true'
+                                                if (lookup('role_var', '_authentication_backend', role='authelia') == 'ldap')
+                                                else 'false' }}"
         ```
 
 === "Docker+"

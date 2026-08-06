@@ -24,6 +24,14 @@ ls -la kill_stream.py
 
 ## Configure Tautulli Notification Agent
 
+???+info "Required setting for using mounted folders"
+
+    ```ini title="/opt/tautulli/config.ini"
+    allow_mounted_folders = 1
+    ```
+
+    For the script to be accessible to Tautulli, ensure the above is not set to 0.
+
 Enter Tautulli settings and find the **Notification Agents** link on the left side menu.\
 Click **Add a new notification agent** and scroll down to **Script** in the selection dialog.
 

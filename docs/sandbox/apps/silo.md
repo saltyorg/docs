@@ -88,6 +88,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_name: silo
         ```
 
+=== "Settings"
+
+    ??? variable bool "`silo_role_jf_enabled`"
+
+        ```yaml
+        # Toggle Jellyfin-compatible endpoint
+        # Type: bool (true/false)
+        silo_role_jf_enabled: false
+        ```
+
+    ??? variable bool "`silo_role_abs_enabled`"
+
+        ```yaml
+        # Toggle Audiobookshelf-compatible endpoint
+        # Type: bool (true/false)
+        silo_role_abs_enabled: false
+        ```
+
 === "Postgres"
 
     ??? variable bool "`silo_role_postgres_deploy`"
@@ -236,6 +254,80 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                             else lookup('role_var', '_web_domain', role='silo')) }}"
         ```
 
+    ??? variable string "`silo_role_web_jf_subdomain`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_jf_subdomain: "{{ silo_name }}jf"
+        ```
+
+    ??? variable string "`silo_role_web_jf_domain`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_jf_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`silo_role_web_jf_port`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_jf_port: "8096"
+        ```
+
+    ??? variable string "`silo_role_web_jf_host`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_jf_host: "{{ (lookup('role_var', '_web_jf_subdomain', role='silo') + '.' + lookup('role_var', '_web_jf_domain', role='silo'))
+                                if (lookup('role_var', '_web_jf_subdomain', role='silo') | length > 0)
+                                else lookup('role_var', '_web_jf_domain', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_web_jf_url`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_jf_url: "https://{{ lookup('role_var', '_web_jf_host', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_web_abs_subdomain`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_abs_subdomain: "{{ silo_name }}abs"
+        ```
+
+    ??? variable string "`silo_role_web_abs_domain`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_abs_domain: "{{ user.domain }}"
+        ```
+
+    ??? variable string "`silo_role_web_abs_port`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_abs_port: "13378"
+        ```
+
+    ??? variable string "`silo_role_web_abs_host`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_abs_host: "{{ (lookup('role_var', '_web_abs_subdomain', role='silo') + '.' + lookup('role_var', '_web_abs_domain', role='silo'))
+                                 if (lookup('role_var', '_web_abs_subdomain', role='silo') | length > 0)
+                                 else lookup('role_var', '_web_abs_domain', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_web_abs_url`"
+
+        ```yaml
+        # Type: string
+        silo_role_web_abs_url: "https://{{ lookup('role_var', '_web_abs_host', role='silo') }}"
+        ```
+
 === "DNS"
 
     ??? variable string "`silo_role_dns_record`"
@@ -257,6 +349,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         silo_role_dns_proxy: "{{ dns_proxied }}"
+        ```
+
+    ??? variable string "`silo_role_jf_dns_record`"
+
+        ```yaml
+        # Type: string
+        silo_role_jf_dns_record: "{{ lookup('role_var', '_web_jf_subdomain', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_jf_dns_zone`"
+
+        ```yaml
+        # Type: string
+        silo_role_jf_dns_zone: "{{ lookup('role_var', '_web_jf_domain', role='silo') }}"
+        ```
+
+    ??? variable bool "`silo_role_jf_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        silo_role_jf_dns_proxy: "{{ lookup('role_var', '_dns_proxy', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_abs_dns_record`"
+
+        ```yaml
+        # Type: string
+        silo_role_abs_dns_record: "{{ lookup('role_var', '_web_abs_subdomain', role='silo') }}"
+        ```
+
+    ??? variable string "`silo_role_abs_dns_zone`"
+
+        ```yaml
+        # Type: string
+        silo_role_abs_dns_zone: "{{ lookup('role_var', '_web_abs_domain', role='silo') }}"
+        ```
+
+    ??? variable bool "`silo_role_abs_dns_proxy`"
+
+        ```yaml
+        # Type: bool (true/false)
+        silo_role_abs_dns_proxy: "{{ lookup('role_var', '_dns_proxy', role='silo') }}"
         ```
 
 === "Traefik"
@@ -407,6 +541,73 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         silo_role_docker_volumes_custom: []
+        ```
+
+    <h5>Labels</h5>
+
+    ??? variable list "`silo_role_docker_labels_jf_template`"
+
+        ```yaml
+        # Type: list
+        silo_role_docker_labels_jf_template:
+          - '{ "traefik.http.routers.{{ silo_name }}-jf-http.entrypoints": "{{ traefik_entrypoint_web }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf-http.service": "{{ silo_name }}-jf" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf-http.rule": "Host(`{{ lookup("role_var", "_web_jf_host", role="silo") }}`)" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf-http.priority": "20" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.entrypoints": "{{ traefik_entrypoint_websecure }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.service": "{{ silo_name }}-jf" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.rule": "Host(`{{ lookup("role_var", "_web_jf_host", role="silo") }}`)" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.tls.options": "securetls@file" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.middlewares": "{{ lookup("role_var", "_traefik_middleware_default", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.priority": "20" }'
+          - '{ "traefik.http.services.{{ silo_name }}-jf.loadbalancer.server.port": "{{ lookup("role_var", "_web_jf_port", role="silo") }}" }'
+        ```
+
+    ??? variable string "`silo_role_docker_labels_jf`"
+
+        ```yaml
+        # Type: string
+        silo_role_docker_labels_jf: "{{ (silo_role_docker_labels_jf_template | map('from_json') | combine)
+                                     if (lookup('role_var', '_jf_enabled', role='silo') | bool)
+                                     else {} }}"
+        ```
+
+    ??? variable list "`silo_role_docker_labels_abs_template`"
+
+        ```yaml
+        # Type: list
+        silo_role_docker_labels_abs_template:
+          - '{ "traefik.http.routers.{{ silo_name }}-abs-http.entrypoints": "{{ traefik_entrypoint_web }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs-http.service": "{{ silo_name }}-abs" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs-http.rule": "Host(`{{ lookup("role_var", "_web_abs_host", role="silo") }}`)" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs-http.middlewares": "{{ traefik_default_middleware_http }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs-http.priority": "20" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.entrypoints": "{{ traefik_entrypoint_websecure }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.service": "{{ silo_name }}-abs" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.rule": "Host(`{{ lookup("role_var", "_web_abs_host", role="silo") }}`)" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.tls.options": "securetls@file" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.middlewares": "{{ lookup("role_var", "_traefik_middleware_default", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.priority": "20" }'
+          - '{ "traefik.http.services.{{ silo_name }}-abs.loadbalancer.server.port": "{{ lookup("role_var", "_web_abs_port", role="silo") }}" }'
+        ```
+
+    ??? variable string "`silo_role_docker_labels_abs`"
+
+        ```yaml
+        # Type: string
+        silo_role_docker_labels_abs: "{{ (silo_role_docker_labels_abs_template | map('from_json') | combine)
+                                      if (lookup('role_var', '_abs_enabled', role='silo') | bool)
+                                      else {} }}"
+        ```
+
+    ??? variable dict "`silo_role_docker_labels_custom`"
+
+        ```yaml
+        # Type: dict
+        silo_role_docker_labels_custom: {}
         ```
 
     <h5>Hostname</h5>
@@ -990,13 +1191,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         silo_role_docker_env_file:
-        ```
-
-    ??? variable dict "`silo_role_docker_labels`"
-
-        ```yaml
-        # Type: dict
-        silo_role_docker_labels:
         ```
 
     ??? variable bool "`silo_role_docker_labels_use_common`"

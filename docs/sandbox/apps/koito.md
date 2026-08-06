@@ -296,8 +296,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         koito_role_web_url: "{{ 'https://' + (lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                              if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                              else lookup('role_var', '_web_domain', role='koito')) }}"
+                             if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
+                             else lookup('role_var', '_web_domain', role='koito')) }}"
         ```
 
     ??? variable string "`koito_role_web_host`"
@@ -305,8 +305,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         koito_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                               if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                               else lookup('role_var', '_web_domain', role='koito')) }}"
+                              if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
+                              else lookup('role_var', '_web_domain', role='koito')) }}"
         ```
 
 === "DNS"
@@ -453,20 +453,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                   if (lookup('role_var', '_enable_lbz_relay', role='koito') == 'true')
                                   else omit }}"
           KOITO_FORCE_TZ: "{{ lookup('role_var', '_force_tz', role='koito')
-                            if (lookup('role_var', '_force_tz', role='koito') | length > 0)
-                            else omit }}"
+                           if (lookup('role_var', '_force_tz', role='koito') | length > 0)
+                           else omit }}"
           KOITO_DISABLE_DEEZER: "{{ lookup('role_var', '_disable_deezer', role='koito') }}"
           KOITO_DISABLE_COVER_ART_ARCHIVE: "{{ lookup('role_var', '_disable_cover_art_archive', role='koito') }}"
           KOITO_DISABLE_MUSICBRAINZ: "{{ lookup('role_var', '_disable_musicbrainz', role='koito') }}"
           KOITO_SUBSONIC_URL: "{{ lookup('role_var', '_subsonic_url', role='koito')
-                                if (lookup('role_var', '_subsonic_url', role='koito') | length > 0)
-                                else omit }}"
+                               if (lookup('role_var', '_subsonic_url', role='koito') | length > 0)
+                               else omit }}"
           KOITO_SUBSONIC_PARAMS: "{{ lookup('role_var', '_subsonic_params', role='koito')
-                                   if (lookup('role_var', '_subsonic_params', role='koito') | length > 0)
-                                   else omit }}"
-          KOITO_LASTFM_API_KEY: "{{ lookup('role_var', '_lastfm_api_key', role='koito')
-                                  if (lookup('role_var', '_lastfm_api_key', role='koito') | length > 0)
+                                  if (lookup('role_var', '_subsonic_params', role='koito') | length > 0)
                                   else omit }}"
+          KOITO_LASTFM_API_KEY: "{{ lookup('role_var', '_lastfm_api_key', role='koito')
+                                 if (lookup('role_var', '_lastfm_api_key', role='koito') | length > 0)
+                                 else omit }}"
           KOITO_SKIP_IMPORT: "{{ lookup('role_var', '_skip_import', role='koito') }}"
           KOITO_DISABLE_RATE_LIMIT: "{{ lookup('role_var', '_disable_rate_limit', role='koito') }}"
           KOITO_THROTTLE_IMPORTS_MS: "{{ lookup('role_var', '_throttle_imports_ms', role='koito') }}"

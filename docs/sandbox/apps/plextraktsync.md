@@ -226,32 +226,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plextraktsync2_docker_envs_custom: {}
         ```
 
-    <h5>Commands</h5>
-
-    ??? variable list "`plextraktsync_role_docker_commands_default`{ .sb-show-on-unchecked }`plextraktsync2_docker_commands_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plextraktsync_role_docker_commands_default: []
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plextraktsync2_docker_commands_default: []
-        ```
-
-    ??? variable list "`plextraktsync_role_docker_commands_custom`{ .sb-show-on-unchecked }`plextraktsync2_docker_commands_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        plextraktsync_role_docker_commands_custom: []
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        plextraktsync2_docker_commands_custom: []
-        ```
-
     <h5>Volumes</h5>
 
     ??? variable list "`plextraktsync_role_docker_volumes_default`{ .sb-show-on-unchecked }`plextraktsync2_docker_volumes_default`{ .sb-show-on-checked }"
@@ -1164,6 +1138,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         plextraktsync2_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`plextraktsync_role_docker_commands`{ .sb-show-on-unchecked }`plextraktsync2_docker_commands`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        plextraktsync_role_docker_commands:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        plextraktsync2_docker_commands:
         ```
 
     ??? variable int "`plextraktsync_role_docker_create_timeout`{ .sb-show-on-unchecked }`plextraktsync2_docker_create_timeout`{ .sb-show-on-checked }"

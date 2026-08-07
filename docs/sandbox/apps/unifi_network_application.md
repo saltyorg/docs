@@ -194,9 +194,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        unifi_network_application_role_web_url: "https://{{ unifi_network_application_role_web_subdomain + '.' + unifi_network_application_role_web_domain
-                                                         if (unifi_network_application_role_web_subdomain | length > 0)
-                                                         else unifi_network_application_role_web_domain }}"
+        unifi_network_application_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='unifi_network_application') + '.' + lookup('role_var', '_web_domain', role='unifi_network_application')
+                                                         if (lookup('role_var', '_web_subdomain', role='unifi_network_application') | length > 0)
+                                                         else lookup('role_var', '_web_domain', role='unifi_network_application') }}"
         ```
 
 === "DNS"

@@ -104,9 +104,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        suwayomi_role_web_url: "https://{{ lookup('role_var', '_web_subdomain') + '.' + lookup('role_var', '_web_domain')
-                                        if (lookup('role_var', '_web_subdomain') | length > 0)
-                                        else lookup('role_var', '_web_domain') }}"
+        suwayomi_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='suwayomi') + '.' + lookup('role_var', '_web_domain', role='suwayomi')
+                                        if (lookup('role_var', '_web_subdomain', role='suwayomi') | length > 0)
+                                        else lookup('role_var', '_web_domain', role='suwayomi') }}"
         ```
 
 === "DNS"
@@ -115,14 +115,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        suwayomi_role_dns_record: "{{ lookup('role_var', '_web_subdomain') }}"
+        suwayomi_role_dns_record: "{{ lookup('role_var', '_web_subdomain', role='suwayomi') }}"
         ```
 
     ??? variable string "`suwayomi_role_dns_zone`"
 
         ```yaml
         # Type: string
-        suwayomi_role_dns_zone: "{{ lookup('role_var', '_web_domain') }}"
+        suwayomi_role_dns_zone: "{{ lookup('role_var', '_web_domain', role='suwayomi') }}"
         ```
 
     ??? variable bool "`suwayomi_role_dns_proxy`"
@@ -221,7 +221,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        suwayomi_role_docker_image: "{{ lookup('role_var', '_docker_image_repo') }}:{{ lookup('role_var', '_docker_image_tag') }}"
+        suwayomi_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='suwayomi') }}:{{ lookup('role_var', '_docker_image_tag', role='suwayomi') }}"
         ```
 
     <h5>Envs</h5>
@@ -248,7 +248,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         suwayomi_role_docker_volumes_default:
-          - "{{ lookup('role_var', '_paths_location') }}:/home/suwayomi/.local/share/Tachidesk"
+          - "{{ lookup('role_var', '_paths_location', role='suwayomi') }}:/home/suwayomi/.local/share/Tachidesk"
           - "/mnt/unionfs/Media/Comics:/comics"
         ```
 

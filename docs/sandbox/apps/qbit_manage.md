@@ -424,22 +424,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='qbit_manage') }}:{{ lookup('role_var', '_docker_image_tag', role='qbit_manage') }}"
         ```
 
-    <h5>Ports</h5>
-
-    ??? variable list "`qbit_manage_role_docker_ports_default`"
-
-        ```yaml
-        # Type: list
-        qbit_manage_role_docker_ports_default: []
-        ```
-
-    ??? variable list "`qbit_manage_role_docker_ports_custom`"
-
-        ```yaml
-        # Type: list
-        qbit_manage_role_docker_ports_custom: []
-        ```
-
     <h5>Envs</h5>
 
     ??? variable dict "`qbit_manage_role_docker_envs_default`"
@@ -818,6 +802,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         qbit_manage_role_docker_pid_mode:
+        ```
+
+    ??? variable list "`qbit_manage_role_docker_ports`"
+
+        ```yaml
+        # Type: list
+        qbit_manage_role_docker_ports:
         ```
 
     ??? variable string "`qbit_manage_role_docker_uts`"

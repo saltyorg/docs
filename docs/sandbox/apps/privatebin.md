@@ -212,6 +212,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         privatebin_role_docker_image_pull: true
         ```
 
+    ??? variable string "`privatebin_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        privatebin_role_docker_image_repo: "privatebin/nginx-fpm-alpine"
+        ```
+
     ??? variable string "`privatebin_role_docker_image_tag`"
 
         ```yaml
@@ -223,7 +230,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        privatebin_role_docker_image: "privatebin/nginx-fpm-alpine:{{ lookup('role_var', '_docker_image_tag', role='privatebin') }}"
+        privatebin_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='privatebin') }}:{{ lookup('role_var', '_docker_image_tag', role='privatebin') }}"
         ```
 
     <h5>Envs</h5>

@@ -405,32 +405,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qui2_docker_volumes_custom: []
         ```
 
-    <h5>Hosts</h5>
-
-    ??? variable dict "`qui_role_docker_hosts_default`{ .sb-show-on-unchecked }`qui2_docker_hosts_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        qui_role_docker_hosts_default: {}
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        qui2_docker_hosts_default: {}
-        ```
-
-    ??? variable dict "`qui_role_docker_hosts_custom`{ .sb-show-on-unchecked }`qui2_docker_hosts_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        qui_role_docker_hosts_custom: {}
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        qui2_docker_hosts_custom: {}
-        ```
-
     <h5>Hostname</h5>
 
     ??? variable string "`qui_role_docker_hostname`{ .sb-show-on-unchecked }`qui2_docker_hostname`{ .sb-show-on-checked }"
@@ -891,6 +865,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: list
         qui2_docker_exposed_ports:
+        ```
+
+    ??? variable dict "`qui_role_docker_hosts`{ .sb-show-on-unchecked }`qui2_docker_hosts`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        qui_role_docker_hosts:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        qui2_docker_hosts:
         ```
 
     ??? variable bool "`qui_role_docker_hosts_use_common`{ .sb-show-on-unchecked }`qui2_docker_hosts_use_common`{ .sb-show-on-checked }"

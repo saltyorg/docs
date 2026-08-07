@@ -363,22 +363,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_host_lookup_libtorrent2: 'release-\(.qbittorrent)_v\(.libtorrent_2_0)'
         ```
 
-    ??? variable string "`qbittorrent_role_host_release_lookup`{ .sb-show-on-unchecked }`qbittorrent2_host_release_lookup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_host_release_lookup: "{{ qbittorrent_role_host_lookup_libtorrent2
-                                               if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
-                                               else qbittorrent_role_host_lookup_libtorrent1 }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_host_release_lookup: "{{ qbittorrent_role_host_lookup_libtorrent2
-                                           if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
-                                           else qbittorrent_role_host_lookup_libtorrent1 }}"
-        ```
-
     ??? variable string "`qbittorrent_role_host_version`{ .sb-show-on-unchecked }`qbittorrent2_host_version`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -811,18 +795,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_docker_ports_8080: "{{ port_lookup_8080.meta.port
                                          if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
                                          else '8090' }}"
-        ```
-
-    ??? variable string "`qbittorrent_role_web_port_lookup`{ .sb-show-on-unchecked }`qbittorrent2_web_port_lookup`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_web_port_lookup: "{{ lookup('role_var', '_web_port', role='qbittorrent') }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_web_port_lookup: "{{ lookup('role_var', '_web_port', role='qbittorrent') }}"
         ```
 
     ??? variable list "`qbittorrent_role_docker_ports_default`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_default`{ .sb-show-on-checked }"

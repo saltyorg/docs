@@ -109,6 +109,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoheal_role_docker_image_pull: true
         ```
 
+    ??? variable string "`autoheal_role_docker_image_repo`"
+
+        ```yaml
+        # Type: string
+        autoheal_role_docker_image_repo: "willfarrell/autoheal"
+        ```
+
     ??? variable string "`autoheal_role_docker_image_tag`"
 
         ```yaml
@@ -120,7 +127,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        autoheal_role_docker_image: "willfarrell/autoheal:{{ autoheal_role_docker_image_tag }}"
+        autoheal_role_docker_image: "{{ lookup('role_var', '_docker_image_repo', role='autoheal') }}:{{ lookup('role_var', '_docker_image_tag', role='autoheal') }}"
         ```
 
     <h5>Envs</h5>

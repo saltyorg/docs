@@ -309,22 +309,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         netdata_role_docker_volumes_custom: []
         ```
 
-    <h5>Labels</h5>
-
-    ??? variable dict "`netdata_role_docker_labels_default`"
-
-        ```yaml
-        # Type: dict
-        netdata_role_docker_labels_default: {}
-        ```
-
-    ??? variable dict "`netdata_role_docker_labels_custom`"
-
-        ```yaml
-        # Type: dict
-        netdata_role_docker_labels_custom: {}
-        ```
-
     <h5>Hostname</h5>
 
     ??? variable string "`netdata_role_docker_hostname`"
@@ -932,6 +916,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         netdata_role_docker_env_file:
+        ```
+
+    ??? variable dict "`netdata_role_docker_labels`"
+
+        ```yaml
+        # Type: dict
+        netdata_role_docker_labels:
         ```
 
     ??? variable bool "`netdata_role_docker_labels_use_common`"

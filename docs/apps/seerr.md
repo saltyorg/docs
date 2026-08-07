@@ -489,32 +489,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         seerr2_docker_volumes_custom: []
         ```
 
-    <h5>Labels</h5>
-
-    ??? variable dict "`seerr_role_docker_labels_default`{ .sb-show-on-unchecked }`seerr2_docker_labels_default`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        seerr_role_docker_labels_default: {}
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        seerr2_docker_labels_default: {}
-        ```
-
-    ??? variable dict "`seerr_role_docker_labels_custom`{ .sb-show-on-unchecked }`seerr2_docker_labels_custom`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict
-        seerr_role_docker_labels_custom: {}
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict
-        seerr2_docker_labels_custom: {}
-        ```
-
     <h5>Hostname</h5>
 
     ??? variable string "`seerr_role_docker_hostname`{ .sb-show-on-unchecked }`seerr2_docker_hostname`{ .sb-show-on-checked }"
@@ -1461,6 +1435,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         seerr2_docker_env_file:
+        ```
+
+    ??? variable dict "`seerr_role_docker_labels`{ .sb-show-on-unchecked }`seerr2_docker_labels`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: dict
+        seerr_role_docker_labels:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: dict
+        seerr2_docker_labels:
         ```
 
     ??? variable bool "`seerr_role_docker_labels_use_common`{ .sb-show-on-unchecked }`seerr2_docker_labels_use_common`{ .sb-show-on-checked }"

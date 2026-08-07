@@ -163,6 +163,48 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             tautulli_instances: ["tautulli", "tautulli2"]
             ```
 
+=== "Config"
+
+    ??? variable list "`tautulli_role_config_settings_default`{ .sb-show-on-unchecked }`tautulli2_config_settings_default`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        tautulli_role_config_settings_default:
+          - { section: "Advanced", option: "allow_mounted_folders", value: "1" }
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        tautulli2_config_settings_default:
+          - { section: "Advanced", option: "allow_mounted_folders", value: "1" }
+        ```
+
+    ??? variable list "`tautulli_role_config_settings_custom`{ .sb-show-on-unchecked }`tautulli2_config_settings_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        tautulli_role_config_settings_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        tautulli2_config_settings_custom: []
+        ```
+
+    ??? variable string "`tautulli_role_config_settings_list`{ .sb-show-on-unchecked }`tautulli2_config_settings_list`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        tautulli_role_config_settings_list: "{{ lookup('role_var', '_config_settings_default', role='tautulli')
+                                                + lookup('role_var', '_config_settings_custom', role='tautulli') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        tautulli2_config_settings_list: "{{ lookup('role_var', '_config_settings_default', role='tautulli')
+                                            + lookup('role_var', '_config_settings_custom', role='tautulli') }}"
+        ```
+
 === "Web"
 
     ??? variable string "`tautulli_role_web_subdomain`{ .sb-show-on-unchecked }`tautulli2_web_subdomain`{ .sb-show-on-checked }"

@@ -154,7 +154,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        recyclarr_role_docker_image_tag: "latest"
+        recyclarr_role_docker_image_tag: "8"
         ```
 
     ??? variable string "`recyclarr_role_docker_image`"

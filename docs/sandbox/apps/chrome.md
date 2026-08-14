@@ -110,14 +110,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        chrome_role_docker_image_repo: "gcr.io/zenika-hub/alpine-chrome"
+        chrome_role_docker_image_repo: "zenika/alpine-chrome"
         ```
 
     ??? variable string "`chrome_role_docker_image_tag`"
 
         ```yaml
         # Type: string
-        chrome_role_docker_image_tag: "124"
+        chrome_role_docker_image_tag: "latest"
         ```
 
     ??? variable string "`chrome_role_docker_image`"

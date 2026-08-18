@@ -156,6 +156,11 @@ global_overrides:
       default: "true"
       type: "bool"
 
+    _paths_folders_list_custom:
+      description: "Extra directories to create"
+      default: null
+      type: "list"
+
     _traefik_autodetect_enabled:
       description: "Enable Traefik autodetect middleware for containers"
       default: "false"

@@ -301,6 +301,7 @@ nav:
           - sandbox/apps/bookstack.md
           - sandbox/apps/calibre.md
           - sandbox/apps/calibre_web.md
+          - sandbox/apps/calibre_web_nextgen.md
           - sandbox/apps/changedetection.md
           - sandbox/apps/cherry.md
           - sandbox/apps/chrome.md

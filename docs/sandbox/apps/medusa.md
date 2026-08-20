@@ -837,13 +837,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         medusa_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`medusa_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        medusa_role_docker_nvidia:
-        ```
-
     ??? variable bool "`medusa_role_docker_read_only`"
 
         ```yaml

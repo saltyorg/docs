@@ -978,13 +978,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         paperless_ngx_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`paperless_ngx_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        paperless_ngx_role_docker_nvidia:
-        ```
-
     ??? variable bool "`paperless_ngx_role_docker_read_only`"
 
         ```yaml

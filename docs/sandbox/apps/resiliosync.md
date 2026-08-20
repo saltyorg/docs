@@ -855,13 +855,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         resiliosync_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`resiliosync_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        resiliosync_role_docker_nvidia:
-        ```
-
     ??? variable bool "`resiliosync_role_docker_read_only`"
 
         ```yaml

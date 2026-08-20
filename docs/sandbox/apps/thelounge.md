@@ -835,13 +835,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         thelounge_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`thelounge_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        thelounge_role_docker_nvidia:
-        ```
-
     ??? variable bool "`thelounge_role_docker_read_only`"
 
         ```yaml

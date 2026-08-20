@@ -843,13 +843,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         gotify_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`gotify_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        gotify_role_docker_nvidia:
-        ```
-
     ??? variable bool "`gotify_role_docker_read_only`"
 
         ```yaml

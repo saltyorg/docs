@@ -852,13 +852,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         xbackbone_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`xbackbone_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        xbackbone_role_docker_nvidia:
-        ```
-
     ??? variable bool "`xbackbone_role_docker_read_only`"
 
         ```yaml

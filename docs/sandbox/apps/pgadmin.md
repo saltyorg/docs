@@ -841,13 +841,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         pgadmin_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`pgadmin_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        pgadmin_role_docker_nvidia:
-        ```
-
     ??? variable bool "`pgadmin_role_docker_read_only`"
 
         ```yaml

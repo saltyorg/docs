@@ -894,13 +894,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dockwatch_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`dockwatch_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        dockwatch_role_docker_nvidia:
-        ```
-
     ??? variable bool "`dockwatch_role_docker_read_only`"
 
         ```yaml

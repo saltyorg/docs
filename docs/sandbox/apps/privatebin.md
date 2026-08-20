@@ -862,13 +862,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         privatebin_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`privatebin_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        privatebin_role_docker_nvidia:
-        ```
-
     ??? variable string "`privatebin_role_docker_runtime`"
 
         ```yaml

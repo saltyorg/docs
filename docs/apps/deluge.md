@@ -1536,18 +1536,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_labels_use_common:
         ```
 
-    ??? variable string "`deluge_role_docker_nvidia`{ .sb-show-on-unchecked }`deluge2_docker_nvidia`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_docker_nvidia:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_docker_nvidia:
-        ```
-
     ??? variable bool "`deluge_role_docker_read_only`{ .sb-show-on-unchecked }`deluge2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

@@ -836,13 +836,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lazylibrarian_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`lazylibrarian_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        lazylibrarian_role_docker_nvidia:
-        ```
-
     ??? variable bool "`lazylibrarian_role_docker_read_only`"
 
         ```yaml

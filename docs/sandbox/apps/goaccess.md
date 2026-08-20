@@ -840,13 +840,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         goaccess_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`goaccess_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        goaccess_role_docker_nvidia:
-        ```
-
     ??? variable bool "`goaccess_role_docker_read_only`"
 
         ```yaml

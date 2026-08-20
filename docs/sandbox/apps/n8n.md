@@ -1032,13 +1032,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         n8n_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`n8n_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        n8n_role_docker_nvidia:
-        ```
-
     ??? variable bool "`n8n_role_docker_read_only`"
 
         ```yaml

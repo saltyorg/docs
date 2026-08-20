@@ -840,13 +840,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         filebot_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`filebot_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        filebot_role_docker_nvidia:
-        ```
-
     ??? variable bool "`filebot_role_docker_read_only`"
 
         ```yaml

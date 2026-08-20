@@ -1219,18 +1219,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kometa2_docker_labels_use_common:
         ```
 
-    ??? variable string "`kometa_role_docker_nvidia`{ .sb-show-on-unchecked }`kometa2_docker_nvidia`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        kometa_role_docker_nvidia:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        kometa2_docker_nvidia:
-        ```
-
     ??? variable bool "`kometa_role_docker_read_only`{ .sb-show-on-unchecked }`kometa2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

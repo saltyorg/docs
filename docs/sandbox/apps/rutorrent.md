@@ -1059,13 +1059,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`rutorrent_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_docker_nvidia:
-        ```
-
     ??? variable bool "`rutorrent_role_docker_read_only`"
 
         ```yaml

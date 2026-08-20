@@ -856,13 +856,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plexshare_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`plexshare_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        plexshare_role_docker_nvidia:
-        ```
-
     ??? variable bool "`plexshare_role_docker_read_only`"
 
         ```yaml

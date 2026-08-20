@@ -850,13 +850,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         jdownloader2_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`jdownloader2_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        jdownloader2_role_docker_nvidia:
-        ```
-
     ??? variable bool "`jdownloader2_role_docker_read_only`"
 
         ```yaml

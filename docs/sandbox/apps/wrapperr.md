@@ -822,13 +822,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wrapperr_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`wrapperr_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        wrapperr_role_docker_nvidia:
-        ```
-
     ??? variable bool "`wrapperr_role_docker_read_only`"
 
         ```yaml

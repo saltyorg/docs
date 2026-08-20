@@ -866,13 +866,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         forgejo_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`forgejo_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        forgejo_role_docker_nvidia:
-        ```
-
     ??? variable bool "`forgejo_role_docker_read_only`"
 
         ```yaml

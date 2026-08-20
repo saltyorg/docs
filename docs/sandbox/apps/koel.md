@@ -866,13 +866,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         koel_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`koel_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        koel_role_docker_nvidia:
-        ```
-
     ??? variable bool "`koel_role_docker_read_only`"
 
         ```yaml

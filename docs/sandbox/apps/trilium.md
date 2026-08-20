@@ -836,13 +836,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         trilium_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`trilium_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        trilium_role_docker_nvidia:
-        ```
-
     ??? variable bool "`trilium_role_docker_read_only`"
 
         ```yaml

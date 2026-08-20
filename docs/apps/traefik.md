@@ -1469,13 +1469,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_docker_env_file:
         ```
 
-    ??? variable string "`traefik_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        traefik_role_docker_nvidia:
-        ```
-
     ??? variable bool "`traefik_role_docker_read_only`"
 
         ```yaml

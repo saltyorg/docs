@@ -739,13 +739,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbthrottle_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`nzbthrottle_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        nzbthrottle_role_docker_nvidia:
-        ```
-
     ??? variable bool "`nzbthrottle_role_docker_read_only`"
 
         ```yaml

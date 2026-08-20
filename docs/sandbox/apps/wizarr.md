@@ -1368,18 +1368,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wizarr2_docker_labels_use_common:
         ```
 
-    ??? variable string "`wizarr_role_docker_nvidia`{ .sb-show-on-unchecked }`wizarr2_docker_nvidia`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        wizarr_role_docker_nvidia:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        wizarr2_docker_nvidia:
-        ```
-
     ??? variable bool "`wizarr_role_docker_read_only`{ .sb-show-on-unchecked }`wizarr2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

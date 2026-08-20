@@ -842,13 +842,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`profilarr_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        profilarr_role_docker_nvidia:
-        ```
-
     ??? variable bool "`profilarr_role_docker_read_only`"
 
         ```yaml

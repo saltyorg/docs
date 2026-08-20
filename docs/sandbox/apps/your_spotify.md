@@ -869,13 +869,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`your_spotify_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        your_spotify_role_docker_nvidia:
-        ```
-
     ??? variable bool "`your_spotify_role_docker_read_only`"
 
         ```yaml

@@ -838,13 +838,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         metube_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`metube_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        metube_role_docker_nvidia:
-        ```
-
     ??? variable bool "`metube_role_docker_read_only`"
 
         ```yaml

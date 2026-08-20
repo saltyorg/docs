@@ -1422,18 +1422,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         watchstate2_docker_labels_use_common:
         ```
 
-    ??? variable string "`watchstate_role_docker_nvidia`{ .sb-show-on-unchecked }`watchstate2_docker_nvidia`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        watchstate_role_docker_nvidia:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        watchstate2_docker_nvidia:
-        ```
-
     ??? variable bool "`watchstate_role_docker_read_only`{ .sb-show-on-unchecked }`watchstate2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

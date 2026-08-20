@@ -865,13 +865,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         speedtest_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`speedtest_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        speedtest_role_docker_nvidia:
-        ```
-
     ??? variable bool "`speedtest_role_docker_read_only`"
 
         ```yaml

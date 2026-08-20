@@ -1830,13 +1830,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authelia_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`authelia_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        authelia_role_docker_nvidia:
-        ```
-
     ??? variable bool "`authelia_role_docker_read_only`"
 
         ```yaml

@@ -829,13 +829,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         adminer_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`adminer_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        adminer_role_docker_nvidia:
-        ```
-
     ??? variable bool "`adminer_role_docker_read_only`"
 
         ```yaml

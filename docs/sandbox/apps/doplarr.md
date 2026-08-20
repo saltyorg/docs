@@ -848,13 +848,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         doplarr_role_docker_labels_use_common:
         ```
 
-    ??? variable string "`doplarr_role_docker_nvidia`"
-
-        ```yaml
-        # Type: string
-        doplarr_role_docker_nvidia:
-        ```
-
     ??? variable bool "`doplarr_role_docker_read_only`"
 
         ```yaml

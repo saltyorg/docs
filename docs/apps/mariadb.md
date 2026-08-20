@@ -1300,18 +1300,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mariadb2_docker_labels_use_common:
         ```
 
-    ??? variable string "`mariadb_role_docker_nvidia`{ .sb-show-on-unchecked }`mariadb2_docker_nvidia`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        mariadb_role_docker_nvidia:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        mariadb2_docker_nvidia:
-        ```
-
     ??? variable bool "`mariadb_role_docker_read_only`{ .sb-show-on-unchecked }`mariadb2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

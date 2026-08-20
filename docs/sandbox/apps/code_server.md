@@ -920,6 +920,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         code_server_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`code_server_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        code_server_role_docker_nvidia:
+        ```
+
     ??? variable bool "`code_server_role_docker_read_only`"
 
         ```yaml

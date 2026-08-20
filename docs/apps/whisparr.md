@@ -1480,6 +1480,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_docker_labels_use_common:
         ```
 
+    ??? variable string "`whisparr_role_docker_nvidia`{ .sb-show-on-unchecked }`whisparr2_docker_nvidia`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        whisparr_role_docker_nvidia:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        whisparr2_docker_nvidia:
+        ```
+
     ??? variable bool "`whisparr_role_docker_read_only`{ .sb-show-on-unchecked }`whisparr2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

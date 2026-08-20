@@ -907,6 +907,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         photoprism_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`photoprism_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        photoprism_role_docker_nvidia:
+        ```
+
     ??? variable bool "`photoprism_role_docker_read_only`"
 
         ```yaml

@@ -871,6 +871,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         uptime_kuma_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`uptime_kuma_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        uptime_kuma_role_docker_nvidia:
+        ```
+
     ??? variable bool "`uptime_kuma_role_docker_read_only`"
 
         ```yaml

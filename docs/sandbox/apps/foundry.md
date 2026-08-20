@@ -876,6 +876,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         foundry_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`foundry_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        foundry_role_docker_nvidia:
+        ```
+
     ??? variable bool "`foundry_role_docker_read_only`"
 
         ```yaml

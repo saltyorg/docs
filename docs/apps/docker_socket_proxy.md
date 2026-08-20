@@ -751,6 +751,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         docker_socket_proxy_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`docker_socket_proxy_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        docker_socket_proxy_role_docker_nvidia:
+        ```
+
     ??? variable string "`docker_socket_proxy_role_docker_runtime`"
 
         ```yaml

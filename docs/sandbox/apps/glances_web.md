@@ -862,6 +862,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         glances_web_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`glances_web_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        glances_web_role_docker_nvidia:
+        ```
+
     ??? variable bool "`glances_web_role_docker_read_only`"
 
         ```yaml

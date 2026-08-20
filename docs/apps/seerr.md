@@ -1461,6 +1461,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         seerr2_docker_labels_use_common:
         ```
 
+    ??? variable string "`seerr_role_docker_nvidia`{ .sb-show-on-unchecked }`seerr2_docker_nvidia`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        seerr_role_docker_nvidia:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        seerr2_docker_nvidia:
+        ```
+
     ??? variable bool "`seerr_role_docker_read_only`{ .sb-show-on-unchecked }`seerr2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

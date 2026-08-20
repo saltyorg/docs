@@ -748,6 +748,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unpackerr_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`unpackerr_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        unpackerr_role_docker_nvidia:
+        ```
+
     ??? variable bool "`unpackerr_role_docker_read_only`"
 
         ```yaml

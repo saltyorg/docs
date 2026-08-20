@@ -837,6 +837,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         navidrome_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`navidrome_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        navidrome_role_docker_nvidia:
+        ```
+
     ??? variable bool "`navidrome_role_docker_read_only`"
 
         ```yaml

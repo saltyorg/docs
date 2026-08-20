@@ -718,6 +718,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         influxdb_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`influxdb_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        influxdb_role_docker_nvidia:
+        ```
+
     ??? variable bool "`influxdb_role_docker_read_only`"
 
         ```yaml

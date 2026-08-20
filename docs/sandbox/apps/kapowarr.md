@@ -830,6 +830,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         kapowarr_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`kapowarr_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        kapowarr_role_docker_nvidia:
+        ```
+
     ??? variable bool "`kapowarr_role_docker_read_only`"
 
         ```yaml

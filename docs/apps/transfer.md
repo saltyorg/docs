@@ -862,6 +862,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         transfer_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`transfer_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        transfer_role_docker_nvidia:
+        ```
+
     ??? variable bool "`transfer_role_docker_read_only`"
 
         ```yaml

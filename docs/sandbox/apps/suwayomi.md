@@ -829,6 +829,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         suwayomi_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`suwayomi_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        suwayomi_role_docker_nvidia:
+        ```
+
     ??? variable bool "`suwayomi_role_docker_read_only`"
 
         ```yaml

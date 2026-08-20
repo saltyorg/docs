@@ -1048,6 +1048,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbit_manage_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`qbit_manage_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        qbit_manage_role_docker_nvidia:
+        ```
+
     ??? variable bool "`qbit_manage_role_docker_read_only`"
 
         ```yaml

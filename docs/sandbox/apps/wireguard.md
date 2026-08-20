@@ -936,6 +936,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wireguard_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`wireguard_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        wireguard_role_docker_nvidia:
+        ```
+
     ??? variable bool "`wireguard_role_docker_read_only`"
 
         ```yaml

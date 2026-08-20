@@ -1009,6 +1009,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         organizr_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`organizr_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        organizr_role_docker_nvidia:
+        ```
+
     ??? variable bool "`organizr_role_docker_read_only`"
 
         ```yaml

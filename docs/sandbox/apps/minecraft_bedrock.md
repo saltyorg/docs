@@ -791,6 +791,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft_bedrock_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`minecraft_bedrock_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        minecraft_bedrock_role_docker_nvidia:
+        ```
+
     ??? variable bool "`minecraft_bedrock_role_docker_read_only`"
 
         ```yaml

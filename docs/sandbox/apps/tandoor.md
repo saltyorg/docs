@@ -1016,6 +1016,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tandoor_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`tandoor_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        tandoor_role_docker_nvidia:
+        ```
+
     ??? variable bool "`tandoor_role_docker_read_only`"
 
         ```yaml

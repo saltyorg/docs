@@ -785,6 +785,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         factorio_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`factorio_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        factorio_role_docker_nvidia:
+        ```
+
     ??? variable bool "`factorio_role_docker_read_only`"
 
         ```yaml

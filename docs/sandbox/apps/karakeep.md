@@ -877,6 +877,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         karakeep_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`karakeep_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        karakeep_role_docker_nvidia:
+        ```
+
     ??? variable bool "`karakeep_role_docker_read_only`"
 
         ```yaml

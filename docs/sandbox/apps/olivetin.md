@@ -847,6 +847,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         olivetin_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`olivetin_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        olivetin_role_docker_nvidia:
+        ```
+
     ??? variable bool "`olivetin_role_docker_read_only`"
 
         ```yaml

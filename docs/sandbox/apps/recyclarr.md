@@ -770,6 +770,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`recyclarr_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        recyclarr_role_docker_nvidia:
+        ```
+
     ??? variable bool "`recyclarr_role_docker_read_only`"
 
         ```yaml

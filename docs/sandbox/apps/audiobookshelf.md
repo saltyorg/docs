@@ -823,6 +823,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         audiobookshelf_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`audiobookshelf_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        audiobookshelf_role_docker_nvidia:
+        ```
+
     ??? variable bool "`audiobookshelf_role_docker_read_only`"
 
         ```yaml

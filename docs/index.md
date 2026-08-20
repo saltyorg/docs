@@ -52,7 +52,7 @@ Saltbox CLI
     reinstall-venv [--flags]          Reinstall the Ansible virtual environment
     update [--flags]                  Update Saltbox & Sandbox
     validate-config [--flags]         Validate Saltbox configuration files
-    version                           Print Saltbox CLI version
+    version [--flags]                 Print Saltbox CLI version
          
   FLAGS  
          

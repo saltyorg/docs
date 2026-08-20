@@ -1369,6 +1369,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         node_red2_docker_labels_use_common:
         ```
 
+    ??? variable string "`node_red_role_docker_nvidia`{ .sb-show-on-unchecked }`node_red2_docker_nvidia`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        node_red_role_docker_nvidia:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        node_red2_docker_nvidia:
+        ```
+
     ??? variable bool "`node_red_role_docker_read_only`{ .sb-show-on-unchecked }`node_red2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

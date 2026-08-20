@@ -837,6 +837,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         reposilite_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`reposilite_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        reposilite_role_docker_nvidia:
+        ```
+
     ??? variable bool "`reposilite_role_docker_read_only`"
 
         ```yaml

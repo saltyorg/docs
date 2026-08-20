@@ -852,6 +852,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         threadfin_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`threadfin_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        threadfin_role_docker_nvidia:
+        ```
+
     ??? variable bool "`threadfin_role_docker_read_only`"
 
         ```yaml

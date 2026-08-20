@@ -934,6 +934,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mylar3_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`mylar3_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        mylar3_role_docker_nvidia:
+        ```
+
     ??? variable bool "`mylar3_role_docker_read_only`"
 
         ```yaml

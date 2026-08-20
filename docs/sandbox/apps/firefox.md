@@ -889,6 +889,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         firefox_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`firefox_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        firefox_role_docker_nvidia:
+        ```
+
     ??? variable bool "`firefox_role_docker_read_only`"
 
         ```yaml

@@ -939,6 +939,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         teslamate_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`teslamate_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        teslamate_role_docker_nvidia:
+        ```
+
     ??? variable bool "`teslamate_role_docker_read_only`"
 
         ```yaml

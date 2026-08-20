@@ -997,6 +997,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex_role_docker_mounts_default:
           - target: /tmp
             type: tmpfs
+            tmpfs_options:
+              - exec: null
         ```
 
         ```yaml { .sb-show-on-checked }
@@ -1004,6 +1006,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex2_docker_mounts_default:
           - target: /tmp
             type: tmpfs
+            tmpfs_options:
+              - exec: null
         ```
 
     ??? variable list "`plex_role_docker_mounts_custom`{ .sb-show-on-unchecked }`plex2_docker_mounts_custom`{ .sb-show-on-checked }"
@@ -1986,6 +1990,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_docker_labels_use_common:
+        ```
+
+    ??? variable string "`plex_role_docker_nvidia`{ .sb-show-on-unchecked }`plex2_docker_nvidia`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_docker_nvidia:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_docker_nvidia:
         ```
 
     ??? variable bool "`plex_role_docker_read_only`{ .sb-show-on-unchecked }`plex2_docker_read_only`{ .sb-show-on-checked }"

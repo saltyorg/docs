@@ -933,6 +933,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dashdot_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`dashdot_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        dashdot_role_docker_nvidia:
+        ```
+
     ??? variable bool "`dashdot_role_docker_read_only`"
 
         ```yaml

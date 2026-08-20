@@ -997,6 +997,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`nzbhydra2_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        nzbhydra2_role_docker_nvidia:
+        ```
+
     ??? variable bool "`nzbhydra2_role_docker_read_only`"
 
         ```yaml

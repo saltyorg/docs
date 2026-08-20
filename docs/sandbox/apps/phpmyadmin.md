@@ -828,6 +828,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         phpmyadmin_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`phpmyadmin_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        phpmyadmin_role_docker_nvidia:
+        ```
+
     ??? variable bool "`phpmyadmin_role_docker_read_only`"
 
         ```yaml

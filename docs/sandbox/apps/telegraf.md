@@ -1352,6 +1352,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         telegraf2_docker_labels_use_common:
         ```
 
+    ??? variable string "`telegraf_role_docker_nvidia`{ .sb-show-on-unchecked }`telegraf2_docker_nvidia`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        telegraf_role_docker_nvidia:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        telegraf2_docker_nvidia:
+        ```
+
     ??? variable bool "`telegraf_role_docker_read_only`{ .sb-show-on-unchecked }`telegraf2_docker_read_only`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

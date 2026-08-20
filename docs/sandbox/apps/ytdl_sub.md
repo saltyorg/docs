@@ -874,6 +874,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ytdl_sub_role_docker_labels_use_common:
         ```
 
+    ??? variable string "`ytdl_sub_role_docker_nvidia`"
+
+        ```yaml
+        # Type: string
+        ytdl_sub_role_docker_nvidia:
+        ```
+
     ??? variable bool "`ytdl_sub_role_docker_read_only`"
 
         ```yaml

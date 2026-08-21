@@ -671,15 +671,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`authentik_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_state: started
-        ```
-
     <h5>Dependencies</h5>
 
     ??? variable string "`authentik_role_depends_on`"

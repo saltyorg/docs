@@ -385,15 +385,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         netdata_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`netdata_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        netdata_role_docker_state: started
-        ```
-
     <h5>PID Mode</h5>
 
     ??? variable string "`netdata_role_docker_pid_mode`"

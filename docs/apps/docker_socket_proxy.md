@@ -213,15 +213,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         docker_socket_proxy_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`docker_socket_proxy_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        docker_socket_proxy_role_docker_state: started
-        ```
-
     <h5>Read Only Filesystem</h5>
 
     ??? variable bool "`docker_socket_proxy_role_docker_read_only`"

@@ -314,15 +314,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cadvisor_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`cadvisor_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        cadvisor_role_docker_state: started
-        ```
-
     <h5>Privileged</h5>
 
     ??? variable bool "`cadvisor_role_docker_privileged`"

@@ -382,15 +382,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lldap_role_docker_restart_policy: unless-stopped
         ```
 
-    <h5>State</h5>
-
-    ??? variable string "`lldap_role_docker_state`"
-
-        ```yaml
-        # Type: string
-        lldap_role_docker_state: started
-        ```
-
     ??? variable dict "`lldap_role_docker_healthcheck`"
 
         ```yaml

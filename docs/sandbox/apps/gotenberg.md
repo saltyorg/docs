@@ -193,7 +193,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`gotenberg_role_docker_gpu_enabled`"
 
         ```yaml
-        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Set this to true to let the app use a GPU.
+        # Intel access also requires gpu.intel: true.
+        # NVIDIA access also requires nvidia_enabled: true.
+        # This setting does not install or enable GPU support on the server.
         # Type: bool (true/false)
         gotenberg_role_docker_gpu_enabled: false
         ```
@@ -201,7 +204,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`gotenberg_role_docker_nvidia_disabled`"
 
         ```yaml
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Set this to true to turn off automatic NVIDIA access for this app.
+        # It only has an effect when the app's _docker_gpu_enabled option and
+        # nvidia_enabled are both true.
+        # Automatic /dev/dri access may remain.
         # Type: bool (true/false)
         gotenberg_role_docker_nvidia_disabled: false
         ```
@@ -209,7 +215,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`gotenberg_role_docker_dev_dri_disabled`"
 
         ```yaml
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Set this to true to stop Saltbox from automatically sharing the
+        # server's /dev/dri video devices with this app.
+        # It only has an effect when the app's _docker_gpu_enabled option is true
+        # and either gpu.intel or nvidia_enabled is true.
+        # NVIDIA-specific access may remain.
         # Type: bool (true/false)
         gotenberg_role_docker_dev_dri_disabled: false
         ```

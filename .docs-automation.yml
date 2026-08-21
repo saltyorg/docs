@@ -231,9 +231,22 @@ global_overrides:
 # =============================================================================
 
 docker_overrides:
-  ignore_suffixes:
-    - "_docker_dev_dri"
-    - "_docker_nvidia"
+  ignore_suffixes: []
+  variables:
+    _docker_gpu_enabled:
+      description: "Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server."
+      default: "false"
+      type: "bool"
+
+    _docker_nvidia_disabled:
+      description: "Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain."
+      default: "false"
+      type: "bool"
+
+    _docker_dev_dri_disabled:
+      description: "Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain."
+      default: "false"
+      type: "bool"
 
 # =============================================================================
 # Type Inference Rules

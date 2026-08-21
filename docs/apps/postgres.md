@@ -1229,6 +1229,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_create_timeout:
         ```
 
+    ??? variable bool "`postgres_role_docker_dev_dri_disabled`{ .sb-show-on-unchecked }`postgres2_docker_dev_dri_disabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        postgres_role_docker_dev_dri_disabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        postgres2_docker_dev_dri_disabled: false
+        ```
+
     ??? variable string "`postgres_role_docker_entrypoint`{ .sb-show-on-unchecked }`postgres2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1253,6 +1267,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_env_file:
         ```
 
+    ??? variable bool "`postgres_role_docker_gpu_enabled`{ .sb-show-on-unchecked }`postgres2_docker_gpu_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        postgres_role_docker_gpu_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        postgres2_docker_gpu_enabled: false
+        ```
+
     ??? variable dict "`postgres_role_docker_labels`{ .sb-show-on-unchecked }`postgres2_docker_labels`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1275,6 +1303,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         postgres2_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`postgres_role_docker_nvidia_disabled`{ .sb-show-on-unchecked }`postgres2_docker_nvidia_disabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        postgres_role_docker_nvidia_disabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        postgres2_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`postgres_role_docker_read_only`{ .sb-show-on-unchecked }`postgres2_docker_read_only`{ .sb-show-on-checked }"

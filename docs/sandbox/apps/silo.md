@@ -469,6 +469,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_container: "{{ silo_name }}"
         ```
 
+    <h5>GPU</h5>
+
+    ??? variable bool "`silo_role_docker_gpu_enabled`"
+
+        ```yaml
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        silo_role_docker_gpu_enabled: true
+        ```
+
     <h5>Image</h5>
 
     ??? variable bool "`silo_role_docker_image_pull`"
@@ -652,17 +662,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         silo_role_docker_restart_policy: unless-stopped
-        ```
-
-    <h5>Groups</h5>
-
-    ??? variable list "`silo_role_docker_groups`"
-
-        ```yaml
-        # Type: list
-        silo_role_docker_groups:
-          - "{{ vgid }}"
-          - "{{ rgid }}"
         ```
 
     <h5>User</h5>
@@ -857,6 +856,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         silo_role_docker_devices:
+        ```
+
+    ??? variable list "`silo_role_docker_groups`"
+
+        ```yaml
+        # Type: list
+        silo_role_docker_groups:
         ```
 
     ??? variable bool "`silo_role_docker_privileged`"
@@ -1182,6 +1188,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_create_timeout:
         ```
 
+    ??? variable bool "`silo_role_docker_dev_dri_disabled`"
+
+        ```yaml
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        silo_role_docker_dev_dri_disabled: false
+        ```
+
     ??? variable string "`silo_role_docker_entrypoint`"
 
         ```yaml
@@ -1201,6 +1215,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         silo_role_docker_labels_use_common:
+        ```
+
+    ??? variable bool "`silo_role_docker_nvidia_disabled`"
+
+        ```yaml
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        silo_role_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`silo_role_docker_read_only`"

@@ -232,6 +232,12 @@ global_overrides:
 
 docker_overrides:
   ignore_suffixes: []
+  groups:
+    - name: "GPU"
+      primary: "_docker_gpu_enabled"
+      companions:
+        - "_docker_nvidia_disabled"
+        - "_docker_dev_dri_disabled"
   variables:
     _docker_gpu_enabled:
       description: "Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server."

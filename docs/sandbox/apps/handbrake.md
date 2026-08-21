@@ -241,6 +241,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         handbrake_role_docker_gpu_enabled: true
         ```
 
+    ??? variable bool "`handbrake_role_docker_nvidia_disabled`"
+
+        ```yaml
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        handbrake_role_docker_nvidia_disabled: false
+        ```
+
+    ??? variable bool "`handbrake_role_docker_dev_dri_disabled`"
+
+        ```yaml
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        handbrake_role_docker_dev_dri_disabled: false
+        ```
+
     <h5>Image</h5>
 
     ??? variable bool "`handbrake_role_docker_image_pull`"
@@ -853,14 +869,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         handbrake_role_docker_create_timeout:
         ```
 
-    ??? variable bool "`handbrake_role_docker_dev_dri_disabled`"
-
-        ```yaml
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
-        # Type: bool (true/false)
-        handbrake_role_docker_dev_dri_disabled: false
-        ```
-
     ??? variable string "`handbrake_role_docker_entrypoint`"
 
         ```yaml
@@ -887,14 +895,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         handbrake_role_docker_labels_use_common:
-        ```
-
-    ??? variable bool "`handbrake_role_docker_nvidia_disabled`"
-
-        ```yaml
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
-        # Type: bool (true/false)
-        handbrake_role_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`handbrake_role_docker_read_only`"

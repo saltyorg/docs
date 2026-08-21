@@ -404,6 +404,32 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
+    <h5>GPU</h5>
+
+    ??? variable bool "`code_server_role_docker_gpu_enabled`"
+
+        ```yaml
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        code_server_role_docker_gpu_enabled: false
+        ```
+
+    ??? variable bool "`code_server_role_docker_nvidia_disabled`"
+
+        ```yaml
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        code_server_role_docker_nvidia_disabled: false
+        ```
+
+    ??? variable bool "`code_server_role_docker_dev_dri_disabled`"
+
+        ```yaml
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        code_server_role_docker_dev_dri_disabled: false
+        ```
+
     <h5>Resource Limits</h5>
 
     ??? variable int "`code_server_role_docker_blkio_weight`"
@@ -892,14 +918,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         code_server_role_docker_create_timeout:
         ```
 
-    ??? variable bool "`code_server_role_docker_dev_dri_disabled`"
-
-        ```yaml
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
-        # Type: bool (true/false)
-        code_server_role_docker_dev_dri_disabled: false
-        ```
-
     ??? variable string "`code_server_role_docker_entrypoint`"
 
         ```yaml
@@ -914,14 +932,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         code_server_role_docker_env_file:
         ```
 
-    ??? variable bool "`code_server_role_docker_gpu_enabled`"
-
-        ```yaml
-        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
-        # Type: bool (true/false)
-        code_server_role_docker_gpu_enabled: false
-        ```
-
     ??? variable dict "`code_server_role_docker_labels`"
 
         ```yaml
@@ -934,14 +944,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         code_server_role_docker_labels_use_common:
-        ```
-
-    ??? variable bool "`code_server_role_docker_nvidia_disabled`"
-
-        ```yaml
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
-        # Type: bool (true/false)
-        code_server_role_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`code_server_role_docker_read_only`"

@@ -331,6 +331,32 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
+    <h5>GPU</h5>
+
+    ??? variable bool "`olivetin_role_docker_gpu_enabled`"
+
+        ```yaml
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        olivetin_role_docker_gpu_enabled: false
+        ```
+
+    ??? variable bool "`olivetin_role_docker_nvidia_disabled`"
+
+        ```yaml
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        olivetin_role_docker_nvidia_disabled: false
+        ```
+
+    ??? variable bool "`olivetin_role_docker_dev_dri_disabled`"
+
+        ```yaml
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        olivetin_role_docker_dev_dri_disabled: false
+        ```
+
     <h5>Resource Limits</h5>
 
     ??? variable int "`olivetin_role_docker_blkio_weight`"
@@ -819,14 +845,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         olivetin_role_docker_create_timeout:
         ```
 
-    ??? variable bool "`olivetin_role_docker_dev_dri_disabled`"
-
-        ```yaml
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
-        # Type: bool (true/false)
-        olivetin_role_docker_dev_dri_disabled: false
-        ```
-
     ??? variable string "`olivetin_role_docker_entrypoint`"
 
         ```yaml
@@ -841,14 +859,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         olivetin_role_docker_env_file:
         ```
 
-    ??? variable bool "`olivetin_role_docker_gpu_enabled`"
-
-        ```yaml
-        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
-        # Type: bool (true/false)
-        olivetin_role_docker_gpu_enabled: false
-        ```
-
     ??? variable dict "`olivetin_role_docker_labels`"
 
         ```yaml
@@ -861,14 +871,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         olivetin_role_docker_labels_use_common:
-        ```
-
-    ??? variable bool "`olivetin_role_docker_nvidia_disabled`"
-
-        ```yaml
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
-        # Type: bool (true/false)
-        olivetin_role_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`olivetin_role_docker_read_only`"

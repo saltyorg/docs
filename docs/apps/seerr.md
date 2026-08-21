@@ -573,6 +573,50 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
 
+    <h5>GPU</h5>
+
+    ??? variable bool "`seerr_role_docker_gpu_enabled`{ .sb-show-on-unchecked }`seerr2_docker_gpu_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        seerr_role_docker_gpu_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
+        # Type: bool (true/false)
+        seerr2_docker_gpu_enabled: false
+        ```
+
+    ??? variable bool "`seerr_role_docker_nvidia_disabled`{ .sb-show-on-unchecked }`seerr2_docker_nvidia_disabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        seerr_role_docker_nvidia_disabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
+        # Type: bool (true/false)
+        seerr2_docker_nvidia_disabled: false
+        ```
+
+    ??? variable bool "`seerr_role_docker_dev_dri_disabled`{ .sb-show-on-unchecked }`seerr2_docker_dev_dri_disabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        seerr_role_docker_dev_dri_disabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
+        # Type: bool (true/false)
+        seerr2_docker_dev_dri_disabled: false
+        ```
+
     <h5>Resource Limits</h5>
 
     ??? variable int "`seerr_role_docker_blkio_weight`{ .sb-show-on-unchecked }`seerr2_docker_blkio_weight`{ .sb-show-on-checked }"
@@ -1413,20 +1457,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         seerr2_docker_create_timeout:
         ```
 
-    ??? variable bool "`seerr_role_docker_dev_dri_disabled`{ .sb-show-on-unchecked }`seerr2_docker_dev_dri_disabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
-        # Type: bool (true/false)
-        seerr_role_docker_dev_dri_disabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Set this to true to stop Saltbox from automatically sharing the server's /dev/dri video devices with this app. It only has an effect when the app's _docker_gpu_enabled option is true and either gpu.intel or nvidia_enabled is true; NVIDIA-specific access may remain.
-        # Type: bool (true/false)
-        seerr2_docker_dev_dri_disabled: false
-        ```
-
     ??? variable string "`seerr_role_docker_entrypoint`{ .sb-show-on-unchecked }`seerr2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1451,20 +1481,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         seerr2_docker_env_file:
         ```
 
-    ??? variable bool "`seerr_role_docker_gpu_enabled`{ .sb-show-on-unchecked }`seerr2_docker_gpu_enabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
-        # Type: bool (true/false)
-        seerr_role_docker_gpu_enabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Set this to true to let the app use a GPU. Intel access also requires gpu.intel: true; NVIDIA access also requires nvidia_enabled: true. This setting does not install or enable GPU support on the server.
-        # Type: bool (true/false)
-        seerr2_docker_gpu_enabled: false
-        ```
-
     ??? variable dict "`seerr_role_docker_labels`{ .sb-show-on-unchecked }`seerr2_docker_labels`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1487,20 +1503,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         seerr2_docker_labels_use_common:
-        ```
-
-    ??? variable bool "`seerr_role_docker_nvidia_disabled`{ .sb-show-on-unchecked }`seerr2_docker_nvidia_disabled`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
-        # Type: bool (true/false)
-        seerr_role_docker_nvidia_disabled: false
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Set this to true to turn off automatic NVIDIA access for this app. It only has an effect when the app's _docker_gpu_enabled option and nvidia_enabled are both true; automatic /dev/dri access may remain.
-        # Type: bool (true/false)
-        seerr2_docker_nvidia_disabled: false
         ```
 
     ??? variable bool "`seerr_role_docker_read_only`{ .sb-show-on-unchecked }`seerr2_docker_read_only`{ .sb-show-on-checked }"

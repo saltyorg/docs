@@ -112,7 +112,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
 {{- if $var.Description }}
-            # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 12 }}
 {{- end }}
             {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -127,7 +127,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-checked }
 {{- if $var.Description }}
-            # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 12 }}
 {{- end }}
             {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -186,7 +186,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml
 {{- if $var.Description }}
-            # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 12 }}
 {{- end }}
             {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -278,7 +278,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
 {{- if $var.Description }}
-        # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -293,7 +293,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-checked }
 {{- if $var.Description }}
-        # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -351,7 +351,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
 {{- if $var.Description }}
-        # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
 {{- if $var.IsMultiline }}
@@ -411,7 +411,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
 {{- if and $override $override.Description }}
-        # {{ $override.Description }}
+{{ $override.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $varType }}
         {{ $.RoleName }}_role_docker_{{ $suffix }}:{{ if and $override $override.HasDefault }} {{ formatOverrideDefault $override.Default $varType }}{{ end }}
@@ -419,7 +419,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-checked }
 {{- if and $override $override.Description }}
-        # {{ $override.Description }}
+{{ $override.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $varType }}
         {{ $.InstanceName }}_docker_{{ $suffix }}:{{ if and $override $override.HasDefault }} {{ formatOverrideDefault $override.Default $varType }}{{ end }}
@@ -440,7 +440,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
 {{- if and $override $override.Description }}
-        # {{ $override.Description | replacePlural }}
+{{ $override.Description | replacePlural | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $varType }}
         {{ $.RoleName }}_role_docker_{{ $suffix }}:{{ if and $override $override.HasDefault }} {{ formatOverrideDefault $override.Default $varType }}{{ end }}
@@ -468,7 +468,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
 {{- if $var.Description }}
-        # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
         {{ $roleVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
@@ -476,7 +476,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-checked }
 {{- if $var.Description }}
-        # {{ $var.Description }}
+{{ $var.Description | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
         {{ $instanceVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
@@ -500,7 +500,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
 {{- if $var.Description }}
-        # {{ $var.Description | replacePlural }}
+{{ $var.Description | replacePlural | formatDescriptionComment | indent 8 }}
 {{- end }}
         {{ formatTypeComment $var.Type }}
         {{ $roleVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}

@@ -256,6 +256,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         minecraft2_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`minecraft_role_traefik_middleware_default_api`{ .sb-show-on-unchecked }`minecraft2_traefik_middleware_default_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        minecraft_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        minecraft2_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`minecraft_role_traefik_middleware_custom_api`{ .sb-show-on-unchecked }`minecraft2_traefik_middleware_custom_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        minecraft_role_traefik_middleware_custom_api: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        minecraft2_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`minecraft_role_traefik_certresolver`{ .sb-show-on-unchecked }`minecraft2_traefik_certresolver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -278,6 +302,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         minecraft2_traefik_enabled: "{{ lookup('role_var', '_dynmap_router_enabled', role='minecraft') }}"
+        ```
+
+    ??? variable bool "`minecraft_role_traefik_api_enabled`{ .sb-show-on-unchecked }`minecraft2_traefik_api_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        minecraft_role_traefik_api_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        minecraft2_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`minecraft_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`minecraft2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        minecraft_role_traefik_api_endpoint: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        minecraft2_traefik_api_endpoint: ""
         ```
 
 === "Ports"
@@ -1672,30 +1720,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         minecraft2_themepark_theme:
-        ```
-
-    ??? variable dict "`minecraft_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`minecraft2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        minecraft_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        minecraft2_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`minecraft_role_traefik_api_middleware`{ .sb-show-on-unchecked }`minecraft2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_traefik_api_middleware:
         ```
 
     ??? variable string "`minecraft_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`minecraft2_traefik_api_middleware_http`{ .sb-show-on-checked }"

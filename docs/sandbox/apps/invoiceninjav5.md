@@ -171,6 +171,71 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         invoiceninjav5_role_nginx_dns_proxy: "{{ dns_proxied }}"
         ```
 
+=== "Traefik"
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_sso_middleware`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_sso_middleware: ""
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_middleware_default`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_middleware_default: "{{ traefik_default_middleware }}"
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_middleware_custom`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_middleware_custom: ""
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_middleware_custom_api: ""
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_certresolver: "{{ traefik_default_certresolver }}"
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_nginx_traefik_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        invoiceninjav5_role_nginx_traefik_enabled: true
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_nginx_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        invoiceninjav5_role_nginx_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`invoiceninjav5_role_nginx_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_nginx_traefik_api_endpoint: ""
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -967,6 +1032,146 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         invoiceninjav5_role_docker_volumes_download:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_themepark_addons`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_themepark_addons:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_themepark_app`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_themepark_app:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_themepark_theme`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_themepark_theme:
+        ```
+
+    ??? variable dict "`invoiceninjav5_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: dict/omit
+        invoiceninjav5_role_traefik_api_endpoint:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_api_middleware_http`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_api_middleware_http:
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_autodetect_enabled`"
+
+        ```yaml
+        # Enable Traefik autodetect middleware for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_autodetect_enabled: false
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_certresolver`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_certresolver:
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_crowdsec_enabled`"
+
+        ```yaml
+        # Enable CrowdSec middleware for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_crowdsec_enabled: false
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_error_pages_enabled`"
+
+        ```yaml
+        # Enable custom error pages middleware for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_error_pages_enabled: false
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_gzip_enabled`"
+
+        ```yaml
+        # Enable gzip compression middleware for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_middleware_custom_api:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_middleware_default_api:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_middleware_http`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_middleware_http:
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_middleware_http_api_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_middleware_http_api_insecure:
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_middleware_http_insecure`"
+
+        ```yaml
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_middleware_http_insecure:
+        ```
+
+    ??? variable string "`invoiceninjav5_role_traefik_priority`"
+
+        ```yaml
+        # Type: string
+        invoiceninjav5_role_traefik_priority:
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_robot_enabled`"
+
+        ```yaml
+        # Enable robots.txt middleware for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_robot_enabled: true
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_tailscale_enabled`"
+
+        ```yaml
+        # Enable Tailscale-specific Traefik configuration for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_tailscale_enabled: false
+        ```
+
+    ??? variable bool "`invoiceninjav5_role_traefik_wildcard_enabled`"
+
+        ```yaml
+        # Enable wildcard certificate for the container
+        # Type: bool (true/false)
+        invoiceninjav5_role_traefik_wildcard_enabled: true
         ```
 
     ??? variable string "`invoiceninjav5_role_web_api_http_port`"

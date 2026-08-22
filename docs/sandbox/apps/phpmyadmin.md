@@ -162,6 +162,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         phpmyadmin_role_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`phpmyadmin_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        phpmyadmin_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`phpmyadmin_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        phpmyadmin_role_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`phpmyadmin_role_traefik_certresolver`"
 
         ```yaml
@@ -983,13 +997,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         phpmyadmin_role_themepark_theme:
-        ```
-
-    ??? variable string "`phpmyadmin_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        phpmyadmin_role_traefik_api_middleware:
         ```
 
     ??? variable string "`phpmyadmin_role_traefik_api_middleware_http`"

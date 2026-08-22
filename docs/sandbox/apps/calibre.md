@@ -351,6 +351,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`calibre_role_traefik_middleware_default_api`{ .sb-show-on-unchecked }`calibre2_traefik_middleware_default_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        calibre_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        calibre2_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`calibre_role_traefik_middleware_custom_api`{ .sb-show-on-unchecked }`calibre2_traefik_middleware_custom_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        calibre_role_traefik_middleware_custom_api: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        calibre2_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`calibre_role_traefik_certresolver`{ .sb-show-on-unchecked }`calibre2_traefik_certresolver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -373,6 +397,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         calibre2_traefik_enabled: true
+        ```
+
+    ??? variable bool "`calibre_role_traefik_api_enabled`{ .sb-show-on-unchecked }`calibre2_traefik_api_enabled`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        calibre_role_traefik_api_enabled: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        calibre2_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`calibre_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`calibre2_traefik_api_endpoint`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        calibre_role_traefik_api_endpoint: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        calibre2_traefik_api_endpoint: ""
         ```
 
     ??? variable string "`calibre_role_books_traefik_sso_middleware`{ .sb-show-on-unchecked }`calibre2_books_traefik_sso_middleware`{ .sb-show-on-checked }"
@@ -1835,30 +1883,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         calibre2_themepark_theme:
-        ```
-
-    ??? variable dict "`calibre_role_traefik_api_endpoint`{ .sb-show-on-unchecked }`calibre2_traefik_api_endpoint`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: dict/omit
-        calibre_role_traefik_api_endpoint:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: dict/omit
-        calibre2_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`calibre_role_traefik_api_middleware`{ .sb-show-on-unchecked }`calibre2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        calibre_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        calibre2_traefik_api_middleware:
         ```
 
     ??? variable string "`calibre_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`calibre2_traefik_api_middleware_http`{ .sb-show-on-checked }"

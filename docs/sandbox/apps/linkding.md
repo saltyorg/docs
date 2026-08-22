@@ -168,6 +168,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         linkding_role_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`linkding_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        linkding_role_traefik_middleware_default_api: "{{ 'dropsecurityheaders@file,' + traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`linkding_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        linkding_role_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`linkding_role_traefik_certresolver`"
 
         ```yaml
@@ -201,13 +215,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         linkding_role_traefik_api_middleware_http: "{{ 'dropsecurityheaders@file,' + traefik_default_middleware_http_api }}"
-        ```
-
-    ??? variable string "`linkding_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        linkding_role_traefik_api_middleware: "{{ 'dropsecurityheaders@file,' + traefik_default_middleware_api }}"
         ```
 
 === "Docker"

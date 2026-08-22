@@ -170,6 +170,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`rutorrent_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        rutorrent_role_traefik_middleware_default_api: "rutorrent-auth,{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`rutorrent_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        rutorrent_role_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`rutorrent_role_traefik_certresolver`"
 
         ```yaml
@@ -189,13 +203,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         rutorrent_role_traefik_api_enabled: true
-        ```
-
-    ??? variable string "`rutorrent_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_traefik_api_middleware: "rutorrent-auth,{{ traefik_default_middleware_api }}"
         ```
 
     ??? variable string "`rutorrent_role_traefik_api_endpoint`"

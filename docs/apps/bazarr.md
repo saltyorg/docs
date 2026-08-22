@@ -246,6 +246,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         bazarr2_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`bazarr_role_traefik_middleware_default_api`{ .sb-show-on-unchecked }`bazarr2_traefik_middleware_default_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        bazarr_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        bazarr2_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`bazarr_role_traefik_middleware_custom_api`{ .sb-show-on-unchecked }`bazarr2_traefik_middleware_custom_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        bazarr_role_traefik_middleware_custom_api: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        bazarr2_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`bazarr_role_traefik_certresolver`{ .sb-show-on-unchecked }`bazarr2_traefik_certresolver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1710,18 +1734,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         bazarr2_docker_volumes_download:
-        ```
-
-    ??? variable string "`bazarr_role_traefik_api_middleware`{ .sb-show-on-unchecked }`bazarr2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        bazarr_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        bazarr2_traefik_api_middleware:
         ```
 
     ??? variable string "`bazarr_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`bazarr2_traefik_api_middleware_http`{ .sb-show-on-checked }"

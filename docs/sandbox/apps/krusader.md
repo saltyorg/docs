@@ -169,11 +169,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         krusader_role_traefik_middleware_default: "{{ traefik_default_middleware }}"
         ```
 
-    ??? variable string "`krusader_role_traefik_middleware_api`"
+    ??? variable string "`krusader_role_traefik_middleware_default_api`"
 
         ```yaml
         # Type: string
-        krusader_role_traefik_middleware_api: "{{ traefik_global_middleware }}"
+        krusader_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`krusader_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        krusader_role_traefik_middleware_custom_api: ""
         ```
 
     ??? variable string "`krusader_role_traefik_certresolver`"
@@ -1007,13 +1014,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         krusader_role_themepark_theme:
-        ```
-
-    ??? variable string "`krusader_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        krusader_role_traefik_api_middleware:
         ```
 
     ??? variable string "`krusader_role_traefik_api_middleware_http`"

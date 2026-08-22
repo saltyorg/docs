@@ -610,6 +610,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex2_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`plex_role_traefik_middleware_default_api`{ .sb-show-on-unchecked }`plex2_traefik_middleware_default_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`plex_role_traefik_middleware_custom_api`{ .sb-show-on-unchecked }`plex2_traefik_middleware_custom_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_traefik_middleware_custom_api: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`plex_role_traefik_certresolver`{ .sb-show-on-unchecked }`plex2_traefik_certresolver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -2224,18 +2248,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         plex2_themepark_app:
-        ```
-
-    ??? variable string "`plex_role_traefik_api_middleware`{ .sb-show-on-unchecked }`plex2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_traefik_api_middleware:
         ```
 
     ??? variable string "`plex_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`plex2_traefik_api_middleware_http`{ .sb-show-on-checked }"

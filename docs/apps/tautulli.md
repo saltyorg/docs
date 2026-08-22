@@ -341,6 +341,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`tautulli_role_traefik_middleware_default_api`{ .sb-show-on-unchecked }`tautulli2_traefik_middleware_default_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        tautulli_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        tautulli2_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`tautulli_role_traefik_middleware_custom_api`{ .sb-show-on-unchecked }`tautulli2_traefik_middleware_custom_api`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        tautulli_role_traefik_middleware_custom_api: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        tautulli2_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`tautulli_role_traefik_certresolver`{ .sb-show-on-unchecked }`tautulli2_traefik_certresolver`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
@@ -1801,18 +1825,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         tautulli2_docker_volumes_download:
-        ```
-
-    ??? variable string "`tautulli_role_traefik_api_middleware`{ .sb-show-on-unchecked }`tautulli2_traefik_api_middleware`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tautulli_role_traefik_api_middleware:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tautulli2_traefik_api_middleware:
         ```
 
     ??? variable string "`tautulli_role_traefik_api_middleware_http`{ .sb-show-on-unchecked }`tautulli2_traefik_api_middleware_http`{ .sb-show-on-checked }"

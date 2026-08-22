@@ -250,6 +250,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grimmory_role_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`grimmory_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        grimmory_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`grimmory_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        grimmory_role_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`grimmory_role_traefik_certresolver`"
 
         ```yaml
@@ -262,6 +276,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         grimmory_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`grimmory_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        grimmory_role_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`grimmory_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        grimmory_role_traefik_api_endpoint: ""
         ```
 
 === "Docker"
@@ -1086,20 +1114,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         grimmory_role_themepark_theme:
-        ```
-
-    ??? variable dict "`grimmory_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        grimmory_role_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`grimmory_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        grimmory_role_traefik_api_middleware:
         ```
 
     ??? variable string "`grimmory_role_traefik_api_middleware_http`"

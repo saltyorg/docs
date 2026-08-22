@@ -1624,13 +1624,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_traefik_api_endpoint:
         ```
 
-    ??? variable string "`traefik_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        traefik_role_traefik_api_middleware:
-        ```
-
     ??? variable string "`traefik_role_traefik_api_middleware_http`"
 
         ```yaml
@@ -1675,6 +1668,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Enable gzip compression middleware for the container
         # Type: bool (true/false)
         traefik_role_traefik_gzip_enabled: false
+        ```
+
+    ??? variable string "`traefik_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_middleware_custom_api:
+        ```
+
+    ??? variable string "`traefik_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        traefik_role_traefik_middleware_default_api:
         ```
 
     ??? variable string "`traefik_role_traefik_middleware_http`"

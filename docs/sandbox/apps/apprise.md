@@ -173,6 +173,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         apprise_role_traefik_middleware_custom: ""
         ```
 
+    ??? variable string "`apprise_role_traefik_middleware_default_api`"
+
+        ```yaml
+        # Type: string
+        apprise_role_traefik_middleware_default_api: "{{ traefik_default_middleware_api }}"
+        ```
+
+    ??? variable string "`apprise_role_traefik_middleware_custom_api`"
+
+        ```yaml
+        # Type: string
+        apprise_role_traefik_middleware_custom_api: ""
+        ```
+
     ??? variable string "`apprise_role_traefik_certresolver`"
 
         ```yaml
@@ -185,6 +199,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         apprise_role_traefik_enabled: true
+        ```
+
+    ??? variable bool "`apprise_role_traefik_api_enabled`"
+
+        ```yaml
+        # Type: bool (true/false)
+        apprise_role_traefik_api_enabled: false
+        ```
+
+    ??? variable string "`apprise_role_traefik_api_endpoint`"
+
+        ```yaml
+        # Type: string
+        apprise_role_traefik_api_endpoint: ""
         ```
 
 === "Docker"
@@ -987,20 +1015,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         apprise_role_themepark_theme:
-        ```
-
-    ??? variable dict "`apprise_role_traefik_api_endpoint`"
-
-        ```yaml
-        # Type: dict/omit
-        apprise_role_traefik_api_endpoint:
-        ```
-
-    ??? variable string "`apprise_role_traefik_api_middleware`"
-
-        ```yaml
-        # Type: string
-        apprise_role_traefik_api_middleware:
         ```
 
     ??? variable string "`apprise_role_traefik_api_middleware_http`"

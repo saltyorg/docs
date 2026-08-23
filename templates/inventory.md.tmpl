@@ -49,6 +49,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 {{- if and $section $section.HasContent }}
 
 === "{{ $sectionName }}"
+{{- if $section.Explainer }}
+
+{{ $section.Explainer | indent 4 }}
+{{- end }}
 {{- if $section.HasSubsections }}
 
     This section is organized into multiple subsections

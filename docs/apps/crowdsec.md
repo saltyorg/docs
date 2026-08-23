@@ -7,6 +7,7 @@ saltbox_automation:
     show_sections:
     - Toggle
     - Configuration
+    - Ports
   app_links:
     - name: Manual
       url:

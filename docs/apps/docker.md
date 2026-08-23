@@ -5,6 +5,7 @@ saltbox_automation:
   inventory:
     show_sections:
       - Settings
+      - Ports
   app_links:
     - name: Manual
       url: https://docs.docker.com

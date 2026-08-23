@@ -330,8 +330,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           # IP address that is reported to the tracker
           - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
           # Ports
-          - { option: "network.port_range.set", value: "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}-{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}" }
-          - { option: "dht.port.set", value: "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}" }
+          - { option: "network.port_range.set", value: "{{ rflood_port_assignment.ports.peer }}-{{ rflood_port_assignment.ports.peer }}" }
+          - { option: "dht.port.set", value: "{{ rflood_port_assignment.ports.dht }}" }
           # Enable / Disable Public Trackers
           - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('on', 'disable') }}" }
           - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
@@ -347,8 +347,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           # IP address that is reported to the tracker
           - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
           # Ports
-          - { option: "network.port_range.set", value: "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}-{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}" }
-          - { option: "dht.port.set", value: "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}" }
+          - { option: "network.port_range.set", value: "{{ rflood_port_assignment.ports.peer }}-{{ rflood_port_assignment.ports.peer }}" }
+          - { option: "dht.port.set", value: "{{ rflood_port_assignment.ports.dht }}" }
           # Enable / Disable Public Trackers
           - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('on', 'disable') }}" }
           - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rflood') | ternary('yes', 'no') }}" }
@@ -381,6 +381,62 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         rflood2_config_rflood_rc_settings_list: "{{ lookup('role_var', '_config_rflood_rc_settings_default', role='rflood')
                                                     + lookup('role_var', '_config_rflood_rc_settings_custom', role='rflood') }}"
+        ```
+
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`rflood_role_port_peer_low_bound`{ .sb-show-on-unchecked }`rflood2_port_peer_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        rflood_role_port_peer_low_bound: 50000
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        rflood2_port_peer_low_bound: 50000
+        ```
+
+    ??? variable int "`rflood_role_port_peer_high_bound`{ .sb-show-on-unchecked }`rflood2_port_peer_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        rflood_role_port_peer_high_bound: 50010
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        rflood2_port_peer_high_bound: 50010
+        ```
+
+    ??? variable int "`rflood_role_port_dht_low_bound`{ .sb-show-on-unchecked }`rflood2_port_dht_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        rflood_role_port_dht_low_bound: 6881
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        rflood2_port_dht_low_bound: 6881
+        ```
+
+    ??? variable int "`rflood_role_port_dht_high_bound`{ .sb-show-on-unchecked }`rflood2_port_dht_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        rflood_role_port_dht_high_bound: 6891
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        rflood2_port_dht_high_bound: 6891
         ```
 
 === "Docker"
@@ -451,56 +507,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Ports</h5>
 
-    <h5>- Internal and External ports need to match for the next set of ports</h5>
-
-    <h5>- Lookup available ports and set docker ports accordingly</h5>
-
-    ??? variable string "`rflood_role_docker_ports_50000`{ .sb-show-on-unchecked }`rflood2_docker_ports_50000`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_docker_ports_50000: "{{ port_lookup_50000.meta.port
-                                         if (port_lookup_50000.meta.port is defined) and (port_lookup_50000.meta.port | trim | length > 0)
-                                         else '50000' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_docker_ports_50000: "{{ port_lookup_50000.meta.port
-                                     if (port_lookup_50000.meta.port is defined) and (port_lookup_50000.meta.port | trim | length > 0)
-                                     else '50000' }}"
-        ```
-
-    ??? variable string "`rflood_role_docker_ports_6881`{ .sb-show-on-unchecked }`rflood2_docker_ports_6881`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        rflood_role_docker_ports_6881: "{{ port_lookup_6881.meta.port
-                                        if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
-                                        else '6881' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        rflood2_docker_ports_6881: "{{ port_lookup_6881.meta.port
-                                    if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
-                                    else '6881' }}"
-        ```
-
     ??? variable list "`rflood_role_docker_ports_default`{ .sb-show-on-unchecked }`rflood2_docker_ports_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         rflood_role_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}:{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}"
-          - "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}:{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}/udp"
+          - "{{ rflood_port_assignment.ports.peer }}:{{ rflood_port_assignment.ports.peer }}"
+          - "{{ rflood_port_assignment.ports.dht }}:{{ rflood_port_assignment.ports.dht }}/udp"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         rflood2_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}:{{ lookup('role_var', '_docker_ports_50000', role='rflood') }}"
-          - "{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}:{{ lookup('role_var', '_docker_ports_6881', role='rflood') }}/udp"
+          - "{{ rflood_port_assignment.ports.peer }}:{{ rflood_port_assignment.ports.peer }}"
+          - "{{ rflood_port_assignment.ports.dht }}:{{ rflood_port_assignment.ports.dht }}/udp"
         ```
 
     ??? variable list "`rflood_role_docker_ports_custom`{ .sb-show-on-unchecked }`rflood2_docker_ports_custom`{ .sb-show-on-checked }"

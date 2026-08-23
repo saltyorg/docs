@@ -317,8 +317,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           # IP address that is reported to the tracker
           - { option: "network.local_address.set", value: "{{ ip_address_public }}" }
           # Ports
-          - { option: "network.port_range.set", value: "{{ rutorrent_role_docker_ports_51413 }}-{{ rutorrent_role_docker_ports_51413 }}" }
-          - { option: "dht.port.set", value: "{{ rutorrent_role_docker_ports_6881 }}" }
+          - { option: "network.port_range.set", value: "{{ rutorrent_port_assignment.ports.peer }}-{{ rutorrent_port_assignment.ports.peer }}" }
+          - { option: "dht.port.set", value: "{{ rutorrent_port_assignment.ports.dht }}" }
           # Enable / Disable Public Trackers
           - { option: "dht.mode.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rutorrent') | ternary('on', 'disable') }}" }
           - { option: "trackers.use_udp.set", value: "{{ lookup('role_var', '_config_public_trackers', role='rutorrent') | ternary('yes', 'no') }}" }
@@ -378,6 +378,42 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_themepark_addons: []
         ```
 
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`rutorrent_role_port_peer_low_bound`"
+
+        ```yaml
+        # Type: int
+        rutorrent_role_port_peer_low_bound: 51413
+        ```
+
+    ??? variable int "`rutorrent_role_port_peer_high_bound`"
+
+        ```yaml
+        # Type: int
+        rutorrent_role_port_peer_high_bound: 51423
+        ```
+
+    ??? variable int "`rutorrent_role_port_dht_low_bound`"
+
+        ```yaml
+        # Type: int
+        rutorrent_role_port_dht_low_bound: 6881
+        ```
+
+    ??? variable int "`rutorrent_role_port_dht_high_bound`"
+
+        ```yaml
+        # Type: int
+        rutorrent_role_port_dht_high_bound: 6891
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -421,32 +457,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Ports</h5>
 
-    ??? variable string "`rutorrent_role_docker_ports_51413`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_docker_ports_51413: "{{ port_lookup_51413.meta.port
-                                            if (port_lookup_51413.meta.port is defined) and (port_lookup_51413.meta.port | trim | length > 0)
-                                            else '51413' }}"
-        ```
-
-    ??? variable string "`rutorrent_role_docker_ports_6881`"
-
-        ```yaml
-        # Type: string
-        rutorrent_role_docker_ports_6881: "{{ port_lookup_6881.meta.port
-                                           if (port_lookup_6881.meta.port is defined) and (port_lookup_6881.meta.port | trim | length > 0)
-                                           else '6881' }}"
-        ```
-
     ??? variable list "`rutorrent_role_docker_ports_default`"
 
         ```yaml
         # Type: list
         rutorrent_role_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}"
-          - "{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_51413', role='rutorrent') }}/udp"
-          - "{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}:{{ lookup('role_var', '_docker_ports_6881', role='rutorrent') }}/udp"
+          - "{{ rutorrent_port_assignment.ports.peer }}:{{ rutorrent_port_assignment.ports.peer }}"
+          - "{{ rutorrent_port_assignment.ports.peer }}:{{ rutorrent_port_assignment.ports.peer }}/udp"
+          - "{{ rutorrent_port_assignment.ports.dht }}:{{ rutorrent_port_assignment.ports.dht }}/udp"
         ```
 
     ??? variable list "`rutorrent_role_docker_ports_custom`"

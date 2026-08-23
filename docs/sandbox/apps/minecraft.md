@@ -330,20 +330,34 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Ports"
 
-    ??? variable string "`minecraft_role_docker_ports_25565`{ .sb-show-on-unchecked }`minecraft2_docker_ports_25565`{ .sb-show-on-checked }"
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`minecraft_role_port_game_low_bound`{ .sb-show-on-unchecked }`minecraft2_port_game_low_bound`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        minecraft_role_docker_ports_25565: "{{ port_lookup_minecraft_tcp.meta.port
-                                            if (port_lookup_minecraft_tcp.meta.port is defined) and (port_lookup_minecraft_tcp.meta.port | trim | length > 0)
-                                            else '25565' }}"
+        # Type: int
+        minecraft_role_port_game_low_bound: 25565
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
-        minecraft2_docker_ports_25565: "{{ port_lookup_minecraft_tcp.meta.port
-                                        if (port_lookup_minecraft_tcp.meta.port is defined) and (port_lookup_minecraft_tcp.meta.port | trim | length > 0)
-                                        else '25565' }}"
+        # Type: int
+        minecraft2_port_game_low_bound: 25565
+        ```
+
+    ??? variable int "`minecraft_role_port_game_high_bound`{ .sb-show-on-unchecked }`minecraft2_port_game_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        minecraft_role_port_game_high_bound: 25665
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        minecraft2_port_game_high_bound: 25665
         ```
 
 === "Docker"
@@ -419,13 +433,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         minecraft_role_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_25565', role='minecraft') }}:25565/tcp"
+          - "{{ minecraft_port_assignment.ports.game }}:25565/tcp"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         minecraft2_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_25565', role='minecraft') }}:25565/tcp"
+          - "{{ minecraft_port_assignment.ports.game }}:25565/tcp"
         ```
 
     ??? variable list "`minecraft_role_docker_ports_custom`{ .sb-show-on-unchecked }`minecraft2_docker_ports_custom`{ .sb-show-on-checked }"

@@ -786,6 +786,38 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex2_themepark_addons: []
         ```
 
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`plex_role_port_web_low_bound`{ .sb-show-on-unchecked }`plex2_port_web_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_port_web_low_bound: 32400
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_port_web_low_bound: 32400
+        ```
+
+    ??? variable int "`plex_role_port_web_high_bound`{ .sb-show-on-unchecked }`plex2_port_web_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        plex_role_port_web_high_bound: 32410
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        plex2_port_web_high_bound: 32410
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -917,22 +949,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```
 
     <h5>Ports</h5>
-
-    ??? variable string "`plex_role_docker_ports_32400`{ .sb-show-on-unchecked }`plex2_docker_ports_32400`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_docker_ports_32400: "{{ port_lookup_32400.meta.port
-                                       if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
-                                       else '32400' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_docker_ports_32400: "{{ port_lookup_32400.meta.port
-                                   if (port_lookup_32400.meta.port is defined) and (port_lookup_32400.meta.port | trim | length > 0)
-                                   else '32400' }}"
-        ```
 
     ??? variable list "`plex_role_docker_ports_default`{ .sb-show-on-unchecked }`plex2_docker_ports_default`{ .sb-show-on-checked }"
 

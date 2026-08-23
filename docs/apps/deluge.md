@@ -408,6 +408,38 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_themepark_addons: []
         ```
 
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`deluge_role_port_peer_low_bound`{ .sb-show-on-unchecked }`deluge2_port_peer_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        deluge_role_port_peer_low_bound: 58112
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        deluge2_port_peer_low_bound: 58112
+        ```
+
+    ??? variable int "`deluge_role_port_peer_high_bound`{ .sb-show-on-unchecked }`deluge2_port_peer_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        deluge_role_port_peer_high_bound: 58132
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        deluge2_port_peer_high_bound: 58132
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -476,36 +508,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Ports</h5>
 
-    ??? variable string "`deluge_role_docker_ports_58112`{ .sb-show-on-unchecked }`deluge2_docker_ports_58112`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        deluge_role_docker_ports_58112: "{{ port_lookup_58112.meta.port
-                                         if (port_lookup_58112.meta.port is defined) and (port_lookup_58112.meta.port | trim | length > 0)
-                                         else '58112' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        deluge2_docker_ports_58112: "{{ port_lookup_58112.meta.port
-                                     if (port_lookup_58112.meta.port is defined) and (port_lookup_58112.meta.port | trim | length > 0)
-                                     else '58112' }}"
-        ```
-
     ??? variable list "`deluge_role_docker_ports_default`{ .sb-show-on-unchecked }`deluge2_docker_ports_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         deluge_role_docker_ports_default:
-          - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}"
-          - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}/udp"
+          - "{{ deluge_port_assignment.ports.peer }}:{{ deluge_port_assignment.ports.peer }}"
+          - "{{ deluge_port_assignment.ports.peer }}:{{ deluge_port_assignment.ports.peer }}/udp"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         deluge2_docker_ports_default:
-          - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}"
-          - "{{ deluge_role_docker_ports_58112 }}:{{ deluge_role_docker_ports_58112 }}/udp"
+          - "{{ deluge_port_assignment.ports.peer }}:{{ deluge_port_assignment.ports.peer }}"
+          - "{{ deluge_port_assignment.ports.peer }}:{{ deluge_port_assignment.ports.peer }}/udp"
         ```
 
     ??? variable list "`deluge_role_docker_ports_custom`{ .sb-show-on-unchecked }`deluge2_docker_ports_custom`{ .sb-show-on-checked }"

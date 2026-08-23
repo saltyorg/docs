@@ -153,4 +153,26 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: int
         docker_create_image_prune_delay_timeout: 10
         ```
+
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`docker_dns_port_low_bound`"
+
+        ```yaml
+        # Type: int
+        docker_dns_port_low_bound: 8190
+        ```
+
+    ??? variable int "`docker_dns_port_high_bound`"
+
+        ```yaml
+        # Type: int
+        docker_dns_port_high_bound: 8280
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

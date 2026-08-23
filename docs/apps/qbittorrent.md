@@ -721,6 +721,62 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_themepark_headers: "\"content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com use.fontawesome.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; font-src use.fontawesome.com;\""
         ```
 
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`qbittorrent_role_port_peer_low_bound`{ .sb-show-on-unchecked }`qbittorrent2_port_peer_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_port_peer_low_bound: 56881
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_port_peer_low_bound: 56881
+        ```
+
+    ??? variable int "`qbittorrent_role_port_peer_high_bound`{ .sb-show-on-unchecked }`qbittorrent2_port_peer_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_port_peer_high_bound: 56901
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_port_peer_high_bound: 56901
+        ```
+
+    ??? variable int "`qbittorrent_role_port_web_low_bound`{ .sb-show-on-unchecked }`qbittorrent2_port_web_low_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_port_web_low_bound: 8090
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_port_web_low_bound: 8090
+        ```
+
+    ??? variable int "`qbittorrent_role_port_web_high_bound`{ .sb-show-on-unchecked }`qbittorrent2_port_web_high_bound`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        qbittorrent_role_port_web_high_bound: 8100
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        qbittorrent2_port_web_high_bound: 8100
+        ```
+
 === "Docker"
 
     <h5>Container</h5>
@@ -789,52 +845,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
     <h5>Ports</h5>
 
-    ??? variable string "`qbittorrent_role_docker_ports_56881`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_56881`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_ports_56881: "{{ port_lookup_56881.meta.port
-                                              if (port_lookup_56881.meta.port is defined) and (port_lookup_56881.meta.port | trim | length > 0)
-                                              else '56881' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_ports_56881: "{{ port_lookup_56881.meta.port
-                                          if (port_lookup_56881.meta.port is defined) and (port_lookup_56881.meta.port | trim | length > 0)
-                                          else '56881' }}"
-        ```
-
-    ??? variable string "`qbittorrent_role_docker_ports_8080`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_8080`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_docker_ports_8080: "{{ port_lookup_8080.meta.port
-                                             if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
-                                             else '8090' }}"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_docker_ports_8080: "{{ port_lookup_8080.meta.port
-                                         if (port_lookup_8080.meta.port is defined) and (port_lookup_8080.meta.port | trim | length > 0)
-                                         else '8090' }}"
-        ```
-
     ??? variable list "`qbittorrent_role_docker_ports_default`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         qbittorrent_role_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
-          - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
+          - "{{ qbittorrent_port_assignment.ports.peer }}:{{ qbittorrent_port_assignment.ports.peer }}"
+          - "{{ qbittorrent_port_assignment.ports.peer }}:{{ qbittorrent_port_assignment.ports.peer }}/udp"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         qbittorrent2_docker_ports_default:
-          - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}"
-          - "{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}:{{ lookup('role_var', '_docker_ports_56881', role='qbittorrent') }}/udp"
+          - "{{ qbittorrent_port_assignment.ports.peer }}:{{ qbittorrent_port_assignment.ports.peer }}"
+          - "{{ qbittorrent_port_assignment.ports.peer }}:{{ qbittorrent_port_assignment.ports.peer }}/udp"
         ```
 
     ??? variable list "`qbittorrent_role_docker_ports_custom`{ .sb-show-on-unchecked }`qbittorrent2_docker_ports_custom`{ .sb-show-on-checked }"

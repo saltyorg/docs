@@ -136,36 +136,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rclone_service_template: "saltbox_managed_rclone_"
         ```
 
-    ??? variable string "`rclone_port_lookup`"
-
-        ```yaml
-        # Type: string
-        rclone_port_lookup: "{{ port_lookup_rclone.meta.port
-                             if (port_lookup_rclone.meta.port is defined) and (port_lookup_rclone.meta.port | trim | length > 0)
-                             else '5572' }}"
-        ```
-
-    ??? variable string "`rclone_remote_port`"
-
-        ```yaml
-        # Type: string
-        rclone_remote_port: "{{ lookup('vars', 'rclone_remote_' + rclone_remote_name + '_port', default=rclone_port_lookup) }}"
-        ```
-
-    ??? variable int "`rclone_remote_port_low_bound`"
-
-        ```yaml
-        # Type: int
-        rclone_remote_port_low_bound: 5572
-        ```
-
-    ??? variable int "`rclone_remote_port_high_bound`"
-
-        ```yaml
-        # Type: int
-        rclone_remote_port_high_bound: 6072
-        ```
-
     ??? variable string "`rclone_remote_name`"
 
         ```yaml
@@ -209,6 +179,28 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rclone_enable_metrics: false
         ```
 
+=== "Ports"
+
+    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
+    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
+    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+
+    ??? variable int "`rclone_remote_port_low_bound`"
+
+        ```yaml
+        # Type: int
+        rclone_remote_port_low_bound: 5572
+        ```
+
+    ??? variable int "`rclone_remote_port_high_bound`"
+
+        ```yaml
+        # Type: int
+        rclone_remote_port_high_bound: 6072
+        ```
+
 === "Rclone VFS Refresh"
 
     ??? variable int "`rclone_vfs_refresh_interval`"
@@ -230,7 +222,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         rclone_vfs_refresh_command: |-
-          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_remote_port }}{{ rclone_vfs_refresh_auth_args if (rclone_enable_metrics | bool) else '' }} _async=true
+          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_port_assignment.ports.rc }}{{ rclone_vfs_refresh_auth_args if (rclone_enable_metrics | bool) else '' }} _async=true
         ```
 
 === "NFS"

@@ -181,13 +181,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DELAY: "{{ lookup('role_var', '_delay', role='ddns') }}"
         ```
 
-    ??? variable dict "`ddns_role_docker_envs_cloudflare`"
+    ??? variable string "`ddns_role_docker_envs_cloudflare`"
 
         ```yaml
-        # Type: dict
+        # Type: string
         ddns_role_docker_envs_cloudflare: "{{ {'CLOUDFLARE_API_TOKEN': cloudflare_scoped_token}
-                                                if cloudflare_scoped_token_is_enabled
-                                                else {'CLOUDFLARE_API_KEY': cloudflare_api_key,
+                                           if cloudflare_scoped_token_is_enabled
+                                           else {'CLOUDFLARE_API_KEY': cloudflare_api_key,
                                                       'CLOUDFLARE_EMAIL': cloudflare_email} }}"
         ```
 

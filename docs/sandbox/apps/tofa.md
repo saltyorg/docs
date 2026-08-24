@@ -42,7 +42,7 @@ Visit <https://tofa.iYOUR_DOMAIN_NAMEi>.
 
 ### First-run setup
 
-The server is claimed once, on first run. Because the Saltbox install is reached through a public domain, that first claim has to carry the setup token that the container generates on boot:
+The server is claimed once, on first run, which links it to your tofa account. Because the Saltbox install is reached through a public domain, that first claim has to carry the setup token the server generates on boot:
 
 ```shell
 sudo cat /opt/tofa/identity/setup_key.secret
@@ -60,18 +60,9 @@ Transcode segments are written to `transcodes_path`, not to the appdata disk.
 
 ### Remote access
 
-Clients reach the server over the Traefik URL, which the role advertises to them automatically. No ports are published on the host by default.
+Clients reach the server over the Traefik URL, which the role advertises to them automatically. No ports are published on the host.
 
-!!! info "Direct LAN connections"
-
-    To let clients on your own network connect straight to the server instead of going out and back through your domain, publish the port and advertise the LAN address:
-
-    ```yaml
-    tofa_role_open_main_ports: true
-    tofa_role_lan_ip: "192.168.1.100"
-    ```
-
-    The port is only published when `tofa_role_open_main_ports` is enabled, so `tofa_role_lan_ip` has no effect on its own.
+On a home server, clients on your own network can be given a direct LAN address instead, so their traffic does not leave and re-enter through your domain. That needs both `tofa_role_open_main_ports` and `tofa_role_lan_ip` below.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

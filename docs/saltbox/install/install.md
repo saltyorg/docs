@@ -256,15 +256,16 @@ To edit any of the following configuration files, use the command written in the
       timezone: auto # (7)!
     traefik:
       cert:
-        http_validation: no # (8)!
-        zerossl: no # (9)!
-      error_pages: no # (10)!
-      hsts: no # (11)!
-      metrics: no # (12)!
-      provider: cloudflare # (13)!
+        additional_domains: [] # (8)!
+        http_validation: no # (9)!
+        zerossl: no # (10)!
+      error_pages: no # (11)!
+      hsts: no # (12)!
+      metrics: no # (13)!
+      provider: cloudflare # (14)!
       subdomains:
-        dash: dash # (14)!
-        metrics: metrics # (15)!
+        dash: dash # (15)!
+        metrics: metrics # (16)!
     ```
 
     1. Toggles Saltbox management of IPv4 A records with Cloudflare.
@@ -319,27 +320,31 @@ To edit any of the following configuration files, use the command written in the
 
         Alternatively you can find a table on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
-    8. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
+    8. Adds domains for Traefik to manage independently of application routers. Enter each certificate base without a wildcard; for example, `home.example.co.uk` requests both `home.example.co.uk` and `*.home.example.co.uk`.
+
+        This option requires DNS certificate validation. When using Cloudflare, every domain must belong to a zone accessible to the configured credentials.
+
+    9. Toggles whether Traefik is configured to use HTTP-01 certificate validation.
 
         This toggle is only useful for those using any of the supported DNS validation methods as this will be enabled by default otherwise.
 
-    9. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
+    10. Toggles whether certificates will be issued by ZeroSSL instead of Let's Encrypt.
 
-    10. Toggles custom Traefik error pages.
+    11. Toggles custom Traefik error pages.
 
         See [styled error pages configuration](../../advanced/styled-error-pages.md) for configuration details.
 
-    11. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
+    12. Toggles the use of [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
 
-    12. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at <https://metrics.iYOUR_DOMAIN_NAMEi/prometheus> assuming default settings.
+    13. Toggles the use of Traefik's Prometheus metrics endpoint, accessible at <https://metrics.iYOUR_DOMAIN_NAMEi/prometheus> assuming default settings.
 
-    13. Allows alternate DNS validation providers supported by Traefik.
+    14. Allows alternate DNS validation providers supported by Traefik.
 
         Implemented ones are listed in [providers.yml.default](https://github.com/saltyorg/Saltbox/blob/master/defaults/providers.yml.default).
 
-    14. Defines which subdomain the Traefik dashboard will be accessible at.
+    15. Defines which subdomain the Traefik dashboard will be accessible at.
 
-    15. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
+    16. Defines which subdomain the Traefik Prometheus metrics endpoint will be accessible at.
 
 ### Validate
 

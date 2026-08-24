@@ -356,6 +356,7 @@ Each tab shows a "section" in the file.
     ```yaml
     traefik:
       cert:
+        additional_domains: []
         http_validation: no
         zerossl: no
       error_pages: no
@@ -368,8 +369,12 @@ Each tab shows a "section" in the file.
       tracing: no
     ```
 
+    `cert.additional_domains`: Additional wildcard certificate bases managed by Traefik. Enter base domains such as `home.example.co.uk`; Traefik requests both the base and `*.home.example.co.uk`. This requires DNS certificate validation. Cloudflare-backed domains must belong to a zone accessible to the configured credentials.
+
+    Default is `[]`.
+
     `cert.http_validation`: Use HTTP (HTTP-01) certificate validation method.
-    Required if not using Cloudflare.
+    Required when you are not using one of the supported DNS validation providers.
 
     Default is `no`.
 

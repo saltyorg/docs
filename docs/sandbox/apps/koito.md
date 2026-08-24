@@ -295,18 +295,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        koito_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                                     if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                                     else lookup('role_var', '_web_domain', role='koito') }}"
+        koito_role_web_url: "{{ lookup('role_web', role='koito', scheme='https') }}"
         ```
 
     ??? variable string "`koito_role_web_host`"
 
         ```yaml
         # Type: string
-        koito_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='koito') + '.' + lookup('role_var', '_web_domain', role='koito')
-                                  if (lookup('role_var', '_web_subdomain', role='koito') | length > 0)
-                                  else lookup('role_var', '_web_domain', role='koito')) }}"
+        koito_role_web_host: "{{ lookup('role_web', role='koito') }}"
         ```
 
 === "DNS"
@@ -450,9 +446,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           KOITO_DEFAULT_PASSWORD: "{{ lookup('role_var', '_default_password', role='koito') }}"
           KOITO_DEFAULT_THEME: "{{ lookup('role_var', '_default_theme', role='koito') }}"
           KOITO_LOGIN_GATE: "{{ lookup('role_var', '_login_gate', role='koito') }}"
-          KOITO_BIND_ADDR: "{{ lookup('role_var', '_bind_addr', role='koito')
-                            if (lookup('role_var', '_bind_addr', role='koito') | length > 0)
-                            else omit }}"
+          KOITO_BIND_ADDR: "{{ lookup('role_var', '_bind_addr', role='koito', default=omit, default_if_empty=true) }}"
           KOITO_LISTEN_PORT: "{{ lookup('role_var', '_web_port', role='koito') }}"
           KOITO_ENABLE_STRUCTURED_LOGGING: "{{ lookup('role_var', '_enable_structured_logging', role='koito') }}"
           KOITO_ENABLE_FULL_IMAGE_CACHE: "{{ lookup('role_var', '_enable_full_image_cache', role='koito') }}"
@@ -466,34 +460,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           KOITO_LBZ_RELAY_TOKEN: "{{ lookup('role_var', '_lbz_relay_token', role='koito')
                                   if (lookup('role_var', '_enable_lbz_relay', role='koito') == 'true')
                                   else omit }}"
-          KOITO_FORCE_TZ: "{{ lookup('role_var', '_force_tz', role='koito')
-                           if (lookup('role_var', '_force_tz', role='koito') | length > 0)
-                           else omit }}"
+          KOITO_FORCE_TZ: "{{ lookup('role_var', '_force_tz', role='koito', default=omit, default_if_empty=true) }}"
           KOITO_DISABLE_DEEZER: "{{ lookup('role_var', '_disable_deezer', role='koito') }}"
           KOITO_DISABLE_COVER_ART_ARCHIVE: "{{ lookup('role_var', '_disable_cover_art_archive', role='koito') }}"
           KOITO_DISABLE_MUSICBRAINZ: "{{ lookup('role_var', '_disable_musicbrainz', role='koito') }}"
-          KOITO_SUBSONIC_URL: "{{ lookup('role_var', '_subsonic_url', role='koito')
-                               if (lookup('role_var', '_subsonic_url', role='koito') | length > 0)
-                               else omit }}"
-          KOITO_SUBSONIC_PARAMS: "{{ lookup('role_var', '_subsonic_params', role='koito')
-                                  if (lookup('role_var', '_subsonic_params', role='koito') | length > 0)
-                                  else omit }}"
-          KOITO_LASTFM_API_KEY: "{{ lookup('role_var', '_lastfm_api_key', role='koito')
-                                 if (lookup('role_var', '_lastfm_api_key', role='koito') | length > 0)
-                                 else omit }}"
+          KOITO_SUBSONIC_URL: "{{ lookup('role_var', '_subsonic_url', role='koito', default=omit, default_if_empty=true) }}"
+          KOITO_SUBSONIC_PARAMS: "{{ lookup('role_var', '_subsonic_params', role='koito', default=omit, default_if_empty=true) }}"
+          KOITO_LASTFM_API_KEY: "{{ lookup('role_var', '_lastfm_api_key', role='koito', default=omit, default_if_empty=true) }}"
           KOITO_SKIP_IMPORT: "{{ lookup('role_var', '_skip_import', role='koito') }}"
           KOITO_DISABLE_RATE_LIMIT: "{{ lookup('role_var', '_disable_rate_limit', role='koito') }}"
           KOITO_THROTTLE_IMPORTS_MS: "{{ lookup('role_var', '_throttle_imports_ms', role='koito') }}"
-          KOITO_IMPORT_BEFORE_UNIX: "{{ lookup('role_var', '_import_before_unix', role='koito')
-                                     if (lookup('role_var', '_import_before_unix', role='koito') | length > 0)
-                                     else omit }}"
-          KOITO_IMPORT_AFTER_UNIX: "{{ lookup('role_var', '_import_after_unix', role='koito')
-                                    if (lookup('role_var', '_import_after_unix', role='koito') | length > 0)
-                                    else omit }}"
+          KOITO_IMPORT_BEFORE_UNIX: "{{ lookup('role_var', '_import_before_unix', role='koito', default=omit, default_if_empty=true) }}"
+          KOITO_IMPORT_AFTER_UNIX: "{{ lookup('role_var', '_import_after_unix', role='koito', default=omit, default_if_empty=true) }}"
           KOITO_FETCH_IMAGES_DURING_IMPORT: "{{ lookup('role_var', '_fetch_images_during_import', role='koito') }}"
-          KOITO_CORS_ALLOWED_ORIGINS: "{{ lookup('role_var', '_cors_allowed_origins', role='koito')
-                                       if (lookup('role_var', '_cors_allowed_origins', role='koito') | length > 0)
-                                       else omit }}"
+          KOITO_CORS_ALLOWED_ORIGINS: "{{ lookup('role_var', '_cors_allowed_origins', role='koito', default=omit, default_if_empty=true) }}"
         ```
 
     ??? variable dict "`koito_role_docker_envs_custom`"
@@ -573,6 +553,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

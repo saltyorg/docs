@@ -142,7 +142,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         linkwarden_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='linkwarden') }} -U {{ lookup('role_var', '_postgres_user', role='linkwarden') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='linkwarden') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='linkwarden') }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -190,9 +196,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        linkwarden_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='linkwarden') + '.' + lookup('role_var', '_web_domain', role='linkwarden')
-                                          if (lookup('role_var', '_web_subdomain', role='linkwarden') | length > 0)
-                                          else lookup('role_var', '_web_domain', role='linkwarden') }}"
+        linkwarden_role_web_url: "{{ lookup('role_web', role='linkwarden', scheme='https') }}"
         ```
 
 === "DNS"
@@ -430,6 +434,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

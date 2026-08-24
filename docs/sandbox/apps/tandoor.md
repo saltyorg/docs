@@ -198,7 +198,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         tandoor_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }} -U {{ lookup('role_var', '_postgres_user', role='tandoor') if (lookup('role_var', '_postgres_user', role='tandoor') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='tandoor', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -246,18 +252,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        tandoor_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='tandoor') + '.' + lookup('role_var', '_web_domain', role='tandoor')
-                                       if (lookup('role_var', '_web_subdomain', role='tandoor') | length > 0)
-                                       else lookup('role_var', '_web_domain', role='tandoor') }}"
+        tandoor_role_web_url: "{{ lookup('role_web', role='tandoor', scheme='https') }}"
         ```
 
     ??? variable string "`tandoor_role_web_host`"
 
         ```yaml
         # Type: string
-        tandoor_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='tandoor') + '.' + lookup('role_var', '_web_domain', role='tandoor')
-                                    if (lookup('role_var', '_web_subdomain', role='tandoor') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='tandoor')) }}"
+        tandoor_role_web_host: "{{ lookup('role_web', role='tandoor') }}"
         ```
 
 === "DNS"
@@ -401,12 +403,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_ENGINE: "django.db.backends.postgresql"
           POSTGRES_HOST: "{{ lookup('role_var', '_postgres_name', role='tandoor') }}"
           POSTGRES_PORT: "5432"
-          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='tandoor')
-                          if (lookup('role_var', '_postgres_user', role='tandoor') | length > 0)
-                          else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='tandoor')
-                              if (lookup('role_var', '_postgres_password', role='tandoor') | length > 0)
-                              else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='tandoor', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='tandoor', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           POSTGRES_DB: "{{ lookup('role_var', '_postgres_docker_env_db', role='tandoor') }}"
           DEBUG: "0"
           GUNICORN_MEDIA: "1"
@@ -506,6 +504,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

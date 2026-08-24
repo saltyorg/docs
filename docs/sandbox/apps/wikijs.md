@@ -146,7 +146,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         wikijs_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }} -U {{ lookup('role_var', '_postgres_user', role='wikijs') if (lookup('role_var', '_postgres_user', role='wikijs') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='wikijs', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -194,9 +200,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        wikijs_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='wikijs') + '.' + lookup('role_var', '_web_domain', role='wikijs')
-                                      if (lookup('role_var', '_web_subdomain', role='wikijs') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='wikijs') }}"
+        wikijs_role_web_url: "{{ lookup('role_web', role='wikijs', scheme='https') }}"
         ```
 
 === "DNS"
@@ -339,12 +343,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_TYPE: "postgres"
           DB_HOST: "{{ lookup('role_var', '_postgres_name', role='wikijs') }}"
           DB_PORT: "5432"
-          DB_USER: "{{ lookup('role_var', '_postgres_user', role='wikijs')
-                    if (lookup('role_var', '_postgres_user', role='wikijs') | length > 0)
-                    else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          DB_PASS: "{{ lookup('role_var', '_postgres_password', role='wikijs')
-                    if (lookup('role_var', '_postgres_password', role='wikijs') | length > 0)
-                    else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          DB_USER: "{{ lookup('role_var', '_postgres_user', role='wikijs', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          DB_PASS: "{{ lookup('role_var', '_postgres_password', role='wikijs', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           DB_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='wikijs') }}"
         ```
 
@@ -422,6 +422,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

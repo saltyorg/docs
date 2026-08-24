@@ -147,7 +147,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         paperless_ngx_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }} -U {{ lookup('role_var', '_postgres_user', role='paperless_ngx') if (lookup('role_var', '_postgres_user', role='paperless_ngx') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='paperless_ngx', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -195,9 +201,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        paperless_ngx_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='paperless_ngx') + '.' + lookup('role_var', '_web_domain', role='paperless_ngx')
-                                             if (lookup('role_var', '_web_subdomain', role='paperless_ngx') | length > 0)
-                                             else lookup('role_var', '_web_domain', role='paperless_ngx') }}"
+        paperless_ngx_role_web_url: "{{ lookup('role_web', role='paperless_ngx', scheme='https') }}"
         ```
 
 === "DNS"
@@ -343,12 +347,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PAPERLESS_DBHOST: "{{ lookup('role_var', '_postgres_name', role='paperless_ngx') }}"
           PAPERLESS_DBPORT: "5432"
           PAPERLESS_DBNAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='paperless_ngx') }}"
-          PAPERLESS_DBPASS: "{{ lookup('role_var', '_postgres_password', role='paperless_ngx')
-                             if (lookup('role_var', '_postgres_password', role='paperless_ngx') | length > 0)
-                             else lookup('role_var', '_docker_env_password', role='postgres') }}"
-          PAPERLESS_DBUSER: "{{ lookup('role_var', '_postgres_user', role='paperless_ngx')
-                             if (lookup('role_var', '_postgres_user', role='paperless_ngx') | length > 0)
-                             else lookup('role_var', '_docker_env_user', role='postgres') }}"
+          PAPERLESS_DBPASS: "{{ lookup('role_var', '_postgres_password', role='paperless_ngx', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
+          PAPERLESS_DBUSER: "{{ lookup('role_var', '_postgres_user', role='paperless_ngx', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           PAPERLESS_URL: "{{ lookup('role_var', '_web_url', role='paperless_ngx') }}"
           PAPERLESS_ENABLE_UPDATE_CHECK: "true"
           PAPERLESS_TRASH_DIR: "../trash/"
@@ -468,6 +468,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

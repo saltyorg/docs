@@ -133,9 +133,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        nextcloud_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='nextcloud') + '.' + lookup('role_var', '_web_domain', role='nextcloud')
-                                         if (lookup('role_var', '_web_subdomain', role='nextcloud') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='nextcloud') }}"
+        nextcloud_role_web_url: "{{ lookup('role_web', role='nextcloud', scheme='https') }}"
         ```
 
 === "DNS"
@@ -277,13 +275,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           TZ: "{{ tz }}"
           NEXTCLOUD_ADMIN_USER: "{{ user.name }}"
           NEXTCLOUD_ADMIN_PASSWORD: "{{ user.pass }}"
-          NEXTCLOUD_TRUSTED_DOMAINS: "{{ lookup('role_var', '_web_subdomain', role='nextcloud') + '.' + lookup('role_var', '_web_domain', role='nextcloud') }}"
+          NEXTCLOUD_TRUSTED_DOMAINS: "{{ lookup('role_web', role='nextcloud') }}"
           NEXTCLOUD_DATA_DIR: "{{ lookup('role_var', '_data_directory', role='nextcloud') }}"
           MYSQL_DATABASE: "nextcloud"
           MYSQL_USER: "root"
           MYSQL_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='mariadb') }}"
           MYSQL_HOST: "mariadb"
-          OVERWRITEHOST: "{{ lookup('role_var', '_web_subdomain', role='nextcloud') + '.' + lookup('role_var', '_web_domain', role='nextcloud') }}"
+          OVERWRITEHOST: "{{ lookup('role_web', role='nextcloud') }}"
           OVERWRITEPROTOCOL: "https"
           OVERWRITECLIURL: "{{ lookup('role_var', '_web_url', role='nextcloud') }}"
           PHP_MEMORY_LIMIT: "{{ lookup('role_var', '_php_memory_limit', role='nextcloud') }}"
@@ -409,6 +407,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

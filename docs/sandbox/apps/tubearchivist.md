@@ -131,9 +131,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        tubearchivist_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='tubearchivist') + '.' + lookup('role_var', '_web_domain', role='tubearchivist')
-                                             if (lookup('role_var', '_web_subdomain', role='tubearchivist') | length > 0)
-                                             else lookup('role_var', '_web_domain', role='tubearchivist') }}"
+        tubearchivist_role_web_url: "{{ lookup('role_web', role='tubearchivist', scheme='https') }}"
         ```
 
 === "DNS"
@@ -288,7 +286,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           REDIS_HOST: "{{ tubearchivist_name }}-redis"
           HOST_UID: "{{ uid }}"
           HOST_GID: "{{ gid }}"
-          TA_HOST: "localhost 127.0.0.1 {{ tubearchivist_name }} {{ lookup('role_var', '_web_subdomain', role='tubearchivist') + '.' + lookup('role_var', '_web_domain', role='tubearchivist') }} {{ lookup('role_var', '_web_url', role='tubearchivist') }}"
+          TA_HOST: "localhost 127.0.0.1 {{ tubearchivist_name }} {{ lookup('role_web', role='tubearchivist') }} {{ lookup('role_var', '_web_url', role='tubearchivist') }}"
           TA_ENABLE_AUTH_PROXY: "{{ 'true' if (lookup('role_var', '_traefik_sso_middleware', role='tubearchivist') | length > 0) else omit }}"
           TA_AUTH_PROXY_USERNAME_HEADER: "{{ lookup('role_var', '_docker_envs_http_header', role='tubearchivist') if (lookup('role_var', '_traefik_sso_middleware', role='tubearchivist') | length > 0) else omit }}"
           TA_USERNAME: "{{ user.name }}"
@@ -389,6 +387,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

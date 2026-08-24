@@ -500,32 +500,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        plex_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                    if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='plex') }}"
+        plex_role_web_url: "{{ lookup('role_web', role='plex', scheme='https') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        plex2_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                else lookup('role_var', '_web_domain', role='plex') }}"
+        plex2_web_url: "{{ lookup('role_web', role='plex', scheme='https') }}"
         ```
 
     ??? variable string "`plex_role_web_insecure_url`{ .sb-show-on-unchecked }`plex2_web_insecure_url`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        plex_role_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                                     if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                                     else lookup('role_var', '_web_domain', role='plex')) }}"
+        plex_role_web_insecure_url: "{{ lookup('role_web', role='plex', scheme='http') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        plex2_web_insecure_url: "{{ 'http://' + (lookup('role_var', '_web_subdomain', role='plex') + '.' + lookup('role_var', '_web_domain', role='plex')
-                                                 if (lookup('role_var', '_web_subdomain', role='plex') | length > 0)
-                                                 else lookup('role_var', '_web_domain', role='plex')) }}"
+        plex2_web_insecure_url: "{{ lookup('role_web', role='plex', scheme='http') }}"
         ```
 
 === "DNS"
@@ -1241,6 +1233,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>Resource Limits</h5>
 

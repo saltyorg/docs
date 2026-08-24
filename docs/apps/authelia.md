@@ -866,7 +866,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml
             # Type: string
-            authelia_role_totp_issuer: "{{ lookup('role_var', '_web_subdomain', role='authelia') + '.' + lookup('role_var', '_web_domain', role='authelia') }}"
+            authelia_role_totp_issuer: "{{ lookup('role_web', role='authelia') }}"
             ```
 
         ??? variable string "`authelia_role_totp_algorithm`"
@@ -1070,9 +1070,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authelia_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='authelia') + '.' + lookup('role_var', '_web_domain', role='authelia')
-                                        if (lookup('role_var', '_web_subdomain', role='authelia') | length > 0)
-                                        else lookup('role_var', '_web_domain', role='authelia') }}"
+        authelia_role_web_url: "{{ lookup('role_web', role='authelia', scheme='https') }}"
         ```
 
 === "DNS"
@@ -1311,6 +1309,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

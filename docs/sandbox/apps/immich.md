@@ -166,7 +166,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         immich_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='immich') }} -U {{ lookup('role_var', '_postgres_user', role='immich') if (lookup('role_var', '_postgres_user', role='immich') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='immich') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='immich', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -229,9 +235,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        immich_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='immich') + '.' + lookup('role_var', '_web_domain', role='immich')
-                                      if (lookup('role_var', '_web_subdomain', role='immich') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='immich') }}"
+        immich_role_web_url: "{{ lookup('role_web', role='immich', scheme='https') }}"
         ```
 
 === "DNS"
@@ -410,12 +414,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
           DB_HOSTNAME: "{{ lookup('role_var', '_postgres_name', role='immich') }}"
-          DB_USERNAME: "{{ lookup('role_var', '_postgres_user', role='immich')
-                        if (lookup('role_var', '_postgres_user', role='immich') | length > 0)
-                        else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          DB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='immich')
-                        if (lookup('role_var', '_postgres_password', role='immich') | length > 0)
-                        else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          DB_USERNAME: "{{ lookup('role_var', '_postgres_user', role='immich', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          DB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='immich', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           DB_DATABASE_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='immich') }}"
           REDIS_HOSTNAME: "{{ immich_name }}-redis"
           DISABLE_MACHINE_LEARNING: "false"
@@ -515,6 +515,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>Resource Limits</h5>
 

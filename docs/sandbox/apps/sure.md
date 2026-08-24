@@ -313,7 +313,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         sure_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='sure') }} -U {{ lookup('role_var', '_postgres_user', role='sure') if (lookup('role_var', '_postgres_user', role='sure') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='sure') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='sure', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -361,18 +367,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        sure_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='sure') + '.' + lookup('role_var', '_web_domain', role='sure')
-                                    if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='sure') }}"
+        sure_role_web_url: "{{ lookup('role_web', role='sure', scheme='https') }}"
         ```
 
     ??? variable string "`sure_role_web_host`"
 
         ```yaml
         # Type: string
-        sure_role_web_host: "{{ (lookup('role_var', '_web_subdomain', role='sure') + '.' + lookup('role_var', '_web_domain', role='sure')
-                                 if (lookup('role_var', '_web_subdomain', role='sure') | length > 0)
-                                 else lookup('role_var', '_web_domain', role='sure')) }}"
+        sure_role_web_host: "{{ lookup('role_web', role='sure') }}"
         ```
 
 === "DNS"
@@ -523,40 +525,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           APP_DOMAIN: "{{ lookup('role_var', '_web_host', role='sure') }}"
           DB_HOST: "{{ lookup('role_var', '_postgres_name', role='sure') }}"
           DB_PORT: "5432"
-          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='sure')
-                          if (lookup('role_var', '_postgres_user', role='sure') | length > 0)
-                          else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='sure')
-                              if (lookup('role_var', '_postgres_password', role='sure') | length > 0)
-                              else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          POSTGRES_USER: "{{ lookup('role_var', '_postgres_user', role='sure', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          POSTGRES_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='sure', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           POSTGRES_DB: "{{ lookup('role_var', '_postgres_docker_env_db', role='sure') }}"
           REDIS_URL: "redis://{{ lookup('role_var', '_redis_name', role='sure') }}:6379/1"
           SIDEKIQ_WEB_USERNAME: "{{ lookup('role_var', '_sidekiq_web_username', role='sure') }}"
           SIDEKIQ_WEB_PASSWORD: "{{ lookup('role_var', '_sidekiq_web_password', role='sure') }}"
-          OPENAI_ACCESS_TOKEN: "{{ lookup('role_var', '_openai_access_token', role='sure')
-                                if (lookup('role_var', '_openai_access_token', role='sure') | length > 0)
-                                else omit }}"
-          OPENAI_MODEL: "{{ lookup('role_var', '_openai_model', role='sure')
-                         if (lookup('role_var', '_openai_model', role='sure') | length > 0)
-                         else omit }}"
-          OPENAI_URI_BASE: "{{ lookup('role_var', '_openai_uri_base', role='sure')
-                            if (lookup('role_var', '_openai_uri_base', role='sure') | length > 0)
-                            else omit }}"
+          OPENAI_ACCESS_TOKEN: "{{ lookup('role_var', '_openai_access_token', role='sure', default=omit, default_if_empty=true) }}"
+          OPENAI_MODEL: "{{ lookup('role_var', '_openai_model', role='sure', default=omit, default_if_empty=true) }}"
+          OPENAI_URI_BASE: "{{ lookup('role_var', '_openai_uri_base', role='sure', default=omit, default_if_empty=true) }}"
           LANGFUSE_HOST: "{{ lookup('role_var', '_langfuse_host', role='sure') }}"
-          LANGFUSE_PUBLIC_KEY: "{{ lookup('role_var', '_langfuse_public_key', role='sure')
-                                if (lookup('role_var', '_langfuse_public_key', role='sure') | length > 0)
-                                else omit }}"
-          LANGFUSE_SECRET_KEY: "{{ lookup('role_var', '_langfuse_secret_key', role='sure')
-                                if (lookup('role_var', '_langfuse_secret_key', role='sure') | length > 0)
-                                else omit }}"
-          TWELVE_DATA_API_KEY: "{{ lookup('role_var', '_twelve_data_api_key', role='sure')
-                                if (lookup('role_var', '_twelve_data_api_key', role='sure') | length > 0)
-                                else omit }}"
+          LANGFUSE_PUBLIC_KEY: "{{ lookup('role_var', '_langfuse_public_key', role='sure', default=omit, default_if_empty=true) }}"
+          LANGFUSE_SECRET_KEY: "{{ lookup('role_var', '_langfuse_secret_key', role='sure', default=omit, default_if_empty=true) }}"
+          TWELVE_DATA_API_KEY: "{{ lookup('role_var', '_twelve_data_api_key', role='sure', default=omit, default_if_empty=true) }}"
           EXCHANGE_RATE_PROVIDER: "{{ lookup('role_var', '_exchange_rate_provider', role='sure') }}"
           SECURITIES_PROVIDER: "{{ lookup('role_var', '_securities_provider', role='sure') }}"
-          SMTP_ADDRESS: "{{ lookup('role_var', '_smtp_address', role='sure')
-                         if (lookup('role_var', '_smtp_address', role='sure') | length > 0)
-                         else omit }}"
+          SMTP_ADDRESS: "{{ lookup('role_var', '_smtp_address', role='sure', default=omit, default_if_empty=true) }}"
           SMTP_PORT: "{{ lookup('role_var', '_smtp_port', role='sure')
                       if (lookup('role_var', '_smtp_address', role='sure') | length > 0)
                       else omit }}"
@@ -569,9 +553,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           SMTP_TLS_ENABLED: "{{ lookup('role_var', '_smtp_tls_enabled', role='sure')
                              if (lookup('role_var', '_smtp_address', role='sure') | length > 0)
                              else omit }}"
-          EMAIL_SENDER: "{{ lookup('role_var', '_email_sender', role='sure')
-                         if (lookup('role_var', '_email_sender', role='sure') | length > 0)
-                         else omit }}"
+          EMAIL_SENDER: "{{ lookup('role_var', '_email_sender', role='sure', default=omit, default_if_empty=true) }}"
         ```
 
     ??? variable dict "`sure_role_docker_envs_custom`"
@@ -665,6 +647,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

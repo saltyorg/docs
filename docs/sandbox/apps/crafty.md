@@ -127,9 +127,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        crafty_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='crafty') + '.' + lookup('role_var', '_web_domain', role='crafty')
-                                      if (lookup('role_var', '_web_subdomain', role='crafty') | length > 0)
-                                      else lookup('role_var', '_web_domain', role='crafty') }}"
+        crafty_role_web_url: "{{ lookup('role_web', role='crafty', scheme='https') }}"
         ```
 
     ??? variable string "`crafty_role_dynmap_web_subdomain`"
@@ -157,8 +155,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        crafty_role_dynmap_host: "{{ lookup('role_var', '_dynmap_web_subdomain', role='crafty')
-                                     + '.' + lookup('role_var', '_dynmap_web_domain', role='crafty') }}"
+        crafty_role_dynmap_host: "{{ lookup('role_web', role='crafty', endpoint='dynmap_web') }}"
         ```
 
 === "DNS"
@@ -449,6 +446,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

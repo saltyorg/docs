@@ -140,9 +140,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        cockpit_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='cockpit') + '.' + lookup('role_var', '_web_domain', role='cockpit')
-                                       if (lookup('role_var', '_web_subdomain', role='cockpit') | length > 0)
-                                       else lookup('role_var', '_web_domain', role='cockpit') }}"
+        cockpit_role_web_url: "{{ lookup('role_web', role='cockpit', scheme='https') }}"
         ```
 
 === "DNS"

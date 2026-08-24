@@ -103,13 +103,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         dockwatch_role_docker_socket_proxy_envs:
-          ALLOW_START: "1"
-          ALLOW_STOP: "1"
-          ALLOW_RESTARTS: "1"
+          ALLOW_LOGS: "1"
+          ALLOW_RESTARTS: "{{ '1'
+                           if lookup('role_var', '_post_enable', role='dockwatch')
+                           else omit }}"
+          ALLOW_START: "{{ '1'
+                        if lookup('role_var', '_post_enable', role='dockwatch')
+                        else omit }}"
+          ALLOW_STOP: "{{ '1'
+                       if lookup('role_var', '_post_enable', role='dockwatch')
+                       else omit }}"
           CONTAINERS: "1"
+          EXEC: "{{ '1'
+                 if lookup('role_var', '_post_enable', role='dockwatch')
+                 else omit }}"
           IMAGES: "1"
           NETWORKS: "1"
-          PORTS: "1"
           POST: "{{ '1'
                  if lookup('role_var', '_post_enable', role='dockwatch')
                  else omit }}"
@@ -143,9 +152,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        dockwatch_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='dockwatch') + '.' + lookup('role_var', '_web_domain', role='dockwatch')
-                                         if (lookup('role_var', '_web_subdomain', role='dockwatch') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='dockwatch') }}"
+        dockwatch_role_web_url: "{{ lookup('role_web', role='dockwatch', scheme='https') }}"
         ```
 
 === "DNS"
@@ -384,6 +391,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

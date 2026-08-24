@@ -196,9 +196,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        dashdot_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='dashdot') + '.' + lookup('role_var', '_web_domain', role='dashdot')
-                                       if (lookup('role_var', '_web_subdomain', role='dashdot') | length > 0)
-                                       else lookup('role_var', '_web_domain', role='dashdot') }}"
+        dashdot_role_web_url: "{{ lookup('role_web', role='dashdot', scheme='https') }}"
         ```
 
 === "DNS"
@@ -338,7 +336,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         dashdot_role_docker_envs_default:
           DASHDOT_SHOW_HOST: "{{ lookup('role_var', '_show_host', role='dashdot') }}"
-          DASHDOT_CUSTOM_HOST: "{{ lookup('role_var', '_web_subdomain', role='dashdot') + '.' + lookup('role_var', '_web_domain', role='dashdot') }}"
+          DASHDOT_CUSTOM_HOST: "{{ lookup('role_web', role='dashdot') }}"
           DASHDOT_ENABLE_CPU_TEMPS: "{{ lookup('role_var', '_cpu_temps', role='dashdot') }}"
           DASHDOT_USE_IMPERIAL: "{{ lookup('role_var', '_imperial', role='dashdot') }}"
           DASHDOT_ALWAYS_SHOW_PERCENTAGES: "{{ lookup('role_var', '_always_show_percentages', role='dashdot') }}"
@@ -430,6 +428,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

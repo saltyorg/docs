@@ -155,7 +155,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         teslamate_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }} -U {{ lookup('role_var', '_postgres_user', role='teslamate') if (lookup('role_var', '_postgres_user', role='teslamate') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='teslamate', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -203,9 +209,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        teslamate_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='teslamate') + '.' + lookup('role_var', '_web_domain', role='teslamate')
-                                         if (lookup('role_var', '_web_subdomain', role='teslamate') | length > 0)
-                                         else lookup('role_var', '_web_domain', role='teslamate') }}"
+        teslamate_role_web_url: "{{ lookup('role_web', role='teslamate', scheme='https') }}"
         ```
 
 === "DNS"
@@ -344,12 +348,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         teslamate_role_docker_envs_default:
-          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='teslamate')
-                          if (lookup('role_var', '_postgres_user', role='teslamate') | length > 0)
-                          else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          DATABASE_PASS: "{{ lookup('role_var', '_postgres_password', role='teslamate')
-                          if (lookup('role_var', '_postgres_password', role='teslamate') | length > 0)
-                          else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='teslamate', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          DATABASE_PASS: "{{ lookup('role_var', '_postgres_password', role='teslamate', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           DATABASE_NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='teslamate') }}"
           ENCRYPTION_KEY: "{{ teslamate_secret_key }}"
           DATABASE_HOST: "{{ lookup('role_var', '_postgres_name', role='teslamate') }}"
@@ -429,6 +429,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

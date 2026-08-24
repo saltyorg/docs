@@ -192,7 +192,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         n8n_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }} -U {{ lookup('role_var', '_postgres_user', role='n8n') if (lookup('role_var', '_postgres_user', role='n8n') | length > 0) else lookup('role_var', '_docker_env_user', role='postgres') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='n8n', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -240,18 +246,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        n8n_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='n8n') + '.' + lookup('role_var', '_web_domain', role='n8n')
-                                   if (lookup('role_var', '_web_subdomain', role='n8n') | length > 0)
-                                   else lookup('role_var', '_web_domain', role='n8n') }}"
+        n8n_role_web_url: "{{ lookup('role_web', role='n8n', scheme='https') }}"
         ```
 
     ??? variable string "`n8n_role_web_host`"
 
         ```yaml
         # Type: string
-        n8n_role_web_host: "{{ lookup('role_var', '_web_subdomain', role='n8n') + '.' + lookup('role_var', '_web_domain', role='n8n')
-                            if (lookup('role_var', '_web_subdomain', role='n8n') | length > 0)
-                            else lookup('role_var', '_web_domain', role='n8n') }}"
+        n8n_role_web_host: "{{ lookup('role_web', role='n8n') }}"
         ```
 
 === "DNS"
@@ -396,12 +398,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DB_POSTGRESDB_DATABASE: "{{ lookup('role_var', '_postgres_docker_env_db', role='n8n') }}"
           DB_POSTGRESDB_HOST: "{{ lookup('role_var', '_postgres_name', role='n8n') }}"
           DB_POSTGRESDB_PORT: "5432"
-          DB_POSTGRESDB_USER: "{{ lookup('role_var', '_postgres_user', role='n8n')
-                               if (lookup('role_var', '_postgres_user', role='n8n') | length > 0)
-                               else lookup('role_var', '_docker_env_user', role='postgres') }}"
-          DB_POSTGRESDB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='n8n')
-                                   if (lookup('role_var', '_postgres_password', role='n8n') | length > 0)
-                                   else lookup('role_var', '_docker_env_password', role='postgres') }}"
+          DB_POSTGRESDB_USER: "{{ lookup('role_var', '_postgres_user', role='n8n', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          DB_POSTGRESDB_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='n8n', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
           N8N_EDITOR_BASE_URL: "{{ lookup('role_var', '_web_url', role='n8n') }}"
           N8N_HOST: "{{ lookup('role_var', '_web_host', role='n8n') }}"
           N8N_PORT: "{{ lookup('role_var', '_web_port', role='n8n') }}"
@@ -529,6 +527,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

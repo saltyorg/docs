@@ -137,7 +137,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         traccar_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='traccar') }} -U {{ lookup('role_var', '_postgres_user', role='traccar') if (lookup('role_var', '_postgres_user', role='traccar') | length > 0) else lookup('role_var', '_docker_env_user', role='timescaledb') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='traccar') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user', role='traccar', default=lookup('role_var', '_docker_env_user', role='timescaledb'), default_if_empty=true) }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -193,9 +199,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        traccar_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='traccar') + '.' + lookup('role_var', '_web_domain', role='traccar')
-                                       if (lookup('role_var', '_web_subdomain', role='traccar') | length > 0)
-                                       else lookup('role_var', '_web_domain', role='traccar') }}"
+        traccar_role_web_url: "{{ lookup('role_web', role='traccar', scheme='https') }}"
         ```
 
 === "DNS"
@@ -364,12 +368,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           CONFIG_USE_ENVIRONMENT_VARIABLES: "true"
           DATABASE_DRIVER: "org.postgresql.Driver"
           DATABASE_URL: "jdbc:postgresql://{{ lookup('role_var', '_postgres_name', role='traccar') }}:5432/{{ lookup('role_var', '_postgres_docker_env_db', role='traccar') }}"
-          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='traccar')
-                          if (lookup('role_var', '_postgres_user', role='traccar') | length > 0)
-                          else lookup('role_var', '_docker_env_user', role='timescaledb') }}"
-          DATABASE_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='traccar')
-                              if (lookup('role_var', '_postgres_password', role='traccar') | length > 0)
-                              else lookup('role_var', '_docker_env_password', role='timescaledb') }}"
+          DATABASE_USER: "{{ lookup('role_var', '_postgres_user', role='traccar', default=lookup('role_var', '_docker_env_user', role='timescaledb'), default_if_empty=true) }}"
+          DATABASE_PASSWORD: "{{ lookup('role_var', '_postgres_password', role='traccar', default=lookup('role_var', '_docker_env_password', role='timescaledb'), default_if_empty=true) }}"
         ```
 
     ??? variable dict "`traccar_role_docker_envs_custom`"
@@ -481,6 +481,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

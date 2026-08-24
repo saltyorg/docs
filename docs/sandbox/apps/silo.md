@@ -178,7 +178,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         silo_role_postgres_docker_healthcheck:
-          test: ["CMD-SHELL", "pg_isready -d {{ lookup('role_var', '_postgres_docker_env_db', role='silo') }} -U {{ lookup('role_var', '_postgres_user_lookup', role='silo') }}"]
+          test:
+            - "CMD"
+            - "pg_isready"
+            - "-d"
+            - "{{ lookup('role_var', '_postgres_docker_env_db', role='silo') }}"
+            - "-U"
+            - "{{ lookup('role_var', '_postgres_user_lookup', role='silo') }}"
           start_period: 20s
           interval: 30s
           retries: 5
@@ -256,9 +262,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        silo_role_web_url: "https://{{ lookup('role_var', '_web_subdomain', role='silo') + '.' + lookup('role_var', '_web_domain', role='silo')
-                                    if (lookup('role_var', '_web_subdomain', role='silo') | length > 0)
-                                    else lookup('role_var', '_web_domain', role='silo') }}"
+        silo_role_web_url: "{{ lookup('role_web', role='silo', scheme='https') }}"
         ```
 
     ??? variable string "`silo_role_web_jf_subdomain`"
@@ -286,9 +290,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        silo_role_web_jf_host: "{{ (lookup('role_var', '_web_jf_subdomain', role='silo') + '.' + lookup('role_var', '_web_jf_domain', role='silo'))
-                                if (lookup('role_var', '_web_jf_subdomain', role='silo') | length > 0)
-                                else lookup('role_var', '_web_jf_domain', role='silo') }}"
+        silo_role_web_jf_host: "{{ lookup('role_web', role='silo', endpoint='web_jf') }}"
         ```
 
     ??? variable string "`silo_role_web_jf_url`"
@@ -323,9 +325,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        silo_role_web_abs_host: "{{ (lookup('role_var', '_web_abs_subdomain', role='silo') + '.' + lookup('role_var', '_web_abs_domain', role='silo'))
-                                 if (lookup('role_var', '_web_abs_subdomain', role='silo') | length > 0)
-                                 else lookup('role_var', '_web_abs_domain', role='silo') }}"
+        silo_role_web_abs_host: "{{ lookup('role_web', role='silo', endpoint='web_abs') }}"
         ```
 
     ??? variable string "`silo_role_web_abs_url`"
@@ -739,6 +739,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>Resource Limits</h5>
 

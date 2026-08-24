@@ -177,7 +177,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           CLOUDFLARE_PROXY_DEFAULT: "{{ dns_proxied | string }}"
           TRAEFIK_API_URL: "http://traefik:8080"
           TRAEFIK_ENTRYPOINTS: "websecure,web"
-          CUSTOM_URLS: "{{ lookup('role_var', '_custom_urls', role='ddns') if (lookup('role_var', '_custom_urls', role='ddns') | length > 0) else omit }}"
+          CUSTOM_URLS: "{{ lookup('role_var', '_custom_urls', role='ddns', default=omit, default_if_empty=true) }}"
           IP_VERSION: "{{ 'both' if (dns_ipv4_enabled and dns_ipv6_enabled) else ('4' if dns_ipv4_enabled else '6') }}"
           DELAY: "{{ lookup('role_var', '_delay', role='ddns') }}"
         ```
@@ -292,6 +292,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 

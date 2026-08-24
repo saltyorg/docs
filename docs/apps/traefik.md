@@ -829,11 +829,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.traefik-internal.rule: "Host(`{{ traefik_name }}`)"
           traefik.http.routers.traefik-internal.entrypoints: "internal"
           traefik.http.routers.traefik-internal.service: "api@internal"
-          traefik.http.routers.traefik-http.rule: "Host(`{{ lookup('role_var', '_web_subdomain', role='traefik') }}.{{ lookup('role_var', '_web_domain', role='traefik') }}`)"
+          traefik.http.routers.traefik-http.rule: "Host(`{{ lookup('role_web', role='traefik') }}`)"
           traefik.http.routers.traefik-http.entrypoints: "{{ traefik_entrypoint_web }}"
           traefik.http.routers.traefik-http.middlewares: "{{ traefik_default_middleware_http }}"
           traefik.http.routers.traefik-http.priority: "20"
-          traefik.http.routers.traefik.rule: "Host(`{{ lookup('role_var', '_web_subdomain', role='traefik') }}.{{ lookup('role_var', '_web_domain', role='traefik') }}`)"
+          traefik.http.routers.traefik.rule: "Host(`{{ lookup('role_web', role='traefik') }}`)"
           traefik.http.routers.traefik.entrypoints: "{{ traefik_entrypoint_websecure }}"
           traefik.http.routers.traefik.tls: "true"
           traefik.http.routers.traefik.tls.options: "securetls@file"
@@ -893,12 +893,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         traefik_role_docker_labels_metrics:
-          traefik.http.routers.metrics-http.rule: "Host(`{{ lookup('role_var', '_metrics_subdomain', role='traefik') }}.{{ lookup('role_var', '_metrics_domain', role='traefik') }}`) && Path(`/prometheus`)"
+          traefik.http.routers.metrics-http.rule: "Host(`{{ lookup('role_web', role='traefik', endpoint='metrics') }}`) && Path(`/prometheus`)"
           traefik.http.routers.metrics-http.service: prometheus@internal
           traefik.http.routers.metrics-http.entrypoints: "{{ traefik_entrypoint_web }}"
           traefik.http.routers.metrics-http.middlewares: "traefik-auth,{{ traefik_default_middleware_http_api }}"
           traefik.http.routers.metrics-http.priority: "20"
-          traefik.http.routers.metrics.rule: "Host(`{{ lookup('role_var', '_metrics_subdomain', role='traefik') }}.{{ lookup('role_var', '_metrics_domain', role='traefik') }}`) && Path(`/prometheus`)"
+          traefik.http.routers.metrics.rule: "Host(`{{ lookup('role_web', role='traefik', endpoint='metrics') }}`) && Path(`/prometheus`)"
           traefik.http.routers.metrics.service: prometheus@internal
           traefik.http.routers.metrics.entrypoints: "{{ traefik_entrypoint_websecure }}"
           traefik.http.routers.metrics.tls: "true"
@@ -971,6 +971,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+
+    A blank value is YAML null and inherits any lower-precedence role or shared default. Explicit Ansible omit is accepted only for optional Docker settings; default-backed and required settings reject it. Use the documented typed empty value, such as `""`, `[]`, or `{}`, when disabling a guaranteed setting.
 
     <h5>GPU</h5>
 
